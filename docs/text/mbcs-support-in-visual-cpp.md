@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608685"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205201"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Compatibilidad con MBCS en Visual C++
 Cuando se ejecuta en una versión habilitada para MBCS de Windows, el sistema de desarrollo de Visual C++ (incluidas las herramientas de línea de comandos, el depurador y el editor de código fuente integrado) está habilitado para MBCS, a excepción de la ventana de la memoria.  
@@ -47,7 +47,7 @@ Cuando se ejecuta en una versión habilitada para MBCS de Windows, el sistema de
  Visual C++ acepta caracteres de doble byte, siempre que sea adecuado hacerlo. Esto incluye los nombres de ruta de acceso y nombres de archivo en los cuadros de diálogo y las entradas de texto en el editor de recursos de Visual C++ (por ejemplo, texto estático en el editor de cuadro de diálogo) y entradas de texto estático en el editor de iconos. Además, el preprocesador reconoce algunas directivas de doble byte, por ejemplo, nombres de archivo en `#include` instrucciones y como argumentos a la `code_seg` y `data_seg` pragmas. En el editor de código fuente, se aceptan caracteres de doble byte en los comentarios y los literales de cadena, aunque no en elementos del lenguaje C o C++ (por ejemplo, los nombres de variable).  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Compatibilidad con el Editor de métodos de entrada (IME)  
- Aplicaciones escritas para los mercados del este asiático que utilizan MBCS (por ejemplo, Japón) normalmente admiten el IME de Windows para escribir ambos caracteres único y de doble byte. El entorno de desarrollo de Visual C++ es totalmente compatible con el IME. Para obtener más información, consulte [ejemplo IME: muestra cómo controlar el modo IME e implementar IME de nivel 3](http://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+ Aplicaciones escritas para los mercados del este asiático que utilizan MBCS (por ejemplo, Japón) normalmente admiten el IME de Windows para escribir ambos caracteres único y de doble byte. El entorno de desarrollo de Visual C++ es totalmente compatible con el IME. Para obtener más información, consulte [ejemplo IME: muestra cómo controlar el modo IME e implementar IME de nivel 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
   
  Teclados japoneses no son directamente compatibles con caracteres Kanji. El IME convierte una cadena fonética, escrita en uno de los otros alfabetos japoneses (Hiragana, Katakana o Romaji) en sus posibles representaciones Kanji. Si no hay ambigüedad, puede seleccionar entre varias alternativas. Cuando haya seleccionado los caracteres Kanji deseados, IME pasa dos `WM_CHAR` mensajes a la aplicación de control.  
   

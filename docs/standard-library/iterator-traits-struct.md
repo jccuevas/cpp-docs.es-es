@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4188c099e676ba58b0194953110fc2e62e8aced8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204924"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits (Struct)
 
@@ -57,7 +57,7 @@ El struct de plantilla define los tipos de miembro:
 
 - `reference`: sinónimo de `Iterator::reference`.
 
-Las especializaciones parciales determinan los tipos críticos asociados a un puntero de objeto del tipo **Type \*** o const **Type \***.
+Las especializaciones parciales determinan los tipos críticos asociados con un puntero de objeto del tipo **tipo** <strong>\*</strong> o **tipo const**  <strong>\*</strong>.
 
 En esta implementación también se pueden usar varias funciones de plantilla que no usan la especialización parcial:
 

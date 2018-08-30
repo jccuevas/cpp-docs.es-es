@@ -1,5 +1,5 @@
 ---
-title: C2778 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2778 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f8747c0f2d0434f034ac0a0b84dcce510de0e96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68180e2fc0c7c33e742f0ffdb3776baa50976f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235096"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209718"
 ---
-# <a name="compiler-error-c2778"></a>C2778 de Error del compilador
+# <a name="compiler-error-c2778"></a>Error del compilador C2778
 GUID formado incorrectamente en __declspec(uuid())  
   
- Se proporcionó un GUID incorrecto para la [uuid](../../cpp/uuid-cpp.md) atributo extendido.  
+ Se proporcionó un GUID incorrecto para el [uuid](../../cpp/uuid-cpp.md) atributo extendido.  
   
- El GUID debe ser una cadena de números hexadecimales con el siguiente formato:  
+ El GUID debe ser una cadena de números hexadecimales con el formato siguiente:  
   
 ```  
 // C2778a.cpp  
@@ -37,7 +37,7 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
 ```  
   
- El `uuid` atributo extendido acepta cadenas reconocidas por [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589), con o sin delimitadores de llaves.  
+ El `uuid` atributo extendido acepta cadenas reconocidas por [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), con o sin delimitadores de llaves.  
   
  El ejemplo siguiente genera C2778:  
   

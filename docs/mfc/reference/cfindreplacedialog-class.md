@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338654"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204010"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog (clase)
 Permite implementar cuadros de diálogo Buscar y reemplazar cadenas estándar en su aplicación.  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  Una vez un `CFindReplaceDialog` se ha construido el objeto, debe llamar a la [crear](#create) función miembro para crear y mostrar el cuadro de diálogo.  
   
- Use la [m_fr](#m_fr) estructura para inicializar el cuadro de diálogo antes de llamar a `Create`. El `m_fr` estructura es de tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Para obtener más información sobre esta estructura, consulte el SDK de Windows.  
+ Use la [m_fr](#m_fr) estructura para inicializar el cuadro de diálogo antes de llamar a `Create`. El `m_fr` estructura es de tipo [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Para obtener más información sobre esta estructura, consulte el SDK de Windows.  
   
- En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funcionar y utilizar el [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macros de mapa de mensajes en el marco ventana que controla este mensaje registrado.  
+ En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funcionar y utilizar el [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macros de mapa de mensajes en el marco ventana que controla este mensaje registrado.  
   
  Puede determinar si el usuario ha decidido terminar el cuadro de diálogo con el `IsTerminating` función miembro.  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  Puntero a la cadena de reemplazo predeterminado cuando aparece el cuadro de diálogo. Si es NULL, el cuadro de diálogo no contiene una cadena de reemplazo predeterminado.  
   
  *dwFlags*  
- Uno o más marcadores que puede usar para personalizar la configuración del cuadro de diálogo combinada mediante el operador OR bit a bit. El valor predeterminado es FR_DOWN, que especifica que la búsqueda debe continuar en dirección descendente. Consulte la [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) estructura en el SDK de Windows para obtener más información sobre estas marcas.  
+ Uno o más marcadores que puede usar para personalizar la configuración del cuadro de diálogo combinada mediante el operador OR bit a bit. El valor predeterminado es FR_DOWN, que especifica que la búsqueda debe continuar en dirección descendente. Consulte la [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) estructura en el SDK de Windows para obtener más información sobre estas marcas.  
   
  *pParentWnd*  
  Un puntero a la ventana de principal o propietaria del cuadro de diálogo. Esta es la ventana que va a recibir el mensaje especial que indica que se solicita una acción de buscar y reemplazar. Si es NULL, se usa la ventana principal de la aplicación.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  Distinto de cero si el objeto de cuadro de diálogo se creó correctamente; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) función cuyo valor devuelto es un número de mensaje único para la instancia de la aplicación. La ventana de marco debe tener una entrada de asignación de mensaje que declara la función de devolución de llamada ( `OnFindReplace` en el ejemplo siguiente) que controla este mensaje registrado. El fragmento de código siguiente es un ejemplo de cómo hacer esto para una clase de ventana de marco denominada `CMyRichEditView`:  
+ En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) función cuyo valor devuelto es un número de mensaje único para la instancia de la aplicación. La ventana de marco debe tener una entrada de asignación de mensaje que declara la función de devolución de llamada ( `OnFindReplace` en el ejemplo siguiente) que controla este mensaje registrado. El fragmento de código siguiente es un ejemplo de cómo hacer esto para una clase de ventana de marco denominada `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `m_fr` es una estructura de tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Sus miembros almacenan las características del objeto de cuadro de diálogo. Después de crear un `CFindReplaceDialog` objeto, puede usar `m_fr` para modificar los valores distintos en el cuadro de diálogo.  
+ `m_fr` es una estructura de tipo [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Sus miembros almacenan las características del objeto de cuadro de diálogo. Después de crear un `CFindReplaceDialog` objeto, puede usar `m_fr` para modificar los valores distintos en el cuadro de diálogo.  
   
  Para obtener más información sobre esta estructura, vea el `FINDREPLACE` estructura en el SDK de Windows.  
   

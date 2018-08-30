@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337493"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207829"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx (clase)
 Implementa la funcionalidad de una interfaz de un único documento (SDI) de Windows superpuesta o una ventana de marco emergente y proporciona miembros para administrar la ventana. Extiende la [CFrameWnd](../../mfc/reference/cframewnd-class.md) clase.  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|Lo llama el marco de trabajo una vez creado el marco.|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|Lo llama el marco de trabajo cuando se destruye el marco.|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Lo llama el marco de trabajo cuando la aplicación dibuja la imagen asociada a un elemento de menú.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Lo llama el marco cuando un `CMFCPopupMenu` objeto procesos un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) mensaje.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Lo llama el marco cuando un `CMFCPopupMenu` objeto procesos un [WM_PAINT](/windows/desktop/gdi/wm-paint) mensaje.|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Lo llama el marco de trabajo cuando se habilita o deshabilita composición del Administrador de ventanas de escritorio (DWM).|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Lo llama el marco de trabajo cuando detiene el marco de movimiento o cambio de tamaño.|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Lo llama el marco de trabajo cuando se cambia el tamaño del marco para establecer los límites de la dimensión de ventana.|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  Identificador de una estructura que contiene las posiciones de varias ventanas. .  
   
 ### <a name="remarks"></a>Comentarios  
- Inicializa la estructura hdwp el [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) método.  
+ Inicializa la estructura hdwp el [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) método.  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Establece el menú de marco y, a continuación, actualiza al procesamiento de comandos está inactivo.  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *lpMMI*  
- Puntero a un [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) estructura.  
+ Puntero a un [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) estructura.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nFlags*  
- Indica si el usuario presiona las teclas modificadoras. Para los valores posibles, vea el parámetro *wParam* en [WM_LBUTTONDOWN notificación](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ Indica si el usuario presiona las teclas modificadoras. Para los valores posibles, vea el parámetro *wParam* en [WM_LBUTTONDOWN notificación](/windows/desktop/inputdev/wm-lbuttondown).  
   
  [in] *punto*  
  Especifica las coordenadas x e y del puntero, relativa a la esquina superior izquierda de la ventana.  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nFlags*  
- Indica si el usuario presiona las teclas modificadoras. Para los valores posibles, vea el parámetro *wParam* en [WM_LBUTTONUP notificación](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ Indica si el usuario presiona las teclas modificadoras. Para los valores posibles, vea el parámetro *wParam* en [WM_LBUTTONUP notificación](/windows/desktop/inputdev/wm-lbuttonup).  
   
  [in] *punto*  
  Especifica las coordenadas x e y del puntero, relativa a la esquina superior izquierda de la ventana.  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nFlags*  
- Indica si un usuario presiona las teclas modificadoras. Para los valores posibles, vea el parámetro *wParam* en [WM_MOUSEMOVE notificación](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ Indica si un usuario presiona las teclas modificadoras. Para los valores posibles, vea el parámetro *wParam* en [WM_MOUSEMOVE notificación](/windows/desktop/inputdev/wm-mousemove).  
   
  [in] *punto*  
  Especifica la x e y las coordenadas del puntero en relación con la esquina superior izquierda de la ventana.  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  La ubicación del puntero en coordenadas de pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Valor enumerado de posicionamiento de un puntero. Para obtener una lista de valores posibles, vea [WM_NCHITTEST notificación](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Valor enumerado de posicionamiento de un puntero. Para obtener una lista de valores posibles, vea [WM_NCHITTEST notificación](/windows/desktop/inputdev/wm-nchittest).  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nHitTest*  
- Valor enumerado de posicionamiento de un puntero. Para obtener una lista de valores posibles, vea [WM_NCHITTEST notificación](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Valor enumerado de posicionamiento de un puntero. Para obtener una lista de valores posibles, vea [WM_NCHITTEST notificación](/windows/desktop/inputdev/wm-nchittest).  
   
  [in] *punto*  
  La ubicación del puntero en coordenadas de pantalla.  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *wp*  
- El evento de administración de energía. Para obtener una lista de valores posibles, vea [mensaje WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+ El evento de administración de energía. Para obtener una lista de valores posibles, vea [mensaje WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).  
   
  [in] *lp*  
  Este parámetro no se utiliza.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Puntero al texto de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el valor de una llamada a [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Devuelve el valor de una llamada a [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nLas*  
- El tipo de cambio de tamaño. Para los valores posibles, vea el parámetro *wParam* en [WM_SIZE notificación](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ El tipo de cambio de tamaño. Para los valores posibles, vea el parámetro *wParam* en [WM_SIZE notificación](/windows/desktop/winmsg/wm-size).  
   
  [in] *cx*  
  Nuevo ancho del fotograma de píxeles.  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *fwSide*  
- El borde del marco que se mueve. Vea el parámetro *wParam* en [WM_SIZING notificación](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ El borde del marco que se mueve. Vea el parámetro *wParam* en [WM_SIZING notificación](/windows/desktop/winmsg/wm-sizing).  
   
  [in, out] *pRect*  
  Puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) o [RECT](../../mfc/reference/rect-structure1.md) estructura que contiene las coordenadas del marco.  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parámetros  
  *dwData*  
- Datos que dependen del *nCmd* parámetro. Para obtener una lista de valores posibles, vea [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Datos que dependen del *nCmd* parámetro. Para obtener una lista de valores posibles, vea [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
  *nCmd*  
- El comando help. Para obtener una lista de valores posibles, vea [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ El comando help. Para obtener una lista de valores posibles, vea [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
 ### <a name="remarks"></a>Comentarios  
   

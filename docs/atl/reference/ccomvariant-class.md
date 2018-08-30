@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc0e098e1f3e80a80dabeda8c0a5f7a58e5e697
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0be9c390b312cdd056c51474f202637dab16b3ff
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961147"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203901"
 ---
 # <a name="ccomvariant-class"></a>CComVariant (clase)
 Esta clase encapsula el tipo de variante, que proporciona a un miembro que indica el tipo de datos almacenados.  
@@ -401,7 +401,7 @@ HRESULT ReadFromStream(IStream* pStream);
   
 ### <a name="parameters"></a>Parámetros  
  *pStream*  
- [in] Un puntero a la [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaz en la secuencia que contiene los datos.  
+ [in] Un puntero a la [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaz en la secuencia que contiene los datos.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  
@@ -438,7 +438,7 @@ HRESULT WriteToStream(IStream* pStream);
   
 ### <a name="parameters"></a>Parámetros  
  *pStream*  
- [in] Un puntero a la [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaz en una secuencia.  
+ [in] Un puntero a la [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaz en una secuencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  

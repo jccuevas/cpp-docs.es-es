@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960257"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199193"
 ---
 # <a name="ltnumericgt-functions"></a>Funciones &lt;numeric&gt;
 
@@ -62,7 +62,7 @@ La suma de *val* y todos los elementos del intervalo especificado para la primer
 
 ### <a name="remarks"></a>Comentarios
 
-El valor inicial garantiza que habrá un resultado bien definido cuando el intervalo está vacío, en cuyo caso *val* se devuelve. La operación binaria no necesita ser asociativa o conmutativa. El resultado se inicializa en el valor inicial *val* y, a continuación, *resultado*  =  `binary_op` ( *resultado*, **\*** `Iter`) se calcula de forma iterativa mediante el rango, donde `Iter` es un iterador que apunta al elemento sucesivo del intervalo. El intervalo debe ser válido y la complejidad es lineal con el tamaño del intervalo. El tipo devuelto del operador binario debe ser convertible a **Type** para garantizar el cierre durante la iteración.
+El valor inicial garantiza que habrá un resultado bien definido cuando el intervalo está vacío, en cuyo caso *val* se devuelve. La operación binaria no necesita ser asociativa o conmutativa. El resultado se inicializa en el valor inicial *val* y, a continuación, *resultado*  =  `binary_op` ( *resultado*, <strong>\*</strong> `Iter`) se calcula de forma iterativa mediante el rango, donde `Iter` es un iterador que apunta al elemento sucesivo del intervalo. El intervalo debe ser válido y la complejidad es lineal con el tamaño del intervalo. El tipo devuelto del operador binario debe ser convertible a **Type** para garantizar el cierre durante la iteración.
 
 ### <a name="example"></a>Ejemplo
 

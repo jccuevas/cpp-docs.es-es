@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884368"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209330"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook (clase)
 Utilice esta clase para enviar informes de depuración a una canalización con nombre.  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>Comentarios  
  Cree una instancia de esta clase en las compilaciones de depuración de los servicios o aplicaciones para enviar informes de depuración a una canalización con nombre. Informes de depuración se generan mediante una llamada a [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) o mediante un contenedor para esta función, como el [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) y [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) macros.  
   
- Uso de esta clase le permite depurar de forma interactiva los componentes que se ejecutan no interactivo [estaciones de ventana](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Uso de esta clase le permite depurar de forma interactiva los componentes que se ejecutan no interactivo [estaciones de ventana](/windows/desktop/winstation/window-stations).  
   
  Tenga en cuenta que los informes de depuración se envían mediante el contexto de seguridad subyacente del subproceso. Suplantación está deshabilitada temporalmente para que se puedan ver los informes de depuración en situaciones donde la suplantación de usuarios con pocos privilegios está teniendo lugar, como en las aplicaciones web.  
   

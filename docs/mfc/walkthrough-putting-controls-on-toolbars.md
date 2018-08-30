@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c7df60fc023710139c8975486428fd7cd7cfd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027130"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199269"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Tutorial: Poner controles en las barras de herramientas
 En este tema se describe cómo agregar a una barra de herramientas un botón de barra de herramientas que contiene un control de Windows. En MFC, debe ser un botón de barra de herramientas un [CMFCToolBarButton (clase)](../mfc/reference/cmfctoolbarbutton-class.md)-clase derivada, por ejemplo [CMFCToolBarComboBoxButton (clase)](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton (clase)](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton (clase)](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), o [CMFCToolBarMenuButton (clase)](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -65,7 +65,7 @@ En este tema se describe cómo agregar a una barra de herramientas un botón de 
   
 2.  Cree una nueva clase, `CFindComboBox`, derivada de [CComboBox (clase)](../mfc/reference/ccombobox-class.md).  
   
-3.  En la clase `CFindComboBox`, invalide el método virtual `PreTranslateMessage`. Este método habilitará el cuadro combinado para procesar el [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) mensaje. Si el usuario presiona la tecla Escape (`VK_ESCAPE`), devuelve el foco a la ventana marco principal. Si el usuario presiona la tecla ENTRAR (`VK_ENTER`), publicar en la ventana de marco principal un mensaje WM_COMMAND que contiene el `ID_EDIT_FIND_COMBO` identificador de comando.  
+3.  En la clase `CFindComboBox`, invalide el método virtual `PreTranslateMessage`. Este método habilitará el cuadro combinado para procesar el [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) mensaje. Si el usuario presiona la tecla Escape (`VK_ESCAPE`), devuelve el foco a la ventana marco principal. Si el usuario presiona la tecla ENTRAR (`VK_ENTER`), publicar en la ventana de marco principal un mensaje WM_COMMAND que contiene el `ID_EDIT_FIND_COMBO` identificador de comando.  
   
 4.  Cree una clase para el **buscar** botón de cuadro combinado, derivado de [CMFCToolBarComboBoxButton (clase)](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). En este ejemplo, se denomina `CFindComboButton`.  
   
@@ -73,7 +73,7 @@ En este tema se describe cómo agregar a una barra de herramientas un botón de 
   
     1.  Pase `ID_EDIT_FIND_COMBO` como el id. de comando.  
   
-    2.  Use [CCommandManager::GetCmdImage](http://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) con `ID_EDIT_FIND` para obtener el índice de imagen.  
+    2.  Use [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) con `ID_EDIT_FIND` para obtener el índice de imagen.  
   
     3.  Para obtener una lista de estilos de cuadro combinado disponibles, consulte [estilos de cuadro combinado](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

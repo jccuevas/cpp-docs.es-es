@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cce467218b92f6d0827cff2b8ede56b735ab9af
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882902"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197151"
 ---
 # <a name="ipropertypage2impl-class"></a>Clase IPropertyPage2Impl
 Esta clase implementa `IUnknown` y hereda la implementación predeterminada de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
@@ -53,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |[IPropertyPage2Impl::EditProperty](#editproperty)|Especifica qué control propiedad recibirá el foco cuando se activa la página de propiedades. La implementación de ATL devuelve E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interfaz extiende [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) agregando el `EditProperty` método. Este método permite que un cliente seleccionar una propiedad específica en un objeto de la página de propiedad.  
+ El [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) interfaz extiende [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) agregando el `EditProperty` método. Este método permite que un cliente seleccionar una propiedad específica en un objeto de la página de propiedad.  
   
  Clase `IPropertyPage2Impl` simplemente devuelve E_NOTIMPL para `IPropertyPage2::EditProperty`. Sin embargo, hereda la implementación predeterminada de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) e implementa `IUnknown` mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.  
   
@@ -82,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
  Devuelve E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) en el SDK de Windows.  
+ Consulte [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [IPerPropertyBrowsingImpl (clase)](../../atl/reference/iperpropertybrowsingimpl-class.md)   

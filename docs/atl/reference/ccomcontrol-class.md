@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883455"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198460"
 ---
 # <a name="ccomcontrol-class"></a>CComControl (clase)
 Esta clase proporciona métodos para crear y administrar los controles ATL.  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la clase del control se deriva de [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), este método llama a [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) notificar a todos conectados `IPropertyNotifySink` interfaces que el control especificado propiedad ha cambiado. Si la clase del control no se deriva de `IPropertyNotifySink`, este método devuelve S_OK. 
+ Si la clase del control se deriva de [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), este método llama a [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) notificar a todos conectados `IPropertyNotifySink` interfaces que el control especificado propiedad ha cambiado. Si la clase del control no se deriva de `IPropertyNotifySink`, este método devuelve S_OK. 
   
  Este método es seguro llamar a incluso si el control no admite puntos de conexión.  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la clase del control se deriva de [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), llama este método [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar a todos conectados `IPropertyNotifySink` interfaces que el especificado propiedad de control que se va a cambiar. Si la clase del control no se deriva de `IPropertyNotifySink`, este método devuelve S_OK.  
+ Si la clase del control se deriva de [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), llama este método [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar a todos conectados `IPropertyNotifySink` interfaces que el especificado propiedad de control que se va a cambiar. Si la clase del control no se deriva de `IPropertyNotifySink`, este método devuelve S_OK.  
 
   
  Este método es seguro llamar a incluso si el control no admite puntos de conexión.  
@@ -205,10 +205,10 @@ int MessageBox(
  El título del cuadro de diálogo. Si es NULL (valor predeterminado), el título que se usa "Error".  
   
  *nLas*  
- Especifica el contenido y el comportamiento del cuadro de diálogo. Consulte la [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) entrada en la documentación del SDK de Windows para obtener una lista de los cuadros de mensajes distintos disponibles. El valor predeterminado proporciona un sencillo **Aceptar** botón.  
+ Especifica el contenido y el comportamiento del cuadro de diálogo. Consulte la [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) entrada en la documentación del SDK de Windows para obtener una lista de los cuadros de mensajes distintos disponibles. El valor predeterminado proporciona un sencillo **Aceptar** botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el valor entero que especifica uno de los valores de elemento de menú que aparece bajo [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) en la documentación del SDK de Windows.  
+ Devuelve el valor entero que especifica uno de los valores de elemento de menú que aparece bajo [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) en la documentación del SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
  `MessageBox` es útil durante el desarrollo y una manera sencilla de mostrar un mensaje de advertencia o error al usuario.  

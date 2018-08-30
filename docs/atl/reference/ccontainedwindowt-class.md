@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882851"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207201"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT (clase)
 Esta clase implementa una ventana dentro de otro objeto.  
@@ -115,7 +115,7 @@ class CContainedWindowT : public TBase
 |Crear controles|[Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Utilizar ventanas en ATL|[Clases de ventana ATL](../../atl/atl-window-classes.md)|  
 |Asistente para proyectos ATL|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) y los temas siguientes en el SDK de Windows|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) y los temas siguientes en el SDK de Windows|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `TBase`  
@@ -214,22 +214,22 @@ HWND Create(
  [in] El identificador de la ventana principal o propietaria.  
   
  *Rect*  
- [in] Un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.  
+ [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.  
   
  *szWindowName*  
  [in] Especifica el nombre de la ventana. El valor predeterminado es NULL.  
   
  *dwStyle*  
- [in] El estilo de la ventana. El valor predeterminado es WS_CHILD &#124; WS_VISIBLE. Para obtener una lista de valores posibles, vea [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) en el SDK de Windows.  
+ [in] El estilo de la ventana. El valor predeterminado es WS_CHILD &#124; WS_VISIBLE. Para obtener una lista de valores posibles, vea [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) en el SDK de Windows.  
   
  *dwExStyle*  
- [in] El estilo extendido de ventana. El valor predeterminado es 0, lo que significa que ningún estilo extendido. Para obtener una lista de valores posibles, vea [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ [in] El estilo extendido de ventana. El valor predeterminado es 0, lo que significa que ningún estilo extendido. Para obtener una lista de valores posibles, vea [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
   
  *MenuOrID*  
  [in] Para una ventana secundaria, el identificador de ventana. Para una ventana de nivel superior, un identificador de menú de la ventana. El valor predeterminado es **0U**.  
   
  *lpCreateParam*  
- [in] Un puntero a datos de creación de la ventana. Para obtener una descripción completa, vea la descripción para el parámetro final a [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Un puntero a datos de creación de la ventana. Para obtener una descripción completa, vea la descripción para el parámetro final a [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si se realiza correctamente, el identificador de la ventana recién creado. en caso contrario, es NULL.  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  El resultado del procesamiento del mensaje.  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada, `DefWindowProc` llamadas la [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/función para enviar la información del mensaje al procedimiento de ventana especificado en [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ De forma predeterminada, `DefWindowProc` llamadas la [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/función para enviar la información del mensaje al procedimiento de ventana especificado en [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Devuelve el mensaje actual (`m_pCurrentMsg`).  

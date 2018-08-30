@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4735b56d6d15dfe3740c0dad727765e0eb84b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 973501339d05f75414d076cbd22f5dabeb0bec7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208728"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping (clase)
 Esta clase representa un archivo asignado a memoria, adición de un operador de conversión a los métodos de [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
@@ -47,10 +47,10 @@ class CAtlFileMapping : public CAtlFileMappingBase
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CAtlFileMapping::operator T *](#operator_t_star)|Permite la conversión implícita de `CAtlFileMapping` objetos `T` **\***.|  
+|[CAtlFileMapping::operator T *](#operator_t_star)|Permite la conversión implícita de `CAtlFileMapping` objetos `T*`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase agrega un operador de conversión única para permitir la conversión implícita de `CAtlFileMapping` objetos `T` **\***. Otros miembros proporcionados por la clase base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
+ Esta clase agrega un operador de conversión única para permitir la conversión implícita de `CAtlFileMapping` objetos `T*`. Otros miembros proporcionados por la clase base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)  
@@ -61,17 +61,17 @@ class CAtlFileMapping : public CAtlFileMappingBase
  **Encabezado:** atlfile.h  
   
 ##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *  
- Permite la conversión implícita de `CAtlFileMapping` objetos `T` **\***.  
+ Permite la conversión implícita de `CAtlFileMapping` objetos `T*`.  
   
 ```  
 operator T*() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un `T` **\*** puntero al principio del archivo asignado a la memoria.  
+ Devuelve un `T*` puntero al principio del archivo asignado a la memoria.  
   
 ### <a name="remarks"></a>Comentarios  
- Las llamadas [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) y vuelve a interpretar el puntero devuelto como un `T` **\*** donde *T* es el tipo utilizado como plantilla parámetro de esta clase.  
+ Las llamadas [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) y vuelve a interpretar el puntero devuelto como un `T*` donde *T* es el tipo utilizado como parámetro de plantilla de esta clase.  
   
 ## <a name="see-also"></a>Vea también  
  [CAtlFileMappingBase (clase)](../../atl/reference/catlfilemappingbase-class.md)   

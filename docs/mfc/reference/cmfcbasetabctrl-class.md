@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540915"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198573"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funcionalidad básica para las ventanas con pestañas.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Vuelve a calcular el diseño interno de una ventana con pestañas.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Quita todas las pestañas de la ventana con pestañas.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Quita una pestaña de una ventana con pestañas.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que especifica el color de fondo de la pestaña activa.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valor que especifica el color de fondo de la pestaña activa.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, el color de fondo de la pestaña activa es COLOR_WINDOW. Puede cambiar el color de fondo de la ficha activa mediante el método [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que especifica el color del texto de la pestaña activa.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valor que especifica el color del texto de la pestaña activa.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, el color del texto de las pestañas activas es COLOR_WINDOWTEXT. Puede cambiar el color del texto con el método [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia a una matriz de [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valores que el [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto se usa para coloreado automático de las pestañas.  
+ Una referencia a una matriz de [COLORREF](/windows/desktop/gdi/colorref) valores que el [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto se usa para coloreado automático de las pestañas.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, el marco de trabajo inicializa la matriz de colores a los colores definidos por la biblioteca. Puede proporcionar una matriz de colores personalizada llamando al método [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  Índice de base cero de la pestaña.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que indica el color de fondo de la pestaña especificada; -1 si *iTab* está fuera del intervalo.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valor que indica el color de fondo de la pestaña especificada; -1 si *iTab* está fuera del intervalo.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Recupera el tamaño de los bordes de pestaña en el control de ficha.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  Índice de base cero de la pestaña.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parámetro que indica el color del texto de la pestaña especificada; -1 si *iTab* está fuera del intervalo.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que indica el color del texto de la pestaña especificada; -1 si *iTab* está fuera del intervalo.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Devuelve el puntero en el panel que se encuentra en la ficha especificada.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Especifica el nuevo color de fondo.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo Obtiene el color de fondo predeterminado de las pestañas activas desde el [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)método.  
+ El marco de trabajo Obtiene el color de fondo predeterminado de las pestañas activas desde el [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)método.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Establece el color del texto de las pestañas activas.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *clr*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parámetro que especifica el color del texto nuevo.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que especifica el color del texto nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada, el marco de trabajo Obtiene el color del texto de [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Reemplazar este color predeterminado mediante el `SetActiveTabTextColor` método.  
+ De forma predeterminada, el marco de trabajo Obtiene el color del texto de [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Reemplazar este color predeterminado mediante el `SetActiveTabTextColor` método.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Establece los colores del control de ficha que utiliza el marco de trabajo en el modo de color automático.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  El ancho de cada imagen en píxeles.  
   
  [in] *clrTransp*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parámetro que indica el color transparente de la imagen.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que indica el color transparente de la imagen.  
   
  [in] *hImageList*  
  Identificador de una lista de imágenes cargadas previamente.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  Índice de base cero de la pestaña.  
   
  [in] *color*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parámetro que indica el color del texto nuevo.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que indica el color del texto nuevo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se realiza correctamente; en caso contrario, es 0.  

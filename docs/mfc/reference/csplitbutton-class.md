@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207646"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton (clase)
 La `CSplitButton` clase representa un control de botón de expansión. El control de botón de expansión realiza un comportamiento predeterminado cuando un usuario hace clic en la parte principal del botón y muestra un menú desplegable cuando un usuario hace clic en la flecha de lista desplegable del botón.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Controla la notificación BCN_DROPDOWN que el sistema envía cuando un usuario hace clic en la flecha desplegable del control de botón de división actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `CSplitButton` clase se deriva el [CButton](../../mfc/reference/cbutton-class.md) clase. El control de botón de expansión es un control de botón cuyo estilo es BS_SPLITBUTTON. Muestra un menú personalizado cuando un usuario hace clic en la flecha de lista desplegable. Para obtener más información, vea los estilos BS_SPLITBUTTON y BS_DEFSPLITBUTTON [estilos de botón](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ El `CSplitButton` clase se deriva el [CButton](../../mfc/reference/cbutton-class.md) clase. El control de botón de expansión es un control de botón cuyo estilo es BS_SPLITBUTTON. Muestra un menú personalizado cuando un usuario hace clic en la flecha de lista desplegable. Para obtener más información, vea los estilos BS_SPLITBUTTON y BS_DEFSPLITBUTTON [estilos de botón](/windows/desktop/Controls/button-styles).  
   
  La figura siguiente muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha de lista desplegable (2) y se muestra el submenú (3).  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Una combinación bit a bit (OR) de estilos que se va a aplicarse al control. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|  
+|[in] *rect*|Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|  
 |[in] *pParentWnd*|Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|  
 |[in] *nID*|El identificador del control.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Puntero a un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) estructura que contiene información sobre la [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notificación.|  
-|[out] *pResult*|(No usar; se devuelve ningún valor). Valor devuelto de la [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notificación.|  
+|[in] *pNMHDR*|Puntero a un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estructura que contiene información sobre la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|  
+|[out] *pResult*|(No usar; se devuelve ningún valor). Valor devuelto de la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando el usuario hace clic en la flecha de lista desplegable en un control de botón de expansión, el sistema envía una notificación BCN_DROPDOWN mensaje que el `OnDropDown` método controla. Sin embargo, la `CSplitButton` objeto no reenvía la notificación BCN_DROPDOWN al control que contiene el control de botón de expansión. Por lo tanto, el control de contenedor no admite una acción personalizada en respuesta a la notificación.  

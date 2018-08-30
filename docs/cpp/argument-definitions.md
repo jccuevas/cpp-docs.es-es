@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407593"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200645"
 ---
 # <a name="argument-definitions"></a>Definiciones de argumentos
 Los argumentos del prototipo  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  El primer argumento de línea de comandos siempre es `argv` **[1]** y el último es `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Por convención, `argv`**[0]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) y si usa los argumentos primeros y segundo (*lpApplicationName* y *lpCommandLine*), `argv` **[0]** no puede ser el archivo ejecutable nombre; use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar el nombre del archivo ejecutable y su ruta de acceso completa.  
+>  Por convención, `argv`**[0]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso usando [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) y si usa los argumentos primeros y segundo (*lpApplicationName* y *lpCommandLine*), `argv` **[0]** no puede ser el archivo ejecutable nombre; use [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar el nombre del archivo ejecutable y su ruta de acceso completa.  
   
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
  *envp*  
@@ -80,5 +80,4 @@ int main( int argc, char *argv[], char *envp[] ) {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- 
-  [main: Inicio de programa](../cpp/main-program-startup.md)
+ [main: Inicio de programa](../cpp/main-program-startup.md)

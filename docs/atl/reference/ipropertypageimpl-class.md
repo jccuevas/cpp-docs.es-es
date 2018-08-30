@@ -41,15 +41,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7377a6b47df76190c4dc97b916590e53c7df8f9c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884755"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210116"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl (clase)
-Esta clase implementa `IUnknown` y proporciona una implementación predeterminada de la [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfaz.  
+Esta clase implementa `IUnknown` y proporciona una implementación predeterminada de la [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaz.  
   
 > [!IMPORTANT]
 >  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
@@ -105,7 +105,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl::m_size](#m_size)|Almacena el alto y ancho de la página de propiedades cuadro de diálogo, en píxeles.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfaz permite que un objeto administrar una determinada página de propiedades dentro de una hoja de propiedades. Clase `IPropertyPageImpl` proporciona una implementación predeterminada de esta interfaz e implementa `IUnknown` mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.  
+ El [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaz permite que un objeto administrar una determinada página de propiedades dentro de una hoja de propiedades. Clase `IPropertyPageImpl` proporciona una implementación predeterminada de esta interfaz e implementa `IUnknown` mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.  
   
  **Artículos relacionados con** [Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -130,7 +130,7 @@ HRESULT Activate(
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, el cuadro de diálogo siempre es no modal, independientemente del valor de la *bModal* parámetro.  
   
- Consulte [IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) en el SDK de Windows.  
+ Consulte [IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) en el SDK de Windows.  
   
 ##  <a name="apply"></a>  IPropertyPageImpl:: Apply  
  Se aplica a valores de la página de propiedad actuales para los objetos subyacentes especificados a través de `SetObjects`.  
@@ -143,7 +143,7 @@ HRESULT Apply();
  Devuelve S_OK.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) en el SDK de Windows.  
+ Consulte [IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) en el SDK de Windows.  
   
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate  
  Destruye la ventana del cuadro de diálogo creada con [activar](#activate).  
@@ -153,7 +153,7 @@ HRESULT Deactivate();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) en el SDK de Windows.  
+ Consulte [IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) en el SDK de Windows.  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
  Rellena el *pPageInfo* estructura con la información contenida en los miembros de datos.  
@@ -165,7 +165,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ### <a name="remarks"></a>Comentarios  
  `GetPageInfo` carga los recursos de cadena asociados [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile), y [m_dwTitle](#m_dwtitle).  
   
- Consulte [IPropertyPage:: GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) en el SDK de Windows.  
+ Consulte [IPropertyPage:: GetPageInfo](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) en el SDK de Windows.  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
  Invoca la Ayuda de Windows para la página de propiedades.  
@@ -175,7 +175,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) en el SDK de Windows.  
+ Consulte [IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) en el SDK de Windows.  
   
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl  
  El constructor.  
@@ -240,7 +240,7 @@ UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- Apunta a la [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) interfaz a través del cual la página de propiedades se comunica con el marco de propiedad.  
+ Apunta a la [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) interfaz a través del cual la página de propiedades se comunica con el marco de propiedad.  
   
 ```
 IPropertyPageSite* m_pPageSite;
@@ -268,7 +268,7 @@ HRESULT Move(LPCRECT pRect);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) en el SDK de Windows.  
+ Consulte [IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) en el SDK de Windows.  
   
 ##  <a name="setdirty"></a>  IPropertyPageImpl:: SetDirty  
  Marcas de estado de la página de propiedad como modificada o sin cambios, dependiendo del valor de *bDirty*.  
@@ -292,17 +292,17 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) en el SDK de Windows.  
+ Consulte [IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) en el SDK de Windows.  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- Proporciona la página de propiedades con un [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) puntero, a través del cual la página de propiedades se comunica con el marco de propiedad.  
+ Proporciona la página de propiedades con un [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) puntero, a través del cual la página de propiedades se comunica con el marco de propiedad.  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) en el SDK de Windows.  
+ Consulte [IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) en el SDK de Windows.  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
  Hace que el cuadro de diálogo página de propiedad visible o invisible.  
@@ -312,7 +312,7 @@ HRESULT Show(UINT nCmdShow);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) en el SDK de Windows.  
+ Consulte [IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) en el SDK de Windows.  
   
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator  
  Procesa la pulsación de tecla especificada en `pMsg`.  
@@ -322,7 +322,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) en el SDK de Windows.  
+ Consulte [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [Clase IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)   

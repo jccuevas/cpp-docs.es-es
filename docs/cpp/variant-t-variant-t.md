@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464167"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209347"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Específicos de Microsoft**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t (VARIANT &***varSrc***)** construye un `_variant_t` objeto desde una copia de la `VARIANT` objeto.     El tipo variant se conserva.  
   
--   **_variant_t (VARIANT\****pVarSrc***)** construye un `_variant_t` objeto desde una copia de la `VARIANT` objeto.     El tipo variant se conserva.  
+-   **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** construye un `_variant_t` objeto desde una copia de la `VARIANT` objeto.     El tipo variant se conserva.  
   
 -   **_variant_t (_variant_t &***var_t_Src***)** construye un `_variant_t` objeto desde otro `_variant_t` objeto.     El tipo variant se conserva.  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** construye un `_variant_t` objeto de tipo VT_BSTR desde un `_bstr_t` objeto.     Se asigna un nuevo `BSTR`.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** construye un `_variant_t` objeto de tipo VT_BSTR desde una cadena Unicode.   Se asigna un nuevo `BSTR`.  
+-   **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** construye un `_variant_t` objeto de tipo VT_BSTR desde una cadena Unicode.   Se asigna un nuevo `BSTR`.  
   
--   **_variant_t (char\***`strSrc`**)** construye un `_variant_t` objeto de tipo VT_BSTR desde una cadena.     Se asigna un nuevo `BSTR`.  
+-   **_variant_t (char**<strong>\*</strong>`strSrc`**)** construye un `_variant_t` objeto de tipo VT_BSTR desde una cadena.     Se asigna un nuevo `BSTR`.  
   
 -   **_variant_t (bool**`bSrc`**)** construye un `_variant_t` objeto de tipo VT_BOOL desde un **bool** valor.      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** construye un `_variant_t` objeto de tipo VT_UNKNOWN desde un puntero de interfaz COM .       Si `fAddRef` es **true**, a continuación, `AddRef` se llama en el puntero de interfaz proporcionado para que coincida con la llamada a `Release` que se producirá cuando el `_variant_t` se destruye el objeto. Es decisión suya llamar a `Release` en el puntero de interfaz proporcionado. Si `fAddRef` es **false**, este constructor toma la propiedad del puntero de interfaz proporcionado; no llame a `Release` en el puntero de interfaz proporcionado.  
+-   **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** construye un `_variant_t` objeto de tipo VT_UNKNOWN desde un puntero de interfaz COM.       Si `fAddRef` es **true**, a continuación, `AddRef` se llama en el puntero de interfaz proporcionado para que coincida con la llamada a `Release` que se producirá cuando el `_variant_t` se destruye el objeto. Es decisión suya llamar a `Release` en el puntero de interfaz proporcionado. Si `fAddRef` es **false**, este constructor toma la propiedad del puntero de interfaz proporcionado; no llame a `Release` en el puntero de interfaz proporcionado.  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** construye un `_variant_t` objeto de tipo VT_DISPATCH desde una interfaz COM puntero.       Si `fAddRef` es **true**, a continuación, `AddRef` se llama en el puntero de interfaz proporcionado para que coincida con la llamada a `Release` que se producirá cuando el `_variant_t` se destruye el objeto. Es decisión suya llamar a `Release` en el puntero de interfaz proporcionado. Si `fAddRef` es **false**, este constructor toma la propiedad del puntero de interfaz proporcionado; no llame a `Release` en el puntero de interfaz proporcionado.  
+-   **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** construye un `_variant_t` objeto de VT_DISPATCH un tipo de puntero de interfaz COM.       Si `fAddRef` es **true**, a continuación, `AddRef` se llama en el puntero de interfaz proporcionado para que coincida con la llamada a `Release` que se producirá cuando el `_variant_t` se destruye el objeto. Es decisión suya llamar a `Release` en el puntero de interfaz proporcionado. Si `fAddRef` es **false**, este constructor toma la propiedad del puntero de interfaz proporcionado; no llame a `Release` en el puntero de interfaz proporcionado.  
   
 -   **_variant_t (DECIMAL &**`decSrc`**)** construye un `_variant_t` objeto de tipo VT_DECIMAL desde un `DECIMAL` valor.      
   

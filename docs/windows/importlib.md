@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9522db579641d79b8b77cc870cd1df6f03c0413
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607678"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206706"
 ---
 # <a name="importlib"></a>importlib
 
@@ -43,7 +43,7 @@ El nombre de un archivo .tlb, entre comillas, que desea importar en la bibliotec
 
 ## <a name="remarks"></a>Comentarios
 
-El **importlib** hace que el atributo de C++ un `importlib` instrucción que se colocarán en el bloque de biblioteca del archivo .idl generado. El **importlib** atributo tiene la misma funcionalidad que el [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) atributo MIDL.
+El **importlib** hace que el atributo de C++ un `importlib` instrucción que se colocarán en el bloque de biblioteca del archivo .idl generado. El **importlib** atributo tiene la misma funcionalidad que el [importlib](/windows/desktop/Midl/importlib) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

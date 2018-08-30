@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (vincular a recursos de .NET Framework) | Documentos de Microsoft
+title: -ASSEMBLYLINKRESOURCE (vincular a recursos de .NET Framework) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374055"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206493"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Vincular a recursos de .NET Framework)
 ```  
@@ -38,15 +38,15 @@ ms.locfileid: "32374055"
  El archivo de recursos de .NET Framework con el que quiere crear un vínculo desde el ensamblado.  
   
 ## <a name="remarks"></a>Comentarios  
- La opción/ASSEMBLYLINKRESOURCE crea un vínculo a un recurso de .NET Framework en el archivo de salida; el archivo de recursos no se coloca en el archivo de salida. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) incrusta un archivo de recursos en el archivo de salida.  
+ La opción /ASSEMBLYLINKRESOURCE crea un vínculo a un recurso de .NET Framework en el archivo de salida. el archivo de recursos no se coloca en el archivo de salida. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) incrusta un archivo de recursos en el archivo de salida.  
   
- Los recursos vinculados son públicos en el ensamblado cuando se crean con el vinculador.  
+ Recursos vinculados son públicos en el ensamblado cuando se crean con el vinculador.  
   
  /ASSEMBLYLINKRESOURCE requiere que el compilador incluya [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) o [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) no se permite con/ASSEMBLYLINKRESOURCE.  
   
- Si *filename* es un archivo de recursos de .NET Framework creado, por ejemplo, con [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) o en el entorno de desarrollo, puede tener acceso a los miembros de la **System.Resources** espacio de nombres. Para obtener más información, consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). Para todos los demás recursos, use el **GetManifestResource** \* métodos en el **System.Reflection.Assembly** clase para acceder al recurso en tiempo de ejecución.  
+ Si *filename* es un archivo de recursos de .NET Framework creado, por ejemplo, con [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) o en el entorno de desarrollo, puede obtenerse con los miembros de la **System.Resources** espacio de nombres. Para obtener más información, consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Para todos los demás recursos, utilice el **GetManifestResource** \* métodos en el **System.Reflection.Assembly** clase para acceder al recurso en tiempo de ejecución.  
   
- *nombre de archivo* puede tener cualquier formato de archivo. Por ejemplo, puede que desee realizar una DLL nativa que forme parte del ensamblado, por lo que se puede instalar en la caché Global de ensamblados y accesible desde el código administrado del ensamblado.  
+ *nombre de archivo* puede tener cualquier formato de archivo. Por ejemplo, desea realizar una DLL nativa forme parte del ensamblado, por lo que se puede instalar en la caché Global de ensamblados y accesible desde el código administrado del ensamblado.  
   
  Otras opciones del vinculador que afectan a la generación de ensamblado son:  
   
@@ -72,7 +72,7 @@ ms.locfileid: "32374055"
   
 3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción en la **opciones adicionales** cuadro.  
+4.  Escriba la opción en el **opciones adicionales** cuadro.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   

@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 21910a85dfecf6bd1e66b4ce0df366e3841f3c36
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572394"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204133"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (clase)
 Proporciona la implementación de conjuntos de filas de esquema.  
@@ -145,7 +145,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
   
 #### <a name="parameters"></a>Parámetros  
  *pUnkOuter*  
- [in] Un exterior [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) al agregar; en caso contrario, NULL.  
+ [in] Un exterior [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) al agregar; en caso contrario, NULL.  
   
  *cRestrictions*  
  [in] El recuento de restricciones aplicado al conjunto de filas de esquema.  
@@ -279,7 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  La implementación de esta función exige que el usuario tenga una asignación de esquema en la clase de sesión. Luego, con la información de la asignación de esquema, responde con la matriz de GUID de los esquemas de la asignación. Representa los esquemas admitidos por el proveedor.  
 
 ## <a name="see-also"></a>Vea también  
- [Miembros de IDBSchemaRowsetImpl (clase)](http://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [Miembros de IDBSchemaRowsetImpl (clase)](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [Admitir conjuntos de filas de esquema](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    

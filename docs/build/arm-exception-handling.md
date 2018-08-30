@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209123"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205708"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
@@ -25,7 +25,7 @@ Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado 
 
 ## <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
-Windows en ARM usa *códigos de desenredado* para controlar el desenredo de pila durante [control estructurado de excepciones](http://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Los códigos de desenredado son una secuencia de bytes almacenada en la sección .xdata de la imagen ejecutable. Describen la operación del código de prólogo y epílogo de la función de forma abstracta, ya que así los efectos del prólogo de una función se pueden deshacer como preparación para desenredar en el marco de pila del llamador.
+Windows en ARM usa *códigos de desenredado* para controlar el desenredo de pila durante [control estructurado de excepciones](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Los códigos de desenredado son una secuencia de bytes almacenada en la sección .xdata de la imagen ejecutable. Describen la operación del código de prólogo y epílogo de la función de forma abstracta, ya que así los efectos del prólogo de una función se pueden deshacer como preparación para desenredar en el marco de pila del llamador.
 
 La EABI de ARM especifica un modelo de desenredado en excepciones en el que se usan códigos de desenredado, pero esta especificación no basta para el desenredado SEH en Windows, donde se deben controlar casos asincrónicos en los que el procesador se encuentra en medio del prólogo y el epílogo de una función. Además, Windows divide el control de desenredado en desenredado en el nivel de función y desenredado de ámbito específico de lenguaje, algo que está unificado en la EABI de ARM. Por ello, Windows en ARM especifica más detalles para el procedimiento y los datos de desenredado.
 

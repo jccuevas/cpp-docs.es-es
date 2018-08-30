@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f214a112c1baedd507a9eeeca02e955aeceedd3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09b0acfc1fc1f9147a6acbe8bbfe66016dc0b54b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879220"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201707"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl (clase)
 Esta clase implementa `IUnknown` y permite que un objeto guardar sus propiedades en una bolsa de propiedades proporcionados por el cliente.  
@@ -79,7 +79,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) en el SDK de Windows.  
+ Consulte [IPersist:: GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) en el SDK de Windows.  
   
 ##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew  
  Inicializa un objeto recién creado.  

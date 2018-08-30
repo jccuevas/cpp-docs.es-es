@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77876aad65a06cd541949937898496f811375e58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404647"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209608"
 ---
 # <a name="access-waccess"></a>_access, _waccess
 
@@ -96,7 +96,7 @@ Cuando se usa con archivos, la **_access** función determina si el archivo o di
 |04|De sólo lectura|
 |06|Operaciones de lectura y escritura|
 
-Esta función solo comprueba si el archivo y directorio son de solo lectura o no; no comprueba la configuración de seguridad del sistema de archivos. Para eso necesita un token de acceso. Para obtener más información sobre la seguridad del sistema de archivos, consulte [Tokens de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374909). Existe una clase ATL que proporciona esta funcionalidad; consulte [Clase CAccessToken](../../atl/reference/caccesstoken-class.md).
+Esta función solo comprueba si el archivo y directorio son de solo lectura o no; no comprueba la configuración de seguridad del sistema de archivos. Para eso necesita un token de acceso. Para obtener más información sobre la seguridad del sistema de archivos, consulte [Tokens de acceso](/windows/desktop/SecAuthZ/access-tokens). Existe una clase ATL que proporciona esta funcionalidad; consulte [Clase CAccessToken](../../atl/reference/caccesstoken-class.md).
 
 **_waccess** es una versión con caracteres anchos de **_access**; el *ruta* argumento **_waccess** es una cadena de caracteres anchos. **_waccess** y **_access** se comportan exactamente igual.
 

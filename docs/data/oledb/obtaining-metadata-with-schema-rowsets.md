@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d86984dc67dd5cbea6fe52ff1c8b099e5b061f5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7b131119f5f6207feccec3c683a470a8b099de12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337195"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207847"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtener metadatos con conjuntos de filas de esquema
 En ciertas ocasiones necesitará obtener información sobre un proveedor, un conjunto de filas, una tabla, ciertas columnas u otros datos relacionados con la base de datos sin abrir el conjunto de filas. Los datos sobre la estructura de la base de datos se denominan metadatos y se pueden recuperar con métodos diversos. Uno de ellos consiste en usar conjuntos de filas de esquema.  
@@ -60,7 +60,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  El [CRestrictions](../../data/oledb/crestrictions-class.md) clase proporciona la compatibilidad con las restricciones. Después de crear una instancia del conjunto de filas de esquema, llame a [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Este método devuelve un conjunto de resultados basado en las restricciones especificadas.  
   
- Para especificar restricciones, consulte [Apéndice B: Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) y buscar el conjunto de filas que está usando. Por ejemplo, `CColumns` corresponde a la [conjunto de filas COLUMNS](http://go.microsoft.com/fwlink/p/?linkid=64682); ese tema enumeran las columnas de restricción en el conjunto de filas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Debe seguir este orden al especificar las restricciones.  
+ Para especificar restricciones, consulte [Apéndice B: Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) y buscar el conjunto de filas que está usando. Por ejemplo, `CColumns` corresponde a la [conjunto de filas COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); ese tema enumeran las columnas de restricción en el conjunto de filas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Debe seguir este orden al especificar las restricciones.  
   
  Por lo tanto, por ejemplo, si desea restringir por nombre de tabla, observe que TABLE_NAME es la tercera columna de restricción y, a continuación, llame a `Open`, especificando el nombre de tabla como el tercer parámetro de restricción, tal como se muestra en el ejemplo siguiente.  
   
@@ -90,9 +90,9 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Para la referencia del conjunto de filas de esquema, se proporcionan definiciones de tipos en las plantillas OLE DB (consulte [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Para obtener más información sobre los conjuntos de filas de esquema OLE DB, incluidas las columnas de restricción, consulte [Apéndice B: Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) en referencia de la base de datos del programador de OLE.  
+ Para obtener más información sobre los conjuntos de filas de esquema OLE DB, incluidas las columnas de restricción, consulte [Apéndice B: Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) en referencia de la base de datos del programador de OLE.  
   
- Para obtener ejemplos más complejos de cómo usar las clases de conjunto de filas de esquema, vea el [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) y [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ejemplos.  
+ Para obtener ejemplos más complejos de cómo usar las clases de conjunto de filas de esquema, vea el [CatDB](https://github.com/Microsoft/VCSamples) y [DBViewer](https://github.com/Microsoft/VCSamples) ejemplos.  
   
  Para obtener información sobre la compatibilidad con el proveedor de conjuntos de filas de esquema, vea [admitir conjuntos de filas de esquema](../../data/oledb/supporting-schema-rowsets.md).  
   

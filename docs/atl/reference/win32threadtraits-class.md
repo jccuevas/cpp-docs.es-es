@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a5d94f92d21ea435bf7d73a6e28470babd293ed3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883679"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206920"
 ---
 # <a name="win32threadtraits-class"></a>Clase Win32ThreadTraits
 Esta clase proporciona la función de creación de un subproceso de Windows. Utilice esta clase si el subproceso no va a usar las funciones de CRT.  
@@ -48,7 +48,7 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|(Estático) Llame a esta función para crear un subproceso que no se debe usar funciones de CRT.|  
   
 ## <a name="remarks"></a>Comentarios  
- Rasgos de subproceso son clases que proporcionan una función de creación de un tipo determinado de subproceso. La función de creación tiene la misma firma y la misma semántica que el Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) función.  
+ Rasgos de subproceso son clases que proporcionan una función de creación de un tipo determinado de subproceso. La función de creación tiene la misma firma y la misma semántica que el Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) función.  
   
  Rasgos del subproceso se utilizan las clases siguientes:  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out] Dirección de la variable DWORD que, si se ejecuta correctamente, recibe el identificador de subproceso del subproceso recién creado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el identificador al subproceso recién creado o NULL en caso de error. Llame a [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obtener más información.  
+ Devuelve el identificador al subproceso recién creado o NULL en caso de error. Llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para obtener más información.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obtener más información sobre los parámetros para esta función.  
+ Consulte [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) para obtener más información sobre los parámetros para esta función.  
   
  Esta función llama a `CreateThread` para crear el subproceso.  
   

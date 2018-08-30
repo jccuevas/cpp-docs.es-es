@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1e8085810eea78d18a5ef68f18e4323ec9d3f4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605426"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209536"
 ---
 # <a name="lcid"></a>lcid
 
@@ -36,7 +36,7 @@ Le permite pasar un identificador de configuración regional a una función.
 
 ## <a name="remarks"></a>Comentarios
 
-El **lcid** atributo de C++ implementa la funcionalidad de la [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) atributo MIDL. Si desea implementar la configuración regional para un bloque de biblioteca, use el **lcid =** `lcid` parámetro para el [módulo](../windows/module-cpp.md) atributo.
+El **lcid** atributo de C++ implementa la funcionalidad de la [lcid](/windows/desktop/Midl/lcid) atributo MIDL. Si desea implementar la configuración regional para un bloque de biblioteca, use el **lcid =** `lcid` parámetro para el [módulo](../windows/module-cpp.md) atributo.
 
 ## <a name="example"></a>Ejemplo
 

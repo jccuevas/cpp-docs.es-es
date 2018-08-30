@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027831"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200275"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager (clase)
 Implementa la funcionalidad básica que controla el diseño de acoplamiento en una ventana de marco principal.  
@@ -379,7 +379,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *hdwp*  
- Especifica la estructura de la posición de ventana aplazada. Para obtener más información, vea [Tipos de datos de Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Especifica la estructura de la posición de ventana aplazada. Para obtener más información, consulte [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la [Administrador de acoplamiento inteligente](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
+ Un puntero a la [Administrador de acoplamiento inteligente](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Recupera un puntero para el Administrador de acoplamiento inteligente.  

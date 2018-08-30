@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965531"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198307"
 ---
 # <a name="valarray-class"></a>valarray (Clase)
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Func(Type)* el objeto de función que se aplicará a cada elemento de la valarray de operando.
+*_Func(Type)*<br/>
+ El objeto de función que se va a aplicar a cada elemento de la valarray de operando.
 
-*_Func(const Type&)* el objeto de función para const que se aplicará a cada elemento de la valarray de operando.
+*_Func(const Type&)*<br/>
+ El objeto de función para const que se va a aplicar a cada elemento de la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -141,7 +143,7 @@ Una valarray a cuyos elementos se ha aplicado `_Func` por elemento a los element
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve un objeto de la clase [valarray](../standard-library/valarray-class.md)**\<Type>** de longitud [size](#size), cuyos elementos `I` son **func**(( **\*this**)[ `I`]).
+La función miembro devuelve un objeto de clase [valarray](../standard-library/valarray-class.md)**\<tipo >**, de longitud [tamaño](#size), cuyos elementos *me*es `_Func((*this)[I])`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1247,7 +1249,7 @@ Una referencia a un elemento o su valor en el índice especificado o un subconju
 
 ### <a name="remarks"></a>Comentarios
 
-El operador de miembro se sobrecarga para proporcionar varias maneras de seleccionar secuencias de elementos entre las controla **\****esto**. El primer grupo de cinco operadores miembro funcionan en conjunción con varias sobrecargas de [operador=](#op_eq) (y otros operadores de asignación) para permitir el reemplazo selectivo (segmentación) de la secuencia controlada. Los elementos seleccionados deben existir.
+El operador de miembro se sobrecarga para proporcionar varias maneras de seleccionar secuencias de elementos entre los controlados por  <strong>\*esto</strong>. El primer grupo de cinco operadores miembro funcionan en conjunción con varias sobrecargas de [operador=](#op_eq) (y otros operadores de asignación) para permitir el reemplazo selectivo (segmentación) de la secuencia controlada. Los elementos seleccionados deben existir.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites de la valarray.  Para más información, vea [Iteradores activados](../standard-library/checked-iterators.md).
 

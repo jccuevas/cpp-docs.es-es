@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0bca9d1f60820b7ceeba633eead0aa9e572be5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8530a3c896d5c1dfa6568e166b9a0a43c0f0b0fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612915"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208092"
 ---
 # <a name="operator-type"></a>operador Type^
-Permite la conversión de [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) en `Platform::Type`.  
+Permite la conversión de [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) a `Platform::Type`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,10 +26,10 @@ Operator Type^(Windows::UI::Xaml::Interop::TypeName typeName)
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un `Platform::Type` cuando se especifica [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
+ Devuelve un `Platform::Type` cuando se especifica un [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
   
 ### <a name="remarks"></a>Comentarios  
- `TypeName` es el struct de Windows en tiempo de ejecución independiente del lenguaje para representar la información de tipo. [Platform::Type](../cppcx/platform-type-class.md) es específico de C++ y no se puede pasar a través de la interfaz binaria de aplicación (ABI). A continuación se muestra un uso de `TypeName`en la función [Navigate](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) :  
+ `TypeName` es el struct de Windows en tiempo de ejecución independiente del lenguaje para representar la información de tipo. [Platform::Type](../cppcx/platform-type-class.md) es específico de C++ y no se puede pasar a través de la interfaz binaria de aplicación (ABI). Este es uno de los usos de `TypeName`, en el [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) función:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

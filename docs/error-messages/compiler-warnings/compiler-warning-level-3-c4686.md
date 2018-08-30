@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 3) C4686 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4686 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1edbf438951644f63aae637a68f69d173ab7e1b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32a44cd929eb7629ef317ce9847950b613bde52c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202085"
 ---
 # <a name="compiler-warning-level-3-c4686"></a>Advertencia del compilador (nivel 3) C4686
-**'**   
- ***tipo definido por el usuario* ': posible cambio de comportamiento, cambio de UDT devuelta de convención de llamada**  
-  
- Una especialización de plantilla de clase no estaba definido antes de se utilizó en un tipo de valor devuelto. Todo lo que crea una instancia de la clase resolverá C4686; declarar una instancia o tiene acceso a un miembro (C\<int >:: nada) también son opciones.  
-  
- De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
-  
- En su lugar, pruebe lo siguiente  
-  
-```  
-// C4686.cpp  
-// compile with: /W3  
-#pragma warning (default : 4686)  
-template <class T>  
-class C;  
-  
-template <class T>  
-C<T> f(T);  
-  
-template <class T>  
-class C {};  
-  
-int main() {  
-   f(1);   // C4686  
-}  
-  
-template <class T>  
-C<T> f(T) {  
-   return C<int>();  
-}  
+
+> '*definido por el usuario*': posible cambio de comportamiento, cambio en el UDT devolver la convención de llamada
+
+## <a name="remarks"></a>Comentarios
+
+No es una especialización de plantilla de clase se define antes de usarlo en un tipo de valor devuelto. Todo lo que crea una instancia de la clase resolverá C4686; declarar una instancia o el acceso a un miembro (C\<int >:: nada) también son opciones.
+
+De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
+
+## <a name="example"></a>Ejemplo
+
+En su lugar, intente lo siguiente:
+
+```cpp
+// C4686.cpp
+// compile with: /W3
+#pragma warning (default : 4686)
+template <class T>
+class C;
+
+template <class T>
+C<T> f(T);
+
+template <class T>
+class C {};
+
+int main() {
+   f(1);   // C4686
+}
+
+template <class T>
+C<T> f(T) {
+   return C<int>();
+}
 ```

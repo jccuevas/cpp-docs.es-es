@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77f92e2a0a5ea65fce361c19ae52745932f58deb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2b120ab308e8d46ac4c874681d62bbeaaa86588
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884938"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205549"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl (clase)
 Esta clase proporciona métodos para implementar un objeto de nodo del complemento.  
@@ -110,7 +110,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  **Encabezado:** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
- Este método implementa la función de Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
+ Este método implementa la función de Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).  
   
 ```
 AddMenuItems(  
@@ -146,7 +146,7 @@ AddMenuItems(
 - Objeto de datos de CCT_UNINITIALIZED tiene un tipo no válido.  
   
 ##  <a name="command"></a>  CSnapInItemImpl::Command  
- Este método implementa la función de Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
+ Este método implementa la función de Win32 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).  
   
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 - Objeto de datos de CCT_UNINITIALIZED tiene un tipo no válido.  
   
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
- Este método implementa la función de Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
+ Este método implementa la función de Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).  
   
 ```
 CreatePropertyPages(  
@@ -280,7 +280,7 @@ SCOPEDATAITEM m_scopeDataItem;
 ```  
   
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
- El [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) estructura del objeto de datos del complemento.  
+ El [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) estructura del objeto de datos del complemento.  
   
 ```
 RESULTDATAITEM m_resultDataItem;

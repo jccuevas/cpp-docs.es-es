@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c92c43a820bc1c8694689c9d99a47b0c46b484e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451594"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209454"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -107,13 +107,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el número de caracteres en *str*, sin incluir el carácter null de terminal. No se reserva ningún valor devuelto para indicar un error, excepto para **_mbstrlen** y **_mbstrlen_l**, que devuelven `((size_t)(-1))` si la cadena contiene un carácter multibyte no válido.
+Cada una de estas funciones devuelve el número de caracteres en *str*, excluido el carácter null de terminal. Se reserva ningún valor devuelto para indicar un error, excepto para **_mbstrlen** y **_mbstrlen_l**, que devuelven `((size_t)(-1))` si la cadena contiene un carácter multibyte no válido.
 
 ## <a name="remarks"></a>Comentarios
 
-**strlen** interpretará la cadena como una cadena de caracteres de un solo byte, por lo que su valor devuelto siempre es igual al número de bytes, incluso si la cadena contiene caracteres multibyte. **wcslen** es una versión con caracteres anchos de **strlen**; el argumento de **wcslen** es una cadena de caracteres anchos y el número de caracteres es en caracteres anchos (dos bytes). **wcslen** y **strlen** se comportan exactamente igual.
+**strlen** interpreta la cadena como una cadena de caracteres de byte único, por lo que su valor devuelto siempre es igual al número de bytes, incluso si la cadena contiene caracteres multibyte. **wcslen** es una versión con caracteres anchos de **strlen**; el argumento de **wcslen** es una cadena de caracteres anchos y el número de caracteres es en caracteres anchos (dos bytes). **wcslen** y **strlen** se comportan exactamente igual.
 
-**Nota de seguridad** Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+**Nota de seguridad** Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -123,7 +123,7 @@ Cada una de estas funciones devuelve el número de caracteres en *str*, sin incl
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** y **_mbslen_l** devuelve el número de caracteres multibyte en una cadena de caracteres multibyte, pero no comprueban la validez de los caracteres multibyte. **_mbstrlen** y **_mbstrlen_l** comprobar la validez del carácter multibyte y reconoce secuencias de caracteres multibyte. Si la cadena pasada a **_mbstrlen** o **_mbstrlen_l** contiene un carácter multibyte no válido para la página de códigos, la función devuelve -1 y conjuntos de **errno** a **EILSEQ**.
+**_mbslen** y **_mbslen_l** devuelve el número de caracteres multibyte en una cadena de caracteres multibyte, pero no comprueban la validez de los caracteres multibyte. **_mbstrlen** y **_mbstrlen_l** comprobar la validez de caracteres multibyte y reconocen secuencias de caracteres multibyte. Si la cadena pasada a **_mbstrlen** o **_mbstrlen_l** contiene un carácter multibyte no válido para la página de códigos, la función devuelve -1 y establece **errno** a **EILSEQ**.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

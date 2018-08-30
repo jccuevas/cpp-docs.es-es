@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208375"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (clase)
 Deriva una clase de contexto de dispositivo [CDC](../../mfc/reference/cdc-class.md).  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>Comentarios  
  Realiza una [CWnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) en tiempo de construcción y [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) en tiempo de destrucción.  
   
- Un `CPaintDC` objeto sólo se puede usar al responder a un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) mensajes, normalmente en su `OnPaint` función miembro de controlador de mensajes.  
+ Un `CPaintDC` objeto sólo se puede usar al responder a un [WM_PAINT](/windows/desktop/gdi/wm-paint) mensajes, normalmente en su `OnPaint` función miembro de controlador de mensajes.  
   
  Para obtener más información sobre el uso de `CPaintDC`, consulte [contextos de dispositivo](../../mfc/device-contexts.md).  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  Apunta a la `CWnd` objeto al que el `CPaintDC` pertenece el objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Una excepción (de tipo `CResourceException`) se produce si el Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) llamar se produce un error. Un contexto de dispositivo no puede estar disponible si Windows ya asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco contextos mostrar comunes disponibles en un momento dado en Windows.  
+ Una excepción (de tipo `CResourceException`) se produce si el Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) llamar se produce un error. Un contexto de dispositivo no puede estar disponible si Windows ya asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco contextos mostrar comunes disponibles en un momento dado en Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

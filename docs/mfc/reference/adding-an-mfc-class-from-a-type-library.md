@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662754ae4f0f95160f18682f35eb2f7951e7e344
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 656d5c357874a7b470eb2fd630c91ad0aefa5a0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026557"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205378"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Agregar una clase MFC desde una biblioteca de tipos
 Use este asistente para crear una clase MFC desde una interfaz en una biblioteca de tipos disponible. Puede agregar una clase MFC a una [Aplicación MFC](../../mfc/reference/creating-an-mfc-application.md), un archivo [DLL de MFC](../../mfc/reference/creating-an-mfc-dll-project.md) o un [control ActiveX de MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -33,7 +33,7 @@ Use este asistente para crear una clase MFC desde una interfaz en una biblioteca
   
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Para agregar una clase MFC desde una biblioteca de tipos  
   
-1.  En el **el Explorador de soluciones** o [vista de clases](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en el nombre del proyecto al que desea agregar la clase.  
+1.  En el **el Explorador de soluciones** o [vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en el nombre del proyecto al que desea agregar la clase.  
   
 2.  En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.  
   

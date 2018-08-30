@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412910"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200299"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
@@ -100,18 +100,18 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_vscprintf_p** devuelve el número de caracteres que se generará si la cadena que señala a la lista de argumentos se impriman o se envíen a un archivo o códigos de búfer con el formato especificado. El valor devuelto no incluye el carácter nulo de finalización. **_vscwprintf_p** realiza la misma función para los caracteres anchos.
+**_vscprintf_p** devuelve el número de caracteres que se generarían si la cadena señalada por la lista de argumentos se imprimiera o enviara a un archivo o códigos de búfer mediante el formato especificado. El valor devuelto no incluye el carácter nulo de finalización. **_vscwprintf_p** realiza la misma función para caracteres anchos.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones se diferencian de **_vscprintf** y **_vscwprintf** solo en que tienen la capacidad de especificar el orden en que se usan los argumentos. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
+Estas funciones se diferencian de **_vscprintf** y **_vscwprintf** solo en que admiten la capacidad de especificar el orden en que se usan los argumentos. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 
-Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen **errno** a **EINVAL**.
+Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
 > [!IMPORTANT]
-> Garantizar que, si *formato* es una cadena definida por el usuario, terminadas en null y tiene el número correcto y tipo de parámetros. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Garantizar que, si *formato* es una cadena definida por el usuario, se termina en null y tiene el número correcto y el tipo de parámetros. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

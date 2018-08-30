@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de controles de encabezado | Documentos de Microsoft
+title: Ejemplos de Control de encabezado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20cdf22a91f7c144c2bbdb96d6789ca45778994
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0b48dc1aa1f2e966836bba8d04227f7c74d5abd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208119"
 ---
 # <a name="header-control-examples"></a>Ejemplos de control de encabezado
-Para obtener ejemplos de controles de encabezado, vea el [controles de encabezado](http://msdn.microsoft.com/library/windows/desktop/bb775238) del SDK de Windows.  
+Para obtener ejemplos de controles de encabezado, vea el [controles de encabezado](/windows/desktop/Controls/header-controls) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b775b14cb2f6b0f87bca1c81938c1a4c05c1304
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335674"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204364"
 ---
 # <a name="rgndata-structure"></a>RGNDATA (Estructura)
 El `RGNDATA` estructura contiene un encabezado y una matriz de rectángulos que componen una región. Estos rectángulos, ordenado arriba a abajo de izquierda a derecha, no se superponen.  
@@ -37,9 +37,9 @@ typedef struct _RGNDATA { /* rgnd */
   
 #### <a name="parameters"></a>Parámetros  
  *rdh*  
- Especifica un [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) estructura. (Para obtener más información sobre esta estructura, consulte el SDK de Windows). Los miembros de esta estructura de especifican el tipo de región (si es rectangular o trapezoidal), el número de rectángulos que componen la región, el tamaño del búfer que contiene las estructuras de rectángulo, y así sucesivamente.  
+ Especifica un [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) estructura. (Para obtener más información sobre esta estructura, consulte el SDK de Windows). Los miembros de esta estructura de especifican el tipo de región (si es rectangular o trapezoidal), el número de rectángulos que componen la región, el tamaño del búfer que contiene las estructuras de rectángulo, y así sucesivamente.  
   
- *Búfer*  
+ *búfer*  
  Especifica un búfer de tamaño arbitrario que contiene el [RECT](../../mfc/reference/rect-structure1.md) estructuras que constituyen la región.  
   
 ## <a name="requirements"></a>Requisitos  

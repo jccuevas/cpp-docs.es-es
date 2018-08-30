@@ -1,5 +1,5 @@
 ---
-title: Comparar el Runtime de simultaneidad con otros modelos de simultaneidad | Documentos de Microsoft
+title: Comparación del Runtime de simultaneidad con otros modelos de simultaneidad | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207216"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparar el runtime de simultaneidad con otros modelos de simultaneidad
 En este documento se describen las diferencias entre las características y los modelos de programación del Runtime de simultaneidad y otras tecnologías. Si compara las ventajas del Runtime de simultaneidad con las ventajas de otros modelos de programación, podrá seleccionar la tecnología que mejor satisfaga los requisitos de sus aplicaciones.  
@@ -64,7 +64,7 @@ En este documento se describen las diferencias entre las características y los 
  La API de Windows usa el lenguaje de programación C para exponer el modelo de programación. El Runtime de simultaneidad proporciona una interfaz de programación de C++ que aprovecha las nuevas características del lenguaje C++. Por ejemplo, las funciones lambda proporcionan un mecanismo conciso con seguridad de tipos para definir funciones de trabajo paralelo. Para obtener más información sobre las nuevas características de C++ que usa el Runtime de simultaneidad, consulte [Información general](../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ### <a name="threads-and-thread-pools"></a>Subprocesos y grupos de subprocesos  
- El mecanismo de simultaneidad central en la API de Windows es el subproceso. Normalmente se usa la función [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para crear subprocesos. Aunque los subprocesos son relativamente fáciles de crear y de usar, el sistema operativo asigna una cantidad significativa de tiempo y otros recursos para administrarlos. Además, aunque se garantiza que todos los subprocesos reciben el mismo tiempo de ejecución que cualquier otro subproceso que esté en el mismo nivel de prioridad, la sobrecarga asociada hace que deba crear tareas suficientemente grandes. Para las tareas pequeñas o más específicas, la sobrecarga asociada a la simultaneidad puede pesar más que la ventaja de ejecutar las tareas en paralelo.  
+ El mecanismo de simultaneidad central en la API de Windows es el subproceso. Normalmente se usa la función [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) para crear subprocesos. Aunque los subprocesos son relativamente fáciles de crear y de usar, el sistema operativo asigna una cantidad significativa de tiempo y otros recursos para administrarlos. Además, aunque se garantiza que todos los subprocesos reciben el mismo tiempo de ejecución que cualquier otro subproceso que esté en el mismo nivel de prioridad, la sobrecarga asociada hace que deba crear tareas suficientemente grandes. Para las tareas pequeñas o más específicas, la sobrecarga asociada a la simultaneidad puede pesar más que la ventaja de ejecutar las tareas en paralelo.  
   
  Los grupos de subprocesos son una forma de reducir el coste de la administración de subprocesos. Los grupos de subprocesos personalizados y la implementación de grupos de subprocesos proporcionada con la API de Windows permiten que los elementos de trabajo pequeños se ejecuten en paralelo de forma eficaz. El grupo de subprocesos de Windows mantiene los elementos de trabajo en una cola «primero en entrar, primero en salir» (FIFO). Todos los elementos de trabajo se inician en el orden en que se agregaron al grupo.  
   
@@ -77,7 +77,7 @@ En este documento se describen las diferencias entre las características y los 
   
  En Windows 7 y Windows Server 2008 R2, el sistema operativo admite la simultaneidad y la escalabilidad. Por ejemplo, estos sistemas operativos admiten los equipos que tienen más de 64 subprocesos de hardware. Las aplicaciones que usan la API de Windows deben modificarse para poder aprovechar estas nuevas características, aunque las aplicaciones que usan el Runtime de simultaneidad usan automáticamente estas características, por lo que no es necesario hacer modificaciones.  
   
- [base.user-mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[Arriba](#top)]  
   

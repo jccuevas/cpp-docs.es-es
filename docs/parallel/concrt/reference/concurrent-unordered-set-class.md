@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878d8a1f7f6ee313c58f92ea3f14b86265006581
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d543ca2d908f59487572f5abc68dc5b04223b88f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539870"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207620"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set (Clase)
 La `concurrent_unordered_set` clase es un contenedor seguro para simultaneidad que controla una secuencia de longitud variable de elementos de tipo K. La secuencia se representa en una forma que permita segura para simultaneidad anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador.  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  El valor de clave que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [par](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) donde el primer elemento es un iterador al principio y el segundo elemento es un iterador al final del intervalo.  
+ Un [par](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) donde el primer elemento es un iterador al principio y el segundo elemento es un iterador al final del intervalo.  
   
 ### <a name="remarks"></a>Comentarios  
  Es posible que las inserciones simultáneas hacer que claves adicionales para insertarse después el iterador inicial y antes el iterador de fin.  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337374"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208890"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 Al escribir una aplicación, cree una sola [CWinApp](../../mfc/reference/cwinapp-class.md)-objeto derivado. En ocasiones, es posible que desea obtener información acerca de este objeto desde fuera de la `CWinApp`-objeto derivado. O bien, puede que necesite acceso a otros objetos globales "Manager".
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  Parámetro que se pasará a la función controladora como se muestra en el parámetro de la declaración de función en *pfnThreadProc*.  
   
  *nPriority*  
- La prioridad deseada del subproceso. Para una lista completa y una descripción de las prioridades disponibles, consulte [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) en el SDK de Windows.  
+ La prioridad deseada del subproceso. Para una lista completa y una descripción de las prioridades disponibles, consulte [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) en el SDK de Windows.  
   
  *nStackSize*  
  Especifica el tamaño en bytes de la pila para el nuevo subproceso. Si es 0, el tamaño de pila predeterminado es el mismo tamaño de pila como del subproceso creador.  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0** iniciar el subproceso inmediatamente después de crear.  
   
  *lpSecurityAttrs*  
- Apunta a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica los atributos de seguridad para el subproceso. Si es NULL, se utilizará los mismos atributos de seguridad que del subproceso creador. Para obtener más información sobre esta estructura, consulte el SDK de Windows.  
+ Apunta a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica los atributos de seguridad para el subproceso. Si es NULL, se utilizará los mismos atributos de seguridad que del subproceso creador. Para obtener más información sobre esta estructura, consulte el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero al objeto de subproceso recién creado, o NULL si se produce un error.  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *lpszName*  
  Un puntero a una cadena que contiene el identificador de recurso.    
  *lpszType*  
- Un puntero al tipo de recurso. Para obtener una lista de tipos de recursos, consulte [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) en el SDK de Windows.  
+ Un puntero al tipo de recurso. Para obtener una lista de tipos de recursos, consulte [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) en el SDK de Windows.  
    
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador para el módulo que contiene el recurso.  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Si la función se realiza correctamente, el valor devuelto es un identificador para el módulo. Si se produce un error en la función, el valor devuelto es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve un identificador que se puede usar en [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función DLL. `AfxLoadLibrary` También puede usarse para asignar otros módulos ejecutables.  
+ Devuelve un identificador que se puede usar en [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función DLL. `AfxLoadLibrary` También puede usarse para asignar otros módulos ejecutables.  
   
  Cada proceso mantiene un recuento de referencias para cada módulo de biblioteca cargada. Este recuento de referencias se incrementa cada vez `AfxLoadLibrary` se llama y disminuye cada vez que `AfxFreeLibrary` se llama. Cuando el recuento de referencias llega a cero, el módulo no está asignado desde el espacio de direcciones del proceso que realiza la llamada y el identificador ya no es válido.  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>Parámetros  
  *lpWndClass*  
- Puntero a un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura que contiene información acerca de la clase de ventana que se registrarán. Para obtener más información sobre esta estructura, consulte el SDK de Windows.  
+ Puntero a un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura que contiene información acerca de la clase de ventana que se registrarán. Para obtener más información sobre esta estructura, consulte el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la clase se ha registrado correctamente; en caso contrario, FALSE.  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>Parámetros  
  *nClassStyle*  
- Especifica el estilo de clase de Windows o una combinación de estilos, creados mediante el uso de la operación bit a bit OR ( **&#124;**) operador para la clase de ventana. Para obtener una lista de estilos de clase, vea el [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura en el SDK de Windows. Si es NULL, los valores predeterminados se establecerá como sigue:  
+ Especifica el estilo de clase de Windows o una combinación de estilos, creados mediante el uso de la operación bit a bit OR ( **&#124;**) operador para la clase de ventana. Para obtener una lista de estilos de clase, vea el [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura en el SDK de Windows. Si es NULL, los valores predeterminados se establecerá como sigue:  
   
 -   Establece el estilo del mouse en CS_DBLCLKS, que envía haga doble clic en los mensajes al procedimiento de ventana cuando el usuario hace doble clic del mouse.  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Especifica un identificador para el recurso de cursor para instalarse en cada ventana creado a partir de la clase de ventana. Si usa el valor predeterminado de **0**, obtendrá el cursor IDC_ARROW estándar.  
   
  *hbrBackground*  
- Especifica un identificador para el recurso de pincel para instalarse en cada ventana creado a partir de la clase de ventana. Si usa el valor predeterminado de **0**, tendrá un pincel de fondo es NULL, y la ventana, de forma predeterminada, no borrará el fondo mientras se procesaba [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055).  
+ Especifica un identificador para el recurso de pincel para instalarse en cada ventana creado a partir de la clase de ventana. Si usa el valor predeterminado de **0**, tendrá un pincel de fondo es NULL, y la ventana, de forma predeterminada, no borrará el fondo mientras se procesaba [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd).  
   
  *hIcon*  
  Especifica un identificador para el recurso de icono para instalarse en cada ventana creado a partir de la clase de ventana. Si usa el valor predeterminado de **0**, obtendrá el icono del logotipo de Windows estándar, marca saludando.  

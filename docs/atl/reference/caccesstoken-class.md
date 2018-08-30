@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ae5547e2cc650c65b4a67d9734f00cf88b76c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 69d25b87c03216b151a29c7688e61fcc278d0dd7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885619"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199174"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken (clase)
 Esta clase es un contenedor para un token de acceso.  
@@ -140,9 +140,9 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Llame a este método para establecer el grupo principal de la `CAccessToken` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un [token de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374909) es un objeto que describe el contexto de seguridad de un proceso o subproceso y se asigna a cada usuario que ha iniciado sesión en un sistema de Windows.  
+ Un [token de acceso](/windows/desktop/SecAuthZ/access-tokens) es un objeto que describe el contexto de seguridad de un proceso o subproceso y se asigna a cada usuario que ha iniciado sesión en un sistema de Windows.  
   
- Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el SDK de Windows.  
+ Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](/windows/desktop/SecAuthZ/access-control) en el SDK de Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h  
@@ -212,13 +212,13 @@ bool CreateImpersonationToken(
  Puntero a la nueva `CAccessToken` objeto.  
   
  *Sil*  
- Especifica un [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) tipo enumerado que proporciona el nivel de suplantación del token de nuevo.  
+ Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token de nuevo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- `CreateImpersonationToken` las llamadas [duplicar el elemento](http://msdn.microsoft.com/library/windows/desktop/aa446616) para crear un nuevo token de suplantación.  
+ `CreateImpersonationToken` las llamadas [duplicar el elemento](https://msdn.microsoft.com/library/windows/desktop/aa446616) para crear un nuevo token de suplantación.  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  Llame a este método para crear un nuevo token principal.  
@@ -235,16 +235,16 @@ bool CreatePrimaryToken(
  Puntero a la nueva `CAccessToken` objeto.  
   
  *dwDesiredAccess*  
- Especifica los derechos de acceso solicitado para el nuevo token. El valor predeterminado, MAXIMUM_ALLOWED, solicita todos los derechos de acceso que son válidos para el llamador. Consulte [derechos de acceso y las máscaras de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374902) para obtener más sobre derechos de acceso.  
+ Especifica los derechos de acceso solicitado para el nuevo token. El valor predeterminado, MAXIMUM_ALLOWED, solicita todos los derechos de acceso que son válidos para el llamador. Consulte [derechos de acceso y las máscaras de acceso](/windows/desktop/SecAuthZ/access-rights-and-access-masks) para obtener más sobre derechos de acceso.  
   
  *pTokenAttributes*  
- Puntero a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo token y determina si los procesos secundarios pueden heredar el token. Si *pTokenAttributes* es NULL, el token Obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.  
+ Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo token y determina si los procesos secundarios pueden heredar el token. Si *pTokenAttributes* es NULL, el token Obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- `CreatePrimaryToken` las llamadas [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) para crear un nuevo token principal.  
+ `CreatePrimaryToken` las llamadas [DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617) para crear un nuevo token principal.  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Llame a este método para crear un nuevo proceso que se ejecuta en el contexto de seguridad del usuario representado por la `CAccessToken` objeto.  
@@ -271,22 +271,22 @@ bool CreateProcessAsUser(
  Puntero a una cadena terminada en null que especifica la línea de comandos para ejecutar.  
   
  *pProcessInformation*  
- Puntero a un [PROCESS_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/ms684873) estructura que recibe información de identificación sobre el proceso de nuevo.  
+ Puntero a un [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) estructura que recibe información de identificación sobre el proceso de nuevo.  
   
  *pStartupInfo*  
- Puntero a un [STARTUPINFO](http://msdn.microsoft.com/library/windows/desktop/ms686331) estructura que especifica cómo debe aparecer la ventana principal del nuevo proceso.  
+ Puntero a un [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) estructura que especifica cómo debe aparecer la ventana principal del nuevo proceso.  
   
  *dwCreationFlags*  
- Especifica marcas adicionales que controlan la clase de prioridad y la creación del proceso. Vea la función de Win32 [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) para obtener una lista de marcas.  
+ Especifica marcas adicionales que controlan la clase de prioridad y la creación del proceso. Vea la función de Win32 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) para obtener una lista de marcas.  
   
  *bLoadProfile*  
- Si es TRUE, se carga el perfil del usuario con [LoadUserProfile](http://msdn.microsoft.com/library/windows/desktop/bb762281).  
+ Si es TRUE, se carga el perfil del usuario con [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).  
   
  *pProcessAttributes*  
- Puntero a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo proceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pProcessAttributes* es NULL, el proceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.  
+ Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo proceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pProcessAttributes* es NULL, el proceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.  
   
  *pThreadAttributes*  
- Puntero a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo subproceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pThreadAttributes* es NULL, el subproceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.  
+ Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo subproceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pThreadAttributes* es NULL, el subproceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.  
   
  *bInherit*  
  Indica si el nuevo proceso hereda controla el proceso de llamada. Si es TRUE, cada identificador abierto heredable en el proceso de llamada se hereda el nuevo proceso. Identificadores heredados tienen los mismos privilegios de acceso y el valor que los identificadores originales.  
@@ -298,7 +298,7 @@ bool CreateProcessAsUser(
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- `CreateProcessAsUser` usa el `CreateProcessAsUser` función de Win32 para crear un nuevo proceso que se ejecuta en el contexto de seguridad del usuario representado por la `CAccessToken` objeto. Vea la descripción de la [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) función para ver una explicación detallada de los parámetros necesarios.  
+ `CreateProcessAsUser` usa el `CreateProcessAsUser` función de Win32 para crear un nuevo proceso que se ejecuta en el contexto de seguridad del usuario representado por la `CAccessToken` objeto. Vea la descripción de la [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) función para ver una explicación detallada de los parámetros necesarios.  
   
  Para que se realice correctamente, este método la `CAccessToken` debe contener objeto AssignPrimaryToken (a menos que sea un token restringido) y IncreaseQuota privilegios.  
   
@@ -330,7 +330,7 @@ bool CreateRestrictedToken(
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- `CreateRestrictedToken` usa el [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) función de Win32 para crear un nuevo `CAccessToken` objeto, con restricciones.  
+ `CreateRestrictedToken` usa el [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) función de Win32 para crear un nuevo `CAccessToken` objeto, con restricciones.  
   
 > [!IMPORTANT]
 >  Cuando se usa `CreateRestrictedToken`, asegúrese de lo siguiente: el token existente es válido (y no se ha introducido por el usuario) y *SidsToDisable* y *PrivilegesToDelete* son válidas (y no se ha introducido por el usuario). Si el método devuelve FALSE, deniegue la funcionalidad.  
@@ -486,7 +486,7 @@ bool GetImpersonationLevel(
   
 ### <a name="parameters"></a>Parámetros  
  *pImpersonationLevel*  
- Puntero a un [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) tipo de enumeración que recibirá la información de nivel de suplantación.  
+ Puntero a un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo de enumeración que recibirá la información de nivel de suplantación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -500,7 +500,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>Parámetros  
  *pluid*  
- Puntero a un [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) que recibirá el identificador de sesión de inicio de sesión.  
+ Puntero a un [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) que recibirá el identificador de sesión de inicio de sesión.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -591,7 +591,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Las llamadas del [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) función de Win32.  
+ Las llamadas del [OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) función de Win32.  
   
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile  
  Llame a este método para obtener el identificador que apunta al perfil de usuario asociado con el `CAccessToken` objeto.  
@@ -612,7 +612,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
   
 ### <a name="parameters"></a>Parámetros  
  *pSource*  
- Puntero a un [TOKEN_SOURCE](http://msdn.microsoft.com/library/windows/desktop/aa379631) estructura.  
+ Puntero a un [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -626,7 +626,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
   
 ### <a name="parameters"></a>Parámetros  
  *pStatistics*  
- Puntero a un [TOKEN_STATISTICS](http://msdn.microsoft.com/library/windows/desktop/aa379632) estructura.  
+ Puntero a un [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -679,7 +679,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>Parámetros  
  *pluid*  
- Puntero a un [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) que recibirá el identificador de Token.  
+ Puntero a un [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) que recibirá el identificador de Token.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -693,7 +693,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
   
 ### <a name="parameters"></a>Parámetros  
  *PEscriba*  
- Dirección de la [TOKEN_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379633) variable que, si se ejecuta correctamente, recibe el tipo del token.  
+ Dirección de la [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) variable que, si se ejecuta correctamente, recibe el tipo del token.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -805,16 +805,16 @@ bool LogonUser(
  Puntero a una cadena terminada en null que especifica la contraseña de texto no cifrado para la cuenta de usuario especificada por *pszUserName*.  
   
  *dwLogonType*  
- Especifica el tipo de operación de inicio de sesión va a realizar. Consulte [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) para obtener más detalles.  
+ Especifica el tipo de operación de inicio de sesión va a realizar. Consulte [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) para obtener más detalles.  
   
  *dwLogonProvider*  
- Especifica el proveedor de inicio de sesión. Consulte [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) para obtener más detalles.  
+ Especifica el proveedor de inicio de sesión. Consulte [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) para obtener más detalles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- El acceso al token resultante desde el inicio de sesión que se asociarán con el `CAccessToken`. Para que se realice correctamente, este método la `CAccessToken` debe contener el objeto privilegios SE_TCB_NAME, que identifica el titular como parte de la base de equipo de confianza. Consulte [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) para obtener más información sobre los privilegios necesarios.  
+ El acceso al token resultante desde el inicio de sesión que se asociarán con el `CAccessToken`. Para que se realice correctamente, este método la `CAccessToken` debe contener el objeto privilegios SE_TCB_NAME, que identifica el titular como parte de la base de equipo de confianza. Consulte [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) para obtener más información sobre los privilegios necesarios.  
   
 ##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken  
  Llamar a este método desde dentro de un servidor COM que controlar una llamada desde un cliente para inicializar el `CAccessToken` con el token de acceso desde el cliente COM.  
@@ -834,7 +834,7 @@ bool OpenCOMClientToken(
  Si es TRUE, el subproceso actual suplantará al cliente COM que realiza la llamada si esta llamada se completa correctamente. Si es FALSE, se abrirá el token de acceso, pero el subproceso no tendrá un token de suplantación cuando se complete esta llamada.  
   
  *bOpenAsSelf*  
- Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
+ Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
  Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
@@ -866,7 +866,7 @@ bool OpenNamedPipeClientToken(
  Si es TRUE, el subproceso actual suplantará al cliente que realiza la llamada de la canalización si esta llamada se completa correctamente. Si es FALSE, se abrirá el token de acceso, pero el subproceso no tendrá un token de suplantación cuando se complete esta llamada.  
   
  *bOpenAsSelf*  
- Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
+ Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
  Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
@@ -898,7 +898,7 @@ bool OpenRPCClientToken(
  Si es TRUE, el subproceso actual suplantará al cliente que realiza la llamada de RPC si esta llamada se completa correctamente. Si es FALSE, se abrirá el token de acceso, pero el subproceso no tendrá un token de suplantación cuando se complete esta llamada.  
   
  *bOpenAsSelf*  
- Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
+ Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
  Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
@@ -927,12 +927,12 @@ bool OpenThreadToken(
  Si es TRUE, el subproceso se dejarán en el nivel de suplantación solicitado cuando este método finalice. Si es FALSE, el subproceso se restablecerá a su nivel de suplantación original.  
   
  *bOpenAsSelf*  
- Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
+ Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
  Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.  
   
  *Sil*  
- Especifica un [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) tipo enumerado que proporciona el nivel de suplantación del token.  
+ Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -953,7 +953,7 @@ bool PrivilegeCheck(
   
 ### <a name="parameters"></a>Parámetros  
  *RequiredPrivileges*  
- Puntero a un [PRIVILEGE_SET](http://msdn.microsoft.com/library/windows/desktop/aa379307) estructura.  
+ Puntero a un [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set) estructura.  
   
  *pbResult*  
  Puntero a un valor que el método establece para indicar si se habilitan any o all del privilegio especificado en el `CAccessToken` objeto.  
@@ -962,7 +962,7 @@ bool PrivilegeCheck(
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando `PrivilegeCheck` que devuelve el `Attributes` miembro de cada [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263) estructura se establece en SE_PRIVILEGE_USED_FOR_ACCESS si está habilitado el privilegio correspondiente. Este método llama a la [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) función de Win32.  
+ Cuando `PrivilegeCheck` que devuelve el `Attributes` miembro de cada [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) estructura se establece en SE_PRIVILEGE_USED_FOR_ACCESS si está habilitado el privilegio correspondiente. Este método llama a la [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) función de Win32.  
   
 ##  <a name="revert"></a>  CAccessToken::Revert  
  Llame a este método para detener un subproceso del uso de un token de suplantación.  
@@ -1034,5 +1034,5 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo ATLSecurity](../../visual-cpp-samples.md)   
- [Tokens de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Tokens de acceso](/windows/desktop/SecAuthZ/access-tokens)   
  [Información general de clases](../../atl/atl-class-overview.md)

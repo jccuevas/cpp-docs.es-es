@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c2f3897f7fb1876ac684e2e6c77cc47f6f67ee
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42543199"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199500"
 ---
 # <a name="vector-class"></a>vector (Clase)
 
@@ -120,7 +120,7 @@ class vector
  Tipo de datos de elementos que se almacenará en el vector.
 
 *Asignador*  
- Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es **asignador***\<tipo>.*
+ Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es `allocator<Type>`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val* el valor que se asigna al elemento que se agrega al final del vector.
+*Val*<br/>
+ El valor que se asignará al elemento que se agrega al final del vector.
 
 ### <a name="example"></a>Ejemplo
 

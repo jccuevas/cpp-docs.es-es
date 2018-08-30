@@ -9,21 +9,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605706"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205485"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Dejar en desuso tipos y miembros (C++/CX)
-En C / c++ / CX, degradación de tipos en tiempo de ejecución de Windows y miembros para los productores y consumidores con el [en desuso](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) se admite el atributo. Si utilizas una API a la que se ha aplicado este atributo, obtienes un mensaje de advertencia en tiempo de compilación que indica que la API está desusada y que te recomienda una API alternativa. Puedes aplicar este atributo en tus propios tipos y métodos públicos, así como proporcionar tus propios mensajes personalizados.  
+En C / c++ / CX, degradación de tipos en tiempo de ejecución de Windows y miembros para los productores y consumidores con el [en desuso](/uwp/api/windows.foundation.metadata.deprecatedattribute) se admite el atributo. Si utilizas una API a la que se ha aplicado este atributo, obtienes un mensaje de advertencia en tiempo de compilación que indica que la API está desusada y que te recomienda una API alternativa. Puedes aplicar este atributo en tus propios tipos y métodos públicos, así como proporcionar tus propios mensajes personalizados.  
   
 > [!CAUTION]
->  El [en desuso](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atributo es para uso exclusivo con tipos de Windows en tiempo de ejecución. En las clases y miembros de C++ estándar, usa [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx).  
+>  El [en desuso](/uwp/api/windows.foundation.metadata.deprecatedattribute) atributo es para uso exclusivo con tipos de Windows en tiempo de ejecución. Para las clases de C++ estándar y miembros, use [__declspec (deprecated)](../cpp/deprecated-cpp.md).  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo marcar como desusadas tus propias API públicas, por ejemplo, en un componente de Windows en tiempo de ejecución. El segundo parámetro, de tipo [Windows:Foundation::Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) , especifica si la API se está marcando como desusada o se está quitando. Actualmente, solo se admite el valor DeprecationType::Deprecated. El tercer parámetro del atributo especifica el objeto [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) al que se aplica el atributo.  
+ En el ejemplo siguiente se muestra cómo marcar como desusadas tus propias API públicas, por ejemplo, en un componente de Windows en tiempo de ejecución. El segundo parámetro de tipo [Windows: Foundation:: Metadata:: deprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype) especifica si se va la API obsoletas o eliminadas. Actualmente, solo se admite el valor DeprecationType::Deprecated. El tercer parámetro en el atributo especifica el [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) al que se aplica el atributo.  
   
 ```  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408364"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209733"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores de multiplicación y el operador de módulo
 ## <a name="syntax"></a>Sintaxis  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Comentarios  
  Los operadores multiplicativos son:  
   
--   Multiplicación (**\***)  
+-   Multiplicación (<strong>\*</strong>)  
   
 -   División (**/**)  
   
--   Módulo (resto de la división) (`%`)  
+-   Módulo (resto de la división) (**%**)  
   
  Estos operadores binarios tienen asociatividad de izquierda a derecha.  
   
- Los operadores multiplicativos toman operandos de tipos aritméticos. El operador de módulo (`%`) tiene un requisito más estricto en tanto que sus operandos deben ser de tipo entero. (Para obtener el resto de una división de punto flotante, use la función de tiempo de ejecución, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Las conversiones descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos y el resultado es del tipo convertido.  
+ Los operadores multiplicativos toman operandos de tipos aritméticos. El operador de módulo (**%**) tiene un requisito más estricto que sus operandos deben ser de tipo entero. (Para obtener el resto de una división de punto flotante, use la función de tiempo de ejecución, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Las conversiones descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos y el resultado es del tipo convertido.  
   
  El operador de multiplicación produce el resultado de multiplicar el primer operando por el segundo.  
   

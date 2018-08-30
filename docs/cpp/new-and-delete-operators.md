@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406668"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208071"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
@@ -55,7 +55,7 @@ Los dos ámbitos para **operador new** funciones se describen en la tabla siguie
 |**:: new (operador)**|Global|  
 |*nombre de la clase* **:: new (operador)**|Clase|  
   
- El primer argumento **new (operador)** debe ser de tipo `size_t` (un tipo definido en \<stddef.h >), y el tipo de valor devuelto es siempre **void \*** .  
+ El primer argumento **new (operador)** debe ser de tipo `size_t` (un tipo definido en \<stddef.h >), y el tipo de valor devuelto es siempre **void** <strong>\*</strong>.  
   
  Global **new (operador)** función se llama cuando el **nueva** operador se usa para asignar objetos de tipos integrados, objetos del tipo de clase que no tienen definido por el usuario **operador new** funciones y las matrices de cualquier tipo. Cuando el **nueva** operador se usa para asignar objetos de un tipo de clase donde un **new (operador)** está definido, esa clase **new (operador)** se llama.  
   

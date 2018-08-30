@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880708"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206646"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (clase)
 Esta clase proporciona métodos para crear un cuadro de diálogo modal o no modal.  
@@ -102,7 +102,7 @@ template <class T,
 |Crear controles|[Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Uso de cuadros de diálogo ATL|[Clases de ventana ATL](../../atl/atl-window-classes.md)|  
 |Asistente para proyectos ATL|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Cuadros de diálogo|[Cuadros de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) y los temas siguientes en el SDK de Windows|  
+|Cuadros de diálogo|[Cuadros de diálogo](https://msdn.microsoft.com/library/windows/desktop/ms632588) y los temas siguientes en el SDK de Windows|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
@@ -126,7 +126,7 @@ HWND Create(
  [in] El identificador de la ventana propietaria.  
   
  **RECT &** *rect*  
- [in] Un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el cuadro de diálogo tamaño y posición.  
+ [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el cuadro de diálogo tamaño y posición.  
   
  *dwInitParam*  
  [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parámetros  
  *hWndParent*  
- [in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) función de Win32.  
+ [in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) función de Win32.  
   
  *dwInitParam*  
  [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.  

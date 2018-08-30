@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211057"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog (clase)
 Un cuadro de diálogo no modal de tabulación ( [CPropertySheet (clase)](../../mfc/reference/cpropertysheet-class.md)) que permite al usuario personalizar las barras de herramientas, menús, métodos abreviados de teclado, herramientas definidas por el usuario y el estilo visual de una aplicación. Normalmente, el usuario tiene acceso a este cuadro de diálogo seleccionando **Personalizar** en el menú **Herramientas** .  
@@ -507,7 +507,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
   
 ### <a name="parameters"></a>Parámetros  
  [in, out] *pAccel*  
- Puntero a la asignación de teclado propuesto se expresa como un [aceleración](http://msdn.microsoft.com/library/windows/desktop/ms646340) struct.  
+ Puntero a la asignación de teclado propuesto se expresa como un [aceleración](/windows/desktop/api/winuser/ns-winuser-tagaccel) struct.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la clave puede ser asignado o FALSE si no se puede asignar la clave. La implementación predeterminada siempre devuelve TRUE.  

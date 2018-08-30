@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34aed4325d2e946f59a4f17275d6b0aabe4de06c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589978"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206607"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -43,7 +43,7 @@ Un identificador de contexto de Ayuda de 32 bits en el **ayuda** archivo.
 
 ## <a name="remarks"></a>Comentarios
 
-El **helpstringcontext** atributo de C++ tiene la misma funcionalidad que el [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (atributo).
+El **helpstringcontext** atributo de C++ tiene la misma funcionalidad que el [helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL (atributo).
 
 ## <a name="example"></a>Ejemplo
 

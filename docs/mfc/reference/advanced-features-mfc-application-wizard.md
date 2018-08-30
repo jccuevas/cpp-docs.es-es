@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198131"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Características avanzadas, Asistente para aplicaciones MFC
 En este tema se muestran las opciones de algunas características adicionales de la aplicación, como la Ayuda, la compatibilidad con la impresión, etc. En cada sección, debe especificar la compatibilidad adicional con estas características avanzadas.  
@@ -47,17 +47,17 @@ En este tema se muestran las opciones de algunas características adicionales de
  Admite Windows Sockets, que se pueden usar para programar aplicaciones que se comuniquen a través de redes TCP/IP.  
   
  **Active Accessibility**  
- Agrega compatibilidad para [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) a [CWnd](../../mfc/reference/cwnd-class.md)-las clases derivadas, que puede usar para personalizar la interfaz de usuario para una mejor interacción con los clientes de accesibilidad.  
+ Agrega compatibilidad para [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) a [CWnd](../../mfc/reference/cwnd-class.md)-las clases derivadas, que puede usar para personalizar la interfaz de usuario para una mejor interacción con los clientes de accesibilidad.  
   
  **Manifiesto de controles comunes**  
  Habilitado de manera predeterminada. Genera un manifiesto de aplicación que habilita el archivo DLL de controles comunes incluido con Microsoft Windows XP y sistemas operativos más recientes.  
   
  La versión 6 del archivo DLL de controles comunes no actualiza automáticamente la versión anterior de los controles comunes que se utilizan en las aplicaciones existentes. Para utilizar la versión 6 del archivo DLL de controles comunes, deberá crear un manifiesto de aplicación que indique a la aplicación que cargue el archivo DLL. Este archivo DLL de controles comunes admite también los temas de Windows XP.  
   
- Un manifiesto de aplicación puede especificar también otros archivos DLL y otras versiones que necesite la aplicación. Para obtener más información acerca de los manifiestos de aplicación, consulte [aplicaciones aisladas y ensamblados en paralelo](http://msdn.microsoft.com/library/dd408052) en el SDK de Windows.  
+ Un manifiesto de aplicación puede especificar también otros archivos DLL y otras versiones que necesite la aplicación. Para obtener más información acerca de los manifiestos de aplicación, consulte [aplicaciones aisladas y ensamblados en paralelo](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) en el SDK de Windows.  
   
  **Compatibilidad con el Administrador de reinicio**  
- Agrega compatibilidad para la [Administrador de reinicio de Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo muestra cómo usar el Administrador de reinicio de MFC: [How Do I: Use el nuevo administrador de reinicio](http://msdn.microsoft.com/vstudio/ee886407).  
+ Agrega compatibilidad para la [Administrador de reinicio de Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo muestra cómo usar el Administrador de reinicio de MFC: [How Do I: Use el nuevo administrador de reinicio](https://msdn.microsoft.com/vstudio/ee886407).  
   
  **Paneles de marco avanzados**  
  |Opción|Descripción|  

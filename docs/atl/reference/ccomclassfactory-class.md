@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d58fc816bea6672309e60a09528b0727c64c6fd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 866d556c06cc7f627c2f5108384704b737eb0330
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880029"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205217"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory (clase)
-Esta clase implementa la [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfaz.  
+Esta clase implementa la [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|Bloquea el generador de clases en la memoria.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComClassFactory` implementa el [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfaz, que contiene métodos para crear un objeto de un CLSID determinado, así como el generador de clases en la memoria para permitir que los nuevos objetos se pueden crear más rápidamente el bloqueo. `IClassFactory` se debe implementar para todas las clases que se registran en el registro del sistema y que asigna un CLSID.  
+ `CComClassFactory` implementa el [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfaz, que contiene métodos para crear un objeto de un CLSID determinado, así como el generador de clases en la memoria para permitir que los nuevos objetos se pueden crear más rápidamente el bloqueo. `IClassFactory` se debe implementar para todas las clases que se registran en el registro del sistema y que asigna un CLSID.  
   
  Objetos ATL adquieren normalmente un generador de clases mediante la derivación de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Esta clase incluye la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara `CComClassFactory` como el generador de clases de forma predeterminada. Para invalidar este comportamiento predeterminado, especifique uno de los `DECLARE_CLASSFACTORY` *XXX* macros en la definición de clase. Por ejemplo, el [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) macro usa la clase especificada para el generador de clases:  
   

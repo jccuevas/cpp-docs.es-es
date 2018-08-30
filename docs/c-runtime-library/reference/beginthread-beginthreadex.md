@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572516"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206402"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -93,7 +93,7 @@ Tamaño de la pila de un subproceso nuevo, o 0.
 Lista de argumentos que se pasarán a un nuevo subproceso, o **NULL**.
 
 *Seguridad*<br/>
-Puntero a una estructura de [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si *seguridad* es **NULL**, no se puede heredar el identificador. Debe ser **NULL** para aplicaciones de Windows 95.
+Puntero a una estructura de [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si *seguridad* es **NULL**, no se puede heredar el identificador. Debe ser **NULL** para aplicaciones de Windows 95.
 
 *initflag*<br/>
 Marcas que controlan el estado inicial de un nuevo subproceso. Establecer *initflag* en 0 para ejecutar inmediatamente, o en **CREATE_SUSPENDED** para crear el subproceso en un estado suspendido; use [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) para ejecutar el subproceso. Establecer *initflag* a **STACK_SIZE_PARAM_IS_A_RESERVATION** marca para usar *stack_size* como inicial reservar el tamaño de la pila en bytes; si esta marca no se especifica, *stack_size* especifica el tamaño de confirmación.
@@ -131,7 +131,7 @@ Es más seguro usar **_beginthreadex** que **_beginthread**. Si el subproceso qu
 
 Puede llamar a [_endthread](endthread-endthreadex.md) o **_endthreadex** explícitamente para terminar el subproceso; sin embargo, **_endthread** o **_endthreadex** se denomina automáticamente cuando el subproceso vuelve de la rutina que se pasa como un parámetro. Si se finaliza un subproceso con una llamada a **_endthread** o **_endthreadex** ayuda a garantiza una recuperación correcta de los recursos asignados para el subproceso.
 
-**_endthread** automáticamente cierra el identificador de subproceso, aunque **_endthreadex** no lo hace. Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Este comportamiento difiere de la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32.
+**_endthread** automáticamente cierra el identificador de subproceso, aunque **_endthreadex** no lo hace. Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Este comportamiento difiere de la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32.
 
 > [!NOTE]
 > Un archivo ejecutable vinculado con Libcmt.lib, no llame a Win32 **ExitThread** API para que no impiden que el sistema de tiempo de ejecución reclamar recursos asignados. **_endthread** y **_endthreadex** reclamar recursos de subprocesos asignados y, a continuación, llame a **ExitThread**.
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

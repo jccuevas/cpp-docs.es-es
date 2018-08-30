@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957979"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209089"
 ---
 # <a name="basicstring-class"></a>basic_string (Clase)
 
@@ -881,7 +881,7 @@ Puntero a la versión de estilo C de la cadena que llama.  El valor de puntero n
 
 ### <a name="remarks"></a>Comentarios
 
-Los objetos de cadena de tipo que pertenecen a la clase de plantilla de C++ basic_string\<char> no son necesariamente terminados en null. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte de la cadena igual que cualquier otro carácter. Hay una conversión automática de const **char\*** en cadenas, pero la clase string no proporciona conversiones automáticas de cadenas de estilo C en objetos de tipo **basic_string\<char>**.
+Los objetos de cadena de tipo que pertenecen a la clase de plantilla de C++ basic_string\<char> no son necesariamente terminados en null. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte de la cadena igual que cualquier otro carácter. Hay una conversión automática de **const char** <strong>\*</strong> en cadenas, pero la cadena de clase no proporciona conversiones automáticas de cadenas de estilo C en objetos de tipo **basic_string\<char >**.
 
 No se debe modificar la cadena de estilo C devuelta, ya que esto podría anular el puntero a la cadena, ni eliminarla, ya que la cadena tiene una duración limitada y es propiedad de la cadena de clase.
 
@@ -1652,7 +1652,7 @@ Puntero al primer elemento de la matriz que contiene el contenido de la cadena, 
 
 Los objetos de cadena de tipo que pertenecen a la clase de plantilla de C++ basic_string \<char> no son necesariamente terminados en null. El tipo de valor devuelto para `data` no es una cadena de C válida, porque no se anexa ningún carácter nulo. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte del objeto de cadena igual que cualquier otro carácter.
 
-Hay una conversión automática de const **char\*** en cadenas, pero la clase string no proporciona conversiones automáticas de cadenas de estilo C en objetos de tipo **basic_string \<char>**.
+Hay una conversión automática de **const char** <strong>\*</strong> en cadenas, pero la cadena de clase no proporciona conversiones automáticas de cadenas de estilo C en objetos de tipo **basic_string \<char >**.
 
 No se debe modificar la cadena devuelta, ya que esto podría anular el puntero a la cadena, ni eliminarla, ya que la cadena tiene una duración limitada y es propiedad de la cadena de clase.
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 El tipo es un sinónimo de `allocator_type::pointer`.
 
-Para el tipo `string`, equivale a **char\***.
+Para el tipo `string`, equivale a **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Ejemplo
 

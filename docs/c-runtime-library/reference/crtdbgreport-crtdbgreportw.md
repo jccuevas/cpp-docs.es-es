@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42575530"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204428"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -108,8 +108,8 @@ La tabla siguiente enumeran las opciones disponibles para el modo de informe o m
 
 |Modo de informe|Archivo de informe|**_CrtDbgReport**, **_CrtDbgReportW** comportamiento|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|No es aplicable|Escribe el mensaje mediante la API [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) de Windows.|
-|**_CRTDBG_MODE_WNDW**|No es aplicable|Llama a la API [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clic **anular**, **_CrtDbgReport** o **_CrtDbgReport** anula inmediatamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clic **omitir**, la ejecución continúa y **_CrtDbgReport** y **_CrtDbgReportW** devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|
+|**_CRTDBG_MODE_DEBUG**|No es aplicable|Escribe el mensaje mediante la API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) de Windows.|
+|**_CRTDBG_MODE_WNDW**|No es aplicable|Llama a la API [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clic **anular**, **_CrtDbgReport** o **_CrtDbgReport** anula inmediatamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clic **omitir**, la ejecución continúa y **_CrtDbgReport** y **_CrtDbgReportW** devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Escribe el mensaje proporcionado por el usuario **controlar**, mediante el Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API y no se comprueba la validez del identificador de archivo; la aplicación es responsable de abrir el archivo de informe y pasar un archivo válido identificador.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Escribe el mensaje en **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Escribe el mensaje en **stdout**.|

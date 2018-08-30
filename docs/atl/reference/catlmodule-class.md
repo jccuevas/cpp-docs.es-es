@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882577"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210006"
 ---
 # <a name="catlmodule-class"></a>CAtlModule (clase)
 Esta clase proporciona métodos utilizados por varias clases de módulo ATL.  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  En las compilaciones de depuración, se producirá un error de aserción si *ppGIT* es igual a NULL, o si no se puede obtener el puntero de la tabla de interfaz Global.  
   
- Consulte [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) para obtener información sobre la tabla de interfaz Global.  
+ Consulte [IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable) para obtener información sobre la tabla de interfaz Global.  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Devuelve el recuento de bloqueos.  

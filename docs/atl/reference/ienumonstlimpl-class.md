@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 15f0b26c5c86d023d98d6a13e6b92518756a3179
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883013"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206211"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl (clase)
 Esta clase define una interfaz de enumerador basándose en una colección de la biblioteca estándar de C++.  
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 #### <a name="parameters"></a>Parámetros  
  *base*  
- Un enumerador COM ( [interfaz IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interfaz.  
+ Un enumerador COM. Consulte [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obtener un ejemplo.
   
  *piid*  
  Un puntero al identificador de interfaz de la interfaz de enumerador.  
@@ -65,11 +65,11 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::Clone](#clone)|La implementación de [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[IEnumOnSTLImpl::Clone](#clone)|La implementación de **clon**.|  
 |[IEnumOnSTLImpl::Init](#init)|Inicializa el enumerador.|  
-|[IEnumOnSTLImpl::Next](#next)|La implementación de [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[IEnumOnSTLImpl::Reset](#reset)|La implementación de [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[IEnumOnSTLImpl::Skip](#skip)|La implementación de [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[IEnumOnSTLImpl::Next](#next)|La implementación de **siguiente**.|  
+|[IEnumOnSTLImpl::Reset](#reset)|La implementación de **restablecer**.|  
+|[IEnumOnSTLImpl::Skip](#skip)|La implementación de **Skip**.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -122,7 +122,7 @@ HRESULT Init(
  Debe llamar a este método antes de pasar un puntero a la interfaz del enumerador a los clientes.  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- Este método proporciona la implementación de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) método mediante la creación de un objeto de tipo `CComEnumOnSTL`, inicializándola con la misma colección e iterador utilizados por el objeto actual y devuelve la interfaz en el objeto recién creado.  
+ Este método proporciona la implementación de la **clon** método mediante la creación de un objeto de tipo `CComEnumOnSTL`, inicializándola con la misma colección e iterador utilizados por el objeto actual y devuelve la interfaz en la recién objeto creado.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -163,7 +163,7 @@ CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- Este método proporciona la implementación de la [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) método.  
+ Este método proporciona la implementación de la **siguiente** método.  
   
 ```
 STDMETHOD(Next)(
@@ -186,7 +186,7 @@ STDMETHOD(Next)(
  Un valor HRESULT estándar.  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- Este método proporciona la implementación de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) método.  
+ Este método proporciona la implementación de la **restablecer** método.  
   
 ```
 STDMETHOD(Reset)(void);
@@ -196,7 +196,7 @@ STDMETHOD(Reset)(void);
  Un valor HRESULT estándar.  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- Este método proporciona la implementación de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) método.  
+ Este método proporciona la implementación de la **Skip** método.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

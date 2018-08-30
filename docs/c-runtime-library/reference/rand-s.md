@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c75b2988dd00d8141c25e67c29bcc0b082270ffe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405762"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210167"
 ---
 # <a name="rands"></a>rand_s
 
-Genera un número pseudoaleatorio. Se trata de una versión más segura de la función [rand](rand.md), con mejoras de seguridad, como se describe en [características de seguridad en CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Genera un número pseudoaleatorio. Se trata de una versión más segura de la función [rand](rand.md), con mejoras de seguridad, como se describe en [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,20 +61,20 @@ Un puntero a un entero que contenga el valor generado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto, código de error en caso contrario. Si el puntero de entrada _randomValue_ es un puntero nulo, la función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**. Si se produce un error en la función por cualquier otro motivo, *_randomValue_ se establece en 0.
+Cero si es correcto, código de error en caso contrario. Si el puntero de entrada _randomValue_ es un puntero nulo, la función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**. Si se produce un error en la función por cualquier otra razón, *_randomValue_ se establece en 0.
 
 ## <a name="remarks"></a>Comentarios
 
-El **rand_s** función escribe un entero de pseudoaleatorio en el intervalo de 0 a **UINT_MAX** al puntero de entrada. El **rand_s** función usa el sistema operativo para generar números aleatorios criptográficamente seguros. No utiliza el valor de inicialización generados por el [srand](srand.md) función, tampoco afecta a la secuencia de números aleatoria utilizada por [rand](rand.md).
+El **rand_s** función escribe un entero pseudoaleatorio entre 0 y **UINT_MAX** al puntero de entrada. El **rand_s** función usa el sistema operativo para generar números aleatorios criptográficamente seguros. No utiliza el valor de inicialización generado por el [srand](srand.md) función, tampoco afecta a la secuencia de números aleatorios utilizada por [rand](rand.md).
 
-El **rand_s** función requiere dicha constante **_CRT_RAND_S** definirse antes de la declaración de inclusión para la función que se declaren como en el ejemplo siguiente:
+El **rand_s** función requiere que la constante **_CRT_RAND_S** definirse antes de la declaración de inclusión de la función se declaren, como en el ejemplo siguiente:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s** depende de la [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API, que solo está disponible en Windows XP y versiones posteriores.
+**rand_s** depende de la [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, que solo está disponible en Windows XP y versiones posteriores.
 
 ## <a name="requirements"></a>Requisitos
 

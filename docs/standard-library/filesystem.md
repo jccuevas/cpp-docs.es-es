@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847252"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207928"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -39,7 +39,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> A partir de la versión de Visual Studio 2017 el \<filesystem > encabezado aún no era un estándar de C++. Visual C++ 2017 implementa el borrador final del estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> A partir de la versión de Visual Studio 2017, el \<filesystem > encabezado aún no era un estándar de C++. Visual C++ 2017 implementa el borrador final del estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Este encabezado admite sistemas de archivos para uno de dos tipos amplios de sistemas operativos host: Microsoft Windows y Posix.
 
@@ -128,10 +128,10 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 
 |nombre|Descripción|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|
+|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|
-|[en permisos](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|
+|[Perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|
 
 ## <a name="see-also"></a>Vea también
 

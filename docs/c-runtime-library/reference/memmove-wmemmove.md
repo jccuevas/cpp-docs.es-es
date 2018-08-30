@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401118"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204633"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -79,9 +79,9 @@ El valor de *dest*.
 
 Copias *recuento* bytes (**memmove**) o caracteres (**wmemmove**) desde *src* a *dest*. Si algunas regiones del área de origen y del destino se superponen, ambas funciones se aseguran de que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.
 
-**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-El **memmove** y **wmemmove** funciones solo quedarán desusadas si la constante **_CRT_SECURE_DEPRECATE_MEMORY** se define antes de la declaración de inclusión en orden para las funciones en desuso, como en el ejemplo siguiente:
+El **memmove** y **wmemmove** funciones solo dejarán de estar si la constante **_CRT_SECURE_DEPRECATE_MEMORY** se define antes de la declaración de inclusión en orden para las funciones en desuso, como en el ejemplo siguiente:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
