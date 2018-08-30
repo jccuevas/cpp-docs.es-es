@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73813c406011eaadd540398d3364ec183f8deaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a700d6e7befb71b1161ec27beb7a839f93e003e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414222"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211479"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -89,10 +89,10 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parámetros
 
 *start*<br/>
-Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) de la cadena de origen; *iniciar* debe preceder a *actual* en la cadena de origen.
+Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) en la cadena de origen; *iniciar* deben preceder a *actual* en la cadena de origen.
 
 *Actual*<br/>
-Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) de la cadena de origen; *actual* debe seguir *iniciar* en la cadena de origen.
+Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) en la cadena de origen; *actual* debe seguir *iniciar* en la cadena de origen.
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -105,12 +105,12 @@ Configuración regional que se va a usar.
 
 El **_mbsdec** y **_mbsdec_l** funciones devuelven un puntero al primer byte del carácter multibyte que precede inmediatamente a *actual* en la cadena que contiene *iniciar*.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información.  **_mbsdec** reconoce las secuencias de caracteres multibyte según la configuración regional que está actualmente en uso, mientras que **_mbsdec_l** es idéntica, salvo que usa el parámetro de configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información.  **_mbsdec** reconoce secuencias de caracteres multibyte según la configuración regional que está actualmente en uso, mientras que **_mbsdec_l** es idéntico, salvo que usa el parámetro de configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *iniciar* o *actual* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** a **EINVAL**.
+Si *iniciar* o *actual* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** a **EINVAL**.
 
 > [!IMPORTANT]
-> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -118,7 +118,7 @@ Si *iniciar* o *actual* es **NULL**, se invoca el controlador de parámetros no 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** y **_wcsdec** son versiones de caracteres de byte único y con caracteres anchos de **_mbsdec** y **_mbsdec_l**. **_strdec** y **_wcsdec** se proporcionan solo para esta asignación y no debe usarse en caso contrario.
+**_strdec** y **_wcsdec** son versiones de caracteres de byte único y de caracteres anchos de **_mbsdec** y **_mbsdec_l**. **_strdec** y **_wcsdec** se proporcionan solo para esta asignación y no debe usarse en caso contrario.
 
 Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
@@ -135,7 +135,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra un uso de **_tcsdec**.
+El ejemplo siguiente muestra un uso de **_tcsdec**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -161,7 +161,7 @@ int main()
 }
 ```
 
-En el ejemplo siguiente se muestra un uso de **_mbsdec**.
+El ejemplo siguiente muestra un uso de **_mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp
