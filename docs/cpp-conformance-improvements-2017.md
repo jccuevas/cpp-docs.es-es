@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572792"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900705"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) y [15.8](#update_158) de Visual Studio 2017
 
@@ -1680,6 +1680,8 @@ struct S : Base<T> {
 ```
 
 Para corregir el error, cambie la instrucción `return` por `return this->base_value;`.
+
+**Nota:** En la biblioteca Boost Python, durante mucho tiempo ha habido una solución alternativa específica para MSVC para una declaración adelantada de plantilla en [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). En el inicio del modo [/permissive-](build/reference/permissive-standards-conformance.md) con la versión 15.8 de Visual Studio 2017 (_MSC_VER=1915), el compilador de MSVC lleva a cabo correctamente una búsqueda de nombre dependiente del argumento (ADL) y es coherente con otros compiladores, por lo que esta restricción alternativa es innecesaria. Para evitar este error, *C3861: "unwind_type: no se encontró el identificador*, consulte [PR 229](https://github.com/boostorg/python/pull/229) en el repositorio Boostorg para actualizar el archivo de encabezado. Ya revisamos y corregimos el paquete [vcpkg](vcpkg.md) de Boost, por lo que si obtiene o actualiza los orígenes de Boost desde vcpkg, no necesita aplicar las revisiones por separado.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Declaraciones y definiciones de reenvío en el espacio de nombres std
 

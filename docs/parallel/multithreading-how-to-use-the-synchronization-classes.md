@@ -1,7 +1,7 @@
 ---
-title: 'Subprocesamiento múltiple: Cómo usar las clases de sincronización | Microsoft Docs'
+title: 'Subprocesamiento múltiple: Cómo usar las clases de sincronización de MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597894"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131267"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>Subprocesamiento múltiple: Uso de las clases de sincronización
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Subprocesamiento múltiple: Cómo usar las clases de sincronización de MFC
 Sincronizar el acceso a los recursos entre subprocesos es un problema habitual cuando se escriben aplicaciones multiproceso. Si dos o más subprocesos tienen acceso a los mismos datos simultáneamente, se pueden producir resultados impredecibles y no deseados. Por ejemplo, un subproceso podría estar actualizando el contenido de una estructura mientras que otro está leyendo el contenido de la misma estructura. No se puede saber qué datos recibirá el proceso de lectura: los datos antiguos, los datos recién escritos o, posiblemente, una mezcla de ambos. MFC proporciona una serie de clases de sincronización y de sincronización de acceso para contribuir a resolver este problema. Este tema describe las clases disponibles y su uso con el fin de crear clases seguras para subprocesos en una aplicación multiproceso típica.  
   
 Una aplicación multiproceso múltiple típica dispone de una clase que representa un recurso que se va a compartir entre subprocesos. Una clase bien diseñada completamente segura para la ejecución de subprocesos no requiere que el programador llame a ninguna función de sincronización. Todo se controla internamente en la clase; por tanto, el programador se puede concentrar en la mejor forma de usar la clase, no en si ésta puede resultar dañada por algún error. Una técnica eficaz para crear una clase segura para la ejecución de subprocesos consiste en fusionar mediante combinación la clase de sincronización en la clase del recurso. La integración de clases de sincronización en la clase compartida es un proceso sencillo.  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 El inconveniente de este enfoque es que la clase será ligeramente más lenta que la misma clase sin los objetos de sincronización agregados. Además, si existe la posibilidad de que varios subprocesos puedan eliminar el objeto, el enfoque de integración no siempre funcionará. En esta situación, es mejor mantener objetos de sincronización independientes.  
   
-Para obtener información acerca de cómo determinar la clase de sincronización que se va a usar en distintas situaciones, consulte [Multithreading: cuándo usar las clases de sincronización](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Para obtener más información acerca de la sincronización, consulte [sincronización](http://msdn.microsoft.com/library/windows/desktop/ms686353) en el SDK de Windows. Para obtener más información sobre la compatibilidad con multithreading en MFC, vea [Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Para obtener información acerca de cómo determinar la clase de sincronización que se va a usar en distintas situaciones, consulte [Multithreading: cuándo usar las clases de sincronización](multithreading-when-to-use-the-synchronization-classes.md). Para obtener más información acerca de la sincronización, consulte [sincronización](/windows/desktop/Sync/synchronization) en el SDK de Windows. Para obtener más información sobre la compatibilidad con multithreading en MFC, vea [Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Vea también  
  
-[Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md)
