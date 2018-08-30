@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 1) C4325 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4325 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936433987f823ae7d5d22cfd075f188dd5d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd265938afb51cc402dc84f38b7e95188c6292a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277649"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197490"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Advertencia del compilador (nivel 1) C4325
-**atributos para la sección estándar '**   
- ***sección* ' omite**  
-  
- No puede cambiar los atributos de una sección estándar. Por ejemplo:  
-  
-```  
-#pragma section(".sdata", long)  
-```  
-  
- Esto reemplazaría el `.sdata` sección estándar que utiliza el **corto** tipo de datos con la **largo** tipo de datos.  
-  
- Incluyen secciones estándares cuyos atributos no se pueden cambiar,  
-  
--   .Data  
-  
--   .sdata  
-  
--   BSS  
-  
--   .sbss  
-  
--   Text  
-  
--   .const  
-  
--   .sconst  
-  
--   rdata  
-  
--   .srdata  
-  
- Las secciones adicionales se pueden agregar más adelante.  
-  
-## <a name="see-also"></a>Vea también  
- [section](../../preprocessor/section.md)
+
+> los atributos de sección estándar '*sección*' omite
+
+## <a name="remarks"></a>Comentarios
+
+No puede cambiar los atributos de una sección estándar. Por ejemplo:
+
+```cpp
+#pragma section(".sdata", long)
+```
+
+Esto sobrescribirá la `.sdata` sección estándar que utiliza el **corto** tipo de datos con el **largo** tipo de datos.
+
+Incluyen secciones estándar cuyos atributos no pueden cambiar,
+
+- .Data
+
+- .sdata
+
+- . BSS
+
+- .sbss
+
+- Text
+
+- .const
+
+- .sconst
+
+- .rdata
+
+- .srdata
+
+Las secciones adicionales pueden agregarse más adelante.
+
+## <a name="see-also"></a>Vea también
+
+[section](../../preprocessor/section.md)

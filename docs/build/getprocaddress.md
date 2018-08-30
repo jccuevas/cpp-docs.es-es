@@ -1,5 +1,5 @@
 ---
-title: GetProcAddress | Documentos de Microsoft
+title: GetProcAddress | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91fd6b983d648b682cbd60fa6126189e102b9f1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367971"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194364"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-Procesos que se vinculan explícitamente a una llamada DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función exportada en el archivo DLL. Utilice el puntero de función devuelto para llamar a la función DLL. **GetProcAddress** toma como parámetros el identificador de módulo del archivo DLL (devuelto por **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) y toma el nombre de la función que desee en la llamada o el ordinal de exportación de la función.  
+Los procesos que se vinculan explícitamente a una llamada DLL [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función exportada en el archivo DLL. Use el puntero de función devuelto para llamar a la función DLL. **GetProcAddress** toma como parámetros el identificador de módulo del archivo DLL (devuelto por **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) y toma el nombre de la función que desee se debe llamar o el ordinal de exportación de la función.  
   
- Dado que está llamando a la función DLL mediante un puntero y no hay ninguna comprobación de tipo en tiempo de compilación, asegúrese de que los parámetros a la función son correctos para que no sobrepasar la memoria asignada en la pila y provoca una infracción de acceso. Una manera de ayudar a proporcionar seguridad de tipos es consultar los prototipos de función de las funciones exportadas y crear typedefs coincidentes para los punteros de función. Por ejemplo:  
+ Dado que está llamando a la función DLL mediante un puntero y no hay ninguna comprobación de tipo en tiempo de compilación, asegúrese de que los parámetros a la función son correctos para que no sobrepasar la memoria asignada en la pila y provocar una infracción de acceso. Una manera de ayudar a proporcionar seguridad de tipos es consultar los prototipos de función de las funciones exportadas y crear definiciones typedef coincidentes para los punteros de función. Por ejemplo:  
   
 ```  
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  
@@ -60,7 +60,7 @@ if (hDLL != NULL)
   
  Cómo especificar la función que desee al llamar a **GetProcAddress** depende de cómo se creó el archivo DLL.  
   
- Solo puede obtener el ordinal de exportación si el archivo DLL está vinculando se genera con un archivo de definición (.def) del módulo y si los ordinales se muestran con las funciones de la **exportaciones** sección del archivo .def de la DLL. Al llamar a **GetProcAddress** con una exportación es ligeramente más rápido si el archivo DLL tiene muchas funciones exportadas, porque los ordinales exportados sirven como índices en la DLL exportación tabla ordinal, en lugar del nombre de función. Con un ordinal de exportación, **GetProcAddress** puede encontrar la función directamente en lugar de comparar el nombre especificado con los nombres de función en la tabla de exportación del archivo DLL. Sin embargo, debe llamar a **GetProcAddress** con un ordinal de exportación únicamente si tiene control sobre la asignación de ordinales a las funciones exportadas en el archivo .def.  
+ Solo puede obtener el ordinal de exportación si se compila el archivo DLL se vincula a con un archivo de módulo (.def) de la definición y si los ordinales figuran en las funciones de la **exportaciones** sección del archivo .def de la DLL. Una llamada a **GetProcAddress** con una exportación ordinal en lugar del nombre de función es ligeramente más rápido si el archivo DLL tiene muchas funciones exportadas, dado que los ordinales exportados sirven como índices en la DLL exportación la tabla. Con un ordinal de exportación, **GetProcAddress** puede encontrar la función directamente en lugar de comparar el nombre especificado con los nombres de función en la tabla de exportación del archivo DLL. Sin embargo, debe llamar a **GetProcAddress** con un ordinal de exportación solo si tiene control sobre la asignación de ordinales a las funciones exportadas en el archivo. def.  
   
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?  
   
@@ -72,7 +72,7 @@ if (hDLL != NULL)
   
 -   [LoadLibrary y AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
   
--   [FreeLibrary](http://msdn.microsoft.com/library/windows/desktop/ms683152)  
+-   [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)  
   
 -   [Exportación desde un archivo DLL mediante archivos DEF](../build/exporting-from-a-dll-using-def-files.md)  
   

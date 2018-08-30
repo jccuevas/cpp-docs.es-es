@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e63a464b68267c8202cdf47717fd1cd81db639c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: cb0b50170de0ba5a5c38c1850369092d8453445a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203205"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr (clase)
 Esta clase proporciona métodos para convertir los nombres de host a direcciones de host, que admiten formatos de IPv4 e IPV6.  
@@ -60,7 +60,7 @@ class CSocketAddr
 ## <a name="remarks"></a>Comentarios  
  Esta clase proporciona una versión IP independiente del enfoque para buscar las direcciones de red para su uso con Windows sockets funciones de la API y los contenedores de socket en las bibliotecas.  
   
- Los miembros de esta clase que se usan para buscar las direcciones de red use la función de la API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
+ Los miembros de esta clase que se usan para buscar las direcciones de red use la función de la API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo).  
   
  Esta clase es compatible con ambas direcciones de red IPv4 andIPv6.  
   
@@ -124,7 +124,7 @@ int FindAddr(
  Devuelve cero si la dirección se calcula correctamente. Devuelve un código de error de Socket de Windows distinto de cero en caso de error. Si es correcto, la dirección calculada se almacena en una lista vinculada que pueda hacer referencia mediante `CSocketAddr::GetAddrInfoList` y `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Comentarios  
- El parámetro de nombre de host puede estar en formato IPv4 o IPv6. Este método llama a la función de la API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) para realizar la conversión.  
+ El parámetro de nombre de host puede estar en formato IPv4 o IPv6. Este método llama a la función de la API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) para realizar la conversión.  
   
 ##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  Llame a este método para convertir el nombre de host de IPv4 en la dirección del host.  
@@ -154,7 +154,7 @@ int FindINET4Addr(
  Devuelve cero si la dirección se calcula correctamente. Devuelve un código de error de Socket de Windows distinto de cero en caso de error. Si es correcto, la dirección calculada se almacena en una lista vinculada que pueda hacer referencia mediante `CSocketAddr::GetAddrInfoList` y `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a la función de la API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) para realizar la conversión.  
+ Este método llama a la función de la API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) para realizar la conversión.  
   
 ##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  Llame a este método para convertir el nombre de host de IPv6 en la dirección del host.  
@@ -184,7 +184,7 @@ int FindINET6Addr(
  Devuelve cero si la dirección se calcula correctamente. Devuelve un código de error de Socket de Windows distinto de cero en caso de error. Si es correcto, la dirección calculada se almacena en una lista vinculada que pueda hacer referencia mediante `CSocketAddr::GetAddrInfoList` y `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a la función de la API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) para realizar la conversión.  
+ Este método llama a la función de la API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) para realizar la conversión.  
   
 ##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  Llame a este método para devolver un puntero a un elemento específico de la `addrinfo` lista.  
@@ -195,7 +195,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
   
 ### <a name="parameters"></a>Parámetros  
  *nIndex*  
- Una referencia a un elemento específico de la [addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) lista.  
+ Una referencia a un elemento específico de la [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un puntero a la `addrinfo` estructura al que hace referencia *nIndex* en la lista vinculada que contiene información de la respuesta sobre el host.  

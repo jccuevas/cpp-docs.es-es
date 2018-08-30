@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886172"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196402"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID (clase)
 Esta clase de adaptador de argumento permite que los nombres de recursos (LPCTSTRs) o identificadores de recursos (unidades) que se pasará a una función sin necesidad de convertir el identificador en una cadena mediante la macro MAKEINTRESOURCE al llamador.  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|El identificador de recursos.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase está diseñada para implementar contenedores de la API de administración de recursos de Windows, como el [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), y [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funciones, que acepten un argumento LPCTSTR que puede ser el nombre de un recurso o su identificador.  
+ Esta clase está diseñada para implementar contenedores de la API de administración de recursos de Windows, como el [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), y [LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua) funciones, que acepten un argumento LPCTSTR que puede ser el nombre de un recurso o su identificador.  
   
  La clase define dos sobrecargas del constructor: uno acepta un argumento LPCTSTR y otra que acepta un argumento UINT. El argumento UINT se convierte en un tipo de recurso compatible con las funciones de administración de recursos de Windows mediante la macro MAKEINTRESOURCE y el resultado almacenado en el miembro de datos única de la clase, [m_lpstr](#_u_stringorid__m_lpstr). El argumento del constructor LPCTSTR se almacena directamente sin conversión.  
   

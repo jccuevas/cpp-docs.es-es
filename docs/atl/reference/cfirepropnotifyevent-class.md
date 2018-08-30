@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881534"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194429"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent (clase)
 Esta clase proporciona métodos para notificar el receptor del contenedor con respecto a los cambios de propiedad de control.  
@@ -60,7 +60,7 @@ class CFirePropNotifyEvent
  **Encabezado:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Notifica a todos conectados [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (en cada punto de conexión del objeto) que ha cambiado la propiedad del objeto especificado.  
+ Notifica a todos conectados [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaces (en cada punto de conexión del objeto) que ha cambiado la propiedad del objeto especificado.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -80,7 +80,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  Esta función es segura llamar a incluso si el control no admite puntos de conexión.  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Notifica a todos conectados [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (en cada punto de conexión del objeto) que la propiedad del objeto especificado que se va a cambiar.  
+ Notifica a todos conectados [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaces (en cada punto de conexión del objeto) que la propiedad del objeto especificado que se va a cambiar.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);

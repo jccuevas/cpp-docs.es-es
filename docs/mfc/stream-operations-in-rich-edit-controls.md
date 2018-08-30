@@ -1,5 +1,5 @@
 ---
-title: Secuencia de operaciones en los controles Rich Edit | Documentos de Microsoft
+title: Stream operaciones en los controles Rich Edit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66afb05031b302877dfd34f64e6076f882a256d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f418156fb5be4837bc0dbe9b05b3ad26d7ac02dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379930"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196863"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operaciones de secuencia en los controles Rich Edit
-Puede utilizar secuencias para transferir datos entre o salga de un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Un flujo se define mediante una [estructura EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estructura, que especifica un búfer y una función de devolución de llamada definida por la aplicación.  
+Puede utilizar secuencias para transferir datos dentro o fuera de un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Un flujo se define mediante una [estructura EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) estructura, que especifica un búfer y una función de devolución de llamada definido por la aplicación.  
   
- Para leer datos en un amplio control de edición (es decir, los datos de secuencia), utilice la [función miembro StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) función miembro. El control llama repetidamente a la función de devolución de llamada definida por la aplicación, que transfiere una parte de los datos en el búfer cada vez.  
+ Para leer datos en un amplio control de edición (es decir, los datos de secuencia), utilice el [función miembro StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) función miembro. El control llama repetidamente a la función de devolución de llamada definido por la aplicación, que transfiere una parte de los datos en el búfer cada vez.  
   
- Para guardar el contenido de los datos completos de un control de edición (es decir, transmitir por secuencias los datos de salida), puede usar el [función miembro StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) función miembro. El control escribe varias veces en el búfer y, a continuación, llama a la función de devolución de llamada definida por la aplicación. Para cada llamada, la función de devolución de llamada guarda el contenido del búfer.  
+ Para guardar el contenido de un amplio control de edición (es decir, transmitir los datos de salida), puede usar el [función miembro StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) función miembro. El control escribe varias veces en el búfer y, a continuación, llama a la función de devolución de llamada definido por la aplicación. Para cada llamada, la función de devolución de llamada guarda el contenido del búfer.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CRichEditCtrl](../mfc/using-cricheditctrl.md)   

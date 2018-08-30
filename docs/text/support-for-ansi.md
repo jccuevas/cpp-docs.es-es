@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde8693009cda20b59262034679aea1a73543401
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a6dca289631f3289a7976b6dc3482770bf5f3fe7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595667"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200623"
 ---
 # <a name="support-for-ansi"></a>Compatibilidad con ANSI
 La mayoría de los métodos y clases MFC admiten el juego de caracteres ANSI, aunque el marco de trabajo MFC como un todo está evolucionando gradualmente hacia el uso solo Unicode juego de caracteres. Debido a las mejoras en curso en la versión 6.1 de Windows Vista y los controles comunes de Windows, compatibilidad para varias clases y métodos ANSI está en desuso.  Para obtener más información, consulte [API de ANSI en desuso](../mfc/deprecated-ansi-apis.md) y [compatibilidad con Unicode](../text/support-for-unicode.md).  
@@ -29,4 +29,4 @@ La mayoría de los métodos y clases MFC admiten el juego de caracteres ANSI, au
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con Unicode](../text/support-for-unicode.md)   
  [API ANSI en desuso](../mfc/deprecated-ansi-apis.md)   
- [Shell y las versiones de los controles comunes](http://msdn.microsoft.com/library/windows/desktop/bb776779)
+ [Shell y las versiones de los controles comunes](https://msdn.microsoft.com/library/windows/desktop/bb776779)

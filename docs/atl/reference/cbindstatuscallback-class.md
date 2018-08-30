@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8df8ef2a0846f5ac90a2adfc53fa64da92930f3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8879c1d304e6d46b7ae3c8c2f1ed535526a5390e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202467"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback (clase)
 Esta clase implementa la interfaz `IBindStatusCallback`.  
@@ -101,10 +101,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Número total de bytes leídos.|  
 |[CBindStatusCallback::m_pFunc](#m_pfunc)|Puntero a la función se llama cuando hay datos disponibles.|  
 |[CBindStatusCallback::m_pT](#m_pt)|Puntero al objeto que solicita la transferencia de datos asincrónica.|  
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Puntero a la [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) interfaz para la operación de enlace actual.|  
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Puntero a la [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) interfaz para la operación de enlace actual.|  
 |[CBindStatusCallback::m_spBinding](#m_spbinding)|Puntero a la `IBinding` interfaz para la operación de enlace actual.|  
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Puntero a la [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) interfaz para la dirección URL.|  
-|[CBindStatusCallback::m_spStream](#m_spstream)|Puntero a la [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaz para la transferencia de datos.|  
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Puntero a la [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) interfaz para la dirección URL.|  
+|[CBindStatusCallback::m_spStream](#m_spstream)|Puntero a la [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaz para la transferencia de datos.|  
   
 ## <a name="remarks"></a>Comentarios  
  La clase `CBindStatusCallback` implementa la interfaz `IBindStatusCallback`. `IBindStatusCallback` se debe implementar la aplicación para que puedan recibir notificaciones de una transferencia de datos asincrónica. El moniker asincrónico proporcionado por el sistema usa `IBindStatusCallback` métodos para enviar y recibir información sobre los datos asincrónicos se transfieren hacia y desde el objeto.  
@@ -278,7 +278,7 @@ T* m_pT;
  La `CBindStatusCallback` objeto se hace plantilla en la clase de este objeto.  
   
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
- Un puntero a un [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) interfaz que proporciona acceso al contexto de enlace (un objeto que almacena información sobre una operación de enlace de moniker determinado).  
+ Un puntero a un [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) interfaz que proporciona acceso al contexto de enlace (un objeto que almacena información sobre una operación de enlace de moniker determinado).  
   
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -298,7 +298,7 @@ CComPtr<IBinding> m_spBinding;
  Inicializado en `OnStartBinding` y se lanzan en `OnStopBinding`.  
   
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
- Un puntero a la [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) interfaz para la dirección URL.  
+ Un puntero a la [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) interfaz para la dirección URL.  
   
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -308,7 +308,7 @@ CComPtr<IMoniker> m_spMoniker;
  Inicializado en `StartAsyncDownload`.  
   
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
- Un puntero a la [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaz de la operación de enlace actual.  
+ Un puntero a la [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaz de la operación de enlace actual.  
   
 ```
 CComPtr<IStream> m_spStream;
@@ -336,10 +336,10 @@ STDMETHOD(
  [in] La cantidad acumulada (en bytes) de datos disponibles desde el principio del enlace. Puede ser cero, lo que indica que la cantidad de datos no es relevante o que ninguna cantidad específica, empezó a estar disponible.  
   
  *pFormatEtc*  
- [in] Puntero a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682242) estructura que contiene el formato de los datos disponibles. Si no hay ningún formato, puede ser CF_NULL.  
+ [in] Puntero a la [FORMATETC](/windows/desktop/com/the-formatetc-structure) estructura que contiene el formato de los datos disponibles. Si no hay ningún formato, puede ser CF_NULL.  
   
  *pstgmed*  
- [in] Puntero a la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms695269) estructura que contiene los datos reales que ya está disponibles.  
+ [in] Puntero a la [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) estructura que contiene los datos reales que ya está disponibles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los valores HRESULT estándar.  

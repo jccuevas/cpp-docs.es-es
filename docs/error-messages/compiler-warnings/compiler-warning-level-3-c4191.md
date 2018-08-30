@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4191 | Documentos de Microsoft
+title: Del compilador (nivel 3) de la advertencia C4191 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291497"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197503"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Advertencia del compilador (nivel 3) C4191
 'operador/operación': conversión no segura de 'tipo de expresión' a 'tipo necesario'  
@@ -36,7 +36,7 @@ ms.locfileid: "33291497"
   
 -   Las longitudes de la lista de argumentos son diferentes (en `__cdecl`, solo en la conversión de una lista más larga a otra más corta, incluso si la más corta es varargs).  
   
--   Puntero a datos (distinto de **void\***) tiene un alias respecto de un puntero a función.  
+-   Puntero a datos (distinto de **void**<strong>\*</strong>) tiene un alias respecto de un puntero a función.  
   
 -   Cualquier otra diferencia de tipos que pueda producir un error o una advertencia en `reinterpret_cast`.  
   

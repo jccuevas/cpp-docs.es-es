@@ -1,5 +1,5 @@
 ---
-title: -constexpr (Control constexpr de evaluación) | Documentos de Microsoft
+title: -constexpr (controlar la evaluación constexpr) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,37 +19,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202579"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (control constexpr de evaluación)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (controlar la evaluación constexpr)  
   
-Use la **/constexpr** opciones del compilador para los parámetros de control para `constexpr` evaluación en tiempo de compilación.  
+Use la **/constexpr** opciones del compilador para los parámetros de control para **constexpr** evaluación en tiempo de compilación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-> /constexpr:Depth*N*  
-> /constexpr:backtrace*N*  
-> /constexpr:Steps*N*  
+> **/ constexpr: Depth**<em>N</em>  
+> **/ constexpr: backtrace**<em>N</em>  
+> **/ constexpr: Steps**<em>N</em>  
   
 ## <a name="arguments"></a>Argumentos  
   
-**profundidad *** N*  
-Limitar la profundidad de recursiva `constexpr` que la invocación de función *N* niveles. El valor predeterminado es 512.  
+**profundidad**<em>N</em>  
+Limitar la profundidad de recursiva **constexpr** invocación de función *N* niveles. El valor predeterminado es 512.  
   
-**seguimiento regresivo *** N*  
-Mostrar hasta *N* `constexpr` evaluaciones de diagnóstico. El valor predeterminado es 10.  
+**seguimiento regresivo**<em>N</em>  
+Mostrar hasta *N* **constexpr** evaluaciones en diagnósticos. El valor predeterminado es 10.  
   
-**pasos *** N*  
-Terminar `constexpr` evaluación después de *N* pasos. El valor predeterminado es 100.000.  
+**pasos**<em>N</em>  
+Finalizar **constexpr** evaluación después *N* pasos. El valor predeterminado es 100.000.  
   
 ## <a name="remarks"></a>Comentarios  
   
-El **/constexpr** opciones de compilador controlan la evaluación en tiempo de compilación de `constexpr` expresiones. Pasos de evaluación, los niveles de recursividad y seguimiento regresivo profundidad se controlan para impedir que el compilador pasan demasiado tiempo en `constexpr` evaluación. Para obtener más información sobre la `constexpr` elemento del lenguaje, consulte [constexpr (C++)](../../cpp/constexpr-cpp.md).  
+El **/constexpr** opciones del compilador de controlan la evaluación de tiempo de compilación de **constexpr** expresiones. Pasos para la evaluación, los niveles de recursividad y seguimiento regresivo profundidad se controlan para evitar que el compilador dedicar demasiado tiempo en **constexpr** evaluación. Para obtener más información sobre la **constexpr** elemento del lenguaje, consulte [constexpr (C++)](../../cpp/constexpr-cpp.md).  
 
 El **/constexpr** opciones están disponibles a partir de Visual Studio 2015.  
   
@@ -57,7 +57,7 @@ El **/constexpr** opciones están disponibles a partir de Visual Studio 2015.
   
 1. Abra el proyecto **páginas de propiedades** cuadro de diálogo.   
   
-2. En **propiedades de configuración**, expanda la **C/C++** carpeta y elija el **línea de comandos** página de propiedades.  
+2. En **propiedades de configuración**, expanda el **C o C++** carpeta y elija el **línea de comandos** página de propiedades.  
   
 3. Escriba cualquier **/constexpr** opciones del compilador en el **opciones adicionales** cuadro. Elija **Aceptar** o **aplicar** para guardar los cambios.  
   

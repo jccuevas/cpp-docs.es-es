@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a8b2ca6ebbc0201a3c56c9239b665c55ccd9eb13
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853490"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202750"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog (clase)
 Se utiliza en el cuadro de diálogo Cambiar origen de OLE.  
@@ -77,9 +77,9 @@ class COleChangeSourceDialog : public COleDialog
 |[COleChangeSourceDialog::m_cs](#m_cs)|Una estructura que controla el comportamiento del cuadro de diálogo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Crear un objeto de clase `COleChangeSourceDialog` cuando desee llamar a este cuadro de diálogo. Después de un `COleChangeSourceDialog` se ha construido el objeto, puede usar el [m_cs](#m_cs) estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El `m_cs` estructura es de tipo [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160). Para obtener más información sobre el uso de esta clase de cuadro de diálogo, vea el [DoModal](#domodal) función miembro.  
+ Crear un objeto de clase `COleChangeSourceDialog` cuando desee llamar a este cuadro de diálogo. Después de un `COleChangeSourceDialog` se ha construido el objeto, puede usar el [m_cs](#m_cs) estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El `m_cs` estructura es de tipo [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea). Para obtener más información sobre el uso de esta clase de cuadro de diálogo, vea el [DoModal](#domodal) función miembro.  
   
- Para obtener más información, consulte el [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura en el SDK de Windows.  
   
  Para obtener más información acerca de los cuadros de diálogo específicos de OLE, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -120,7 +120,7 @@ explicit COleChangeSourceDialog(
 ### <a name="remarks"></a>Comentarios  
  Para mostrar el cuadro de diálogo, llame a la [DoModal](#domodal) función.  
   
- Para obtener más información, consulte el [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura y [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) función en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura y [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) función en el SDK de Windows.  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Llame a esta función para mostrar el cuadro de diálogo origen de OLE cambio.  
@@ -136,7 +136,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL si el usuario canceló el cuadro de diálogo.  
   
-- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) función en el SDK de Windows.  
+- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) función en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea inicializar los distintos controles de cuadro de diálogo mediante el establecimiento de los miembros de la [m_cs](#m_cs) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.  
@@ -185,9 +185,9 @@ CString GetFromPrefix();
 ### <a name="remarks"></a>Comentarios  
  Llamada a esta función solo después de [DoModal](#domodal) devuelve IDOK.  
   
- Este valor proviene directamente de la `lpszFrom` miembro de la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura.  
+ Este valor proviene directamente de la `lpszFrom` miembro de la [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura.  
   
- Para obtener más información, consulte el [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura en el SDK de Windows.  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  Llame a esta función para recuperar la parte de moniker del elemento del nombre para mostrar para el elemento vinculado del cliente.  
@@ -215,12 +215,12 @@ CString GetToPrefix();
 ### <a name="remarks"></a>Comentarios  
  Llamada a esta función solo después de [DoModal](#domodal) devuelve IDOK.  
   
- Este valor proviene directamente de la `lpszTo` miembro de la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura.  
+ Este valor proviene directamente de la `lpszTo` miembro de la [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura.  
   
- Para obtener más información, consulte el [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura en el SDK de Windows.  
   
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
- Este miembro de datos es una estructura de tipo [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
+ Este miembro de datos es una estructura de tipo [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea).  
   
 ```  
 OLEUICHANGESOURCE m_cs;  
@@ -229,7 +229,7 @@ OLEUICHANGESOURCE m_cs;
 ### <a name="remarks"></a>Comentarios  
  `OLEUICHANGESOURCE` se usa para controlar el comportamiento del cuadro de diálogo origen de OLE cambio. Los miembros de esta estructura se pueden modificar directamente.  
   
- Para obtener más información, consulte el [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura en el SDK de Windows.  
   
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  Llame a esta función para determinar si el nuevo origen es válido.  
@@ -244,7 +244,7 @@ BOOL IsValidSource();
 ### <a name="remarks"></a>Comentarios  
  Llamada a esta función solo después de [DoModal](#domodal) devuelve IDOK.  
   
- Para obtener más información, consulte el [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) estructura en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [COleDialog (clase)](../../mfc/reference/coledialog-class.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 449887e2424ce86fd97407b416e741c908910dfa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592016"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202295"
 ---
 # <a name="restricted"></a>restricted
 
@@ -43,7 +43,7 @@ Una o más interfaces que no se llama de forma arbitraria en un objeto COM. Este
 
 ## <a name="remarks"></a>Comentarios
 
-El **restringido** atributo de C++ tiene la misma funcionalidad que el [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL.
+El **restringido** atributo de C++ tiene la misma funcionalidad que el [restringido](/windows/desktop/Midl/restricted) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

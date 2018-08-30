@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196967"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (clase)
 Esta clase proporciona un grupo de subprocesos de trabajo que procesan una cola de elementos de trabajo.  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Comentarios  
  Se crean y se destruyen cuando se inicializa, cambia el tamaño o cerrar el grupo de subprocesos en el grupo. Una instancia de clase *trabajo* se crearán en la pila de cada subproceso de trabajo en el grupo. Cada instancia se encontrarán durante la vigencia del subproceso.  
   
- Inmediatamente después de la creación de un subproceso, *trabajo*:: `Initialize` se llamará en el objeto asociado a ese subproceso. Inmediatamente antes de la destrucción de un subproceso, *trabajo*:: `Terminate` se llamará. Ambos métodos deben aceptar una **void\***  argumento. El valor de este argumento se pasa al grupo de subprocesos a través de la *pvWorkerParam* parámetro de [CThreadPool::Initialize](#initialize).  
+ Inmediatamente después de la creación de un subproceso, *trabajo*::`Initialize` se llamará en el objeto asociado a ese subproceso. Inmediatamente antes de la destrucción de un subproceso, *trabajo*::`Terminate` se llamará. Ambos métodos deben aceptar una **void** <strong>\*</strong> argumento. El valor de este argumento se pasa al grupo de subprocesos a través de la *pvWorkerParam* parámetro de [CThreadPool::Initialize](#initialize).  
   
- Cuando hay elementos de trabajo en los subprocesos de trabajo y de cola disponible para el trabajo, un subproceso de trabajo extrae un elemento fuera de la cola y llame a la `Execute` método de la *trabajo* objeto para ese subproceso. Tres elementos, a continuación, se pasan al método: el elemento de la cola, el mismo `pvWorkerParam` pasado a *trabajo*:: `Initialize` y *trabajo*:: `Terminate`y un puntero a la [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estructura usada para la cola de puerto de finalización de E/S.  
+ Cuando hay elementos de trabajo en los subprocesos de trabajo y de cola disponible para el trabajo, un subproceso de trabajo extrae un elemento fuera de la cola y llame a la `Execute` método de la *trabajo* objeto para ese subproceso. Tres elementos, a continuación, se pasan al método: el elemento de la cola, el mismo `pvWorkerParam` pasado a *trabajo*:: `Initialize` y *trabajo*:: `Terminate`y un puntero a la [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) estructura usada para la cola de puerto de finalización de E/S.  
   
  El *trabajo* clase declara el tipo de los elementos que se pondrán en cola en el grupo de subprocesos, ya que proporciona una definición de tipo *trabajo*:: `RequestType`. Este tipo debe ser capaz de que se va a convertir a y desde un ULONG_PTR.  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre. Si se especifica 0 o ningún valor, este método usará el tiempo de espera establecido por [CThreadPool::SetTimeout](#settimeout).  
   
 ### <a name="remarks"></a>Comentarios  
- Este método envía una solicitud de cierre a todos los subprocesos del grupo. Si se agota el tiempo de espera, se llamará este método [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) en cualquier subproceso que no se cerró. Este método se llama automáticamente desde el destructor de la clase.  
+ Este método envía una solicitud de cierre a todos los subprocesos del grupo. Si se agota el tiempo de espera, se llamará este método [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) en cualquier subproceso que no se cerró. Este método se llama automáticamente desde el destructor de la clase.  
   
 ## <a name="see-also"></a>Vea también  
  [IThreadPoolConfig (interfaz)](../../atl/reference/ithreadpoolconfig-interface.md)   

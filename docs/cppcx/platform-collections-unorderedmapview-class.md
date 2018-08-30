@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203033"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 Representa una vista de solo lectura en un *mapa*, que es una colección de pares clave-valor.  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Espacio de nombres:** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First (Método)
-Devuelve un iterador que especifica el primer [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento del mapa no ordenado.  
+Devuelve un iterador que especifica el primer [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento del mapa no ordenado.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  UnorderedMapView::Size (Método)
-Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos en el objeto UnorderedMapView.  
+Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos en el objeto UnorderedMapView.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Typename del objeto UnorderedMapView.  
   
  `H`  
- Objeto de función que puede generar un valor hash para una clave. El valor predeterminado es [std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) para los tipos que `std::hash` admite.  
+ Objeto de función que puede generar un valor hash para una clave. El valor predeterminado es [std:: hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) para los tipos que `std::hash` admite.  
   
  `P`  
  Tipo que proporciona un objeto de función que puede comparar dos claves para determinar si son iguales. El valor predeterminado es [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  

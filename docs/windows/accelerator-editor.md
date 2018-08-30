@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81642132272b40229437c2be8bac32d160885600
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578099"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202281"
 ---
 # <a name="accelerator-editor"></a>Editor de aceleradores
 
@@ -35,7 +35,7 @@ Una tabla de aceleradores es un recurso de Windows que contiene una lista de tec
 
 Normalmente, los aceleradores se usan como métodos abreviados de teclado para comandos de programa que también están disponibles en un menú o una barra de herramientas. Sin embargo, puede usar la tabla de aceleradores para definir las combinaciones de teclas para los comandos que no tienen asociado un objeto de interfaz de usuario.
 
-Puede usar [vista de clases](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) para enlazar comandos de teclas de aceleración al código.
+Puede usar [vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) para enlazar comandos de teclas de aceleración al código.
 
 Con el **acelerador** editor, puede:
 

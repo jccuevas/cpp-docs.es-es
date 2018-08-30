@@ -1,5 +1,5 @@
 ---
-title: DEVNAMES (estructura) | Documentos de Microsoft
+title: DEVNAMES (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c13167c42c6acbfcc5f3af500205eed6ab884d9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e2ba459a2ee98a89e264be452b04f116072d41e6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121580"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194616"
 ---
 # <a name="devnames-structure"></a>DEVNAMES (Estructura)
-El `DEVNAMES` estructura contiene las cadenas que identifican el controlador, el dispositivo y los nombres de puerto de salida de una impresora.  
+El `DEVNAMES` estructura contiene cadenas que identifican el controlador, dispositivo y los nombres de puerto de salida de una impresora.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,16 +44,16 @@ typedef struct tagDEVNAMES { /* dvnm */
  (Entrada/salida) Especifica el desplazamiento de caracteres en una cadena terminada en null que contiene el nombre de archivo (sin extensión) del controlador del dispositivo. En la entrada, esta cadena se usa para determinar la impresora para mostrar inicialmente en el cuadro de diálogo.  
   
  *wDeviceOffset*  
- (Entrada/salida) Especifica el desplazamiento de caracteres a la cadena terminada en null (máximo de 32 bytes incluido el carácter null) que contiene el nombre del dispositivo. Esta cadena debe ser idéntica a la `dmDeviceName` miembro de la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) estructura.  
+ (Entrada/salida) Especifica el desplazamiento de caracteres en la cadena terminada en null (máximo de 32 bytes incluir el carácter nulo) que contiene el nombre del dispositivo. Esta cadena debe ser idéntica a la `dmDeviceName` miembro de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) estructura.  
   
  *wOutputOffset*  
- (Entrada/salida) Especifica el desplazamiento de caracteres a la cadena terminada en null que contiene el nombre de dispositivo de DOS para el medio físico de salida (puerto de salida).  
+ (Entrada/salida) Especifica el desplazamiento de caracteres en la cadena terminada en null que contiene el nombre de dispositivo de denegación de servicio para el medio físico de salida (puerto de salida).  
   
  *wDefault*  
- Especifica si las cadenas se incluye en el `DEVNAMES` estructura identifican la impresora predeterminada. Esta cadena se usa para comprobar que la impresora predeterminada no ha cambiado desde la última operación de impresión. En la entrada, si se establece la marca DN_DEFAULTPRN, los otros valores en la `DEVNAMES` estructura se comprueban en la impresora predeterminada actual. Si cualquiera de las cadenas no coinciden, se muestra un mensaje de advertencia que informa al usuario que el documento que deba cambiar el formato. En la salida, la `wDefault` miembro solo cambia si se muestra el cuadro de diálogo de instalación de impresión y el usuario elige el botón Aceptar. Si se ha seleccionado la impresora predeterminada, se establece la marca DN_DEFAULTPRN. Si se selecciona una impresora determinada, no se estableció el marcador. Todos los demás bits en este miembro se reservan para uso interno por el procedimiento de cuadro de diálogo de impresión.  
+ Especifica si las cadenas que contiene el `DEVNAMES` estructura identifican la impresora predeterminada. Esta cadena se usa para comprobar que la impresora predeterminada no ha cambiado desde la última operación de impresión. En la entrada, si se establece la marca DN_DEFAULTPRN, los otros valores en el `DEVNAMES` estructura se comprueban con la impresora predeterminada actual. Si cualquiera de las cadenas no coinciden, se muestra un mensaje de advertencia que informa al usuario que deba volver a formatear el documento. En la salida, el `wDefault` miembro solo cambia si se muestra el cuadro de diálogo de instalación de impresión y el usuario elige el botón Aceptar. Si se ha seleccionado la impresora predeterminada, se establece la marca DN_DEFAULTPRN. Si se selecciona una determinada impresora, no se establece la marca. Todos los demás bits en este miembro se reservan para uso interno por el procedimiento de cuadro de diálogo de impresión.  
   
 ## <a name="remarks"></a>Comentarios  
- El `PrintDlg` función estas cadenas utiliza para inicializar los miembros en el cuadro de diálogo de impresión definida por el sistema. Cuando el usuario cierra el cuadro de diálogo, se devuelve información acerca de la impresora seleccionada en esta estructura.  
+ El `PrintDlg` función usa estas cadenas para inicializar los miembros en el cuadro de diálogo Imprimir definido por el sistema. Cuando el usuario cierra el cuadro de diálogo, se devuelve información acerca de la impresora seleccionada en esta estructura.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** commdlg.h  

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1469bef0ef41c72e2ff5e59017088cd63f0f9c79
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850818"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194603"
 ---
 # <a name="reference-counting"></a>Recuento de referencias
 El propio COM no automáticamente intenta quitar un objeto de memoria cuando piensa que el objeto ya no está usando. En su lugar, el programador de objetos debe quitar el objeto sin usar. El programador determina si un objeto se puede quitar según un recuento de referencias.  
   
- COM utiliza el `IUnknown` métodos, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) y [versión](http://msdn.microsoft.com/library/windows/desktop/ms682317), para administrar el recuento de referencias de las interfaces en un objeto. Las reglas generales para llamar a estos métodos son:  
+ COM utiliza el `IUnknown` métodos, [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) y [versión](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), para administrar el recuento de referencias de las interfaces en un objeto. Las reglas generales para llamar a estos métodos son:  
   
 -   Cada vez que un cliente recibe un puntero de interfaz `AddRef` debe llamarse en la interfaz.  
   
@@ -43,5 +43,5 @@ El propio COM no automáticamente intenta quitar un objeto de memoria cuando pie
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a COM](../atl/introduction-to-com.md)   
- [Administrar la duración de objeto a través de un recuento de referencias](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [Administrar la duración de objeto a través de un recuento de referencias](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

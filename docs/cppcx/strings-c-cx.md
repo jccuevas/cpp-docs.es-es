@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f33b6b1738e9027c88d171fc7bacc729fb507b10
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202353"
 ---
 # <a name="strings-ccx"></a>Cadenas (C++/CX)
 Se representa el texto en el tiempo de ejecución de Windows en C++ / c++ / CX por la [clase Platform:: String](../cppcx/platform-string-class.md). Use la `Platform::String Class` al pasar cadenas y hacia atrás a los métodos de clases en tiempo de ejecución de Windows, o cuando estés interactuando con otros componentes de Windows en tiempo de ejecución a través del límite de interfaz binaria (ABI) de la aplicación. La clase `Platform::String Class` proporciona métodos para varias operaciones de cadena comunes, pero no está diseñada para ser una clase de cadena completa. En el módulo de C++, utiliza los tipos de cadena de C++ estándar tales como [wstring](../standard-library/basic-string-class.md) para cualquier procesamiento de texto significativo y, a continuación, convierte el resultado final a [Platform::String^](../cppcx/platform-string-class.md) antes de pasarlo a o desde una interfaz pública. La conversión entre `wstring` o `wchar_t*` y `Platform::String`es un proceso sencillo y eficaz.  
@@ -76,4 +76,4 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos integrados](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)
+ [Tipos integrados](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

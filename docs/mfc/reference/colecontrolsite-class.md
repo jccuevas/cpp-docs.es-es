@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850360"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202860"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite (clase)
 Proporciona compatibilidad con interfaces de control de cliente personalizadas.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Las dimensiones del sitio del control.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta compatibilidad es el medio principal por el que un control ActiveX incrustado obtiene información sobre la ubicación y el alcance de su sitio de visualizaicón, su moniker, su interfaz de usuario, sus propiedades de ambientales y otros recursos proporcionados por su contenedor. `COleControlSite` implementa por completo el [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfaces. Además, también se implementa la interfaz IDispatch (proporcionar soporte para las propiedades de ambiente y receptores de eventos).  
+ Esta compatibilidad es el medio principal por el que un control ActiveX incrustado obtiene información sobre la ubicación y el alcance de su sitio de visualizaicón, su moniker, su interfaz de usuario, sus propiedades de ambientales y otros recursos proporcionados por su contenedor. `COleControlSite` implementa por completo el [IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite), [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite), [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfaces. Además, también se implementa la interfaz IDispatch (proporcionar soporte para las propiedades de ambiente y receptores de eventos).  
   
  Para crear un sitio del control ActiveX con `COleControlSite`, derive una clase de `COleControlSite`. En su `CWnd`-invalidar una clase derivada para el contenedor (por ejemplo, el cuadro de diálogo) el `CWnd::CreateControlSite` función.  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>Comentarios  
  Esta función llama directamente a través del control `IOleObject` interfaz para ejecutar el verbo especificado. Si se produce una excepción como resultado de esta llamada de función, se devuelve un código de error HRESULT.  
   
- Para obtener más información, consulte [DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) en el SDK de Windows.  
+ Para obtener más información, consulte [DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) en el SDK de Windows.  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Permite que los datos de origen para el sitio del control.  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta información se almacena en un [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) estructura.  
+ Esta información se almacena en un [CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo) estructura.  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Contiene la cookie del punto de conexión desde el receptor de eventos del control.  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)en el SDK de Windows.  
+ Para obtener más información, consulte [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)en el SDK de Windows.  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Contiene el [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) cookie.  
+ Contiene el [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- Contiene el [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interfaz del control.  
+ Contiene el [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) interfaz del control.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- Contiene el `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) interfaz del control.  
+ Contiene el `IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) interfaz del control.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- Contiene el `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) interfaz del control.  
+ Contiene el `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) interfaz del control.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Los estilos que se va a agregarse desde los estilos de ventana actual.  
   
  *nFlags*  
- Marcadores de posición de las ventanas. Para obtener una lista de valores posibles, vea el [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) función en el SDK de Windows.  
+ Marcadores de posición de las ventanas. Para obtener una lista de valores posibles, vea el [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) función en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se modifican los estilos, en caso contrario, cero.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Comentarios  
  Acciones del control propiedad Enabled se modificará para que coincida con la configuración de WS_DISABLED. Propiedades de estilo de borde estándar del control se modificará para que coincida con la configuración solicitada para WS_BORDER. Todos los demás estilos se aplican directamente al identificador de ventana del control, si hay alguno.  
   
- Modifica los estilos de ventana del control. Se pueden combinar los estilos para agregarse o quitarse mediante el uso de la operación OR bit a bit ( &#124; ) operador. Consulte la [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) función en el SDK de Windows para obtener información acerca de los estilos de ventana disponibles.  
+ Modifica los estilos de ventana del control. Se pueden combinar los estilos para agregarse o quitarse mediante el uso de la operación OR bit a bit ( &#124; ) operador. Consulte la [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) función en el SDK de Windows para obtener información acerca de los estilos de ventana disponibles.  
   
  Si *nFlags* es distinto de cero, `ModifyStyle` llama a la función de Win32 `SetWindowPos`y vuelve a dibujar la ventana mediante la combinación *nFlags* con los cuatro indicadores siguientes:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Los estilos extendidos para agregarse desde los estilos de ventana actual.  
   
  *nFlags*  
- Marcadores de posición de las ventanas. Para obtener una lista de valores posibles, vea el [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) función en el SDK de Windows.  
+ Marcadores de posición de las ventanas. Para obtener una lista de valores posibles, vea el [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) función en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se modifican los estilos, en caso contrario, cero.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Comentarios  
  Acciones del control propiedad Appearance se modificará para que coincida con la configuración de WS_EX_CLIENTEDGE. Todos los demás estilos de ventana extendidos se aplican directamente al identificador de ventana del control, si hay alguno.  
   
- Modifica la ventana estilos del objeto de sitio del control extendidos. Se pueden combinar los estilos para agregarse o quitarse mediante el uso de la operación OR bit a bit ( &#124; ) operador. Consulte la [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) función en el SDK de Windows para obtener información acerca de los estilos de ventana disponibles.  
+ Modifica la ventana estilos del objeto de sitio del control extendidos. Se pueden combinar los estilos para agregarse o quitarse mediante el uso de la operación OR bit a bit ( &#124; ) operador. Consulte la [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) función en el SDK de Windows para obtener información acerca de los estilos de ventana disponibles.  
   
  Si *nFlags* es distinto de cero, `ModifyStyleEx` llama a la función de Win32 `SetWindowPos`y vuelve a dibujar la ventana mediante la combinación *nFlags* con los cuatro indicadores siguientes:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  El nuevo alto de la ventana.  
   
  *nFlags*  
- Especifica la ventana de tamaño y la posición de marcas. Para los valores posibles, vea la sección Comentarios para [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) en el SDK de Windows.  
+ Especifica la ventana de tamaño y la posición de marcas. Para los valores posibles, vea la sección Comentarios para [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si es correcto, en caso contrario, es cero.  

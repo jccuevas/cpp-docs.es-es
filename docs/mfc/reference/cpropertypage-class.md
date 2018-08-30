@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203408"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (clase)
 Representa páginas individuales de una hoja de propiedades, también conocidas como cuadro de diálogo de pestaña.  
@@ -80,7 +80,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|Cambia el botón Aceptar para cerrar de lectura y deshabilita el botón Cancelar, tras un cambio en la página de una hoja de propiedades modal irrecuperable.|  
 |[CPropertyPage::Construct](#construct)|Construye un objeto `CPropertyPage`. Use `Construct` si desea especificar los parámetros en tiempo de ejecución, o si está utilizando matrices.|  
-|[CPropertyPage::GetPSP](#getpsp)|Recupera el Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) estructura asociada con el `CPropertyPage` objeto.|  
+|[CPropertyPage::GetPSP](#getpsp)|Recupera el Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) estructura asociada con el `CPropertyPage` objeto.|  
 |[CPropertyPage::OnApply](#onapply)|Lo llama el marco de trabajo cuando se hace clic en el botón Aplicar ahora.|  
 |[CPropertyPage::OnCancel](#oncancel)|Lo llama el marco de trabajo cuando se hace clic en el botón Cancelar.|  
 |[CPropertyPage:: OnKillActive](#onkillactive)|Lo llama el marco de trabajo cuando la página actual ya no es la página activa. Realizar la validación de datos aquí.|  
@@ -98,7 +98,7 @@ class CPropertyPage : public CDialog
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|El Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) estructura. Proporciona acceso a los parámetros de la página de propiedad básico.|  
+|[CPropertyPage::m_psp](#m_psp)|El Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) estructura. Proporciona acceso a los parámetros de la página de propiedad básico.|  
   
 ## <a name="remarks"></a>Comentarios  
  Como con cuadros de diálogo estándar, deriva una clase de `CPropertyPage` para cada página en la hoja de propiedades. Para usar `CPropertyPage`-objetos derivados, cree primero un [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) objeto y, a continuación, cree un objeto para cada página que se incluye en la hoja de propiedades. Llame a [CPropertySheet:: AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) para cada página en la hoja y, a continuación, muestre la hoja de propiedades mediante una llamada a [CPropertySheet:: DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) para una hoja de propiedades modal o [CPropertySheet:: Crear](../../mfc/reference/cpropertysheet-class.md#create) para una hoja de propiedades no modal.  
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- Recupera el Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) estructura asociada con el `CPropertyPage` objeto.  
+ Recupera el Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) estructura asociada con el `CPropertyPage` objeto.  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
  Una referencia a la `PROPSHEETPAGE` estructura.  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` es una estructura cuyos miembros almacenan las características de [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
+ `m_psp` es una estructura cuyos miembros almacenan las características de [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2).  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -306,7 +306,7 @@ virtual BOOL OnApply();
   
  La implementación predeterminada de `OnApply` llamadas `OnOK`.  
   
- Para obtener más información acerca de los mensajes de notificación se envía cuando el usuario presiona el aplicar ahora o botón Aceptar en una hoja de propiedades, vea [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) en el SDK de Windows.  
+ Para obtener más información acerca de los mensajes de notificación se envía cuando el usuario presiona el aplicar ahora o botón Aceptar en una hoja de propiedades, vea [PSN_APPLY](/windows/desktop/Controls/psn-apply) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPropertyPage::OnOK](#onok).  
@@ -352,7 +352,7 @@ virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando el usuario elige Aceptar o en el botón Aplicar ahora, el marco de trabajo recibe el [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) notificación desde la página de propiedades. La llamada a `OnOK` no se realizará si se llama a [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) porque la página de propiedades no envía la notificación en ese caso.  
+ Cuando el usuario elige Aceptar o en el botón Aplicar ahora, el marco de trabajo recibe el [PSN_APPLY](/windows/desktop/Controls/psn-apply) notificación desde la página de propiedades. La llamada a `OnOK` no se realizará si se llama a [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) porque la página de propiedades no envía la notificación en ese caso.  
   
  Reemplace esta función miembro para implementar el comportamiento adicional específico de la página actualmente activa cuando el usuario cierra la hoja de propiedades completa.  
   
@@ -447,7 +447,7 @@ virtual BOOL OnWizardFinish();
   
  Puede reemplazar esta función miembro para especificar alguna acción que el usuario debe realizar cuando se presiona el botón Finalizar. Al reemplazar esta función, devuelve FALSE para impedir que se está destruyendo la hoja de propiedades.  
   
- Para obtener más información acerca de los mensajes de notificación se envía cuando el usuario presiona el botón Finalizar en una hoja de propiedades del asistente, consulte [PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) en el SDK de Windows.  
+ Para obtener más información acerca de los mensajes de notificación se envía cuando el usuario presiona el botón Finalizar en una hoja de propiedades del asistente, consulte [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) en el SDK de Windows.  
   
  Para obtener más información sobre cómo realizar una hoja de propiedades de tipo asistente, consulte [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
   

@@ -1,5 +1,5 @@
 ---
-title: Clase CLinearTransitionFromSpeed | Documentos de Microsoft
+title: CLinearTransitionFromSpeed (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac677549c01f7e5360cfcda7c640dbf10318c172
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039487"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203313"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Clase CLinearTransitionFromSpeed
 Encapsula una transición de velocidad lineal.  
@@ -46,7 +46,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Construye un objeto de la transición de velocidad lineal y la inicializa con la velocidad y el valor final.|  
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Construye un objeto de la transición de velocidad lineal y lo inicializa con la velocidad y el valor final.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -59,10 +59,10 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 |Name|Descripción|  
 |----------|-----------------|  
 |[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|El valor de la variable de animación al final de la transición.|  
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|El valor absoluto del progreso de la variable.|  
+|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|El valor absoluto de velocidad de la variable.|  
   
 ## <a name="remarks"></a>Comentarios  
- Durante una transición de velocidad lineal, cambia el valor de la variable de animación a una velocidad especificada. La duración de la transición viene determinada por la diferencia entre el valor inicial y el valor final especificado. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador de nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
+ Durante una transición de velocidad lineal, cambia el valor de la variable de animación a una velocidad especificada. La duración de la transición viene determinada por la diferencia entre el valor inicial y el valor final especificado. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,7 +75,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
  **Encabezado:** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
- Construye un objeto de la transición de velocidad lineal y la inicializa con la velocidad y el valor final.  
+ Construye un objeto de la transición de velocidad lineal y lo inicializa con la velocidad y el valor final.  
   
 ```  
 CLinearTransitionFromSpeed(
@@ -85,7 +85,7 @@ CLinearTransitionFromSpeed(
   
 ### <a name="parameters"></a>Parámetros  
  *dblSpeed*  
- El valor absoluto del progreso de la variable.  
+ El valor absoluto de velocidad de la variable.  
   
  *dblFinalValue*  
  El valor de la variable de animación al final de la transición.  
@@ -101,7 +101,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parámetros  
 *pLibrary*  
- Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
+ Un puntero a un [IUIAnimationTransitionLibrary interfaz](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define una biblioteca de transiciones estándares.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; en caso contrario, FALSE.  
@@ -114,7 +114,7 @@ DOUBLE m_dblFinalValue;
 ```  
   
 ##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed  
- El valor absoluto del progreso de la variable.  
+ El valor absoluto de velocidad de la variable.  
   
 ```  
 DOUBLE m_dblSpeed;  

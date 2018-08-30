@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540887"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199926"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos utilizados por MFC  
   
@@ -308,7 +308,7 @@ Los siguientes estilos de cuadro combinado están disponibles en MFC. Para obten
   
 ## <a name="edit-styles"></a>  Estilos de edición  
   
-Editar los estilos se aplican a [clase CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obtener más información sobre los estilos de control de edición en Windows, consulte [estilos de Control de edición (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Editar los estilos se aplican a [clase CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obtener más información sobre los estilos de control de edición en Windows, consulte [estilos de Control de edición (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ Están disponibles los siguientes estilos de cuadro de mensaje.
   
 ## <a name="scroll-bar-styles"></a> Estilos de barra de desplazamiento  
   
-Se aplican los estilos de barra de desplazamiento para [CScrollBar (clase)](../../mfc/reference/cscrollbar-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obtener más información acerca de los estilos de control de Windows de la barra de desplazamiento, vea [estilos de Control de barra de desplazamiento (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Se aplican los estilos de barra de desplazamiento para [CScrollBar (clase)](../../mfc/reference/cscrollbar-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obtener más información acerca de los estilos de control de Windows de la barra de desplazamiento, vea [estilos de Control de barra de desplazamiento (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Se aplican los estilos de barra de desplazamiento para [CScrollBar (clase)](../.
   
 ## <a name="static-styles"></a> Estilos estáticos  
   
-Estilos estáticos se aplican a [CStatic (clase)](../../mfc/reference/cstatic-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obtener más información sobre los estilos de control estático en Windows, consulte [estilos de Control estática (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Estilos estáticos se aplican a [CStatic (clase)](../../mfc/reference/cstatic-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obtener más información sobre los estilos de control estático en Windows, consulte [estilos de Control estática (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-cl
 |WS_EX_CONTEXTHELP|Incluye un signo de interrogación en la barra de título de la ventana. Cuando el usuario hace clic en el signo de interrogación, el cursor se transforma en un signo de interrogación con un puntero. Si el usuario hace clic, a continuación, en una ventana secundaria, el elemento secundario recibe un mensaje WM_HELP.|  
 |WS_EX_CONTROLPARENT|Permite al usuario navegar entre las ventanas secundarias de la ventana mediante la tecla TAB.|  
 |WS_EX_DLGMODALFRAME|Designa una ventana con un borde doble que puede crearse (opcionalmente) con un título de la barra cuando se especifica el indicador de estilo WS_CAPTION en el *dwStyle* parámetro.|  
-|WS_EX_LAYERED|La ventana es un [ventana por capas](http://msdn.microsoft.com/library/ms632599.aspx#layered). Este estilo no se puede usar si la ventana tiene un [estilo de clase](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) de CS_OWNDC o CS_CLASSDC. Sin embargo, Microsoft Windows 8 es compatible con el estilo WS_EX_LAYERED para ventanas secundarias, donde las versiones anteriores de Windows solo lo admitían para ventanas de nivel superior.|  
+|WS_EX_LAYERED|La ventana es un [ventana por capas](/windows/desktop/winmsg/window-features). Este estilo no se puede usar si la ventana tiene un [estilo de clase](/windows/desktop/winmsg/about-window-classes) de CS_OWNDC o CS_CLASSDC. Sin embargo, Microsoft Windows 8 es compatible con el estilo WS_EX_LAYERED para ventanas secundarias, donde las versiones anteriores de Windows solo lo admitían para ventanas de nivel superior.|  
 |WS_EX_LEFT|Proporciona propiedades genéricas alineado a la izquierda de ventana. Este es el valor predeterminado.|  
 |WS_EX_LEFTSCROLLBAR|Coloca una barra de desplazamiento vertical a la izquierda del área cliente.|  
 |WS_EX_LTRREADING|Muestra el uso de izquierda a derecha el texto de la ventana Propiedades de orden de lectura. Este es el valor predeterminado.|  
@@ -524,14 +524,14 @@ Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-cl
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [Estilos de botón (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Estilos de cuadro combinado (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Edición de estilos de Control (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[Edición de estilos de Control (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [Lista de estilos de cuadro (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [función MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[estilos de Control de barra de desplazamiento (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Estilos de Control estática (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[estilos de Control de barra de desplazamiento (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[Estilos de Control estática (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [Estilos de ventana (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [Estilos de ventana extendidos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

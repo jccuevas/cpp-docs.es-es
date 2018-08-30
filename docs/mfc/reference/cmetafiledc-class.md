@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197008"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (clase)
 Implementa un metarchivo de Windows, que contiene una secuencia de comandos de la interfaz de dispositivo gráfico (GDI) que puede volver a consultar para crear la imagen o el texto que desee.  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  Después de enviar los comandos que quiera en el metarchivo, llame a la `Close` función miembro, lo que cierra los contextos de dispositivo de metarchivo y devuelve un identificador del metarchivo. A continuación, eliminarlos de la `CMetaFileDC` objeto.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) , a continuación, se puede usar el identificador del metarchivo para reproducir varias veces el metarchivo. Metarchivo también se puede manipular con las funciones de Windows como [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), que copia un metarchivo en el disco.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) , a continuación, se puede usar el identificador del metarchivo para reproducir varias veces el metarchivo. Metarchivo también se puede manipular con las funciones de Windows como [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), que copia un metarchivo en el disco.  
   
- Cuando ya no se necesita el metarchivo, eliminarlo de la memoria con el [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) función de Windows.  
+ Cuando ya no se necesita el metarchivo, eliminarlo de la memoria con el [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) función de Windows.  
   
  También puede implementar la `CMetaFileDC` de objeto que puede controlar tanto las llamadas de salida y atributo, como llamadas GDI `GetTextExtent`. Este tipo de un metarchivo es más flexible y pueden más fácilmente reutilizar código general de GDI, lo que a menudo se compone de una combinación de las llamadas de salida y el atributo. El `CMetaFileDC` clase hereda de dos contextos de dispositivo, `m_hDC` y `m_hAttribDC`, de CDC. El `m_hDC` contexto de dispositivo encarga de toda [CDC](../../mfc/reference/cdc-class.md) GDI llamadas de salida y el `m_hAttribDC` contexto de dispositivo controla todas las llamadas de atributo CDC GDI. Normalmente, estos contextos de dos dispositivo hacen referencia al mismo dispositivo. En el caso de `CMetaFileDC`, el controlador de dominio de atributo se establece en NULL de forma predeterminada.  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  Un HMETAFILE válido si la función se realiza correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- El identificador del metarchivo de Windows también puede usarse para manipular el metarchivo con funciones de Windows como [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ El identificador del metarchivo de Windows también puede usarse para manipular el metarchivo con funciones de Windows como [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).  
   
- Elimina el metarchivo tras su uso mediante una llamada a la Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) función.  
+ Elimina el metarchivo tras su uso mediante una llamada a la Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) función.  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Cierra un contexto de dispositivo de metarchivo mejorado y devuelve un identificador que identifica un metarchivo mejorado de formato.  

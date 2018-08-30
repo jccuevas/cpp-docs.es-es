@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027691"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197477"
 ---
 # <a name="run-time-object-model-services"></a>Servicios del modelo de objetos en tiempo de ejecución
 Las clases [CObject](../../mfc/reference/cobject-class.md) y [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsular varios servicios de objeto, incluido el acceso a información de clases en tiempo de ejecución, la serialización y la creación de objetos dinámicos. Todas las clases derivadas de `CObject` heredan esta funcionalidad.  
@@ -87,7 +87,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  Puntero a una cadena terminada en null que contiene el nombre de función, o especifica el valor ordinal de la función. Si este parámetro es un valor ordinal, debe estar en la palabra de orden inferior; la palabra de orden superior debe ser cero. Este parámetro debe estar en formato Unicode.  
    
 ### <a name="remarks"></a>Comentarios  
- Use esta macro para determinar si la biblioteca de controles comunes la función especificada por *proc* (en lugar de llamar [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
+ Use esta macro para determinar si la biblioteca de controles comunes la función especificada por *proc* (en lugar de llamar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
 ### <a name="requirements"></a>Requisitos  
  afxcomctl32.h, afxcomctl32.inl  
@@ -107,7 +107,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  Puntero a una cadena terminada en null que contiene el nombre de función, o especifica el valor ordinal de la función. Si este parámetro es un valor ordinal, debe estar en la palabra de orden inferior; la palabra de orden superior debe ser cero. Este parámetro debe estar en formato Unicode.  
    
 ### <a name="remarks"></a>Comentarios  
- Use esta macro para determinar si la biblioteca de controles comunes la función especificada por *proc* (en lugar de llamar [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). Esta macro es la versión Unicode de AFX_COMCTL32_IF_EXISTS.  
+ Use esta macro para determinar si la biblioteca de controles comunes la función especificada por *proc* (en lugar de llamar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Esta macro es la versión Unicode de AFX_COMCTL32_IF_EXISTS.  
    
 ### <a name="requirements"></a>Requisitos  
  afxcomctl32.h, afxcomctl32.inl  
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` Establece el modelo de subprocesos en el registro para ThreadingModel = apartamento.    
     -   `afxRegFreeThreading` Establece el modelo de subprocesos en el registro para ThreadingModel = gratis.  
       
-         Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` establecer ThreadingModel = Both. Consulte [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) en el SDK de Windows para obtener más información sobre el registro del modelo de subprocesos. 
+         Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` establecer ThreadingModel = Both. Consulte [InprocServer32](/windows/desktop/com/inprocserver32) en el SDK de Windows para obtener más información sobre el registro del modelo de subprocesos. 
    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Componentes de CLSID de la clase.  
@@ -350,7 +350,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="see-also"></a>Vea también  
  [Macros y funciones globales](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [Clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [Clave CLSID](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,12 +368,12 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  El identificador de recurso de cadena que contiene el nombre externo del control.  
   
  *dwOleMisc*  
- Una enumeración que contiene uno o más marcadores. Para obtener más información acerca de esta enumeración, vea [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) en el SDK de Windows.  
+ Una enumeración que contiene uno o más marcadores. Para obtener más información acerca de esta enumeración, vea [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) en el SDK de Windows.  
    
 ### <a name="remarks"></a>Comentarios  
  Además de IMPLEMENT_OLECTLTYPE, debe agregar el declare_olectltype (macro) a la declaración de clase del control.  
   
- El `GetUserTypeNameID` función miembro devuelve la cadena de recurso que identifica la clase del control. `GetMiscStatus` Devuelve los bits OLEMISC para el control. Esta enumeración especifica una colección de valores que describen varias características del control. Para obtener una descripción completa de la configuración de OLEMISC, consulte [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) en el SDK de Windows.  
+ El `GetUserTypeNameID` función miembro devuelve la cadena de recurso que identifica la clase del control. `GetMiscStatus` Devuelve los bits OLEMISC para el control. Esta enumeración especifica una colección de valores que describen varias características del control. Para obtener una descripción completa de la configuración de OLEMISC, consulte [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) en el SDK de Windows.  
   
 > [!NOTE]
 >  La configuración predeterminada utilizada por el ActiveX ControlWizard es: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE y OLEMISC_RECOMPOSEONRESIZE.  
