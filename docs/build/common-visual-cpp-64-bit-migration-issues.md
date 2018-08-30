@@ -1,5 +1,5 @@
 ---
-title: Problemas comunes de migración de 64 bits de Visual C++ | Documentos de Microsoft
+title: Problemas comunes de migración a 64 bits de Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fadc3d48eb6ba812415cbedc9c077e7ffc1b4016
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208163"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemas comunes de migración a 64 bits en Visual C++
 
@@ -53,9 +53,9 @@ Para obtener más información, consulte:
   
 -   [Opciones del compilador](../build/reference/compiler-options.md)  
   
--   [Sugerencias de migración](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [Sugerencias de migración](/windows/desktop/WinProg64/migration-tips)  
   
 ## <a name="see-also"></a>Vea también  
 
-[Configurar Visual C++ de 64 bits, x64 destinos](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+[Configuración de Visual C++ de 64 bits, x64 destinos](../build/configuring-programs-for-64-bit-visual-cpp.md)   
 [Guía de migración y actualización de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852986"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208871"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty (clase)
 La `CMFCPropertyGridFileProperty` clase es compatible con un elemento de control de lista de propiedades que se abre un cuadro de diálogo de selección de fuente.  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  Una estructura de fuente lógica que especifica los atributos de la fuente.  
   
  [in] *dwFontDialogFlags*  
- Estilos que se aplican al cuadro de diálogo fuente que se muestra al hacer clic en el botón de lista desplegable del valor de propiedad. El valor predeterminado es la combinación bit a bit (OR) de CF_EFFECTS y CF_SCREENFONTS. Para obtener más información, consulte el *marcas* parámetro de la [CHOOSEFONT estructura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Estilos que se aplican al cuadro de diálogo fuente que se muestra al hacer clic en el botón de lista desplegable del valor de propiedad. El valor predeterminado es la combinación bit a bit (OR) de CF_EFFECTS y CF_SCREENFONTS. Para obtener más información, consulte el *marcas* parámetro de la [CHOOSEFONT estructura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
  [in] *lpszDescr*  
  Descripción de la propiedad font. El valor predeterminado es NULL.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura que describe la fuente seleccionada.  
+ Un puntero a un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura que describe la fuente seleccionada.  
   
 ### <a name="remarks"></a>Comentarios  
   

@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51470a572ec9540f203bb4cff80981fe6ad15dd1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 903c477117162dde1d0becc6e2196e683ea189f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196815"
 ---
 # <a name="string-editor"></a>Editor de cadenas
 
@@ -55,7 +55,7 @@ Con el editor de cadenas, puede:
    > [!NOTE]
    > Windows no permite la creación de tablas de cadenas vacías. Si crea una tabla de cadenas sin entradas, se elimina automáticamente al guardar el archivo de recursos.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Tutorial: uso de recursos para la localización con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -64,6 +64,6 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editores de recursos](../windows/resource-editors.md)  
-[Cadenas](http://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[Cadenas](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
 [Acerca de las cadenas](/windows/desktop/menurc/about-strings)
 

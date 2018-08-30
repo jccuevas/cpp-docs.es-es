@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201859"
 ---
 # <a name="crebar-class"></a>CReBar (clase)
 Barra de control que proporciona información de diseño, persistencia y estado para controles rebar.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Un puntero a un `CBitmap` objeto se muestre en el fondo del control rebar. NULL de forma predeterminada.  
   
  *dwStyle*  
- DWORD que contiene el estilo que se aplicará para el control rebar. Consulte la `fStyle` descripción de la estructura de Win32 de la función [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) para obtener una lista completa de los estilos de banda.  
+ DWORD que contiene el estilo que se aplicará para el control rebar. Consulte la `fStyle` descripción de la estructura de Win32 de la función [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) para obtener una lista completa de los estilos de banda.  
   
  *clrFore*  
  Un valor COLORREF que representa el color de primer plano del control rebar.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Puntero a la `CWnd` objeto cuya ventana de Windows es el elemento primario de la barra de estado. Normalmente, la ventana de marco.  
   
  *dwCtrlStyle*  
- El estilo del control rebar. De forma predeterminada, RBS_BANDBORDERS, que muestra la estrechas líneas para separar las bandas adyacentes dentro del control rebar. Consulte [estilos del Control Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) en el SDK de Windows para obtener una lista de estilos.  
+ El estilo del control rebar. De forma predeterminada, RBS_BANDBORDERS, que muestra la estrechas líneas para separar las bandas adyacentes dentro del control rebar. Consulte [estilos del Control Rebar](/windows/desktop/Controls/rebar-control-styles) en el SDK de Windows para obtener una lista de estilos.  
   
  *dwStyle*  
  Los estilos de ventana rebar.  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5de304b7a21c47af18b8b753d6de704ef2473c5f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16d78d590201ea637dd6153edb40a1c6d89a82c0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338797"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210346"
 ---
 # <a name="creating-an-ole-db-provider"></a>Crear un proveedor OLE DB
 La manera recomendada para crear un proveedor OLE DB es usar a los asistentes para crear un proyecto ATL COM y un proveedor y, a continuación, modificar los archivos mediante las plantillas OLE DB. Para personalizar su proveedor, puede comentar las propiedades no deseadas y agregar interfaces opcionales.  
@@ -36,7 +36,7 @@ La manera recomendada para crear un proveedor OLE DB es usar a los asistentes pa
   
 4.  Actualice PROVIDER_COLUMN_MAP, que puede encontrarse en MyProviderRS.h. Para obtener un ejemplo, vea [almacenar cadenas en el proveedor OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
   
-5.  Cuando esté listo para probar el proveedor, puede probarla mediante tratando de encontrar el proveedor de una enumeración de proveedor. Para obtener ejemplos de código de prueba que busquen un proveedor en una enumeración, vea el [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) y [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ejemplos o en el ejemplo de [implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md).  
+5.  Cuando esté listo para probar el proveedor, puede probarla mediante tratando de encontrar el proveedor de una enumeración de proveedor. Para obtener ejemplos de código de prueba que busquen un proveedor en una enumeración, vea el [CATDB](https://github.com/Microsoft/VCSamples) y [DBVIEWER](https://github.com/Microsoft/VCSamples) ejemplos o en el ejemplo de [implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md).  
   
 6.  Agregue las interfaces adicionales que desee. Para obtener un ejemplo, vea [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
@@ -44,5 +44,5 @@ La manera recomendada para crear un proveedor OLE DB es usar a los asistentes pa
     >  De forma predeterminada, los asistentes generan código que es el nivel 0 compatible con OLE DB. Para asegurarse de que la aplicación sigue siendo el nivel 0 compatible, no quite ninguna de las interfaces generados por el asistente desde el código.  
   
 ## <a name="see-also"></a>Vea también  
- [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)
+ [CATDB](https://github.com/Microsoft/VCSamples)   
+ [DBVIEWER](https://github.com/Microsoft/VCSamples)

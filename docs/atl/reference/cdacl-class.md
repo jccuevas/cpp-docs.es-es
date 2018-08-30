@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd66c7c0637b4874f6a40bd77b3387191f00d35
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 93427eb8e842687e9bba3dc1eef12bcd07e7e167
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881206"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208016"
 ---
 # <a name="cdacl-class"></a>CDacl (clase)
 Esta clase es un contenedor para una estructura DACL (lista de control de acceso discrecional).  
@@ -74,7 +74,7 @@ class CDacl : public CAcl
   
  Utilice los métodos de clase proporcionados para crear, agregar, quitar y eliminar las ACE de la `CDacl` objeto. Vea también [AtlGetDacl](security-global-functions.md#atlgetdacl) y [AtlSetDacl](security-global-functions.md#atlsetdacl).  
   
- Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el SDK de Windows.  
+ Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](/windows/desktop/SecAuthZ/access-control) en el SDK de Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -123,7 +123,7 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>Comentarios  
  Un `CDacl` objeto contiene cero o más entradas de control de acceso que identifican los usuarios y grupos que pueden tener acceso al objeto. Este método agrega una ACE que permita el acceso a la `CDacl` objeto.  
   
- Consulte [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) para obtener una descripción de las diversas marcas que se pueden establecer en el `AceFlags` parámetro.  
+ Consulte [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) para obtener una descripción de las diversas marcas que se pueden establecer en el `AceFlags` parámetro.  
   
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Agrega una ACE de denegación (entrada de control de acceso) a la `CDacl` objeto.  
@@ -164,7 +164,7 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>Comentarios  
  Un `CDacl` objeto contiene cero o más entradas de control de acceso que identifican los usuarios y grupos que pueden tener acceso al objeto. Este método agrega una ACE que deniega el acceso a la `CDacl` objeto.  
   
- Consulte [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) para obtener una descripción de las diversas marcas que se pueden establecer en el `AceFlags` parámetro.  
+ Consulte [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) para obtener una descripción de las diversas marcas que se pueden establecer en el `AceFlags` parámetro.  
   
 ##  <a name="cdacl"></a>  CDacl::CDacl  
  El constructor.  
@@ -245,7 +245,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de seguridad](../../visual-cpp-samples.md)   
  [CAcl (clase)](../../atl/reference/cacl-class.md)   
- [ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [ACL](/windows/desktop/SecAuthZ/access-control-lists)   
+ [ACE](/windows/desktop/SecAuthZ/access-control-entries)   
  [Información general de clases](../../atl/atl-class-overview.md)   
  [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

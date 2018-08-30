@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336571"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202735"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile (clase)
 Permite el acceso a archivos en sistemas remotos que utilizan protocolos de Internet.  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  Una referencia a la [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que recibe la línea de lectura.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al búfer que contiene los datos sin formato que se recuperan de la [CInternetFile](../../mfc/reference/cinternetfile-class.md) objeto. Independientemente del tipo de datos del búfer pasado a este método, no realiza las manipulaciones de los datos (por ejemplo, la conversión a Unicode), por lo que debe asignar los datos devueltos a la estructura se espera que, como si el **void\***  devolvió el tipo.  
+ Un puntero al búfer que contiene los datos sin formato que se recuperan de la [CInternetFile](../../mfc/reference/cinternetfile-class.md) objeto. Independientemente del tipo de datos del búfer pasado a este método, no realiza las manipulaciones de los datos (por ejemplo, la conversión a Unicode), por lo que debe asignar los datos devueltos a la estructura se espera que, como si el **void** <strong>\*</strong> devolvió el tipo.  
   
  NULL si se alcanzó el final de archivo sin necesidad de leer los datos; o bien, si se alcanzó boolean, FALSE si el final de archivo sin necesidad de leer los datos.  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Tamaño deseado del búfer en bytes.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.  
   
 ### <a name="remarks"></a>Comentarios  
  Las APIs WinInet subyacente no realizar almacenamiento en búfer, así que elija un tamaño de búfer que permite que la aplicación leer datos de forma eficaz, independientemente de la cantidad de datos que deben leerse. Si cada llamada a [lectura](#read) normalmente implica una aount grande de datos (por ejemplo, cuatro o más kilobytes), no es necesario un búfer. Sin embargo, si se llama a `Read` obtener pequeños fragmentos de datos, o si usa [ReadString](#readstring) para leer las líneas individuales a la vez, un búfer de lectura mejora el rendimiento de la aplicación.  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  El tamaño del búfer en bytes.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.  
   
 ### <a name="remarks"></a>Comentarios  
  Subyacente WinInet APIs no realiza el almacenamiento en búfer, por lo que se elija un tamaño de búfer que permite que la aplicación escribir datos de manera eficiente, independientemente de la cantidad de datos se escriban. Si cada llamada a [escribir](#write) normalmente implica una gran cantidad de datos (por ejemplo, cuatro o más kilobytes a la vez), no es necesario un búfer. Sin embargo, si se llama a [escribir](#write) para escribir pequeños fragmentos de datos, un búfer de escritura mejora el rendimiento de la aplicación.  

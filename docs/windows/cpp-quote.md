@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1b9ba00c8728c86935b7c64105d03bb4f19b10
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da9e378ff75ec67660b0c29a5765be88a2c06496
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610605"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205671"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -47,7 +47,7 @@ El **cpp_quote** atributo de C++ es útil si desea colocar una directiva de prep
 
 También puede usar **cpp_quote** y generar un archivo .h como parte de la compilación de MIDL. Por ejemplo, si tiene un archivo de encabezado de C++ que utiliza atributos IDL de C++, pero no se puede usar este archivo para alguna tarea, a continuación, puede compilar para crear un archivo .h generados por MIDL, que debe ser capaz de usar.
 
-El **cpp_quote** atributo tiene la misma funcionalidad que el [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) atributo MIDL.
+El **cpp_quote** atributo tiene la misma funcionalidad que el [cpp_quote](/windows/desktop/Midl/cpp-quote) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

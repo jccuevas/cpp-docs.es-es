@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604284"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206722"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -58,7 +58,7 @@ Para obtener más información sobre todos estos conceptos, consulte [guía para
 
 ##  <a name="BK_Native"></a> Aplicaciones de escritorio y servidores
 
-Para obtener información sobre los fundamentos de escribir aplicaciones cliente de Windows para el escritorio, consulte [Developing Windows Applications in C++](http://msdn.microsoft.com/vstudio//hh304489) (Desarrollo de aplicaciones Windows en C++) e [Introduction to Windows Programming in C++](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)(Introducción a la programación para Windows en C++).
+Para obtener información sobre los fundamentos de escribir aplicaciones de cliente de Windows para el escritorio, consulte [desarrollar aplicaciones de Windows en C++](https://msdn.microsoft.com/vstudio//hh304489) y [Introducción a la programación de Windows en C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
 
 En Windows 10, puede usar Visual C++ para crear muchos tipos de programas de escritorio:
 

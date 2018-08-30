@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901093"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200151"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (clase)
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |Name|Descripción|
 |----------|-----------------|
-|[:: M_psh de PROPSHEETHEADER](#m_psh)|El Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) estructura. Proporciona acceso a los parámetros de la hoja de propiedades básicas.|
+|[:: M_psh de PROPSHEETHEADER](#m_psh)|El Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) estructura. Proporciona acceso a los parámetros de la hoja de propiedades básicas.|
 
 ## <a name="remarks"></a>Comentarios
 
 Consta de una hoja de propiedades de un `CPropertySheet` objeto y uno o más [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objetos. El marco de trabajo muestra una hoja de propiedades como una ventana con un conjunto de índices de pestaña y un área que contiene la página seleccionada actualmente. El usuario navega a una página específica mediante el uso de la pestaña correspondiente.
 
-`CPropertySheet` proporciona compatibilidad para el modo expandido [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) estructura que se presentó en Windows 98 y 2000 de Windows NT. La estructura contiene marcas adicionales y los miembros que admiten el uso de un mapa de bits de fondo "marca de agua".
+`CPropertySheet` proporciona compatibilidad para el modo expandido [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) estructura que se presentó en Windows 98 y 2000 de Windows NT. La estructura contiene marcas adicionales y los miembros que admiten el uso de un mapa de bits de fondo "marca de agua".
 
 Para mostrar estas nuevas imágenes automáticamente en su objeto de hoja de propiedades, pasar los valores válidos para las imágenes de mapa de bits y paleta en la llamada a [CPropertySheet::Construct](#construct) o [CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ Por ejemplo, llamar a esta función miembro si desea agregar mapas de bits a cad
 
 ##  <a name="m_psh"></a>  :: M_psh de PROPSHEETHEADER
 
-Una estructura cuyos miembros almacenan las características de [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).
+Una estructura cuyos miembros almacenan las características de [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*  
-Apunta a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo que para se va a convertir.
+Apunta a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo que para se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
 Unidades de cuadro de diálogo se indican en términos de la unidad de base de cuadro de diálogo actual derivada del ancho medio y alto de caracteres de la fuente utilizada para el texto del cuadro de diálogo. Una unidad horizontal es una cuarta parte de la unidad de base ancho del cuadro de diálogo y una unidad vertical es una octava parte de la unidad de alto de la base del cuadro de diálogo.
 
-El [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) función Windows devuelve información de tamaño de la fuente del sistema, pero puede especificar una fuente distinta para cada hoja de propiedades si usa el estilo DS_SETFONT en el archivo de definición de recursos. El [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) función de Windows, se describe en el SDK de Windows, usa la fuente adecuada para este cuadro de diálogo.
+El [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) función Windows devuelve información de tamaño de la fuente del sistema, pero puede especificar una fuente distinta para cada hoja de propiedades si usa el estilo DS_SETFONT en el archivo de definición de recursos. El [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) función de Windows, se describe en el SDK de Windows, usa la fuente adecuada para este cuadro de diálogo.
 
 El `MapDialogRect` función miembro reemplaza las unidades de cuadro de diálogo en *lpRect* con pantalla (píxeles) de las unidades para que el rectángulo se puede usar para crear un cuadro de diálogo o colocar un control dentro de un cuadro.
 
@@ -683,9 +683,9 @@ nBotón: identifica que se pulse el botón. Este parámetro puede ser uno de los
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) para obtener más información sobre el mensaje Pressbutton del SDK de Windows.
+Consulte [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) para obtener más información sobre el mensaje Pressbutton del SDK de Windows.
 
-Una llamada a `PressButton` no enviará el [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) notificación de una página de propiedades para el marco de trabajo. Para enviar esta notificación, llame a [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Una llamada a `PressButton` no enviará el [PSN_APPLY](/windows/desktop/Controls/psn-apply) notificación de una página de propiedades para el marco de trabajo. Para enviar esta notificación, llame a [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Ejemplo
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0fab92dddc10a66fe350d343f1fd280ce5c9a50
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 30906b3851357942873e3926151d5a195161a6e5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027156"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205188"
 ---
 # <a name="using-cobject"></a>Usar CObject
 [CObject](../mfc/reference/cobject-class.md) es la clase base raíz para la mayor parte de la biblioteca de clases de Microsoft Foundation (MFC). La `CObject` clase contiene muchas características útiles que puede incorporar en sus propios objetos de programa, incluida la compatibilidad con la serialización, la información de clase en tiempo de ejecución y salida de diagnóstico del objeto. Si se deriva la clase de `CObject`, la clase puede aprovechar estos `CObject` características.  
@@ -40,9 +40,9 @@ ms.locfileid: "39027156"
   
 -   [Crear objetos de forma dinámica](../mfc/dynamic-object-creation.md)  
   
--   [Volcar los datos del objeto para fines de diagnóstico](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [Volcar los datos del objeto para fines de diagnóstico](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))  
   
--   Validar el estado interno del objeto (consulte [MFC ASSERT_VALID y CObject:: AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   Validar el estado interno del objeto (consulte [MFC ASSERT_VALID y CObject:: AssertValid](https://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
 -   [Tiene la clase serializarse en un almacenamiento persistente](../mfc/serialization-in-mfc.md)  
   

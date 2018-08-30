@@ -1,5 +1,5 @@
 ---
-title: Clase CConstantTransition | Documentos de Microsoft
+title: CConstantTransition (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: dc7e4104e6555ada88483336917708db943be2a0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954032"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210584"
 ---
 # <a name="cconstanttransition-class"></a>Clase CConstantTransition
 Encapsula una transición constante.  
@@ -59,7 +59,7 @@ class CConstantTransition : public CBaseTransition;
 |[CConstantTransition::m_duration](#m_duration)|La duración de la transición.|  
   
 ## <a name="remarks"></a>Comentarios  
- Durante una transición constante, el valor de una variable de animación es el valor inicial durante el tiempo de la transición. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador de nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
+ Durante una transición constante, el valor de una variable de animación se queda con el valor inicial a través de la duración de la transición. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -93,7 +93,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parámetros  
  *pLibrary*  
- Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
+ Un puntero a un [IUIAnimationTransitionLibrary interfaz](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define una biblioteca de transiciones estándares.  
 
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; en caso contrario, FALSE.  

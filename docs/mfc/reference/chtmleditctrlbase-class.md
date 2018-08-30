@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee202defce08d30f36fb0002bd1477957dd76bc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337572"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207967"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase (clase)
 Representa un componente de edición HTML.  
@@ -575,7 +575,7 @@ HRESULT ExecCommand(
  El identificador de comando que se ejecutará. Para obtener una lista, consulte [identificadores de comandos de MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
  *cmdExecOpt*  
- Valores tomados de la [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) enumeración, que describen cómo el objeto debe ejecutar el comando.  
+ Valores tomados de la [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) enumeración, que describen cómo el objeto debe ejecutar el comando.  
   
  *pInVar*  
  Los argumentos de entrada.  
@@ -590,7 +590,7 @@ HRESULT ExecCommand(
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método proporciona la funcionalidad de [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
+ Este método proporciona la funcionalidad de [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec).  
   
 ##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
  Se abre un cuadro de diálogo fuente para permitir al usuario cambiar el color del texto, fuente y tamaño de fuente de la selección actual.  
@@ -838,7 +838,7 @@ HRESULT GetIsDirty() const;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Indica si el documento ha cambiado. `GetIsDirty` Devuelve un valor HRESULT de [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
+ Indica si el documento ha cambiado. `GetIsDirty` Devuelve un valor HRESULT de [IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty).  
   
 ##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
  Devuelve si se muestra un glifo para todos los elementos que tienen un `styleFloat` propiedad.  
@@ -1469,7 +1469,7 @@ long QueryStatus(long cmdID) const;
  Identificador del comando. Identificadores de comandos se realizan desde el grupo de comandos CGID_MSHTML. Estos comandos se definen en Mshtmcid.h. También puede encontrar la lista en línea en [identificadores de comandos de MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) que indica el estado de *cmdID*, o 0 en caso de error.  
+ Devuelve un [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) que indica el estado de *cmdID*, o 0 en caso de error.  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  Sobrescribe un control de radio en la selección actual.  

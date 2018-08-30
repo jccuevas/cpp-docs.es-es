@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849663"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204146"
 ---
 # <a name="cpen-class"></a>CPen (clase)
 Encapsula un lápiz de la Interfaz de dispositivo gráfico (GDI) de Windows.  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |Name|Descripción|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Crea un lápiz de cosmético o geométrico lógico con el estilo especificado, el ancho y el pincel atributos y se adjunta a la `CPen` objeto.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Crea un lápiz con el estilo, ancho y color de un [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) estructurar y lo adjunta a la `CPen` objeto.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Crea un lápiz con el estilo, ancho y color de un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estructurar y lo adjunta a la `CPen` objeto.|  
 |[CPen::FromHandle](#fromhandle)|Devuelve un puntero a un `CPen` objeto cuando se especifica un HPEN de Windows.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Obtiene un [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) estructura subyacente.|  
-|[CPen::GetLogPen](#getlogpen)|Obtiene un [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) estructura subyacente.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Obtiene un [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) estructura subyacente.|  
+|[CPen::GetLogPen](#getlogpen)|Obtiene un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estructura subyacente.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -144,7 +144,7 @@ CPen(
   
 - Une PS_JOIN_BEVEL son biselada.  
   
-- Se une PS_JOIN_MITER ángulo cuando estén dentro del límite actual establecido por el [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) función. Si la combinación supera este límite, se biselada.  
+- Se une PS_JOIN_MITER ángulo cuando estén dentro del límite actual establecido por el [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) función. Si la combinación supera este límite, se biselada.  
   
 - Une PS_JOIN_ROUND son redondear.  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  Contiene un color RGB para la pluma.  
   
  *pLogBrush*  
- Apunta a un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura. Si *nPenStyle* es PS_COSMETIC, el `lbColor` miembro de la `LOGBRUSH` estructura especifica el color del lápiz y el *lbStyle* miembro de la `LOGBRUSH` estructura debe establecerse en BS_ SÓLIDO. Si nPenStyle es PS_GEOMETRIC, todos los miembros deben usarse para especificar los atributos de pincel del lápiz.  
+ Apunta a un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura. Si *nPenStyle* es PS_COSMETIC, el `lbColor` miembro de la `LOGBRUSH` estructura especifica el color del lápiz y el *lbStyle* miembro de la `LOGBRUSH` estructura debe establecerse en BS_ SÓLIDO. Si nPenStyle es PS_GEOMETRIC, todos los miembros deben usarse para especificar los atributos de pincel del lápiz.  
   
  *nStyleCount*  
  Especifica la longitud, en unidades de palabra doble, de la *lpStyle* matriz. Este valor debe ser cero si *nPenStyle* no es PS_USERSTYLE.  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parámetros  
  *pLogPen*  
- Apunta a un [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) estructura que contiene información acerca de la pluma.  
+ Apunta a un [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) estructura que contiene información acerca de la pluma.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  Vea los temas siguientes en el SDK de Windows para obtener información acerca de los atributos del lápiz:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente se muestra cómo llamar `GetExtLogPen` para recuperar los atributos de un lápiz y, a continuación, crear un lápiz de cosmético, nueva con el mismo color.  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parámetros  
  *pLogPen*  
- Apunta a un [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) estructura para contener información acerca de la pluma.  
+ Apunta a un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estructura para contener información acerca de la pluma.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  Vea los temas siguientes en el SDK de Windows para obtener información acerca de los atributos del lápiz:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente se muestra cómo llamar `GetLogPen` para recuperar un carácter de lápiz y, a continuación, crear un lápiz sólido, de nuevo con el mismo color.  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Comentarios  
  Este es un operador de conversión, que admite el uso directo de un objeto HPEN.  
   
- Para obtener más información sobre el uso de objetos gráficos, vea el artículo [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) en Windows SDK.  
+ Para obtener más información sobre el uso de objetos gráficos, vea el artículo [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en Windows SDK.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

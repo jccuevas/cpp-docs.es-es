@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d1911a8bd8a7f3079497ec66ea1de59aff480a0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d84eef4c91442eedc830fdee836dc5d950b5eae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604055"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209595"
 ---
 # <a name="creating-new-symbols"></a>Crear nuevos símbolos
 
@@ -45,7 +45,7 @@ Cuando inicie un proyecto nuevo, le resultará conveniente asignar los nombres d
 
 Si escribe un nombre de símbolo que ya existe, aparecerá un cuadro de mensaje que indica que ya está definido un símbolo con ese nombre. No se pueden definir dos o más símbolos con el mismo nombre, pero es posible definir símbolos diferentes con el mismo valor numérico. Para obtener más información, consulte [restricciones de nombre de símbolo](../windows/symbol-name-restrictions.md) y [restricciones de valor de símbolo](../windows/symbol-value-restrictions.md).
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. . Para información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a recursos, mostrar recursos estáticos y asignar recursos de cadenas a las propiedades.
 
 ## <a name="requirements"></a>Requisitos
 

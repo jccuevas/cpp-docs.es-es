@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849878"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198117"
 ---
 # <a name="cmultilock-class"></a>CMultiLock (clase)
 Representa el mecanismo de control de acceso utilizado para controlar el acceso a los recursos en un programa de multithreading.  
@@ -128,7 +128,7 @@ DWORD Lock(
  Especifica si todos los objetos que se espera deben señalarse al mismo tiempo antes de devolver. Si es FALSE, `Lock` devolverá cuando se señala a cualquiera de los objetos que se espera.  
   
  *dwWakeMask*  
- Especifica otras condiciones que pueden anular la espera. Para obtener una lista completa de las opciones disponibles para este parámetro, vea [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) en el SDK de Windows.  
+ Especifica otras condiciones que pueden anular la espera. Para obtener una lista completa de las opciones disponibles para este parámetro, vea [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si `Lock` se produce un error, devuelve - 1. Si se realiza correctamente, devuelve uno de los valores siguientes:  

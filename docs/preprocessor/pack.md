@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538701"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207497"
 ---
 # <a name="pack"></a>pack
 Especifica la alineación de empaquetado de los miembros de estructura, unión y clase.  
@@ -38,7 +38,7 @@ Especifica la alineación de empaquetado de los miembros de estructura, unión y
 
 Empaquetar una clase consiste en colocar sus miembros uno tras otro en la memoria, lo que puede conllevar que algunos o todos los miembros se alineen en un límite menor que la alineación predeterminada de la arquitectura de destino. **módulo** ofrece un control en el nivel de declaración de datos. Esto difiere de la opción del compilador [/Zp](../build/reference/zp-struct-member-alignment.md), que solo proporciona control de nivel de módulo. **módulo** surte efecto en la primera **struct**, **unión**, o **clase** declaración después de la pragma. **módulo** no tiene ningún efecto en las definiciones. Una llamada a **pack** sin argumentos establece *n* en el valor establecido en la opción del compilador `/Zp`. Si no se establece la opción del compilador, el valor predeterminado es 8.  
   
-Si cambia la alineación de una estructura, puede que no use tanto espacio en la memoria, pero es posible que vea una disminución del rendimiento o incluso que obtenga una excepción generada por el hardware debido al acceso no alineado.  Puede modificar este comportamiento de excepción mediante [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+Si cambia la alineación de una estructura, puede que no use tanto espacio en la memoria, pero es posible que vea una disminución del rendimiento o incluso que obtenga una excepción generada por el hardware debido al acceso no alineado.  Puede modificar este comportamiento de excepción mediante [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
 *Mostrar* (opcional)  
 Muestra el valor de byte actual para la alineación de empaquetamiento. El valor se muestra mediante un mensaje de advertencia.  

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 515d74b30e63fbc40411ec9cd62b2b1ab6d92591
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: 1d04f918c9c92c2de8ff6b654a8a0d4ee43c2130
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093012"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196030"
 ---
 # <a name="file-handling-and-io-ccli"></a>Control y E/S de archivos (C++/CLI)
 Muestra distintas operaciones de archivo mediante .NET Framework.  
@@ -337,6 +337,6 @@ int main()
 ## <a name="see-also"></a>Vea también   
  [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
- [E/S de archivos y secuencias](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
+ [E/S de archivos y secuencias](https://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
 
  [Espacio de nombres System.IO](https://msdn.microsoft.com/library/system.io.aspx)

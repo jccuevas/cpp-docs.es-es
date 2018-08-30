@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0a7a2bcabc045be7493174c8eea2362d074b221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608272"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203948"
 ---
 # <a name="concurrency-runtime"></a>Runtime de simultaneidad
 El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sólidas, escalables y receptivas. Eleva el nivel de abstracción para que, de esta forma, no sea necesario administrar los detalles de infraestructura relacionados con la simultaneidad. También se puede usar para especificar directivas de programación que cumplan las demandas de calidad de servicio de las aplicaciones. Use estos recursos como ayuda para empezar a trabajar con el runtime de simultaneidad.  
@@ -107,7 +107,7 @@ El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sóli
   
 |||  
 |-|-|  
-|[Patrones y sugerencias de programación Async en Hilo (aplicaciones de la Tienda Windows que usan C++ y XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información sobre cómo se usa el Runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación en tiempo de ejecución de Windows con C++ y XAML.|  
+|[Patrones de programación asincrónica y sugerencias en Hilo (aplicaciones de Windows Store usando C++ y XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información sobre cómo se usa el Runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación en tiempo de ejecución de Windows con C++ y XAML.|  
 |[Ejemplos de código para el Runtime de simultaneidad y la biblioteca de patrones paralelos en Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Proporciona aplicaciones de ejemplo y utilidades que muestran el uso del runtime de simultaneidad.|  
 |[Programación paralela en código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Proporciona artículos de blog detallados adicionales sobre la programación paralela en el runtime de simultaneidad.|  
 |[Informática en paralelo en el foro de C++ y código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Le permite participar en los debates de la comunidad sobre el runtime de simultaneidad.|  

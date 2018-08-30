@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cef503bf9862f1259e25aff76a013d60776077
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 36aab0177eaa62e5ec9601d9258c7de1a6ce7b59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883731"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205695"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opciones, Asistente para objetos simples ATL
 Use esta página del Asistente para objetos simples ATL para el diseño para una mayor eficiencia y soporte técnico de error para el objeto.  
@@ -35,14 +35,14 @@ Use esta página del Asistente para objetos simples ATL para el diseño para una
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Single**|Especifica que el objeto siempre se ejecuta en el subproceso COM principal. Consulte [contenedores uniproceso](http://msdn.microsoft.com/library/windows/desktop/ms680112) y [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) para obtener más información.|  
-|**Apartamento**|Especifica que el objeto utiliza el apartamento de subproceso. Apartamento de subproceso equivalente al único. Se asigna a cada objeto de un componente de subprocesamiento controlado un apartamento de subproceso, durante la vida del objeto; Sin embargo, varios subprocesos pueden usarse para varios objetos. Cada contenedor está asociado a un subproceso concreto y tiene un bombeo de mensajes de Windows (valor predeterminado).<br /><br /> Consulte [contenedores uniproceso](http://msdn.microsoft.com/library/windows/desktop/ms680112) para obtener más información.|  
+|**Single**|Especifica que el objeto siempre se ejecuta en el subproceso COM principal. Consulte [contenedores uniproceso](/windows/desktop/com/single-threaded-apartments) y [InprocServer32](/windows/desktop/com/inprocserver32) para obtener más información.|  
+|**Apartamento**|Especifica que el objeto utiliza el apartamento de subproceso. Apartamento de subproceso equivalente al único. Se asigna a cada objeto de un componente de subprocesamiento controlado un apartamento de subproceso, durante la vida del objeto; Sin embargo, varios subprocesos pueden usarse para varios objetos. Cada contenedor está asociado a un subproceso concreto y tiene un bombeo de mensajes de Windows (valor predeterminado).<br /><br /> Consulte [contenedores uniproceso](/windows/desktop/com/single-threaded-apartments) para obtener más información.|  
 |**Ambos**|Especifica que el objeto puede usar apartamento o subprocesamiento libre, dependiendo del tipo de un subproceso creado.|  
-|**gratis**|Especifica que el objeto usa el subprocesamiento libre. Subprocesamiento libre es equivalente a un modelo de apartamento multiproceso. Consulte [apartamentos multiproceso](http://msdn.microsoft.com/library/windows/desktop/ms693421) para obtener más información.|  
+|**gratis**|Especifica que el objeto usa el subprocesamiento libre. Subprocesamiento libre es equivalente a un modelo de apartamento multiproceso. Consulte [apartamentos multiproceso](/windows/desktop/com/multithreaded-apartments) para obtener más información.|  
 |**Neutral**|Especifica que el objeto sigue las directrices para apartamentos multiproceso, pero pueden ejecutar en cualquier tipo de subproceso.|  
   
  **Agregación**  
- Indica si el objeto usa [agregación](http://msdn.microsoft.com/library/windows/desktop/ms686558). El objeto agregado elige qué interfaces se expondrán a los clientes y las interfaces se exponen como si el objeto agregado implementarlos. Los clientes del objeto agregado comunicarse solo con el objeto agregado.  
+ Indica si el objeto usa [agregación](/windows/desktop/com/aggregation). El objeto agregado elige qué interfaces se expondrán a los clientes y las interfaces se exponen como si el objeto agregado implementarlos. Los clientes del objeto agregado comunicarse solo con el objeto agregado.  
   
 |Opción|Descripción|  
 |------------|-----------------|  
@@ -71,5 +71,5 @@ Use esta página del Asistente para objetos simples ATL para el diseño para una
 ## <a name="see-also"></a>Vea también  
  [Asistente para objetos simples ATL](../../atl/reference/atl-simple-object-wizard.md)   
  [Objeto Simple ATL](../../atl/reference/adding-an-atl-simple-object.md)   
- [Problemas de subprocesamiento de servidor en proceso](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [Problemas de subprocesamiento de servidor en proceso](/windows/desktop/com/in-process-server-threading-issues)
 

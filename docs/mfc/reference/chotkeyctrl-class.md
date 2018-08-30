@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337263"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206271"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (clase)
 Proporciona la funcionalidad del control común de tecla de acceso rápido de Windows.  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  Cuando el usuario ha elegido una combinación de teclas, la aplicación puede recuperar la combinación de teclas especificada desde el control y usar el mensaje del mensaje WM_SETHOTKEY para establecer la tecla de acceso rápido en el sistema. Cada vez que el usuario presiona la tecla de acceso rápido a partir de entonces, desde cualquier parte del sistema, la ventana especificada en el mensaje del mensaje WM_SETHOTKEY recibe un mensaje WM_SYSCOMMAND especificar SC_HOTKEY. Este mensaje activa la ventana que lo recibe. La tecla de acceso rápido sigue siendo válida hasta que la aplicación que llama el mensaje WM_SETHOTKEY salidas.  
   
- Este mecanismo es diferente de la compatibilidad con clave activo que depende el mensaje WM_HOTKEY y el Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) y [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funciones.  
+ Este mecanismo es diferente de la compatibilidad con clave activo que depende el mensaje WM_HOTKEY y el Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) y [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) funciones.  
   
  Para obtener más información sobre el uso de `CHotKeyCtrl`, consulte [controles](../../mfc/controls-mfc.md) y [usar CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parámetros  
  *dwStyle*  
- Especifica el estilo del control clave activa. Aplicar cualquier combinación de los estilos de control. Consulte [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) en el SDK de Windows para obtener más información.  
+ Especifica el estilo del control clave activa. Aplicar cualquier combinación de los estilos de control. Consulte [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows para obtener más información.  
   
  *Rect*  
  Especifica el tamaño y la posición del control clave activo. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [estructura RECT](../../mfc/reference/rect-structure1.md).  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  *dwExStyle*  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
   
  *dwStyle*  
- Especifica el estilo del control clave activa. Aplicar cualquier combinación de los estilos de control. Para obtener más información, consulte [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) en el SDK de Windows.  
+ Especifica el estilo del control clave activa. Aplicar cualquier combinación de los estilos de control. Para obtener más información, consulte [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows.  
   
  *Rect*  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
+ Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
   
  *pParentWnd*  
  Un puntero a la ventana que es primario del control.  

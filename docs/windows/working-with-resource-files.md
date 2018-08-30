@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211102"
 ---
 # <a name="working-with-resource-files"></a>Trabajar con archivos de recursos
 
 > [!WARNING]
-> Esta sección se aplica a aplicaciones de escritorio de Windows escritas en C++. Para obtener información sobre los recursos de aplicaciones de plataforma Universal de Windows escritas en C++, vea [definir recursos de la aplicación](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Esta sección se aplica a aplicaciones de escritorio de Windows escritas en C++. Para obtener información sobre los recursos de aplicaciones de plataforma Universal de Windows escritas en C++, vea [definir recursos de la aplicación](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Para obtener información sobre cómo agregar recursos a C++ / c++ / proyectos de la CLI, consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
 
@@ -53,7 +53,7 @@ Describe los editores de recursos que se proporcionan en Visual Studio y los tip
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Proporciona vínculos a la documentación de Visual C++.
 
-[Introducción a Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Introducción a Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 Describe el conjunto completo de herramientas de desarrollo que usan el mismo entorno de desarrollo integrado (IDE), lo que les permite compartir herramientas y facilita la creación de soluciones con varios lenguajes.
 
 [Hable con nosotros](/visualstudio/ide/talk-to-us)  
@@ -62,4 +62,4 @@ Proporciona vínculos a información acerca del uso del conjunto de documentaci�
 ## <a name="see-also"></a>Vea también
 
 [Aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md)  
-[Menús y otros recursos](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menús y otros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

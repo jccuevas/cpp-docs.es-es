@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851384"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210855"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton (clase)
 Proporciona la funcionalidad de botón en barras de herramientas.  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Determina si el botón es el propietario del identificador de ventana proporcionado.|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|Determina si el botón de barra de herramientas está visible.|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Determina si el identificador de ventana subyacente del botón está visible.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Especifica si el botón procesa el [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Especifica si el botón procesa el [WM_COMMAND](/windows/desktop/menurc/wm-command) mensaje.|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Lo llama el marco cuando el botón se agrega a un **personalizar** cuadro de diálogo.|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Especifica si se puede arrastrar el botón.|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Especifica si un usuario puede quitar el botón en la barra de herramientas de destino.|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Lo llama el marco de trabajo para calcular el tamaño del botón para el contexto de dispositivo especificado y el estado de acoplamiento.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Lo llama el marco de trabajo para controlar la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) mensaje.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Lo llama el marco de trabajo para controlar la [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) mensaje.|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Lo llama el marco cuando el botón se inserta en una nueva barra de herramientas.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Lo llama el marco cuando el usuario hace clic en el botón del mouse.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Lo llama el marco cuando el usuario suelta el botón del mouse.|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Lo llama el marco de trabajo cuando la barra de herramientas primario controla un mensaje WM_HELPHITTEST.|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Lo llama el marco de trabajo cuando la barra de herramientas primario controla un WM_CTLCOLOR (mensaje).|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Permite que el botón modificar el menú proporcionado cuando la aplicación muestra un menú contextual en la barra de herramientas primario.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|Lo llama el marco cuando la barra de herramientas primario controla un [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) mensaje.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Lo llama el marco cuando la barra de herramientas primario controla un [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) mensaje.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Lo llama el marco de trabajo para dibujar el botón mediante el uso de las opciones y estilos especificados.|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Lo llama el marco de trabajo para dibujar el botón de la **comandos** panel de la **personalizar** cuadro de diálogo.|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Lo llama el marco de trabajo para recuperar el texto de información sobre herramientas personalizada para el botón.|  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  Establezca este parámetro en True para habilitar entrada, o en FALSE para deshabilitar la entrada.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a la `EnableWindow` función para habilitar o deshabilitar la entrada. Para obtener más información, consulte [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) en el SDK de Windows.  
+ Este método llama a la `EnableWindow` función para habilitar o deshabilitar la entrada. Para obtener más información, consulte [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) en el SDK de Windows.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  Copia el texto en el botón de barra de herramientas a un menú.  
@@ -884,7 +884,7 @@ CString m_strText;
  Este miembro de datos contiene la etiqueta de texto del botón. La etiqueta de texto puede estar vacía.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- Especifica si el botón procesa el [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje.  
+ Especifica si el botón procesa el [WM_COMMAND](/windows/desktop/menurc/wm-command) mensaje.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Este método devuelve FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco llama a este método cuando está a punto de enviar un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje a la ventana primaria.  
+ El marco llama a este método cuando está a punto de enviar un [WM_COMMAND](/windows/desktop/menurc/wm-command) mensaje a la ventana primaria.  
   
  De forma predeterminada, este método devuelve FALSE. Invalide este método para devolver TRUE si desea que procese el mensaje WM_COMMAND o FALSE para indicar que la barra de herramientas primario debe controlar el mensaje.  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  Invalide este método si desea proporcionar el tamaño de un botón no estándar (por ejemplo, un botón de cuadro de edición).  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- Lo llama el marco de trabajo para controlar la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) mensaje.  
+ Lo llama el marco de trabajo para controlar la [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) mensaje.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de este método no hace nada. Invalide este método si desea controlar la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) mensaje.  
+ La implementación predeterminada de este método no hace nada. Invalide este método si desea controlar la [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) mensaje.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  Lo llama el marco cuando el botón se inserta en una nueva barra de herramientas.  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  La implementación predeterminada no hace nada y devuelve FALSE. Invalide este método y devolver un valor distinto de cero si desea modificar el contenido del menú proporcionado.  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- Lo llama el marco cuando la barra de herramientas primario controla un [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) mensaje.  
+ Lo llama el marco cuando la barra de herramientas primario controla un [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) mensaje.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   La ventana primaria del botón.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por el `CMFCToolBar::OnLButtonDblClk` método cuando la barra de herramientas primario controla un [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) mensaje.  
+ Este método es invocado por el `CMFCToolBar::OnLButtonDblClk` método cuando la barra de herramientas primario controla un [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) mensaje.  
   
  La implementación predeterminada de este método no hace nada.  
   

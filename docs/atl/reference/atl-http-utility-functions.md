@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 224f4d78aec432a27b2a0258d0d6b3d4a8f2174d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026093"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209513"
 ---
 # <a name="atl-http-utility-functions"></a>Funciones de utilidad HTTP ATL
 
@@ -27,7 +27,7 @@ Estas funciones admiten la manipulación de direcciones URL.
 |[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Obtiene el número de puerto predeterminado asociado con un determinado protocolo de Internet o un esquema.|  
 |[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|Determina si un carácter es seguro para su uso en una dirección URL.|  
 |[AtlUnescapeUrl](#atlunescapeurl)|Convierte los caracteres de escape a sus valores originales.|  
-|[RGBToHtml](#rgbtohtml)|Convierte un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor para el texto HTLM correspondiente a ese valor de color.|
+|[RGBToHtml](#rgbtohtml)|Convierte un [COLORREF](/windows/desktop/gdi/colorref) valor para el texto HTLM correspondiente a ese valor de color.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Llame a esta función para convertir una hora del sistema en una cadena con un formato adecuado para usarla en encabezados HTTP.|
 
 ## <a name="requirements"></a>Requisitos  
@@ -69,10 +69,10 @@ inline BOOL AtlCanonicalizeUrl(
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Se comporta como la versión actual de [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) pero no requiere WinInet o Internet Explorer para instalarse.  
+ Se comporta como la versión actual de [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) pero no requiere WinInet o Internet Explorer para instalarse.  
   
 ### <a name="see-also"></a>Vea también  
- [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
+ [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
  ## <a name="atlcombineurl"></a> AtlCombineUrl
  Llame a esta función para combinar una dirección URL base y una dirección URL relativa en una única dirección URL canónica.  
@@ -106,7 +106,7 @@ inline BOOL AtlCombineUrl(
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Se comporta como la versión actual de [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) pero no requiere WinInet o Internet Explorer para instalarse.  
+ Se comporta como la versión actual de [InternetCombineUrl](/windows/desktop/api/wininet/nf-wininet-internetcombineurla) pero no requiere WinInet o Internet Explorer para instalarse.  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  Llame a esta función para convertir todos los caracteres no seguros en secuencias de escape.  
@@ -214,7 +214,7 @@ inline BOOL AtlUnescapeUrl(
  Invierte el proceso de conversión aplicado por [AtlEscapeUrl](#atlescapeurl).  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-Convierte un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor para el texto HTLM correspondiente a ese valor de color.  
+Convierte un [COLORREF](/windows/desktop/gdi/colorref) valor para el texto HTLM correspondiente a ese valor de color.  
   
 ```  
 bool inline RGBToHtml(  

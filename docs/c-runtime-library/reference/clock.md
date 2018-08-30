@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4caf2518de21a938822e443c0383c22cf170d44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd4b399900802d110ff5746a0ccb2424ba40e6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395372"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209871"
 ---
 # <a name="clock"></a>clock
 
@@ -54,13 +54,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-El tiempo transcurrido desde la inicialización de CRT al principio del proceso, medido en **CLOCKS_PER_SEC** unidades por segundo. Si el tiempo transcurrido no está disponible o ha superado el tiempo positivo máximo que se puede registrar como un **clock_t** tipo, la función devuelve el valor `(clock_t)(-1)`.
+El tiempo transcurrido desde la inicialización de CRT al principio del proceso, medido en **CLOCKS_PER_SEC** unidades por segundo. Si el tiempo transcurrido no está disponible o ha superado el tiempo máximo positivo que puede registrarse como un **clock_t** tipo, la función devuelve el valor `(clock_t)(-1)`.
 
 ## <a name="remarks"></a>Comentarios
 
-El **reloj** función indica cuánto tiempo de reloj transcurrido desde que la inicialización de CRT durante el inicio del proceso. Tenga en cuenta que esta función no se ajusta estrictamente a ISO C, que especifica el tiempo de CPU neto como el valor devuelto. Para obtener tiempos de CPU, use la función [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223) de Win32. Para determinar el tiempo transcurrido en segundos, divida el valor devuelto por la **reloj** función mediante la macro **CLOCKS_PER_SEC**.
+El **reloj** función indica cuánto tiempo de reloj transcurrido desde que la inicialización de CRT durante el inicio del proceso. Tenga en cuenta que esta función no se ajusta estrictamente a ISO C, que especifica el tiempo de CPU neto como el valor devuelto. Para obtener tiempos de CPU, use la función [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) de Win32. Para determinar el tiempo transcurrido en segundos, divida el valor devuelto por la **reloj** función mediante la macro **CLOCKS_PER_SEC**.
 
-Con el tiempo suficiente, el valor devuelto por **reloj** puede superar el valor positivo máximo de **clock_t**. Cuando el proceso ejecuta mucho más tiempo, el valor devuelto por **reloj** siempre es `(clock_t)(-1)`, tal y como especifica el estándar ISO C99 (7.23.2.1) y el estándar ISO C11 (7.27.2.1). Microsoft implementa **clock_t** como un **largo**, un entero de 32 bits con signo y el **CLOCKS_PER_SEC** se definió la macro como 1000. Esto proporciona un máximo **reloj** función de valor devuelto de 2147483.647 segundos, o aproximadamente 24,8 días. No se debe confiar en el valor devuelto por **reloj** en procesos que se han ejecutado durante más tiempo que esta cantidad de tiempo. Puede usar el modo de 64 bits [tiempo](time-time32-time64.md) función o las ventanas [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) función para los tiempos de proceso de registro transcurrido de muchos años.
+Con el tiempo suficiente, el valor devuelto por **reloj** puede superar el valor positivo máximo de **clock_t**. Cuando el proceso ha ejecutado más tiempo, el valor devuelto por **reloj** siempre `(clock_t)(-1)`, tal y como especifica el estándar ISO C99 (7.23.2.1) y el estándar ISO C11 (7.27.2.1). Microsoft implementa **clock_t** como un **largo**, un entero de 32 bits con signo y el **CLOCKS_PER_SEC** macro se define como 1000. Esto proporciona un máximo **reloj** función de valor devuelto de 2.147.483,647 segundos o aproximadamente 24,8 días. No confíe en el valor devuelto por **reloj** en procesos que se han ejecutado durante más tiempo que esta cantidad de tiempo. Puede usar el modo de 64 bits [tiempo](time-time32-time64.md) función o el Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) función a los tiempos transcurridos de proceso de registro de muchos años.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401849"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199545"
 ---
 # <a name="memccpy"></a>_memccpy
 
@@ -70,13 +70,13 @@ Número de caracteres.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si el carácter *c* se copia, **_memccpy** devuelve un puntero a char en *dest* que sigue inmediatamente al carácter. Si *c* no se copia, devuelve **NULL**.
+Si el carácter *c* se copia, **_memccpy** devuelve un puntero al carácter en *dest* que sigue inmediatamente al carácter. Si *c* no se copia, devuelve **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_memccpy** función copia 0 o más caracteres de *src* a *dest*, la detención cuando el carácter *c* se ha copiado o cuando *recuento* caracteres se han copiado, lo que ocurra primero.
+El **_memccpy** función copia 0 o más caracteres de *src* a *dest*, y se detiene cuando el carácter *c* se ha copiado o cuando *recuento* caracteres se han copiado, lo que ocurra primero.
 
-**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ## <a name="requirements"></a>Requisitos
 

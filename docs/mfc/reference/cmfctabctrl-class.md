@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541864"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199851"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 La `CMFCTabCtrl` clase proporciona funcionalidad para un control de ficha. El control de pestaña muestra una ventana acoplable con pestañas planas o tridimensionales en la parte superior o inferior. Las pestañas pueden mostrar texto y una imagen y pueden cambiar de color cuando están activas.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Lo llama el marco cuando primero se arrastra el cursor en la ventana de control de ficha.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Lo llama el marco de trabajo durante una operación de arrastre cuando el mouse se mueve a través de la ventana de destino. (Invalida [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Muestra un menú emergente de ventanas con pestañas, espera hasta que el usuario selecciona una ficha y hace que la pestaña seleccionada en la pestaña activa.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Vuelve a calcular el diseño interno del control de ficha. (Invalida [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|La pestaña actual de un control de ficha se establece como la pestaña activa en un grupo de pestañas de interfaz de múltiples documentos.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Activa una pestaña. (Invalida [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  Apunta a un objeto de datos que contiene los datos que el usuario arrastra.  
   
  [in] *dwKeyState*  
- Contiene el estado de las teclas modificadoras. Este parámetro es una combinación bit a bit (OR) de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, consulte el **parámetros de mensaje** sección de [acerca de la entrada del Mouse](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Contiene el estado de las teclas modificadoras. Este parámetro es una combinación bit a bit (OR) de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, consulte el **parámetros de mensaje** sección de [acerca de la entrada del Mouse](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *punto*  
  Contiene la ubicación actual del cursor en coordenadas de cliente.  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  Puntero a un [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto que se está arrastrando sobre el destino de colocación.  
   
  [in] *dwKeyState*  
- El estado de las teclas modificadoras, que es una combinación bit a bit (OR) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, vea "Parámetros de mensaje" en [acerca de la entrada del Mouse](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ El estado de las teclas modificadoras, que es una combinación bit a bit (OR) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, vea "Parámetros de mensaje" en [acerca de la entrada del Mouse](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *punto*  
  La posición del mouse actual.  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>Parámetros  
  [out] *pScrollInfo*  
- Puntero a un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estructura o NULL. Cuando este método devuelve, y si este parámetro no es NULL, la estructura contiene todos los parámetros de la barra de desplazamiento. El valor predeterminado es NULL.  
+ Puntero a un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) estructura o NULL. Cuando este método devuelve, y si este parámetro no es NULL, la estructura contiene todos los parámetros de la barra de desplazamiento. El valor predeterminado es NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  

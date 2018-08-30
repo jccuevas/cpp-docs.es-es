@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208563"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar (clase)
 El `CMFCToolBar` es similar a [CToolBar (clase)](../../mfc/reference/ctoolbar-class.md), pero proporciona compatibilidad adicional para las características de la interfaz de usuario. Se incluyen las barras de herramientas planas, las barras de herramientas con imágenes activas, los iconos grandes, los botones de buscapersonas, las barras de herramientas bloqueadas, los controles rebar, el texto en imágenes, las imágenes de fondo y las barras de herramientas con pestañas. La clase `CMFCToolBar` también contiene compatibilidad integrada para la personalización de usuario de barras de herramientas y menús, arrastrar y colocar entre las barras de herramientas y menús, botones del cuadro combinado, botones del cuadro de edición, selectores de colores y botones acumulados.
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Un puntero a la ventana primaria de la barra de herramientas.  
   
  [in] *dwStyle*  
- El estilo de barra de herramientas. Consulte [Control de barra de herramientas y los estilos de botón](http://msdn.microsoft.com/library/windows/desktop/bb760439) en el SDK de Windows para la lista de estilos.  
+ El estilo de barra de herramientas. Consulte [Control de barra de herramientas y los estilos de botón](/windows/desktop/Controls/toolbar-control-and-button-styles) en el SDK de Windows para la lista de estilos.  
   
  [in] *nID*  
  El identificador de la ventana secundaria de la barra de herramientas.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Estilos adicionales para crear el objeto de barra de control incrustado.  
   
  [in] *dwStyle*  
- El estilo de barra de herramientas. Consulte [Control de barra de herramientas y los estilos de botón](http://msdn.microsoft.com/library/windows/desktop/bb760439) para obtener una lista de estilos apropiados.  
+ El estilo de barra de herramientas. Consulte [Control de barra de herramientas y los estilos de botón](/windows/desktop/Controls/toolbar-control-and-button-styles) para obtener una lista de estilos apropiados.  
   
  [in] *rcBorders*  
  Un `CRect` objeto que especifica el ancho de los bordes de ventana de la barra de herramientas.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que representan el color de resaltado de texto actual.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valor que representan el color de resaltado de texto actual.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a [CMFCToolBar::SetHotTextColor](#sethottextcolor) para establecer un nuevo color de texto para los botones de barra de herramientas resaltados.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE si la barra de herramientas y sus elementos relacionados se colocan en la misma fila. en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El [cmfccustomizebutton:: CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) método llama a este método para determinar cómo mostrar la **personalizar** menú emergente. Si este método devuelve TRUE, el marco de trabajo muestra el **mostrar botones en una fila** botón. En caso contrario, el marco de trabajo muestra el **mostrar botones en dos filas** botón.  
+ El [cmfccustomizebutton:: CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) método llama a este método para determinar cómo mostrar la **personalizar** menú emergente. Si este método devuelve TRUE, el marco de trabajo muestra el **mostrar botones en una fila** botón. En caso contrario, el marco de trabajo muestra el **mostrar botones en dos filas** botón.  
   
  Normalmente no tiene que utilizar este método. Para habilitar el **mostrar botones en una fila** o **mostrar botones en dos filas** , llame a [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).  
   

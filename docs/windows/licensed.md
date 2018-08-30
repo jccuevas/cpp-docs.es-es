@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b30a9a0e2d959725b5f5d94118493ef833a57579
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e57e0cd60ee1d07f29c3aba5540980cd5f4ae02b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604834"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209907"
 ---
 # <a name="licensed"></a>licensed
 
@@ -36,7 +36,7 @@ Indica que el objeto COM al que se aplica tiene licencia y se debe crear instanc
 
 ## <a name="remarks"></a>Comentarios
 
-El **licencia** atributo de C++ tiene la misma funcionalidad que el [licencia](http://msdn.microsoft.com/library/windows/desktop/aa367070) atributo MIDL.
+El **licencia** atributo de C++ tiene la misma funcionalidad que el [licencia](/windows/desktop/Midl/licensed) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

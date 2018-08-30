@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1123 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1123 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300282"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206793"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Error de las herramientas del vinculador LNK1123
 
@@ -41,7 +41,7 @@ Los archivos de entrada deben tener el formato de archivo de objeto común (COFF
 
 - Pruebe a desactivar la opción Incrustar manifiesto. En la barra de menús, seleccione **Proyecto**, **Propiedades**. En el **páginas de propiedades** cuadro de diálogo, expanda **propiedades de configuración**, **herramienta manifiesto**, **de entrada y salida**. Cambie el valor de **incrustar manifiesto** a **No**.
 
-- Asegúrese de que el tipo de archivo es válido. Por ejemplo, asegúrese de que un objeto OMF es de 32 bits y no de 16 bits. Para obtener más información, consulte [. Archivos obj como entrada del vinculador](../../build/reference/dot-obj-files-as-linker-input.md) y [formato PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+- Asegúrese de que el tipo de archivo es válido. Por ejemplo, asegúrese de que un objeto OMF es de 32 bits y no de 16 bits. Para obtener más información, consulte [. Archivos obj como entrada del vinculador](../../build/reference/dot-obj-files-as-linker-input.md) y [formato PE](/windows/desktop/Debug/pe-format).
 
 - Compruebe que el archivo no está dañado. Vuelva a compilar, si es necesario.
 

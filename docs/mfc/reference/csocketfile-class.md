@@ -1,5 +1,5 @@
 ---
-title: Clase CSocketFile | Documentos de Microsoft
+title: CSocketFile (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f1198c85b8366d7dec4d38d002b65468c38347c
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: c4c74d1ab89c45b7871cf0b4fa0d8a6350bc1425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121735"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209642"
 ---
-# <a name="csocketfile-class"></a>Clase CSocketFile
+# <a name="csocketfile-class"></a>CSocketFile (clase)
 Se utiliza un objeto `CFile` para enviar y recibir datos a través de una red mediante Windows Sockets.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,22 +43,22 @@ class CSocketFile : public CFile
 |[CSocketFile::CSocketFile](#csocketfile)|Construye un objeto `CSocketFile`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede adjuntar el `CSocketFile` el objeto a un `CSocket` objeto para este propósito. También puede realizar y, normalmente, adjuntar la `CSocketFile` el objeto a un `CArchive` objeto para simplificar el envío y recepción de datos usa la serialización de MFC.  
+ Puede adjuntar el `CSocketFile` objeto a un `CSocket` objeto para este propósito. También puede y normalmente, adjunte el `CSocketFile` objeto a un `CArchive` objeto para simplificar, enviar y recibir datos utilizando la serialización de MFC.  
   
- Para serializar datos (envío), insértela en el archivo, que llama `CSocketFile` funciones de miembro para escribir datos en el `CSocket` objeto. Para deserializar (recepción) datos, extraer del archivo. Esto hace que el archivo llamar a `CSocketFile` funciones miembro para leer los datos de la `CSocket` objeto.  
+ Para serializar los datos (envío), lo inserta en el archivo, que llama a `CSocketFile` funciones miembro para escribir datos en el `CSocket` objeto. Para deserializar (recepción) datos, extraer desde el archivo. Esto hace que el archivo llamar a `CSocketFile` funciones miembro para leer datos desde el `CSocket` objeto.  
   
 > [!TIP]
->  Además de usar `CSocketFile` tal como se describe a continuación, utilizarla como un objeto de archivo independiente, igual que lo haría con `CFile`, su clase base. También puede usar `CSocketFile` con cualquier función de serialización de MFC basado en archivo. Dado que `CSocketFile` no admitir todas `CFile`de funcionalidad, algunos predeterminado MFC serializar funciones no son compatibles con `CSocketFile`. Esto es especialmente así la `CEditView` clase. No debe intentar serializar `CEditView` datos a través de un `CArchive` objeto asociado a un `CSocketFile` objeto mediante la `CEditView::SerializeRaw`; use `CEditView::Serialize` en su lugar. El `SerializeRaw` función espera el objeto de archivo tenga funciones, como `Seek`, que `CSocketFile` no tiene.  
+>  Además de usar `CSocketFile` como se describe aquí, puede usarlo como un objeto de archivo independiente, se puede hacer con `CFile`, su clase base. También puede usar `CSocketFile` con las funciones de serialización de MFC basada en el almacenamiento. Dado que `CSocketFile` no admite todos `CFile`de la funcionalidad, algún valor predeterminado MFC serializar funciones no son compatibles con `CSocketFile`. Esto es particularmente cierto con las `CEditView` clase. No debe intentar serializar `CEditView` datos a través de un `CArchive` objeto asociado a un `CSocketFile` objeto mediante `CEditView::SerializeRaw`; use `CEditView::Serialize` en su lugar. El `SerializeRaw` función espera tener funciones, como el objeto de archivo `Seek`, que `CSocketFile` no tiene.  
   
- Cuando usas `CArchive` con `CSocketFile` y `CSocket`, puede darse el caso donde `CSocket::Receive` entra en un bucle (por `PumpMessages(FD_READ)`) esperando la cantidad de bytes solicitada. Esto es porque Windows sockets permite sólo una llamada de recepción por la notificación de FD_READ, pero `CSocketFile` y `CSocket` permitir varias llamadas de recepción por FD_READ. Si recibe un FD_READ cuando no hay datos para leer, la aplicación se bloquea. Si nunca se produce otro FD_READ, la aplicación deja de comunicarse a través del socket.  
+ Cuando usas `CArchive` con `CSocketFile` y `CSocket`, pueda encontrar una situación donde `CSocket::Receive` entra en un bucle (por `PumpMessages(FD_READ)`) a la espera para la cantidad de bytes solicitada. Esto es debido a que los sockets de Windows permiten sólo una llamada de recepción por notificación FD_READ, pero `CSocketFile` y `CSocket` permitir varias llamadas recibidas por FD_READ. Si recibe un FD_READ cuando no hay ningún dato para leer, la aplicación se bloquea. Si nunca se produce otra FD_READ, la aplicación deja de comunicarse a través del socket.  
   
- Puede resolver este problema como se indica a continuación. En el `OnReceive` método de la clase socket, llamada `CAsyncSocket::IOCtl(FIONREAD, ...)` antes de llamar a la `Serialize` método de la clase de mensaje cuando los datos esperados para leer desde el socket superan el tamaño de un paquete TCP (unidad de transmisión máxima del medio de red normalmente al menos 1096 bytes). Si el tamaño de los datos disponibles es menor que el necesario, espere a todos los datos que puede recibir y luego iniciar la operación de lectura.  
+ Puede resolver este problema como se indica a continuación. En el `OnReceive` método de la clase socket, llamada `CAsyncSocket::IOCtl(FIONREAD, ...)` antes de llamar a la `Serialize` método de la clase de mensaje cuando los datos esperados para leerse desde el socket superan el tamaño de un paquete TCP (unidad de transmisión máxima del medio de red Normalmente, al menos 1096 bytes). Si el tamaño de los datos disponibles es menor que el necesario, espere a todos los datos se reciben y solo después inicia la operación de lectura.  
   
  En el ejemplo siguiente, `m_dwExpected` es el número aproximado de bytes que el usuario espera recibir. Se supone que se declara en otra parte en el código.  
   
  [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]  
   
- Para obtener más información, consulte [Windows Sockets en MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md), así como [API de Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Para obtener más información, consulte [Windows Sockets en MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md), así como [API de Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,17 +84,17 @@ explicit CSocketFile(
  El socket para adjuntar a la `CSocketFile` objeto.  
   
  *bArchiveCompatible*  
- Especifica si el objeto de archivo es para su uso con un `CArchive` objeto. Pase FALSE solo si va a utilizar el `CSocketFile` objeto de forma independiente como lo haría con un `CFile` objeto, con ciertas limitaciones. Esta marca cambia cómo el `CArchive` objeto asociado a la `CSocketFile` objeto administra su búfer para su lectura.  
+ Especifica si el objeto de archivo es para su uso con un `CArchive` objeto. Pase FALSE solo si desea usar el `CSocketFile` objeto de forma independiente como lo haría una independiente `CFile` objeto, con ciertas limitaciones. Esta marca se cambia el modo `CArchive` objeto asociado al `CSocketFile` objeto administra su búfer de lectura.  
   
 ### <a name="remarks"></a>Comentarios  
- Al destructor del objeto se desasocia propia del objeto de socket cuando el objeto queda fuera del ámbito o se elimina.  
+ El destructor del objeto se desasocia propio desde el objeto de socket cuando se sale del ámbito o se elimina el objeto.  
   
 > [!NOTE]
->  A `CSocketFile` también puede usarse como un archivo (limitado) sin un `CArchive` objeto. De forma predeterminada, el `CSocketFile` del constructor *bArchiveCompatible* parámetro es TRUE. Esto especifica que el objeto de archivo es para su uso con un archivo. Para usar el objeto de archivo sin un archivo, pasar el valor FALSE en la *bArchiveCompatible* parámetro.  
+>  Un `CSocketFile` también puede usarse como un archivo (limitado) sin un `CArchive` objeto. De forma predeterminada, el `CSocketFile` del constructor *bArchiveCompatible* parámetro es TRUE. Esto especifica que el objeto de archivo es para su uso con un archivo. Para usar el objeto de archivo sin un archivo, pase FALSE en el *bArchiveCompatible* parámetro.  
   
- En el modo "compatible con el archivo", un `CSocketFile` objeto proporciona un mejor rendimiento y reduce el riesgo de un "interbloqueo". Un interbloqueo se produce cuando los sockets envío y recepción se esperan entre sí, o para un recurso común. Esto puede suceder si el `CArchive` objeto ha trabajado con la `CSocketFile` el modo en que lo hace con un `CFile` objeto. Con `CFile`, el archivo puede suponer que si recibe menos bytes que los solicitados, se ha alcanzado el final del archivo.  
+ En el modo "compatible con el archivo", un `CSocketFile` objeto proporciona un mejor rendimiento y reduce el riesgo de "interbloqueo". Un interbloqueo se produce cuando los sockets envío y recepción están esperando mutuamente, o para un recurso común. Esto puede suceder si el `CArchive` objeto trabajó con el `CSocketFile` el modo en que lo hace con un `CFile` objeto. Con `CFile`, el archivo puede suponer que si recibe menos bytes que los solicitados, se ha alcanzado el final del archivo.  
   
- Con `CSocketFile`, sin embargo, están de datos basado en mensajes; el búfer puede contener varios mensajes, por lo que recibir menor que el número de bytes solicitado no implica el final del archivo. La aplicación no se bloquea en este caso, como podría ocurrir con `CFile`, y puede seguir leyendo mensajes del búfer hasta que el búfer está vacío. El [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) función es útil para supervisar el estado del búfer del archivo en este caso.  
+ Con `CSocketFile`, sin embargo, están de datos basado en mensajes; el búfer puede contener varios mensajes, por lo que recibe menos que el número de bytes solicitado no implica el final del archivo. La aplicación no se bloquea en este caso, como podría ocurrir con `CFile`, y puede continuar leyendo mensajes desde el búfer hasta que el búfer está vacío. El [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) función es útil para supervisar el estado del búfer del archivo en este caso.  
   
  Para obtener más información sobre el uso de `CSocketFile`, consulte los artículos [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md) y [Windows Sockets: ejemplo de Sockets con archivos](../../mfc/windows-sockets-example-of-sockets-using-archives.md).  
   

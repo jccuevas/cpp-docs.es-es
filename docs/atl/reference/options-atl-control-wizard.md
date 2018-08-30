@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880104"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208766"
 ---
 # <a name="options-atl-control-wizard"></a>Opciones, Asistente para controles ATL
 Inserte aquí "Resultados de búsqueda" resumen.  
@@ -78,7 +78,7 @@ Inserte aquí "Resultados de búsqueda" resumen.
   
 -   **Custom**: crea una interfaz que expone métodos directamente a través de VTBL.  
   
-     Si selecciona **personalizado**, a continuación, puede especificar que el control es **compatible con automatización**. Si selecciona **compatible con automatización**, a continuación, el asistente agrega el [oleautomation](../../windows/oleautomation.md) atributo a la interfaz en el archivo IDL, y la interfaz puede calcularse mediante el contador de referencias universal en oleaut32.dll. Consulte [Marshaling Details](http://msdn.microsoft.com/library/windows/desktop/ms692621) en el SDK de Windows para obtener más información.  
+     Si selecciona **personalizado**, a continuación, puede especificar que el control es **compatible con automatización**. Si selecciona **compatible con automatización**, a continuación, el asistente agrega el [oleautomation](../../windows/oleautomation.md) atributo a la interfaz en el archivo IDL, y la interfaz puede calcularse mediante el contador de referencias universal en oleaut32.dll. Consulte [Marshaling Details](/windows/desktop/com/marshaling-details) en el SDK de Windows para obtener más información.  
   
      Además, si selecciona **compatible con automatización**, a continuación, todos los parámetros de todos los métodos en el control deben ser variantes compatible.  
   
@@ -87,7 +87,7 @@ Inserte aquí "Resultados de búsqueda" resumen.
   
 -   **Puntos de conexión**: permite a los puntos de conexión para el objeto mediante la realización de derivar de la clase del objeto [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) y permitir que exponga una interfaz de origen.  
   
--   **Licencia**: agrega compatibilidad para el control [licencias](http://msdn.microsoft.com/library/windows/desktop/ms690543). Solo se pueden hospedar controles con licencia, si el equipo cliente tiene la licencia correcta.  
+-   **Licencia**: agrega compatibilidad para el control [licencias](/windows/desktop/com/licensing). Solo se pueden hospedar controles con licencia, si el equipo cliente tiene la licencia correcta.  
   
 ## <a name="see-also"></a>Vea también  
  [Asistente para controles ATL](../../atl/reference/atl-control-wizard.md)

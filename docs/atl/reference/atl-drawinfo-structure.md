@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa45822d51d704022e773f6c8220db34b010a805
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 76f21f93bbd8386bbf0b4b63f3cf7c8b34057145
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885827"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210662"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO (estructura)
 Contiene información utilizada para la representación a varios destinos, como una impresora, metarchivo o control ActiveX.  
@@ -53,13 +53,13 @@ struct ATL_DRAWINFO {
  El tamaño de la estructura, en bytes.  
   
  `dwDrawAspect`  
- Especifica cómo se puede representar el destino. Representaciones pueden incluir contenido, un icono, una vista en miniatura o un documento impreso. Para obtener una lista de valores posibles, vea [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) y [DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644).  
+ Especifica cómo se puede representar el destino. Representaciones pueden incluir contenido, un icono, una vista en miniatura o un documento impreso. Para obtener una lista de valores posibles, vea [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) y [DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2).  
   
  `lindex`  
  Parte del destino que es de interés para la operación de dibujo. Su interpretación varía según el valor de la `dwDrawAspect` miembro.  
   
  `ptd`  
- Puntero a un [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) estructura que permite optimizaciones de dibujos dependen del aspecto especificado. Tenga en cuenta que más reciente objetos y contenedores que admiten las interfaces de dibujos optimizadas admiten a también este miembro. Antiguos objetos y contenedores que no admiten interfaces dibujos optimizadas siempre especifican NULL para este miembro.  
+ Puntero a un [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) estructura que permite optimizaciones de dibujos dependen del aspecto especificado. Tenga en cuenta que más reciente objetos y contenedores que admiten las interfaces de dibujos optimizadas admiten a también este miembro. Antiguos objetos y contenedores que no admiten interfaces dibujos optimizadas siempre especifican NULL para este miembro.  
   
  `hicTargetDev`  
  Información de contexto para el dispositivo de destino que apunta `ptd` desde el que el objeto puede extraer las métricas del dispositivo y probar las funcionalidades del dispositivo. Si `ptd` es NULL, el objeto debe omitir el valor en el `hicTargetDev` miembro.  
@@ -68,10 +68,10 @@ struct ATL_DRAWINFO {
  El contexto de dispositivo en el que se va a dibujar. Para un objeto sin ventana, el `hdcDraw` miembro está en el `MM_TEXT` modo de asignación con sus coordenadas lógicas coincidencia de las coordenadas de cliente de la ventana contenedora. Además, el contexto de dispositivo debe estar en el mismo estado que normalmente se pasa por un `WM_PAINT` mensaje.  
   
  `prcBounds`  
- Puntero a un [RECTL](http://msdn.microsoft.com/library/windows/desktop/dd162907) estructura que especifica el rectángulo en `hdcDraw` y en la que se debe dibujar el objeto. Este miembro controla el posicionamiento y la ampliación del objeto. Este miembro debe ser NULL para dibujar el objeto activo en contexto sin ventana. En todas las otras situaciones, NULL no es un valor válido y debe tener como resultado un `E_INVALIDARG` código de error. Si el contenedor pasa un valor distinto de NULL a un objeto sin ventana, el objeto debe representar el aspecto solicitado en el contexto de dispositivo especificado y el rectángulo. Un contenedor puede solicitarla desde un objeto sin ventana para representar una vista en segundo lugar, no activos del objeto o para imprimir el objeto.  
+ Puntero a un [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) estructura que especifica el rectángulo en `hdcDraw` y en la que se debe dibujar el objeto. Este miembro controla el posicionamiento y la ampliación del objeto. Este miembro debe ser NULL para dibujar el objeto activo en contexto sin ventana. En todas las otras situaciones, NULL no es un valor válido y debe tener como resultado un `E_INVALIDARG` código de error. Si el contenedor pasa un valor distinto de NULL a un objeto sin ventana, el objeto debe representar el aspecto solicitado en el contexto de dispositivo especificado y el rectángulo. Un contenedor puede solicitarla desde un objeto sin ventana para representar una vista en segundo lugar, no activos del objeto o para imprimir el objeto.  
   
  `prcWBounds`  
- Si `hdcDraw` es un contexto de dispositivo de metarchivo (consulte [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) en el SDK de Windows), este es un puntero a un `RECTL` estructura que especifica el rectángulo delimitador en el metarchivo subyacente. La estructura de rectángulo contiene la extensión de la ventana y el origen de la ventana. Estos valores son útiles para dibujar metarchivos. El rectángulo indicado por `prcBounds` está anidada dentro de este `prcWBounds` rectángulo; están en el mismo espacio de coordenadas.  
+ Si `hdcDraw` es un contexto de dispositivo de metarchivo (consulte [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) en el SDK de Windows), este es un puntero a un `RECTL` estructura que especifica el rectángulo delimitador en el metarchivo subyacente. La estructura de rectángulo contiene la extensión de la ventana y el origen de la ventana. Estos valores son útiles para dibujar metarchivos. El rectángulo indicado por `prcBounds` está anidada dentro de este `prcWBounds` rectángulo; están en el mismo espacio de coordenadas.  
   
  `bOptimize`  
  Distinto de cero si el dibujo del control es ser optimizado, en caso contrario, 0. Si se optimiza el dibujo, el estado del contexto del dispositivo se restaura automáticamente cuando termine de representación.  
@@ -97,7 +97,7 @@ struct ATL_DRAWINFO {
  **Encabezado:** atlctl.h  
   
 ## <a name="see-also"></a>Vea también  
-  [Clases y structs](../../atl/reference/atl-classes.md) [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
+  [Clases y structs](../../atl/reference/atl-classes.md) [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)   
  [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
 
 

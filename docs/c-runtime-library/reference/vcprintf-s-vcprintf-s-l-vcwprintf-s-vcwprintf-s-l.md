@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415772"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208993"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
@@ -107,16 +107,16 @@ Para obtener más información, vea [Sintaxis de especificación de formato: Fun
 
 Número de caracteres escrito o un valor negativo si se produce un error en la salida.
 
-Al igual que las versiones menos seguras de estas funciones, si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, a diferencia de las versiones menos seguras de estas funciones, si *formato* no especifica un formato válido, se genera una excepción de parámetro no válido. Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen **errno** para ese código de error. El código de error predeterminado es **EINVAL** si no hay ningún valor más concreto.
+Al igual que las versiones menos seguras de estas funciones, si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, a diferencia de las versiones menos seguras de estas funciones, si *formato* no especifica un formato válido, se genera una excepción de parámetro no válido. Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen **errno** para ese código de error. El código de error predeterminado es **EINVAL** si no se aplica un valor más concreto.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola. **_vcwprintf_s** es la versión con caracteres anchos de **_vcprintf_s**. Toma una cadena de caracteres anchos como argumento.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola. **_vcwprintf_s** es la versión de caracteres anchos de **_vcprintf_s**. Toma una cadena de caracteres anchos como argumento.
 
-Las versiones de estas funciones que tienen la **_l** sufijo son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
+Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

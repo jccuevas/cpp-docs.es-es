@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f312267d83f73e30eecb569b50678e7cf5da5e7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52fb779173565eaa35eec37da80c93ba0610c14f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199073"
 ---
 # <a name="public-c-attributes"></a>public (Atributos de C++)
 
@@ -36,7 +36,7 @@ Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no
 
 ## <a name="remarks"></a>Comentarios
 
-El **pública** atributo de C++ tiene la misma funcionalidad que el [pública](http://msdn.microsoft.com/library/windows/desktop/aa367150) atributo MIDL.
+El **pública** atributo de C++ tiene la misma funcionalidad que el [pública](/windows/desktop/Midl/public) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

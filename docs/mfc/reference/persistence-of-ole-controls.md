@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336831"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204574"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistencia de los controles OLE
 Una capacidad de los controles OLE es la persistencia de propiedad (o serialización), lo que permite el control OLE leer o escribir los valores de propiedad hacia y desde un archivo o secuencia. Una aplicación de contenedor puede utilizar la serialización para almacenar los valores de propiedad de un control incluso después de la aplicación ha destruido el control. Los valores de propiedad del control OLE, a continuación, se pueden leer desde el archivo o secuencia cuando una nueva instancia del control se crea en un momento posterior.  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   Un bloque de memoria que contiene los datos binarios reales.  
   
- Tenga en cuenta que `PX_Blob` asignará memoria, el uso de la Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, al cargar las propiedades de tipo de BLOB. Usted es responsable de liberar esta memoria. Por lo tanto, debe llamar al destructor del control [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) en cualquier propiedad de tipo de BLOB identificadores para liberar cualquier memoria asignada al control de seguridad.  
+ Tenga en cuenta que `PX_Blob` asignará memoria, el uso de la Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API, al cargar las propiedades de tipo de BLOB. Usted es responsable de liberar esta memoria. Por lo tanto, debe llamar al destructor del control [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) en cualquier propiedad de tipo de BLOB identificadores para liberar cualquier memoria asignada al control de seguridad.  
   
 ##  <a name="px_bool"></a>  PX_Bool  
  Llame a esta función dentro de su control `DoPropExchange` función miembro para serializar o inicializar una propiedad de tipo BOOL.  

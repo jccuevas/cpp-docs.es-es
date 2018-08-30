@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131443"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206480"
 ---
 # <a name="numericlimits-class"></a>numeric_limits (Clase)
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* el tipo de datos de un elemento fundamental cuyas propiedades se están probando, consultando o estableciendo.
+*Type*<br/>
+ Tipo de datos del elemento fundamental cuyas propiedades se están probando, consultando o estableciendo.
 
 ## <a name="remarks"></a>Comentarios
 
-El encabezado define especializaciones explícitas para los tipos de **wchar_t**, **bool**, **char**, **firmado char**, **sin signo char**, **corto**, **entero corto sin signo**, **int**, **int sin signo**, **prolongada**, **unsigned long**, **float**, **doble**, **long double ***** **long long**, **long long sin signo**, `char16_t`, y `char32_t`. Para estas especializaciones explícitas, el miembro [numeric_limits:: is_specialized](#is_specialized) es **true**, y todos los miembros pertinentes tienen valores significativos. El programa puede proporcionar especializaciones explícitas adicionales. La mayoría de las funciones de miembro de la clase describen o prueban implementaciones posibles de **float**.
+El encabezado define especializaciones explícitas para los tipos de **wchar_t**, **bool**, **char**, **firmado char**, **sin signo char**, **corto**, **entero corto sin signo**, **int**, **int sin signo**, **prolongada**, **unsigned long**, **float**, **doble**, **long double**, **long long**, **long long sin signo**, **char16_t**, y **char32_t**. Para estas especializaciones explícitas, el miembro [numeric_limits:: is_specialized](#is_specialized) es **true**, y todos los miembros pertinentes tienen valores significativos. El programa puede proporcionar especializaciones explícitas adicionales. La mayoría de las funciones de miembro de la clase describen o prueban implementaciones posibles de **float**.
 
 Para una especialización arbitraria, ningún miembro tiene valores significativos. Un objeto de miembro que no tiene un valor significativo almacena cero (o **false**) y una función miembro que no devuelve un valor significativo devuelve `Type(0)`.
 

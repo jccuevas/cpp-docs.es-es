@@ -1,5 +1,5 @@
 ---
-title: Usar CListCtrl | Documentos de Microsoft
+title: Usar CListCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210495"
 ---
 # <a name="using-clistctrl"></a>Usar CListCtrl
-Utilice un control de lista para mostrar cualquier organización de iconos con etiquetas, como en el Explorador de archivos o listas de columnas de texto, con o sin iconos. Para obtener una descripción de las cuatro posibles "vistas" (no debe confundirse con las vistas MFC) puede tener un control de lista, vista de iconos, vista de iconos pequeños, vista de lista y vista de informe, ver las vistas en el [CListCtrl](../mfc/reference/clistctrl-class.md) información general de la clase.  
+Usar un control de lista para mostrar cualquier organización de iconos con etiquetas, como en el Explorador de archivos o listas de columnas de texto, con o sin iconos. Para obtener una descripción de las cuatro posibles "vistas" (no debe confundirse con las vistas MFC) puede tener un control de lista, vista de iconos, vista de iconos pequeños, vista de lista y vista de informe, vea las vistas en el [CListCtrl](../mfc/reference/clistctrl-class.md) información general de clases.  
   
- En algunas vistas, los usuarios pueden arrastrar iconos a otras posiciones o editar etiquetas de iconos. Por ejemplo, vea el panel derecho en el Explorador de archivos, que utiliza un control de lista en una ventana de nondialog. Puede experimentar con las vistas disponibles en el menú Vista del explorador.  
+ En algunas vistas, los usuarios pueden arrastrar iconos de distintas posiciones o editar etiquetas de icono. Por ejemplo, vea el panel derecho en el Explorador de archivos, que usa un control de lista en una ventana nondialog. Puede experimentar con las vistas disponibles en el menú Vista del explorador.  
   
- Para obtener información relacionada, consulte [sobre controles de vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774735) del SDK de Windows.  
+ Para obtener información relacionada, consulte [acerca de los controles de vista de lista](/windows/desktop/Controls/list-view-controls-overview) en el SDK de Windows.  
   
 > [!NOTE]
 >  El SDK de Windows hace referencia a los controles de lista como "controles de vista de lista". Este uso de "vista" no hace referencia a clases de vista MFC, especialmente `CListView`. Para obtener más información, consulte [Control de lista y vista de lista](../mfc/list-control-and-list-view.md).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre  
   
 -   [Control de lista y vista de lista](../mfc/list-control-and-list-view.md)  
   
