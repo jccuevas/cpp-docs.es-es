@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390029"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131744"
 ---
 # <a name="thread-local-storage"></a>Almacenamiento local para el subproceso
 **Específicos de Microsoft**  
   
- El almacenamiento local de subprocesos (TLS) es el mecanismo por el que cada subproceso de un proceso con un subproceso determinado asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener un análisis completo de subprocesos, vea [Procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms684841) en [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ El almacenamiento local de subprocesos (TLS) es el mecanismo por el que cada subproceso de un proceso con un subproceso determinado asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener un análisis completo de subprocesos, vea [Procesos y subprocesos](/windows/desktop/ProcThread/processes-and-threads) en Windows SDK.  
   
  El lenguaje C de Microsoft incluye el atributo extendido de clase de almacenamiento, thread, que se utiliza con la palabra clave __declspec para declarar una variable local para el subproceso. Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:  
   
