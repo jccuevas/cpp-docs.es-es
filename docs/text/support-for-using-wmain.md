@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604068"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205721"
 ---
 # <a name="support-for-using-wmain"></a>Compatibilidad con el uso de wmain
 Visual C++ admite la definición de un **wmain** función y pasar argumentos de caracteres anchos a una aplicación Unicode. Declarar parámetros formales para **wmain**, utilizando un formato similar a `main`. A continuación, se pueden pasar al programa argumentos de caracteres anchos y, opcionalmente, un puntero a entorno de caracteres anchos. Los parámetros `argv` y `envp` de **wmain** son del tipo `wchar_t*`. Por ejemplo:  
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con Unicode](../text/support-for-unicode.md)   
  [Resumen de la programación de Unicode](../text/unicode-programming-summary.md)   
- [WinMain (función)](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [WinMain (función)](https://msdn.microsoft.com/library/windows/desktop/ms633559)

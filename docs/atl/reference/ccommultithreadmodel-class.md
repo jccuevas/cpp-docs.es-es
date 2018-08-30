@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 25c9e21aa4b0f09db83632973d3a5046e3e2aa4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880510"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206125"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel (clase)
 `CComMultiThreadModel` Proporciona métodos seguros para subprocesos para aumentar y disminuir el valor de una variable.  
@@ -158,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  Consulte [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- Esta función estática llama a la función de Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), que disminuye el valor de la variable apunta a *p*.  
+ Esta función estática llama a la función de Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), que disminuye el valor de la variable apunta a *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
  `InterlockedDecrement` impide que varios subprocesos simultáneamente mediante esta variable.  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- Esta función estática llama a la función de Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), lo que incrementa el valor de la variable apuntado *p*.  
+ Esta función estática llama a la función de Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), lo que incrementa el valor de la variable apuntado *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

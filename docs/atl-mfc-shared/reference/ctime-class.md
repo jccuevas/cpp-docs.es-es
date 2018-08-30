@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027678"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205992"
 ---
 # <a name="ctime-class"></a>CTime (clase)
 Representa una fecha y hora absoluta.  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|Convierte un `CTime` objeto en una cadena con formato, según la zona horaria local.|  
 |[CTime::FormatGmt](#formatgmt)|Convierte un `CTime` objeto en una cadena con formato, según la hora UTC.|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Convierte la información de hora almacenada en el `CTime` objeto a una estructura DBTIMESTAMP compatible con Win32.|  
-|[CTime::GetAsSystemTime](#getassystemtime)|Convierte la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.|  
+|[CTime::GetAsSystemTime](#getassystemtime)|Convierte la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.|  
 |[CTime:: GetCurrentTime](#getcurrenttime)|Crea un `CTime` objeto que representa la hora actual (función miembro estática).|  
 |[CTime::GetDay](#getday)|Devuelve el representan día por el `CTime` objeto.|  
 |[CTime::GetDayOfWeek](#getdayofweek)|Devuelve el día de la semana representado por la `CTime` objeto.|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  El constructor utilizando `DBTIMESTAMP` parámetro solo está disponible cuando se incluye OLEDB.h.  
   
- Para obtener más información, consulte el [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) y [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estructura en el SDK de Windows. Consulte también el [MS-DOS fecha y hora](http://msdn.microsoft.com/library/windows/desktop/ms724503) entrada en el SDK de Windows.  
+ Para obtener más información, consulte el [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) y [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estructura en el SDK de Windows. Consulte también el [MS-DOS fecha y hora](/windows/desktop/SysInfo/ms-dos-date-and-time) entrada en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- Llame a esta función miembro para convertir la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.  
+ Llame a esta función miembro para convertir la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>Parámetros  
  *timeDest*  
- Una referencia a un [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que va a contener el valor de fecha y hora convertido de la `CTime` objeto.  
+ Una referencia a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que va a contener el valor de fecha y hora convertido de la `CTime` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si es correcto; en caso contrario, FALSE.  
