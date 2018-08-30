@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 1) C4951 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4951 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e26c4bc176a54f063a3f9bce2faf451a9c0406f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204240"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>Advertencia del compilador (nivel 1) C4951
-'function' se ha editado desde que se recopilaron los datos de perfil; los datos de perfil de la función no se han utilizado  
-  
- Una función se ha editado en un módulo de entrada a [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), de forma que los datos del perfil ahora no son válidos. El módulo de entrada se ha vuelto a compilar después de **/LTCG:PGINSTRUMENT** y tiene una función (***function***) con un flujo de control diferente que el del módulo en el momento de la operación **/LTCG:PGINSTRUMENT** .  
-  
- La advertencia es informativa. Para solucionar esta advertencia, ejecute **/LTCG:PGINSTRUMENT**, rehaga todas las ejecuciones de prueba y ejecute **/LTCG:PGOPTIMIZE**.  
-  
- Esta advertencia se reemplazaría por un error si se hubiera usado **/LTCG:PGOPTIMIZE** .
+
+> '*función*' se ha editado desde que se recopilaron los datos, los datos de perfil de función no usa de perfil
+
+Una función se ha editado en un módulo de entrada a [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), de forma que los datos del perfil ahora no son válidos. El módulo de entrada se ha vuelto a compilar después **/LTCG: PGINSTRUMENT** y tiene una función (*función*) con un flujo de control diferente que el módulo en el momento de la  **/LTCG: PGINSTRUMENT** operación.
+
+La advertencia es informativa. Para solucionar esta advertencia, ejecute **/LTCG:PGINSTRUMENT**, rehaga todas las ejecuciones de prueba y ejecute **/LTCG:PGOPTIMIZE**.
+
+Esta advertencia se reemplazaría por un error si se hubiera usado **/LTCG:PGOPTIMIZE** .

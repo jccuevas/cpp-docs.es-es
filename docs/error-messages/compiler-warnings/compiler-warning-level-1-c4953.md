@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 1) C4953 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4953 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0af5a16ebbf7851eceb2f2cd355f953b14c4bd38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e53808d4ad97bad4eccdf81b0a863277f8f7796
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293067"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194637"
 ---
 # <a name="compiler-warning-level-1-c4953"></a>Advertencia del compilador (nivel 1) C4953
-La inclusión en líneas de 'function' se ha editado desde que los datos de perfil se recopilaron; datos de perfil no utilizados  
-  
- Al usar [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), el compilador detectó un módulo de entrada que se ha vuelto a compilar después de `/LTCG:PGINSTRUMENT` y tiene una función (***function***) que se editó y donde las ejecuciones de pruebas existentes identifican la función como candidata para la inclusión en líneas. Sin embargo, como resultado de volver a compilar el módulo, la función ya no será candidata para la inclusión en líneas.  
-  
- Esta advertencia es informativa. Para resolver esta advertencia, ejecute `/LTCG:PGINSTRUMENT`, rehaga todas las pruebas y ejecute `/LTCG:PGOPTIMIZE`.  
-  
- Esta advertencia se reemplazaría por un error si se hubiera usado `/LTCG:PGOPTIMIZE` .
+
+> Inlinee '*función*' se ha editado desde que se recopilaron los datos, datos de perfil no utilizados de perfil
+
+Cuando se usa [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), el compilador detectó un módulo de entrada que se ha vuelto a compilar después `/LTCG:PGINSTRUMENT` y tiene una función (*función*) que se editó y donde ejecuciones de pruebas existentes identificado el función como candidata para inserción. Sin embargo, como resultado de volver a compilar el módulo, la función ya no será candidata para la inclusión en líneas.
+
+Esta advertencia es informativa. Para resolver esta advertencia, ejecute `/LTCG:PGINSTRUMENT`, rehaga todas las pruebas y ejecute `/LTCG:PGOPTIMIZE`.
+
+Esta advertencia se reemplazaría por un error si se hubiera usado `/LTCG:PGOPTIMIZE` .

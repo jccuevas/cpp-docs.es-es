@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f00bfbcb02e05ac2c0eeac5aed9485607e0309a4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 246ca30c63596dd463889947a4dba9c350d449e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954947"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202214"
 ---
 # <a name="ccombstr-class"></a>CComBSTR (clase)
 Esta clase es un contenedor de cadenas BSTR.  
@@ -411,7 +411,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- Consulte [LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) en el SDK de Windows.  
+ Consulte [LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si la cadena se carga correctamente; en caso contrario, devuelve FALSE.  
@@ -604,7 +604,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Parámetros  
  *pStream*  
- [in] Un puntero a la [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaz en la secuencia que contiene los datos.  
+ [in] Un puntero a la [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaz en la secuencia que contiene los datos.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  
@@ -650,7 +650,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Parámetros  
  *pStream*  
- [in] Un puntero a la [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaz en una secuencia.  
+ [in] Un puntero a la [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaz en una secuencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  

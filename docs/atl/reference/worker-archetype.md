@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204859"
 ---
 # <a name="worker-archetype"></a>Worker (Arquetipo)
 Las clases que se ajustan a la *trabajo* Arquetipo de proporcionar el código para procesar elementos de trabajo en cola en un grupo de subprocesos.  
@@ -31,8 +31,8 @@ Las clases que se ajustan a la *trabajo* Arquetipo de proporcionar el código pa
 |Método|Descripción|  
 |------------|-----------------|  
 |[Initialize](#initialize)|Se llama para inicializar el objeto de trabajo para las solicitudes se pasan a [Execute](#execute).|  
-|[Ejecutar](#execute)|Se llama para procesar un elemento de trabajo.|  
-|[Finalizar](#terminate)|Se llama para anular la inicialización del objeto de trabajo después de que se han pasado todas las solicitudes al [Execute](#execute).|  
+|[Execute](#execute)|Se llama para procesar un elemento de trabajo.|  
+|[Terminate](#terminate)|Se llama para anular la inicialización del objeto de trabajo después de que se han pasado todas las solicitudes al [Execute](#execute).|  
   
 |Definición de tipo|Descripción|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Un parámetro personalizado que entiende por la clase de trabajo. También pasa a `WorkerArchetype::Initialize` y `Terminate`.  
   
  *pOverlapped*  
- Un puntero a la [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estructura usada para crear la cola en qué trabajo se pusieron en cola los elementos.  
+ Un puntero a la [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) estructura usada para crear la cola en qué trabajo se pusieron en cola los elementos.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Se llama para inicializar el objeto de trabajo para las solicitudes se pasan a `WorkerArchetype::Execute`.  

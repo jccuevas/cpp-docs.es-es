@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540900"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196387"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar (clase)
 Una barra de menús que implementa el acoplamiento.  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Debe usar esta función en lugar de [CMFCMenuBar::Create](#create) cuando desee especificar estilos además el estilo de barra de herramientas. Algunos estilos adicionales usados con frecuencia son TBSTYLE_TRANSPARENT y CBRS_TOP.  
   
- Para obtener listas de estilos adicionales, vea [Control de barra de herramientas y los estilos de botón](http://msdn.microsoft.com/library/windows/desktop/bb760439), [estilos de control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498), y [estilos de ventana comunes](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ Para obtener listas de estilos adicionales, vea [Control de barra de herramientas y los estilos de botón](/windows/desktop/Controls/toolbar-control-and-button-styles), [estilos de control comunes](/windows/desktop/Controls/common-control-styles), y [estilos de ventana comunes](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar el `CreateEx` método de la `CMFCMenuBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *lpLogFont*  
- Un puntero a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) estructura que define la fuente para establecer.  
+ Un puntero a un [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) estructura que define la fuente para establecer.  
   
  [in] *bHorz*  
  TRUE si desea que el *lpLogFont* parámetro que se usa para la fuente vertical, FALSE si desea que se usará para la fuente horizontal.  

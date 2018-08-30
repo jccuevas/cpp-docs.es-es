@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203757"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array y WriteOnlyArray (C++/CX)
 Puede utilizar libremente matrices normales de estilo C o [std:: Array](../standard-library/array-class-stl.md) en C++ / c++ / programa CX (aunque [std:: vector](../standard-library/vector-class.md) a menudo es mejor usar), pero en cualquier API que se ha publicado en metadatos, debe convertir una matriz de estilo C o vector para un [Platform:: Array](../cppcx/platform-array-class.md) o [writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo dependiendo de cómo se usa. El tipo [Platform::Array](../cppcx/platform-array-class.md) no es tan eficaz como [std::vector](../standard-library/vector-class.md), por lo que, como regla general, no debes utilizarlo en código interno que realice gran cantidad de operaciones en los elementos de la matriz.  
@@ -82,12 +82,12 @@ Puede utilizar libremente matrices normales de estilo C o [std:: Array](../stand
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>Usar ArrayReference para evitar la copia de datos  
  En algunos escenarios donde los datos se pasan a través de la ABI en un tipo [Platform::Array](../cppcx/platform-array-class.md)y deseas en última instancia que dichos datos se procesen en una matriz de estilo C por razones de eficacia, puedes utilizar [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) para evitar la operación de copia adicional. Cuando pases un tipo [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) como argumento a un parámetro que toma un tipo `Platform::Array`, el objeto `ArrayReference` almacenará los datos directamente en la matriz de estilo C que especifiques. Solo debes tener en cuenta que `ArrayReference` no tiene ningún bloqueo en los datos de origen, por lo que si esos datos se modifican o eliminan en otro subproceso antes de completarse la llamada, los resultados serán no definidos (undefined).  
   
- En el siguiente fragmento de código se muestra cómo copiar los resultados de una operación [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) en un tipo `Platform::Array` (el patrón habitual) y, a continuación, cómo sustituir `ArrayReference` para copiar los datos directamente en una matriz de estilo C:  
+ El fragmento de código siguiente muestra cómo copiar los resultados de una [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operación en un `Platform::Array` (el patrón habitual) y, a continuación, cómo sustituir `ArrayReference` para copiar los datos directamente en una matriz de estilo C:  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Evitar exponer una matriz como una propiedad  
- En general, debes evitar exponer un tipo `Platform::Array` como una propiedad de una clase ref porque se devuelve la matriz completa, incluso cuando el código de cliente intenta únicamente acceder a un solo elemento. Cuando necesites exponer un contenedor de secuencias como una propiedad en una clase ref pública, es preferible que uses [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) . En las API privadas o internas (que no se publican para metadatos), considera la opción de utilizar un contenedor de C++ estándar como [std::vector](../standard-library/vector-class.md).  
+ En general, debes evitar exponer un tipo `Platform::Array` como una propiedad de una clase ref porque se devuelve la matriz completa, incluso cuando el código de cliente intenta únicamente acceder a un solo elemento. Cuando deba exponer un contenedor de secuencias como una propiedad en una clase ref pública, [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) es una opción mejor. En las API privadas o internas (que no se publican para metadatos), considera la opción de utilizar un contenedor de C++ estándar como [std::vector](../standard-library/vector-class.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Sistema de tipos](../cppcx/type-system-c-cx.md)   

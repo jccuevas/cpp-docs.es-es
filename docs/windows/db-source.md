@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 509395daef16e06c915190a80dc1b9c1c5e6494f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bad61c157926fd417467afaa2d97d0db517430f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598054"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201561"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -61,7 +61,7 @@ Cuando usas **db_source** en un método, se ejecutará el código insertado en e
 
 Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *NombreClase*descriptor de acceso, donde *NombreClase* es el nombre que asignó el clase y el compilador también creará una clase denominada *NombreClase*, que se deriva de \_ *NombreClase*descriptor de acceso.  En Vista de clases verá ambas clases.
 
-Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) y [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).
+Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](https://github.com/Microsoft/VCSamples) y [MultiRead](https://github.com/Microsoft/VCSamples).
 
 ## <a name="example"></a>Ejemplo
 

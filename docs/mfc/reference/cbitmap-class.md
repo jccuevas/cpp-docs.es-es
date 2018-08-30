@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337021"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195857"
 ---
 # <a name="cbitmap-class"></a>CBitmap (clase)
 Encapsula un mapa de bits de la Interfaz de dispositivo gráfico (GDI) de Windows y proporciona funciones miembro para manipular el mapa de bits.  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Comentarios  
  Aunque un mapa de bits no se puede seleccionar directamente para un dispositivo de pantalla, puede seleccionarse como el mapa de bits actual para un contexto de dispositivo de memoria usando [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) y copiarse en cualquier contexto de dispositivo compatible con la [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) función. (El [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) función puede copiar el mapa de bits para el pincel actual directamente en el contexto de dispositivo de pantalla.)  
   
- Si el `BITMAP` estructura que señala el *lpBitmap* parámetro se ha rellenado mediante el uso de la `GetObject` función, no se especifican los bits del mapa de bits y el mapa de bits no está inicializada. Para inicializar el mapa de bits, una aplicación puede usar una función como [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) para copiar los bits del mapa de bits identificado por el primer parámetro de `CGdiObject::GetObject` al mapa de bits creado por `CreateBitmapIndirect`.  
+ Si el `BITMAP` estructura que señala el *lpBitmap* parámetro se ha rellenado mediante el uso de la `GetObject` función, no se especifican los bits del mapa de bits y el mapa de bits no está inicializada. Para inicializar el mapa de bits, una aplicación puede usar una función como [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) para copiar los bits del mapa de bits identificado por el primer parámetro de `CGdiObject::GetObject` al mapa de bits creado por `CreateBitmapIndirect`.  
   
  Cuando termine con el `CBitmap` objeto creado con `CreateBitmapIndirect` funcione, primero seleccione el mapa de bits fuera del contexto de dispositivo y luego eliminar el `CBitmap` objeto.  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, `LoadMappedBitmap` asignará los colores usados en los glifos de botón.  
   
- Para obtener información acerca de cómo crear un mapa de bits asignado, vea la función de Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) y [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) estructura en el SDK de Windows.  
+ Para obtener información acerca de cómo crear un mapa de bits asignado, vea la función de Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) y [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) estructura en el SDK de Windows.  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Carga un mapa de bits predefinido utilizado por Windows.  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Comentarios  
  Este es un operador de conversión, que admite el uso directo de un `HBITMAP` objeto.  
   
- Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) en el SDK de Windows.  
+ Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en el SDK de Windows.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Establece los bits de un mapa de bits en los valores de bits proporcionados por *lpBits*.  

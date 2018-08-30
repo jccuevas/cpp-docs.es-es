@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572297"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194732"
 ---
 # <a name="appearance-atl-control-wizard"></a>Apariencia, Asistente para controles ATL
 Inserte aquí "Resultados de búsqueda" resumen.  
@@ -32,7 +32,7 @@ Inserte aquí "Resultados de búsqueda" resumen.
 **Estado de vista**  
 Establece la apariencia del control dentro del contenedor.  
   
- -   **Opaco**: establece el bit VIEWSTATUS_OPAQUE en el [VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201) enumeración y dibuja el rectángulo de todo el control pasa a la [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) método. El control aparece completamente opaco y ninguno de sus contenedores muestra detrás de los límites del control.      
+ -   **Opaco**: establece el bit VIEWSTATUS_OPAQUE en el [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) enumeración y dibuja el rectángulo de todo el control pasa a la [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) método. El control aparece completamente opaco y ninguno de sus contenedores muestra detrás de los límites del control.      
       
         Esta configuración permite que el contenedor de dibujar el control más rápidamente. Si no se selecciona esta opción, el control puede contener las partes transparentes.  
       
@@ -82,7 +82,7 @@ Establece las opciones de apariencia y comportamiento adicionales para el contro
   
  -   **Invisible en tiempo de ejecución**: establece el control sea invisible en tiempo de ejecución. Puede usar controles invisibles para realizar operaciones en segundo plano, como la activación de eventos a intervalos de tiempo.  
       
- -   **Actúa como botón**: establece el bit OLEMISC_ACTSLIKEBUTTON en el [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) enumeración para permitir que un control para que actúe como un botón. Si el contenedor ha marcado el sitio de cliente del control como un botón predeterminado, al seleccionar esta opción permite que el control de botón para que se muestre como un botón predeterminado mediante el dibujo de sí mismo con un marco más grueso. Consulte [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) para obtener más información.  
+ -   **Actúa como botón**: establece el bit OLEMISC_ACTSLIKEBUTTON en el [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) enumeración para permitir que un control para que actúe como un botón. Si el contenedor ha marcado el sitio de cliente del control como un botón predeterminado, al seleccionar esta opción permite que el control de botón para que se muestre como un botón predeterminado mediante el dibujo de sí mismo con un marco más grueso. Consulte [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) para obtener más información.  
       
   -   **Actúa como etiqueta**: establece el bit OLEMISC_ACTSLIKELABEL en la enumeración OLEMISC para permitir que un control reemplazar la etiqueta del contenedor nativo. El contenedor determina qué hacer con esta marca, caso en todo.  
   

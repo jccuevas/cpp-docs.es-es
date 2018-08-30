@@ -1,5 +1,5 @@
 ---
-title: Comparar estructuras de datos de sincronización con la API de Windows | Documentos de Microsoft
+title: Comparar estructuras de datos de sincronización con la API de Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1470911b13243a7c8b3befc627801368e89f04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cb6dc90a272c8e288a4370ae18ad3d1fda150eed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687379"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197553"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Comparar estructuras de datos de sincronización con la API de Windows
 En este tema se compara el comportamiento de las estructuras de datos de sincronización que proporciona el Runtime de simultaneidad con las que proporciona la API de Windows.  
   
- Las estructuras de datos de sincronización que proporcionan el Runtime de simultaneidad siguen el *cooperativa modelo de subprocesos*. En este modelo, las primitivas de sincronización ceden explícitamente sus recursos de procesamiento a otros subprocesos. Esto difiere de la *modelo de subprocesos preferente*, donde los recursos de procesamiento se transfieren a otros subprocesos por el sistema operativo o el programador de control.  
+ Las estructuras de datos de sincronización que proporcionan el Runtime de simultaneidad siguen el *cooperativa de modelo de subprocesos*. En este modelo, las primitivas de sincronización ceden explícitamente sus recursos de procesamiento a otros subprocesos. Esto difiere de la *preferente de modelo de subprocesos*, donde los recursos de procesamiento se transfieren a otros subprocesos por el sistema operativo o el programador de control.  
   
 ## <a name="criticalsection"></a>critical_section  
- El [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) es similar a las ventanas `CRITICAL_SECTION` porque se puede utilizar solo por los subprocesos de un proceso de la estructura. Para obtener más información acerca de las secciones críticas en la API de Windows, vea [objetos de sección crítica](http://msdn.microsoft.com/library/windows/desktop/ms682530).  
+ El [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) es similar a la Windows `CRITICAL_SECTION` estructura porque puede usarse únicamente por los subprocesos de un proceso. Para obtener más información acerca de las secciones críticas en la API de Windows, consulte [objetos de sección crítica](/windows/desktop/Sync/critical-section-objects).  
   
 ## <a name="readerwriterlock"></a>reader_writer_lock  
  El [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) es similar a bloqueos finos de lector/escritor (SRW) de Windows. En la tabla siguiente se explican las similitudes y las diferencias.  
@@ -41,10 +41,10 @@ En este tema se compara el comportamiento de las estructuras de datos de sincron
 |Bloqueo de preferencia de escritura|Sí|No|  
 |Acceso FIFO a escritores|Sí|No|  
   
- Para obtener más información sobre los bloqueos SRW, vea [bloqueos finos de lector/escritor (SRW)](http://msdn.microsoft.com/library/windows/desktop/aa904937) en Platform SDK.  
+ Para obtener más información sobre los bloqueos SRW, vea [bloqueos finos de lector/escritor (SRW)](https://msdn.microsoft.com/library/windows/desktop/aa904937) en Platform SDK.  
   
 ## <a name="event"></a>evento  
- El [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) es similar a un evento de restablecimiento manual sin nombre, de Windows. Sin embargo, un objeto `event` se comporta de forma cooperativa, en tanto que un evento de Windows se comporta con preferencia. Para obtener más información acerca de los eventos de Windows, vea [objetos de evento](http://msdn.microsoft.com/library/windows/desktop/ms682655).  
+ El [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) es similar a un evento de restablecimiento manual sin nombre, de Windows. Sin embargo, un objeto `event` se comporta de forma cooperativa, en tanto que un evento de Windows se comporta con preferencia. Para obtener más información acerca de los eventos de Windows, consulte [objetos de evento](/windows/desktop/Sync/event-objects).  
   
 ## <a name="example"></a>Ejemplo  
   

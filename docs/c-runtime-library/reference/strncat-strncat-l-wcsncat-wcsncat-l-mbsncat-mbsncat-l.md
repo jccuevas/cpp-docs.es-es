@@ -67,12 +67,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417592"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202873"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -152,14 +152,14 @@ Devuelve un puntero a la cadena de destino. No se reserva ningún valor devuelto
 
 ## <a name="remarks"></a>Comentarios
 
-El **strncat** función anexa, como máximo, los primeros *recuento* caracteres de *strSource* a *strDest*. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDest*. Si aparece un carácter nulo en *strSource* antes de *recuento* se anexan caracteres, **strncat** anexa todos los caracteres de *strSource*, hasta el carácter nulo. Si *recuento* es mayor que la longitud de *strSource*, la longitud de *strSource* se utiliza en lugar de *recuento*. En todos los casos, la cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+El **strncat** función anexa, como máximo, los primeros *recuento* caracteres de *strSource* a *strDest*. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDest*. Si aparece un carácter nulo en *strSource* antes *recuento* se anexan caracteres, **strncat** anexa todos los caracteres desde *strSource*, hasta el carácter nulo. Si *recuento* es mayor que la longitud de *strSource*, la longitud de *strSource* se utiliza en lugar de *recuento*. En todos los casos, la cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
-> **strncat** no comprueba si hay espacio suficiente en *strDest*; por lo tanto, es una posible causa de saturaciones de búfer. Tenga en cuenta que *recuento* limita el número de caracteres anexar; no es un límite en el tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> **strncat** no comprueba si hay espacio suficiente en *strDest*; por lo tanto, es una posible causa de saturaciones del búfer. Tenga en cuenta que *recuento* limita el número de anexar caracteres; no es un límite del tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-**wcsncat** y **_mbsncat** son versiones de caracteres multibyte y anchos de **strncat**. Los argumentos de cadena y el valor devuelto de **wcsncat** son caracteres anchos cadenas; los de **_mbsncat** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcsncat** y **_mbsncat** son versiones de caracteres anchos y caracteres multibyte de **strncat**. Los argumentos de cadena y el valor devuelto de **wcsncat** son caracteres anchos cadenas; los de **_mbsncat** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -171,7 +171,7 @@ En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más infor
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** y **_wcsncat_l** no tienen dependen de la configuración regional y no están diseñadas para ser llamado directamente. Se proporcionan para uso interno exclusivo **_tcsncat_l**.
+> **_strncat_l** y **_wcsncat_l** no tienen dependen de la configuración regional y no están diseñados para ser llamado directamente. Se proporcionan para uso interno por **_tcsncat_l**.
 
 ## <a name="requirements"></a>Requisitos
 

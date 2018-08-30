@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6a0e57931b7f2af3f6232f140fd38155cfa5b2f8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131859"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195240"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funciones de la biblioteca en tiempo de ejecución de C para el control de subprocesos
 Todos los programas Win32 contienen al menos un subproceso. Cualquier subproceso puede crear subprocesos adicionales. Un subproceso puede completar su trabajo rápidamente y después terminar, o bien puede permanecer activo durante toda la vida del programa.  
@@ -40,7 +40,7 @@ Las funciones `_beginthread` y `_beginthreadex` crean un nuevo subproceso y devu
  
 Las funciones `_beginthread` y `_beginthreadex` crean un nuevo subproceso. Un subproceso comparte los segmentos de código y de datos de un proceso con otros subprocesos del proceso pero dispone de sus propios y únicos valores de registros, espacio de pila y dirección de la instrucción actual. El sistema asigna tiempo de CPU a cada subproceso, de modo que todos los subprocesos de un proceso puedan ejecutarse de forma simultánea.  
   
-`_beginthread` y `_beginthreadex` son similares a los [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) función de la API de Win32, pero tiene estas diferencias:  
+`_beginthread` y `_beginthreadex` son similares a los [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) función de la API de Win32, pero tiene estas diferencias:  
   
 - Inicializan ciertas variables de la biblioteca en tiempo de ejecución de C. Esto sólo es importante cuando se utiliza la biblioteca en tiempo de ejecución de C en los subprocesos.  
   

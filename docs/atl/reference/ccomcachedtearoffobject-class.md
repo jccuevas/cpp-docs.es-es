@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203876"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject (clase)
-Esta clase implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para una interfaz desplazable.  
+Esta clase implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para una interfaz desplazable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|Un `CComContainedObject` objeto derivado de la clase desplazable (la clase `contained`).|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComCachedTearOffObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para una interfaz desplazable. Esta clase difiere `CComTearOffObject` que `CComCachedTearOffObject` tiene su propio `IUnknown`, independiente del objeto propietario de `IUnknown` (el propietario es el objeto para el que se crea el desplazable). `CComCachedTearOffObject` mantiene su propio el recuento de referencias en sus `IUnknown` y elimina a sí mismo una vez que su recuento de referencias es cero. Sin embargo, si una consulta para cualquiera de su desplazable interfaces, el recuento de referencias del objeto propietario `IUnknown` se incrementará.  
+ `CComCachedTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para una interfaz desplazable. Esta clase difiere `CComTearOffObject` que `CComCachedTearOffObject` tiene su propio `IUnknown`, independiente del objeto propietario de `IUnknown` (el propietario es el objeto para el que se crea el desplazable). `CComCachedTearOffObject` mantiene su propio el recuento de referencias en sus `IUnknown` y elimina a sí mismo una vez que su recuento de referencias es cero. Sin embargo, si una consulta para cualquiera de su desplazable interfaces, el recuento de referencias del objeto propietario `IUnknown` se incrementará.  
   
  Si el `CComCachedTearOffObject` objeto ya se crean instancias de implementar las tiras y la interfaz desplazable se consulta de nuevo, en el mismo `CComCachedTearOffObject` se vuelve a usar el objeto. En cambio, si implementa una interfaz divisible por un `CComTearOffObject` nuevo se consulta a través del objeto propietario, otro `CComTearOffObject` se creará una instancia.  
   

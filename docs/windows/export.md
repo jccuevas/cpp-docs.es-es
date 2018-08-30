@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e696b3c141a83882af67e72039c164a0f917d446
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5da3f03500ccaadb4cff3be0226592e36ed3160
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611205"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200894"
 ---
 # <a name="export"></a>exportar
 
@@ -42,7 +42,7 @@ No se puede aplicar el **exportar** atributo a una clase, incluso si la clase s�
 
 Si exporta una sin nombre **enum** o **struct**, se le asigna un nombre que comienza con **__unnamed**<em>x</em>, donde *x* es un número secuencial.
 
-Las definiciones de tipo válidos para la exportación son tipos base, estructuras, uniones, enumeraciones, o escriba los identificadores.  Consulte [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) para obtener más información.
+Las definiciones de tipo válidos para la exportación son tipos base, estructuras, uniones, enumeraciones, o escriba los identificadores.  Consulte [typedef](/windows/desktop/Midl/typedef) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409130"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200498"
 ---
 # <a name="indirection-operator-"></a>Operador de direccionamiento indirecto: *
 ## <a name="syntax"></a>Sintaxis  
@@ -32,7 +32,7 @@ ms.locfileid: "39409130"
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El operador de direccionamiento indirecto unario (**\***) desreferencia un puntero; es decir, convierte un valor de puntero a un valor l. El operando del operador de direccionamiento indirecto debe ser un puntero a un tipo. El resultado de la expresión de direccionamiento indirecto es el tipo del que se deriva el tipo de puntero. El uso de la **\*** operador en este contexto es diferente de su significado como operador binario, que es multiplicación.  
+ El operador de direccionamiento indirecto unario (<strong>\*</strong>) desreferencia un puntero; es decir, convierte un valor de puntero a un valor l. El operando del operador de direccionamiento indirecto debe ser un puntero a un tipo. El resultado de la expresión de direccionamiento indirecto es el tipo del que se deriva el tipo de puntero. El uso de la <strong>\*</strong> operador en este contexto es diferente de su significado como operador binario, que es multiplicación.  
   
  Si el operando señala a una función, el resultado es un designador de función. Si señala a una ubicación de almacenamiento, el resultado es un valor L que designa la ubicación de almacenamiento.  
   

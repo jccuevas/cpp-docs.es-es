@@ -1,5 +1,5 @@
 ---
-title: Usar campos de devolución de llamada en un selector de hora y fecha Control | Documentos de Microsoft
+title: Usar campos de devolución de llamada en una fecha y hora selector Control | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,50 +23,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf132de39eb630f314c1c5a99e629cbfb25394a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 092038a141f3ace1969fcfa50ec4a5cefb77de0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951132"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195178"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Usar campos de devolución de llamada en un control de selector de fecha y hora
-Además de los caracteres de formato estándar que definen los campos del selector de fecha y hora, puede personalizar la salida mediante la especificación de determinadas partes de una cadena de formato personalizado como campos de devolución de llamada. Para declarar un campo de devolución de llamada, incluya uno o varios caracteres "X" (código ASCII 88) en cualquier lugar en el cuerpo de la cadena de formato. Por ejemplo, la siguiente cadena "' hoy en día es: 'yy' / 'MM' / 'dd' (día 'X')'" hace que el control de selector de fecha y hora mostrar el valor actual como año seguido del mes, fecha y, finalmente, el día del año.  
+Además de los caracteres de formato estándar que definen los campos del selector de fecha y hora, puede personalizar la salida mediante la especificación de determinadas partes de una cadena de formato personalizado como campos de devolución de llamada. Para declarar un campo de devolución de llamada, incluya uno o varios caracteres "X" (código ASCII 88) en cualquier lugar en el cuerpo de la cadena de formato. Por ejemplo, la siguiente cadena "' hoy en día es: 'yy' / 'MM' / 'dd' (día 'X')'" hace que el control de selector de fecha y hora mostrar el valor actual como el año seguido del mes, fecha y, por último, el día del año.  
   
 > [!NOTE]
 >  El número de x en una devolución de llamada campo no se corresponde con el número de caracteres que se mostrará.  
   
- Puede distinguir entre varios campos de devolución de llamada en una cadena personalizada repitiendo el carácter "X". Por lo tanto, la cadena de formato "XXddddMMMdd', ' yyyXXX" contiene dos campos de devolución de llamada único, "XX" y "XXX".  
+ Se puede distinguir entre varios campos de devolución de llamada en una cadena personalizada repitiendo el carácter "X". Por lo tanto, la cadena de formato "XXddddMMMdd', ' yyyXXX" contiene dos campos de devolución de llamada única, "XX" y "XXX".  
   
 > [!NOTE]
->  Campos de devolución de llamada se tratan como campos válidos, por lo que su aplicación debe estar preparada para controlar mensajes de notificación DTN_WMKEYDOWN.  
+>  Campos de devolución de llamada se tratan como campos válidos, por lo que su aplicación debe estar preparada para controlar los mensajes de notificación DTN_WMKEYDOWN.  
   
- Implementación de campos de devolución de llamada en el control de selector de fecha y hora consta de tres partes:  
+ Implementación de los campos de devolución de llamada en el control de selector de fecha y hora consta de tres partes:  
   
 -   Inicializando la cadena de formato personalizado  
   
--   Controlar la notificación DTN_FORMATQUERY  
+-   Control DTN_FORMATQUERY (notificación)  
   
 -   Controlar DTN_FORMAT (notificación)  
   
 ## <a name="initializing-the-custom-format-string"></a>Inicializando la cadena de formato personalizado  
- Inicialice la cadena personalizada con una llamada a `CDateTimeCtrl::SetFormat`. Para obtener más información, consulte [utilizando cadenas de formato personalizado en un Control Date and Time selector](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). Es un lugar común para definir la cadena de formato personalizado en el `OnInitDialog` función de la clase de cuadro de diálogo contenedora o `OnInitialUpdate` función de la clase contenedora de la vista.  
+ Inicialice la cadena personalizada con una llamada a `CDateTimeCtrl::SetFormat`. Para obtener más información, consulte [utilizando cadenas de formato personalizado en un Control Selector de hora de fecha y](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). Es un lugar común para establecer la cadena de formato personalizado en el `OnInitDialog` función de su clase contenedora del cuadro de diálogo o `OnInitialUpdate` función de su clase contenedora de la vista.  
   
-## <a name="handling-the-dtnformatquery-notification"></a>Controlar la notificación DTN_FORMATQUERY  
- Cuando el control analiza la cadena de formato y encuentra un campo de devolución de llamada, la aplicación envía mensajes de notificación DTN_FORMAT y DTN_FORMATQUERY. La cadena del campo de devolución de llamada se incluye con las notificaciones para que pueda determinar qué campo de devolución de llamada que se va a consultar.  
+## <a name="handling-the-dtnformatquery-notification"></a>Control DTN_FORMATQUERY (notificación)  
+ Cuando el control analiza la cadena de formato y encuentra un campo de devolución de llamada, la aplicación envía mensajes de notificación DTN_FORMAT y DTN_FORMATQUERY. La cadena del campo de devolución de llamada se incluye con las notificaciones para que pueda determinar qué campo de devolución de llamada se está consultando.  
   
- La notificación DTN_FORMATQUERY se envía para recuperar el tamaño máximo permitido en píxeles de la cadena que se mostrará en el campo de devolución de llamada actual.  
+ DTN_FORMATQUERY (notificación) se envía para recuperar el tamaño máximo permitido de píxeles de la cadena que se mostrará en el campo de devolución de llamada actual.  
   
- Para calcular este valor correctamente, debe calcular el alto y ancho de la cadena, que se sustituirá para el campo, utilice la fuente de presentación del control. El cálculo real de la cadena se consigue fácilmente con una llamada a la [función GetTextExtentPoint32](http://msdn.microsoft.com/library/windows/desktop/dd144938) función de Win32. Una vez que se determina el tamaño, pase el valor a la aplicación y salga de la función de controlador.  
+ Para calcular este valor correctamente, debe calcular el alto y ancho de la cadena, que se sustituirá para el campo, utilizando la fuente del control para mostrar. El cálculo real de la cadena se consigue fácilmente con una llamada a la [función GetTextExtentPoint32](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpoint32a) función de Win32. Una vez que se determina el tamaño, pase el valor a la aplicación y salga de la función de controlador.  
   
  El ejemplo siguiente es un método para proporcionar el tamaño de la cadena de devolución de llamada:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]  
   
- Una vez que se ha calculado el tamaño del campo de devolución de llamada actual, debe proporcionar un valor para el campo. Esto se hace en el controlador para la notificación DTN_FORMAT.  
+ Una vez que se ha calculado el tamaño del campo de devolución de llamada actual, debe proporcionar un valor para el campo. Esto se realiza en el controlador para DTN_FORMAT (notificación).  
   
 ## <a name="handling-the-dtnformat-notification"></a>Controlar DTN_FORMAT (notificación)  
- DTN_FORMAT (notificación) se usa la aplicación para solicitar la cadena de caracteres que se sustituirá. En el ejemplo siguiente se muestra un método posible:  
+ DTN_FORMAT (notificación) sirve para solicitar la cadena de caracteres que será sustituida por la aplicación. El ejemplo siguiente muestra un posible método:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]  
   

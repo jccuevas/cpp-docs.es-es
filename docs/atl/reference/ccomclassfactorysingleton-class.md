@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c70347c7226df804acd894b6271c4673ec81f72d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884199"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201160"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton (clase)
 Esta clase se deriva de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) y usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir un objeto único.  
@@ -109,7 +109,7 @@ CComPtr<IUnknown> m_spObj;
  Tenga en cuenta que el formulario actual de `m_spObj` presenta un cambio importante de la forma en que `CComClassFactorySingleton` funcionó en versiones anteriores de ATL. En versiones anteriores el `CComClassFactorySingleton` se creó el objeto al mismo tiempo como el generador de clases, durante la inicialización del servidor. En Visual C++ .NET 2003, el objeto se crea de forma diferida, en la primera solicitud. Este cambio podría producir errores en programas que se basan en la inicialización temprana.  
   
 ## <a name="see-also"></a>Vea también  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2 (clase)](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactoryAutoThread (clase)](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)   

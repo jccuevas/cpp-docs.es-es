@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 22e4cf19ec3b85d14d346bd56697f4bcc4ff687b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025944"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194473"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 
@@ -38,7 +38,7 @@ En este tema, se documentan las enumeraciones del encabezado del sistema de arch
 
 ## <a name="copy_options"></a>  copy_options
 
-Una enumeración de valores de máscara de bits que se usa con las funciones [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) y [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) para especificar el comportamiento.
+Una enumeración de valores de máscara de bits que se usa con las funciones [copy](filesystem-functions.md#copy) y [copy_file](filesystem-functions.md#copy_file) para especificar el comportamiento.
 
 ### <a name="syntax"></a>Sintaxis
 

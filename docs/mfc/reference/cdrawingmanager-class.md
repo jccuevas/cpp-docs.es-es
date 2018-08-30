@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209175"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196065"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager (clase)
 La `CDrawingManager` clase implementa los algoritmos de dibujos complejos.  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  Un identificador para el mapa de bits DIB recién creado si este método se realiza correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información sobre cómo crear un mapa de bits DIB, consulte [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+ Para obtener más información sobre cómo crear un mapa de bits DIB, consulte [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap).  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  Muestra los mapas de bits con píxeles transparentes o semitransparentes.  
@@ -196,7 +196,7 @@ void DrawAlpha(
  El rectángulo de origen.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método realiza la combinación alfa para dos mapas de bits. Para obtener más información acerca de la combinación alfa, consulte [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) en el SDK de Windows.  
+ Este método realiza la combinación alfa para dos mapas de bits. Para obtener más información acerca de la combinación alfa, consulte [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) en el SDK de Windows.  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  Dibuja una elipse con los colores de relleno y borde proporcionados.  

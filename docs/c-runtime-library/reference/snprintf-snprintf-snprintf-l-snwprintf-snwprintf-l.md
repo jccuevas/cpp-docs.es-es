@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451750"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203523"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Escribe datos con formato en una cadena. Hay disponibles versiones más seguras de estas funciones; vea [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -146,7 +146,7 @@ Número máximo de caracteres que se pueden almacenar.
 *format*<br/>
 Cadena de control de formato.
 
-*Argumento*<br/>
+*argumento*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -156,32 +156,32 @@ Para obtener más información, vea [Sintaxis de especificación de formato: Fun
 
 ## <a name="return-value"></a>Valor devuelto
 
-Permiten **len** sea la longitud de la cadena de datos con formato, sin incluir el carácter null final. Ambos **len** y *recuento* se expresan en bytes para **snprintf** y **_snprintf**, caracteres anchos para **_snwprintf**.
+Permiten **len** es la longitud de la cadena con formato de datos, sin incluir el carácter nulo final. Ambos **len** y *recuento* están en bytes para **snprintf** y **_snprintf**, caracteres anchos para **_snwprintf**.
 
 Para todas las funciones, si **len** < *recuento*, **len** caracteres se almacenan en *búfer*, se anexa un terminador null, y **len** se devuelve.
 
-El **snprintf** función trunca el resultado cuando **len** es mayor o igual que *recuento*, mediante la colocación de un terminador null en `buffer[count-1]`. El valor devuelto es **len**, el número de caracteres que se habrían resultado si *recuento* era lo suficientemente grande. El **snprintf** función devuelve un valor negativo si se produce un error de codificación.
+El **snprintf** función trunca el resultado cuando **len** es mayor o igual a *recuento*, mediante la colocación de un terminador null a `buffer[count-1]`. El valor devuelto es **len**, el número de caracteres que habrían resultado si *recuento* era lo suficientemente grande. El **snprintf** función devuelve un valor negativo si se produce un error de codificación.
 
-Para todas las funciones excepto **snprintf**si **len** = *recuento*, **len** caracteres se almacenan en  *búfer*, no se anexa ningún terminador null y **len** se devuelve. Si **len** > *recuento*, *recuento* caracteres se almacenan en *búfer*, ningún terminador null no es anexado, negativo se devuelve el valor.
+Para todas las funciones distintas de **snprintf**si **len** = *recuento*, **len** caracteres se almacenan en  *búfer*, no se anexa ningún terminador null y **len** se devuelve. Si **len** > *recuento*, *recuento* caracteres se almacenan en *búfer*, ningún terminador null es anexado y un valor negativo se devuelve el valor.
 
-Si *búfer* es un puntero nulo y *recuento* es cero, **len** se devuelve como el número de caracteres necesarios para dar formato al resultado, sin incluir el carácter null final. Para realizar una llamada correcta con el mismo *argumento* y *configuración regional* parámetros, asigne un búfer que contenga al menos **len** + 1 caracteres.
+Si *búfer* es un puntero nulo y *recuento* es cero, **len** se devuelve como el número de caracteres necesario para dar formato al resultado, sin incluir el carácter nulo final. Para realizar una llamada correcta con el mismo *argumento* y *configuración regional* parámetros, asignar un búfer que contenga al menos **len** + 1 caracteres.
 
-Si *búfer* es un puntero nulo y *recuento* es distinto de cero, o si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+Si *búfer* es un puntero nulo y *recuento* es distinto de cero, o si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **snprintf** función y la **_snprintf** familia de funciones formato y almacenan *recuento* caracteres o menos en *búfer*. El **snprintf** función siempre almacena un carácter nulo de terminación, trunca el resultado si es necesario. El **_snprintf** familia de funciones solo anexa un carácter null final si la longitud de cadena con formato es estrictamente menor que *recuento* caracteres. Cada *argumento* (si existe) se convierte y se muestra según la especificación de formato correspondiente de *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+El **snprintf** función y el **_snprintf** familia de funciones formato y almacenan *recuento* caracteres o menos en *búfer*. El **snprintf** función siempre almacena un carácter nulo final, trunca el resultado si es necesario. El **_snprintf** familia de funciones solo anexa un carácter null final si la longitud de cadena con formato es estrictamente menor que *recuento* caracteres. Cada *argumento* (si existe) se convierte y se muestra según la especificación de formato correspondiente de *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Dado que el **_snprintf** funciones no garantizan la terminación null, en particular, cuando el valor devuelto es *recuento*: asegúrese de que vayan seguidas de código que agrega el terminador nulo. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Dado que el **_snprintf** funciones no garantizan la terminación null, en concreto, cuando el valor devuelto es *recuento*: asegúrese de que vayan seguidas de código que agrega el terminador nulo. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-A partir del ucrt de Visual Studio 2015 y Windows 10, **snprintf** ya no es idéntico a **_snprintf**. El **snprintf** comportamiento de la función ahora es compatible con el estándar C99.
+A partir del UCRT en Visual Studio 2015 y Windows 10, **snprintf** ya no es idéntico al **_snprintf**. El **snprintf** comportamiento de la función ahora es compatible con el estándar C99.
 
-**_snwprintf** es una versión con caracteres anchos de **_snprintf**; los argumentos de puntero a **_snwprintf** son cadenas de caracteres anchos. Detección de errores en de codificación **_snwprintf** pueden diferir de la de **_snprintf**. **_snwprintf**, igual que **swprintf**, escribe los resultados en una cadena en lugar de un destino de tipo **archivo**.
+**_snwprintf** es una versión con caracteres anchos de **_snprintf**; los argumentos de puntero **_snwprintf** son cadenas de caracteres anchos. Detección de errores de codificación **_snwprintf** puede diferir en **_snprintf**. **_snwprintf**, al igual que **swprintf**, escribe la salida en una cadena en lugar de un destino de tipo **archivo**.
 
-Las versiones de estas funciones que tienen la **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan sus homólogos más seguros y más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

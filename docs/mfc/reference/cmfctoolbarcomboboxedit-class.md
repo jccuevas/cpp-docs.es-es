@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCToolBarComboBoxEdit | Documentos de Microsoft
+title: CMFCToolBarComboBoxEdit (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aa01a9cb38de2297ebf1282f0d86333218861a0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042513"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195491"
 ---
-# <a name="cmfctoolbarcomboboxedit-class"></a>Clase CMFCToolBarComboBoxEdit
+# <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit (clase)
 El marco de trabajo usa el `CMFCToolBarComboBoxEdit` clase para crear un botón de barra de herramientas que se comporta como un control de cuadro combinado editable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,10 +47,10 @@ class CMFCToolBarComboBoxEdit : public CEdit
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Convierte los mensajes de ventana antes de que se envíen a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
   
 ### <a name="remarks"></a>Comentarios  
- Derivar una clase de la `CMFCToolBarComboBoxEdit` clase para personalizar sus operaciones de edición.  
+ Derive una clase de la `CMFCToolBarComboBoxEdit` clase para personalizar sus operaciones de edición.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  

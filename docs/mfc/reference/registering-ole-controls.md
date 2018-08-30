@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335628"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196558"
 ---
 # <a name="registering-ole-controls"></a>Registrar controles OLE
 Pueden tener acceso a los controles OLE, al igual que otros objetos de servidor OLE, por otras aplicaciones compatibles con OLE. Esto se logra mediante el registro de la biblioteca de tipos y la clase del control.  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` Establece el modelo de subprocesos en el registro para ThreadingModel = gratis.  
   
-     Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` establecer ThreadingModel = Both. Consulte [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) en el SDK de Windows para obtener más información sobre el registro del modelo de subprocesos.  
+     Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` establecer ThreadingModel = Both. Consulte [InprocServer32](/windows/desktop/com/inprocserver32) en el SDK de Windows para obtener más información sobre el registro del modelo de subprocesos.  
   
 > [!NOTE]
 >  En las versiones MFC anteriores MFC 4.2, el **int** *nRegFlags* parámetro era un parámetro de tipo BOOL, *bInsertable*, que permite o deniega el control que debe insertarse de la instrucción Insert Cuadro de diálogo del objeto.  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Distinto de cero si se ha registrado la clase del control; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Esto permite que el control que va a usar contenedores OLE-control. `AfxOleRegisterControlClass` actualiza el registro con el nombre del control y la ubicación en el sistema y también establece el modelo de subprocesos que admite el control en el registro. Para obtener más información, consulte [64 de nota técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Subprocesamiento de modelo de subprocesos en controles OLE," y [sobre procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms681917) en el SDK de Windows.  
+ Esto permite que el control que va a usar contenedores OLE-control. `AfxOleRegisterControlClass` actualiza el registro con el nombre del control y la ubicación en el sistema y también establece el modelo de subprocesos que admite el control en el registro. Para obtener más información, consulte [64 de nota técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Subprocesamiento de modelo de subprocesos en controles OLE," y [sobre procesos y subprocesos](/windows/desktop/ProcThread/about-processes-and-threads) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Distinto de cero si se ha registrado la clase del control; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Esto permite que la página de propiedades que va a usar contenedores OLE-control. `AfxOleRegisterPropertyPageClass` actualiza el registro con el nombre de la página de propiedades y su ubicación en el sistema y también establece el modelo de subprocesos que admite el control en el registro. Para obtener más información, consulte [64 de nota técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Subprocesamiento de modelo de subprocesos en controles OLE," y [sobre procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms681917) en el SDK de Windows.  
+ Esto permite que la página de propiedades que va a usar contenedores OLE-control. `AfxOleRegisterPropertyPageClass` actualiza el registro con el nombre de la página de propiedades y su ubicación en el sistema y también establece el modelo de subprocesos que admite el control en el registro. Para obtener más información, consulte [64 de nota técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Subprocesamiento de modelo de subprocesos en controles OLE," y [sobre procesos y subprocesos](/windows/desktop/ProcThread/about-processes-and-threads) en el SDK de Windows.  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  

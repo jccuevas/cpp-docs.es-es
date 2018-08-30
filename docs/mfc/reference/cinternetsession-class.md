@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337175"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197444"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (clase)
 
@@ -237,7 +237,7 @@ Para obtener más información acerca de las operaciones asincrónicas, vea el a
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-Esta función miembro implementa el comportamiento de la función de Win32 [método](http://msdn.microsoft.com/library/windows/desktop/aa384710), tal y como se describe en el SDK de Windows.
+Esta función miembro implementa el comportamiento de la función de Win32 [método](/windows/desktop/api/wininet/nf-wininet-internetgetcookiea), tal y como se describe en el SDK de Windows.
 
 ```cpp
 static BOOL GetCookie(
@@ -269,7 +269,7 @@ La variable especifica el tamaño de la *pstrCookieData* búfer. Si la función 
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se realiza correctamente o falso en caso contrario. Si se produce un error en la llamada, llame a la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para determinar la causa del error. Se aplican los valores de error siguiente:
+Devuelve TRUE si se realiza correctamente o falso en caso contrario. Si se produce un error en la llamada, llame a la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para determinar la causa del error. Se aplican los valores de error siguiente:
 
 - ERROR_NO_MORE_ITEMS no es ninguna cookie para la dirección URL especificada y todos sus objetos primarios.
 
@@ -476,7 +476,7 @@ El *dwInternetStatus* parámetro indica la operación se realiza y determina qu�
 |INTERNET_STATUS_RESPONSE_RECEIVED|Correctamente recibió una respuesta desde el servidor. El *lpvStatusInformation* parámetro es NULL.|
 |INTERNET_STATUS_CLOSING_CONNECTION|Cerrando la conexión al servidor. El *lpvStatusInformation* parámetro es NULL.|
 |INTERNET_STATUS_CONNECTION_CLOSED|Cerrado correctamente la conexión al servidor. El *lpvStatusInformation* parámetro es NULL.|
-|INTERNET_STATUS_HANDLE_CREATED|Usa la función de la API Win32 [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) para indicar que ha creado el nuevo identificador. Esto permite que la función llamada a Win32 application [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) desde otro subproceso, si la conexión está tardando demasiada. Consulte la SDKfor de Windows para obtener más información acerca de estas funciones.|
+|INTERNET_STATUS_HANDLE_CREATED|Usa la función de la API Win32 [InternetConnect](/windows/desktop/api/wininet/nf-wininet-internetconnecta) para indicar que ha creado el nuevo identificador. Esto permite que la función llamada a Win32 application [InternetCloseHandle](/windows/desktop/api/wininet/nf-wininet-internetclosehandle) desde otro subproceso, si la conexión está tardando demasiada. Consulte la SDKfor de Windows para obtener más información acerca de estas funciones.|
 |INTERNET_STATUS_HANDLE_CLOSING|Este valor de identificador se finalizó correctamente.|
 
 Reemplace esta función miembro para requerir alguna acción antes de realiza una rutina de devolución de llamada de estado.
@@ -589,7 +589,7 @@ Devuelve TRUE si se realiza correctamente o falso en caso contrario. Para obtene
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro implementa el comportamiento del mensaje de Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), tal y como se describe en el SDK de Windows.
+Esta función miembro implementa el comportamiento del mensaje de Win32 [InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea), tal y como se describe en el SDK de Windows.
 
 ## <a name="setoption"></a>  CInternetSession:: SetOption
 
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>Parámetros
 
 *dwOption*  
-Para establecer la opción de Internet. Consulte [marcas de opción](http://msdn.microsoft.com/library/windows/desktop/aa385328) en el SDKfor una lista de las posibles opciones de Windows.
+Para establecer la opción de Internet. Consulte [marcas de opción](/windows/desktop/WinInet/option-flags) en el SDKfor una lista de las posibles opciones de Windows.
 
 *lpBuffer*  
 Un búfer que contiene el valor de opción.
@@ -632,7 +632,7 @@ Indica las distintas opciones de almacenamiento en caché. El valor predetermina
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la operación fue correcta, se devuelve un valor TRUE. Si se produjo un error, se devuelve un valor FALSE. Si se produce un error en la llamada, la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.
+Si la operación fue correcta, se devuelve un valor TRUE. Si se produjo un error, se devuelve un valor FALSE. Si se produce un error en la llamada, la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.
 
 ## <a name="see-also"></a>Vea también
 

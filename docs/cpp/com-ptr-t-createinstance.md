@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677d3dcab98b9bff8df7a49ba584900bd0b72925
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: bde476af66ae0a5a560019db29d25385c718e517
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201807"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Específicos de Microsoft**  
@@ -69,9 +69,9 @@ HRESULT CreateInstance(
   
 -   **CreateInstance (***rclsid* **,***dwClsContext***)** crea una nueva instancia de ejecución de un objeto, dado un `CLSID`.  
   
--   **CreateInstance (***clsidString* **,***dwClsContext***)** crea una nueva instancia de ejecución de un objeto dada una Cadena Unicode que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.        
+-   **CreateInstance (***clsidString* **,***dwClsContext***)** crea una nueva instancia de ejecución de un objeto dada una Cadena Unicode que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.  
   
--   **CreateInstance (***clsidStringA* **,***dwClsContext***)** crea una nueva instancia de ejecución de un objeto dada una cadena de caracteres multibyte que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.       Las llamadas [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), que se da por supuesto que es la cadena en la página de códigos ANSI en lugar de una página de códigos OEM.  
+-   **CreateInstance (***clsidStringA* **,***dwClsContext***)** crea una nueva instancia de ejecución de un objeto dada una cadena de caracteres multibyte que contiene un `CLSID` (empezando por "**{**") o un `ProgID`. Las llamadas [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), que se da por supuesto que es la cadena en la página de códigos ANSI en lugar de una página de códigos OEM.  
   
  **FIN de Específicos de Microsoft**  
   

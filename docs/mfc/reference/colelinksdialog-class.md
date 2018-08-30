@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3db235771156380c5f1b22af225d7aacbc4989b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853883"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203510"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog (clase)
 Se utiliza en el cuadro de diálogo Editar vínculos de OLE.  
@@ -64,7 +64,7 @@ class COleLinksDialog : public COleDialog
 > [!NOTE]
 >  Código de contenedor generados por el Asistente para la aplicación usa esta clase.  
   
- Para obtener más información, consulte el [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) estructura en el SDK de Windows.  
   
  Para obtener más información sobre los cuadros de diálogo OLE específicos, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -100,7 +100,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL si el usuario canceló el cuadro de diálogo.  
   
-- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) función en el SDK de Windows.  
+- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) función en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea inicializar los distintos controles de cuadro de diálogo mediante el establecimiento de los miembros de la [m_el](#m_el) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>Comentarios  
  Los miembros de esta estructura se pueden modificar directamente o a través de funciones miembro.  
   
- Para obtener más información, consulte el [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) estructura en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [COleDialog (clase)](../../mfc/reference/coledialog-class.md)   

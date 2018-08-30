@@ -1,5 +1,5 @@
 ---
-title: Configurar Visual C++ de 64 bits, x64 destinos | Documentos de Microsoft
+title: Configuración de Visual C++ de 64 bits, x64 destinos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366814"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196994"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configurar Visual C++ de 64 bits, x64 destinos
+# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configuración de Visual C++ de 64 bits, x64 destinos
 
 Esta sección contiene temas sobre cómo destinar 64-bit x64 herramientas de generación de hardware con Visual C++.  
   
@@ -49,7 +49,7 @@ Esta sección contiene temas sobre cómo destinar 64-bit x64 herramientas de gen
   
 [/favor (Optimizar para valores específicos de la arquitectura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-[Guía de programación para Windows de 64 bits](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
+[Guía de programación de Windows de 64 bits](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
   
 [MASM para x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   

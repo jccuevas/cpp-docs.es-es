@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b552417af72b24cddae9055d436a56f771c48743
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203452"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage (clase)
 La `CMFCPropertyPage` clase admite la visualización de los menús emergentes en una página de propiedades.  
@@ -50,7 +50,7 @@ class CMFCPropertyPage : public CPropertyPage
 |`CMFCPropertyPage::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
 |`CMFCPropertyPage::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
 |`CMFCPropertyPage::OnSetActive`|Esta función miembro se llama el marco de trabajo cuando la página elegida por el usuario y se convierte en la página activa. (Invalida [notificaciones CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. Para obtener más información y la sintaxis de método, consulte [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CPropertyPage::PreTranslateMessage`).|  
+|`CMFCPropertyPage::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. Para obtener más información y la sintaxis de método, consulte [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CPropertyPage::PreTranslateMessage`).|  
   
 ## <a name="remarks"></a>Comentarios  
  La `CMFCPropertyPage` clase representa páginas individuales de una hoja de propiedades, también conocido como un cuadro de diálogo de pestaña.  

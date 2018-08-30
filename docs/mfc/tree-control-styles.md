@@ -1,5 +1,5 @@
 ---
-title: Estilos de Control de árbol | Documentos de Microsoft
+title: Estilos de Control de árbol | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,25 +29,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 2a448d76236c3467228b2aa57cd71284274687ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953151"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200436"
 ---
 # <a name="tree-control-styles"></a>Estilos de control de árbol
-Control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlan aspectos de la apariencia de un control de árbol. Establecer los estilos iniciales cuando se crea el control de árbol. Puede recuperar y cambiar los estilos después de crear el control de árbol utilizando la [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) y [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funciones de Windows, especificar **GWL_STYLE** para el *nIndex* parámetro. Para obtener una lista completa de los estilos, consulte [estilos de ventana de Control de vista de árbol](http://msdn.microsoft.com/library/windows/desktop/bb760013) del SDK de Windows.  
+Control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlan aspectos de la apariencia de un control de árbol. Establece los estilos iniciales al crear el control de árbol. Puede recuperar y cambiar los estilos de una vez creado el control de árbol mediante el [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) y [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) las funciones de Windows, especificar **GWL_STYLE** para el *nIndex* parámetro. Para obtener una lista completa de los estilos, consulte [estilos de ventana de Control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) en el SDK de Windows.  
   
- El **TVS_HASLINES** estilo mejora la representación gráfica de la jerarquía de un control de árbol dibujando líneas que vinculan los elementos secundarios a su elemento primario correspondiente. Este estilo no vincula a elementos en la raíz de la jerarquía. Para ello, necesita combinar el **TVS_HASLINES** y **TVS_LINESATROOT** estilos.  
+ El **TVS_HASLINES** estilo mejora la representación gráfica de la jerarquía de un control de árbol mediante el dibujo de líneas que vinculan elementos secundarios a su elemento primario correspondiente. Este estilo no vincular elementos en la raíz de la jerarquía. Para ello, necesita combinar el **TVS_HASLINES** y **TVS_LINESATROOT** estilos.  
   
- El usuario puede expandir o contraer la lista de elementos secundarios del elemento de un primario haciendo doble clic en el elemento primario. Un control de árbol que contiene el **TVS_SINGLEEXPAND** estilo hace que el elemento seleccionado se expanda y el elemento que se va a anular la selección para contraer. Si el mouse se utiliza para el elemento seleccionado con un solo clic y ese elemento está cerrado, se expandirán. Si el elemento seleccionado se hace clic solo cuando se abre, se contraen.  
+ El usuario puede expandir o contraer la lista de un elemento primario de los elementos secundarios haciendo doble clic en el elemento primario. Un control de árbol que tiene el **TVS_SINGLEEXPAND** estilo hace que el elemento seleccionado se expanda y el elemento no seleccionado se contraiga. Si el mouse se usa para el elemento seleccionado de un solo clic y ese elemento se cierra, se expandirá. Si el elemento seleccionado se hace clic único cuando se abre, se contraerá.  
   
- Un control de árbol que contiene el **TVS_HASBUTTONS** estilo agrega un botón a la izquierda de cada elemento primario. El usuario puede hacer clic en el botón para expandir o contraer los elementos secundarios como alternativa al hacer doble clic en el elemento primario. **TVS_HASBUTTONS** no agregar botones a elementos en la raíz de la jerarquía. Para ello, debe combinar **TVS_HASLINES**, **TVS_LINESATROOT**, y **TVS_HASBUTTONS**.  
+ Un control de árbol que tiene el **TVS_HASBUTTONS** estilo agrega un botón a la izquierda de cada elemento primario. El usuario puede hacer clic en el botón para expandir o contraer los elementos secundarios como alternativa al hacer doble clic en el elemento primario. **TVS_HASBUTTONS** no agregar botones a elementos en la raíz de la jerarquía. Para ello, debe combinar **TVS_HASLINES**, **TVS_LINESATROOT**, y **TVS_HASBUTTONS**.  
   
- El **TVS_EDITLABELS** estilo hace posible para el usuario editar las etiquetas de elementos de control de árbol. Para obtener más información acerca de cómo editar las etiquetas, vea [edición de la etiqueta de Control de árbol](../mfc/tree-control-label-editing.md) más adelante en este tema.  
+ El **TVS_EDITLABELS** estilo hace posible que el usuario editar las etiquetas de elementos de control de árbol. Para obtener más información acerca de cómo editar las etiquetas, consulte [edición de la etiqueta de Control de árbol](../mfc/tree-control-label-editing.md) más adelante en este tema.  
   
- El **TVS_NOTOOLTIPS** estilo deshabilita la característica de sugerencia de herramienta automática de los controles de vista de árbol. Esta característica muestra automáticamente la información sobre herramientas que contiene el título del elemento en el cursor del mouse, si todo el título no es visible en ese momento.  
+ El **TVS_NOTOOLTIPS** estilo deshabilita la característica de sugerencia de la herramienta automática de los controles de vista de árbol. Esta característica muestra automáticamente una información sobre herramientas, que contiene el título del elemento bajo el cursor del mouse, si todo el título no está actualmente visible.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CTreeCtrl](../mfc/using-ctreectrl.md)   

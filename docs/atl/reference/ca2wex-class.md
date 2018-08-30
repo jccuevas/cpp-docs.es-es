@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19046cc825fabd2a3a41020a9f4c141dc98489e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 095d0d74fe5ff6eb30866b619e201a029b754d38
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882824"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202181"
 ---
 # <a name="ca2wex-class"></a>Clase CA2WEX
 Esta clase se utiliza por las macros de conversión de cadena CA2TEX, CA2CTEX, CT2WEX y CT2CWEX y la definición de tipo CA2W.  
@@ -110,7 +110,7 @@ CA2WEX(LPCSTR psz) throw(...);
  La cadena de texto que se va a convertir.  
   
  *nCodePage*  
- La página de códigos utilizada para realizar la conversión. Vea la descripción del parámetro de página de código para la función de Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) para obtener más detalles.  
+ La página de códigos utilizada para realizar la conversión. Vea la descripción del parámetro de página de código para la función de Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) para obtener más detalles.  
   
 ### <a name="remarks"></a>Comentarios  
  Asigna el búfer usado en el proceso de traducción.  

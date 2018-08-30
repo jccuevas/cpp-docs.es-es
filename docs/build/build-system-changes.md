@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613206"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202162"
 ---
 # <a name="build-system-changes"></a>Cambios del sistema de compilación
 Se usa el sistema MSBuild para compilar proyectos de Visual C++. Sin embargo, en Visual Studio 2008 y versiones anteriores, se utiliza el sistema de VCBuild. Ciertos tipos de archivo y conceptos que dependían de VCBuild no existen o se representan de forma diferente en el sistema actual. Este documento describen las diferencias en el sistema de compilación actual.  
@@ -55,7 +55,7 @@ Se usa el sistema MSBuild para compilar proyectos de Visual C++. Sin embargo, en
   
  En la versión actual, se admite la herencia especificando el valor de una propiedad como la concatenación de uno o más valores literales y macros de propiedades. El **Inherit** y **NoInherit** macros no se admiten.  
   
- En el ejemplo siguiente, una lista delimitada por punto y coma se asigna a una propiedad en una página de propiedades. La lista se compone de la concatenación de la  *\<valor >* literal y el valor de la `MyProperty` propiedad, que se accede mediante la notación de macro, **$(***MyProperty***)** .  
+ En el ejemplo siguiente, una lista delimitada por punto y coma se asigna a una propiedad en una página de propiedades. La lista se compone de la concatenación de la  *\<valor >* literal y el valor de la `MyProperty` propiedad, que se accede mediante la notación de macro, **$(**  <em>MyProperty</em>**)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
