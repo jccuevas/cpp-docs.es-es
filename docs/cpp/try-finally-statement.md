@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215536"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 **Específicos de Microsoft**  
@@ -90,7 +90,7 @@ Orden de terminación-ejecución de controladores
 ## <a name="abnormal-termination"></a>Finalización anómala  
  Salir de un **try-finally** instrucción mediante el [longjmp](../c-runtime-library/reference/longjmp.md) función en tiempo de ejecución se considera una finalización anómala. No es válido saltar dentro un **__try** instrucción, pero sí fuera. Todos los **__finally** las instrucciones que están activas entre el punto de partida (terminación normal de la **__try** bloque) y el destino (el **__except** que bloquear controla la excepción) se debe ejecutar. Esto recibe el nombre de desenredado local.  
   
- Si un **intente** bloque esté terminado prematuramente por cualquier motivo, incluido un salto fuera del bloque, el sistema ejecuta asociado **finalmente** bloque como parte del proceso de desenredo de la pila. En tales casos, el [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) función devuelve **true** si se llama desde dentro el **finalmente** bloquear; en caso contrario, devuelve **false**.  
+ Si un **intente** bloque esté terminado prematuramente por cualquier motivo, incluido un salto fuera del bloque, el sistema ejecuta asociado **finalmente** bloque como parte del proceso de desenredo de la pila. En tales casos, el [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) función devuelve **true** si se llama desde dentro el **finalmente** bloquear; en caso contrario, devuelve **false**.  
   
  No se llama al controlador de terminación si un proceso se elimina en medio de ejecución de un **try-finally** instrucción.  
   
@@ -100,4 +100,4 @@ Orden de terminación-ejecución de controladores
  [Escribir un controlador de finalización](../cpp/writing-a-termination-handler.md)   
  [(C/C ++) de control de excepciones estructurado](../cpp/structured-exception-handling-c-cpp.md)   
  [Palabras clave](../cpp/keywords-cpp.md)   
- [Sintaxis de controlador de terminación](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Sintaxis de controlador de terminación](/windows/desktop/Debug/termination-handler-syntax)

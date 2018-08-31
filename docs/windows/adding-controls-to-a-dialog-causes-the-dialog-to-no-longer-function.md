@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c1cb1a1894f3288e2825c5eb7d521a468ccdfa7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592819"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215375"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Al agregar controles a un cuadro de diálogo, éste deja de funcionar
 
@@ -61,11 +61,11 @@ Actualmente, el editor de cuadro de diálogo no agrega automáticamente código 
 
 ## <a name="the-fix-for-common-controls"></a>La corrección para controles comunes
 
-Para usar controles comunes en un cuadro de diálogo, deberá llamar a [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) o `AFXInitCommonControls` antes de crear el cuadro de diálogo.
+Para usar controles comunes en un cuadro de diálogo, deberá llamar a [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) o `AFXInitCommonControls` antes de crear el cuadro de diálogo.
 
 ## <a name="the-fix-for-richedit-controls"></a>La corrección para controles RichEdit
 
-Debe llamar a `LoadLibrary` para controles rich edit. Para obtener más información, consulte [con el Control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [acerca de los controles Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) en el SDK de Windows, y [información general sobre el Control Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
+Debe llamar a `LoadLibrary` para controles rich edit. Para obtener más información, consulte [con el Control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [acerca de los controles Rich Edit](/windows/desktop/Controls/about-rich-edit-controls) en el SDK de Windows, y [información general sobre el Control Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
 
 ## <a name="requirements"></a>Requisitos
 

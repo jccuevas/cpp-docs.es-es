@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: b1a15397ee74c94c0d3af088a7b6eb80bd21c66d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572998"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195344"
 ---
 # <a name="cwin32heap-class"></a>Clase de CWin32Heap
 Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación del montón de Win32.  
@@ -73,7 +73,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|Identificador del objeto de montón.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CWin32Heap` implementa los métodos de asignación de memoria mediante las funciones de asignación del montón de Win32, incluidos [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) y [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). A diferencia de otras clases de montón, `CWin32Heap` requiere un identificador de montón válido debe proporcionarse antes de la memoria se asigna: la otra clases usan de forma predeterminada el montón del proceso. Se puede proporcionar el identificador en el constructor o en el [CWin32Heap:: Attach](#attach) método. Consulte la [CWin32Heap::CWin32Heap](#cwin32heap) método para obtener más detalles.  
+ `CWin32Heap` implementa los métodos de asignación de memoria mediante las funciones de asignación del montón de Win32, incluidos [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc) y [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree). A diferencia de otras clases de montón, `CWin32Heap` requiere un identificador de montón válido debe proporcionarse antes de la memoria se asigna: la otra clases usan de forma predeterminada el montón del proceso. Se puede proporcionar el identificador en el constructor o en el [CWin32Heap:: Attach](#attach) método. Consulte la [CWin32Heap::CWin32Heap](#cwin32heap) método para obtener más detalles.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -103,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Comentarios  
  Llame a [CWin32Heap:: Free](#free) o [CWin32Heap:: ReAllocate](#reallocate) para liberar la memoria asignada por este método.  
   
- Implementa mediante [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
+ Implementa mediante [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc).  
   
 ##  <a name="attach"></a>  CWin32Heap:: Attach  
  Asocia el objeto de montón a un montón existente.  

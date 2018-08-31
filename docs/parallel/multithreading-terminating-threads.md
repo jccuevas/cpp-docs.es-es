@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
-ms.translationtype: HT
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131950"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205427"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Finalizar subprocesos en MFC
 Hacer que un subproceso puede terminar dos situaciones normales: la función controladora finaliza o el subproceso no se puede ejecutar hasta su finalización. Si un procesador de textos, se usa un subproceso para impresión de fondo, la función controladora terminaría normalmente si la impresión se completa correctamente. Sin embargo, si el usuario desea cancelar la impresión, el subproceso de impresión en segundo plano tiene debe terminarse prematuramente. En este tema se explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.  
@@ -43,7 +43,7 @@ Hacer que un subproceso puede terminar dos situaciones normales: la función con
  
 Para un subproceso de trabajo, la terminación normal es simple: salir de la función controladora y devolver un valor que indica la razón de finalización. Puede usar el [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) función o un **devolver** instrucción. Normalmente, 0 significa terminación sin error, pero que depende de usted.  
   
-Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) en el SDK de Windows. El único parámetro que `PostQuitMessage` es el código de salida del subproceso. En cuanto a los subprocesos de trabajo, 0 suele significar terminación sin errores.  
+Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) en el SDK de Windows. El único parámetro que `PostQuitMessage` es el código de salida del subproceso. En cuanto a los subprocesos de trabajo, 0 suele significar terminación sin errores.  
   
 ##  <a name="_core_premature_thread_termination"></a> Terminación prematura de subprocesos  
  
@@ -53,7 +53,7 @@ Terminar un subproceso de forma prematura es casi igual de sencillo: llamar a [A
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Recuperar el código de salida de un subproceso  
  
-Para obtener el código de salida de trabajo o el subproceso de interfaz de usuario, llame a la [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) función. Para obtener información acerca de esta función, consulte el SDK de Windows. Esta función recibe el identificador del subproceso (almacenado en el `m_hThread` miembro de datos de `CWinThread` objetos) y la dirección de un valor DWORD.  
+Para obtener el código de salida de trabajo o el subproceso de interfaz de usuario, llame a la [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) función. Para obtener información acerca de esta función, consulte el SDK de Windows. Esta función recibe el identificador del subproceso (almacenado en el `m_hThread` miembro de datos de `CWinThread` objetos) y la dirección de un valor DWORD.  
   
 Si el subproceso está aún activo, `GetExitCodeThread` coloca STILL_ACTIVE en la dirección DWORD suministrada; de lo contrario, el código de salida se coloca en esta dirección.  
   
@@ -70,4 +70,4 @@ Cualquiera de los métodos permite determinar por qué un `CWinThread` objeto fi
 [Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)

@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465478"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195036"
 ---
 # <a name="summary-of-scope-rules"></a>Resumen de reglas de ámbito
 El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en que se determina la sobrecarga). Si el nombre indica una función, la función no debe ser ambigua respecto al número y tipo de parámetros. Si el nombre se mantiene no ambiguo, [acceso a miembros](../cpp/member-access-control-cpp.md) se aplican las reglas.  
   
 ## <a name="constructor-initializers"></a>Inicializadores del constructor  
- Los inicializadores de constructor (descrito en [inicializar Bases y miembros](http://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) se evalúan en el ámbito de bloque más externo del constructor para el que se especifican. Por lo tanto, pueden usar los nombres de parámetro del constructor.  
+ Los inicializadores de constructor (descrito en [inicializar Bases y miembros](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) se evalúan en el ámbito de bloque más externo del constructor para el que se especifican. Por lo tanto, pueden usar los nombres de parámetro del constructor.  
   
 ## <a name="global-names"></a>Nombres globales  
  Un nombre de un objeto, una función o un enumerador es global si se presenta fuera de cualquier función o clase o está precedido por el operador unario global de ámbito (`::`) y si no se usa junto con alguno de estos operadores binarios:  
