@@ -84,8 +84,7 @@
 #### [/LN (Crear un módulo MSIL)](ln-create-msil-module.md)
 #### [/MD, /MT, /LD (Usar la biblioteca en tiempo de ejecución)](md-mt-ld-use-run-time-library.md)
 #### [/MP (Compilar con varios procesos)](mp-build-with-multiple-processes.md)
-#### 
-  [/nologo (Suprimir el titular de inicio) (C/C++)](nologo-suppress-startup-banner-c-cpp.md)
+#### [/nologo (Suprimir el titular de inicio) (C/C++)](nologo-suppress-startup-banner-c-cpp.md)
 #### [/O (Opciones) (Optimizar código)](o-options-optimize-code.md)
 ##### [/O1, /O2 (Minimizar tamaño, maximizar velocidad)](o1-o2-minimize-size-maximize-speed.md)
 ##### [/Ob (Expansión de funciones insertadas)](ob-inline-function-expansion.md)
@@ -247,8 +246,7 @@
 ### [/NOASSEMBLY (Crear un módulo MSIL)](noassembly-create-a-msil-module.md)
 ### [/NODEFAULTLIB (Omitir bibliotecas)](nodefaultlib-ignore-libraries.md)
 ### [/NOENTRY (Sin punto de entrada)](noentry-no-entry-point.md)
-### 
-  [/NOLOGO (Suprimir el titular de inicio) (Vinculador)](nologo-suppress-startup-banner-linker.md)
+### [/NOLOGO (Suprimir el titular de inicio) (Vinculador)](nologo-suppress-startup-banner-linker.md)
 ### [/NXCOMPAT (Compatible con la prevención de ejecución de datos)](nxcompat-compatible-with-data-execution-prevention.md)
 ### [/OPT (Optimizaciones)](opt-optimizations.md)
 ### [/ORDER (Colocar las funciones en orden)](order-put-functions-in-order.md)

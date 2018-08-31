@@ -53,10 +53,8 @@
 ### [Archivos de encabezado](header-files-cpp.md)
 ### [Programa y vinculación](program-and-linkage-cpp.md)
 #### [extern](using-extern-to-specify-linkage.md)
-### 
-  [Inicio y finalización](startup-and-termination-cpp.md)
-#### 
-  [main: Inicio de programa](main-program-startup.md)
+### [Inicio y finalización](startup-and-termination-cpp.md)
+#### [main: Inicio de programa](main-program-startup.md)
 ##### [Usar wmain en vez de main](using-wmain-instead-of-main.md)
 ##### [Definiciones de argumentos](argument-definitions.md)
 ##### [Expansión de caracteres comodín](wildcard-expansion.md)
@@ -67,8 +65,7 @@
 ##### [exit (Función)](exit-function.md)
 ##### [abort (Función)](abort-function.md)
 ##### [Instrucción return en la finalización del programa](return-statement-in-program-termination-cpp.md)
-#### 
-  [Consideraciones de inicio adicionales](additional-startup-considerations.md)
+#### [Consideraciones de inicio adicionales](additional-startup-considerations.md)
 #### [Consideraciones de finalización adicionales](additional-termination-considerations.md)
 ##### [Usar exit o return](using-exit-or-return.md)
 ##### [Usar atexit](using-atexit.md)
