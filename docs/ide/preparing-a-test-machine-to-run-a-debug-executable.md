@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330302"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578224"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparar un equipo de pruebas para ejecutar un archivo ejecutable de depuración
 Para preparar un equipo con el fin de probar la versión de depuración de una aplicación compilada con Visual C++, tiene que implementar versiones de depuración de los archivos DLL de biblioteca de Visual C++ de los que depende la aplicación. Para identificar qué archivos DLL se deben implementar, siga los pasos de [Descripción de las dependencias de una aplicación de Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Normalmente, las versiones de depuración de los archivos DLL de biblioteca de Visual C++ tienen nombres que terminan en "d"; por ejemplo, la versión de depuración del archivo msvcr100.dll se denomina msvcr100d.dll.  
@@ -43,5 +43,5 @@ Para preparar un equipo con el fin de probar la versión de depuración de una a
 ## <a name="see-also"></a>Vea también  
  
  [Implementación en Visual C++](../ide/deployment-in-visual-cpp.md)   
- [Opciones de la línea de comandos de Windows Installer](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Opciones de la línea de comandos de Windows Installer](/windows/desktop/Msi/command-line-options)   
  [Ejemplos de implementación](../ide/deployment-examples.md) [Depuración remota](/visualstudio/debugger/remote-debugging.md)
