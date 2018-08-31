@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569854"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215703"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -61,11 +61,11 @@ Descriptor del archivo existente.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un identificador de archivo del sistema operativo si *fd* es válida. De lo contrario, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **INVALID_HANDLE_VALUE** (-1) y establece **errno** a **EBADF**, que indica un identificador de archivo no válido. Para evitar una advertencia del compilador cuando se utiliza el resultado en rutinas que esperan un identificador de archivo Win32, conviértalo a una **controlar** tipo.
+Devuelve un identificador de archivo del sistema operativo si *fd* es válido. De lo contrario, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **INVALID_HANDLE_VALUE** (-1) y establece **errno** a **EBADF**, que indica un identificador de archivo no válido. Para evitar una advertencia del compilador cuando se usa el resultado en rutinas que esperan un identificador de archivo Win32, conviértalo a un **controlar** tipo.
 
 ## <a name="remarks"></a>Comentarios
 
-Para cerrar un archivo cuyo identificador de archivos del sistema operativo (SO) se obtiene mediante **_get_osfhandle**, llame a [_close](close.md) en el descriptor de archivo *fd*. No llame a **CloseHandle** en el valor devuelto de esta función. El identificador de archivo del sistema operativo subyacente pertenece a la *fd* descriptor de archivo y se cierra cuando [_close](close.md) se llama en *fd*. Si el descriptor de archivo pertenece a un **archivo \***  secuencia, a continuación, llamar a [fclose](fclose-fcloseall.md) en ese **archivo \***  secuencia cierra el descriptor de archivo y el identificador de archivo de sistema operativo subyacente. En este caso, no llame a [_close](close.md) en el descriptor de archivo.
+Para cerrar un archivo cuyo identificador de archivo del sistema operativo (SO) se obtiene mediante **_get_osfhandle**, llame a [_close](close.md) en el descriptor de archivo *fd*. No llame a **CloseHandle** en el valor devuelto de esta función. El identificador de archivo del sistema operativo subyacente pertenece a la *fd* descriptor de archivo y se cierra cuando [_close](close.md) se llama en *fd*. Si el descriptor de archivo pertenece a un `FILE *` secuencia, a continuación, llamar a [fclose](fclose-fcloseall.md) en que `FILE *` secuencia cierra el descriptor de archivo y el identificador de archivo del sistema operativo subyacente. En este caso, no llame a [_close](close.md) en el descriptor de archivo.
 
 ## <a name="requirements"></a>Requisitos
 

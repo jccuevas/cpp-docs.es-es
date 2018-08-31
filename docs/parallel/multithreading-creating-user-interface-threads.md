@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
-ms.translationtype: HT
+ms.openlocfilehash: ad16b4955cf8128d4f54edceeadd4b6551bc6f14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131565"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206519"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Crear subprocesos de interfaz de usuario MFC
 Los subprocesos de interfaz de usuario se utilizan normalmente para controlar los datos proporcionados por el usuario y para responder a los eventos de usuario independientemente de los subprocesos que ejecutan otras partes de la aplicación. El subproceso principal de la aplicación (suministrado en la clase derivada de `CWinApp`) ya está creado y se inicia automáticamente. Este tema describe los pasos necesarios para crear subprocesos de interfaz de usuario adicionales.  
@@ -49,13 +49,13 @@ MFC proporciona dos versiones de `AfxBeginThread` por medio de sobrecarga de par
   
 - El [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) de la clase que deriva de `CWinThread`.  
   
-- (Opcional) El nivel de prioridad deseado. El valor predeterminado es la prioridad normal. Para obtener más información acerca de los niveles de prioridad disponibles, vea [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) en el SDK de Windows.  
+- (Opcional) El nivel de prioridad deseado. El valor predeterminado es la prioridad normal. Para obtener más información acerca de los niveles de prioridad disponibles, vea [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) en el SDK de Windows.  
   
 - (Opcional) El tamaño de pila deseado para el subproceso. El valor predeterminado para el tamaño de pila es el mismo que el del subproceso creador.  
   
 - (Opcional) CREATE_SUSPENDED si desea que el subproceso que se creará en un estado suspendido. El valor predeterminado es 0, es decir, iniciar el subproceso normalmente.  
   
-- (Opcional) Los atributos de seguridad deseados. El valor predeterminado es el mismo acceso que el de su subproceso primario. Para obtener más información sobre el formato de esta información de seguridad, consulte [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) en el SDK de Windows.  
+- (Opcional) Los atributos de seguridad deseados. El valor predeterminado es el mismo acceso que el de su subproceso primario. Para obtener más información sobre el formato de esta información de seguridad, consulte [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) en el SDK de Windows.  
   
 `AfxBeginThread` realiza automáticamente la mayoría del trabajo. Crea un nuevo objeto de la clase, lo inicializa con la información suministrada y llama a [CWinThread:: CreateThread](../mfc/reference/cwinthread-class.md#createthread) para empezar a ejecutar el subproceso. Se realizan comprobaciones en todo el procedimiento para asegurar que todos los objetos queden desasignados correctamente en caso de error en algún momento del proceso de creación.  
   

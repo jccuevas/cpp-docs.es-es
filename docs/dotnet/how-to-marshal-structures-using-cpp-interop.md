@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: serializar estructuras mediante la interoperabilidad de C++ | Documentos de Microsoft'
+title: 'Cómo: serializar estructuras mediante la interoperabilidad de C++ | Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 312fef089262c7e21285d1e3a1fb79de65264d7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130378"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215125"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Cómo: serializar estructuras mediante la interoperabilidad de C++
-En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- El siguiente código, se ejemplos utilizan la [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma implementar administrados y funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si está definido en archivos independientes. No es necesario que los archivos que contienen únicamente funciones no administradas pueden compilarse con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma para implementar administrados y las funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si se definen en archivos independientes. No es necesario que los archivos que contienen solo las funciones no administradas se compilan con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo pasar una estructura de administrada a una función no administrada, por valor y por referencia. Dado que la estructura de este ejemplo contiene tipos de datos intrínsecos solo simple (vea [bits/bytes y tipos no-bits/bytes](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), ninguna serialización especial es necesaria. Para calcular las referencias de estructuras no bits/bytes, como las que contienen punteros, vea [Cómo: Marshal Embedded Pointers Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ El ejemplo siguiente se muestra cómo pasar una estructura de administrado a una función no administrada, por valor y por referencia. Dado que la estructura de este ejemplo contiene los tipos de datos intrínsecos simples solo (consulte [Non-bits/bytes tipos](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), ningún cálculo de referencias especial es necesario. Para calcular las referencias de estructuras de espacio, como las que contienen punteros, vea [Cómo: serializar incrustado punteros Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo pasar una estructura de no administrado a una función administrada, por valor y por referencia. Dado que la estructura de este ejemplo contiene tipos de datos intrínsecos solo simple (vea [bits/bytes y tipos no](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), ningún cálculo de referencias especial es necesario. Para calcular las referencias de estructuras no bits/bytes, como las que contienen punteros, vea [Cómo: Marshal Embedded Pointers Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ En el ejemplo siguiente se muestra cómo pasar una estructura de no administrado a una función administrada, por valor y por referencia. Dado que la estructura de este ejemplo contiene los tipos de datos intrínsecos simples solo (consulte [Non-bits/bytes tipos](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), ningún cálculo de referencias especial es necesario. Para calcular las referencias de estructuras de espacio, como las que contienen punteros, vea [Cómo: serializar incrustado punteros Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  

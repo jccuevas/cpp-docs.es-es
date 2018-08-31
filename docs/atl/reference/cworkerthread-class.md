@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885645"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195348"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread (clase)
 Esta clase crea un subproceso de trabajo o usa uno existente, espera en uno o varios identificadores de objeto de kernel y ejecuta una función de cliente especificada cuando se señala a uno de los controladores.  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se quita el identificador [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) se llamará en el objeto asociado a la que se pasó a [AddHandle](#addhandle). Si se produce un error en esta llamada, `CWorkerThread` llamará el Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) función en el identificador.  
+ Cuando se quita el identificador [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) se llamará en el objeto asociado a la que se pasó a [AddHandle](#addhandle). Si se produce un error en esta llamada, `CWorkerThread` llamará el Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) función en el identificador.  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Llame a este método para apagar el subproceso de trabajo.  

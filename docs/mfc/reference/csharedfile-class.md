@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853733"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215588"
 ---
 # <a name="csharedfile-class"></a>CSharedFile (clase)
 El [CMemFile](../../mfc/reference/cmemfile-class.md)-clase derivada que es compatible con archivos de memoria compartida.  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Comentarios  
  Los archivos de memoria se comportan como los archivos de disco, salvo que el archivo se almacena en la memoria RAM en lugar de en disco. Un archivo de memoria es útil para el almacenamiento temporal rápido o para la transferencia de bytes sin formato o los objetos serializados entre procesos independientes.  
   
- Archivos de memoria compartida se diferencian de otros archivos de memoria en que se asigna memoria para ellos con el [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) función de Windows. El `CSharedFile` clase almacena los datos en un bloque de memoria asignado globalmente (creados con `GlobalAlloc`), y este bloque de memoria se puede compartir con otros OLE/COM uniforme transferencia operaciones de datos, por ejemplo, el Portapapeles o DDE mediante `IDataObject`.  
+ Archivos de memoria compartida se diferencian de otros archivos de memoria en que se asigna memoria para ellos con el [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) función de Windows. El `CSharedFile` clase almacena los datos en un bloque de memoria asignado globalmente (creados con `GlobalAlloc`), y este bloque de memoria se puede compartir con otros OLE/COM uniforme transferencia operaciones de datos, por ejemplo, el Portapapeles o DDE mediante `IDataObject`.  
   
  `GlobalAlloc` Devuelve un identificador HGLOBAL controlar en lugar de un puntero a la memoria, por ejemplo, el puntero devuelto por [malloc](../../c-runtime-library/reference/malloc.md). Se necesita el identificador HGLOBAL en determinadas aplicaciones. Por ejemplo, para colocar datos en el Portapapeles necesita un identificador HGLOBAL.  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>Parámetros  
  *nAllocFlags*  
- Marcas que indican cómo es asignar memoria. Consulte [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) para obtener una lista de valores de indicador válidos.  
+ Marcas que indican cómo es asignar memoria. Consulte [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) para obtener una lista de valores de indicador válidos.  
   
  *nGrowBytes*  
  El incremento de la asignación de memoria en bytes.  
