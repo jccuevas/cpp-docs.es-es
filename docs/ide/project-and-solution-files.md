@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 282fd41602b70f743926b0fe5322346e9cdfd3fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340702"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203300"
 ---
 # <a name="project-and-solution-files"></a>Archivos de proyecto y solución
 Los archivos siguientes se generan al crear un proyecto en Visual Studio. Se usan para administrar los archivos de proyecto de la solución.  
   
-|Filename|Ubicación del directorio|Ubicación del Explorador de soluciones|Description|  
+|Filename|Ubicación del directorio|Ubicación del Explorador de soluciones|Descripción|  
 |--------------|------------------------|--------------------------------|-----------------|  
 |*Nombre_solución*.sln|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de la *solución*. Organiza todos los elementos de un proyecto o varios proyectos en una solución.|  
 |*Nombre_proyecto*.suo|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de *opciones de solución*. Almacena personalizaciones para la solución para que cada vez que se abra un proyecto o archivo en la solución, tenga la apariencia y el comportamiento deseados.|  
@@ -40,7 +40,7 @@ Los archivos siguientes se generan al crear un proyecto en Visual Studio. Se usa
 |*Nombre_proyecto*.sdf|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de *base de datos de exploración*. Admite las características de exploración y navegación como **Ir a definición**, **Buscar todas las referencias**, y **Vista de clases**. Se genera mediante el análisis de los archivos de encabezado.|  
 |*Nombre_proyecto.* vcxproj.filters|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de *filtros*. Especifica dónde colocar un archivo que se agrega a la solución. Por ejemplo, un archivo .h se coloca en el nodo **Archivos de encabezado**.|  
 |*Nombre_proyecto.* vcxproj.user|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de *usuario de migración*. Después de migrar un proyecto de Visual Studio 2008, este archivo contiene la información que se convirtió desde un archivo .vsprops.|  
-|*Nombre_proyecto*.idl|*Nombre_proyecto*|Origen|(Específico del proyecto) Contiene el código fuente del lenguaje de descripción de interfaz (IDL) de una biblioteca de tipos de control. Visual C++ usa este archivo para generar una biblioteca de tipos. La biblioteca generada expone la interfaz del control a otros clientes de Automation. Para obtener más información, vea [Interface Definition (IDL) File](http://msdn.microsoft.com/library/windows/desktop/aa378712) (Archivo de definición de interfaz [IDL]) en Windows SDK.|  
+|*Nombre_proyecto*.idl|*Nombre_proyecto*|Origen|(Específico del proyecto) Contiene el código fuente del lenguaje de descripción de interfaz (IDL) de una biblioteca de tipos de control. Visual C++ usa este archivo para generar una biblioteca de tipos. La biblioteca generada expone la interfaz del control a otros clientes de Automation. Para obtener más información, vea [Interface Definition (IDL) File](https://msdn.microsoft.com/library/windows/desktop/aa378712) (Archivo de definición de interfaz [IDL]) en Windows SDK.|  
 |ReadMe.txt|*Nombre_proyecto*|Proyecto|El archivo *Léame*. Lo genera el asistente para aplicaciones y describe los archivos de un proyecto.|  
   
 ## <a name="see-also"></a>Vea también  

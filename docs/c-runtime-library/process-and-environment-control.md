@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200968"
 ---
 # <a name="process-and-environment-control"></a>Control de proceso y de entorno
 
@@ -56,7 +56,7 @@ Utilice las rutinas del control de proceso para iniciar, detener, y administrar 
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Llamar a las funciones registradas por **atexit** y **_onexit**, vaciar todos los búferes, cerrar todos los archivos abiertos y terminar el proceso|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminar el proceso inmediatamente sin llamar a **atexit** o **_onexit** ni vaciar los búferes|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obtener valor de la variable de entorno|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Obtener número de identificador del proceso|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Obtener número de identificador del proceso|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurar el entorno de pila guardado; usarlo para ejecutar un valor **goto** no local|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Programar rutinas para su ejecución al finalizar el programa; usarlas para compatibilidad con Microsoft C/C++ versión 7.0 y anteriores|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Esperar al nuevo procesador de comandos y cerrar el flujo en la canalización asociada|

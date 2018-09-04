@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418385"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216939"
 ---
 # <a name="vprintf-functions"></a>vprintf (Funciones)
 Cada una de las funciones `vprintf` toma un puntero a una lista de argumentos y, después, aplica formato a los datos determinados y los escribe en un destino concreto. Las funciones se diferencian en la validación de parámetros realizada, si las funciones adoptan cadenas de caracteres de byte único o de caracteres anchos, el destino de salida y la posibilidad de especificar el orden en que se usan los parámetros en la cadena de formato.  
@@ -89,7 +89,7 @@ Cada una de las funciones `vprintf` toma un puntero a una lista de argumentos y,
  En el caso de **vsprintf**, `vswprintf`, `_vsnprintf` y `_vsnwprintf`, si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.  
   
 > [!IMPORTANT]
->  Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Si usa las versiones seguras de estas funciones (con los sufijos **_s** o **_p**), una cadena de formato proporcionada por el usuario podría desencadenar una excepción de parámetro no válido si dicha cadena contiene caracteres de formato no válidos.  
+>  Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer). Si usa las versiones seguras de estas funciones (con los sufijos **_s** o **_p**), una cadena de formato proporcionada por el usuario podría desencadenar una excepción de parámetro no válido si dicha cadena contiene caracteres de formato no válidos.  
   
 ## <a name="see-also"></a>Vea también  
  [E/S de secuencia](../c-runtime-library/stream-i-o.md)   

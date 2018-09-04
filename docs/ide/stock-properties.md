@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335448"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213798"
 ---
 # <a name="stock-properties"></a>Propiedades estándar
 Si se va a agregar una propiedad a una interfaz dispinterface de MFC mediante el [Asistente para agregar propiedades](../ide/idl-attributes-add-property-wizard.md), se puede elegir una propiedad estándar de la lista **Nombre de la propiedad** en la página [Nombres](../ide/names-add-property-wizard.md) del asistente. Estas propiedades son las siguientes:  
   
-|Nombre de la propiedad|Description|  
+|Nombre de la propiedad|Descripción|  
 |-------------------|-----------------|  
 |**Apariencia**|Devuelve o establece un valor que determina la apariencia del control. La propiedad **Apariencia** del control puede incluir u omitir efectos de presentación tridimensionales. Se trata de una propiedad de ambiente de lectura y escritura.|  
 |`BackColor`|Devuelve o establece la propiedad `BackColor` de ambiente del control en un color de paleta (RGB) o un color del sistema predefinido. De forma predeterminada, su valor se corresponde al color de primer plano del contenedor del control. Se trata de una propiedad de ambiente de lectura y escritura.|  
@@ -35,7 +35,7 @@ Si se va a agregar una propiedad a una interfaz dispinterface de MFC mediante el
 |**Fuente**|Devuelve o establece la fuente de ambiente del control. Es NULL si el control no tiene ninguna fuente.|  
 |`ForeColor`|Devuelve o establece la propiedad `ForeColor` de ambiente del control.|  
 |**hWnd**|Devuelve o establece la propiedad **hWnd** de ambiente del control. **hWnd** no tiene ningún tipo de implementación **Variable miembro**.|  
-|**ReadyState**|Devuelve o establece la propiedad **ReadyState** del control. Un control puede estar no inicializado, inicializado, cargando, interactivo o completo. Vea [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) en el *SDK de Internet* para obtener más información.|  
+|**ReadyState**|Devuelve o establece la propiedad **ReadyState** del control. Un control puede estar no inicializado, inicializado, cargando, interactivo o completo. Vea [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) en el *SDK de Internet* para obtener más información.|  
 |**Texto**|Devuelve o establece el texto contenido en un control. **Texto** no tiene ningún tipo de implementación **Variable miembro**.|  
   
 ## <a name="see-also"></a>Vea también  

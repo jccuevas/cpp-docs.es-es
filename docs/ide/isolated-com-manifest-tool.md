@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330186"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216385"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM aislado, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de &lt;Nombre_Proyecto&gt; (Cuadro de diálogo)
-Use este cuadro de diálogo para especificar opciones de **COM aislado** para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+Use este cuadro de diálogo para especificar opciones de **COM aislado** para [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  Para acceder a este cuadro de diálogo de página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el nodo **Herramienta Manifiesto** bajo **Propiedades comunes** y, después, seleccione **COM aislado**.  
   
@@ -47,7 +47,7 @@ Use este cuadro de diálogo para especificar opciones de **COM aislado** para [M
  Usa la opción /replacements para especificar la ruta de acceso completa al archivo que contiene los valores para las cadenas reemplazables en el archivo .rgs.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicaciones aisladas](http://msdn.microsoft.com/library/aa375190)   
+ [Aplicaciones aisladas](/windows/desktop/SbsCs/isolated-applications)   
  [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
  [Páginas de propiedades de la herramienta Manifiesto](../ide/manifest-tool-property-pages.md)   
  [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)   

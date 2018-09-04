@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d816d932ce518e006e5537075fe4ac7782362ad4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206989"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redistribuir componentes mediante módulos de fusión mediante combinación
-Visual Studio incluye [módulos de combinación](http://msdn.microsoft.com/library/aa367434) para cada componente de Visual C++ con licencia para redistribuirse con una aplicación. Cuando un módulo de fusión mediante combinación se compila en un archivo de instalación de Windows Installer, habilita la implementación de determinados archivos DLL en los equipos que tienen una plataforma específica. En el archivo de instalación, especifique que los módulos de fusión mediante combinación son requisitos previos para la aplicación. Cuando se instala Visual Studio, los módulos de combinación se instalan en la carpeta \Archivos de programa\Common Files\Merge Modules\\. (Solo se pueden redistribuir las versiones que no son de depuración de los archivos DLL de Visual C++). Para obtener más información y un vínculo a una lista de los módulos de combinación que se pueden redistribuir, vea [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md).  
+Visual Studio incluye [módulos de combinación](/windows/desktop/Msi/about-merge-modules) para cada componente de Visual C++ con licencia para redistribuirse con una aplicación. Cuando un módulo de fusión mediante combinación se compila en un archivo de instalación de Windows Installer, habilita la implementación de determinados archivos DLL en los equipos que tienen una plataforma específica. En el archivo de instalación, especifique que los módulos de fusión mediante combinación son requisitos previos para la aplicación. Cuando se instala Visual Studio, los módulos de combinación se instalan en la carpeta \Archivos de programa\Common Files\Merge Modules\\. (Solo se pueden redistribuir las versiones que no son de depuración de los archivos DLL de Visual C++). Para obtener más información y un vínculo a una lista de los módulos de combinación que se pueden redistribuir, vea [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
  Puede usar los módulos de combinación para habilitar la instalación de los archivos DLL redistribuibles de Visual C++ en la carpeta %SYSTEMROOT%\system32\. (El propio Visual Studio emplea esta técnica). Sin embargo, la instalación en esta carpeta producirá un error a menos que el usuario que realiza la instalación tenga derechos de administrador.  
   

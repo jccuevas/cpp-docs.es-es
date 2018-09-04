@@ -20,23 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388911"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196981"
 ---
 # <a name="one-dimensional-arrays"></a>Matrices unidimensionales
 Una expresión de postfijo seguida de una expresión entre corchetes (**[ ]**) es una representación de subíndice de un elemento de un objeto de matriz. Una expresión de subíndice representa el valor en la dirección, es decir, posiciones de *expression* más allá de *postfix-expression* cuando se expresa como  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
  Normalmente, el valor representado por *postfix-expression* es un valor de puntero, tal como un identificador de matriz y *expression* es un valor entero. Sin embargo, todo lo que se necesita desde el punto de vista sintáctico es que una de las expresiones sea de tipo puntero y que la otra sea de tipo entero. Así pues, el valor entero podría estar en la posición de *postfix-expression* y el valor de puntero podría estar en los corchetes de la posición de *expression* o subíndice. Por ejemplo, este código es válido:  
@@ -52,7 +47,7 @@ int main() {
   
  Las expresiones suscritas se utilizan normalmente para hacer referencia a elementos de matriz, pero se puede aplicar un subíndice a cualquier puntero. Sea cual sea el orden de los valores, *expression* se debe incluir entre corchetes (**[ ]**).  
   
- La expresión de subíndice se evalúa sumando el valor entero al valor del puntero y, después, aplicando el operador de direccionamiento indirecto (**\***) al resultado. (Vea [Direccionamiento indirecto y dirección de operadores](../c-language/indirection-and-address-of-operators.md) para ver una descripción del operador de direccionamiento indirecto). De hecho, en una matriz unidimensional, las cuatro expresiones siguientes son equivalentes, suponiendo que `a` es un puntero y `b` es un entero:  
+ La expresión de subíndice se evalúa sumando el valor entero al valor del puntero y, después, aplicando el operador de direccionamiento indirecto (<strong>\*</strong>) al resultado. (Vea [Direccionamiento indirecto y dirección de operadores](../c-language/indirection-and-address-of-operators.md) para ver una descripción del operador de direccionamiento indirecto). De hecho, en una matriz unidimensional, las cuatro expresiones siguientes son equivalentes, suponiendo que `a` es un puntero y `b` es un entero:  
   
 ```  
 a[b]  

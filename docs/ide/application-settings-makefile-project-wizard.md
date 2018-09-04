@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53d87c6f0109708023f57e2d30ae38fa4f4f574b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222665"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Configuración de la aplicación, Asistente para proyectos de archivo MAKE
 Proporcione la información para el proyecto. Las opciones que se especifiquen se reflejan en la [página de propiedades](../ide/working-with-project-properties.md) del proyecto. Una vez creado el proyecto, puede ver y modificar cada una de las opciones siguientes en la página **Nmake** de la página de propiedades del proyecto.  
@@ -44,4 +44,4 @@ Proporcione la información para el proyecto. Las opciones que se especifiquen s
  [Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)   
  [Crear proyectos de escritorio con asistentes para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   
- [Implementación de aplicaciones](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Implementación de aplicaciones](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

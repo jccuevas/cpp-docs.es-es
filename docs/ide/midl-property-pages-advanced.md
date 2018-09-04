@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197965"
 ---
 # <a name="midl-property-pages-advanced"></a>Páginas de propiedades MIDL: Avanzadas
 En la página de propiedades **Avanzadas** de la carpeta **MIDL** se especifican las opciones del compilador MIDL siguientes:  
   
--   Habilitar comprobación de errores ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Habilitar comprobación de errores ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Comprobar asignaciones ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Comprobar asignaciones ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Comprobar límites ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Comprobar límites ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Comprobar intervalo de enumeración ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Comprobar intervalo de enumeración ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Comprobar punteros de referencia ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Comprobar punteros de referencia ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Comprobar código auxiliar de los datos ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Comprobar código auxiliar de los datos ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Validar parámetros ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   Validar parámetros ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   Alineación de miembros de struct ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Alineación de miembros de struct ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Redirigir resultados ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Redirigir resultados ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   Opciones de preproceso de C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   Opciones de preproceso de C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Anular definiciones del preprocesador ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Anular definiciones del preprocesador ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* /robust solo se usa al compilar para un equipo Windows 2000 o posterior. Si compila un proyecto ATL y quiere usar /robust, cambie esta línea en el archivo dlldatax.c:  
   

@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332821"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197908"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilizar las plantillas Agregar nuevo elemento de Visual C++
 Se pueden agregar fácilmente elementos que son comunes a los proyectos de Visual C++ mediante el comando **Agregar nuevo elemento**. Cuando se usa el comando **Agregar nuevo elemento**, aparece el cuadro de diálogo `Add New Item` con una lista de plantillas de elemento, que agregan los archivos apropiados al proyecto.  
   
  En la tabla siguiente se muestra una lista alfabética de las plantillas de Agregar nuevo elemento de Visual C++.  
   
-|Plantilla|Description|  
+|Plantilla|Descripción|  
 |--------------|-----------------|  
 |Archivo de recursos de ensamblado (.resx)|Crea un archivo que contiene recursos CLR.|  
 |Archivo de mapa de bits (.bmp)|Crea un archivo de mapa de bits de Win32.|  
@@ -44,7 +44,7 @@ Se pueden agregar fácilmente elementos que son comunes a los proyectos de Visua
 |Archivo de encabezado (.h)|Crea un archivo de encabezado de C++.|  
 |Página HTML (.htm)|Crea un archivo HTML en blanco.|  
 |Archivo de icono (.ico)|Crea un archivo de icono de Win32.|  
-|Clase de instalador|Agrega una clase que hereda de la [Clase de instalador](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) mediante las características de CLR.|  
+|Clase de instalador|Agrega una clase que hereda de la [Clase de instalador](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) mediante las características de CLR.|  
 |Archivo MIDL (.idl)|Crea un archivo de Lenguaje de definición de interfaz.|  
 |Archivo de definición de módulo (.def)|Crea un archivo de definición de exportación de DLL.|  
 |Hoja de propiedades (.props)|Crea un archivo de hoja de propiedades de Visual C++.|  

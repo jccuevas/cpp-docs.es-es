@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332428"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222248"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Creación y administración de proyectos de Visual C++ basados en MSBuild
 MSBuild es el sistema de compilación nativo para Visual C++ y, generalmente, es el mejor para las aplicaciones para UWP, así como para las aplicaciones de escritorio que usan bibliotecas de MFC o ATL. MSBuild está totalmente integrado con el IDE y el sistema de proyectos de Visual Studio, pero también se puede usar desde la línea de comandos. A partir de Visual Studio 2017, Visual C++ admite [CMake y otros sistemas que no son MSBuild a través de la característica Abrir carpeta](non-msbuild-projects.md).
@@ -68,8 +68,8 @@ Puede crear proyectos de Visual C++ si selecciona **Archivo &#124; Nuevo &#124; 
  [Compilación de programas de C/C++](../build/building-c-cpp-programs.md)  
  Ofrece vínculos a temas en los que se describe la compilación de programas desde la línea de comandos o desde el entorno de desarrollo integrado de Visual Studio.  
   
- [Referencias de Visual C++](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Referencias de Visual C++](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  Contiene vínculos a temas en los que se describen las referencias de los lenguajes C y C++, las bibliotecas suministradas con Visual C++, el Modelo de objetos de extensibilidad de Visual C++ y Microsoft Macro Assembler (MASM).  
   
 ## <a name="see-also"></a>Vea también  
- [Visual Studio SDK](http://msdn.microsoft.com/vstudio/extend)
+ [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

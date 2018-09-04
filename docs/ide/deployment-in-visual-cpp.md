@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310f462414ce5e579ea16b40c44ce543bd74b107
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337523"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204065"
 ---
 # <a name="deployment-in-visual-c"></a>Implementación en Visual C++
 
@@ -58,7 +58,7 @@ Además de las bibliotecas vinculadas dinámicamente, Visual Studio proporciona 
 
 ## <a name="troubleshooting-deployment-issues"></a>Solución de problemas de implementación
 
-El orden de carga de las bibliotecas de Visual C++ depende del sistema. Para diagnosticar los problemas de cargador, utilice depends.exe o where.exe. Para obtener más información, vea [Dynamic-Link Library Search Order (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx) (Orden de búsqueda de las bibliotecas de vínculos dinámicos [Windows]).
+El orden de carga de las bibliotecas de Visual C++ depende del sistema. Para diagnosticar los problemas de cargador, utilice depends.exe o where.exe. Para obtener más información, vea [Dynamic-Link Library Search Order (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx) (Orden de búsqueda de las bibliotecas de vínculos dinámicos [Windows]).
 
 ## <a name="see-also"></a>Vea también
 

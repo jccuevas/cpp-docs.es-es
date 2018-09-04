@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212800"
 ---
 # <a name="adding-a-property-visual-c"></a>Agregar una propiedad (Visual C++)
 Se puede usar el [Asistente para agregar propiedades](../ide/names-add-property-wizard.md) para agregar un método a una interfaz en el proyecto.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Para agregar una propiedad al objeto  
   
-1.  En la [Vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic con el botón derecho en la interfaz a la que quiera agregar la propiedad.  
+1.  En la [Vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic con el botón derecho en la interfaz a la que quiera agregar la propiedad.  
   
     > [!NOTE]
     >  También puede agregar propiedades a interfaces dispinterface que, a menos que el proyecto tenga atributos, se anidan bajo el nodo de biblioteca.  
@@ -49,5 +49,5 @@ Se puede usar el [Asistente para agregar propiedades](../ide/names-add-property-
 ## <a name="see-also"></a>Vea también  
  [Crear una interfaz COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Editar una interfaz COM](../ide/editing-a-com-interface.md)   
- [The Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  (Modelo de objetos componentes (COM))  
- [Interface Pointers and Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms688484) (Punteros de interfaz e interfaces)
+ [The Component Object Model](/windows/desktop/com/the-component-object-model)  (Modelo de objetos componentes (COM))  
+ [Interface Pointers and Interfaces](/windows/desktop/com/interface-pointers-and-interfaces) (Punteros de interfaz e interfaces)
