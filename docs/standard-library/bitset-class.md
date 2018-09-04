@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ef37b3bae0fa6bff9353b4415a614d252ddf661e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962834"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205345"
 ---
 # <a name="bitset-class"></a>bitset (Clase)
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>Parámetros
 
-*N* especifica el número de bits del objeto bitset con un entero distinto de cero de tipo `size_t` que deben conocerse en tiempo de compilación.
+*N*<br/>
+ Especifica el número de bits del objeto bitset con un entero distinto de cero de tipo `size_t` que deben conocerse en tiempo de compilación.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parámetros
 
-*Val* el entero sin signo cuya representación base dos se usa para inicializar los bits en el conjunto de bits que se está construyendo.
+*Val*<br/>
+ El entero sin signo cuya representación de base dos se usa para inicializar los bits del conjunto de bits que se está construyendo.
 
-*Str* la cadena de ceros y unos que se usa para inicializar los valores de bits del bitset.
+*str*<br/>
+ La cadena de ceros y unos que se usa para inicializar los valores de bits del conjunto de bits.
 
-*_CStr* una cadena de estilo C de ceros y unos que se usa para inicializar los valores de bits del bitset.
+*_CStr*<br/>
+ Una cadena de estilo C de ceros y unos que se usa para inicializar los valores de bits del conjunto de bits.
 
-*_Pos* la posición del carácter en la cadena, contando de izquierda a derecha y a partir de cero, se usa para inicializar el primer bit del conjunto de bits.
+*_Pos*<br/>
+ La posición del carácter en la cadena, contando de izquierda a derecha y a partir de cero, que se usa para inicializar el primer bit del conjunto de bits.
 
-*recuento de* el número de caracteres de la cadena que se usa para proporcionar los valores iniciales de los bits del BitSet.
+*count*<br/>
+ El número de caracteres de la cadena que se usa para proporcionar los valores iniciales de los bits del conjunto de bits.
 
-*_Zero* el carácter que se utiliza para representar un cero. El valor predeterminado es "0".
+*_Zero*<br/>
+ El carácter que se usa para representar un cero. El valor predeterminado es "0".
 
-*_Una* el carácter que se usa para representar un uno. El valor predeterminado es "1".
+*_Una*<br/>
+ El carácter que se usa para representar un uno. El valor predeterminado es "1".
 
 ### <a name="remarks"></a>Comentarios
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* la posición del bit cuyo valor es va a invertir.
+*_Pos*<br/>
+ La posición del bit cuyo valor se va a invertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -473,7 +482,7 @@ Una copia del conjunto de bits modificado para el que se ha invocado la función
 
 ### <a name="remarks"></a>Comentarios
 
-La segunda función miembro produce una [out_of_range](../standard-library/out-of-range-class.md) excepción si la posición especificada como un parámetro es mayor que el tamaño *N* de la **bitset\<***N***  >**  cuyos bits se ha invertido.
+La segunda función miembro produce una [out_of_range](../standard-library/out-of-range-class.md) excepción si la posición especificada como un parámetro es mayor que el tamaño *N* de la **bitset\<**  *N* **>** cuyos bits se ha invertido.
 
 ### <a name="example"></a>Ejemplo
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el conjunto de bits que se va a compararse con el conjunto de bits de destino no son iguales.
+*right*<br/>
+ Conjunto de bits que va a compararse con el conjunto de bits de destino para comprobar si son iguales.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el conjunto de bits que va a combinarse bit a bit con el conjunto de bits de destino.
+*right*<br/>
+ El conjunto de bits que se va a combinar bit a bit con el conjunto de bits de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* el número de posiciones a la izquierda que se desplazarán los bits del BitSet.
+*_Pos*<br/>
+ El número de posiciones a la izquierda que se desplazarán los bits en el conjunto de bits.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* el número de posiciones a la izquierda los bits del conjunto de bits que se va a desplazar.
+*_Pos*<br/>
+ El número de posiciones a la izquierda que se desplazarán los bits en el conjunto de bits.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el conjunto de bits que se va a compararse con el conjunto de bits de destino para la igualdad.
+*right*<br/>
+ Conjunto de bits que va a compararse con el conjunto de bits de destino para comprobar si hay igualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* el número de posiciones a la derecha los bits del conjunto de bits que se va a desplazar.
+*_Pos*<br/>
+ El número de posiciones a la derecha que se desplazarán los bits en el conjunto de bits.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* el número de posiciones a la derecha los bits del conjunto de bits que se va a desplazar.
+*_Pos*<br/>
+ El número de posiciones a la derecha que se desplazarán los bits en el conjunto de bits.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* la posición que localiza el bit en el conjunto de bits.
+*_Pos*<br/>
+ La posición que localiza el bit en el conjunto de bits.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el conjunto de bits que va a combinarse bit a bit con el conjunto de bits de destino.
+*right*<br/>
+ El conjunto de bits que se va a combinar bit a bit con el conjunto de bits de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el conjunto de bits que va a combinarse bit a bit con el conjunto de bits de destino.
+*right*<br/>
+ El conjunto de bits que se va a combinar bit a bit con el conjunto de bits de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*Val* el valor del objeto del tipo **bool** que se asignará a un poco en un conjunto de bits.
+*Val*<br/>
+ El valor del objeto del tipo **bool** que se asignará a un poco en un conjunto de bits.
 
-*_Bitref* una referencia del formulario *x [i]* al bit en la posición *i* BitSet *x*.
+*_Bitref*<br/>
+ Una referencia con el formato *x [ i ]* al bit en la posición *i* en el conjunto de bits *x*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1213,7 +1234,7 @@ Una referencia al bit en el conjunto de bits especificado por la posición del a
 
 ### <a name="remarks"></a>Comentarios
 
-La clase `reference` solo existe como una clase auxiliar para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo **bool**, *x* y *y* los objetos de tipo **bitset\<***N***>**, y *i* y *j* posiciones válidas dentro de este tipo de objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:
+La clase `reference` solo existe como una clase auxiliar para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo **bool**, *x* y *y* los objetos de tipo **bitset\<**  *N* **>**, y *i* y *j* posiciones válidas dentro de este tipo de objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:
 
 |Operación|de esquema JSON|
 |---------------|----------------|
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* la posición del bit en el conjunto de bits que se restablece a 0.
+*_Pos*<br/>
+ La posición del bit en el conjunto de bits que se restablecerá en 0.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* la posición del bit en el conjunto de bits debe establecerse asigna un valor.
+*_Pos*<br/>
+ La posición del bit en el conjunto de bits que se establecerá para que asigne un valor.
 
-*Val* el valor que se asigna al bit en la posición especificada.
+*Val*<br/>
+ Valor que se asignará al bit en la posición especificada.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* la posición del bit en el conjunto de bits que se comprobará si su valor.
+*_Pos*<br/>
+ La posición del bit en el conjunto de bits al que se comprobará el valor.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>Comentarios
 
 La función miembro produce un [out_of_range](../standard-library/out-of-range-class.md)
-
