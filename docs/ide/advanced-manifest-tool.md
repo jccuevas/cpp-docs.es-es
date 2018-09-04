@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d4dc3ab325a7346d0e787a15d69d646896827d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1b12c53f2793f7ac083ca06143be18aa6234f1de
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326942"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201589"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Avanzadas, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de &lt;Nombre_Proyecto&gt; (Cuadro de diálogo)
-Use este cuadro de diálogo para especificar las opciones avanzadas de [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+Use este cuadro de diálogo para especificar las opciones avanzadas de [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  Para acceder a este cuadro de diálogo de página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el nodo **Herramienta Manifiesto** bajo **Propiedades de configuración** y, después, seleccione **Avanzadas**.  
   

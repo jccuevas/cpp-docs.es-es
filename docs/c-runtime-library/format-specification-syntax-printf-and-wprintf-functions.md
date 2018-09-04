@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392541"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216677"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
@@ -85,7 +85,7 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**p**|Tipo de puntero|Muestra el argumento como una dirección de dígitos hexadecimales.|
 |**s**|String|Cuando se usa con funciones `printf`, especifica una cadena de caracteres de byte único o multibyte; cuando se usa con funciones `wprintf`, especifica una cadena de carácter ancho. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
 |**S**|String|Cuando se usa con funciones `printf`, especifica una cadena de carácter ancho; cuando se usa con funciones `wprintf`, especifica una cadena de caracteres de byte único o multibyte. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
-|**Z**|Estructura `ANSI_STRING` o `UNICODE_STRING`|Cuando la dirección de una estructura [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) o [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) se pasa como argumento, muestra la cadena contenida en el búfer al que apunta el campo `Buffer` de la estructura. Use un prefijo del modificador *tamaño* de **w** para especificar un argumento `UNICODE_STRING`, por ejemplo, `%wZ`. El campo `Length` de la estructura debe establecerse en la longitud de la cadena expresada en bytes. El campo `MaximumLength` de la estructura debe establecerse en la longitud del búfer expresada en bytes.<br /><br /> Normalmente, el carácter de tipo **Z** tan solo se usa en funciones de depuración de controladores que utilizan una especificación de formato, como `dbgPrint` y `kdPrint`.|
+|**Z**|Estructura `ANSI_STRING` o `UNICODE_STRING`|Cuando la dirección de una estructura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) o [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) se pasa como argumento, muestra la cadena contenida en el búfer al que apunta el campo `Buffer` de la estructura. Use un prefijo del modificador *tamaño* de **w** para especificar un argumento `UNICODE_STRING`, por ejemplo, `%wZ`. El campo `Length` de la estructura debe establecerse en la longitud de la cadena expresada en bytes. El campo `MaximumLength` de la estructura debe establecerse en la longitud del búfer expresada en bytes.<br /><br /> Normalmente, el carácter de tipo **Z** tan solo se usa en funciones de depuración de controladores que utilizan una especificación de formato, como `dbgPrint` y `kdPrint`.|
 
 A partir de Visual Studio 2015, si el argumento correspondiente a un especificador de conversión de punto flotante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) es infinito, indefinido o NaN, la salida con formato se ajusta al estándar C99. Esta tabla enumera la salida con formato:
 

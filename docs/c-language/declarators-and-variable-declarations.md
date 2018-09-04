@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0219c5eecda84f27411ee0dca9cc43a1b5c9148e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a5ec2cf7984940421726dd0197dff4cf6d5ea0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390611"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200364"
 ---
 # <a name="declarators-and-variable-declarations"></a>Declaradores y declaraciones de variables
 En el resto de esta sección se describe el formato y el significado de las declaraciones de tipos de variable resumidos en esta lista. En concreto, en las secciones restantes se explica cómo declarar los siguientes elementos:  
   
-|Tipo de variable|Description|  
+|Tipo de variable|Descripción|  
 |----------------------|-----------------|  
 |[Variables simples](../c-language/simple-variable-declarations.md)|Variables de valor único con tipo entero o de punto flotante|  
 |[Matrices](../c-language/array-declarations.md)|Variables compuestas por una colección de elementos con el mismo tipo|  
@@ -35,7 +35,7 @@ En el resto de esta sección se describe el formato y el significado de las decl
 |[Estructuras](../c-language/structure-declarations.md)|Variables compuestas por una colección de valores que pueden tener diferentes tipos|  
 |[Uniones](../c-language/union-declarations.md)|Variables formadas por varios valores de tipos diferentes que ocupan el mismo espacio de almacenamiento|  
   
- Un declarador es la parte de una declaración que especifica el nombre que se va a introducir en el programa. Puede incluir modificadores como **\*** (puntero a) y cualquiera de las palabras clave de convención de llamada de Microsoft.  
+ Un declarador es la parte de una declaración que especifica el nombre que se va a introducir en el programa. Puede incluir modificadores como <strong>\*</strong> (puntero a) y cualquiera de las palabras clave de convención de llamada de Microsoft.  
   
  **Específicos de Microsoft**  
   
@@ -63,8 +63,8 @@ __declspec(thread) char *var;
  &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
   
  *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
   
  *type-qualifier-list*:  
  &nbsp;&nbsp;*type-qualifier*  
@@ -73,7 +73,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  Vea la sintaxis de *declaration* en [Información general de declaraciones](../c-language/overview-of-declarations.md) o [Resumen de la sintaxis del lenguaje C](../c-language/c-language-syntax-summary.md) para conocer la sintaxis que hace referencia a un *declarator*.  
   
- Cuando un declarador consta de un identificador sin modificar, el elemento que se va a declarar tiene un tipo base. Si aparece un asterisco (**\***) a la izquierda de un identificador, el tipo se modifica en un tipo de puntero. Si el identificador va seguido de corchetes (**[ ]**), el tipo se modifica en un tipo de matriz. Si el identificador va seguido de paréntesis, el tipo se modifica en un tipo de función. Para obtener más información sobre cómo interpretar la prioridad en declaraciones, vea [Interpretación de declaradores más complejos](../c-language/interpreting-more-complex-declarators.md).  
+ Cuando un declarador consta de un identificador sin modificar, el elemento que se va a declarar tiene un tipo base. Si aparece un asterisco (<strong>\*</strong>) a la izquierda de un identificador, el tipo se modifica en un tipo de puntero. Si el identificador va seguido de corchetes (**[ ]**), el tipo se modifica en un tipo de matriz. Si el identificador va seguido de paréntesis, el tipo se modifica en un tipo de función. Para obtener más información sobre cómo interpretar la prioridad en declaraciones, vea [Interpretación de declaradores más complejos](../c-language/interpreting-more-complex-declarators.md).  
   
  Cada declarador declara al menos un identificador. Un declarador debe incluir un especificador de tipo para que sea una declaración completa. El especificador de tipo proporciona el tipo de los elementos de un tipo de matriz, el tipo de objeto al que apunta un tipo de puntero o el tipo de valor devuelto de una función.  
   

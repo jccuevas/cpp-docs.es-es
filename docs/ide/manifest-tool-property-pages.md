@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16a5033a2656cea3f1cecea1e5b97f4ad9c117ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321992"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222212"
 ---
 # <a name="manifest-tool-property-pages"></a>Herramienta Manifiesto (Páginas de propiedades)
 Las páginas de propiedades **Herramienta Manifiesto** se usan para establecer las opciones de compilación de mt.exe.  
   
- Para obtener más información sobre la herramienta Manifiesto, vea [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Para obtener más información sobre la herramienta Manifiesto, vea [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  [General, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de \<NombreDeProyecto> (Cuadro de diálogo)](../ide/general-manifest-tool-configuration-properties.md)  
   

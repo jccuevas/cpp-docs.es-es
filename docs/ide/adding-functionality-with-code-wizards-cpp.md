@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337046"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213141"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Agregar funcionalidad con los asistentes para código (C++)
 Una vez haya creado un proyecto, le interesará cambiar o ampliar su funcionalidad. Estas tareas incluyen crear clases, agregar funciones miembro y variables nuevas, y agregar métodos y propiedades de automatización. Los asistentes para código están diseñados para permitir hacer todo esto.  
@@ -56,7 +56,7 @@ Una vez haya creado un proyecto, le interesará cambiar o ampliar su funcionalid
   
 -   En el **Explorador de soluciones**, haga clic con el botón derecho en cualquier carpeta y haga clic en **Agregar** desde el menú contextual para agregar archivos nuevos o existentes, más carpetas, elementos, clases, recursos y referencias web al proyecto.  
   
--   Desde la [ventana Vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic con el botón derecho en el nodo adecuado y haga clic en **Agregar** en el menú contextual para agregar funciones, variables, clases, propiedades, métodos, eventos, interfaces, puntos de conexión u otro código al proyecto.  
+-   Desde la [ventana Vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic con el botón derecho en el nodo adecuado y haga clic en **Agregar** en el menú contextual para agregar funciones, variables, clases, propiedades, métodos, eventos, interfaces, puntos de conexión u otro código al proyecto.  
   
     > [!NOTE]
     >  Visual Studio no proporciona un asistente para agregar una interfaz a un proyecto. Puede agregar una interfaz a un proyecto ATL o a [Agregar compatibilidad con ATL a un proyecto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) mediante la adición de un objeto simple con el [Asistente para objetos simples ATL](../atl/reference/atl-simple-object-wizard.md). Como alternativa, abra el archivo .idl del proyecto y cree la interfaz escribiendo lo siguiente:  
@@ -69,7 +69,7 @@ Una vez haya creado un proyecto, le interesará cambiar o ampliar su funcionalid
   
      Vea [Implementar una interfaz](../ide/implementing-an-interface-visual-cpp.md) y [Agregar controles y objetos a un proyecto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obtener más información.  
   
-    |Acceder al asistente para código desde|Description|  
+    |Acceder al asistente para código desde|Descripción|  
     |-----------------------------|-----------------|  
     |Agregar nuevo elemento|Los asistentes para código Agregar nuevo elemento agregan archivos de código fuente al proyecto. Si es necesario, se crean directorios adicionales para contener los archivos donde el motor de compilación de proyecto espera encontrarlos. Los asistentes para código disponibles desde el icono Agregar elemento incluyen los siguientes:<br /><br /> -    Agregar archivos de código fuente de C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />-   Agregar archivos de desarrollo web (.html, .asp, .css, .xml).<br />-   Agregar archivos de recursos y de utilidad (.bmp, .cur, .ico, .rct, .sql, .txt).<br /><br /> Por lo general, estos asistentes para código no solicitan información, sino que agregan un archivo al árbol de desarrollo. Se puede cambiar el nombre del archivo en la ventana Propiedades.|  
     |Explorador de soluciones|Los asistentes para código disponibles en el Explorador de soluciones dependen de dónde esté el foco del cursor al hacer clic con el botón derecho en un elemento. Si al hacer clic con el botón derecho en un elemento no aparece la opción **Agregar**, suba el cursor un nivel en el árbol de desarrollo e inténtelo de nuevo. Los asistentes para código siempre colocan el código adicional en el lugar adecuado en el árbol de desarrollo, con independencia de la posición del cursor. Los asistentes para código disponibles desde el Explorador de soluciones incluyen los siguientes:<br /><br /> -   Agregar clase (abre el cuadro de diálogo **Agregar clase** que contiene los asistentes para código nuevos).<br />-   Agregar recurso (Nuevo, Importar o Personalizar).<br />-   Agregar referencia web.|  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8003997d82c59d42813d7852e6c3fadb8f12fb26
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386269"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208913"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expresiones de valor L y valor R
 Las expresiones que hacen referencia a ubicaciones de memoria se denominan expresiones de “valor L”. Un valor L representa un valor de "localizador" de la región de almacenamiento o un valor "izquierdo", lo que implica que puede aparecer a la izquierda del signo igual (**=**). Los valores L suelen ser identificadores.  
@@ -39,7 +39,7 @@ Las expresiones que hacen referencia a ubicaciones de memoria se denominan expre
   
 -   Una expresión de selección de miembro (**->** o **.**)  
   
--   Una expresión de direccionamiento indirecto unario (**\***) que no hace referencia a una matriz  
+-   Una expresión de direccionamiento indirecto unario (<strong>\*</strong>) que no hace referencia a una matriz  
   
 -   Una expresión de valor L entre paréntesis  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f8fae2d8af1b7121290bfbd42b2668afc50034c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325388"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217258"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 La etiqueta \<param> debe usarse en el comentario de una declaración de método para describir uno de los parámetros del método.  
@@ -42,7 +42,7 @@ La etiqueta \<param> debe usarse en el comentario de una declaración de método
  Descripción del parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- El texto de la etiqueta \<param> se mostrará en IntelliSense, el [Examinador de objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) y en el informe web de comentario de código.  
+ El texto de la etiqueta \<param> se mostrará en IntelliSense, el [Examinador de objetos](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) y en el informe web de comentario de código.  
   
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   

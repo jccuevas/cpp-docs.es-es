@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340546"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195200"
 ---
 # <a name="implement-interface-wizard"></a>Asistente para implementar interfaces
 Este asistente implementa una interfaz para un objeto COM. Las implementaciones de muchas interfaces se incluyen en las bibliotecas COM disponibles con Visual Studio y Windows. Una implementación de interfaz está asociada a un objeto cuando se crea una instancia de ese objeto, y proporciona los servicios que ofrece el objeto.  
   
- Para obtener una explicación de las interfaces y las implementaciones, vea [Interfaces and Interface Implementations](http://msdn.microsoft.com/library/windows/desktop/ms694356) (Interfaces e implementaciones de interfaz) de Windows SDK.  
+ Para obtener una explicación de las interfaces y las implementaciones, vea [Interfaces and Interface Implementations](/windows/desktop/com/interfaces-and-interface-implementations) (Interfaces e implementaciones de interfaz) de Windows SDK.  
   
  **Implementar interfaz desde**  
  Especifica la ubicación de la biblioteca de tipos, desde la que se crea la interfaz.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**Proyecto**|La biblioteca de tipos forma parte del proyecto.|  
 |**Registry**|La biblioteca de tipos se registra en el sistema. Las bibliotecas de tipos registradas se enumeran en **Bibliotecas de tipos disponibles**.|  
@@ -49,7 +49,7 @@ Este asistente implementa una interfaz para un objeto COM. Las implementaciones 
 > [!NOTE]
 >  Las interfaces que tienen el mismo nombre que las ya implementadas por el objeto seleccionado no se muestran en el cuadro **Interfaces**.  
   
-|Botón de transferencia|Description|  
+|Botón de transferencia|Descripción|  
 |---------------------|-----------------|  
 |**>**|Agrega el nombre de interfaz seleccionado actualmente en la lista **Interfaces** a la lista **Implementar interfaces**.|  
 |**>>**|Agrega todos los nombre de interfaz disponibles en la lista **Interfaces** a la lista **Implementar interfaces**.|  
