@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 410737380f6cc7c5ad52f29953926b3b1c2e71b5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206300"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678090"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Descripción de los pasos de compilación personalizada y los eventos de compilación
 Desde dentro del entorno de desarrollo de Visual C++, hay tres maneras básicas de personalizar el proceso de compilación:  
@@ -73,4 +73,3 @@ Desde dentro del entorno de desarrollo de Visual C++, hay tres maneras básicas 
 ## <a name="see-also"></a>Vea también  
  [Compilar proyectos de C++ en Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
  [Macros comunes para propiedades y comandos de compilación](../ide/common-macros-for-build-commands-and-properties.md)   
- [Orden de compilación de herramientas (Cuadro de diálogo)](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

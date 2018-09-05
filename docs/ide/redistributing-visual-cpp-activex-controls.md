@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207962"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683357"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribuir controles ActiveX de Visual C++
 Visual C++ 6.0 proporciona controles ActiveX que se pueden usar en las aplicaciones que después se van a redistribuir. Estos controles ya no se incluyen en Visual C++. Según los contratos de licencia para Visual C++ 6.0, puede redistribuir estos controles con las aplicaciones desarrolladas en Visual C++.  
@@ -43,8 +43,6 @@ Visual C++ 6.0 proporciona controles ActiveX que se pueden usar en las aplicacio
 -   Stdole2.tlb  
   
  Si estos archivos DLL no están disponibles en el sistema de destino, se deben actualizar mediante el mecanismo indicado para actualizar el sistema operativo correspondiente. Puede descargar los Service Pack más recientes para los sistemas operativos de Windows de [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
-  
- Si en la aplicación se usa uno de los controles ActiveX que se conecta a una base de datos, debe tener Microsoft Data Access Components (MDAC) instalado en el sistema de destino. Para obtener más información, vea [Redistribuir archivos de compatibilidad con bases de datos](../ide/redistributing-database-support-files.md).  
   
  Cuando se usa un control ActiveX que se conecta a una base de datos, también se debe replicar el nombre del origen de datos en el equipo de destino. Esto se puede hacer mediante programación con funciones como `ConfigDSN`.  
   

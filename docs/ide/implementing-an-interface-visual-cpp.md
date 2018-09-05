@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfee61f1632fad2d762c41149c1bc302a1c4b9da
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211217"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691991"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementar una interfaz (Visual C++)
 Para implementar una interfaz, debe haber creado un proyecto como una aplicación COM de ATL o como una aplicación MFC que sea compatible con ATL. Puede usar el [Asistente para proyectos ATL](../atl/reference/atl-project-wizard.md) para crear una aplicación ATL, o bien [agregar un objeto ATL a una aplicación MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad con ATL para una aplicación MFC.  
@@ -46,7 +46,7 @@ Para implementar una interfaz, debe haber creado un proyecto como una aplicació
 4.  En la Vista de clases, expanda el nodo Bases e interfaces del objeto para ver la interfaz que ha implementado y, después, expanda el nodo de la interfaz para ver sus propiedades, métodos y eventos disponibles.  
   
     > [!NOTE]
-    >  También puede usar el [Examinador de objetos](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) para examinar los miembros de la interfaz.  
+    >  También puede usar el [Examinador de objetos](/visualstudio/ide/viewing-the-structure-of-code) para examinar los miembros de la interfaz.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una interfaz COM](../ide/creating-a-com-interface-visual-cpp.md)   
