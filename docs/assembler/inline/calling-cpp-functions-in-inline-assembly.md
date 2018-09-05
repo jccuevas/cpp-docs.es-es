@@ -1,7 +1,7 @@
 ---
-title: Llamar a funciones de C++ en el código ensamblador en línea | Documentos de Microsoft
+title: Llamar a funciones de C++ en ensamblado alineado | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,20 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbd8038d240bc2ab0240d172d914790b6ca02ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4717ae24dc1a0b6f51f7a00f68f6569c2f988c65
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049628"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678949"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Llamada a funciones C++ en el ensamblado alineado
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Un bloque `__asm` solo puede llamar a funciones globales de C++ que no estén sobrecargadas. Si llama a una función global sobrecargada de C++ o a una función miembro de C++, el compilador genera un error.  
-  
- También puede llamar a cualquier función declarada con **extern "C"** vinculación. Esto permite un `__asm` bloque dentro de un programa de C++ para llamar a funciones de la biblioteca de C, porque todos los archivos de encabezado estándar declaran las funciones de biblioteca con **extern "C"** vinculación.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Ensamblador insertado](../../assembler/inline/inline-assembler.md)
+
+**Específicos de Microsoft**
+
+Un bloque `__asm` solo puede llamar a funciones globales de C++ que no estén sobrecargadas. Si llama a una función global sobrecargada de C++ o a una función miembro de C++, el compilador genera un error.
+
+También puede llamar a cualquier función declarada con **extern "C"** vinculación. Esto permite un `__asm` bloque dentro de un programa de C++ para llamar a las funciones de biblioteca de C, porque todos los archivos de encabezado estándar declaran las funciones de biblioteca para tener **extern "C"** vinculación.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

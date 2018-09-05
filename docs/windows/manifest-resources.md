@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0f06e2d430867d04600547312fbc484ec6257c53
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218255"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685157"
 ---
 # <a name="manifest-resources"></a>Recursos del manifiesto
 
@@ -45,9 +45,9 @@ Los recursos de manifiesto son archivos XML que describen las dependencias que u
 
 Para una aplicación de Windows XP o Windows Vista, el recurso del manifiesto no solo especifica que la aplicación usa la versión más reciente de los controles comunes de Windows (versión 6.0, tal como se muestra anteriormente), pero también admite la [control Syslink](/windows/desktop/Controls/syslink-overview).
 
-Para ver la versión y escriba la información contenida en un recurso del manifiesto, puede abrir el archivo en un visor XML o en Visual Studio [Editor de texto](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Para obtener más información, vea el tema sobre cómo [abrir un recurso del manifiesto en el editor de texto de Visual Studio](../windows/how-to-open-a-manifest-resource.md).
+Para ver la versión y escriba la información contenida en un recurso del manifiesto, puede abrir el archivo en un visor de XML o en el editor de texto de Visual Studio. Para obtener más información, vea el tema sobre cómo [abrir un recurso del manifiesto en el editor de texto de Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
 
 ## <a name="limitations"></a>Limitaciones
 

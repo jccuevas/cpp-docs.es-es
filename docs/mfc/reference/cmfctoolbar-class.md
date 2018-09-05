@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208563"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689237"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar (clase)
 El `CMFCToolBar` es similar a [CToolBar (clase)](../../mfc/reference/ctoolbar-class.md), pero proporciona compatibilidad adicional para las características de la interfaz de usuario. Se incluyen las barras de herramientas planas, las barras de herramientas con imágenes activas, los iconos grandes, los botones de buscapersonas, las barras de herramientas bloqueadas, los controles rebar, el texto en imágenes, las imágenes de fondo y las barras de herramientas con pestañas. La clase `CMFCToolBar` también contiene compatibilidad integrada para la personalización de usuario de barras de herramientas y menús, arrastrar y colocar entre las barras de herramientas y menús, botones del cuadro combinado, botones del cuadro de edición, selectores de colores y botones acumulados.
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE si la barra de herramientas y sus elementos relacionados se colocan en la misma fila. en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El [cmfccustomizebutton:: CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) método llama a este método para determinar cómo mostrar la **personalizar** menú emergente. Si este método devuelve TRUE, el marco de trabajo muestra el **mostrar botones en una fila** botón. En caso contrario, el marco de trabajo muestra el **mostrar botones en dos filas** botón.  
+ El [cmfccustomizebutton:: CreatePopupMenu](internal-classes.md) método llama a este método para determinar cómo mostrar la **personalizar** menú emergente. Si este método devuelve TRUE, el marco de trabajo muestra el **mostrar botones en una fila** botón. En caso contrario, el marco de trabajo muestra el **mostrar botones en dos filas** botón.  
   
  Normalmente no tiene que utilizar este método. Para habilitar el **mostrar botones en una fila** o **mostrar botones en dos filas** , llame a [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).  
   

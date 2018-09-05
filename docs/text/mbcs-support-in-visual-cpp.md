@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e66254e9e2e0090fafb1a1c0d2aa061d6e70806
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205201"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680864"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Compatibilidad con MBCS en Visual C++
 Cuando se ejecuta en una versión habilitada para MBCS de Windows, el sistema de desarrollo de Visual C++ (incluidas las herramientas de línea de comandos, el depurador y el editor de código fuente integrado) está habilitado para MBCS, a excepción de la ventana de la memoria.  
@@ -47,13 +47,13 @@ Cuando se ejecuta en una versión habilitada para MBCS de Windows, el sistema de
  Visual C++ acepta caracteres de doble byte, siempre que sea adecuado hacerlo. Esto incluye los nombres de ruta de acceso y nombres de archivo en los cuadros de diálogo y las entradas de texto en el editor de recursos de Visual C++ (por ejemplo, texto estático en el editor de cuadro de diálogo) y entradas de texto estático en el editor de iconos. Además, el preprocesador reconoce algunas directivas de doble byte, por ejemplo, nombres de archivo en `#include` instrucciones y como argumentos a la `code_seg` y `data_seg` pragmas. En el editor de código fuente, se aceptan caracteres de doble byte en los comentarios y los literales de cadena, aunque no en elementos del lenguaje C o C++ (por ejemplo, los nombres de variable).  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Compatibilidad con el Editor de métodos de entrada (IME)  
- Aplicaciones escritas para los mercados del este asiático que utilizan MBCS (por ejemplo, Japón) normalmente admiten el IME de Windows para escribir ambos caracteres único y de doble byte. El entorno de desarrollo de Visual C++ es totalmente compatible con el IME. Para obtener más información, consulte [ejemplo IME: muestra cómo controlar el modo IME e implementar IME de nivel 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+ Aplicaciones escritas para los mercados del este asiático que utilizan MBCS (por ejemplo, Japón) normalmente admiten el IME de Windows para escribir ambos caracteres único y de doble byte. El entorno de desarrollo de Visual C++ es totalmente compatible con el IME.
   
  Teclados japoneses no son directamente compatibles con caracteres Kanji. El IME convierte una cadena fonética, escrita en uno de los otros alfabetos japoneses (Hiragana, Katakana o Romaji) en sus posibles representaciones Kanji. Si no hay ambigüedad, puede seleccionar entre varias alternativas. Cuando haya seleccionado los caracteres Kanji deseados, IME pasa dos `WM_CHAR` mensajes a la aplicación de control.  
   
  El IME, activado por ALT +\` combinación de teclas, aparece como un conjunto de botones (un indicador) y una ventana de conversión. La aplicación coloca la ventana en el punto de inserción de texto. La aplicación debe controlar `WM_MOVE` y `WM_SIZE` mensajes por cambiar la posición de la ventana de conversión que se ajuste a la nueva ubicación o el tamaño de la ventana de destino.  
   
- Si desea que los usuarios de la aplicación y tener la capacidad de escribir caracteres Kanji, la aplicación debe controlar los mensajes de IME de Windows. Para obtener más información acerca de la programación de IME, vea [Input Method Editor](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
+ Si desea que los usuarios de la aplicación y tener la capacidad de escribir caracteres Kanji, la aplicación debe controlar los mensajes de IME de Windows. Para obtener más información acerca de la programación de IME, vea [Administrador de métodos de entrada](/windows/desktop/intl/input-method-manager).  
   
 ## <a name="visual-c-debugger"></a>Depurador de Visual C++  
  El depurador de Visual C++ proporciona la capacidad de establecer puntos de interrupción en los mensajes IME. Además, la ventana memoria puede mostrar caracteres de doble byte.  

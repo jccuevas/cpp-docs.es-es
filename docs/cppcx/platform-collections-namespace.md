@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d872df7294e33ef47247609af4606da842bb6184
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612536"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686552"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections (Espacio de nombres)
 
-Contiene el espacio de nombres Platform:: Collections la `Map`, `MapView`, `Vector`, y `VectorView` clases. Estas clases son implementaciones concretas de las interfaces correspondientes que se definen en el espacio de nombres [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) . Los tipos de colección concretos no son portátiles a través de la ABI (por ejemplo, cuando un programa de JavaScript o de C# llama a un componente de C++), pero se pueden convertir implícitamente a sus tipos de interfaz correspondientes. Por ejemplo, si implementa un método público que rellena y devuelve una colección, use [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) para implementar la colección internamente y usa [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) como tipo de valor devuelto. Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx.md) y [crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Contiene el espacio de nombres Platform:: Collections la `Map`, `MapView`, `Vector`, y `VectorView` clases. Estas clases son implementaciones concretas de las interfaces correspondientes que se definen en el [Collections](/uwp/api/Windows.Foundation.Collections) espacio de nombres. Los tipos de colección concretos no son portátiles a través de la ABI (por ejemplo, cuando un programa de JavaScript o de C# llama a un componente de C++), pero se pueden convertir implícitamente a sus tipos de interfaz correspondientes. Por ejemplo, si implementa un método público que rellena y devuelve una colección, utilizamos [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) para implementar la colección internamente y usa [Collections: : IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) como el tipo de valor devuelto. Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx.md) y [crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Puedes crear un objeto Platform::Collections::Vector a partir de un objeto [std::vector](../standard-library/vector-class.md) y un objeto [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) a partir de un objeto [std::map](../standard-library/map-class.md).
 

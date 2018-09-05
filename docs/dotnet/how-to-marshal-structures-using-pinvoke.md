@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219889"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689515"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Cómo: serializar estructuras mediante PInvoke
 Este documento explica cómo funciones nativas que acepten las estructuras de estilo C se pueden llamar desde las funciones administradas por mediante P/Invoke. Aunque recomendamos que use las características de interoperabilidad de C++ en lugar de P/Invoke porque P/Invoke proporciona pocos informes, de errores de tiempo de compilación no es seguro para el tipo y puede resultar tedioso de implementar, si la API no administrada se empaqueta como un archivo DLL y el código fuente no es está disponible, P/Invoke es la única opción. En caso contrario, consulte los siguientes documentos:  
@@ -34,7 +34,7 @@ Este documento explica cómo funciones nativas que acepten las estructuras de es
   
  De forma predeterminada, las estructuras nativas y administradas se distribuyen de manera diferente en la memoria, correctamente pasar estructuras a través del límite administrado y no requiere pasos adicionales para mantener la integridad de datos.  
   
- Este documento explica los pasos necesarios para definir equivalentes administrados de estructuras nativas y cómo se pueden pasar las estructuras resultantes a funciones no administradas. Este documento se da por supuesto que simple estructuras: aquellos que no contienen cadenas o punteros: se usan. Para obtener información acerca de la interoperabilidad de espacio, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke no pueden tener tipos como un valor devuelto. Tipos tienen la misma representación en código administrado y no administrado. Para obtener más información, consulte [Non-bits/bytes tipos](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Este documento explica los pasos necesarios para definir equivalentes administrados de estructuras nativas y cómo se pueden pasar las estructuras resultantes a funciones no administradas. Este documento se da por supuesto que simple estructuras: aquellos que no contienen cadenas o punteros: se usan. Para obtener información acerca de la interoperabilidad de espacio, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke no pueden tener tipos como un valor devuelto. Tipos tienen la misma representación en código administrado y no administrado. Para obtener más información, consulte [Non-bits/bytes tipos](/dotnet/framework/interop/blittable-and-non-blittable-types).  
   
  Cálculo de referencias simples, las estructuras de bits/bytes a través del límite y no administrado en primer lugar requiere que versiones administradas de cada estructura nativa se defina. Estas estructuras pueden tener cualquier nombre válido; No hay ninguna relación entre la versión nativa y administrada de las dos estructuras que no sea su distribución de datos. Por lo tanto, es fundamental que la versión administrada contiene campos que son del mismo tamaño y en el mismo orden que la versión nativa. (No hay ningún mecanismo para garantizar que las versiones administradas y nativas de la estructura son equivalentes, por lo que las incompatibilidades no serán evidentes hasta el tiempo de ejecución. Es responsabilidad del programador garantizar que las dos estructuras tienen el mismo diseño de datos).  
   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cf6c5efb0c7613c1332ce05483bd311b037a9b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ef8f2142f00b862ff198df9c75e142dc66a049b5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194487"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689969"
 ---
 # <a name="insert-activex-control-dialog-box"></a>Insertar control ActiveX (cuadro de diálogo)
 
@@ -31,13 +31,13 @@ Este cuadro de diálogo permite [insertar controles ActiveX en el cuadro de diá
 
 ### <a name="activex-control"></a>Control ActiveX
 
-Muestra una lista de controles Active X. Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) para crear uno (para obtener más información, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md)). Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.
+Muestra una lista de controles Active X. Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para crear uno (para obtener más información, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md)). Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.
 
 ### <a name="path"></a>Ruta de acceso
 
 Muestra el archivo donde se encuentra el control ActiveX.
 
-Puede colocar controles en el **cuadro de herramientas** ventana para facilitar el acceso. Para obtener más información, consulte [cuadro de diálogo Personalizar cuadro de herramientas](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).
+Puede colocar controles en el **cuadro de herramientas** ventana para facilitar el acceso. Para obtener más información, vea [Cuadro de herramientas](/visualstudio/ide/reference/).
 
 Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
 

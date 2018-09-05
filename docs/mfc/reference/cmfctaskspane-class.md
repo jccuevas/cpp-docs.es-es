@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686462"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane (clase)
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Indica si el panel de tareas ajusta las líneas en las etiquetas.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Indica si el panel de tareas ajusta las líneas en las tareas.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Invalida [CDockablePane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Invalida [CDockablePane:: Loadstate](cdockablepane-class.md#loadstate).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Lo llama el marco cuando el usuario hace clic en un elemento del panel de tareas.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,17 +293,17 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Lo llama el marco cuando el usuario hace clic en el botón de navegación Inicio.|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Invalida [cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Invalida [CDockablePane:: OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Invalida [CDockablePane:: PreTranslateMessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Invalida [CDockablePane:: OnUpdateCmdUI](cdockablepane-class.md).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Invalida [CDockablePane:: PreTranslateMessage](cdockablepane-class.md).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Invalida [CPANE:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Quita todos los grupos de la página especificada.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Quita todas las páginas del panel de tareas excepto la página predeterminada (primera).|  
 |[CMFCTasksPane::RemoveAllTasks](#removealltasks)|Quita todas las tareas del grupo.|  
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Quita un grupo.|  
-|[CMFCTasksPane::RemovePage](#removepage)|Quita una página especificada desde el panel de tareas.|  
+|[CMFCTasksPane::RemovePage](#removepage)|Quita una página especificada desde el panel de tareas.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Quita una tarea de un grupo de tareas.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Invalida [CDockablePane:: SaveState](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Invalida [CDockablePane:: Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Invalida [CDockablePane:: SaveState](cdockablepane-class.md).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Invalida [CDockablePane:: Serialize]().)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Quita una página especificada del panel de tareas.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Establece el nombre del título de un panel de tareas.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Establece la altura de un título de grupo.|  
@@ -318,7 +318,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::SetTaskName](#settaskname)|Establece el nombre de una tarea.|  
 |[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
 |[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
-|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Establece el color del texto de una tarea.|  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Establece el color del texto de una tarea.| 
 |[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|Establece el desplazamiento horizontal de las tareas con respecto a los bordes izquierdos y derecho de sus grupos primarios.|  
 |[CMFCTasksPane::SetVertMargin](#setvertmargin)|Establece el espaciado vertical entre un panel de tareas y los bordes del área de cliente.|  
 |[CMFCTasksPane::SetWindowHeight](#setwindowheight)|Establece la altura de una ventana.|  

@@ -17,21 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23266ca4b4d32146ed8627c6ce3ab1cc878d59cd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c313a72a3c76b65476659e463076d61383dd43a5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600657"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682088"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación
 El Control de cuentas de usuario (UAC) es una característica de Windows Vista para limitar los privilegios de las cuentas de usuario. Puede encontrar información detallada sobre UAC en estos sitios:  
   
--   [Guía paso a paso de Control de cuentas de usuario de Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
-  
--   [Developer Best Practices and Guidelines for Applications in a Least Privileged Environment](http://go.microsoft.com/fwlink/p/?linkid=82444)  
-  
--   [Descripción y configuración de Control de cuentas de usuario en Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [Developer Best Practices and Guidelines for Applications in a Least Privileged Environment](/windows/desktop/uxguide/winenv-uac)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Compilar proyectos después de habilitar UAC  
  Si compila un proyecto de Visual C++ en Windows Vista con UAC deshabilitado, y posteriormente lo habilita, deberá limpiar y recompilar el proyecto para que funcione correctamente.  

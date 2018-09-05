@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78867405627a870f68e5411b7e577b563a605c75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207201"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690951"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT (clase)
 Esta clase implementa una ventana dentro de otro objeto.  
@@ -220,16 +220,16 @@ HWND Create(
  [in] Especifica el nombre de la ventana. El valor predeterminado es NULL.  
   
  *dwStyle*  
- [in] El estilo de la ventana. El valor predeterminado es WS_CHILD &#124; WS_VISIBLE. Para obtener una lista de valores posibles, vea [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) en el SDK de Windows.  
+ [in] El estilo de la ventana. El valor predeterminado es WS_CHILD &#124; WS_VISIBLE. Para obtener una lista de valores posibles, vea [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows.  
   
  *dwExStyle*  
- [in] El estilo extendido de ventana. El valor predeterminado es 0, lo que significa que ningún estilo extendido. Para obtener una lista de valores posibles, vea [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ [in] El estilo extendido de ventana. El valor predeterminado es 0, lo que significa que ningún estilo extendido. Para obtener una lista de valores posibles, vea [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.  
   
  *MenuOrID*  
  [in] Para una ventana secundaria, el identificador de ventana. Para una ventana de nivel superior, un identificador de menú de la ventana. El valor predeterminado es **0U**.  
   
  *lpCreateParam*  
- [in] Un puntero a datos de creación de la ventana. Para obtener una descripción completa, vea la descripción para el parámetro final a [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Un puntero a datos de creación de la ventana. Para obtener una descripción completa, vea la descripción para el parámetro final a [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si se realiza correctamente, el identificador de la ventana recién creado. en caso contrario, es NULL.  

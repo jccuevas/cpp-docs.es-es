@@ -1,7 +1,7 @@
 ---
-title: PÁGINA | Documentos de Microsoft
+title: PÁGINA | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994a542b543fd58fa970c373243f18403b167c1d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cc2057a850d050795ec605eca8e31b69a0086169
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058011"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692485"
 ---
 # <a name="page"></a>PAGE
-La primera Directiva establece línea *longitud* y carácter *ancho* de la lista de programa. Si no se proporcionan argumentos, genera un salto de página. La segunda directiva incrementa el número de sección y restablece el número de página en 1.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      PAGE [[[[length]], width]]  
-PAGE +  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+La primera Directiva establece línea *longitud* y carácter *ancho* de la lista de programa. Si no se proporciona ningún argumento, genera un salto de página. La segunda directiva incrementa el número de sección y restablece el número de página en 1.
+
+## <a name="syntax"></a>Sintaxis
+
+> PÁGINA [[*longitud*]] [[, *ancho*]]<br/><br/>
+> PÁGINA +
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

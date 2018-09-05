@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211102"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691197"
 ---
 # <a name="working-with-resource-files"></a>Trabajar con archivos de recursos
 
 > [!WARNING]
-> Esta sección se aplica a aplicaciones de escritorio de Windows escritas en C++. Para obtener información sobre los recursos de aplicaciones de plataforma Universal de Windows escritas en C++, vea [definir recursos de la aplicación](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Esta sección se aplica a aplicaciones de escritorio de Windows escritas en C++. Para obtener información sobre los recursos de aplicaciones de plataforma Universal de Windows escritas en C++, vea [definir recursos de la aplicación](/windows/uwp/app-resources/).
 >
 > Para obtener información sobre cómo agregar recursos a C++ / c++ / proyectos de la CLI, consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
 
@@ -52,9 +52,6 @@ Describe los editores de recursos que se proporcionan en Visual Studio y los tip
 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Proporciona vínculos a la documentación de Visual C++.
-
-[Introducción a Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-Describe el conjunto completo de herramientas de desarrollo que usan el mismo entorno de desarrollo integrado (IDE), lo que les permite compartir herramientas y facilita la creación de soluciones con varios lenguajes.
 
 [Hable con nosotros](/visualstudio/ide/talk-to-us)  
 Proporciona vínculos a información acerca del uso del conjunto de documentación, el contacto con el servicio de soporte técnico y el uso de características de accesibilidad.

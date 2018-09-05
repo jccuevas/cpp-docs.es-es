@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214996"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682861"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd (clase)
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Llamado por el marco de trabajo cuando se oculta o se muestra un panel de la ventana de marco reducido.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Devuelve un panel si contiene un punto proporcionado por el usuario dentro de una ventana de marco reducido.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Vuelve a dibujar todas las ventanas de marco reducido.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Llamado por el marco de trabajo para quitar los paneles no válidos.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Quita un panel de la ventana de marco reducido.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  El alto, en píxeles, de la ventana de marco reducido.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a este método para determinar el alto de una ventana de marco reducido. De forma predeterminada, se establece el alto en SM_CYSMCAPTION. Para obtener más información, consulte [función GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Llame a este método para determinar el alto de una ventana de marco reducido. De forma predeterminada, se establece el alto en SM_CYSMCAPTION. Para obtener más información, consulte [función GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Calcula el rectángulo delimitador del título de una ventana de marco reducido.  

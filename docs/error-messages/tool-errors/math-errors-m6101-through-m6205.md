@@ -1,5 +1,5 @@
 ---
-title: 'Errores matemáticos: de M6101 a M6205 | Documentos de Microsoft'
+title: 'Errores matemáticos: de M6101 a M6205 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -12,17 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980facfddffb9a7c55854e05e42e7e7c5ec4c889
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0f4796b7c3d6cdc4a44326d9b4db388a12ce5a3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683504"
 ---
 # <a name="math-errors-m6101-through-m6205"></a>Errores matemáticos: de M6101 a M6205
 
-Esta sección es una referencia a los errores generados por la biblioteca de matemáticas de punto flotante en tiempo de ejecución.
+En esta sección es una referencia a los errores generados por la biblioteca de matemáticas de punto flotante en tiempo de ejecución.
 
-Puede encontrar ayuda adicional para errores y advertencias en los foros públicos de Microsoft. También puede buscar el error o el número de advertencia en el [Comunidad de desarrolladores](https://go.microsoft.com/fwlink/p/?linkid=820594) sitio. El [lenguaje Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) es foro para preguntas y debate sobre la sintaxis del lenguaje C++ y el compilador MSVC. El [General de Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158194) es foro para preguntas sobre Visual C++ que no se debaten en otros foros. También puede buscar errores y advertencias y hacer preguntas sobre [desbordamiento de la pila](http://stackoverflow.com/) para buscar soluciones.
+Puede encontrar ayuda adicional para errores y advertencias en los foros públicos de Microsoft. Puede buscar el error o el número de advertencia en el [Comunidad de desarrolladores](https://developercommunity.visualstudio.com) sitio. El [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) foro es para preguntas acerca de Visual C++ que no se debaten en otros foros. También puede buscar errores y advertencias y formular preguntas en [Stack Overflow](http://stackoverflow.com/) para buscar soluciones.
 
-Para obtener vínculos a información adicional y recursos de la Comunidad, vea [ayuda de Visual C++ y de la Comunidad](../../visual-cpp-help-and-community.md).
+Para obtener vínculos a ayuda adicional y recursos de la Comunidad, vea [ayuda de Visual C++ y la Comunidad](../../visual-cpp-help-and-community.md).

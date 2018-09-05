@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691840"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Tutorial: Usar el Runtime de simultaneidad en una aplicación habilitada para COM
 En este documento se muestra cómo se usa el Runtime de simultaneidad en una aplicación que emplea el Modelo de objetos componentes (COM).  
@@ -36,7 +36,7 @@ En este documento se muestra cómo se usa el Runtime de simultaneidad en una apl
   
 - [Control de excepciones](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Para obtener más información acerca de COM, consulte [modelo de objetos componentes (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Para obtener más información acerca de COM, consulte [modelo de objetos componentes (COM)](/windows/desktop/com/component-object-model--com--portal).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>Administrar la duración de la biblioteca COM  
  Aunque el uso de COM con el Runtime de simultaneidad sigue los mismos principios que cualquier otro mecanismo de simultaneidad, las siguientes instrucciones pueden ayudarle a usar conjuntamente estas bibliotecas de forma eficaz.  

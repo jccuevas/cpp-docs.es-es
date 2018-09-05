@@ -1,7 +1,7 @@
 ---
 title: Operador PARITY? | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56c79c4f9cd837d06af683fa3450349ecdbc1b5f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c0b93d709f70bf8f5435b79f246ea354edcb3a5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057817"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686060"
 ---
 # <a name="operator-parity"></a>Operador PARITY?
-Estado del indicador de paridad. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúa en tiempo de ejecución, no en tiempo de ensamblado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-PARITY?  
-  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Estado de la marca de paridad. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúan en tiempo de ejecución, no en tiempo de ensamblado.
+
+## <a name="syntax"></a>Sintaxis
+
+> ¿PARIDAD?
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

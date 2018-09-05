@@ -1,7 +1,7 @@
 ---
-title: Error recuperable A2219 de ML | Documentos de Microsoft
+title: Error recuperable A2219 de ML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d1ae9eb4b8535ac3f1363bb1059468cddf5636
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 365997181b0d4f4471162d7cf8f65a4429e69e74
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056124"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681650"
 ---
 # <a name="ml-nonfatal-error-a2219"></a>Error recuperable A2219 de ML
-**Códigos de desenredado de alineación incorrecta de desplazamiento en**  
-  
- El operando de [. ALLOCSTACK](../../assembler/masm/dot-allocstack.md) y [. SAVEREG](../../assembler/masm/dot-savereg.md) debe ser un múltiplo de 8.  El operando de [. Savexmm128](../../assembler/masm/dot-savexmm128.md) y [. SETFRAME](../../assembler/masm/dot-setframe.md) debe ser un múltiplo de 16.  
-  
-## <a name="see-also"></a>Vea también  
- [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)
+
+**Alineación incorrecta de desplazamiento en el código de desenredado**
+
+El operando para [. ALLOCSTACK](../../assembler/masm/dot-allocstack.md) y [. SAVEREG](../../assembler/masm/dot-savereg.md) debe ser un múltiplo de 8.  El operando para [. Savexmm128](../../assembler/masm/dot-savexmm128.md) y [. SETFRAME](../../assembler/masm/dot-setframe.md) debe ser un múltiplo de 16.
+
+## <a name="see-also"></a>Vea también
+
+[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>

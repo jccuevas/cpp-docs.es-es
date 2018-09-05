@@ -1,7 +1,7 @@
 ---
-title: SBYTE (MASM) | Documentos de Microsoft
+title: SBYTE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8d9def44f027255df77d1e2f160450501857147
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 24703e88c63c04b7f0e3681744e5409622a83078
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057973"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692004"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
-Asigna y, opcionalmente, inicializa un byte con signo de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-name SBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)   
- [BYTES](../../assembler/masm/byte-masm.md)   
- [DB](../../assembler/masm/db.md)
+
+Asigna e inicializa opcionalmente un byte con signo de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.
+
+## <a name="syntax"></a>Sintaxis
+
+> nombre SBYTEinitializer [[, inicializador]]...
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[BYTE](../../assembler/masm/byte-masm.md)<br/>
+[DB](../../assembler/masm/db.md)<br/>

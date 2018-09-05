@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47914999a48b4d5924a25ad1688ee83c533398f3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfdf224ed96484af52a84c270c93df87821a444f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218903"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684604"
 ---
 # <a name="how-to-migrate-to-clr"></a>Cómo: Migrar a /clr
 En este tema se trata los problemas que surgen al compilar el código nativo con **/CLR** (consulte [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) para obtener más información). **/ CLR** permite que los módulos de Visual C++ invocar y se pueden invocar desde ensamblados .NET conservando la compatibilidad con módulos no administrados. Consulte [ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md) y [nativo e interoperabilidad de .NET](../dotnet/native-and-dotnet-interoperability.md) para obtener más información sobre las ventajas de compilar con **/CLR**.  
@@ -90,7 +90,7 @@ COMObj2->Method(args);  // C++ equivalent
  Después de que el proyecto se compila y ejecuta en Visual Studio 2010 debe crear nuevas configuraciones de proyecto para **/CLR** en lugar de modificar las configuraciones predeterminadas. **/ CLR** es incompatible con algunas opciones del compilador y la creación de configuraciones independientes le permite compilar el proyecto como nativo o administrado. Cuando **/CLR** está seleccionado en el cuadro de diálogo páginas de propiedades, la configuración del proyecto no es compatible con **/CLR** están deshabilitadas (y las opciones deshabilitadas no se restauran automáticamente si   **/CLR** se desactiva posteriormente).  
   
 ### <a name="create-new-project-configurations"></a>Crear nuevas configuraciones de proyecto  
- Puede usar **Copiar configuración de** opción el [nuevo cuadro de diálogo de configuración de proyecto](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be) para crear una configuración de proyecto basada en la configuración del proyecto existente. Haga esto una vez para la configuración de depuración y una vez para la configuración Release. A continuación, se pueden aplicar los cambios posteriores a la **/CLR** -configuraciones específicas, dejando intactas las configuraciones del proyecto original.  
+ Puede usar **Copiar configuración de** opción el **nuevo cuadro de diálogo de configuración de proyecto** (**compilar** > **deConfigurationManager**  >  **Configuración de soluciones activas** > **New**) para crear una configuración de proyecto basada en la configuración del proyecto existente. Haga esto una vez para la configuración de depuración y una vez para la configuración Release. A continuación, se pueden aplicar los cambios posteriores a la **/CLR** -configuraciones específicas, dejando intactas las configuraciones del proyecto original.  
   
  Los proyectos que usan reglas de compilación personalizadas pueden requerir más atención.  
   

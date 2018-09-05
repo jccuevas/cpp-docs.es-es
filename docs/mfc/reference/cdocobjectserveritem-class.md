@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 985333deaeceeed594e11223c417f3217e8b0322
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211810"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682048"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem (clase)
 Implementa verbos de servidor OLE específicamente para servidores de DocObject.  
@@ -58,11 +58,12 @@ class CDocObjectServerItem : public COleServerItem
   
 |Name|Descripción|  
 |----------|-----------------|  
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Produce una excepción si el marco de trabajo intenta ocultar un elemento de DocObject.|
 |[CDocObjectServerItem::OnHide](#onhide)|Produce una excepción si el marco de trabajo intenta ocultar un elemento de DocObject.|  
 |[CDocObjectServerItem::OnShow](#onshow)|Lo llama el marco para que sea el DocObject elemento en el sitio activo. Si el elemento no es un objeto DocObject, llama a [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Comentarios  
- `CDocObjectServerItem` define las funciones miembro que se puede invalidar: [OnHide](#onhide), [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), y [OnShow](#onshow).  
+ `CDocObjectServerItem` define las funciones miembro que se puede invalidar: [OnHide](#onhide), [OnDoVerb](#ondoverb), y [OnShow](#onshow).  
   
  Para usar `CDocObjectServerItem`, asegurarse de que el [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) invalidar en su `COleServerDoc`-devuelve una nueva clase derivada `CDocObjectServerItem` objeto. Si necesita cambiar ninguna funcionalidad en el elemento, puede crear una nueva instancia de su propio `CDocObjectServerItem`-clase derivada.  
   

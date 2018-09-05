@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5289b27ae0749d85b3e4ee60717212acc95536d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 081e380dc639ed6a814913dd42c6fc1b55041b01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405710"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681140"
 ---
 # <a name="rand"></a>rand
 
-Genera un número pseudoaleatorio mediante un algoritmo conocido y reproducible totalmente. Una versión más mediante programación segura de esta función está disponible; vea [rand_s](rand-s.md). Números generan por **rand** no son criptográficamente segura. Para más seguros criptográficamente generación de números aleatorios, use [rand_s](rand-s.md) o las funciones se declaran en la biblioteca estándar de C++ en [ \<aleatorio >](../../standard-library/random.md).
+Genera un número pseudoaleatorio mediante un algoritmo muy conocido y completamente reproducible. Una versión más mediante programación segura de esta función está disponible; consulte [rand_s](rand-s.md). Los números generan por **rand** no son seguras criptográficamente. Para más seguros criptográficamente generación de números aleatorios, utilice [rand_s](rand-s.md) o las funciones se declaran en la biblioteca estándar de C++ en [ \<aleatorio >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,13 +54,13 @@ int rand( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**RAND** devuelve un número pseudoaleatorio, como se describió anteriormente. No se devuelve ningún error.
+**RAND** devuelve un número pseudoaleatorio, como se ha descrito anteriormente. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **rand** función devuelve un entero pseudoaleatorio en el intervalo de 0 a **RAND_MAX** (32767). Use la [srand](srand.md) función para inicializar el generador de números pseudoaleatorios antes de llamar a **rand**.
+El **rand** función devuelve un entero pseudoaleatorio entre 0 y **RAND_MAX** (32767). Use la [srand](srand.md) función para inicializar el generador de números pseudoaleatorios antes de llamar a **rand**.
 
-El **rand** función genera una secuencia conocida y no es adecuado para su uso como una función criptográfica. Para más seguros criptográficamente generación de números aleatorios, use [rand_s](rand-s.md) o las funciones se declaran en la biblioteca estándar de C++ en [ \<aleatorio >](../../standard-library/random.md). Para obtener información acerca de cuál es el problema con **rand** y cómo \<aleatorio > aborda, vea [este vídeo](http://go.microsoft.com/fwlink/?LinkId=397615).
+El **rand** función genera una secuencia conocida y no es adecuado para su uso como una función criptográfica. Para más seguros criptográficamente generación de números aleatorios, utilice [rand_s](rand-s.md) o las funciones se declaran en la biblioteca estándar de C++ en [ \<aleatorio >](../../standard-library/random.md). Para obtener información acerca de cuál es el problema con **rand** y cómo \<aleatorio > aborda estas desventajas, vea este vídeo titulado [rand considera perjudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Requisitos
 

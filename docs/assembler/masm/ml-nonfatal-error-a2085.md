@@ -1,7 +1,7 @@
 ---
-title: Error recuperable A2085 de ML | Documentos de Microsoft
+title: Error recuperable A2085 de ML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82f0a014810679f0b48f79198b1335240f5cd6a8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd5ec9f36a4f956b8eeb097b6a8f8eaed89ba2b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054281"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681441"
 ---
 # <a name="ml-nonfatal-error-a2085"></a>Error recuperable A2085 de ML
-**instrucción o registrar que no se aceptan en el modo actual de CPU**  
-  
- Se intentó utilizar una instrucción, el registro o la palabra clave que no era válido para el modo de procesador actual.  
-  
- Por ejemplo, registros de 32 bits requieren [.386](../../assembler/masm/dot-386.md) o superior. Registros de control como CR0 requieren el modo privilegiado [386p](../../assembler/masm/dot-386p.md) o superior. Este error también se generarán para el **NEAR32**, **FAR32**, y **FLAT** keywords, que requieren. **386** o superior.  
-  
-## <a name="see-also"></a>Vea también  
- [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)
+
+**instrucción o registrar que no se acepta en modo de CPU actual**
+
+Se intentó utilizar una instrucción, el registro o la palabra clave que no era válido para el modo actual del procesador.
+
+Por ejemplo, registros de 32 bits requieren [.386](../../assembler/masm/dot-386.md) o superior. Registros de control, como CR0 requieren el modo privilegiado [.386P](../../assembler/masm/dot-386p.md) o superior. Este error también se generarán para el **NEAR32**, **FAR32**, y **planos** palabras clave, que requieren. **386** o superior.
+
+## <a name="see-also"></a>Vea también
+
+[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>

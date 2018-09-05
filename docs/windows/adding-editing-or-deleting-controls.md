@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b28736e4e9c4b4f327f80a97b5b7ed3b6d1c7c40
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219441"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686277"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Agregar, editar o eliminar controles
 
 Mediante el **diálogo** editor, puede agregar, cambiar el tamaño, editar y eliminar los controles de cuadros de diálogo. También puede editar las propiedades de un control, como su identificador, o si está visible inicialmente en tiempo de ejecución.
 
-Puede usar el menú contextual de la **diálogo** registrado de editor para agregar rápidamente controles ActiveX a un cuadro de diálogo, y puede agregar controles ActiveX a la **cuadro de herramientas** para un acceso rápido (para obtener más información, vea [Personalizar cuadro de diálogo](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
+Puede usar el menú contextual de la **diálogo** registrado de editor para agregar rápidamente controles ActiveX a un cuadro de diálogo, y puede agregar controles ActiveX a la **cuadro de herramientas** para un acceso rápido (para obtener más información, vea [Cuadro de herramientas](/visualstudio/ide/reference/toolbox)).
 
 - [Agregar un control a un cuadro de diálogo](adding-a-control-to-a-dialog-box.md)
 

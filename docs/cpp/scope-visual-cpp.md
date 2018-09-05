@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679702"
 ---
 # <a name="scope-c"></a>Ámbito (C++)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > La reutilización de los nombres de identificador, tal y como se muestra en este ejemplo, se considera mal estilo de programación.
 
- Para obtener más información sobre los punteros, vea [tipos derivados](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Para obtener información acerca de la declaración e inicialización de objetos de clase, vea [clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md). Para obtener información sobre el uso de la **nueva** y **eliminar** operadores de almacenamiento libre, consulte [nuevas y eliminar operadores](new-and-delete-operators.md).
+Para obtener información acerca de la declaración e inicialización de objetos de clase, vea [clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md). Para obtener información sobre el uso de la **nueva** y **eliminar** operadores de almacenamiento libre, consulte [nuevas y eliminar operadores](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Ocultar nombres con ámbito global
 

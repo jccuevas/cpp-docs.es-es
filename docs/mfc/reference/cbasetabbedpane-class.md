@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412010f7e8599ab9a97ea5a4e5cab55fca6051a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690439"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (clase)
 Extiende la funcionalidad de [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) para permitir la creación de ventanas con pestañas.  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Vuelve a calcular información de diseño para el panel. (Invalida [CPANE:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CBaseTabbedPane::RemovePane](#removepane)|Quita un panel desde el panel con pestañas.|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|Se usa internamente durante la serialización.|  
-|`CBaseTabbedPane::Serialize`|(Invalida [CDockablePane:: Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::Serialize`|(Invalida [CDockablePane:: Serialize](cdockablepane-class.md).)|  
 |`CBaseTabbedPane::SerializeTabWindow`|Se usa internamente durante la serialización.|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Determina si se destruirán automáticamente la barra de control con pestañas.|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Alterna entre mostrar el panel de acoplamiento y el modo de ocultación automática. (Invalida [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  

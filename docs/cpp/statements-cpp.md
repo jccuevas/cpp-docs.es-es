@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216370"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685810"
 ---
 # <a name="statements-c"></a>Instrucciones (C++)
 Las instrucciones de C++ son los elementos de programa que controlan cómo y en qué orden se manipulan los objetos. Esta sección incluye:  
@@ -42,7 +42,7 @@ Las instrucciones de C++ son los elementos de programa que controlan cómo y en 
   
     -   [Instrucciones de salto](../cpp/jump-statements-cpp.md). Estas instrucciones transfieren el control inmediatamente a otra ubicación de la función o devuelven el control de la función.  
   
-    -   [Las instrucciones de declaración](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Las declaraciones introducen un nombre en un programa. ([Declaraciones y definiciones](declarations-and-definitions-cpp.md) proporciona información más detallada sobre las declaraciones.)  
+    -   [Las instrucciones de declaración](declarations-and-definitions-cpp.md). Las declaraciones introducen un nombre en un programa.  
   
  Para obtener información sobre las instrucciones de control de excepciones, vea [Exception Handling](../cpp/exception-handling-in-visual-cpp.md).  
   

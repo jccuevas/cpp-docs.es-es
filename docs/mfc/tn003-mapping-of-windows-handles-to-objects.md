@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211767"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692453"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Asignar identificadores de Windows a objetos
 Esta nota describe las MFC rutinas que admiten la asignación de Windows objeto identificadores de objetos de C++.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Esto crea una entrada en la asociación de asignación permanente *myWnd* y *hWnd*. Una llamada a `CWnd::FromHandle(hWnd)` ahora devolverá un puntero a *myWnd*. Cuando *myWnd* es eliminado, el destructor se destruye automáticamente *hWnd* mediante una llamada a la Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) función. Si esto no es el deseado, *hWnd* se debe desasociar de *myWnd* antes *myWnd* se destruye (normalmente al salir del ámbito en el que *myWnd*se ha definido). El `Detach` método hace esto.  
+ Esto crea una entrada en la asociación de asignación permanente *myWnd* y *hWnd*. Una llamada a `CWnd::FromHandle(hWnd)` ahora devolverá un puntero a *myWnd*. Cuando *myWnd* es eliminado, el destructor se destruye automáticamente *hWnd* mediante una llamada a la Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) función. Si esto no es el deseado, *hWnd* se debe desasociar de *myWnd* antes *myWnd* se destruye (normalmente al salir del ámbito en el que *myWnd*se ha definido). El `Detach` método hace esto.  
   
 ```  
 myWnd.Detach();

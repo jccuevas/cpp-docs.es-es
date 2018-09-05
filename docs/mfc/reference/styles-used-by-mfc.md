@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199926"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689326"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos utilizados por MFC  
   
@@ -219,7 +219,7 @@ Utilice las siguientes marcas de estilo para especificar el comportamiento y apa
   
 ## <a name="button-styles"></a> Estilos de botón  
   
-Se aplican los estilos de botón para [CButton (clase)](../../mfc/reference/cbutton-class.md) objetos, como botones de radio, comprobación casillas y botones de comando. Especificar una combinación de estilos en el *dwStyle* parámetro de [CButton::Create](../../mfc/reference/cbutton-class.md#create). Para obtener más información sobre los estilos de botón en Windows, consulte [estilos de botón (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
+Se aplican los estilos de botón para [CButton (clase)](../../mfc/reference/cbutton-class.md) objetos, como botones de radio, comprobación casillas y botones de comando. Especificar una combinación de estilos en el *dwStyle* parámetro de [CButton::Create](../../mfc/reference/cbutton-class.md#create). Para obtener más información sobre los estilos de botón en Windows, consulte [estilos de botón (Windows)](/windows/desktop/Controls/button-styles).  
   
 ### <a name="button-types"></a>Tipos de botón  
   
@@ -288,7 +288,7 @@ En la tabla siguiente se enumera las opciones adicionales que puede usar con cua
   
 ## <a name="combo-box-styles"></a>  Estilos de cuadro combinado  
   
-Los siguientes estilos de cuadro combinado están disponibles en MFC. Para obtener más información sobre los estilos de cuadro combinado en Windows, consulte [estilos de cuadro combinado (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
+Los siguientes estilos de cuadro combinado están disponibles en MFC. Para obtener más información sobre los estilos de cuadro combinado en Windows, consulte [estilos de cuadro combinado (Windows)](/windows/desktop/Controls/combo-box-styles).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ Los siguientes estilos de cuadro combinado están disponibles en MFC. Para obten
   
 ## <a name="edit-styles"></a>  Estilos de edición  
   
-Editar los estilos se aplican a [clase CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obtener más información sobre los estilos de control de edición en Windows, consulte [estilos de Control de edición (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Editar los estilos se aplican a [clase CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obtener más información sobre los estilos de control de edición en Windows, consulte [estilos de Control de edición (Windows)](/windows/desktop/Controls/edit-control-styles).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ Se aplican los estilos de ventana de marco para [CFrameWnd (clase)](../../mfc/re
   
 ## <a name="list-box-styles"></a> Estilos de cuadro de lista  
   
-Estilos de cuadro de lista se aplican a [CListBox (clase)](../../mfc/reference/clistbox-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Para obtener más información sobre los estilos de cuadro de lista en Windows, consulte [estilos de cuadro de lista (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
+Estilos de cuadro de lista se aplican a [CListBox (clase)](../../mfc/reference/clistbox-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Para obtener más información sobre los estilos de cuadro de lista en Windows, consulte [estilos de cuadro de lista (Windows)](/windows/desktop/Controls/list-box-styles).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Estilos de cuadro de lista se aplican a [CListBox (clase)](../../mfc/reference/c
   
 ##<a name="message-box-styles"></a>  Estilos de cuadro de mensaje  
   
-Se aplican los estilos de cuadro de mensaje para [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementos. Especificar una combinación de estilos en el *nLas* parámetro de `AfxMessageBox`. Para obtener más información acerca de los estilos de cuadro de mensaje en Windows, consulte [función MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
+Se aplican los estilos de cuadro de mensaje para [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementos. Especificar una combinación de estilos en el *nLas* parámetro de `AfxMessageBox`. Para obtener más información acerca de los estilos de cuadro de mensaje en Windows, consulte [función MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).  
   
 Están disponibles los siguientes estilos de cuadro de mensaje.  
   
@@ -403,7 +403,7 @@ Están disponibles los siguientes estilos de cuadro de mensaje.
   
 ## <a name="scroll-bar-styles"></a> Estilos de barra de desplazamiento  
   
-Se aplican los estilos de barra de desplazamiento para [CScrollBar (clase)](../../mfc/reference/cscrollbar-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obtener más información acerca de los estilos de control de Windows de la barra de desplazamiento, vea [estilos de Control de barra de desplazamiento (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Se aplican los estilos de barra de desplazamiento para [CScrollBar (clase)](../../mfc/reference/cscrollbar-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obtener más información acerca de los estilos de control de Windows de la barra de desplazamiento, vea [estilos de Control de barra de desplazamiento (Windows)](/windows/desktop/Controls/scroll-bar-control-styles).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Se aplican los estilos de barra de desplazamiento para [CScrollBar (clase)](../.
   
 ## <a name="static-styles"></a> Estilos estáticos  
   
-Estilos estáticos se aplican a [CStatic (clase)](../../mfc/reference/cstatic-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obtener más información sobre los estilos de control estático en Windows, consulte [estilos de Control estática (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Estilos estáticos se aplican a [CStatic (clase)](../../mfc/reference/cstatic-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obtener más información sobre los estilos de control estático en Windows, consulte [estilos de Control estática (Windows)](/windows/desktop/Controls/static-control-styles).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ Estilos de ventana se aplican a [clase CWnd](../../mfc/reference/cwnd-class.md) 
   
 ## <a name="extended-window-styles"></a> Estilos de ventana extendidos  
   
-Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-class.md) objetos. Especificar una combinación de estilos en el *dwExStyle* parámetro de [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obtener más información sobre los estilos de ventana extendidos en Windows, consulte [estilos de ventana extendidos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
+Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-class.md) objetos. Especificar una combinación de estilos en el *dwExStyle* parámetro de [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obtener más información sobre los estilos de ventana extendidos en Windows, consulte [estilos de ventana extendidos (Windows)](/windows/desktop/winmsg/extended-window-styles).  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -524,14 +524,14 @@ Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-cl
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[Estilos de botón (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[Estilos de cuadro combinado (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Edición de estilos de Control (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Lista de estilos de cuadro (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[función MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[estilos de Control de barra de desplazamiento (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Estilos de Control estática (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[Estilos de botón (Windows)](/windows/desktop/Controls/button-styles)  
+[Estilos de cuadro combinado (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[Edición de estilos de Control (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[Lista de estilos de cuadro (Windows)](/windows/desktop/Controls/list-box-styles) 
+[función MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[estilos de Control de barra de desplazamiento (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[Estilos de Control estática (Windows)](/windows/desktop/Controls/static-control-styles)  
 [Estilos de ventana (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[Estilos de ventana extendidos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[Estilos de ventana extendidos (Windows)](/windows/desktop/winmsg/extended-window-styles)  

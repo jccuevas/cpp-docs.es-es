@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a01c319f8a93931539b8ba79cc9c9f554317bab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1db86f2ba4b9f023d0a0a0abaf67114176c0ddf4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200174"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690215"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Agregar archivos a una aplicación de Win32 vacía
 
@@ -45,4 +45,3 @@ Para agregar los archivos que no son ni de origen, encabezado ni archivos de rec
 ## <a name="see-also"></a>Vea también
 
 [Creación de una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)  
-[Implementación de aplicaciones](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573185"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687940"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary y AfxLoadLibrary
 
-Procesa llamada [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) para vincularse explícitamente a un archivo DLL. Si la función se realiza correctamente, se asigna el archivo DLL especificado en el espacio de direcciones del proceso que realiza la llamada y devuelve un identificador para el archivo DLL que se puede usar con otras funciones en la vinculación explícita, por ejemplo, `GetProcAddress` y `FreeLibrary`.
+Procesa llamada [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) o [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) para vincularse explícitamente a un archivo DLL. Si la función se realiza correctamente, se asigna el archivo DLL especificado en el espacio de direcciones del proceso que realiza la llamada y devuelve un identificador para el archivo DLL que se puede usar con otras funciones en la vinculación explícita, por ejemplo, `GetProcAddress` y `FreeLibrary`.
 
 `LoadLibrary` intenta encontrar el archivo DLL mediante el uso de la misma secuencia de búsqueda que se utiliza para la vinculación implícita. Si el sistema no encuentra el archivo DLL o si la función de punto de entrada devuelve FALSE, `LoadLibrary` devuelve NULL. Si la llamada a `LoadLibrary` especifica un módulo DLL que ya está asignado al espacio de direcciones del proceso que realiza la llamada, la función devuelve un identificador de la DLL e incrementa el recuento de referencias del módulo.
 
@@ -59,5 +59,3 @@ Si Windows no pueden cargar el archivo DLL, el proceso puede intentar recuperars
 ## <a name="see-also"></a>Vea también
 
 - [Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

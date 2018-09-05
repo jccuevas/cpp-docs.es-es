@@ -1,5 +1,5 @@
 ---
-title: -Qpar-report (nivel de información de Paralelizador automático) | Documentos de Microsoft
+title: -Qpar-report (nivel de información de Paralelizador automático) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70ac8433b4692586880648d6c5d5d83f1cbb15fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376019"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681700"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (Nivel de información de paralelizador automático)
-Habilita la característica de informes del compilador [Paralelizador automático](../../parallel/auto-parallelization-and-auto-vectorization.md) y especifica el nivel de mensajes informativos de salida durante la compilación.  
+Habilita la característica informes del compilador [Paralelizador automático](../../parallel/auto-parallelization-and-auto-vectorization.md) y especifica el nivel de los mensajes informativos de salida durante la compilación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,9 +41,9 @@ Habilita la característica de informes del compilador [Paralelizador automátic
   
 1.  En el **Explorador de soluciones**, abra el menú contextual del proyecto y, a continuación, elija **Propiedades**.  
   
-2.  En el **páginas de propiedades** cuadro de diálogo **C/C++**, seleccione **línea de comandos**.  
+2.  En el **páginas de propiedades** cuadro de diálogo **C o C++**, seleccione **línea de comandos**.  
   
-3.  En el **opciones adicionales** cuadro, escriba `/Qpar-report:1` o `/Qpar-report:2`.  
+3.  En el **opciones adicionales** , escriba `/Qpar-report:1` o `/Qpar-report:2`.  
   
 ### <a name="to-set-the-qpar-report-compiler-option-programmatically"></a>Cómo establecer la opción del compilador /Qpar-report mediante programación  
   
@@ -52,5 +52,5 @@ Habilita la característica de informes del compilador [Paralelizador automátic
 ## <a name="see-also"></a>Vea también  
  [Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)   
  [Opciones del compilador](../../build/reference/compiler-options.md)   
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
- [Programación paralela en código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Establecer opciones del compilador](../../build/reference/setting-compiler-options.md)   
+ [Programación en paralelo en código nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

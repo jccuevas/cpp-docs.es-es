@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221760"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690454"
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelación en la biblioteca PPL
 En este documento se explica el rol de cancelación de la biblioteca de patrones de procesamiento paralelo (PPL), cómo se cancela el trabajo paralelo y cómo se determina cuándo se cancela un trabajo paralelo.  
@@ -150,7 +150,7 @@ En este documento se explica el rol de cancelación de la biblioteca de patrones
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Tokens de cancelación y composición de tareas  
 
- El [concurrency:: HYPERLINK "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all](reference/concurrency-namespace-functions.md#when_all) y [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) las funciones que pueden ayudarle a crear varias tareas para implementar patrones comunes. En esta sección se describe cómo operan estas funciones con tokens de cancelación.  
+ El [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) y [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) las funciones que pueden ayudarle a crear varias tareas para implementar patrones comunes. En esta sección se describe cómo operan estas funciones con tokens de cancelación.  
   
  Cuando se proporciona un token de cancelación a la función `when_all` o `when_any`, dicha función se cancela solo cuando se cancela ese token de cancelación o cuando una de las tareas participantes finaliza en un estado cancelado o produce una excepción.  
   

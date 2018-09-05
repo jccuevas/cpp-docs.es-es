@@ -1,7 +1,7 @@
 ---
-title: Error recuperable A2044 de ML | Documentos de Microsoft
+title: Error recuperable A2044 de ML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e7c3e3c5122298e853a80d5abd45ffda912167
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 21a4ef6a11b52221b86ec791c864505b79b7e6bb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686962"
 ---
 # <a name="ml-nonfatal-error-a2044"></a>Error recuperable A2044 de ML
-**carácter no válido en archivo**  
-  
- El archivo de origen contiene un carácter fuera de un comentario, cadena, o literal no se reconoció como un operador u otro carácter legal.  
-  
-## <a name="see-also"></a>Vea también  
- [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)
+
+**carácter no válido en archivo**
+
+El archivo de origen contenía un carácter fuera de un comentario, cadena o literal no se reconoció como un operador u otro carácter legal.
+
+## <a name="see-also"></a>Vea también
+
+[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>

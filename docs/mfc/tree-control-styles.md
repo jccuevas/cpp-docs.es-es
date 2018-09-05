@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a448d76236c3467228b2aa57cd71284274687ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b6f3f28bbc2a69a5ad5c4fe9910d8312b236c34f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200436"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686503"
 ---
 # <a name="tree-control-styles"></a>Estilos de control de árbol
-Control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlan aspectos de la apariencia de un control de árbol. Establece los estilos iniciales al crear el control de árbol. Puede recuperar y cambiar los estilos de una vez creado el control de árbol mediante el [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) y [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) las funciones de Windows, especificar **GWL_STYLE** para el *nIndex* parámetro. Para obtener una lista completa de los estilos, consulte [estilos de ventana de Control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) en el SDK de Windows.  
+Control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlan aspectos de la apariencia de un control de árbol. Establece los estilos iniciales al crear el control de árbol. Puede recuperar y cambiar los estilos de una vez creado el control de árbol mediante el [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) y [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) las funciones de Windows, especificar **GWL_STYLE** para el *nIndex* parámetro. Para obtener una lista completa de los estilos, consulte [estilos de ventana de Control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) en el SDK de Windows.  
   
  El **TVS_HASLINES** estilo mejora la representación gráfica de la jerarquía de un control de árbol mediante el dibujo de líneas que vinculan elementos secundarios a su elemento primario correspondiente. Este estilo no vincular elementos en la raíz de la jerarquía. Para ello, necesita combinar el **TVS_HASLINES** y **TVS_LINESATROOT** estilos.  
   

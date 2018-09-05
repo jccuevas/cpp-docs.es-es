@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219178"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684798"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx (clase)
 Esta clase proporciona métodos para controlar la administración de recuento de referencia de objeto para objetos agregados y agregados.  
@@ -279,7 +279,7 @@ IUnknown*
  Si el objeto es agregado, el puntero para el desconocido externo se almacena en `m_pOuterUnknown`. Si el objeto no es agregado, el recuento de referencias accediendo `AddRef` y `Release` se almacena en [m_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Para cada clase que aparece en el [mapa de objetos](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), esta función se llama una vez cuando se inicializa el módulo, y otra vez cuando se termina.  
+ Para cada clase que aparece en el mapa de objetos, esta función se llama una vez cuando se inicializa el módulo, y otra vez cuando se termina.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

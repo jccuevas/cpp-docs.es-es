@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5bc95e75cc9a58dd6f01b8a4ca537709941f6bf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba32b0c15f6262763fa001d89d3439c153f5fa3d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680294"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Crear zonas transparentes o inversas en las imágenes de dispositivo (Editor de imágenes para iconos)
 
@@ -44,7 +44,7 @@ En el [editor de imágenes](../windows/image-editor-for-icons.md), la imagen ini
 Los colores de pantalla e inversos se aplica a los iconos y cursores en forma y color de la imagen derivada o designan regiones inversas. Los colores indican las partes de la imagen que poseen estos atributos. Puede cambiar los colores que representan los atributos de color de la pantalla y color inverso en la edición. Estos cambios no afectan a la apariencia del icono o cursor en la aplicación.
 
 > [!NOTE]
-> Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la **Ayuda**, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la **Ayuda**, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-create-transparent-or-inverse-regions"></a>Para crear zonas transparentes o inversas
 

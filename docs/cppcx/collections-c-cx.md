@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c174c904dfb43ff3fa3c032bae30da8c1e139c3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0be29ed74b2c5abf8bc3c781900caa61ada3713f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222905"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693083"
 ---
 # <a name="collections-ccx"></a>Colecciones (C++/CX)
 En C / c++ / programa CX, puede hacer uso libre de contenedores de la biblioteca de plantillas estándar (STL), o cualquier otro tipo de colección definida por el usuario. Sin embargo, cuando pases colecciones y hacia atrás en la interfaz binaria de aplicación de Windows en tiempo de ejecución (ABI), por ejemplo, para un control XAML o a un cliente de JavaScript, debe usar los tipos de colección en tiempo de ejecución de Windows.  
@@ -145,6 +145,5 @@ void FindButton(UIElementCollection^ col)
   
 ## <a name="see-also"></a>Vea también  
  [Sistema de tipos](../cppcx/type-system-c-cx.md)   
- [Tipos integrados](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)

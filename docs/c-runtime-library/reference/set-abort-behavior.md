@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb308e527cc955d91af0b12547d52aa5e6316af5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 299801cc4276118fc73a4be625a3df8cc84d58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407280"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692939"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Especifica la acción que se debe llevar a cabo cuando un programa finaliza de forma anormal.
 
 > [!NOTE]
-> No utilice la [anular](abort.md) función para cerrar una aplicación de Microsoft Store, excepto en pruebas o en escenarios de depuración. No se permiten formas mediante programación o la interfaz de usuario para cerrar una aplicación de tienda según la [las directivas de Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Para obtener más información, consulte [ciclo de vida de aplicación UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> No utilice el [anular](abort.md) función para que se cierre una aplicación de Microsoft Store, excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,8 +61,8 @@ unsigned int _set_abort_behavior(
 *flags*<br/>
 Nuevo valor de la [anular](abort.md) marcas.
 
-*máscara*<br/>
-Máscara para la [anular](abort.md) marcas de bits para establecer.
+*Máscara*<br/>
+Máscara para el [anular](abort.md) marcas de bits para establecer.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -70,7 +70,7 @@ Valor anterior de las marcas.
 
 ## <a name="remarks"></a>Comentarios
 
-Hay dos [anular](abort.md) marcas: **_WRITE_ABORT_MSG** y **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina si se imprime un mensaje de texto de ayuda cuando un programa se termina de forma anómala. El mensaje indica que la aplicación ha llamado el [anular](abort.md) función. El comportamiento predeterminado consiste en imprimir el mensaje. **_CALL_REPORTFAULT**, si se establece, especifica que un volcado de Watson se genera y notifica cuando [anular](abort.md) se llama. De forma predeterminada, los informes de volcado de memoria están habilitados en las compilaciones que no son de DEBUG.
+Hay dos [anular](abort.md) marcas: **_WRITE_ABORT_MSG** y **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina si se imprime un mensaje de texto de ayuda cuando un programa de forma anormal. El mensaje indica que la aplicación ha llamado el [anular](abort.md) función. El comportamiento predeterminado consiste en imprimir el mensaje. **_CALL_REPORTFAULT**, si establece, especifica que se genera un volcado de bloqueo Watson y notifica cuando [anular](abort.md) se llama. De forma predeterminada, los informes de volcado de memoria están habilitados en las compilaciones que no son de DEBUG.
 
 ## <a name="requirements"></a>Requisitos
 

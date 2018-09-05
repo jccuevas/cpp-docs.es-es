@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2538e2b14277b24c583ae2392dd9249c93d4854b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336445"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690270"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente
 Cuando usa el Asistente para consumidores OLE DB ATL para crear un consumidor, el asistente genera a un miembro de datos en la clase de registro de usuario para cada campo que especifique en el mapa de columnas. Cada miembro de datos es de tipo `DWORD` y contiene un valor de estado correspondiente a su campo correspondiente.  
@@ -85,7 +85,7 @@ END_COLUMN_MAP()
   
  También puede usar los valores de estado para establecer un valor NULL para un campo determinado. Esto ayuda a en los casos en los que desee distinguir un valor de campo como NULL en lugar de cero. Depende de usted decidir si NULL es un valor válido o un valor especial y decidir cómo debe controlar su aplicación. OLE DB define DBSTATUS_S_ISNULL como la forma correcta de especificar un valor NULL genérico. Si el consumidor lee los datos y el valor es null, el campo de estado se establece en DBSTATUS_S_ISNULL. Si el consumidor desea establecer un valor NULL, el consumidor establece el valor de estado en DBSTATUS_S_ISNULL antes de llamar al proveedor.  
   
- A continuación, abra Oledb.h y busque `DBSTATUSENUM`. A continuación, puede hacer coincidir el valor numérico del estado distinto de cero con el `DBSTATUSENUM` valores de enumeración. Si el nombre de la enumeración no es suficiente para saber cuál es el problema, consulte el tema "Status" en la sección "Valores de datos de enlace" de la [Guía del programador de OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548). Este tema contiene las tablas de valores de estado que se utiliza al obtener o establecer los datos. Para obtener información acerca de los valores de longitud, vea el tema "Length" en la misma sección.  
+ A continuación, abra Oledb.h y busque `DBSTATUSENUM`. A continuación, puede hacer coincidir el valor numérico del estado distinto de cero con el `DBSTATUSENUM` valores de enumeración. Si el nombre de la enumeración no es suficiente para saber cuál es el problema, consulte el tema "Status" en la sección "Valores de datos de enlace" de la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Este tema contiene las tablas de valores de estado que se utiliza al obtener o establecer los datos. Para obtener información acerca de los valores de longitud, vea el tema "Length" en la misma sección.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperar la longitud o el estado de una columna  
  Puede recuperar la longitud de una columna de longitud variable o el estado de una columna (para buscar DBSTATUS_S_ISNULL, por ejemplo):  
