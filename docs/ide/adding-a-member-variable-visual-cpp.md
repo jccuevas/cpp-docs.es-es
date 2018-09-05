@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207303"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687647"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Agregar una variable miembro (Visual C++)
-Se puede agregar una variable miembro a una clase mediante la Vista de clases. Las variables miembro pueden ser para [intercambio y validación de datos](../mfc/dialog-data-exchange-and-validation.md), o bien pueden ser genéricas. El Asistente para variables miembro de datos está diseñado específicamente para tomar la información correspondiente y usarla para insertar elementos en los archivos de código fuente en las ubicaciones adecuadas. Una variable miembro se puede agregar desde el [Editor de cuadros de diálogo](../windows/dialog-editor.md) en la [Vista de recursos](../windows/resource-view-window.md), o bien desde la [Vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+Se puede agregar una variable miembro a una clase mediante la Vista de clases. Las variables miembro pueden ser para [intercambio y validación de datos](../mfc/dialog-data-exchange-and-validation.md), o bien pueden ser genéricas. El Asistente para variables miembro de datos está diseñado específicamente para tomar la información correspondiente y usarla para insertar elementos en los archivos de código fuente en las ubicaciones adecuadas. Una variable miembro se puede agregar desde el [Editor de cuadros de diálogo](../windows/dialog-editor.md) en la [Vista de recursos](../windows/resource-view-window.md), o bien desde la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Cuando diseñe e implemente un cuadro de diálogo, es posible que le resulte más eficaz usar el Editor de cuadros de diálogo para agregar los controles de cuadro de diálogo y, después, implementar las variables miembro de los controles.  
@@ -49,7 +49,7 @@ Se puede agregar una variable miembro a una clase mediante la Vista de clases. L
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Para agregar una variable miembro desde la Vista de clases mediante el Asistente para agregar variables miembro  
   
-1.  En la [Vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), expanda el nodo del proyecto para mostrar las clases del proyecto.  
+1.  En la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code), expanda el nodo del proyecto para mostrar las clases del proyecto.  
   
 2.  Haga clic con el botón derecho en la clase a la que quiera agregar una variable.  
   

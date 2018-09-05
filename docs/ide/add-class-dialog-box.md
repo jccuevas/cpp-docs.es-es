@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9d4e90ace469614d6d422e0b75445eae5696bc26
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200325"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681607"
 ---
 # <a name="add-class-dialog-box"></a>Agregar clase (cuadro de diálogo)
 El cuadro de diálogo **Agregar clase** contiene plantillas que permiten:  
@@ -32,7 +32,7 @@ El cuadro de diálogo **Agregar clase** contiene plantillas que permiten:
   
 -   Crear automáticamente una nueva clase propia agregando el código fuente y los archivos adecuados al proyecto.  
   
- Puede acceder al cuadro de diálogo **Agregar clase** desde el menú **Proyecto**, el **Explorador de soluciones** o la [Vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Puede acceder al cuadro de diálogo **Agregar clase** desde el menú **Proyecto**, el **Explorador de soluciones** o la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Cuando intente agregar una clase que no es adecuada para el proyecto actual, recibirá un mensaje de error. Haga clic en **Aceptar** para volver al cuadro de diálogo **Agregar clase** .  

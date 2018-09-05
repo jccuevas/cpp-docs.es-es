@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a290eb7695bbcd7c03cda0351445519352e80a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213538"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677729"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Implementación de ClickOnce para aplicaciones de Visual C++
 Visual Studio proporciona dos tecnologías diferentes para implementar aplicaciones Windows: implementación de ClickOnce o implementación de [Windows Installer](/windows/desktop/Msi/windows-installer-portal).  
@@ -53,7 +53,6 @@ Visual Studio proporciona dos tecnologías diferentes para implementar aplicacio
  [Makecert.exe (herramienta de creación de certificados)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Implementar aplicaciones, servicios y componentes](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Implementación de Windows Installer](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Crear paquetes de arranque](/visualstudio/deployment/creating-bootstrapper-packages)   
  [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
