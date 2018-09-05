@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e6b8922ea176619764308122867c4d2ebfcfe449
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206256"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676814"
 ---
 # <a name="editing-a-message-handler"></a>Editar un controlador de mensajes
 Una vez haya definido un controlador de mensajes, puede ir a definición de la función miembro para agregar o modificar el código.  
   
  Para saltar a una definición de función miembro de la [editor de cuadro de diálogo](../../windows/dialog-editor.md), haga doble clic en un control para el que se haya definido un controlador. Esto desplaza al archivo en el que se define el controlador de mensajes del control seleccionado.  
   
- Para saltar a una definición de función miembro de [vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga doble clic en el nombre de función en la vista de clases.  
+ Para saltar a una definición de función miembro de [vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga doble clic en el nombre de función en la vista de clases.  
   
 ## <a name="see-also"></a>Vea también  
  [Asignar mensajes a funciones](../../mfc/reference/mapping-messages-to-functions.md)   

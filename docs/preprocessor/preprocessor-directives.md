@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212226"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678805"
 ---
 # <a name="preprocessor-directives"></a>Directivas de preprocesador
 
 Las directivas de preprocesador, tales como `#define` y `#ifdef`, normalmente se usan para que los programas de origen sean fáciles de modificar y compilar en diferentes entornos de ejecución. Las directivas del archivo de código fuente indican al preprocesador que realice acciones específicas. Por ejemplo, el preprocesador puede reemplazar tokens en el texto, insertar el contenido de otros archivos en el archivo de código fuente o suprimir la compilación de parte del archivo quitando secciones de texto. Las líneas de preprocesador se reconocen y se ejecutan antes de la expansión de macro. Por consiguiente, si una macro se expande en algo que se parezca a un comando de preprocesador, el preprocesador no reconocerá ese comando.
 
-Las instrucciones de preprocesador utilizan el mismo juego de caracteres que las instrucciones del archivo de código fuente, con la excepción de que no se admiten secuencias de escape. Juego de caracteres utilizado en las instrucciones de preprocesador es el mismo que el [juego de caracteres de ejecución](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). El preprocesador también reconoce valores de caracteres negativos.
+Las instrucciones de preprocesador utilizan el mismo juego de caracteres que las instrucciones del archivo de código fuente, con la excepción de que no se admiten secuencias de escape. El juego de caracteres utilizado en las instrucciones de preprocesador es el mismo que el juego de caracteres de la ejecución. El preprocesador también reconoce valores de caracteres negativos.
 
 El preprocesador reconoce las siguientes directivas:
 

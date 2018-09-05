@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33054190e94ca7d136e319b2afc9e28c9080de05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217094"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677981"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 (clase)
 `CMFCVisualManagerOffice2003` Proporciona a una aplicación un aspecto de Microsoft Office 2003.  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Las llamadas de framework este método cuando dibuja un resaltado personalizar rápido de botón de menú. (Invalida `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`).|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|El marco llama a este método cuando dibuja un comando de menú resaltado. (Invalida `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`).|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|El marco de trabajo llama a esta función cuando cambian los colores del sistema. (Invalida `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`).|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Especifica si el administrador visual debe usar colores de tema de Windows XP nativos o colores obtienen [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Especifica si el administrador visual debe usar colores de tema de Windows XP nativos o colores obtienen [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Especifica que debe usarse el tema global de Windows XP.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Especifica si el administrador visual utiliza un tema global.|  
   
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  El marco llama a este método como parte del procesamiento del mensaje WM_SYSCOLORCHANGE. Invalide este método en un administrador visual derivado si desea ejecutar código personalizado al cambian los colores de su aplicación.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Especifica si el administrador visual debe usar colores de tema de Windows XP nativos o colores obtienen [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Especifica si el administrador visual debe usar colores de tema de Windows XP nativos o colores obtienen [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

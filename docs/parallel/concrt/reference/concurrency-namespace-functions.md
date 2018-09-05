@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1535ccda7b53a4fe87c496e2749e382413e32d0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219584"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677793"
 ---
 # <a name="concurrency-namespace-functions"></a>funciones del espacio de nombres de simultaneidad
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  Interfaz `IResourceManager`.  
   
 ### <a name="remarks"></a>Comentarios  
- Varias llamadas subsiguientes a este método devolverán la misma instancia del Administrador de recursos. Cada llamada al método incrementa una referencia de recuento en el Administrador de recursos y debe coincidir con una llamada a la [IResourceManager:: Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) método cuando el programador haya terminado comunicarse con el Administrador de recursos.  
+ Varias llamadas subsiguientes a este método devolverán la misma instancia del Administrador de recursos. Cada llamada al método incrementa una referencia de recuento en el Administrador de recursos y debe coincidir con una llamada a la [IResourceManager:: Release](iresourcemanager-structure.md) método cuando el programador haya terminado comunicarse con el Administrador de recursos.  
   
  [unsupported_os](unsupported-os-class.md) se produce si el sistema operativo no es compatible con el Runtime de simultaneidad.  
   
 ##  <a name="create_task"></a>  create_task  
- Crea un PPL [tarea](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) objeto. `create_task` se puede usar en cualquier lugar en el que se ha utilizado un constructor de tarea. Se proporciona principalmente por comodidad, porque permite el uso de la palabra clave `auto` cuando se crean tareas.  
+ Crea un PPL [tarea](task-class.md) objeto. `create_task` se puede usar en cualquier lugar en el que se ha utilizado un constructor de tarea. Se proporciona principalmente por comodidad, porque permite el uso de la palabra clave `auto` cuando se crean tareas.  
   
 ```
 template<typename T>

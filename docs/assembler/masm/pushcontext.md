@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT | Documentos de Microsoft
+title: PUSHCONTEXT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677433"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-Guarda todo o parte del actual `context`: registro de segmento se supone, valor de base, marcas de lista y cref o valores de procesador/coprocesador. El `context` puede ser **asume que**, `RADIX`, **enumerar**, **CPU**, o **todos los**.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Guarda la totalidad o parte de la actual `context`: registro de segmento se supone, valor base, las marcas de anuncio y cref o valores de procesador/coprocesador. El `context` puede ser **asume**, `RADIX`, **enumerar**, **CPU**, o **todas**.
+
+## <a name="syntax"></a>Sintaxis
+
+> Contexto PUSHCONTEXT
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

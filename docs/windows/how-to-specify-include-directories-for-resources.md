@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0b655713a378c859bb017f661022f86aa687ab6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220603"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676437"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Cómo: Especificar directorios de inclusión para los recursos
 
@@ -32,7 +32,7 @@ ms.locfileid: "43220603"
 
 2. En el **páginas de propiedades** cuadro de diálogo, haga clic en el **recursos** nodo en el panel izquierdo, a continuación, especifique el adicionales incluyen directorios en el **directorios de inclusión adicionales** propiedad.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en la Guía del desarrollador de .NET Framework. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en la Guía del desarrollador de .NET Framework. 
 
 ## <a name="requirements"></a>Requisitos
 

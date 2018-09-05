@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213667"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678103"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (clase)
 El `CMFCRibbonBaseElement` clase es la clase base para todos los elementos que se pueden agregar a un [barra de cinta](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Un puntero a la ventana primaria para el elemento de la cinta si el método se realizó correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- La ventana primaria para un elemento de la cinta es una [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md) o un [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ La ventana primaria para un elemento de la cinta es una [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md) o un [CMFCRibbonPanelMenuBar](internal-classes.md).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Recupera un puntero al elemento de la cinta de opciones si el usuario lo pulsa actualmente.  

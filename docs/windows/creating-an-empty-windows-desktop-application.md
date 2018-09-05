@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55ce0fc38c5633e334211a1c4985de65aa4dc8ad
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c8bbd345e2d3fe0c5571407d41f590c6cc8d7ba
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676828"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Crear una aplicación de escritorio de Windows vacía
 
@@ -42,7 +42,3 @@ ms.locfileid: "43197781"
 El proyecto aparece en el **Explorador de soluciones** con tres directorios que contendrán archivos de código fuente, archivos de encabezado y archivos de recursos.
 
 A continuación, puede [agregar archivos al proyecto vacío de Visual C++](../windows/adding-files-to-an-empty-win32-applications.md).
-
-## <a name="see-also"></a>Vea también
-
-[Implementación de aplicaciones](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

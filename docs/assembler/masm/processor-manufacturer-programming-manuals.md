@@ -1,7 +1,7 @@
 ---
-title: Manuales de programación de fabricante de procesador | Documentos de Microsoft
+title: Manuales de programación de fabricante de procesador | Microsoft Docs
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,24 +12,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d712af448b4e18d853ced3d387918561d235b0
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 56e653f1870d3139031a79180cc3a02c33b162f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753606"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676263"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Manuales de programación de los fabricantes de procesadores
 
-Este artículo contiene vínculos a sitios Web que puede contener información de programación acerca de los procesadores que no se ha fabricado, vendidas o se compatible con Microsoft. Microsoft no posee o controlar los sitios Web o el contenido en ellos.
+Este artículo contiene vínculos a sitios Web que pueden contener información de programación sobre los procesadores que no están fabricados, vende o se compatible con Microsoft. Microsoft no posee o controlar los sitios Web o el contenido en ellos.
 
 ## <a name="processor-manufacturer-websites"></a>Sitios Web del fabricante de procesador
 
-- [Guías para desarrolladores de AMD, manuales y documentos ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [Guías para desarrolladores AMD, manuales y documentos ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
-- [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](https://software.intel.com/articles/intel-sdm)
 
-- [Introducción a Intel Advanced extensiones de Vector](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Introducción a las extensiones de Vector avanzadas de Intel](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Comentarios
 

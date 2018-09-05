@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4779b832eaff7a322184adf1734f69d266c05331
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219114"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677696"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 La `CMDIChildWndEx` clase proporciona la funcionalidad de un Windows ventana secundaria de varios documentos (MDI) de la interfaz. Amplía la funcionalidad de [CMDIChildWnd (clase)](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Lo llama el marco de trabajo cuando es necesario ajustar un mapa de bits para Windows 7 barra de tareas ficha Vista previa en miniatura del formulario secundario MDI.|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Lo llama el marco de trabajo para actualizar el título del marco. (Invalida `CMDIChildWnd::OnUpdateFrameTitle`).|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Devuelve el panel que contiene el punto especificado.|  
-|`CMDIChildWndEx::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
+|`CMDIChildWndEx::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Vuelve a calcular el diseño de la ventana.|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Registra el formulario secundario MDI con fichas de la barra de tareas de Windows 7.|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Quita un panel desde el Administrador de acoplamiento.|  

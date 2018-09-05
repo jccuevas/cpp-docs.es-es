@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216293"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678819"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
 Extiende la funcionalidad de [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), una ventana de marco de interfaz múltiples documentos (MDI) de Windows.  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Lo llama el marco de trabajo cuando se activa un menú con barra desplazable.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Lo llama el marco de trabajo para actualizar el menú del marco. (Invalida `CMDIFrameWnd::OnUpdateFrameMenu`).|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Devuelve el panel de acoplamiento que contiene el punto especificado.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows.  (Invalida `CMDIFrameWnd::PreTranslateMessage`).|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows.  (Invalida `CMDIFrameWnd::PreTranslateMessage`).|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Lo llama el marco de trabajo para volver a calcular el diseño de la ventana de marco. (Invalida [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Anula el registro de un panel y se quita el Administrador de acoplamiento.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Guarda el diseño actual de grupos con fichas MDI y la lista de documentos abiertos previamente.|  

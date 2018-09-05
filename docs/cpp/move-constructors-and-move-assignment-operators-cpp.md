@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f414871477e8d263546833cb71496f5795dd4671
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec9dd48a8e46bfb7d65901fdcc0a3f682139cfd6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676408"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructores de movimiento y operadores de asignación de movimiento (C++)
 Este tema describe cómo escribir un *constructor de movimiento* y un operador de asignación de movimiento para una clase de C++. Un constructor de movimiento permite a los recursos que pertenecen a un objeto de valor r para pasarlos a un valor l sin copiar. Para obtener más información acerca de la semántica de movimiento, consulte [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -317,4 +317,4 @@ MemoryBlock(MemoryBlock&& other)
   
 ## <a name="see-also"></a>Vea también  
  [Declarador de referencia rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utilidad > mover](https://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [std:: Move](../standard-library/utility-functions.md#move)

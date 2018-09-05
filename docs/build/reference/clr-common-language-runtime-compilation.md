@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606868"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676990"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilación de Common Language Runtime)
 Permite que las aplicaciones y los componentes usen las características de Common Language Runtime (CLR).  
@@ -68,9 +68,7 @@ Permite que las aplicaciones y los componentes usen las características de Comm
  Antes de Visual C++ 2005, **/clr:noAssembly** requería **/LD**. Ahora,**/LD** está implícita cuando especifica **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Permite que una aplicación de Visual C++ para ejecutarse en la versión 1 de CLR. Si usas **initialAppDomain**, puede ver algunos de los problemas que se describen en [error: excepción de AppDomainUnloaded al usar extensiones administradas para los componentes de Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) en Microsoft Sitio Web de soporte técnico.  
-  
- Las aplicaciones que se compilan con **initialAppDomain** no se deben usar en otras que usan ASP.NET porque estas no son compatibles con la versión 1 de CLR.  
+ Permite que una aplicación de Visual C++ para ejecutarse en la versión 1 de CLR.  Las aplicaciones que se compilan con **initialAppDomain** no se deben usar en otras que usan ASP.NET porque estas no son compatibles con la versión 1 de CLR.  
   
  **/clr:nostdlib**  
  Indica al compilador que omita el directorio \clr predeterminado. El compilador genera errores si se incluyen varias versiones de un archivo DLL como System.dll. Esta opción le permite especificar el marco concreto que se usa durante la compilación.  
