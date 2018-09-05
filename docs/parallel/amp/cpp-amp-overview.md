@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df69423e635a76d82ad8a2539c6fd92054f24964
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219388"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677674"
 ---
 # <a name="c-amp-overview"></a>Información general sobre C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) acelera la ejecución del código de C++ aprovechando las ventajas de hardware de los datos en paralelo, como una unidad de procesamiento de gráficos (GPU) en una tarjeta gráfica discreta. Al utilizar C++ AMP, puede codificar algoritmos de datos multidimensionales para que se acelere la ejecución mediante el uso de paralelismo en hardware heterogéneo. El modelo de programación de C++ AMP incluye matrices multidimensionales, indexación, transferencia de memoria, disposición en mosaico y una biblioteca de funciones matemáticas. Puede usar las extensiones del lenguaje C++ AMP para controlar cómo se mueven los datos de la CPU a la GPU y viceversa, para que se puede mejorar el rendimiento.  
@@ -464,7 +464,7 @@ C++ AMP incluye una biblioteca de gráficos que se ha diseñado para la programa
   
 - [writeonly_texture_view (clase)](../../parallel/amp/reference/writeonly-texture-view-class.md): proporciona acceso de solo escritura a cualquier textura.  
   
-- [Biblioteca de vectores de cortocircuito](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): define un conjunto de tipos de vector corto de longitud 2, 3 y 4 que se basan en **int**, `uint`, **float**, **doble**, [norma](../../parallel/amp/reference/norm-class.md), o [unorm](../../parallel/amp/reference/unorm-class.md).  
+- Biblioteca de vectores cortos: Define un conjunto de tipos de vector corto de longitud 2, 3 y 4 que se basan en **int**, `uint`, **float**, **doble**, [norm ](../../parallel/amp/reference/norm-class.md), o [unorm](../../parallel/amp/reference/unorm-class.md).  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplicaciones de universal Windows Platform (UWP)  
  
@@ -496,7 +496,7 @@ El visualizador de simultaneidad incluye compatibilidad para analizar el rendimi
   
 - [Canales (vista de subprocesos)](/visualstudio/profiling/channels-threads-view)  
   
-- [Análisis de código de AMP de C++ con el visualizador de simultaneidad](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
+- [Análisis de código de AMP de C++ con el visualizador de simultaneidad](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)  
   
 ## <a name="performance-recommendations"></a>Recomendaciones de rendimiento  
  

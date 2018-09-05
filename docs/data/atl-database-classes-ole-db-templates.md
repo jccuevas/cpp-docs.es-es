@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6df13353b61347455cc5d707f099086429d46f6f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218993"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677874"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Clases de base de datos ATL (plantillas OLE DB)
 Microsoft proporciona varias implementaciones de OLE DB, un conjunto de interfaces COM que proporcionan acceso uniforme a datos de diversos orígenes de información y formatos.  OLE DB esté oficialmente en desuso; Esta documentación es para los desarrolladores que están realizando el mantenimiento código heredado. Aplicaciones nuevas deben utilizar ODBC para conectarse a orígenes de datos SQL.
@@ -39,11 +39,11 @@ Microsoft proporciona varias implementaciones de OLE DB, un conjunto de interfac
   
  Observe que la biblioteca MFC contiene una clase, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), que muestra los registros de base de datos en controles. La vista es una vista de formulario conectada directamente a un `CRowset` de objetos y muestra los campos de la `CRowset` objeto en los controles de la plantilla de cuadro de diálogo.  
   
- Para obtener más información, consulte [programación de OLE DB](../data/oledb/ole-db-programming.md) y [Guía del programador de OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
+ Para obtener más información, consulte [programación de OLE DB](../data/oledb/ole-db-programming.md) y [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear un consumidor OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Creación de un proveedor OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
  [Referencia de plantillas de consumidor OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
  [Referencia de plantillas de proveedores OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [Ejemplos de plantillas OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [Ejemplos de plantillas OLE DB](https://github.com/Microsoft/VCSamples)

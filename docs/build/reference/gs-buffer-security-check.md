@@ -1,5 +1,5 @@
 ---
-title: -GS (comprobación de seguridad de búfer) | Documentos de Microsoft
+title: -GS (comprobación de seguridad de búfer) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fdb08515d20a4de00ea35373670887e48b835e28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379489"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678397"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Comprobación de seguridad del búfer)  
   
@@ -43,7 +43,7 @@ Detecta algunas saturaciones de búfer que sobrescriben la dirección de devoluc
   
 ## <a name="remarks"></a>Comentarios  
   
-**/GS** está activado de forma predeterminada. Si se espera que su aplicación ningún riesgo de seguridad, use **/GS-**. Para obtener más información acerca de **/GS**, consulte [compilador Security Checks In Depth](http://go.microsoft.com/fwlink/p/?linkid=7260). Para obtener más información sobre cómo suprimir la detección de saturación del búfer, vea [safebuffers](../../cpp/safebuffers.md).  
+**/GS** está activada de forma predeterminada. Si espera que su aplicación no tenga ningún riesgo de seguridad, utilice **/GS-**. Para obtener más información sobre cómo suprimir la detección de saturación del búfer, vea [safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Comprobaciones de seguridad  
   
@@ -57,7 +57,7 @@ Se realiza una comprobación de seguridad de saturación del búfer en un *búfe
   
 -   Una estructura de datos cuyo tamaño es superior a 8 bytes y no contiene punteros.  
   
--   Un búfer asignado mediante la [_alloca](../../c-runtime-library/reference/alloca.md) función.  
+-   Un búfer asignado mediante el uso de la [_alloca](../../c-runtime-library/reference/alloca.md) función.  
   
 -   Cualquier clase o estructura que contiene un búfer GS.  
   
@@ -82,7 +82,7 @@ struct { int a; int b; };
   
 ## <a name="initialize-the-security-cookie"></a>Inicializar la cookie de seguridad  
   
-El **/GS** opción del compilador requiere que se inicialice la cookie de seguridad antes de ejecuta cualquier función que utiliza la cookie. La cookie de seguridad se debe inicializar inmediatamente en la entrada a un archivo EXE o DLL. Esto se hace automáticamente si utiliza los puntos de entrada de VCRuntime de manera predeterminada: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, o _DllMainCRTStartup. Si usa un punto de entrada alternativo, debe inicializar manualmente la cookie de seguridad mediante una llamada a [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).  
+El **/GS** opción del compilador requiere que se inicialice la cookie de seguridad antes de ejecuta cualquier función que usa la cookie. La cookie de seguridad debe inicializarse inmediatamente en la entrada a un archivo EXE o DLL. Esto se hace automáticamente si utiliza los puntos de entrada predeterminada VCRuntime: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, o _DllMainCRTStartup. Si usa un punto de entrada alternativo, debe inicializar manualmente la cookie de seguridad mediante una llamada a [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).  
   
 ## <a name="what-is-protected"></a>Lo que está protegido  
   
@@ -106,11 +106,11 @@ El compilador no realiza copias de los parámetros vulnerables en las siguientes
   
 -   Funciones que no contienen un búfer GS.  
   
--   Las optimizaciones ([opciones /O](../../build/reference/o-options-optimize-code.md)) no están habilitadas.  
+-   Optimizaciones ([opciones /O](../../build/reference/o-options-optimize-code.md)) no están habilitadas.  
   
 -   Funciones que tienen una lista de argumentos de variable (...).  
   
--   Las funciones que se marcan con [naked](../../cpp/naked-cpp.md).  
+-   Las funciones marcadas con [naked](../../cpp/naked-cpp.md).  
   
 -   Funciones que contienen código de ensamblado insertado en la primera instrucción.  
   
@@ -118,21 +118,21 @@ El compilador no realiza copias de los parámetros vulnerables en las siguientes
   
 ## <a name="what-is-not-protected"></a>Lo que no está protegido  
   
-El **/GS** opción del compilador no protege frente a todos los ataques de seguridad de saturación del búfer. Por ejemplo, si tiene un búfer y vtable en un objeto, la saturación de un búfer podría dañar vtable.  
+El **/GS** opción del compilador no protege contra todos los ataques de seguridad de saturación del búfer. Por ejemplo, si tiene un búfer y vtable en un objeto, la saturación de un búfer podría dañar vtable.  
   
-Incluso si utiliza **/GS**, siempre intenta escribir código seguro que no tenga ninguna saturación de búfer.  
+Incluso si usa **/GS**, siempre intenta escribir código seguro que no tenga ninguna saturación de búfer.  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para establecer esta opción del compilador en Visual Studio  
   
 1.  En **el Explorador de soluciones**, haga clic en el proyecto y, a continuación, haga clic en **propiedades**.  
   
-     Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
+     Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  En el **páginas de propiedades** cuadro de diálogo, haga clic en el **C/C++** carpeta.  
+2.  En el **páginas de propiedades** cuadro de diálogo, haga clic en el **C o C++** carpeta.  
   
 3.  Haga clic en el **generación de código** página de propiedades.  
   
-4.  Modificar el **comprobación de seguridad del búfer** propiedad.  
+4.  Modificar el **Buffer Security Check** propiedad.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   

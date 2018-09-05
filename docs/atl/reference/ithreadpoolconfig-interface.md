@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b144e08e0f87165c284310afc86267f67b1c124
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5f23e46f2ef8de61e6dccc16a24e8c4bcfaa8f2e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222059"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677089"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig (interfaz)
 Esta interfaz proporciona métodos para configurar un grupo de subprocesos.  
@@ -105,7 +105,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  Si *nNumThreads* es negativo, su valor absoluto se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  
   
- Si *nNumThreads* es cero, [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  
+ Si *nNumThreads* es cero, ATLS_DEFAULT_THREADSPERPROC se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  

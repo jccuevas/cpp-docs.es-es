@@ -1,7 +1,7 @@
 ---
-title: INVOCAR | Documentos de Microsoft
+title: INVOCAR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c18c83b623ce1a22ffcb5e1a9f1ce98ee6eb20
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3e5698acf9986903a1d6d731c1047484a0ce6904
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055175"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676522"
 ---
 # <a name="invoke"></a>INVOKE
-Llama al procedimiento en la dirección proporcionada por *expresión*, pasando los argumentos en la pila o en los registros según las convenciones de llamada estándares del tipo de lenguaje.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-INVOKE   
-expression [[, arguments]]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Cada argumento pasado al procedimiento puede ser una expresión, un par de registros o una expresión de dirección (precedida de una expresión `ADDR`).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Llama al procedimiento en la dirección proporcionada por *expresión*, pasando los argumentos en la pila o en los registros según las convenciones de llamada estándares del tipo de lenguaje.
+
+## <a name="syntax"></a>Sintaxis
+
+> INVOKE *expresión* [[, *argumentos*]]
+
+## <a name="remarks"></a>Comentarios
+
+Cada argumento pasado al procedimiento puede ser una expresión, un par de registro o una expresión de dirección (precedido de una expresión `ADDR`).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

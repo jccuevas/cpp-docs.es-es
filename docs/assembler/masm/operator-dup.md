@@ -1,7 +1,7 @@
 ---
-title: operador DUP | Documentos de Microsoft
+title: operador DUP | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf25627a47a21d37bd8b837b74f26af194542497
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c03dab1b7809530cd98f82f1f9b0260760c98b68
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056563"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676734"
 ---
 # <a name="operator-dup"></a>Operador DUP
-Especifica *recuento* número de declaraciones de *initialvalue*.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-count DUP (initialvalue [[, initialvalue]]...)  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Especifica *recuento* número de declaraciones de *initialvalue*.
+
+## <a name="syntax"></a>Sintaxis
+
+> recuento DUP (initialvalue [[, initialvalue]]...)
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

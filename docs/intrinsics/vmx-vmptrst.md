@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e879726f9ef3ad65dabd00056ddb859c72dd039e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540314"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679572"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Específicos de Microsoft**  
@@ -44,7 +44,7 @@ void __vmx_vmptrst(
 ## <a name="remarks"></a>Comentarios  
  El puntero de la VMCS es una dirección física de 64 bits.  
   
- El `__vmx_vmptrst` función es equivalente a la `VMPTRST` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization Technical especificación para la arquitectura IA-32 Intel," documento C97063-002, número en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
+ El `__vmx_vmptrst` función es equivalente a la `VMPTRST` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization Technical especificación para la arquitectura IA-32 Intel," documento C97063-002, número en el [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   

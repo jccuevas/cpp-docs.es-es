@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677832"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -76,7 +76,7 @@ En Windows 10, puede usar Visual C++ para crear muchos tipos de programas de esc
 
 - Servicios de Windows. Para obtener más información, consulta [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications).
 
-Puede utilizar Visual C++ para empaquetar casi cualquier tipo de funcionalidad personalizada de alto rendimiento en archivos DLL Win32 o en archivos DLL COM que pueden usar las aplicaciones de C++ o las aplicaciones escritas en otros lenguajes, por ejemplo C# o Visual Basic. Para obtener más información sobre los archivos DLL WIn32, consulte [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Para obtener más información sobre el desarrollo COM, vea [modelo de objetos componentes (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573).
+Puede utilizar Visual C++ para empaquetar casi cualquier tipo de funcionalidad personalizada de alto rendimiento en archivos DLL Win32 o en archivos DLL COM que pueden usar las aplicaciones de C++ o las aplicaciones escritas en otros lenguajes, por ejemplo C# o Visual Basic. Para obtener más información sobre los archivos DLL WIn32, consulte [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Para obtener más información sobre el desarrollo COM, vea [modelo de objetos componentes (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="games"></a>Juegos
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4cf37857e12eb795ebfa4c5c115bc80a1688d69e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677157"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Subprocesamiento y cálculo de referencias (C++/CX)
 En la mayoría de los casos, las instancias de clases en tiempo de ejecución de Windows, como objetos de C++ estándares, se pueden acceder desde cualquier subproceso. Dichas clases reciben el nombre de "ágiles". Sin embargo, un número pequeño de clases en tiempo de ejecución de Windows que se incluyen con Windows es no ágiles y debe utilizarse más como objetos COM en los objetos de C++ estándar. No es necesario ser un experto en COM para usar clases no ágiles, pero sí lo es tomar en consideración el modelo de subprocesos de la clase y su comportamiento del cálculo de referencias. En este artículo se proporcionan información y orientación sobre estos escenarios raros en que es necesario usar una instancia de una clase no ágil.  
@@ -100,7 +100,7 @@ ref class MyOptions
  En Visual C++, cuando se crea una referencia a una clase en tiempo de ejecución de Windows en un proceso que tiene un comportamiento del cálculo de referencias de "None", el compilador emite la advertencia C4451 pero no sugiere que consideres el uso `Platform::Agile<T>`.  El compilador no puede proporcionar ningún tipo de ayuda más allá de esta advertencia, por lo que tienes la responsabilidad de utilizar la clase correctamente y asegurarte de que el código llame a los componentes STA solo desde el subproceso de interfaz de usuario y a los componentes MTA solo desde un subproceso en segundo plano.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Creación de componentes de Windows en tiempo de ejecución ágiles  
- Al definir una clase ref en C / c++ / CX, es ágil de forma predeterminada, es decir, tiene `ThreadingModel`= Both y `MarshallingType`= Agile.  Si usa la biblioteca de plantillas C++ de Windows en tiempo de ejecución, se puede crear tu clase ágil derivando de `FtmBase`, que usa el `FreeThreadedMarshaller`.  Si creas una clase que tenga `ThreadingModel`=Both o `ThreadingModel`=MTA, asegúrate de que la clase sea segura para la ejecución de subprocesos. Para obtener más información, consulte [crear y consumir objetos (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ Al definir una clase ref en C / c++ / CX, es ágil de forma predeterminada, es decir, tiene `ThreadingModel`= Both y `MarshallingType`= Agile.  Si usa la biblioteca de plantillas C++ de Windows en tiempo de ejecución, se puede crear tu clase ágil derivando de `FtmBase`, que usa el `FreeThreadedMarshaller`.  Si creas una clase que tenga `ThreadingModel`=Both o `ThreadingModel`=MTA, asegúrate de que la clase sea segura para la ejecución de subprocesos.   
   
  Puedes modificar el modelo de subprocesos y el comportamiento del cálculo de referencias de una clase ref. Sin embargo, si realizas cambios que presentan la clase como no ágil, debes conocer las implicaciones asociadas a esos cambios.  
   

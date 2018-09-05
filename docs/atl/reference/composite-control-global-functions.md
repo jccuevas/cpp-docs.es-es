@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677853"
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de Control compuesto
 Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y para crear, hospedar y controles ActiveX con licencia.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Distinto de cero si la inicialización del control de código de hospedaje se realizó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función debe llamarse antes de usar la API que hospeda los controles ATL. Después de una llamada a esta función, el **"AtlAxWin"** clase de ventana se puede usar en las llamadas a [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) o [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), tal y como se describe en el SDK de Windows.  
+ Esta función debe llamarse antes de usar la API que hospeda los controles ATL. Después de una llamada a esta función, el **"AtlAxWin"** clase de ventana se puede usar en las llamadas a [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) o [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), tal y como se describe en el SDK de Windows.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Esta función anula la inicialización anular el registro de código que hospeda los controles de ATL la **"AtlAxWin80"** y **"AtlAxWinLic80"** clases de ventana.  

@@ -1,7 +1,7 @@
 ---
-title: Referencias de ensamblado insertado de segmento | Documentos de Microsoft
+title: Segmentar las referencias de ensamblado insertado | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,18 +19,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7add95852f751ed29dad8e0ba9577abd55fabaf
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 792dda60407928aaf4a7d3fec2a61c0018b8b35a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051481"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676394"
 ---
 # <a name="segment-references-in-inline-assembly"></a>Referencias de segmento de ensamblado insertado
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Debe hacer referencia a los segmentos por registro en lugar de por nombre (el nombre de segmento `_TEXT` no es válido, por ejemplo). Los reemplazos de segmento deben usar el registro explícitamente, como en ES:[BX].  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Uso del lenguaje de ensamblado en bloques __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Específicos de Microsoft**
+
+Debe hacer referencia a los segmentos por registro en lugar de por nombre (el nombre de segmento `_TEXT` no es válido, por ejemplo). Los reemplazos de segmento deben usar el registro explícitamente, como en ES:[BX].
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Uso del lenguaje de ensamblado en bloques __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>
