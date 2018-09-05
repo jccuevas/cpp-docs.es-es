@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f0a812ff5304288a2a7c25edeb07d76a4d06ded8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540292"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683020"
 ---
 # <a name="ribbon-designer-mfc"></a>Diseñador de la cinta de opciones (MFC)
-El diseñador de la cinta de opciones permite crear y personalizar las cintas de opciones de las aplicaciones MFC. Una cinta de opciones es un elemento de la interfaz de usuario (IU) que organiza los comandos en grupos lógicos. Estos grupos aparecen en pestañas independientes en una banda a lo largo de la parte superior de la ventana. La cinta de opciones reemplaza a la barra de menús y a las barras de herramientas. Una cinta de opciones puede mejorar considerablemente la facilidad de uso de la aplicación. Para obtener más información, consulte [cintas](http://go.microsoft.com/fwlink/p/?linkid=129233). En la siguiente ilustración se muestra una cinta de opciones.  
+El diseñador de la cinta de opciones permite crear y personalizar las cintas de opciones de las aplicaciones MFC. Una cinta de opciones es un elemento de la interfaz de usuario (IU) que organiza los comandos en grupos lógicos. Estos grupos aparecen en pestañas independientes en una banda a lo largo de la parte superior de la ventana. La cinta de opciones reemplaza a la barra de menús y a las barras de herramientas. Una cinta de opciones puede mejorar considerablemente la facilidad de uso de la aplicación. Para obtener más información, consulte [cintas](/windows/desktop/uxguide/cmd-ribbons). En la siguiente ilustración se muestra una cinta de opciones.  
   
  ![Control de recursos de cinta de opciones de MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   

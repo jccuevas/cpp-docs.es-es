@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f105f41c465d2750d372a8794a9ab66fa13db466
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cefedc4b1517b242eef62192e8d03a60097700c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215987"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683177"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Cómo: Buscar símbolos en recursos
 
@@ -29,10 +29,10 @@ ms.locfileid: "43215987"
 
 1. Desde el **editar** menú, elija **Buscar símbolo**.
 
-2. En el [cuadro de diálogo Buscar símbolo](https://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96), en el **buscar** cuadro, seleccione una cadena de búsqueda anterior en la lista desplegable o escriba la tecla de aceleración que desea buscar (por ejemplo, ID_ACCEL1).
+2. En el [cuadro de diálogo Buscar símbolo](/visualstudio/ide/go-to), en el **buscar** cuadro, seleccione una cadena de búsqueda anterior en la lista desplegable o escriba la tecla de aceleración que desea buscar (por ejemplo, ID_ACCEL1).
 
    > [!TIP]
-   > Para usar [expresiones regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) para la búsqueda, debe usar el [comando Buscar en archivos](/visualstudio/ide/reference/find-command) desde el **editar** menú en lugar de la **Buscar símbolo**comando. Para habilitar las expresiones regulares, debe tener la **uso: las expresiones regulares** casilla seleccionada en el [cuadro de diálogo Buscar](https://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600). Puede hacer clic en el botón de flecha derecha situada a la derecha de la **buscar** cuadro para mostrar una lista de expresiones regulares de búsqueda. Al seleccionar una expresión de esta lista, se usará como el texto de búsqueda en el **buscar** cuadro.
+   > Para usar [expresiones regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) para la búsqueda, debe usar el [comando Buscar en archivos](/visualstudio/ide/reference/find-command) desde el **editar** menú en lugar de la **Buscar símbolo**comando. Para habilitar las expresiones regulares, debe tener la **uso: las expresiones regulares** casilla seleccionada en el [cuadro de diálogo Buscar](/visualstudio/ide/finding-and-replacing-text). Puede hacer clic en el botón de flecha derecha situada a la derecha de la **buscar** cuadro para mostrar una lista de expresiones regulares de búsqueda. Al seleccionar una expresión de esta lista, se usará como el texto de búsqueda en el **buscar** cuadro.
 
 3. Seleccione cualquiera de los **buscar** opciones.
 

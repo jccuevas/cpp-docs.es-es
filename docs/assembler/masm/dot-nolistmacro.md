@@ -1,7 +1,7 @@
 ---
-title: . NOLISTMACRO | Documentos de Microsoft
+title: . NOLISTMACRO | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b1ba3123f3a306ad476f7d9802656df005ef0d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4cc26959cbc8ea95fc6922468093a04b32bb98b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052656"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681072"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
-Suprime la lista de expansiones de macros.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-.NOLISTMACRO  
-  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Igual que [. STODAS](../../assembler/masm/dot-sall.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Suprime la lista de expansiones de macro.
+
+## <a name="syntax"></a>Sintaxis
+
+> .NOLISTMACRO
+
+## <a name="remarks"></a>Comentarios
+
+Igual que [. STODAS](../../assembler/masm/dot-sall.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f946a0e24790fd894e4eb908e77163306130e46a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214641"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683370"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programación web y para la nube en Visual C++
 
@@ -62,7 +62,7 @@ En C++, existen varias opciones para conectarse a la Web y a la nube.
 
    Proporciona una interfaz COM nativa que puede usar en aplicaciones de Windows Runtime o aplicaciones de escritorio de Windows para conectarse a Internet a través de HTTP y emitir comandos GET, PUT y otros comandos HTTP. Para obtener más información, consulte [Tutorial: conectar usando tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](https://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
+- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
 
    API de Windows que se puede utilizar en aplicaciones de escritorio de Windows para conectarse a Internet.
 

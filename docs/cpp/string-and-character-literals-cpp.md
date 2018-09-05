@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a05eddd4f0ed75db4e122b1544b0347ad922eba3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219157"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688765"
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 C++ admite varios tipos de cadenas y caracteres, y proporciona maneras de expresar valores literales de cada uno de esos tipos. En el código fuente, el contenido de los literales de carácter y cadena se expresa mediante un juego de caracteres. Los nombres de carácter universal y los caracteres de escape permiten expresar cualquier cadena con tan solo el juego básico de caracteres de código fuente. Un literal de cadena sin formato permite evitar la utilización de caracteres de escape y puede usarse para expresar todos los tipos de literales de cadena. También se pueden crear literales std::string sin necesidad de seguir pasos adicionales de construcción o conversión.  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Literales de cadena sin formato (C++11)  
- Un literal de cadena sin formato es una matriz terminada en null, de cualquier tipo de carácter, que contiene cualquier carácter gráfico, incluidas las comillas dobles ("), barra diagonal inversa (\\), o el carácter de nueva línea. Los literales de cadena sin formato suelen usarse en expresiones regulares que utilizan clases de caracteres, y en las cadenas HTML y XML. Para obtener ejemplos, vea el artículo siguiente: [más frecuentes de Bjarne Stroustrup sobre C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+ Un literal de cadena sin formato es una matriz terminada en null, de cualquier tipo de carácter, que contiene cualquier carácter gráfico, incluidas las comillas dobles ("), barra diagonal inversa (\\), o el carácter de nueva línea. Los literales de cadena sin formato suelen usarse en expresiones regulares que utilizan clases de caracteres, y en las cadenas HTML y XML. Para obtener ejemplos, vea el artículo siguiente: [más frecuentes de Bjarne Stroustrup sobre C ++ 11](http://www.stroustrup.com/C++11FAQ.html).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

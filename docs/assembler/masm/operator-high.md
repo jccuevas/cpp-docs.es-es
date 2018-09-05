@@ -1,7 +1,7 @@
 ---
-title: operador HIGH | Documentos de Microsoft
+title: operador HIGH | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11890a8b37a9b191a573f12c4df1328d12c1d5cd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd69844b8ec81dc41df1f742e02f5da6476fa220
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679321"
 ---
 # <a name="operator-high"></a>Operador HIGH
-Devuelve los 8 bits de los 16 bits inferiores de alta *expresión*. Expresiones MASM son valores de 64 bits.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-HIGH expression  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Devuelve el altos 8 bits de 16 bits inferiores de *expresión*. Expresiones MASM son valores de 64 bits.
+
+## <a name="syntax"></a>Sintaxis
+
+> Expresión alto
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

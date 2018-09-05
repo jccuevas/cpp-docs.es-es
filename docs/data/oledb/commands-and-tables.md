@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e9d9fc72791572d840b88f1d74eb736e3ad65c7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d6397e6e8355e8361ea95f03fc9b67d2f3211478
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213715"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685578"
 ---
 # <a name="commands-and-tables"></a>Comandos y tablas
 Comandos y tablas permiten tener acceso a los conjuntos de filas; es decir, abrir conjuntos de filas, ejecutar comandos y enlazar las columnas. El [CCommand](../../data/oledb/ccommand-class.md) y [CTable](../../data/oledb/ctable-class.md) clases crean instancias de los objetos de comando y tabla, respectivamente. Estas clases derivan de [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) tal como se muestra en la ilustración siguiente.  
@@ -43,7 +43,7 @@ Comando y las clases Table
   
 -   Para orígenes de datos que admiten los comandos, puede usar el `CCommand` clase en su lugar. Para ejecutar un comando, llame a [abierto](../../data/oledb/ccommand-open.md) en esta clase. Como alternativa, puede llamar a `Prepare` para preparar un comando que desea ejecutar más de una vez.  
   
-     `CCommand` tiene tres argumentos de plantilla: un tipo de descriptor de acceso, un tipo de conjunto de filas y un tipo de resultado (`CNoMultipleResults`, de forma predeterminada, o `CMultipleResults`). Si especifica `CMultipleResults`, `CCommand` clase admite la `IMultipleResults` interfaz y administra varios conjuntos de filas. El [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ejemplo muestra cómo controlar múltiples resultados.  
+     `CCommand` tiene tres argumentos de plantilla: un tipo de descriptor de acceso, un tipo de conjunto de filas y un tipo de resultado (`CNoMultipleResults`, de forma predeterminada, o `CMultipleResults`). Si especifica `CMultipleResults`, `CCommand` clase admite la `IMultipleResults` interfaz y administra varios conjuntos de filas. El [DBVIEWER](https://github.com/Microsoft/VCSamples) ejemplo muestra cómo controlar múltiples resultados.  
   
 ## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

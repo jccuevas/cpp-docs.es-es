@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251703307c5f6ed5787227a4def42dfbcd3fc18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203033"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684014"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 Representa una vista de solo lectura en un *mapa*, que es una colección de pares clave-valor.  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  Un tipo que proporciona un objeto de función que puede comparar dos valores de clave para determinar si son iguales. De forma predeterminada, [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Comentarios  
- UnorderedMapView es la implementación concreta en C++ de la [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfaz que se pasa a través de la interfaz binaria de aplicación (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView es la implementación concreta en C++ de la [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfaz que se pasa a través de la interfaz binaria de aplicación (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Miembros  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Typename del objeto UnorderedMapView.  
   
  `H`  
- Objeto de función que puede generar un valor hash para una clave. El valor predeterminado es [std:: hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) para los tipos que `std::hash` admite.  
+ Objeto de función que puede generar un valor hash para una clave. El valor predeterminado es [std:: hash\<K >](../standard-library/hash-class.md) para los tipos que `std::hash` admite.  
   
  `P`  
  Tipo que proporciona un objeto de función que puede comparar dos claves para determinar si son iguales. El valor predeterminado es [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
@@ -237,4 +237,4 @@ UnorderedMapView(
    
 ## <a name="see-also"></a>Vea también  
  [Platform:: Collections Namespace](../cppcx/platform-collections-namespace.md)   
- [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
+ [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

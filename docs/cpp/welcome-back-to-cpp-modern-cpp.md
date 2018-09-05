@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572106"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679286"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Aquí está otra vez C++ (C++ moderno)
 C++ es uno de los lenguajes de programación más utilizados en el mundo. Los programas bien escritos de C++ son rápidos y eficaces. El lenguaje es más flexible que otros lenguajes, ya que se puede utilizar para crear una amplia gama de aplicaciones, desde divertidos y emocionantes juegos, para software científico de alto rendimiento, hasta controladores de dispositivos, programas incrustados y aplicaciones cliente de Windows. Durante más de 20 años, C++ se ha utilizado para resolver problemas como estos y muchos otros. Lo que es posible que no sepa es que un creciente número de programadores de C++ han doblado la programación estilo C poco elegante de ayer y han puesto C++ moderno en su lugar.  
@@ -133,7 +133,7 @@ void f()
   
 -   [Portabilidad en los límites de ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Para obtener más información, vea el artículo de StackOverflow [qué giros de C++ están en desuso en C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Para obtener más información, vea el artículo de StackOverflow [qué giros de C++ están en desuso en C ++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)   

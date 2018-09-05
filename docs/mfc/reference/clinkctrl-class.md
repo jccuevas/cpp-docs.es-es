@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201009"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690426"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl (clase)
 Proporciona la funcionalidad del control SysLink común de Windows.  
@@ -189,7 +189,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
  Puntero a una cadena terminada en cero que contiene el marcado de texto para mostrar. Para obtener más información, consulte la sección "Marcado y acceso a vínculos" en el tema [información general de los controles SysLink](/windows/desktop/Controls/syslink-overview).  
   
  *dwExStyle*  
- Especifica el estilo extendido del control link. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control link. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.  
   
  *dwStyle*  
  Especifica el estilo del control de vínculo. Aplicar cualquier combinación de los estilos de control. Para obtener más información, consulte [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows.  

@@ -1,7 +1,7 @@
 ---
-title: punto de operador | Documentos de Microsoft
+title: punto de operador | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,24 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84eb11751d82b72b903a8dfa8196292b001646f5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8481d13472e41b94592d981622b5f9fd8551090b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058168"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689345"
 ---
 # <a name="operator-"></a>Operador .
-El primer operador devuelve *expresión* más el desplazamiento de *campo* dentro de su estructura o unión. El segundo operador devuelve el valor en la ubicación señalada por *registrar* más el desplazamiento de *campo* dentro de su estructura o unión.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      expression  
-      . field [[. field]]...  
-[register]. field [[. field]]...  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+El primer operador devuelve *expresión* más el desplazamiento de *campo* dentro de su estructura o unión. El segundo operador devuelve el valor de la ubicación señalada por *registrar* más el desplazamiento de *campo* dentro de su estructura o unión.
+
+## <a name="syntax"></a>Sintaxis
+
+> *Expresión*<br/> . *campo* [[. *campo*]]...
+
+> [*registrar*]. *campo* [[. *campo*]]...
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

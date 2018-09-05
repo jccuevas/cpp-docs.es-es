@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539299"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680642"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Específicos de Microsoft**  
@@ -44,7 +44,7 @@ void __svm_vmsave(
 |[in] `VmcbPhysicalAddress`|La dirección física de la VMCB.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `__svm_vmsave` función es equivalente a la `VMSAVE` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número de documento 24593, revisión 3.11 o posterior, en el [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) sitio.  
+ El `__svm_vmsave` función es equivalente a la `VMSAVE` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número de documento 24593, revisión 3.11 o posterior, en el [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   

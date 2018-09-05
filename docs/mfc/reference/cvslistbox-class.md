@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453eb66fd062aa3e4df510925d2c9b0e6732b98b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212404"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680585"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox (clase)
 La `CVSListBox` clase admite un control de lista modificable.  
@@ -73,7 +73,7 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::GetItemData](#getitemdata)|Recupera un valor de 32 bits específicos de la aplicación que está asociado con un elemento de control de lista modificable. (Invalida `CVSListBoxBase::GetItemData`).|  
 |[CVSListBox::GetItemText](#getitemtext)|Recupera el texto de un elemento de control de lista modificable. (Invalida `CVSListBoxBase::GetItemText`).|  
 |[CVSListBox::GetSelItem](#getselitem)|Recupera el índice de base cero del elemento actualmente seleccionado en un control de lista modificable. (Invalida `CVSListBoxBase::GetSelItem`).|  
-|`CVSListBox::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. Para obtener más información y la sintaxis de método, consulte [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CVSListBoxBase::PreTranslateMessage`).|  
+|`CVSListBox::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. Para obtener más información y la sintaxis de método, consulte [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CVSListBoxBase::PreTranslateMessage`).|  
 |[CVSListBox::RemoveItem](#removeitem)|Quita un elemento de un control de lista modificable. (Invalida `CVSListBoxBase::RemoveItem`).|  
 |[CVSListBox::SelectItem](#selectitem)|Selecciona una cadena de control de lista modificable. (Invalida `CVSListBoxBase::SelectItem`).|  
 |[CVSListBox::SetItemData](#setitemdata)|Asocia un valor de 32 bits específicos de la aplicación a un elemento de control de lista modificable. (Invalida `CVSListBoxBase::SetItemData`).|  

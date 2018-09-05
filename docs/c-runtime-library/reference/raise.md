@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a41f88bc6883af1db4bbde8729a3638ded64a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1bc3f52b97159a9caba6f80b4798d9588ec341d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685913"
 ---
 # <a name="raise"></a>raise
 
 Envía una señal al programa en ejecución.
 
 > [!NOTE]
-> No utilice este método para cerrar una aplicación de Microsoft Store, excepto en pruebas o en escenarios de depuración. No se permiten formas mediante programación o la interfaz de usuario para cerrar una aplicación de tienda según la [las directivas de Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Para obtener más información, consulte [ciclo de vida de aplicación UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> No utilice este método para cerrar una aplicación de Microsoft Store, excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -77,7 +77,7 @@ La función **raise** envía *sig* al programa en ejecución. Si una llamada ant
 |**SIGSEGV**|Acceso no válido a almacenamiento|Finaliza el programa de llamada|
 |**SIGTERM**|Solicitud de finalización enviada al programa|Omite la señal|
 
-Si el argumento no es una señal válida según lo especificado anteriormente, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si no se controla, la función establece **errno** a **EINVAL** y devuelve un valor distinto de cero.
+Si el argumento no es una señal válida según lo especificado anteriormente, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si no controla, la función establece **errno** a **EINVAL** y devuelve un valor distinto de cero.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681286"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Cómo: Llamar a archivos DLL nativos desde el código administrado mediante PInvoke
 Funciones que se implementan en archivos DLL no administrado se pueden llamar desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se usa Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) función para recuperar la resolución actual de la pantalla en píxeles.  
+ En el ejemplo de código siguiente se usa Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) función para recuperar la resolución actual de la pantalla en píxeles.  
   
  Para las funciones que usan solo tipos intrínsecos como argumentos y valores devuelven, no se requiere ningún trabajo adicional. Otros tipos de datos, como punteros de función, matrices y estructuras, requieren atributos adicionales para asegurarse de que el cálculo de referencias de datos adecuada.  
   

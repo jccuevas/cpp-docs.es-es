@@ -1,7 +1,7 @@
 ---
-title: operador ! (Tiempo de ejecución de MASM) | Documentos de Microsoft
+title: operador ! (Tiempo de ejecución de MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,24 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b72f808bd17dc61334e7be84af902f5956efd1b8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bb03955ab5c0bf50531b26c21b28b47083e7dbe4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057333"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682404"
 ---
 # <a name="operator--masm-run-time"></a>operador ! (Tiempo de ejecución de MASM)
-Negación lógica. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúa en tiempo de ejecución, no en tiempo de ensamblado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-!  
-expression  
-  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Negación lógica. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúan en tiempo de ejecución, no en tiempo de ensamblado.
+
+## <a name="syntax"></a>Sintaxis
+
+> ! *Expresión*
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

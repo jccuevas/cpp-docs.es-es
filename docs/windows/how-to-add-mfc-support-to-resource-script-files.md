@@ -20,18 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f84f343a5a742e37deb776f20c9038ea7f90576e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 194f2b4f2e6659412c9c2b5f688e0b73eea3bba5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198440"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692033"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Cómo: Agregar compatibilidad con MFC a los archivos de script de recursos
 
 Normalmente, cuando crea una aplicación MFC para Windows usando el [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md), el asistente genera un conjunto básico de archivos (como un archivo de recursos (.rc) de la secuencia de comandos) que contiene las características principales de Microsoft Foundation clases (MFC). Sin embargo, cuando se edita un archivo .rc para una aplicación Windows que no esté basada en MFC, no estarán disponibles las siguientes características, específicas del marco de trabajo de MFC:
 
-- Los asistentes para código MFC (denominada anteriormente "[MFC ClassWizard](https://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")
+- Asistentes para código MFC
 
 - Cadenas de mensajes de menú
 

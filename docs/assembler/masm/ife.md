@@ -1,7 +1,7 @@
 ---
-title: IFE | Documentos de Microsoft
+title: IFE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210db70ae3e8277d56a2e22e0b6e21ec6229135c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d649fa5994b4de15d8aadb425527187329103298
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051445"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689833"
 ---
 # <a name="ife"></a>IFE
-Concede al ensamblado si *expresión* es false (0).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-IFE expression  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Vea [IF](../../assembler/masm/if-masm.md) para consultar la sintaxis completa.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Concede al ensamblado si *expresión* es false (0).
+
+## <a name="syntax"></a>Sintaxis
+
+> Expresión IFE
+
+## <a name="remarks"></a>Comentarios
+
+Consulte [IF](../../assembler/masm/if-masm.md) para conocer la sintaxis completa.
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

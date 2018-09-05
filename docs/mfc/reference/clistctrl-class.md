@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d798f78addcc457303b42d80f79f77aef67305a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199785"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684962"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
 Encapsula la funcionalidad de un "control de vista de lista", que muestra una colección de elementos cada uno de los cuales consta de un icono (de una lista de imágenes) y una etiqueta.  
@@ -653,7 +653,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  *dwExStyle*  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.  
   
  *dwStyle*  
  Especifica el estilo del control de lista. Aplicar cualquier combinación de los estilos de control de lista al control. Para obtener una lista completa de estos estilos, consulte [estilos de ventana de vista de lista](/windows/desktop/Controls/list-view-window-styles) en el SDK de Windows.  

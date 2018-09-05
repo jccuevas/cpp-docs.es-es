@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0177d350d37b7fb1afe27d8aa4aad98dd985ec13
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679183"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl (clase)
 Proporciona la funcionalidad del control de dirección IP común de Windows.  
@@ -120,7 +120,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parámetros  
  *dwStyle*  
- Estilo del control de dirección IP. Aplicar una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) en el SDK de Windows para obtener una lista de los estilos de windows.  
+ Estilo del control de dirección IP. Aplicar una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows para obtener una lista de los estilos de windows.  
   
  *Rect*  
  Referencia al tamaño y la posición del Control de dirección IP. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
@@ -157,10 +157,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  *dwExStyle*  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.  
   
  *dwStyle*  
- Estilo del control de dirección IP. Aplicar una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) en el SDK de Windows para obtener una lista de los estilos de windows.  
+ Estilo del control de dirección IP. Aplicar una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows para obtener una lista de los estilos de windows.  
   
  *Rect*  
  Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  

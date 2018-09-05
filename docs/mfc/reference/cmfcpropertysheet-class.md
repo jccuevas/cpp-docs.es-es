@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e08ca5e8fcf78215edd80ae053c5576b6bc95f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9e4d2bc62ffadb59565ba64e28311cd1283cb5d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207483"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691441"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet (clase)
 La clase `CMFCPropertySheet` admite una hoja de propiedades donde cada página de propiedades se indica mediante una pestaña de página, un botón de barra de herramientas, un nodo del control de árbol o un elemento de lista.  
@@ -93,7 +93,7 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Lo llama el marco de trabajo para dibujar un encabezado de la página de propiedades personalizada.|  
 |`CMFCPropertySheet::OnInitDialog`|Controla el [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) mensaje. (Invalida [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Lo llama el marco de trabajo para quitar una página de propiedades de un control de árbol.|  
-|`CMFCPropertySheet::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida `CPropertySheet::PreTranslateMessage`).|  
+|`CMFCPropertySheet::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida `CPropertySheet::PreTranslateMessage`).|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Quita un nodo del control de árbol.|  
 |[CMFCPropertySheet::RemovePage](#removepage)|Quita una página de propiedades de la hoja de propiedades.|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Especifica la lista de imágenes que se usan en el control de navegación del panel de Outlook.|  

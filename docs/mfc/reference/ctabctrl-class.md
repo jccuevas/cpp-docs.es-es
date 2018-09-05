@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c9ea52115cf5921aab4cc7f6cefb939f3e6e461
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207185"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690476"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (clase)
 Proporciona la funcionalidad del control de pestaña común de Windows.  
@@ -240,7 +240,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  *dwExStyle*  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.  
   
  *dwStyle*  
  Especifica el estilo del control de ficha. Aplicar cualquier combinación de [estilos de control de pestaña](/windows/desktop/Controls/tab-control-styles), que se describen en el SDK de Windows. Consulte **comentarios** en [crear](#create) para obtener una lista de estilos de ventana que también se pueden aplicar al control.  

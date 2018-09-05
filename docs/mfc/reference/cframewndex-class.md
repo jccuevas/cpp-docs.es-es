@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2854199796f5d75cc4b24016def3c63327a5d511
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207829"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692047"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx (clase)
 Implementa la funcionalidad de una interfaz de un único documento (SDI) de Windows superpuesta o una ventana de marco emergente y proporciona miembros para administrar la ventana. Extiende la [CFrameWnd](../../mfc/reference/cframewnd-class.md) clase.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Puntero al texto de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el valor de una llamada a [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Devuelve el valor de una llamada a [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca).  
   
 ### <a name="remarks"></a>Comentarios  
   

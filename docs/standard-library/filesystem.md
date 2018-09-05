@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207928"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681045"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -128,7 +128,8 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 
 |nombre|Descripción|
 |----------|-----------------|
-|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|
+|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
+|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|
 |[Perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|

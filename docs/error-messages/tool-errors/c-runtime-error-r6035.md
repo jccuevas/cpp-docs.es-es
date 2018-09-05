@@ -1,5 +1,5 @@
 ---
-title: Error de en tiempo de ejecución de C R6035 | Documentos de Microsoft
+title: Error en tiempo de ejecución de C R6035 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecadf1793475e1cf5f354796c71a1894884e24e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa300619d59bdcf4295c8db9f8e9ebf1acb6bb3a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299752"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683595"
 ---
-# <a name="c-runtime-error-r6035"></a>Error de en tiempo de ejecución de C R6035
+# <a name="c-runtime-error-r6035"></a>Error en tiempo de ejecución de C R6035
 Biblioteca en tiempo de ejecución de Microsoft Visual C++, error R6035: Un módulo de esta aplicación está inicializando la cookie de seguridad global del módulo al mismo tiempo que una función basada en dicha cookie de seguridad está activa.  Llame previamente a __security_init_cookie.  
   
  [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) debe llamarse antes del primer uso de la cookie de seguridad global.  
   
- La cookie de seguridad global se usa para la protección de saturación del búfer en el código compilado con [/GS (comprobación de seguridad de búfer)](../../build/reference/gs-buffer-security-check.md) y en el código que usa el control de excepciones estructurado. Fundamentalmente, en la entrada a una función con protección de saturación, la cookie se coloca en la pila y, en la salida, el valor de la pila se compara con respecto a la cookie global. Cualquier diferencia en la comparación indica que se ha producido una saturación del búfer y da lugar a la finalización inmediata del programa.  
+ La cookie de seguridad global se usa para la protección de saturación del búfer en el código compilado con [/GS (comprobación de seguridad del búfer)](../../build/reference/gs-buffer-security-check.md) y en el código que usa el control de excepciones estructurado. Fundamentalmente, en la entrada a una función con protección de saturación, la cookie se coloca en la pila y, en la salida, el valor de la pila se compara con respecto a la cookie global. Cualquier diferencia en la comparación indica que se ha producido una saturación del búfer y da lugar a la finalización inmediata del programa.  
   
  El error R6035 indica que se ha realizado una llamada a `__security_init_cookie` después de la introducción de una función protegida. Si la ejecución continuara, se detectaría una saturación del búfer falsa porque la cookie de la pila dejaría de coincidir con la cookie global.  
   
- Considere el ejemplo de archivo DLL siguiente. El punto de entrada de archivo DLL se establece en DllEntryPoint mediante el vinculador [/ENTRY (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md) opción. Esto hace que la inicialización de CRT se omita, con lo que la cookie de seguridad global se inicializaría normalmente, de modo que el propio archivo DLL debe llamar a `__security_init_cookie`.  
+ Considere el ejemplo de archivo DLL siguiente. El punto de entrada del archivo DLL se establece en DllEntryPoint mediante el enlazador [/Entry (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md) opción. Esto hace que la inicialización de CRT se omita, con lo que la cookie de seguridad global se inicializaría normalmente, de modo que el propio archivo DLL debe llamar a `__security_init_cookie`.  
   
 ```  
 // Wrong way to call __security_init_cookie  
@@ -78,4 +78,4 @@ void DllEntryHelper() {
 >  El mensaje de error R6035 sólo lo genera el CRT de depuración x86, y para el control de excepciones estructurado exclusivamente, pero la condición de error se produce en todas las plataformas y para todas las formas de control de excepciones, como C++ EH.  
   
 ## <a name="see-also"></a>Vea también  
- [Comprobación de seguridad exhaustiva del compilador](http://go.microsoft.com/fwlink/p/?linkid=7260)
+ [Características de seguridad de MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)

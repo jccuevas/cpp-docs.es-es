@@ -1,7 +1,7 @@
 ---
-title: Error recuperable A2031 de ML | Documentos de Microsoft
+title: Error recuperable A2031 de ML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ab35776944604f3133254532d2631460c755983
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bf6744224847e114e76df6e7ad6470696d3e8387
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057151"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682663"
 ---
 # <a name="ml-nonfatal-error-a2031"></a>Error recuperable A2031 de ML
-**debe ser el registro de base o índice**  
-  
- Se intentó usar un registro que no era un registro de base o índice en una expresión de memoria.  
-  
- Por ejemplo, las expresiones siguientes producen este error:  
-  
-```  
-[ax]  
-[bl]  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)
+
+**debe ser el registro de base o índice**
+
+Se intentó usar un registro que no era un registro de base o índice en una expresión de la memoria.
+
+Por ejemplo, las expresiones siguientes producen este error:
+
+```asm
+[ax]
+[bl]
+```
+
+## <a name="see-also"></a>Vea también
+
+[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>

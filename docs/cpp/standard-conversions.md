@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c2e8a69cf7f118af8753ebcb9e0e150c8dfc0859
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220793"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687318"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
-El lenguaje C++ define conversiones entre sus tipos fundamentales. También define conversiones para tipos derivados de puntero, referencia y puntero a miembro. Estas conversiones se denominan "conversiones estándar". (Para obtener más información sobre los tipos, tipos estándar y los tipos derivados, vea [tipos](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+El lenguaje C++ define conversiones entre sus tipos fundamentales. También define conversiones para tipos derivados de puntero, referencia y puntero a miembro. Estas conversiones se denominan *conversiones estándar*.  
   
  Esta sección trata las conversiones estándar siguientes:  
   
@@ -210,7 +210,7 @@ Gráfico de herencia para ilustrar la accesibilidad de clase base
 ||Protegido|Sí|  
 ||Público|Sí|  
   
- El segundo caso en el que un puntero a una clase se puede convertir a un puntero a una clase base es cuando se utiliza una conversión de tipos explícita. (Consulte [expresiones con conversiones de tipo explícitas](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obtener más información sobre las conversiones de tipo explícito.)  
+ El segundo caso en el que un puntero a una clase se puede convertir a un puntero a una clase base es cuando se utiliza una conversión de tipos explícita. (Consulte [operador de conversión de tipos explícita](explicit-type-conversion-operator-parens.md) para obtener más información sobre las conversiones de tipo explícito.)  
   
  El resultado de tal conversión es un puntero al “subobjeto”, la parte del objeto que la clase base describe completamente.  
   
@@ -249,7 +249,7 @@ int main()
  Un puntero a una función se puede convertir al tipo `void *`si tipo `void *` es lo suficientemente grande como para contener ese puntero.  
   
 ### <a name="pointer-to-void"></a>De puntero a void  
- Punteros a tipo **void** se puede convertir a punteros a cualquier otro tipo, pero solo con una conversión de tipos explícita (a diferencia de C). (Consulte [expresiones con conversiones de tipo explícitas](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obtener más información sobre conversiones de tipo.) Un puntero a cualquier tipo se puede convertir implícitamente a un puntero al tipo **void**. Un puntero a un objeto incompleto de un tipo se puede convertir en un puntero a **void** (implícitamente) y viceversa (explícitamente). El resultado de dicha conversión es igual al valor del puntero original. Un objeto se considera incompleto si se declara, pero no hay suficiente información disponible para determinar su tamaño o clase base.  
+ Punteros a tipo **void** se puede convertir a punteros a cualquier otro tipo, pero solo con una conversión de tipos explícita (a diferencia de C). Un puntero a cualquier tipo se puede convertir implícitamente a un puntero al tipo **void**. Un puntero a un objeto incompleto de un tipo se puede convertir en un puntero a **void** (implícitamente) y viceversa (explícitamente). El resultado de dicha conversión es igual al valor del puntero original. Un objeto se considera incompleto si se declara, pero no hay suficiente información disponible para determinar su tamaño o clase base.  
   
  Un puntero a cualquier objeto que no es **const** o **volátil** puede convertirse implícitamente a un puntero de tipo `void *`.  
   

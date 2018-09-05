@@ -1,5 +1,5 @@
 ---
-title: -APPCONTAINER | Documentos de Microsoft
+title: -APPCONTAINER | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c47154d7a5eddd26573612708462c0352da30ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368439"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686258"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Marca un ejecutable que se debe ejecutar en un contenedor de la aplicación, por ejemplo, una aplicación de Windows universales ni de Microsoft Store.  
+Marca un ejecutable que se debe ejecutar en un contenedor de aplicaciones, por ejemplo, una aplicación de Microsoft Store o Windows Universal.  
   
 ```  
   
@@ -38,4 +38,4 @@ Marca un ejecutable que se debe ejecutar en un contenedor de la aplicación, por
   
 ## <a name="see-also"></a>Vea también  
  [Opciones de EDITBIN](../../build/reference/editbin-options.md)   
- [¿Qué es una aplicación Universal de Windows?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+ [¿Qué es una aplicación Universal Windows?](/windows/uwp/get-started/universal-application-platform-guide)

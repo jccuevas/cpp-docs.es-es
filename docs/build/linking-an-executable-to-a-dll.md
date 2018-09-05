@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e72cc680036d2c7e3737e5512c73115e29562018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692220"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Vincular un ejecutable a un archivo DLL  
   
@@ -76,7 +76,7 @@ Hay que tener en cuenta dos posibles peligros en la vinculación explícita:
   
 -   Si el archivo DLL tiene una `DllMain` función de punto de entrada, el sistema operativo llama a la función en el contexto del subproceso que llama `LoadLibrary`. No se llama a la función de punto de entrada si el archivo DLL ya está asociado al proceso a causa de una llamada anterior a `LoadLibrary` que ha tenido una llamada correspondiente a la `FreeLibrary` función. Vinculación explícita puede producir problemas si el archivo DLL utiliza un `DllMain` función para realizar la inicialización de cada subproceso de un proceso dado que ya existen subprocesos cuando `LoadLibrary` (o `AfxLoadLibrary`) se llama no se inicializan.  
   
--   Si un archivo DLL declara datos de extensión estática como `__declspec(thread)`, que puede causar un error de protección si se vincula explícitamente. Una vez cargado el archivo DLL mediante una llamada a `LoadLibrary`, se producirá un error de protección siempre que el código hace referencia a estos datos. Entre los datos de extensión estática se incluyen elementos estáticos globales y locales. Por lo tanto, cuando se crea un archivo DLL, debe evitar el uso de almacenamiento local de subprocesos o informar a los usuarios del archivo DLL acerca de los problemas potenciales de cargar dinámicamente el archivo DLL. Para obtener más información, consulte [mediante almacenamiento local de subprocesos en una biblioteca de vínculos dinámicos (Windows SDK)](https://msdn.microsoft.com/library/windows/desktop/ms686997).  
+-   Si un archivo DLL declara datos de extensión estática como `__declspec(thread)`, que puede causar un error de protección si se vincula explícitamente. Una vez cargado el archivo DLL mediante una llamada a `LoadLibrary`, se producirá un error de protección siempre que el código hace referencia a estos datos. Entre los datos de extensión estática se incluyen elementos estáticos globales y locales. Por lo tanto, cuando se crea un archivo DLL, debe evitar el uso de almacenamiento local de subprocesos o informar a los usuarios del archivo DLL acerca de los problemas potenciales de cargar dinámicamente el archivo DLL. Para obtener más información, consulte [mediante almacenamiento local de subprocesos en una biblioteca de vínculos dinámicos (Windows SDK)](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library).  
   
 <a name="linking-implicitly"></a>  
   

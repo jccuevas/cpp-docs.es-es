@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220637"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680560"
 ---
 # <a name="c-runtime-error-r6025"></a>C Runtime Error R6025
 llamada de función virtual pura  
@@ -41,4 +41,3 @@ llamada de función virtual pura
   
  Este error se debe a una llamada a una función virtual en una clase base abstracta a través de un puntero que se crea mediante una conversión al tipo de la clase derivada, pero es realmente un puntero a la clase base. Esto puede ocurrir cuando se realiza la conversión de un **void** <strong>\*</strong> a un puntero a una clase cuando la **void** <strong>\*</strong> era se creó durante la construcción de la clase base.  
   
- Para obtener más información, consulte el [soporte técnico de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) sitio Web.

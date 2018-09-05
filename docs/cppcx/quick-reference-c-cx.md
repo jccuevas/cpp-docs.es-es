@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608338"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692593"
 ---
 # <a name="quick-reference-ccx"></a>Referencia rápida (C++/CX)
-El tiempo de ejecución de Windows es compatible con aplicaciones de plataforma Universal de Windows (UWP) que se ejecutan únicamente en un entorno de sistema operativo de confianza, utilizan funciones, tipos de datos y dispositivos autorizados y se distribuyen a través de la Microsoft Store. C++ / c++ / CX simplifican la escritura de aplicaciones de Windows en tiempo de ejecución. En este artículo es una referencia rápida; Para obtener documentación más completa, consulte [Type System](../cppcx/type-system-c-cx.md) y [extensiones de componentes para plataformas de tiempo de ejecución](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+El tiempo de ejecución de Windows es compatible con aplicaciones de plataforma Universal de Windows (UWP) que se ejecutan únicamente en un entorno de sistema operativo de confianza, utilizan funciones, tipos de datos y dispositivos autorizados y se distribuyen a través de la Microsoft Store. C++ / c++ / CX simplifican la escritura de aplicaciones de Windows en tiempo de ejecución. En este artículo es una referencia rápida; Para obtener documentación más completa, consulte [Type System](../cppcx/type-system-c-cx.md).  
   
  Cuando se compila en la línea de comandos, utilice el **/ZW** opción del compilador para generar una aplicación para UWP o componente en tiempo de ejecución de Windows. Para obtener acceso a las declaraciones de Windows en tiempo de ejecución, que se definen en los archivos de metadatos (.winmd) de Windows en tiempo de ejecución, especifique el `#using` directiva o la **/FU** opción del compilador. Cuando se crea un proyecto para una aplicación para UWP, Visual Studio de forma predeterminada establece estas opciones y agrega las referencias a todas las bibliotecas en tiempo de ejecución de Windows.  
   

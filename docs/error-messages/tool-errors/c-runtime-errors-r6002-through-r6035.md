@@ -1,5 +1,5 @@
 ---
-title: En tiempo de ejecución de C errores ejecución R6002 a R6035 | Documentos de Microsoft
+title: Errores de tiempo de ejecución de C R6002 a R6035 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -14,20 +14,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d856fef8e8915683b77ada2bb8f669e303f1b5a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e7a8c7c544ef89f1b54459a7f02b90424e6c7c5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693566"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>Errores en tiempo de ejecución de C de R6002 a R6035
 
-En esta sección se hace referencia a los errores que puede generar la biblioteca en tiempo de ejecución de C (CRT) cuando se carga o se ejecuta la aplicación. Aunque el mensaje se refiere al tiempo de ejecución de Microsoft Visual C++, estos errores indican un error en el código de la aplicación, o bien una condición que no puede procesar la biblioteca en tiempo de ejecución, por ejemplo, memoria insuficiente. Los usuarios finales de la aplicación puede ver estos errores si no la aplicación para evitar las condiciones que hagan que muestren el código, o escribir código para capturar estos errores y presentar un mensaje descriptivo para los usuarios.
+En esta sección se hace referencia a los errores que puede generar la biblioteca en tiempo de ejecución de C (CRT) cuando se carga o se ejecuta la aplicación. Aunque el mensaje se refiere al tiempo de ejecución de Microsoft Visual C++, estos errores indican un error en el código de la aplicación, o una condición que no puede procesar la biblioteca en tiempo de ejecución, como memoria insuficiente. Los usuarios finales de la aplicación puede ver estos errores si no codificar la aplicación para evitar las condiciones que hagan que muestren ni escribir código para capturar estos errores y presentar un mensaje descriptivo a los usuarios.
 
-Puede encontrar ayuda adicional para errores y advertencias en los foros públicos de Microsoft. También puede buscar el error o el número de advertencia en el [Comunidad de desarrolladores](https://go.microsoft.com/fwlink/p/?linkid=820594) sitio. El [lenguaje Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) es foro para preguntas y debate sobre la sintaxis del lenguaje C++ y el compilador MSVC. El [General de Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158194) es foro para preguntas sobre Visual C++ que no se debaten en otros foros. También puede buscar errores y advertencias y hacer preguntas sobre [desbordamiento de la pila](http://stackoverflow.com/) para buscar soluciones.
+Puede encontrar ayuda adicional para errores y advertencias en los foros públicos de Microsoft. Puede buscar el error o el número de advertencia en el [Comunidad de desarrolladores](https://developercommunity.visualstudio.com) sitio. El [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) foro es para preguntas acerca de Visual C++ que no se debaten en otros foros. También puede buscar errores y advertencias y formular preguntas en [Stack Overflow](http://stackoverflow.com/) para buscar soluciones.
 
-Para obtener vínculos a información adicional y recursos de la Comunidad, vea [ayuda de Visual C++ y de la Comunidad](../../visual-cpp-help-and-community.md).
+Para obtener vínculos a ayuda adicional y recursos de la Comunidad, vea [ayuda de Visual C++ y la Comunidad](../../visual-cpp-help-and-community.md).
 
 ## <a name="c-runtime-errors"></a>Errores en tiempo de ejecución de C
 

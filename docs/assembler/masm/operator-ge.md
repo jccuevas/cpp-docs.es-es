@@ -1,7 +1,7 @@
 ---
-title: operador GE | Documentos de Microsoft
+title: operador GE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99ef77272c6f3242c0f5359f1625496da9ba3fb0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e494e7eb36173d77a8fc0cd16015f97c4c756e34
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692353"
 ---
 # <a name="operator-ge"></a>Operador GE
-Devuelve true (-1) si *expression1* es mayor o igual que *expression2*, o devuelve un valor falso (0) si no lo está.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-expression1 GE expression2  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Devuelve true (-1) si *expression1* es mayor o igual a *expression2*, o devuelve false (0) si no lo está.
+
+## <a name="syntax"></a>Sintaxis
+
+> Expresión1 GE Expresión2
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

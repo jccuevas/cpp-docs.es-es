@@ -1,7 +1,7 @@
 ---
-title: . NOCREF | Documentos de Microsoft
+title: . NOCREF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ee936ebbbd2136f14fecf51bfe0b7d69c61a476
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9ad9e4d84d8d49b4d1b5c71cc695031da9cd878e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055084"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680005"
 ---
 # <a name="nocref"></a>.NOCREF
-Suprime la lista de símbolos en el archivo de tabla y el Explorador de símbolos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-.NOCREF [[name[[, name]]...]]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Si se especifican, se suprimen solo los nombres especificados. Igual que [. XCREF](../../assembler/masm/dot-xcref.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Suprime la lista de símbolos en el archivo de tabla y el Explorador de símbolos.
+
+## <a name="syntax"></a>Sintaxis
+
+> . NOCREF [[nombre [[, nombre]]...]]
+
+## <a name="remarks"></a>Comentarios
+
+Si se especifican, se suprimen sólo los nombres especificados. Igual que [. XCREF](../../assembler/masm/dot-xcref.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

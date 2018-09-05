@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205100"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680658"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl (clase)
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Indica si el marco de trabajo se vuelve a dibujar las columnas de nombre y valor del control de cuadrícula de propiedad actual cuando un usuario cambia el tamaño de las columnas.|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Indica si la apariencia del control de cuadrícula de propiedad está en el estilo que usa .NET VS.|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Especifica cómo se muestran las propiedades modificadas.|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Quita todos los objetos de propiedad de un control de cuadrícula de propiedades.|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Restaura el valor original de todas las propiedades.|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Establece o restablece el modo alfabético.|  

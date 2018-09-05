@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7c82a55d2cbfba20b80a02dbcf000c85ed10e83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679798"
 ---
 # <a name="how-to-create-a-resource"></a>Cómo: Crear un recurso
 
@@ -48,7 +48,7 @@ ms.locfileid: "43221025"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Para crear un recurso nuevo en la Vista de clases
 
-1. En [vista de clases](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en la clase y elija **agregar**, a continuación, haga clic en **Agregar recurso** en el menú contextual.
+1. En [vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic en la clase y elija **agregar**, a continuación, haga clic en **Agregar recurso** en el menú contextual.
 
 2. En el [cuadro de diálogo Agregar recurso](../windows/add-resource-dialog-box.md), elija el tipo de recurso que desee agregar al proyecto.
 

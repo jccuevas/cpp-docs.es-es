@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213833"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679992"
 ---
 # <a name="using-manual-accessors"></a>Utilizar descriptores de acceso manuales
 Hay cuatro aspectos que debe hacer cuando se controla un comando desconocido:  
@@ -53,7 +53,7 @@ Hay cuatro aspectos que debe hacer cuando se controla un comando desconocido:
   
 6.  Llame a `GetNextResult` para determinar si están disponibles más conjuntos de filas. Repita los pasos 2 a 5.  
   
- Para obtener un ejemplo de un descriptor de acceso manual, consulte `CDBListView::CallProcedure` en el [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ejemplo.  
+ Para obtener un ejemplo de un descriptor de acceso manual, consulte `CDBListView::CallProcedure` en el [DBVIEWER](https://github.com/Microsoft/VCSamples) ejemplo.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b8cb328ec69d5c322538a073fac5fc1761aed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212993"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683683"
 ---
 # <a name="clr-integration-ccx"></a>Integración de CLR (C++/CX)
 Algunos tipos de Windows en tiempo de ejecución reciben un tratamiento especial en C / c++ / CX y los idiomas que se basan en common language runtime (CLR). En este artículo se describe la manera en que varios tipos de un lenguaje se asignan a otro lenguaje. Por ejemplo, CLR asigna Windows.Foundation.IVector to System.Collections.IList, Windows.Foundation.IMap to System.Collections.IDictionary, etc. De forma similar, C++ / c++ / CX asigna especialmente tipos como Platform:: Delegate y Platform:: String.  
@@ -22,7 +22,7 @@ Algunos tipos de Windows en tiempo de ejecución reciben un tratamiento especial
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Asignar el tiempo de ejecución de Windows en C++ / c++ / CX  
  Cuando C++ / c++ / CX lee un archivo de metadatos (.winmd) de Windows, el compilador asigna automáticamente espacios de nombres comunes de Windows Runtime y tipos de C / c++ / CX espacios de nombres y tipos. Por ejemplo, el tipo en tiempo de ejecución de Windows numérico `UInt32` se asignan automáticamente a `default::uint32`.  
   
- C++ / c++ / CX asigna varios otros tipos en tiempo de ejecución de Windows para el **plataforma** espacio de nombres. Por ejemplo, el **Windows::Foundation** identificador HSTRING, que representa una cadena de texto Unicode de solo lectura, se asigna a C++ / c++ / CX `Platform::String` clase. Cuando una operación de Windows Runtime devuelve un HRESULT de error, se asigna a C++ / c++ / CX `Platform::Exception`. Para obtener más información, consulte [tipos integrados](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C++ / c++ / CX asigna varios otros tipos en tiempo de ejecución de Windows para el **plataforma** espacio de nombres. Por ejemplo, el **Windows::Foundation** identificador HSTRING, que representa una cadena de texto Unicode de solo lectura, se asigna a C++ / c++ / CX `Platform::String` clase. Cuando una operación de Windows Runtime devuelve un HRESULT de error, se asigna a C++ / c++ / CX `Platform::Exception`.   
   
  C++ / c++ / CX también asigna determinados tipos en espacios de nombres en tiempo de ejecución de Windows para mejorar la funcionalidad del tipo. Para estos tipos, C / c++ / CX proporciona constructores auxiliares y métodos que son específicas de C++ y no están disponibles en el archivo de .winmd estándar del tipo.  
   

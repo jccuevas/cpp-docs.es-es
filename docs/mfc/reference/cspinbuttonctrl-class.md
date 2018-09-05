@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c229a07d7d8dbf8d74e487c99e6f79b8203f04f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202650"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688005"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 Proporciona la funcionalidad del control de botón de número común de Windows.  
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  *dwExStyle*  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de windows, consulte el *dwExStyle* parámetro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.  
   
  *dwStyle*  
  Especifica el estilo del control de botón de número. Se aplican a cualquier combinación de los estilos de control de botón de número para el control. Estos estilos se describen en [estilos de Control de flechas](/windows/desktop/Controls/up-down-control-styles) en el SDK de Windows.  

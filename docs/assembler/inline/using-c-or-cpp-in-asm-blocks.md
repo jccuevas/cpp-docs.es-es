@@ -1,7 +1,7 @@
 ---
-title: Uso de C o C++ en bloques __asm | Documentos de Microsoft
+title: Uso de C o C++ en bloques __asm | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ed46cdf44ccacee806dd03bf7eacca26eec32d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 14b91a7925089f6a6ab747a9fd6a5813f9a14693
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37120955"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687104"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Uso de C o C++ en bloques __asm
 
-** Específicos de Microsoft **
+** Específico de Microsoft **
 
 Puesto que las instrucciones de ensamblado insertado se pueden combinar con instrucciones de C o C++, pueden hacer referencia a variables de C o C++ por nombre y usar muchos otros elementos de esos lenguajes.
 
@@ -49,7 +49,7 @@ Un bloque `__asm` puede usar los elementos de lenguaje siguientes:
 
 - Nombres de tipo (dondequiera que un tipo MASM sea legal)
 
-- `typedef` nombres, utilizados normalmente con operadores como **PTR** y **tipo** o especificar miembros de estructura o unión
+- `typedef` nombres, utilizados normalmente con operadores tales como **PTR** y **tipo** o especificar miembros de estructura o unión
 
 Dentro de un bloque `__asm`, puede especificar constantes de tipo entero con notación C o notación de base de ensamblador (0x100 y 100h son equivalentes, por ejemplo). Esto permite definir (mediante `#define`) una constante en C y, a continuación, usarla en C o C++ y en partes de ensamblado del programa. También puede especificar constantes en octal precediéndolas con un 0. Por ejemplo, 0777 especifica una constante octal.
 
@@ -67,4 +67,4 @@ Dentro de un bloque `__asm`, puede especificar constantes de tipo entero con not
 
 ## <a name="see-also"></a>Vea también
 
-[Ensamblador insertado](../../assembler/inline/inline-assembler.md)
+[Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

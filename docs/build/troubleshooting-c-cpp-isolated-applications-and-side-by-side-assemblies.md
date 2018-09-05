@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681390"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionar problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++
 La acción de cargar una aplicación de C/C++ puede sufrir un error si no se pueden encontrar las bibliotecas dependientes. En este artículo se describen algunas de las razones comunes por las que una aplicación de C/C++ no se carga y se sugieren pasos para resolver los problemas.  
@@ -46,7 +46,7 @@ La acción de cargar una aplicación de C/C++ puede sufrir un error si no se pue
   
 3.  Si la aplicación depende de ensamblados en paralelo y no existe un manifiesto, debe asegurarse de que el vinculador genere uno para el proyecto. Active la opción del vinculador **Generar manifiesto** en el **las propiedades del proyecto** cuadro de diálogo para el proyecto.  
   
-4.  Si el manifiesto está incrustado en el binario, asegúrese de que el identificador de RT_MANIFEST es correcto para este tipo del binario. Para obtener más información sobre el identificador de recurso para usar, consulte [Using Side-by-Side Assemblies como un recurso (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Si el manifiesto se encuentra en un archivo independiente, ábralo en un editor XML o en un editor de texto. Para obtener más información sobre los manifiestos y reglas para la implementación, consulte [manifiestos](https://msdn.microsoft.com/library/aa375365).  
+4.  Si el manifiesto está incrustado en el binario, asegúrese de que el identificador de RT_MANIFEST es correcto para este tipo del binario. Para obtener más información sobre el identificador de recurso para usar, consulte [Using Side-by-Side Assemblies como un recurso (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Si el manifiesto se encuentra en un archivo independiente, ábralo en un editor XML o en un editor de texto. Para obtener más información sobre los manifiestos y reglas para la implementación, consulte [manifiestos](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Si hay un manifiesto incrustado y un archivo de manifiesto independiente, el cargador del sistema operativo utiliza el manifiesto incrustado y omite el archivo independiente. Sin embargo, en Windows XP, se cumple lo contrario: se usa el archivo de manifiesto independiente y se omite el manifiesto incrustado.  

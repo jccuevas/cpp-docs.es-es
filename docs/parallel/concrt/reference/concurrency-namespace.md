@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324acb33998246933b0c426357368247c6689c47
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4d5e7499bb1734b2093a60039e28b6f9f85920df
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681190"
 ---
 # <a name="concurrency-namespace"></a>concurrency (Espacio de nombres)
 El espacio de nombres `Concurrency` proporciona las clases y funciones que dan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../../../parallel/concrt/concurrency-runtime.md).  
@@ -47,12 +47,6 @@ namespace concurrency;
 ```  
   
 ## <a name="members"></a>Miembros  
-  
-### <a name="namespaces"></a>Espacios de nombres  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Concurrency::Extensibility Namespace](https://msdn.microsoft.com/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -135,7 +129,7 @@ namespace concurrency;
 |[structured_task_group (clase)](structured-task-group-class.md)|La clase `structured_task_group` representa una colección muy estructurada de trabajos paralelos. Puede poner en cola tareas individuales paralelas a `structured_task_group` mediante objetos `task_handle`, y esperar a que se completen, o cancelar el grupo de tareas antes de que haya finalizado su ejecución, que anulará cualquier tarea cuya ejecución no haya comenzado.|  
 |[target_block (clase)](target-block-class.md)|La clase `target_block` es una clase base abstracta que proporciona funcionalidad de administración de vínculo básica y comprueba errores solo para bloques de destino.|  
 |[task (clase) (Runtime de simultaneidad)](task-class.md)|La clase `task` de la biblioteca de patrones de procesamiento paralelo (PPL). Un objeto `task` representa el trabajo que se puede ejecutar de forma asincrónica y de forma simultánea con otras tareas y trabajos paralelos generados por los algoritmos paralelos en el runtime de simultaneidad. Genera un resultado de tipo `_ResultType` al finalizar correctamente. Las tareas de tipo `task<void>` no producen ningún resultado. Es posible esperar y cancelar una tarea de forma independiente al resto de tareas. También se puede componer con otras tareas mediante continuaciones (`then`), así como con patrones de unión (`when_all`) y elección (`when_any`).|  
-|[task_canceled (clase)](task-canceled-class.md)|Esta clase describe una excepción producida por la capa de tareas de PPL para obligar a que se cancele la tarea actual. También se produce por la `get()` método [tarea](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f), para una tarea cancelada.|  
+|[task_canceled (clase)](task-canceled-class.md)|Esta clase describe una excepción producida por la capa de tareas de PPL para obligar a que se cancele la tarea actual. También se produce por la `get()` método [tarea](task-class.md), para una tarea cancelada.|  
 |[task_completion_event (clase)](task-completion-event-class.md)|La clase `task_completion_event` permite retrasar la ejecución de una tarea hasta que se satisfaga una condición, o iniciar una tarea en respuesta a un evento externo.|  
 |[task_continuation_context (clase)](task-continuation-context-class.md)|La clase `task_continuation_context` permite especificar dónde se desea que se ejecute una continuación. Sólo es útil utilizar esta clase desde una aplicación para UWP. Para las aplicaciones en tiempo de ejecución que no son de Windows, el contexto de ejecución de la continuación tarea es determinado por el tiempo de ejecución y no es configurable.|  
 |[task_group (clase)](task-group-class.md)|La clase `task_group` representa una colección de trabajo paralelo que es posible esperar o cancelar.|  
@@ -194,7 +188,7 @@ namespace concurrency;
 |[asend (función)](concurrency-namespace-functions.md#asend)|Sobrecargado. Una operación de envío asincrónica, que programa una tarea para propagar los datos al bloque de destino.|  
 |[cancel_current_task (función)](concurrency-namespace-functions.md#cancel_current_task)|Cancela la tarea que se está ejecutando actualmente. Se puede llamar a esta función desde el cuerpo de una tarea para anular la ejecución de la tarea y hacer que obtenga el estado `canceled`.<br /><br /> No está admitido que llame a esta función si no está dentro del cuerpo de un objeto `task`. Esto dará lugar a un comportamiento indefinido como, por ejemplo, un bloqueo en la aplicación.|  
 |[create_async (función)](concurrency-namespace-functions.md#create_async)|Crea una construcción asincrónica de Windows Runtime basada en un objeto o función lambda que se ha proporcionado. El tipo devuelto de `create_async` es `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` en función de la signatura de la expresión lambda pasada al método.|  
-|[create_task (función)](concurrency-namespace-functions.md#create_task)|Sobrecargado. Crea un PPL [tarea](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) objeto. `create_task` se puede usar en cualquier lugar en el que se ha utilizado un constructor de tarea. Se proporciona principalmente por comodidad, porque permite el uso de la palabra clave `auto` cuando se crean tareas.|  
+|[create_task (función)](concurrency-namespace-functions.md#create_task)|Sobrecargado. Crea un PPL [tarea](task-class.md) objeto. `create_task` se puede usar en cualquier lugar en el que se ha utilizado un constructor de tarea. Se proporciona principalmente por comodidad, porque permite el uso de la palabra clave `auto` cuando se crean tareas.|  
 |[CreateResourceManager (función)](concurrency-namespace-functions.md#createresourcemanager)|Devuelve una interfaz que representa la instancia singleton del Administrador de recursos del runtime de simultaneidad. El Administrador de recursos es el responsable de asignar recursos a los programadores que desean cooperar entre sí.|  
 |[DisableTracing (función)](concurrency-namespace-functions.md#disabletracing)|Deshabilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW no está registrada de forma predeterminada.|  
 |[EnableTracing (función)](concurrency-namespace-functions.md#enabletracing)|Habilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW ahora está registrada de forma predeterminada.|  

@@ -1,7 +1,7 @@
 ---
-title: MAYOR | Documentos de Microsoft
+title: EQU | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7678cac4c480934fe9f6dd9816e636481c2d64
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 37509a39d2247649c2971932f402a18f3ac667d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050755"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681312"
 ---
 # <a name="equ"></a>EQU
-La primera directiva asigna un valor numérico de *expresión* a *nombre*.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      name EQU expression  
-name EQU <text>  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El *nombre* no se puede volver a definir más adelante.  
-  
- El segundo asigna la directiva especificado *texto* a *nombre*. El *nombre* se puede asignar otro *texto* más tarde. Vea [TEXTEQU](../../assembler/masm/textequ.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+La primera directiva asigna un valor numérico de *expresión* a *nombre*.
+
+## <a name="syntax"></a>Sintaxis
+
+> *nombre* EQU *expresión*
+
+> *nombre* EQU \< *texto*>
+
+## <a name="remarks"></a>Comentarios
+
+El *nombre* no se puede redefinir más adelante.
+
+El segundo asigna la directiva especificado *texto* a *nombre*. El *nombre* se puede asignar otro *texto* más adelante. Consulte [TEXTEQU](../../assembler/masm/textequ.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

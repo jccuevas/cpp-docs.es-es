@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210256"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679252"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Proporciona la funcionalidad del control de vista de árbol común de Windows.  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parámetros  
  *dwStyle*  
- Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.  
+ Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.  
   
  *Rect*  
  Especifica el tamaño y la posición del control de vista de árbol. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  *dwExStyle*  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.  
   
  *dwStyle*  
- Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.  
+ Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.  
   
  *Rect*  
  Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  

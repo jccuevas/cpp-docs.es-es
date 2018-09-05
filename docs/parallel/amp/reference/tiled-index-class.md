@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209438"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680200"
 ---
 # <a name="tiledindex-class"></a>tiled_index (Clase)
 Proporciona un índice en una [tiled_extent](tiled-extent-class.md) objeto. Esta clase tiene propiedades para tener acceso a elementos relacionados con el origen local del mosaico y con el origen global. Para obtener más información sobre los espacios de mosaico, vea [usando iconos](../../../parallel/amp/using-tiles.md).  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[Constante de barrera](#tiled_index__barrier)|Almacena un [tile_barrier](tile-barrier-class.md) objeto que representa una barrera en el mosaico actual de subprocesos.|  
 |||  
-|[Constante global](#tiled_index__global)|Almacena un [índice](index-class.md) objeto del rango 1, 2 o 3 que representa la información global de índice en un [cuadrícula](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
+|[Constante global](#tiled_index__global)|Almacena un [índice](index-class.md) objeto del rango 1, 2 o 3 que representa el índice global en un objeto de cuadrícula.|  
 |[Constante local](#tiled_index__local)|Almacena un `index` objeto de índice de rango 1, 2 o 3 que representa la relación en el mosaico actual de un [tiled_extent](tiled-extent-class.md) objeto.|  
 |[Rank (constante)](#tiled_index__rank)|Almacena el rango de la `tiled_index` objeto.|  
 |[Tile (constante)](#tiled_index__tile)|Almacena un `index` objeto del rango 1, 2 ó 3 que representa las coordenadas del mosaico actual de un `tiled_extent` objeto.|  

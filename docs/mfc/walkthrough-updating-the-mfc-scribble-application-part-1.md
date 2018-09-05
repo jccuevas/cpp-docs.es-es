@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cec86d276732bd7273d0f5585de5093f0cd01f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685550"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 
-Este tutorial muestra cómo modificar una aplicación MFC existente para utilizar la interfaz de usuario de la cinta de opciones. Visual Studio admite la cinta de Office 2007 y la cinta de Windows 7 Scenic. Para obtener más información acerca de la interfaz de usuario de cinta de opciones, consulte [cintas](http://go.microsoft.com/fwlink/p/?linkid=129233) en el sitio Web de MSDN.
+Este tutorial muestra cómo modificar una aplicación MFC existente para utilizar la interfaz de usuario de la cinta de opciones. Visual Studio admite la cinta de Office 2007 y la cinta de Windows 7 Scenic. Para obtener más información acerca de la interfaz de usuario de cinta de opciones, consulte [cintas](/windows/desktop/uxguide/cmd-ribbons).
 
 En este tutorial se ha modificado el ejemplo clásico de MFC Scribble 1.0 que permite utilizar el mouse para crear dibujos lineales. En esta parte del tutorial se muestra cómo modificar el ejemplo Scribble de modo que muestre una barra de cinta. [Parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) agregan más botones a la barra de cinta.
 

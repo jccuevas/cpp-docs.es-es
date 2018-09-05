@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223218"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693721"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl (clase)
 Esta clase implementa la [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) interfaz.  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>Comentarios  
  `IPersistStorageImpl` implementa el [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) interfaz, que permite que un cliente para solicitar que la carga del objeto y guardar sus datos persistentes con una de almacenamiento.  
   
- La implementación de esta clase requiere la clase `T` para realizar una implementación de la `IPersistStreamInit` disponible a través de la interfaz `QueryInterface`. Normalmente, esto significa que esa clase `T` debe derivar de [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), proporcione una entrada para `IPersistStreamInit` en el [mapa COM](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)y usar un [deasignacióndepropiedad](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) para describir los datos persistentes de la clase.  
+ La implementación de esta clase requiere la clase `T` para realizar una implementación de la `IPersistStreamInit` disponible a través de la interfaz `QueryInterface`. Normalmente, esto significa que esa clase `T` debe derivar de [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), proporcione una entrada para `IPersistStreamInit` en el [mapa COM](com-map-macros.md)y usar un [deasignacióndepropiedad](property-map-macros.md) para describir los datos persistentes de la clase.  
   
  **Artículos relacionados con** [Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
   

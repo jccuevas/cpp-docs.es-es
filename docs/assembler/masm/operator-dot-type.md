@@ -1,7 +1,7 @@
 ---
-title: operador. TIPO | Documentos de Microsoft
+title: operador. TIPO | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e77646cd5c2a2496f2a6a9e0c0dd1286e0cfc0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: fe7fd7e78bfce428569d33f1f1a4c7e7d2c80773
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053280"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686842"
 ---
 # <a name="operator-type"></a>Operador .TYPE
-Vea [OPATTR](../../assembler/masm/operator-opattr.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-.TYPE expression  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Consulte [OPATTR](../../assembler/masm/operator-opattr.md).
+
+## <a name="syntax"></a>Sintaxis
+
+> . Expresión de tipo
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
