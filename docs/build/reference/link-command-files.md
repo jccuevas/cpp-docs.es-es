@@ -1,7 +1,7 @@
 ---
-title: Archivos de comandos LINK | Documentos de Microsoft
+title: Archivos de comandos de vínculo | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -21,33 +21,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6614af87f072c54353ead39c2c5ca789da18dbb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8934758d8aa406ea7b7c959b1fc535cde32195b1
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375290"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894686"
 ---
 # <a name="link-command-files"></a>Archivos de comandos de LINK
-Puede pasar argumentos de línea de comandos al vínculo de la forma de un archivo de comandos. Para especificar un archivo de comandos al vinculador, use la sintaxis siguiente:  
-  
-```  
-LINK @commandfile  
-```  
-  
- El `commandfile` es el nombre de un archivo de texto. No se permite ningún espacio o tabulación entre el signo de arroba (@) y el nombre de archivo. No hay ninguna extensión predeterminada; debe especificar el nombre de archivo completo, incluida la extensión. No se puede usar caracteres comodín. Puede especificar una ruta de acceso absoluta o relativa con el nombre de archivo. VÍNCULO no usa una variable de entorno para buscar el archivo.  
-  
- En el archivo de comandos, los argumentos pueden ser separados por espacios o tabulaciones, (como en la línea de comandos) y caracteres de nueva línea.  
-  
- Puede especificar todos o parte de la línea de comandos en un archivo de comandos. Puede usar más de un archivo de comandos en un comando de LINK. VÍNCULO acepta datos proporcionados por el archivo de comandos como si se especifica en esa ubicación en la línea de comandos. Archivos de comandos no se pueden anidar. VÍNCULO repite el contenido de archivos de comandos, a menos que la [/nologo](../../build/reference/nologo-suppress-startup-banner-linker.md) se especifica la opción.  
-  
-## <a name="example"></a>Ejemplo  
- El siguiente comando para generar un archivo DLL pasa los nombres de las bibliotecas y archivos de objeto en archivos de comandos diferentes y usa un tercer archivo de comandos para la especificación de la opción/EXPORTS:  
-  
-```  
-link /dll @objlist.txt @liblist.txt @exports.txt  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+Puede pasar argumentos de línea de comandos para el vínculo en forma de un archivo de comandos. Para especificar un archivo de comandos del vinculador, use la sintaxis siguiente:
+
+> **VÍNCULO \@**  <em>/commandfile</em>
+
+El */commandfile* es el nombre de un archivo de texto. No se permite ningún espacio o tabulación entre la arroba (**\@**) y el nombre de archivo. No hay ninguna extensión predeterminada; debe especificar el nombre de archivo completo, incluida la extensión. No se puede usar caracteres comodín. Puede especificar una ruta de acceso absoluta o relativa con el nombre de archivo. VÍNCULO no utiliza una variable de entorno para buscar el archivo.
+
+En el archivo de comandos, se pueden separar los argumentos con espacios o tabulaciones (como en la línea de comandos) y caracteres de nueva línea.
+
+Puede especificar toda o parte de la línea de comandos en un archivo de comandos. Puede usar más de un archivo de comandos en un comando de LINK. VÍNCULO acepta la entrada de archivo de comandos como si se especificaron en esa ubicación en la línea de comandos. Archivos de comandos no se pueden anidar. VÍNCULO refleje el contenido de archivos de comandos, a menos que el [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md) se especifica la opción.
+
+## <a name="example"></a>Ejemplo
+
+El siguiente comando para generar un archivo DLL pasa los nombres de los archivos objeto y bibliotecas de archivos de comandos independientes y usa un tercer archivo de comandos para la especificación de la opción/EXPORTS:
+
+```cmd
+link /dll @objlist.txt @liblist.txt @exports.txt
+```
+
+## <a name="see-also"></a>Vea también
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
+[Opciones del vinculador](../../build/reference/linker-options.md)

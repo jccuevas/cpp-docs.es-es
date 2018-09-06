@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403146"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895167"
 ---
 # <a name="postfix-expressions"></a>Expresiones postfijas
 Las expresiones de postfijo constan de expresiones primarias o expresiones en las que los operadores de postfijo siguen una expresión primaria. Los operadores de postfijo se enumeran en la tabla siguiente.  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- En la expresión anterior, `func` es una expresión primaria, `func(1)` es una expresión de postfijo de función, `func(1)->GetData` es una expresión de postfijo que especifica un miembro de la clase, `func(1)->GetData()` es otra expresión de postfijo de función y todo el contenido expresión es una expresión de postfijo que incrementa el valor devuelto de GetData.  El significado de la expresión completa es que la función que llama pasa 1 como argumento y obtiene un puntero a una clase como valor devuelto.  A continuación, llamar a `GetValue()` en esa clase, a continuación, incremente el valor devuelto.  
+ En la expresión anterior, `func` es una expresión primaria, `func(1)` es una expresión de postfijo de función, `func(1)->GetValue` es una expresión de postfijo que especifica un miembro de la clase, `func(1)->GetValue()` es otra expresión de postfijo de función y todo el contenido expresión es una expresión de postfijo que incrementa el valor devuelto de GetValue.  El significado de la expresión completa es que la función que llama pasa 1 como argumento y obtiene un puntero a una clase como valor devuelto.  A continuación, llamar a `GetValue()` en esa clase, a continuación, incremente el valor devuelto.  
   
  Las expresiones enumeradas anteriormente son expresiones de asignación, lo que significa que el resultado de estas expresiones debe ser un valor R.  
   

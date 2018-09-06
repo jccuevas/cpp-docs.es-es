@@ -1,7 +1,7 @@
 ---
-title: Advertencia de NMAKE U4001 | Documentos de Microsoft
+title: Advertencia de NMAKE U4001 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619c3184b24481d7c44cb27f6beed16d32d644b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b34cf70a43bf1beee6daf636ae44840d75b0d63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316178"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894635"
 ---
 # <a name="nmake-warning-u4001"></a>Advertencia de NMAKE U4001
-archivo de comandos se puede invocar solo desde la línea de comandos  
-  
- Un archivo de comandos, que se invoca con el signo de arroba (**@**) especificador, no puede contener una especificación para otro archivo de comandos. No se permite este tipo anidamiento. Se omitió la especificación.
+
+> archivo de comandos se puede invocar solo desde la línea de comandos
+
+Un archivo de comandos, que es invocado por el signo de arroba (**\@**) especificador, no puede contener una especificación para otro archivo de comandos. No se permite el anidamiento de este tipo. Se omitió la especificación.

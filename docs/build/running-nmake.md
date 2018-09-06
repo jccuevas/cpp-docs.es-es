@@ -1,7 +1,7 @@
 ---
-title: Ejecutar NMAKE | Documentos de Microsoft
+title: Ejecutar NMAKE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -20,31 +20,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29516dcbcf650225ec3b86eee9e135a35bff82f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379710"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894647"
 ---
 # <a name="running-nmake"></a>Ejecutar NMAKE
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-NMAKE [option...] [macros...] [targets...] [@commandfile...]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Compilaciones NMAKE solo especificados *destinos* o, si no se especifica ninguno, el primer destino en el archivo MAKE. El primer destino de archivo MAKE puede ser un [pseudodestino](../build/pseudotargets.md) que genera otros destinos. NMAKE utiliza los archivos MAKE especificados con/f; Si no se especifica/f, utiliza el archivo MAKE en el directorio actual. Si no se especifica ningún archivo MAKE, utiliza reglas de inferencia para generar la línea de comandos *destinos*.  
-  
- El `commandfile` archivo de texto (o un archivo de respuesta) contiene una entrada de línea de comandos. Otra entrada puede delante o detrás de`commandfile`. Se permite una ruta de acceso. En `commandfile`, saltos de línea se tratan como espacios. Escriba las definiciones de macro entre comillas si contienen espacios.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
- [Opciones de NMAKE](../build/nmake-options.md)  
-  
- [Tools.ini y NMAKE](../build/tools-ini-and-nmake.md)  
-  
- [Códigos de salida de NMAKE](../build/exit-codes-from-nmake.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de NMAKE](../build/nmake-reference.md)
+
+## <a name="syntax"></a>Sintaxis
+
+> **NMAKE** [*opción* ...] [*macros* ...] [*destinos* ...] [**\@**<em>/commandfile</em> ...]
+
+## <a name="remarks"></a>Comentarios
+
+Las compilaciones NMAKE solo especificadas *destinos* o, si se especifica ninguno, el primer destino en el archivo MAKE. El primer destino de archivo MAKE puede ser un [pseudodestino](../build/pseudotargets.md) que genera otros destinos. NMAKE utiliza archivos MAKE especificados con/f; Si no se especifica/f, utiliza el archivo MAKE en el directorio actual. Si no se especifica ningún archivo MAKE, utiliza reglas de inferencia para compilar la línea de comandos *destinos*.
+
+El */commandfile* archivo de texto (o archivo de respuesta) contiene entradas de la línea de comandos. Otras entradas pueden ir precedidas o seguidas \@ */commandfile*. Se permite una ruta de acceso. En */commandfile*, saltos de línea se tratan como espacios. Escriba las definiciones de macro entre comillas si contienen espacios.
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
+
+[Opciones de NMAKE](../build/nmake-options.md)  
+
+[Tools.ini y NMAKE](../build/tools-ini-and-nmake.md)  
+
+[Códigos de salida de NMAKE](../build/exit-codes-from-nmake.md)  
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de NMAKE](../build/nmake-reference.md)

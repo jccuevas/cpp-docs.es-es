@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753740"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895297"
 ---
 # <a name="curl-class"></a>CUrl (clase)
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` permite manipular los campos de una dirección URL, como el número de puerto o ruta de acceso. `CUrl` comprende las direcciones URL de la forma siguiente:
 
-\<Esquema > ://\<UserName >:\<contraseña > @\<nombre de host >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
+\<Esquema > ://\<UserName >:\<contraseña >\@\<nombre de host >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
 
 (Algunos campos son opcionales). Por ejemplo, considere esta dirección URL:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) lo analiza como sigue:
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Contraseña: "secreto"
 
-- Nombre de host: "www.microsoft.com"
+- Nombre de host: "`www.microsoft.com`"
 
 - Número de puerto: 80
 
@@ -235,7 +235,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Este método anexa sus campos individuales para construir la cadena de dirección URL completa con el formato siguiente:
 
-**\<esquema > ://\<usuario >:\<pasar > @\<dominio >:\<puerto >\<ruta de acceso >\<adicional >**
+**\<esquema > ://\<usuario >:\<pasar >\@\<dominio >:\<puerto >\<ruta de acceso >\<adicional >**
 
 Cuando se llama a este método, el *pdwMaxLength* parámetro debe contener inicialmente la longitud máxima del búfer de cadena al que hace referencia el *lpszUrl* parámetro. El valor de la *pdwMaxLength* parámetro, se actualizará con la longitud real de la cadena de dirección URL.
 
