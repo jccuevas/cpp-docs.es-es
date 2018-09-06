@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 41068a81d52c0e30ef95cf364d759f35a39140c9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958496"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760021"
 ---
 # <a name="class-factories-classes"></a>Clases de generadores de clase
-Las clases siguientes implementan o admiten un generador de clases:  
-  
--   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) proporciona un generador de clases predeterminado para la creación de objetos.  
-  
--   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) controla la creación de objeto a través de una licencia.  
-  
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) permite crear en apartamentos de subproceso agrupada varios objetos.  
-  
--   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) crea un objeto único.  
-  
--   [CComCoClass](../atl/reference/ccomcoclass-class.md) define el generador de clases para el objeto.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)   
- [Macros de agregación y generador de clases](../atl/reference/aggregation-and-class-factory-macros.md)
+
+Las clases siguientes implementan o admiten un generador de clases:
+
+- [CComClassFactory](../atl/reference/ccomclassfactory-class.md) proporciona un generador de clases predeterminado para la creación de objetos.
+
+- [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) controla la creación de objeto a través de una licencia.
+
+- [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) permite crear en apartamentos de subproceso agrupada varios objetos.
+
+- [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) crea un objeto único.
+
+- [CComCoClass](../atl/reference/ccomcoclass-class.md) define el generador de clases para el objeto.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)   
+[Macros de agregación y generador de clases](../atl/reference/aggregation-and-class-factory-macros.md)
 

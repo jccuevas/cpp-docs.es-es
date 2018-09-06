@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e2f1e83c285274326be2501a8f9b006c8df05204
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613391"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751532"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType (Interfaz)
 `Platform::IValueType` es una interfaz de infraestructura que se implementa por las clases de valor y las estructuras de valor. No se usará explícitamente en el código.  

@@ -1,5 +1,5 @@
 ---
-title: Componente de registro ATL (registrador) | Documentos de Microsoft
+title: Componente de registro ATL (registrador) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1aafdfd118a78aefff4fa32ac67f4e290596b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354905"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759436"
 ---
 # <a name="atl-registry-component-registrar"></a>Componente de registro de ATL (Registrador)
-El registrador de ATL proporciona un acceso optimizado al registro del sistema a través de una interfaz personalizada. El registrador de subprocesamiento libre y permite la vinculación estática de código para los clientes de C++.  
-  
+
+El registrador de ATL proporciona un acceso mejorado al registro del sistema a través de una interfaz personalizada. El registrador es de subprocesamiento libre y permite la vinculación estática de código para los clientes de C++.
+
 > [!NOTE]
->  El código fuente para el registrador de ATL se puede encontrar en atlmfc\include\atliface.h.  
-  
-## <a name="in-this-section"></a>En esta sección  
- [Crear scripts del registrador](../atl/creating-registrar-scripts.md)  
- Una guía para crear scripts de registrador. Incluye temas sobre la sintaxis BNF, árboles de análisis, ejemplos, usar parámetros reemplazables e invocando las secuencias de comandos de secuencias de comandos de registro.  
-  
- [Cómo configurar un vínculo estático al código del registrador (sólo en C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- Se enumeran los pasos para configurar la vinculación estática con el registrador.  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
+>  El código fuente para el registrador de ATL puede encontrarse en atlmfc\include\atliface.h.
+
+## <a name="in-this-section"></a>En esta sección
+
+[Crear scripts del registrador](../atl/creating-registrar-scripts.md)  
+Una guía para crear secuencias de comandos de registrador. Incluye temas sobre la sintaxis BNF, árboles de análisis, ejemplos, usar parámetros reemplazables e invocar los scripts de scripting del registro.
+
+[Configurar un vínculo estático al código del registrador (solo C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+Se enumeran los pasos para establecer la vinculación estática con el registrador.
+
+## <a name="related-sections"></a>Secciones relacionadas
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
 

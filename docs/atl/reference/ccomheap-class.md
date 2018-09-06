@@ -21,127 +21,148 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c456aaa6f3448cf4386e0556773f2a9839702ccd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf09696f6a13c11fbb37fa6e89ccb9b1241cadd0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202427"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751548"
 ---
 # <a name="ccomheap-class"></a>CComHeap (clase)
-Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación de memoria COM.  
-  
+
+Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación de memoria COM.
+
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class CComHeap : public IAtlMemMgr
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CComHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|  
-|[Ccomheap:: Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|  
-|[CComHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|  
-|[Ccomheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|  
-  
-## <a name="remarks"></a>Comentarios  
- `CComHeap` implementa funciones de asignación de memoria mediante las funciones de asignación COM, incluidos [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)y [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). La cantidad máxima de memoria que se puede asignar es igual a bytes INT_MAX (2147483647).  
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `IAtlMemMgr`  
-  
- `CComHeap`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** ATLComMem.h  
-  
-##  <a name="allocate"></a>  CComHeap::Allocate  
- Llame a este método para asignar un bloque de memoria.  
-  
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CComHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
+|[Ccomheap:: Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
+|[CComHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|
+|[Ccomheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
+
+## <a name="remarks"></a>Comentarios
+
+`CComHeap` implementa funciones de asignación de memoria mediante las funciones de asignación COM, incluidos [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)y [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). La cantidad máxima de memoria que se puede asignar es igual a bytes INT_MAX (2147483647).
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`IAtlMemMgr`
+
+`CComHeap`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** ATLComMem.h
+
+##  <a name="allocate"></a>  CComHeap::Allocate
+
+Llame a este método para asignar un bloque de memoria.
+
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *nBytes*  
- Número de bytes solicitado en el nuevo bloque de memoria.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero al principio del bloque de memoria recién asignado.  
-  
-### <a name="remarks"></a>Comentarios  
- Llame a [ccomheap:: Free](#free) o [ccomheap:: ReAllocate](#reallocate) para liberar la memoria asignada por este método.  
-  
- Implementa mediante [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).  
-  
-##  <a name="free"></a>  Ccomheap:: Free  
- Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*nBytes*  
+Número de bytes solicitado en el nuevo bloque de memoria.
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve un puntero al principio del bloque de memoria recién asignado.
+
+### <a name="remarks"></a>Comentarios
+
+Llame a [ccomheap:: Free](#free) o [ccomheap:: ReAllocate](#reallocate) para liberar la memoria asignada por este método.
+
+Implementa mediante [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).
+
+##  <a name="free"></a>  Ccomheap:: Free
+
+Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.
+
 ```
 virtual void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *p*  
- Puntero a la memoria previamente asignada por este administrador de memoria. NULL es un valor válido y no hace nada.  
-  
-### <a name="remarks"></a>Comentarios  
- Implementa mediante [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).  
-  
-##  <a name="getsize"></a>  CComHeap::GetSize  
- Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*p*  
+Puntero a la memoria previamente asignada por este administrador de memoria. NULL es un valor válido y no hace nada.
+
+### <a name="remarks"></a>Comentarios
+
+Implementa mediante [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).
+
+##  <a name="getsize"></a>  CComHeap::GetSize
+
+Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.
+
 ```
 virtual size_t GetSize(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *p*  
- Puntero a la memoria previamente asignada por este administrador de memoria.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Devuelve el tamaño del bloque de memoria asignada en bytes.  
-  
-### <a name="remarks"></a>Comentarios  
- Implementa mediante [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).  
-  
-##  <a name="reallocate"></a>  Ccomheap:: ReAllocate  
- Llame a este método para reasignar la memoria asignada por este administrador de memoria.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*p*  
+Puntero a la memoria previamente asignada por este administrador de memoria.
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve el tamaño del bloque de memoria asignada en bytes.
+
+### <a name="remarks"></a>Comentarios
+
+Implementa mediante [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).
+
+##  <a name="reallocate"></a>  Ccomheap:: ReAllocate
+
+Llame a este método para reasignar la memoria asignada por este administrador de memoria.
+
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *p*  
- Puntero a la memoria previamente asignada por este administrador de memoria.  
-  
- *nBytes*  
- Número de bytes solicitado en el nuevo bloque de memoria.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero al principio del bloque de memoria recién asignado.  
-  
-### <a name="remarks"></a>Comentarios  
- Llame a [ccomheap:: Free](#free) para liberar la memoria asignada por este método.  
-  
- Implementa mediante [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).  
-  
-## <a name="see-also"></a>Vea también  
- [Ejemplo DynamicConsumer](../../visual-cpp-samples.md)   
- [Información general de clases](../../atl/atl-class-overview.md)   
- [Clase de CWin32Heap](../../atl/reference/cwin32heap-class.md)   
- [CLocalHeap (clase)](../../atl/reference/clocalheap-class.md)   
- [CGlobalHeap (clase)](../../atl/reference/cglobalheap-class.md)   
- [CCRTHeap (clase)](../../atl/reference/ccrtheap-class.md)   
- [IAtlMemMgr (clase)](../../atl/reference/iatlmemmgr-class.md)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*p*  
+Puntero a la memoria previamente asignada por este administrador de memoria.
+
+*nBytes*  
+Número de bytes solicitado en el nuevo bloque de memoria.
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve un puntero al principio del bloque de memoria recién asignado.
+
+### <a name="remarks"></a>Comentarios
+
+Llame a [ccomheap:: Free](#free) para liberar la memoria asignada por este método.
+
+Implementa mediante [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
+
+## <a name="see-also"></a>Vea también
+
+[Ejemplo DynamicConsumer](../../visual-cpp-samples.md)   
+[Información general de clases](../../atl/atl-class-overview.md)   
+[Clase de CWin32Heap](../../atl/reference/cwin32heap-class.md)   
+[CLocalHeap (clase)](../../atl/reference/clocalheap-class.md)   
+[CGlobalHeap (clase)](../../atl/reference/cglobalheap-class.md)   
+[CCRTHeap (clase)](../../atl/reference/ccrtheap-class.md)   
+[IAtlMemMgr (clase)](../../atl/reference/iatlmemmgr-class.md)

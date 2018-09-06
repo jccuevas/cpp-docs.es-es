@@ -21,57 +21,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7473bed5e4bf973dcea4d186e9b5b3367fb03ff1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880364"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764220"
 ---
 # <a name="registry-data-exchange-macros"></a>Macros de intercambio de datos del registro
-Estas macros realizan operaciones de intercambio de datos del registro.  
-  
-|||  
-|-|-|  
-|[BEGIN_RDX_MAP](#begin_rdx_map)|Marca el principio de la asignación de intercambio de datos del registro.|  
-|[END_RDX_MAP](#end_rdx_map)|Marca el final de la asignación de intercambio de datos del registro.|  
-|[RDX_BINARY](#rdx_binary)|Asocia la entrada del registro especificada a una variable de miembro especificado de tipo BYTE.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo CString.|  
-|[RDX_DWORD](#rdx_dword)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo DWORD.|  
+
+Estas macros realizan operaciones de intercambio de datos del registro.
+
+|||
+|-|-|
+|[BEGIN_RDX_MAP](#begin_rdx_map)|Marca el principio de la asignación de intercambio de datos del registro.|
+|[END_RDX_MAP](#end_rdx_map)|Marca el final de la asignación de intercambio de datos del registro.|
+|[RDX_BINARY](#rdx_binary)|Asocia la entrada del registro especificada a una variable de miembro especificado de tipo BYTE.|
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo CString.|
+|[RDX_DWORD](#rdx_dword)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo DWORD.|
 |[RDX_TEXT](#rdx_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo TCHAR.|  
 
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlplus.h  
-   
-##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
- Marca el principio de la asignación de intercambio de datos del registro.  
-  
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlplus.h
+
+##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP
+
+Marca el principio de la asignación de intercambio de datos del registro.
+
 ```
 BEGIN_RDX_MAP
-```  
-  
-### <a name="remarks"></a>Comentarios  
- Las macros siguientes se usan dentro de la asignación de intercambio de datos del registro para leer y escribir entradas del registro del sistema:  
-  
-|Macro|Descripción|  
-|-----------|-----------------|  
-|[RDX_BINARY](#rdx_binary)|Asocia la entrada del registro especificada a una variable de miembro especificado de tipo BYTE.|  
-|[RDX_DWORD](#rdx_dword)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo DWORD.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo CString.|  
-|[RDX_TEXT](#rdx_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo TCHAR.|  
-  
- La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o se debe usar la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, siempre que el código necesita intercambiar datos entre el registro del sistema y la variables especificadas en el mapa RDX.  
-  
-##  <a name="end_rdx_map"></a>  END_RDX_MAP  
- Marca el final de la asignación de intercambio de datos del registro.  
-  
+```
+
+### <a name="remarks"></a>Comentarios
+
+Las macros siguientes se usan dentro de la asignación de intercambio de datos del registro para leer y escribir entradas del registro del sistema:
+
+|Macro|Descripción|
+|-----------|-----------------|
+|[RDX_BINARY](#rdx_binary)|Asocia la entrada del registro especificada a una variable de miembro especificado de tipo BYTE.|
+|[RDX_DWORD](#rdx_dword)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo DWORD.|
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo CString.|
+|[RDX_TEXT](#rdx_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo TCHAR.|
+
+La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o se debe usar la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, siempre que el código necesita intercambiar datos entre el registro del sistema y la variables especificadas en el mapa RDX.
+
+##  <a name="end_rdx_map"></a>  END_RDX_MAP
+
+Marca el final de la asignación de intercambio de datos del registro.
+
 ```
 END_RDX_MAP
-```  
-  
-##  <a name="rdx_binary"></a>  RDX_BINARY  
- Asocia la entrada del registro especificada a una variable de miembro especificado de tipo BYTE.  
-  
+```
+
+##  <a name="rdx_binary"></a>  RDX_BINARY
+
+Asocia la entrada del registro especificada a una variable de miembro especificado de tipo BYTE.
+
 ```
 RDX_BINARY(
     rootkey, 
@@ -79,30 +85,33 @@ RDX_BINARY(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *ROOTKEY*  
- La raíz de la clave del registro.  
-  
- *subclave*  
- La subclave del registro.  
-  
- *VALUENAME*  
- La clave del registro.  
-  
- *Miembro*  
- La variable miembro para asociar a la entrada del registro especificada.  
-  
- *member_size*  
- El tamaño, en bytes, de la variable de miembro.  
-  
-### <a name="remarks"></a>Comentarios  
- Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.  
-  
-##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
- Asocia la entrada del registro especificado con una variable de miembro especificado del tipo CString.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*ROOTKEY*  
+La raíz de la clave del registro.
+
+*subclave*  
+La subclave del registro.
+
+*VALUENAME*  
+La clave del registro.
+
+*Miembro*  
+La variable miembro para asociar a la entrada del registro especificada.
+
+*member_size*  
+El tamaño, en bytes, de la variable de miembro.
+
+### <a name="remarks"></a>Comentarios
+
+Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.
+
+##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT
+
+Asocia la entrada del registro especificado con una variable de miembro especificado del tipo CString.
+
 ```
 RDX_CSTRING_TEXT(
     rootkey, 
@@ -110,30 +119,33 @@ RDX_CSTRING_TEXT(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *ROOTKEY*  
- La raíz de la clave del registro.  
-  
- *subclave*  
- La subclave del registro.  
-  
- *VALUENAME*  
- La clave del registro.  
-  
- *Miembro*  
- La variable miembro para asociar a la entrada del registro especificada.  
-  
- *member_size*  
- El tamaño, en bytes, de la variable de miembro.  
-  
-### <a name="remarks"></a>Comentarios  
- Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.  
-  
-##  <a name="rdx_dword"></a>  RDX_DWORD  
- Asocia la entrada del registro especificado con una variable de miembro especificado del tipo DWORD.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*ROOTKEY*  
+La raíz de la clave del registro.
+
+*subclave*  
+La subclave del registro.
+
+*VALUENAME*  
+La clave del registro.
+
+*Miembro*  
+La variable miembro para asociar a la entrada del registro especificada.
+
+*member_size*  
+El tamaño, en bytes, de la variable de miembro.
+
+### <a name="remarks"></a>Comentarios
+
+Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.
+
+##  <a name="rdx_dword"></a>  RDX_DWORD
+
+Asocia la entrada del registro especificado con una variable de miembro especificado del tipo DWORD.
+
 ```
 RDX_DWORD(
     rootkey, 
@@ -141,30 +153,33 @@ RDX_DWORD(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *ROOTKEY*  
- La raíz de la clave del registro.  
-  
- *subclave*  
- La subclave del registro.  
-  
- *VALUENAME*  
- La clave del registro.  
-  
- *Miembro*  
- La variable miembro para asociar a la entrada del registro especificada.  
-  
- *member_size*  
- El tamaño, en bytes, de la variable de miembro.  
-  
-### <a name="remarks"></a>Comentarios  
- Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.  
-  
-##  <a name="rdx_text"></a>  RDX_TEXT  
- Asocia la entrada del registro especificado con una variable de miembro especificado del tipo TCHAR.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*ROOTKEY*  
+La raíz de la clave del registro.
+
+*subclave*  
+La subclave del registro.
+
+*VALUENAME*  
+La clave del registro.
+
+*Miembro*  
+La variable miembro para asociar a la entrada del registro especificada.
+
+*member_size*  
+El tamaño, en bytes, de la variable de miembro.
+
+### <a name="remarks"></a>Comentarios
+
+Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.
+
+##  <a name="rdx_text"></a>  RDX_TEXT
+
+Asocia la entrada del registro especificado con una variable de miembro especificado del tipo TCHAR.
+
 ```
 RDX_TEXT(
     rootkey, 
@@ -172,34 +187,31 @@ RDX_TEXT(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *ROOTKEY*  
- La raíz de la clave del registro.  
-  
- *subclave*  
- La subclave del registro.  
-  
- *VALUENAME*  
- La clave del registro.  
-  
- *Miembro*  
- La variable miembro para asociar a la entrada del registro especificada.  
-  
- *member_size*  
- El tamaño, en bytes, de la variable de miembro.  
-  
-### <a name="remarks"></a>Comentarios  
- Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.  
-  
-## <a name="see-also"></a>Vea también  
- [Macros](../../atl/reference/atl-macros.md)   
- [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
+```
 
+### <a name="parameters"></a>Parámetros
 
+*ROOTKEY*  
+La raíz de la clave del registro.
 
+*subclave*  
+La subclave del registro.
 
+*VALUENAME*  
+La clave del registro.
 
+*Miembro*  
+La variable miembro para asociar a la entrada del registro especificada.
 
+*member_size*  
+El tamaño, en bytes, de la variable de miembro.
+
+### <a name="remarks"></a>Comentarios
+
+Esta macro se usa junto con las macros BEGIN_RDX_MAP y END_RDX_MAP para asociar una variable miembro a una entrada del Registro determinada. La función global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la función de miembro del mismo nombre creado por las macros BEGIN_RDX_MAP y END_RDX_MAP, debe usarse para realizar el intercambio de datos entre el registro del sistema y las variables de miembro en el mapa RDX.
+
+## <a name="see-also"></a>Vea también
+
+[Macros](../../atl/reference/atl-macros.md)   
+[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

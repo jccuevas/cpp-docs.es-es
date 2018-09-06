@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ac1821f34269a54fc0fb10a3ae797a815d5acd9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959961"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758328"
 ---
 # <a name="site-information-classes"></a>Clases de información del sitio
-Las clases siguientes permiten a un objeto para comunicarse con su sitio:  
-  
--   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se usa para los objetos que no son controles.  
-  
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se utiliza con los controles.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)
+
+Las clases siguientes permiten a un objeto para comunicarse con su sitio:
+
+- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se usa para los objetos que no son controles.
+
+- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se utiliza con los controles.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)
 

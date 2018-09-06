@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600860"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764311"
 ---
 # <a name="properties-ccx"></a>Propiedades (C++/CX)
 Los tipos en tiempo de ejecución de Windows exponen los datos públicos como propiedades. El código de cliente tiene acceso a la propiedad como un objeto datamember público. Internamente, la propiedad se implementa como un bloque que contiene un método de descriptor de acceso get, un método de descriptor de acceso set o ambos. Mediante los métodos de descriptor de acceso, puedes realizar acciones adicionales antes o después de recuperar el valor; por ejemplo, puedes desencadenar un evento o realizar comprobaciones de validación.  

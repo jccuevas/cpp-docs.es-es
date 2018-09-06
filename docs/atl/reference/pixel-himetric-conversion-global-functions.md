@@ -15,68 +15,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 086310efe565e060645320db30526b03d57a68af
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881167"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752415"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Funciones globales de conversión de píxel/HIMETRIC
-Estas funciones proporcionan compatibilidad para la conversión entre píxeles y unidades HIMETRIC.  
-  
+
+Estas funciones proporcionan compatibilidad para la conversión entre píxeles y unidades HIMETRIC.
+
 > [!IMPORTANT]
->  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
-  
-|||  
-|-|-|  
-|[AtlHiMetricToPixel](#atlhimetrictopixel)|Convierte unidades HIMETRIC (cada unidad es de 0,01 milímetros) en píxeles.|  
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|Convierte los píxeles en unidades HIMETRIC (cada unidad es de 0,01 milímetros).|  
-  
-##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
- Convierte un tamaño de objeto en unidades HIMETRIC (cada unidad es de 0,01 milímetros) a un tamaño en píxeles del dispositivo de pantalla.  
-  
- 
+>  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+
+|||
+|-|-|
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|Convierte unidades HIMETRIC (cada unidad es de 0,01 milímetros) en píxeles.|
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|Convierte los píxeles en unidades HIMETRIC (cada unidad es de 0,01 milímetros).|
+
+##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel
+
+Convierte un tamaño de objeto en unidades HIMETRIC (cada unidad es de 0,01 milímetros) a un tamaño en píxeles del dispositivo de pantalla.
+
 ```
 extern void AtlHiMetricToPixel(
-  const SIZEL* lpSizeInHiMetric, 
-  LPSIZEL lpSizeInPix);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *lpSizeInHiMetric*  
- [in] Puntero al tamaño del objeto en unidades HIMETRIC.  
-  
- *lpSizeInPix*  
- [out] Puntero a donde el tamaño del objeto en píxeles se va a devolver.  
-  
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
+    const SIZEL* lpSizeInHiMetric, 
+    LPSIZEL lpSizeInPix);
+```
 
-### <a name="requirements"></a>Requisitos  
- **Encabezado:** atlwin.h  
-  
-##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric  
- Convierte un tamaño de objeto especificado en píxeles en el dispositivo de pantalla en un tamaño especificado en unidades HIMETRIC (cada unidad es de 0,01 milímetros).  
-  
+### <a name="parameters"></a>Parámetros
+
+*lpSizeInHiMetric*  
+[in] Puntero al tamaño del objeto en unidades HIMETRIC.
+
+*lpSizeInPix*  
+[out] Puntero a donde el tamaño del objeto en píxeles se va a devolver.
+
+### <a name="example"></a>Ejemplo
+
+[!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
+
+### <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlwin.h
+
+##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric
+
+Convierte un tamaño de objeto especificado en píxeles en el dispositivo de pantalla en un tamaño especificado en unidades HIMETRIC (cada unidad es de 0,01 milímetros).
+
 ```
 extern void AtlPixelToHiMetric(
     const SIZEL* lpSizeInPix, 
     LPSIZEL lpSizeInHiMetric);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *lpSizeInPix*  
- [in] Puntero al tamaño del objeto en píxeles.  
-  
- *lpSizeInHiMetric*  
- [out] Puntero a donde el tamaño del objeto en unidades HIMETRIC se va a devolver.  
-  
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
+```
 
-### <a name="requirements"></a>Requisitos  
- **Encabezado:** atlwin.h  
+### <a name="parameters"></a>Parámetros
 
-## <a name="see-also"></a>Vea también  
- [Funciones](../../atl/reference/atl-functions.md)
+*lpSizeInPix*  
+[in] Puntero al tamaño del objeto en píxeles.
+
+*lpSizeInHiMetric*  
+[out] Puntero a donde el tamaño del objeto en unidades HIMETRIC se va a devolver.
+
+### <a name="example"></a>Ejemplo
+
+[!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
+
+### <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlwin.h  
+
+## <a name="see-also"></a>Vea también
+
+[Funciones](../../atl/reference/atl-functions.md)

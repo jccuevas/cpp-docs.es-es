@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584125"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767612"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref (Clases y structs) (C++/CX)
 C++ / c++ / admite CX definido por el usuario *las clases ref* y *estructuras ref*y definido por el usuario *clases de valor* y *structs de valor*. Estas estructuras de datos son los contenedores primarios por qué C++ / c++ / CX admite el sistema de tipos en tiempo de ejecución de Windows. Su contenido se emite para metadatos según determinadas reglas concretas, y esto permite que se pase entre componentes de Windows Runtime y las aplicaciones de plataforma Universal de Windows que están escritas en C++ u otros lenguajes.  

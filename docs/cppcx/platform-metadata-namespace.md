@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607811"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759595"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (Espacio de nombres)
 Este espacio de nombres contiene atributos que modifican las declaraciones de tipos.  

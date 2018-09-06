@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c59120c0da1939ceb108493323b24d7a15d0730
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593403"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766739"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details (Espacio de nombres)
 Este espacio de nombres solo está previsto para uso interno y no para utilizarlo en el desarrollo.  

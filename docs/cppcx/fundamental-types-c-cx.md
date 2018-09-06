@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597878"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754200"
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentales (C++/CX)
 Además el estándares tipos integrados de C++, C / c++ / CX admite el sistema de tipos que se define mediante la arquitectura de Windows en tiempo de ejecución ofreciendo typedefs para el tiempo de ejecución de Windows fundamentales tipos que se asignan a los tipos estándar de C++... C++ / c++ / CX implementa tipos fundamentales numéricos, de carácter y un valor booleano. Estas typedefs se definen en el el espacio de nombres `default` , que nunca debe especificarse de manera explícita. Además, C / c++ / CX ofrece contenedores e implementaciones concretas para determinados tipos de Windows en tiempo de ejecución y las interfaces.  

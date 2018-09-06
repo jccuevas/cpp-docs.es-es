@@ -17,21 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 000ccb5a211ba9c017117fdf589f12fd4f21f923
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953709"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757320"
 ---
 # <a name="object-safety-classes"></a>Clases de seguridad de objeto
-La clase siguiente proporciona compatibilidad para seguridad de objetos:  
-  
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) permite que un objeto se marquen como seguras para inicialización o seguros para scripting.  
-  
-## <a name="related-articles"></a>Artículos relacionados  
- [Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)
+
+La clase siguiente proporciona compatibilidad para seguridad de objetos:
+
+- [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) permite que un objeto se marquen como seguras para inicialización o seguros para scripting.
+
+## <a name="related-articles"></a>Artículos relacionados
+
+[Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)
 

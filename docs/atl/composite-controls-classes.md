@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964202"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765887"
 ---
 # <a name="composite-controls-classes"></a>Clases de controles compuestos
-La clase siguiente proporciona compatibilidad para crear controles compuestos  
-  
--   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) derivados de los controles ActiveX `CComCompositeControl` se hospedan en un cuadro de diálogo estándar. Estos tipos de controles se denominan controles compuestos porque son capaz de hospedar otros controles (controles de Windows nativos y los controles ActiveX).  
-  
-## <a name="related-articles"></a>Artículos relacionados  
- [Fundamentos de controles compuestos](../atl/atl-composite-control-fundamentals.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)   
- [Macros de Control compuesto](../atl/reference/composite-control-macros.md)   
- [Funciones globales de control compuesto](../atl/reference/composite-control-global-functions.md)
+
+La clase siguiente proporciona compatibilidad para crear controles compuestos
+
+- [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) derivados de los controles ActiveX `CComCompositeControl` se hospedan en un cuadro de diálogo estándar. Estos tipos de controles se denominan controles compuestos porque son capaz de hospedar otros controles (controles de Windows nativos y los controles ActiveX).
+
+## <a name="related-articles"></a>Artículos relacionados
+
+[Fundamentos de controles compuestos](../atl/atl-composite-control-fundamentals.md)
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)   
+[Macros de Control compuesto](../atl/reference/composite-control-macros.md)   
+[Funciones globales de control compuesto](../atl/reference/composite-control-global-functions.md)
 

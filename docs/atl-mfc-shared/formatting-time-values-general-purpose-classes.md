@@ -17,29 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83037258ebd279f7c9ed80086a34ebf497efeed
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d8d61c845a059619e135dd07bc40a33ace046937
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131688"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759566"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formato de los valores de tiempo: Clases de propósito general
-El siguiente procedimiento muestra cómo dar formato a valores de tiempo.  
-  
-#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>Para dar formato a una representación de cadena de una hora o el tiempo transcurrido  
-  
-Use la `Format` función miembro desde el [CTime](../atl-mfc-shared/reference/ctime-class.md) o [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) las clases para crear un carácter de representación de cadena de la hora o el tiempo transcurrido, tal como se muestra en el ejemplo siguiente.
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre  
-  
--   [Fecha general y la programación de tiempo en MFC](../atl-mfc-shared/date-and-time.md)  
-  
--   [Trabajar con SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
-  
--   [Compatibilidad de automatización de la fecha y la programación de tiempo](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
 
+El siguiente procedimiento muestra cómo dar formato a valores de tiempo.
+
+#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>Para dar formato a una representación de cadena de una hora o el tiempo transcurrido
+
+Use la `Format` función miembro desde el [CTime](../atl-mfc-shared/reference/ctime-class.md) o [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) las clases para crear un carácter de representación de cadena de la hora o el tiempo transcurrido, tal como se muestra en el ejemplo siguiente.
+
+   [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+
+- [Fecha general y la programación de tiempo en MFC](../atl-mfc-shared/date-and-time.md)
+
+- [Trabajar con SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
+
+- [Compatibilidad de automatización de la fecha y la programación de tiempo](../atl-mfc-shared/date-and-time-automation-support.md)
 

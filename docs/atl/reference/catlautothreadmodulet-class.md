@@ -18,75 +18,84 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883078"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757620"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT (clase)
-Esta clase proporciona métodos para implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso.  
-  
+
+Esta clase proporciona métodos para implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso.
+
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 template <class T, 
          class ThreadAllocator = CComSimpleThreadAllocator,
          DWORD dwWait = INFINITE>  
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *T*  
- La clase que implementará el servidor COM.  
-  
- *ThreadAllocator*  
- La clase de administración de selección de subprocesos. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
-  
- *dwWait*  
- Especifica el intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, lo que significa que intervalo de tiempo de espera del método nunca transcurre.  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Esta función estática dinámicamente calcula y devuelve el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores.|  
-  
-## <a name="remarks"></a>Comentarios  
- La clase [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva `CAtlAutoThreadModuleT` con el fin de implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso. Reemplaza a la clase obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
-  
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*T*  
+La clase que implementará el servidor COM.
+
+*ThreadAllocator*  
+La clase de administración de selección de subprocesos. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
+
+*dwWait*  
+Especifica el intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, lo que significa que intervalo de tiempo de espera del método nunca transcurre.
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Esta función estática dinámicamente calcula y devuelve el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores.|
+
+## <a name="remarks"></a>Comentarios
+
+La clase [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva `CAtlAutoThreadModuleT` con el fin de implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso. Reemplaza a la clase obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+
 > [!NOTE]
->  Esta clase no debe usarse en un archivo DLL, como el valor predeterminado *dwWait* valor de infinito producirá un interbloqueo cuando se descarga el archivo DLL.  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `IAtlAutoThreadModule`  
-  
- `CAtlAutoThreadModuleT`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlbase.h  
-  
-##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
- Esta función estática dinámicamente calcula y devuelve el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores.  
-  
+>  Esta clase no debe usarse en un archivo DLL, como el valor predeterminado *dwWait* valor de infinito producirá un interbloqueo cuando se descarga el archivo DLL.
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`IAtlAutoThreadModule`
+
+`CAtlAutoThreadModuleT`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlbase.h
+
+##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads
+
+Esta función estática dinámicamente calcula y devuelve el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores.
+
 ```
 static int GetDefaultThreads();
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
- El número de subprocesos que se creará en el módulo del archivo EXE.  
-  
-### <a name="remarks"></a>Comentarios  
- Invalide este método si desea usar otro método para calcular el número de subprocesos. De forma predeterminada, el número de subprocesos se basa en el número de procesadores.  
-  
-## <a name="see-also"></a>Vea también  
- [IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)   
- [Información general de clases](../../atl/atl-class-overview.md)   
- [IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)   
- [Clases de módulo](../../atl/atl-module-classes.md)
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+El número de subprocesos que se creará en el módulo del archivo EXE.
+
+### <a name="remarks"></a>Comentarios
+
+Invalide este método si desea usar otro método para calcular el número de subprocesos. De forma predeterminada, el número de subprocesos se basa en el número de procesadores.
+
+## <a name="see-also"></a>Vea también
+
+[IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)   
+[Información general de clases](../../atl/atl-class-overview.md)   
+[IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)   
+[Clases de módulo](../../atl/atl-module-classes.md)

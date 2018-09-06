@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a28f07990d5958f48f032b1355a565d2a4a559e9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611587"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758979"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices (Espacio de nombres)
 Este espacio de nombres solo está previsto para uso interno y no para utilizarlo en el desarrollo.  

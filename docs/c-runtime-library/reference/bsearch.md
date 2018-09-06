@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394699"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764792"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -78,7 +78,7 @@ Función de devolución de llamada que compara dos elementos. El primero es un p
 
 ## <a name="remarks"></a>Comentarios
 
-El **bsearch** función realiza una búsqueda binaria de una matriz ordenada de *número* elementos, cada uno de los *ancho* el tamaño en bytes. El *base* value es un puntero a la base de la matriz que desea buscar, y *clave* es el valor que se van a buscar. El *comparar* parámetro es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada en un elemento de matriz y devuelve uno de los siguientes valores que especifica su relación:
+El **bsearch** función realiza una búsqueda binaria de una matriz ordenada de *número* elementos, cada uno de *ancho* bytes de tamaño. El *base* valor es un puntero a la base de la matriz que desea buscar, y *clave* es el valor buscado. El *comparar* parámetro es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada en un elemento de matriz y devuelve uno de los siguientes valores que especifica su relación:
 
 |Valor devuelto por *comparar* rutina|Descripción|
 |-----------------------------------------|-----------------|
@@ -86,7 +86,7 @@ El **bsearch** función realiza una búsqueda binaria de una matriz ordenada de 
 |0|El valor de clave es igual al elemento de matriz.|
 |> 0|La clave es mayor que el elemento de matriz.|
 
-Esta función valida sus parámetros. Si *comparar*, *clave* o *número* es **NULL**, o si *base* es **NULL**y **número* es distinto de cero, o si *ancho* es cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
+Esta función valida sus parámetros. Si *comparar*, *clave* o *número* es **NULL**, o si *base* es **NULL**y *número* es distinto de cero, o si *ancho* es cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en `EINVAL` y la función devuelve **NULL**.
 
 ## <a name="requirements"></a>Requisitos
 

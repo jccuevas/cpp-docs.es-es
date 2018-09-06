@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 904ca2920f1086aeb099290382402e7201e81b49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601941"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759017"
 ---
 # <a name="platformdetailsconsole-class"></a>Platform::Details::Console (Clase)
 Esta clase solo está prevista para uso interno y no para usarla en el desarrollo.  

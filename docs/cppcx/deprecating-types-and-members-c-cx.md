@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205485"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764415"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Dejar en desuso tipos y miembros (C++/CX)
 En C / c++ / CX, degradación de tipos en tiempo de ejecución de Windows y miembros para los productores y consumidores con el [en desuso](/uwp/api/windows.foundation.metadata.deprecatedattribute) se admite el atributo. Si utilizas una API a la que se ha aplicado este atributo, obtienes un mensaje de advertencia en tiempo de compilación que indica que la API está desusada y que te recomienda una API alternativa. Puedes aplicar este atributo en tus propios tipos y métodos públicos, así como proporcionar tus propios mensajes personalizados.  
