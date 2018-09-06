@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4358712e5573095229a48a6d08b78706c608874d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403653"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752921"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -30,36 +30,36 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 
 ## <a name="grammar"></a>Gramática
 
-*decl-specifier*:  
+*decl-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl-modifier-seq***)** 
 
-*extended-decl-modifier-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier*<sub>participar</sub>  
+*extended-decl-modifier-seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier*<sub>participar</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
 
-*extended-decl-modifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**Alinear (** *#* **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**asignar ("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dominio de aplicación**  
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**En desuso**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
-&nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noalias**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noinline**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
-&nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
-&nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Proceso**  
-&nbsp;&nbsp;&nbsp;&nbsp;**propiedad (** { **obtener =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restringir**  
-&nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
-&nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Spectre(nomitigation)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**subproceso**  
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**  
+*extended-decl-modifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Alinear (** *#* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**asignar ("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dominio de aplicación**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**En desuso**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noalias**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noinline**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noreturn**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Proceso**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**propiedad (** { **obtener =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**restringir**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Spectre(nomitigation)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**subproceso**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**
 
 El espacio en blanco separa la secuencia de modificador de la declaración. En secciones posteriores aparecen ejemplos.
 

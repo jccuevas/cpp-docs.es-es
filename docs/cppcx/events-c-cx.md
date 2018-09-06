@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606381"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767583"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 Puede declarar el tipo de un Runtime de Windows (que es, publicar) eventos y el código de cliente en el mismo componente o de otros componentes pueden suscribirse a esos eventos asociando métodos denominados *controladores de eventos* con el evento. Se pueden asociar varios controladores de eventos a un único evento. Cuando el objeto de publicación genera el evento, hace que se invoquen todos los controladores de eventos. De esta manera, una clase de suscripción puede realizar la acción personalizada apropiada cuando el publicador genera el evento. Un evento tiene un tipo de delegado que especifica la signatura que deben tener todos los controladores de eventos para suscribirse al evento.  

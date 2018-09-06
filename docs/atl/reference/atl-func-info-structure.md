@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8852deacfd36ba988b9b31bdad363c05aee12b6e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 392e9dc2997dc7f4f0f36b1d7d38cd8ecdc691bb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882213"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759537"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO (estructura)
-Contiene información de tipo que se utiliza para describir un método o propiedad en una interfaz dispinterface.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+Contiene información de tipo que se utiliza para describir un método o propiedad en una interfaz dispinterface.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 struct _ATL_FUNC_INFO {
     CALLCONV cc;
@@ -38,42 +39,43 @@ struct _ATL_FUNC_INFO {
     SHORT nParams;
     VARTYPE pVarTypes[_ATL_MAX_VARTYPES];
 };
-```  
-  
-## <a name="members"></a>Miembros  
- `cc`  
- Convención de llamada. Cuando se usa esta estructura con la [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (clase), este miembro debe ser CC_STDCALL. `CC_CDECL` es la única opción admitida en Windows CE para el `CALLCONV` campo de la `_ATL_FUNC_INFO` estructura. No se admite cualquier otro valor, por tanto, su comportamiento sin definir.  
-  
- `vtReturn`  
- El tipo de variante de la función devuelve el valor.  
-  
- `nParams`  
- El número de parámetros de función.  
-  
- `pVarTypes`  
- Una matriz de tipos de variante de los parámetros de función.  
-  
-## <a name="remarks"></a>Comentarios  
- Internamente, ATL utiliza esta estructura que contiene la información obtenida de una biblioteca de tipos. Es posible que deba manipular directamente esta estructura si se proporciona información de tipo para un controlador de eventos que se usa con el [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) clase y [macro SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) macro.  
-  
-## <a name="example"></a>Ejemplo  
- Dado un método dispinterface definido en un IDL:  
-  
- [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  
-  
- tendría que definir un `_ATL_FUNC_INFO` estructura:  
-  
- [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
-  
-## <a name="requirements"></a>Requisitos  
- Encabezado: atlcom.h  
-  
-## <a name="see-also"></a>Vea también  
-  [Clases y structs](../../atl/reference/atl-classes.md)  
- [IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)   
- [MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
+```
 
+## <a name="members"></a>Miembros
 
+`cc`  
+Convención de llamada. Cuando se usa esta estructura con la [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (clase), este miembro debe ser CC_STDCALL. `CC_CDECL` es la única opción admitida en Windows CE para el `CALLCONV` campo de la `_ATL_FUNC_INFO` estructura. No se admite cualquier otro valor, por tanto, su comportamiento sin definir.
 
+`vtReturn`  
+El tipo de variante de la función devuelve el valor.
 
+`nParams`  
+El número de parámetros de función.
+
+`pVarTypes`  
+Una matriz de tipos de variante de los parámetros de función.
+
+## <a name="remarks"></a>Comentarios
+
+Internamente, ATL utiliza esta estructura que contiene la información obtenida de una biblioteca de tipos. Es posible que deba manipular directamente esta estructura si se proporciona información de tipo para un controlador de eventos que se usa con el [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) clase y [macro SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) macro.
+
+## <a name="example"></a>Ejemplo
+
+Dado un método dispinterface definido en un IDL:
+
+[!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]
+
+tendría que definir un `_ATL_FUNC_INFO` estructura:
+
+[!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]
+
+## <a name="requirements"></a>Requisitos
+
+Encabezado: atlcom.h
+
+## <a name="see-also"></a>Vea también
+
+[Clases y structs](../../atl/reference/atl-classes.md)  
+[IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)   
+[MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 

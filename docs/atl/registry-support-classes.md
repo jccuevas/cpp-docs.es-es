@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7acfbfc29be7a2f6a091291e05fa55b49a5e112c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1821a4e04667fd1e05a9bbd4fdd81cb19e6eaca7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960409"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762530"
 ---
 # <a name="registry-support-classes"></a>Clases de compatibilidad del registro
-La siguiente clase proporciona compatibilidad con el registro:  
-  
--   [CRegKey](../atl/reference/cregkey-class.md) contiene métodos para manipular los valores del registro del sistema.  
-  
-## <a name="related-articles"></a>Artículos relacionados  
- [El componente de registro ATL (registrador)](../atl/atl-registry-component-registrar.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)   
- [Macros de Registro](../atl/reference/registry-macros.md)
+
+La siguiente clase proporciona compatibilidad con el registro:
+
+- [CRegKey](../atl/reference/cregkey-class.md) contiene métodos para manipular los valores del registro del sistema.
+
+## <a name="related-articles"></a>Artículos relacionados
+
+[El componente de registro ATL (registrador)](../atl/atl-registry-component-registrar.md)
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)   
+[Macros de Registro](../atl/reference/registry-macros.md)
 

@@ -17,53 +17,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 524f360f2dcc2e1eaec11723395da0be7058c21a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879314"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756508"
 ---
 # <a name="com-map-macros"></a>Macros de mapa COM
-Estas macros definen los mapas de interfaz COM.  
-  
-|||  
-|-|-|  
-|[BEGIN_COM_MAP](#begin_com_map)|Marca el principio de las entradas del mapa de interfaz COM.|  
+
+Estas macros definen los mapas de interfaz COM.
+
+|||
+|-|-|
+|[BEGIN_COM_MAP](#begin_com_map)|Marca el principio de las entradas del mapa de interfaz COM.|
 |[END_COM_MAP](#end_com_map)|Marca el final de las entradas de mapa de interfaz COM.|  
 
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlcom.h  
-   
-##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
- El mapa COM es el mecanismo que expone las interfaces en un objeto a un cliente a través de `QueryInterface`.  
-  
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlcom.h
+
+##  <a name="begin_com_map"></a>  BEGIN_COM_MAP
+
+El mapa COM es el mecanismo que expone las interfaces en un objeto a un cliente a través de `QueryInterface`.
+
 ```
 BEGIN_COM_MAP(x)
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *x*  
- [in] El nombre del objeto de clase que se exponen en las interfaces.  
-  
-### <a name="remarks"></a>Comentarios  
- [CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) solo devuelve punteros para las interfaces en el mapa COM. Iniciar el mapa de interfaz con la macro BEGIN_COM_MAP, agregar entradas para cada una de las interfaces con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o uno de sus variantes y complete el mapa con el [END_COM_MAP](#end_com_map) macro.  
+```
 
-  
-### <a name="example"></a>Ejemplo  
- Desde la biblioteca ATL [BUSCAPERSONAS](../../visual-cpp-samples.md) ejemplo:  
-  
- [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
-  
+### <a name="parameters"></a>Parámetros
 
-  
-##  <a name="end_com_map"></a>  END_COM_MAP  
- Termina la definición de la asignación de interfaz COM.  
-  
+*x*  
+[in] El nombre del objeto de clase que se exponen en las interfaces.
+
+### <a name="remarks"></a>Comentarios
+
+[CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) solo devuelve punteros para las interfaces en el mapa COM. Iniciar el mapa de interfaz con la macro BEGIN_COM_MAP, agregar entradas para cada una de las interfaces con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o uno de sus variantes y complete el mapa con el [END_COM_MAP](#end_com_map) macro.  
+
+### <a name="example"></a>Ejemplo
+
+Desde la biblioteca ATL [BUSCAPERSONAS](../../visual-cpp-samples.md) ejemplo:
+
+[!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
+
+##  <a name="end_com_map"></a>  END_COM_MAP
+
+Termina la definición de la asignación de interfaz COM.
+
 ```
 END_COM_MAP()
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Macros](../../atl/reference/atl-macros.md)   
- [Funciones globales de mapa COM](../../atl/reference/com-map-global-functions.md)
+```
+
+## <a name="see-also"></a>Vea también
+
+[Macros](../../atl/reference/atl-macros.md)   
+[Funciones globales de mapa COM](../../atl/reference/com-map-global-functions.md)

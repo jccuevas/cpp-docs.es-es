@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203597"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751983"
 ---
 # <a name="boxing-ccx"></a>Conversión boxing (C++/CX)
 *Conversión boxing* es el ajuste de una variable de tipo de valor como [DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), o un tipo escalar fundamental como `int`: en una clase ref cuando la variable se pasa a un método que toma [ Platform:: Object ^](../cppcx/platform-object-class.md) como tipo de entrada.  

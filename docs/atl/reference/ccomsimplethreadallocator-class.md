@@ -21,58 +21,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e2c8c7b2e6132bb39c8e548f6057ded0b0ca6c1e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884670"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752484"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator (clase)
-Esta clase administra la selección de subproceso para la clase `CComAutoThreadModule`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+Esta clase administra la selección de subproceso para la clase `CComAutoThreadModule`.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class CComSimpleThreadAllocator
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CComSimpleThreadAllocator::GetThread](#getthread)|Selecciona un subproceso.|  
-  
-## <a name="remarks"></a>Comentarios  
- `CComSimpleThreadAllocator` administra la selección de subproceso para [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` simplemente recorre cada subproceso y devuelve el siguiente en la secuencia.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlbase.h  
-  
-##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
- Selecciona un subproceso especificando el siguiente subproceso en la secuencia.  
-  
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CComSimpleThreadAllocator::GetThread](#getthread)|Selecciona un subproceso.|
+
+## <a name="remarks"></a>Comentarios
+
+`CComSimpleThreadAllocator` administra la selección de subproceso para [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` simplemente recorre cada subproceso y devuelve el siguiente en la secuencia.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlbase.h
+
+##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread
+
+Selecciona un subproceso especificando el siguiente subproceso en la secuencia.
+
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *pApt*  
- No se utiliza en la implementación de predeterminada de ATL.  
-  
- *nThreads*  
- El número máximo de subprocesos en el módulo del archivo EXE.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Un entero entre cero y (*nThreads* - 1). Identifica uno de los subprocesos en el módulo del archivo EXE.  
-  
-### <a name="remarks"></a>Comentarios  
- Puede invalidar `GetThread` para proporcionar un método de selección diferente o para hacer uso de la *pApt* parámetro.  
-  
- `GetThread` llama a [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
-  
-## <a name="see-also"></a>Vea también  
- [CComApartment (clase)](../../atl/reference/ccomapartment-class.md)   
- [Información general de clases](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*pApt*  
+No se utiliza en la implementación de predeterminada de ATL.
+
+*nThreads*  
+El número máximo de subprocesos en el módulo del archivo EXE.
+
+### <a name="return-value"></a>Valor devuelto
+
+Un entero entre cero y (*nThreads* - 1). Identifica uno de los subprocesos en el módulo del archivo EXE.
+
+### <a name="remarks"></a>Comentarios
+
+Puede invalidar `GetThread` para proporcionar un método de selección diferente o para hacer uso de la *pApt* parámetro.
+
+`GetThread` llama a [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).
+
+## <a name="see-also"></a>Vea también
+
+[CComApartment (clase)](../../atl/reference/ccomapartment-class.md)   
+[Información general de clases](../../atl/atl-class-overview.md)

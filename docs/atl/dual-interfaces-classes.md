@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07bc54ebecf0b8d1267ac510c7792c38088280d1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 528534abd396827815ea4913af4a0b42a5703f31
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961615"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759299"
 ---
 # <a name="dual-interfaces-classes"></a>Clases de Interfaces duales
-La clase siguiente proporciona compatibilidad para interfaces duales:  
-  
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) implementa el `IDispatch` parte de una interfaz dual. Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)
+
+La clase siguiente proporciona compatibilidad para interfaces duales:
+
+- [IDispatchImpl](../atl/reference/idispatchimpl-class.md) implementa el `IDispatch` parte de una interfaz dual. Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)
 

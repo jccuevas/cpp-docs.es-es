@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b368794aa9137144213e3ad485068ea5a9e6b10f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575656"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751392"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean (Clase de valor)
 Representa un valor booleano. El equivalente a `bool`.  

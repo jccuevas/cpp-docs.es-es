@@ -29,11 +29,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541101"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751700"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton (clase)
 Implementa un botón de menú de la cinta que contiene galerías de la cinta.  

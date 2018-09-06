@@ -20,90 +20,105 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a35579cc29e2ec964998c3c126c7aadb17de57e0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221106"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757843"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator (clase)
-Esta clase proporciona métodos para administrar la memoria que usa COM rutinas de memoria.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+Esta clase proporciona métodos para administrar la memoria que usa COM rutinas de memoria.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class CComAllocator
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CComAllocator::Allocate](#allocate)|Llame a este método estático para asignar memoria.|  
-|[CComAllocator::Free](#free)|Llame a este método estático para liberar memoria asignada.|  
-|[CComAllocator::Reallocate](#reallocate)|Llame a este método estático para reasignar memoria.|  
-  
-## <a name="remarks"></a>Comentarios  
- Esta clase se utiliza por [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para proporcionar rutinas de asignación de memoria COM. La clase homólogo, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), proporciona los mismos métodos que usa las rutinas de CRT.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlbase.h  
-  
-##  <a name="allocate"></a>  CComAllocator::Allocate  
- Llame a esta función estática para asignar memoria.  
-  
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CComAllocator::Allocate](#allocate)|Llame a este método estático para asignar memoria.|
+|[CComAllocator::Free](#free)|Llame a este método estático para liberar memoria asignada.|
+|[CComAllocator::Reallocate](#reallocate)|Llame a este método estático para reasignar memoria.|
+
+## <a name="remarks"></a>Comentarios
+
+Esta clase se utiliza por [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para proporcionar rutinas de asignación de memoria COM. La clase homólogo, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), proporciona los mismos métodos que usa las rutinas de CRT.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlbase.h
+
+##  <a name="allocate"></a>  CComAllocator::Allocate
+
+Llame a esta función estática para asignar memoria.
+
 ```
 static void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *nBytes*  
- Número de bytes que se van a asignar.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero void al espacio asignado, o NULL si no hay suficiente memoria disponible.  
-  
-### <a name="remarks"></a>Comentarios  
- Asigna memoria. Consulte [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) para obtener más detalles.  
-  
-##  <a name="free"></a>  CComAllocator::Free  
- Llame a esta función estática para liberar memoria asignada.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*nBytes*  
+Número de bytes que se van a asignar.
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve un puntero void al espacio asignado, o NULL si no hay suficiente memoria disponible.
+
+### <a name="remarks"></a>Comentarios
+
+Asigna memoria. Consulte [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) para obtener más detalles.
+
+##  <a name="free"></a>  CComAllocator::Free
+
+Llame a esta función estática para liberar memoria asignada.
+
 ```
 static void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *p*  
- Puntero a la memoria asignada.  
-  
-### <a name="remarks"></a>Comentarios  
- Libera la memoria asignada. Consulte [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) para obtener más detalles.  
-  
-##  <a name="reallocate"></a>  CComAllocator::Reallocate  
- Llame a esta función estática para reasignar memoria.  
-  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*p*  
+Puntero a la memoria asignada.
+
+### <a name="remarks"></a>Comentarios
+
+Libera la memoria asignada. Consulte [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) para obtener más detalles.
+
+##  <a name="reallocate"></a>  CComAllocator::Reallocate
+
+Llame a esta función estática para reasignar memoria.
+
 ```
 static void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *p*  
- Puntero a la memoria asignada.  
-  
- *nBytes*  
- El número de bytes para reasignar.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero void al espacio asignado, o NULL si no hay memoria suficiente  
-  
-### <a name="remarks"></a>Comentarios  
- Cambia el tamaño de la cantidad de memoria asignada. Consulte [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) para obtener más detalles.  
-  
-## <a name="see-also"></a>Vea también  
- [CComHeapPtr (clase)](../../atl/reference/ccomheapptr-class.md)   
- [CCRTAllocator (clase)](../../atl/reference/ccrtallocator-class.md)   
- [Información general de clases](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*p*  
+Puntero a la memoria asignada.
+
+*nBytes*  
+El número de bytes para reasignar.
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve un puntero void al espacio asignado, o NULL si no hay memoria suficiente
+
+### <a name="remarks"></a>Comentarios
+
+Cambia el tamaño de la cantidad de memoria asignada. Consulte [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) para obtener más detalles.
+
+## <a name="see-also"></a>Vea también
+
+[CComHeapPtr (clase)](../../atl/reference/ccomheapptr-class.md)   
+[CCRTAllocator (clase)](../../atl/reference/ccrtallocator-class.md)   
+[Información general de clases](../../atl/atl-class-overview.md)

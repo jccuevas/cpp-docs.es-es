@@ -14,44 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5699ce82a6e8537f12da50fdcb8288da167ecca3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408380"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752244"
 ---
 # <a name="microsoft-extensions"></a>Extensiones de Microsoft
-*instrucción de ASM*:  
- **__asm***instrucción de ensamblado* **;** participar    
-  
- **__asm {***lista de instrucciones de ensamblado***};** participar      
-  
- *lista de instrucciones de ensamblado*:  
- *instrucción de ensamblado* **;** participar  
-  
- *instrucción de ensamblado* **;** *lista de instrucciones de ensamblado* **;** participar  
-  
- *modificador-MS-list*:  
- *modificador de MS-ms-modificador-list*participar  
-  
- *MS-modifier*:  
- **__cdecl**  
-  
- **__fastcall**  
-  
- **__stdcall**  
-  
- **__syscall** (reservado para implementaciones futuras)  
-  
- **__oldcall** (reservado para implementaciones futuras)  
-  
- **__unaligned** (reservado para implementaciones futuras)  
-  
- *en función de modificador*  
-  
- *en función de modificador*:  
- **__based (** *en función de tipo* **)**  
-  
- *en función de tipo*:  
- *name*  
+
+*instrucción de ASM*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm***instrucción de ensamblado* **;** <sub>participar  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {***lista de instrucciones de ensamblado***};** <sub>participar    </sub>
+
+*lista de instrucciones de ensamblado*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrucción de ensamblado* **;** <sub>participar</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrucción de ensamblado* **;** *lista de instrucciones de ensamblado* **;** <sub>participar</sub>
+
+*modificador-MS-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*MS-modifier* *modificador-ms-list*<sub>participar</sub>
+
+*MS-modifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__syscall** (reservado para implementaciones futuras)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__oldcall** (reservado para implementaciones futuras)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__unaligned** (reservado para implementaciones futuras)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*en función de modificador*
+
+*en función de modificador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__based (** *en función de tipo* **)**
+
+*en función de tipo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nombre*

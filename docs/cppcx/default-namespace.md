@@ -12,11 +12,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 87510fe7eee6a8027e5375f82f2b6ce7bf74ec3c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589739"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754106"
 ---
 # <a name="default-namespace"></a>espacio de nombres predeterminado
 El `default` establece el ámbito de espacio de nombres de los tipos integrados que son compatibles con C++ / c++ / CX.  

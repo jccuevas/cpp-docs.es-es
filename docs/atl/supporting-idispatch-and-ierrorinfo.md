@@ -1,5 +1,5 @@
 ---
-title: Admitir IDispatch y IErrorInfo | Documentos de Microsoft
+title: Admitir IDispatch e IErrorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f4c99da3989cce84bd5b6bd3bbfee8df97ff43
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360954"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753613"
 ---
-# <a name="supporting-idispatch-and-ierrorinfo"></a>Admitir IDispatch y IErrorInfo
-Puede utilizar la clase de plantilla [IDispatchImpl](../atl/reference/idispatchimpl-class.md) para proporcionar una implementación predeterminada de la `IDispatch Interface` parte de las interfaces duales en el objeto.  
-  
- Si el objeto utiliza el `IErrorInfo` interfaz para notificar errores que se devuelva al cliente, a continuación, el objeto debe admitir la `ISupportErrorInfo Interface` interfaz. La clase de plantilla [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) proporciona una manera fácil de implementar esto si sólo dispone de una única interfaz que genera errores en el objeto.  
-  
-## <a name="see-also"></a>Vea también  
- [Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)
+# <a name="supporting-idispatch-and-ierrorinfo"></a>Admitir IDispatch e IErrorInfo
+
+Puede usar la clase de plantilla [IDispatchImpl](../atl/reference/idispatchimpl-class.md) para proporcionar una implementación predeterminada de la `IDispatch Interface` parte de las interfaces duales en el objeto.
+
+Si el objeto utiliza el `IErrorInfo` interfaz para notificar los errores que se devuelva al cliente, a continuación, el objeto debe admitir la `ISupportErrorInfo Interface` interfaz. La clase de plantilla [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) proporciona una manera fácil de implementar esto si solo tiene una única interfaz que genera errores en el objeto.
+
+## <a name="see-also"></a>Vea también
+
+[Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)
 

@@ -12,11 +12,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 77cd035b6cf84b16f4f6d5d92f3dd247f1251509
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601566"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751288"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference (Clase)
 Representa una referencia débil a una instancia de una clase ref.  

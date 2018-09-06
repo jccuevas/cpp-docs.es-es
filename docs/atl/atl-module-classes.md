@@ -1,5 +1,5 @@
 ---
-title: Clases de módulo ATL | Documentos de Microsoft
+title: Clases de módulo ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,53 +16,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 777d81fbe1de48289863fda00591a5328b40cf4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af9749e2809678a7d7a8cc1e2bc6f4c2a40fbd6a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356610"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753469"
 ---
 # <a name="atl-module-classes"></a>Clases de módulo de ATL
-Este tema describen las clases de módulo que se introdujeron en ATL 7.0.  
-  
-## <a name="ccommodule-replacement-classes"></a>Clases de reemplazo de CComModule  
- Las versiones anteriores de ATL usa `CComModule`. En ATL 7.0, `CComModule` funcionalidad se ha reemplazado por varias clases:  
-  
--   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) contiene información requerida por la mayoría de las aplicaciones que utilizan ATL. Contiene la HINSTANCE del módulo y la instancia del recurso.  
-  
--   [CAtlComModule](../atl/reference/catlcommodule-class.md) contiene información requerida por las clases COM de ATL.  
-  
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) contiene información requerida por las clases de ventana de ATL.  
-  
--   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) contiene compatibilidad para la depuración de interfaz.  
-  
--   [CAtlModule](../atl/reference/catlmodule-class.md) siguiente `CAtlModule`-clases derivadas están personalizadas para que contenga la información necesaria en un tipo de aplicación en particular. Se puede invalidar la mayoría de los miembros de estas clases:  
-  
-    -   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) usar en aplicaciones de DLL. Proporciona código para las exportaciones estándares.  
-  
-    -   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) utilizado en las aplicaciones EXE. Proporciona el código requerido en un archivo EXE.  
-  
-    -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) proporciona compatibilidad para crear servicios Windows NT y Windows 2000.  
-  
- `CComModule` sigue estando disponible para compatibilidad con versiones anteriores.  
-  
-## <a name="reasons-for-distributing-ccommodule-functionality"></a>Motivos para la distribución de la funcionalidad de CComModule  
- La funcionalidad de `CComModule` se ha distribuido en varias clases nuevas para los siguientes motivos:  
-  
--   Realizar la funcionalidad de `CComModule` granular.  
-  
-     Compatibilidad con COM, basado en ventanas, depuración de interfaces y características de específicos de la aplicación (DLL o EXE) se encuentra ahora en clases independientes.  
-  
--   Declarar automáticamente la instancia global de cada uno de estos módulos.  
-  
-     Una instancia global de las clases de módulo requeridas está vinculada en el proyecto.  
-  
--   Eliminar la necesidad de llamar a los métodos Init y Term.  
-  
-     Los métodos Init y Term han movido a los constructores y destructores para las clases de módulo; ya no es necesario llamar a Init y Term.  
-  
-## <a name="see-also"></a>Vea también  
- [Conceptos](../atl/active-template-library-atl-concepts.md)   
- [Información general de clases](../atl/atl-class-overview.md)
+
+En este tema se describe las clases de módulo que se introdujeron en ATL 7.0.
+
+## <a name="ccommodule-replacement-classes"></a>Clases de reemplazo de CComModule
+
+Las versiones anteriores de ATL utiliza `CComModule`. En ATL 7.0, `CComModule` funcionalidad se ha reemplazado por varias clases:
+
+- [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) contiene información requerida por la mayoría de las aplicaciones que utilizan ATL. Contiene la HINSTANCE del módulo y la instancia del recurso.
+
+- [CAtlComModule](../atl/reference/catlcommodule-class.md) contiene información requerida por las clases COM de ATL.
+
+- [CAtlWinModule](../atl/reference/catlwinmodule-class.md) contiene información requerida por las clases de ventanas en ATL.
+
+- [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) contiene compatibilidad para la depuración de interfaz.
+
+- [CAtlModule](../atl/reference/catlmodule-class.md) siguiente `CAtlModule`-las clases derivadas se personalizan para que contenga la información necesaria en un tipo de aplicación concreto. Se pueden invalidar los miembros de la mayoría de estas clases:
+
+   - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) utilizados en las aplicaciones DLL. Proporciona código para las exportaciones estándares.
+
+   - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) utilizado en las aplicaciones EXE. Proporciona el código necesario en un archivo EXE.
+
+   - [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) proporciona compatibilidad para crear servicios de Windows 2000 y de Windows NT.
+
+`CComModule` sigue estando disponible para compatibilidad con versiones anteriores.
+
+## <a name="reasons-for-distributing-ccommodule-functionality"></a>Motivos para la distribución de la funcionalidad de CComModule
+
+La funcionalidad de `CComModule` se ha distribuido en varias clases nuevas para los siguientes motivos:
+
+- Realizar la funcionalidad en `CComModule` granular.
+
+     Compatibilidad con COM, ventanas, depuración de la interfaz y las características específicas de la aplicación de (DLL o EXE) está ahora en clases independientes.
+
+- Automáticamente, declare una instancia global de cada uno de estos módulos.
+
+     Una instancia global de las clases de módulo necesario está vinculada al proyecto.
+
+- Eliminan la necesidad de llamar a métodos Init y término.
+
+     Los métodos Init y término se han movido a los constructores y destructores para las clases de módulo; ya no hay necesidad de llamar a Init y término.
+
+## <a name="see-also"></a>Vea también
+
+[Conceptos](../atl/active-template-library-atl-concepts.md)   
+[Información general de clases](../atl/atl-class-overview.md)
 

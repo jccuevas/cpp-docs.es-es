@@ -1,5 +1,5 @@
 ---
-title: Clase CAtlDebugInterfacesModule | Documentos de Microsoft
+title: CAtlDebugInterfacesModule (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dbac5c07f04725400423e72d1cc38eb0f25e48f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359227"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755533"
 ---
-# <a name="catldebuginterfacesmodule-class"></a>Clase CAtlDebugInterfacesModule
-Esta clase proporciona compatibilidad para interfaces de depuración.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+# <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule (clase)
+
+Esta clase proporciona compatibilidad para interfaces de depuración.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>Comentarios  
- `CAtlDebugInterfacesModule` proporciona la compatibilidad requerida para interfaces de depuración. Se incluye en cualquier proyecto que define el símbolo [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlbase.h  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../../atl/atl-class-overview.md)   
- [Clases de módulo](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>Comentarios
+
+`CAtlDebugInterfacesModule` proporciona la compatibilidad requerida para interfaces de depuración. Se incluye en cualquier proyecto que define el símbolo [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlbase.h
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../../atl/atl-class-overview.md)   
+[Clases de módulo](../../atl/atl-module-classes.md)
