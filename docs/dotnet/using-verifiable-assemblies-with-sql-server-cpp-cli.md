@@ -15,75 +15,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 65a3c4da1664e34e40e0961655c130f320efb17b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690708"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894712"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizar ensamblados comprobables con SQL Server (C++/CLI)
-Procedimientos almacenados extendidos, empaquetados como bibliotecas de vínculos dinámicos (DLL), proporcionan una forma de ampliar la funcionalidad de SQL Server a través de funciones desarrolladas con Visual C++. Los procedimientos almacenados extendidos se implementan como funciones en archivos DLL. Además de las funciones, también pueden definir los procedimientos almacenados extendidos [tipos definidos por el usuario](../cpp/classes-and-structs-cpp.md) y agregar funciones (como SUM o AVG).  
-  
- Cuando un cliente ejecuta un procedimiento almacenado extendido, SQL Server busca el archivo DLL asociado con el procedimiento almacenado extendido y carga el archivo DLL. SQL Server llama al procedimiento almacenado extendido solicitado y lo ejecuta en un contexto de seguridad especificado. El procedimiento almacenado extendido, a continuación, los conjuntos de resultados de las pasadas y devuelve parámetros al servidor.  
-  
- SQL Server proporciona extensiones a Transact-SQL (T-SQL) para que pueda instalar a los ensamblados comprobables en SQL Server. El conjunto de permisos de SQL Server especifica el contexto de seguridad, con los siguientes niveles de seguridad:  
-  
--   Modo no restringido: ejecutar código bajo su propia responsabilidad; código no tiene que ser de tipos comprobable.  
-  
--   Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe.  
-  
- Modo seguro requiere que los ensamblados ejecutados tengan seguridad de tipos comprobable.  
-  
- Para crear y cargar un ensamblado comprobable en SQL Server, use los comandos CREATE ASSEMBLY y DROP ASSEMBLY de Transact-SQL como sigue:  
-  
+
+Procedimientos almacenados extendidos, empaquetados como bibliotecas de vínculos dinámicos (DLL), proporcionan una forma de ampliar la funcionalidad de SQL Server a través de funciones desarrolladas con Visual C++. Los procedimientos almacenados extendidos se implementan como funciones en archivos DLL. Además de las funciones, también pueden definir los procedimientos almacenados extendidos [tipos definidos por el usuario](../cpp/classes-and-structs-cpp.md) y agregar funciones (como SUM o AVG).
+
+Cuando un cliente ejecuta un procedimiento almacenado extendido, SQL Server busca el archivo DLL asociado con el procedimiento almacenado extendido y carga el archivo DLL. SQL Server llama al procedimiento almacenado extendido solicitado y lo ejecuta en un contexto de seguridad especificado. El procedimiento almacenado extendido, a continuación, los conjuntos de resultados de las pasadas y devuelve parámetros al servidor.
+
+SQL Server proporciona extensiones a Transact-SQL (T-SQL) para que pueda instalar a los ensamblados comprobables en SQL Server. El conjunto de permisos de SQL Server especifica el contexto de seguridad, con los siguientes niveles de seguridad:
+
+- Modo no restringido: ejecutar código bajo su propia responsabilidad; código no tiene que ser de tipos comprobable.
+
+- Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe.
+
+Modo seguro requiere que los ensamblados ejecutados tengan seguridad de tipos comprobable.
+
+Para crear y cargar un ensamblado comprobable en SQL Server, use los comandos CREATE ASSEMBLY y DROP ASSEMBLY de Transact-SQL como sigue:
+
+```sql
+CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
+  PERMISSION_SET <permissions>
+DROP ASSEMBLY <assemblyName>
 ```  
-CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
-  PERMISSION_SET <permissions>  
-DROP ASSEMBLY <assemblyName>  
-```  
-  
- El comando PERMISSION_SET especifica el contexto de seguridad y puede tener los valores UNRESTRICTED, SAFE o EXTENDED.  
-  
- Además, puede usar el comando CREATE FUNCTION para enlazar a los nombres de método en una clase:  
-  
-```  
+
+El comando PERMISSION_SET especifica el contexto de seguridad y puede tener los valores UNRESTRICTED, SAFE o EXTENDED.
+
+Además, puede usar el comando CREATE FUNCTION para enlazar a los nombres de método en una clase:
+
+```sql
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
-RETURNS returnType  
-[EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]  
+RETURNS returnType
+[EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
 ```  
-  
-## <a name="example"></a>Ejemplo  
- El siguiente script SQL (por ejemplo, "MyScript.sql" con nombre) carga un ensamblado en SQL Server y pone a disposición un método de una clase:  
-  
-```  
--- Create assembly without external access  
-drop assembly stockNoEA  
-go  
-create assembly stockNoEA  
-from   
-'c:\stockNoEA.dll'  
-with permission_set safe  
-  
--- Create function on assembly with no external access  
-drop function GetQuoteNoEA  
-go  
+
+## <a name="example"></a>Ejemplo
+El siguiente script SQL (por ejemplo, "MyScript.sql" con nombre) carga un ensamblado en SQL Server y pone a disposición un método de una clase:
+
+```sql
+-- Create assembly without external access
+drop assembly stockNoEA
+go
+create assembly stockNoEA
+from
+'c:\stockNoEA.dll'
+with permission_set safe
+
+-- Create function on assembly with no external access
+drop function GetQuoteNoEA
+go
 create function GetQuoteNoEA(@sym nvarchar(10))  
-returns real  
-external name stockNoEA:StockQuotes::GetQuote  
-go  
-  
--- To call the function  
+returns real
+external name stockNoEA:StockQuotes::GetQuote
+go
+
+-- To call the function
 select dbo.GetQuoteNoEA('MSFT')  
-go  
+go
 ```  
-  
- Secuencias de comandos SQL se pueden ejecutar interactivamente en el analizador de consultas SQL o en la línea de comandos con la utilidad sqlcmd.exe. La siguiente línea de comandos se conecta a MyServer, utiliza la base de datos de forma predeterminada, usa una conexión de confianza, introduce MyScript.sql y genera MyResult.txt.  
-  
+
+Secuencias de comandos SQL se pueden ejecutar interactivamente en el analizador de consultas SQL o en la línea de comandos con la utilidad sqlcmd.exe. La siguiente línea de comandos se conecta a MyServer, utiliza la base de datos de forma predeterminada, usa una conexión de confianza, introduce MyScript.sql y genera MyResult.txt.
+
+```cmd
+sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```  
-sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Cómo: migrar a/CLR: safe (C++ / c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
- [Clases y structs](../cpp/classes-and-structs-cpp.md)
+
+## <a name="see-also"></a>Vea también
+
+[Cómo: migrar a/CLR: safe (C++ / c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+[Clases y structs](../cpp/classes-and-structs-cpp.md)
