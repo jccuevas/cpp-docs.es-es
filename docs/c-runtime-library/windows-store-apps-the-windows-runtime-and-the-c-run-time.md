@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e1a67ce57e4ddf726ba64923bbe5a95b5b2f1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f76b6f61eb5d8e7370e61e9cc1f466bdfb4c43
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410845"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592724"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicaciones de la Plataforma universal de Windows, Windows Runtime y tiempo de ejecución de C
 
-Las aplicaciones de la Plataforma universal de Windows (UWP) son programas que se ejecutan en Windows Runtime, que se ejecuta en [!INCLUDE[win8](../build/reference/includes/win8_md.md)]. Windows Runtime es un entorno de confianza que controla las funciones, las variables y los recursos que están disponibles para una aplicación de la Plataforma universal de Windows. Sin embargo, por su naturaleza, las restricciones de Windows Runtime impiden el uso de la mayoría de las características de la biblioteca en tiempo de ejecución de C (CRT) en las aplicaciones de la Plataforma universal de Windows.
+Las aplicaciones de la Plataforma universal de Windows (UWP) son programas que se ejecutan en Windows Runtime, que se ejecuta en 8. Windows Runtime es un entorno de confianza que controla las funciones, las variables y los recursos que están disponibles para una aplicación de la Plataforma universal de Windows. Sin embargo, por su naturaleza, las restricciones de Windows Runtime impiden el uso de la mayoría de las características de la biblioteca en tiempo de ejecución de C (CRT) en las aplicaciones de la Plataforma universal de Windows.
 
 Windows Runtime no admite las siguientes características de CRT:
 

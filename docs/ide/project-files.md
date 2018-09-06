@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327234"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578621"
 ---
 # <a name="project-files"></a>Archivos de proyecto
 Un archivo de proyecto de Visual C++ es un archivo basado en XML que tiene la extensión de nombre de archivo .vcxproj y que contiene la información necesaria para compilar un proyecto de Visual C++.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente archivo .vcxproj de ejemplo se creó mediante la especificación de una **Aplicación de consola Win32** en el cuadro de diálogo **Nuevo proyecto**. Para procesar un proyecto de archivo, use la herramienta msbuild.exe en la línea de comandos, o bien el comando **Compilar** en el [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Este ejemplo no se puede procesar porque no se proporcionan los archivos de código y de encabezado necesarios). Para obtener más información sobre los elementos XML en un archivo de proyecto, vea [Referencia de esquemas de archivo del proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ El siguiente archivo .vcxproj de ejemplo se creó mediante la especificación de una **Aplicación de consola Win32** en el cuadro de diálogo **Nuevo proyecto**. Para procesar un proyecto de archivo, use la herramienta msbuild.exe en la línea de comandos, o bien el comando **Compilar** en el IDE. (Este ejemplo no se puede procesar porque no se proporcionan los archivos de código y de encabezado necesarios). Para obtener más información sobre los elementos XML en un archivo de proyecto, vea [Referencia de esquemas de archivo del proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

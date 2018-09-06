@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322373"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583902"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
@@ -335,7 +335,7 @@ Una *reproducción de vínculo* es el contenido generado por el vinculador de un
 
 1. Escriba **mkdir linkrepro** para crear un directorio para la reproducción de vínculo.
 
-1. Escriba el comando **set link\_repro=linkrepro** para establecer la variable de entorno **link\_repro** en el directorio que acaba de crear.
+1. Escriba el comando **set link\_repro=linkrepro** para establecer la variable de entorno **link\_repro** en el directorio que acaba de crear. Si la compilación se ejecuta desde un directorio diferente, como suele ser el caso de los proyectos más complejos, es mejor establecer **link\_repro** en la ruta de acceso completa al directorio linkrepro.
 
 1. Para generar el proyecto de reproducción en Visual Studio, escriba el comando **devenv** en la ventana de la consola del símbolo del sistema para desarrolladores. De este modo se garantiza que el valor de la variable de entorno **link\_repro** sea visible en Visual Studio. Para compilar el proyecto en la línea de comandos, utilice los argumentos de línea de comandos capturados más arriba para duplicar la compilación de reproducción.
 

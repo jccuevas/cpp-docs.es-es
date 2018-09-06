@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238570"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900672"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Proyectos de CMake en Visual C++
 
@@ -221,6 +221,8 @@ Para especificar un generador de Visual Studio, abra el archivo CMakeSettings.js
 1. **variables**: contiene un par nombre-valor de variables de CMake que se pasan como **-D**_nombre_**=**_valor_ a CMake. Si las instrucciones de compilación del proyecto de CMake especifican la adición de las variables directamente al archivo de caché de CMake, en su lugar se recomienda agregarlas aquí.
 1. **cmakeCommandArgs**: especifica los modificadores adicionales que se quieren a pasar a CMake.exe.
 1. **configurationType**: define el tipo de configuración de compilación para el generador seleccionado. Los valores admitidos actualmente son "Debug", "MinSizeRel", "Release" y "RelWithDebInfo".
+1. **ctestCommandArgs**: especifica los modificadores adicionales para pasarlos a CTest al ejecutar pruebas.
+1. **ctestCommandArgs**: especifica los modificadores adicionales para pasarlos al sistema de compilación subyacente. Por ejemplo, pasar -v cuando se usa el generador Ninja obliga a Ninja a dar como resultado líneas de comandos.
 
 ### <a name="environment-variables"></a>Variables de entorno
 
@@ -245,7 +247,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opción|Description|
+|Opción|Descripción|
 |--------------|------------|
 | --version  | Se imprime la versión de Ninja ("1.7.1").|
 |   -C DIR   | Se cambia a DIR antes de realizar cualquier otra acción.|
@@ -270,7 +272,7 @@ El ejemplo anterior equivale a ejecutar el **Símbolo del sistema para desarroll
 
 En la tabla siguiente se muestran los valores predeterminados y sus equivalentes de la línea de comandos:
 
-|Nombre del contexto|Description|
+|Nombre del contexto|Descripción|
 |-----------|-----------------|
 |vsdev|El entorno de Visual Studio predeterminado.|
 |msvc_x86|Compilar para x86 con herramientas de x86.|

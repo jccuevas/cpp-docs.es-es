@@ -1,7 +1,7 @@
 ---
 title: Nombres de configuración regional, idiomas y cadenas de país/región | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606740"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578307"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nombres de configuración regional, idiomas y cadenas de país/región
 
@@ -44,9 +44,9 @@ El formato *idioma*[*_país_región*[.*página_de_códigos*]] form is stored in 
 
 La página de códigos es la página de códigos de ANSI/OEM asociada a la configuración regional. La página de códigos se determina automáticamente al especificar una configuración regional solo por idioma o por idioma y país o región. El valor especial `.ACP` especifica la página de códigos ANSI para el país o región. El valor especial `.OCP` especifica la página de códigos OEM para el país o región. Por ejemplo, si especifica `"Greek_Greece.ACP"` como configuración regional, la configuración regional se almacena como `Greek_Greece.1253` (página de códigos ANSI del griego); si especifica `"Greek_Greece.OCP"` como configuración regional, se almacena como `Greek_Greece.737` (página de códigos OEM del griego). Para obtener más información sobre las páginas de códigos, vea [Code Pages](../c-runtime-library/code-pages.md). Para obtener la lista de páginas de códigos admitidas en Windows, vea [Code Page Identifiers](/windows/desktop/Intl/code-page-identifiers)(Identificadores de páginas de códigos).
 
-Si usa solo la página de códigos para especificar la configuración regional, se usan el idioma y el país o región predeterminados del sistema. Por ejemplo, si especifica `".1254"` (ANSI del turco) como configuración regional en un sistema configurado para inglés (Estados Unidos), la configuración regional que se almacena es `English_United States.1254`. No se recomienda usar este formato, porque podría causar un comportamiento incoherente.
+Si usa solo la página de códigos para especificar la configuración regional, se usan el idioma y el país o región predeterminados del usuario, según se indica en [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename). Por ejemplo, si especifica `".1254"` (ANSI del turco) como configuración regional de un usuario configurado para inglés (Estados Unidos), la configuración regional que se almacena es `English_United States.1254`. No se recomienda usar este formato, porque podría causar un comportamiento incoherente.
 
-Un valor de argumento *locale* de `C` especifica el entorno compatible con ANSI mínimo para la conversión de C. La configuración regional de `C` supone que cada tipo de datos `char` es de 1 byte y su valor es siempre menor que 256. Si *locale* señala a una cadena vacía, la configuración regional es el entorno nativo definido por la implementación.
+Un valor de argumento *locale* de `C` especifica el entorno compatible con ANSI mínimo para la conversión de C. La configuración regional de `C` da por hecho que cada tipo de datos **char** es de 1 byte y su valor es siempre menor que 256. Si *locale* señala a una cadena vacía, la configuración regional es el entorno nativo definido por la implementación.
 
 Puede especificar a la vez todas las categorías de configuración regional para las funciones `setlocale` y `_wsetlocale` con la categoría `LC_ALL` . Todas las categorías se pueden establecer en la misma configuración regional. También puede establecer cada categoría por separado mediante un argumento de configuración regional con el siguiente formato:
 

@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705442"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42583898"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS
 
@@ -217,7 +217,7 @@ El contenido de una instancia de vcpkg es:
 
 ## <a name="command-line-reference"></a>Referencia de la línea de comandos
 
-|Comando|Description|
+|Comando|Descripción|
 |---------|---------|
 |**vcpkg search [pat]**|Permite buscar los paquetes disponibles para instalar.|
 |**vcpkg install \<pkg>...**|Instala un paquete.|
@@ -239,7 +239,7 @@ El contenido de una instancia de vcpkg es:
 
 ### <a name="options"></a>Opciones
 
-|Opción|Description|
+|Opción|Descripción|
 |---------|---------|
 |**--triplet \<t>**|Permite especificar el triplo de la arquitectura de destino. El valor predeterminado es `%VCPKG_DEFAULT_TRIPLET%`; vea también **vcpkg help triplet**.|
 |**--vcpkg-root \<path>**|Permite especificar el directorio raíz de vcpkg. El predeterminado es `%VCPKG_ROOT%`.|
