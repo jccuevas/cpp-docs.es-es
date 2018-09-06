@@ -8,16 +8,16 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cac05b17d470cdb593f4d7e1e1943f812022906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851640"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583990"
 ---
 # <a name="visual-c-help-and-community"></a>Ayuda y comunidad de Visual C++
 
@@ -25,16 +25,16 @@ Aquí se explica dónde obtener información sobre cómo escribir código de C++
 
 ## <a name="samples"></a>Ejemplos
 
-|Title|Description|
+|Title|Descripción|
 |-----------|-----------------|
 |[Muestras de código para desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=256533)|Contiene código de ejemplo descargable de Microsoft y de colaboradores de la comunidad.|
 
 ## <a name="product-documentation"></a>Documentación del producto
 
-|Title|Description|
+|Title|Descripción|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Contiene documentación de referencia y conceptual sobre Visual C++. Forma parte de MSDN Library.|
-|[Centro para desarrolladores de Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contiene información sobre cómo utilizar C++ y otros lenguajes para desarrollar aplicaciones para [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Forma parte del Centro de desarrollo de Windows; el contenido de C++ está bajo el nodo Documentos > Referencia del lenguaje.|
+|[Centro para desarrolladores de Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contiene información sobre cómo utilizar C++ y otros lenguajes para desarrollar aplicaciones para Windows 8. Forma parte del Centro de desarrollo de Windows; el contenido de C++ está bajo el nodo Documentos > Referencia del lenguaje.|
 
 ### <a name="online-and-offline-documentation"></a>Documentación en línea y sin conexión
 
@@ -46,7 +46,7 @@ Muchas de las secciones de la documentación también están disponibles en form
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Title|Description|
+|Title|Descripción|
 |-----------|-----------------|
 |[Blog del equipo de Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=256537)|Contiene entradas sobre diversos temas publicados por los expertos del equipo del producto Visual C++.|
 |[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Contiene vídeos de conferencias y entrevistas. Utilice el cuadro de búsqueda de la página principal de Channel 9 para buscar contenido de C++.|

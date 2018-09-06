@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 36aad914fc9552cea06eabd0898fe33b9b09481e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332785"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605836"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación
 Describe cómo usar un proyecto de instalación para implementar una aplicación de Visual C++.  
@@ -27,7 +27,7 @@ Describe cómo usar un proyecto de instalación para implementar una aplicación
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   Un equipo con [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] instalado.  
+-   Un equipo con Visual Studio 2012 instalado.  
   
 -   Un equipo adicional que no tenga las bibliotecas de Visual C++.  
   
