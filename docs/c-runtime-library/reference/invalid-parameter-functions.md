@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0fecd7eefe9ac6a7a479fb12475b2b1c769cf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26e66b6ad47af521bb5188860d7d987e9d3b5f6b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405476"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100843"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -64,29 +64,34 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Parámetros
 
-*expresión* una cadena que representa la expresión de parámetro de código de origen que no es válida.
+*Expresión*<br/>
+Una cadena que representa la expresión del parámetro de código fuente que no es válida.
 
-*nombre_función* el nombre de la función que llama el controlador.
+*nombre_de_función*<br/>
+El nombre de la función que llamó al controlador.
 
-*file_name* el archivo de código fuente donde se llama al controlador.
+*file_name*<br/>
+El archivo de código fuente donde se llamó al controlador.
 
-*line_number* el número de línea en el código fuente donde se llama al controlador.
+*line_number*<br/>
+El número de línea del código fuente donde se llamó al controlador.
 
-*reservada* no utilizado.
+*Reservado*<br/>
+Sin usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Estas funciones no devuelven ningún valor. El **_invalid_parameter_noinfo_noreturn** y **_invoke_watson** funciones no vuelven al llamador y en algunos casos, **_invalid_parameter** y **_invalid_parameter_noinfo** no puede devolver al llamador.
+Estas funciones no devuelven ningún valor. El **_invalid_parameter_noinfo_noreturn** y **_invoke_watson** funciones no devuelven al llamador y en algunos casos, **_invalid_parameter** y **_invalid_parameter_noinfo** no puede devolver al llamador.
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando se pasan parámetros no válidos a las funciones de la biblioteca en tiempo de ejecución de C, las funciones de la biblioteca llaman a un *controlador de parámetros no válidos*, una función que el programador puede especificar para llevar a cabo numerosas operaciones. Por ejemplo, puede notificar el problema al usuario, escribir en un registro, interrumpir un depurador, finalizar el programa o no hacer nada. Si no se especifica ninguna función por el programador, un controlador predeterminado, **_invoke_watson**, se llama.
+Cuando se pasan parámetros no válidos a las funciones de la biblioteca en tiempo de ejecución de C, las funciones de la biblioteca llaman a un *controlador de parámetros no válidos*, una función que el programador puede especificar para llevar a cabo numerosas operaciones. Por ejemplo, puede notificar el problema al usuario, escribir en un registro, interrumpir un depurador, finalizar el programa o no hacer nada. Si no se especifica ninguna función de un controlador de forma predeterminada, el programador **_invoke_watson**, se llama.
 
-De forma predeterminada, cuando se identifica un parámetro no válido en el código de depuración, funciones de la biblioteca CRT llamar a la función **_invalid_parameter** mediante parámetros detallados. En el código no son de depuración, el **_invalid_parameter_noinfo** se llama a función que llama el **_invalid_parameter** función con parámetros vacías. Si la función de biblioteca de CRT de depuración no requiere la finalización del programa, el **_invalid_parameter_noinfo_noreturn** se llama a función que llama el **_invalid_parameter** función vacía los parámetros, seguidos por una llamada a la **_invoke_watson** función para forzar la finalización del programa.
+De forma predeterminada, cuando se identifica un parámetro no válido en el código de depuración, funciones de la biblioteca CRT llama a la función **_invalid_parameter** mediante parámetros detallados. En el código de no depuración, la **_invalid_parameter_noinfo** llama la función, que llama a la **_invalid_parameter** función con parámetros vacíos. Si la función de biblioteca de CRT que no sean de depuración requiere la finalización del programa, el **_invalid_parameter_noinfo_noreturn** llama la función, que llama a la **_invalid_parameter** funcionando mediante vacío los parámetros, seguidos por una llamada a la **_invoke_watson** función para forzar la finalización del programa.
 
-El **_invalid_parameter** función comprueba si se estableció un controlador de parámetros no válidos definidos por el usuario y, si es así, lo llama. Por ejemplo, si un controlador de subproceso local definido por el usuario se ha establecido mediante una llamada a [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) en el subproceso actual, se llama a este y luego se devuelve la función. En caso contrario, si un controlador global de parámetros no válidos definido por el usuario se ha establecido mediante una llamada a [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), se llama a este y se devuelve la función. En caso contrario, el controlador predeterminado **_invoke_watson** se llama. El comportamiento predeterminado de **_invoke_watson** consiste en Finalizar el programa. Los controladores definidos por el usuario pueden finalizar o devolver. Se recomienda que los controladores definidos por el usuario finalicen el programa a menos que la recuperación sea segura.
+El **_invalid_parameter** función comprueba si se ha establecido un controlador de parámetros no válidos definidos por el usuario y, si es así, lo llama. Por ejemplo, si un controlador de subproceso local definido por el usuario se ha establecido mediante una llamada a [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) en el subproceso actual, se llama a este y luego se devuelve la función. En caso contrario, si un controlador global de parámetros no válidos definido por el usuario se ha establecido mediante una llamada a [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), se llama a este y se devuelve la función. En caso contrario, el controlador predeterminado **_invoke_watson** se llama. El comportamiento predeterminado de **_invoke_watson** consiste en Finalizar el programa. Los controladores definidos por el usuario pueden finalizar o devolver. Se recomienda que los controladores definidos por el usuario finalicen el programa a menos que la recuperación sea segura.
 
-Cuando el controlador predeterminado **_invoke_watson** se llama, si el procesador admite un [__fastfail](../../intrinsics/fastfail.md) operación, se invoca con un parámetro de **FAST_FAIL_INVALID_ARG** y finaliza el proceso. De lo contrario, se produce una excepción de error rápido, que se puede detectar con un depurador adjunto. Si el proceso puede continuar, se termina por una llamada a las ventanas **TerminateProcess** funcionar con un estado del código de excepción **STATUS_INVALID_CRUNTIME_PARAMETER**.
+Cuando el controlador predeterminado **_invoke_watson** se llama si el procesador admite una [__fastfail](../../intrinsics/fastfail.md) operación, se invoca mediante un parámetro de **FAST_FAIL_INVALID_ARG** y termina el proceso. De lo contrario, se produce una excepción de error rápido, que se puede detectar con un depurador adjunto. Si el proceso puede continuar, se termina por una llamada a la Windows **TerminateProcess** funcione con un estado de código de excepción de **STATUS_INVALID_CRUNTIME_PARAMETER**.
 
 ## <a name="requirements"></a>Requisitos
 

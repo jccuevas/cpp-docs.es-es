@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e01c1d71cbc0b3990e40a38484cc9c7a2cc3ebcc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954163"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102803"
 ---
 # <a name="ltrandomgt-functions"></a>Funciones &lt;random&gt;
 
@@ -31,11 +31,14 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* tipo integral de punto flotante. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Tipo integral de punto flotante. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*Bits* el generador de números aleatorios.
+*Bits*<br/>
+Generador de números aleatorios.
 
-*Gen* el generador de números aleatorios.
+*Gen*<br/>
+Generador de números aleatorios.
 
 ### <a name="remarks"></a>Comentarios
 

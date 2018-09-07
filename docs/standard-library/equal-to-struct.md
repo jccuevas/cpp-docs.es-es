@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 78ee4e040bc70b3ababe357fea2c6a279fb1b09a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961657"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105441"
 ---
 # <a name="equalto-struct"></a>equal_to (struct)
 
@@ -33,27 +33,29 @@ Predicado binario que realiza la operación de igualdad (`operator==`) sobre sus
 ```cpp
 template <class Type = void>
 struct equal_to : public binary_function<Type, Type, bool>
- {
+{
     bool operator()(const Type& Left, const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator==
 template <>
 struct equal_to<void>
- {
+{
     template <class T, class U>
     auto operator()(T&& Left, U&& Right) const
       ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *Tipo*, *T*, *U* cualquier tipo que admita un `operator==` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda* el operando izquierdo de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
+*Izquierda*<br/>
+Operando izquierdo de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha* el operando derecho de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
+*Derecha*<br/>
+Operando derecho de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 

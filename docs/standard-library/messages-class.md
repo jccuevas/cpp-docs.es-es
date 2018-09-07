@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954895"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106456"
 ---
 # <a name="messages-class"></a>messages (Clase)
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType* tipo usado dentro de un programa para codificar los caracteres en una configuración regional.
+*CharType*<br/>
+Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval* el catálogo que se cerrará.
+*_Catval*<br/>
+El catálogo que se va a cerrar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval* el catálogo que se cerrará.
+*_Catval*<br/>
+El catálogo que se va a cerrar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval* el valor de identificación que especifica el catálogo de mensajes que se va a buscar.
+*_Catval*<br/>
+El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer* el primer identificado localizaba un mensaje en un catálogo de mensajes.
+*_Establecer*<br/>
+El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo* el segundo identificado localizaba un mensaje en un catálogo de mensajes.
+*_Cuerpo*<br/>
+El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault* la cadena que se va a devolver en caso de error.
+*_Dfault*<br/>
+La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname* el nombre del catálogo que se buscará.
+*_Catname*<br/>
+El nombre del catálogo que se va a buscar.
 
-*_Loc* la configuración regional que se va a buscar en el catálogo.
+*_Loc*<br/>
+La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval* el valor de identificación que especifica el catálogo de mensajes que se va a buscar.
+*_Catval*<br/>
+El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer* el primer identificado localizaba un mensaje en un catálogo de mensajes.
+*_Establecer*<br/>
+El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo* el segundo identificado localizaba un mensaje en un catálogo de mensajes.
+*_Cuerpo*<br/>
+El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault* la cadena que se va a devolver en caso de error.
+*_Dfault*<br/>
+La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs*<br/>
+Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-*_Locname* el nombre de la configuración regional.
+*_Locname*<br/>
+El nombre de la configuración regional.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname* el nombre del catálogo que se buscará.
+*_Catname*<br/>
+El nombre del catálogo que se va a buscar.
 
-*_Loc* la configuración regional que se va a buscar en el catálogo.
+*_Loc*<br/>
+La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
 

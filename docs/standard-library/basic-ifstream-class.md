@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2e641dbea0507c51987d67e78b3cd8ef8be0dc6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 63712f6eb7efd9c52db5480b7f13babe9601dea2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958509"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110232"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream (Clase)
 
@@ -46,9 +46,11 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem* el elemento básico del búfer del archivo.
+*Elem*<br/>
+Elemento básico del búfer del archivo.
 
-*TR* los rasgos del elemento básico del búfer del archivo (normalmente `char_traits` <  `Elem`>).
+*Tr*<br/>
+Rasgos del elemento básico del búfer del archivo (normalmente `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -141,11 +143,14 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Nombre de archivo* el nombre del archivo que se abra.
+*_Nombre de archivo*<br/>
+Nombre del archivo que se va a abrir.
 
-*_Modo de* una de las enumeraciones en [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modo de*<br/>
+Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* el archivo de forma predeterminada abriendo protección equivalente a la `shflag` parámetro [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Protección predeterminada de apertura del archivo, equivalente al parámetro `shflag` de [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -242,11 +247,14 @@ void open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Nombre de archivo* el nombre del archivo que se abra.
+*_Nombre de archivo*<br/>
+Nombre del archivo que se va a abrir.
 
-*_Modo de* una de las enumeraciones en [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modo de*<br/>
+Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* el archivo de forma predeterminada abriendo protección equivalente a la `shflag` parámetro [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Protección predeterminada de apertura del archivo, equivalente al parámetro `shflag` de [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -266,7 +274,8 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* una referencia rvalue para un `basic_ifstream` objeto.
+*right*<br/>
+Referencia a un valor R a un objeto `basic_ifstream`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -302,7 +311,8 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* una referencia a otro búfer de secuencia.
+*right*<br/>
+Referencia a otro búfer de secuencia.
 
 ### <a name="remarks"></a>Comentarios
 

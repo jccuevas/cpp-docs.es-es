@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956871"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100916"
 ---
 # <a name="duration-class"></a>duration (Clase)
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rep2* un tipo aritmético para representar el número de pasos.
+*Rep2*<br/>
+Un tipo aritmético para representar el número de ciclos.
 
-*Period2* A `std::ratio` especialización de plantilla para representar el período de ciclo en unidades de segundos.
+*Period2*<br/>
+Una especialización de plantilla `std::ratio` para representar el período de ciclo en unidades de segundos.
 
-*R* el número de ciclos del período predeterminado.
+*R*<br/>
+El número de ciclos del período predeterminado.
 
-*Dur* el número de ciclos del período especificado por *Period2*.
+*Duración*<br/>
+El número de ciclos del período especificado por *Period2*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parámetros
 
-*Div* para el primer método, *Div* representa un recuento de pasos. Para el segundo método, *Div* es un `duration` objeto que contiene un recuento de pasos.
+*Div*<br/>
+Para el primer método, *Div* representa un recuento de pasos. Para el segundo método, *Div* es un `duration` objeto que contiene un recuento de pasos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parámetros
 
-*MULT* un valor del tipo especificado por `duration::rep`.
+*Mult*<br/>
+Valor del tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parámetros
 
-*Div* un valor del tipo especificado por `duration::rep`.
+*Div*<br/>
+Valor del tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Dur* A `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Dur* A `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parámetros
 
-*Div* divisor, que es un objeto de duración o un valor que representa los recuentos de pasos.
+*Div*<br/>
+El divisor, que es un objeto de duración o un valor que representa los recuentos de pasos.
 
 ### <a name="remarks"></a>Comentarios
 

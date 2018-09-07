@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b651d73db043388e1dc7bf33c085f07d3aabed33
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767948"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103715"
 ---
 # <a name="atl-operators"></a>Operadores ATL
 
@@ -43,15 +43,15 @@ Esta sección contiene los temas de referencia para los operadores globales de A
 Compara `CSid` objetos o `SID` igualdad de estructuras (identificador de seguridad).
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`lhs`  
+*LHS*  
 La primera `CSid` objeto o `SID` estructura para comparar.
 
-`rhs`  
+*RHS*  
 El segundo `CSid` objeto o `SID` estructura para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -63,7 +63,7 @@ Devuelve TRUE si los objetos son iguales; FALSE si no son iguales.
 Compara `CSid` objetos o `SID` desigualdad de estructuras (identificador de seguridad).
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -83,7 +83,7 @@ Devuelve TRUE si los objetos no son iguales y FALSE si son iguales.
 Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es menor que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -107,7 +107,7 @@ Este operador actúa en la dirección de la `CSid` objeto o `SID` estructurar y 
 Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es mayor que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -131,7 +131,7 @@ Este operador actúa en la dirección de la `CSid` objeto o `SID` estructurar y 
 Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es menor o igual que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -155,7 +155,7 @@ Este operador actúa en la dirección de la `CSid` objeto o `SID` estructurar y 
 Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es mayor o igual que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros

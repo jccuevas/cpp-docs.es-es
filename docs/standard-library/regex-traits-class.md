@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960936"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106475"
 ---
 # <a name="regextraits-class"></a>regex_traits (Clase)
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem* el tipo de elemento de carácter para describir.
+*Elem*<br/>
+El tipo de elemento de carácter que se va describir.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*loc* para almacenar el objeto de configuración regional.
+*LOC*<br/>
+El objeto de configuración regional que se va a almacenar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH* el elemento que se va a probar.
+*CH*<br/>
+Elemento que se va a comprobar.
 
-*CLS* las clases que se va a comprobar.
+*CLS*<br/>
+Las clases que se van a probar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parámetros
 
-*str*
+*str*<br/>
 
 La secuencia terminada en null.
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* a partir de secuencia que se va a buscar.
+*first*<br/>
+Principio de la secuencia que se va a buscar.
 
-*último* final de secuencia para buscar.
+*Último*<br/>
+Final de la secuencia que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* a partir de secuencia que se va a buscar.
+*first*<br/>
+Principio de la secuencia que se va a buscar.
 
-*último* final de secuencia para buscar.
+*Último*<br/>
+Final de la secuencia que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* a partir de secuencia que se va a transformar.
+*first*<br/>
+Principio de la secuencia que se va a transformar.
 
-*último* final de secuencia para transformar.
+*Último*<br/>
+Final de la secuencia que se va a transformar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* a partir de secuencia que se va a transformar.
+*first*<br/>
+Principio de la secuencia que se va a transformar.
 
-*último* final de secuencia para transformar.
+*Último*<br/>
+Final de la secuencia que se va a transformar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH* el elemento que se va a convertir.
+*CH*<br/>
+El elemento que se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH* el elemento que se va a convertir.
+*CH*<br/>
+El elemento que se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH* el elemento que se va a convertir.
+*CH*<br/>
+El elemento que se va a convertir.
 
-*radix* las operaciones aritméticas base a utilizar.
+*radix*<br/>
+Las operaciones aritméticas base que se van a usar.
 
 ### <a name="remarks"></a>Comentarios
 

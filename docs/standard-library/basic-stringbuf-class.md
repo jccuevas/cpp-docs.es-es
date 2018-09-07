@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b8bb688a0a79c82d4a8baa13ef2841956b5e331
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956155"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101721"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf (Clase)
 
@@ -61,11 +61,14 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc* la clase de asignador.
+*Alloc*<br/>
+Clase de asignador.
 
-*Elem* el tipo del elemento básico de la cadena.
+*Elem*<br/>
+Tipo de elemento básico de la cadena.
 
-*TR* rasgos de caracteres especializados en el elemento básico de la cadena.
+*Tr*<br/>
+Rasgos de caracteres especializados en el elemento básico de la cadena.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -135,9 +138,11 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Modo de* una de las enumeraciones en [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modo de*<br/>
+Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*Str* un objeto de tipo [basic_string](../standard-library/basic-string-class.md).
+*str*<br/>
+Un objeto de tipo [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -179,7 +184,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta* el carácter que se va a insertar en el búfer, o `traits_type::eof`.
+*_Meta*<br/>
+El carácter que se va a insertar en el búfer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -203,7 +209,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta* el carácter que se va a insertar en el búfer, o `traits_type::eof`.
+*_Meta*<br/>
+El carácter que se va a insertar en el búfer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -238,11 +245,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off* buscar relativa a la posición *_Way*. Para obtener más información, vea [basic_stringbuf::off_type](#off_type).
+*_Off*<br/>
+La posición para buscar relativa a *_Way*. Para obtener más información, vea [basic_stringbuf::off_type](#off_type).
 
-*_Way* el punto de partida para las operaciones de desplazamiento. Vea los valores posibles en [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*<br/>
+El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Modo de* especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura. Para obtener más información, vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Modo de*<br/>
+Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura. Para obtener más información, vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -274,9 +284,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sp* la posición para buscar.
+*_Sp*<br/>
+La posición que se va a buscar.
 
-*_Modo de* especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
+*_Modo de*<br/>
+Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -300,7 +312,8 @@ void str(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Newstr* la nueva cadena.
+*_Newstr*<br/>
+La nueva cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -388,7 +401,8 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parámetros
 
-*otros* basic_stringbuf cuyo contenido se intercambiará con este basic_stringbuf.
+*other*<br/>
+El parámetro basic_stringbuf cuyo contenido se intercambiará con este basic_stringbuf.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -402,7 +416,8 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parámetros
 
-*otros* un basic_stringbuf cuyo contenido, incluidas características de configuración regional, se asignará al stringbuf del lado izquierdo del operador.
+*other*<br/>
+Un basic_stringbuf cuyo contenido, incluidas las características de configuración regional, se asignará al stringbuf del lado izquierdo del operador.
 
 ### <a name="remarks"></a>Comentarios
 

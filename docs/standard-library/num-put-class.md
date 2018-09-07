@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965995"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100929"
 ---
 # <a name="numput-class"></a>num_put (Clase)
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType* tipo usado dentro de un programa para codificar los caracteres en una configuración regional.
+*CharType*<br/>
+Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-*OutputIterator* el tipo de iterador para que las funciones numeric put escriben sus resultados.
+*OutputIterator*<br/>
+Tipo de iterador en el que las funciones numeric put escriben sus resultados.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parámetros
 
-*siguiente* un iterador que direcciona el primer elemento de la cadena insertada.
+*next*<br/>
+Un iterador que se dirige al primer elemento de la cadena insertada.
 
-*_Iosbase* ha especificado la secuencia que contiene la configuración regional con la faceta numpunct usada para puntuar la salida y marcas para dar formato a la salida.
+*_Iosbase*<br/>
+Ha especificado la secuencia que contiene la configuración regional con la faceta numpunct usada para puntuar la salida y marcas para aplicar formato a la salida.
 
-*_Fill* un carácter que se usa para el espaciado.
+*_Fill*<br/>
+Un carácter que se usa para el espaciado.
 
-*Val* el número o tipo booleano que se va a la salida.
+*Val*<br/>
+El número o tipo booleano del que se va a obtener la salida.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs*<br/>
+Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>Parámetros
 
-*dest* un iterador que direcciona el primer elemento de la cadena insertada.
+*dest*<br/>
+Un iterador que se dirige al primer elemento de la cadena insertada.
 
-*_Iosbase* ha especificado la secuencia que contiene la configuración regional con la faceta numpunct usada para puntuar la salida y marcas para dar formato a la salida.
+*_Iosbase*<br/>
+Ha especificado la secuencia que contiene la configuración regional con la faceta numpunct usada para puntuar la salida y marcas para aplicar formato a la salida.
 
-*_Fill* un carácter que se usa para el espaciado.
+*_Fill*<br/>
+Un carácter que se usa para el espaciado.
 
-*Val* el número o tipo booleano que se va a la salida.
+*Val*<br/>
+El número o tipo booleano del que se va a obtener la salida.
 
 ### <a name="return-value"></a>Valor devuelto
 

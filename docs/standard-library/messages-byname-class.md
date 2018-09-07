@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de239e408adf4f66e7868ce9b91d7da574fffde
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e03cb627e7e9db40d56a69112977d87141626696
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958040"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100449"
 ---
 # <a name="messagesbyname-class"></a>messages_byname (Clase)
 
@@ -49,9 +49,11 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname* una configuración regional con nombre.
+*_Locname*<br/>
+Una configuración regional con nombre.
 
-*_Refs* un recuento de referencias inicial.
+*_Refs*<br/>
+Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 

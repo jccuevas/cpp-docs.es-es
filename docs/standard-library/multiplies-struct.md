@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4405f2ac1615a40f41f5deb9ee4d9baf5b8f8ef7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0f8917d2d1a6895f4454aad8d48dd25ee4bdaa3f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955278"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110570"
 ---
 # <a name="multiplies-struct"></a>multiplies (Struct)
 
@@ -44,16 +44,18 @@ struct multiplies<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) * std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *Tipo*, *T*, *U* un tipo que admita un binario `operator*` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda* el operando izquierdo de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
+*Izquierda*<br/>
+Operando izquierdo de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha* el operando derecho de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
+*Derecha*<br/>
+Operando derecho de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -111,7 +113,7 @@ int main( )
 The vector v1 = ( 2 4 6 8 10 12 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise products of vectors V1 & v2
- are: ( 6 24 54 96 150 216 )
+are: ( 6 24 54 96 150 216 )
 *\
 ```
 

@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957430"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101669"
 ---
 # <a name="ltmemorygt-functions"></a>Funciones &lt;memory&gt;
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val* el objeto o función que se va a obtener la dirección real.
+*Val*<br/>
+Objeto o función para el que se va a obtener la dirección real.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>Parámetros
 
-*Alineación* límite de alineación para intentar.
+*Alineación*<br/>
+Límite de alineación que se va a intentar.
 
-*Tamaño* el tamaño en bytes para el almacenamiento alineado.
+*Size*<br/>
+Tamaño en bytes del almacenamiento alineado.
 
-*PTR* la dirección inicial del grupo de almacenamiento contiguo disponible para usar. Este parámetro también es un parámetro de salida y se establece para que contenga la nueva dirección inicial si la alineación se realiza correctamente. Si `align()` no se realiza correctamente, este parámetro no se modifica.
+*PTR*<br/>
+Dirección inicial del bloque de almacenamiento contiguo disponible que se va a usar. Este parámetro también es un parámetro de salida y se establece para que contenga la nueva dirección inicial si la alineación se realiza correctamente. Si `align()` no se realiza correctamente, este parámetro no se modifica.
 
-*Espacio* el espacio total disponible para `align()` debe utilizar para crear el almacenamiento alineado. Este parámetro también es un parámetro de salida, y contiene espacio ajustado que queda en el búfer de almacenamiento después de restar el almacenamiento alineado y cualquier sobrecarga asociada.
+*Espacio*<br/>
+Espacio total disponible para `align()` que se va a usar para crear el almacenamiento alineado. Este parámetro también es un parámetro de salida, y contiene espacio ajustado que queda en el búfer de almacenamiento después de restar el almacenamiento alineado y cualquier sobrecarga asociada.
 
 Si `align()` no se realiza correctamente, este parámetro no se modifica.
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc* asignador usado para crear objetos.
+*Alloc*<br/>
+Asignador usado para crear objetos.
 
-*Args* cero o más argumentos que se convierten en los objetos.
+*Args*<br/>
+Cero o más argumentos que se convierten en los objetos.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* tipo controlado por el valor devuelto compartido puntero.
+*Ty*<br/>
+Tipo controlado por el puntero compartido devuelto.
 
-*Otros* tipo controlado por el puntero compartido de argumento.
+*Otros problemas*<br/>
+Tipo controlado por el puntero compartido de argumento.
 
-*Otros* el puntero compartido de argumento.
+*Otros problemas*<br/>
+Puntero compartido de argumento.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* un puntero a un área de almacenamiento accesibles, asignado y válido.
+*ptr*<br/>
+Un puntero para un área de almacenamiento válida, asignada, accesible.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -296,7 +307,8 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* puntero al objeto va a eliminar.
+*PTR*<br/>
+Puntero al objeto que se va a eliminar.
 
 Otro tipo de elementos de la matriz que se va a eliminar.
 
@@ -316,11 +328,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* tipo controlado por el valor devuelto compartido puntero.
+*Ty*<br/>
+Tipo controlado por el puntero compartido devuelto.
 
-*Otros* tipo controlado por el puntero compartido de argumento.
+*Otros problemas*<br/>
+Tipo controlado por el puntero compartido de argumento.
 
-*SP* el puntero compartido de argumento.
+*SP*<br/>
+Puntero compartido de argumento.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -373,11 +388,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-*D.* el tipo del eliminador.
+*D*<br/>
+Tipo del eliminador.
 
-*Ty* tipo controlado por el puntero compartido.
+*Ty*<br/>
+Tipo controlado por el puntero compartido.
 
-*SP* el puntero compartido.
+*SP*<br/>
+El puntero compartido.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -451,7 +469,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-*recuento* es el número máximo de elementos solicitados para la memoria que se va a asignar.
+*count*<br/>
+El número máximo de elementos solicitados para los que va a asignarse la memoria.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -619,15 +638,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>Parámetros
 
-*T* el tipo del objeto que el `unique_ptr` apuntará a.
+*T*<br/>
+Tipo del objeto al que apuntará el `unique_ptr`.
 
-*Tipos* los tipos de los argumentos de constructor especificados por *Args*.
+*Tipos*<br/>
+Los tipos de los argumentos de constructor especificados por *Args*.
 
-*Args* los argumentos que se pasarán al constructor del objeto de tipo *T*.
+*Args*<br/>
+Los argumentos que se pasarán al constructor del objeto de tipo *T*.
 
-*Elem* una matriz de elementos de tipo *T*.
+*Elem*<br/>
+Una matriz de elementos de tipo *T*.
 
-*Tamaño* el número de elementos que se va a asignar espacio en la nueva matriz.
+*Size*<br/>
+Número de elementos para los que se va a asignar espacio en la nueva matriz.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -684,9 +708,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parámetros
 
-*a la _izquierda* un puntero compartido o débil.
+*a la _izquierda*<br/>
+Un puntero compartido o no seguro.
 
-*derecha* un puntero compartido o débil.
+*right*<br/>
+Un puntero compartido o no seguro.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -703,7 +729,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pbuf* un puntero a la memoria que se va a cancelar la asignación.
+*_Pbuf*<br/>
+Un puntero a la memoria que se va a desasignar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -744,7 +771,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a> static_pointer_cast
@@ -759,11 +786,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* tipo controlado por el valor devuelto compartido puntero.
+*Ty*<br/>
+Tipo controlado por el puntero compartido devuelto.
 
-*Otros* tipo controlado por el puntero compartido de argumento.
+*Otros problemas*<br/>
+Tipo controlado por el puntero compartido de argumento.
 
-*Otros* el puntero compartido de argumento.
+*Otros problemas*<br/>
+Puntero compartido de argumento.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -818,13 +848,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* tipo controlado por el puntero compartido/débil izquierdo.
+*Ty*<br/>
+Tipo controlado por el puntero compartido/débil izquierdo.
 
-*Otros* tipo controlado por el puntero compartido/débil derecho.
+*Otros problemas*<br/>
+Tipo controlado por el puntero compartido/débil derecho.
 
-*izquierdo* el puntero compartido/débil izquierdo.
+*left*<br/>
+Puntero compartido/débil izquierdo.
 
-*derecha* el puntero compartido/débil derecho.
+*right*<br/>
+Puntero compartido/débil derecho.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -927,11 +961,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador de entrada que direcciona el primer elemento del intervalo de origen.
+*first*<br/>
+Iterador de entrada que direcciona el primer elemento del intervalo de origen.
 
-*último* un iterador de entrada que direcciona el último elemento del intervalo de origen.
+*Último*<br/>
+Iterador de entrada que direcciona el último elemento del intervalo de origen.
 
-*dest* un iterador hacia delante que direcciona el primer elemento del intervalo de destino.
+*dest*<br/>
+Iterador hacia delante que direcciona el primer elemento del intervalo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1032,11 +1069,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador de entrada que hace referencia al objeto que se va a copiar.
+*first*<br/>
+Iterador de entrada que hace referencia al objeto que se va a copiar.
 
-*recuento* un con o sin el signo de tipo entero que especifica el número de veces para copiar el objeto.
+*count*<br/>
+Tipo entero con signo o sin signo que especifica el número de veces que se va a copiar el objeto.
 
-*dest* un iterador hacia delante que hace referencia a dónde van las nuevas copias.
+*dest*<br/>
+Iterador hacia delante que hace referencia a dónde van las nuevas copias.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1066,11 +1106,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a iniciar.
+*first*<br/>
+Un iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a iniciar.
 
-*último* un iterador hacia delante que direcciona el último elemento del intervalo de destino que se va a iniciar.
+*Último*<br/>
+Un iterador hacia delante que direcciona el último elemento del intervalo de destino que se va a iniciar.
 
-*Val* el valor que se utilizará para inicializar el intervalo de destino.
+*Val*<br/>
+Valor que se usará para inicializar el intervalo de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1135,11 +1178,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador hacia delante que direcciona el primer elemento del intervalo de destino que se inicie.
+*first*<br/>
+Iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a iniciar.
 
-*recuento de* el número de elementos que se va a inicializarse.
+*count*<br/>
+Número de elementos que se van a inicializar.
 
-*Val* el valor que se utilizará para inicializar el intervalo de destino.
+*Val*<br/>
+Valor que se usará para inicializar el intervalo de destino.
 
 ### <a name="remarks"></a>Comentarios
 

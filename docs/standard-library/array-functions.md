@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961076"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108731"
 ---
 # <a name="ltarraygt-functions"></a>Funciones &lt;array&gt;
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Índice* el desplazamiento del elemento.
+*Index*<br/>
+El desplazamiento del elemento.
 
-*T* el tipo de un elemento.
+*T*<br/>
+El tipo de un elemento.
 
-*N* el número de elementos de la matriz.
+*N*<br/>
+Número de elementos de la matriz.
 
-*arr* seleccione de la matriz.
+*arr*<br/>
+La matriz de la que se selecciona.
 
 ### <a name="example"></a>Ejemplo
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* el tipo de un elemento.
+*Ty*<br/>
+El tipo de un elemento.
 
-*N* el tamaño de la matriz.
+*N*<br/>
+Se refiere al tamaño de la matriz.
 
-*izquierdo* la primera matriz intercambiar.
+*left*<br/>
+Primera matriz que se va a intercambiar.
 
-*derecha* la segunda matriz intercambiar.
+*right*<br/>
+Segunda matriz que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 

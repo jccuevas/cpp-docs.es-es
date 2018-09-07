@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966490"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100811"
 ---
 # <a name="enableif-class"></a>enable_if (Clase)
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parámetros
 
-*B* el valor que determina la existencia del tipo resultante.
+*B*<br/>
+El valor que determina la existencia del tipo resultante.
 
-*T* para crear una instancia si el tipo de *B* es true.
+*T*<br/>
+El tipo para crear una instancia si *B* es true.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -64,12 +66,12 @@ A continuación, se presentan cuatro escenarios de ejemplo:
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - Escenario 2: Agregar un parámetro de función que tiene un argumento predeterminado:
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - Escenario 3: Agregar un parámetro de plantilla que tiene un argumento predeterminado:
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 El escenario 1 no funciona con constructores y operadores de conversión porque no tienen tipos de retorno.

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a14b2fe5a14eaf264377a1f818227d73e134b030
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fd4481be124cbcbba04f6b45b4c5a08beb34f04d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957972"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103310"
 ---
 # <a name="isliteraltype-class"></a>Clase is_literal_type
 
@@ -37,7 +37,8 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T* el tipo de consulta.
+*T*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
