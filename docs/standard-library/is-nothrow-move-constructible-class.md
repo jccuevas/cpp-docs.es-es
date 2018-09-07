@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1883f051a1df74256da533cf2aba19626b9f19e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bba1380df8acf85aaf6729b5a6bf80465439773d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959464"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101656"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>Clase is_nothrow_move_constructible
 
@@ -36,7 +36,8 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* el tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106088"
 ---
 # <a name="chartraits-struct"></a>char_traits (Struct)
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType* el tipo de elemento de datos.
+*CharType*<br/>
+Tipo de datos del elemento.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -116,11 +117,13 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* el carácter cuyo valor se asignará.
 
-*_CharTo* el elemento que se asigna el valor de carácter.
+*_CharTo*<br/>
+El elemento al que se asignará el valor de carácter.
 
 * strTo * la matriz de cadenas o caracteres cuyos elementos iniciales se pueden asignar valores de caracteres.
 
-*_Num* el número de elementos que se van a asignar valores.
+*_Num*<br/>
+El número de elementos a los que se van a asignar valores.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -199,7 +202,8 @@ static int compare(const char_type* str1,
 
 * str2 * el segundo de dos cadenas que se va a comparar entre sí.
 
-*_Num* el número de elementos en las cadenas que se va a comparar.
+*_Num*<br/>
+El número de elementos en las cadenas que se van a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -258,11 +262,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parámetros
 
-*_To* el elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
+*_To*<br/>
+El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-*_Desde* el elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
+*_Desde*<br/>
+El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
-*_Num* el número de elementos que se copiarán.
+*_Num*<br/>
+Número de elementos que se van a copiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -317,13 +324,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*dest* la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
+*dest*<br/>
+La matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-*dest_size* el tamaño de *dest*. Si `char_type` es **char**, entonces es este tamaño en bytes. Si `char_type` es **wchar_t**, a continuación, este tamaño no está en palabras.
+*dest_size*<br/>
+El tamaño de *dest*. Si `char_type` es **char**, entonces es este tamaño en bytes. Si `char_type` es **wchar_t**, a continuación, este tamaño no está en palabras.
 
-*_Desde* la matriz de cadenas o caracteres de origen que se va a copiar.
+*_Desde*<br/>
+Matriz de cadenas o caracteres de origen que se va a copiar.
 
-*recuento de* el número de elementos que se copiarán.
+*count*<br/>
+Número de elementos que se van a copiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -425,9 +436,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch1* el primero de dos caracteres que se comprobará si son iguales.
+*_Ch1*<br/>
+El primero de dos caracteres que se comprobará si son iguales.
 
-*_Ch2* el segundo de dos caracteres que se comprobará si son iguales.
+*_Ch2*<br/>
+El segundo de dos caracteres que se comprobará si son iguales.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -483,9 +496,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch1* el primero de los dos caracteres que se comprobará si son iguales como `int_type`s.
+*_Ch1*<br/>
+El primero de los dos caracteres que se comprobará si son iguales como `int_type`s.
 
-*_Ch2* el segundo de los dos caracteres que se comprobará si son iguales como `int_type`s.
+*_Ch2*<br/>
+El segundos de los dos caracteres que se comprobará si son iguales como `int_type`s.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -551,9 +566,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a>  char_traits::find
@@ -568,11 +583,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* el primer carácter de la cadena se va a buscar.
+*str*<br/>
+El primer carácter de la cadena que se buscará.
 
-*_Num* el número de posiciones, contando desde el principio, en el intervalo que se va a buscar.
+*_Num*<br/>
+El número de posiciones, contando desde el principio, del intervalo que se buscará.
 
-*_Ch* el carácter que se va a buscar en el intervalo.
+*_Ch*<br/>
+El carácter que se va a buscar en el intervalo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -616,7 +634,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +664,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* la cadena de C cuya longitud es va a medir.
+*str*<br/>
+La cadena de C cuya longitud se va a medir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -688,9 +707,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch1* el primero de dos caracteres que se va a menor.
+*_Ch1*<br/>
+El primero de dos caracteres que se comprobará si son menores.
 
-*_Ch2* el segundo de dos caracteres que se va a menor.
+*_Ch2*<br/>
+El segundo de dos caracteres que se comprobará si son menores.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -749,11 +770,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parámetros
 
-*_To* el elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
+*_To*<br/>
+El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-*_Desde* el elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
+*_Desde*<br/>
+El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
-*_Num* el número de elementos que se copian de la cadena de origen.
+*_Num*<br/>
+El número de elementos que se copiarán de la cadena de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -823,13 +847,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*dest* el elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
+*dest*<br/>
+El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-*dest_size* el tamaño de *dest*. Si `char_type` es **char**, está en bytes. Si `char_type` es **wchar_t**, está en palabras.
+*dest_size*<br/>
+El tamaño de *dest*. Si `char_type` es **char**, está en bytes. Si `char_type` es **wchar_t**, está en palabras.
 
-*_Desde* el elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
+*_Desde*<br/>
+El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
-*recuento de* el número de elementos que se copian de la cadena de origen.
+*count*<br/>
+El número de elementos que se copiarán de la cadena de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -895,7 +923,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch* el carácter representado como un `int_type` va a probar para si es el carácter EOF o no.
+*_Ch*<br/>
+El carácter representado como un `int_type` que se va a probar si es o no es el carácter EOF.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1002,7 +1031,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch* el `int_type` caracteres para ser representado como un `char_type`.
+*_Ch*<br/>
+El carácter `int_type` que se representará como un `char_type`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1107,7 +1137,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch* el `char_type` caracteres para ser representado como un `int_type`.
+*_Ch*<br/>
+El carácter `char_type` que se representará como un `int_type`.
 
 ### <a name="return-value"></a>Valor devuelto
 

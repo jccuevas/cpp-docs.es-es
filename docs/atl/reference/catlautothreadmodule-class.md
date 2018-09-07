@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b782d7d53e5d97f08ebae62fc62d7a49c9f96d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763661"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110648"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule (clase)
 
 Esta clase implementa un servidor COM de subprocesamiento de modelo, agrupadas por subproceso.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,7 +46,7 @@ Debe usar el [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-ma
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
->  Esta clase reemplaza el atributo obsolete [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) clase.
+> Esta clase reemplaza el atributo obsolete [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) clase.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

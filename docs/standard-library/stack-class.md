@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963230"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110417"
 ---
 # <a name="stack-class"></a>stack (Clase)
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* el elemento tipo de datos que se almacenará en la pila.
+*Type*<br/>
+Tipo de datos de los elementos que se van a almacenar en la pila.
 
-*Contenedor* el tipo del contenedor subyacente usado para implementar la pila. El valor predeterminado es la clase `deque`*\<Type>*.
+*Contenedor*<br/>
+Tipo del contenedor subyacente que se usa para implementar la pila. El valor predeterminado es la clase `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val* el elemento agregado a la parte superior de la pila.
+*Val*<br/>
+El elemento agregado a la parte superior de la pila.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el contenedor del que la pila construida va a ser una copia.
+*right*<br/>
+El contenedor del que la pila construida va a ser una copia.
 
 ### <a name="example"></a>Ejemplo
 

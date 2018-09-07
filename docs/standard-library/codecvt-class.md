@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956812"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110636"
 ---
 # <a name="codecvt-class"></a>codecvt (Clase)
 
@@ -70,11 +70,14 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType* tipo usado dentro de un programa para codificar los caracteres.
+*CharType*<br/>
+Tipo usado dentro de un programa para codificar caracteres.
 
-*Bytes* un tipo usado para codificar caracteres fuera de un programa.
+*Byte*<br/>
+Tipo usado para codificar caracteres fuera de un programa.
 
-*StateType* un tipo que se puede usar para representar los estados intermedios de una conversión entre tipos internos y externos de representaciones de caracteres.
+*StateType*<br/>
+Tipo que se puede usar para representar los estados intermedios de una conversión entre los tipos internos y externos de representaciones de caracteres.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -206,7 +209,8 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs*<br/>
+Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -216,7 +220,7 @@ Los valores posibles de la *_Refs* parámetro y su importancia son:
 
 - 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: no se definen estos valores.
+- 2: no se definen estos valores.
 
 El constructor inicializa su `locale::facet` objeto base con **locale::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -277,19 +281,26 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1* puntero al principio de la secuencia que se va a convertir.
+*first1*<br/>
+Puntero al principio de la secuencia que se va a convertir.
 
-*last1* puntero al final de la secuencia que se va a convertir.
+*last1*<br/>
+Puntero al final de la secuencia que se va a convertir.
 
-*next1* puntero más allá del final de la secuencia convertida, al primer carácter sin convertir.
+*next1*<br/>
+Puntero más allá del final de la secuencia convertida, al primer carácter sin convertir.
 
-*first2* puntero al principio de la secuencia convertida.
+*first2*<br/>
+Puntero al principio de la secuencia convertida.
 
-*last2* puntero al final de la secuencia convertida.
+*last2*<br/>
+Puntero al final de la secuencia convertida.
 
-*next2* puntero a la `CharType` que viene después de convertir la última `CharType`, al primer carácter sin modificaciones en la secuencia de destino.
+*next2*<br/>
+Puntero a la `CharType` que viene después de convertir la última `CharType`, al primer carácter sin modificaciones en la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -325,13 +336,17 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1* puntero al principio de la secuencia externa.
+*first1*<br/>
+Puntero al principio de la secuencia externa.
 
-*last1* puntero al final de la secuencia externa.
+*last1*<br/>
+Puntero al final de la secuencia externa.
 
-*_Len2* el número máximo de `Byte`s que pueden ser devueltos por la función miembro.
+*_Len2*<br/>
+El número máximo de `Byte`s que pueden ser devueltos por la función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -386,19 +401,26 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1* puntero al principio de la secuencia que se va a convertir.
+*first1*<br/>
+Puntero al principio de la secuencia que se va a convertir.
 
-*last1* puntero al final de la secuencia que se va a convertir.
+*last1*<br/>
+Puntero al final de la secuencia que se va a convertir.
 
-*next1* sin convertir la referencia a un puntero al primer `CharType`, después del último `CharType` convertir.
+*next1*<br/>
+Referencia a un puntero al primer sin convertir `CharType`, después del último `CharType` convertir.
 
-*first2* puntero al principio de la secuencia convertida.
+*first2*<br/>
+Puntero al principio de la secuencia convertida.
 
-*last2* puntero al final de la secuencia convertida.
+*last2*<br/>
+Puntero al final de la secuencia convertida.
 
-*next2* sin convertir la referencia a un puntero al primer `Byte`, después del último `Byte` convertir.
+*next2*<br/>
+Referencia a un puntero al primer sin convertir `Byte`, después del último `Byte` convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -434,13 +456,17 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first2* puntero a la primera posición del intervalo de destino.
+*first2*<br/>
+Puntero a la primera posición del intervalo de destino.
 
-*last2* puntero a la última posición del intervalo de destino.
+*last2*<br/>
+Puntero a la última posición del intervalo de destino.
 
-*next2* puntero al primer elemento sin modificaciones en la secuencia de destino.
+*next2*<br/>
+Puntero al primer elemento sin modificaciones en la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -544,19 +570,26 @@ result in(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1* puntero al principio de la secuencia que se va a convertir.
+*first1*<br/>
+Puntero al principio de la secuencia que se va a convertir.
 
-*last1* puntero al final de la secuencia que se va a convertir.
+*last1*<br/>
+Puntero al final de la secuencia que se va a convertir.
 
-*next1* puntero más allá del final de la secuencia convertida al primer carácter sin convertir.
+*next1*<br/>
+Puntero más allá del final de la secuencia convertida, al primer carácter sin convertir.
 
-*first2* puntero al principio de la secuencia convertida.
+*first2*<br/>
+Puntero al principio de la secuencia convertida.
 
-*last2* puntero al final de la secuencia convertida.
+*last2*<br/>
+Puntero al final de la secuencia convertida.
 
-*next2* puntero a la `CharType` que viene después de convertir la última `Chartype` al primer carácter sin modificaciones en la secuencia de destino.
+*next2*<br/>
+Puntero a la `CharType` que viene después de convertir la última `Chartype` al primer carácter sin modificaciones en la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -610,7 +643,7 @@ int main( )
 
 ```Output
 It worked! The converted string is:
- [This is the string to be converted!]
+[This is the string to be converted!]
 ```
 
 ## <a name="intern_type"></a>  codecvt::intern_type
@@ -639,13 +672,17 @@ int length(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1* puntero al principio de la secuencia externa.
+*first1*<br/>
+Puntero al principio de la secuencia externa.
 
-*last1* puntero al final de la secuencia externa.
+*last1*<br/>
+Puntero al final de la secuencia externa.
 
-*_Len2* el número máximo de Bytes que pueden ser devueltos por la función miembro.
+*_Len2*<br/>
+El número máximo de Bytes que puede devolver la función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -740,19 +777,26 @@ result out(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1* puntero al principio de la secuencia que se va a convertir.
+*first1*<br/>
+Puntero al principio de la secuencia que se va a convertir.
 
-*last1* puntero al final de la secuencia que se va a convertir.
+*last1*<br/>
+Puntero al final de la secuencia que se va a convertir.
 
-*next1* sin convertir la referencia a un puntero al primer `CharType` después del último `CharType` convertir.
+*next1*<br/>
+Referencia a un puntero al primer sin convertir `CharType` después del último `CharType` convertir.
 
-*first2* puntero al principio de la secuencia convertida.
+*first2*<br/>
+Puntero al principio de la secuencia convertida.
 
-*last2* puntero al final de la secuencia convertida.
+*last2*<br/>
+Puntero al final de la secuencia convertida.
 
-*next2* sin convertir la referencia a un puntero al primer `Byte` una vez convertido el último `Byte`.
+*next2*<br/>
+Referencia a un puntero al primer sin convertir `Byte` una vez convertido el último `Byte`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -796,7 +840,7 @@ int main( )
 
 ```Output
 It worked: The converted string is:
- [This is the wchar_t string to be converted.]
+[This is the wchar_t string to be converted.]
 ```
 
 ## <a name="state_type"></a>  codecvt::state_type
@@ -825,13 +869,17 @@ result unshift(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* el estado de conversión que se mantiene entre las llamadas a la función miembro.
+*_State*<br/>
+El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first2* puntero a la primera posición del intervalo de destino.
+*first2*<br/>
+Puntero a la primera posición del intervalo de destino.
 
-*last2* puntero a la última posición del intervalo de destino.
+*last2*<br/>
+Puntero a la última posición del intervalo de destino.
 
-*next2* puntero al primer elemento sin modificaciones en la secuencia de destino.
+*next2*<br/>
+Puntero al primer elemento sin modificaciones en la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -857,5 +905,5 @@ La función miembro devuelve [do_unshift](#do_unshift)( `_State`, `first2`, `las
 
 [\<locale>](../standard-library/locale.md)<br/>
 [Páginas de códigos](../c-runtime-library/code-pages.md)<br/>
-[Nombres de configuración regional, idiomas y cadenas de país o región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

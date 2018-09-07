@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955025"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107663"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* el primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse bit a bit `AND`.
+*left*<br/>
+El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
-*derecha* la segunda de las dos valarray cuyos elementos respectivos van a combinarse bit a bit `AND`.
+*right*<br/>
+El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* un objeto de tipo **bitset\<N >** que va a insertarse en el flujo de salida como una cadena.
+*right*<br/>
+Un objeto de tipo **bitset\<N>** que se va a insertar en el flujo de salida como una cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Istr* la cadena que se escriban en el flujo de entrada van a insertar en el conjunto de bits.
+*_Istr*<br/>
+La cadena que se escribe en el flujo de entrada para insertarla en un conjunto de bits.
 
-*derecha* el conjunto de bits que recibe los bits del flujo de entrada.
+*right*<br/>
+El conjunto de bits que recibe los bits del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* el primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse bit a bit `EXCLUSIVE-OR`.
+*left*<br/>
+El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
-*derecha* la segunda de las dos valarray cuyos elementos respectivos van a combinarse bit a bit `EXCLUSIVE-OR`.
+*right*<br/>
+El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* el primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse bit a bit `OR`.
+*left*<br/>
+El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
-*derecha* la segunda de las dos valarray cuyos elementos respectivos van a combinarse bit a bit `OR`.
+*right*<br/>
+El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
 ### <a name="return-value"></a>Valor devuelto
 

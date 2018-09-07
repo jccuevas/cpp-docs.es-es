@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 527213eb8e696caa97e307c643929118dd954965
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208531"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101020"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator (Clase)
 
@@ -40,9 +40,11 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*OutputIterator* especifica el iterador de salida para el objeto que se almacena.
+*OutputIterator*<br/>
+Especifica el iterador de salida para el objeto que se almacena.
 
-*Tipo* el tipo de objeto para el que se está asignando el almacenamiento.
+*Type*<br/>
+Tipo de objeto al que se va a asignar almacenamiento.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -159,9 +161,9 @@ int main( void)
 {
    Int *pInt = ( Int* ) malloc( sizeof( Int ) );
    memset( pInt, 0, sizeof( Int ) ); // Set bIsConstructed to false;
- *pInt = 5;
+*pInt = 5;
    raw_storage_iterator< Int*, Int > it( pInt );
- *it = 5;
+*it = 5;
 }
 \* Output:
 Not constructed.
@@ -181,7 +183,8 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El valor del objeto del tipo `Type` va a insertar en la memoria.
+*Val*<br/>
+El valor del objeto del tipo `Type` va a insertar en la memoria.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -233,7 +236,7 @@ int main( void )
 *pInt = 5;
 
    raw_storage_iterator<Int*, Int> it( pInt );
- *it = 5;
+*it = 5;
 }
 \* Output:
 Not constructed.
@@ -282,7 +285,7 @@ int main( void )
    int *pInt = new int[5];
    std::raw_storage_iterator<int*,int> it( pInt );
    for ( int i = 0; i < 5; i++, it++ ) {
- *it = 2 * i;
+*it = 2 * i;
 };
 
    for ( int i = 0; i < 5; i++ ) cout << "array " << i << " = " << pInt[i] << endl;;
@@ -308,7 +311,8 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* el iterador hacia delante que va a subyacer la `raw_storage_iterator` de objeto que se está construyendo.
+*first*<br/>
+El iterador de reenvío que va a subyacer al objeto `raw_storage_iterator` que se está construyendo.
 
 ### <a name="example"></a>Ejemplo
 

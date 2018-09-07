@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddd340f0a5d988709804698f53918462f4b4e512
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c2dafffcaee1dc4ba9bc87c2bfaa60dee45ca234
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964536"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100772"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t (Clase)
 
@@ -32,20 +32,23 @@ Clase de adaptadores que permite llamar a una función miembro **const** que tom
 ```cpp
 template <class Result, class Type, class Arg>
 class const_mem_fun1_ref_t
- : public binary_function<Type, Arg, Result>
- {
+: public binary_function<Type, Arg, Result>
+{
     explicit const_mem_fun1_ref_t(Result (Type::* Pm)(Arg) const);
     Result operator()(const Type& left, Arg right) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*P. M.* un puntero a la función miembro de clase `Type` va a convertir en un objeto de función.
+*P. M.*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*izquierdo* el **const** objeto al que el *Pm* función miembro se llama en.
+*left*<br/>
+El **const** objeto al que el *Pm* función miembro se llama en.
 
-*derecha* el argumento que se entrega a *Pm*.
+*right*<br/>
+El argumento que se entrega a *Pm*.
 
 ## <a name="return-value"></a>Valor devuelto
 

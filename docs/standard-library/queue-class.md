@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954921"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103708"
 ---
 # <a name="queue-class"></a>queue (Clase)
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* el elemento tipo de datos que se almacenará en la cola
+*Type*<br/>
+El tipo de datos de los elementos que se va a almacenar en la cola
 
-*Contenedor* el tipo del contenedor subyacente que se usa para implementar la cola.
+*Contenedor*<br/>
+El tipo del contenedor subyacente que se usa para implementar la cola.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val* el elemento agregado a la parte trasera de la cola.
+*Val*<br/>
+El elemento que se ha agregado a la parte trasera de la cola.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el **const** contenedor del que la cola construida va a ser una copia.
+*right*<br/>
+El contenedor **const** del que la cola construida va a ser una copia.
 
 ### <a name="remarks"></a>Comentarios
 

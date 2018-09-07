@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d4dd1f7b428e3b19f86445bf0b191fb840ecdb9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960972"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101007"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator (Clase)
 
@@ -87,11 +87,14 @@ private:
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt* el tipo de iterador para subcoincidencias.
+*BidIt*<br/>
+El tipo de iterador para subcoincidencias.
 
-*Elem* el tipo de los elementos que coinciden.
+*Elem*<br/>
+Tipo de los elementos que debe coincidir.
 
-*RXtraits* clase de rasgos para los elementos.
+*RXtraits*<br/>
+Clase Traits para los elementos.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -335,7 +338,8 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el iterador que se compara con.
+*right*<br/>
+Iterador con el que se compara.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -679,7 +683,8 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el iterador que se compara con.
+*right*<br/>
+Iterador con el que se compara.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1144,13 +1149,17 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* a partir de la secuencia que debe coincidir.
+*first*<br/>
+Principio de la secuencia que debe coincidir.
 
-*último* final de secuencia para hacer coincidir.
+*Último*<br/>
+Final de la secuencia que debe coincidir.
 
-*Re* expresión Regular para coincidencias.
+*Re*<br/>
+Expresión regular para las coincidencias.
 
-*f* marcadores para coincidencias.
+*f*<br/>
+Marcadores para coincidencias.
 
 ### <a name="remarks"></a>Comentarios
 

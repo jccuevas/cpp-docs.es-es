@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cc8b144ab8cf619469723f6fd19a4ffdac085e6d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953239"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105853"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution (Clase)
 
@@ -76,7 +76,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*URNG* El motor de generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG*<br/>
+El uniforme generador motor de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -158,7 +159,7 @@ Enter an integer value for a sample count: 100
 p == 0.45
 Histogram for 100 samples:
 false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
- true :::::::::::::::::::::::::::::::::::::::::
+true :::::::::::::::::::::::::::::::::::::::::
 ```
 
 ## <a name="requirements"></a>Requisitos
@@ -178,9 +179,11 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*p* almacenado `p` parámetro de distribución.
+*p*<br/>
+Parámetro de distribución `p` almacenado.
 
-*parm* el `param_type` estructura usada para construir la distribución.
+*parm*<br/>
+La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -200,7 +203,8 @@ struct param_type {typedef bernoulli_distribution distribution_type; param_type 
 
 ### <a name="parameters"></a>Parámetros
 
-*p* almacenado `p` parámetro de distribución.
+*p*<br/>
+Parámetro de distribución `p` almacenado.
 
 ### <a name="remarks"></a>Comentarios
 

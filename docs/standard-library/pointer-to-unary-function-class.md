@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b9543ed9bec188ab810bbfd3e0ac52a764fc2fdd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953067"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110404"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function (Clase)
 
@@ -43,9 +43,11 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*pfunc* la función binaria que se va a convertir.
+*pfunc*<br/>
+La función binaria que se va a convertir.
 
-*izquierdo* el objeto que la  *\*pfunc* se llama en.
+*left*<br/>
+El objeto al que *\*pfunc* está llamado.
 
 ## <a name="return-value"></a>Valor devuelto
 

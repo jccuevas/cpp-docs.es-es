@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962456"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110443"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits (clase)
 
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parámetros
 
-*al* un objeto de asignador.
+*Al*<br/>
+Un objeto de asignador.
 
-*recuento de* el número de elementos que se va a asignar.
+*count*<br/>
+Número de elementos que se van a asignar.
 
-*Sugerencia* A `const_pointer` que puede ayudar el objeto de asignador a satisfacer la solicitud de almacenamiento al buscar la dirección de un objeto asignado antes de la solicitud. Un puntero nulo se trata como si no hubiera sugerencia.
+*Sugerencia*<br/>
+`const_pointer` que puede ayudar al objeto de asignador a satisfacer la solicitud de almacenamiento al buscar la dirección de un objeto asignado antes de la solicitud. Un puntero nulo se trata como si no hubiera sugerencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-*al* un objeto de asignador.
+*Al*<br/>
+Un objeto de asignador.
 
-*PTR* un puntero a la ubicación donde el objeto se va a construir.
+*ptr*<br/>
+Puntero a la ubicación donde se va a crear el objeto.
 
-*args* una lista de argumentos que se pasa al constructor de objetos.
+*args*<br/>
+Lista de argumentos que se pasa al constructor de objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parámetros
 
-*al* un objeto de asignador.
+*Al*<br/>
+Un objeto de asignador.
 
-*PTR* un puntero a la ubicación inicial de los objetos que se va a cancelar la asignación.
+*ptr*<br/>
+Puntero a la ubicación inicial de los objetos que se van a desasignar.
 
-*recuento de* el número de objetos que se va a desasignar.
+*count*<br/>
+Número de objetos que se van a desasignar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-*al* un objeto de asignador.
+*Al*<br/>
+Un objeto de asignador.
 
-*PTR* un puntero a la ubicación del objeto.
+*ptr*<br/>
+Puntero a la ubicación del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parámetros
 
-*al* un objeto de asignador.
+*Al*<br/>
+Un objeto de asignador.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parámetros
 
-*al* un objeto de asignador.
+*Al*<br/>
+Un objeto de asignador.
 
 ### <a name="return-value"></a>Valor devuelto
 

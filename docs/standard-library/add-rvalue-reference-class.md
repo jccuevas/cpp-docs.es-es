@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a20a637872c8c26433920da313d4e6c001736d06
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966627"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105762"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference (clase)
 
@@ -39,7 +39,8 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T* el tipo de modificación.
+*T*<br/>
+Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -80,7 +81,8 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>Requisitos
 
-Encabezado: <type_traits> Espacio de nombres: std
+Encabezado: \<type_traits >  
+Namespace: std
 
 ## <a name="see-also"></a>Vea también
 

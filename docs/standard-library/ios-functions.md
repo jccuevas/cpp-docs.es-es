@@ -52,12 +52,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 23689b7c7d6770816db02e4a463fd63080abbaf4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a19d023400179e1e7e16541b7e3d7ef38ad963ba
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959097"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101098"
 ---
 # <a name="ltiosgt-functions"></a>Funciones de &lt;ios&gt;
 
@@ -82,7 +82,8 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -133,7 +134,8 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -185,7 +187,8 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Iosbase* un `ios_base` objeto.
+*_Iosbase*<br/>
+Un objeto `ios_base`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -201,7 +204,8 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -248,7 +252,8 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -274,7 +279,8 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -319,7 +325,8 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -361,7 +368,8 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -389,7 +397,8 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -415,7 +424,8 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -461,7 +471,8 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -487,7 +498,8 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -528,7 +540,8 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -550,7 +563,8 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -574,7 +588,8 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -600,7 +615,8 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -656,7 +672,8 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -700,7 +717,8 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -753,7 +771,8 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -779,7 +798,8 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -823,7 +843,8 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -876,7 +897,8 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -900,7 +922,8 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md), o a un tipo que hereda de `ios_base`.
+*str*<br/>
+Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md) o a un tipo que hereda de `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
 

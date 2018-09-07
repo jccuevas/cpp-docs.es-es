@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954999"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100785"
 ---
 # <a name="sharedfuture-class"></a>shared_future (Clase)
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha* A `shared_future` objeto.
+*Derecha*<br/>
+Un objeto `shared_future`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha* A [futuras](../standard-library/future-class.md) o `shared_future` objeto.
+*Derecha*<br/>
+Un objeto [future](../standard-library/future-class.md) o `shared_future`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rel_time* A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica un intervalo de tiempo máximo que el subproceso se bloquea.
+*Rel_time*<br/>
+Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo máximo que el subproceso bloquea.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parámetros
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica un tiempo después del cual se puede desbloquear el subproceso.
+*Abs_time*<br/>
+Un objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica un tiempo después del cual se puede desbloquear el subproceso.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd7a429bbddc81458538ace0ccc138dec65b9aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955252"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106579"
 ---
 # <a name="moveiterator-class"></a>move_iterator (Clase)
 
@@ -157,7 +157,8 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el iterador que se usará como el iterador almacenado.
+*right*<br/>
+Iterador que se va a usar como iterador almacenado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -173,7 +174,8 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off* un desplazamiento para agregar a la posición actual para determinar la nueva posición actual.
+*_Off*<br/>
+Un desplazamiento para agregar a la posición actual con el fin de determinar la nueva posición actual.
 
 ### <a name="return-value"></a>Valor devuelto
 

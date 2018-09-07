@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e37d1506fd713f90b793c6f3f9a04b39bf53f7a4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954240"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100475"
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 
@@ -56,13 +56,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* uno de los objetos que se va a probar para desigualdad.
+*left*<br/>
+Uno de los objetos cuya desigualdad se va a comprobar.
 
-*derecha* uno de los objetos que se va a probar para desigualdad.
+*right*<br/>
+Uno de los objetos cuya desigualdad se va a comprobar.
 
-*Ty1* tipo controlado por la izquierda compartido puntero.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2* tipo controlado por la derecha compartido puntero.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -154,13 +158,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* uno de los objetos que se va a probar para igualdad.
+*left*<br/>
+Uno de los objetos cuya igualdad se va a comprobar.
 
-*derecha* uno de los objetos que se va a probar para igualdad.
+*right*<br/>
+Uno de los objetos cuya igualdad se va a comprobar.
 
-*Ty1* tipo controlado por la izquierda compartido puntero.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2* tipo controlado por la derecha compartido puntero.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -258,13 +266,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-*derecha* uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-*Ty1* tipo controlado por la izquierda compartido puntero.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2* tipo controlado por la derecha compartido puntero.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -288,13 +300,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-*derecha* uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-*Ty1* tipo controlado por el puntero izquierdo.
+*Ty1*<br/>
+Tipo controlado por el puntero izquierdo.
 
-*Ty2* tipo controlado por el puntero derecho.
+*Ty2*<br/>
+Tipo controlado por el puntero derecho.
 
 ## <a name="op_lt_eq"></a> operator&lt;=
 
@@ -314,13 +330,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-*derecha* uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-*Ty1* tipo controlado por la izquierda compartido puntero.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2* tipo controlado por la derecha compartido puntero.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -344,13 +364,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-*derecha* uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-*Ty1* tipo controlado por la izquierda compartido puntero.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2* tipo controlado por la derecha compartido puntero.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
 
@@ -364,15 +388,20 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem* el tipo de elemento de la secuencia.
+*Elem*<br/>
+El tipo del elemento de secuencia.
 
-*TR* el tipo de los rasgos de elemento de la secuencia.
+*Tr*<br/>
+El tipo de rasgos del elemento de secuencia.
 
-*Ty* tipo controlado por el puntero compartido.
+*Ty*<br/>
+Tipo controlado por el puntero compartido.
 
-*out* el flujo de salida.
+*out*<br/>
+Secuencia de salida.
 
-*SP* el puntero compartido.
+*SP*<br/>
+El puntero compartido.
 
 ### <a name="remarks"></a>Comentarios
 

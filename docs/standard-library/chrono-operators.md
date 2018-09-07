@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 56a8d05c3a68cf8d3e12b8a6452d43033e414cbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957417"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102725"
 ---
 # <a name="ltchronogt-operators"></a>Operadores de &lt;chrono&gt;
 
@@ -49,13 +49,17 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda* la izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-*Derecha* derecho `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
-*Tiempo* A `time_point` objeto.
+*Tiempo*<br/>
+Un objeto `time_point`.
 
-*Dur* A `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -84,9 +88,11 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`Left` La izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-`Right` El derecho de `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -114,9 +120,11 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parámetros
 
-*Dur* A `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
-*MULT* un valor entero.
+*Mult*<br/>
+Valor entero.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -147,13 +155,17 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parámetros
 
-*Dur* A `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
-*Div* un valor entero.
+*Div*<br/>
+Valor entero.
 
-*Izquierda* la izquierda `duration` objeto.
+*Izquierda*<br/>
+Objeto `duration` izquierdo.
 
-*Derecha* derecho `duration` objeto.
+*Derecha*<br/>
+Objeto `duration` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -191,13 +203,17 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda* la izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-*Derecha* derecho `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
-*Tiempo* A `time_point` objeto.
+*Tiempo*<br/>
+Un objeto `time_point`.
 
-*Dur* A `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -224,9 +240,11 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda* la izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-*Derecha* derecho `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -252,9 +270,11 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda* la izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-*Derecha* derecho `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -278,9 +298,11 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda* la izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-*Derecha* derecho `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -306,9 +328,11 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda* la izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-*Derecha* derecho `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -332,9 +356,11 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda* la izquierda `duration` o `time_point` objeto.
+*Izquierda*<br/>
+Objeto `duration` o `time_point` izquierdo.
 
-*Derecha* derecho `duration` o `time_point` objeto.
+*Derecha*<br/>
+Objeto `duration` o `time_point` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -360,13 +386,17 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parámetros
 
-*Dur* A `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
-*Div* un valor entero.
+*Div*<br/>
+Valor entero.
 
-*Izquierda* la izquierda `duration` objeto.
+*Izquierda*<br/>
+Objeto `duration` izquierdo.
 
-*Derecha* derecho `duration` objeto.
+*Derecha*<br/>
+Objeto `duration` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 

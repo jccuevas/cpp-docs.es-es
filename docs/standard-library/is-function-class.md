@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef542ea54c0fc570443fa07908968ffa3398232
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f668a1439f1694263405932c290cc5b54543ac84
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101033"
 ---
 # <a name="isfunction-class"></a>is_function (Clase)
 
@@ -37,7 +37,8 @@ struct is_function;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* el tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 

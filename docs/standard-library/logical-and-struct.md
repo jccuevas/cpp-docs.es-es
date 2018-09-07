@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df2f932290caac5253da3cc859abda9a05f8a41
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cab2335a8e9adb3e4f68f8576df466be45f01504
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964865"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100798"
 ---
 # <a name="logicaland-struct"></a>logical_and (struct)
 
@@ -44,16 +44,18 @@ struct logical_and<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) && std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *Tipo*, *T*, *U* cualquier tipo que admita un `operator&&` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda* el operando izquierdo de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
+*Izquierda*<br/>
+Operando izquierdo de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha* el operando derecho de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
+*Derecha*<br/>
+Operando derecho de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -127,12 +129,12 @@ int main( )
 
 /* Output:
 Original deque:
- d1 = ( true true true true true false false )
+d1 = ( true true true true true false false )
 Original deque:
- d2 = ( true false true true false true false )
+d2 = ( true false true true false true false )
 The deque which is the conjuction of d1 & d2 is:
- d3 = ( true false true true false false false )
- */
+d3 = ( true false true true false false false )
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

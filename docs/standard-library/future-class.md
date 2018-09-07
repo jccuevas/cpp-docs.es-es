@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e55f5d9759de0993f0202612e237bb778a195602
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956643"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106657"
 ---
 # <a name="future-class"></a>future (Clase)
 
@@ -94,7 +94,8 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Otros* A `future` objeto.
+*Otros problemas*<br/>
+Un objeto `future`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -134,7 +135,8 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha* A `future` objeto.
+*Derecha*<br/>
+Un objeto `future`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -191,7 +193,8 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Rel_time* A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica un intervalo de tiempo máximo que el subproceso se bloquea.
+*Rel_time*<br/>
+Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo máximo que el subproceso bloquea.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -212,7 +215,8 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parámetros
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica un tiempo después del cual se puede desbloquear el subproceso.
+*Abs_time*<br/>
+Un objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica un tiempo después del cual se puede desbloquear el subproceso.
 
 ### <a name="return-value"></a>Valor devuelto
 

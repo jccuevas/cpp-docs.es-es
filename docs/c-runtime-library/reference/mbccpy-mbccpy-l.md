@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebc03a459a190144217ca15a9ab13bef395d5128
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201392"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103728"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 
@@ -74,11 +74,14 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*dest* destino de copia.
+*dest*<br/>
+Destino de la copia.
 
-*src* carácter Multibyte para copiar.
+*src*<br/>
+Carácter multibyte que se va a copiar.
 
-*configuración regional* configuración regional que se use.
+*locale*<br/>
+Configuración regional que se va a usar.
 
 ## <a name="remarks"></a>Comentarios
 

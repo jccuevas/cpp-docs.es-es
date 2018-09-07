@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963721"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100981"
 ---
 # <a name="basicostream-class"></a>basic_ostream (Clase)
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem* A `char_type`.
+*Elem*<br/>
+Objeto `char_type`.
 
-*TR* el carácter `traits_type`.
+*Tr*<br/>
+El carácter `traits_type`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*strbuf* un objeto de tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Objeto de tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** si se trata de un flujo estándar; de lo contrario, **false**.
+*_Isstd*<br/>
+**True** si se trata de un flujo estándar; de lo contrario, **false**.
 
-*derecha* una referencia rvalue a un objeto de tipo `basic_ostream`.
+*right*<br/>
+Referencia a un valor R a un objeto de tipo `basic_ostream`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parámetros
 
-*PFN* un puntero de función.
+*PFN*<br/>
+Puntero de función.
 
-*strbuf* un puntero a un `stream_buf` objeto.
+*strbuf*<br/>
+Un puntero a un `stream_buf` objeto.
 
-*Val* un elemento que se va a escribir en el flujo.
+*Val*<br/>
+Elemento que se va a escribir en el flujo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* una `rvalue` hacen referencia a un `basic_ostream` objeto.
+*right*<br/>
+Referencia `rvalue` a un objeto `basic_ostream`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch* un carácter.
+*_Ch*<br/>
+Un carácter.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos* la posición en la secuencia.
+*_Pos*<br/>
+Posición en el flujo.
 
-*_Off* el desplazamiento relativo a *_Way*.
+*_Off*<br/>
+El desplazamiento relativo a *_Way*.
 
-*_Way* uno de los [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) enumeraciones.
+*_Way*<br/>
+Una de las enumeraciones [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* una referencia a un `basic_ostream` objeto.
+*right*<br/>
+Referencia a un objeto `basic_ostream`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Parámetros
 
-*recuento* recuento de caracteres a colocar en el flujo.
+*count*<br/>
+Recuento de caracteres que se van a colocar en el flujo.
 
-*Str* caracteres que se va a colocar en el flujo.
+*str*<br/>
+Caracteres que se van a colocar en el flujo.
 
 ### <a name="return-value"></a>Valor devuelto
 

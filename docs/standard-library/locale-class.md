@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963799"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100759"
 ---
 # <a name="locale-class"></a>locale (Clase)
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Loc* la configuración regional que contiene la faceta que se va a insertar en la configuración regional de destino.
+*LOC*<br/>
+Configuración regional que contiene la faceta que se va a insertar en la configuración regional de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Loc* la configuración regional que se usará como la configuración regional predeterminada por el programa.
+*LOC*<br/>
+Configuración regional que el programa usará como configuración regional predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parámetros
 
-*Locname* nombre de una configuración regional.
+*Locname*<br/>
+Nombre de una configuración regional.
 
-*Loc* una configuración regional que se va a copiar en la construcción de la nueva configuración regional.
+*LOC*<br/>
+Configuración regional que se va a copiar en la construcción de la nueva configuración regional.
 
-*Otros* una configuración regional para seleccionar una categoría.
+*Otros problemas*<br/>
+Configuración regional de la que se va a seleccionar una categoría.
 
-*Cat* la categoría que se sustituirá en la configuración regional construida.
+*CAT*<br/>
+Categoría que se va a sustituir en la configuración regional construida.
 
-*Fac* la faceta que se sustituirá en la configuración regional construida.
+*Fac*<br/>
+Faceta que se va a sustituir en la configuración regional construida.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* una de las configuraciones regionales va a probar para desigualdad.
+*right*<br/>
+Una de las configuraciones regionales cuya desigualdad se va a comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  locale::operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierdo* cadena izquierda.
+*left*<br/>
+Cadena izquierda.
 
-*derecha* cadena derecha.
+*right*<br/>
+Cadena derecha.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* una de las configuraciones regionales que se comprobará si son iguales.
+*right*<br/>
+Una de las configuraciones regionales cuya igualdad se va a comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -734,14 +745,14 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>Vea también
 
 [\<locale>](../standard-library/locale.md)<br/>
 [Páginas de códigos](../c-runtime-library/code-pages.md)<br/>
-[Nombres de configuración regional, idiomas y cadenas de país o región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

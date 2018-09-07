@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960201"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103284"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution (Clase)
 
@@ -77,9 +77,11 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* el tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG* El motor de generador de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG*<br/>
+El motor del generador de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -191,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*lambda* el `lambda` parámetro de distribución.
+*lambda*<br/>
+El parámetro de distribución `lambda`.
 
-*parm* el paquete de parámetros utilizado para construir la distribución.
+*parm*<br/>
+Paquete de parámetros utilizado para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -220,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*lambda* el `lambda` parámetro de distribución.
+*lambda*<br/>
+El parámetro de distribución `lambda`.
 
-*derecha* el `param_type` objeto que se va a comparar con este.
+*right*<br/>
+El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
 

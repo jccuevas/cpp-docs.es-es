@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ee9e6af44c77c16099dc5e30c78ac4a5f39aa54a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959866"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108552"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution (Clase)
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* el tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -208,11 +209,14 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*significa* el `mean` parámetro de distribución.
+*mean*<br/>
+El parámetro de distribución `mean`.
 
-*StdDev* el `stddev` parámetro de distribución.
+*stddev*<br/>
+El parámetro de distribución `stddev`.
 
-*parm* la estructura de parámetros que se usa para construir la distribución.
+*parm*<br/>
+La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -239,11 +243,14 @@ struct param_type {
 ```
 ### <a name="parameters"></a>Parámetros
 
-*significa* el `mean` parámetro de distribución.
+*mean*<br/>
+El parámetro de distribución `mean`.
 
-*StdDev* el `stddev` parámetro de distribución.
+*stddev*<br/>
+El parámetro de distribución `stddev`.
 
-*derecha* el `param_type` estructura usada para comparar.
+*right*<br/>
+La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios
 

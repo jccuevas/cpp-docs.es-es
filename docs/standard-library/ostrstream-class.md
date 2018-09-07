@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 526ed4340446e78a723af97f43fbed401f574764
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966589"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106049"
 ---
 # <a name="ostrstream-class"></a>ostrstream (Clase)
 
@@ -77,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Freezeit* A **bool** que indica si desea que la secuencia se detenga.
+*_Freezeit*<br/>
+Un **bool** que indica si desea que la secuencia se detenga.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -101,11 +102,14 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* el búfer.
+*ptr*<br/>
+El búfer.
 
-*recuento de* el tamaño del búfer en bytes.
+*count*<br/>
+El tamaño del búfer en bytes.
 
-*_Modo de* el modo de entrada y salido del búfer. Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener más información.
+*_Modo de*<br/>
+El modo de entrada y salida del búfer. Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener más información.
 
 ### <a name="remarks"></a>Comentarios
 

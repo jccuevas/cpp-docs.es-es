@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959753"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100890"
 ---
 # <a name="basicregex-class"></a>basic_regex (Clase)
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem* el tipo de los elementos que coinciden.
+*Elem*<br/>
+Tipo de los elementos que debe coincidir.
 
-*RXtraits* clase de rasgos para los elementos.
+*RXtraits*<br/>
+Clase Traits para los elementos.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parámetros
 
-*STtraits* clase Traits para un origen de cadena.
+*STtraits*<br/>
+Clase traits para un origen de cadena.
 
-*STalloc* clase de asignador para un origen de cadena.
+*STalloc*<br/>
+Clase de asignador para un origen de cadena.
 
-*InIt* tipo de iterador para un origen de intervalo de entrada.
+*InIt*<br/>
+Tipo de iterador de entrada para un origen de intervalo.
 
-*derecha* origen Regex para copiar.
+*right*<br/>
+Origen regex que se va a copiar.
 
-*PTR* puntero al principio de la secuencia para copiar.
+*ptr*<br/>
+Puntero al inicio de la secuencia que se va a copiar.
 
-*marcas de* marcas de opción de sintaxis para agregar al copiar.
+*flags*<br/>
+Marcas de opción de sintaxis que se van a agregar al copiar.
 
 *Len/TD >* longitud de secuencia que se va a copiar.
 
-*Str* cadena para copiar.
+*str*<br/>
+Cadena que se va a copiar.
 
-*primera* a partir de secuencia que se va a copiar.
+*first*<br/>
+Principio de la secuencia que se va a copiar.
 
-*último* final de secuencia para copiar.
+*Último*<br/>
+Final de la secuencia que se va a copiar.
 
-*IList* initializer_list a copiar.
+*IList*<br/>
+initializer_list que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parámetros
 
-*STtraits* clase Traits para un origen de cadena.
+*STtraits*<br/>
+Clase traits para un origen de cadena.
 
-*STalloc* clase de asignador para un origen de cadena.
+*STalloc*<br/>
+Clase de asignador para un origen de cadena.
 
-*InIt* tipo de iterador para un origen de intervalo de entrada.
+*InIt*<br/>
+Tipo de iterador de entrada para un origen de intervalo.
 
-*derecha* origen Regex para copiar.
+*right*<br/>
+Origen regex que se va a copiar.
 
-*PTR* puntero al principio de la secuencia para copiar.
+*ptr*<br/>
+Puntero al inicio de la secuencia que se va a copiar.
 
-*marcas de* marcas de opción de sintaxis para agregar al copiar.
+*flags*<br/>
+Marcas de opción de sintaxis que se van a agregar al copiar.
 
 *Len/TD >* longitud de secuencia que se va a copiar.
 
-*Str* cadena para copiar.
+*str*<br/>
+Cadena que se va a copiar.
 
-*primera* a partir de secuencia que se va a copiar.
+*first*<br/>
+Principio de la secuencia que se va a copiar.
 
-*último* final de secuencia para copiar.
+*Último*<br/>
+Final de la secuencia que se va a copiar.
 
-*IList* initializer_list a copiar.
+*IList*<br/>
+initializer_list que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*loc* para almacenar el objeto de configuración regional.
+*LOC*<br/>
+El objeto de configuración regional que se va a almacenar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parámetros
 
-*STtraits* clase Traits para un origen de cadena.
+*STtraits*<br/>
+Clase traits para un origen de cadena.
 
-*STalloc* clase de asignador para un origen de cadena.
+*STalloc*<br/>
+Clase de asignador para un origen de cadena.
 
-*derecha* origen Regex para copiar.
+*right*<br/>
+Origen regex que se va a copiar.
 
-*Str* cadena para copiar.
+*str*<br/>
+Cadena que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* intercambiar con el objeto de expresión regular.
+*right*<br/>
+El objeto de expresión regular con el que se intercambia.
 
 ### <a name="remarks"></a>Comentarios
 

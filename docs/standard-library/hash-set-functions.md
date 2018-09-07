@@ -7,12 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c96ac897d870e1f8dc153847797379b6720dc7b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961882"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103251"
 ---
 # <a name="lthashsetgt-functions"></a>Funciones de &lt;hash_set&gt;
 
@@ -35,9 +35,11 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el objeto hash_set que proporciona los elementos deben intercambiar o el objeto hash_set cuyos elementos se van a intercambiar con los del objeto hash_set *izquierdo*.
+*right*<br/>
+El objeto hash_set que proporciona los elementos deben intercambiar o el objeto hash_set cuyos elementos se van a intercambiar con los del objeto hash_set *izquierdo*.
 
-*izquierdo* hash_set cuyos elementos se van a intercambiar con los del objeto hash_set *derecho*.
+*left*<br/>
+El objeto hash_set cuyos elementos se van a intercambiar con los del objeto hash_set *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -64,9 +66,11 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el objeto hash_multiset que proporciona los elementos deben intercambiar o el objeto hash_multiset cuyos elementos se van a intercambiar con los del objeto hash_multiset *izquierdo*.
+*right*<br/>
+El objeto hash_multiset que proporciona los elementos deben intercambiar o el objeto hash_multiset cuyos elementos se van a intercambiar con los del objeto hash_multiset *izquierdo*.
 
-*izquierdo* hash_multiset cuyos elementos se van a intercambiar con los del objeto hash_multiset *derecho*.
+*left*<br/>
+El objeto hash_multiset cuyos elementos se van a intercambiar con los del objeto hash_multiset *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
