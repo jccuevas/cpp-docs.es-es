@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956481"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110141"
 ---
 # <a name="uniquelock-class"></a>unique_lock (Clase)
 
@@ -76,7 +76,7 @@ Internamente, un `unique_lock` almacena un puntero a un asociado `mutex` objeto 
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
-`unique_lock`
+*unique_lock*<br/>
 
 ## <a name="requirements"></a>Requisitos
 
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Otros problemas*  
- Un objeto `unique_lock`.
+Un objeto `unique_lock`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -182,7 +182,7 @@ void swap(unique_lock& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Otros problemas*  
- Un objeto `unique_lock`.
+Un objeto `unique_lock`.
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -215,7 +215,7 @@ bool try_lock_for(
 ### <a name="parameters"></a>Parámetros
 
 *Rel_time*  
- Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
+Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -241,7 +241,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="parameters"></a>Parámetros
 
 *Abs_time*  
- Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
+Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -284,16 +284,16 @@ unique_lock(mutex_type& Mtx,
 ### <a name="parameters"></a>Parámetros
 
 *Mtx*  
- Un objeto de tipo de exclusión mutua.
+Un objeto de tipo de exclusión mutua.
 
 *Rel_time*  
- Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
+Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
 
 *Abs_time*  
- Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
+Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
 
 *Otros problemas*  
- Un objeto `unique_lock`.
+Un objeto `unique_lock`.
 
 ### <a name="remarks"></a>Comentarios
 

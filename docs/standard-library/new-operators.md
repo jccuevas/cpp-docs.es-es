@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31db26453efbecceb136b614b8eabf178a0cdfea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216193"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100371"
 ---
 # <a name="ltnewgt-operators"></a>Operadores &lt;new&gt;
 
@@ -39,7 +39,8 @@ void operator delete(void* ptr,
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* el puntero cuyo valor es representar no válido por la eliminación.
+*ptr*<br/>
+El puntero cuyo valor se va a representar como no válido mediante la eliminación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -71,7 +72,8 @@ void operator delete[](void* ptr,
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* el puntero cuyo valor es representar no válido por la eliminación.
+*ptr*<br/>
+El puntero cuyo valor se va a representar como no válido mediante la eliminación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -101,9 +103,11 @@ void* operator new(std::size_t count,
 
 ### <a name="parameters"></a>Parámetros
 
-*recuento de* el número de bytes de almacenamiento se asigne.
+*count*<br/>
+El número de bytes de almacenamiento que se va a asignar.
 
-*PTR* el puntero que se va a devolver.
+*ptr*<br/>
+El puntero que se va a devolver.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -198,9 +202,11 @@ void* operator new[](std::size_t count,
 
 ### <a name="parameters"></a>Parámetros
 
-*recuento de* el número de bytes de almacenamiento que va a asignar para el objeto de matriz.
+*count*<br/>
+El número de bytes de almacenamiento que se va a asignar para el objeto de matriz.
 
-*PTR* el puntero que se va a devolver.
+*ptr*<br/>
+El puntero que se va a devolver.
 
 ### <a name="return-value"></a>Valor devuelto
 

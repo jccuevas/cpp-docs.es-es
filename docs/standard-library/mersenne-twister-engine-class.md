@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959276"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100227"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine (Clase)
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*UIntType* el tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*W* **tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **tamaño de estado**. El número de elementos (valores) en la secuencia de estado.
+*N*<br/>
+**Tamaño de estado**. El número de elementos (valores) en la secuencia de estado.
 
-*M* **tamaño de cambio**. El número de elementos que omitir durante cada vuelta. **Condición previa:** `0 < M ≤ N`
+*M*<br/>
+**Tamaño de cambio**. El número de elementos que omitir durante cada vuelta. **Condición previa:** `0 < M ≤ N`
 
-*R* **bits de máscara**. **Condición previa:** `R ≤ W`
+*R*<br/>
+**Bits de máscara**. **Condición previa:** `R ≤ W`
 
-*Un* **máscara XOR**. **Condición previa:** `A ≤ (1u<<W) - 1u`
+*A*<br/>
+**Máscara XOR**. **Condición previa:** `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L* **parámetros de cambio de Tempering**. Utilizados como valores de cambio durante la codificación (atenuación). Condición previa: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L*<br/>
+**Parámetros de cambio de atenuación**. Utilizados como valores de cambio durante la codificación (atenuación). Condición previa: `U,S,T,L ≤ W`
 
-*D.*, *B*, *C* **Tempering parámetros de máscara de bits**. Utilizados como valores de máscara de bit durante la codificación (atenuación). Condición previa: `D,B,C ≤ (1u<<W) - 1u`
+*D.*, *B*, *C*<br/>
+**Parámetros de máscara de bit de atenuación**. Utilizados como valores de máscara de bit durante la codificación (atenuación). Condición previa: `D,B,C ≤ (1u<<W) - 1u`
 
-*F* **multiplicador de inicialización**. Utilizado para ayudar a la inicialización de la secuencia. Condición previa: `F ≤ (1u<<W) - 1u`
+*F*<br/>
+**Multiplicador de inicialización**. Utilizado para ayudar a la inicialización de la secuencia. Condición previa: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Miembros
 

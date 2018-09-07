@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7893f992fa19cdef8713ec4c9fd755c7cd1b465e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961979"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100318"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine (Clase)
 
@@ -45,9 +45,11 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*Motor* el tipo de motor de base.
+*Motor de*<br/>
+El tipo de motor base.
 
-*K* **tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa:** `0 < K`
+*K*<br/>
+**Tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa:** `0 < K`
 
 ## <a name="members"></a>Miembros
 
