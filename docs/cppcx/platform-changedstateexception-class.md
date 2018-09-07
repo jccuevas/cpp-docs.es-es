@@ -16,35 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 029242a466b7fbac0d967596c114eb0ad45aa569
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9fa22457626892e1ebbf02d6859577b2795f7d04
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760674"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105268"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException (Clase)
-Se produce cuando el estado interno de un objeto ha cambiado, invalidando de este modo los resultados del método.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-public ref class ChangedStateException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- Un ejemplo donde se produce esta excepción es cuando los métodos de un iterador de colección o de una vista de colección se invocan después de que la colección principal haya cambiado, invalidando los resultados del método.  
-  
- Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md) .  
-  
-### <a name="requirements"></a>Requisitos  
- **Cliente mínimo admitido:** Windows 8  
-  
- **Servidor mínimo admitido:** Windows Server 2012  
-  
- **Espacio de nombres:** Plataforma  
-  
- **Metadatos:** platform.winmd  
-  
-## <a name="see-also"></a>Vea también  
- [Platform::COMException (Clase)](../cppcx/platform-comexception-class.md)
+
+Se produce cuando el estado interno de un objeto ha cambiado, invalidando de este modo los resultados del método.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+public ref class ChangedStateException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Comentarios
+
+Un ejemplo donde se produce esta excepción es cuando los métodos de un iterador de colección o de una vista de colección se invocan después de que la colección principal haya cambiado, invalidando los resultados del método.
+
+Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md) .
+
+### <a name="requirements"></a>Requisitos
+
+**Cliente mínimo admitido:** Windows 8
+
+**Servidor mínimo admitido:** Windows Server 2012
+
+**Espacio de nombres:** Plataforma
+
+**Metadatos:** platform.winmd
+
+## <a name="see-also"></a>Vea también
+
+[Platform::COMException (Clase)](../cppcx/platform-comexception-class.md)

@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 36af7eb87f777686a0a83fab98032ce36e75c906
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966373"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102530"
 ---
 # <a name="ltmapgt-functions"></a>Funciones de &lt;map&gt;
 
@@ -33,9 +33,11 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el mapa que proporciona los elementos deben intercambiar o mapa cuyos elementos se van a intercambiar con los del mapa *izquierdo*.
+*right*<br/>
+El mapa que proporciona los elementos deben intercambiar o mapa cuyos elementos se van a intercambiar con los del mapa *izquierdo*.
 
-*izquierdo* mapa cuyos elementos se van a intercambiar con los del mapa *derecho*.
+*left*<br/>
+Mapa cuyos elementos se van a intercambiar con los del mapa *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -58,9 +60,11 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* la asignación múltiple que proporciona los elementos deben intercambiar o el mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple *izquierdo*.
+*right*<br/>
+La asignación múltiple que proporciona los elementos deben intercambiar o el mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple *izquierdo*.
 
-*izquierdo* el mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple *derecho*.
+*left*<br/>
+El mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 

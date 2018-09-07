@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4937676b085988153b9b36875ae6bed4762d271c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954648"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102478"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper (Clase)
 
@@ -186,9 +186,11 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipos de* los tipos de lista de argumentos.
+*Tipos*<br/>
+Los tipos de la lista de argumentos.
 
-*args* la lista de argumentos.
+*args*<br/>
+La lista de argumentos.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -229,9 +231,11 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* el tipo de ajuste de línea.
+*Ty*<br/>
+El tipo que se va a ajustar.
 
-*Val* el valor para ajustar.
+*Val*<br/>
+El valor que se va a ajustar.
 
 ### <a name="remarks"></a>Comentarios
 

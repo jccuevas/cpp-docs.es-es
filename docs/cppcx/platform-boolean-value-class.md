@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b368794aa9137144213e3ad485068ea5a9e6b10f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8870e952b4bcba9455a6c056c9fa21a8178d122
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751392"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100266"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean (Clase de valor)
-Representa un valor booleano. El equivalente a `bool`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-public value struct Boolean  
-```  
-  
-### <a name="members"></a>Miembros  
- Boolean tiene los métodos Equals(), GetHashCode() y ToString() que se derivan de [Platform::Object Class](../cppcx/platform-object-class.md), y el método GetTypeCode() que se deriva de [Platform::Type Class](../cppcx/platform-type-class.md).  
-  
-### <a name="requirements"></a>Requisitos  
- **Cliente mínimo admitido:** Windows 8  
-  
- **Servidor mínimo admitido:** Windows Server 2012  
-  
- **Espacio de nombres:** Plataforma  
-  
- **Metadatos:** platform.winmd  
-  
-## <a name="see-also"></a>Vea también  
- [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)
+
+Representa un valor booleano. El equivalente a `bool`.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+public value struct Boolean
+```
+
+### <a name="members"></a>Miembros
+
+Boolean tiene los métodos Equals(), GetHashCode() y ToString() que se derivan de [Platform::Object Class](../cppcx/platform-object-class.md), y el método GetTypeCode() que se deriva de [Platform::Type Class](../cppcx/platform-type-class.md).
+
+### <a name="requirements"></a>Requisitos
+
+**Cliente mínimo admitido:** Windows 8
+
+**Servidor mínimo admitido:** Windows Server 2012
+
+**Espacio de nombres:** Plataforma
+
+**Metadatos:** platform.winmd
+
+## <a name="see-also"></a>Vea también
+
+[Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

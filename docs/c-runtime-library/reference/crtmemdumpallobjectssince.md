@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cf01facaba326c36454ea5410da8dbb05848f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92d6148f6cbe49799a122d1745a6a6cde4c8be30
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396874"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100384"
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
@@ -53,17 +53,18 @@ void _CrtMemDumpAllObjectsSince(
 
 ### <a name="parameters"></a>Parámetros
 
-*estado* puntero al estado del montón a iniciar el volcado desde o **NULL**.
+*state*<br/>
+Puntero al estado del montón desde el que se va a iniciar el volcado o **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtMemDumpAllObjectsSince** función vuelca la información de encabezado de depuración de objetos asignados en el montón en un formato legible para el usuario. La aplicación puede usar la información del volcado para realizar el seguimiento de las asignaciones y detectar problemas de memoria. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtMemDumpAllObjectsSince** se quitan durante el preprocesamiento.
+El **_CrtMemDumpAllObjectsSince** función vuelca la información de encabezado de depuración de objetos asignados en el montón en un formato legible por el usuario. La aplicación puede usar la información del volcado para realizar el seguimiento de las asignaciones y detectar problemas de memoria. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtMemDumpAllObjectsSince** se quitan durante el preprocesamiento.
 
-**_CrtMemDumpAllObjectsSince** utiliza el valor de la *estado* parámetro para determinar dónde iniciar la operación de volcado de memoria. Para iniciar el volcado desde un estado del montón especificado, el *estado* parámetro debe ser un puntero a un **_CrtMemState** estructura que ha sido rellenada por [_CrtMemCheckpoint](crtmemcheckpoint.md) antes de **_CrtMemDumpAllObjectsSince** se llamó. Cuando *estado* es **NULL**, la función empieza el volcado desde el principio de la ejecución del programa.
+**_CrtMemDumpAllObjectsSince** usa el valor de la *estado* parámetro para determinar dónde iniciar la operación de volcado de memoria. Para iniciar el volcado desde un estado del montón especificado, el *estado* parámetro debe ser un puntero a un **_CrtMemState** estructura que ha sido rellenada por [_CrtMemCheckpoint](crtmemcheckpoint.md) antes **_CrtMemDumpAllObjectsSince** llamó. Cuando *estado* es **NULL**, la función empieza el volcado desde el principio de la ejecución del programa.
 
-Si la aplicación ha instalado una función de enlace de volcado de memoria mediante una llamada a [_CrtSetDumpClient](crtsetdumpclient.md), a continuación, cada vez que **_CrtMemDumpAllObjectsSince** vuelca información sobre un **_CLIENT_BLOCK** tipo de bloque, llama a la función de volcado proporcionada por la aplicación también. De forma predeterminada, los bloques de tiempo de ejecución de C internos (**_CRT_BLOCK**) no se incluyen en las operaciones de volcado de memoria. El [_CrtSetDbgFlag](crtsetdbgflag.md) función puede utilizarse para activar el **_CRTDBG_CHECK_CRT_DF** de bits de **_crtDbgFlag** para incluir estos bloques. Además, los bloques marcados como liberados u omitidos (**_FREE_BLOCK**, **_IGNORE_BLOCK**) no se incluyen en el volcado de memoria.
+Si la aplicación ha instalado una función de enlace de volcado de memoria mediante una llamada a [_CrtSetDumpClient](crtsetdumpclient.md), cada vez que **_CrtMemDumpAllObjectsSince** vuelca información sobre un **_CLIENT_BLOCK** tipo de bloque, llama a la función de volcado proporcionada por la aplicación. De forma predeterminada, los bloques internos de tiempo de ejecución de C (**_CRT_BLOCK**) no se incluyen en las operaciones de volcado de memoria. El [_CrtSetDbgFlag](crtsetdbgflag.md) función puede utilizarse para activar el **_CRTDBG_CHECK_CRT_DF** de bits de **_crtDbgFlag** para incluir estos bloques. Además, los bloques marcados como liberados u omitidos (**_FREE_BLOCK**, **_IGNORE_BLOCK**) no se incluyen en el volcado de memoria.
 
-Para obtener más información sobre las funciones de estado del montón y la **_CrtMemState** estructura, vea [funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información sobre las funciones de estado del montón y la **_CrtMemState** estructura, vea [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

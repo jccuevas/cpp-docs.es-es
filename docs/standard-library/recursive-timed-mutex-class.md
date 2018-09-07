@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30cf00a1e551c8d25b17d3a876d556ecea40c9e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957628"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107645"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex (Clase)
 
@@ -129,7 +129,8 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rel_time* A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica la cantidad máxima de tiempo que el método intenta obtener la propiedad de la `mutex`.
+*Rel_time*<br/>
+Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -152,7 +153,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parámetros
 
-*Abs_time* un punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de la `mutex`.
+*Abs_time*<br/>
+Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 

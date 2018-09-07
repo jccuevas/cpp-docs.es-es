@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cdef0e68e50085513871d1fcacd9cfdb302e9f51
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953461"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107577"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function (Clase)
 
@@ -44,11 +44,14 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*pfunc* la función binaria que se va a convertir.
+*pfunc*<br/>
+La función binaria que se va a convertir.
 
-*izquierdo* objeto de la izquierda que la  *\*pfunc* se llama en.
+*left*<br/>
+El objeto de la izquierda al que *\*pfunc* está llamado.
 
-*derecha* el derecho de objeto que el  *\*pfunc* se llama en.
+*right*<br/>
+El objeto de la derecha al que *\*pfunc* está llamado.
 
 ## <a name="return-value"></a>Valor devuelto
 

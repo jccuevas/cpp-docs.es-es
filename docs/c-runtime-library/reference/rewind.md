@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406838"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100292"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,19 +55,20 @@ void rewind(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia* puntero a **archivo** estructura.
+*secuencia*<br/>
+Puntero a la estructura **FILE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **rebobinar** función cambia de posición el puntero de archivo asociado a *flujo* al principio del archivo. Una llamada a **rewind** es similar a
+El **rebobinar** función recoloca el puntero de archivo asociado con *secuencia* al principio del archivo. Una llamada a **rewind** es similar a
 
-**fseek (void) (** _flujo_**, 0 L, SEEK_SET);**
+**fseek (void) (** _secuencia_**, 0 L, SEEK_SET);**
 
 Sin embargo, a diferencia de [fseek](fseek-fseeki64.md), **rebobinar** borra los indicadores de error de la secuencia, así como el indicador de fin de archivo. Además, a diferencia de [fseek](fseek-fseeki64.md), **rebobinar** no devuelve un valor que indica si el puntero se movió correctamente.
 
-Para borrar el búfer del teclado, use **rebobinar** con el flujo de **stdin**, que está asociado con el teclado de manera predeterminada.
+Para borrar el búfer del teclado, use **rebobinar** con el flujo **stdin**, que está asociado con el teclado de manera predeterminada.
 
-Si el flujo es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** está establecido en **EINVAL**.
+Si la secuencia es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** está establecido en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
