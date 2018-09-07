@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 05442a0c590bcb66449aeae72d54cc6e988421bc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962431"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099901"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution (Clase)
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* el tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG* El motor de generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG*<br/>
+El uniforme generador motor de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -207,11 +209,14 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*alfa* el `alpha` parámetro de distribución.
+*alpha*<br/>
+El parámetro de distribución `alpha`.
 
-*Beta* el `beta` parámetro de distribución.
+*beta*<br/>
+El parámetro de distribución `beta`.
 
-*parm* la estructura de parámetros que se usa para construir la distribución.
+*parm*<br/>
+La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -239,11 +244,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*alfa* el `alpha` parámetro de distribución.
+*alpha*<br/>
+El parámetro de distribución `alpha`.
 
-*Beta* el `beta` parámetro de distribución.
+*beta*<br/>
+El parámetro de distribución `beta`.
 
-*derecha* el `param_type` comparar con esta instancia.
+*right*<br/>
+La instancia `param_type` que comparar con esta.
 
 ### <a name="remarks"></a>Comentarios
 

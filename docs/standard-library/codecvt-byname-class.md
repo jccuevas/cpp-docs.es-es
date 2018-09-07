@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a785c7868f3a1f3262283cf131bbd3cc3ae88e4c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964377"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102161"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname (Clase)
 
@@ -53,9 +53,11 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname* una configuración regional con nombre.
+*_Locname*<br/>
+Una configuración regional con nombre.
 
-*_Refs* un recuento de referencias inicial.
+*_Refs*<br/>
+Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 

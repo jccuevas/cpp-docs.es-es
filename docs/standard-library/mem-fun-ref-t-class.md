@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0684d51fd406f16588188555f67fcebb351fbf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a2dffdb71b8121073775af52ed42cda205c70589
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956103"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100175"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t (Clase)
 
@@ -42,9 +42,11 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pm* un puntero a la función miembro de clase `Type` va a convertir en un objeto de función.
+*_Pm*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*izquierdo* el objeto que la *_Pm* función miembro se llama en.
+*left*<br/>
+El objeto que la *_Pm* función miembro se llama en.
 
 ## <a name="return-value"></a>Valor devuelto
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ae1c3e043d35ba91813fb5288e100610986dbd76
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199193"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100188"
 ---
 # <a name="ltnumericgt-functions"></a>Funciones &lt;numeric&gt;
 
@@ -48,13 +48,17 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador de entrada dirige al primer elemento del intervalo que se puede sumar o combinar según una operación binaria especificada.
+*first*<br/>
+Un iterador de entrada que direcciona el primer elemento del intervalo que se va a sumar o combinar según una operación binaria especificada.
 
-*último* un iterador de entrada direcciona el último elemento del intervalo que se puede sumar o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
+*Último*<br/>
+Un iterador de entrada que direcciona el último elemento del intervalo que se va a sumar o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
 
-*Val* un valor inicial a la que cada elemento a su vez se agrega o combina según una operación binaria especificada.
+*Val*<br/>
+Un valor inicial al que, a su vez, cada elemento se agrega o combina según una operación binaria específica.
 
-*binary_op* la operación binaria que se aplica a cada elemento en el intervalo especificado y el resultado de sus aplicaciones anteriores.
+*binary_op*<br/>
+La operación binaria que se va a aplicar en cada elemento del intervalo especificado y el resultado de sus aplicaciones anteriores.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -151,16 +155,16 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
+( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
 The sum of the integers from 1 to 20 is: 210.
 The vector of partial sums is:
- ( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
+( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
 
 The original vector v3 is:
- ( 1 2 3 4 5 6 7 8 9 10 ).
+( 1 2 3 4 5 6 7 8 9 10 ).
 The product of the integers from 1 to 10 is: 3628800.
 The vector of partial products is:
- ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
+( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
 ## <a name="adjacent_difference"></a> adjacent_difference
@@ -184,13 +188,17 @@ OutputIterator adjacent_difference(
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador de entrada que direcciona el primer elemento del intervalo de entrada cuyos elementos se van a ser diferenciar con sus predecesores respectivos o donde es el par de valores que se opera por otra operación binaria especificada.
+*first*<br/>
+Iterador de entrada que direcciona el primer elemento del intervalo de entrada cuyos elementos se van a diferenciar con sus predecesores respectivos o donde se va a actuar sobre el par de valores mediante otra operación binaria especificada.
 
-*último* un iterador de entrada que direcciona el último elemento del intervalo de entrada cuyos elementos se van a ser diferenciar con sus predecesores respectivos o donde es el par de valores que se opera por otra operación binaria especificada.
+*Último*<br/>
+Iterador de entrada que direcciona el último elemento del intervalo de entrada cuyos elementos se van a diferenciar con sus predecesores respectivos o donde se va a actuar sobre el par de valores mediante otra operación binaria especificada.
 
-*resultado* un iterador de salida que direcciona el primer elemento de un intervalo de destino donde es la serie de diferencias o los resultados de la operación especificada que se almacenará.
+*Resultado*<br/>
+Iterador de salida que direcciona el primer elemento de un intervalo de destino donde se va a almacenar la serie de diferencias o los resultados de la operación especificada.
 
-*binary_op* la operación binaria que se va a aplicar en la operación generalizada reemplazando la operación de resta en el procedimiento de diferenciación.
+*binary_op*<br/>
+Operación binaria que se va a aplicar en la operación generalizada reemplazando la operación de resta en el procedimiento de diferenciación.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -291,17 +299,23 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parámetros
 
-*first1* un iterador de entrada que direcciona el primer elemento del primer intervalo cuyo producto interno o producto interno generalizado con el segundo intervalo es que hay que calcular.
+*first1*<br/>
+Un iterador de entrada que direcciona el primer elemento del primer intervalo cuyo producto interno o producto interno generalizado debe calcularse con el segundo intervalo.
 
-*last1* un iterador de entrada que direcciona el último elemento del primer intervalo cuyo producto interno o producto interno generalizado con el segundo intervalo debe calcularse.
+*last1*<br/>
+Un iterador de entrada que direcciona el último elemento del primer intervalo cuyo producto interno o producto interno generalizado con el segundo intervalo debe calcularse.
 
-*first2* un iterador de entrada que direcciona el primer elemento en el segundo intervalo cuyo producto interno o producto interno generalizado con el primer intervalo es que hay que calcular.
+*first2*<br/>
+Un iterador de entrada que direcciona el primer elemento del segundo intervalo cuyo producto interno o producto interno generalizado con el primer intervalo debe calcularse.
 
-*Val* un valor inicial a la que el producto interno o producto interno generalizado entre los intervalos consiste en Agregar.
+*Val*<br/>
+Un valor inicial al que se va a agregar el producto interno o el producto interno generalizado entre los intervalos.
 
-*binary_op1* la operación binaria que reemplaza la operación de producto interno de suma que se aplica a los productos de elementos en la generalización del producto interno.
+*binary_op1*<br/>
+La operación binaria que reemplaza la operación de producto interno de suma que se aplica a los productos de elementos en la generalización del producto interno.
 
-*binary_op2* la operación binaria que reemplaza la operación por elemento de producto interno de multiplicar en la generalización del producto interno.
+*binary_op2*<br/>
+La operación binaria que reemplaza la operación de elementos de producto interno de multiplicar en la generalización del producto interno.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -422,11 +436,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador de entrada que direcciona el primer elemento del intervalo que se va a rellenar.
+*first*<br/>
+Un iterador de entrada que direcciona el primer elemento del intervalo que se va a rellenar.
 
-*último* un iterador de entrada que direcciona el último elemento del intervalo que se va a rellenar.
+*Último*<br/>
+Un iterador de entrada que direcciona el último elemento del intervalo que se va a rellenar.
 
-*valor* el valor inicial para almacenar en el primer elemento y para incrementar sucesivamente los elementos posteriores.
+*valor*<br/>
+El valor inicial para almacenar en el primer elemento y para incrementar sucesivamente los elementos posteriores.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -493,13 +510,17 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* un iterador de entrada dirige al primer elemento del intervalo a sumar parcialmente o combinar según una operación binaria especificada.
+*first*<br/>
+Iterador de entrada que direcciona el primer elemento del intervalo que se va a sumar parcialmente o combinar según una operación binaria especificada.
 
-*último* un iterador de entrada direcciona el último elemento del intervalo a sumar parcialmente o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
+*Último*<br/>
+Iterador de entrada que direcciona el último elemento del intervalo que se va a sumar parcialmente o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
 
-*resultado* un iterador de salida que direcciona el primer elemento de un intervalo de destino donde es la serie de sumas parciales o los resultados de la operación especificada que se almacenará.
+*Resultado*<br/>
+Iterador de salida que direcciona el primer elemento de un intervalo de destino donde se va a almacenar la serie de sumas parciales o los resultados de la operación especificada.
 
-*binary_op* la operación binaria que se va a aplicar en la operación generalizada reemplazando la operación de suma en el procedimiento de suma parcial.
+*binary_op*<br/>
+Operación binaria que se va a aplicar en la operación generalizada reemplazando la operación de suma en el procedimiento de suma parcial.
 
 ### <a name="return-value"></a>Valor devuelto
 

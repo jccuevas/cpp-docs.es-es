@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eef350723dd8658bfc349495e905466e8179db1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 41c09d35c81d8b9f9b8b2e629eabd1ec9a5ec8d9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965924"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099582"
 ---
 # <a name="istrivial-class"></a>Clase is_trivial
 
@@ -37,7 +37,8 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Parámetros
 
-*T* el tipo de consulta.
+*T*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
