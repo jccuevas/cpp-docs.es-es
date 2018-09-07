@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198320"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105320"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -32,7 +32,7 @@ Agrega datos de perfil de uno o más archivos .pgc para el archivo .pgd.
 
 ### <a name="parameters"></a>Parámetros
 
-*Opciones*<br/>
+*options*<br/>
 Las siguientes opciones pueden especificarse para **pgomgr**:
 
 - **¿/ Ayuda** o **/?** Muestra disponible **pgomgr** opciones.
@@ -50,7 +50,8 @@ Las siguientes opciones pueden especificarse para **pgomgr**:
 *pgcfiles*<br/>
 Uno o más archivos .pgc cuyos datos de perfil que desea combinar en el archivo PGD. Puede especificar un archivo .pgc único o varios archivos .pgc. Si no especifica ningún archivo .pgc, **pgomgr** combina todos los archivos .pgc cuyos nombres son los mismos que el archivo PGD.
 
-*pgdFile* el archivo .pgd en el que va a combinar datos desde el archivo .pgc o archivos.
+*pgdFile*<br/>
+El archivo .pgd en el que va a combinar datos desde el archivo .pgc o archivos.
 
 ## <a name="remarks"></a>Comentarios
 

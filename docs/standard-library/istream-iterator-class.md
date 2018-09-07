@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959873"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099595"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator (Clase)
 
@@ -38,7 +38,7 @@ Describe un objeto iterador de entrada. Extrae objetos de clase `Type` de un flu
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* el tipo de objeto que se va a extraer del flujo de entrada.
+*Type*<br/>
+Tipo de objeto que se extraerá del flujo de entrada.
 
-*CharType* el tipo que representa el tipo de carácter para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es **char**.
+*CharType*<br/>
+Tipo que representa el tipo de caracteres para `istream_iterator`. Este argumento es opcional y el valor predeterminado es **char**.
 
-*Rasgos* el tipo que representa el tipo de carácter para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`< `CharType`>.
+*Rasgos*<br/>
+Tipo que representa el tipo de caracteres para `istream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`< `CharType`>.
 
-*Distancia* firmados de un tipo entero que representa el tipo de diferencia para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es `ptrdiff_t`.
+*Distance*<br/>
+Tipo entero con signo que representa el tipo de diferencia para `istream_iterator`. Este argumento es opcional y el valor predeterminado es `ptrdiff_t`.
 
 Después de crear o incrementar un objeto de clase istream_iterator con un puntero almacenado no null, el objeto intenta extraer y almacenar un objeto de tipo `Type` del flujo de entrada asociado. Si se produce un error en la extracción, el objeto reemplaza el puntero almacenado con un puntero NULL, creando de esta forma un indicador de fin de secuencia.
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Istr* leer uso el flujo de entrada para inicializar el `istream_iterator`.
+*_Istr*<br/>
+Flujo de entrada que se va a leer usado para inicializar `istream_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 

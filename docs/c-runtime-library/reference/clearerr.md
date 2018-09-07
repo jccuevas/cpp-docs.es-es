@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395307"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105281"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,13 +54,14 @@ void clearerr(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia* puntero a **archivo** estructura.
+*secuencia*<br/>
+Puntero a la estructura **FILE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **clearerr** función restablece el indicador de error y el indicador de fin de archivo para *flujo*. Indicadores de error no se borran automáticamente; una vez que se establece el indicador de error de una secuencia especificada, las operaciones en ese flujo continuar devolver un valor de error hasta que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama.
+El **clearerr** función restablece el indicador de error y el indicador de fin de archivo para *secuencia*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama.
 
-Si *flujo* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve. Para obtener más información sobre **errno** y códigos de error, vea [errno constantes](../../c-runtime-library/errno-constants.md).
+Si *secuencia* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve. Para obtener más información sobre **errno** y códigos de error, vea [errno (constantes)](../../c-runtime-library/errno-constants.md).
 
 Hay disponible una versión más segura de esta función; consulte [clearerr_s](clearerr-s.md).
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac1a6c39f25e42237265964ae1bfb0214aaa9087
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f9cddada58773102311027399a0b139b19568445
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961004"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099608"
 ---
 # <a name="isenum-class"></a>is_enum (Clase)
 
@@ -37,7 +37,8 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* el tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 

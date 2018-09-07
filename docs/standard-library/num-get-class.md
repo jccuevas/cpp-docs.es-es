@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959825"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110128"
 ---
 # <a name="numget-class"></a>num_get (clase)
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType* tipo usado dentro de un programa para codificar los caracteres en una configuración regional.
+*CharType*<br/>
+Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-*InputIterator* el tipo de iterador desde el que las funciones get numéricas lee su entrada.
+*InputIterator*<br/>
+El tipo de iterador del que las funciones get numéricas leen su entrada.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* el principio del intervalo de caracteres desde la que se va a leer el número.
+*first*<br/>
+El principio del intervalo de caracteres del que se va a leer el número.
 
-*último* el final del intervalo de caracteres desde la que se va a leer el número.
+*Último*<br/>
+El final del intervalo de caracteres del que se va a leer el número.
 
-*_Iosbase* el [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan en la conversión.
+*_Iosbase*<br/>
+El objeto [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan por la conversión.
 
-*_State* el estado al que failbit (ver [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.
+*_State*<br/>
+El estado al que failbit (ver [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.
 
-*Val* el valor que se ha leído.
+*Val*<br/>
+Valor que se leyó.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-*primera* el principio del intervalo de caracteres desde la que se va a leer el número.
+*first*<br/>
+El principio del intervalo de caracteres del que se va a leer el número.
 
-*último* el final del intervalo de caracteres desde la que se va a leer el número.
+*Último*<br/>
+El final del intervalo de caracteres del que se va a leer el número.
 
-*_Iosbase* el [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan en la conversión.
+*_Iosbase*<br/>
+El objeto [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan por la conversión.
 
-*_State* el estado al que failbit (ver [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.
+*_State*<br/>
+El estado al que failbit (ver [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.
 
-*Val* el valor que se ha leído.
+*Val*<br/>
+Valor que se leyó.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs*<br/>
+Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 

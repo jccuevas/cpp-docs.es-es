@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e0fea9154801f850640234355af53dc1154160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408920"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100410"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -87,17 +87,20 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de archivo* nombre del archivo que se buscará.
+*filename*<br/>
+Nombre del archivo que se va a buscar.
 
-*VarName* entorno para buscar.
+*VarName*<br/>
+Entorno en el que se va a buscar.
 
-*ruta de acceso* búfer para almacenar la ruta de acceso completa.
+*ruta de acceso*<br/>
+Búfer en el que se va a almacenar la ruta de acceso completa.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_searchenv** búsquedas rutinarias para el archivo de destino en el dominio especificado. El *varname* variable puede ser cualquier variable definida por el usuario o el entorno, por ejemplo, **ruta de acceso**, **LIB**, o **INCLUDE**, que especifica un lista de rutas de acceso de directorio. Dado que **_searchenv** distingue mayúsculas de minúsculas, *varname* debe coincidir con el caso de la variable de entorno.
+El **_searchenv** búsquedas rutinarias para el archivo de destino en el dominio especificado. El *varname* variable puede ser cualquier entorno o definida por el usuario, por ejemplo, **ruta de acceso**, **LIB**, o **INCLUDE**, que especifica un lista de rutas de acceso de directorio. Dado que **_searchenv** distingue mayúsculas de minúsculas *varname* debe coincidir con el caso de la variable de entorno.
 
-En primer lugar, la rutina busca el archivo en el directorio de trabajo actual. Si no lo encuentra aquí, lo busca en los directorios que especifica la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso creada recientemente se copia en *pathname*. Si el *filename* no se encuentra el archivo, *pathname* contiene una cadena vacía terminada en null.
+En primer lugar, la rutina busca el archivo en el directorio de trabajo actual. Si no lo encuentra aquí, lo busca en los directorios que especifica la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso recién creada se copia en *pathname*. Si el *filename* no se encuentra el archivo, *pathname* contiene una cadena vacía terminada en null.
 
 El *pathname* búfer debe ser al menos **_MAX_PATH** caracteres de longitud para dar cabida a la longitud total del nombre de ruta de acceso construido. En caso contrario, **_searchenv** puede saturar el *pathname* almacene en búfer y provocar un comportamiento inesperado.
 
@@ -105,9 +108,9 @@ El *pathname* búfer debe ser al menos **_MAX_PATH** caracteres de longitud para
 
 Si *filename* es una cadena vacía, estas funciones devuelven **ENOENT**.
 
-Si *filename* o *pathname* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+Si *filename* o *pathname* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
-Para obtener más información acerca de **errno** y códigos de error, vea [errno constantes](../../c-runtime-library/errno-constants.md).
+Para obtener más información acerca de **errno** y códigos de error, vea [errno (constantes)](../../c-runtime-library/errno-constants.md).
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan a los homólogos más recientes y seguros de dichas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

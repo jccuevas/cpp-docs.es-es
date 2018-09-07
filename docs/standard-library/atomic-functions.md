@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539485"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110167"
 ---
 # <a name="ltatomicgt-functions"></a>Funciones &lt;atomic&gt;
 
@@ -110,11 +110,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un *atómica* objeto que almacena un valor de tipo `Ty`.
+*Atom*<br/>
+Un puntero a un *atómica* objeto que almacena un valor de tipo `Ty`.
 
-*EXP* un puntero a un valor de tipo `Ty`.
+*Exp*<br/>
+Puntero a un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -148,15 +151,20 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `Ty`.
 
-*EXP* un puntero a un valor de tipo `Ty`.
+*Exp*<br/>
+Puntero a un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
-*Order1* primera [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumento.
+*Order1*<br/>
+Primer argumento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2* segundo `memory_order` argumento. El valor de *Order2* no puede ser `memory_order_release` o `memory_order_acq_rel`, no puede ser más seguro que el valor de *Order1*.
+*Order2*<br/>
+Segundo argumento `memory_order`. El valor de *Order2* no puede ser `memory_order_release` o `memory_order_acq_rel`, no puede ser más seguro que el valor de *Order1*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -186,11 +194,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `Ty`.
 
-*EXP* un puntero a un valor de tipo `Ty`.
+*Exp*<br/>
+Puntero a un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -224,15 +235,20 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `Ty`.
 
-*EXP* un puntero a un valor de tipo `Ty`.
+*Exp*<br/>
+Puntero a un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
-*Order1* primera [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumento.
+*Order1*<br/>
+Primer argumento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2* segundo `memory_order` argumento. El valor de *Order2* no puede ser `memory_order_release` o `memory_order_acq_rel`, ni puede ser más seguro que el valor de *Order1*.
+*Order2*<br/>
+Segundo argumento `memory_order`. El valor de *Order2* no puede ser `memory_order_release` o `memory_order_acq_rel`, ni puede ser más seguro que el valor de *Order1*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -256,9 +272,11 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -288,11 +306,14 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -315,9 +336,11 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un puntero al tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un puntero al tipo `T`.
 
-*Valor* un valor de tipo `ptrdiff_t`.
+*Valor*<br/>
+Valor de tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -357,9 +380,11 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un puntero al tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un puntero al tipo `T`.
 
-*Valor* un valor de tipo `ptrdiff_t`.
+*Valor*<br/>
+Valor de tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -398,9 +423,11 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `T`.
 
-*Valor* un valor de tipo `T`.
+*Valor*<br/>
+Valor de tipo `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -430,11 +457,14 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `T`.
 
-*Valor* un valor de tipo `T`.
+*Valor*<br/>
+Valor de tipo `T`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -457,9 +487,11 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `T`.
 
-*Valor* un valor de tipo `T`.
+*Valor*<br/>
+Valor de tipo `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -489,11 +521,14 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `T`.
 
-*Valor* un valor de tipo `T`.
+*Valor*<br/>
+Valor de tipo `T`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -521,9 +556,11 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un puntero al tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un puntero al tipo `T`.
 
-*Valor* un valor de tipo `ptrdiff_t`.
+*Valor*<br/>
+Valor de tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -561,9 +598,11 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un puntero al tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un puntero al tipo `T`.
 
-*Valor* un valor de tipo `ptrdiff_t`.
+*Valor*<br/>
+Valor de tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -603,9 +642,11 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `T`.
 
-*Valor* un valor de tipo `T`.
+*Valor*<br/>
+Valor de tipo `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -635,11 +676,14 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `T`.
 
-*Valor* un valor de tipo `T`.
+*Valor*<br/>
+Valor de tipo `T`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -660,7 +704,8 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Marca* un puntero a un `atomic_flag` objeto.
+*Marca*<br/>
+Puntero a un objeto `atomic_flag`.
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
@@ -673,9 +718,11 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parámetros
 
-*Marca* un puntero a un `atomic_flag` objeto.
+*Marca*<br/>
+Puntero a un objeto `atomic_flag`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
@@ -688,7 +735,8 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Marca* un puntero a un `atomic_flag` objeto.
+*Marca*<br/>
+Puntero a un objeto `atomic_flag`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -705,9 +753,11 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parámetros
 
-*Marca* un puntero a un `atomic_flag` objeto.
+*Marca*<br/>
+Puntero a un objeto `atomic_flag`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -726,9 +776,11 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -747,7 +799,8 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que almacena un valor de tipo `T`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que almacena un valor de tipo `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -770,7 +823,8 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que contiene un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que contiene un valor de tipo `Ty`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -793,9 +847,11 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que contiene un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que contiene un valor de tipo `Ty`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). No utilice `memory_order_release` ni `memory_order_acq_rel`.
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum). No utilice `memory_order_release` ni `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -811,7 +867,8 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Orden* ordenación restricción que determina el tipo de barrera de memoria.
+*Orden*<br/>
+Restricción de ordenación de memoria que determina el tipo de barrera.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -839,9 +896,11 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un objeto atómico que contiene un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto atomic que contiene un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -867,11 +926,14 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Atom* un puntero a un `atomic` objeto que contiene un valor de tipo `Ty`.
+*Atom*<br/>
+Puntero a un objeto `atomic` que contiene un valor de tipo `Ty`.
 
-*Valor* un valor de tipo `Ty`.
+*Valor*<br/>
+Valor de tipo `Ty`.
 
-*Orden* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). No utilice `memory_order_consume`, `memory_order_acquire` ni `memory_order_acq_rel`.
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum). No utilice `memory_order_consume`, `memory_order_acquire` ni `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -887,7 +949,8 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Orden* ordenación restricción que determina el tipo de barrera de memoria.
+*Orden*<br/>
+Restricción de ordenación de memoria que determina el tipo de barrera.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -913,7 +976,8 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Arg* un valor de tipo `Ty`.
+*arg*<br/>
+Valor de tipo `Ty`.
 
 ### <a name="return-value"></a>Valor devuelto
 
