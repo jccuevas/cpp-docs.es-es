@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 1) C4627 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4627 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284191"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249625"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Advertencia del compilador (nivel 1) C4627
-'\<identificador >': omite al buscar el precompilado uso del encabezado  
+
+> '*header_file*': omite al buscar el precompilado uso del encabezado
+
+Si el archivo de origen actual tiene el [/Yu \(usar archivo de encabezado precompilado)](../../build/reference/yu-use-precompiled-header-file.md) establecida, la opción, a continuación, el compilador omite todo lo que en el archivo antes de que se incluye el encabezado precompilado. Advertencia **C4627** se genera en Visual Studio 2015 y versiones anteriores si *header_file* se incluye antes del archivo de encabezado precompilado, y si el encabezado precompilado no incluye también *header_file*.
+
+## <a name="example"></a>Ejemplo
+
+Este ejemplo muestra cómo puede producirse el error y muestra cómo corregirlo:
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- Al buscar la ubicación donde se utiliza un encabezado precompilado, el compilador encontró una `#include` la directiva para la  *\<identificador >* archivo de inclusión. El compilador omite la `#include` directiva, pero emite la advertencia **C4627** si el encabezado precompilado aún no contiene el  *\<identificador >* archivo de inclusión.  
-  
-## <a name="see-also"></a>Vea también  
- [Crear archivos de encabezado precompilados](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Vea también
+
+[Crear archivos de encabezado precompilados](../../build/reference/creating-precompiled-header-files.md)
