@@ -1,5 +1,5 @@
 ---
-title: Abrir el Editor de recursos para un símbolo determinado | Microsoft Docs
+title: Abrir el Editor de recursos para un símbolo determinado (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - resource symbols
 - View Use button
-- resource editors, resource symbols
+- resource editors [C++], resource symbols
 ms.assetid: f715807b-5af2-4627-be25-be63b23fd097
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f10b0e46fee7877a4fcf6f21f3c5c938cd33ab2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b4b2c6f37a1e496310b1520754a90feb2facb163
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607964"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313187"
 ---
-# <a name="opening-the-resource-editor-for-a-given-symbol"></a>Abrir el Editor de recursos para un símbolo determinado
+# <a name="opening-the-resource-editor-for-a-given-symbol-c"></a>Abrir el Editor de recursos para un símbolo determinado (C++)
 
 Al buscar símbolos en el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md), es posible que desee obtener más información sobre cómo se utiliza un símbolo concreto. El **Ver uso** botón proporciona una forma rápida de obtener esta información.
 

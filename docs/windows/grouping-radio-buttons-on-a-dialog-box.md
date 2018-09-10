@@ -1,5 +1,5 @@
 ---
-title: Agrupar botones de Radio en un cuadro de diálogo | Microsoft Docs
+title: Agrupar botones de Radio en un cuadro de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - member variables, adding to radio button groups
 - variables, dialog box control member variables
-- dialog box controls, grouping radio buttons
+- dialog box controls [C++], grouping radio buttons
 - grouping controls
-- radio buttons, grouping on dialog boxes
+- radio buttons [C++], grouping on dialog boxes
 ms.assetid: 3cc43f9e-56c8-4faa-9930-ce81733c69de
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d0846d87273920f72598a1ea5bc4bd83d4c952d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599890"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315397"
 ---
-# <a name="grouping-radio-buttons-on-a-dialog-box"></a>Agrupar botones de opción en un cuadro de diálogo
+# <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>Agrupar botones de Radio en un cuadro de diálogo (C++)
 
 Al agregar botones de radio a un cuadro de diálogo, tratarlos como un grupo estableciendo una **grupo** propiedad en el **propiedades** ventana para el primer botón en el grupo. Después, aparecerá un id. de control para ese botón de opción en el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md), lo que le permite agregar una variable miembro para el grupo de botones de radio.
 

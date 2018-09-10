@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6f49e224520751e08ba6aa7e37932314e11ef8a5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406024"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315194"
 ---
 # <a name="integer-limits"></a>Límites de enteros
 
 **Específicos de Microsoft**
 
-Los límites de los tipos enteros se muestran en la tabla siguiente. Estos límites también se definen en el archivo de encabezado estándar < limits.h >.
+Los límites de los tipos enteros se muestran en la tabla siguiente. Estos límites también se definen en el archivo de encabezado estándar \<limits.h >.
 
 ## <a name="limits-on-integer-constants"></a>Límites en constantes de enteros
 
@@ -59,4 +59,5 @@ Si un valor supera la representación de entero mayor, el compilador de Microsof
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
- [Límites flotantes](../cpp/floating-limits.md)  
+
+[Límites flotantes](../cpp/floating-limits.md)

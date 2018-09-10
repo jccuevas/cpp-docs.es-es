@@ -1,5 +1,5 @@
 ---
-title: Editor de la barra de herramientas | Microsoft Docs
+title: Barra de herramientas del Editor (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,7 +10,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Toolbar editor
+- resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0f9c4977ff82bd3f4af40af657a4bfed3a90568
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c51c8a5dc321d61b6167fb6a1e5b71d52145d81d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197881"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316957"
 ---
-# <a name="toolbar-editor"></a>Editor de barras de herramientas
+# <a name="toolbar-editor-c"></a>Barra de herramientas del Editor (C++)
 
-El **barra de herramientas** editor le permite crear recursos de la barra de herramientas y convertir mapas de bits en recursos de la barra de herramientas. El **barra de herramientas** editor usa una presentación gráfica para mostrar una barra de herramientas y botones que se parecen mucho al aspecto que tendrán en una aplicación acabada.
+El **barra de herramientas** editor le permite crear recursos de la barra de herramientas de C++ y convertir mapas de bits en recursos de la barra de herramientas. El **barra de herramientas** editor usa una presentación gráfica para mostrar una barra de herramientas y botones que se parecen mucho al aspecto que tendrán en una aplicación acabada.
 
 Con el **barra de herramientas** editor, puede:
 

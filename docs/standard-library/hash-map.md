@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef090aec97308a6d423c18daab5ee540efdd8a1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959779"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316330"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -32,7 +32,7 @@ Define las clases de plantilla de contenedor hash_map y hash_multimap y sus plan
 
 ## <a name="syntax"></a>Sintaxis
 
-> #<a name="include-hashmap"></a>incluir < hash_map >
+> #<a name="include-hashmap"></a>incluir \<hash_map >
 
 ### <a name="operators"></a>Operadores
 
@@ -64,6 +64,6 @@ Define las clases de plantilla de contenedor hash_map y hash_multimap y sus plan
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](cpp-standard-library-header-files.md)
-[seguridad para subprocesos en la biblioteca estándar de C++](thread-safety-in-the-cpp-standard-library.md)
-[referencia de la biblioteca estándar de C++](cpp-standard-library-reference.md)
+[Referencia de archivos de encabezado](cpp-standard-library-header-files.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de biblioteca estándar de C++](cpp-standard-library-reference.md)

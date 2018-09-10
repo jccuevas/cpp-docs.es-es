@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850425"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319089"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Advertencias del compilador por versión del compilador
 
@@ -404,7 +404,7 @@ C4694|'*tipo*': una clase abstracta sellada no puede tener una clase base*tipo*'
 C4720|informes de ensamblado en línea: '*descripción*'
 C4721|'*descripción*': no está disponible como intrínseco
 C4722|'*descripción*': destructor nunca devuelve un valor, posible pérdida de memoria
-C4726|ARM arch4/4T solamente admite ' < cpsr_f > o < spsr_f >' con un valor inmediato
+C4726|ARM arch4/4T solamente admite '\<cpsr_f > o \<spsr_f >' con un valor inmediato
 C4727|PCH denominado *nombre* con la misma marca de tiempo en *nombre* y *nombre*.  Usar el primer PCH.
 C4729|función demasiado grande para advertencias basadas en gráficos de flujos
 C4730|'*descripción*': mezcla de _m64 y expresiones pueden ocasionar código incorrecto de punto flotante

@@ -1,5 +1,5 @@
 ---
-title: Controles de cuadros de diálogo | Microsoft Docs
+title: Controles de cuadros de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591963"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317113"
 ---
-# <a name="controls-in-dialog-boxes"></a>Controles de cuadros de diálogo
+# <a name="controls-in-dialog-box-ces"></a>Es los controles de cuadro de diálogo) (C++)
 
 Puede agregar controles a un cuadro de diálogo mediante la [pestaña del cuadro de diálogo Editor](../windows/dialog-editor-tab-toolbox.md) en el [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox), que le permite elegir el control que desee y arrástrelo hasta el cuadro de diálogo. De forma predeterminada, la ventana de cuadro de herramientas se establece en la opción Ocultar automáticamente. Aparece como una pestaña en el margen izquierdo de la solución cuando se abre el editor de cuadro de diálogo. Sin embargo, puede anclar el **cuadro de herramientas** ventana a su posición, haga clic en el **Ocultar automáticamente** botón en la esquina superior derecha de la ventana. Para obtener más información sobre cómo controlar el comportamiento de esta ventana, consulte [administración de ventanas](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

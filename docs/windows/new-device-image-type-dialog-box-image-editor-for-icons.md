@@ -1,5 +1,5 @@
 ---
-title: Nuevo &lt;dispositivo&gt; la imagen, cuadro de diálogo de tipo (Editor de imágenes para iconos) | Microsoft Docs
+title: Nuevo &lt;dispositivo&gt; (C++) (Editor de imágenes para iconos) de cuadro de diálogo de tipo de imagen | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New <Device> Image Type dialog box
+- New <Device> Image Type dialog box [C++]
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ab00ebad999569c3991f3a1d8d511d24eb47380
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610888"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313941"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nuevo &lt;dispositivo&gt; la imagen, cuadro de diálogo de tipo (Editor de imágenes para iconos)
+# <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Nuevo &lt;dispositivo&gt; imagen en el cuadro de diálogo de tipo (C++) (Editor de imágenes para iconos)
 
 Permite crear una nueva imagen de dispositivo de un tipo especificado. Para abrir el **New \<dispositivo > imagen** cuadro de diálogo, haga clic en **nuevo tipo de imagen** en el **imagen** menú.
 

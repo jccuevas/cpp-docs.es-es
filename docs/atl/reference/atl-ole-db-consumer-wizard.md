@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763073"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315383"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 
@@ -106,23 +106,23 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
    Después de seleccionar un origen de datos, este cuadro se rellena con un nombre de clase predeterminado basado en la tabla o procedimiento almacenado que seleccionó (vea **seleccionar un origen de datos** a continuación). Puede editar el nombre de clase.
 
-- **Archivo .h**  
+- **Archivo .h**
 
    Después de seleccionar un origen de datos, este cuadro se rellena con un nombre de clase de encabezado predeterminada en función de la tabla o procedimiento almacenado que seleccionó (vea **seleccionar un origen de datos** a continuación). Puede editar el nombre del archivo de encabezado o seleccionar un archivo de encabezado existente.
 
-- **Con atributos**  
+- **Con atributos**
 
    Esta opción especifica si el asistente creará clases de consumidor con atributos o definiciones de plantilla. Cuando se selecciona esta opción, el asistente utiliza atributos en lugar de declaraciones de plantilla (es decir, la opción predeterminada). Cuando se desactiva esta opción, el asistente utiliza las declaraciones de plantilla en lugar de atributos.
 
    - Si selecciona un consumidor **tipo** de **tabla**, usa el Asistente para la `db_source` y `db_table` atributos para crear la tabla y el descriptor de acceso de tabla declaraciones de clase y usa `db_column` a crear el mapa de columnas. Por ejemplo, crea este mapa:
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - Si selecciona un consumidor **tipo** de **comando**, usa el Asistente para la `db_source` y `db_command` atributos y usa `db_column` para crear el mapa de columnas. Por ejemplo, crea este mapa:
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       en lugar de usar el comando y declaraciones de clase de descriptor de acceso de comando en el archivo .h de la clase de comando, por ejemplo:
@@ -193,6 +193,6 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
 ## <a name="see-also"></a>Vea también
 
-[Consumidor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Las cadenas de conexión y vínculos de datos (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Consumidor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)
+[agregar funcionalidad con los asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)
+[cadenas de conexión y vínculos de datos (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

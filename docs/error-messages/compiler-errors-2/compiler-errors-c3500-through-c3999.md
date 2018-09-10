@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539489"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319076"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Errores de compilador C3500 a C3999
 
@@ -496,7 +496,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3721](compiler-error-c3721.md)|'*firma*': signatura no compatible para el evento|
 |[Error del compilador C3722](compiler-error-c3722.md)|no se permite un evento genérico|
 |[Error del compilador C3723](compiler-error-c3723.md)|'*función*': no se pudo resolver el evento|
-|[Error del compilador C3724](compiler-error-c3724.md)|debe #include < windows.h > para utilizar subprocesamiento múltiple con eventos|
+|[Error del compilador C3724](compiler-error-c3724.md)|debe #include \<windows.h > para usar subprocesamiento múltiple con eventos|
 |C3725 de Error del compilador|Obsoleto.|
 |C3726 de Error del compilador|Obsoleto.|
 |[Error del compilador C3727](compiler-error-c3727.md)|'*eventos*': un evento administrado debe ser una función miembro o un miembro de datos es un puntero a un delegado|
