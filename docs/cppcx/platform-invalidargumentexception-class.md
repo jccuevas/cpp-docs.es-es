@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2ccd6a2ac0b47db7d808f3f90a228ecf497e95be
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761386"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101865"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException (Clase)
-Se produce cuando uno de los argumentos proporcionados a un método no es válido.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md) .  
-  
-### <a name="requirements"></a>Requisitos  
- **Cliente mínimo admitido:** Windows 8  
-  
- **Servidor mínimo admitido:** Windows Server 2012  
-  
- **Espacio de nombres:** Plataforma  
-  
- **Metadatos:** platform.winmd  
-  
-## <a name="see-also"></a>Vea también  
- [Platform::COMException (Clase)](../cppcx/platform-comexception-class.md)
+
+Se produce cuando uno de los argumentos proporcionados a un método no es válido.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Comentarios
+
+Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md) .
+
+### <a name="requirements"></a>Requisitos
+
+**Cliente mínimo admitido:** Windows 8
+
+**Servidor mínimo admitido:** Windows Server 2012
+
+**Espacio de nombres:** Plataforma
+
+**Metadatos:** platform.winmd
+
+## <a name="see-also"></a>Vea también
+
+[Platform::COMException (Clase)](../cppcx/platform-comexception-class.md)
