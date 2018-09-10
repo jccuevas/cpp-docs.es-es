@@ -1,5 +1,5 @@
 ---
-title: Agregar un Control a un cuadro de diálogo | Microsoft Docs
+title: Agregar un Control a un cuadro de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, adding controls to
-- dialog box controls, adding to dialog boxes
-- controls [C++], adding to dialog boxes
+- dialog boxes [C++], adding controls to
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17c3756dc62fd8872adb8a0fb1b89112ed9771f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e60c64777ea4b5726721a267bcdd700cd71b4214
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608616"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317906"
 ---
-# <a name="adding-a-control-to-a-dialog-box"></a>Agregar un control a un cuadro de diálogo
+# <a name="adding-a-control-to-a-dialog-box-c"></a>Agregar un Control a un cuadro de diálogo (C++)
 
 ### <a name="to-add-a-control-to-a-dialog-box"></a>Para agregar un control a un cuadro de diálogo
 

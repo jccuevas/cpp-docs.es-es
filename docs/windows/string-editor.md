@@ -1,5 +1,5 @@
 ---
-title: Editor de cadenas | Microsoft Docs
+title: Editor de cadenas (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,10 +12,10 @@ dev_langs:
 helpviewer_keywords:
 - String editor
 - string tables
-- string tables, String editor
+- string tables [C++], String editor
 - string editing
 - string editing, string tables
-- resource editors, String editor
+- resource editors [C++], String editor
 - strings [C++], editing
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
 author: mikeblome
@@ -23,14 +23,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 903c477117162dde1d0becc6e2196e683ea189f1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 94f4aaeae3acb225c2fdc457af135e3534f8d381
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196815"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313265"
 ---
-# <a name="string-editor"></a>Editor de cadenas
+# <a name="string-editor-c"></a>Editor de cadenas (C++)
 
 Una tabla de cadenas es un recurso de Windows que contiene una lista de id., valores y títulos para todas las cadenas de su aplicación. Por ejemplo, los mensajes de la barra de estado se encuentran en la tabla de cadenas.
 

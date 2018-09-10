@@ -1,5 +1,5 @@
 ---
-title: Agregar información de versión para otro idioma | Microsoft Docs
+title: Agregar información de versión para otro idioma (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,7 +13,7 @@ helpviewer_keywords:
 - languages, version information
 - New Version Info Block
 - blocks, adding
-- resources [Visual Studio], adding version information
+- resources [C++], adding version information
 - version information, adding for languages
 ms.assetid: 17f6273c-e1cc-441a-a3d8-f564341cbf20
 author: mikeblome
@@ -21,14 +21,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db11dee47b51cf695a93489d4ab851be47c39144
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bf01f1d4b1c687ed919b94f651ef7ccf4b0bf45d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612663"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313460"
 ---
-# <a name="adding-version-information-for-another-language"></a>Agregar información de versión para otro idioma
+# <a name="adding-version-information-for-another-language-c"></a>Agregar información de versión para otro idioma (C++)
 
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>Para agregar información de versión para otro idioma (nuevo bloque de información)
 

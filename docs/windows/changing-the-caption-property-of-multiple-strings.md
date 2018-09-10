@@ -1,5 +1,5 @@
 ---
-title: Cambiar la propiedad Caption de varias cadenas | Microsoft Docs
+title: Cambiar la propiedad Caption de varios recursos de cadena (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,22 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- String editor, changing properties of multiple strings
-- strings [C++], changing caption property of multiple
-- string editing, string tables
-- string tables, changing caption of multiple strings
+- String editor [C++], changing properties of multiple strings
+- string tables [C++], changing caption of multiple strings
 ms.assetid: 82ac4389-fd9c-4794-a18f-c6bf5b253bd7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec23396f81faf1b31f1adeb37cbb6af2854ea952
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ba75745d769d593549e707a9100a50c40e6f65
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194855"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318829"
 ---
-# <a name="changing-the-caption-property-of-multiple-strings"></a>Cambiar la propiedad Caption de varias cadenas
+# <a name="changing-the-caption-property-of-multiple-string-resources-c"></a>Cambiar la propiedad Caption de varios recursos de cadena (C++)
 
 El siguiente procedimiento muestra cómo cambiar la propiedad caption de varias cadenas.
 

@@ -1,5 +1,5 @@
 ---
-title: Adición o eliminación de una cadena | Microsoft Docs
+title: Adición o eliminación de un recurso de cadena (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - strings [C++], adding to string tables
-- string tables, deleting strings
+- string tables [C++], deleting strings
 - strings [C++], deleting in string tables
-- string tables, adding strings
+- string tables [C++], adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 952531a846fe48e9f093f016efd67d73c386d82c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c22990c504700ab82ae0d7542420a3f82db4d73
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204492"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314045"
 ---
-# <a name="adding-or-deleting-a-string"></a>Agregar o eliminar una cadena
+# <a name="adding-or-deleting-a-string-resource-c"></a>Adición o eliminación de un recurso de cadena (C++)
 
 Puede insertar rápidamente nuevas entradas en la tabla de la cadena mediante la **cadena** editor. Nuevas cadenas se colocan al final de la tabla y reciben el siguiente identificador disponible. Se puede editar el **ID**, **valor**, o **título** propiedades en el [ventana propiedades](/visualstudio/ide/reference/properties-window) según sea necesario.
 

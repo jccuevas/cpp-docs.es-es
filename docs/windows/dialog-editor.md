@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Editor | Microsoft Docs
+title: Cuadro de diálogo Editor (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Dialog editor
+- resource editors [C++], Dialog editor
 - editors, dialog boxes
 - Dialog editor
-- dialog boxes, editing
+- dialog boxes [C++], editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c34487941ee45f91883ed91b1faa2c93973cfe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601729"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315501"
 ---
-# <a name="dialog-editor"></a>Editor de cuadros de diálogo
+# <a name="dialog-editor-c"></a>Cuadro de diálogo Editor (C++)
 
 El **diálogo** editor le permite crear o editar recursos de cuadro de diálogo. Abra el editor de cuadro de diálogo haciendo doble clic en el archivo .rc de un cuadro de diálogo en el **vista de recursos** ventana (**vista** > **vista de recursos**). Tenga en cuenta que **vista de recursos** no está disponible en las ediciones Express.
 

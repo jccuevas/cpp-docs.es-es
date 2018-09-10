@@ -1,5 +1,5 @@
 ---
-title: Especificar la ubicación y tamaño de un cuadro de diálogo | Microsoft Docs
+title: Especificar la ubicación y tamaño de un cuadro de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, size
-- dialog boxes, positioning
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be3db9c689b79edd17af567831d62071d79cad2d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 854e4df84bfc5f75eda8f98fa117c199ba054b3a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604624"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316580"
 ---
-# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Especificar la ubicación y el tamaño de un cuadro de diálogo
+# <a name="specifying-the-location-and-size-of-a-dialog-box-c"></a>Especificar la ubicación y tamaño de un cuadro de diálogo (C++)
 
-La ubicación y el tamaño de un cuadro de diálogo, así como la ubicación y tamaño de los controles dentro de ella, se miden en unidades de cuadro de diálogo. Los valores de los controles individuales y el cuadro de diálogo aparecen en la esquina inferior derecha de la barra cuando seleccionarlas de estado de Visual Studio.
+La ubicación y el tamaño de un cuadro de diálogo de C++, así como la ubicación y tamaño de los controles dentro de ella, se miden en unidades de cuadro de diálogo. Los valores de los controles individuales y el cuadro de diálogo aparecen en la esquina inferior derecha de la barra cuando seleccionarlas de estado de Visual Studio.
 
 Hay tres propiedades que se pueden establecer en el [ventana propiedades](/visualstudio/ide/reference/properties-window) para especificar dónde aparecerá un cuadro de diálogo en la pantalla. El **Center** propiedad es un valor booleano; si establece el valor en **True**, el cuadro de diálogo siempre aparecerá en el centro de la pantalla. Si se establece en **False**, a continuación, puede establecer el **XPos** y **YPos** las propiedades para definir explícitamente donde aparecerá el cuadro de diálogo en la pantalla. Las propiedades de posición son valores de desplazamiento de la esquina superior izquierda del área de visualización, que se define como `{X=0, Y=0}`. La posición también se basa en el **Absolute Align** propiedad: si **True**, las coordenadas son relativas a la pantalla; si **False**, las coordenadas son en relación con el cuadro de diálogo ventana del propietario.
 

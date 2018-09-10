@@ -1,5 +1,5 @@
 ---
-title: Teclas de aceleración (Editor de imágenes para iconos) | Microsoft Docs
+title: Teclas de aceleración (Editor de C++ imágenes para iconos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f211b15134ad292c9e7e4d3ed92d81ea59dd3b86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683305"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317750"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>Teclas de aceleración (Editor de imágenes para iconos)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>Teclas de aceleración (Editor de C++ imágenes para iconos)
 
 A continuación se muestran las teclas de aceleración de los comandos del editor de imágenes que están enlazados a las claves de forma predeterminada. Para cambiar las teclas de aceleración, haga clic en **opciones** en el **herramientas** menú y, a continuación, elija **teclado** bajo el **entorno** carpeta. Para obtener más información, vea [Identificar y personalizar métodos abreviados de teclado](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 

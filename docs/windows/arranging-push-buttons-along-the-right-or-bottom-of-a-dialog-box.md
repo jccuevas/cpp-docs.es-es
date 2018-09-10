@@ -1,5 +1,5 @@
 ---
-title: Organizar botones de comando a la derecha o inferior de un cuadro de diálogo | Microsoft Docs
+title: Organizar botones de comando a la derecha o inferior de un cuadro de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e44b8d4fef02101c7b8d8f5878aeaa22a5c528
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e87a600192bbcd3c8c91dd3f400ed67e9fab7ea9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608728"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316736"
 ---
-# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Colocar botones de comando a la derecha o en la parte inferior de un cuadro de diálogo
+# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box-c"></a>Organizar botones de comando a la derecha o inferior de un cuadro de diálogo (C++)
 
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organizar botones de comando a la derecha o inferior de un cuadro de diálogo
 

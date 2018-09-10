@@ -1,5 +1,5 @@
 ---
-title: Editar tablas de aceleradores | Microsoft Docs
+title: Editar tablas de aceleradores (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c258f691b7dbea814c707cbf1f3825b9db5ba42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596408"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314890"
 ---
-# <a name="editing-accelerator-tables"></a>Editar tablas de aceleradores
+# <a name="editing-accelerator-tables-c"></a>Editar tablas de aceleradores (C++)
 
-En Visual C++, puede editar una tabla de aceleradores directamente con la edición en contexto en el **acelerador** editor.
+En un proyecto de C++, puede editar una tabla de aceleradores directamente con la edición en contexto en el **acelerador** editor.
 
 Los procedimientos siguientes hacen referencia al uso de páginas de propiedades estándar, sin embargo, tanto la edición en contexto y el método de página de propiedad tienen el mismo resultado. Los cambios realizados mediante las páginas de propiedades o mediante la edición en contexto se reflejan inmediatamente en la tabla de aceleradores.
 
