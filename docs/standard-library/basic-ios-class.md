@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956848"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110023"
 ---
 # <a name="basicios-class"></a>basic_ios (Clase)
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem* un tipo.
+*Elem*<br/>
+Un tipo.
 
-*Rasgos* una variable de tipo `char_traits`.
+*Rasgos*<br/>
+Una variable de tipo `char_traits`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>Parámetros
 
-*SB* búfer estándar para almacenar elementos de entrada o salidos.
+*SB*<br/>
+Búfer estándar para almacenar elementos de entrada o salida.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* flujo cuyas marcas se va a copiar.
+*right*<br/>
+Flujo cuyas marcas se quieren copiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parámetros
 
-*Newexcept* las marcas que se desean producir una excepción.
+*Newexcept*<br/>
+Marcas que quiere que inicie una excepción.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parámetros
 
-*Char* el carácter que desee como el carácter de relleno.
+*Char*<br/>
+Carácter que se quiere como carácter de relleno.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Loc* una cadena de configuración regional.
+*LOC*<br/>
+Cadena de configuración regional.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sb* búfer estándar para almacenar elementos de entrada o salidos.
+*_Sb*<br/>
+Búfer estándar para almacenar elementos de entrada o salida.
 
-*_Isstd* especifica si se trata de una secuencia estándar.
+*_Isstd*<br/>
+Especifica si se trata de un flujo estándar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* la `ios_base` mover los valores de objeto.
+*right*<br/>
+Objeto `ios_base` cuyos valores se van a mover.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Char* el **char** para convertir.
+*Char*<br/>
+El **char** para convertir.
 
-*Default* el **char** que desee devuelto si no se encuentra ningún equivalente.
+*Predetermiado*<br/>
+El **char** que desee devuelto si no se encuentra ningún equivalente.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sb* una secuencia.
+*_Sb*<br/>
+Flujo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parámetros
 
-*_State* marcas adicionales para establecer.
+*_State*<br/>
+Marcas adicionales que se van a establecer.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parámetros
 
-*strbuf* el búfer de secuencia para convertirse en el búfer de lectura.
+*strbuf*<br/>
+Búfer de flujo que se va a convertir en el búfer de lectura.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parámetros
 
-*Str* una secuencia.
+*str*<br/>
+Flujo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Char* el carácter que se va a convertir.
+*Char*<br/>
+Carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el `basic_ios` objeto que se usa para intercambiar valores.
+*right*<br/>
+Objeto `basic_ios` que se usa para intercambiar valores.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d73beb5b935a729eb5e304eb03cbc37536c4d0e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0d9950d9198aec27ec3114d8a2b5151d105ee0b1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963159"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110010"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t (Clase)
 
@@ -44,11 +44,14 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pm* un puntero a la función miembro de clase `Type` va a convertir en un objeto de función.
+*_Pm*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*_Pleft* el objeto que la *_Pm* función miembro se llama en.
+*_Pleft*<br/>
+El objeto que la *_Pm* función miembro se llama en.
 
-*derecha* el argumento que se entrega a *_Pm*.
+*right*<br/>
+El argumento que se entrega a *_Pm*.
 
 ## <a name="return-value"></a>Valor devuelto
 

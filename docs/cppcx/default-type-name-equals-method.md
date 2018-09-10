@@ -13,40 +13,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 127f5ee876790fa3cfb8a052c2db6c41cc00f332
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763918"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109024"
 ---
 # <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals (Método)
-Determina si el objeto especificado es igual al objeto actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-  
-bool Equals(  
-    Object^ obj  
-)  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- obj  
- Objeto que se va a comparar.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Es`true` si los objetos son iguales; de lo contrario, es `false`.  
-  
-### <a name="requirements"></a>Requisitos  
- **Cliente mínimo admitido:** Windows 8  
-  
- **Servidor mínimo admitido:** Windows Server 2012  
-  
- **Espacio de nombres:** predeterminado  
-  
- **Encabezado:** vccorlib.h  
-  
-## <a name="see-also"></a>Vea también  
- [espacio de nombres predeterminado](../cppcx/default-namespace.md)
+
+Determina si el objeto especificado es igual al objeto actual.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+bool Equals(
+    Object^ obj
+)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*obj*<br/>
+Objeto que se va a comparar.
+
+### <a name="return-value"></a>Valor devuelto
+
+Es`true` si los objetos son iguales; de lo contrario, es `false`.
+
+### <a name="requirements"></a>Requisitos
+
+**Cliente mínimo admitido:** Windows 8
+
+**Servidor mínimo admitido:** Windows Server 2012
+
+**Espacio de nombres:** predeterminado
+
+**Encabezado:** vccorlib.h
+
+## <a name="see-also"></a>Vea también
+
+[espacio de nombres predeterminado](../cppcx/default-namespace.md)

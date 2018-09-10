@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960048"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110063"
 ---
 # <a name="array-class-c-standard-library"></a>Clase array (Biblioteca estándar de C++)
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* objeto o el intervalo se va a insertar.
+*right*<br/>
+Objeto o intervalo que se va a insertar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val* el valor que se asigna.
+*Val*<br/>
+Valor que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*desactivar* la posición del elemento para tener acceso a.
+*Desactivar*<br/>
+Posición del elemento al que se accederá.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*desactivar* la posición del elemento para tener acceso a.
+*Desactivar*<br/>
+Posición del elemento al que se accederá.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* contenedor para copiar.
+*right*<br/>
+Contenedor que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* matriz para intercambiar el contenido.
+*right*<br/>
+Matriz con la que se va a intercambiar el contenido.
 
 ### <a name="remarks"></a>Comentarios
 

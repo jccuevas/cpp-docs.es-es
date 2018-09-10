@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960074"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109895"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream (Clase)
 
@@ -44,11 +44,14 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc* la clase de asignador.
+*Alloc*<br/>
+Clase de asignador.
 
-*Elem* el tipo del elemento básico de la cadena.
+*Elem*<br/>
+Tipo de elemento básico de la cadena.
 
-*TR* rasgos de caracteres especializados en el elemento básico de la cadena.
+*Tr*<br/>
+Rasgos de caracteres especializados en el elemento básico de la cadena.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -112,11 +115,14 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Modo de* una de las enumeraciones en [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modo de*<br/>
+Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*Str* un objeto de tipo `basic_string`.
+*str*<br/>
+Objeto de tipo `basic_string`.
 
-*derecha* una referencia rvalue de un `basic_istringstream` objeto.
+*right*<br/>
+Referencia a un valor R de un objeto `basic_istringstream`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -136,7 +142,8 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* una referencia rvalue para un `basic_istringstream` objeto.
+*right*<br/>
+Referencia a un valor R a un objeto `basic_istringstream`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -172,7 +179,8 @@ void str(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Newstr* la nueva cadena.
+*_Newstr*<br/>
+La nueva cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 

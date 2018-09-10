@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f7a4d5ad1d7991e69a5092333974ec3a8ade07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 72ab821d32b63800c9edeaef070bd745ef8eae86
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956627"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108881"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic (Clase)
 
@@ -37,7 +37,8 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty* el tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
