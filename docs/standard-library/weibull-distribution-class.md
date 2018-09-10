@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6a71770afdb541efa76f85464d9aeef7b2fb91
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f684ad5e6487378e8f85aa1c30af0ae9d9038075
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681013"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109854"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution (Clase)
 
@@ -80,7 +80,8 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* el tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 

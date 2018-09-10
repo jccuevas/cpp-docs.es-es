@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965183"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109841"
 ---
 # <a name="conditionvariable-class"></a>condition_variable (Clase)
 
@@ -125,9 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) objeto.
+*Lck*<br/>
+Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Pred* cualquier expresión que devuelva **true** o **false**.
+*Pred*<br/>
+Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -159,11 +161,14 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) objeto.
+*Lck*<br/>
+Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Rel_time* A `chrono::duration` reactiva el objeto que especifica la cantidad de tiempo antes de que el subproceso.
+*Rel_time*<br/>
+Objeto `chrono::duration` que especifica la cantidad de tiempo que tiene que transcurrir hasta que el subproceso se reactive.
 
-*Pred* cualquier expresión que devuelva **true** o **false**.
+*Pred*<br/>
+Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -214,11 +219,14 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) objeto.
+*Lck*<br/>
+Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md) objeto.
+*Abs_time*<br/>
+Un objeto [chrono::time_point](../standard-library/time-point-class.md).
 
-*Pred* cualquier expresión que devuelva **true** o **false**.
+*Pred*<br/>
+Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 

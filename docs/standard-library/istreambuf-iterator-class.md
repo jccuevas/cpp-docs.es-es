@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 381316cd7b05f62ba8b730c376e266e5fd0a70cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960596"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109294"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator (Clase)
 
@@ -49,9 +49,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType* el tipo que representa el tipo de caracteres para istreambuf_iterator.
+*CharType*<br/>
+Tipo que representa el tipo de caracteres para istreambuf_iterator.
 
-*Rasgos* el tipo que representa el tipo de caracteres para istreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
+*Rasgos*<br/>
+Tipo que representa el tipo de caracteres para istreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -150,7 +152,8 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* el iterador para que se va a comprobar la igualdad.
+*right*<br/>
+Iterador con el que se va a comprobar la igualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -246,9 +249,11 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*strbuf* el búfer de flujo de entrada a la que el `istreambuf_iterator` se va a adjuntar.
+*strbuf*<br/>
+Búfer de flujo de entrada al que se va a adjuntar `istreambuf_iterator`.
 
-*_Istr* el flujo de entrada a la que el `istreambuf_iterator` se va a adjuntar.
+*_Istr*<br/>
+Flujo de entrada al que se va a adjuntar `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -319,7 +324,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;   //Put value of outpos equal to inpos
+*outpos = *inpos;   //Put value of outpos equal to inpos
       ++inpos;
       ++outpos;
    }
@@ -364,7 +369,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;
+*outpos = *inpos;
       ++inpos;   //Increment istreambuf_iterator
       ++outpos;
    }

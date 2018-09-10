@@ -13,33 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6461e6c94a6889c956ac0319c55c9ee5d2a361
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: edcb67686db871e4ebddb961ed254d260b630139
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751385"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107154"
 ---
 # <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode (Método)
-Devuelve el código hash de esta instancia.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
- Código hash de esta instancia.  
-  
-### <a name="requirements"></a>Requisitos  
- **Cliente mínimo admitido:** Windows 8  
-  
- **Servidor mínimo admitido:** Windows Server 2012  
-  
- **Espacio de nombres:** predeterminado  
-  
- **Encabezado:** vccorlib.h  
-  
-## <a name="see-also"></a>Vea también  
- [espacio de nombres predeterminado](../cppcx/default-namespace.md)
+
+Devuelve el código hash de esta instancia.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Código hash de esta instancia.
+
+### <a name="requirements"></a>Requisitos
+
+**Cliente mínimo admitido:** Windows 8
+
+**Servidor mínimo admitido:** Windows Server 2012
+
+**Espacio de nombres:** predeterminado
+
+**Encabezado:** vccorlib.h
+
+## <a name="see-also"></a>Vea también
+
+[espacio de nombres predeterminado](../cppcx/default-namespace.md)

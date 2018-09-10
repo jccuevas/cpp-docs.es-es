@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957527"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109880"
 ---
 # <a name="sharedptr-class"></a>shared_ptr (Clase)
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parámetros
 
-*SP* el puntero compartido para copiar.
+*SP*<br/>
+El puntero compartido que se va a copiar.
 
-*Asia Pacífico* el puntero automático para copiar.
+*Asia Pacífico*<br/>
+El puntero automático que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* una `lvalue` referencia como un `shared_ptr` o `weak_ptr`.
+*ptr*<br/>
+Una referencia `lvalue` a un `shared_ptr` o un `weak_ptr`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Otros* tipo controlado por el puntero de argumento.
+*Otros problemas*<br/>
+Tipo controlado por el puntero de argumento.
 
-*D.* el tipo del eliminador.
+*D*<br/>
+Tipo del eliminador.
 
-*PTR* el puntero para copiar.
+*ptr*<br/>
+Puntero que se va a copiar.
 
-*Dtor* eliminador para copiar.
+*destructor*<br/>
+El eliminador que se va a copiar.
 
-*Un* el tipo del asignador.
+*A*<br/>
+Tipo del asignador.
 
-*Alloc* el asignador para copiar.
+*Alloc*<br/>
+El asignador que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parámetros
 
-*Otros* tipo controlado por el puntero de argumento.
+*Otros problemas*<br/>
+Tipo controlado por el puntero de argumento.
 
-*PTR* el puntero para copiar.
+*ptr*<br/>
+Puntero que se va a copiar.
 
-*D.* el tipo del eliminador.
+*D*<br/>
+Tipo del eliminador.
 
-*Un* el tipo del asignador.
+*A*<br/>
+Tipo del asignador.
 
-*Dtor* eliminador.
+*destructor*<br/>
+Eliminador.
 
-*ador* el asignador.
+*ador*<br/>
+Asignador.
 
-*SP* el puntero inteligente para copiar.
+*SP*<br/>
+El puntero inteligente que se va a copiar.
 
-*wp* el puntero débil.
+*wp*<br/>
+El puntero débil.
 
-*Asia Pacífico* el puntero automático para copiar.
+*Asia Pacífico*<br/>
+El puntero automático que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-*SP* el puntero compartido a intercambiar.
+*SP*<br/>
+El puntero compartido que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 
