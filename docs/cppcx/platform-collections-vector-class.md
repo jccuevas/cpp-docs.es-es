@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761116"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103937"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector (Clase)
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Tipo de los elementos contenidos en el objeto Vector.
 
-*E*  
+*E*<br/>
 Especifica un predicado binario para probar la igualdad con valores de tipo *T*. El valor predeterminado es `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Comentarios
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 El elemento que se va a insertar en el objeto Vector. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="clear"></a>  Clear (método)
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parámetros
 
-*startIndex*  
+*startIndex*<br/>
 Índice basado en cero del principio de los elementos que se van a recuperar.
 
-*dest*  
+*dest*<br/>
 Una matriz asignada por el llamador de elementos que comienzan con el elemento especificado por *startIndex* y termina con el último elemento del vector.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*  
+*valor*<br/>
 El elemento que se va a buscar.
 
-*index*  
+*index*<br/>
 Índice de base cero del elemento si parámetro *valor* se encuentra; en caso contrario, 0.
 
 El *índice* parámetro es 0 si el elemento es el primer elemento del Vector o no se encontró el elemento. Si el valor devuelto es `true`, se encontró el elemento y es el primer elemento; de lo contrario, no se encuentra el elemento.
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*Elemento*  
+*Elemento*<br/>
 Un elemento que se va a insertar en el objeto Vector detrás del elemento especificado por *índice*. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="removeat"></a>  RemoveAt (método)
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
 ## <a name="removeatend"></a>  Removeatend (método)
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Parámetros
 
-*arr*  
+*arr*<br/>
 Una matriz de objetos cuyo tipo está definido por el *T* typename.
 
 ## <a name="setat"></a>  SetAt (método)
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*Elemento*  
+*Elemento*<br/>
 El valor que se va a asignar al elemento especificado. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="size"></a>  Vector:: Size (método)
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Parámetros
 
-*a*  
+*a*<br/>
 Un [std:: Array](../standard-library/array-class-stl.md) que se utilizará para inicializar el objeto Vector.
 
-*arr*  
+*arr*<br/>
 Un [Platform:: Array](../cppcx/platform-array-class.md) que se utilizará para inicializar el objeto Vector.
 
-*InIt*  
+*InIt*<br/>
 El tipo de una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
-*IL*  
+*IL*<br/>
 Un [std:: initializer_list](../standard-library/initializer-list-class.md) de objetos de tipo *T* que se utilizará para inicializar el objeto Vector.
 
-*N*  
+*N*<br/>
 El número de elementos en una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
-*size*  
+*size*<br/>
 El número de elementos del objeto Vector.
 
-*valor*  
+*valor*<br/>
 Un valor que se utiliza para inicializar cada elemento en el objeto Vector actual.
 
-*v*  
+*v*<br/>
 Un [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: vector](../standard-library/vector-class.md) que se utiliza para inicializar el objeto Vector actual.
 
-*ptr*  
+*ptr*<br/>
 Puntero a un objeto `std::vector` que se usa para inicializar el objeto Vector actual.
 
-*first*  
+*first*<br/>
 El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *primera* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*Último*  
+*Último*<br/>
 El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *última* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Plataforma Namespace](platform-namespace-c-cx.md)  
-[Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Plataforma Namespace](platform-namespace-c-cx.md)<br/>
+[Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

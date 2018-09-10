@@ -15,44 +15,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a28f07990d5958f48f032b1355a565d2a4a559e9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8345a8418a2ff08b8909a7c01bd177afa426709b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758979"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104100"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices (Espacio de nombres)
-Este espacio de nombres solo está previsto para uso interno y no para utilizarlo en el desarrollo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace InteropServices {  
-}}  
-```  
-  
-### <a name="members"></a>Miembros  
- Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.  
-  
-|nombre|Observación|  
-|----------|------------|  
-|ComInterfaceType|enumeración|  
-|InterfaceTypeAttribute||  
-|LayoutKind|enumeración|  
-|MarshalAsAttribute||  
-|StuctLayoutAttribute||  
-|UnmanagedType|enumeración|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `Platform`  
-  
-### <a name="requirements"></a>Requisitos  
- **Metadatos:** platform.winmd  
-  
- **Namespace:** Platform::InteropServices  
-  
-## <a name="see-also"></a>Vea también  
- [Plataforma Namespace](platform-namespace-c-cx.md)
+
+Este espacio de nombres solo está previsto para uso interno y no para utilizarlo en el desarrollo.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+namespace Platform {
+   namespace InteropServices {
+}}
+```
+
+### <a name="members"></a>Miembros
+
+Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.
+
+|nombre|Observación|
+|----------|------------|
+|ComInterfaceType|enumeración|
+|InterfaceTypeAttribute||
+|LayoutKind|enumeración|
+|MarshalAsAttribute||
+|StuctLayoutAttribute||
+|UnmanagedType|enumeración|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`Platform`
+
+### <a name="requirements"></a>Requisitos
+
+**Metadatos:** platform.winmd
+
+**Namespace:** Platform::InteropServices
+
+## <a name="see-also"></a>Vea también
+
+[Plataforma Namespace](platform-namespace-c-cx.md)

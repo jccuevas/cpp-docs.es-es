@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407371"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105088"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT (Macro)
 
-Evaluar una expresión en tiempo de compilación y generar un error cuando el resultado es **FALSE**.
+Evalúa una expresión en tiempo de compilación y generar un error cuando el resultado es **FALSE**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,7 +49,8 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>Parámetros
 
-*booleanExpression* expresión (incluidos los punteros) que se evalúa como a distinto de cero (**TRUE**) o 0 (**FALSE**).
+*booleanExpression*<br/>
+Expresión (incluidos los punteros) que se evalúa como distinto de cero a (**TRUE**) o 0 (**FALSE**).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -57,7 +58,7 @@ Esta macro es similar a la [macros _ASSERT y _ASSERTE](assert-asserte-assert-exp
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo, se comprueba si el [sizeof](../../c-language/sizeof-operator-c.md) una **int** es mayor que o igual a 2 bytes y si el [sizeof](../../c-language/sizeof-operator-c.md) una **largo** es de 1 byte. El programa no se compilará y generará [Error del compilador C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) porque un **largo** es mayor que 1 byte.
+En este ejemplo, comprobamos si el [sizeof](../../c-language/sizeof-operator-c.md) una **int** es mayor que o igual a 2 bytes y si el [sizeof](../../c-language/sizeof-operator-c.md) un **largo** es de 1 byte. El programa no se compilará y generará [Error del compilador C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) porque un **largo** es mayor que 1 byte.
 
 ```C
 // crt__static_assert.c

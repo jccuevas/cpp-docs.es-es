@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7d2035a1146c5e620d8f75dd6bba5095a7630e0a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964413"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104002"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution (Clase)
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType* el tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*IntType*<br/>
+El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -242,11 +243,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*k* el `k` parámetro de distribución.
+*k*<br/>
+El parámetro de distribución `k`.
 
-*p* el `p` parámetro de distribución.
+*p*<br/>
+El parámetro de distribución `p`.
 
-*parm* la estructura de parámetros que se usa para construir la distribución.
+*parm*<br/>
+La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -266,11 +270,14 @@ struct param_type {typedef negative_binomial_distribution`<`result_type > distri
 
 ### <a name="parameters"></a>Parámetros
 
-*k* el `k` parámetro de distribución.
+*k*<br/>
+El parámetro de distribución `k`.
 
-*p* el `p` parámetro de distribución.
+*p*<br/>
+El parámetro de distribución `p`.
 
-*derecha* el `param_type` estructura usada para comparar.
+*right*<br/>
+La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios
 

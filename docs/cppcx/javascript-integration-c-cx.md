@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e792233e9ce9b1fbbf2e63142caaeba37f8b4976
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9f5e61c5555a59b4842d109eec5c7cbb060abe46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760690"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106982"
 ---
 # <a name="javascript-integration-ccx"></a>Integración de JavaScript (C++/CX)
 
@@ -22,4 +22,4 @@ Para obtener más información, consulte [crear componentes de Windows en tiempo
 
 ## <a name="see-also"></a>Vea también
 
-[Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)  
+[Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)

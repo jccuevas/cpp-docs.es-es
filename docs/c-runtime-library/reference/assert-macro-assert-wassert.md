@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200672"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101942"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert (macro), _assert, _wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>Parámetros
 
-*expresión* una expresión escalar (incluidas las expresiones de puntero) que se evalúa como distinto de cero a (**true**) o 0 (**false**).
+*Expresión*<br/>
+Una expresión escalar (incluidas las expresiones de puntero) que se evalúa como distinto de cero a (**true**) o 0 (**false**).
 
-*mensaje* el mensaje para mostrar.
+*message*<br/>
+Mensaje que se va a mostrar.
 
-*nombre de archivo* el nombre del origen de archivo de la aserción no se pudo en.
+*filename*<br/>
+Nombre del archivo de origen en el que la aserción generó error.
 
-*línea* el número de línea en el archivo de origen de la aserción con errores.
+*Línea*<br/>
+Número de línea del archivo de origen de la aserción con error.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -15,42 +15,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 660ba394e6eacb640aae72a791d034499d69aa4e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759595"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101851"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (Espacio de nombres)
-Este espacio de nombres contiene atributos que modifican las declaraciones de tipos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace Metadata {  
-}}  
-```  
-  
-### <a name="members"></a>Miembros  
- Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.  
-  
-|nombre|Observación|  
-|----------|------------|  
-|Atributo|La clase base de los atributos.|  
-|[Platform::Metadata::DefaultMemberAttribute (Atributo)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indica la función preferida que se va a invocar entre varias funciones sobrecargadas posibles.|  
-|[Atributo Platform::Metadata::FlagsAttribute](../cppcx/platform-metadata-flagsattribute-attribute.md)Flags|Declara una enumeración como enumeración de campos de bits.<br /><br /> En el siguiente ejemplo se muestra cómo aplicar el atributo `Flags` a una enumeración.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|  
-|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Garantiza que una clase ref privada tiene un nombre de clase en tiempo de ejecución válido.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `Platform`  
-  
-### <a name="requirements"></a>Requisitos  
- **Metadatos:** platform.winmd  
-  
- **Espacio de nombres:** Platform::Metadata  
-  
-## <a name="see-also"></a>Vea también  
- [Plataforma Namespace](platform-namespace-c-cx.md)
+
+Este espacio de nombres contiene atributos que modifican las declaraciones de tipos.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+namespace Platform {
+   namespace Metadata {
+}}
+```
+
+### <a name="members"></a>Miembros
+
+Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.
+
+|nombre|Observación|
+|----------|------------|
+|Atributo|La clase base de los atributos.|
+|[Platform::Metadata::DefaultMemberAttribute (Atributo)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indica la función preferida que se va a invocar entre varias funciones sobrecargadas posibles.|
+|[Atributo Platform::Metadata::FlagsAttribute](../cppcx/platform-metadata-flagsattribute-attribute.md)Flags|Declara una enumeración como enumeración de campos de bits.<br /><br /> En el siguiente ejemplo se muestra cómo aplicar el atributo `Flags` a una enumeración.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|
+|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Garantiza que una clase ref privada tiene un nombre de clase en tiempo de ejecución válido.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`Platform`
+
+### <a name="requirements"></a>Requisitos
+
+**Metadatos:** platform.winmd
+
+**Espacio de nombres:** Platform::Metadata
+
+## <a name="see-also"></a>Vea también
+
+[Plataforma Namespace](platform-namespace-c-cx.md)

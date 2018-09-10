@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 21cfcfb8a1c82fb351b85b0fb169a94dd3c2c5d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204909"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105099"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -75,15 +75,20 @@ void _wmakepath(
 
 ### <a name="parameters"></a>Parámetros
 
-*ruta de acceso* búfer de la ruta de acceso completa.
+*path*<br/>
+Búfer de la ruta de acceso completa.
 
-*unidad* contiene una letra (A, B y así sucesivamente) correspondiente a la unidad deseada y un signo de dos puntos final opcional. **_makepath** inserta los dos puntos automáticamente en la ruta de acceso compuesta si está presente. Si *unidad* es **NULL** o apunta a una cadena vacía, letra de unidad no aparece en la composición *ruta* cadena.
+*Unidad*<br/>
+Contiene una letra (A, B, etc.) correspondiente a la unidad deseada y un signo de dos puntos final opcional. **_makepath** inserta los dos puntos automáticamente en la ruta de acceso compuesta si está presente. Si *unidad* es **NULL** o apunta a una cadena vacía, letra de unidad no aparece en la composición *ruta* cadena.
 
-*dir* contiene la ruta de acceso de directorios, sin incluir el designador de unidad o el nombre de archivo real. La barra diagonal final es opcional y una barra diagonal (/) o una barra diagonal inversa (\\) o ambos se pueden utilizar en una sola *dir* argumento. Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **NULL** o apunta a una cadena vacía, no hay ruta de acceso de directorio se insertará en la composición *ruta* cadena.
+*dir*<br/>
+Contiene la ruta de acceso de los directorios, sin incluir el designador de unidad ni el nombre de archivo real. La barra diagonal final es opcional y una barra diagonal (/) o una barra diagonal inversa (\\) o ambos se pueden utilizar en una sola *dir* argumento. Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **NULL** o apunta a una cadena vacía, no hay ruta de acceso de directorio se insertará en la composición *ruta* cadena.
 
-*fname* contiene el nombre de archivo base sin ninguna extensión de nombre de archivo. Si *fname* es **NULL** o apunta a una cadena vacía, ningún nombre de archivo se insertará en la composición *ruta* cadena.
+*fname*<br/>
+Contiene el nombre de archivo base sin ninguna extensión de nombre de archivo. Si *fname* es **NULL** o apunta a una cadena vacía, ningún nombre de archivo se insertará en la composición *ruta* cadena.
 
-*ext* contiene la extensión de nombre de archivo real, con o sin un punto inicial (.). **_makepath** inserta el punto automáticamente si no aparece en *ext*. Si *ext* es **NULL** o apunta a una cadena vacía, sin extensión se insertará en la composición *ruta* cadena.
+*ext*<br/>
+Contiene la extensión de nombre de archivo real, con o sin punto inicial (.). **_makepath** inserta el punto automáticamente si no aparece en *ext*. Si *ext* es **NULL** o apunta a una cadena vacía, sin extensión se insertará en la composición *ruta* cadena.
 
 ## <a name="remarks"></a>Comentarios
 

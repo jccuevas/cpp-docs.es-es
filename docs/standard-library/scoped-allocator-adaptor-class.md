@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962935"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104072"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor (clase)
 
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parámetros
 
-*recuento de* el número de elementos para el que se asignarán suficiente espacio de almacenamiento.
+*count*<br/>
+Número de elementos para los que se va a asignar suficiente espacio de almacenamiento.
 
-*Sugerencia* un puntero que es posible que ayude el objeto de asignador ubicando la dirección de un objeto asignado antes de la solicitud.
+*Sugerencia*<br/>
+Un puntero que es posible que ayude el objeto de asignador ubicando la dirección de un objeto asignado antes de la solicitud.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* un puntero a la ubicación de memoria donde el objeto se va a crearse.
+*ptr*<br/>
+Un puntero a la ubicación de memoria donde se va a crear el objeto.
 
-*args* una lista de argumentos.
+*args*<br/>
+Una lista de argumentos.
 
-*primera* un objeto del primer tipo en un par.
+*first*<br/>
+Un objeto del primer tipo en un par.
 
-*segundo* un objeto del tipo de segundo de un par.
+*segundo*<br/>
+Un objeto del segundo tipo en un par.
 
-*derecha* un objeto existente para mover o copiar.
+*right*<br/>
+Un objeto existente para mover o copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* un puntero a la ubicación inicial de los objetos que se va a cancelar la asignación.
+*ptr*<br/>
+Puntero a la ubicación inicial de los objetos que se van a desasignar.
 
-*recuento de* el número de objetos que se va a desasignar.
+*count*<br/>
+Número de objetos que se van a desasignar.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::Destroy
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR* un puntero al objeto que se va a destruir.
+*ptr*<br/>
+Un puntero al objeto que se va a destruir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* existente `scoped_allocator_adaptor`.
+*right*<br/>
+Un `scoped_allocator_adaptor` existente.
 
-*al* un asignador existente que se usará como el asignador exterior.
+*Al*<br/>
+Un asignador existente que se usará como el asignador exterior.
 
-*Rest* una lista de asignadores que se usarán como los asignadores exteriores.
+*REST*<br/>
+Una lista de asignadores que se usarán como los asignadores exteriores.
 
 ### <a name="remarks"></a>Comentarios
 
