@@ -1,7 +1,7 @@
 ---
 title: regex_constants (Clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107533"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385000"
 ---
-# <a name="regexconstants-class"></a>regex_constants (Clase)
+# <a name="regexconstants-namespace"></a>espacio de nombres regex_constants)
 
 Espacio de nombres para las marcas de expresiones regulares.
 
@@ -116,6 +116,12 @@ namespace regex_constants {
 ## <a name="remarks"></a>Comentarios
 
 El espacio de nombres `regex_constants` encapsula varios tipos de marca y sus valores de marca asociados.
+
+|||
+|-|-|
+|[error_type](#error_type)|Marcas para notificar errores de sintaxis de expresión regular.|
+|[match_flag_type](#match_flag_type)|Marcadores para las opciones de coincidencia de expresión regular.|
+|[syntax_option_type](#syntax_option_type)|Marcas para seleccionar las opciones de sintaxis.|
 
 ## <a name="requirements"></a>Requisitos
 

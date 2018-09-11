@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mamillmsft
+author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378c6fe9a86cc44d80252f69367cf8c70234f469
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613251"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384961"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa
 
@@ -31,7 +31,7 @@ En este artículo contiene instrucciones para desarrolladores ayudar a identific
 
 Las instrucciones proporcionadas en este artículo está relacionado con las clases de vulnerabilidades representadas por:
 
-1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. 
+1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. El `/Qspectre` también está disponible en Visual Studio 2015 Update 3 a través de conmutador [4338871 KB](https://support.microsoft.com/help/4338871). La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. 
 
 2. CVE-2018-3639, también conocido como [especulativa Store omisión (SSB)](https://aka.ms/sescsrdssb). Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa de una carga por delante de un almacén dependiente como resultado de una predicción de acceso de memoria.
 
