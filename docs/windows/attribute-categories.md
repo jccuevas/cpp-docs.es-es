@@ -8,19 +8,19 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], grouped by category
+- attributes [C++/CLI], grouped by category
 ms.assetid: 0f0679dc-2c1e-4463-b6a8-5829e36782e1
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a53577446db1001b354f5765c9c7b6c5e0e1e06b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7ce109fa4a7eb3adbcb15150a14a03801a9e247b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604200"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316489"
 ---
 # <a name="attribute-categories"></a>Categorías de atributos
 La referencia de atributos describe los distintos tipos de atributos que puede utilizar en Visual C++.
