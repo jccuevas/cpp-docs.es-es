@@ -1,7 +1,7 @@
 ---
 title: recursive_directory_iterator (Clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82df045c5a41767093e690ec35ffeb3d81032474
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0d3765f57ee299a70a54e3b69dbaee0e0687a64c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110661"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691658"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator (Clase)
 
@@ -41,7 +41,7 @@ La clase de plantilla almacena:
 
 1. un objeto de tipo `directory_entry` llamado `myentry` aquí, que representa el nombre de archivo actual en la secuencia del directorio
 
-1. un objeto de tipo `bool`, llamado `no_push` aquí, que registra si está deshabilitado el descenso recursivo en subdirectorios
+1. un objeto de tipo **bool**, llamado `no_push` aquí, que registra si está deshabilitado el descenso recursivo en subdirectorios
 
 1. un objeto de tipo `directory_options`, llamado `myoptions` aquí, que registra las opciones establecidas en la construcción
 
