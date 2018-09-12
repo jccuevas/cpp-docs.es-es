@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216103"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversiones entre tipos de puntero
 Un puntero a un tipo de valor se puede convertir en un puntero a un tipo diferente. Sin embargo, el resultado puede ser indefinido debido a los requisitos de alineación y a los tamaños de los tipos diferentes en el almacenamiento. Un puntero a un objeto se puede convertir en un puntero a un objeto cuyo tipo requiere una alineación de almacenamiento igual o menos estricta, y viceversa, sin necesidad de hacer cambios.  
@@ -43,7 +43,7 @@ Un puntero a un tipo de valor se puede convertir en un puntero a un tipo diferen
   
 -   Si el tamaño del tipo entero es diferente del tamaño del tipo de puntero, el tipo entero se convierte primero al tamaño de puntero, mediante las rutas de conversión incluidas en las tablas [Conversión de tipos enteros con signo](../c-language/conversions-from-signed-integral-types.md) y [Conversión de tipos enteros sin signo](../c-language/conversions-from-unsigned-integral-types.md). A continuación, se trata como un valor de puntero.  
   
- Una expresión constante entera con valor 0 o como una conversión de expresión al tipo **void \*** se puede convertir mediante una conversión de tipo, mediante asignación o mediante comparación en un puntero de cualquier tipo. Esto genera un puntero null que es igual a otro puntero null del mismo tipo, pero este puntero null no es igual a ningún puntero a una función o a un objeto. Los enteros distintos de la constante 0 se pueden convertir al tipo de puntero, pero el resultado no es transferible.  
+ Una expresión constante entera con valor 0 o como una conversión de expresión al tipo **void** <strong>\*</strong> se puede convertir mediante una conversión de tipo, mediante asignación o mediante comparación en un puntero de cualquier tipo. Esto genera un puntero null que es igual a otro puntero null del mismo tipo, pero este puntero null no es igual a ningún puntero a una función o a un objeto. Los enteros distintos de la constante 0 se pueden convertir al tipo de puntero, pero el resultado no es transferible.  
   
 ## <a name="see-also"></a>Vea también  
  [Conversiones de asignación](../c-language/assignment-conversions.md)

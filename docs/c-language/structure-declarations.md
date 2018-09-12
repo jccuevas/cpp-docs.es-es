@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391905"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207275"
 ---
 # <a name="structure-declarations"></a>Declaraciones de estructura
 Una "declaración de estructura" designa un tipo y especifica una secuencia de valores variables (denominados “miembros” o “campos” de la estructura) que pueden tener diferentes tipos. Un identificador opcional, denominado “etiqueta”, proporciona el nombre del tipo de estructura y se puede usar en referencias posteriores al tipo de estructura. Una variable de este tipo de estructura contiene la secuencia completa definida por el tipo. Las estructuras de C son similares a los tipos denominados "registros" en otros lenguajes.  
@@ -163,7 +163,7 @@ struct somestruct
   
  El compilador permite una matriz sin tamaño o de tamaño cero como el último miembro de una estructura. Esto puede ser útil si el tamaño de una matriz constante es diferente según en la situación en la que se use. La declaración de este tipo de estructura tiene el siguiente aspecto:  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  Las matrices sin tamaño solo pueden aparecer como el último miembro de una estructura. Las estructuras que contienen declaraciones de matriz sin tamaño se pueden anidar dentro de otras estructuras siempre y cuando no se declaren como miembros en ninguna de las estructuras contenedoras. Las matrices de estas estructuras no se permiten. El operador `sizeof`, cuando se aplica a una variable de este tipo o al propio tipo, asume que el tamaño de la matriz es 0.  
   

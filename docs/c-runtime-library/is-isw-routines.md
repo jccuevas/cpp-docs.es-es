@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391966"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206138"
 ---
 # <a name="is-isw-routines"></a>is, isw (Rutinas)
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391966"
  `__iscsymf`  
  Letra o carácter de subrayado.  
   
- **isdigit**  
+ `isdigit`  
  Dígito decimal (0 - 9).  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391966"
  `iswcntrl`  
  Carácter ancho de control.  
   
- **__iswcsym**  
- Cualquier carácter ancho para el que **isalnum** sea True, o el carácter '_'.  
+ `__iswcsym`  
+ Cualquier carácter ancho para el que `isalnum` sea True, o el carácter '_'.  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  Cualquier carácter ancho para el que `iswalpha` sea True, o el carácter '_'.  
   
  `iswctype`  
  El carácter tiene la propiedad especificada por el argumento `desc`. Por cada valor válido del argumento `desc` de `iswctype`, hay una rutina equivalente de clasificación de carácter ancho, como se muestra en la tabla siguiente:  
   
- **Equivalencia de iswctype(**   
- ***c, desc*) con otras rutinas de prueba de isw**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Equivalencia de iswctype(c, desc) con otras rutinas de prueba de isw
   
 |Valor del argumento *desc*|equivalente de iswctype( *c, desc* )|  
 |------------------------------|----------------------------------------|  

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6e23358e17558c436d82a3226f84c35a59bf63a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340403"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694031"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuir la biblioteca MFC
 Si vincula dinámicamente la aplicación a la biblioteca MFC, deberá redistribuir el archivo DLL de MFC coincidente. Por ejemplo, si la aplicación MFC se compila mediante la versión de MFC que se incluye con Visual Studio 2015, deberá redistribuir mfc140.dll o mfc140u.dll, en función de si la aplicación se compila para compatibilidad con Unicode o caracteres estrechos.  
@@ -36,7 +36,7 @@ Si vincula dinámicamente la aplicación a la biblioteca MFC, deberá redistribu
   
  Si en la aplicación se usan las clases MFC que implementan el control WebBrowser (por ejemplo, las clases [CHtmlView](../mfc/reference/chtmlview-class.md) o [CHtmlEditView](../mfc/reference/chtmleditview-class.md)), se recomienda instalar también la versión más actual de Microsoft Internet Explorer, de forma que el equipo de destino tenga los archivos de control comunes más recientes. (Como mínimo, se requiere Internet Explorer 4.0.) La información sobre cómo instalar los componentes de Internet Explorer se encuentra disponible en el artículo "Article 185375: How To Create a Single EXE Install of Internet Explorer"" en el sitio web de Soporte Microsoft.  
   
- Si en la aplicación se usan las clases de base de datos de MFC (como por ejemplo, [CRecordset](../mfc/reference/crecordset-class.md) y [CRecordView](../mfc/reference/crecordview-class.md)), tendrá que redistribuir ODBC y todos los controladores ODBC que se usen en la aplicación. Para obtener más información, vea [Redistribuir archivos de compatibilidad con bases de datos](../ide/redistributing-database-support-files.md).  
+ Si en la aplicación se usan las clases de base de datos de MFC (como por ejemplo, [CRecordset](../mfc/reference/crecordset-class.md) y [CRecordView](../mfc/reference/crecordview-class.md)), tendrá que redistribuir ODBC y todos los controladores ODBC que se usen en la aplicación.  
   
  Si la aplicación MFC utiliza controles de Windows Forms, deberá redistribuir mfcmifc80.dll con la aplicación. Este archivo DLL es un ensamblado .NET firmado y con nombre seguro que se puede redistribuir con una aplicación en la carpeta local de la aplicación o implementándolo en la caché global de ensamblados (GAC) mediante [Gacutil.exe (Herramienta Caché global de ensamblados)](/dotnet/framework/tools/gacutil-exe-gac-tool).  
   
@@ -49,7 +49,7 @@ Si vincula dinámicamente la aplicación a la biblioteca MFC, deberá redistribu
   
  Los archivos .msm redistribuibles contienen los archivos DLL que se utilizan para la localización. Hay un archivo DLL para cada lenguaje compatible. Durante el proceso de instalación se instalan estos archivos DLL en la carpeta %windir%\system32\ del equipo de destino.  
   
- Para obtener más información sobre cómo localizar las aplicaciones MFC, vea [TN057: Localización de componentes de MFC](../mfc/tn057-localization-of-mfc-components.md) y también el [Article 208983: How to Using MFC LOC DLLs](http://go.microsoft.com/fwlink/p/?linkid=198025) (Artículo 208983: Cómo usar archivos DLL de localización de MFC) en el sitio web de Soporte de Microsoft.  
+ Para obtener más información sobre cómo localizar aplicaciones MFC, vea [TN057: localización de componentes de MFC](../mfc/tn057-localization-of-mfc-components.md).
   
  Puede redistribuir archivos DLL de localización de MFC si implementa el archivo DLL de MFC en la carpeta local de la aplicación. Para obtener más información sobre cómo redistribuir bibliotecas de Visual C++, vea [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md).  
   

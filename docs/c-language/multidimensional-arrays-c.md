@@ -16,27 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2257ff9be5988ed6a08dd5d152c83910c6edc88
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387968"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214724"
 ---
 # <a name="multidimensional-arrays-c"></a>Matrices multidimensionales (C)
 Una expresión de subíndice también puede tener varios subíndices, como se indica a continuación:  
   
 ```  
-  
-expression1  
-[  
-expression2  
-] [  
-expression3  
-]...  
+expression1 [ expression2 ] [ expression3 ] ...  
 ```  
   
- Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, expression1 ***[*** expression2***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).  
+ Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, *expression1* **[** *expression2* **]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (<strong>\*</strong>) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).  
   
  Las expresiones con varios subíndices hacen referencia a elementos de “matrices multidimensionales”. Una matriz multidimensional es una matriz cuyos elementos son matrices. Por ejemplo, el primer elemento de una matriz tridimensional es una matriz con dos dimensiones.  
   
