@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c6298c7b66c8967a4e5e23a37c3614edcddf3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5272f662580eff92e9ec15860b978ab739e613
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415535"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691606"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 
@@ -90,15 +90,15 @@ Ambas funciones devuelven 0 si se realizan correctamente o un número de error e
 |-|-|-|-|
 |*str*|*sizeInChars*|**Valor devuelto**|**Contenido de***str* |
 |**NULL**|any|**EINVAL**|no modificado|
-|No **NULL** (apunta a la memoria válido)|demasiado corto|**ERANGE**|no modificado|
+|No **NULL** (apunta a la memoria válida)|demasiado corto|**ERANGE**|no modificado|
 
-Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
+Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones devuelve el nombre de un archivo que no existe en este momento. **tmpnam_s** devuelve un nombre único en el directorio de trabajo actual. Tenga en cuenta que cuando un nombre de archivo va precedido por una barra diagonal inversa sin información de ruta de acceso, como \fname21, esto indica que el nombre es válido para el directorio de trabajo actual.
+Cada una de estas funciones devuelve el nombre de un archivo que no existe en este momento. **tmpnam_s** devuelve un nombre único en el directorio temporal de Windows designado devuelto por [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). Tenga en cuenta que cuando un nombre de archivo va precedido por una barra diagonal inversa sin información de ruta de acceso, como \fname21, esto indica que el nombre es válido para el directorio de trabajo actual.
 
-Para **tmpnam_s**, puede almacenar este nombre de archivo generado en *str*. La longitud máxima de una cadena devuelta por **tmpnam_s** es **L_tmpnam_s**, definido en STDIO. H. Si *str* es **NULL**, a continuación, **tmpnam_s** deja el resultado en un búfer interno estático. Por lo tanto, las siguientes llamadas destruyen este valor. El nombre generado por **tmpnam_s** consta de un nombre de archivo generado por el programa y, después de la primera llamada a **tmpnam_s**, una extensión de archivo de los números secuenciales de 32 base (cuando.1-.1vvvvvu, **TMP _MAX_S** en STDIO. H es **INT_MAX**).
+Para **tmpnam_s**, puede almacenar este nombre de archivo generado en *str*. La longitud máxima de una cadena devuelta por **tmpnam_s** es **L_tmpnam_s**, definido en STDIO. H. Si *str* es **NULL**, a continuación, **tmpnam_s** deja el resultado en un búfer estático interno. Por lo tanto, las siguientes llamadas destruyen este valor. El nombre generado por **tmpnam_s** consta de un nombre de archivo generado por el programa y, después de la primera llamada a **tmpnam_s**, una extensión de archivo de números secuenciales en base 32 (.1-. 1vvvvvu cuando **TMP _MAX_S** en STDIO. H es **INT_MAX**).
 
 **tmpnam_s** automáticamente argumentos de cadena de caracteres multibyte de identificadores según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos OEM obtienen del sistema operativo. **_wtmpnam_s** es una versión con caracteres anchos de **tmpnam_s**; el argumento y el valor devuelto de **_wtmpnam_s** son cadenas de caracteres anchos. **_wtmpnam_s** y **tmpnam_s** se comportan exactamente igual, salvo que **_wtmpnam_s** no controla las cadenas de caracteres multibyte.
 
@@ -150,6 +150,24 @@ int main( void )
       }
    }
 }
+```
+
+```Output
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.1 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.3 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.4 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.5 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.6 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.7 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.8 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.9 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.a is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.b is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.c is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>Vea también
