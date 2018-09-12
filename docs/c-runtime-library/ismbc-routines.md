@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c2bff6aa96ad5c2eea127fa643641d268e3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4aaf456e83968cf47573a9ea2e765f9e7d552625
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392580"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760255"
 ---
 # <a name="ismbc-routines"></a>_ismbc (Rutinas)
 Cada rutina de **_ismbc** prueba si un carácter multibyte `c` dado cumple una condición determinada.  
@@ -43,9 +43,9 @@ Cada rutina de **_ismbc** prueba si un carácter multibyte `c` dado cumple una c
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado de la prueba de cada rutina de **_ismbc** depende de la página de códigos multibyte en vigor. Las páginas de códigos multibyte tienen caracteres alfabéticos de un solo byte. De forma predeterminada, la página de códigos multibyte se establece en la página de códigos ANSI predeterminada del sistema obtenida del sistema operativo cuando se inicia el programa. Puede ver o cambiar la página de códigos multibyte en vigor con [_getmbcp](../c-runtime-library/reference/getmbcp.md) o [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivamente.  
+El resultado de la prueba de cada rutina de **_ismbc** depende de la página de códigos multibyte en vigor. Las páginas de códigos multibyte tienen caracteres alfabéticos de un solo byte. De forma predeterminada, la página de códigos multibyte se establece en la página de códigos ANSI predeterminada del sistema obtenida del sistema operativo cuando se inicia el programa. Puede ver o cambiar la página de códigos multibyte en vigor con [_getmbcp](../c-runtime-library/reference/getmbcp.md) o [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivamente.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa.  
+El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa.  
   
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|  
 |-------------|--------------------|---------------------------|  
@@ -62,9 +62,9 @@ Cada rutina de **_ismbc** prueba si un carácter multibyte `c` dado cumple una c
 |[_ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Símbolo multibyte|Devuelve un valor distinto de cero si y solo si 0x8141<=`c`<=0x81AC.|  
 |[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Alfabético en mayúscula|Devuelve cero si y solo si `c` es una representación de un solo byte de una letra inglesa mayúscula ASCII: 0x41<=`c`<=0x5A.|  
   
- **Información específica de la página de códigos 932**  
+**Información específica de la página de códigos 932**  
   
- Las rutinas siguientes son específicas de la página de códigos 932.  
+Las rutinas siguientes son específicas de la página de códigos 932.  
   
 |Rutina|Condición de prueba (solo página de códigos 932)|  
 |-------------|-------------------------------------------|  
@@ -74,11 +74,11 @@ Cada rutina de **_ismbc** prueba si un carácter multibyte `c` dado cumple una c
 |[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS de nivel 1: 0x889F<=`c`<=0x9872.|  
 |[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS de nivel 2: 0x989F<=`c`<=0xEA9E.|  
   
- `_ismbcl0`, `_ismbcl1` y `_ismbcl2` comprueban que el valor `c` especificado coincide con las condiciones de prueba descritas en la tabla anterior, pero no comprueben que `c` es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.  
+`_ismbcl0`, `_ismbcl1` y `_ismbcl2` comprueban que el valor `c` especificado coincide con las condiciones de prueba descritas en la tabla anterior, pero no comprueben que `c` es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.  
   
- **Información específica de la página de códigos de fin 932**  
+**Información específica de la página de códigos de fin 932**  
   
 ## <a name="see-also"></a>Vea también  
- [Clasificación de caracteres](../c-runtime-library/character-classification.md)   
- [is, isw (Rutinas)](../c-runtime-library/is-isw-routines.md)   
- [_ismbb (rutinas)](../c-runtime-library/ismbb-routines.md)
+[Clasificación de caracteres](../c-runtime-library/character-classification.md)   
+[is, isw (Rutinas)](../c-runtime-library/is-isw-routines.md)   
+[_ismbb (rutinas)](../c-runtime-library/ismbb-routines.md)

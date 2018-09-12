@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409282"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205265"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipos de datos de SBCS y MBCS
 
@@ -34,7 +34,7 @@ Cualquier rutina de biblioteca en tiempo de ejecución de MBCS que solo controla
 
 Por consiguiente, es mejor representar un byte de un carácter multibyte como un `unsigned char` de 8 bits . O bien, para evitar un resultado negativo, basta con convertir un carácter de un solo byte de tipo **char** a un `unsigned char` antes de convertirlo en un **int** o un **long**.
 
-Dado que algunas funciones de control de cadenas de SBCS reciben parámetros **char\*** (con signo), se genera una advertencia del compilador de error de coincidencia de tipos cuando se define **_MBCS**. Hay tres formas de evitar esta advertencia, por orden de eficacia:
+Dado que algunas funciones de control de cadenas de SBCS reciben parámetros **char**<strong>\*</strong> (con signo), se genera una advertencia del compilador de error de coincidencia de tipos cuando se define **_MBCS**. Hay tres formas de evitar esta advertencia, por orden de eficacia:
 
 1. Usar las funciones insertadas con seguridad de tipos en TCHAR.H. Éste es el comportamiento predeterminado.
 

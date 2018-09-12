@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48d9a013240dddc95fbd977cdf383c3ebff188b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d040f3ce29f78b614c60d815cac16362374bddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205615"
 ---
 # <a name="type-cast-conversions"></a>Conversiones de tipos
 Puede utilizar conversiones de tipo para convertir tipos explícitamente.  
@@ -47,14 +47,14 @@ Puede utilizar conversiones de tipo para convertir tipos explícitamente.
 |-----------------------|-----------------------|  
 |Tipos enteros|Cualquier tipo entero o tipo de punto flotante o puntero a un objeto|  
 |Punto flotante|Cualquier tipo aritmético|  
-|Un puntero a un objeto o (**void \***)|Cualquier tipo entero, (**void \***), un puntero a un objeto o un puntero de función|  
+|Un puntero a un objeto o (**void** <strong>\*</strong>)|Cualquier tipo entero, (**void** <strong>\*</strong>), un puntero a un objeto o un puntero de función|  
 |Puntero de función|Cualquier tipo entero, un puntero a un objeto o un puntero de función|  
 |Una estructura, unión o matriz|Ninguna|  
 |Un tipo void|Cualquier tipo|  
   
  Cualquier identificador se puede convertir al tipo `void`. Sin embargo, si el tipo especificado en una expresión de conversión de tipos no es `void`, el identificador que se va a convertir a ese tipo no puede ser una expresión `void`. Cualquier expresión se puede convertir a `void`, pero una expresión de tipo `void` no se puede convertir a ningún otro tipo. Por ejemplo, una función con el tipo de valor devuelto `void` no puede devolver un valor convertido a otro tipo.  
   
- Tenga en cuenta que una expresión **void \*** tiene un puntero de tipo a `void`, no un tipo `void`. Si un objeto se convierte al tipo `void`, la expresión resultante no se puede asignar a ningún elemento. Asimismo, un objeto de conversión de tipo no es un valor L aceptable, por lo que no se puede realizar ninguna asignación a un objeto de conversión de tipo.  
+ Tenga en cuenta que una expresión **void** <strong>\*</strong> tiene un puntero de tipo a `void`, no un tipo `void`. Si un objeto se convierte al tipo `void`, la expresión resultante no se puede asignar a ningún elemento. Asimismo, un objeto de conversión de tipo no es un valor L aceptable, por lo que no se puede realizar ninguna asignación a un objeto de conversión de tipo.  
   
  **Específicos de Microsoft**  
   
@@ -62,7 +62,7 @@ Puede utilizar conversiones de tipo para convertir tipos explícitamente.
   
  **FIN de Específicos de Microsoft**  
   
- Puede convertir una expresión al tipo `void` con una conversión, pero la expresión resultante solo se puede utilizar donde no se requiera un valor. Un puntero de objeto convertido a **void \*** y después al tipo original volverá a su valor original.  
+ Puede convertir una expresión al tipo `void` con una conversión, pero la expresión resultante solo se puede utilizar donde no se requiera un valor. Un puntero de objeto convertido a **void** <strong>\*</strong> y después al tipo original volverá a su valor original.  
   
 ## <a name="see-also"></a>Vea también  
  [Conversiones de tipos](../c-language/type-conversions-c.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2c8b6f9c6be0b07dba710e50f71f96bdf3f0eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcda68906e281bdf33ebe95a8019851bcb3cdb11
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389785"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752305"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Resumen de duración y visibilidad
 En la tabla siguiente se muestra un resumen de características de duración y de visibilidad para la mayoría de los identificadores. Las tres primeras columnas proporcionan los atributos que definen duración y visibilidad. Un identificador con los atributos especificados por las tres primeras columnas tiene la duración y la visibilidad que se muestran en la cuarta y quinta columnas. Sin embargo, la tabla no cubre todos los casos posibles. Consulte [Clases de almacenamiento](../c-language/c-storage-classes.md) para obtener más información.  
@@ -30,17 +30,17 @@ En la tabla siguiente se muestra un resumen de características de duración y d
 |Atributos:<br /><br /> Nivel|Elemento|Clase de almacenamiento<br /><br /> Especificador|Resultado: <br /><br /> Período de duración|Visibilidad|  
 |---------------------------|----------|----------------------------------|--------------------------|----------------|  
 |Ámbito de archivo|Definición de variable|**static**|Global|Resto del archivo de código fuente en el que aparece|  
-||Declaración de variables|`extern`|Global|Resto del archivo de código fuente en el que aparece|  
+||Declaración de variables|**extern**|Global|Resto del archivo de código fuente en el que aparece|  
 ||Prototipo o definición de función|**static**|Global|Archivo de código fuente único|  
-||Prototipo de función|`extern`|Global|Resto del archivo de código fuente|  
-|Ámbito de bloque|Declaración de variables|`extern`|Global|Bloque|  
+||Prototipo de función|**extern**|Global|Resto del archivo de código fuente|  
+|Ámbito de bloque|Declaración de variables|**extern**|Global|Bloque|  
 ||Definición de variable|**static**|Global|Bloque|  
 ||Definición de variable|**auto** o **register**|Local|Bloque|  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
- En el ejemplo siguiente se ilustran los bloques, el anidamiento y la visibilidad de las variables:  
+### <a name="description"></a>Descripción  
+En el ejemplo siguiente se ilustran los bloques, el anidamiento y la visibilidad de las variables:  
   
 ### <a name="code"></a>Código  
   
@@ -71,7 +71,7 @@ int main()  // main function defined at external level
 ```  
   
 ### <a name="comments"></a>Comentarios  
- En este ejemplo, hay cuatro niveles de visibilidad: el nivel externo y tres niveles bloqueados. Los valores se imprimen en pantalla según se indica en los comentarios que siguen a cada instrucción.  
+En este ejemplo, hay cuatro niveles de visibilidad: el nivel externo y tres niveles bloqueados. Los valores se imprimen en pantalla según se indica en los comentarios que siguen a cada instrucción.  
   
 ## <a name="see-also"></a>Vea también  
- [Duración, ámbito, visibilidad y vinculación](../c-language/lifetime-scope-visibility-and-linkage.md)
+[Duración, ámbito, visibilidad y vinculación](../c-language/lifetime-scope-visibility-and-linkage.md)

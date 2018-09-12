@@ -21,60 +21,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf98987323b96c8b3977e9a6d2bc590e0b612b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5b497745177bce165277e3a6e4ece2a3c47f20a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392255"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194880"
 ---
 # <a name="structure-and-union-members"></a>Miembros de estructura y de unión
 Una expresión de selección de miembro (“member-selection expression”) hace referencia a miembros de estructuras y uniones. Tal expresión tiene el valor y el tipo del miembro seleccionado.  
   
-```  
+> *postfix-expression* **.** *identifier*  
+> *postfix-expression* **->** *identifier*
   
-postfix-expression  
-.  
-identifier  
-postfix-expression  
-->  
-identifier  
+En esta lista se describen las dos formas de expresiones de selección de miembro:  
   
-```  
-  
- En esta lista se describen las dos formas de expresiones de selección de miembro:  
-  
-1.  En la primera forma, *postfix-expression* representa un valor de tipo `struct` o **union**, e *identifier* nombra un miembro de la estructura o unión especificadas. El valor de la operación es el de *identifier* y es un valor L si *postfix-expression* es un valor L. Vea [Expresiones de valor L y de valor R](../c-language/l-value-and-r-value-expressions.md) para obtener más información.  
+1.  En la primera forma, *postfix-expression* representa un valor de tipo **struct** o **union**, e *identifier* nombra un miembro de la estructura o unión especificadas. El valor de la operación es el de *identifier* y es un valor L si *postfix-expression* es un valor L. Vea [Expresiones de valor L y de valor R](../c-language/l-value-and-r-value-expressions.md) para obtener más información.  
   
 2.  En la segunda forma, *postfix-expression* representa un puntero a una estructura o unión, e *identifier* nombra un miembro de la estructura o unión especificadas. El valor es el de *identifier* y es un valor L.  
   
  Las dos formas de expresiones de selección de miembros tienen efectos similares.  
   
- De hecho, una expresión que contenga el operador de selección de miembro (**->**) es una versión abreviada de una expresión que usa el punto (**.**) si la expresión anterior al punto consta del operador de direccionamiento indirecto (**\***) aplicado a un valor de puntero. Por lo tanto,  
-  
-```  
-  
-expression  
-->  
-identifier  
-  
-```  
-  
- es equivalente a  
-  
-```  
-  
-(*  
-expression  
-) .  
-identifier  
-  
-```  
-  
+ De hecho, una expresión que contenga el operador de selección de miembro (**->**) es una versión abreviada de una expresión que usa el punto (**.**) si la expresión anterior al punto consta del operador de direccionamiento indirecto (<strong>\*</strong>) aplicado a un valor de puntero. Por lo tanto,  
+
+```cpp
+expression->identifier  
+```
+
+es equivalente a  
+
+```cpp
+(*expression).identifier
+```
+
  cuando *expression* es un valor de puntero.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes hacen referencia a esta declaración de estructura. Para obtener información sobre el operador de direccionamiento indirecto (**\***) usado en estos ejemplos, vea [Direccionamiento indirecto y dirección de operadores](../c-language/indirection-and-address-of-operators.md).  
+ Los ejemplos siguientes hacen referencia a esta declaración de estructura. Para obtener información sobre el operador de direccionamiento indirecto (<strong>\*</strong>) usado en estos ejemplos, vea [Direccionamiento indirecto y dirección de operadores](../c-language/indirection-and-address-of-operators.md).  
   
 ```  
 struct pair   
