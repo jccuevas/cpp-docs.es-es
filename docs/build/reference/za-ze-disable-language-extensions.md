@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597578"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556759"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Deshabilitar extensiones de lenguaje)
 El **/Za** opción del compilador emite un error para las construcciones de lenguaje que no son compatibles con ANSI C89 o ISO C ++ 11. El **/Ze** habilita la opción del compilador, que está activada de forma predeterminada, las extensiones de Microsoft.  
@@ -54,8 +54,8 @@ El **/Za** opción del compilador emite un error para las construcciones de leng
   
  Se recomienda que deshabilite las extensiones de lenguaje especificando el **/Za** opción si planea trasladar un programa a otros entornos. Cuando **/Za** se especifica, el compilador trata las palabras clave como identificadores simples de extendidas de Microsoft, deshabilita las demás extensiones de Microsoft y define automáticamente el `__STDC__` la macro predefinida para los programas de C.  
   
- Puede usar con otras opciones del compilador **/Za** pueden afectar a cómo el compilador garantiza el cumplimiento de estándares. Por ejemplo, **/Za** y [/fp (Especificar comportamiento de punto flotante)](../../build/reference/fp-specify-floating-point-behavior.md) puede provocar un comportamiento de promoción de tipo de punto flotante que no se ajusta a ISO C99 o estándares C ++ 11.  
-  
+ Puede usar con otras opciones del compilador **/Za** pueden afectar a cómo el compilador garantiza el cumplimiento de estándares.
+
  Para que ver formas de especificar la configuración de comportamiento conforme a los estándares específicos, consulte el [/Zc](../../build/reference/zc-conformance.md) opción del compilador.  
   
  Para obtener más información acerca de problemas de conformidad con Visual C++, vea [comportamiento no estándar](../../cpp/nonstandard-behavior.md).  
