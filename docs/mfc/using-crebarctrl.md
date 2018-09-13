@@ -1,5 +1,5 @@
 ---
-title: Usar CReBarCtrl | Documentos de Microsoft
+title: Usar CReBarCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29f678eb776e17fc9dc7cbd07e9a0fa91eef530c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "33383314"
 ---
 # <a name="using-crebarctrl"></a>Usar CReBarCtrl
-Un control rebar actúa como un contenedor para ventanas secundarias. Estas ventanas secundarias, a menudo otros controles, se asignan a una banda de control rebar. Un control rebar puede contener una o más bandas, con cada banda puede tener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria. Sin embargo, las bandas no pueden contener más de una ventana secundaria.  
+Un control rebar actúa como un contenedor para ventanas secundarias. Estas ventanas secundarias, a menudo otros controles, se asignan a una banda de control rebar. Un control rebar puede contener una o más bandas con cada banda puede tener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria. Sin embargo, las bandas no pueden contener más de una ventana secundaria.  
   
- La ilustración siguiente muestra un control rebar con dos bandas. Uno contiene una barra de agarre, una etiqueta de texto ("Address") y una ventana de elemento secundario de cuadro combinado. La otra banda contiene una barra de agarre, una etiqueta de texto y una barra de herramientas plana (implementada con una ventana secundaria).  
+ La siguiente ilustración muestra un control rebar con dos bandas. Uno contiene una barra de controles, una etiqueta de texto ("Address") y una ventana de elemento secundario de cuadro combinado. La otra banda contiene una barra de controles, una etiqueta de texto y una barra de herramientas plana (implementada con una ventana secundaria).  
   
  ![Control rebar con dos bandas](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre  
   
 -   [CReBar frente a CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
   

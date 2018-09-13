@@ -18,35 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf56a409f9a76cdf401323d1425ee28fc6cf286b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cadad9f2f025db4f7c3a63a7948a6cbbcfbd3ac3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386419"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761435"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto e instrucciones con etiquetas (C)
 La instrucción `goto` transfiere el control a una etiqueta. La etiqueta especificada debe estar en la misma función y puede aparecer delante de una sola instrucción en la misma función.  
   
-## <a name="syntax"></a>Sintaxis  
- *statement*:  
- *labeled-statement*  
+## <a name="syntax"></a>Sintaxis
+
+*statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
+
+*jump-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+
+*labeled-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+
+Una etiqueta de instrucción solo tiene sentido en una instrucción `goto`; en cualquier otro contexto, una instrucción con etiqueta se ejecuta sin tener en cuenta la etiqueta.  
   
- *jump-statement*  
+Un elemento *jump-statement* debe estar en la misma función y puede aparecer delante de una sola instrucción en la misma función. El conjunto de nombres de *identifier* que siguen a `goto` tiene su propio espacio de nombres, por lo que los nombres no interfieren con otros identificadores. Las etiquetas no se pueden volver a declarar. Para más información, vea [Espacios de nombres](../c-language/name-spaces.md).  
   
- *jump-statement*:  
- **goto**  *identifier*  **;**  
+Una práctica de programación recomendada es usar la instrucción **break**, **continue** y `return` en lugar de `goto` siempre que sea posible. Como la instrucción **break** solo sale de un nivel del bucle, puede ser necesario usar `goto` para salir de un bucle profundamente anidado.  
   
- *labeled-statement*:  
- *identifier*  **:**  *statement*  
-  
- Una etiqueta de instrucción solo tiene sentido en una instrucción `goto`; en cualquier otro contexto, una instrucción con etiqueta se ejecuta sin tener en cuenta la etiqueta.  
-  
- Un elemento *jump-statement* debe estar en la misma función y puede aparecer delante de una sola instrucción en la misma función. El conjunto de nombres de *identifier* que siguen a `goto` tiene su propio espacio de nombres, por lo que los nombres no interfieren con otros identificadores. Las etiquetas no se pueden volver a declarar. Para más información, vea [Espacios de nombres](../c-language/name-spaces.md).  
-  
- Una práctica de programación recomendada es usar la instrucción **break**, **continue** y `return` en lugar de `goto` siempre que sea posible. Como la instrucción **break** solo sale de un nivel del bucle, puede ser necesario usar `goto` para salir de un bucle profundamente anidado.  
-  
- En este ejemplo se muestra la instrucción `goto`:  
+En este ejemplo se muestra la instrucción `goto`:  
   
 ```  
 // goto.c  
@@ -74,7 +74,7 @@ int main()
 }  
 ```  
   
- En este ejemplo, una instrucción `goto` transfiere el control al punto con la etiqueta `stop` cuando `i` es igual a 5.  
+En este ejemplo, una instrucción `goto` transfiere el control al punto con la etiqueta `stop` cuando `i` es igual a 5.  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucciones](../c-language/statements-c.md)
+[Instrucciones](../c-language/statements-c.md)

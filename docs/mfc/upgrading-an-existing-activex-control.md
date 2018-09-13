@@ -1,7 +1,7 @@
 ---
 title: Actualizar un Control ActiveX existente | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686191"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535280"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Actualizar un control ActiveX existente
-Los controles ActiveX existentes (antes controles OLE) puede usarse en Internet sin ninguna modificación. Sin embargo, puede modificar los controles para mejorar su rendimiento. Cuando se usa el control en una página Web, existen consideraciones adicionales. El archivo .ocx y todos los archivos auxiliares deben estar en el equipo de destino o descargarse a través de Internet. Esto hace que el tamaño del código y descarga una consideración importante de tiempo. Las descargas se pueden empaquetar en un archivo .cab firmado. Puede marcar el control como seguros para scripting así como para inicializar.  
+Los controles ActiveX existentes (antes controles OLE) puede usarse en Internet sin ninguna modificación. Sin embargo, puede modificar los controles para mejorar su rendimiento. 
+
+>[!IMPORTANT]
+> ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](activex-controls.md).
+
+Cuando se usa el control en una página Web, existen consideraciones adicionales. El archivo .ocx y todos los archivos auxiliares deben estar en el equipo de destino o descargarse a través de Internet. Esto hace que el tamaño del código y descarga una consideración importante de tiempo. Las descargas se pueden empaquetar en un archivo .cab firmado. Puede marcar el control como seguros para scripting así como para inicializar.  
   
  En este artículo se trata los temas siguientes:  
   
