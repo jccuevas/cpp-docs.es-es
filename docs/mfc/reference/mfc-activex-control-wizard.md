@@ -1,7 +1,7 @@
 ---
-title: Asistente para controles ActiveX MFC | Documentos de Microsoft
+title: Asistente para controles ActiveX MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45af43a98244e90f52075817fc9e17a905cbf065
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7dcd6d1924281f5a283a86211e49b338b6bc42
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375068"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535137"
 ---
 # <a name="mfc-activex-control-wizard"></a>Asistente para controles ActiveX MFC
-Un control ActiveX es un tipo específico de [del servidor de automatización](../../mfc/automation-servers.md); es un componente reutilizable. La aplicación que hospeda el control ActiveX es el [cliente de automatización](../../mfc/automation-clients.md) de ese control. Si su objetivo es crear un componente reutilizable de ese tipo, a continuación, use este asistente para crear el control. Vea [controles ActiveX MFC](../../mfc/mfc-activex-controls.md) para obtener más información.  
+Un control ActiveX es un tipo específico de [servidor de automatización](../../mfc/automation-servers.md); es un componente reutilizable. La aplicación que hospeda el control ActiveX es el [cliente de automatización](../../mfc/automation-clients.md) de ese control. Si su objetivo es crear un componente reutilizable de este tipo, a continuación, use este asistente para crear el control. Consulte [controles ActiveX MFC](../../mfc/mfc-activex-controls.md) para obtener más información.
+
+>[!IMPORTANT]
+> ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](../activex-controls.md).  
   
- Como alternativa, puede crear una automatización de la aplicación de server MFC usando la [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md).  
+ Como alternativa, puede crear una automatización MFC aplicación server usando la [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md).  
   
  Un control ActiveX creado con este asistente puede tener una interfaz de usuario, o puede ser invisible. Puede especificar esta opción en el [configuración del Control](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) página del asistente. Un control timer es un ejemplo de un control ActiveX que podría desear ser invisible.  
   
- Controles ActiveX pueden tener una interfaz de usuario complejas. Algunos controles pueden ser equivalentes a formularios encapsulados: un control individual que contiene muchos campos, cada uno de ellos un control de Windows en su propio derecha. Por ejemplo, un objeto de partes automática implementado como un control ActiveX de MFC podría presentar una interfaz de usuario de forma similar a través del cual los usuarios podían leer y editar el número de pieza, nombre de una parte y otra información. Vea [controles ActiveX MFC](../../mfc/mfc-activex-controls.md) para obtener más información.  
+ Los controles ActiveX pueden tener una interfaz de usuario complejas. Algunos controles pueden ser similar a los formularios encapsulados: un control único que contiene muchos campos, cada uno de ellos un control de Windows por derecho propio. Por ejemplo, un objeto de partes automática implementado como un control ActiveX de MFC puede presentar una interfaz de usuario de forma similar a través del cual los usuarios podían leer y editar el número de pieza, nombre de una parte y otra información. Consulte [controles ActiveX MFC](../../mfc/mfc-activex-controls.md) para obtener más información.  
   
- Si tiene que crear un contenedor para sus objetos ActiveX, vea [crear un contenedor de controles ActiveX](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
+ Si necesita crear un contenedor para sus objetos ActiveX, vea [crear un contenedor de controles ActiveX](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
   
- El programa MFC inicial incluye archivos de origen (.cpp) de C++, archivos de recursos (.rc) y un archivo de proyecto (.vcxproj). El código generado en estos archivos iniciales se basa en MFC.  
+ El programa MFC inicial incluye archivos de código fuente (.cpp) de C++, los archivos de recursos (.rc) y un archivo de proyecto (.vcxproj). El código generado en estos archivos iniciales se basa en MFC.  
   
- En la lista de ejemplo siguiente muestra las tareas y los tipos de mejoras para el control ActiveX:  
+ La lista de ejemplo siguiente muestra las tareas y tipos de mejoras para el control ActiveX:  
   
 -   [Optimizar un Control ActiveX](../../mfc/mfc-activex-controls-optimization.md)  
   
@@ -59,11 +62,11 @@ Un control ActiveX es un tipo específico de [del servidor de automatización](.
 -   [Programar controles ActiveX en un contenedor de controles ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
 ## <a name="overview"></a>Información general  
- Esta página del asistente describe la configuración de la aplicación actual para el proyecto de control ActiveX de MFC que está creando. De forma predeterminada, el asistente crea un proyecto de la manera siguiente:  
+ Esta página del asistente describe la configuración de aplicación actual para el proyecto de control ActiveX de MFC que está creando. De forma predeterminada, el asistente crea un proyecto de la manera siguiente:  
   
--   El proyecto predeterminado no genera ningún archivo de ayuda o licencia de tiempo de ejecución. Puede cambiar estos valores predeterminados en el [configuración de la aplicación](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) página. Solo las selecciones que realice en esta página del Asistente de Control ActiveX se reflejan en el **Introducción** página.  
+-   El proyecto predeterminado genera ningún archivo de licencia o la Ayuda de tiempo de ejecución. Puede cambiar estos valores predeterminados en el [configuración de la aplicación](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) página. Solo las selecciones realizadas en esta página del Asistente de Control ActiveX se reflejan en el **Introducción** página.  
   
--   El proyecto incluye una clase de control y una clase de página de propiedades, según el nombre del proyecto. Puede editar los nombres de los nombres de archivo y el proyecto en el [nombres de los controles](../../mfc/reference/control-names-mfc-activex-control-wizard.md) página.  
+-   El proyecto incluye una clase de control y una clase de página de propiedades, según el nombre del proyecto. Puede editar los nombres de los nombres de proyecto y archivo en el [nombres de Control](../../mfc/reference/control-names-mfc-activex-control-wizard.md) página.  
   
 -   El control se basa en ningún control de Windows existente y se activa cuando se vuelve visible, tiene una interfaz de usuario e incluye un **sobre** cuadro de diálogo. Puede cambiar estos valores predeterminados en el [configuración del Control](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) página.  
   

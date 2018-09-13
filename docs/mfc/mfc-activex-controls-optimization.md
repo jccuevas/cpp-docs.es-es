@@ -1,7 +1,7 @@
 ---
 title: 'Controles ActiveX MFC: Optimización | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,15 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 09d441a44660310a13be264b24286ad2f0ccc6cd
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220511"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535189"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controles ActiveX MFC: Optimización
 En este artículo se explica técnicas que puede usar para optimizar los controles ActiveX para mejorar el rendimiento.  
+
+>[!IMPORTANT]
+> ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](activex-controls.md).
   
  Los temas [al desactivar la opción Activar cuando Visible](../mfc/turning-off-the-activate-when-visible-option.md) y [proporcionar Mouse interacción inactivo](../mfc/providing-mouse-interaction-while-inactive.md) sobre los controles que no se crean una ventana hasta que se activen. El tema [proporcionar activación sin ventana](../mfc/providing-windowless-activation.md) se describen los controles que nunca crean una ventana, incluso cuando se activan.  
   

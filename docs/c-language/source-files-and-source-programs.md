@@ -17,37 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe7021156f2d24e62590cccbe2feb476a6a642ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5189f1e9467977afda919862005901a633dae6a7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391199"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765166"
 ---
 # <a name="source-files-and-source-programs"></a>Archivos de código fuente y programas de origen
 Un programa de origen se puede dividir en uno o más "archivos de código fuente" o "unidades de traducción". La entrada del compilador se denomina "unidad de traducción".  
   
-## <a name="syntax"></a>Sintaxis  
- *translation-unit*:  
- *external-declaration*  
+## <a name="syntax"></a>Sintaxis
+
+*translation-unit*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*  
   
- *translation-unit external-declaration*  
-  
- *external-declaration*:  
- *function-definition*  
-  
- *declaration*  
-  
- En [Información general de declaraciones](../c-language/overview-of-declarations.md) se proporciona la sintaxis para `declaration` no terminal, y en la *Referencia del preprocesador* se explica cómo se procesa la [unidad de traducción](../preprocessor/phases-of-translation.md).  
+*external-declaration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+
+En [Información general de declaraciones](../c-language/overview-of-declarations.md) se proporciona la sintaxis para `declaration` no terminal, y en la *Referencia del preprocesador* se explica cómo se procesa la [unidad de traducción](../preprocessor/phases-of-translation.md).  
   
 > [!NOTE]
 >  Vea la introducción a [Resumen de la sintaxis de lenguaje C](../c-language/c-language-syntax-summary.md) para obtener una explicación de las convenciones de sintaxis de ANSI.  
   
- Los componentes de una unidad de traducción son las declaraciones externas que incluyen definiciones de función y declaraciones de identificador. Estas declaraciones y definiciones pueden estar en los archivos de código fuente, archivos de encabezado, bibliotecas y otros archivos que el programa necesita. Debe compilar cada unidad de traducción y vincular los archivos objeto resultantes para crear un programa.  
+Los componentes de una unidad de traducción son las declaraciones externas que incluyen definiciones de función y declaraciones de identificador. Estas declaraciones y definiciones pueden estar en los archivos de código fuente, archivos de encabezado, bibliotecas y otros archivos que el programa necesita. Debe compilar cada unidad de traducción y vincular los archivos objeto resultantes para crear un programa.  
   
- Un "programa de origen" de C es una colección de directivas, pragmas, declaraciones, definiciones, bloques de instrucciones y funciones. Para ser componentes válidos de un programa de Microsoft C, deben ajustarse a la sintaxis descrita en este libro, aunque pueden aparecer en cualquier orden en el programa (de conformidad con las reglas descritas en este libro). Sin embargo, la ubicación de estos componentes en un programa afecta al modo en que se pueden utilizar las variables y funciones en un programa. (Vea [Duración, ámbito, visibilidad y vinculación](../c-language/lifetime-scope-visibility-and-linkage.md) para obtener más información).  
+Un "programa de origen" de C es una colección de directivas, pragmas, declaraciones, definiciones, bloques de instrucciones y funciones. Para ser componentes válidos de un programa de Microsoft C, deben ajustarse a la sintaxis descrita en este libro, aunque pueden aparecer en cualquier orden en el programa (de conformidad con las reglas descritas en este libro). Sin embargo, la ubicación de estos componentes en un programa afecta al modo en que se pueden utilizar las variables y funciones en un programa. (Vea [Duración, ámbito, visibilidad y vinculación](../c-language/lifetime-scope-visibility-and-linkage.md) para obtener más información).  
   
- Los archivos de código fuente no tienen que contener instrucciones ejecutables. Por ejemplo, puede resultarle útil colocar las definiciones de variables en un archivo de código fuente y, a continuación, declarar las referencias a estas variables en otros archivos de código fuente que las usen. Esta técnica facilita la búsqueda y actualización de las definiciones cuando es necesario. Por la misma razón, las constantes y macros se organizan en archivos independientes, denominados "archivos de inclusión" o "archivos de encabezado", a los que se puede hacer referencia en archivos de código fuente según sea necesario. Vea la *Referencia del preprocesador* para obtener información sobre [macros](../preprocessor/macros-c-cpp.md) y [archivos de inclusión](../preprocessor/hash-include-directive-c-cpp.md).  
+Los archivos de código fuente no tienen que contener instrucciones ejecutables. Por ejemplo, puede resultarle útil colocar las definiciones de variables en un archivo de código fuente y, a continuación, declarar las referencias a estas variables en otros archivos de código fuente que las usen. Esta técnica facilita la búsqueda y actualización de las definiciones cuando es necesario. Por la misma razón, las constantes y macros se organizan en archivos independientes, denominados "archivos de inclusión" o "archivos de encabezado", a los que se puede hacer referencia en archivos de código fuente según sea necesario. Vea la *Referencia del preprocesador* para obtener información sobre [macros](../preprocessor/macros-c-cpp.md) y [archivos de inclusión](../preprocessor/hash-include-directive-c-cpp.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Estructura del programa](../c-language/program-structure.md)
+[Estructura del programa](../c-language/program-structure.md)

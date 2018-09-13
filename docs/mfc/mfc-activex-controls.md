@@ -1,7 +1,7 @@
 ---
 title: Controles ActiveX de MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,15 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 64b44afa6f9605c8c10d933b06fcec79b92f7c97
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205847"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535202"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
-Un control ActiveX es un componente de software reutilizable, basado en el modelo de objetos componentes (COM), que admite una gran variedad de funciones OLE y se puede personalizar de modo que se adapte a las necesidades del software. Los controles ActiveX están diseñados para su uso tanto en contenedores de controles ActiveX ordinarios como en páginas web de Internet. Puede crear controles ActiveX con MFC, descrita aquí, o con el [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
+
+Un control ActiveX es un componente de software reutilizable, basado en el modelo de objetos componentes (COM), que admite una gran variedad de funciones OLE y se puede personalizar de modo que se adapte a las necesidades del software. 
+
+>[!IMPORTANT]
+> ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información, consulte [controles ActiveX](activex-controls.md).
+
+Los controles ActiveX están diseñados para su uso tanto en contenedores de controles ActiveX ordinarios como en páginas web de Internet. Puede crear controles ActiveX con MFC, descrita aquí, o con el [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
  Un control ActiveX puede dibujarse por sí mismo en su propia ventana, responde a eventos (por ejemplo, los clics del mouse) y se administra a través de una interfaz que incluye propiedades y métodos similares a los de los objetos de Automation.  
   
