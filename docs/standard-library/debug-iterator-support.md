@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad de los iteradores de depuración | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959597"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601475"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -38,7 +38,7 @@ El estándar de C++ describe cómo las funciones miembro pueden provocar que los
 
 - Aumentar el tamaño de un [vector](../standard-library/vector.md) mediante inserción causa que los iteradores de `vector` no sean válidos.
 
-## <a name="example"></a>Ejemplo
+## <a name="invalid-iterators"></a>Iteradores no válidos
 
 Si compila este programa de ejemplo en modo de depuración, en tiempo de ejecución se valida y finaliza.
 
@@ -49,12 +49,7 @@ Si compila este programa de ejemplo en modo de depuración, en tiempo de ejecuci
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Ejemplo
+## <a name="using-iteratordebuglevel"></a>Uso de _ITERATOR_DEBUG_LEVEL
 
 Puede usar la macro de preprocesador [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) para desactivar la característica de depuración de iteradores en una compilación de depuración. Este programa no valida, pero aún desencadena un comportamiento indefinido.
 
@@ -81,11 +76,7 @@ Puede usar la macro de preprocesador [_ITERATOR_DEBUG_LEVEL](../standard-library
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>Ejemplo
+## <a name="unitialized-iterators"></a>Iteradores no inicializados
 
 También se produce una aserción si intenta usar un iterador antes de que se inicialice, como se muestra aquí:
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Ejemplo
+## <a name="incompatible-iterators"></a>Iteradores incompatibles
 
 En el ejemplo de código siguiente se produce una aserción porque los dos iteradores del algoritmo [for_each](../standard-library/algorithm-functions.md#for_each) son incompatibles. Comprobación de algoritmos para determinar si los iteradores que se les suministran hacen referencia al mismo contenedor.
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 Tenga en cuenta que este ejemplo usa la expresión lambda `[] (int& elem) { elem *= 2; }` en lugar de un functor. Aunque esta opción no influye en el error de aserción (un functor similar provocaría el mismo error), las expresiones lambda son una forma muy útil de realizar tareas de objeto de función compacta. Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="example"></a>Ejemplo
+## <a name="iterators-going-out-of-scope"></a>Iteradores va fuera del ámbito
 
 Comprobaciones de iteradores de depuración también provocar una variable de iterador que se declara en un **para** bucle esté fuera de ámbito cuando el **para** finaliza el ámbito de bucle.
 
@@ -163,11 +148,7 @@ Comprobaciones de iteradores de depuración también provocar una variable de it
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Ejemplo
+## <a name="destructors-for-debug-iterators"></a>Destructores para los iteradores de depuración
 
-Los iteradores de depuración tienen destructores no triviales. Si no se ejecuta un destructor, por el motivo que sea, se podrían producir infracciones de acceso y daños en los datos. Considere este ejemplo:
+Los iteradores de depuración tienen destructores no triviales. Si no se ejecuta un destructor, pero se libera la memoria del objeto, pueden producirse daños en datos y las infracciones de acceso. Considere este ejemplo:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>Vea también
