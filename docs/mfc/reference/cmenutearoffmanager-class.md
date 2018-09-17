@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540520"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700939"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager (clase)
 Administra menús con barra desplazable. Un menú con barra desplazable es un menú de la barra de menús. El usuario puede quitar un menú con barra desplazable de la barra de menús y provocar que el menú con barra desplazable quede flotante.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiTearOffBarID*  
- [in] *strText*  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszRegEntry*  
- Una cadena que contiene la ruta de acceso de una entrada del registro. Las aplicaciones se almacena la configuración de barras desplazable en esta entrada del registro.  
+*lpszRegEntry*<br/>
+[in] Una cadena que contiene la ruta de acceso de una entrada del registro. Las aplicaciones se almacena la configuración de barras desplazable en esta entrada del registro.  
   
- [in] *uiTearOffMenuFirst*  
- El primer identificador de menú para un menú desplazable.  
+*uiTearOffMenuFirst*<br/>
+[in] El primer identificador de menú para un menú desplazable.  
   
- [in] *uiTearOffMenuLast*  
- El último identificador de menú para un menú desplazable.  
+*uiTearOffMenuLast*<br/>
+[in] El último identificador de menú para un menú desplazable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdId*  
- [in] *bUtilice*  
+*uiCmdId*<br/>
+[in] [in] *bUtilice*  
   
 ### <a name="remarks"></a>Comentarios  
   

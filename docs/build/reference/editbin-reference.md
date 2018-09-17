@@ -19,24 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1e9963328d328767d97b3af34e20b1d2a1840b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 809d1d4f25611b2310d651702f01e1e98888ad4a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572982"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699952"
 ---
 # <a name="editbin-reference"></a>Referencia de EDITBIN
-El Editor de archivos de Microsoft COFF Binary (EDITBIN. (EXE) modifica los archivos binarios de formato de archivo de objeto común (COFF). Puede utilizar EDITBIN para modificar archivos de objetos, archivos ejecutables y bibliotecas de vínculos dinámicos (DLL).  
-  
+
+El Editor de archivos de Microsoft COFF Binary (EDITBIN. (EXE) modifica los archivos binarios de formato de archivo de objeto común (COFF). Puede utilizar EDITBIN para modificar archivos de objetos, archivos ejecutables y bibliotecas de vínculos dinámicos (DLL).
+
 > [!NOTE]
->  Puede iniciar esta herramienta solo desde el símbolo del sistema de Visual Studio. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.  
-  
- EDITBIN no está disponible para su uso en los archivos producidos con la [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador. Las modificaciones en los archivos binarios generados con/GL tendrán que se logra volver a compilar y vincular.  
-  
--   [Línea de comandos EDITBIN](../../build/reference/editbin-command-line.md)  
-  
--   [Opciones de EDITBIN](../../build/reference/editbin-options.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)
+>  Puede iniciar esta herramienta solo desde el símbolo del sistema de Visual Studio. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
+
+EDITBIN no está disponible para su uso en los archivos producidos con la [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador. Las modificaciones en los archivos binarios generados con/GL tendrán que se logra volver a compilar y vincular.
+
+- [Línea de comandos EDITBIN](../../build/reference/editbin-command-line.md)
+
+- [Opciones de EDITBIN](../../build/reference/editbin-options.md)
+
+## <a name="see-also"></a>Vea también
+
+[Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)

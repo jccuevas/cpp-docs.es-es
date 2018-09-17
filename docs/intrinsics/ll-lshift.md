@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540917"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702083"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Específicos de Microsoft**  
@@ -40,11 +40,11 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Mask`  
- El valor del entero de 64 bits para desplazarse a la izquierda.  
+*Máscara*<br/>
+[in] El valor del entero de 64 bits para desplazarse a la izquierda.  
   
- [in] `nBit`  
- El número de bits que se va a desplazar.  
+*nBit*<br/>
+[in] El número de bits del desplazamiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
  La máscara desplazado a la izquierda `nBit` bits.  

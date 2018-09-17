@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 055c1a0c19afce43338df90a92afef2a8469f3f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac6968a688c50ad665e8b28a883eaf62255aaf28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584034"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700115"
 ---
 # <a name="safesubtract"></a>SafeSubtract
 
@@ -41,14 +41,14 @@ inline bool SafeSubtract (
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *t*  
-El primer número de la resta. Esto debe ser de tipo `T`.
+*t*<br/>
+[in] El primer número de la resta. Esto debe ser de tipo `T`.
 
-[in] *u*  
-El número para restárselo a *t*. Esto debe ser de tipo `U`.
+*u*<br/>
+[in] El número para restárselo a *t*. Esto debe ser de tipo `U`.
 
-[out] *resultado*  
-El parámetro donde **SafeSubtract** almacena el resultado.
+*Resultado*<br/>
+[out] El parámetro donde **SafeSubtract** almacena el resultado.
 
 ## <a name="return-value"></a>Valor devuelto
 

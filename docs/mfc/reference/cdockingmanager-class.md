@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b8aa623f79c32303a0d5fb84c9b865bff918d9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2ddfeb41f9036e783fbf2b303a796fddf48405c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683582"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701797"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager (clase)
 Implementa la funcionalidad básica que controla el diseño de acoplamiento en una ventana de marco principal.  
@@ -320,11 +320,11 @@ BOOL AddDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *información*  
- Una referencia a una estructura de información que contiene la alineación del panel de acoplamiento.  
+*Info*<br/>
+[in] Una referencia a una estructura de información que contiene la alineación del panel de acoplamiento.  
   
- [out] *ppDockBar*  
- Un puntero a un puntero al nuevo panel de acoplamiento.  
+*ppDockBar*<br/>
+[out] Un puntero a un puntero al nuevo panel de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel de acoplamiento se creó correctamente; FALSE en caso contrario.  
@@ -337,8 +337,8 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a una barra de panel  
+*pBar*<br/>
+[in] Un puntero a una barra de panel  
   
 ##  <a name="addpane"></a>  CDockingManager::AddPane  
  Registra un panel con el Administrador de acoplamiento.  
@@ -352,17 +352,17 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *conquistado*  
- Especifica el panel para agregar al administrador de acoplamiento.  
+*conquistado*<br/>
+[in, out] Especifica el panel para agregar al administrador de acoplamiento.  
   
- [in] *bTail*  
- TRUE para agregar el panel al final de la lista de paneles para el Administrador de acoplamiento en caso contrario, FALSE.  
+*bTail*<br/>
+[in] TRUE para agregar el panel al final de la lista de paneles para el Administrador de acoplamiento en caso contrario, FALSE.  
   
- [in] *bAutoHide*  
- Sólo para uso interno. Utilice siempre el valor predeterminado es FALSE.  
+*bAutoHide*<br/>
+[in] Solo para uso interno. Utilice siempre el valor predeterminado es FALSE.  
   
- [in] *bInsertForOuterEdge*  
- Sólo para uso interno. Utilice siempre el valor predeterminado es FALSE.  
+*bInsertForOuterEdge*<br/>
+[in] Solo para uso interno. Utilice siempre el valor predeterminado es FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel se registró correctamente con el Administrador de acoplamiento en caso contrario, FALSE.  
@@ -378,8 +378,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hdwp*  
- Especifica la estructura de la posición de ventana aplazada. Para obtener más información, consulte [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).  
+*hdwp*<br/>
+[in] Especifica la estructura de la posición de ventana aplazada. Para obtener más información, consulte [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -391,8 +391,8 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Un puntero a un marco.  
+*conquistado*<br/>
+[in] Un puntero a un marco.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el marco no está en la lista de fotogramas minivolcados y se ha agregado correctamente; FALSE en caso contrario.  
@@ -416,11 +416,11 @@ virtual BOOL AdjustRectToClientArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rectResult*  
- Una referencia a un `CRect` objeto  
+*rectResult*<br/>
+[in] Una referencia a un `CRect` objeto  
   
- [in] *dwAlignment*  
- La alineación de la `CRect` objeto  
+*dwAlignment*<br/>
+[in] La alineación de la `CRect` objeto  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la alineación de la `CRect` se ajustó el objeto; FALSE en caso contrario.  
@@ -446,11 +446,11 @@ void AlignAutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDefaultSlider*  
- El panel de control deslizante de acoplamiento.  
+*pDefaultSlider*<br/>
+[in] El panel de control deslizante de acoplamiento.  
   
- [in] *bIsVisible*  
- TRUE si el panel de acoplamiento es visible; FALSE en caso contrario.  
+*bIsVisible*<br/>
+[in] TRUE si el panel de acoplamiento es visible; FALSE en caso contrario.  
   
 ##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane  
  Crea una barra de herramientas Ocultar automáticamente.  
@@ -462,11 +462,11 @@ CMFCAutoHideToolBar* AutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a la barra de panel.  
+*pBar*<br/>
+[in] Un puntero a la barra de panel.  
   
- [in] *pCurrAutoHideToolBar*  
- Un puntero a una barra de herramientas de ocultar automáticamente.  
+*pCurrAutoHideToolBar*<br/>
+[in] Un puntero a una barra de herramientas de ocultar automáticamente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es NULL si no se ha creado la barra de herramientas de ocultar automáticamente; en caso contrario, un puntero a la nueva barra de herramientas.  
@@ -481,11 +481,11 @@ void BringBarsToTop(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwAlignment*  
- La alineación de las barras de acoplamiento que se incorporan a la parte superior de otras ventanas.  
+*dwAlignment*<br/>
+[in] La alineación de las barras de acoplamiento que se incorporan a la parte superior de otras ventanas.  
   
- [in] *bExcludeDockedBars*  
- TRUE para excluir las barras acopladas de está hacia arriba. en caso contrario, FALSE.  
+*bExcludeDockedBars*<br/>
+[in] TRUE para excluir las barras acopladas de está hacia arriba. en caso contrario, FALSE.  
   
 ##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu  
  Agrega los nombres de los paneles de acoplamiento y barras de herramientas a un menú.  
@@ -497,11 +497,11 @@ void BuildPanesMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *menú*  
- Menú para agregar los nombres de los paneles de acoplamiento y barras de herramientas.  
+*Menú*<br/>
+[in] Menú para agregar los nombres de los paneles de acoplamiento y barras de herramientas.  
   
- [in] *bToolbarsOnly*  
- TRUE para agregar nombres de la barra de herramientas solo al menú; FALSE en caso contrario.  
+*bToolbarsOnly*<br/>
+[in] TRUE para agregar nombres de la barra de herramientas solo al menú; FALSE en caso contrario.  
   
 ##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect  
  Calcula el rectángulo esperado de una ventana acoplada.  
@@ -516,20 +516,20 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Un puntero a la ventana de acoplamiento.  
+*conquistado*<br/>
+[in] Un puntero a la ventana de acoplamiento.  
   
- [in] *ptMouse*  
- La ubicación del mouse.  
+*ptMouse*<br/>
+[in] La ubicación del mouse.  
   
- [out] *rectResult*  
- Rectángulo calculado.  
+*rectResult*<br/>
+[out] Rectángulo calculado.  
   
- [in] *bDrawTab*  
- True para dibujar una pestaña; en caso contrario, FALSE.  
+*bDrawTab*<br/>
+[in] True para dibujar una pestaña; en caso contrario, FALSE.  
   
- [out] *ppTargetBar*  
- Un puntero a un puntero al panel de destino.  
+*ppTargetBar*<br/>
+[out] Un puntero a un puntero al panel de destino.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método calcula el rectángulo que ocuparía una ventana si un usuario arrastra la ventana para el punto especificado por *ptMouse* y ancló no existe.  
@@ -542,8 +542,8 @@ BOOL Create(CFrameWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentWnd*  
- Un puntero al marco primario del Administrador de acoplamiento. Este valor no debe ser NULL.  
+*pParentWnd*<br/>
+[in] Un puntero al marco primario del Administrador de acoplamiento. Este valor no debe ser NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre es TRUE.  
@@ -562,23 +562,23 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pt*  
- La ubicación del panel para comprobar.  
+*PT*<br/>
+[in] La ubicación del panel para comprobar.  
   
- [in] *nSensitivity*  
- El valor para aumentar el rectángulo de la ventana de cada panel activado. Un panel satisface los criterios de búsqueda si el punto especificado está en esta región mayor.  
+*nSensitivity*<br/>
+[in] El valor para aumentar el rectángulo de la ventana de cada panel activado. Un panel satisface los criterios de búsqueda si el punto especificado está en esta región mayor.  
   
- [in] *dwEnabledAlignment*  
- La alineación del panel de acoplamiento.  
+*dwEnabledAlignment*<br/>
+[in] La alineación del panel de acoplamiento.  
   
- [out] *ppTargetBar*  
- Un puntero a un puntero al panel de destino.  
+*ppTargetBar*<br/>
+[out] Un puntero a un puntero al panel de destino.  
   
- [in] *pBarToIgnore*  
- El panel que omite el método.  
+*pBarToIgnore*<br/>
+[in] El panel que omite el método.  
   
- [in] *pBarToDock*  
- El panel que está acoplado.  
+*pBarToDock*<br/>
+[in] El panel que está acoplado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El estado de acoplamiento.  
@@ -601,8 +601,8 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bDeshabilite*  
- True para deshabilitar la carga de diseño de acoplamiento del registro; en caso contrario, FALSE.  
+*bDeshabilite*<br/>
+[in] True para deshabilitar la carga de diseño de acoplamiento del registro; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método cuando se debe conservar el diseño actual de los paneles de acoplamiento y barras de herramientas cuando el estado de la aplicación se está cargando.  
@@ -618,14 +618,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a una barra de panel para acoplar a.  
+*pBar*<br/>
+[in] Un puntero a una barra de panel para acoplar a.  
   
- [in] *nDockBarID*  
- El identificador de la barra de acoplamiento.  
+*nDockBarID*<br/>
+[in] El identificador de la barra de acoplamiento.  
   
- [in] *lpRect*  
- El rectángulo de destino.  
+*lpRect*<br/>
+[in] El rectángulo de destino.  
   
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf  
  Acopla un panel a la izquierda de otro panel.  
@@ -637,11 +637,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBarToDock*  
- Un puntero al panel para acoplar a la izquierda del *pTargetBar*.  
+*pBarToDock*<br/>
+[in] Un puntero al panel para acoplar a la izquierda del *pTargetBar*.  
   
- [in] *pTargetBar*  
- Un puntero al panel de destino.  
+*pTargetBar*<br/>
+[in] Un puntero al panel de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel se acopla correctamente; en caso contrario, FALSE.  
@@ -654,8 +654,8 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwStyle*  
- La alineación de acoplamiento.  
+*dwStyle*<br/>
+[in] La alineación de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel de acoplamiento se creó correctamente; FALSE en caso contrario.  
@@ -668,8 +668,8 @@ BOOL EnableDocking(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwStyle*  
- La alineación de acoplamiento.  
+*dwStyle*<br/>
+[in] La alineación de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel de acoplamiento se creó correctamente; FALSE en caso contrario.  
@@ -682,8 +682,8 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar el menú acoplar sitio; en caso contrario, FALSE.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar el menú acoplar sitio; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  El menú del sitio de acoplamiento muestra las siguientes opciones para cambiar el estado de acoplamiento del panel:  
@@ -710,17 +710,17 @@ void EnablePaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Si es TRUE, la biblioteca se convierte en el menú contextual automática; la compatibilidad con Si es FALSE la biblioteca desactiva la compatibilidad con menú contextual automática.  
+*bHabilitar el*<br/>
+[in] Si es TRUE, la biblioteca se convierte en el menú contextual automática; la compatibilidad con Si es FALSE la biblioteca desactiva la compatibilidad con menú contextual automática.  
   
- [in] *uiCustomizeCmd*  
- Un identificador de comando para el **personalizar** elemento en el menú.  
+*uiCustomizeCmd*<br/>
+[in] Un identificador de comando para el **personalizar** elemento en el menú.  
   
- [in] *strCustomizeText*  
- El texto de la **personalizar** elemento.  
+*strCustomizeText*<br/>
+[in] El texto de la **personalizar** elemento.  
   
- [in] *bToolbarsOnly*  
- Si es TRUE, el menú muestra solo una lista de barras de herramientas de la aplicación; Si es FALSE, la biblioteca agrega paneles de acoplamiento de la aplicación a esta lista.  
+*bToolbarsOnly*<br/>
+[in] Si es TRUE, el menú muestra solo una lista de barras de herramientas de la aplicación; Si es FALSE, la biblioteca agrega paneles de acoplamiento de la aplicación a esta lista.  
   
 ##  <a name="finddocksite"></a>  CDockingManager::FindDockSite  
  Recupera la barra de panel que está en la posición especificada y que tiene la alineación especificada.  
@@ -732,11 +732,11 @@ virtual CDockSite* FindDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwAlignment*  
- La alineación de la barra de panel.  
+*dwAlignment*<br/>
+[in] La alineación de la barra de panel.  
   
- [in] *bOuter*  
- Si es TRUE, recupere la barra en la posición principal en la lista de barras de control. Recuperar en caso contrario, la barra en la posición final de la lista de barras de control.  
+*bOuter*<br/>
+[in] Si es TRUE, recupere la barra en la posición principal en la lista de barras de control. Recuperar en caso contrario, la barra en la posición final de la lista de barras de control.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El panel de acoplamiento que tiene la alineación especificada; En caso contrario, es NULL.  
@@ -751,11 +751,11 @@ virtual CBasePane* FindPaneByID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uBarID*  
- Especifica el identificador de control del panel para buscar.  
+*uBarID*<br/>
+[in] Especifica el identificador de control del panel para buscar.  
   
- [in] *bSearchMiniFrames*  
- TRUE para incluir paneles flotantes todo en la búsqueda. FALSE para incluir solo los paneles acoplados.  
+*bSearchMiniFrames*<br/>
+[in] TRUE para incluir paneles flotantes todo en la búsqueda. FALSE para incluir solo los paneles acoplados.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El [CBasePane](../../mfc/reference/cbasepane-class.md) objeto que tiene el control especificado ID, o NULL si no se encuentra el panel especificado.  
@@ -770,8 +770,8 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pTargetBar*  
- Un puntero en el panel de barra de destino.  
+*pTargetBar*<br/>
+[in] Un puntero en el panel de barra de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La barra de panel que tiene el identificador del panel de barra de destino; NULL si no existe ninguna, panel de la barra.  
@@ -797,14 +797,14 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pt*  
- Especifica el punto, en coordenadas de pantalla, para comprobar.  
+*PT*<br/>
+[in] Especifica el punto, en coordenadas de pantalla, para comprobar.  
   
- [in] *pFrameToExclude*  
- Un puntero a un marco para excluir.  
+*pFrameToExclude*<br/>
+[in] Un puntero a un marco para excluir.  
   
- [in] *bFloatMultiOnly*  
- True para excluir marcos que no sean instancias de `CMultiPaneFrameWnd`; FALSE en caso contrario.  
+*bFloatMultiOnly*<br/>
+[in] True para excluir marcos que no sean instancias de `CMultiPaneFrameWnd`; FALSE en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El marco que contiene el punto especificado; En caso contrario, es NULL.  
@@ -819,8 +819,8 @@ void GetClientAreaBounds(CRect& rcClient);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rcClient*  
- Una referencia al rectángulo que contiene los límites del área de cliente.  
+*rcClient*<br/>
+[out] Una referencia al rectángulo que contiene los límites del área de cliente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El rectángulo que contiene los límites del área de cliente.  
@@ -899,17 +899,17 @@ void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *lstBars*  
- Contiene todos los paneles del Administrador de acoplamiento actual.  
+*lstBars*<br/>
+[in, out] Contiene todos los paneles del Administrador de acoplamiento actual.  
   
- [in] *bIncludeAutohide*  
- TRUE para incluir los paneles que se encuentran en modo de ocultación automática; en caso contrario, FALSE.  
+*bIncludeAutohide*<br/>
+[in] TRUE para incluir los paneles que se encuentran en modo de ocultación automática; en caso contrario, FALSE.  
   
- [in] *pRTCFilter*  
- Si no es NULL, la lista devuelta contiene paneles sólo de la clase en tiempo de ejecución especificado.  
+*pRTCFilter*<br/>
+[in] Si no es NULL, la lista devuelta contiene paneles sólo de la clase en tiempo de ejecución especificado.  
   
- [in] *bIncludeTabs*  
- TRUE para incluir tabulaciones; en caso contrario, FALSE.  
+*bIncludeTabs*<br/>
+[in] TRUE para incluir tabulaciones; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Si hay cualquier paneles con pestañas en el Administrador de acoplamiento, el método devuelve punteros a [CBaseTabbedPane (clase)](../../mfc/reference/cbasetabbedpane-class.md) objetos y se deben enumerar explícitamente las fichas.  
@@ -958,11 +958,11 @@ void HideAutoHidePanes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBarToExclude*  
- Un puntero a una barra para excluir de la ocultación.  
+*pBarToExclude*<br/>
+[in] Un puntero a una barra para excluir de la ocultación.  
   
- [in] *bImmediately*  
- TRUE para ocultar el panel inmediatamente; FALSE para ocultar el panel con el efecto de ocultar automáticamente.  
+*bImmediately*<br/>
+[in] TRUE para ocultar el panel inmediatamente; FALSE para ocultar el panel con el efecto de ocultar automáticamente.  
   
 ##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite  
  Crea un panel de acoplamiento y lo inserta en la lista de barras de control.  
@@ -975,14 +975,14 @@ BOOL InsertDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *información*  
- Una estructura que contiene la información de alineación acerca del panel de acoplamiento.  
+*Info*<br/>
+[in] Una estructura que contiene la información de alineación acerca del panel de acoplamiento.  
   
- [in] *dwAlignToInsertAfter*  
- Alineación del panel de acoplamiento.  
+*dwAlignToInsertAfter*<br/>
+[in] Alineación del panel de acoplamiento.  
   
- [out] *ppDockBar*  
- Un puntero a un puntero a un panel de acoplamiento.  
+*ppDockBar*<br/>
+[out] Un puntero a un puntero a un panel de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel de acoplamiento se creó correctamente; FALSE en caso contrario.  
@@ -998,14 +998,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero a un panel de control.  
+*pControlBar*<br/>
+[in] Un puntero a un panel de control.  
   
- [in] *pTarget*  
- Un puntero a un panel de destino.  
+*pTarget*<br/>
+[in] Un puntero a un panel de destino.  
   
- [in] *después*  
- TRUE para insertar el panel después de la posición del panel de destino; FALSE en caso contrario.  
+*Después*<br/>
+[in] TRUE para insertar el panel después de la posición del panel de destino; FALSE en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel de control se agregó correctamente a la lista de barras de control; FALSE en caso contrario.  
@@ -1060,14 +1060,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- El punto especificado.  
+*punto*<br/>
+[in] El punto especificado.  
   
- [out] *dwBarAlignment*  
- Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM.  
+*dwBarAlignment*<br/>
+[out] Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM.  
   
- [out] *bOuterEdge*  
- TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
+*bOuterEdge*<br/>
+[out] TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el punto está cerca del sitio de vinculación; en caso contrario, FALSE.  
@@ -1092,11 +1092,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Nombre del perfil.  
+*lpszProfileName*<br/>
+[in] Nombre del perfil.  
   
- [in] *uiID*  
- El identificador del Administrador de acoplamiento.  
+*uiID*<br/>
+[in] El identificador del Administrador de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el estado de acoplamiento manager se ha cargado correctamente; en caso contrario, FALSE.  
@@ -1109,8 +1109,8 @@ void LockUpdate(BOOL bLock);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bloque*  
- TRUE si la ventana está bloqueada; FALSE en caso contrario.  
+*Bloque*<br/>
+[in] TRUE si la ventana está bloqueada; FALSE en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando una ventana está bloqueada, no se pueden mover y no se puede volver a dibujar.  
@@ -1173,8 +1173,8 @@ virtual void OnActivateFrame(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bActivate*  
- Si es TRUE, la ventana de marco se pondrá en activa; Si es FALSE, se desactiva la ventana de marco.  
+*bActivate*<br/>
+[in] Si es TRUE, la ventana de marco se pondrá en activa; Si es FALSE, se desactiva la ventana de marco.  
   
 ##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu  
  Lo llama el marco cuando un menú emergente activo procesa un mensaje WM_DESTROY.  
@@ -1194,8 +1194,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFrame*  
- Un puntero a una ventana de marco reducido.  
+*pFrame*<br/>
+[in] Un puntero a una ventana de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -1208,8 +1208,8 @@ void OnPaneContextMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Especifica la ubicación del menú.  
+*punto*<br/>
+[in] Especifica la ubicación del menú.  
   
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint  
  Devuelve el panel que contiene el punto especificado.  
@@ -1232,26 +1232,26 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Especifica el punto, en coordenadas de pantalla, para comprobar.  
+*punto*<br/>
+[in] Especifica el punto, en coordenadas de pantalla, para comprobar.  
   
- [in] *nSensitivity*  
- El valor se infle el rectángulo de la ventana de cada panel activado. Un panel satisface los criterios de búsqueda si el punto especificado está en esta región aumentada.  
+*nSensitivity*<br/>
+[in] El valor se infle el rectángulo de la ventana de cada panel activado. Un panel satisface los criterios de búsqueda si el punto especificado está en esta región aumentada.  
   
- [in] *bExactBar*  
- TRUE para omitir el *nSensitivity* parámetro; en caso contrario, FALSE.  
+*bExactBar*<br/>
+[in] TRUE para omitir el *nSensitivity* parámetro; en caso contrario, FALSE.  
   
- [in] *pRTCBarType*  
- Si no es NULL, el método busca solo en los paneles del tipo especificado.  
+*pRTCBarType*<br/>
+[in] Si no es NULL, el método busca solo en los paneles del tipo especificado.  
   
- [in] *bCheckVisibility*  
- TRUE para comprobar si solo los paneles visibles; en caso contrario, FALSE.  
+*bCheckVisibility*<br/>
+[in] TRUE para comprobar si solo los paneles visibles; en caso contrario, FALSE.  
   
- [out] *dwAlignment*  
- Si un panel se encuentra en el punto especificado, este parámetro contiene el lado del panel que era más cercano al punto especificado. Para obtener más información, vea la sección Comentarios.  
+*dwAlignment*<br/>
+[out] Si un panel se encuentra en el punto especificado, este parámetro contiene el lado del panel que era más cercano al punto especificado. Para obtener más información, vea la sección Comentarios.  
   
- [in] *pBarToIgnore*  
- Si no es NULL, el método omite los paneles que se especifica este parámetro.  
+*pBarToIgnore*<br/>
+[in] Si no es NULL, el método omite los paneles que se especifica este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El [CBasePane](../../mfc/reference/cbasepane-class.md)-objeto derivado que contiene el punto especificado o NULL si no se ha encontrado ningún panel.  
@@ -1271,17 +1271,17 @@ BOOL ProcessPaneContextMenuCommand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- El identificador de una barra de control en el menú.  
+*nID*<br/>
+[in] El identificador de una barra de control en el menú.  
   
- [in] *nCode*  
- El código de notificación de comandos.  
+*nCode*<br/>
+[in] El código de notificación de comandos.  
   
- [in] *pExtra*  
- Un puntero a void que es convertir en un puntero a `CCmdUI` si *nCode* es CN_UPDATE_COMMAND_UI.  
+*pExtra*<br/>
+[in] Un puntero a void que es convertir en un puntero a `CCmdUI` si *nCode* es CN_UPDATE_COMMAND_UI.  
   
- [in] *pHandlerInfo*  
- Un puntero a una estructura de información. Este parámetro no se utiliza.  
+*pHandlerInfo*<br/>
+[in] Un puntero a una estructura de información. Este parámetro no se utiliza.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si *pEXtra* no es NULL y *nCode* es igual a CN_UPDATE_COMMAND_UI, o si hay una barra de controles con los valores especificados *nID*.  
@@ -1294,8 +1294,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bNotify*  
- Este parámetro no se utiliza.  
+*bNotify*<br/>
+[in] No se utiliza este parámetro.  
   
 ##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers  
  Libera los contenedores de panel vacía.  
@@ -1312,8 +1312,8 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a una barra de panel para quitar.  
+*pBar*<br/>
+[in] Un puntero a una barra de panel para quitar.  
   
 ##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame  
  Quita un período especificado de la lista de fotogramas minivolcados.  
@@ -1323,8 +1323,8 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Un puntero a un marco para quitar.  
+*conquistado*<br/>
+[in] Un puntero a un marco para quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se quita del marco especificado; FALSE en caso contrario.  
@@ -1342,20 +1342,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Un puntero a un panel que se va a quitar.  
+*conquistado*<br/>
+[in] Un puntero a un panel que se va a quitar.  
   
- [in] *bDestroy*  
- Si es TRUE, se destruye el panel quitado.  
+*bDestroy*<br/>
+[in] Si es TRUE, se destruye el panel quitado.  
   
- [in] *bAdjustLayout*  
- Si es TRUE, ajustar el diseño de acoplamiento inmediatamente.  
+*bAdjustLayout*<br/>
+[in] Si es TRUE, ajustar el diseño de acoplamiento inmediatamente.  
   
- [in] *bAutoHide*  
- Si es TRUE, se quita el panel de la lista de barras de ocultación automática. Si es FALSE, se quita el panel de la lista de paneles regulares.  
+*bAutoHide*<br/>
+[in] Si es TRUE, se quita el panel de la lista de barras de ocultación automática. Si es FALSE, se quita el panel de la lista de paneles regulares.  
   
- [in] *pBarReplacement*  
- Un puntero a un panel que reemplaza el panel quitado.  
+*pBarReplacement*<br/>
+[in] Un puntero a un panel que reemplaza el panel quitado.  
   
 ##  <a name="replacepane"></a>  CDockingManager::ReplacePane  
  Reemplaza un panel con otro.  
@@ -1367,11 +1367,11 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pOriginalBar*  
- Un puntero en el panel original.  
+*pOriginalBar*<br/>
+[in] Un puntero en el panel original.  
   
- [in] *pNewBar*  
- Un puntero al panel que reemplaza el panel original.  
+*pNewBar*<br/>
+[in] Un puntero al panel que reemplaza el panel original.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel se ha reemplazado correctamente; FALSE en caso contrario.  
@@ -1393,11 +1393,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Una ruta de acceso a una clave del registro.  
+*lpszProfileName*<br/>
+[in] Una ruta de acceso a una clave del registro.  
   
- [in] *uiID*  
- En el identificador de jefe acoplamiento.  
+*uiID*<br/>
+[in] En el identificador de jefe acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el estado se guardó correctamente; en caso contrario, FALSE.  
@@ -1416,14 +1416,14 @@ BOOL SendMessageToMiniFrames(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uMessage*  
- El mensaje que se enviará.  
+*uMessage*<br/>
+[in] El mensaje que se enviará.  
   
- [in] *wParam*  
- Información dependiente adicional al mensaje.  
+*wParam*<br/>
+[in] Información dependiente adicional al mensaje.  
   
- [in] *lParam*  
- Información dependiente adicional al mensaje.  
+*lParam*<br/>
+[in] Información dependiente adicional al mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre es TRUE.  
@@ -1436,8 +1436,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *ar*  
- Una referencia a un objeto de almacenamiento.  
+*cuentas por cobrar*<br/>
+[in] Una referencia a un objeto de almacenamiento.  
   
 ### <a name="remarks"></a>Comentarios  
  Escribir el Administrador de acoplamiento en un archivo consiste en determinar el número de controles deslizantes y barras de control de acoplamiento y escribir las barras de control, los marcos minivolcados, las barras de ocultación automática y las barras MDI con fichas en el archivo.  
@@ -1450,8 +1450,8 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pAHDockingBar*  
- Un puntero a un panel acoplable.  
+*pAHDockingBar*<br/>
+[in] Un puntero a un panel acoplable.  
   
 ##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode  
  Establece el modo de acoplamiento.  
@@ -1497,11 +1497,11 @@ void SetPrintPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bPreview*  
- TRUE si se establece el modo de vista previa de impresión; FALSE en caso contrario.  
+*bPreview*<br/>
+[in] TRUE si se establece el modo de vista previa de impresión; FALSE en caso contrario.  
   
- [in] *pState*  
- Un puntero a un estado de vista previa. Este parámetro no se utiliza.  
+*pState*<br/>
+[in] Un puntero a un estado de vista previa. Este parámetro no se utiliza.  
   
 ##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams  
  Establece los parámetros que definen el comportamiento de acoplamiento inteligente.  
@@ -1511,8 +1511,8 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *params*  
- Define los parámetros de acoplamiento inteligente.  
+*params*<br/>
+[in, out] Define los parámetros de acoplamiento inteligente.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método si desea personalizar la apariencia, el color o la forma de los marcadores de acoplamiento inteligentes.  
@@ -1527,8 +1527,8 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- TRUE para activar la ventana del marco que se muestra; FALSE para ocultar la ventana del marco.  
+*bMostrar*<br/>
+[in] TRUE para activar la ventana del marco que se muestra; FALSE para ocultar la ventana del marco.  
   
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes  
  Muestra u oculta los paneles de las barras de control y ocultar automáticamente.  
@@ -1538,8 +1538,8 @@ virtual BOOL ShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- TRUE para mostrar los paneles; FALSE para ocultar los paneles.  
+*bMostrar*<br/>
+[in] TRUE para mostrar los paneles; FALSE para ocultar los paneles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre es FALSE.  
@@ -1552,8 +1552,8 @@ void StartSDocking(CWnd* pDockingWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDockingWnd*  
- Un puntero a una ventana de acoplamiento.  
+*pDockingWnd*<br/>
+[in] Un puntero a una ventana de acoplamiento.  
   
 ##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking  
  Se detiene inteligente de acoplamiento.  

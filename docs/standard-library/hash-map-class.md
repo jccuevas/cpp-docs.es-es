@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211597"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702032"
 ---
 # <a name="hashmap-class"></a>hash_map (Clase)
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>Parámetros
 
 *Key*<br/>
- Tipo de datos de clave que se almacenará en hash_map.
+Tipo de datos de clave que se almacenará en hash_map.
 
 *Type*<br/>
- Tipo de datos de elemento que se almacenará en hash_map.
+Tipo de datos de elemento que se almacenará en hash_map.
 
 *Rasgos*<br/>
- Tipo que incluye dos objetos de función: uno de clase compare que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es un predicado unario que asigna valores de clave de los elementos a enteros sin signo de tipo `size_t`. Este argumento es opcional, y hash_compare<`Key`, less<`Key`> > es el valor predeterminado.
+Tipo que incluye dos objetos de función: uno de clase compare que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es un predicado unario que asigna valores de clave de los elementos a enteros sin signo de tipo `size_t`. Este argumento es opcional, y hash_compare<`Key`, less<`Key`> > es el valor predeterminado.
 
 *Asignador*<br/>
- Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de hash_map. Este argumento es opcional y el valor predeterminado es allocator<pair <const `Key`, `Type`>>.
+Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de hash_map. Este argumento es opcional y el valor predeterminado es allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor clave de los elementos cuya coincidencia debe buscarse a partir del objeto hash_map.
+Valor clave de los elementos cuya coincidencia debe buscarse a partir del objeto hash_map.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_map::empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_map que se está buscando.
+Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_map que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parámetros
 
 *_WHERE*<br/>
- Posición del elemento que se va a quitar de hash_map.
+Posición del elemento que se va a quitar de hash_map.
 
 *first*<br/>
- Posición del primer elemento que se ha quitado de hash_map.
+Posición del primer elemento que se ha quitado de hash_map.
 
 *Último*<br/>
- Posición inmediatamente siguiente al último elemento que se ha quitado de hash_map.
+Posición inmediatamente siguiente al último elemento que se ha quitado de hash_map.
 
 *key*<br/>
- El valor clave de los elementos que se van a quitar de hash_map.
+El valor clave de los elementos que se van a quitar de hash_map.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- El valor de la clave con el que debe coincidir el criterio de ordenación de un elemento del objeto hash_map en el que se buscará.
+El valor de la clave con el que debe coincidir el criterio de ordenación de un elemento del objeto hash_map en el que se buscará.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_map que se está buscando.
+Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_map que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>Parámetros
 
 *right*<br/>
- Objeto hash_map de argumentos que proporciona los elementos que se van a intercambiar con el objeto hash_map de destino.
+Objeto hash_map de argumentos que proporciona los elementos que se van a intercambiar con el objeto hash_map de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor de clave de argumento que se comparará con el valor de clave de ordenación de un elemento del objeto hash_map que se está buscando.
+Valor de clave de argumento que se comparará con el valor de clave de ordenación de un elemento del objeto hash_map que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 

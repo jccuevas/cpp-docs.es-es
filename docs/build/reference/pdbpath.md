@@ -1,5 +1,5 @@
 ---
-title: -PDBPATH | Documentos de Microsoft
+title: -PDBPATH | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,44 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 274c4a3742d99b1e4702ed332206b78dacebccbd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c9d93ef38ba444fd716bd3363a6605eae66dfec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373673"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699680"
 ---
 # <a name="pdbpath"></a>/PDBPATH
-```  
-/PDBPATH[:VERBOSE] filename  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- donde:  
-  
- *filename*  
- El nombre del archivo .dll o .exe para el que desea buscar el archivo .pdb correspondiente.  
-  
- VERBOSE (opcional)  
- Notifica todos los directorios donde se realizó un intento para buscar el archivo PDB.  
-  
-## <a name="remarks"></a>Comentarios  
- /PDBPATH buscará en el equipo a lo largo de las mismas rutas de acceso que el depurador podría buscar un archivo .pdb y notificará que, si existe, los archivos .pdb se corresponden con el archivo especificado en *filename*.  
-  
- Al utilizar al depurador de Visual Studio, puede experimentar un problema debido al hecho de que el depurador está usando un archivo .pdb con una versión diferente del archivo que se está depurando.  
-  
- /PDBPATH buscará archivos .pdb en las rutas de acceso siguientes:  
-  
--   Compruebe la ubicación donde reside el archivo ejecutable.  
-  
--   Compruebe la ubicación del archivo PDB insertado en el archivo ejecutable. Esto suele ser la ubicación en el momento de que la imagen se vincula.  
-  
--   Compruebe la ruta de búsqueda configurada en el IDE de Visual Studio.  
-  
--   Comprobar a lo largo de las rutas de acceso en el _NT_SYMBOL_PATH y _NT_ALT_SYMBOL_PATH las variables de entorno.  
-  
--   Compruebe en el directorio de Windows.  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)   
- [/PDBALTPATH (Usar ruta de PDB alternativa)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+
+```
+/PDBPATH[:VERBOSE] filename
+```
+
+### <a name="parameters"></a>Parámetros
+
+*filename*<br/>
+El nombre del archivo .dll o .exe para el que desea buscar el archivo .pdb correspondiente.
+
+**: DETALLADO**<br/>
+(Opcional) Notifica todos los directorios donde se ha intentado para buscar el archivo PDB.
+
+## <a name="remarks"></a>Comentarios
+
+/PDBPATH buscará en las mismas rutas de acceso que el depurador buscará un archivo .pdb y notificará que, si existe, los archivos .pdb corresponden al archivo especificado en su equipo *filename*.
+
+Al usar al depurador de Visual Studio, puede experimentar un problema por el hecho de que el depurador está usando un archivo .pdb para una versión diferente del archivo que está depurando.
+
+/PDBPATH buscará archivos .pdb en las siguientes rutas:
+
+- Compruebe la ubicación donde reside el archivo ejecutable.
+
+- Compruebe la ubicación del archivo PDB escrito en el archivo ejecutable. Normalmente, esta es la ubicación en el momento en que estaba vinculada a la imagen.
+
+- Compruebe la ruta de búsqueda configuradas en el IDE de Visual Studio.
+
+- Compruebe las rutas de la _NT_SYMBOL_PATH y _NT_ALT_SYMBOL_PATH variables de entorno.
+
+- Compruebe en el directorio de Windows.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)<br/>
+[/PDBALTPATH (Usar ruta de PDB alternativa)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)

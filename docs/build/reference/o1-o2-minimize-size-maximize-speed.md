@@ -1,5 +1,5 @@
 ---
-title: -O1, - O2 (minimizar tamaño, maximizar velocidad) | Documentos de Microsoft
+title: -O1, - O2 (minimizar tamaño, maximizar velocidad) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5003695c5ae2b16faf8aa80f68928858a3a48288
-ms.sourcegitcommit: 4cdfff1114829599ab54178767f57664ad3424d1
+ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270557"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702564"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Minimizar tamaño, maximizar velocidad)
 
@@ -39,12 +39,11 @@ Selecciona un conjunto predefinido de opciones que afectan al tamaño y la veloc
 
 ## <a name="syntax"></a>Sintaxis
 
-> /O1  
-> /O2
+> / / O2 O1
 
 ## <a name="remarks"></a>Comentarios
 
-El **/O1** y **/O2** opciones del compilador son una manera rápida para establecer varias opciones de optimización específica a la vez. El **/O1** opción establece las opciones de optimización individuales que crea el código más pequeño en la mayoría de los casos. El **/O2** opción establece las opciones que crea el código más rápido en la mayoría de los casos. El **/O2** es la opción predeterminada para las versiones de lanzamiento. Esta tabla muestra las opciones específicas que se establezcan en **/O1** y **/O2**:
+El **/O1** y **/O2** opciones del compilador son una forma rápida para establecer varias opciones de optimización específicas a la vez. El **/O1** opción establece las opciones de optimización individual que crea el código más pequeño en la mayoría de los casos. El **/O2** opción establece las opciones que crea el código más rápido en la mayoría de los casos. El **/O2** es la opción predeterminada para las compilaciones de versión. Esta tabla muestran las opciones específicas que se establezcan en **/O1** y **/O2**:
 
 |Opción|Equivalente a|
 |------------|-------------------|
@@ -53,15 +52,14 @@ El **/O1** y **/O2** opciones del compilador son una manera rápida para estable
 
 **/ O1** y **/O2** son mutuamente excluyentes.
 
-> [!NOTE]  
-> **x86 específico**  
-> Estas opciones implican el uso de la omisión de puntero de marco ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) opción.
+> [!NOTE]
+> **x86 específico** estas opciones implican el uso de la omisión de puntero de marco ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) opción.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-1. En **propiedades de configuración**, abra **C/C++** y, a continuación, elija la **optimización** página de propiedades.
+1. En **propiedades de configuración**, abra **C o C++** y, a continuación, elija el **optimización** página de propiedades.
 
 1. Modificar el **optimización** propiedad.
 
@@ -71,7 +69,7 @@ El **/O1** y **/O2** opciones del compilador son una manera rápida para estable
 
 ## <a name="see-also"></a>Vea también
 
-[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)  
-[Opciones del compilador](../../build/reference/compiler-options.md)  
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)  
+[Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)
+[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (Modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md)

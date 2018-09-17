@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 817c828c56fe2e95756e517c3d930d365714ad99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701719"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (clase)
 Proporciona la funcionalidad de una ventana de marco de interfaz de un único documento (SDI) de Windows superpuesta o emergente, junto con los miembros para administrar la ventana.  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *nState*|Especifica si se debe mostrar u ocultar el menú. El *nState* parámetro puede tener los siguientes valores:<br /><br /> -AFX_MBS_VISIBLE (0 x 01): muestra el menú si está oculto, pero no tiene ningún efecto si está visible.<br />-AFX_MBS_HIDDEN (0 x 02): oculta el control menu si está visible, pero no tiene ningún efecto si está oculto.|  
+|*nState*|[in] Especifica si se debe mostrar u ocultar el menú. El *nState* parámetro puede tener los siguientes valores:<br /><br /> -AFX_MBS_VISIBLE (0 x 01): muestra el menú si está oculto, pero no tiene ningún efecto si está visible.<br />-AFX_MBS_HIDDEN (0 x 02): oculta el control menu si está visible, pero no tiene ningún efecto si está oculto.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método cambia correctamente el estado de menú. en caso contrario, FALSE.  
@@ -1005,7 +1005,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *nStyle*|Especifica si el menú está oculta, de manera predeterminada o es visible y tiene el foco. El *nStyle* parámetro puede tener los siguientes valores:<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01):<br />     El menú se muestra en todo momento y, de forma predeterminada no tiene el foco.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     El menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla ALT para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla ALT o ESC para ocultar el menú.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinación bit a bit (OR)): el menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla F10 para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla F10 para alternar el foco o desactivar el menú. Se muestra el menú hasta que presione la tecla ALT o ESC para ocultarlo.|  
+|*nStyle*|[in] Especifica si el menú está oculta, de manera predeterminada o es visible y tiene el foco. El *nStyle* parámetro puede tener los siguientes valores:<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01):<br />     El menú se muestra en todo momento y, de forma predeterminada no tiene el foco.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     El menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla ALT para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla ALT o ESC para ocultar el menú.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinación bit a bit (OR)): el menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla F10 para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla F10 para alternar el foco o desactivar el menú. Se muestra el menú hasta que presione la tecla ALT o ESC para ocultarlo.|  
   
 ### <a name="remarks"></a>Comentarios  
  Si el valor de la *nStyle* parámetro no es válido, este método valida en modo de depuración y provoca [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) en modo de lanzamiento. En el caso de otros errores en tiempo de ejecución, este método aserciones en modo de depuración y provoca una excepción derivada de la [CException](../../mfc/reference/cexception-class.md) clase.  
