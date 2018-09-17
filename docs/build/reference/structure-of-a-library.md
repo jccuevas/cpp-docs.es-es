@@ -1,5 +1,5 @@
 ---
-title: Estructura de una biblioteca | Documentos de Microsoft
+title: Estructura de una biblioteca | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eff0000aef01790106b44b49b4855218fcf9332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c2c66d45ee415ddc4f3ba27b6a100c5e2ec1dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373106"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702109"
 ---
 # <a name="structure-of-a-library"></a>Estructura de una biblioteca
-Una biblioteca contiene objetos COFF. Objetos de una biblioteca contienen funciones y datos que pueden hacer referencia externamente otros objetos en un programa. Un objeto en una biblioteca se conoce a veces como un miembro de biblioteca.  
-  
- Puede obtener información adicional sobre el contenido de una biblioteca mediante la ejecución de la herramienta DUMPBIN con la opción/LINKERMEMBER. Para obtener más información acerca de esta opción, vea [referencia de DUMPBIN](../../build/reference/dumpbin-reference.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Información general sobre LIB](../../build/reference/overview-of-lib.md)
+
+Una biblioteca contiene objetos COFF. Objetos de una biblioteca contienen funciones y datos que pueden hacer referencia externamente otros objetos en un programa. Un objeto en una biblioteca a veces se conoce como un miembro de biblioteca.
+
+Puede obtener información adicional sobre el contenido de una biblioteca mediante la ejecución de la herramienta DUMPBIN con la opción/LINKERMEMBER. Para obtener más información acerca de esta opción, consulte [referencia de DUMPBIN](../../build/reference/dumpbin-reference.md).
+
+## <a name="see-also"></a>Vea también
+
+[Información general sobre LIB](../../build/reference/overview-of-lib.md)

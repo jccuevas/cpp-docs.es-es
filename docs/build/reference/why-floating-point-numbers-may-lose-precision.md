@@ -1,5 +1,5 @@
 ---
-title: ¿Por qué los números de punto flotante pierden precisión | Documentos de Microsoft
+title: ¿Por qué los números de punto flotante pierden precisión | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,62 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb673f087d98f6c7acdd1e98b5649cc84a48d277
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de54610676ade49f7ce41e00ed0049b20e46709c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376142"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700026"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Por qué los números de punto flotante pierden precisión
-Por lo general valores decimales de punto flotante no tiene una representación binaria exacta. Se trata de un efecto secundario de cómo la CPU representa los datos de punto flotante. Por este motivo, puede experimentar una pérdida de precisión y algunas operaciones de punto flotante pueden producir resultados inesperados.  
-  
- Este comportamiento es el resultado de uno de los siguientes:  
-  
--   La representación binaria del número decimal puede no ser exacta.  
-  
--   Hay una discordancia de tipos entre los números utilizados (por ejemplo, combinación float y double).  
-  
- Para resolver este comportamiento, los programadores Asegúrese de que el valor es mayor o menor que lo que es necesario, o bien obtengan y utilizar una biblioteca de Binary Coded Decimal (BCD) que mantendrá la precisión.  
-  
- Representación binaria de los valores de punto flotante afecta a la precisión y la exactitud de los cálculos de punto flotante. Microsoft Visual C++ utiliza [formato de punto flotante de IEEE](../../build/reference/ieee-floating-point-representation.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// Floating-point_number_precision.c  
-// Compile options needed: none. Value of c is printed with a decimal   
-// point precision of 10 and 6 (printf rounded value by default) to   
-// show the difference  
-#include <stdio.h>  
-  
-#define EPSILON 0.0001   // Define your own tolerance  
-#define FLOAT_EQ(x,v) (((v - EPSILON) < x) && (x <( v + EPSILON)))  
-  
-int main() {  
-   float a, b, c;  
-  
-   a = 1.345f;  
-   b = 1.123f;  
-   c = a + b;  
-   // if (FLOAT_EQ(c, 2.468)) // Remove comment for correct result  
-   if (c == 2.468)            // Comment this line for correct result  
-      printf_s("They are equal.\n");  
-   else  
-      printf_s("They are not equal! The value of c is %13.10f "  
-                "or %f",c,c);  
-}  
-```  
-  
-```Output  
-They are not equal! The value of c is  2.4679999352 or 2.468000  
-```  
-  
-## <a name="comments"></a>Comentarios  
- Para EPSILON, puede utilizar la constante FLT_EPSILON, que se define para float como 1, 192092896e-07F, o la constante DBL_EPSILON, que se define para como 2, 2204460492503131e-016. Debe incluir float.h para estas constantes. Estas constantes se definen como menor positivo número x, de modo que x + 1,0 no es igual a 1,0. Dado que se trata de un número muy pequeño, debe emplear tolerancia definido por el usuario para los cálculos que implican a números muy grandes.  
-  
-## <a name="see-also"></a>Vea también  
- [Optimizar el código](../../build/reference/optimizing-your-code.md)
+
+Por lo general los valores decimales de punto flotante no tienen una representación binaria exacta. Se trata de un efecto secundario de cómo la CPU representa los datos de punto flotante. Por este motivo, puede experimentar una pérdida de precisión y algunas operaciones de punto flotante pueden producir resultados inesperados.
+
+Este comportamiento es el resultado de una de las siguientes acciones:
+
+- La representación binaria del número decimal puede no ser exacta.
+
+- Hay una discordancia entre los números utilizados (por ejemplo, mezcla float y double).
+
+Para corregir este comportamiento, asegúrese de que el valor es mayor o menor que lo que es necesario, o bien puedan obtengan y usar una biblioteca de Binary Coded Decimal (BCD) que mantendrá la precisión de los programadores.
+
+Representación binaria de los valores de punto flotante afecta a la precisión y la precisión de los cálculos de punto flotante. Microsoft Visual C++ utiliza [formato de punto flotante de IEEE](../../build/reference/ieee-floating-point-representation.md).
+
+## <a name="example"></a>Ejemplo
+
+```
+// Floating-point_number_precision.c
+// Compile options needed: none. Value of c is printed with a decimal
+// point precision of 10 and 6 (printf rounded value by default) to
+// show the difference
+#include <stdio.h>
+
+#define EPSILON 0.0001   // Define your own tolerance
+#define FLOAT_EQ(x,v) (((v - EPSILON) < x) && (x <( v + EPSILON)))
+
+int main() {
+   float a, b, c;
+
+   a = 1.345f;
+   b = 1.123f;
+   c = a + b;
+   // if (FLOAT_EQ(c, 2.468)) // Remove comment for correct result
+   if (c == 2.468)            // Comment this line for correct result
+      printf_s("They are equal.\n");
+   else
+      printf_s("They are not equal! The value of c is %13.10f "
+                "or %f",c,c);
+}
+```
+
+```Output
+They are not equal! The value of c is  2.4679999352 or 2.468000
+```
+
+## <a name="comments"></a>Comentarios
+
+Para EPSILON, puede utilizar la constante FLT_EPSILON, que se define para float como 1.192092896e-07F, o DBL_EPSILON, que se define para como 2, 2204460492503131e-016. Debe incluir float.h para estas constantes. Estas constantes se definen como positivo menor el número x, tal que x + 1,0 no es igual a 1,0. Se trata de un número muy pequeño, debería emplear tolerancia definido por el usuario para los cálculos que implican a números muy grandes.
+
+## <a name="see-also"></a>Vea también
+
+[Optimizar el código](../../build/reference/optimizing-your-code.md)

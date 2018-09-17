@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205292"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702096"
 ---
 # <a name="ccombobox-class"></a>CComboBox (clase)
 Proporciona la funcionalidad de un cuadro combinado de Windows.  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *lpszText*|Puntero a un búfer que recibe el texto de titular de indicación.|  
-|[in] *cchText*|Tamaño del búfer que el *lpszText* parámetro señala.|  
+|*lpszText*|[out] Puntero a un búfer que recibe el texto de titular de indicación.|  
+|*cchText*|[in] Tamaño del búfer que el *lpszText* parámetro señala.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  En la primera sobrecarga, una [CString](../../atl-mfc-shared/using-cstring.md) objeto que contiene el texto del titular de indicación de si existe; de lo contrario, un `CString` objeto que tiene una longitud cero.  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *lpszText*|Puntero a un búfer terminado en null que contiene el texto de indicación.|  
+|*lpszText*|[in] Puntero a un búfer terminado en null que contiene el texto de indicación.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Especifica el número mínimo de elementos visibles.|  
+|*iMinVisible*|[in] Especifica el número mínimo de elementos visibles.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  

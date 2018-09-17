@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538963"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700845"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty (clase)
 La `CMFCPropertyGridFileProperty` clase es compatible con un elemento de control de lista de propiedades que se abre un cuadro de diálogo de selección de archivos.  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *strName*  
- Nombre de la propiedad.  
+*strName*<br/>
+[in] El nombre de propiedad.  
   
- [in] *bOpenFileDialog*  
- True para abrir un **abrir archivo** cuadro de diálogo; FALSE para abrir un **Guardar archivo** cuadro de diálogo.  
+*bOpenFileDialog*<br/>
+[in] True para abrir un **abrir archivo** cuadro de diálogo; FALSE para abrir un **Guardar archivo** cuadro de diálogo.  
   
- [in] *strFileName*  
- El nombre de archivo inicial.  
+*strFileName*<br/>
+[in] El nombre de archivo inicial.  
   
- [in] *lpszDefExt*  
- Una cadena con una o más extensiones de nombre de archivo. El valor predeterminado es NULL.  
+*lpszDefExt*<br/>
+[in] Una cadena de uno o más extensiones de nombre de archivo. El valor predeterminado es NULL.  
   
- [in] *dwFlags*  
- Marcas de cuadro de diálogo. El valor predeterminado es una combinación bit a bit (OR) de OFN_HIDEREADONLY y OFN_OVERWRITEPROMPT.  
+*dwFlags*<br/>
+[in] Marcas de cuadro de diálogo. El valor predeterminado es una combinación bit a bit (OR) de OFN_HIDEREADONLY y OFN_OVERWRITEPROMPT.  
   
- [in] *lpszFilter*  
- Una cadena de uno o más filtros de archivo. El valor predeterminado es NULL.  
+*lpszFilter*<br/>
+[in] Una cadena de uno o varios filtros de archivo. El valor predeterminado es NULL.  
   
- [in] *lpszDescr*  
- Una descripción del elemento de propiedad. El valor predeterminado es NULL.  
+*lpszDescr*<br/>
+[in] La descripción del elemento de propiedad. El valor predeterminado es NULL.  
   
- [in] *dwData*  
- Datos específicos de la aplicación que están asociados al elemento de propiedad. Por ejemplo, un entero de 32 bits o un puntero a otros datos. El valor predeterminado es 0.  
+*dwData*<br/>
+[in] Datos específicos de la aplicación que está asociados con el elemento de propiedad. Por ejemplo, un entero de 32 bits o un puntero a otros datos. El valor predeterminado es 0.  
   
 ### <a name="return-value"></a>Valor devuelto  
   

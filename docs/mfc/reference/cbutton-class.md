@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196716"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701838"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 Proporciona la funcionalidad de los controles de botón de Windows.  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *lpszNote*|Puntero a un búfer que el llamador es responsable de asignar y desasignar. Si el valor devuelto es TRUE, el búfer contiene el texto de la nota que está asociado con el control de vínculo de comando actual; en caso contrario, no se modifica el búfer.|  
-|[in, out] *cchNote*|Un puntero a una variable de entero sin signo.<br /><br /> Cuando se llama a este método, la variable contiene el tamaño del búfer especificado por el *lpszNote* parámetro.<br /><br /> Cuando este método devuelve, si el valor devuelto es TRUE, la variable contiene el tamaño de la nota asociado al control de vínculo de comando actual. Si el valor devuelto es FALSE, la variable contiene el tamaño del búfer necesario para contener la nota.|  
+|*lpszNote*|[out] Puntero a un búfer que el llamador es responsable de asignar y desasignar. Si el valor devuelto es TRUE, el búfer contiene el texto de la nota que está asociado con el control de vínculo de comando actual; en caso contrario, no se modifica el búfer.|  
+|*cchNote*|[in, out] Un puntero a una variable de entero sin signo.<br /><br /> Cuando se llama a este método, la variable contiene el tamaño del búfer especificado por el *lpszNote* parámetro.<br /><br /> Cuando este método devuelve, si el valor devuelto es TRUE, la variable contiene el tamaño de la nota asociado al control de vínculo de comando actual. Si el valor devuelto es FALSE, la variable contiene el tamaño del búfer necesario para contener la nota.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  En la primera sobrecarga, una [CString](../../atl-mfc-shared/using-cstring.md) objeto que contiene el texto de nota asociado con el control de vínculo de comando actual.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *pInfo*|Puntero a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estructura que recibe información sobre el control de botón de división actual. El llamador es responsable de asignar la estructura.|  
+|*pInfo*|[out] Puntero a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estructura que recibe información sobre el control de botón de división actual. El llamador es responsable de asignar la estructura.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *pSize*|Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe la descripción de un rectángulo.|  
+|*pSize*|[out] Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe la descripción de un rectángulo.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *fDropDown*|TRUE para establecer el estado BST_DROPDOWNPUSHED; en caso contrario, FALSE.|  
+|*fDropDown*|[in] TRUE para establecer el estado BST_DROPDOWNPUSHED; en caso contrario, FALSE.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *fElevationRequired*|Es True para establecer `elevation required` estado; en caso contrario, FALSE.|  
+|*fElevationRequired*|[in] Es True para establecer `elevation required` estado; en caso contrario, FALSE.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *lpszNote*|Puntero a una cadena Unicode que se establece como el texto de nota para el control de vínculo de comando.|  
+|*lpszNote*|[in] Puntero a una cadena Unicode que se establece como el texto de nota para el control de vínculo de comando.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *chGlyph*|Un carácter que especifica el glifo que se usará como la flecha de lista desplegable del botón de división.|  
+|*chGlyph*|[in] Un carácter que especifica el glifo que se usará como la flecha de lista desplegable del botón de división.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto que se va a asignar al control de botón de división actual.|  
+|*pSplitImageList*|[in] Puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto que se va a asignar al control de botón de división actual.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pInfo*|Puntero a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estructura que define el control de botón de división actual.|  
+|*pInfo*|[in] Puntero a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estructura que define el control de botón de división actual.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pSize*|Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que describe un rectángulo delimitador.|  
+|*pSize*|[in] Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que describe un rectángulo delimitador.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Una combinación bit a bit de los estilos de botón de división. Para obtener más información, consulte el `uSplitStyle` miembro de la [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estructura.|  
+|*uSplitStyle*|[in] Una combinación bit a bit de los estilos de botón de división. Para obtener más información, consulte el `uSplitStyle` miembro de la [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estructura.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  

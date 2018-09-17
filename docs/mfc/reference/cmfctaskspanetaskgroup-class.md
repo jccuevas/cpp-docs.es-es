@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849170"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701654"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup (clase)
 El `CMFCTasksPaneTaskGroup` clase es una clase auxiliar usada por el [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. Los objetos de tipo `CMFCTasksPaneTaskGroup` representan un *grupo de tareas*. El grupo de tareas es una lista de elementos que el marco muestra en un cuadro independiente con un botón de contraer. El cuadro puede tener una leyenda opcional (nombre de grupo). Si un grupo está contraído, la lista de tareas no está visible.  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParent*  
- Representa la ventana principal del grupo de tareas actual.  
+*pParent*<br/>
+[in] Representa la ventana principal del grupo de tareas actual.  
   
- [out] *datos*  
- Un objeto de tipo `CAccessibilityData` que se rellena con los datos de accesibilidad del grupo de tareas actual.  
+*data*<br/>
+[out] Un objeto de tipo `CAccessibilityData` que se rellena con los datos de accesibilidad del grupo de tareas actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el *datos* parámetro se rellena con los datos de accesibilidad del grupo de tareas actual correctamente; de lo contrario, FALSE.  
