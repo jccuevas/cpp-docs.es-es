@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703890"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (clase)
 El `CMFCRibbonBaseElement` clase es la clase base para todos los elementos que se pueden agregar a un [barra de cinta](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.  
@@ -423,8 +423,8 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *arElems*  
- Hacer referencia a un [CArray](../../mfc/reference/carray-class.md) de sugerencias de teclas.  
+*arElems*<br/>
+[in] Hacer referencia a un [CArray](../../mfc/reference/carray-class.md) de sugerencias de teclas.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando está habilitada la característica de sugerencias de teclas de la cinta de opciones, el marco de trabajo muestra información sobre las teclas cinta de opciones cuando el usuario presiona la tecla ALT o F10.  
@@ -439,11 +439,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndListBox*  
- Puntero a un cuadro de lista de comandos.  
+*pWndListBox*<br/>
+[in] Puntero a un cuadro de lista de comandos.  
   
- [in] *bDeep*  
- Este parámetro no se utiliza.  
+*bDeep*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero del elemento agregado de la cinta de opciones.  
@@ -529,8 +529,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *src*  
- El origen [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) objeto.  
+*src*<br/>
+[in] El origen [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) objeto.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -555,14 +555,14 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo.  
   
- [in] *tipo*  
- Valor enumerado de un tipo de imagen. Consulte la sección Comentarios para obtener una lista de valores posibles.  
+*type*<br/>
+[in] Valor enumerado de un tipo de imagen. Consulte la sección Comentarios para obtener una lista de valores posibles.  
   
- [in] *rectImage*  
- El rectángulo de imagen.  
+*rectImage*<br/>
+[in] El rectángulo de imagen.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método no hace nada. Invalide este método en una clase derivada para dibujar la imagen para el elemento de la cinta de opciones.  
@@ -583,8 +583,8 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pElement*  
- Puntero a un elemento de la cinta de opciones.  
+*pElement*<br/>
+[in] Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al elemento de la cinta de opciones si *pElement* puntos en el actual objeto; en caso contrario, NULL.  
@@ -599,8 +599,8 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwData*  
- Los datos asociados con un elemento de la cinta.  
+*dwData*<br/>
+[in] Los datos asociados con un elemento de la cinta.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al elemento de cinta de opciones si contiene los datos especificados; en caso contrario, es NULL.  
@@ -615,8 +615,8 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Identificador de comando para un elemento de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] Identificador de comando para un elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al elemento de cinta de opciones si ese elemento se identifica mediante el identificador de comando especificado; en caso contrario, es NULL.  
@@ -631,8 +631,8 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pOriginal*  
- Puntero a un elemento de la cinta de opciones.  
+*pOriginal*<br/>
+[in] Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al elemento de cinta de opciones si su elemento de la cinta original coincide con el elemento especificado de la cinta de opciones; en caso contrario, es NULL.  
@@ -648,8 +648,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño compacto de un elemento de la cinta de opciones.  
@@ -698,8 +698,8 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *arElements*  
- Una matriz de elementos de la cinta de opciones.  
+*arElements*<br/>
+[in, out] Una matriz de elementos de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -713,11 +713,11 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Identificador de comando de un elemento de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] Identificador de comando de un elemento de la cinta de opciones.  
   
- [in] *arElements*  
- Una matriz de elementos de la cinta de opciones.  
+*arElements*<br/>
+[in] Una matriz de elementos de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -761,8 +761,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño del elemento de cinta de opciones en su estado intermedio.  
@@ -787,11 +787,11 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo.  
   
- [in] *bIsMenu*  
- TRUE si el elemento de la cinta muestra un menú emergente; en caso contrario, FALSE.  
+*bIsMenu*<br/>
+[in] TRUE si el elemento de la cinta muestra un menú emergente; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve un rectángulo con valores de 0.  
@@ -807,8 +807,8 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño del texto del elemento keytip.  
@@ -965,8 +965,8 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño normal del elemento de cinta de opciones.  
@@ -984,8 +984,8 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño actual del elemento de cinta de opciones.  
@@ -1083,8 +1083,8 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Este parámetro no se utiliza.  
+*punto*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al elemento de cinta de opciones si existe; en caso contrario, FALSE.  
@@ -1126,8 +1126,8 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nDelay*  
- Este parámetro no se utiliza.  
+*nDelay*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve FALSE.  
@@ -1378,8 +1378,8 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bWithDelay*  
- TRUE para agregar la notificación de comandos a la cola de mensajes de la ventana primaria; FALSE para enviar el mensaje inmediatamente a la ventana primaria.  
+*bWithDelay*<br/>
+[in] TRUE para agregar la notificación de comandos a la cola de mensajes de la ventana primaria; FALSE para enviar el mensaje inmediatamente a la ventana primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se envió el mensaje; en caso contrario, FALSE.  
@@ -1394,8 +1394,8 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- El índice del elemento de cinta de opciones en la lista.  
+*nIndex*<br/>
+[in] El índice del elemento de cinta de opciones en la lista.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1407,8 +1407,8 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *qat*  
- La barra de herramientas acceso rápido.  
+*qat*<br/>
+[in] La barra de herramientas acceso rápido.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve TRUE indica que el elemento de la cinta se ha agregado a la barra de herramientas de acceso rápido.  
@@ -1423,8 +1423,8 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Este parámetro no se utiliza.  
+*pDC*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método actualiza la información sobre herramientas para el elemento de la cinta de opciones. Invalide este método para actualizar el elemento de la cinta después de que ha cambiado el rectángulo de presentación.  
@@ -1450,8 +1450,8 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Este parámetro no se utiliza.  
+*pDC*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método no hace nada. Invalide este método para calcular el tamaño del texto para el elemento de la cinta de opciones.  
@@ -1465,11 +1465,11 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pPanelMenuBar*  
- Este parámetro no se utiliza.  
+*pPanelMenuBar*<br/>
+[in] No se utiliza este parámetro.  
   
- [in] *pHot*  
- Este parámetro no se utiliza.  
+*pHot*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método no hace nada. Invalide este método para actualizar un elemento de la cinta de opciones que se encuentra en un menú cuando cambia el resaltado.  
@@ -1482,8 +1482,8 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada si desea personalizar el dibujo de un elemento específico de la cinta de opciones.  
@@ -1499,14 +1499,14 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- Rectángulo de límite de keytip.  
+*Rect*<br/>
+[in] Rectángulo de límite de keytip.  
   
- [in] *bIsMenu*  
- TRUE si la keytip es para un botón de menú emergente; en caso contrario, FALSE.  
+*bIsMenu*<br/>
+[in] TRUE si la keytip es para un botón de menú emergente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1520,11 +1520,11 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- Rectángulo de imagen del menú.  
+*Rect*<br/>
+[in] Rectángulo de imagen del menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve TRUE para indicar que se dibuje la imagen.  
@@ -1545,23 +1545,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el elemento de la cinta de opciones.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el elemento de la cinta de opciones.  
   
- [in] *strText*  
- El texto para mostrar.  
+*strText*<br/>
+[in] El texto para mostrar.  
   
- [in] *nTextOffset*  
- Distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.  
+*nTextOffset*<br/>
+[in] Distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.  
   
- [in] *rect*  
- El rectángulo de presentación para el elemento de la cinta de opciones.  
+*Rect*<br/>
+[in] El rectángulo de presentación para el elemento de la cinta de opciones.  
   
- [in] *bIsSelected*  
- Este parámetro no se utiliza.  
+*bIsSelected*<br/>
+[in] No se utiliza este parámetro.  
   
- [in] *bHighlighted*  
- Este parámetro no se utiliza.  
+*bHighlighted*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  El cuadro de lista de comandos muestra los elementos de la cinta de opciones para habilitar a los usuarios personalizar la barra de herramientas de acceso rápido.  
@@ -1574,8 +1574,8 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bIsMenuKey*  
- TRUE si keytip muestra un menú emergente; en caso contrario, FALSE.  
+*bIsMenuKey*<br/>
+[in] TRUE si keytip muestra un menú emergente; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se controló el evento; en caso contrario, FALSE.  
@@ -1590,8 +1590,8 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nUpperChar*  
- Este parámetro no se utiliza.  
+*nUpperChar*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve FALSE.  
@@ -1607,8 +1607,8 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nChar*  
- Este parámetro no se utiliza.  
+*NChar*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve FALSE.  
@@ -1624,8 +1624,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bIsRTL*  
- Este parámetro no se utiliza.  
+*bIsRTL*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método no hace nada. Invalide este método para ajustar el elemento de la cinta de opciones cuando cambia el diseño de la dirección. La dirección del diseño predeterminado es de izquierda a derecha.  
@@ -1648,8 +1648,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- Este parámetro no se utiliza.  
+*bMostrar*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método no hace nada. Invalide este método para mostrar u ocultar el elemento de la cinta de opciones.  
@@ -1672,8 +1672,8 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdId*  
- No se utiliza el parámetro.  
+*uiCmdId*<br/>
+[in] No se utiliza el parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  Solo se envía el mensaje de cierre si el elemento de la cinta se encuentra en un menú emergente.  
@@ -1718,8 +1718,8 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bCompactMode*  
- TRUE para reducir el tamaño de presentación del elemento de la cinta de opciones; FALSE para aumentar el tamaño de presentación del elemento de cinta de opciones.  
+*bCompactMode*<br/>
+[in] TRUE para reducir el tamaño de presentación del elemento de la cinta de opciones; FALSE para aumentar el tamaño de presentación del elemento de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  En la tabla siguiente se resume la lógica para este método.  
@@ -1739,8 +1739,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwData*  
- El valor de datos.  
+*dwData*<br/>
+[in] El valor de datos.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
  Establece el elemento aparezca como un comando emergente de la cinta.  
@@ -1750,8 +1750,8 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bIsDefaultMenuLook*  
- TRUE para establecer el elemento de la cinta de opciones que aparezca como un comando emergente; en caso contrario, FALSE.  
+*bIsDefaultMenuLook*<br/>
+[in] TRUE para establecer el elemento de la cinta de opciones que aparezca como un comando emergente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1763,8 +1763,8 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszText*  
- La descripción para el elemento de la cinta de opciones.  
+*lpszText*<br/>
+[in] La descripción para el elemento de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo muestra la descripción nuevo en la barra de estado, o en la información sobre herramientas o en el botón de menú.  
@@ -1777,8 +1777,8 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Identificador del comando.  
+*nID*<br/>
+[in] El identificador de comando.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
  Establece el tamaño de la presentación inicial para el elemento de la cinta de opciones.  
@@ -1788,8 +1788,8 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bOneRow*  
- True para limitar el tamaño de presentación para el elemento de la cinta de opciones a compact o intermedio; en caso contrario, FALSE.  
+*bOneRow*<br/>
+[in] True para limitar el tamaño de presentación para el elemento de la cinta de opciones a compact o intermedio; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  El tamaño de presentación de elementos de la cinta de opciones puede ser compacto, intermedio o grandes.  
@@ -1804,11 +1804,11 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszKeys*  
- Keytip para el elemento de la cinta de opciones.  
+*lpszKeys*<br/>
+[in] Keytip para el elemento de la cinta de opciones.  
   
- [in] *lpszMenuKeys*  
- Keytip para el menú emergente del elemento de cinta de opciones.  
+*lpszMenuKeys*<br/>
+[in] Keytip para el menú emergente del elemento de cinta de opciones.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
  Establece el elemento de la cinta original para el elemento de la cinta de opciones.  
@@ -1818,8 +1818,8 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pOriginal*  
- Puntero a un elemento de la cinta de opciones.  
+*pOriginal*<br/>
+[in] Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  Los elementos de la cinta de opciones que se copian en otro contenedor conservan un puntero para el elemento de la cinta original.  
@@ -1832,8 +1832,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParent*  
- Puntero a una categoría de cinta de opciones.  
+*pParent*<br/>
+[in] Puntero a una categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  Los grupos con pestañas en los controles de cinta de opciones se denominan categorías.  
@@ -1846,8 +1846,8 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuBar*  
- En el menú principal.  
+*pMenuBar*<br/>
+[in] En el menú principal.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1859,8 +1859,8 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pRibbonBar*  
- Puntero a la barra de cinta de opciones de elemento primario.  
+*pRibbonBar*<br/>
+[in] Puntero a la barra de cinta de opciones de elemento primario.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1872,8 +1872,8 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rect*  
- Las dimensiones del rectángulo.  
+*Rect*<br/>
+[in] Las dimensiones del rectángulo.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1885,8 +1885,8 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszText*  
- El texto y la keytip para el elemento de la cinta de opciones.  
+*lpszText*<br/>
+[in] El texto y la keytip para el elemento de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  Para establecer la keytip para el elemento de la cinta de opciones, anexar la secuencia de escape de nueva línea seguida por los caracteres de keytip en *lpszText*.  
@@ -1910,8 +1910,8 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSet*  
- TRUE para mostrar el texto de la derecha; en caso contrario, FALSE.  
+*bSet*<br/>
+[in] TRUE para mostrar el texto de la derecha; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1923,8 +1923,8 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszText*  
- El texto de información sobre herramientas.  
+*lpszText*<br/>
+[in] El texto de información sobre herramientas.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
  Establece la visibilidad del elemento de cinta de opciones.  
@@ -1934,8 +1934,8 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bIsVisible*  
- TRUE para mostrar el elemento de la cinta de opciones; FALSE para ocultar el elemento de la cinta de opciones.  
+*bIsVisible*<br/>
+[in] TRUE para mostrar el elemento de la cinta de opciones; FALSE para ocultar el elemento de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1959,11 +1959,11 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Este parámetro no se utiliza.  
+*pDC*<br/>
+[in] No se utiliza este parámetro.  
   
- [in] *nHeight*  
- El alto de la fila.  
+*nHeight*<br/>
+[in] El alto de la fila.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se ha establecido el alto de pantalla; en caso contrario, FALSE.  

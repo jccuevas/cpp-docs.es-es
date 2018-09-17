@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad de punto flotante para el código anterior (Visual C++) | Documentos de Microsoft
+title: Compatibilidad de punto flotante para el código anterior (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7cbf955fbf795d06d9cd2448d0736dc435f3b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7285325bf1a934afcef337da318d019ec6fe375c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367165"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706815"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Compatibilidad del código antiguo con puntos flotantes (Visual C++)
-Los registros MMX y pila de punto flotante (MM0-MM7/ST0-ST7) se conservan en cambios de contexto.  No hay ninguna convención de llamada explícita para estos registros.  El uso de estos registros está estrictamente prohibido en código en modo kernel.  
-  
-## <a name="see-also"></a>Vea también  
- [Convención de llamada](../build/calling-convention.md)
+
+Los registros MMX y pila de punto flotante (MM0 MM7/ST0 ST7) se conservan a través de los cambios de contexto.  No hay ninguna convención de llamada explícita para estos registros.  El uso de estos registros está prohibido en el código de modo kernel.
+
+## <a name="see-also"></a>Vea también
+
+[Convención de llamada](../build/calling-convention.md)

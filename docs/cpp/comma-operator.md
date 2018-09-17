@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707777"
 ---
 # <a name="comma-operator-"></a>Operador coma: ,
 Permite agrupar dos instrucciones donde se espera una.  
@@ -37,11 +37,7 @@ expression , expression
   
  Las comas se pueden utilizar como separadores en algunos contextos, como las listas de argumentos de función. No confunda el uso de la coma como separador y como operador; los dos usos son completamente diferentes.  
   
- Considere la expresión  
-  
- *E1* , *e2*  
-  
- El tipo y el valor de la expresión son el tipo y el valor de *e2*; el resultado de evaluar *e1* se descarta. El resultado es un valor L si el operando derecho es un valor L.  
+ Considere la expresión `e1, e2`. El tipo y el valor de la expresión son el tipo y el valor de *e2*; el resultado de evaluar *e1* se descarta. El resultado es un valor L si el operando derecho es un valor L.  
   
  En los contextos en los que normalmente se utiliza la coma como separador (por ejemplo, en argumentos reales para funciones o inicializadores de agregado), el operador de la coma y sus operandos deben incluirse entre paréntesis. Por ejemplo:  
   

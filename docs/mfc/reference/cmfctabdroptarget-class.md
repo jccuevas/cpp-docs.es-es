@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852973"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711638"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget (clase)
 Proporciona el mecanismo de comunicación entre un control de pestaña y las bibliotecas OLE.  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *conquistado*|Sin usar.|  
-|[in] *pDataObject*|Un puntero al objeto que el usuario arrastra.|  
-|[in] *dwKeyState*|Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|  
-|[in] *punto*|La ubicación del cursor en coordenadas de cliente.|  
+|*conquistado*|[in] Sin usar.|  
+|*pDataObject*|[in] Un puntero al objeto que el usuario arrastra.|  
+|*dwKeyState*|[in] Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|  
+|*punto*|[in] La ubicación del cursor en coordenadas de cliente.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El efecto que se produce si se produce la entrega en la ubicación especificada por *punto*. Puede ser uno o varios de los siguientes:  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *conquistado*|Sin usar.|  
+|*conquistado*|[in] Sin usar.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método llama a la `CMFCBaseTabCtrl::OnDragLeave` método para realizar la operación de arrastre.  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *conquistado*|Sin usar.|  
-|[in] *pDataObject*|Un puntero al objeto que el usuario arrastra.|  
-|[in] *dwKeyState*|Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|  
-|[in] *punto*|La ubicación del puntero del mouse en coordenadas de cliente.|  
+|*conquistado*|[in] Sin usar.|  
+|*pDataObject*|[in] Un puntero al objeto que el usuario arrastra.|  
+|*dwKeyState*|[in] Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|  
+|*punto*|[in] La ubicación del puntero del mouse en coordenadas de cliente.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El efecto que se produce si se produce la entrega en la ubicación especificada por *punto*. Puede ser uno o varios de los siguientes:  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *conquistado*|Sin usar.|  
-|[in] *pDataObject*|Un puntero al objeto que el usuario arrastra.|  
-|[in] *EfectoColocar*|La operación de colocar de forma predeterminada.|  
-|[in] *lista desplegable*|Sin usar.|  
-|[in] *punto*|La ubicación del puntero del mouse en coordenadas de cliente.|  
+|*conquistado*|[in] Sin usar.|  
+|*pDataObject*|[in] Un puntero al objeto que el usuario arrastra.|  
+|*EfectoColocar*|[in] La operación de colocar de forma predeterminada.|  
+|*lista desplegable*|[in] Sin usar.|  
+|*punto*|[in] La ubicación del puntero del mouse en coordenadas de cliente.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El efecto resultante. Puede ser uno o varios de los siguientes:  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *pOwner*|Control de ficha que se va a registrar como un destino de colocación.|  
+|*pOwner*|[in] Control de ficha que se va a registrar como un destino de colocación.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el registro se realiza correctamente; en caso contrario, es 0.  

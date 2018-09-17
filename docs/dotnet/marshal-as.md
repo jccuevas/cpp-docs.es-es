@@ -1,5 +1,5 @@
 ---
-title: marshal_as | Documentos de Microsoft
+title: serializar_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f57db502be6e34d275e3aba0e7705992b3c4d0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701628"
 ---
 # <a name="marshalas"></a>serializar_as
 Este método convierte los datos entre los entornos nativo y administrado.  
@@ -38,14 +38,14 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `input`  
- El valor cuyas referencias desea calcular para una variable `To_Type`.  
+*entrada*<br/>
+[in] El valor que se desea calcular las referencias a un `To_Type` variable.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Una variable de tipo `To_Type` que es el valor convertido de `input`.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método es una manera simplificada de convertir datos entre los tipos nativos y administrados. Para determinar qué tipos de datos son compatibles, consulte [información general de serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md). Algunas conversiones de datos requieren un contexto. Puede convertir los tipos de datos mediante la [marshal_context (clase)](../dotnet/marshal-context-class.md).  
+ Este método es una manera simplificada de convertir datos entre los tipos nativos y administrados. Para determinar qué tipos de datos son compatibles, consulte [Overview of Marshaling en C++](../dotnet/overview-of-marshaling-in-cpp.md). Algunas conversiones de datos requieren un contexto. Puede convertir los tipos de datos mediante el [marshal_context Class](../dotnet/marshal-context-class.md).  
   
  Si se intenta serializar un par de tipos de datos que no son compatibles, `marshal_as` generará un error [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) en tiempo de compilación. Lea el mensaje proporcionado con el error para obtener más información. El error `C4996` se puede generar para algunas funciones, aparte de las desusadas. Un ejemplo de esto consiste en intentar para serializar un par de tipos de datos que no se admiten.  
   
@@ -73,7 +73,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Archivo de encabezado:** \<msclr\marshal. h >, \<msclr\serializar_windows. h >, \<msclr\serializar_cppstd. h >, o \<msclr\serializar_atl. h >  
+ **Archivo de encabezado:** \<msclr\marshal. h >, \<msclr\marshal_windows. h >, \<msclr\marshal_cppstd. h >, o \<msclr\marshal_atl. h >  
   
  **Namespace:** msclr:: Interop  
   

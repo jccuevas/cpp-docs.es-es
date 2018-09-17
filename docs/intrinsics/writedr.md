@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540117"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704956"
 ---
 # <a name="writedr"></a>__writedr
 Escribe el valor especificado en el registro de depuración especificado.  
@@ -34,11 +34,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `DebugRegister`  
- Registrar un número entre 0 y 7 que identifica la depuración.  
+*DebugRegister*<br/>
+[in] Registrar un número entre 0 y 7 que identifica la depuración.  
   
- [in] `DebugValue`  
- Registre un valor para escribir en la depuración.  
+*DebugValue*<br/>
+[in] Registre un valor para escribir en la depuración.  
   
 ## <a name="remarks"></a>Comentarios  
  Estas funciones intrínsecas están disponibles solo en modo kernel, y las rutinas sólo están disponibles como intrínsecos.  

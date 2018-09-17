@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4555de3e42efd298cc7a6f67949a8b474f76064
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ffb17f8f38e83399ec32b792338f818cc06215dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541082"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703786"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton (clase)
 Un botón de barra de herramientas que contiene un control de cuadro combinado ( [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)).  
@@ -168,11 +168,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszItem*  
- Texto del elemento que se agrega al cuadro de lista.  
+*lpszItem*<br/>
+[in] Texto del elemento que se agrega al cuadro de lista.  
   
- [in] *dwData*  
- Los datos asociados con el elemento que se va a agregar al cuadro de lista.  
+*dwData*<br/>
+[in] Los datos asociados con el elemento que se va a agregar al cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice del último elemento del cuadro de lista.  
@@ -192,11 +192,11 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszItem*  
- Texto del elemento que se agrega al cuadro de lista.  
+*lpszItem*<br/>
+[in] Texto del elemento que se agrega al cuadro de lista.  
   
- [in] *dwData*  
- Los datos asociados con el elemento que se va a agregar al cuadro de lista.  
+*dwData*<br/>
+[in] Los datos asociados con el elemento que se va a agregar al cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice del elemento que se ha agregado al cuadro de lista.  
@@ -226,17 +226,17 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiID*  
- El identificador de comando del botón nueva.  
+*uiID*<br/>
+[in] El identificador de comando del botón nueva.  
   
- [in] *iImage*  
- El índice de imagen de la imagen asociada con el botón nuevo.  
+*iImage*<br/>
+[in] El índice de imagen de la imagen asociada con el botón nuevo.  
   
- [in] *dwStyle*  
- El estilo del botón nueva.  
+*dwStyle*<br/>
+[in] El estilo del botón nueva.  
   
- [in] *iWidth*  
- El ancho, en píxeles, del botón nueva.  
+*iWidth*<br/>
+[in] El ancho, en píxeles, del botón nueva.  
   
 ### <a name="remarks"></a>Comentarios  
  El ancho predeterminado es 150 píxeles.  
@@ -263,11 +263,11 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszItem1*  
- Primera cadena que se va a comparar.  
+*lpszItem1*<br/>
+[in] La primera cadena para comparar.  
   
- [in] *lpszItem2*  
- Segunda cadena que se va a comparar.  
+*lpszItem2*<br/>
+[in] Segunda cadena que se va a comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que indica la relación entre mayúsculas y minúsculas lexicográfica entre las cadenas. En la tabla siguiente se enumera los valores posibles:  
@@ -293,8 +293,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *src*  
- Objeto `CMFCToolBarComboBoxButton` de origen.  
+*src*<br/>
+[in] El origen `CMFCToolBarComboBoxButton` objeto.  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
  Crea un nuevo cuadro combinado para el botón de cuadro combinado.  
@@ -306,11 +306,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Un puntero a la ventana primaria del botón.  
+*pWndParent*<br/>
+[in] Un puntero a la ventana primaria del botón.  
   
- [in] *rect*  
- Rectángulo delimitador del cuadro combinado.  
+*Rect*<br/>
+[in] Rectángulo delimitador del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al cuadro combinado nuevo si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -326,14 +326,14 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Un puntero a la ventana primaria del botón.  
+*pWndParent*<br/>
+[in] Un puntero a la ventana primaria del botón.  
   
- [in] *rect*  
- Rectángulo delimitador del nuevo cuadro de edición.  
+*Rect*<br/>
+[in] Rectángulo delimitador del nuevo cuadro de edición.  
   
- [in] *dwEditStyle*  
- Estilo de control del nuevo cuadro de edición.  
+*dwEditStyle*<br/>
+[in] Estilo de control del nuevo cuadro de edición.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero para el nuevo cuadro de edición si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -351,14 +351,14 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero del elemento que se va a eliminar.  
+*iÍndice*<br/>
+[in] Índice de base cero del elemento que se va a eliminar.  
   
- [in] *dwData*  
- Los datos asociados con el elemento que se va a eliminar.  
+*dwData*<br/>
+[in] Los datos asociados con el elemento que se va a eliminar.  
   
- [in] *lpszText*  
- El texto del elemento que se va a eliminar. Si hay varios elementos con el mismo texto, se elimina el primer elemento.  
+*lpszText*<br/>
+[in] El texto del elemento que se va a eliminar. Si hay varios elementos con el mismo texto, se elimina el primer elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el elemento se encuentra y se eliminó correctamente; en caso contrario, FALSE.  
@@ -383,8 +383,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para permitir que los cuadros de edición y combinado. FALSE para deshabilitar los cuadros de edición y combinado.  
+*bHabilitar el*<br/>
+[in] TRUE para permitir que los cuadros de edición y combinado. FALSE para deshabilitar los cuadros de edición y combinado.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando está deshabilitado, los controles no se ha convertido en activos y no pueden aceptar la entrada del usuario.  
@@ -397,8 +397,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *menuButton*  
- Referencia a un botón de menú.  
+*MenuButton*<br/>
+[out] Referencia a un botón de menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre es TRUE.  
@@ -411,8 +411,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszText*  
- El texto que se va a buscar en el cuadro de lista.  
+*lpszText*<br/>
+[in] El texto que se va a buscar en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice del elemento; o CB_ERR si no se encuentra el elemento.  
@@ -429,11 +429,11 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando de un botón de cuadro combinado.  
+*uiCmd*<br/>
+[in] El identificador de comando de un botón de cuadro combinado.  
   
- [in] *bIsFocus*  
- True para buscar solo centrado botones; FALSE para buscar todos los botones.  
+*bIsFocus*<br/>
+[in] True para buscar solo centrado botones; FALSE para buscar todos los botones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un botón de cuadro combinado; o NULL si no se encuentra el botón.  
@@ -482,8 +482,8 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando de un botón de cuadro combinado.  
+*uiCmd*<br/>
+[in] El identificador de comando de un botón de cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El número de elementos en el cuadro de lista. en caso contrario, no se encuentra CB_ERR si el cuadro combinado del botón de cuadro.  
@@ -511,8 +511,8 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando de un botón de cuadro combinado.  
+*uiCmd*<br/>
+[in] El identificador de comando de un botón de cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice del elemento actualmente seleccionado en el cuadro de lista. en caso contrario, no se encuentra CB_ERR si se selecciona ningún elemento o un botón de cuadro combinado.  
@@ -550,8 +550,8 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento en el cuadro de lista.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la cadena que está asociado con el elemento; de lo contrario, NULL si el parámetro de índice no es válido, o si el parámetro de índice es -1 y no hay ningún elemento seleccionado en el cuadro combinado.  
@@ -569,11 +569,11 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando de un botón de cuadro combinado.  
+*uiCmd*<br/>
+[in] El identificador de comando de un botón de cuadro combinado.  
   
- [in] *iÍndice*  
- Índice de base cero de un elemento en el cuadro de lista.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la cadena del elemento si el método se realizó correctamente; de lo contrario, NULL si el índice no es válido, no se encuentra un botón de cuadro combinado, o si el índice es -1 y no hay ningún elemento seleccionado en el cuadro combinado.  
@@ -589,8 +589,8 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento en el cuadro de lista.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Los datos asociados con el elemento; o bien 0 si el elemento no existe.  
@@ -608,11 +608,11 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando de un botón de cuadro combinado.  
+*uiCmd*<br/>
+[in] El identificador de comando de un botón de cuadro combinado.  
   
- [in] *iÍndice*  
- Índice de base cero de un elemento en el cuadro de lista.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Los datos asociados con el elemento si el método se realizó correctamente; en caso contrario, 0 si el índice especificado no es válido o no se encuentra CB_ERR si el cuadro combinado del botón de cuadro.  
@@ -630,11 +630,11 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando del botón de cuadro combinado.  
+*uiCmd*<br/>
+[in] El identificador de comando del botón de cuadro combinado.  
   
- [in] *iÍndice*  
- Índice de base cero de un elemento en el cuadro de lista.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero asociado al elemento si el método se realizó correctamente; en caso contrario,-1 si un error se produce, o NULL si el cuadro combinado del cuadro botón no se encuentra.  
@@ -674,8 +674,8 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando de un botón de cuadro combinado específico.  
+*uiCmd*<br/>
+[in] El identificador de comando de un botón de cuadro combinado específico.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El texto en el cuadro de edición si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -728,8 +728,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hwnd*  
- Un identificador de ventana.  
+*HWND*<br/>
+[in] Un identificador de ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el identificador está asociado con el botón de cuadro combinado, o uno de sus elementos secundarios; en caso contrario, FALSE.  
@@ -765,8 +765,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iNotifyCode*  
- El mensaje de notificación que está asociado con el comando.  
+*iNotifyCode*<br/>
+[in] El mensaje de notificación que está asociado con el comando.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si el botón de cuadro combinado procesa el mensaje.  
@@ -789,14 +789,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que muestra el botón de cuadro combinado.  
+*pDC*<br/>
+[in] El contexto de dispositivo que muestra el botón de cuadro combinado.  
   
- [in] *sizeDefault*  
- El tamaño predeterminado del botón de cuadro combinado.  
+*sizeDefault*<br/>
+[in] El tamaño predeterminado del botón de cuadro combinado.  
   
- [in] *bHorz*  
- El estado de acoplamiento de la barra de herramientas primario. Es TRUE cuando la barra de herramientas está acoplado horizontalmente y FALSE cuando la barra de herramientas está acoplada verticalmente.  
+*bHorz*<br/>
+[in] El estado de acoplamiento de la barra de herramientas primario. Es TRUE cuando la barra de herramientas está acoplado horizontalmente y FALSE cuando la barra de herramientas está acoplada verticalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `SIZE` estructura que contiene las dimensiones del botón de cuadro combinado, en píxeles.  
@@ -809,8 +809,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Puntero a la nueva barra de herramientas primario.  
+*pWndParent*<br/>
+[in] Puntero a la nueva barra de herramientas primario.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
  Lo llama el marco cuando el usuario hace clic en el botón de cuadro combinado.  
@@ -822,11 +822,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Puntero a la ventana primaria del botón de cuadro combinado.  
+*conquistado*<br/>
+[in] Puntero a la ventana primaria del botón de cuadro combinado.  
   
- [in] *bDelay*  
- Reservado para uso en una clase derivada.  
+*bDelay*<br/>
+[in] Reservado para uso en una clase derivada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método controla el evento; en caso contrario, FALSE.  
@@ -841,11 +841,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que muestra el botón de cuadro combinado.  
+*pDC*<br/>
+[in] El contexto de dispositivo que muestra el botón de cuadro combinado.  
   
- [in] *nCtlColor*  
- Sin usar.  
+*nCtlColor*<br/>
+[in] Sin usar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Identificador del pincel que el marco de trabajo que se usa para pintar el fondo del botón de cuadro combinado.  
@@ -869,29 +869,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Pdc*  
- El contexto de dispositivo que muestra el botón.  
+*PDC*<br/>
+[in] El contexto de dispositivo que muestra el botón.  
   
- [in] *rect*  
- El rectángulo delimitador del botón.  
+*Rect*<br/>
+[in] El rectángulo delimitador del botón.  
   
- [in] *pImages*  
- La colección de imágenes que está asociada con el botón.  
+*pImages*<br/>
+[in] La colección de imágenes que está asociada con el botón.  
   
- [in] *bHorz*  
- El estado de acoplamiento de la barra de herramientas primario. Es TRUE cuando la barra de herramientas está acoplado horizontalmente y FALSE cuando la barra de herramientas está acoplada verticalmente.  
+*bHorz*<br/>
+[in] El estado de acoplamiento de la barra de herramientas primario. Es TRUE cuando la barra de herramientas está acoplado horizontalmente y FALSE cuando la barra de herramientas está acoplada verticalmente.  
   
- [in] *bCustomizeMode*  
- Si la aplicación está en modo de personalización.  
+*bCustomizeMode*<br/>
+[in] Si la aplicación está en modo de personalización.  
   
- [in] *bHighlight*  
- Si se va a dibujar el botón de cuadro combinado resaltado.  
+*bHighlight*<br/>
+[in] Si se va a dibujar el botón de cuadro combinado resaltado.  
   
- [in] *bDrawBorder*  
- Si se va a dibujar el botón de cuadro combinado con un borde.  
+*bDrawBorder*<br/>
+[in] Si se va a dibujar el botón de cuadro combinado con un borde.  
   
- [in] *bGrayDisabledButtons*  
- True para dibujar el sombreado los botones deshabilitados; FALSE para usar la colección de imágenes deshabilitado.  
+*bGrayDisabledButtons*<br/>
+[in] True para dibujar el sombreado los botones deshabilitados; FALSE para usar la colección de imágenes deshabilitado.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  Lo llama el marco de trabajo para dibujar el botón de cuadro combinado el **comandos** panel de la **personalizar** cuadro de diálogo.  
@@ -904,14 +904,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que muestra el botón de cuadro combinado.  
+*pDC*<br/>
+[in] El contexto de dispositivo que muestra el botón de cuadro combinado.  
   
- [in] *rect*  
- El rectángulo delimitador del botón de cuadro combinado.  
+*Rect*<br/>
+[in] El rectángulo delimitador del botón de cuadro combinado.  
   
- [in] *bSelected*  
- TRUE si se selecciona el botón de cuadro combinado; en caso contrario, FALSE.  
+*bSelected*<br/>
+[in] TRUE si se selecciona el botón de cuadro combinado; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El ancho, en píxeles, del botón de cuadro combinado.  
@@ -938,8 +938,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- Si desea ocultar o mostrar el botón de cuadro combinado.  
+*bMostrar*<br/>
+[in] Si desea ocultar o mostrar el botón de cuadro combinado.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
  Lo llama el marco de trabajo para cambiar el tamaño del botón de cuadro combinado cuando cambia el tamaño de la barra de herramientas primario.  
@@ -949,8 +949,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iSize*  
- Nuevo ancho del botón de cuadro combinado.  
+*iSize*<br/>
+[in] Nuevo ancho del botón de cuadro combinado.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  Lo llama el marco cuando el usuario cambia la información sobre herramientas para el botón de cuadro combinado.  
@@ -964,17 +964,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Puntero a la ventana primaria para el botón de cuadro combinado.  
+*pWndParent*<br/>
+[in] Puntero a la ventana primaria para el botón de cuadro combinado.  
   
- [in] *iButtonIndex*  
- Id. del botón de cuadro combinado.  
+*iButtonIndex*<br/>
+[in] Id. del botón de cuadro combinado.  
   
- [in] *wndToolTip*  
- Herramientas para asociar con el botón de cuadro combinado.  
+*wndToolTip*<br/>
+[in] Herramientas para asociar con el botón de cuadro combinado.  
   
- [in] *str*  
- El texto de sugerencia.  
+*str*<br/>
+[in] El texto de sugerencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método controla el evento; en caso contrario, FALSE.  
@@ -1002,17 +1002,17 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento en el cuadro de lista.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento en el cuadro de lista.  
   
- [in] *bNotify*  
- TRUE para notificar el botón de cuadro combinado de la selección; en caso contrario, FALSE.  
+*bNotify*<br/>
+[in] TRUE para notificar el botón de cuadro combinado de la selección; en caso contrario, FALSE.  
   
- [in] *dwData*  
- Los datos asociados a un elemento en el cuadro de lista.  
+*dwData*<br/>
+[in] Los datos asociados a un elemento en el cuadro de lista.  
   
- [in] *lpszText*  
- El texto de un elemento en el cuadro de lista.  
+*lpszText*<br/>
+[in] El texto de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
@@ -1039,17 +1039,17 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando del botón de cuadro combinado que contiene el cuadro de lista.  
+*uiCmd*<br/>
+[in] El identificador de comando del botón de cuadro combinado que contiene el cuadro de lista.  
   
- [in] *iÍndice*  
- Índice de base cero del elemento en el cuadro de lista. Un valor de -1, quita cualquier selección actual en el cuadro de lista y borra el cuadro de edición.  
+*iÍndice*<br/>
+[in] Índice de base cero del elemento en el cuadro de lista. Un valor de -1, quita cualquier selección actual en el cuadro de lista y borra el cuadro de edición.  
   
- [in] *dwData*  
- Los datos de un elemento en el cuadro de lista.  
+*dwData*<br/>
+[in] Los datos de un elemento en el cuadro de lista.  
   
- [in] *lpszText*  
- El texto de un elemento en el cuadro de lista.  
+*lpszText*<br/>
+[in] El texto de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
@@ -1064,8 +1064,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *ar*  
- La `CArchive` objeto que se va a serializar.  
+*cuentas por cobrar*<br/>
+[in, out] La `CArchive` objeto que se va a serializar.  
   
 ### <a name="remarks"></a>Comentarios  
  Configuración de la `CArchive` objeto determinar si este método lee o escribe en el archivo.  
@@ -1080,11 +1080,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParent*  
- La ventana primaria del botón de cuadro combinado.  
+*pParent*<br/>
+[in] La ventana primaria del botón de cuadro combinado.  
   
- [out] *datos*  
- Un `CAccessibilityData` objeto que recibe los datos de accesibilidad en el botón de cuadro combinado.  
+*data*<br/>
+[out] Un `CAccessibilityData` objeto que recibe los datos de accesibilidad en el botón de cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
@@ -1097,8 +1097,8 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bCenterVert*  
- TRUE para que se centre el botón de cuadro combinado en la barra de herramientas; FALSE para alinear el botón de cuadro combinado a la parte superior de la barra de herramientas.  
+*bCenterVert*<br/>
+[in] TRUE para que se centre el botón de cuadro combinado en la barra de herramientas; FALSE para alinear el botón de cuadro combinado a la parte superior de la barra de herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, los botones de cuadro combinado se alinean a la parte superior.  
@@ -1111,8 +1111,8 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiResID*  
- El identificador de recurso de menú contextual.  
+*uiResID*<br/>
+[in] El identificador de recurso de menú contextual.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  Establece el alto del cuadro de lista cuando se coloca.  
@@ -1122,8 +1122,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nHeight*  
- El alto, en píxeles, del cuadro de lista.  
+*nHeight*<br/>
+[in] El alto, en píxeles, del cuadro de lista.  
   
 ### <a name="remarks"></a>Comentarios  
  El alto predeterminado es 150 píxeles.  
@@ -1136,8 +1136,8 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bFlat*  
- TRUE para una apariencia de estilo plano; en caso contrario, FALSE.  
+*bFlat*<br/>
+[in] TRUE para una apariencia de estilo plano; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  El estilo plano de forma predeterminada para los botones de cuadro combinado es FALSE.  
@@ -1150,8 +1150,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nStyle*  
- Una combinación bit a bit (OR) de los estilos de barra de herramientas.  
+*nStyle*<br/>
+[in] Una combinación bit a bit (OR) de los estilos de barra de herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener una lista de estilos de botón de barra de herramientas vea [estilos de Control ToolBar](../../mfc/reference/toolbar-control-styles.md)  
@@ -1164,8 +1164,8 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszText*  
- Puntero a una cadena que contiene el texto para el cuadro de edición.  
+*lpszText*<br/>
+[in] Puntero a una cadena que contiene el texto para el cuadro de edición.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

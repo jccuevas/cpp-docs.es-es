@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849020"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701394"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton (clase)
 Implementa un botón especial situado en la esquina superior izquierda de la ventana de la aplicación. Cuando se hace clic, el botón abre un menú que contiene normalmente los comandos comunes del menú **Archivo** , tales como **Abrir**, **Guardar**y **Salir**.  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiBmpResID*  
- El identificador de recurso de la imagen para mostrar en el botón de la aplicación.  
+*uiBmpResID*<br/>
+[in] El identificador de recurso de la imagen para mostrar en el botón de la aplicación.  
   
- [in] *hBmp*  
- Identificador de un mapa de bits que se muestra en el botón de la aplicación.  
+*hBmp*<br/>
+[in] Identificador de un mapa de bits que se muestra en el botón de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para asignar una nueva imagen en el botón de la aplicación de cinta después de crear el botón. El botón de la aplicación se encuentra en la esquina superior izquierda de la ventana de la aplicación.  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04eccb2d1472afb1c04daac8ab23c2ce6fe97c58
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9e1339c1696483a3150337a9d2670763e075f7ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851450"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702682"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl (clase)
 El `CMFCListCtrl` clase extiende la funcionalidad de [CListCtrl (clase)](../../mfc/reference/clistctrl-class.md) clase proporcionando la funcionalidad de control avanzado de encabezado de la [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,11 +105,11 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMark*  
- Un parámetro booleano que determina si se debe habilitar un color de fondo diferente.  
+*bMark*<br/>
+[in] Un parámetro booleano que determina si se debe habilitar un color de fondo diferente.  
   
- [in] *bRedraw*  
- Un parámetro booleano que determina si se debe dibujar el control inmediatamente.  
+*bRedraw*<br/>
+[in] Un parámetro booleano que determina si se debe dibujar el control inmediatamente.  
   
 ### <a name="remarks"></a>Comentarios  
  `EnableMarkSortedColumn` usa el método `CDrawingManager::PixelAlpha` calcular el color que se utilizará para ordena las columnas. El color elegido se basa en el color de fondo normal.  
@@ -122,8 +122,8 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Valor booleano que especifica si se debe habilitar el modo de ordenación de varias columnas.  
+*bHabilitar el*<br/>
+[in] Valor booleano que especifica si se debe habilitar el modo de ordenación de varias columnas.  
   
 ### <a name="remarks"></a>Comentarios  
  Al habilitar la ordenación según varias columnas, las columnas tienen una jerarquía. Las filas de datos se ordenarán primero por la columna principal. Los valores equivalentes, a continuación, se ordenan por cada columna subsiguientes según la prioridad.  
@@ -165,14 +165,14 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lParam1*  
- Primer elemento que comparar.  
+*lParam1*<br/>
+[in] El primer elemento para comparar.  
   
- [in] *lParam2*  
- Segundo elemento que comparar.  
+*lParam2*<br/>
+[in] El segundo elemento para comparar.  
   
- [in] *iColumn*  
- El índice de la columna que se está ordenando este método.  
+*iColumn*<br/>
+[in] El índice de la columna que se está ordenando este método.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un entero que indica la posición relativa de los dos elementos. Un valor negativo indica que el primer elemento debería preceder al segundo, valor positivo indica que el primer elemento debería seguir al segundo, y cero significa que los dos elementos son equivalentes.  
@@ -190,11 +190,11 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *funciones nRow*  
- La fila de la celda en cuestión.  
+*funciones nRow*<br/>
+[in] La fila de la celda en cuestión.  
   
- [in] *nColumn*  
- La columna de la celda en cuestión.  
+*nColumn*<br/>
+[in] La columna de la celda en cuestión.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor COLOREF que especifica el color de fondo de la celda.  
@@ -213,14 +213,14 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *funciones nRow*  
- La fila de la celda en cuestión.  
+*funciones nRow*<br/>
+[in] La fila de la celda en cuestión.  
   
- [in] *nColumn*  
- La columna de la celda en cuestión.  
+*nColumn*<br/>
+[in] La columna de la celda en cuestión.  
   
- [in] *dwData*  
- Datos definidos por el usuario. La implementación predeterminada no utiliza este parámetro.  
+*dwData*<br/>
+[in] Datos definidos por el usuario. La implementación predeterminada no utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Identificador de la fuente que se usa para la celda actual.  
@@ -238,11 +238,11 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *funciones nRow*  
- La fila de la celda en cuestión.  
+*funciones nRow*<br/>
+[in] La fila de la celda en cuestión.  
   
- [in] *nColumn*  
- La columna de la celda en cuestión.  
+*nColumn*<br/>
+[in] La columna de la celda en cuestión.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor COLOREF que especifica el color del texto de la celda.  
@@ -258,8 +258,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iColumn*  
- Para quitar la columna.  
+*iColumn*<br/>
+[in] Para quitar la columna.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método quita una columna de ordenación del control de encabezado. Llama a [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iColumn*  
- La columna para ordenar.  
+*iColumn*<br/>
+[in] La columna para ordenar.  
   
- [in] *bAscending*  
- Un valor booleano que especifica el criterio de ordenación.  
+*bAscending*<br/>
+[in] Un valor booleano que especifica el criterio de ordenación.  
   
- [in] *bAgregar*  
- Un valor booleano que especifica si el método agrega la columna indicada por *iColumn* a la lista de columnas de ordenación.  
+*bAgregar*<br/>
+[in] Un valor booleano que especifica si el método agrega la columna indicada por *iColumn* a la lista de columnas de ordenación.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método pasa los parámetros de entrada para el control de encabezado mediante el método [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iColumn*  
- La columna para ordenar.  
+*iColumn*<br/>
+[in] La columna para ordenar.  
   
- [in] *bAscending*  
- Un valor booleano que especifica el criterio de ordenación.  
+*bAscending*<br/>
+[in] Un valor booleano que especifica el criterio de ordenación.  
   
- [in] *bAgregar*  
- Un valor booleano que especifica si este método agrega la columna indicada por *iColumn* a la lista de columnas de ordenación.  
+*bAgregar*<br/>
+[in] Un valor booleano que especifica si este método agrega la columna indicada por *iColumn* a la lista de columnas de ordenación.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

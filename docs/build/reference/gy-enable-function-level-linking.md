@@ -1,5 +1,5 @@
 ---
-title: -Gy (habilitar vinculación en el nivel de función) | Documentos de Microsoft
+title: -Gy (habilitar vinculación en el nivel de función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,48 +23,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e939a12cf23a9d9e476b676a5b068889414497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09faa1a1d2b6743b7fce31af32ba4fe1572b592e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376304"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705008"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Habilitar vinculación en el nivel de función)
-Permite que el compilador empaquete las funciones individuales con formato de funciones empaquetadas (COMDATs).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/Gy[-]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El vinculador requiere que las funciones se empaquetan por separado como COMDAT para excluir u ordenar funciones individuales en un archivo DLL o .exe.  
-  
- Puede usar la opción del vinculador [especificación /OPT (optimizaciones)](../../build/reference/opt-optimizations.md) para impedir que el archivo .exe las funciones empaquetadas.  
-  
- Puede usar la opción del vinculador [/ORDER (colocar funciones en orden)](../../build/reference/order-put-functions-in-order.md) para incluir las funciones empaquetadas en un orden especificado en el archivo .exe.  
-  
- Las funciones inline siempre se empaquetan si sus instancias se crean como llamadas (lo que ocurre, por ejemplo, si los procesos inline están desactivados o si se toma una dirección de función). Además, las funciones de miembro de C++ definidas en la declaración de clase se empaquetan de manera automática; otras funciones no son y, al seleccionar esta opción es necesaria para compilarlos como funciones empaquetadas.  
-  
+
+Permite que el compilador empaquete las funciones individuales con formato de funciones empaquetadas (COMDATs).
+
+## <a name="syntax"></a>Sintaxis
+
+```
+/Gy[-]
+```
+
+## <a name="remarks"></a>Comentarios
+
+El vinculador requiere que las funciones se empaqueta por separado como COMDAT para excluir u ordenar funciones individuales en un archivo .exe o DLL.
+
+Puede usar la opción del vinculador [/OPT (optimizaciones)](../../build/reference/opt-optimizations.md) para excluir las funciones empaquetadas desde el archivo .exe.
+
+Puede usar la opción del vinculador [/ORDER (colocar funciones en orden)](../../build/reference/order-put-functions-in-order.md) para incluir funciones empaquetadas en un orden especificado en el archivo .exe.
+
+Las funciones inline siempre se empaquetan si sus instancias se crean como llamadas (lo que ocurre, por ejemplo, si la inserción es o si se toma una dirección de función). Además, las funciones de miembro de C++ definidas en la declaración de clase se empaquetan de manera automática; otras funciones no son, y al seleccionar esta opción es necesaria para compilarlos como funciones empaquetadas.
+
 > [!NOTE]
->  El [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción, se utiliza para editar y continuar, establece automáticamente el **/Gy** opción.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Haga clic en la carpeta **C/C++** .  
-  
-3.  Haga clic en el **generación de código** página de propiedades.  
-  
-4.  Modificar el **habilitar vinculación en el nivel de función** propiedad.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
-  
--   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador](../../build/reference/compiler-options.md)   
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+>  El [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción, se utiliza para editar y continuar, se establece automáticamente la **/Gy** opción.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+
+1. Haga clic en la carpeta **C/C++** .
+
+1. Haga clic en el **generación de código** página de propiedades.
+
+1. Modificar el **habilitar vinculación en el nivel de función** propiedad.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
+
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

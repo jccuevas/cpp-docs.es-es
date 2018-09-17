@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e06ff5301af07ff123954060053296839118d11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693197"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703968"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (clase)
 Proporciona la funcionalidad del control deslizante común de Windows.  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *nLength*|Longitud del control deslizante, en píxeles.|  
+|*nLength*|[in] Longitud del control deslizante, en píxeles.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método requiere que el control de barra de seguimiento se establezca en [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) estilo.  

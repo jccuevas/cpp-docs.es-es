@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686804"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703929"
 ---
 # <a name="map-class"></a>map (Clase)
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>Parámetros
 
 *Key*<br/>
- Tipo de datos de clave que se almacenará en la asignación.
+Tipo de datos de clave que se almacenará en la asignación.
 
 *Type*<br/>
- Tipo de datos de elementos que se va a almacenar en la asignación.
+Tipo de datos de elementos que se va a almacenar en la asignación.
 
 *Rasgos*<br/>
- Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en la asignación. Este argumento es opcional y el predicado binario `less<Key>` es el valor predeterminado.
+Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en la asignación. Este argumento es opcional y el predicado binario `less<Key>` es el valor predeterminado.
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado std::less<> que no tiene ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
 *Asignador*<br/>
- Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair<const Key, Type> >`.
+Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor clave de los elementos cuya coincidencia debe buscarse a partir del objeto map.
+Valor clave de los elementos cuya coincidencia debe buscarse a partir del objeto map.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del mapa que se está buscando.
+Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del mapa que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>Parámetros
 
 *Where*<br/>
- Posición del elemento que se va a quitar.
+Posición del elemento que se va a quitar.
 
 *Primero*<br/>
- Posición del primer elemento que se va a quitar.
+Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
- Posición situada más allá del último elemento que se va a quitar.
+Posición situada más allá del último elemento que se va a quitar.
 
 *Key*<br/>
- Valor de clave de los elementos que se van a quitar.
+Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- El valor de la clave con el que debe coincidir el criterio de ordenación de un elemento del mapa en el que se buscará.
+El valor de la clave con el que debe coincidir el criterio de ordenación de un elemento del mapa en el que se buscará.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del mapa que se está buscando.
+Valor de clave de argumento que se comparará con la clave de ordenación de un elemento del mapa que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>Parámetros
 
 *right*<br/>
- Mapa de argumentos que proporciona los elementos que se van a intercambiar con el mapa de destino.
+Mapa de argumentos que proporciona los elementos que se van a intercambiar con el mapa de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Valor de clave de argumento que se comparará con el valor de clave de ordenación de un elemento del mapa que se está buscando.
+Valor de clave de argumento que se comparará con el valor de clave de ordenación de un elemento del mapa que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
