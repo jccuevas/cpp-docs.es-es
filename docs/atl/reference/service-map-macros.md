@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765350"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702603"
 ---
 # <a name="service-map-macros"></a>Macros de mapa de servicio
 
@@ -123,14 +123,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Parámetros
 
-[IN] *guidService*  
-Puntero a un identificador de servicio (SID).
+*guidService*<br/>
+[in] Puntero a un identificador de servicio (SID).
 
-[IN] *riid*  
-Identificador de la interfaz a la que el llamador es obtener acceso.
+*riid*<br/>
+[in] Identificador de la interfaz a la que el llamador es obtener acceso.
 
-[OUT] *ppvObj*  
-Puntero indirecto a la interfaz solicitada.
+*ppvObj*<br/>
+[out] Puntero indirecto a la interfaz solicitada.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758861"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712743"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (clase)
 Proporciona la funcionalidad del control común de encabezado de Windows.  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *iItem*|Índice de base cero de un elemento de encabezado cuyo estilo es HDF_SPLITBUTTON. Para obtener más información, consulte el `fmt` miembro de la [DITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estructura.|  
-|[out] *lpRect*|Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para recibir la información del rectángulo delimitador.|  
+|*iItem*|[in] Índice de base cero de un elemento de encabezado cuyo estilo es HDF_SPLITBUTTON. Para obtener más información, consulte el `fmt` miembro de la [DITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estructura.|  
+|*lpRect*|[out] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para recibir la información del rectángulo delimitador.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si esta función se realiza correctamente; en caso contrario, FALSE.  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *lpRect*|Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe la información del rectángulo delimitador.|  
+|*lpRect*|[out] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe la información del rectángulo delimitador.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si esta función se realiza correctamente; en caso contrario, FALSE.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in, out] *phdhti*|Puntero a un [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) estructura que especifica el punto de prueba y recibe los resultados de la prueba.|  
+|*phdhti*|[in, out] Puntero a un [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) estructura que especifica el punto de prueba y recibe los resultados de la prueba.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero del elemento de encabezado, si hay alguno, en la posición especificada; en caso contrario, es -1.  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *iItem*|Índice de base cero de un elemento de encabezado.|  
+|*iItem*|[in] Índice de base cero de un elemento de encabezado.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  

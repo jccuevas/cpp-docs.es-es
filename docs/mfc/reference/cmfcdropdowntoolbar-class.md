@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692388"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719243"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar (clase)
 Una barra de herramientas que aparece cuando el usuario presiona y mantiene presionado un botón de la barra de herramientas de nivel superior.  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiResID*  
- El identificador de recurso del mapa de bits que hace referencia a las imágenes de barra de herramientas activa.  
+*uiResID*<br/>
+[in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de barra de herramientas activa.  
   
- [in] *uiColdResID*  
- El identificador de recurso del mapa de bits que hace referencia a las imágenes de barra de herramientas inactiva.  
+*uiColdResID*<br/>
+[in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de barra de herramientas inactiva.  
   
- [in] *uiMenuResID*  
- El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú regular.  
+*uiMenuResID*<br/>
+[in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú normal.  
   
- [in] *bloqueado*  
- TRUE para bloquear la barra de herramientas; en caso contrario, FALSE.  
+*Bloqueado*<br/>
+[in] TRUE para bloquear la barra de herramientas; en caso contrario, FALSE.  
   
- [in] *uiDisabledResID*  
- El identificador de recurso del mapa de bits que hace referencia a las imágenes de barra de herramientas deshabilitada.  
+*uiDisabledResID*<br/>
+[in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de barra de herramientas deshabilitada.  
   
- [in] *uiMenuDisabledResID*  
- El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú deshabilitado.  
+*uiMenuDisabledResID*<br/>
+[in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú deshabilitado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método es correcto; de lo contrario, 0.  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiResID*  
- [in] *uiColdResID*  
- [in] *uiMenuResID*  
- [in] *BOOL*  
- [in] *uiDisabledResID*  
- [in] *uiMenuDisabledResID*  
+*uiResID*<br/>
+[in] [in] *uiColdResID*  
+*uiMenuResID*<br/>
+[in] [in] *BOOL*  
+*uiDisabledResID*<br/>
+[in] [in] *uiMenuDisabledResID*  
  [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nFlags*  
- [in] *punto*  
+*nFlags*<br/>
+[in] [in] *punto*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nFlags*  
- [in] *punto*  
+*nFlags*<br/>
+[in] [in] *punto*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentarios  
   

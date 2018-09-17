@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689197"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721518"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar (clase)
 Un `CMFCReBar` objeto es una barra de controles que proporciona información de diseño, persistencia y estado para controles rebar.  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in] [out] *pBar*  
  Un puntero a la ventana secundaria que se va a insertar en el control rebar. El objeto que se hace referencia debe tener la **WS_CHILD** estilo de ventana.  
   
- [in] *pszText*  
- Especifica el texto que aparece en el control rebar. El texto no forma parte de la ventana secundaria. En su lugar, se muestra en el control rebar propio.  
+*pszText*<br/>
+[in] Especifica el texto que aparece en el control rebar. El texto no forma parte de la ventana secundaria. En su lugar, se muestra en el control rebar propio.  
   
  [in] [out] *pbmp*  
  Especifica el mapa de bits que se mostrará en el fondo del control rebar.  
   
- [in] *dwStyle*  
- Contiene el estilo que se aplican a la banda. Para obtener una lista completa de los estilos de banda, consulte la descripción de `fStyle` en el [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) estructura en la documentación del SDK de Windows.  
+*dwStyle*<br/>
+[in] Contiene el estilo que se aplican a la banda. Para obtener una lista completa de los estilos de banda, consulte la descripción de `fStyle` en el [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) estructura en la documentación del SDK de Windows.  
   
- [in] *clrFore*  
- Representa el color de primer plano del control rebar.  
+*clrFore*<br/>
+[in] Representa el color de primer plano del control rebar.  
   
- [in] *clrBack*  
- Representa el color de fondo del control rebar.  
+*clrBack*<br/>
+[in] Representa el color de fondo del control rebar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la banda se agregó correctamente al control rebar; en caso contrario, FALSE.  
@@ -146,14 +146,14 @@ BOOL Create(
  [in] [out] *pParentWnd*  
  Un puntero a la ventana primaria de este control rebar.  
   
- [in] *dwCtrlStyle*  
- Especifica el estilo del control rebar. El valor de estilo predeterminado es **RBS_BANDBORDERS**, que muestra restringir las líneas para separar las bandas adyacentes en el control rebar. Para obtener una lista de los estilos válidos, vea [estilos del Control Rebar](/windows/desktop/Controls/rebar-control-styles) en la documentación del SDK de Windows.  
+*dwCtrlStyle*<br/>
+[in] Especifica el estilo del control rebar. El valor de estilo predeterminado es **RBS_BANDBORDERS**, que muestra restringir las líneas para separar las bandas adyacentes en el control rebar. Para obtener una lista de los estilos válidos, vea [estilos del Control Rebar](/windows/desktop/Controls/rebar-control-styles) en la documentación del SDK de Windows.  
   
- [in] *dwStyle*  
- El estilo de ventana del control rebar. Para obtener una lista de los estilos válidos, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] El estilo de ventana del control rebar. Para obtener una lista de los estilos válidos, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *nID*  
- Identificador de ventana secundaria. del control rebar  
+*nID*<br/>
+[in] Identificador de ventana secundaria. del control rebar  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el control rebar se creó correctamente; en caso contrario, FALSE.  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- [in] *pTI*  
+*punto*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentarios  
   

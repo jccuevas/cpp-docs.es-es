@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf94c53bd0491d5959a53591b77305d19f21bc36
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4bafae070d3ff9fe80070e3598cd36867abcf830
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612351"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707205"
 ---
 # <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 
@@ -40,11 +40,11 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *t*  
-El primer número que se compara. Esto debe ser de tipo `T`.
+*t*<br/>
+[in] El primer número que se compara. Esto debe ser de tipo `T`.
 
-[in] *u*  
-Segundo número que se va a comparar. Esto debe ser de tipo `U`.
+*u*<br/>
+[in] Segundo número que se va a comparar. Esto debe ser de tipo `U`.
 
 ## <a name="return-value"></a>Valor devuelto
 
