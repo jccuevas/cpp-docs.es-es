@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCSpinButtonCtrl | Documentos de Microsoft
+title: CMFCSpinButtonCtrl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 960a1a0338a3390fdc10cf03ddc235bcf4ecbae9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712756"
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>Clase CMFCSpinButtonCtrl
+# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl (clase)
 La `CMFCSpinButtonCtrl` clase es compatible con un administrador visual que dibuja un control de botón de número.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -50,7 +50,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 |[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Vuelve a dibujar el control de botón de número actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para utilizar un administrador visual para dibujar un control de botón de número en la aplicación, reemplace todas las instancias de la `CSpinButtonCtrl` clase con la `CMFCSpinButtonCtrl` clase.  
+ Para usar un administrador visual para dibujar un control de botón de número en la aplicación, reemplace todas las instancias de la `CSpinButtonCtrl` clase con la `CMFCSpinButtonCtrl` clase.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo crear un objeto de la `CMFCSpinButtonCtrl` clase y usar su `Create` método.  
@@ -79,11 +79,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
- Las llamadas de framework la `CMFCSpinButtonCtrl::OnPaint` método para controlar la [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) mensaje, y que a su vez llamadas de método esto `CMFCSpinButtonCtrl::OnDraw` método. Invalide este método para personalizar la forma en que el marco de trabajo dibuja el control de botón de número.  
+ Llama el marco del `CMFCSpinButtonCtrl::OnPaint` método para controlar el [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) mensaje y que a su vez llama método esto `CMFCSpinButtonCtrl::OnDraw` método. Invalide este método para personalizar la forma en que el marco dibuja el control de botón de número.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

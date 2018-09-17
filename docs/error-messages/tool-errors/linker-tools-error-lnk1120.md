@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1120 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1120 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab2b937f8bf941219c678c638e9757903ee7698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1d2a55d683e9c8b9d6a0da2b3e5fa78d5a39933
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725574"
 ---
 # <a name="linker-tools-error-lnk1120"></a>Error de las herramientas del vinculador LNK1120
-*número* externos sin resolver  
+
+> *número* externos sin resolver  
   
-El error LNK1120 notifica el recuento (*número*) de errores de símbolo externo sin resolver de esta operación de enlace. La mayoría no resuelta se notifican los errores de símbolo externo individualmente por [Error de las herramientas del vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) y [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), que preceden a este mensaje de error, una vez por cada externo sin resolver error de símbolo.  
+El error LNK1120 notifica el recuento (*número*) de los errores de símbolo externo sin resolver de esta operación de enlace. La mayoría sin resolver errores de símbolo externo se notifican individualmente por [Error de las herramientas del vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) y [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), que preceden a este mensaje de error, una vez para cada externo sin resolver error de símbolo.  
   
-Para corregir este error, corrija todos los demás errores externos sin resolver u otros errores del vinculador que lo preceden en la salida de compilación. Este error no se produce cuando no permanecen errores externos sin resolver.  
+Para corregir este error, corrija todos los demás errores externos sin resolver o de otros errores del vinculador que lo preceden en la salida de compilación. No se notifica este error cuando no hay errores externos sin resolver permanecen.  

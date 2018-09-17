@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212896"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707491"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager (clase)
 Administra las tablas de teclas de método abreviado de la ventana de marco principal y las ventanas de marco secundarias.  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- Identificador del comando.  
+*uiCmd*<br/>
+[in] El identificador de comando.  
   
- [out] *str*  
- Referencia a un objeto `CString`.  
+*str*<br/>
+[out] Una referencia a un `CString` objeto.  
   
- [in] *pWndFrame*  
- Un puntero a una ventana de marco.  
+*pWndFrame*<br/>
+[in] Un puntero a una ventana de marco.  
   
- [in] *bIsDefaultFrame*  
- Especifica si la ventana de marco es la ventana de marco de forma predeterminada.  
+*bIsDefaultFrame*<br/>
+[in] Especifica si la ventana de marco es la ventana de marco de forma predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se encuentra el método abreviado; en caso contrario, es 0.  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *nKey*|Clave que se va a comprobar.|  
-|[in] *fVirt*|Especifica el comportamiento de la tecla de método abreviado. Para obtener una lista de valores posibles, vea [aceleración estructura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
-|[in] *pWndFrame*|Una ventana de marco. Este método determina si una tecla de método abreviado se trata en este marco.|  
-|[in] *bIsDefaultFrame*|Un parámetro booleano que indica si *pWndFrame* es la ventana de marco de forma predeterminada.|  
+|*nKey*|[in] Para comprobar la clave.|  
+|*fVirt*|[in] Especifica el comportamiento de la tecla de método abreviado. Para obtener una lista de valores posibles, vea [aceleración estructura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
+|*pWndFrame*|[in] Una ventana de marco. Este método determina si una tecla de método abreviado se trata en este marco.|  
+|*bIsDefaultFrame*|[in] Un parámetro booleano que indica si *pWndFrame* es la ventana de marco de forma predeterminada.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se controla la tecla de método abreviado. FALSE si no se controla la clave o si *pWndFrame* es NULL.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *nChar*|El carácter que este método comprueba.|  
+|*NChar*|[in] El carácter que este método comprueba.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el carácter es imprimible, cero si no lo está.  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- La ruta de acceso del registro donde `CKeyboardManager` se guardan los datos.  
+*lpszProfileName*<br/>
+[in] La ruta de acceso del registro donde `CKeyboardManager` se guardan los datos.  
   
- [in] *pDefaultFrame*  
- Un puntero a una ventana de marco que se usará como la ventana de forma predeterminada.  
+*pDefaultFrame*<br/>
+[in] Un puntero a una ventana de marco que se usará como la ventana de forma predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el estado se carga correctamente o 0 en caso contrario.  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- La ruta de acceso del registro para guardar la `CKeyboardManager` estado.  
+*lpszProfileName*<br/>
+[in] La ruta de acceso del registro para guardar la `CKeyboardManager` estado.  
   
- [in] *pDefaultFrame*  
- Un puntero a una ventana de marco que se convierte en la ventana de forma predeterminada.  
+*pDefaultFrame*<br/>
+[in] Un puntero a una ventana de marco que se convierte en la ventana de forma predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el estado del Administrador de teclado se ha guardado correctamente, o 0 en caso contrario.  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bShowAll*  
- Si es TRUE, se mostrará todas las teclas de método abreviado. Si es FALSE, se mostrará la primera tecla de método abreviado.  
+*bShowAll*<br/>
+[in] Si es TRUE, se mostrará todas las teclas de método abreviado. Si es FALSE, se mostrará la primera tecla de método abreviado.  
   
- [in] *lpszDelimiter*  
- Una cadena que se va a insertar entre las teclas de método abreviado. Este delimitador no tiene ningún efecto si solo se muestra una tecla de método abreviado.  
+*lpszDelimiter*<br/>
+[in] Una cadena que se va a insertar entre las teclas de método abreviado. Este delimitador no tiene ningún efecto si solo se muestra una tecla de método abreviado.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, si un comando tiene más de una tecla de método abreviado asociada con él, se mostrará la primera tecla de método abreviado. Esta función permite obtener una lista de todas las teclas de método abreviado asociadas con todos los comandos.  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nChar*  
- Carácter que se va a convertir.  
+*NChar*<br/>
+[in] El carácter que se va a convertir.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El carácter que es la parte superior del registro del parámetro de entrada.  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pTemplate*  
- Un puntero a una plantilla de documento.  
+*pTemplate*<br/>
+[in] Un puntero a una plantilla de documento.  
   
- [in] *lpAccel*  
- Un puntero a la nueva clave de acceso directo.  
+*lpAccel*<br/>
+[in] Un puntero a la nueva clave de acceso directo.  
   
- [in] *nSize*  
- El tamaño de la nueva tabla de acceso directo.  
+*nSize*<br/>
+[in] El tamaño de la nueva tabla de acceso directo.  
   
- [in] *pDefaultFrame*  
- Un puntero a la ventana de marco de forma predeterminada.  
+*pDefaultFrame*<br/>
+[in] Un puntero a la ventana de marco de forma predeterminada.  
   
- [in] *hAccelNew*  
- Identificador de la nueva tabla de acceso directo.  
+*hAccelNew*<br/>
+[in] Identificador de la nueva tabla de acceso directo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método es correcto; en caso contrario, es 0.  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a6bed16f338c5ee3333529613189fe03ad7e3ec3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851592"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709558"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl (clase)
 La `CMFCLinkCtrl` clase muestra un botón como hipervínculo e invoca el destino del vínculo cuando se hace clic en el botón.  
@@ -91,11 +91,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rectClient*  
- Un rectángulo que delimita el control de vínculo.  
+*rectClient*<br/>
+[in] Un rectángulo que delimita el control de vínculo.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método cuando desee utilizar su propio código para dibujar el rectángulo de foco del botón.  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszURL*  
- Para mostrar el texto del botón.  
+*lpszURL*<br/>
+[in] Para mostrar el texto del botón.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -121,8 +121,8 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszPrefix*  
- El prefijo del protocolo de dirección URL.  
+*lpszPrefix*<br/>
+[in] El prefijo del protocolo de dirección URL.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para establecer el prefijo de dirección URL. El prefijo no se muestra en la cara del botón, pero se puede usar para ayudar a buscar de destino de la dirección URL.  
@@ -137,11 +137,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bVCenter*  
- TRUE para centrar el texto del botón y un mapa de bits verticalmente entre la parte superior e inferior del control de vínculo; en caso contrario, FALSE. El valor predeterminado es FALSE.  
+*bVCenter*<br/>
+[in] TRUE para centrar el texto del botón y un mapa de bits verticalmente entre la parte superior e inferior del control de vínculo; en caso contrario, FALSE. El valor predeterminado es FALSE.  
   
- [in] *bHCenter*  
- TRUE para centrar el texto del botón y un mapa de bits horizontalmente entre los lados izquierdo y derecho del control link; en caso contrario, FALSE. El valor predeterminado es FALSE.  
+*bHCenter*<br/>
+[in] TRUE para centrar el texto del botón y un mapa de bits horizontalmente entre los lados izquierdo y derecho del control link; en caso contrario, FALSE. El valor predeterminado es FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contiene el nuevo tamaño del control link.  
