@@ -1,7 +1,7 @@
 ---
 title: módulo | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b62716066d1df94b0072b00254dc96ec450df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207497"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720621"
 ---
 # <a name="pack"></a>pack
 Especifica la alineación de empaquetado de los miembros de estructura, unión y clase.  
@@ -34,29 +34,31 @@ Especifica la alineación de empaquetado de los miembros de estructura, unión y
 #pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
 ```  
   
+### <a name="parameters"></a>Parámetros
+
+**Show**<br/>
+(Opcional) Muestra el valor de byte actual para la alineación de empaquetado. El valor se muestra mediante un mensaje de advertencia.  
+
+**push**<br/>
+(Opcional) Valor de la alineación de empaquetado actual de inserciones en la pila interna del compilador y establece la alineación de empaquetado actual valor en *n*. Si *n* no se especifica, el actual se inserta el valor de alineación de empaquetado.  
+  
+**pop**<br/>
+(Opcional) Quita el registro de la parte superior de la pila interna del compilador. Si *n* no se especifica con **pop**, entonces el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si *n* se especifica, por ejemplo, `#pragma pack(pop, 16)`, *n* se convierte en el nuevo valor de alineación de empaquetado. Si saca con *identificador*, por ejemplo, `#pragma pack(pop, r1)`, a continuación, se extraen todos los registros de la pila hasta que el registro que tiene *identificador* se encuentra. Ese registro se saca y el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si saca con un *identificador* que no se encuentra en cualquier registro en la pila, el **pop** se omite.  
+  
+*identifier*<br/>
+(Opcional) Cuando se usa con *inserción*, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con **pop**, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
+  
+*n*<br/>
+(Opcional) Especifica el valor, en bytes, que se usará para el empaquetado. Si la opción del compilador [/Zp](../build/reference/zp-struct-member-alignment.md) no está establecida para el módulo, el valor predeterminado de *n* es 8. Los valores válidos son 1, 2, 4, 8 y 16. La alineación de un miembro estará en un límite que sea un múltiplo de *n* ni un múltiplo del tamaño del miembro, lo que sea menor.  
+  
+`#pragma pack(pop, identifier, n)` no está definido.  
+  
 ## <a name="remarks"></a>Comentarios  
 
 Empaquetar una clase consiste en colocar sus miembros uno tras otro en la memoria, lo que puede conllevar que algunos o todos los miembros se alineen en un límite menor que la alineación predeterminada de la arquitectura de destino. **módulo** ofrece un control en el nivel de declaración de datos. Esto difiere de la opción del compilador [/Zp](../build/reference/zp-struct-member-alignment.md), que solo proporciona control de nivel de módulo. **módulo** surte efecto en la primera **struct**, **unión**, o **clase** declaración después de la pragma. **módulo** no tiene ningún efecto en las definiciones. Una llamada a **pack** sin argumentos establece *n* en el valor establecido en la opción del compilador `/Zp`. Si no se establece la opción del compilador, el valor predeterminado es 8.  
   
-Si cambia la alineación de una estructura, puede que no use tanto espacio en la memoria, pero es posible que vea una disminución del rendimiento o incluso que obtenga una excepción generada por el hardware debido al acceso no alineado.  Puede modificar este comportamiento de excepción mediante [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
-  
-*Mostrar* (opcional)  
-Muestra el valor de byte actual para la alineación de empaquetamiento. El valor se muestra mediante un mensaje de advertencia.  
-  
-*inserción* (opcional)  
-Valor de la alineación de empaquetado actual de inserciones en la pila interna del compilador y establece la alineación de empaquetado actual valor en *n*. Si *n* no se especifica, el actual se inserta el valor de alineación de empaquetado.  
-  
-*POP* (opcional)  
-Quita el registro de la parte superior de la pila interna del compilador. Si *n* no se especifica con *pop*, entonces el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si *n* se especifica, por ejemplo, `#pragma pack(pop, 16)`, *n* se convierte en el nuevo valor de alineación de empaquetado. Si saca con *identificador*, por ejemplo, `#pragma pack(pop, r1)`, a continuación, se extraen todos los registros de la pila hasta que el registro que tiene *identificador* se encuentra. Ese registro se saca y el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si saca con un *identificador* que no se encuentra en cualquier registro en la pila, el *pop* se omite.  
-  
-*identificador* (opcional)  
-Cuando se usa con *inserción*, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con *pop*, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
-  
-*n* (opcional)  
-Especifica el valor, en bytes, que se usará para el empaquetado. Si la opción del compilador [/Zp](../build/reference/zp-struct-member-alignment.md) no está establecida para el módulo, el valor predeterminado de *n* es 8. Los valores válidos son 1, 2, 4, 8 y 16. La alineación de un miembro estará en un límite que sea un múltiplo de *n* ni un múltiplo del tamaño del miembro, lo que sea menor.  
-  
-`#pragma pack(pop, identifier, n)` no está definido.  
-  
+Si cambia la alineación de una estructura, puede que no use tanto espacio en la memoria, pero es posible que vea una disminución del rendimiento o incluso que obtenga una excepción generada por el hardware debido al acceso no alineado.  Puede modificar este comportamiento de excepción mediante [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).
+
 Para obtener más información acerca de cómo modificar la alineación, vea estos temas:  
   
 - [__alignof](../cpp/alignof-operator.md)  
@@ -67,8 +69,8 @@ Para obtener más información acerca de cómo modificar la alineación, vea est
   
 - [Ejemplos de alineación de estructuras](../build/examples-of-structure-alignment.md) (x64 específico)  
   
-    > [!WARNING]
-    > Tenga en cuenta que en Visual Studio 2015 y posterior puede usar los operadores estándar alignof y alignas, que, a diferencia de `__alignof` y `declspec( align )`, son portátiles entre compiladores. El estándar de C++ no se ocupa del empaquetado, por lo que deberá seguir usando **pack** (o la extensión que corresponda en otros compiladores) para especificar alineaciones que sean inferiores al tamaño de palabra de la arquitectura de destino.  
+   > [!WARNING]
+   > Tenga en cuenta que en Visual Studio 2015 y posterior puede usar los operadores estándar alignof y alignas, que, a diferencia de `__alignof` y `declspec( align )`, son portátiles entre compiladores. El estándar de C++ no se ocupa del empaquetado, por lo que deberá seguir usando **pack** (o la extensión que corresponda en otros compiladores) para especificar alineaciones que sean inferiores al tamaño de palabra de la arquitectura de destino.  
   
 ## <a name="examples"></a>Ejemplos
 

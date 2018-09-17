@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214684"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712963"
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
 La biblioteca MFC (Microsoft Foundation Class) ofrece muchos servicios de diagnóstico que facilitan la depuración de los programas con mayor facilidad. Estos servicios de diagnóstico incluyen macros y funciones globales que le permiten realizar un seguimiento de las asignaciones de memoria de su programa, volcar el contenido de los objetos en tiempo de ejecución e imprimir mensajes de depuración en tiempo de ejecución. Las macros y funciones globales para servicios de diagnóstico se agrupan en las siguientes categorías:  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bDump*  
- TRUE indica que el volcado de pérdida de memoria está habilitado; FALSE indica que el volcado de pérdida de memoria está deshabilitado.  
+*bDump*<br/>
+[in] TRUE indica que el volcado de pérdida de memoria está habilitado; FALSE indica que el volcado de pérdida de memoria está deshabilitado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Valor anterior de esta marca.  

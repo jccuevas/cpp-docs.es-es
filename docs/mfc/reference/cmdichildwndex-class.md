@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677696"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726718"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 La `CMDIChildWndEx` clase proporciona la funcionalidad de un Windows ventana secundaria de varios documentos (MDI) de la interfaz. Amplía la funcionalidad de [CMDIChildWnd (clase)](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero al panel.  
+*pControlBar*<br/>
+[in] Un puntero al panel.  
   
- [in] *bTail*  
- TRUE para agregar el panel al final de la lista de paneles para el Administrador de acoplamiento en caso contrario, FALSE.  
+*bTail*<br/>
+[in] TRUE para agregar el panel al final de la lista de paneles para el Administrador de acoplamiento en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel se registró correctamente con el Administrador de acoplamiento en caso contrario, FALSE.  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero al panel.  
+*pControlBar*<br/>
+[in] Un puntero al panel.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Ajusta el diseño de acoplamiento.  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hdwp*  
- Identificador de una estructura de posición de ventana aplazada.  
+*hdwp*<br/>
+[in] Identificador de una estructura de posición de ventana aplazada.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero al panel.  
+*pBar*<br/>
+[in] Un puntero al panel.  
   
- [in] *nDockBarID*  
- El identificador del panel.  
+*nDockBarID*<br/>
+[in] El identificador del panel.  
   
- [in] *lpRect*  
- Un puntero a un rectángulo.  
+*lpRect*<br/>
+[in] Un puntero a un rectángulo.  
   
 ### <a name="remarks"></a>Comentarios  
  El *lpRect* no se usa el parámetro.  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwDockStyle*  
- Especifica los lados de la ventana de marco principal que está habilitado. Utilice uno o varios de los siguientes indicadores.  
+*dwDockStyle*<br/>
+[in] Especifica los lados de la ventana de marco principal que está habilitado. Utilice uno o varios de los siguientes indicadores.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwDockStyle*  
- Especifica la alineación de acoplamiento para habilitar.  
+*dwDockStyle*<br/>
+[in] Especifica la alineación de acoplamiento para habilitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- El identificador de control del panel a buscar.  
+*nID*<br/>
+[in] El identificador de control del panel a buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al panel si se encuentra, de lo contrario, NULL.  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero al panel se va a insertar.  
+*pControlBar*<br/>
+[in] Un puntero al panel se va a insertar.  
   
- [in] *pTarget*  
- Un puntero en el panel adyacente.  
+*pTarget*<br/>
+[in] Un puntero en el panel adyacente.  
   
- [in] *después*  
- Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.  
+*Después*<br/>
+[in] Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método tiene éxito, FALSE en caso contrario.  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- El punto especificado.  
+*punto*<br/>
+[in] El punto especificado.  
   
- [in] *dwBarAlignment*  
- Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
+*bOuterEdge*<br/>
+[in] TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el punto está cerca del sitio de vinculación; en caso contrario, FALSE.  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFrame*  
- Un puntero a una ventana de marco reducido.  
+*pFrame*<br/>
+[in] Un puntero a una ventana de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método tiene éxito, en caso contrario, FALSE.  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bPreview*  
- Si es TRUE, entrar en modo de vista previa de impresión. Si es FALSE, salga del modo de vista previa de impresión.  
+*bPreview*<br/>
+[in] Si es TRUE, entrar en modo de vista previa de impresión. Si es FALSE, salga del modo de vista previa de impresión.  
   
- [in] *pState*  
- Un puntero a la estructura de estado de vista previa de impresión.  
+*pState*<br/>
+[in] Un puntero a la estructura de estado de vista previa de impresión.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Lo llama el marco de trabajo para actualizar el título del marco.  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bAddToTitle*  
- Si es TRUE, agregue el nombre del documento en el título.  
+*bAddToTitle*<br/>
+[in] Si es TRUE, agregue el nombre del documento en el título.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Devuelve el panel que contiene el punto especificado.  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Especifica el punto, en coordenadas de pantalla, para comprobar.  
+*punto*<br/>
+[in] Especifica el punto, en coordenadas de pantalla, para comprobar.  
   
- [in] *nSensitivity*  
- Aumentar el área de búsqueda en esta cantidad. Un panel satisface los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
+*nSensitivity*<br/>
+[in] Aumentar el área de búsqueda en esta cantidad. Un panel satisface los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
   
- [in] *bExactBar*  
- TRUE para omitir el *nSensitivity* parámetro; en caso contrario, FALSE.  
+*bExactBar*<br/>
+[in] TRUE para omitir el *nSensitivity* parámetro; en caso contrario, FALSE.  
   
- [in] *pRTCBarType*  
- Si no es NULL, el método busca solo los paneles del tipo especificado.  
+*pRTCBarType*<br/>
+[in] Si no es NULL, el método busca solo los paneles del tipo especificado.  
   
- [in] *dwAlignment*  
- Si un panel se encuentra en el punto especificado, este parámetro contiene el lado del panel que era más cercano al punto especificado. Para obtener más información, vea la sección Comentarios.  
+*dwAlignment*<br/>
+[in] Si un panel se encuentra en el punto especificado, este parámetro contiene el lado del panel que era más cercano al punto especificado. Para obtener más información, vea la sección Comentarios.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la `CBasePane`-objeto derivado que contiene el punto especificado o NULL si no se ha encontrado ningún panel.  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bNotify*  
- Si es TRUE, el elemento en contexto activo para la ventana recibe la notificación del cambio de diseño.  
+*bNotify*<br/>
+[in] Si es TRUE, el elemento en contexto activo para la ventana recibe la notificación del cambio de diseño.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Quita un panel desde el Administrador de acoplamiento.  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero al panel para quitar.  
+*pControlBar*<br/>
+[in] Un puntero al panel para quitar.  
   
- [in] *bDestroy*  
- Si es TRUE, se destruye el panel quitado.  
+*bDestroy*<br/>
+[in] Si es TRUE, se destruye el panel quitado.  
   
- [in] *bAdjustLayout*  
- Si es TRUE, ajustar el diseño de acoplamiento inmediatamente.  
+*bAdjustLayout*<br/>
+[in] Si es TRUE, ajustar el diseño de acoplamiento inmediatamente.  
   
- [in] *bAutoHide*  
- Si es TRUE, el diseño de acoplamiento está relacionado con la lista de barras de ocultación automática. Si es FALSE, el diseño de acoplamiento está relacionado con la lista de paneles regulares.  
+*bAutoHide*<br/>
+[in] Si es TRUE, el diseño de acoplamiento está relacionado con la lista de barras de ocultación automática. Si es FALSE, el diseño de acoplamiento está relacionado con la lista de paneles regulares.  
   
- [in] *pBarReplacement*  
- Un puntero a un panel que reemplaza el panel quitado.  
+*pBarReplacement*<br/>
+[in] Un puntero a un panel que reemplaza el panel quitado.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- [in] *bMostrar*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bMostrar*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Comentarios  
   

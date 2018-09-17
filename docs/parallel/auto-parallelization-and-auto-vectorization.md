@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720415"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Paralelización y vectorización automáticas
 El paralelizador automático y el vectorizador automático se han diseñado para proporcionar mejoras automáticas de rendimiento de los bucles en el código.  
@@ -75,8 +75,10 @@ La compilación con este comando:
   
  produce este resultado:  
   
-**---Analizando función: void test(void) __cdecl**   
-**d:\myproject\mytest.cpp(4): bucle paralelizado**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 La compilación con este comando:  
   
@@ -84,9 +86,11 @@ La compilación con este comando:
   
 produce este resultado:  
   
-**---Analizando función: void test(void) __cdecl**   
-**d:\myproject\mytest.cpp(4): bucle paralelizado**   
-**d:\myproject\mytest.cpp(4): bucle no paralelizado por el motivo '1008'**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 Tenga en cuenta la diferencia entre los dos diferentes [/qpar-Report (nivel de información de Paralelizador automático)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opciones. `/Qpar-report:1` genera mensajes del paralelizador solo para los bucles que se paralelizan correctamente. `/Qpar-report:2` genera mensajes del paralelizador para las paralelizaciones de bucles correctas e incorrectas.  
   

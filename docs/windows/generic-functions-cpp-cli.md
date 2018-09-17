@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700c88fa71e82e35602efef768fc5753760a5e1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709155"
 ---
 # <a name="generic-functions-ccli"></a>Funciones genéricas (C++/CLI)
 
@@ -63,11 +63,11 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parámetros
 
-*atributos* (opcional)  
-Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.
+*Atributos*  
+(Opcional) Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.
 
-*modificadores* (opcional)  
-Un modificador de la función, como estático.  **virtual** no se permite porque los métodos virtuales no pueden ser genéricos.
+*Modificadores*  
+(Opcional) Un modificador de la función, como estático.  **virtual** no se permite porque los métodos virtuales no pueden ser genéricos.
 
 *tipo de valor devuelto*  
 Tipo devuelto por el método. Si el tipo de valor devuelto es void, no se requiere ningún valor devuelto.
@@ -78,8 +78,8 @@ Nombre de la función.
 *identificadores de parámetro de tipo*  
 Lista separada por comas de identificadores.
 
-*parámetros formales* (opcional)  
-Lista de parámetros.
+*parámetros formales*  
+(Opcional) Lista de parámetros.
 
 *tipo de parámetro restricciones cláusulas*  
 Esto especifica restricciones de los tipos que se pueden usar como argumentos de tipo y adopta la forma especificada en [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).

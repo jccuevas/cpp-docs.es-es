@@ -1,5 +1,5 @@
 ---
-title: /Zc:externConstexpr (variables de constexpr enable extern) | Documentos de Microsoft
+title: '/ Zc: externconstexpr (habilitar las variables del extern constexpr) | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -17,36 +17,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cbce8366fdd7be62c8d71f838b298d77849dcdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34aea466a3e673c3eebb3b415d544d9299fed615
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378423"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713147"
 ---
-# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (variables de habilitar extern constexpr)
+# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/ Zc: externconstexpr (habilitar las variables del extern constexpr)
 
-El **/Zc:externConstexpr** opción del compilador indica al compilador que se ajusta al estándar de C++ y permitir la vinculación externa para `constexpr` variables. De forma predeterminada, Visual Studio siempre da un `constexpr` variable vinculación interna, incluso si se especifica la `extern` palabra clave.
+El **/Zc: externconstexpr** opción del compilador indica al compilador que se ajusta al estándar de C++ y permiten una vinculación externa para `constexpr` variables. De forma predeterminada, Visual Studio siempre da un `constexpr` vinculación interna de variable, incluso si se especifica la `extern` palabra clave.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/Zc:externConstexpr**[**-**]
+> **/ Zc: externconstexpr**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
-El **/Zc:externConstexpr** opción del compilador hace que el compilador vinculación externa se aplican a las variables declaradas con `extern constexpr`. En versiones anteriores de Visual Studio y de manera predeterminada o si **/Zc:externConstexpr-** se especifica, Visual Studio aplica vinculación interna a `constexpr` aunque se utilicen variables el `extern` se utiliza la palabra clave. El **/Zc:externConstexpr** opción está disponible a partir de Visual Studio de 2017 actualización 15,6. y está desactivada de forma predeterminada. El [/ permisivo-](permissive-standards-conformance.md) no habilita la opción **/Zc:externConstexpr**.
+El **/Zc: externconstexpr** opción del compilador hace que el compilador vinculación externa se aplican a las variables declaradas con `extern constexpr`. En versiones anteriores de Visual Studio y de forma predeterminada o si **/Zc:externConstexpr-** se especifica, Visual Studio aplica vinculación interna a `constexpr` aunque se utilicen las variables el `extern` se utiliza la palabra clave. El **/Zc: externconstexpr** opción está disponible a partir de Visual Studio 2017 15.6 de actualización. y está desactivada de forma predeterminada. El [/ permissive-](permissive-standards-conformance.md) no habilita la opción **/Zc: externconstexpr**.
 
-Si un archivo de encabezado contiene una variable declarada `extern constexpr`, se debe marcar [__declspec (selectany)](../../cpp/selectany.md) para combinar las declaraciones duplicadas en una sola instancia en el archivo binario vinculado. En caso contrario, puede que vea errores del compilador, por ejemplo, LNK2005, para las infracciones de la regla de definición.
+Si un archivo de encabezado contiene una variable declarada `extern constexpr`, debe marcarse [__declspec (selectany)](../../cpp/selectany.md) para combinar las declaraciones duplicadas en una sola instancia en el archivo binario vinculado. En caso contrario, es posible que vea errores del vinculador, por ejemplo, LNK2005, las infracciones de la regla de definición de.
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para establecer esta opción del compilador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **C/C++** > **línea de comandos** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
-1. Agregar **/Zc:externConstexpr** o **/Zc:externConstexpr-** a la **opciones adicionales:** panel.
+1. Agregar **/Zc: externconstexpr** o **/Zc:externConstexpr-** a la **opciones adicionales:** panel.
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)  
-[Auto (palabra clave)](../../cpp/auto-keyword.md)
+[/Zc (ajuste)](../../build/reference/zc-conformance.md)
+[auto (palabra clave)](../../cpp/auto-keyword.md)

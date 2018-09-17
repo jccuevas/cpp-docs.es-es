@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703838"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel (clase)
 Implementa una etiqueta de texto no seleccionable en una cinta.  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszText*  
- Texto que aparecerá en la etiqueta.  
+*lpszText*<br/>
+[in] Texto que aparecerá en la etiqueta.  
   
- [in] *bIsMultiLine*  
- TRUE para especificar que la etiqueta es una etiqueta de varias líneas; en caso contrario, FALSE.  
+*bIsMultiLine*<br/>
+[in] TRUE para especificar que la etiqueta es una etiqueta de varias líneas; en caso contrario, FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Determina los datos de accesibilidad para el elemento actual de etiqueta de cinta de opciones.  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParent*  
- Representa la ventana primaria de la etiqueta actual de la cinta de opciones.  
+*pParent*<br/>
+[in] Representa la ventana primaria de la etiqueta actual de la cinta de opciones.  
   
- [out] *datos*  
- Un objeto de tipo `CAccessibilityData` que se rellena con los datos de accesibilidad de la etiqueta actual de la cinta de opciones.  
+*data*<br/>
+[out] Un objeto de tipo `CAccessibilityData` que se rellena con los datos de accesibilidad de la etiqueta actual de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el *datos* parámetro era correctamente rellenada con los datos de accesibilidad de la etiqueta de cinta actual; en caso contrario, FALSE.  

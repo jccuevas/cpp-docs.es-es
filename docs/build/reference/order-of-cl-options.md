@@ -1,5 +1,5 @@
 ---
-title: Orden de las opciones de CL | Documentos de Microsoft
+title: Orden de las opciones de CL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165e20eefecd20ad9dec9e01b38c5eaa7926e4eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ffe9a440396df14823775db335e52bca6cacdb3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372814"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725028"
 ---
 # <a name="order-of-cl-options"></a>Orden de las opciones de CL
-Opciones pueden aparecer en cualquier parte en la línea de comandos de CL, excepto para la opción, que debe aparecer en último lugar. El compilador comienza con las opciones especificadas en el [variable de entorno de CL](../../build/reference/cl-environment-variables.md) y, a continuación, lee la línea de comandos de izquierda a derecha, procesando los archivos de comandos en el orden en los encuentra. Cada opción se aplica a todos los archivos en la línea de comandos. Si CL encuentra opciones en conflicto, utiliza la opción más a la derecha.  
-  
-## <a name="see-also"></a>Vea también  
- [Sintaxis de la línea de comandos del compilador](../../build/reference/compiler-command-line-syntax.md)
+
+Las opciones pueden aparecer en cualquier lugar en la línea de comandos de CL, excepto la opción /link, que debe aparecer en último lugar. El compilador comienza con las opciones especificadas en el [variable de entorno de CL](../../build/reference/cl-environment-variables.md) y, a continuación, lee la línea de comandos de izquierda a derecha: procesamiento de archivos de comandos en el orden en que los encuentra. Cada opción se aplica a todos los archivos en la línea de comandos. Si CL encuentra opciones en conflicto, utiliza la opción más a la derecha.
+
+## <a name="see-also"></a>Vea también
+
+[Sintaxis de la línea de comandos del compilador](../../build/reference/compiler-command-line-syntax.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 551282b6d99491e49a185bab2ede2f775bb55498
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955843"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707829"
 ---
 # <a name="lttypetraitsgt-functions"></a>Funciones de &lt;type_traits&gt;
 
@@ -53,11 +53,11 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*En*  
- El tipo del objeto que recibe la asignación.
+*En*<br/>
+El tipo del objeto que recibe la asignación.
 
-*From*  
- El tipo del objeto que proporciona el valor.
+*From*<br/>
+El tipo del objeto que proporciona el valor.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -74,8 +74,8 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*  
- Tipo que se va a consultar.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -92,8 +92,8 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*  
- Tipo que se va a consultar.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -145,8 +145,8 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
- Tipo que se va a consultar.
+*T*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -198,8 +198,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
- Tipo que se va a consultar.
+*T*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -216,8 +216,8 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
- El tipo que se debe evaluar
+*T*<br/>
+El tipo que se debe evaluar
 
 ### <a name="remarks"></a>Comentarios
 
@@ -234,8 +234,8 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*  
- Tipo que se va a consultar.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -252,8 +252,8 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
- Tipo que se va a consultar.
+*T*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -272,8 +272,8 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*  
- Tipo que se va a consultar.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -302,8 +302,8 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*  
- Tipo que se va a consultar.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 

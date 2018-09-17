@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7150789756273f9d70b3dd6e156c63d0649d0957
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539132"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708193"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar (clase)
 El `CMFCStatusBar` clase implementa una barra de estado similar a la `CStatusBar` clase. Sin embargo, la clase `CMFCStatusBar` tiene características que no ofrece la clase `CStatusBar` , tales como la capacidad para mostrar imágenes, animaciones y barras de progreso y la capacidad de responder a los doble clics del mouse. 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -229,8 +229,8 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentWnd*  
- [in] *dwStyle*  
+*pParentWnd*<br/>
+[in] [in] *dwStyle*  
  [in] *nID*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentWnd*  
- [in] *dwCtrlStyle*  
- [in] *dwStyle*  
- [in] *nID*  
+*pParentWnd*<br/>
+[in] [in] *dwCtrlStyle*  
+*dwStyle*<br/>
+[in] [in] *nID*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -277,8 +277,8 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Si es TRUE, habilite el procesamiento del doble clic del mouse. En caso contrario, deshabilite el procesamiento del doble clic del mouse.  
+*bHabilitar el*<br/>
+[in] Si es TRUE, habilite el procesamiento del doble clic del mouse. En caso contrario, deshabilite el procesamiento del doble clic del mouse.  
   
 ### <a name="remarks"></a>Comentarios  
  Si está habilitada la barra de estado para procesar los dobles clics, Windows envía la notificación de WM_COMMAND junto con un identificador de recurso para el propietario de la cada vez que el usuario hace doble clic en el panel de barra de estado de la barra de estado.  
@@ -297,23 +297,23 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel cuyo barra de progreso para habilitar.  
+*nIndex*<br/>
+[in] Especifica el índice del panel cuyo barra de progreso para habilitar.  
   
- [in] *nEl*  
- Especifica el valor máximo de la barra de progreso.  
+*nEl*<br/>
+[in] Especifica el valor máximo de la barra de progreso.  
   
- [in] *bDisplayText*  
- Especifica si la barra de progreso debe mostrar el valor de progreso actual.  
+*bDisplayText*<br/>
+[in] Especifica si la barra de progreso debe mostrar el valor de progreso actual.  
   
- [in] *clrBar*  
- Especifica el color de fondo de la barra de progreso.  
+*clrBar*<br/>
+[in] Especifica el color de fondo de la barra de progreso.  
   
- [in] *clrBarDest*  
- Especifica el color secundario del fondo de la barra de progreso. Usar valor distinto de *clrBar* para rellenar por un dado lugar a un degradado de color.  
+*clrBarDest*<br/>
+[in] Especifica el color secundario del fondo de la barra de progreso. Usar valor distinto de *clrBar* para rellenar por un dado lugar a un degradado de color.  
   
- [in] *clrProgressText*  
- Especifica el color del texto de la barra de progreso.  
+*clrProgressText*<br/>
+[in] Especifica el color del texto de la barra de progreso.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea deshabilitar la llamada de la barra de progreso `EnablePaneProgressBar` con *nEl* establecido en -1. De forma predeterminada *nEl* está establecido en 100. Por lo tanto, no es necesario ningún cálculos adicionales para mostrar el progreso como porcentaje.  
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- [in] *lpRect*  
+*nIndex*<br/>
+[in] [in] *lpRect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- [in] *s*  
+*nIndex*<br/>
+[in] [in] *s*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -460,8 +460,8 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel de barra de estado.  
+*nIndex*<br/>
+[in] Especifica el índice del panel de barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El ancho del panel de barra de estado que *nIndex* especifica; de lo contrario, es cero si no existe un panel de barra de estado.  
@@ -474,8 +474,8 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel para que se va a recuperar el texto de sugerencia.  
+*nIndex*<br/>
+[in] Especifica el índice del panel para que se va a recuperar el texto de sugerencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El texto de información sobre herramientas del panel de barra de estado que *nIndex* especifica. En caso contrario, la cadena vacía si no existe un panel de barra de estado para el elemento especificado *nIndex* o si el texto de información sobre herramientas está vacío.  
@@ -488,8 +488,8 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel cuyo contenido es invalidado y vuelve a dibujar.  
+*nIndex*<br/>
+[in] Especifica el índice del panel cuyo contenido es invalidado y vuelve a dibujar.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando se invalida la barra de estado, se marca para volver a dibujar. Windows vuelve a dibujar cuando el `UpdateWindow` método envía un mensaje WM_PAINT a la `OnPaint` método.  
@@ -504,11 +504,11 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Un puntero a un contexto de dispositivo para dibujar.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo para dibujar.  
   
- [in] *pPane*  
- Un puntero a un `CMFCStatusBarPaneInfo` estructura que contiene la información acerca del panel para volver a dibujar.  
+*pPane*<br/>
+[in] Un puntero a un `CMFCStatusBarPaneInfo` estructura que contiene la información acerca del panel para volver a dibujar.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, `OnDrawPane` vuelve a dibujar el panel utilizando el contexto de dispositivo *pDC* según el estilo y el contenido del panel.  
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpIDArray*  
- [in] *nIDCount*  
+*lpIDArray*<br/>
+[in] [in] *nIDCount*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -570,17 +570,17 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel al que desea que se le asignan una animación.  
+*nIndex*<br/>
+[in] Especifica el índice del panel al que desea que se le asignan una animación.  
   
- [in] *hImageList*  
- Especifica un identificador de la lista de imágenes que contiene los fotogramas de animación.  
+*hImageList*<br/>
+[in] Especifica un identificador de la lista de imágenes que contiene los fotogramas de animación.  
   
- [in] *nFrameRate*  
- Especifica la velocidad de fotogramas, en milisegundos, para la animación.  
+*nFrameRate*<br/>
+[in] Especifica la velocidad de fotogramas, en milisegundos, para la animación.  
   
- [in] *bActualizar*  
- Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, se actualiza el contenido del panel al que se invalide.  
+*bActualización*<br/>
+[in] Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, se actualiza el contenido del panel al que se invalide.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea deshabilitar la animación actual, llame a `SetPaneAnimation` con `hImageList` establecido en NULL.  
@@ -596,14 +596,14 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel para que se va a establecer un nuevo color de fondo.  
+*nIndex*<br/>
+[in] Especifica el índice del panel para que se va a establecer un nuevo color de fondo.  
   
- [in] *clrBackground*  
- Especifica el nuevo color de fondo.  
+*clrBackground*<br/>
+[in] Especifica el nuevo color de fondo.  
   
- [in] *bActualizar*  
- Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, no actualice el contenido del panel hasta que el panel se invalida por cualquier otro método.  
+*bActualización*<br/>
+[in] Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, no actualice el contenido del panel hasta que el panel se invalida por cualquier otro método.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  Establecer el icono del panel de barra de estado.  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel para que se va a establecer la imagen.  
+*nIndex*<br/>
+[in] Especifica el índice del panel para que se va a establecer la imagen.  
   
- [in] *hIcon*  
- Especifica un identificador para el icono que se establecerá como la imagen del panel.  
+*hIcon*<br/>
+[in] Especifica un identificador para el icono que se establecerá como la imagen del panel.  
   
- [in] *bActualizar*  
- Especifica si se debe actualizar inmediatamente el contenido del panel.  
+*bActualización*<br/>
+[in] Especifica si se debe actualizar inmediatamente el contenido del panel.  
   
- [in] *hBmp*  
- Especifica un identificador para el mapa de bits que se establecerá como la imagen del panel.  
+*hBmp*<br/>
+[in] Especifica un identificador para el mapa de bits que se establecerá como la imagen del panel.  
   
- [in] *clrTransparent*  
- Especifica el color transparente del mapa de bits que el *hBmp* indica.  
+*clrTransparent*<br/>
+[in] Especifica el color transparente del mapa de bits que el *hBmp* indica.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede pasar HICON o HBITMAP junto con el color transparente para establecer la imagen del panel. Si no desea mostrar la imagen más largo, pase el valor NULL como identificador de la imagen.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -673,14 +673,14 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel para que se va a actualizar el indicador de progreso.  
+*nIndex*<br/>
+[in] Especifica el índice del panel para que se va a actualizar el indicador de progreso.  
   
- [in] *nCurr*  
- Especifica el valor actual del indicador de progreso.  
+*nCurr*<br/>
+[in] Especifica el valor actual del indicador de progreso.  
   
- [in] *bActualizar*  
- Especifica si se debe actualizar inmediatamente el panel.  
+*bActualización*<br/>
+[in] Especifica si se debe actualizar inmediatamente el panel.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método cuando desee actualizar el indicador de progreso de la barra de progreso en el panel especificado.  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- [in] *nStyle*  
+*nIndex*<br/>
+[in] [in] *nStyle*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -713,8 +713,8 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- [in] *lpszNewText*  
+*nIndex*<br/>
+[in] [in] *lpszNewText*  
  [in] *bActualizar*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -732,14 +732,14 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice del panel al que desea asignar un nuevo color de texto.  
+*nIndex*<br/>
+[in] Especifica el índice del panel al que desea asignar un nuevo color de texto.  
   
- [in] *clrText*  
- Especifica el color del texto.  
+*clrText*<br/>
+[in] Especifica el color del texto.  
   
- [in] *bActualizar*  
- Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, no actualice el contenido del panel hasta que el panel se invalida por cualquier otro método.  
+*bActualización*<br/>
+[in] Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, no actualice el contenido del panel hasta que el panel se invalida por cualquier otro método.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  Establezca el ancho del panel de barra de estado.  
@@ -751,11 +751,11 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Índice del panel de barra de estado para el que se va a establecer un ancho de nuevo.  
+*nIndex*<br/>
+[in] Índice del panel de barra de estado para el que se va a establecer un ancho de nuevo.  
   
- [in] *cx*  
- Nuevo ancho del panel de barra de estado, en píxeles.  
+*CX*<br/>
+[in] Nuevo ancho del panel de barra de estado, en píxeles.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  Establecer el texto de información sobre herramientas de un panel de barra de estado.  
@@ -767,11 +767,11 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- El índice del panel al que desea asignar el texto de información sobre herramientas.  
+*nIndex*<br/>
+[in] El índice del panel al que desea asignar el texto de información sobre herramientas.  
   
- [in] *pszTipText*  
- El nuevo texto de información sobre herramientas.  
+*pszTipText*<br/>
+[in] El nuevo texto de información sobre herramientas.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

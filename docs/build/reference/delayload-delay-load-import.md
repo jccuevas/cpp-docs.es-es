@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b140aed55bb1a83224bbe1698ff40695c306a693
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103741"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722376"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Retrasar importación de carga)
 
@@ -56,5 +56,5 @@ El [/DELAY](../../build/reference/delay-delay-load-import-settings.md) opción e
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756368"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709805"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl (clase)
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>Parámetros
 
-[in] *T*  
-Una interfaz dual.
+*T*<br/>
+[in] Una interfaz dual.
 
-[in] *piid*  
-Un puntero para el IID de *T*.
+*piid*<br/>
+[in] Un puntero para el IID de *T*.
 
-[in] *plibid*  
-Un puntero a LIBID de la biblioteca de tipos que contiene información acerca de la interfaz. De forma predeterminada, se pasa la biblioteca de tipos de nivel de servidor.
+*plibid*<br/>
+[in] Un puntero a LIBID de la biblioteca de tipos que contiene información acerca de la interfaz. De forma predeterminada, se pasa la biblioteca de tipos de nivel de servidor.
 
-[in] *wMajor*  
-La versión principal de la biblioteca de tipos. De forma predeterminada, el valor es 1.
+*wMajor*<br/>
+[in] La versión principal de la biblioteca de tipos. De forma predeterminada, el valor es 1.
 
-[in] *wMinor*  
-La versión secundaria de la biblioteca de tipos. De forma predeterminada, el valor es 0.
+*wMinor*<br/>
+[in] La versión secundaria de la biblioteca de tipos. De forma predeterminada, el valor es 0.
 
-[in] *tihclass*  
-La clase usada para administrar la información de tipo para *T*. De forma predeterminada, el valor es `CComTypeInfoHolder`.
+*tihclass*<br/>
+[in] La clase usada para administrar la información de tipo para *T*. De forma predeterminada, el valor es `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Miembros
 

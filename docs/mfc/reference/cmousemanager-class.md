@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720283"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager (clase)
 Permite que un usuario asociar diferentes comandos a un determinado [CView](../../mfc/reference/cview-class.md) objeto cuando el usuario hace doble clic dentro de esa vista.  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iViewId*  
- Un identificador de la vista.  
+*iViewId*<br/>
+[in] Un identificador de la vista.  
   
- [in] *uiViewNameResId*  
- Un identificador de cadena de recurso que se hace referencia al nombre de vista.  
+*uiViewNameResId*<br/>
+[in] Un identificador de cadena de recurso que se hace referencia al nombre de vista.  
   
- [in] *uiIconId*  
- Un identificador de icono de vista.  
+*uiIconId*<br/>
+[in] Un identificador de icono de vista.  
   
- [in] *iId*  
- Un identificador de la vista.  
+*iId*<br/>
+[in] Un identificador de la vista.  
   
- [in] *lpszViewName*  
- Un nombre de vista.  
+*lpszViewName*<br/>
+[in] Un nombre de vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iId*  
- El identificador de la vista.  
+*iId*<br/>
+[in] El identificador de la vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El identificador de comando si la vista está asociada con un comando; en caso contrario, es 0.  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iViewId*  
- El identificador de la vista.  
+*iViewId*<br/>
+[in] El identificador de la vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador de recurso de icono, si se realiza correctamente; en caso contrario, es 0.  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- El nombre de vista.  
+*lpszName*<br/>
+[in] El nombre de vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador de la vista si se realiza correctamente; en caso contrario, es 0.  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *listOfNames*  
- Una referencia a `CStringList` objeto.  
+*listOfNames*<br/>
+[out] Una referencia a `CStringList` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método rellena el parámetro `listOfNames` con los nombres de todas las vistas registrados mediante [CMouseManager::AddView](#addview).  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Una ruta de acceso de una clave del registro.  
+*lpszProfileName*<br/>
+[in] Una ruta de acceso de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Una ruta de acceso de una clave del registro.  
+*lpszProfileName*<br/>
+[in] Una ruta de acceso de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iViewId*  
- El identificador de la vista.  
+*iViewId*<br/>
+[in] El identificador de la vista.  
   
- [in] *uiCmd*  
- Identificador de comando.  
+*uiCmd*<br/>
+[in] Identificador de comando.  
   
 ### <a name="remarks"></a>Comentarios  
  Con el fin de asociar un comando personalizado a una vista, primero debe registrar la vista mediante [CMouseManager::AddView](#addview). El `AddView` método requiere un identificador de la vista como un parámetro de entrada. Una vez que registra una vista, puede llamar a `CMouseManager::SetCommandForDblClk` con la misma vista identificador parámetro de entrada que ha proporcionado a `AddView`. A partir de entonces, cuando el usuario hace doble clic del mouse (ratón) en la vista registrada, la aplicación ejecutará el comando indicado por *uiCmd.* Para admitir el comportamiento personalizado del mouse, también deberá personalizar la vista registrada con el administrador del mouse. Para obtener más información sobre el comportamiento personalizado del mouse, consulte [personalización del teclado y Mouse](../keyboard-and-mouse-customization.md).  

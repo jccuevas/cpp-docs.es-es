@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c9eba152ddaf0ab35fc1a331905a457ff339f28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964826"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725990"
 ---
 # <a name="ltthreadgt-operators"></a>Operadores de &lt;thread&gt;
 
@@ -49,11 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*  
- Objeto `thread::id` izquierdo.
+*Izquierda*<br/>
+Objeto `thread::id` izquierdo.
 
-*Derecha*  
- Objeto `thread::id` derecho.
+*Derecha*<br/>
+Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -75,11 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*  
- Objeto `thread::id` izquierdo.
+*Izquierda*<br/>
+Objeto `thread::id` izquierdo.
 
-*Derecha*  
- Objeto `thread::id` derecho.
+*Derecha*<br/>
+Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -101,11 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*  
- Objeto `thread::id` izquierdo.
+*Izquierda*<br/>
+Objeto `thread::id` izquierdo.
 
-*Derecha*  
- Objeto `thread::id` derecho.
+*Derecha*<br/>
+Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -127,11 +127,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*  
- Objeto `thread::id` izquierdo.
+*Izquierda*<br/>
+Objeto `thread::id` izquierdo.
 
-*Derecha*  
- Objeto `thread::id` derecho.
+*Derecha*<br/>
+Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -155,11 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*  
- Objeto `thread::id` izquierdo.
+*Izquierda*<br/>
+Objeto `thread::id` izquierdo.
 
-*Derecha*  
- Objeto `thread::id` derecho.
+*Derecha*<br/>
+Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -180,12 +180,12 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>Parámetros
- 
-*Izquierda*  
- Objeto `thread::id` izquierdo.
 
-*Derecha*  
- Objeto `thread::id` derecho.
+*Izquierda*<br/>
+Objeto `thread::id` izquierdo.
+
+*Derecha*<br/>
+Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -207,11 +207,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ostr*  
- Un objeto [basic_ostream](../standard-library/basic-ostream-class.md).
+*Ostr*<br/>
+Un objeto [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Id.*  
- Un objeto `thread::id`.
+*Id.*<br/>
+Un objeto `thread::id`.
 
 ### <a name="return-value"></a>Valor devuelto
 

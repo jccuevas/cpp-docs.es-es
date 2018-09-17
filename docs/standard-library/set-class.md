@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706165"
 ---
 # <a name="set-class"></a>set (Clase)
 
@@ -119,15 +119,15 @@ class set
 ### <a name="parameters"></a>Parámetros
 
 *Key*<br/>
- Tipo de datos de los elementos que se va a almacenar en el conjunto.
+Tipo de datos de los elementos que se va a almacenar en el conjunto.
 
 *Rasgos*<br/>
- Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como criterios de ordenación para determinar su orden relativo en el conjunto. Este argumento es opcional y el predicado binario **less** *\<Key>* es el valor predeterminado.
+Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como criterios de ordenación para determinar su orden relativo en el conjunto. Este argumento es opcional y el predicado binario **less** *\<Key>* es el valor predeterminado.
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
 *Asignador*<br/>
- Tipo que representa el objeto asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria del conjunto. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
+Tipo que representa el objeto asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria del conjunto. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Clave de los elementos del conjunto que deben coincidir.
+Clave de los elementos del conjunto que deben coincidir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -934,7 +934,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
+La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1019,16 +1019,16 @@ size_type erase(
 ### <a name="parameters"></a>Parámetros
 
 *Where*<br/>
- Posición del elemento que se va a quitar.
+Posición del elemento que se va a quitar.
 
 *Primero*<br/>
- Posición del primer elemento que se va a quitar.
+Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
- Posición situada más allá del último elemento que se va a quitar.
+Posición situada más allá del último elemento que se va a quitar.
 
 *Key*<br/>
- Valor de clave de los elementos que se van a quitar.
+Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1131,7 +1131,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- El valor de clave que debe coincidir con la clave de ordenación de un elemento del conjunto que se está buscando.
+El valor de clave que debe coincidir con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1595,7 +1595,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
+La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2215,7 +2215,7 @@ void swap(
 ### <a name="parameters"></a>Parámetros
 
 *right*<br/>
- El conjunto de argumentos que proporciona los elementos que se van a intercambiar con el conjunto de destino.
+El conjunto de argumentos que proporciona los elementos que se van a intercambiar con el conjunto de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2284,7 +2284,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
+La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 

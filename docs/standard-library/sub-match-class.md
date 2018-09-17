@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: d2349beadb5983c85059be83ee5a933689913886
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691619"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722727"
 ---
 # <a name="submatch-class"></a>sub_match (Clase)
 
@@ -51,8 +51,8 @@ class sub_match
 
 ## <a name="parameters"></a>Parámetros
 
-*BidIt*  
- El tipo de iterador para subcoincidencias.
+*BidIt*<br/>
+El tipo de iterador para subcoincidencias.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -159,14 +159,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- Subcoincidencia con la que se va comparar.
+*right*<br/>
+Subcoincidencia con la que se va comparar.
 
-*str*  
- Cadena con la que se va a comparar.
+*str*<br/>
+Cadena con la que se va a comparar.
 
-*ptr*  
- La secuencia terminada en un valor nulo con la que se va a comparar.
+*ptr*<br/>
+La secuencia terminada en un valor nulo con la que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 

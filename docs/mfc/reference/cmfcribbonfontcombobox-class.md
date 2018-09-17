@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216479"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705710"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox (clase)
 Implementa un cuadro combinado que contiene una lista de fuentes. El cuadro combinado se coloca en un panel de la cinta.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nFontType*  
- Especifica el tipo de fuente de las fuentes a agregar.  
+*nFontType*<br/>
+[in] Especifica el tipo de fuente de las fuentes a agregar.  
   
- [in] *nCharSet*  
- Especifica el juego de caracteres de las fuentes a agregar.  
+*nCharSet*<br/>
+[in] Especifica el juego de caracteres de las fuentes a agregar.  
   
- [in] *nPitchAndFamily*  
- Especifica el cabeceo y la familia de fuentes para agregar.  
+*nPitchAndFamily*<br/>
+[in] Especifica el cabeceo y la familia de fuentes para agregar.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Crea e inicializa un [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) objeto.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- El identificador de comando del comando que se ejecuta cuando el usuario selecciona un elemento en el cuadro combinado.  
+*nID*<br/>
+[in] El identificador de comando del comando que se ejecuta cuando el usuario selecciona un elemento en el cuadro combinado.  
   
- [in] *nFontType*  
- Especifica los tipos de fuente para mostrar en el cuadro combinado. Las opciones válidas son DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE o cualquier combinación bit a bit de estas.  
+*nFontType*<br/>
+[in] Especifica los tipos de fuente para mostrar en el cuadro combinado. Las opciones válidas son DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE o cualquier combinación bit a bit de estas.  
   
- [in] *nCharSet*  
- Filtra las fuentes en el cuadro combinado a los que pertenecen al juego de caracteres especificado...  
+*nCharSet*<br/>
+[in] Filtra las fuentes en el cuadro combinado a los que pertenecen al juego de caracteres especificado...  
   
- [in] *nPitchAndFamily*  
- Especifica el tono y la familia de fuentes que se muestran en el cuadro combinado.  
+*nPitchAndFamily*<br/>
+[in] Especifica el tono y la familia de fuentes que se muestran en el cuadro combinado.  
   
- [in] *nWidth*  
- Especifica el ancho, en píxeles, del cuadro combinado.  
+*nWidth*<br/>
+[in] Especifica el ancho, en píxeles, del cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información sobre las posibles *nFontType* valores de parámetros, vea [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) en la documentación del SDK de Windows.  

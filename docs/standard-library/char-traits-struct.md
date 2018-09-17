@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106088"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724612"
 ---
 # <a name="chartraits-struct"></a>char_traits (Struct)
 
@@ -120,7 +120,8 @@ static char_type *assign(char_type* strTo,
 *_CharTo*<br/>
 El elemento al que se asignará el valor de carácter.
 
-* strTo * la matriz de cadenas o caracteres cuyos elementos iniciales se pueden asignar valores de caracteres.
+*strTo*<br/>
+La matriz de cadenas o caracteres a cuyos elementos iniciales se les asignarán valores de caracteres.
 
 *_Num*<br/>
 El número de elementos a los que se van a asignar valores.
@@ -198,9 +199,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parámetros
 
-* str1 * el primero de dos cadenas que se va a comparar entre sí.
+*str1*<br/>
+La primera de dos cadenas que se van a comparar entre sí.
 
-* str2 * el segundo de dos cadenas que se va a comparar entre sí.
+*str2*<br/>
+La segunda de dos cadenas que se van a comparar entre sí.
 
 *_Num*<br/>
 El número de elementos en las cadenas que se van a comparar.

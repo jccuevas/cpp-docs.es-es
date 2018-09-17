@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712041"
 ---
 # <a name="cwinapp-class"></a>CWinApp (clase)
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *lpvParam*  
-Reservado para un uso futuro.
+*lpvParam*<br/>
+[in] Reservado para uso futuro.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *lpszFileName*  
-El nombre del archivo que se puede abrir.
+*lpszFileName*<br/>
+[in] El nombre del archivo que se puede abrir.
 
-[in] *bAddToMRU*  
-TRUE indica que el documento es uno de los archivos más recientes; FALSE indica que el documento no es uno de los archivos más recientes.
+*bAddToMRU*<br/>
+[in] TRUE indica que el documento es uno de los archivos más recientes; FALSE indica que el documento no es uno de los archivos más recientes.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bCompat*  
-TRUE agrega entradas de registro para los comandos de shell de impresión y de impresión a, permiten al usuario imprimir archivos directamente desde el shell, o bien arrastrando el archivo a un objeto de la impresora. También agrega una clave DefaultIcon. De forma predeterminada, este parámetro es FALSE por compatibilidad con versiones anteriores.
+*bCompat*<br/>
+[in] TRUE agrega entradas de registro para los comandos de shell de impresión y de impresión a, permiten al usuario imprimir archivos directamente desde el shell, o bien arrastrando el archivo a un objeto de la impresora. También agrega una clave DefaultIcon. De forma predeterminada, este parámetro es FALSE por compatibilidad con versiones anteriores.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |Parámetro|Descripción|
-|[in] *bRegisterRecoveryCallback*|TRUE indica que esta instancia de la aplicación usa una función de devolución de llamada de recuperación; FALSE indica que no. El marco de trabajo llama a la función de devolución de llamada de recuperación cuando la aplicación se cierra inesperadamente. Para obtener más información, consulte [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *strRestartIdentifier*|La cadena única que identifica esta instancia del Administrador de reinicio. El identificador del Administrador de reinicio es único para cada instancia de una aplicación.|
-|[in] *pwzCommandLineArgs*|Una cadena que contiene los argumentos adicionales de la línea de comandos.|
-|[in] *dwRestartFlags*|Marcas opcionales para el Administrador de reinicio. Para obtener más información, vea la sección Comentarios.|
-|[in] *pRecoveryCallback*|La función de devolución de llamada de recuperación. Esta función debe tomar un parámetro LPVOID como entrada y devolver un valor DWORD. La función de devolución de llamada de recuperación predeterminada es `CWinApp::ApplicationRecoveryCallback`.|
-|[in] *lpvParam*|El parámetro de entrada para la función de devolución de llamada de recuperación. Para obtener más información, consulte [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *dwPingInterval*|El período de tiempo que espera el Administrador de reinicio para que la función de devolución de llamada de recuperación devolver. Este parámetro está en milisegundos.|
-|[in] *dwCallbackFlags*|Marcas se pasan a la función de devolución de llamada de recuperación. Reservado para un uso futuro.|
+|*bRegisterRecoveryCallback*|[in] TRUE indica que esta instancia de la aplicación usa una función de devolución de llamada de recuperación; FALSE indica que no. El marco de trabajo llama a la función de devolución de llamada de recuperación cuando la aplicación se cierra inesperadamente. Para obtener más información, consulte [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*strRestartIdentifier*|[in] La cadena única que identifica esta instancia del Administrador de reinicio. El identificador del Administrador de reinicio es único para cada instancia de una aplicación.|
+|*pwzCommandLineArgs*|[in] Una cadena que contiene los argumentos adicionales de la línea de comandos.|
+|*dwRestartFlags*|[in] Marcas opcionales para el Administrador de reinicio. Para obtener más información, vea la sección Comentarios.|
+|*pRecoveryCallback*|[in] La función de devolución de llamada de recuperación. Esta función debe tomar un parámetro LPVOID como entrada y devolver un valor DWORD. La función de devolución de llamada de recuperación predeterminada es `CWinApp::ApplicationRecoveryCallback`.|
+|*lpvParam*|[in] El parámetro de entrada para la función de devolución de llamada de recuperación. Para obtener más información, consulte [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*dwPingInterval*|[in] El período de tiempo que espera el Administrador de reinicio para que la función de devolución de llamada de recuperación devolver. Este parámetro está en milisegundos.|
+|*dwCallbackFlags*|[in] Marcas se pasan a la función de devolución de llamada de recuperación. Reservado para un uso futuro.|
 
 ### <a name="return-value"></a>Valor devuelto
 

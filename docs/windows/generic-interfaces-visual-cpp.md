@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607704"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704905"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfaces genéricas (Visual C++)
 
@@ -42,8 +42,8 @@ Para obtener más información sobre las interfaces, vea [clase de interfaz](../
 
 ## <a name="remarks"></a>Comentarios
 
-*atributos* (opcional)  
-Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea **atributos**.
+*Atributos*  
+(Opcional) Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea **atributos**.
 
 *clave de clase*  
 **clase** o **typename**
@@ -54,20 +54,20 @@ Lista separada por comas de identificadores.
 *tipo de parámetro restricciones cláusulas*  
 Toma la forma especificada en [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modificadores de accesibilidad* (opcional)  
-Modificadores de accesibilidad (por ejemplo, **public, private**).
+*modificadores de accesibilidad*  
+(Opcional) Modificadores de accesibilidad (por ejemplo, **public, private**).
 
 *identifier*  
 El nombre de la interfaz.
 
-*base-list* (opcional)  
-Una lista que contiene una o varias interfaces base explícitas separadas por comas.
+*base-list*  
+(Opcional) Una lista que contiene una o varias interfaces base explícitas separadas por comas.
 
 *cuerpo de la interfaz*  
 Declaraciones de los miembros de interfaz.
 
-*los declaradores* (opcional)  
-Declaraciones de variables en función de este tipo.
+*declaradores*  
+(Opcional) Declaraciones de variables en función de este tipo.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,5 +1,5 @@
 ---
-title: Dónde definir Macros | Documentos de Microsoft
+title: Dónde definir Macros | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf3e87a50362c770d45f00c4dc17ac3d264f611
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a2899d7dba0b34c0ac3319c253c8056912d883
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380919"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713822"
 ---
 # <a name="where-to-define-macros"></a>Dónde definir macros
-Definir macros en una línea de comandos, archivo de comandos, archivos MAKE o el archivo Tools.ini.  
-  
- En un archivo MAKE o el archivo Tools.ini, cada definición de macro debe aparecer en una línea independiente y no puede comenzar con un espacio o tabulación. Se omiten los espacios o tabulaciones a ambos lados del signo igual. Todos los [cadena caracteres](../build/defining-an-nmake-macro.md) son literales, incluidas las comillas tipográficas y los espacios incrustados.  
-  
- En una línea de comandos o el archivo de comandos, espacios y tabulaciones delimitan los argumentos y no se pueden delimitar el signo igual. Si `string` tiene insertados espacios o tabulaciones, encierre la propia cadena o la macro completa entre comillas dobles ("").  
-  
-## <a name="see-also"></a>Vea también  
- [Definición de una macro NMAKE](../build/defining-an-nmake-macro.md)
+
+Definir macros en el archivo Tools.ini, archivos MAKE, archivo de comandos o una línea de comandos.
+
+En un archivo MAKE o el archivo Tools.ini, cada definición de macro debe aparecer en una línea independiente y no puede comenzar con un espacio o tabulación. Se omiten los espacios o tabulaciones después del signo igual. Todos los [cadena de caracteres](../build/defining-an-nmake-macro.md) son literales, incluidas las comillas y espacios incrustados.
+
+En una línea de comandos o el archivo de comandos, espacios y tabulaciones delimitan los argumentos y no se pueden delimitar el signo igual. Si `string` ha incorporado espacios o tabulaciones, encierre la propia cadena o la macro completa entre comillas dobles ("").
+
+## <a name="see-also"></a>Vea también
+
+[Definición de una macro NMAKE](../build/defining-an-nmake-macro.md)

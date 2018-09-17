@@ -23,31 +23,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 063c858253c12cfedbf252a124029b8cbc16a691
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e6c7e498100a60a3d4c592c343cc86b5ee0a0ea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680968"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713367"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary y AfxFreeLibrary
-Los procesos que se vinculan explícitamente a una llamada a la DLL del [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) funcionar cuando ya no se necesita el módulo de DLL. Esta función reduce recuento de referencias del módulo y, si el recuento de referencias es cero, elimina la asignación del espacio de direcciones del proceso.  
-  
- En una aplicación MFC, utilice [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) en lugar de `FreeLibrary` para descargar un archivo DLL de extensión MFC. La interfaz (prototipo de función) para `AfxFreeLibrary` es el mismo que `FreeLibrary`.  
-  
-## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?  
-  
--   [Cómo vincular implícitamente a un archivo DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
-  
--   [Determinar qué método de vinculación para usar](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
-  
--   [LoadLibrary y AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
-  
--   [GetProcAddress](../build/getprocaddress.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)   
- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)   
- [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)
+
+Los procesos que se vinculan explícitamente a una llamada a la DLL del [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) funcionar cuando ya no se necesita el módulo de DLL. Esta función reduce recuento de referencias del módulo y, si el recuento de referencias es cero, elimina la asignación del espacio de direcciones del proceso.
+
+En una aplicación MFC, utilice [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) en lugar de `FreeLibrary` para descargar un archivo DLL de extensión MFC. La interfaz (prototipo de función) para `AfxFreeLibrary` es el mismo que `FreeLibrary`.
+
+## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
+
+- [Cómo vincular implícitamente a un archivo DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+
+- [Determinar qué método de vinculación para usar](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
+
+- [LoadLibrary y AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+
+- [GetProcAddress](../build/getprocaddress.md)
+
+## <a name="see-also"></a>Vea también
+
+[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)
+[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725665"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl (clase)
 La `CMFCColorPickerCtrl` clase proporciona funcionalidad para un control que se utiliza para seleccionar colores.  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- Especifica un área rectangular alrededor del color seleccionado.  
+*Rect*<br/>
+[in] Especifica un área rectangular alrededor del color seleccionado.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método cuando necesite cambiar la forma del cursor que apunta al color seleccionado.  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *hue*  
- Puntero a una variable de tipo double que recibe información de hue.  
+*HUE*<br/>
+[out] Puntero a una variable de tipo double que recibe información de hue.  
   
- [out] *luminancia*  
- Puntero a una variable de tipo double que recibe información de luminancia.  
+*luminancia*<br/>
+[out] Puntero a una variable de tipo double que recibe información de luminancia.  
   
- [out] *saturación*  
- Puntero a una variable de tipo double que recibe información de la saturación.  
+*saturación*<br/>
+[out] Puntero a una variable de tipo double que recibe información de la saturación.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *R*  
- El componente de color rojo.  
+*R*<br/>
+[in] El componente de color rojo.  
   
- [in] *G*  
- El componente de color verde.  
+*G*<br/>
+[in] El componente de color verde.  
   
- [in] *B*  
- El componente de color azul.  
+*B*<br/>
+[in] El componente de color azul.  
   
- [in] *x*  
- La coordenada x del cursor, que señala a un hexágono de celda.  
+*x*<br/>
+[in] La coordenada x del cursor, que señala a un hexágono de celda.  
   
- [in] *y*  
- Coordenada y del cursor, que señala a un hexágono de celda.  
+*y*<br/>
+[in] Coordenada y del cursor, que señala a un hexágono de celda.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La segunda sobrecarga de este método siempre devuelve FALSE.  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Color*  
- Un valor de color RGB.  
+*Color*<br/>
+[in] Un valor de color RGB.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hue*  
- Un valor de matiz.  
+*HUE*<br/>
+[in] Un valor de matiz.  
   
- [in] *luminancia*  
- Un valor de luminancia.  
+*luminancia*<br/>
+[in] Un valor de luminancia.  
   
- [in] *saturación*  
- Un valor de saturación.  
+*saturación*<br/>
+[in] Un valor de saturación.  
   
- [in] *bInvalidate*  
- TRUE para forzar la ventana para actualizar inmediatamente el nuevo color; en caso contrario, FALSE. El valor predeterminado es TRUE.  
+*bInvalidate*<br/>
+[in] TRUE para forzar la ventana para actualizar inmediatamente el nuevo color; en caso contrario, FALSE. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Hue*  
- Un valor de matiz.  
+*HUE*<br/>
+[in] Un valor de matiz.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Luminancia*  
- Un valor de luminancia.  
+*Luminancia*<br/>
+[in] Un valor de luminancia.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *w*  
- El ancho de la barra de luminancia medido en píxeles.  
+*W*<br/>
+[in] El ancho de la barra de luminancia medido en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
  Use este método para cambiar el tamaño de la barra de luminancia, que se encuentra en la **personalizado** pestaña de control de selector de color. El *w* parámetro especifica el nuevo ancho de la barra de luminancia. Si supera tres cuartas partes del ancho del área de cliente, se omite el valor de ancho.  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *ref*  
- Un valor de color RGB.  
+*ref*<br/>
+[in] Un valor de color RGB.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método cuando se inicializa el control de selector de color.  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pPalette*  
- Puntero a una paleta de colores.  
+*pPalette*<br/>
+[in] Puntero a una paleta de colores.  
   
 ### <a name="remarks"></a>Comentarios  
  La paleta de colores define la matriz de colores que se presenta en el control de selector de color.  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Saturación*  
- Un valor de saturación.  
+*Saturación*<br/>
+[in] Un valor de saturación.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *colorType*  
- Un tipo de control de selector de color.  
+*colorType*<br/>
+[in] Un tipo de control de selector de color.  
   
  Los tipos definidos por el `CMFCColorPickerCtrl::COLORTYPE` enumeración. Los tipos posibles son LUMINANCIA, SELECTOR, HEXADECIMAL y HEX_GREYSCALE. El tipo predeterminado es SELECTOR.  
   

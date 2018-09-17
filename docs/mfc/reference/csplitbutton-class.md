@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207646"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705281"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton (clase)
 La `CSplitButton` clase representa un control de botón de expansión. El control de botón de expansión realiza un comportamiento predeterminado cuando un usuario hace clic en la parte principal del botón y muestra un menú desplegable cuando un usuario hace clic en la flecha de lista desplegable del botón.  
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Una combinación bit a bit (OR) de estilos que se va a aplicarse al control. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|  
-|[in] *pParentWnd*|Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|  
-|[in] *nID*|El identificador del control.|  
+|*dwStyle*|[in] Una combinación bit a bit (OR) de estilos que se va a aplicarse al control. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|*Rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|  
+|*pParentWnd*|[in] Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|  
+|*nID*|[in] El identificador del control.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -126,9 +126,9 @@ CSplitButton(CMenu* pMenu)
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *nMenuId*|El identificador de recurso de la barra de menús.|  
-|[in] *nSubMenuId*|El identificador de recurso de un submenú.|  
-|[in] *pMenu*|Un puntero a un [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica un submenú. El `CSplitButton` eliminaciones de objetos la `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto queda fuera del ámbito.|  
+|*nMenuId*|[in] El identificador de recurso de la barra de menús.|  
+|*nSubMenuId*|[in] El identificador de recurso de un submenú.|  
+|*pMenu*|[in] Un puntero a un [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica un submenú. El `CSplitButton` eliminaciones de objetos la `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto queda fuera del ámbito.|  
   
 ### <a name="remarks"></a>Comentarios  
  Use la [CSplitButton::Create](#create) método para crear un control de botón de expansión y adjuntarlo a la `CSplitButton` objeto.  
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Puntero a un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estructura que contiene información sobre la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|  
-|[out] *pResult*|(No usar; se devuelve ningún valor). Valor devuelto de la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|  
+|*pNMHDR*|[in] Puntero a un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estructura que contiene información sobre la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|  
+|*pResult*|[out] (No usar; se devuelve ningún valor). Valor devuelto de la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando el usuario hace clic en la flecha de lista desplegable en un control de botón de expansión, el sistema envía una notificación BCN_DROPDOWN mensaje que el `OnDropDown` método controla. Sin embargo, la `CSplitButton` objeto no reenvía la notificación BCN_DROPDOWN al control que contiene el control de botón de expansión. Por lo tanto, el control de contenedor no admite una acción personalizada en respuesta a la notificación.  
@@ -178,9 +178,9 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *nMenuId*|El identificador de recurso de la barra de menús.|  
-|[in] *nSubMenuId*|El identificador de recurso de un submenú.|  
-|[in] *pMenu*|Puntero a un [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica un submenú. El `CSplitButton` eliminaciones de objetos la `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto queda fuera del ámbito.|  
+|*nMenuId*|[in] El identificador de recurso de la barra de menús.|  
+|*nSubMenuId*|[in] El identificador de recurso de un submenú.|  
+|*pMenu*|[in] Puntero a un [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica un submenú. El `CSplitButton` eliminaciones de objetos la `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto queda fuera del ámbito.|  
   
 ### <a name="remarks"></a>Comentarios  
  El *nMenuId* parámetro identifica una barra de menús, que es una lista de elementos de la barra de menú horizontal. El *nSubMenuId* parámetro es un número de índice de base cero que identifica un submenú, que es la lista desplegable de elementos de menú asociados con cada elemento de la barra de menú. Por ejemplo, una aplicación típica tiene un menú que contiene los elementos de la barra de menús, "Archivo", "Editar" y "Help". El elemento de barra de menú "Archivo" tiene un submenú que contiene los elementos de menú "Abrir", "Cerrar" y "Exit". Cuando se hace clic en la flecha desplegable del control de botón de expansión, el control muestra el submenú especificado, no en la barra de menús.  

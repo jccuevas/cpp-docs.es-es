@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895219"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725977"
 ---
 # <a name="base-base-address"></a>/BASE (Dirección base)
 
@@ -60,11 +60,11 @@ En la línea de comandos, otra manera de especificar la dirección base es media
 
 El *clave* es una cadena de caracteres alfanuméricos y no distingue mayúsculas de minúsculas. Suele ser el nombre de un archivo DLL, pero no es necesario que sea. El *clave* va seguido de una base de *dirección* en notación de lenguaje C, hexadecimal o decimal y un máximo opcional *tamaño*. Los tres argumentos están separados por espacios o tabulaciones. El enlazador emite una advertencia si especificado *tamaño* es menor que el espacio de direcciones virtuales requerido por el programa. Un *comentario* especificado por un punto y coma (**;**) y puede estar en la misma o una línea independiente. El vinculador omite todo el texto desde el punto y coma al final de la línea. En este ejemplo se muestra parte de este tipo de archivo:
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 Si el archivo que contiene estas líneas se denomina DLLS.txt, el comando de ejemplo siguiente aplica esta información:
 
@@ -88,5 +88,5 @@ Otra forma de establecer la dirección base es mediante la *BASE* argumento en u
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)  
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

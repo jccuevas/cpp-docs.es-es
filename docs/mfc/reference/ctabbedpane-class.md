@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901016"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712843"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane (clase)
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bHabilitar el*  
-TRUE para habilitar el coloreado automático de fichas; en caso contrario, FALSE.
+*bHabilitar el*<br/>
+[in] TRUE para habilitar el coloreado automático de fichas; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *dockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Parámetros
 
-[out] *rectTabAreaTop*  
-Contiene el tamaño y posición, en coordenadas de pantalla del área superior de ficha.
+*rectTabAreaTop*<br/>
+[out] Contiene el tamaño y posición, en coordenadas de pantalla del área superior de ficha.
 
-[out] *rectTabAreaBottom*  
-Contiene el tamaño y posición, en coordenadas de pantalla del área inferior de ficha.
+*rectTabAreaBottom*<br/>
+[out] Contiene el tamaño y posición, en coordenadas de pantalla del área inferior de ficha.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *arColors*  
-Contiene la matriz de colores para establecer.
+*arColors*<br/>
+[in] Contiene la matriz de colores para establecer.
 
 ### <a name="remarks"></a>Comentarios
 

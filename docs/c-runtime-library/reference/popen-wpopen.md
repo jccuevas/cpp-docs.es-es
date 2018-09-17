@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2a0dd4f32f8c7b3a9e859e23fcc26e668fa87cdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218391"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726367"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -61,12 +61,12 @@ Crea una canalización y ejecuta un comando.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ Para obtener información sobre estos y otros códigos de error, vea [_doserrno,
 
 El **_popen** función crea una canalización y ejecuta de forma asincrónica una copia generada del procesador de comandos con la cadena especificada de *comando*. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
 
-**"r"** el proceso de llamada puede leer la salida estándar del comando generado utilizando la secuencia devuelta.
-
-**"w"** el proceso de llamada puede escribir en la entrada estándar del comando generado utilizando la secuencia devuelta.
-
-**"b"** abierto en modo binario.
-
-**"t"** abierto en modo de texto.
+|Modo de acceso|Descripción|
+|-|-|
+|**"r"**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
+|**"w"**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
+|**"b"**|Abrir en modo binario.|
+|**"t"**|Abrir en modo de texto.|
 
 > [!NOTE]
 > Si se usa en un programa de Windows, el **_popen** función devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el SDK de Windows.

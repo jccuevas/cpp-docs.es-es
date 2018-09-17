@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4bb77489a610d9331378e523b6983dcf14d996c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762984"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717215"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Asistente para proveedores OLE DB ATL
 
@@ -34,49 +34,63 @@ A partir de Visual Studio 2008, el script de registro generado por este asistent
 
 En la tabla siguiente se describe las opciones para el Asistente para proveedores OLE DB ATL:
 
-**Nombre corto**  
-Escriba el nombre corto del proveedor que se va a crear. Los otros cuadros de edición en el asistente se rellenarán automáticamente en función de lo que escribe aquí. Puede modificar los otros cuadros de nombre si lo desea.
+- **Nombre corto**
 
-**Coclase**  
-El nombre de la coclase. El nombre de ProgID cambiará para coincidir con este nombre.
+   Escriba el nombre corto del proveedor que se va a crear. Los otros cuadros de edición en el asistente se rellenarán automáticamente en función de lo que escribe aquí. Puede modificar los otros cuadros de nombre si lo desea.
 
-**Con atributos**  
-Esta opción especifica si el asistente creará clases de proveedor mediante atributos o declaraciones de plantilla. Cuando se selecciona esta opción, el asistente utiliza atributos en lugar de declaraciones de plantilla (es la opción predeterminada si ha creado un proyecto con atributos). Cuando desactiva esta opción, el asistente utiliza las declaraciones de plantilla en lugar de atributos (la opción predeterminada si ha creado un proyecto sin atributos).
+- **Coclase**
 
-Si selecciona esta opción al crear un proyecto sin atributos, el asistente le advertirá de que el proyecto se convertirá en un proyecto con atributos y le preguntará si desea continuar o no.
+   El nombre de la coclase. El nombre de ProgID cambiará para coincidir con este nombre.
 
-**Id. de programa**  
-El ProgID o el identificador de programación, es una cadena de texto que puede usar la aplicación en lugar de un GUID. El nombre de ProgID tiene la forma *Projectname.Coclassname*.
+- **Con atributos**
 
-**Versión**  
-El número de versión del proveedor. El valor predeterminado es 1.
+   Esta opción especifica si el asistente creará clases de proveedor mediante atributos o declaraciones de plantilla. Cuando se selecciona esta opción, el asistente utiliza atributos en lugar de declaraciones de plantilla (es la opción predeterminada si ha creado un proyecto con atributos). Cuando desactiva esta opción, el asistente utiliza las declaraciones de plantilla en lugar de atributos (la opción predeterminada si ha creado un proyecto sin atributos).
 
-**Clase de origen de datos**  
-El nombre de la clase de origen de datos del formulario C*Shortname*origen.
+   Si selecciona esta opción al crear un proyecto sin atributos, el asistente le advertirá de que el proyecto se convertirá en un proyecto con atributos y le preguntará si desea continuar o no.
 
-**Archivo .h de origen de datos**  
-El archivo de encabezado para la clase de origen de datos. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+- **Id. de programa**
 
-**Clase de sesión**  
-El nombre de la clase de sesión del formulario C*Shortname*sesión.
+   El ProgID o el identificador de programación, es una cadena de texto que puede usar la aplicación en lugar de un GUID. El nombre de ProgID tiene la forma *Projectname.Coclassname*.
 
-**Archivo .h de sesión**  
-El archivo de encabezado para la clase de sesión. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+- **Versión**
 
-**Clase de comando**  
-El nombre de la clase de comando del formulario C*Shortname*comando.
+   El número de versión del proveedor. El valor predeterminado es 1.
 
-**Archivo .h de Command**  
-El archivo de encabezado para la clase de comando. Este nombre no se puede editar y depende del nombre del archivo de encabezado del conjunto de filas.
+- **Clase de origen de datos**
 
-**Clase de conjunto de filas**  
-El nombre de la clase de conjunto de filas, del formulario C*Shortname*conjunto de filas.
+   El nombre de la clase de origen de datos del formulario C*Shortname*origen.
 
-**Archivo .h de Rowset**  
-El archivo de encabezado para la clase de conjunto de filas. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+- **Archivo .h de origen de datos**
 
-**Archivo .cpp de Rowset**  
-Archivo de implementación del proveedor. Puede editar este nombre de archivo o seleccionar un archivo de implementación existente.
+   El archivo de encabezado para la clase de origen de datos. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+
+- **Clase de sesión**
+
+   El nombre de la clase de sesión del formulario C*Shortname*sesión.
+
+- **Archivo .h de sesión**
+
+   El archivo de encabezado para la clase de sesión. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+
+- **Clase de comando**
+
+   El nombre de la clase de comando del formulario C*Shortname*comando.
+
+- **Archivo .h de Command**
+
+   El archivo de encabezado para la clase de comando. Este nombre no se puede editar y depende del nombre del archivo de encabezado del conjunto de filas.
+
+- **Clase de conjunto de filas**
+
+   El nombre de la clase de conjunto de filas, del formulario C*Shortname*conjunto de filas.
+
+- **Archivo .h de Rowset**
+
+   El archivo de encabezado para la clase de conjunto de filas. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+
+- **Archivo .cpp de Rowset**
+
+   Archivo de implementación del proveedor. Puede editar este nombre de archivo o seleccionar un archivo de implementación existente.
 
 ## <a name="see-also"></a>Vea también
 

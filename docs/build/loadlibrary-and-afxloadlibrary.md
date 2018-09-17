@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687940"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726305"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary y AfxLoadLibrary
 
@@ -39,7 +39,7 @@ Para aplicaciones MFC que cargan archivos DLL de extensión MFC, se recomienda q
 
 Si Windows no pueden cargar el archivo DLL, el proceso puede intentar recuperarse del error. Por ejemplo, el proceso podría notificar al usuario sobre el error y pedir al usuario que especifique otra ruta de acceso al archivo DLL.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Asegúrese de especificar la ruta de acceso completa de los archivos DLL. Se busca primero en el directorio actual cuando se cargan archivos. Si no califica la ruta de acceso del archivo, se puede cargar un archivo que no es lo previsto. Otra manera de evitar que esto es mediante la [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) opción del vinculador.
 
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?

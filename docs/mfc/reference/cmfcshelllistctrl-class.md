@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ae5b321ce9de1e834119e764a65df638d97e10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195837"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721193"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl (clase)
 La `CMFCShellListCtrl` clase proporciona funcionalidad de control de lista de Windows y la expande incluyendo la capacidad para mostrar una lista de elementos de shell.  
@@ -130,11 +130,11 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszPath*  
- Una cadena que contiene la ruta de acceso de una carpeta.  
+*lpszPath*<br/>
+[in] Una cadena que contiene la ruta de acceso de una carpeta.  
   
- [in] *lpItemInfo*  
- Un puntero a un `LPAFX_SHELLITEMINFO` estructura que describe una carpeta para mostrar.  
+*lpItemInfo*<br/>
+[in] Un puntero a un `LPAFX_SHELLITEMINFO` estructura que describe una carpeta para mostrar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; E_FAIL en caso contrario.  
@@ -157,8 +157,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Un valor booleano que especifica si el marco de trabajo permite el acceso directo.  
+*bHabilitar el*<br/>
+[in] Un valor booleano que especifica si el marco de trabajo permite el acceso directo.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
  Recupera la ruta de acceso de la carpeta actualmente seleccionada en el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.  
@@ -168,8 +168,8 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *strPath*  
- Una referencia a un parámetro de cadena donde el método escribe la ruta de acceso.  
+*strPath*<br/>
+[out] Una referencia a un parámetro de cadena donde el método escribe la ruta de acceso.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se realiza correctamente; en caso contrario, es 0.  
@@ -185,8 +185,8 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *strName*  
- Una referencia a un parámetro de cadena donde el método escribe el nombre.  
+*strName*<br/>
+[out] Una referencia a un parámetro de cadena donde el método escribe el nombre.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se realiza correctamente; en caso contrario, es 0.  
@@ -227,11 +227,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *strPath*  
- Una referencia a una cadena que recibe la ruta de acceso.  
+*strPath*<br/>
+[out] Una referencia a una cadena que recibe la ruta de acceso.  
   
- [in] *iItem*  
- El índice del elemento de lista.  
+*iItem*<br/>
+[in] El índice del elemento de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se realiza correctamente; FALSE en caso contrario.  
@@ -273,8 +273,8 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lParam1*  
- [in] *lParam2*  
+*lParam1*<br/>
+[in] [in] *lParam2*  
  [in] *iColumn*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -291,11 +291,11 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *tmFile*  
- La fecha asociada a un archivo.  
+*tmFile*<br/>
+[in] La fecha asociada a un archivo.  
   
- [out] *str*  
- Una cadena que contiene la fecha con formato de archivo.  
+*str*<br/>
+[out] Una cadena que contiene la fecha con formato de archivo.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando un [CMFCShellListCtrl (clase)](../../mfc/reference/cmfcshelllistctrl-class.md) objeto muestra la fecha asociada a un archivo, que debe convertir esa fecha en un formato de cadena. El `CMFCShellListCtrl` usa este método para realizar esa conversión. De forma predeterminada, este método usa la configuración regional para dar formato a la fecha en una cadena.  
@@ -310,11 +310,11 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lFileSize*  
- El tamaño del archivo que se mostrará el marco de trabajo.  
+*lFileSize*<br/>
+[in] El tamaño del archivo que se mostrará el marco de trabajo.  
   
- [out] *str*  
- Una cadena que contiene el tamaño de archivo con formato.  
+*str*<br/>
+[out] Una cadena que contiene el tamaño de archivo con formato.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando un [CMFCShellListCtrl (clase)](../../mfc/reference/cmfcshelllistctrl-class.md) debe mostrar el tamaño de un archivo de objeto, debe convertir el tamaño del archivo en un formato de cadena. El `CMFCShellListCtrl` usa este método para realizar esa conversión. De forma predeterminada, este método convierte el tamaño del archivo de bytes en kilobytes y, a continuación, utiliza la configuración regional para dar formato el tamaño en cadena.  
@@ -329,11 +329,11 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iItem*  
- El índice del elemento.  
+*iItem*<br/>
+[in] El índice del elemento.  
   
- [in] *pItem*  
- Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.  
+*pItem*<br/>
+[in] Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice de la imagen del icono si es correcto; -1 si se produce un error en la función.  
@@ -354,14 +354,14 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iItem*  
- El índice del elemento.  
+*iItem*<br/>
+[in] El índice del elemento.  
   
- [in] *iColumn*  
- La columna de interés.  
+*iColumn*<br/>
+[in] La columna de interés.  
   
- [in] *pItem*  
- Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.  
+*pItem*<br/>
+[in] Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `CString` que contiene el texto asociado al elemento.  
@@ -402,8 +402,8 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nTypes*  
- Una lista de elementos de tipos que el `CMFCShellListCtrl` objeto admite.  
+*nTypes*<br/>
+[in] Una lista de elementos de tipos que el `CMFCShellListCtrl` objeto admite.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información acerca de la lista de tipos de elemento, vea [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).  

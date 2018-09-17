@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte, __writefsdword, __writefsqword, __writefsword | Documentos de Microsoft
+title: __writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338307"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718476"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Específicos de Microsoft**  
   
- Escribir en la memoria en una ubicación especificada por un desplazamiento respecto al principio del segmento FS.  
+ Escribir en la memoria en una ubicación especificada por un desplazamiento relativo al principio del segmento de FS.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,11 +60,11 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Offset`  
- El desplazamiento desde el principio de FS a escribir.  
+*Desplazamiento*<br/>
+[in] El desplazamiento desde el principio de FS para escribir en.  
   
- [in] `Data`  
- Valor que se va a escribir.  
+*Data*<br/>
+[in] El valor para escribir.  
   
 ## <a name="requirements"></a>Requisitos  
   

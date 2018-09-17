@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110023"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725327"
 ---
 # <a name="basicios-class"></a>basic_ios (Clase)
 
@@ -230,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parámetros
 
-*estado* (opcional) los indicadores que desea establecer después de borrar todas las marcas. Tiene como valor predeterminado `goodbit`.
+*state*<br/>
+(Opcional) Las marcas que desea establecer después de borrar todas las marcas. Tiene como valor predeterminado `goodbit`.
 
-*reraise ()* (opcional) especifica si la excepción debe volver a generarse. El valor predeterminado es **false** (no volver a genera la excepción).
+*reraise)*<br/>
+(Opcional) Especifica si la excepción debe volver a generarse. El valor predeterminado es **false** (no volver a genera la excepción).
 
 ### <a name="remarks"></a>Comentarios
 

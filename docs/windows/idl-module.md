@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715538"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -49,26 +49,26 @@ function declaration
 *name*  
 Un nombre definido por el usuario para el bloque de código que va a aparecer en el archivo. idl.
 
-*dllname* (opcional)  
-El archivo .dll que contiene la exportación.
+*dllname*  
+(Opcional) El archivo .dll que contiene la exportación.
 
-*UUID* (opcional)  
-Identificador único.
+*uuid*  
+(Opcional) Un identificador único.
 
-*helpstring* (opcional)  
-Una cadena de caracteres que se usa para describir la biblioteca de tipos.
+*helpstring*  
+(Opcional) Una cadena de caracteres que se usa para describir la biblioteca de tipos.
 
-*helpstringcontext* (opcional)  
-El identificador de un tema de ayuda en un archivo .hlp o chm.
+*helpstringcontext*  
+(Opcional) El identificador de un tema de ayuda en un archivo .hlp o chm.
 
-*HelpContext* (opcional)  
-Identificador de ayuda para esta biblioteca de tipos.
+*helpcontext*  
+(Opcional) Identificador de ayuda para esta biblioteca de tipos.
 
-*oculto* (opcional)  
-Un parámetro que impide que aparezca la biblioteca. Consulte la [oculto](/windows/desktop/Midl/hidden) atributo MIDL para obtener más información.
+*hidden*  
+(Opcional) Un parámetro que impide que aparezca la biblioteca. Consulte la [oculto](/windows/desktop/Midl/hidden) atributo MIDL para obtener más información.
 
-*restringido* (opcional)  
-Los miembros de la biblioteca no se puede llamar arbitrariamente. Consulte la [restringido](/windows/desktop/Midl/restricted) atributo MIDL para obtener más información.
+*restricted*  
+(Opcional) Los miembros de la biblioteca no se puede llamar arbitrariamente. Consulte la [restringido](/windows/desktop/Midl/restricted) atributo MIDL para obtener más información.
 
 *declaración de función*  
 La función que va a definir.

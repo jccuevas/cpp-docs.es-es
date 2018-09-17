@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5ae6f47009600c87cb260246fca474592a5e9c6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8376300f4234f355cce49c2aae90fdc0e67f9a18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541317"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725873"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 **Específicos de Microsoft**  
@@ -56,11 +56,11 @@ void __writegsqword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Offset`  
- El desplazamiento desde el principio de GS para escribir en.  
+*Desplazamiento*<br/>
+[in] El desplazamiento desde el principio de GS para escribir en.  
   
- [in] `Data`  
- Valor que se va a escribir.  
+*Data*<br/>
+[in] El valor para escribir.  
   
 ## <a name="requirements"></a>Requisitos  
   

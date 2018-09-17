@@ -1,5 +1,5 @@
 ---
-title: __stosq | Documentos de Microsoft
+title: __stosq | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332031"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715512"
 ---
 # <a name="stosq"></a>__stosq
 **Específicos de Microsoft**  
   
- Genera una instrucción de cadena de almacén (`rep stosq`).  
+ Genera una instrucción de cadena de la tienda (`rep stosq`).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [out] `Dest`  
- El destino de la operación.  
+*dest*<br/>
+[out] El destino de la operación.  
   
- [in] `Data`  
- Los datos para almacenar.  
+*Data*<br/>
+[in] Para almacenar los datos.  
   
- [in] `Count`  
- La longitud del bloque de palabras cuádruples a escribir.  
+*Recuento*<br/>
+[in] La longitud del bloque de palabras cuádruples a escribir.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -59,7 +59,7 @@ void __stosb(
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado es que la quadword `Data` se escribe en un bloque de `Count` palabras cuádruples en el `Dest` cadena.  
+ El resultado es que el quadword `Data` se escribe en un bloque de `Count` palabras cuádruples en el `Dest` cadena.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

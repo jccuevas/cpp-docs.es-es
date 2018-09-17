@@ -1,5 +1,5 @@
 ---
-title: Resultados de LINK | Documentos de Microsoft
+title: Resultados de LINK | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,36 +27,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68de707ece35825a32a404ce14032d4bbd3141
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ca32769d7797446dbb0766c41867da1554b037f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376733"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706217"
 ---
 # <a name="link-output"></a>Resultados de LINK
-Resultados de LINK incluyen archivos .exe, DLL, archivos de asignaciones y mensajes.  
-  
-##  <a name="_core_output_files"></a> Archivos de salida  
- El archivo de salida predeterminado de LINK es un archivo .exe. Si el [/DLL](../../build/reference/dll-build-a-dll.md) , LINK generará un archivo DLL. Puede controlar el nombre de archivo de salida con el [nombre de archivo de salida (/ OUT)](../../build/reference/out-output-file-name.md) opción.  
-  
- En el modo incremental, LINK crea un archivo .ilk que contiene información de estado para posteriores generaciones incrementales del programa. Para obtener más información sobre los archivos .ilk, vea [archivos .ilk](../../build/reference/dot-ilk-files-as-linker-input.md). Para obtener más información sobre la vinculación incremental, vea la [vínculo incremental (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opción.  
-  
- Cuando LINK crea un programa que contiene exportaciones (normalmente un archivo DLL), crea también un archivo .lib, a menos que se utilice un archivo .exp en la compilación. Puede controlar el nombre de archivo de biblioteca de importación con la [/IMPLIB](../../build/reference/implib-name-import-library.md) opción.  
-  
- Si el [generar archivo de asignaciones (/ MAP)](../../build/reference/map-generate-mapfile.md) , LINK creará un archivo de asignaciones.  
-  
- Si el [generar información de depuración (/Debug)](../../build/reference/debug-generate-debug-info.md) , LINK creará una PDB para contener la información de depuración para el programa.  
-  
-##  <a name="_core_other_output"></a> Otros resultados  
- Cuando escriba `link` sin ninguna entrada de línea de comandos, LINK muestra una instrucción de uso que se resume sus opciones.  
-  
- VÍNCULO muestra un mensaje de copyright y la versión y repetir la entrada, en el archivo de comandos, a menos que la [suprimir el titular de inicio (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) se utiliza la opción.  
-  
- Puede usar el [imprimir mensajes de progreso (/ VERBOSE)](../../build/reference/verbose-print-progress-messages.md) opción para mostrar detalles adicionales acerca de la compilación.  
-  
- LINK emite los mensajes de error y advertencia en el formato LNK*nnnn*. También se utilizan el prefijo de error y el intervalo de números de LIB, DUMPBIN y EDITBIN.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+Resultados de LINK incluyen archivos .exe, DLL, archivos de asignaciones y los mensajes.
+
+##  <a name="_core_output_files"></a> Archivos de salida
+
+El archivo de salida predeterminado del vínculo es un archivo .exe. Si el [/DLL](../../build/reference/dll-build-a-dll.md) , LINK generará un archivo DLL. Puede controlar el nombre de archivo de salida con el [nombre de archivo de salida (/out)](../../build/reference/out-output-file-name.md) opción.
+
+En el modo incremental, vínculo crea un archivo .ilk para alojar información de estado para las compilaciones incrementales posterior del programa. Para obtener más información acerca de los archivos .ilk, vea [archivos .ilk](../../build/reference/dot-ilk-files-as-linker-input.md). Para obtener más información sobre la vinculación incremental, vea la [vincular de forma incremental (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opción.
+
+Cuando se crea el vínculo de un programa que contiene exportaciones (normalmente una DLL), también genera un archivo .lib, a menos que se usó un archivo .exp en la compilación. Puede controlar el nombre de archivo de biblioteca de importación con la [/IMPLIB](../../build/reference/implib-name-import-library.md) opción.
+
+Si el [generar archivo de asignaciones (/Map)](../../build/reference/map-generate-mapfile.md) , LINK creará un archivo de asignaciones.
+
+Si el [generar información de depuración (/Debug)](../../build/reference/debug-generate-debug-info.md) , LINK creará un archivo PDB para que contenga información de depuración del programa.
+
+##  <a name="_core_other_output"></a> Otros resultados
+
+Cuando escriba `link` sin ninguna entrada de línea de comandos, vínculo, muestra un extracto de uso que resume sus opciones.
+
+VÍNCULO muestra un mensaje de copyright y de versión y reproduce el archivo de comandos de entrada, a menos que el [suprimir la pancarta de inicio (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) se usa la opción.
+
+Puede usar el [imprimir mensajes de progreso (/verbose)](../../build/reference/verbose-print-progress-messages.md) opción para mostrar detalles adicionales sobre la compilación.
+
+VÍNCULO emite mensajes de error y advertencia en el formulario LNK*nnnn*. LIB, DUMPBIN y EDITBIN también usan este prefijo de error y el intervalo de números.
+
+## <a name="see-also"></a>Vea también
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opciones del vinculador](../../build/reference/linker-options.md)

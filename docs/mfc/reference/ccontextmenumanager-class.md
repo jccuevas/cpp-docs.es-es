@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3a9088ced647dd0e6694181cd7ab7857047c720
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338758"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713287"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager (clase)
 La `CContextMenuManager` objeto administra menús contextuales, también conocidos como menús contextuales.  
@@ -115,14 +115,14 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiMenuNameResId*  
- Un identificador de recurso para una cadena que contiene el nombre para el nuevo menú.  
+*uiMenuNameResId*<br/>
+[in] Un identificador de recurso para una cadena que contiene el nombre para el nuevo menú.  
   
- [in] *uiMenuResId*  
- El identificador de recurso de menú.  
+*uiMenuResId*<br/>
+[in] El identificador de recurso de menú.  
   
- [in] *lpszName*  
- Una cadena que contiene el nombre para el nuevo menú.  
+*lpszName*<br/>
+[in] Una cadena que contiene el nombre para el nuevo menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método se realizó correctamente; 0 si se produce un error en el método.  
@@ -148,8 +148,8 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nMenuResId*  
- El identificador de recurso para el menú.  
+*nMenuResId*<br/>
+[in] El identificador de recurso para el menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador del menú asociado o `NULL` si no se encuentra el menú.  
@@ -164,11 +164,11 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- Una cadena que contiene el nombre del menú que se va a recuperar.  
+*lpszName*<br/>
+[in] Una cadena que contiene el nombre del menú que se va a recuperar.  
   
- [out] *puiOrigResID*  
- Un puntero a un tipo UINT. Este parámetro contiene el identificador de recurso del menú especificado, si se encuentra.  
+*puiOrigResID*<br/>
+[out] Un puntero a un tipo UINT. Este parámetro contiene el identificador de recurso del menú especificado, si se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador del menú que coincide con el nombre que especificó *lpszName*. NULL si no hay ningún menú llamado *lpszName*.  
@@ -184,8 +184,8 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *listOfNames*  
- Una referencia a un [CStringList](../../mfc/reference/cstringlist-class.md) parámetro. Este método escribe la lista de nombres de menú para este parámetro.  
+*listOfNames*<br/>
+[out] Una referencia a un [CStringList](../../mfc/reference/cstringlist-class.md) parámetro. Este método escribe la lista de nombres de menú para este parámetro.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  Carga la información asociada con el [CContextMenuManager (clase)](../../mfc/reference/ccontextmenumanager-class.md) desde el registro de Windows.  
@@ -195,8 +195,8 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
+*lpszProfileName*<br/>
+[in] Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método es correcto; en caso contrario, es 0.  
@@ -227,8 +227,8 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
+*lpszProfileName*<br/>
+[in] Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método es correcto; en caso contrario, es 0.  
@@ -246,8 +246,8 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSet*  
- Un parámetro booleano que controla si se debe cerrar el menú emergente activo. Un valor TRUE indica que no se cierra el menú emergente activo. FALSE indica que se cierra el menú emergente activo.  
+*bSet*<br/>
+[in] Un parámetro booleano que controla si se debe cerrar el menú emergente activo. Un valor TRUE indica que no se cierra el menú emergente activo. FALSE indica que se cierra el menú emergente activo.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, el `CContextMenuManager` cierra el menú emergente activo.  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiMenuResId*  
- El identificador de recurso del menú que se mostrará este método.  
+*uiMenuResId*<br/>
+[in] El identificador de recurso del menú que se mostrará este método.  
   
- [in] *x*  
- El desplazamiento para el menú contextual, en coordenadas de cliente de horizontal.  
+*x*<br/>
+[in] El desplazamiento para el menú contextual, en coordenadas de cliente de horizontal.  
   
- [in] *y*  
- El desplazamiento vertical para el acceso directo en coordenadas de cliente  
+*y*<br/>
+[in] El desplazamiento vertical para el acceso directo en coordenadas de cliente  
   
- [in] *pWndOwner*  
- Un puntero a la ventana primaria del menú contextual.  
+*pWndOwner*<br/>
+[in] Un puntero a la ventana primaria del menú contextual.  
   
- [in] *bOwnMessage*  
- Un parámetro booleano que indica cómo se enrutan los mensajes. Si *bOwnMessage* es FALSE, el estándar de MFC se usa el enrutamiento. En caso contrario, *pWndOwner* recibe los mensajes.  
+*bOwnMessage*<br/>
+[in] Un parámetro booleano que indica cómo se enrutan los mensajes. Si *bOwnMessage* es FALSE, el estándar de MFC se usa el enrutamiento. En caso contrario, *pWndOwner* recibe los mensajes.  
   
- [in] *hmenuPopup*  
- El identificador del menú que se mostrará este método.  
+*hmenuPopup*<br/>
+[in] El identificador del menú que se mostrará este método.  
   
- [in] *bAutoDestroy*  
- Un parámetro booleano que indica si el menú se eliminará automáticamente.  
+*bAutoDestroy*<br/>
+[in] Un parámetro booleano que indica si el menú se eliminará automáticamente.  
   
- [in] *bRightAlign*  
- Un parámetro booleano que indica cómo se alinean los elementos de menú. Si *bRightAlign* es TRUE, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda.  
+*bRightAlign*<br/>
+[in] Un parámetro booleano que indica cómo se alinean los elementos de menú. Si *bRightAlign* es TRUE, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La primera sobrecarga del método devuelve cero si el método muestra el menú correctamente; en caso contrario, es 0. La segunda sobrecarga del método devuelve un puntero a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) si el menú contextual se muestra correctamente; en caso contrario, NULL.  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hmenuPopup*  
- El identificador del menú contextual que muestra este método.  
+*hmenuPopup*<br/>
+[in] El identificador del menú contextual que muestra este método.  
   
- [in] *x*  
- El desplazamiento para el menú contextual, en coordenadas de cliente de horizontal.  
+*x*<br/>
+[in] El desplazamiento para el menú contextual, en coordenadas de cliente de horizontal.  
   
- [in] *y*  
- El desplazamiento para el menú contextual, en coordenadas de cliente vertical.  
+*y*<br/>
+[in] El desplazamiento para el menú contextual, en coordenadas de cliente vertical.  
   
- [in] *pWndOwner*  
- Un puntero a la ventana primaria del menú contextual.  
+*pWndOwner*<br/>
+[in] Un puntero a la ventana primaria del menú contextual.  
   
- [in] *bRightAlign*  
- Un parámetro booleano que indica cómo se alinean los elementos de menú. Si *bRightAlign* es TRUE, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda. Si *bRightAlign* es FALSE, el menú está alineado a la izquierda para el orden de lectura de izquierda a derecha.  
+*bRightAlign*<br/>
+[in] Un parámetro booleano que indica cómo se alinean los elementos de menú. Si *bRightAlign* es TRUE, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda. Si *bRightAlign* es FALSE, el menú está alineado a la izquierda para el orden de lectura de izquierda a derecha.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El identificador de comando de menú del comando que el usuario elige; 0 si el usuario cierra el menú contextual sin seleccionar un comando de menú.  

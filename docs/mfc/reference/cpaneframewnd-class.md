@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a7a91920906d5693eafbbf79a4bdd00814c79108
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682861"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703721"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd (clase)
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
@@ -271,8 +271,8 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- El panel para agregar.  
+*conquistado*<br/>
+[in] El panel para agregar.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
  Agrega o quita un panel de la lista global.  
@@ -284,11 +284,11 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- El panel para agregar o quitar.  
+*conquistado*<br/>
+[in] El panel para agregar o quitar.  
   
- [in] *bAgregar*  
- Si es distinto de cero, agregar el panel. Si es 0, quite el panel.  
+*bAgregar*<br/>
+[in] Si es distinto de cero, agregar el panel. Si es 0, quite el panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método se realizó correctamente; en caso contrario, es 0.  
@@ -317,8 +317,8 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rectBorderSize*  
- Contiene el tamaño, en píxeles, del borde de la ventana de marco reducido.  
+*rectBorderSize*<br/>
+[out] Contiene el tamaño, en píxeles, del borde de la ventana de marco reducido.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método se llama el marco de trabajo para calcular el tamaño del borde de una ventana de marco reducido. El tamaño devuelto depende de si una ventana de marco reducido contiene una barra de herramientas o una [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
@@ -336,20 +336,20 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndToDock*  
- Un puntero a la ventana de acoplamiento.  
+*pWndToDock*<br/>
+[in] Un puntero a la ventana de acoplamiento.  
   
- [in] *ptMouse*  
- La ubicación del mouse.  
+*ptMouse*<br/>
+[in] La ubicación del mouse.  
   
- [out] *rectResult*  
- Rectángulo calculado.  
+*rectResult*<br/>
+[out] Rectángulo calculado.  
   
- [out] *bDrawTab*  
- Si es TRUE, dibuje una pestaña. Si es FALSE, no se dibujan una pestaña.  
+*bDrawTab*<br/>
+[out] Si es TRUE, dibuje una pestaña. Si es FALSE, no se dibujan una pestaña.  
   
- [out] *ppTargetBar*  
- Un puntero al panel de destino.  
+*ppTargetBar*<br/>
+[out] Un puntero al panel de destino.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método calcula el rectángulo que ocuparía una ventana si un usuario arrastra la ventana para el punto especificado por *ptMouse* y ancló no existe.  
@@ -372,8 +372,8 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDockingBar*  
- Un panel.  
+*pDockingBar*<br/>
+[in] Un panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se puede acoplar el marco reducido a *pDockingBar*; de lo contrario, 0.  
@@ -407,14 +407,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszWindowName*  
- Especifica el texto que se muestra en la ventana de marco reducido.  
+*lpszWindowName*<br/>
+[in] Especifica el texto que se muestra en la ventana de marco reducido.  
   
- [in] *dwStyle*  
- Especifica el estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Especifica el estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *rect*  
- Especifica el tamaño inicial y la posición de la ventana de marco reducido.  
+*Rect*<br/>
+[in] Especifica el tamaño inicial y la posición de la ventana de marco reducido.  
   
  [in] [out] *pParentWnd*  
  Especifica el marco principal de la ventana de marco reducido. Este valor no debe ser NULL.  
@@ -442,17 +442,17 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwStyleEx*  
- Especifica el estilo extendido de ventana. Para obtener más información, consulte [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
+*dwStyleEx*<br/>
+[in] Especifica el estilo extendido de ventana. Para obtener más información, consulte [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] *lpszWindowName*  
- Especifica el texto que se muestra en la ventana de marco reducido.  
+*lpszWindowName*<br/>
+[in] Especifica el texto que se muestra en la ventana de marco reducido.  
   
- [in] *dwStyle*  
- Especifica el estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Especifica el estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *rect*  
- Especifica el tamaño inicial y la posición de la ventana de marco reducido.  
+*Rect*<br/>
+[in] Especifica el tamaño inicial y la posición de la ventana de marco reducido.  
   
  [in] [out] *pParentWnd*  
  Especifica el marco principal de la ventana de marco reducido. Este valor no debe ser NULL.  
@@ -474,8 +474,8 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *bWasDocked*  
- TRUE si el panel ya se ha acoplado; en caso contrario, FALSE.  
+*bWasDocked*<br/>
+[out] TRUE si el panel ya se ha acoplado; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si la operación fue correcta, el `CDockablePane` que el panel se ha acoplado a; de lo contrario, NULL.  
@@ -488,8 +488,8 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Representa el identificador de control del panel para buscar.  
+*nID*<br/>
+[in] Representa el identificador de control del panel para buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El panel con el identificador del control especificado; en caso contrario, NULL, si ningún panel tiene el identificador de control especificado.  
@@ -506,17 +506,17 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pt*  
- El punto en coordenadas de pantalla.  
+*PT*<br/>
+[in] El punto en coordenadas de pantalla.  
   
- [in] *nSensitivity*  
- Aumentar el área de búsqueda de la ventana de marco reducido por este tamaño. Una ventana de marco reducido satisface los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
+*nSensitivity*<br/>
+[in] Aumentar el área de búsqueda de la ventana de marco reducido por este tamaño. Una ventana de marco reducido satisface los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
   
- [in] *pFrameToExclude*  
- Especifica una ventana de marco reducido para excluir de la búsqueda.  
+*pFrameToExclude*<br/>
+[in] Especifica una ventana de marco reducido para excluir de la búsqueda.  
   
- [in] *bFloatMultiOnly*  
- Si es TRUE, solo buscará en las ventanas de marco reducido que tienen el estilo CBRS_FLOAT_MULTI. Si es FALSE, buscar todas las ventanas de marco reducido.  
+*bFloatMultiOnly*<br/>
+[in] Si es TRUE, solo buscará en las ventanas de marco reducido que tienen el estilo CBRS_FLOAT_MULTI. Si es FALSE, buscar todas las ventanas de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la ventana de marco reducido que contiene *pt*; de lo contrario, NULL.  
@@ -542,8 +542,8 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rectCaption*  
- Contiene el tamaño y posición del título de ventana de marco reducido, en coordenadas de pantalla.  
+*rectCaption*<br/>
+[out] Contiene el tamaño y posición del título de ventana de marco reducido, en coordenadas de pantalla.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método se llama el marco de trabajo para calcular el rectángulo delimitador de un título de ventana de marco reducido.  
@@ -688,11 +688,11 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- El punto de prueba.  
+*punto*<br/>
+[in] El punto de prueba.  
   
- [in] *bDetectCaption*  
- Si es TRUE, compruebe el punto en el título. Si es FALSE, omita el título.  
+*bDetectCaption*<br/>
+[in] Si es TRUE, compruebe el punto en el título. Si es FALSE, omita el título.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los siguientes valores:  
@@ -780,11 +780,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- El nombre del perfil.  
+*lpszProfileName*<br/>
+[in] El nombre del perfil.  
   
- [in] *uiID*  
- El identificador del panel.  
+*uiID*<br/>
+[in] El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el estado del panel se ha cargado correctamente; en caso contrario, FALSE.  
@@ -836,8 +836,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que se usa para dibujar el borde.  
+*pDC*<br/>
+[in] El contexto de dispositivo que se usa para dibujar el borde.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método se llama el marco de trabajo para dibujar los bordes de la ventana de marco reducido.  
@@ -859,11 +859,11 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a un panel (se omite).  
+*pBar*<br/>
+[in] Un puntero a un panel (se omite).  
   
- [in] *ptOffset*  
- El desplazamiento por el que se va a mover el panel.  
+*ptOffset*<br/>
+[in] El desplazamiento por el que se va a mover el panel.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  Ajusta el diseño de un panel dentro de una ventana de marco reducido.  
@@ -894,11 +894,11 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- El panel que se va a mostrar u ocultar.  
+*pBar*<br/>
+[in] El panel que se va a mostrar u ocultar.  
   
- [in] *bMostrar*  
- TRUE si se muestra el panel; FALSE si se va a ocultar el panel.  
+*bMostrar*<br/>
+[in] TRUE si se muestra el panel; FALSE si se va a ocultar el panel.  
   
 ### <a name="remarks"></a>Comentarios  
  Lo llama el marco de trabajo cuando es mostrar u ocultar un panel en la ventana de marco reducido. La implementación predeterminada no hace nada.  
@@ -926,14 +926,14 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- El punto de que el usuario hizo clic, en coordenadas de pantalla.  
+*punto*<br/>
+[in] El punto de que el usuario hizo clic, en coordenadas de pantalla.  
   
- [in] *nSensitivity*  
- Este parámetro no se utiliza.  
+*nSensitivity*<br/>
+[in] No se utiliza este parámetro.  
   
- [in] *bCheckVisibility*  
- TRUE para especificar que se deben devolver solo los paneles visibles; en caso contrario, FALSE.  
+*bCheckVisibility*<br/>
+[in] TRUE para especificar que se deben devolver solo los paneles visibles; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El panel que el usuario hizo clic, o NULL si no existe ningún panel en esa ubicación.  
@@ -969,14 +969,14 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Un puntero al panel para quitar.  
+*conquistado*<br/>
+[in] Un puntero al panel para quitar.  
   
- [in] *bDestroy*  
- Especifica lo que ocurre en la ventana de marco reducido. Si *bDestroy* es TRUE, este método destruye la ventana de marco reducido inmediatamente. Si es FALSE, este método destruye la ventana de marco reducido después de un retraso determinado.  
+*bDestroy*<br/>
+[in] Especifica lo que ocurre en la ventana de marco reducido. Si *bDestroy* es TRUE, este método destruye la ventana de marco reducido inmediatamente. Si es FALSE, este método destruye la ventana de marco reducido después de un retraso determinado.  
   
- [in] *bNoDelayedDestroy*  
- Si es TRUE, la destrucción diferida está deshabilitada. Si es FALSE, la destrucción diferida está habilitada.  
+*bNoDelayedDestroy*<br/>
+[in] Si es TRUE, la destrucción diferida está deshabilitada. Si es FALSE, la destrucción diferida está habilitada.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo puede destruir ventanas de marco reducido inmediatamente o tras un retraso determinado. Si desea retrasar la destrucción de ventanas de marco reducido, pasar el valor FALSE en el *bNoDelayedDestroy* parámetro. Destrucción diferida se produce cuando el marco de trabajo procesa el mensaje AFX_WM_CHECKEMPTYMINIFRAME.  
@@ -991,11 +991,11 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBarOrg*  
- Un puntero en el panel original.  
+*pBarOrg*<br/>
+[in] Un puntero en el panel original.  
   
- [in] *pBarReplaceWith*  
- Un puntero al panel que reemplaza el panel original.  
+*pBarReplaceWith*<br/>
+[in] Un puntero al panel que reemplaza el panel original.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  Guarda el estado del panel en el registro.  
@@ -1007,11 +1007,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- El nombre del perfil.  
+*lpszProfileName*<br/>
+[in] El nombre del perfil.  
   
- [in] *uiID*  
- El identificador del panel.  
+*uiID*<br/>
+[in] El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el estado del panel se ha guardado correctamente; en caso contrario, FALSE.  
@@ -1024,8 +1024,8 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwButtons*  
- Combinación OR bit a bit de los valores siguientes:  
+*dwButtons*<br/>
+[in] Combinación OR bit a bit de los valores siguientes:  
   
 - AFX_CAPTION_BTN_CLOSE  
   
@@ -1067,8 +1067,8 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nTimeOut*  
- Valor de tiempo de espera en milisegundos.  
+*nTimeOut*<br/>
+[in] Valor de tiempo de espera en milisegundos.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  Establece el estado de acoplamiento.  
@@ -1078,8 +1078,8 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDockManager*  
- Un puntero a un administrador de acoplamiento.  
+*pDockManager*<br/>
+[in] Un puntero a un administrador de acoplamiento.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
 
@@ -1104,8 +1104,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *preDockState*  
- Valores posibles:  
+*preDockState*<br/>
+[in] Valores posibles:  
   
 - PDS_NOTHING,  
   
@@ -1113,11 +1113,11 @@ virtual BOOL SetPreDockState(
   
 - PDS_DOCK_TO_TAB  
   
- [in] *pBarToDock*  
- Un puntero al panel para acoplar.  
+*pBarToDock*<br/>
+[in] Un puntero al panel para acoplar.  
   
- [in] *dockMethod*  
- El método de acoplamiento. (Este parámetro se omite).  
+*dockMethod*<br/>
+[in] El método de acoplamiento. (Este parámetro se omite).  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la ventana de marco reducido está desacoplada; FALSE si está acoplada.  
@@ -1140,8 +1140,8 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenu*  
- Un puntero a un menú.  
+*pMenu*<br/>
+[in] Un puntero a un menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDockingBar*  
- [in] *pTabbedBar*  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Comentarios  
   

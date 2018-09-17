@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606960"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721350"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *i*  
-El valor de la nueva **SafeInt** objeto. Debe ser un parámetro de tipo T o U, según el constructor.
+*i*<br/>
+[in] El valor de la nueva **SafeInt** objeto. Debe ser un parámetro de tipo T o U, según el constructor.
 
-[in] *b*  
-El valor booleano para la nueva **SafeInt** objeto.
+*b*<br/>
+[in] El valor booleano para la nueva **SafeInt** objeto.
 
-[in] *u*  
-Un **SafeInt** de tipo U. El nuevo **SafeInt** objeto tendrá el mismo valor que *u*, pero serán de tipo T.
+*u*<br/>
+[in] Un **SafeInt** de tipo U. El nuevo **SafeInt** objeto tendrá el mismo valor que *u*, pero serán de tipo T.
 
 U el tipo de datos almacenados en el **SafeInt**. Esto puede ser el tipo de un valor booleano, carácter o entero. Si es un tipo entero, puede ser con o sin signo y tener entre 8 y 64 bits.
 

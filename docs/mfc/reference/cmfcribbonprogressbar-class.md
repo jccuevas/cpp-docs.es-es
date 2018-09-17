@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545869"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711989"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar (clase)
 Implementa un control que indica visualmente el progreso de una operación larga.  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Especifica el identificador de comando de la barra de progreso de la cinta de opciones.  
+*nID*<br/>
+[in] Especifica el identificador de comando de la barra de progreso de la cinta de opciones.  
   
- [in] *nWidth*  
- Especifica el ancho, en píxeles, de la barra de progreso de la cinta de opciones.  
+*nWidth*<br/>
+[in] Especifica el ancho, en píxeles, de la barra de progreso de la cinta de opciones.  
   
- [in] *nHeight*  
- Especifica el alto, en píxeles, de la barra de progreso de la cinta de opciones.  
+*nHeight*<br/>
+[in] Especifica el alto, en píxeles, de la barra de progreso de la cinta de opciones.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Devuelve la posición actual de la barra de progreso.  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSet*  
- TRUE para especificar que la barra de progreso está en modo de infinito; en caso contrario, FALSE.  
+*bSet*<br/>
+[in] TRUE para especificar que la barra de progreso está en modo de infinito; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Por lo general, si la barra de progreso está en modo infinito, se indica al usuario que está en curso una operación, pero que la hora de finalización es desconocida. Por lo tanto, la barra de progreso rellena repetidamente desde el valor mínimo para el valor máximo.  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nPos*  
- Especifica la posición a la que se establece la barra de progreso.  
+*nPos*<br/>
+[in] Especifica la posición a la que se establece la barra de progreso.  
   
- [in] *bRedraw*  
- Especifica si debe volver a dibujar la barra de progreso.  
+*bRedraw*<br/>
+[in] Especifica si debe volver a dibujar la barra de progreso.  
   
 ### <a name="remarks"></a>Comentarios  
  El intervalo que se va a establecer debe estar dentro del intervalo especificado por el [CMFCRibbonProgressBar::SetRange](#setrange) método.  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nmín.*  
- Especifica el valor mínimo del intervalo.  
+*nmín.*<br/>
+[in] Especifica el valor mínimo del intervalo.  
   
- [in] *Nmáx.*  
- Especifica el valor máximo del intervalo.  
+*Nmáx.*<br/>
+[in] Especifica el valor máximo del intervalo.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para definir el intervalo de la barra de progreso estableciendo los valores mínimos y máximo.  

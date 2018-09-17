@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027185"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712498"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox (clase)
 La clase `CMFCRibbonCheckBox` implementa una casilla que se puede agregar a un menú emergente, a la barra de herramientas de acceso rápido o al panel de cinta de opciones.  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Especifica el identificador de comando.  
+*nID*<br/>
+[in] Especifica el identificador de comando.  
   
- [in] *lpszText*  
- Especifica la etiqueta de texto.  
+*lpszText*<br/>
+[in] Especifica la etiqueta de texto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Construye un objeto de casilla de verificación de la cinta de opciones.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero al objeto CDC asociado con la casilla de verificación.  
+*pDC*<br/>
+[in] Puntero al objeto CDC asociado con la casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un `CSize` objeto que contiene el tamaño compacto de la casilla de verificación.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a CDC asociado con esta casilla de verificación.  
+*pDC*<br/>
+[in] Puntero a CDC asociado con esta casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `CSize` objeto que contiene el tamaño de la casilla de verificación intermedio.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero al objeto CDC asociado con esta casilla de verificación.  
+*pDC*<br/>
+[in] Puntero al objeto CDC asociado con esta casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un `CSize` objeto que contiene el tamaño de la casilla de verificación normal.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero al objeto CDC en la que se va a dibujar la casilla de verificación.  
+*pDC*<br/>
+[in] Puntero al objeto CDC en la que se va a dibujar la casilla de verificación.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *CDC**  
  Puntero al objeto CDC asociado con la casilla de verificación.  
   
- [in] *CRect*  
- Un `CRect` objeto que especifica el rectángulo en el que se va a dibujar la imagen del menú.  
+*CRect*<br/>
+[in] Un `CRect` objeto que especifica el rectángulo en el que se va a dibujar la imagen del menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se dibuja la imagen, o FALSE en caso contrario.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero al contexto de dispositivo en el que se va a dibujar la casilla de verificación.  
+*pDC*<br/>
+[in] Puntero al contexto de dispositivo en el que se va a dibujar la casilla de verificación.  
   
- [in] *strText*  
- El texto para mostrar.  
+*strText*<br/>
+[in] El texto para mostrar.  
   
- [in] *nTextOffset*  
- La distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.  
+*nTextOffset*<br/>
+[in] La distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.  
   
- [in] *rect*  
- El rectángulo de presentación de la casilla de verificación.  
+*Rect*<br/>
+[in] El rectángulo de presentación de la casilla de verificación.  
   
- [in] *bIsSelected*  
- TRUE si la casilla de verificación está seleccionada, o FALSE si no.  
+*bIsSelected*<br/>
+[in] TRUE si la casilla de verificación está seleccionada, o FALSE si no.  
   
- [in] *bHighlighted*  
- TRUE si la casilla de verificación está resaltado o FALSE si no.  
+*bHighlighted*<br/>
+[in] TRUE si la casilla de verificación está resaltado o FALSE si no.  
   
 ### <a name="remarks"></a>Comentarios  
   

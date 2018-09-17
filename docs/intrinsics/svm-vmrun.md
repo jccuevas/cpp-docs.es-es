@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086fbbc2a25c4af2b09f40d83ac0b20399860ca1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3777492212bbff368902acf589f0a3c46ea4ac18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718684"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Específicos de Microsoft**  
@@ -41,7 +41,7 @@ void __svm_vmrun(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|La dirección física de la VMCB.|  
+|*VmcbPhysicalAddress*|[in] La dirección física de la VMCB.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `__svm_vmrun` función usa una cantidad mínima de información en el VMCB para empezar a ejecutar el código de invitado de máquina virtual. Use la [__svm_vmsave](../intrinsics/svm-vmsave.md) o [__svm_vmload](../intrinsics/svm-vmload.md) funcionando si necesita más información para controlar una interrupción compleja o para cambiar a otro invitado.  

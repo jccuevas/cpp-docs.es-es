@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849476"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717436"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit (clase)
 La `CMFCMaskedEdit` clase es compatible con un control de edición enmascarado, que valida la entrada de usuario en una máscara y muestra los resultados validados de acuerdo con una plantilla.  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para especificar que el [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve enmascara solo caracteres; FALSE para especificar que el método recuperar todo el texto. El valor predeterminado es TRUE.  
+*bHabilitar el*<br/>
+[in] TRUE para especificar que el [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve enmascara solo caracteres; FALSE para especificar que el método recuperar todo el texto. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para habilitar la recuperación caracteres enmascarados. A continuación, cree un control de edición con máscara que se corresponde con el número de teléfono, como (425) 555-0187. Si se llama a la `GetWindowText` método, devuelve "4255550187". Si deshabilita recuperar caracteres enmascarados, el `GetWindowText` método devuelve el texto que se muestra en el control de edición, por ejemplo, "(425) 555-0187".  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszMask*  
- Una cadena de máscara que especifica el tipo de caracteres que pueden aparecer en cada posición en la entrada del usuario. La longitud de la *lpszInputTemplate* y *lpszMask* cadenas del parámetro deben ser el mismo. Vea la sección Comentarios para obtener más detalles sobre los caracteres de máscara.  
+*lpszMask*<br/>
+[in] Una cadena de máscara que especifica el tipo de caracteres que pueden aparecer en cada posición en la entrada del usuario. La longitud de la *lpszInputTemplate* y *lpszMask* cadenas del parámetro deben ser el mismo. Vea la sección Comentarios para obtener más detalles sobre los caracteres de máscara.  
   
- [in] *lpszInputTemplate*  
- Una cadena de plantilla de máscara que especifica que el literal de caracteres que puede aparecer en cada posición en la entrada del usuario. Use el carácter de subrayado ('_') como marcador de posición de carácter. La longitud de la *lpszInputTemplate* y *lpszMask* cadenas del parámetro deben ser el mismo.  
+*lpszInputTemplate*<br/>
+[in] Una cadena de plantilla de máscara que especifica que el literal de caracteres que puede aparecer en cada posición en la entrada del usuario. Use el carácter de subrayado ('_') como marcador de posición de carácter. La longitud de la *lpszInputTemplate* y *lpszMask* cadenas del parámetro deben ser el mismo.  
   
- [in] *chMaskInputTemplate*  
- Un carácter predeterminado que se sustituye por el marco de trabajo para cada carácter no válido en la entrada del usuario. El valor predeterminado de este parámetro es un carácter de subrayado ('_').  
+*chMaskInputTemplate*<br/>
+[in] Un carácter predeterminado que se sustituye por el marco de trabajo para cada carácter no válido en la entrada del usuario. El valor predeterminado de este parámetro es un carácter de subrayado ('_').  
   
- [in] *lpszValid*  
- Cadena que contiene un conjunto de caracteres válidos. NULL indica que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.  
+*lpszValid*<br/>
+[in] Cadena que contiene un conjunto de caracteres válidos. NULL indica que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para crear la máscara para el control de edición con máscara. Derive una clase de la `CMFCMaskedEdit` clase e invalidar la [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) método debe utilizar su propio código para el procesamiento de máscara personalizado.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para seleccionar únicamente grupos; FALSE para seleccionar todo el texto. El valor predeterminado es TRUE.  
+*bHabilitar el*<br/>
+[in] TRUE para seleccionar únicamente grupos; FALSE para seleccionar todo el texto. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
  Use esta función para especificar si el control de edición con máscara permite al usuario seleccionar por grupo o todo el texto.  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para validar la entrada con solo enmascarar caracteres; del usuario FALSE para validar la máscara completa. El valor predeterminado es TRUE.  
+*bHabilitar el*<br/>
+[in] TRUE para validar la entrada con solo enmascarar caracteres; del usuario FALSE para validar la máscara completa. El valor predeterminado es TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Recupera texto desde el control de edición enmascarada puede validar.  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *lpszStringBuf*  
- Un puntero a un búfer que recibe el texto desde el control de edición.  
+*lpszStringBuf*<br/>
+[out] Un puntero a un búfer que recibe el texto desde el control de edición.  
   
- [in] *nMaxCount*  
- El número máximo de caracteres que se va a recibir.  
+*nMaxCount*<br/>
+[in] El número máximo de caracteres que se va a recibir.  
   
- [out] *rstrString*  
- Una referencia al objeto de cadena que recibe el texto desde el control de edición.  
+*rstrString*<br/>
+[out] Una referencia al objeto de cadena que recibe el texto desde el control de edición.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La primera sobrecarga del método devuelve el número de bytes de la cadena que se copia en el *lpszStringBuf* búfer de parámetro; 0 si el control de edición con máscara no tiene ningún texto.  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *chChar*  
- El carácter que se va a validarse.  
+*chChar*<br/>
+[in] El carácter que se va a validarse.  
   
- [in] *chMaskChar*  
- El carácter correspondiente de la cadena de máscara.  
+*chMaskChar*<br/>
+[in] El carácter correspondiente de la cadena de máscara.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el *chChar* parámetro es el tipo de caracteres permitido por el *chMaskChar* parámetro; en caso contrario, FALSE.  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszValid*  
- Cadena que contiene el conjunto de caracteres de entrada válidos. NULL significa que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.  
+*lpszValid*<br/>
+[in] Cadena que contiene el conjunto de caracteres de entrada válidos. NULL significa que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para definir una lista de caracteres válidos. Si un carácter de entrada no está en esta lista, control de edición enmascarado no lo aceptará.  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszString*  
- Apunta a una cadena terminada en null que se usará como un símbolo del sistema.  
+*lpszString*<br/>
+[in] Apunta a una cadena terminada en null que se usará como un símbolo del sistema.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método establece el texto del control.  

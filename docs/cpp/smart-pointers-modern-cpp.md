@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462256"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703591"
 ---
 # <a name="smart-pointers-modern-c"></a>Punteros inteligentes (C++ moderno)
 En la programación de C++ moderno, incluye la biblioteca estándar de *inteligente punteros*, que se usan para ayudar a garantizar que los programas están libres de memoria y pérdidas de recursos y son seguro ante excepciones.  
@@ -69,8 +69,9 @@ En la programación de C++ moderno, incluye la biblioteca estándar de *intelige
 ## <a name="kinds-of-smart-pointers"></a>Clases de punteros inteligentes  
  En la sección siguiente se resumen los distintos tipos de punteros inteligentes disponibles en el entorno de programación de Windows y se describe cuándo utilizarlos.  
   
- **Punteros inteligentes de biblioteca estándar de C++**  
- Utilice estos punteros inteligentes como primera opción para encapsular punteros a los objetos estándar de C++ (POCO).  
+### <a name="c-standard-library-smart-pointers"></a>Punteros inteligentes de la biblioteca estándar de C++
+
+Utilice estos punteros inteligentes como primera opción para encapsular punteros a los objetos estándar de C++ (POCO).  
   
 -   `unique_ptr`   
      Permite exactamente un único propietario del puntero subyacente. Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto `shared_ptr`. Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir. Sustituye a `auto_ptr`, que está desusado. Comparado con `boost::scoped_ptr`, `unique_ptr` es pequeño y eficaz; el tamaño es un puntero y admite referencias rvalue para una rápida inserción y la recuperación de las colecciones de la biblioteca estándar de C++. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) y [unique_ptr (clase)](../standard-library/unique-ptr-class.md).  
@@ -81,8 +82,9 @@ En la programación de C++ moderno, incluye la biblioteca estándar de *intelige
 -   `weak_ptr`   
     Puntero inteligente de caso especial para usarlo junto con `shared_ptr`. `weak_ptr` proporciona acceso a un objeto que pertenece a una o varias instancias de `shared_ptr`, pero no participa en el recuento de referencias. Utilícelo cuando desee observar un objeto, pero no quiere que permanezca activo. Es necesario en algunos casos para interrumpir las referencias circulares entre instancias de `shared_ptr`. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) y [weak_ptr (clase)](../standard-library/weak-ptr-class.md).  
   
- **Punteros inteligentes para objetos COM (programación de Windows clásico)**  
- Cuando trabaje con objetos COM, encapsule los punteros de interfaz en un tipo de puntero inteligente adecuado. Active Template Library (ATL) define varios punteros inteligentes para propósitos diferentes. También puede usar el tipo de puntero inteligente `_com_ptr_t`, que el compilador utiliza cuando crea clases contenedoras de archivos .tlb. Es la mejor opción si no desea incluir los archivos de encabezado ATL.  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Punteros inteligentes para objetos COM (programación clásica de Windows)
+
+Cuando trabaje con objetos COM, encapsule los punteros de interfaz en un tipo de puntero inteligente adecuado. Active Template Library (ATL) define varios punteros inteligentes para propósitos diferentes. También puede usar el tipo de puntero inteligente `_com_ptr_t`, que el compilador utiliza cuando crea clases contenedoras de archivos .tlb. Es la mejor opción si no desea incluir los archivos de encabezado ATL.  
   
  [CComPtr (clase)](../atl/reference/ccomptr-class.md)  
  Utilice esta opción a menos que no puede usar ATL. Realiza el recuento de referencias mediante los métodos `AddRef` y de `Release`. Para obtener más información, consulte [Cómo: crear y usar instancias de CComPtr y CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
@@ -99,8 +101,9 @@ En la programación de C++ moderno, incluye la biblioteca estándar de *intelige
  [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)  
  Se parece a `CComQIPtr` en funcionalidad, pero no depende de los encabezados ATL.  
   
- **Punteros inteligentes ATL para objetos POCO**  
- Además de punteros inteligentes para los objetos COM, ATL también define punteros inteligentes y colecciones de punteros inteligentes para objetos estándar de C++. En la programación clásica de Windows, estos tipos son alternativas útiles a las colecciones de la biblioteca estándar de C++, especialmente cuando no se requiere la portabilidad del código o cuando no desee mezclar los modelos de programación de la biblioteca estándar de C++ y ATL.  
+### <a name="atl-smart-pointers-for-poco-objects"></a>Punteros inteligentes ATL para objetos POCO
+
+Además de punteros inteligentes para los objetos COM, ATL también define punteros inteligentes y colecciones de punteros inteligentes para objetos estándar de C++. En la programación clásica de Windows, estos tipos son alternativas útiles a las colecciones de la biblioteca estándar de C++, especialmente cuando no se requiere la portabilidad del código o cuando no desee mezclar los modelos de programación de la biblioteca estándar de C++ y ATL.  
   
  [CAutoPtr (clase)](../atl/reference/cautoptr-class.md)  
  Puntero inteligente que exige una propiedad única al transferir la propiedad en la copia. Puede compararse con la clase `std::auto_ptr` desusada.  

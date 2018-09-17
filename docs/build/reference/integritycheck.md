@@ -1,5 +1,5 @@
 ---
-title: / INTEGRITYCHECK | Documentos de Microsoft
+title: / INTEGRITYCHECK | Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0adf9add2d191ae89aec0a5d756ade8e9f7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 062ce019fe1b622661be880d8a06eac9c5971103
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370253"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709208"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
@@ -36,4 +36,4 @@ En el encabezado del archivo DLL o el archivo ejecutable, esta opción establece
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de EDITBIN](../../build/reference/editbin-options.md)  
+[Opciones de EDITBIN](../../build/reference/editbin-options.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716786"
 ---
 # <a name="generic-classes-ccli"></a>Clases genéricas (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 En la sintaxis anterior, se utilizan los términos siguientes:
 
-*atributos* (opcional)  
-Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.
+*Atributos*  
+(Opcional) Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.
 
 *clave de clase*  
 Cualquier **clase** o **typename**
@@ -58,7 +58,7 @@ Cualquier **clase** o **typename**
 *cláusulas de restricción*  
 Una lista (no separados por comas) de **donde** cláusulas especifica las restricciones para los parámetros de tipo. Toma la forma:
 
-`where`  *identificador de parámetro de tipo*`:`*lista de restricciones*  `...`
+> **donde** *identificador de parámetro de tipo* **:** *lista de restricciones***...** 
 
 *lista de restricciones*  
 *clase o interfaz*[`,` *...* ]
@@ -69,8 +69,8 @@ Modificadores de accesibilidad para la clase genérica. Para el tiempo de ejecuc
 *identifier*  
 El nombre de la clase genérica, cualquier identificador de C++ válido.
 
-*modificadores* (opcional)  
-Permite incluyen los modificadores **sealed** y **abstracta**.
+*Modificadores*  
+(Opcional) Permite incluyen los modificadores **sealed** y **abstracta**.
 
 *base-list*  
 Una lista que contiene la clase base y las interfaces implementadas, todas separadas por comas.

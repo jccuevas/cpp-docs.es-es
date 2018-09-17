@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335963"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716311"
 ---
 # <a name="cdialogex-class"></a>CDialogEx (clase)
 La clase `CDialogEx` especifica el color de fondo y la imagen de fondo de un cuadro de diálogo.  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIDTemplate*  
- El identificador de recurso de una plantilla de cuadro de diálogo.  
+*nIDTemplate*<br/>
+[in] El identificador de recurso de una plantilla de cuadro de diálogo.  
   
- [in] *lpszTemplateName*  
- El nombre de recurso de una plantilla de cuadro de diálogo.  
+*lpszTemplateName*<br/>
+[in] El nombre de recurso de una plantilla de cuadro de diálogo.  
   
- [in] *pParent*  
- Un puntero a la ventana primaria. El valor predeterminado es NULL.  
+*pParent*<br/>
+[in] Un puntero a la ventana primaria. El valor predeterminado es NULL.  
   
- [in] *pParentWnd*  
- Un puntero a la ventana primaria. El valor predeterminado es NULL.  
+*pParentWnd*<br/>
+[in] Un puntero a la ventana primaria. El valor predeterminado es NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *color*  
- Un valor de color RGB.  
+*Color*<br/>
+[in] Un valor de color RGB.  
   
- [in] *bRepaint*  
- TRUE para actualizar inmediatamente la pantalla; en caso contrario, FALSE. El valor predeterminado es TRUE.  
+*bRepaint*<br/>
+[in] TRUE para actualizar inmediatamente la pantalla; en caso contrario, FALSE. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hBitmap*  
- Identificador de la imagen de fondo.  
+*hBitmap*<br/>
+[in] Identificador de la imagen de fondo.  
   
- [in] *uiBmpResId*  
- El identificador de recurso de la imagen de fondo.  
+*uiBmpResId*<br/>
+[in] El identificador de recurso de la imagen de fondo.  
   
- [in] *ubicación*  
- Uno de los `CDialogEx::BackgroundLocation` valores que especifican la ubicación de la imagen. Los valores válidos incluyen BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT y BACKGR_BOTTOMRIGHT. El valor predeterminado es BACKGR_TILE.  
+*Ubicación*<br/>
+[in] Uno de los `CDialogEx::BackgroundLocation` valores que especifican la ubicación de la imagen. Los valores válidos incluyen BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT y BACKGR_BOTTOMRIGHT. El valor predeterminado es BACKGR_TILE.  
   
- [in] *bAutoDestroy*  
- TRUE para destruir automáticamente la imagen de fondo. en caso contrario, FALSE.  
+*bAutoDestroy*<br/>
+[in] TRUE para destruir automáticamente la imagen de fondo. en caso contrario, FALSE.  
   
- [in] *bRepaint*  
- TRUE para volver a dibujar inmediatamente el cuadro de diálogo; en caso contrario, FALSE.  
+*bRepaint*<br/>
+[in] TRUE para volver a dibujar inmediatamente el cuadro de diálogo; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  En el segundo método sobrecargar sintaxis, TRUE si el método se realiza correctamente; en caso contrario, FALSE.  

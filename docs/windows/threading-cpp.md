@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19f49951cad65d3dbf15c406af9ac78a28408d4b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899c41a65a651f7464b11639d2106b3eaa51e21b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221819"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708661"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -38,8 +38,8 @@ Especifica el modelo de subprocesos para un objeto COM.
 
 ### <a name="parameters"></a>Parámetros
 
-*modelo* (opcional)  
-Uno de los modelos de subprocesamiento siguientes:
+*model*<br/>
+(Opcional) Uno de los modelos de subprocesamiento siguientes:
 
 - `apartment` (apartamento de subproceso)
 

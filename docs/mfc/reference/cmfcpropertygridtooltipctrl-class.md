@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676785"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716175"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl (clase)
 Implementa una información sobre herramientas que controlan el [CMFCPropertyGridCtrl (clase)](../../mfc/reference/cmfcpropertygridctrl-class.md) usa para mostrar información sobre herramientas.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Un puntero a la ventana primaria.  
+*pWndParent*<br/>
+[in] Un puntero a la ventana primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la ventana se ha creado correctamente; en caso contrario, FALSE.  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rect*  
- Contiene la última posición del control tooltip.  
+*Rect*<br/>
+[out] Contiene la última posición del control tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Oculta el control tooltip.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nTextMargin*  
- Especifica el espaciado entre el texto del control de información sobre herramientas y el borde de la ventana de información sobre herramientas. El valor predeterminado es 10 píxeles.  
+*nTextMargin*<br/>
+[in] Especifica el espaciado entre el texto del control de información sobre herramientas y el borde de la ventana de información sobre herramientas. El valor predeterminado es 10 píxeles.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Muestra el control de información sobre herramientas.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rect*  
- Especifica la posición y el tamaño del control tooltip.  
+*Rect*<br/>
+[in] Especifica la posición y el tamaño del control tooltip.  
   
- [in] *strText*  
- Especifica el texto que se mostrará en la información sobre herramientas.  
+*strText*<br/>
+[in] Especifica el texto que se mostrará en la información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método muestra el control de información sobre herramientas en la posición y el tamaño especificado por *rect*. Si la posición, el tamaño y el texto no han cambiado desde la última vez que se llamó a este método, este método tiene ningún efecto.  

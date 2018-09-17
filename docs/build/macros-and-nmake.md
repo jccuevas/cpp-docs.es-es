@@ -1,5 +1,5 @@
 ---
-title: Las macros y NMAKE | Documentos de Microsoft
+title: Macros y NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,30 +15,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f348da925347b1d97a2e1e74a20eff43886bf7e4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a4e2c91bfe78ff72cc438de2aaec2bb9f0d8a94
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368010"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712977"
 ---
 # <a name="macros-and-nmake"></a>Las macros y NMAKE
-Las macros reemplazan una cadena concreta en el archivo MAKE por otra cadena. Uso de macros, puede:  
-  
--   Crear un archivo MAKE que pueda generar distintos proyectos.  
-  
--   Especifique las opciones de comandos.  
-  
--   Establecer variables de entorno.  
-  
- Puede definir [sus propias macros](../build/defining-an-nmake-macro.md) o use de NMAKE [macros predefinidas](../build/special-nmake-macros.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
- [Definir una macro NMAKE](../build/defining-an-nmake-macro.md)  
-  
- [Utilizar una macro NMAKE](../build/using-an-nmake-macro.md)  
-  
- [Macros NMAKE especiales](../build/special-nmake-macros.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de NMAKE](../build/nmake-reference.md)
+
+Macros de reemplazan una cadena concreta en el archivo MAKE por otra cadena. Uso de macros, puede:
+
+- Cree un archivo MAKE que se puede compilar proyectos diferentes.
+
+- Especifique las opciones de comandos.
+
+- Establecer variables de entorno.
+
+Puede definir [sus propias macros](../build/defining-an-nmake-macro.md) o usar de NMAKE [macros predefinidas](../build/special-nmake-macros.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
+
+[Definir una macro NMAKE](../build/defining-an-nmake-macro.md)
+
+[Utilizar una macro NMAKE](../build/using-an-nmake-macro.md)
+
+[Macros NMAKE especiales](../build/special-nmake-macros.md)
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de NMAKE](../build/nmake-reference.md)

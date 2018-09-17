@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104295"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714534"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ Presenta una sección de una o varias definiciones de exportación que especific
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Comentarios
 
@@ -76,7 +76,7 @@ La palabra clave opcional **datos** especifica que una exportación es de datos,
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 Puede exportar una definición de estas cuatro formas, por orden de más a menos recomendadas:
 
@@ -95,7 +95,7 @@ Puede exportar una definición de estas cuatro formas, por orden de más a menos
 
 La directiva #pragma es útil si tiene que exportar un nombre de función no representativos y tener exportaciones diferentes dependiendo de la configuración de compilación (por ejemplo, en las compilaciones de 32 bits o 64 bits).
 
-Se pueden utilizar los cuatro métodos en el mismo programa. Cuando LINK compila un programa que contiene exportaciones, crea también una biblioteca de importación, excepto si se usa un archivo .EXP en la compilación. 
+Se pueden utilizar los cuatro métodos en el mismo programa. Cuando LINK compila un programa que contiene exportaciones, crea también una biblioteca de importación, excepto si se usa un archivo .EXP en la compilación.
 
 Este es un ejemplo de una sección EXPORTS:
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 Al exportar una variable de una DLL con un archivo .DEF, no es necesario que especifique `__declspec(dllexport)` en la variable. Sin embargo, en todos los archivos que utilicen la DLL, deberá usar `__declspec(dllimport)` en la declaración de datos.
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538942"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721180"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar (clase)
 Implementa una barra de herramientas emergente contextual.  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pRibbonBar*  
- La barra de cinta que se busca en los botones Mostrar la minibarra de herramientas.  
+*pRibbonBar*<br/>
+[in] La barra de cinta que se busca en los botones Mostrar la minibarra de herramientas.  
   
- [in] *lstCommands*  
- La lista de comandos que se mostrará en la minibarra de herramientas. Todas las categorías de la cinta de opciones se van a buscar los botones asociados.  
+*lstCommands*<br/>
+[in] La lista de comandos que se mostrará en la minibarra de herramientas. Todas las categorías de la cinta de opciones se van a buscar los botones asociados.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para establecer la lista de comandos que se mostrará en la minibarra de herramientas.  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *x*  
- Especifica la posición horizontal de la minibarra de herramientas en coordenadas de pantalla.  
+*x*<br/>
+[in] Especifica la posición horizontal de la minibarra de herramientas en coordenadas de pantalla.  
   
- [in] *y*  
- Especifica la posición vertical de la minibarra de herramientas en coordenadas de pantalla.  
+*y*<br/>
+[in] Especifica la posición vertical de la minibarra de herramientas en coordenadas de pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la minibarra de herramientas se mostró correctamente; en caso contrario, FALSE.  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *x*  
- Especifica la posición horizontal del menú contextual en coordenadas de pantalla.  
+*x*<br/>
+[in] Especifica la posición horizontal del menú contextual en coordenadas de pantalla.  
   
- [in] *y*  
- Especifica la posición vertical del menú contextual en coordenadas de pantalla.  
+*y*<br/>
+[in] Especifica la posición vertical del menú contextual en coordenadas de pantalla.  
   
- [in] *uiMenuResID*  
- Especifica el identificador de recurso del menú contextual para mostrar.  
+*uiMenuResID*<br/>
+[in] Especifica el identificador de recurso del menú contextual para mostrar.  
   
- [in] *pWndOwner*  
- Identifica la ventana que recibe los mensajes en el menú contextual.  
+*pWndOwner*<br/>
+[in] Identifica la ventana que recibe los mensajes en el menú contextual.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el menú contextual se mostró correctamente; en caso contrario, FALSE.  

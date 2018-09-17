@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cc824d31f305fe36e0971704fd63025b3c1fdad2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540707"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722961"
 ---
 # <a name="cmfcautohidebutton-class"></a>Clase CMFCAutoHideButton
 Botón que muestra u oculta una [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurada para ocultar.  
@@ -144,14 +144,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentBar*  
- Un puntero a la barra de herramientas primario.  
+*pParentBar*<br/>
+[in] Un puntero a la barra de herramientas primario.  
   
- [in] *pAutoHideWnd*  
- Un puntero a un [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto. Este botón de ocultación automática oculta y se muestra que `CDockablePane`.  
+*pAutoHideWnd*<br/>
+[in] Un puntero a un [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto. Este botón de ocultación automática oculta y se muestra que `CDockablePane`.  
   
- [in] *dwAlignment*  
- Un valor que especifica la alineación del botón con la ventana de marco principal.  
+*dwAlignment*<br/>
+[in] Un valor que especifica la alineación del botón con la ventana de marco principal.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -303,8 +303,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea personalizar la apariencia de los botones de ocultación automática en la aplicación, cree una clase nueva derivada de `CMFCAutoHideButton`. En la clase derivada, invalide este método.  
@@ -320,14 +320,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rectBounds*  
- El rectángulo delimitador del botón de ocultación automática.  
+*rectBounds*<br/>
+[in] El rectángulo delimitador del botón de ocultación automática.  
   
- [in] *rectBorderSize*  
- El grosor del borde de cada lado del botón de ocultación automática.  
+*rectBorderSize*<br/>
+[in] El grosor del borde de cada lado del botón de ocultación automática.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea personalizar el borde de cada botón de ocultación automática en la aplicación, cree una nueva clase que deriva el `CMFCAutoHideButton`. En la clase derivada, invalide este método.  
@@ -342,11 +342,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- El rectángulo delimitador del botón de ocultación automática.  
+*Rect*<br/>
+[in] El rectángulo delimitador del botón de ocultación automática.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea personalizar el fondo de los botones de ocultación automática en la aplicación, cree una nueva clase que deriva el `CMFCAutoHideButton`. En la clase derivada, invalide este método.  
@@ -359,8 +359,8 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- Un valor booleano que especifica si este método muestra el archivo adjunto `CDockablePane`.  
+*bMostrar*<br/>
+[in] Un valor booleano que especifica si este método muestra el archivo adjunto `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Muestra u oculta el botón de ocultación automática.  
@@ -370,8 +370,8 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- Valor booleano que especifica si se debe mostrar el botón de ocultación automática.  
+*bMostrar*<br/>
+[in] Valor booleano que especifica si se debe mostrar el botón de ocultación automática.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
@@ -405,8 +405,8 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFirstBarInGroup*  
- Puntero a la primera barra del grupo.  
+*pFirstBarInGroup*<br/>
+[in] Un puntero a la primera barra en el grupo.  
   
 ### <a name="remarks"></a>Comentarios  
   

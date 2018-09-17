@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704879"
 ---
 # <a name="timeget-class"></a>time_get (Clase)
 
@@ -69,10 +69,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*  
+*CharType*<br/>
 Tipo usado dentro de un programa para codificar caracteres.
 
-*InputIterator*  
+*InputIterator*<br/>
 Iterador del que se leen los valores de hora.
 
 ## <a name="remarks"></a>Comentarios
@@ -320,19 +320,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información de fecha.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -371,19 +371,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Sin usar.
 
-*state*  
+*state*<br/>
 Un parámetro de salida que establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información del mes.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -414,19 +414,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Sin usar.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información de fecha.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -465,19 +465,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información del día de la semana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -508,19 +508,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información de año.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -563,31 +563,31 @@ iter_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que indica dónde comienza la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que indica dónde acaba la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 La secuencia.
 
-*state*  
+*state*<br/>
 Se establecen los elementos de máscara de bits apropiados para que el estado de la secuencia indique los errores.
 
-*ptm*  
+*ptm*<br/>
 Puntero a la estructura de tiempo en la que se va a almacenar la hora.
 
-*FMT*  
+*FMT*<br/>
 Carácter especificador de conversión.
 
-*Mod*  
+*Mod*<br/>
 Carácter modificador opcional.
 
-*fmt_first*  
+*fmt_first*<br/>
 Apunta al principio de las directivas de formato.
 
-*fmt_last*  
+*fmt_last*<br/>
 Apunta al final de las directivas de formato.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -620,19 +620,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información de fecha.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -714,19 +714,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Sin usar.
 
-*state*  
+*state*<br/>
 Un parámetro de salida que establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información del mes.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -806,19 +806,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Sin usar.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información de fecha.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -887,19 +887,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información del día de la semana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -964,19 +964,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*first*  
+*first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*  
+*Último*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*iosbase*  
+*iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*state*  
+*state*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*ptm*  
+*ptm*<br/>
 Un puntero a donde se va a almacenar la información de año.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1050,7 +1050,7 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*Refs*  
+*Refs*<br/>
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios

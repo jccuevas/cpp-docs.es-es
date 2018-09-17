@@ -1,5 +1,5 @@
 ---
-title: -Fi (Preprocesar el nombre de archivo de salida) | Documentos de Microsoft
+title: -Fi (Preprocesar el nombre de archivo de salida) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,41 +19,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e7fe5ffbb8a6ccdd5ef02d2cf3feb6b94d48233
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dfe9e54dbafbcbd27763060dc9d81b21bac2503d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709408"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (Preprocesar el nombre del archivo de salida)
-Especifica el nombre del archivo de salida a la que el [/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md) opción del compilador escribe la salida preprocesada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/Fipathname  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
-  
-|Parámetro|Descripción|  
-|---------------|-----------------|  
-|`pathname`|El nombre y la ruta de acceso del archivo de salida generan por la **/P** opción del compilador.|  
-  
-## <a name="remarks"></a>Comentarios  
- Use la **/Fi** opción del compilador en combinación con la **/P** opción del compilador.  
-  
- Si especifica solo una ruta de acceso para el `pathname` parámetro, el nombre base del archivo de origen se utiliza como el nombre base del archivo de salida preprocesado. El `pathname` parámetro no requiere una extensión de nombre de archivo en particular. Sin embargo, una extensión de "i" se utiliza si no especifica una extensión de nombre de archivo.  
-  
-## <a name="example"></a>Ejemplo  
- La línea de comandos siguiente preprocesa PROGRAM.cpp, conserva los comentarios, agrega [#line](../../preprocessor/hash-line-directive-c-cpp.md) directivas y escribe el resultado en el archivo MYPROCESS.i.  
-  
-```  
-CL /P /FiMYPROCESS.I PROGRAM.CPP  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador](../../build/reference/compiler-options.md)   
- [/P (Preprocesar y escribir en un archivo)](../../build/reference/p-preprocess-to-a-file.md)   
- [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+
+Especifica el nombre del archivo de salida a la que el [/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md) opción del compilador escribe la salida preprocesada.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+/Fipathname
+```
+
+#### <a name="parameters"></a>Parámetros
+
+|Parámetro|Descripción|
+|---------------|-----------------|
+|`pathname`|El nombre y ruta de acceso del archivo de salida generados por el **/P** opción del compilador.|
+
+## <a name="remarks"></a>Comentarios
+
+Use la **/Fi** en combinación con la opción del compilador la **/P** opción del compilador.
+
+Si especifica solo una ruta de acceso para el `pathname` parámetro, el nombre base del archivo de origen se utiliza como nombre base del archivo de salida preprocesado. El `pathname` parámetro no requiere una extensión de nombre de archivo determinado. Sin embargo, una extensión de "i" se usa si no especifica una extensión de nombre de archivo.
+
+## <a name="example"></a>Ejemplo
+
+La siguiente línea de comandos preprocesa PROGRAM.cpp, conserva los comentarios, agrega [#line](../../preprocessor/hash-line-directive-c-cpp.md) directivas y escribe el resultado en el archivo MYPROCESS.i.
+
+```
+CL /P /FiMYPROCESS.I PROGRAM.CPP
+```
+
+## <a name="see-also"></a>Vea también
+
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/P (Preprocesar para archivo)](../../build/reference/p-preprocess-to-a-file.md)
+[especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bad61c157926fd417467afaa2d97d0db517430f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201561"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716019"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -43,11 +43,11 @@ Crea una conexión a un origen de datos.
 *db_source*  
 La cadena de conexión usada para conectarse al origen de datos. Para el formato de la cadena de conexión, consulte [cadenas de conexión y vínculos de datos](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) en Microsoft Data Access Components (MDAC) SDK.
 
-*name* (opcional)  
-Cuando usas **db_source** en una clase, *nombre* es una instancia de un objeto de origen de datos que tiene el **db_source** atributo aplicado a él (vea el ejemplo 1). Cuando usas **db_source** en línea en una implementación de método *nombre* es una variable (local al método) que se puede usar para acceder a los datos de origen (vea el ejemplo 2). Pase este *nombre* a la *source_name* parámetro de `db_command` para asociar un comando en el origen de datos.
+*name*  
+(Opcional) Cuando usas **db_source** en una clase, *nombre* es una instancia de un objeto de origen de datos que tiene el **db_source** atributo aplicado a él (vea el ejemplo 1). Cuando usas **db_source** en línea en una implementación de método *nombre* es una variable (local al método) que se puede usar para acceder a los datos de origen (vea el ejemplo 2). Pase este *nombre* a la *source_name* parámetro de `db_command` para asociar un comando en el origen de datos.
 
-*HRESULT* (opcional)  
-Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
+*HRESULT*  
+(Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -1,5 +1,5 @@
 ---
-title: Referencia (Runtime de simultaneidad) | Documentos de Microsoft
+title: Referencia (Runtime de simultaneidad) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723234"
 ---
 # <a name="reference-concurrency-runtime"></a>Referencia (Runtime de simultaneidad)
 Esta sección contiene información de referencia para el Runtime de simultaneidad.
-**Tenga en cuenta** estándar del lenguaje C++ la reserva el uso de identificadores que comienzan por un carácter de subrayado (_) para las implementaciones, como las bibliotecas. No utilice estos nombres en el código. El comportamiento de los elementos de código cuyos nombres siguen esta convención no está garantizado y está sujeto a cambios en el futuro. Por estos motivos, se omiten estos elementos de código en la documentación del Runtime de simultaneidad.
+
+> [!Note]
+> El estándar del lenguaje C++ reserva el uso de los identificadores que comienzan con un carácter de subrayado (_) para implementaciones como bibliotecas. No utilice estos nombres en el código. El comportamiento de los elementos de código cuyos nombres siguen esta convención no está garantizado y está sujeto a cambios en el futuro. Por estos motivos, dichos elementos de código se omiten en la documentación del Runtime de simultaneidad.
 
 ## <a name="in-this-section"></a>En esta sección
-[simultaneidad Namespace](concurrency-namespace.md) el espacio de nombres de simultaneidad proporciona las clases y funciones que dan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../concurrency-runtime.md).
+
+[simultaneidad Namespace](concurrency-namespace.md) el espacio de nombres de simultaneidad proporciona clases y funciones que le proporcionan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../concurrency-runtime.md).
 
 [espacio de nombres std](std-namespace.md)
-[stdx espacio de nombres](stdx-namespace.md)
 
-
+[espacio de nombres stdx)](stdx-namespace.md)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221137"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706633"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Incluye las funciones API de Windows, proporcionando una interfaz orientada a objetos que se utiliza para tener acceso al registro.  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pszPath*  
- Especifica el nombre de una clave que se creó o se abran.  
+*pszPath*<br/>
+[in] Especifica el nombre de una clave que se creó o se abran.  
   
 ### <a name="return-value"></a>Valor devuelto  
  0 si es correcto; en caso contrario, un valor distinto de cero.  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bruta administrativa*  
- Parámetro booleano que especifica si el `CSettingsStore` objeto actúa en modo de administrador.  
+*bruta administrativa*<br/>
+[in] Parámetro booleano que especifica si el `CSettingsStore` objeto actúa en modo de administrador.  
   
- [in] *bReadOnly*  
- Parámetro booleano que especifica si el `CSettingsStore` objeto se crea en modo de solo lectura.  
+*bReadOnly*<br/>
+[in] Parámetro booleano que especifica si el `CSettingsStore` objeto se crea en modo de solo lectura.  
   
 ### <a name="remarks"></a>Comentarios  
  Si *bruta administrativa* está establecida en TRUE, el `m_hKey` variable de miembro se establece en **HKEY_LOCAL_MACHINE**. Si establece *bruta administrativa* en FALSE, `m_hKey` está establecido en **HKEY_CURRENT_USER**.  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pszPath*  
- El nombre de la clave que se va a eliminar.  
+*pszPath*<br/>
+[in] El nombre de la clave que se va a eliminar.  
   
- [in] *bruta administrativa*  
- Modificador que especifica la ubicación de la clave que se va a eliminar.  
+*bruta administrativa*<br/>
+[in] Modificador que especifica la ubicación de la clave que se va a eliminar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pszValue*  
- Especifica el campo de valor para quitar.  
+*pszValue*<br/>
+[in] Especifica el campo de valor para quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pszPath*  
- El nombre de una clave del registro.  
+*pszPath*<br/>
+[in] El nombre de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pszKey*  
- Puntero a una cadena terminada en null que contiene el nombre del valor que se va a leer del registro.  
+*pszKey*<br/>
+[in] Puntero a una cadena terminada en null que contiene el nombre del valor que se va a leer del registro.  
   
- [out] *iVal*  
- Referencia a una variable entera que recibe el valor leído de la clave del registro.  
+*iVal*<br/>
+[out] Referencia a una variable entera que recibe el valor leído de la clave del registro.  
   
- [out] *dwVal*  
- Referencia a una variable de doble palabra de 32 bits que recibe el valor leído de la clave del registro.  
+*dwVal*<br/>
+[out] Referencia a una variable de doble palabra de 32 bits que recibe el valor leído de la clave del registro.  
   
- [out] *sVal*  
- Referencia a una variable de cadena que recibe el valor leído de la clave del registro.  
+*sVal*<br/>
+[out] Referencia a una variable de cadena que recibe el valor leído de la clave del registro.  
   
- [out] *scStringList*  
- Referencia a una variable de la lista de cadena que recibe el valor leído de la clave del registro.  
+*scStringList*<br/>
+[out] Referencia a una variable de la lista de cadena que recibe el valor leído de la clave del registro.  
   
- [out] *scArray*  
- Referencia a una variable de matriz de cadena que recibe el valor leído de la clave del registro.  
+*scArray*<br/>
+[out] Referencia a una variable de matriz de cadena que recibe el valor leído de la clave del registro.  
   
- [out] *dwcArray*  
- Referencia a una variable de matriz de doble palabra de 32 bits que recibe el valor leído de la clave del registro.  
+*dwcArray*<br/>
+[out] Referencia a una variable de matriz de doble palabra de 32 bits que recibe el valor leído de la clave del registro.  
   
- [out] *wcArray*  
- Referencia a una variable de matriz de palabras de 16 bits que recibe el valor leído de la clave del registro.  
+*wcArray*<br/>
+[out] Referencia a una variable de matriz de palabras de 16 bits que recibe el valor leído de la clave del registro.  
   
- [out] *bcArray*  
- Referencia a una variable de matriz de bytes que recibe el valor leído de la clave del registro.  
+*bcArray*<br/>
+[out] Referencia a una variable de matriz de bytes que recibe el valor leído de la clave del registro.  
   
- [out] *lpPoint*  
- Referencia a un puntero a un `POINT` lee de estructura que recibe el valor de la clave del registro.  
+*lpPoint*<br/>
+[out] Referencia a un puntero a un `POINT` lee de estructura que recibe el valor de la clave del registro.  
   
- [out] *rect*  
- Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable que recibe el valor leído desde la clave del registro.  
+*Rect*<br/>
+[out] Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable que recibe el valor leído desde la clave del registro.  
   
- [out] *ppData*  
- Puntero a un puntero a los datos que recibe el valor de lee la clave del registro.  
+*ppData*<br/>
+[out] Puntero a un puntero a los datos que recibe el valor de lee la clave del registro.  
   
- [out] *pBytes*  
- Puntero a una variable de entero sin signo. Esta variable recibe el tamaño del búfer que *ppData* apunta a.  
+*pBytes*<br/>
+[out] Puntero a una variable de entero sin signo. Esta variable recibe el tamaño del búfer que *ppData* apunta a.  
   
- [out] *lista*  
- Hacer referencia a un [CObList](../../mfc/reference/coblist-class.md) variable que recibe el valor leído desde la clave del registro.  
+*list*<br/>
+[out] Hacer referencia a un [CObList](../../mfc/reference/coblist-class.md) variable que recibe el valor leído desde la clave del registro.  
   
- [out] *obj*  
- Hacer referencia a un [CObject](../../mfc/reference/cobject-class.md) variable que recibe el valor leído desde la clave del registro.  
+*obj*<br/>
+[out] Hacer referencia a un [CObject](../../mfc/reference/cobject-class.md) variable que recibe el valor leído desde la clave del registro.  
   
- [out] *pObj*  
- Referencia a un puntero a un `CObject` variable que recibe el valor leído desde la clave del registro.  
+*pObj*<br/>
+[out] Referencia a un puntero a un `CObject` variable que recibe el valor leído desde la clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pszKey*  
- Puntero a una cadena que contiene el nombre del valor que se establece.  
+*pszKey*<br/>
+[in] Puntero a una cadena que contiene el nombre del valor que se establece.  
   
- [in] *iVal*  
- Referencia a una variable de entero que contiene los datos que se va a almacenar.  
+*iVal*<br/>
+[in] Referencia a una variable de entero que contiene los datos que se va a almacenar.  
   
- [in] *dwVal*  
- Referencia a una variable de doble palabra de 32 bits que contiene los datos que se va a almacenar.  
+*dwVal*<br/>
+[in] Referencia a una variable de doble palabra de 32 bits que contiene los datos que se va a almacenar.  
   
- [in] *pszVal*  
- Puntero a una variable de cadena terminada en null que contiene los datos que se va a almacenar.  
+*pszVal*<br/>
+[in] Puntero a una variable de cadena terminada en null que contiene los datos que se va a almacenar.  
   
- [in] *scStringList*  
- Hacer referencia a un [CStringList](../../mfc/reference/cstringlist-class.md) variable que contiene los datos que se va a almacenar.  
+*scStringList*<br/>
+[in] Hacer referencia a un [CStringList](../../mfc/reference/cstringlist-class.md) variable que contiene los datos que se va a almacenar.  
   
- [in] *bcArray*  
- Referencia a una variable de matriz de bytes que contiene los datos que se va a almacenar.  
+*bcArray*<br/>
+[in] Referencia a una variable de matriz de bytes que contiene los datos que se va a almacenar.  
   
- [in] *scArray*  
- Referencia a una variable de matriz de cadena que contiene los datos que se va a almacenar.  
+*scArray*<br/>
+[in] Referencia a una variable de matriz de cadena que contiene los datos que se va a almacenar.  
   
- [in] *dwcArray*  
- Referencia a una variable de matriz de doble palabra de 32 bits que contiene los datos que se va a almacenar.  
+*dwcArray*<br/>
+[in] Referencia a una variable de matriz de doble palabra de 32 bits que contiene los datos que se va a almacenar.  
   
- [in] *wcArray*  
- Referencia a una variable de matriz de palabras de 16 bits que contiene los datos que se va a almacenar.  
+*wcArray*<br/>
+[in] Referencia a una variable de matriz de palabras de 16 bits que contiene los datos que se va a almacenar.  
   
- [in] *rect*  
- Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable que contiene los datos que se va a almacenar.  
+*Rect*<br/>
+[in] Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable que contiene los datos que se va a almacenar.  
   
- [in] *lpPoint*  
- Referencia a un puntero a un `POINT` variable que contiene los datos que se va a almacenar.  
+*lpPoint*<br/>
+[in] Referencia a un puntero a un `POINT` variable que contiene los datos que se va a almacenar.  
   
- [in] *pData*  
- Puntero a un búfer que contiene los datos que se va a almacenar.  
+*pData*<br/>
+[in] Puntero a un búfer que contiene los datos que se va a almacenar.  
   
- [in] *nBytes*  
- Especifica el tamaño, en bytes, de los datos a la que el *pData* puntos del parámetro.  
+*nBytes*<br/>
+[in] Especifica el tamaño, en bytes, de los datos a la que el *pData* puntos del parámetro.  
   
- [in] *lista*  
- Hacer referencia a un [CObList](../../mfc/reference/coblist-class.md) variable que contiene los datos que se va a almacenar.  
+*list*<br/>
+[in] Hacer referencia a un [CObList](../../mfc/reference/coblist-class.md) variable que contiene los datos que se va a almacenar.  
   
- [in] *obj*  
- Hacer referencia a un [CObject](../../mfc/reference/cobject-class.md) variable que contiene los datos que se va a almacenar.  
+*obj*<br/>
+[in] Hacer referencia a un [CObject](../../mfc/reference/cobject-class.md) variable que contiene los datos que se va a almacenar.  
   
- [in] *pObj*  
- Puntero a un puntero a un `CObject` variable que contiene los datos que se va a almacenar.  
+*pObj*<br/>
+[in] Puntero a un puntero a un `CObject` variable que contiene los datos que se va a almacenar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si es correcto; en caso contrario, FALSE.  

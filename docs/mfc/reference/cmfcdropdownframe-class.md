@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713458"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame (clase)
 Proporciona funcionalidad de la ventana de marco de la lista desplegable para las barras de herramientas de la lista desplegable y botones de barra de herramientas desplegable.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *pWndParent*|La ventana primaria del marco de la lista desplegable.|  
-|[in] *x*|La coordenada de pantalla horizontal para la ubicación del marco de desplegable.|  
-|[in] *y*|La coordenada de pantalla vertical para la ubicación del marco de desplegable.|  
-|[in] *pWndOriginToolbar*|La barra de herramientas que tiene los botones de la lista desplegable que utiliza este método para rellenar el nuevo objeto de marco de la lista desplegable.|  
+|*pWndParent*|[in] La ventana primaria del marco de la lista desplegable.|  
+|*x*|[in] La coordenada de pantalla horizontal para la ubicación del marco de desplegable.|  
+|*y*|[in] La coordenada de pantalla vertical para la ubicación del marco de desplegable.|  
+|*pWndOriginToolbar*|[in] La barra de herramientas que tiene los botones de la lista desplegable que utiliza este método para rellenar el nuevo objeto de marco de la lista desplegable.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el marco de la lista desplegable se creó correctamente; en caso contrario, FALSE.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *bNotify*|Sin usar.|  
+|*bNotify*|[in] Sin usar.|  
   
 ### <a name="remarks"></a>Comentarios  
  El marco llama a este método cuando se crea el marco de la lista desplegable o se cambia el tamaño de la ventana primaria. Este método calcula la posición y el tamaño del marco de la lista desplegable mediante el uso de la posición y tamaño de la ventana primaria.  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bAutoDestroy*  
- TRUE para destruir automáticamente la ventana de la barra de herramientas de lista desplegable asociada. en caso contrario, FALSE.  
+*bAutoDestroy*<br/>
+[in] TRUE para destruir automáticamente la ventana de la barra de herramientas de lista desplegable asociada. en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Si *bAutoDestroy* es TRUE, el `CMFCDropDownFrame` destructor destruye la ventana de la barra de herramientas de lista desplegable asociada. El valor predeterminado es TRUE.  

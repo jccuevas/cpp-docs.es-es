@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339443"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717644"
 ---
 # <a name="carray-class"></a>CArray (clase)
 Admite matrices que son similares a las matrices de C, pero pueden reducir y crecer según sea necesario dinámicamente.  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- *TIPO*  
- Parámetro de plantilla que especifica el tipo de objetos almacenados en la matriz. *TIPO* es un parámetro devuelto por `CArray`.  
-  
- *ARG* *_* *TIPO*  
- Parámetro de plantilla que especifica el tipo de argumento que se usa para tener acceso a los objetos almacenados en la matriz. A menudo una referencia a *tipo*. *ARG_TYPE* es un parámetro que se pasa a `CArray`.  
+#### <a name="parameters"></a>Parámetros
+
+*TIPO*<br/>
+Parámetro de plantilla que especifica el tipo de objetos almacenados en la matriz. *TIPO* es un parámetro devuelto por `CArray`.
+
+*ARG_TYPE*<br/>
+Parámetro de plantilla que especifica el tipo de argumento que se usa para tener acceso a los objetos almacenados en la matriz. A menudo una referencia a *tipo*. *ARG_TYPE* es un parámetro que se pasa a `CArray`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Requisitos  
- `Header:` afxtempl.h  
+**Encabezado:** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  Agrega un nuevo elemento al final de una matriz, aumentando la matriz en 1.  

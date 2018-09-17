@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545878"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712522"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl (clase)
 Implementa un hipervínculo que se coloca en una cinta. El hipervínculo abre una página web cuando se hace clic en él.  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Especifica el identificador de comando del comando que se ejecuta cuando se hace clic en el control de vínculo.  
+*nID*<br/>
+[in] Especifica el identificador de comando del comando que se ejecuta cuando se hace clic en el control de vínculo.  
   
- [in] *lpszText*  
- Especifica la etiqueta que se muestra en el control de vínculo.  
+*lpszText*<br/>
+[in] Especifica la etiqueta que se muestra en el control de vínculo.  
   
- [in] *lpszLink*  
- Especifica el hipervínculo asociado al control de vínculo.  
+*lpszLink*<br/>
+[in] Especifica el hipervínculo asociado al control de vínculo.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar el constructor de la `CMFCRibbonLinkCtrl` clase. Este fragmento de código forma parte de la [ejemplo Gadgets de la cinta de opciones](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszLink*  
- Especifica el texto del hipervínculo.  
+*lpszLink*<br/>
+[in] Especifica el texto del hipervínculo.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691515"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725314"
 ---
 # <a name="path-class"></a>path (Clase)
 
@@ -638,7 +638,7 @@ Para `template<class InIt> path(InIt first, InIt last, const locale& loc)` es `m
 
 ## <a name="preferred_separator"></a> Path::preferred_separator
 
-El objeto constante ofrece el carácter preferido para separar los componentes de la ruta de acceso, según el sistema operativo host. 
+El objeto constante ofrece el carácter preferido para separar los componentes de la ruta de acceso, según el sistema operativo host.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -654,7 +654,7 @@ Tenga en cuenta que en la mayoría de los contextos en Windows también se permi
 
 ## <a name="relative_path"></a> Path:: RELATIVE_PATH
 
-Devuelve el componente de ruta de acceso relativa de `myname`. 
+Devuelve el componente de ruta de acceso relativa de `myname`.
 
 ```cpp
 path relative_path() const;
@@ -674,7 +674,7 @@ path& remove_filename();
 
 ## <a name="replace_extension"></a> Path::replace_extension
 
-Reemplaza la extensión de `myname`. 
+Reemplaza la extensión de `myname`.
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -715,7 +715,7 @@ return (*this);
 
 ## <a name="root_directory"></a> Path:: root_directory
 
-Devuelve el componente del directorio raíz de `myname`. 
+Devuelve el componente del directorio raíz de `myname`.
 
 ```cpp
 path root_directory() const;
@@ -727,7 +727,7 @@ El componente puede estar vacío.
 
 ## <a name="root_name"></a> Path:: root_name
 
-Devuelve el componente de nombre de raíz de `myname`. 
+Devuelve el componente de nombre de raíz de `myname`.
 
 ```cpp
 path root_name() const;

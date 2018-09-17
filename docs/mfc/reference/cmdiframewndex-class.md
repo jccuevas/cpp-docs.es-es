@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 91ca6c6a2d00bb377fe5b4980ea821184627826f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678819"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708245"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
 Extiende la funcionalidad de [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), una ventana de marco de interfaz múltiples documentos (MDI) de Windows.  
@@ -314,11 +314,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Puntero al panel para registrar.  
+*pControlBar*<br/>
+[in] Puntero al panel para registrar.  
   
- [in] *bTail*  
- Especifica si se debe agregar este panel hasta el final de la lista.  
+*bTail*<br/>
+[in] Especifica si se debe agregar este panel hasta el final de la lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un valor distinto de cero si el panel se ha registrado correctamente. Devuelve 0 si el panel ya está registrado con el Administrador de acoplamiento.  
@@ -341,8 +341,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hdwp*  
- Identifica la estructura de la posición de la ventana de varios. Puede obtener este valor mediante una llamada a `BeginDeferWindowPos`.  
+*hdwp*<br/>
+[in] Identifica la estructura de la posición de la ventana de varios. Puede obtener este valor mediante una llamada a `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función miembro para volver a calcular el diseño de todos los paneles acoplada a la ventana de marco.  
@@ -355,8 +355,8 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *pnMDITabsType*  
- Un puntero a una variable de entero que indica qué características están habilitadas:  
+*pnMDITabsType*<br/>
+[out] Un puntero a una variable de entero que indica qué características están habilitadas:  
   
 -   0: todas las características están deshabilitadas.  
   
@@ -414,11 +414,11 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpcszDocName*  
- Una cadena de texto que contiene un identificador de documento. Normalmente, es la ruta de acceso completa de un archivo de documento.  
+*lpcszDocName*<br/>
+[in] Una cadena de texto que contiene un identificador de documento. Normalmente, es la ruta de acceso completa de un archivo de documento.  
   
- [in] *pObj*  
- Un puntero a un objeto definido por el usuario. Por ejemplo, un desarrollador puede crear una estructura de datos específicos de la aplicación que describe el documento y que le indica cómo se debe inicializar el documento en el inicio.  
+*pObj*<br/>
+[in] Un puntero a un objeto definido por el usuario. Por ejemplo, un desarrollador puede crear una estructura de datos específicos de la aplicación que describe el documento y que le indica cómo se debe inicializar el documento en el inicio.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a `CMDIChildWndEx`.  
@@ -445,11 +445,11 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpcszDocName*  
- El nombre del documento.  
+*lpcszDocName*<br/>
+[in] El nombre del documento.  
   
- [in] *pObj*  
- Reservado para un uso futuro.  
+*pObj*<br/>
+[in] Reservado para uso futuro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la nueva ventana.  
@@ -465,14 +465,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Puntero en el panel para acoplar.  
+*pBar*<br/>
+[in] Puntero en el panel para acoplar.  
   
- [in] *nDockBarID*  
- Especifica qué lados de la ventana de marco para acoplar a.  
+*nDockBarID*<br/>
+[in] Especifica qué lados de la ventana de marco para acoplar a.  
   
- [in] *lpRect*  
- No usado.  
+*lpRect*<br/>
+[in] No se utiliza.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método acopla especificado el panel a uno de los lados de la ventana de marco que se especificó cuando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) y [CMDIFrameWndEx::EnableDocking](#enabledocking) llamó.  
@@ -492,11 +492,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero al panel de acoplamiento.  
+*pBar*<br/>
+[in] Un puntero al panel de acoplamiento.  
   
- [in] *pLeftOf*  
- Un puntero al panel que actúa como el sitio de vinculación. .  
+*pLeftOf*<br/>
+[in] Un puntero al panel que actúa como el sitio de vinculación. .  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si la operación es correcta. En caso contrario, devuelve FALSE.  
@@ -517,8 +517,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwDockStyle*  
- Especifica los lados de la ventana de marco principal que se habilitarán. Utilice uno o varios de los siguientes indicadores.  
+*dwDockStyle*<br/>
+[in] Especifica los lados de la ventana de marco principal que se habilitarán. Utilice uno o varios de los siguientes indicadores.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -546,8 +546,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwDockStyle*  
- Especifica el estilo de acoplamiento que desea aplicar.  
+*dwDockStyle*<br/>
+[in] Especifica el estilo de acoplamiento que desea aplicar.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -567,8 +567,8 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bEnableMenu*  
- TRUE para mostrar el menú principal en modo de pantalla completa, o FALSE para ocultarlo.  
+*bEnableMenu*<br/>
+[in] TRUE para mostrar el menú principal en modo de pantalla completa, o FALSE para ocultarlo.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -580,8 +580,8 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiFullScreenCmd*  
- El identificador de comando que habilita o deshabilita el modo de pantalla completa.  
+*uiFullScreenCmd*<br/>
+[in] El identificador de comando que habilita o deshabilita el modo de pantalla completa.  
   
 ### <a name="remarks"></a>Comentarios  
  En el modo de pantalla completa, todas las barras de control de acoplamiento, barras de herramientas y los menús están ocultos y se cambia el tamaño de la vista activa para ocupar la pantalla completa. Cuando se habilita el modo de pantalla completa, debe especificar un identificador del comando que habilita o deshabilita. Puede llamar a `EnableFullScreenMode` desde el marco principal `OnCreate` función. Cuando una ventana de marco que se cambia a modo de pantalla completa, el marco de trabajo crea una barra de herramientas flotante con un botón que tiene el identificador de comando especificado. Si desea mantener el menú principal en la pantalla, llame a [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
@@ -594,8 +594,8 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar la carga de estado de acoplamiento, FALSE para deshabilitar la carga del estado de acoplamiento.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar la carga de estado de acoplamiento, FALSE para deshabilitar la carga del estado de acoplamiento.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -609,11 +609,11 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Si es TRUE, se habilita la característica de grupos con fichas MDI; Si es FALSE, se deshabilita la característica de grupos con fichas MDI.  
+*bHabilitar el*<br/>
+[in] Si es TRUE, se habilita la característica de grupos con fichas MDI; Si es FALSE, se deshabilita la característica de grupos con fichas MDI.  
   
- [in] *params*  
- Especifica los parámetros que el marco de trabajo se aplica a las ventanas secundarias que se crean en el área de cliente MDI.  
+*params*<br/>
+[in] Especifica los parámetros que el marco de trabajo se aplica a las ventanas secundarias que se crean en el área de cliente MDI.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para habilitar o deshabilitar la característica de grupos con fichas MDI. Esta característica permite a las aplicaciones MDI mostrar ventanas secundarias como ventanas con pestañas que se alinean verticalmente u horizontalmente en el área de cliente MDI. Grupos de ventanas con pestañas se separan mediante separadores. El usuario puede cambiar el tamaño de grupos con fichas mediante el uso de un divisor.  
@@ -695,8 +695,8 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bLastActiveTab*  
- Si es TRUE, habilitar la activación de la última pestaña activa. Si es FALSE, deshabilitar la activación de la última pestaña activa.  
+*bLastActiveTab*<br/>
+[in] Si es TRUE, habilitar la activación de la última pestaña activa. Si es FALSE, deshabilitar la activación de la última pestaña activa.  
   
 ### <a name="remarks"></a>Comentarios  
  Hay dos maneras de abrir una ficha cuando se cierra la pestaña activa:  
@@ -723,23 +723,23 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Si es TRUE, el control automático del menú panel está habilitado; Si es FALSE, el control automático está deshabilitado.  
+*bHabilitar el*<br/>
+[in] Si es TRUE, el control automático del menú panel está habilitado; Si es FALSE, el control automático está deshabilitado.  
   
- [in] *uiCustomizeCmd*  
- Identificador de comando del **personalizar** elemento de menú. Normalmente, este elemento de menú se agrega al final de la lista de paneles.  
+*uiCustomizeCmd*<br/>
+[in] Identificador de comando del **personalizar** elemento de menú. Normalmente, este elemento de menú se agrega al final de la lista de paneles.  
   
- [in] *strCustomizeLabel*  
- El texto que se mostrará para el **personalizar** elemento de menú (para la localización).  
+*strCustomizeLabel*<br/>
+[in] El texto que se mostrará para el **personalizar** elemento de menú (para la localización).  
   
- [in] *uiViewToolbarsMenuEntryID*  
- Especifica el identificador de un elemento de menú de barra de herramientas que se abre el menú del panel. Esta suele ser la **las barras de herramientas** submenú de la **vista** menú.  
+*uiViewToolbarsMenuEntryID*<br/>
+[in] Especifica el identificador de un elemento de menú de barra de herramientas que se abre el menú del panel. Esta suele ser la **las barras de herramientas** submenú de la **vista** menú.  
   
- [in] *bContextMenuShowsToolbarsOnly*  
- Si es TRUE, el menú de panel muestra solo una lista de las barras de herramientas. Si es FALSE, el menú muestra una lista de las barras de herramientas y barras de acoplamiento.  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] Si es TRUE, el menú de panel muestra solo una lista de las barras de herramientas. Si es FALSE, el menú muestra una lista de las barras de herramientas y barras de acoplamiento.  
   
- [in] *bViewMenuShowsToolbarsOnly*  
- Si es TRUE, el menú de panel muestra solo una lista de las barras de herramientas. Si es FALSE, el menú muestra una lista de las barras de herramientas y barras de acoplamiento.  
+*bViewMenuShowsToolbarsOnly*<br/>
+[in] Si es TRUE, el menú de panel muestra solo una lista de las barras de herramientas. Si es FALSE, el menú muestra una lista de las barras de herramientas y barras de acoplamiento.  
   
 ### <a name="remarks"></a>Comentarios  
  El menú emergente de panel muestra la lista de paneles de la aplicación y permite al usuario mostrar u ocultar paneles individuales.  
@@ -768,17 +768,17 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiMenuId*  
- Especifica el identificador de recurso de un menú.  
+*uiMenuId*<br/>
+[in] Especifica el identificador de recurso de un menú.  
   
- [in] *lpszMenuText*  
- Especifica el texto del elemento.  
+*lpszMenuText*<br/>
+[in] Especifica el texto del elemento.  
   
- [in] *bShowHelpButton*  
- Especifica si se debe mostrar un **ayuda** botón en el cuadro de diálogo de administración de windows.  
+*bShowHelpButton*<br/>
+[in] Especifica si se debe mostrar un **ayuda** botón en el cuadro de diálogo de administración de windows.  
   
- [in] *uiMenuTextResId*  
- El identificador de recurso de cadena que contiene la cadena de texto del elemento.  
+*uiMenuTextResId*<br/>
+[in] El identificador de recurso de cadena que contiene la cadena de texto del elemento.  
   
 ### <a name="remarks"></a>Comentarios  
  Use este método para insertar un elemento de menú cuyo comando llama a un cuadro de diálogo de administración de ventana MDI secundario ( [CMFCWindowsManagerDialog (clase)](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). El nuevo elemento se inserta en el menú especificado por *uiMenuId*. Llamar a `EnableWindowsDialog` al procesar el mensaje WM_CREATE.  
@@ -884,8 +884,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- El identificador de control.  
+*nID*<br/>
+[in] El identificador de control.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al panel que tiene el identificador del control especificado, si existe. En caso contrario, es NULL.  
@@ -925,11 +925,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pButton*  
- Un puntero a un botón de barra de herramientas.  
+*pButton*<br/>
+[in] Un puntero a un botón de barra de herramientas.  
   
- [in] *strTTText*  
- El texto de información sobre herramientas que se muestra en el botón.  
+*strTTText*<br/>
+[in] El texto de información sobre herramientas que se muestra en el botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se ha mostrado la información sobre herramientas. FALSE en caso contrario.  
@@ -947,14 +947,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero al panel que se va a insertar.  
+*pControlBar*<br/>
+[in] Un puntero al panel que se va a insertar.  
   
- [in] *pTarget*  
- Un puntero al panel antes o después de que se va a insertar en el panel.  
+*pTarget*<br/>
+[in] Un puntero al panel antes o después de que se va a insertar en el panel.  
   
- [in] *después*  
- Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.  
+*Después*<br/>
+[in] Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método registre correctamente el panel, es FALSE si el panel ya se ha registrado con el Administrador de acoplamiento.  
@@ -996,8 +996,8 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Un puntero a la ventana con pestañas.  
+*conquistado*<br/>
+[in] Un puntero a la ventana con pestañas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la ventana con pestañas especificada está en la lista de ventanas con pestañas que forman los grupos con fichas MDI. En caso contrario, FALSE.  
@@ -1023,14 +1023,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- El punto especificado en coordenadas de pantalla.  
+*punto*<br/>
+[in] El punto especificado en coordenadas de pantalla.  
   
- [in] *dwBarAlignment*  
- Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
+*bOuterEdge*<br/>
+[in] TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el punto está cerca del sitio de vinculación; en caso contrario, FALSE.  
@@ -1062,17 +1062,17 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIDResource*  
- El identificador de un recurso compartido asociado con la ventana de marco.  
+*nIDResource*<br/>
+[in] El identificador de un recurso compartido asociado con la ventana de marco.  
   
- [in] *dwDefaultStyle*  
- El estilo de la ventana de marco.  
+*dwDefaultStyle*<br/>
+[in] El estilo de la ventana de marco.  
   
- [in] *pParentWnd*  
- Un puntero al elemento primario del marco.  
+*pParentWnd*<br/>
+[in] Un puntero al elemento primario del marco.  
   
- [in] *pContext*  
- Un puntero a un [CCreateContext (estructura)](../../mfc/reference/ccreatecontext-structure.md). Este parámetro puede ser NULL.  
+*pContext*<br/>
+[in] Un puntero a un [CCreateContext (estructura)](../../mfc/reference/ccreatecontext-structure.md). Este parámetro puede ser NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método tiene éxito, en caso contrario, FALSE.  
@@ -1085,8 +1085,8 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Especifica el nombre del perfil.  
+*lpszProfileName*<br/>
+[in] Especifica el nombre del perfil.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la carga se realizó correctamente; FALSE si la carga no se pudo o no hay ningún dato para cargar.  
@@ -1115,8 +1115,8 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSiguiente*  
- Si es TRUE, mover la ficha al siguiente grupo de pestañas. Si es FALSE, muévalo al grupo de pestañas anterior.  
+*bSiguiente*<br/>
+[in] Si es TRUE, mover la ficha al siguiente grupo de pestañas. Si es FALSE, muévalo al grupo de pestañas anterior.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
  Crea un nuevo grupo con pestañas que tiene una sola ventana.  
@@ -1126,8 +1126,8 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bVert*  
- Especifica la alineación del grupo nuevo. Si es TRUE, el nuevo grupo se alinea verticalmente. Si es FALSE, el nuevo grupo se alinea horizontalmente.  
+*bVert*<br/>
+[in] Especifica la alineación del grupo nuevo. Si es TRUE, el nuevo grupo se alinea verticalmente. Si es FALSE, el nuevo grupo se alinea horizontalmente.  
   
 ### <a name="remarks"></a>Comentarios  
  Use esta función para crear una nueva con pestañas de ventana (nuevo grupo con pestañas) y agregue la primera pestaña a él.  
@@ -1178,8 +1178,8 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nBorderCmd*  
- Contiene uno de los siguientes valores de la enumeración `CFrameWnd::BorderCmd`:  
+*nBorderCmd*<br/>
+[in] Contiene uno de los siguientes valores de la enumeración `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
   
@@ -1187,8 +1187,8 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [in, out] *lpRectBorder*  
- Puntero a un [estructura RECT](../../mfc/reference/rect-structure1.md) o un [CRect (clase)](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas del borde.  
+*lpRectBorder*<br/>
+[in, out] Puntero a un [estructura RECT](../../mfc/reference/rect-structure1.md) o un [CRect (clase)](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas del borde.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método se realizó correctamente; en caso contrario, es 0.  
@@ -1204,8 +1204,8 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Puntero en el panel se está cerrando.  
+*conquistado*<br/>
+[in] Puntero en el panel se está cerrando.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se puede cerrar el panel de acoplamiento. En caso contrario, FALSE.  
@@ -1223,8 +1223,8 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Puntero a la ventana de marco reducido que se va a cerrar.  
+*conquistado*<br/>
+[in] Puntero a la ventana de marco reducido que se va a cerrar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se puede cerrar la ventana de marco reducido flotante. En caso contrario, FALSE.  
@@ -1242,8 +1242,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuPopup*  
- Puntero a un menú emergente.  
+*pMenuPopup*<br/>
+[in] Puntero a un menú emergente.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método si desea procesar las notificaciones de [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md) objetos que pertenecen a la ventana de marco MDI cuando esos objetos procesan mensajes WM_DESTROY.  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Identificador del comando.  
+*nID*<br/>
+[in] El identificador de comando.  
   
- [in] *nCode*  
- Identifica el código de notificación de comandos. Consulte [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obtener más información acerca de los valores para *nCode*.  
+*nCode*<br/>
+[in] Identifica el código de notificación de comandos. Consulte [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obtener más información acerca de los valores para *nCode*.  
   
- [in] *pExtra*  
- Usar según el valor de *nCode*. Consulte [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obtener más información acerca de *pExtra*.  
+*pExtra*<br/>
+[in] Usar según el valor de *nCode*. Consulte [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obtener más información acerca de *pExtra*.  
   
- [in, out] *pHandlerInfo*  
- Normalmente, este parámetro debe ser NULL. Si no es NULL, `OnCmdMsg` rellena el `pTarget` y `pmf` los miembros de la *pHandlerInfo* estructura en lugar de enviar el comando.  
+*pHandlerInfo*<br/>
+[in, out] Normalmente, este parámetro debe ser NULL. Si no es NULL, `OnCmdMsg` rellena el `pTarget` y `pmf` los miembros de la *pHandlerInfo* estructura en lugar de enviar el comando.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el mensaje está controlado; en caso contrario, es 0.  
@@ -1286,14 +1286,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo.  
   
- [in] *pMenuButton*  
- Puntero en el botón de menú.  
+*pMenuButton*<br/>
+[in] Puntero en el botón de menú.  
   
- [in] *rectImage*  
- Rectángulo delimitador de la imagen.  
+*rectImage*<br/>
+[in] Rectángulo delimitador de la imagen.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método dibuja la imagen. La implementación predeterminada devuelve FALSE.  
@@ -1337,11 +1337,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pButton*  
- El botón de barra de herramientas.  
+*pButton*<br/>
+[in] El botón de barra de herramientas.  
   
- [out] *pTI*  
- Puntero a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) estructura.  
+*PTI*<br/>
+[out] Puntero a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la aplicación rellena el *pTI* parámetro. La implementación predeterminada devuelve FALSE.  
@@ -1357,8 +1357,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFrame*  
- Un puntero a una ventana de marco reducido.  
+*pFrame*<br/>
+[in] Un puntero a una ventana de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método tiene éxito, en caso contrario, FALSE.  
@@ -1373,11 +1373,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bPreview*  
- Si es TRUE, Establece el modo de vista previa de impresión. Si es FALSE, cancela el modo de vista previa.  
+*bPreview*<br/>
+[in] Si es TRUE, Establece el modo de vista previa de impresión. Si es FALSE, cancela el modo de vista previa.  
   
- [in] *pState*  
- Un puntero a un `CPrintPreviewState` estructura.  
+*pState*<br/>
+[in] Un puntero a un `CPrintPreviewState` estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método invalida [CFrameWnd:: Onsetpreviewmode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
@@ -1392,11 +1392,11 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuPane*  
- Un puntero al panel de personalización rápida.  
+*pMenuPane*<br/>
+[in] Un puntero al panel de personalización rápida.  
   
- [in] *uiToolbarID*  
- Id. de control de la barra de herramientas para personalizar.  
+*uiToolbarID*<br/>
+[in] Id. de control de la barra de herramientas para personalizar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Este método siempre devuelve TRUE.  
@@ -1417,11 +1417,11 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- La ubicación del menú en coordenadas de pantalla.  
+*punto*<br/>
+[in] La ubicación del menú en coordenadas de pantalla.  
   
- [in] *dwAllowedItems*  
- Una combinación de OR bit a bit de marcas que indica las acciones permitidas para la ficha actual:  
+*dwAllowedItems*<br/>
+[in] Una combinación de OR bit a bit de marcas que indica las acciones permitidas para la ficha actual:  
   
 - BCGP_MDI_CREATE_VERT_GROUP - puede crear un grupo de pestañas vertical.  
   
@@ -1433,8 +1433,8 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - BCGP_MDI_CAN_BE_DOCKED - cambiar un documento con pestañas al estado acoplado (para documentos con fichas solo es relevante).  
   
- [in] *bTabDrop*  
- TRUE para mostrar el menú como resultado de arrastrar la ficha a otro grupo con pestañas. FALSE para mostrar el menú como menú contextual en la pestaña actualmente activa.  
+*bTabDrop*<br/>
+[in] TRUE para mostrar el menú como resultado de arrastrar la ficha a otro grupo con pestañas. FALSE para mostrar el menú como menú contextual en la pestaña actualmente activa.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Invalide este método en un [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-clase derivada.  
@@ -1455,8 +1455,8 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- TRUE para mostrar paneles, FALSE para ocultar paneles.  
+*bMostrar*<br/>
+[in] TRUE para mostrar paneles, FALSE para ocultar paneles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se cambia el estado de los paneles como resultado de llamar a este método, es FALSE si los paneles ya están en el estado especificado por *bMostrar*. Por ejemplo, si se ocultan los paneles y *bMostrar* es FALSE, el valor devuelto es FALSE.  
@@ -1491,11 +1491,11 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rectOld*  
- El tamaño actual de la ventana de cliente MDI.  
+*rectOld*<br/>
+[in] El tamaño actual de la ventana de cliente MDI.  
   
- [in] *rectNew*  
- El nuevo tamaño de la ventana de cliente MDI.  
+*rectNew*<br/>
+[in] El nuevo tamaño de la ventana de cliente MDI.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1509,11 +1509,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuPopup*  
- Un puntero en el menú emergente.  
+*pMenuPopup*<br/>
+[in] Un puntero en el menú emergente.  
   
- [in] *pBar*  
- Un puntero a la barra desplazable.  
+*pBar*<br/>
+[in] Un puntero a la barra desplazable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE para permitir que el menú emergente con la barra desplazable realizarse activar; en caso contrario, FALSE. El valor predeterminado es TRUE.  
@@ -1529,8 +1529,8 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hMenuAlt*  
- Identificador de un menú.  
+*hMenuAlt*<br/>
+[in] Identificador de un menú.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
  Devuelve el panel de acoplamiento que contiene el punto especificado.  
@@ -1550,20 +1550,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- El punto (en coordenadas de pantalla).  
+*punto*<br/>
+[in] El punto (en coordenadas de pantalla).  
   
- [in] *nSensitivity*  
- El rectángulo de la ventana de cada panel activado se amplía en todas las direcciones en este valor.  
+*nSensitivity*<br/>
+[in] El rectángulo de la ventana de cada panel activado se amplía en todas las direcciones en este valor.  
   
- [in] *bExactBar*  
- Si es TRUE, el *nSensitivity* parámetro se omite.  
+*bExactBar*<br/>
+[in] Si es TRUE, el *nSensitivity* parámetro se omite.  
   
- [in] *pRTCBarType*  
- Si no es NULL, el método recorre en iteración sólo los paneles del tipo especificado.  
+*pRTCBarType*<br/>
+[in] Si no es NULL, el método recorre en iteración sólo los paneles del tipo especificado.  
   
- [out] *dwAlignment*  
- Si se encuentra un panel, este parámetro especificará qué lado del panel es más cercano al punto especificado.  
+*dwAlignment*<br/>
+[out] Si se encuentra un panel, este parámetro especificará qué lado del panel es más cercano al punto especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un panel acoplable o NULL si no hay control contiene el punto especificado por *punto*.  
@@ -1579,8 +1579,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bNotify*  
- Determina si el elemento en contexto activo para la ventana de marco recibe la notificación del cambio de diseño. Si es TRUE, se notifica el elemento; en caso contrario, FALSE.  
+*bNotify*<br/>
+[in] Determina si el elemento en contexto activo para la ventana de marco recibe la notificación del cambio de diseño. Si es TRUE, se notifica el elemento; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método invalida [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
@@ -1598,20 +1598,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero a un panel que se va a quitar.  
+*pControlBar*<br/>
+[in] Un puntero a un panel que se va a quitar.  
   
- [in] *bDestroy*  
- TRUE para destruir el panel quitado. Si es FALSE, no lo destruirá.  
+*bDestroy*<br/>
+[in] TRUE para destruir el panel quitado. Si es FALSE, no lo destruirá.  
   
- [in] *bAdjustLayout*  
- TRUE para ajustar el diseño de acoplamiento inmediatamente. Si es FALSE, el ajuste se producen solo cuando se produce un evento redraw por otras razones (el usuario cambia el tamaño de la ventana, se arrastra el marco principal, etcetera.).  
+*bAdjustLayout*<br/>
+[in] TRUE para ajustar el diseño de acoplamiento inmediatamente. Si es FALSE, el ajuste se producen solo cuando se produce un evento redraw por otras razones (el usuario cambia el tamaño de la ventana, se arrastra el marco principal, etcetera.).  
   
- [in] *bAutoHide*  
- TRUE para quitar el panel de la lista de paneles de ocultar automáticamente. FALSE para quitar el panel de la lista de paneles regulares.  
+*bAutoHide*<br/>
+[in] TRUE para quitar el panel de la lista de paneles de ocultar automáticamente. FALSE para quitar el panel de la lista de paneles regulares.  
   
- [in] *pBarReplacement*  
- Un puntero a un panel que reemplaza el panel quitado.  
+*pBarReplacement*<br/>
+[in] Un puntero a un panel que reemplaza el panel quitado.  
   
 ### <a name="remarks"></a>Comentarios  
  Debe registrar cada panel con el Administrador de acoplamiento para tomar parte en el diseño de acoplamiento. Use [CMDIFrameWndEx::AddPane](#addpane) o [CMDIFrameWndEx::InsertPane](#insertpane) para registrar los paneles.  
@@ -1626,8 +1626,8 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Especifica el nombre del perfil.  
+*lpszProfileName*<br/>
+[in] Especifica el nombre del perfil.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la operación de guardar se realizó correctamente; FALSE si no se pudo guardar.  
@@ -1660,8 +1660,8 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Puntero a una ventana de marco de vista previa de impresión.  
+*conquistado*<br/>
+[in] Puntero a una ventana de marco de vista previa de impresión.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1676,14 +1676,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *menú*  
- Una referencia a un [CMenu (clase)](../../mfc/reference/cmenu-class.md) objeto va a modificar.  
+*Menú*<br/>
+[in] Una referencia a un [CMenu (clase)](../../mfc/reference/cmenu-class.md) objeto va a modificar.  
   
- [in] *uiViewUserToolbarCmdFirst*  
- Especifica el primer comando definido por el usuario.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Especifica el primer comando definido por el usuario.  
   
- [in] *uiViewUserToolbarCmdLast*  
- Especifica el último comando definido por el usuario.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Especifica el último comando definido por el usuario.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
  Cambia el marco principal de modo normal al modo de pantalla completa.  
@@ -1706,17 +1706,17 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Puntero al panel para mostrar u ocultar.  
+*pBar*<br/>
+[in] Puntero al panel para mostrar u ocultar.  
   
- [in] *bMostrar*  
- TRUE para mostrar el panel. FALSE para ocultar el panel.  
+*bMostrar*<br/>
+[in] TRUE para mostrar el panel. FALSE para ocultar el panel.  
   
- [in] *bDelay*  
- TRUE para retrasar el recálculo del diseño de acoplamiento. FALSE para volver a calcular el diseño de acoplamiento inmediatamente.  
+*bDelay*<br/>
+[in] TRUE para retrasar el recálculo del diseño de acoplamiento. FALSE para volver a calcular el diseño de acoplamiento inmediatamente.  
   
- [in] *bActivate*  
- True para mostrar el panel debe como activo. FALSE para mostrar el panel como inactiva.  
+*bActivate*<br/>
+[in] True para mostrar el panel debe como activo. FALSE para mostrar el panel como inactiva.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para mostrar u ocultar el panel. No use `ShowWindow` para acoplar paneles.  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwData*  
- Especifica datos según sea necesario para el tipo de Ayuda especificado por *nCmd*.  
+*dwData*<br/>
+[in] Especifica datos según sea necesario para el tipo de Ayuda especificado por *nCmd*.  
   
- [in] *nCmd*  
- Especifica el tipo de ayuda solicitado. Para obtener una lista de valores posibles y cómo afectan la *dwData* parámetro, vea el [función WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) en el SDK de Windows.  
+*nCmd*<br/>
+[in] Especifica el tipo de ayuda solicitado. Para obtener una lista de valores posibles y cómo afectan la *dwData* parámetro, vea el [función WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método invalida [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

@@ -7,12 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fb028f3383225d89a8366461400bf704c7a4dd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956675"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720088"
 ---
 # <a name="ltunorderedsetgt-functions"></a>Funciones de &lt;unordered_set&gt;
 
@@ -34,23 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*  
- El tipo de clave.
+*Key*<br/>
+El tipo de clave.
 
-*Hash*  
- El tipo de objeto de la función hash.
+*hash*<br/>
+El tipo de objeto de la función hash.
 
-*Pred*  
- El tipo de objeto de función de comparación de igualdad.
+*Pred*<br/>
+El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*  
- Clase de asignador.
+*Alloc*<br/>
+Clase de asignador.
 
-*left*  
- El primer contenedor que se va a cambiar.
+*left*<br/>
+El primer contenedor que se va a cambiar.
 
-*right*  
- El segundo contenedor que se va a cambiar.
+*right*<br/>
+El segundo contenedor que se va a cambiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -126,23 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*  
- El tipo de clave.
+*Key*<br/>
+El tipo de clave.
 
-*Hash*  
- El tipo de objeto de la función hash.
+*hash*<br/>
+El tipo de objeto de la función hash.
 
-*Pred*  
- El tipo de objeto de función de comparación de igualdad.
+*Pred*<br/>
+El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*  
- Clase de asignador.
+*Alloc*<br/>
+Clase de asignador.
 
-*left*  
- El primer contenedor que se va a cambiar.
+*left*<br/>
+El primer contenedor que se va a cambiar.
 
-*right*  
- El segundo contenedor que se va a cambiar.
+*right*<br/>
+El segundo contenedor que se va a cambiar.
 
 ### <a name="remarks"></a>Comentarios
 

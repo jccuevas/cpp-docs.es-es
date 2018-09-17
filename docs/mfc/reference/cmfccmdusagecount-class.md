@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853769"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719971"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount (clase)
 Realiza un seguimiento del recuento de uso de los mensajes de Windows, como cuando el usuario selecciona un elemento en un menú.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *uiCmd*|Especifica el contador de comando que se va a incrementar.|  
+|*uiCmd*|[in] Especifica el contador de comando que se va a incrementar.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método agrega una nueva entrada a la estructura del mapa de recuentos de comando, `m_CmdUsage`, si la entrada no existe ya.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *uiCmd*|Identificador del contador de comando que se va a recuperar.|  
+|*uiCmd*|[in] Identificador del contador de comando que se va a recuperar.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El contador de uso que está asociado con el identificador de comando especificado.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *uiCmd*|Especifica el comando para comprobar.|  
+|*uiCmd*|[in] Especifica el comando para comprobar.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el comando se usa con frecuencia; en caso contrario, es 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *ar*|Un `CArchive` objeto que se va a serializar desde o hacia.|  
+|*cuentas por cobrar*|[in] Un `CArchive` objeto que se va a serializar desde o hacia.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método serializa la estructura del mapa de recuentos de comando, `m_CmdUsage`y el uso del comando total, `m_nTotalUsage`, contador desde o al archivo especificado.  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *nStartCount*|El nuevo recuento inicial de los comandos de seguimiento del proceso.|  
-|[in] *nMinUsagePercentage*|El porcentaje de uso mínimo de la nueva.|  
+|*nStartCount*|[in] El nuevo recuento inicial de los comandos de seguimiento del proceso.|  
+|*nMinUsagePercentage*|[in] El porcentaje de uso mínimo de la nueva.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método tiene éxito, FALSE si el *nMinUsagePercentage* parámetro es mayor o igual a 100.  

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677750"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711813"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (clase)
 Proporciona la funcionalidad del control de barra de estado común de Windows.  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *iPart*|Índice de base cero del elemento que contiene el icono que se va a recuperar. Si este parámetro es -1, la barra de estado se supone que una barra de estado de un modo sencillo.|  
+|*iPart*|[in] Índice de base cero del elemento que contiene el icono que se va a recuperar. Si este parámetro es -1, la barra de estado se supone que una barra de estado de un modo sencillo.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El identificador del icono si el método es correcto; en caso contrario, es NULL.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSimple*  
- Indicador de tipo de visualización. Si este parámetro es TRUE, el control muestra texto simple; Si es FALSE, muestra varias partes.  
+*bSimple*<br/>
+[in] Indicador de tipo de visualización. Si este parámetro es TRUE, el control muestra texto simple; Si es FALSE, muestra varias partes.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve 0.  

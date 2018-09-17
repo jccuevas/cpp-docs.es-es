@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540519"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712535"
 ---
 # <a name="indword"></a>__indword
 **Específicos de Microsoft**  
@@ -39,8 +39,8 @@ unsigned long __indword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- Para leer desde el puerto.  
+*Puerto*<br/>
+[in] Para leer desde el puerto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  La palabra se lee desde el puerto.  

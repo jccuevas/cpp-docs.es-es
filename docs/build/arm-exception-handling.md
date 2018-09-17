@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205708"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711235"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
@@ -175,26 +175,26 @@ Cuando el formato de desenredado empaquetado no basta para describir el desenred
 1. Un encabezado de 1 o 2 palabras que indica el tamaño general de la estructura de .xdata y que proporciona datos de función fundamentales. La segunda palabra solo está presente si el *epílogo recuento* y *código palabras* campos se establecen en 0. Los campos aparecen detallados en esta tabla:
 
    |Palabra|Bits|Finalidad|
-    |----------|----------|-------------|
-    |0|0-17|*Función longitud* es un campo de 18 bits que indica la longitud total de la función en bytes, dividido por 2. Si una función supera los 512 KB, se deberán usar varios registros .pdata y .xdata para describir la función. Para obtener información detallada, vea la sección Funciones grandes en este documento.|
-    |0|18-19|*Vers* es un campo de 2 bits que describe la versión de los xdata restantes. Actualmente solo está definida la versión 0; los valores 1-3 están reservados.|
-    |0|20|*X* es un campo de 1 bit que indica la presencia (1) o ausencia (0) de datos de excepción.|
-    |0|21|*E* es un campo de 1 bit que indica que la información que describe un único epílogo está empaquetada en el encabezado (1) en lugar de requerir ámbito adicional palabras posteriores (0).|
-    |0|22|*F* es un campo de 1 bit que indica que este registro describe un fragmento de función (1) o una función completa (0). Un fragmento implica que no hay prólogo y que, por lo tanto, todo el procesamiento de prólogo se debe pasar por alto.|
-    |0|23-27|*Recuento de epílogo* es un campo de 5 bits que tiene dos significados posibles, dependiendo del estado de la *E* bits:<br /><br /> -If *E* es 0, este campo es un recuento del número total de ámbitos de excepción que se describe en la sección 3. Si existen más de 31 ámbitos en la función y, a continuación, este campo y el *código palabras* campo debe establecerse ambas como 0 para indicar que se necesita una palabra de extensión.<br />-If *E* es 1, este campo especifica el índice del primer código de desenredado que describe el único epílogo.|
-    |0|28-31|*Código palabras* es un campo de 4 bits que especifica el número de palabras de 32 bits necesario para contener todos los códigos de desenredado en la sección 4. Si se requieren más de 63 bytes de código de desenredado, este campo de más de 15 palabras y el *epílogo recuento* campo debe establecerse ambas como 0 para indicar que se necesita una palabra de extensión.|
-    |1|0-15|*Cuenta de epílogo extendida* es un campo de 16 bits que proporciona más espacio para codificar un número inusualmente grande de epílogos. La palabra de extensión que contiene este campo solo está presente si el *epílogo recuento* y *código palabras* campos en la primera palabra del encabezado se establecen en 0.|
-    |1|16-23|*Extended código palabras* es un campo de 8 bits que proporciona más espacio para codificar un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene este campo solo está presente si el *epílogo recuento* y *código palabras* campos en la primera palabra del encabezado se establecen en 0.|
-    |1|24-31|Reservada|
+   |----------|----------|-------------|
+   |0|0-17|*Función longitud* es un campo de 18 bits que indica la longitud total de la función en bytes, dividido por 2. Si una función supera los 512 KB, se deberán usar varios registros .pdata y .xdata para describir la función. Para obtener información detallada, vea la sección Funciones grandes en este documento.|
+   |0|18-19|*Vers* es un campo de 2 bits que describe la versión de los xdata restantes. Actualmente solo está definida la versión 0; los valores 1-3 están reservados.|
+   |0|20|*X* es un campo de 1 bit que indica la presencia (1) o ausencia (0) de datos de excepción.|
+   |0|21|*E* es un campo de 1 bit que indica que la información que describe un único epílogo está empaquetada en el encabezado (1) en lugar de requerir ámbito adicional palabras posteriores (0).|
+   |0|22|*F* es un campo de 1 bit que indica que este registro describe un fragmento de función (1) o una función completa (0). Un fragmento implica que no hay prólogo y que, por lo tanto, todo el procesamiento de prólogo se debe pasar por alto.|
+   |0|23-27|*Recuento de epílogo* es un campo de 5 bits que tiene dos significados posibles, dependiendo del estado de la *E* bits:<br /><br /> -If *E* es 0, este campo es un recuento del número total de ámbitos de excepción que se describe en la sección 3. Si existen más de 31 ámbitos en la función y, a continuación, este campo y el *código palabras* campo debe establecerse ambas como 0 para indicar que se necesita una palabra de extensión.<br />-If *E* es 1, este campo especifica el índice del primer código de desenredado que describe el único epílogo.|
+   |0|28-31|*Código palabras* es un campo de 4 bits que especifica el número de palabras de 32 bits necesario para contener todos los códigos de desenredado en la sección 4. Si se requieren más de 63 bytes de código de desenredado, este campo de más de 15 palabras y el *epílogo recuento* campo debe establecerse ambas como 0 para indicar que se necesita una palabra de extensión.|
+   |1|0-15|*Cuenta de epílogo extendida* es un campo de 16 bits que proporciona más espacio para codificar un número inusualmente grande de epílogos. La palabra de extensión que contiene este campo solo está presente si el *epílogo recuento* y *código palabras* campos en la primera palabra del encabezado se establecen en 0.|
+   |1|16-23|*Extended código palabras* es un campo de 8 bits que proporciona más espacio para codificar un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene este campo solo está presente si el *epílogo recuento* y *código palabras* campos en la primera palabra del encabezado se establecen en 0.|
+   |1|24-31|Reservada|
 
 2. Después de los datos de excepción (si la *E* bit en el encabezado se establece en 0) es una lista de información sobre los ámbitos de epílogo, que se empaquetan una a una palabra y se almacenan en orden creciente de desplazamiento inicial. Cada ámbito contiene estos campos:
 
    |Bits|Finalidad|
-    |----------|-------------|
-    |0-17|*Desplazamiento de inicio del epílogo* es un campo de 18 bits que describe el desplazamiento del epílogo, en bytes dividida entre 2, en relación con el inicio de la función.|
-    |18-19|*Res* es un campo de 2 bits reservado para una futura expansión. Su valor debe ser 0.|
-    |20-23|*Condición* es un campo de 4 bits que aporta la condición bajo la que se ejecuta el epílogo. En el caso de los epílogos incondicionales, se debe establecer en 0xE, lo que indica "siempre". (Un epílogo debe ser completamente condicional o completamente incondicional y, en el modo Thumb-2, el epílogo comienza por la primera instrucción tras el código de operación de IT).|
-    |24-31|*Índice inicial de epílogo* es un campo de 8 bits que indica el índice de bytes del primer código de desenredado que describe este epílogo.|
+   |----------|-------------|
+   |0-17|*Desplazamiento de inicio del epílogo* es un campo de 18 bits que describe el desplazamiento del epílogo, en bytes dividida entre 2, en relación con el inicio de la función.|
+   |18-19|*Res* es un campo de 2 bits reservado para una futura expansión. Su valor debe ser 0.|
+   |20-23|*Condición* es un campo de 4 bits que aporta la condición bajo la que se ejecuta el epílogo. En el caso de los epílogos incondicionales, se debe establecer en 0xE, lo que indica "siempre". (Un epílogo debe ser completamente condicional o completamente incondicional y, en el modo Thumb-2, el epílogo comienza por la primera instrucción tras el código de operación de IT).|
+   |24-31|*Índice inicial de epílogo* es un campo de 8 bits que indica el índice de bytes del primer código de desenredado que describe este epílogo.|
 
 3. Tras la lista de ámbitos de epílogo viene una matriz que contiene códigos de desenredado, que se detallan en profundidad en la sección Códigos de desenredado de este artículo. Esta matriz se rellena al final del límite de palabra completa más cercano. Los bytes se almacenan en orden little-endian, por lo que se pueden recuperar directamente en modo little-endian.
 
@@ -358,16 +358,16 @@ Es un caso especial más complejo de fragmentos de función *reducción*, guarda
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 Por lo general, se espera que las funciones reducidas hasta ajustarse tengan espacio previamente asignado para el almacenamiento de registros extra en el prólogo regular para, luego, guardarlos mediante `str` o `stm` en lugar de `push`. Esto hace que toda la manipulación de puntero de pila tenga lugar en el prólogo original de la función.
@@ -386,14 +386,14 @@ Existe otro método que puede funcionar si la manipulación de pila realizada an
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 Aquí, la clave consiste en que, en cada límite de instrucción, la pila es totalmente coherente con los códigos de desenredado de la región. Si se produce un desenredado antes de la inserción interior en este ejemplo, se considerará como parte de la región A y, como tal, solo se desenredará el prólogo de la región A. Si el desenredado se produce después de la inserción interior, se considera parte de la región B, que no tiene prólogo, pero tiene códigos de desenredado que describen la inserción interior como en el prólogo original de la región A. esta misma lógica se mantiene durante la extracción interior.
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)  
-[Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)

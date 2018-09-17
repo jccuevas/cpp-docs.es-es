@@ -1,5 +1,5 @@
 ---
-title: programación | Documentos de Microsoft
+title: programación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00db7daf5c2c9882c1d54ac054ee285de1fdac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691838"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712158"
 ---
 # <a name="schedule"></a>schedule
 Se aplica a la [para](../../../parallel/openmp/reference/for-openmp.md) directiva.  
@@ -44,8 +44,8 @@ schedule(type[,size])
   
 -   `static`  
   
- `size` (opcional)  
- Especifica el tamaño de las iteraciones. `size` debe ser un entero. No es válido cuando `type` es `runtime`.  
+*size*<br/>
+(Opcional) Especifica el tamaño de las iteraciones. `size` debe ser un entero. No es válido cuando `type` es `runtime`.  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [2.4.1 for (construcción)](../../../parallel/openmp/2-4-1-for-construct.md).  

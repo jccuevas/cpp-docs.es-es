@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535410"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726640"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Proporciona la funcionalidad de un control de edición de Windows.  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *lpszText*  
- Un puntero a una cadena que contiene el texto de indicación.  
+*lpszText*<br/>
+[out] Un puntero a una cadena que contiene el texto de indicación.  
   
- [in] *cchText*  
- El número de caracteres que se pueden recibir. Este número incluye el carácter nulo de terminación.  
+*cchText*<br/>
+[in] El número de caracteres que se pueden recibir. Este número incluye el carácter nulo de terminación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Para la primera sobrecarga, TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *pichStart*|Índice de base cero del primer carácter del intervalo de texto que aparece resaltado.|  
-|[out] *pichEnd*|Índice de base cero del último carácter del intervalo de texto que aparece resaltado.|  
+|*pichStart*|[out] Índice de base cero del primer carácter del intervalo de texto que aparece resaltado.|  
+|*pichEnd*|[out] Índice de base cero del último carácter del intervalo de texto que aparece resaltado.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszText*  
- Puntero a una cadena que contiene la pila para mostrar en el control de edición.  
+*lpszText*<br/>
+[in] Puntero a una cadena que contiene la pila para mostrar en el control de edición.  
   
- [in] *fDrawWhenFocused*  
- Si es FALSE, no se dibuja el titular de indicación cuando el usuario hace clic en el control de edición y proporciona el control el foco.  
+*fDrawWhenFocused*<br/>
+[in] Si es FALSE, no se dibuja el titular de indicación cuando el usuario hace clic en el control de edición y proporciona el control el foco.  
   
  Si es TRUE, se dibuja el titular de indicación, incluso cuando el control tiene el foco. El titular de indicación desaparece cuando el usuario comienza a escribir en el control.  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *ichStart*|Índice de base cero del primer carácter del intervalo de texto que se va a resaltar.|  
-|[in] *ichEnd*|Índice de base cero del último carácter del intervalo de texto que se va a resaltar.|  
+|*ichStart*|[in] Índice de base cero del primer carácter del intervalo de texto que se va a resaltar.|  
+|*ichEnd*|[in] Índice de base cero del último carácter del intervalo de texto que se va a resaltar.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) mensaje, que se describe en el SDK de Windows.  Este método envía el [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) mensaje, que se describe en el SDK de Windows. Ambos `SetHighlight` y `GetHighlight` están habilitadas para UNICODE solo se basa. 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Puntero a un [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estructura que describe el globo de sugerencias.|  
-|[in] *lpszTitle*|Puntero a una cadena Unicode que contiene el título del globo de sugerencias.|  
-|[in] *lpszText*|Puntero a una cadena Unicode que contiene el texto de sugerencia de globo.|  
-|[in] *ttiIcon*|Un **INT** que especifica el tipo de icono que se va a asociar con el globo de sugerencias. El valor predeterminado es TTI_NONE. Para obtener más información, consulte el `ttiIcon` miembro de la [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estructura.|  
+|*pEditBalloonTip*|[in] Puntero a un [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estructura que describe el globo de sugerencias.|  
+|*lpszTitle*|[in] Puntero a una cadena Unicode que contiene el título del globo de sugerencias.|  
+|*lpszText*|[in] Puntero a una cadena Unicode que contiene el texto de sugerencia de globo.|  
+|*ttiIcon*|[in] Un **INT** que especifica el tipo de icono que se va a asociar con el globo de sugerencias. El valor predeterminado es TTI_NONE. Para obtener más información, consulte el `ttiIcon` miembro de la [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estructura.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  

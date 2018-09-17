@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680585"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721258"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox (clase)
 La `CVSListBox` clase admite un control de lista modificable.  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *strIext*  
- Una referencia a una cadena.  
+*strIext*<br/>
+[in] Una referencia a una cadena.  
   
- [in] *dwData*  
- Un valor de 32 bits específicos de la aplicación que está asociado a la cadena. El valor predeterminado es 0.  
+*dwData*<br/>
+[in] Un valor de 32 bits específicos de la aplicación que está asociado a la cadena. El valor predeterminado es 0.  
   
- [in] *iÍndice*  
- Índice de base cero de la posición que va a contener la cadena. Si el *iÍndice* parámetro es -1, la cadena se agrega al final de la lista. El valor predeterminado es -1.  
+*iÍndice*<br/>
+[in] Índice de base cero de la posición que va a contener la cadena. Si el *iÍndice* parámetro es -1, la cadena se agrega al final de la lista. El valor predeterminado es -1.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la posición de la cadena en el control de lista.  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento de control de lista.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento de control de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la operación de edición se inicia correctamente; en caso contrario, FALSE.  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento de control de lista modificable.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El valor de 32 bits que está asociado con el elemento especificado.  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
- Índice de base cero de un elemento de control de lista modificable.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contiene el texto del elemento especificado.  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento de control de lista modificable.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se quita el elemento especificado; en caso contrario, FALSE.  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iItem*  
- Índice de base cero de un elemento de control de lista modificable.  
+*iItem*<br/>
+[in] Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento de control de lista modificable.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento de control de lista modificable.  
   
- [in] *dwData*  
- Un valor de 32 bits. Este valor puede ser un entero específico de la aplicación o un puntero a otros datos.  
+*dwData*<br/>
+[in] Un valor de 32 bits. Este valor puede ser un entero específico de la aplicación o un puntero a otros datos.  
   
 ### <a name="remarks"></a>Comentarios  
   

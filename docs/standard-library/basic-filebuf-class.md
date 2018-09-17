@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ee6c74693987c35f37caf210e604835061cbefd6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222726"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715343"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf (Clase)
 
@@ -71,10 +71,10 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 ### <a name="parameters"></a>Parámetros
 
 *Elem*<br/>
- Elemento básico del búfer del archivo.
+Elemento básico del búfer del archivo.
 
 *Tr*<br/>
- Rasgos del elemento básico del búfer del archivo (normalmente `char_traits`< `Elem`>).
+Rasgos del elemento básico del búfer del archivo (normalmente `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -413,13 +413,13 @@ basic_filebuf<Elem, Tr> *open(
 ### <a name="parameters"></a>Parámetros
 
 *_Nombre de archivo*<br/>
- Nombre del archivo que se va a abrir.
+Nombre del archivo que se va a abrir.
 
 *_Modo de*<br/>
- Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
- El archivo de forma predeterminada abriendo protección equivalente a la *shflag* parámetro [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+El archivo de forma predeterminada abriendo protección equivalente a la *shflag* parámetro [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -462,7 +462,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 ### <a name="parameters"></a>Parámetros
 
 *right*<br/>
- Referencia a un valor R a un objeto [basic_filebuf](../standard-library/basic-filebuf-class.md).
+Referencia a un valor R a un objeto [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -483,7 +483,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>Parámetros
 
 *_Meta*<br/>
- El carácter que se va a insertar en el búfer o `traits_type::eof`.
+El carácter que se va a insertar en el búfer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>Parámetros
 
 *_Meta*<br/>
- El carácter que se va a insertar en el búfer o `traits_type::eof`.
+El carácter que se va a insertar en el búfer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -547,13 +547,13 @@ virtual pos_type seekoff(off_type _Off,
 ### <a name="parameters"></a>Parámetros
 
 *_Off*<br/>
- La posición para buscar relativa a *_Way*.
+La posición para buscar relativa a *_Way*.
 
 *_Way*<br/>
- El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
+El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
 
 *_Which*<br/>
- Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
+Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -578,10 +578,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 ### <a name="parameters"></a>Parámetros
 
 *_Sp*<br/>
- La posición que se va a buscar.
+La posición que se va a buscar.
 
 *_Which*<br/>
- Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
+Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -608,10 +608,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 ### <a name="parameters"></a>Parámetros
 
 *_Buffer*<br/>
- Puntero a un búfer.
+Puntero a un búfer.
 
 *count*<br/>
- Tamaño del búfer.
+Tamaño del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -632,7 +632,7 @@ void swap(basic_filebuf& right);
 ### <a name="parameters"></a>Parámetros
 
 *right*<br/>
- Referencia `lvalue` a otro `basic_filebuf`.
+Referencia `lvalue` a otro `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

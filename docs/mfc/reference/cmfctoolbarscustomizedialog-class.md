@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d796908504d746baee7863a6c6735bca3572d02b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211057"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702822"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog (clase)
 Un cuadro de diálogo no modal de tabulación ( [CPropertySheet (clase)](../../mfc/reference/cpropertysheet-class.md)) que permite al usuario personalizar las barras de herramientas, menús, métodos abreviados de teclado, herramientas definidas por el usuario y el estilo visual de una aplicación. Normalmente, el usuario tiene acceso a este cuadro de diálogo seleccionando **Personalizar** en el menú **Herramientas** .  
@@ -137,17 +137,17 @@ void AddButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCategoryId*  
- Especifica el identificador de categoría en la que se va a insertar en el botón.  
+*uiCategoryId*<br/>
+[in] Especifica el identificador de categoría en la que se va a insertar en el botón.  
   
- [in] *botón*  
- Especifica el botón que se va a insertar.  
+*Botón*<br/>
+[in] Especifica el botón que se va a insertar.  
   
- [in] *iInsertBefore*  
- Especifica el índice de base cero de un botón de barra de herramientas antes de que el botón se inserta.  
+*iInsertBefore*<br/>
+[in] Especifica el índice de base cero de un botón de barra de herramientas antes de que el botón se inserta.  
   
- [in] *lpszCategory*  
- Especifica la cadena de categoría para insertar el botón.  
+*lpszCategory*<br/>
+[in] Especifica la cadena de categoría para insertar el botón.  
   
 ### <a name="remarks"></a>Comentarios  
  El `AddButton` método omite los botones que tienen los identificadores de comando estándar (por ejemplo, ID_FILE_MRU_FILE1), que no se permiten los comandos (consulte [CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) y los botones de ficticio.  
@@ -171,8 +171,8 @@ BOOL AddMenu(UINT uiMenuResId);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiMenuResId*  
- Especifica el identificador de recurso de un menú cargar.  
+*uiMenuResId*<br/>
+[in] Especifica el identificador de recurso de un menú cargar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si un menú se ha agregado correctamente; en caso contrario, FALSE.  
@@ -192,17 +192,17 @@ void AddMenuCommands(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenu*  
- Un puntero al objeto CMenu para agregar.  
+*pMenu*<br/>
+[in] Un puntero al objeto CMenu para agregar.  
   
- [in] *bPopup*  
- Especifica si se va a insertar los elementos de menú emergente a la lista de comandos.  
+*bPopup*<br/>
+[in] Especifica si se va a insertar los elementos de menú emergente a la lista de comandos.  
   
- [in] *lpszCategory*  
- El nombre de la categoría que se va a insertar en el menú.  
+*lpszCategory*<br/>
+[in] El nombre de la categoría que se va a insertar en el menú.  
   
- [in] *lpszMenuPath*  
- Un prefijo que se agrega al nombre cuando el comando se muestra en el **todas las categorías** lista.  
+*lpszMenuPath*<br/>
+[in] Un prefijo que se agrega al nombre cuando el comando se muestra en el **todas las categorías** lista.  
   
 ### <a name="remarks"></a>Comentarios  
  El `AddMenuCommands` método recorre todos los elementos de menú de *pMenu*. Para cada elemento de menú que no tiene un submenú, este método crea un [CMFCToolBarButton (clase)](../../mfc/reference/cmfctoolbarbutton-class.md) objeto y llama a la [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) método para agregar el elemento de menú como barra de herramientas botón a la lista de comandos en el **comandos** página. Los separadores se omiten en este proceso.  
@@ -223,14 +223,14 @@ BOOL AddToolBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCategoryId*  
- Especifica el identificador de recurso de la categoría para agregar la barra de herramientas.  
+*uiCategoryId*<br/>
+[in] Especifica el identificador de recurso de la categoría para agregar la barra de herramientas.  
   
- [in] *uiToolbarResId*  
- Especifica el identificador de recurso de una barra de herramientas cuyos comandos se insertan en la lista de comandos.  
+*uiToolbarResId*<br/>
+[in] Especifica el identificador de recurso de una barra de herramientas cuyos comandos se insertan en la lista de comandos.  
   
- [in] *lpszCategory*  
- Especifica el nombre de la categoría que se va a agregar la barra de herramientas.  
+*lpszCategory*<br/>
+[in] Especifica el nombre de la categoría que se va a agregar la barra de herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -251,8 +251,8 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lstTools*  
- La lista de herramientas definidas por el usuario para comprobar.  
+*lstTools*<br/>
+[in] La lista de herramientas definidas por el usuario para comprobar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si la lista de herramientas definidas por el usuario es válida; en caso contrario, FALSE. La implementación predeterminada siempre devuelve TRUE.  
@@ -274,14 +274,14 @@ CMFCToolBarsCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParentFrame*  
- Un puntero al marco primario. Este parámetro no debe ser NULL.  
+*pWndParentFrame*<br/>
+[in] Un puntero al marco primario. Este parámetro no debe ser NULL.  
   
- [in] *bAutoSetFromMenus*  
- Un valor booleano que especifica si se debe agregar los comandos de menú de todos los menús en la lista de comandos en el **comandos** página. Si este parámetro es TRUE, se agregan los comandos de menú. En caso contrario, no se agregan los comandos de menú.  
+*bAutoSetFromMenus*<br/>
+[in] Un valor booleano que especifica si se debe agregar los comandos de menú de todos los menús en la lista de comandos en el **comandos** página. Si este parámetro es TRUE, se agregan los comandos de menú. En caso contrario, no se agregan los comandos de menú.  
   
- [in] *uiFlags*  
- Una combinación de marcas que afectan al comportamiento del cuadro de diálogo. Este parámetro puede ser uno o varios de los siguientes valores:  
+*uiFlags*<br/>
+[in] Una combinación de marcas que afectan al comportamiento del cuadro de diálogo. Este parámetro puede ser uno o varios de los siguientes valores:  
   
 - AFX_CUSTOMIZE_MENU_SHADOWS  
   
@@ -299,8 +299,8 @@ CMFCToolBarsCustomizeDialog(
   
 - AFX_CUSTOMIZE_NO_LARGE_ICONS  
   
- [in] *plistCustomPages*  
- Un puntero a una lista de `CRuntimeClass` objetos que especifican las páginas personalizadas adicionales.  
+*plistCustomPages*<br/>
+[in] Un puntero a una lista de `CRuntimeClass` objetos que especifican las páginas personalizadas adicionales.  
   
 ### <a name="remarks"></a>Comentarios  
  El *plistCustomPages* parámetro hace referencia a la lista de `CRuntimeClass` objetos que especifican las páginas personalizadas adicionales. El constructor agrega más páginas al cuadro de diálogo mediante el uso de la [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) método. Vea el ejemplo CustomPages para obtener un ejemplo que agrega más páginas para el **personalizar** cuadro de diálogo.  
@@ -333,8 +333,8 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar las barras de herramientas definidas por el usuario; FALSE para deshabilitar las barras de herramientas.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar las barras de herramientas definidas por el usuario; FALSE para deshabilitar las barras de herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
  Si *bHabilitar el* es TRUE, el **New**, **cambiar el nombre de** y **eliminar** botones se mostrarán en el **las barras de herramientas** página.  
@@ -349,8 +349,8 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `wndListOfCommands`  
- Una referencia a la `CListBox` objeto que se va a rellenar.  
+*wndListOfCommands*<br/>
+[out] Una referencia a la `CListBox` objeto que se va a rellenar.  
   
 ### <a name="remarks"></a>Comentarios  
  El **todos los comandos** categoría contiene los comandos de todas las categorías. El [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) método agrega el comando que está asociado con el botón proporcionado para el **todos los comandos** categoría por usted.  
@@ -369,11 +369,11 @@ void FillCategoriesComboBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *wndCategory*  
- Una referencia a la `CComboBox` objeto que se va a rellenar.  
+*wndCategory*<br/>
+[out] Una referencia a la `CComboBox` objeto que se va a rellenar.  
   
- [in] *bAddEmpty*  
- Un valor booleano que especifica si se debe agregar categorías al cuadro combinado que no tienen comandos. Si este parámetro es TRUE, vacías las categorías se agregan al cuadro combinado. En caso contrario, no se agregan categorías vacías.  
+*bAddEmpty*<br/>
+[in] Un valor booleano que especifica si se debe agregar categorías al cuadro combinado que no tienen comandos. Si este parámetro es TRUE, vacías las categorías se agregan al cuadro combinado. En caso contrario, no se agregan categorías vacías.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método es similar a la [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox) método salvo que este método funciona con un `CComboBox` objeto.  
@@ -394,11 +394,11 @@ void FillCategoriesListBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *wndCategory*  
- Una referencia a la `CListBox` objeto que se va a rellenar.  
+*wndCategory*<br/>
+[out] Una referencia a la `CListBox` objeto que se va a rellenar.  
   
- [in] *bAddEmpty*  
- Un valor booleano que especifica si se debe agregar categorías en el cuadro de lista que no tienen comandos. Si este parámetro es TRUE, vacías las categorías se agregan al cuadro de lista. En caso contrario, no se agregan categorías vacías.  
+*bAddEmpty*<br/>
+[in] Un valor booleano que especifica si se debe agregar categorías en el cuadro de lista que no tienen comandos. Si este parámetro es TRUE, vacías las categorías se agregan al cuadro de lista. En caso contrario, no se agregan categorías vacías.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método es similar a la [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox) método salvo que este método funciona con un `CListBox` objeto.  
@@ -417,8 +417,8 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador del comando que se va a recuperar.  
+*uiCmd*<br/>
+[in] El identificador del comando que se va a recuperar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El nombre que está asociado con el identificador de comando especificado o NULL si no existe el comando.  
@@ -433,11 +433,11 @@ int GetCountInCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszItemName*  
- Para que coincida con la etiqueta de texto.  
+*lpszItemName*<br/>
+[in] Para que coincida con la etiqueta de texto.  
   
- [in] *lstCommands*  
- Una referencia a una lista que contiene `CMFCToolBarButton` objetos.  
+*lstCommands*<br/>
+[in] Una referencia a una lista que contiene `CMFCToolBarButton` objetos.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El número de elementos en el lista cuya etiqueta de texto es igual a *lpszItemName*.  
@@ -492,8 +492,8 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *pSelTool*  
- Un puntero al objeto de herramienta de usuario que ha cambiado.  
+*pSelTool*<br/>
+[in, out] Un puntero al objeto de herramienta de usuario que ha cambiado.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método cuando un usuario cambia las propiedades de una herramienta definido por el usuario. La implementación predeterminada no hace nada. Invalide este método en una clase derivada de `CMFCToolBarsCustomizeDialog` para realizar el procesamiento después de que se produce un cambio en una herramienta de usuario.  
@@ -506,8 +506,8 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *pAccel*  
- Puntero a la asignación de teclado propuesto se expresa como un [aceleración](/windows/desktop/api/winuser/ns-winuser-tagaccel) struct.  
+*pAccel*<br/>
+[in, out] Puntero a la asignación de teclado propuesto se expresa como un [aceleración](/windows/desktop/api/winuser/ns-winuser-tagaccel) struct.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la clave puede ser asignado o FALSE si no se puede asignar la clave. La implementación predeterminada siempre devuelve TRUE.  
@@ -523,8 +523,8 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *pSelTool*  
- Un puntero al objeto de herramienta de usuario que se va a reemplazar.  
+*pSelTool*<br/>
+[in, out] Un puntero al objeto de herramienta de usuario que se va a reemplazar.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método se llama el marco de trabajo cuando las propiedades de una herramienta definido por el usuario que se va a cambiar. La implementación predeterminada no hace nada. Invalidar el `OnBeforeChangeTool` método en una clase derivada de `CMFCToolBarsCustomizeDialog` si desea realizar el procesamiento antes de que se produce un cambio en una herramienta de usuario, como la liberación de recursos que *pSelTool* usa.  
@@ -540,14 +540,14 @@ virtual BOOL OnEditToolbarMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Un puntero a la ventana primaria.  
+*pWndParent*<br/>
+[in] Un puntero a la ventana primaria.  
   
- [in] *mapa de bits*  
- Una referencia a un objeto de mapa de bits que se va a editar.  
+*mapa de bits*<br/>
+[in] Una referencia a un objeto de mapa de bits que se va a editar.  
   
- [in] *nBitsPerPixel*  
- Resolución de color, en bits por píxel del mapa de bits.  
+*nBitsPerPixel*<br/>
+[in] Resolución de color, en bits por píxel del mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se confirma un cambio; en caso contrario, FALSE. La implementación predeterminada muestra un cuadro de diálogo y devuelve TRUE si el usuario hace clic **Aceptar**, o FALSE si el usuario hace clic **cancelar** o **cerrar** botón.  
@@ -604,14 +604,14 @@ int RemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCategoryId*  
- Especifica el identificador de categoría desde la que se va a quitar el botón.  
+*uiCategoryId*<br/>
+[in] Especifica el identificador de categoría desde la que se va a quitar el botón.  
   
- [in] *uiCmdId*  
- Especifica el identificador de comando del botón.  
+*uiCmdId*<br/>
+[in] Especifica el identificador de comando del botón.  
   
- [in] *lpszCategory*  
- Especifica el nombre de la categoría desde la que se va a quitar el botón.  
+*lpszCategory*<br/>
+[in] Especifica el nombre de la categoría desde la que se va a quitar el botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la botón quitado, o -1 si no se encontró el identificador de comando especificado en la categoría especificada. Si *uiCategoryId* es -1, el valor devuelto es 0.  
@@ -629,11 +629,11 @@ BOOL RenameCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszCategoryOld*  
- Para cambiar el nombre de categoría.  
+*lpszCategoryOld*<br/>
+[in] Para cambiar el nombre de categoría.  
   
- [in] *lpszCategoryNew*  
- El nuevo nombre de categoría.  
+*lpszCategoryNew*<br/>
+[in] El nuevo nombre de categoría.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
@@ -651,11 +651,11 @@ void ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- Especifica el comando del botón que se debe reemplazar.  
+*uiCmd*<br/>
+[in] Especifica el comando del botón que se debe reemplazar.  
   
- [in] *botón*  
- Un **const** referencia al objeto de botón de barra de herramientas que reemplaza al botón anterior.  
+*Botón*<br/>
+[in] Un **const** referencia al objeto de botón de barra de herramientas que reemplaza al botón anterior.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands), o [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) agrega una comando para el **comandos** página, que el comando está en forma de un [CMFCToolBarButton (clase)](../../mfc/reference/cmfctoolbarbutton-class.md) objeto (o un [CMFCToolBarMenuButton (clase)](../../mfc/reference/cmfctoolbarmenubutton-class.md) objeto para un menú elemento que contiene un submenú agregado por `AddMenuCommands`). El marco de trabajo también llama a estos tres métodos para agregar comandos automáticamente. Si desea una línea de comandos para representarlo mediante un tipo derivado en su lugar, llame a `ReplaceButton` y pase un botón del tipo derivado.  
@@ -673,8 +673,8 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszCategory*  
- Nombre de la categoría.  
+*lpszCategory*<br/>
+[in] El nombre de la categoría.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  

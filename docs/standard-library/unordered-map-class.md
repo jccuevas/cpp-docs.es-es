@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726237"
 ---
 # <a name="unorderedmap-class"></a>unordered_map (Clase)
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*  
+*nbucket*<br/>
 Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
+*keyVal*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
+*keyVal*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parámetros
 
-*Where*  
+*Where*<br/>
 Posición del elemento que se va a quitar.
 
-*Primero*  
+*Primero*<br/>
 Posición del primer elemento que se va a quitar.
 
-*Último*  
+*Último*<br/>
 Posición situada más allá del último elemento que se va a quitar.
 
-*Key*  
+*Key*<br/>
 Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
+*keyVal*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parámetros
 
-*factor*  
+*factor*<br/>
 El nuevo factor de carga máxima.
 
 ### <a name="remarks"></a>Comentarios
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parámetros
 
-*nbuckets*  
+*nbuckets*<br/>
 Número solicitado de depósitos.
 
 ### <a name="remarks"></a>Comentarios
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
+*right*<br/>
 El contenedor con el que se intercambia.
 
 ### <a name="remarks"></a>Comentarios

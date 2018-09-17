@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540486"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711163"
 ---
 # <a name="bssseg"></a>bss_seg
 Especifica el segmento en el que las variables sin inicializar se almacenan en el archivo .obj.  
@@ -35,27 +35,27 @@ Especifica el segmento en el que las variables sin inicializar se almacenan en e
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- 
+
 Archivos obj pueden verse con el [dumpbin](../build/reference/dumpbin-command-line.md) aplicación. El segmento predeterminado del archivo .obj para los datos sin inicializar es .bss. En algunos casos de uso de **bss_seg** puede acelerar tiempos de carga mediante la agrupación de datos sin inicializar en una sección.  
   
 **bss_seg** sin parámetros restablece el segmento a. BSS.  
   
-*inserción* (opcional)  
-Inserta un registro en la pila interna del compilador. Un *inserción* puede tener un *identificador* y *nombre de segmento*.  
+**push**<br/>
+(Opcional) Inserta un registro en la pila interna del compilador. Un *pu*sh * puede tener un *identificador* y *nombre de segmento*.  
   
-*POP* (opcional)  
-Quita un registro de la parte superior de la pila interna del compilador.  
+**pop**<br/>
+(Opcional) Quita un registro de la parte superior de la pila interna del compilador.  
   
-*identificador* (opcional)  
-Cuando se usa con *inserción*, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con *pop*, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
+*identifier*<br/>
+(Opcional) Cuando se usa con **inserción**, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con **pop**, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
   
-*identificador* permite varios registros que se saque con una sola *pop* comando.  
+*identificador* permite varios registros que se saque con una sola **pop** comando.  
   
-*"segment-name"*(opcional)  
-Nombre de un segmento. Cuando se usa con *pop*, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.  
+*"segment-name"*<br/>
+(Opcional) El nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.  
   
-*"clase de segmento"* (opcional)  
-Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.  
+*"segmento-class"*<br/>
+(Opcional) Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.  
   
 ## <a name="example"></a>Ejemplo  
   

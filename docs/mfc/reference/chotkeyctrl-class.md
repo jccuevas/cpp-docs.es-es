@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681630"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722252"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (clase)
 Proporciona la funcionalidad del control común de tecla de acceso rápido de Windows.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *wVirtualKeyCode*  
- Código de tecla virtual de método abreviado de teclado. Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.  
+*wVirtualKeyCode*<br/>
+[out] Código de tecla virtual de método abreviado de teclado. Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.  
   
- [out] *wModifiers*  
- Una combinación bit a bit (OR) de marcas que indican las teclas modificadoras en el método abreviado de teclado.  
+*wModifiers*<br/>
+[out] Una combinación bit a bit (OR) de marcas que indican las teclas modificadoras en el método abreviado de teclado.  
   
  Los marcadores modificadores son los siguientes:  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *wVirtualKeyCode*  
- Código de tecla virtual de método abreviado de teclado. Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.  
+*wVirtualKeyCode*<br/>
+[in] Código de tecla virtual de método abreviado de teclado. Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.  
   
- [in] *wModifiers*  
- Una combinación bit a bit (OR) de marcas que indican las teclas modificadoras en el método abreviado de teclado.  
+*wModifiers*<br/>
+[in] Una combinación bit a bit (OR) de marcas que indican las teclas modificadoras en el método abreviado de teclado.  
   
  Los marcadores modificadores son los siguientes:  
   

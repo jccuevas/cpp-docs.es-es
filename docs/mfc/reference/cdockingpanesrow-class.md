@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d98940ffbd1c6ff021712ee50721908d7760abee
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541133"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712132"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow (clase)
 Administra una lista de paneles ubicados en la misma fila horizontal o vertical (columna) de un sitio de vinculación.  
@@ -201,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- [in] *dockMethod*  
- [in] *lpRect*  
- [in] *bAddLast*  
+*pControlBar*<br/>
+[in] [in] *dockMethod*  
+*lpRect*<br/>
+[in] [in] *bAddLast*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -218,8 +218,8 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- [in] *dockMethod*  
+*pControlBar*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -233,11 +233,11 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nMargin*  
- Especifica el desplazamiento, en píxeles, del primer panel desde la esquina superior izquierda de la fila.  
+*nMargin*<br/>
+[in] Especifica el desplazamiento, en píxeles, del primer panel desde la esquina superior izquierda de la fila.  
   
- [in] *nSpacing*  
- Especifica el espaciado, en píxeles, entre los paneles.  
+*nSpacing*<br/>
+[in] Especifica el espaciado, en píxeles, entre los paneles.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para organizar los paneles en la fila donde acoplará. Después de llamar a este método, debe llamar a `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
@@ -252,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -270,8 +270,8 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentDockBar*  
- [in] *nOffset*  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
  [in] *nHeight*  
   
 ### <a name="remarks"></a>Comentarios  
@@ -315,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMoveBackToVirtualRect*  
- [in] *pBarToExclude*  
+*bMoveBackToVirtualRect*<br/>
+[in] [in] *pBarToExclude*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -390,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- [in] *lst*  
+*pBar*<br/>
+[in] [in] *lst*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -599,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- [in] *ptOffset*  
- [in] *bSwapControlBars*  
- [in] *hdwp*  
- [in] *rectTarget*  
- [in] *nOffset*  
- [in] *bForward*  
- [in] *nAbsolutOffset*  
+*pControlBar*<br/>
+[in] [in] *ptOffset*  
+*bSwapControlBars*<br/>
+[in] [in] *hdwp*  
+*rectTarget*<br/>
+[in] [in] *nOffset*  
+*bForward*<br/>
+[in] [in] *nAbsolutOffset*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -653,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBarOld*  
- [in] *pBarNew*  
+*pBarOld*<br/>
+[in] [in] *pBarNew*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -672,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rectNewParentBarArea*  
- [in] *entro*  
- [in] *bExpand*  
- [in] *nOffset*  
+*rectNewParentBarArea*<br/>
+[in] [in] *entro*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -729,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nExtraSpace*  
- [in] *rowExtraAlign*  
+*nExtraSpace*<br/>
+[in] [in] *rowExtraAlign*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -744,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- [in] *bDelay*  
+*bMostrar*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -760,8 +760,8 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- [in] *bMostrar*  
+*pControlBar*<br/>
+[in] [in] *bMostrar*  
  [in] *bDelay*  
   
 ### <a name="return-value"></a>Valor devuelto  

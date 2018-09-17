@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104113"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719282"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Controlar llamadas de comprobación de la pila)
+
 Controla las comprobaciones de la pila.
 
 ## <a name="syntax"></a>Sintaxis
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>Argumentos
+
 *size*<br/>
 (Opcional) Número de bytes que pueden ocupar las variables locales antes de que se inicie un sondeo de pila. Si el **/GS.** opción se especifica sin un `size` argumento, es lo mismo que especificar **/Gs0**,
 
 ## <a name="remarks"></a>Comentarios
+
 Un sondeo de pila es una secuencia de código que el compilador inserta en cada llamada de función. Cuando se inicia un sondeo de pila, se introduce en la memoria sin causar conflictos, en la cantidad de espacio necesaria para almacenar las variables locales de la función.
 
 Si una función requiere más de `size` bytes de espacio de la pila para las variables locales, se activará su sondeo de pila. De forma predeterminada, el compilador genera código que inicia un sondeo de pila cuando una función requiere más de una página de espacio de pila. Esto es equivalente a una opción del compilador de **/Gs4096** x86, x64 y plataformas ARM. Este valor permite a una aplicación y al administrador de memoria de Windows aumentar la cantidad de memoria asignada dinámicamente a la pila del programa en tiempo de ejecución.
@@ -58,18 +61,19 @@ Puede activar o desactivar las comprobaciones de la pila mediante [check_stack](
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-2.  Seleccione el **C o C++** carpeta.
+1. Seleccione el **C o C++** carpeta.
 
-3.  Seleccione el **línea de comandos** página de propiedades.
+1. Seleccione el **línea de comandos** página de propiedades.
 
-4.  Escriba la opción del compilador en el cuadro **Opciones adicionales** .
+1. Escriba la opción del compilador en el cuadro **Opciones adicionales** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
--   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Vea también
-[Opciones del compilador](../../build/reference/compiler-options.md)   
+
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

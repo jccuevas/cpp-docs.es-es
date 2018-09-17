@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849178"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705840"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty (clase)
 La clase `CMFCPropertyGridColorProperty` admite un elemento de control de la lista de propiedades que abre un cuadro de diálogo de selección de color.  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *strName*  
- Nombre de la propiedad.  
+*strName*<br/>
+[in] El nombre de la propiedad.  
   
- [in] *color*  
- El valor de color de la propiedad.  
+*Color*<br/>
+[in] El valor de color de la propiedad.  
   
- [in] *pPalette*  
- Puntero a una paleta de colores. El valor predeterminado es NULL.  
+*pPalette*<br/>
+[in] Puntero a una paleta de colores. El valor predeterminado es NULL.  
   
- [in] *lpszDescr*  
- Descripción de propiedad. El valor predeterminado es NULL.  
+*lpszDescr*<br/>
+[in] Descripción de propiedad. El valor predeterminado es NULL.  
   
- [in] *dwData*  
- Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
+*dwData*<br/>
+[in] Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Habilita la *automática* botón en el cuadro de diálogo de selección de color. (El botón automático estándar tiene la etiqueta **automática**.)  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszLabel*  
- El texto de la etiqueta del botón automático.  
+*lpszLabel*<br/>
+[in] El texto de la etiqueta del botón automático.  
   
- [in] *automáticoColor*  
- El valor de color RGB del color automático (predeterminado).  
+*automáticoColor*<br/>
+[in] El valor de color RGB del color automático (predeterminado).  
   
- [in] *bHabilitar el*  
- TRUE para habilitar el botón automático; en caso contrario, FALSE. El valor predeterminado es TRUE.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar el botón automático; en caso contrario, FALSE. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszLabel*  
- El texto de la etiqueta del otro botón.  
+*lpszLabel*<br/>
+[in] El texto de la etiqueta del otro botón.  
   
- [in] *bAltColorDlg*  
- True para mostrar el `CMFCColorDialog` cuadro de diálogo; FALSE para mostrar el cuadro de diálogo de selección de color estándar. El valor predeterminado es TRUE.  
+*bAltColorDlg*<br/>
+[in] True para mostrar el `CMFCColorDialog` cuadro de diálogo; FALSE para mostrar el cuadro de diálogo de selección de color estándar. El valor predeterminado es TRUE.  
   
- [in] *bHabilitar el*  
- TRUE para mostrar el botón otro; en caso contrario, FALSE.  El valor predeterminado es TRUE.  
+*bHabilitar el*<br/>
+[in] TRUE para mostrar el botón otro; en caso contrario, FALSE.  El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *color*  
- Un valor de color RGB.  
+*Color*<br/>
+[in] Un valor de color RGB.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nColumnsNumber*  
- El número preferido de las columnas de la cuadrícula de propiedades de color.  
+*nColumnsNumber*<br/>
+[in] El número preferido de las columnas de la cuadrícula de propiedades de color.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método establece el valor de la `m_nColumnsNumber` protegido el miembro de datos.  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *varValue*  
- Un valor.  
+*varValue*<br/>
+[in] Un valor.  
   
 ### <a name="remarks"></a>Comentarios  
  Use la [cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) método para restablecer el valor original de una propiedad editada.  

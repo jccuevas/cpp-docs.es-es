@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee20d07ff37024506ef925fd94363bf85ceb8bc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e25fa8a730ea31caf747d07ce30a0622c4bd01
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756891"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714693"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Configuración de la aplicación, Asistente para proyectos ATL
 
@@ -31,32 +31,40 @@ Use la **configuración de la aplicación** página del Asistente para proyectos
 
 Elija uno de los tres tipos de servidor:
 
-**Biblioteca de vínculos dinámicos (DLL)**  
-Seleccione esta opción para crear un servidor en proceso.
+- **Biblioteca de vínculos dinámicos (DLL)**  
 
-**Archivo ejecutable (EXE)**  
-Seleccione esta opción para crear un servidor fuera de proceso local. Esta opción no permite la compatibilidad con MFC ni COM + 1.0. No se permite para la combinación de código auxiliar y proxy.
+   Seleccione esta opción para crear un servidor en proceso.
 
-**Servicio (EXE)**  
-Seleccione esta opción para crear una aplicación de Windows que se ejecuta en segundo plano cuando se inicia Windows. Esta opción no permite la compatibilidad con MFC ni COM + 1.0 o no se admite para la combinación de código auxiliar y proxy.
+- **Archivo ejecutable (EXE)**  
+
+   Seleccione esta opción para crear un servidor fuera de proceso local. Esta opción no permite la compatibilidad con MFC ni COM + 1.0. No se permite para la combinación de código auxiliar y proxy.
+
+- **Servicio (EXE)**  
+
+   Seleccione esta opción para crear una aplicación de Windows que se ejecuta en segundo plano cuando se inicia Windows. Esta opción no permite la compatibilidad con MFC ni COM + 1.0 o no se admite para la combinación de código auxiliar y proxy.
 
 ## <a name="additional-options"></a>Opciones adicionales
 
 > [!NOTE]
->  Todas las opciones adicionales están disponibles para proyectos de archivos DLL solo.
+> Todas las opciones adicionales están disponibles para proyectos de archivos DLL solo.
 
-**Permitir la combinación de código auxiliar y proxy**  
-Seleccione el **permitir la combinación de código auxiliar y proxy** casilla de verificación por comodidad cuando se requiere la serialización de interfaces. Esta opción coloca el código proxy y código auxiliar generado por MIDL en el mismo archivo ejecutable como el servidor.
+- **Permitir la combinación de código auxiliar y proxy**  
 
-**Compatibilidad con MFC**  
-Seleccione esta opción para especificar que el objeto que incluye compatibilidad con MFC. Esta opción vincula el proyecto a las bibliotecas MFC para que puede tener acceso a cualquiera de las clases y funciones que contienen.
+   Seleccione el **permitir la combinación de código auxiliar y proxy** casilla de verificación por comodidad cuando se requiere la serialización de interfaces. Esta opción coloca el código proxy y código auxiliar generado por MIDL en el mismo archivo ejecutable como el servidor.
 
-**Compatibilidad con COM + 1.0**  
-Seleccione esta opción para modificar la configuración de compilación del proyecto para admitir los componentes de COM + 1.0. Además de la lista estándar de bibliotecas, el asistente agrega la biblioteca específicos del componente de COM + 1.0 Comsvcs.lib.
+- **Compatibilidad con MFC**  
 
-Además, el mtxex.dll es el retraso que se cargan en el sistema host cuando se inicia la aplicación.
+   Seleccione esta opción para especificar que el objeto que incluye compatibilidad con MFC. Esta opción vincula el proyecto a las bibliotecas MFC para que puede tener acceso a cualquiera de las clases y funciones que contienen.
 
-- **Compatibilidad con el registrador de componentes** si el proyecto ATL contiene compatibilidad para los componentes de COM + 1.0, puede establecer esta opción. El registrador de componentes permite al objeto COM + 1.0 obtener una lista de componentes, registrar componentes o anular el registro de componentes (individualmente o a la vez).
+- **Compatibilidad con COM + 1.0**  
+
+   Seleccione esta opción para modificar la configuración de compilación del proyecto para admitir los componentes de COM + 1.0. Además de la lista estándar de bibliotecas, el asistente agrega la biblioteca específicos del componente de COM + 1.0 Comsvcs.lib.
+
+   Además, el mtxex.dll es el retraso que se cargan en el sistema host cuando se inicia la aplicación.
+
+- **Registro de componentes de soporte técnico**
+
+   Si el proyecto ATL contiene compatibilidad para los componentes de COM + 1.0, puede establecer esta opción. El registrador de componentes permite al objeto COM + 1.0 obtener una lista de componentes, registrar componentes o anular el registro de componentes (individualmente o a la vez).
 
 ## <a name="see-also"></a>Vea también
 

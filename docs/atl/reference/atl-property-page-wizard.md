@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760388"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703800"
 ---
 # <a name="atl-property-page-wizard"></a>Asistente para páginas de propiedades ATL
 
@@ -56,17 +56,20 @@ Proporciona información para la clase de C++ creada para implementar el objeto.
 
 Proporciona información sobre la funcionalidad de COM para el objeto.
 
-**Coclase**  
-Establece el nombre de la clase de componente que contiene una lista de interfaces que admite el objeto.
+- **Coclase**
 
-> [!NOTE]
->  Si crea el proyecto mediante atributos, o si se indica que la página de propiedades utiliza atributos en esta página del asistente, no se puede cambiar esta opción ya que ATL no incluye el `coclass` atributo.
+   Establece el nombre de la clase de componente que contiene una lista de interfaces que admite el objeto.
 
-**Type**  
-Establece la descripción del objeto que va a aparecer en el registro
+   > [!NOTE]
+   > Si crea el proyecto mediante atributos, o si se indica que la página de propiedades utiliza atributos en esta página del asistente, no se puede cambiar esta opción ya que ATL no incluye el `coclass` atributo.
 
-**Id. de programa**  
-Establece el nombre que se pueden usar los contenedores en lugar del CLSID del objeto.
+- **Type**
+
+   Establece la descripción del objeto que va a aparecer en el registro
+
+- **Id. de programa**
+
+   Establece el nombre que se pueden usar los contenedores en lugar del CLSID del objeto.
 
 ## <a name="see-also"></a>Vea también
 

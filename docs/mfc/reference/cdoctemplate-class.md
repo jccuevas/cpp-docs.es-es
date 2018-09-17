@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336990"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709844"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate (clase)
 Una clase base abstracta que define la funcionalidad básica para las plantillas de documento.  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszPathName*  
- Puntero a la ruta de acceso del archivo que contiene el documento que se va a abrirse.  
+*lpszPathName*<br/>
+[in] Puntero a la ruta de acceso del archivo que contiene el documento que se va a abrirse.  
   
- [in] *bAddToMRU*  
- TRUE indica que el documento es uno de los archivos más recientes; FALSE indica que el documento no es uno de los archivos más recientes.  
+*bAddToMRU*<br/>
+[in] TRUE indica que el documento es uno de los archivos más recientes; FALSE indica que el documento no es uno de los archivos más recientes.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al documento cuyo archivo se denomina por *lpszPathName*; Es NULL si no lo consigue.  

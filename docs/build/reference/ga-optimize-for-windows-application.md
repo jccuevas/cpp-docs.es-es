@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2ef8aaf1e2b3f1dd75f7ca2669aaf09f3d121a98
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710065"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (optimizar código para una aplicación para Windows)
-Tiene como resultado un código más eficaz para un archivo .exe para tener acceso a las variables de almacenamiento local de subprocesos (TLS).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/GA  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- **/GA** declarado acelera el acceso a datos con [__declspec (Thread)](../../cpp/declspec.md) en un programa basado en Windows. Cuando se establece esta opción, el [__tls_index](/windows/desktop/ProcThread/thread-local-storage) macro se supone que es 0.  
-  
- Uso de **/GA** para puede dar lugar a un archivo DLL de generación de código incorrecto.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Haga clic en la carpeta **C/C++** .  
-  
-3.  Haga clic en la página de propiedades **Línea de comandos** .  
-  
-4.  Escriba la opción del compilador en el cuadro **Opciones adicionales** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
-  
--   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador](../../build/reference/compiler-options.md)   
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+
+Tiene como resultado un código más eficaz para un archivo .exe para tener acceso a las variables de almacenamiento local de subprocesos (TLS).
+
+## <a name="syntax"></a>Sintaxis
+
+```
+/GA
+```
+
+## <a name="remarks"></a>Comentarios
+
+**/GA** declarado acelera el acceso a datos con [__declspec (Thread)](../../cpp/declspec.md) en un programa basado en Windows. Cuando se establece esta opción, el [__tls_index](/windows/desktop/ProcThread/thread-local-storage) macro se supone que es 0.
+
+Uso de **/GA** para puede dar lugar a un archivo DLL de generación de código incorrecto.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+
+1. Haga clic en la carpeta **C/C++** .
+
+1. Haga clic en la página de propiedades **Línea de comandos** .
+
+1. Escriba la opción del compilador en el cuadro **Opciones adicionales** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
+
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

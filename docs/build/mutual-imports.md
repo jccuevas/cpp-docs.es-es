@@ -1,5 +1,5 @@
 ---
-title: Importaciones mutuas | Documentos de Microsoft
+title: Importaciones mutuas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,115 +24,119 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7aee01e72fb8386b6aee7e6a505424b4138f45d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704852"
 ---
 # <a name="mutual-imports"></a>Importaciones mutuas
-Exportar o importar a otro archivo ejecutable presenta complicaciones cuando las importaciones mutuas (o circulares). Por ejemplo, dos archivos DLL importan símbolos entre sí, similar a funciones mutuamente recursivas.  
-  
- El problema de importar mutuamente archivos ejecutables (generalmente archivos DLL) es que no se pueden generar sin generar al otro primero. Cada proceso de compilación requiere, como entrada, una biblioteca de importación generada por el otro proceso de compilación.  
-  
- La solución consiste en utilizar la herramienta LIB con la opción/DEF, que produce una biblioteca de importación sin compilar el archivo ejecutable. Con esta herramienta, puede generar todas las bibliotecas de importación que necesita, independientemente de cuántos archivos DLL haya implicados y la complejidad de las dependencias.  
-  
- La solución general para procesar importaciones mutuas es:  
-  
-1.  Llevar a su vez cada DLL. (Cualquier orden es factible, aunque algunos pedidos resultan más óptimos). Si todas las bibliotecas de importación necesarias existen y están actualizadas, ejecute LINK para generar el archivo ejecutable (DLL). Esto produce una biblioteca de importación. En caso contrario, ejecute LIB para generar una biblioteca de importación.  
-  
-     Ejecutar LIB con la opción/DEF genera un archivo adicional con un. Extensión EXP. El archivo. Archivo EXP debe usarse posteriormente para generar el archivo ejecutable.  
-  
-2.  Después de utilizar LINK o LIB para generar todas las bibliotecas de importación, vuelva atrás y ejecute LINK para generar los archivos ejecutables que no se compilaron en el paso anterior. Tenga en cuenta que el archivo .exp correspondiente debe especificarse en la línea de vínculo.  
-  
-     Si hubiera ejecutado la herramienta LIB para producir una biblioteca de importación para DLL1, LIB también habrá producido el archivo DLL1.exp así. Debe utilizar DLL1.exp como entrada de LINK al generar DLL1.dll.  
-  
- En la siguiente ilustración muestra una solución para dos archivos DLL que importan, DLL1 y DLL2. Paso 1 consiste en ejecutar LIB, con la opción/DEF establecida, en DLL1. Paso 1 produce DLL1.lib, una biblioteca de importación y DLL1.exp. En el paso 2, la biblioteca de importación se utiliza para generar DLL2, que a su vez produce una biblioteca de importación para los símbolos de DLL2. Paso 3 genera DLL1, con DLL1.exp y DLL2.lib como entrada. Tenga en cuenta que no es necesario un archivo .exp para DLL2 porque no se utilizó LIB para generar la biblioteca de importación de DLL2.  
-  
- ![Uso de importaciones mutuas para vincular dos archivos DLL](../build/media/vc37yj1.gif "vc37YJ1")  
-Vincular dos archivos DLL con importaciones mutuas  
-  
-## <a name="limitations-of-afxext"></a>Limitaciones de _AFXEXT  
- Puede usar el `_AFXEXT` símbolo de preprocesador para la extensión MFC DLL siempre y cuando no tiene varios niveles de archivos DLL de extensión MFC. Si tiene archivos DLL que llamar o derivar desde clases de sus propios archivos DLL, que se derivan de las clases MFC, de extensión MFC de extensión de MFC debe utilizar su propio símbolo de preprocesador para evitar la ambigüedad.  
-  
- El problema es que en Win32, debe declarar explícitamente los datos como **__declspec (dllexport)** si no se puede exportar desde un archivo DLL, y **__declspec (dllimport)** si se va a importar desde un archivo DLL. Cuando se define `_AFXEXT`, los encabezados de MFC Asegúrese de que **AFX_EXT_CLASS** se definió correctamente.  
-  
- Si tiene varios niveles, un símbolo como **AFX_EXT_CLASS** no es suficiente, porque un archivo DLL de extensión MFC puede exportar clases nuevas, así como importar otras clases desde otro archivo DLL de extensión MFC. Para solucionar este problema, utilice un símbolo de preprocesador especial que indique que está generando el archivo DLL, frente al uso de la DLL. Por ejemplo, imagine dos archivos DLL de extensión MFC,.dll y B.dll. Cada uno de ellos exporta algunas clases en A.h y B.h, respectivamente. B.dll utiliza las clases de.dll. Los archivos de encabezado sería algo parecido a esto:  
-  
-```  
-/* A.H */  
-#ifdef A_IMPL  
-   #define CLASS_DECL_A   __declspec(dllexport)  
-#else  
-   #define CLASS_DECL_A   __declspec(dllimport)  
-#endif  
-  
-class CLASS_DECL_A CExampleA : public CObject  
-{ ... class definition ... };  
-  
-// B.H  
-#ifdef B_IMPL  
-   #define CLASS_DECL_B   __declspec(dllexport)  
-#else  
-   #define CLASS_DECL_B   __declspec(dllimport)  
-#endif  
-  
-class CLASS_DECL_B CExampleB : public CExampleA  
-{ ... class definition ... };  
-...  
-```  
-  
- .Dll se genera con `/D A_IMPL` y B.dll se genera con `/D B_IMPL`. Si utiliza símbolos independientes para cada DLL `CExampleB` se exporta y `CExampleA` se importa al generar B.dll. `CExampleA` se exporta al generar A.dll y se importa al ser utilizada por B.dll (o algún otro cliente).  
-  
- No se puede realizar este tipo de distribución en capas cuando se usa la integrada **AFX_EXT_CLASS** y `_AFXEXT` símbolos de preprocesador. La técnica descrita anteriormente soluciona este problema de forma no al contrario que el mecanismo de MFC utiliza al generar sus tecnologías activas, base de datos y archivos DLL de extensión de MFC de la red.  
-  
-## <a name="not-exporting-the-entire-class"></a>No exporte toda la clase  
- Cuando no se exporta una clase completa, tendrá que asegurarse de que los elementos de datos necesarios creados por las macros MFC se exportan correctamente. Esto puede hacerse mediante la redefinición de `AFX_DATA` macro su específica de la clase. Esto debe hacerse siempre que no se exporte toda la clase.  
-  
- Por ejemplo:  
-  
-```  
-/* A.H */  
-#ifdef A_IMPL  
-   #define CLASS_DECL_A  _declspec(dllexport)  
-#else  
-   #define CLASS_DECL_A  _declspec(dllimport)  
-#endif  
-  
-#undef  AFX_DATA  
-#define AFX_DATA CLASS_DECL_A  
-  
-class CExampleA : public CObject  
-{  
-   DECLARE_DYNAMIC()  
-   CLASS_DECL_A int SomeFunction();  
-   //... class definition ...  
-};  
-  
-#undef AFX_DATA  
-#define AFX_DATA  
-```  
-  
-### <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?  
-  
--   [Exportar desde un archivo DLL](../build/exporting-from-a-dll.md)  
-  
--   [Exportar desde un archivo DLL mediante archivos. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Exportar desde un archivo DLL mediante__declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
--   [Exportar e importar utilizando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
-  
--   [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
-  
--   [Determinar qué método de exportación para usar](../build/determining-which-exporting-method-to-use.md)  
-  
--   [Importar a una aplicación mediante __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
-  
--   [La utilidad LIB y la opción/DEF](../build/reference/lib-reference.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Importar y exportar](../build/importing-and-exporting.md)
+
+Exportar o importar a otro archivo ejecutable presenta complicaciones cuando las importaciones mutuas (o circulares). Por ejemplo, dos archivos DLL importa símbolos entre sí, similar a las funciones mutuamente recursivas.
+
+El problema de importar mutuamente archivos ejecutables (generalmente dll) es que no se puede compilar sin tener que crear la primera de otra. Cada proceso de compilación requiere, como entrada, una biblioteca de importación generada por el otro proceso de compilación.
+
+La solución es usar la utilidad LIB con la opción /DEF, que genera una biblioteca de importación sin tener que crear el archivo ejecutable. Con esta utilidad, puede crear todas las bibliotecas de importación que necesita, independientemente de cuántos archivos DLL haya implicados y cómo complejidad de las dependencias.
+
+La solución general para el tratamiento de importaciones mutuas es:
+
+1. Tener a su vez cada DLL. (Cualquier orden es factible, aunque resultan más óptimos algunos pedidos). Si todas las bibliotecas de importación necesarias existen y están actualizadas, ejecute LINK para generar el archivo ejecutable (DLL). Esto genera una biblioteca de importación. En caso contrario, ejecute LIB para generar una biblioteca de importación.
+
+   Ejecutar LIB con la opción /DEF genera un archivo adicional con un. Extensión EXP. El archivo. Archivo EXP debe usarse posteriormente para generar el archivo ejecutable.
+
+1. Después de usar el vínculo o LIB para generar todas las bibliotecas de importación, vuelva atrás y ejecute LINK para generar los archivos ejecutables que no se generaron en el paso anterior. Tenga en cuenta que se debe especificar el archivo .exp correspondiente en la línea de vínculo.
+
+   Si hubiera ejecutado la herramienta LIB para producir una biblioteca de importación para DLL1, LIB habría producido el archivo DLL1.exp también. Debe utilizar DLL1.exp como entrada de LINK al generar DLL1.dll.
+
+La siguiente ilustración muestra una solución para dos archivos DLL, DLL1 y DLL2. Paso 1 es ejecutar LIB, con la opción /DEF establecida, en DLL1. Paso 1 produce DLL1.lib, una biblioteca de importación y DLL1.exp. En el paso 2, la biblioteca de importación se utiliza para generar DLL2, que a su vez genera una biblioteca de importación para los símbolos de DLL2. Paso 3 genera DLL1, con DLL1.exp y DLL2.lib como entrada. Tenga en cuenta que no es necesario un archivo .exp para DLL2 porque no se utilizó para generar la biblioteca de importación de DLL2 LIB.
+
+![Uso de importaciones mutuas para vincular dos archivos DLL](../build/media/vc37yj1.gif "con importaciones mutuas para vincular dos archivos DLL")<br/>
+Vincular dos archivos DLL con importaciones mutuas
+
+## <a name="limitations-of-afxext"></a>Limitaciones de _AFXEXT
+
+Puede usar el `_AFXEXT` símbolo de preprocesador para la extensión siempre y cuando no tiene varias capas de DLL de extensión MFC de DLL MFC. Si tiene la extensión de MFC archivos DLL que llamar o derivar desde clases en su propia extensión MFC archivos DLL, que se derivan de las clases de MFC, debe utilizar su propio símbolo de preprocesador para evitar la ambigüedad.
+
+El problema es que en Win32, debe declarar explícitamente todos los datos como **__declspec (dllexport)** si se van a exportarse desde un archivo DLL, y **__declspec (dllimport)** si se van a importar desde un archivo DLL. Al definir `_AFXEXT`, los encabezados de MFC, asegúrese de que **AFX_EXT_CLASS** está definida correctamente.
+
+Cuando hay varios niveles, un símbolo como **AFX_EXT_CLASS** no es suficiente, porque un archivo DLL de extensión MFC podría exportar clases nuevas, así como importar otras clases desde otro archivo DLL de extensión MFC. Para solucionar este problema, utilice un símbolo de preprocesador especial que indica que se está compilando el archivo DLL, frente al uso de la DLL. Por ejemplo, imagine dos archivos DLL de extensión MFC, A.dll y B.dll. Cada uno de ellos exporta algunas clases en A.h y B.h, respectivamente. B.dll utiliza las clases de A.dll. Los archivos de encabezado sería algo parecido a esto:
+
+```
+/* A.H */
+#ifdef A_IMPL
+   #define CLASS_DECL_A   __declspec(dllexport)
+#else
+   #define CLASS_DECL_A   __declspec(dllimport)
+#endif
+
+class CLASS_DECL_A CExampleA : public CObject
+{ ... class definition ... };
+
+// B.H
+#ifdef B_IMPL
+   #define CLASS_DECL_B   __declspec(dllexport)
+#else
+   #define CLASS_DECL_B   __declspec(dllimport)
+#endif
+
+class CLASS_DECL_B CExampleB : public CExampleA
+{ ... class definition ... };
+...
+```
+
+A.dll se genera con `/D A_IMPL` y B.dll se genera con `/D B_IMPL`. Mediante el uso de símbolos independientes para cada archivo DLL, `CExampleB` se exporta y `CExampleA` se importa al compilar B.dll. `CExampleA` se exporta al generar A.dll y se importa al utiliza B.dll (o algún otro cliente).
+
+Este tipo de disposición en capas no se puede realizar cuando se usa el método integrado **AFX_EXT_CLASS** y `_AFXEXT` símbolos de preprocesador. La técnica descrita anteriormente soluciona este problema en una manera que el mecanismo de MFC usa al generar sus tecnologías activas, base de datos y archivos DLL de extensión MFC de red.
+
+## <a name="not-exporting-the-entire-class"></a>No exporte toda la clase
+
+Cuando no se exporta una clase entera, tendrá que asegurarse de que los elementos de datos necesarios creados por las macros MFC se exportan correctamente. Esto puede hacerse mediante la redefinición de `AFX_DATA` macro específica de la clase. Esto debe hacerse siempre que no se exporte toda la clase.
+
+Por ejemplo:
+
+```
+/* A.H */
+#ifdef A_IMPL
+   #define CLASS_DECL_A  _declspec(dllexport)
+#else
+   #define CLASS_DECL_A  _declspec(dllimport)
+#endif
+
+#undef  AFX_DATA
+#define AFX_DATA CLASS_DECL_A
+
+class CExampleA : public CObject
+{
+   DECLARE_DYNAMIC()
+   CLASS_DECL_A int SomeFunction();
+   //... class definition ...
+};
+
+#undef AFX_DATA
+#define AFX_DATA
+```
+
+### <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
+
+- [Exportar desde un archivo DLL](../build/exporting-from-a-dll.md)
+
+- [Exportar desde un archivo DLL mediante. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Exportar desde un archivo DLL mediante__declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+- [Exportar e importar utilizando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+
+- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+
+- [Determinar qué método de exportación para usar](../build/determining-which-exporting-method-to-use.md)
+
+- [Importar a una aplicación mediante __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
+
+- [La utilidad LIB y la opción /DEF](../build/reference/lib-reference.md)
+
+## <a name="see-also"></a>Vea también
+
+[Importar y exportar](../build/importing-and-exporting.md)

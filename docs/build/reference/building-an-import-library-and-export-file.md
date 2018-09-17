@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723312"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilar bibliotecas de importación y archivos de exportación
 
@@ -60,7 +60,7 @@ Estos son los mismos métodos que se usa para especificar exportaciones al vincu
 
 Las siguientes opciones se aplican a la creación de una biblioteca de importación y exportación de archivo:
 
-> **/ OUT:** *importar*  
+> **/ OUT:** *importar*
 
 Invalida el nombre del archivo de salida predeterminado para el *importar* biblioteca que se está creando. Cuando no se especifica/out, el nombre predeterminado es el nombre base del primer archivo objeto o biblioteca en el comando LIB y la extensión. lib. El archivo de exportación tiene el mismo nombre base que la biblioteca de importación y la extensión. exp.
 

@@ -1,5 +1,5 @@
 ---
-title: Prioridad en definiciones de Macro | Documentos de Microsoft
+title: Prioridad en definiciones de Macro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ce6f0acc898dc719d2252d5cc59dff92bda4a98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21a3d8873fd1fee61afec865181bab27305bebfd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722220"
 ---
 # <a name="precedence-in-macro-definitions"></a>Prioridad en las definiciones de macro
-Si una macro tiene varias definiciones, NMAKE utiliza la definición de prioridad más alta. En la lista siguiente muestra el orden de prioridad, de mayor a menor:  
-  
-1.  Una macro definida en la línea de comandos  
-  
-2.  Una macro definida en un archivo MAKE o archivo de inclusión  
-  
-3.  Una macro de variables de entorno heredada  
-  
-4.  Una macro definida en el archivo Tools.ini  
-  
-5.  Una macro predefinida, como [CC](../build/command-macros-and-options-macros.md) y [AS](../build/command-macros-and-options-macros.md)  
-  
- Use /E para hacer que las macros heredadas de variables de entorno para reemplazar macros de archivo MAKE con el mismo nombre. Utilice **! UNDEF** para reemplazar una línea de comandos.  
-  
-## <a name="see-also"></a>Vea también  
- [Definición de una macro NMAKE](../build/defining-an-nmake-macro.md)
+
+Si una macro tiene varias definiciones, NMAKE utiliza la definición de la prioridad más alta. En la lista siguiente se muestra el orden de prioridad, de mayor a menor:
+
+1. Una macro definida en la línea de comandos
+
+1. Una macro definida en un archivo MAKE o incluir archivo
+
+1. Una macro de variables de entorno heredada
+
+1. Una macro definida en el archivo Tools.ini
+
+1. Una macro predefinida, como [CC](../build/command-macros-and-options-macros.md) y [AS](../build/command-macros-and-options-macros.md)
+
+Use /E para hacer que las macros heredadas de variables de entorno para invalidar las macros de archivos MAKE con el mismo nombre. Use **! UNDEF** para invalidar una línea de comandos.
+
+## <a name="see-also"></a>Vea también
+
+[Definición de una macro NMAKE](../build/defining-an-nmake-macro.md)

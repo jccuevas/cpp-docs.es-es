@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab2dd3b359806aa6b5d54e476ec3581f7bb31d02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717124"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -44,14 +44,14 @@ Se abre una tabla de OLE DB.
 *db_table*  
 Cadena que especifica el nombre de una tabla de base de datos (por ejemplo, "productos").
 
-*name* (opcional)  
-El nombre del identificador que se utiliza para trabajar con la tabla. Debe especificar este parámetro si desea devolver más de una fila de resultados. **db_table** genera una variable con los valores especificados *nombre* que puede utilizarse para recorrer el conjunto de filas o ejecutar varias consultas de acción.
+*name*  
+(Opcional) El nombre del identificador que se utiliza para trabajar con la tabla. Debe especificar este parámetro si desea devolver más de una fila de resultados. **db_table** genera una variable con los valores especificados *nombre* que puede utilizarse para recorrer el conjunto de filas o ejecutar varias consultas de acción.
 
-*source_name* (opcional)  
-Variable o instancia `CSession` de una clase que tiene aplicado el atributo `db_source` , en el que se ejecuta el comando. Consulte [db_source](../windows/db-source.md).
+*source_name*  
+(Opcional) El `CSession` variable o instancia de una clase que tiene el `db_source` atributo aplicado a él en el que se ejecuta el comando. Consulte [db_source](../windows/db-source.md).
 
-*HRESULT* (opcional)  
-Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
+*HRESULT*  
+(Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
 ## <a name="remarks"></a>Comentarios
 
