@@ -1,5 +1,5 @@
 ---
-title: -Fd (nombre de archivo de base de datos de programa) | Documentos de Microsoft
+title: -Fd (nombre de archivo de base de datos de programa) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,54 +24,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ab9f1d9c5c611b8da8b19860fe9e0c05351d75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64e047a832b3c097ced57f9d491b1344c51da495
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375628"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724417"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Nombre del archivo de base de datos del programa)
-Especifica un nombre de archivo para el archivo de base de datos (PDB) programa creado por [/Z7, / Zi, /ZI (formato de información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/Fdpathname  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Sin **/Fd**, el nombre del archivo PDB tiene como valor predeterminado VC*x*0.pdb, donde *x* es la versión principal de Visual C++ en uso.  
-  
- Si especifica un nombre de ruta de acceso que no incluye un nombre de archivo (la ruta de acceso finaliza con una barra diagonal inversa), el compilador crea un archivo .pdb denominado VC*x*0 pdb en el directorio especificado.  
-  
- Si especifica un nombre de archivo que no incluye una extensión, el compilador utiliza .pdb como la extensión.  
-  
- Esta opción también asigna el archivo de estado (.idb) utilizado para la recompilación mínima y la compilación incremental.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Haga clic en la carpeta **C/C++** .  
-  
-3.  Haga clic en la página de propiedades **Archivos de salida** .  
-  
-4.  Modificar el **nombre de archivo de base de datos de programa** propiedad.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
-  
--   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>.  
-  
-## <a name="example"></a>Ejemplo  
- Esta línea de comandos crea un archivo .pdb denominado PROG.pdb y un archivo .idb denominado PROG.idb:  
-  
-```  
-CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)   
- [Opciones del compilador](../../build/reference/compiler-options.md)   
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
- [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+
+Especifica un nombre de archivo para el archivo de base de datos (PDB) de programa creado por [/Z7, / Zi, /ZI (formato de la información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```
+/Fdpathname
+```
+
+## <a name="remarks"></a>Comentarios
+
+Sin **/Fd**, el valor predeterminado es el nombre del archivo PDB a los VC*x*0.pdb, donde *x* es la versión principal de Visual C++ en uso.
+
+Si especifica un nombre de ruta de acceso que no incluya un nombre de archivo (la ruta de acceso finaliza con una barra diagonal inversa), el compilador crea un archivo .pdb denominado VC*x*0.pdb en el directorio especificado.
+
+Si especifica un nombre de archivo que no incluye una extensión, el compilador usa .pdb como la extensión.
+
+Esta opción también asigna nombre al archivo de estado (.idb) que se usa para la compilación incremental y recompilación mínima.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+
+1. Haga clic en la carpeta **C/C++** .
+
+1. Haga clic en la página de propiedades **Archivos de salida** .
+
+1. Modificar el **nombre del archivo de base de datos de programa** propiedad.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
+
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>.
+
+## <a name="example"></a>Ejemplo
+
+Esta línea de comandos crea un archivo .pdb denominado PROG.pdb y un archivo .idb denominado PROG.idb:
+
+```
+CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
+```
+
+## <a name="see-also"></a>Vea también
+
+[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
+[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

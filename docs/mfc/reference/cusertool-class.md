@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202981"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708999"
 ---
 # <a name="cusertool-class"></a>CUserTool (clase)
 Una herramienta de usuario es un elemento de menú que ejecuta una aplicación externa. El **herramientas** pestaña de la **personalizar** cuadro de diálogo ( [CMFCToolBarsCustomizeDialog (clase)](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite al usuario agregar herramientas de usuario y para especificar el nombre, comandos, argumentos, y directorio inicial para cada herramienta de usuario.  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rectImage*  
- Especifica las coordenadas del área para mostrar el icono.  
+*rectImage*<br/>
+[in] Especifica las coordenadas del área para mostrar el icono.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Devuelve una cadena que contiene el texto del comando asociado con la herramienta de usuario.  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszCmd*  
- Especifica la nueva aplicación va a asociar con la herramienta de usuario.  
+*lpszCmd*<br/>
+[in] Especifica la nueva aplicación va a asociar con la herramienta de usuario.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para establecer una nueva aplicación que se ejecuta la herramienta de usuario. El método destruye el icono anterior y carga un nuevo icono de la aplicación dada. Si no puede cargar un icono de la aplicación, carga el icono predeterminado para una herramienta de usuario mediante una llamada a [CUserTool::LoadDefaultIcon](#loaddefaulticon).  

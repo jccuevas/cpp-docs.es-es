@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7c2e2e6e4ce39d74142891c5e539b8cc4d028753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101682"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726848"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
 
@@ -2520,11 +2520,11 @@ Devuelve **true** si los elementos del intervalo especificado forman un montón,
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función de plantilla devuelve [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`.
+La primera función de plantilla devuelve [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`.
 
 La segunda función de plantilla devuelve
 
-`is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.
+`is_heap_until(first, last, comp) == last`.
 
 ## <a name="is_heap_until"></a>  is_heap_until
 
@@ -3854,7 +3854,7 @@ constexpr const Type& min(
     const Type& right,
     BinaryPredicate comp);
 template<class Type>
-constexpr Type min( 
+constexpr Type min(
     initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(

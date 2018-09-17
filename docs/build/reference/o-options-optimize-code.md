@@ -1,5 +1,5 @@
 ---
-title: -O opciones) (optimizar código) | Documentos de Microsoft
+title: -O (opciones) (optimizar código) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -19,30 +19,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ddebec9db7a02db40ef31c89c7ff48a66cf665
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c77fd91d63ec79fca87e11a4a02eca157eddf84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376805"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717540"
 ---
 # <a name="o-options-optimize-code"></a>/O (Opciones) (Optimizar código)
 
-El **/O** opciones controlan diversas optimizaciones que le ayudarán a creación código para la velocidad máxima o el tamaño mínimo.
+El **/O** opciones controlan diversas optimizaciones que le ayudarán a creación código para máxima velocidad o el tamaño mínimo.
 
-- [/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de las optimizaciones que generan código de tamaño mínimo.
+- [/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de optimizaciones que generan código de tamaño mínimo.
 
-- [/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de las optimizaciones que optimiza el código para la velocidad máxima.
+- [/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de optimizaciones que optimiza el código para la máxima velocidad.
 
-- [/Ob](../../build/reference/ob-inline-function-expansion.md) controla la expansión de funciones inline.
+- [/Ob](../../build/reference/ob-inline-function-expansion.md) controla la expansión de funciones insertadas.
 
 - [/Od](../../build/reference/od-disable-debug.md) deshabilita la optimización, para acelerar la compilación y simplificar la depuración.
 
 - [/ Og](../../build/reference/og-global-optimizations.md) habilita las optimizaciones globales.
 
-- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) genera funciones intrínsecas para las llamadas de función correspondiente.
+- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) genera funciones intrínsecas para llamadas de función apropiadas.
 
-- [/OS](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) indica al compilador que dé prioridad a las optimizaciones de tamaño sobre las optimizaciones para acelerar el proceso.
+- [/OS](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) indica al compilador que dé prioridad a las optimizaciones de tamaño a través de las optimizaciones de velocidad.
 
 - [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (valor predeterminado) indica al compilador que dé prioridad a las optimizaciones de velocidad sobre las optimizaciones de tamaño.
 
@@ -52,9 +52,9 @@ El **/O** opciones controlan diversas optimizaciones que le ayudarán a creació
 
 ## <a name="remarks"></a>Comentarios
 
-Puede combinar varios **/O** opciones en una instrucción única opción. Por ejemplo, **/Odi** es el mismo que **/Od /Oi**. Algunas opciones son mutuamente excluyentes y producen un error del compilador si se usan juntos. Vea el individuo **/O** opciones para obtener más información.
+Puede combinar varios **/O** opciones en una instrucción única opción. Por ejemplo, **/Odi** es el mismo que **/Od /Oi**. Algunas opciones son mutuamente excluyentes y producen un error del compilador si se usan juntos. Consulte el individuo **/O** opciones para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)   
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

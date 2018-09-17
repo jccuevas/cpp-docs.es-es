@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540295"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720556"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 (clase)
 El `CMFCVisualManagerWindows7` proporciona la apariencia de una aplicación de Windows 7 a una aplicación.  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pEdit*  
- Un puntero al control de edición. Este valor no puede ser NULL.  
+*pEdit*<br/>
+[in] Un puntero al control de edición. Este valor no puede ser NULL.  
   
- [out] *bIsHighlighted*  
- Devuelve si la casilla de la cinta de opciones está resaltada.  
+*bIsHighlighted*<br/>
+[out] Devuelve si la casilla de la cinta de opciones está resaltada.  
   
- [out] *bIsPaneHighlighted*  
- Devuelve TRUE si la cinta de opciones del panel que contiene *pEdit* está resaltado.  
+*bIsPaneHighlighted*<br/>
+[out] Devuelve TRUE si la cinta de opciones del panel que contiene *pEdit* está resaltado.  
   
- [out] *bIsDisabled*  
- Devuelve si *pEdit* está deshabilitado.  
+*bIsDisabled*<br/>
+[out] Devuelve si *pEdit* está deshabilitado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El color de fondo del cuadro de edición *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Un puntero al contexto de dispositivo de un botón de menú.  
+*pDC*<br/>
+[in] Un puntero al contexto de dispositivo de un botón de menú.  
   
- [in] *pButton*  
- Un puntero a un `CMFCToolBarButton`. El marco de trabajo rellena el fondo para este botón.  
+*pButton*<br/>
+[in] Un puntero a un `CMFCToolBarButton`. El marco de trabajo rellena el fondo para este botón.  
   
- [in] *rect*  
- Un rectángulo que especifica los límites del área de imagen del botón de menú.  
+*Rect*<br/>
+[in] Un rectángulo que especifica los límites del área de imagen del botón de menú.  
   
- [in] *estado*  
- El estado del botón.  
+*state*<br/>
+[in] El estado del botón.  
   
 ### <a name="remarks"></a>Comentarios  
   

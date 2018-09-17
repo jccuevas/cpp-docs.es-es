@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686090"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724079"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (clase)
 Proporciona la funcionalidad del control de barra de herramientas común de Windows.  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *idButton*|Identificador del comando del botón que se va a recibir un nuevo mapa de bits.|  
-|[in] *iBitmap*|Índice de base cero de una imagen en la lista de imágenes del control de barra de herramientas actual.|  
+|*idButton*|[in] Identificador del comando del botón que se va a recibir un nuevo mapa de bits.|  
+|*iBitmap*|[in] Índice de base cero de una imagen en la lista de imágenes del control de barra de herramientas actual.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *idButton*|El identificador del botón cuyo texto para mostrar se recupera.|  
+|*idButton*|[in] El identificador del botón cuyo texto para mostrar se recupera.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un [CString](../../atl-mfc-shared/using-cstring.md) que contiene el texto para mostrar del botón especificado.  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Puntero a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estructura que recibe la información de esquema de color. Cuando este método finaliza, la estructura describe el color de resaltado y el color de sombra del control de barra de herramientas.|  
+|*lpColorScheme*|[out] Puntero a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estructura que recibe la información de esquema de color. Cuando este método finaliza, la estructura describe el color de resaltado y el color de sombra del control de barra de herramientas.|  
   
 ### <a name="return-value"></a>Valor devuelto  
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] *pnHorzPadding*|Un entero que recibe el relleno horizontal del control de barra de herramientas, en píxeles.|  
-|[out] *pnVertPadding*|Un entero que recibe el relleno vertical del control de barra de herramientas, en píxeles.|  
+|*pnHorzPadding*|[out] Un entero que recibe el relleno horizontal del control de barra de herramientas, en píxeles.|  
+|*pnVertPadding*|[out] Un entero que recibe el relleno vertical del control de barra de herramientas, en píxeles.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- El identificador de comando para el botón de barra de herramientas.  
+*nID*<br/>
+[in] El identificador de comando para el botón de barra de herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si se resalta el botón de número entero positivo, 0 si no se resalta el botón, o -1 si un error se produce.  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Identificador del comando del botón en la barra de herramientas.  
+*nID*<br/>
+[in] Identificador del comando del botón en la barra de herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Entero positivo si el botón es indeterminado, cero si el botón no es indeterminado, o -1 si un error se produce.  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Identificador del comando del botón en presiona o suelta.  
+*nID*<br/>
+[in] Identificador del comando del botón en presiona o suelta.  
   
- [in] *bPress*  
- TRUE para que se presione el botón especificado; FALSE para liberar el botón especificado. El valor predeterminado es TRUE.  
+*bPress*<br/>
+[in] TRUE para que se presione el botón especificado; FALSE para liberar el botón especificado. El valor predeterminado es TRUE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Puntero a un [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) estructura que describe el mapa de bits que se debe reemplazar y el nuevo mapa de bits.|  
+|*pReplaceBitmap*|[in] Puntero a un [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) estructura que describe el mapa de bits que se debe reemplazar y el nuevo mapa de bits.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *fAnchor*  
- Especifica si el resaltado de delimitador está habilitado o deshabilitado. Si este valor es distinto de cero, se habilitará el anclaje resaltado. Si este valor es cero, se deshabilitará al anclaje resaltado  
+*fAnchor*<br/>
+[in] Especifica si el resaltado de delimitador está habilitado o deshabilitado. Si este valor es distinto de cero, se habilitará el anclaje resaltado. Si este valor es cero, se deshabilitará al anclaje resaltado  
   
 ### <a name="return-value"></a>Valor devuelto  
  El valor de delimitador anterior. Si se habilitó el resaltado, este valor es distinto de cero. Si no se habilitó el resaltado, este valor es cero.  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Puntero a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estructura que describe el color de resaltado y el color de sombra del control de barra de herramientas.|  
+|*lpColorScheme*|[in] Puntero a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estructura que describe el color de resaltado y el color de sombra del control de barra de herramientas.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método no tiene ningún efecto si se establece un tema visual de Windows Vista.  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *nHorzPadding*|Especifica el relleno horizontal del control de barra de herramientas, en píxeles.|  
-|[in] *nVertPadding*|Especifica el relleno vertical del control de barra de herramientas, en píxeles.|  
+|*nHorzPadding*|[in] Especifica el relleno horizontal del control de barra de herramientas, en píxeles.|  
+|*nVertPadding*|[in] Especifica el relleno vertical del control de barra de herramientas, en píxeles.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor DWORD cuya palabra baja contiene el valor de relleno horizontal anterior, y cuya palabra alta contiene el valor de relleno vertical anterior. Los valores de relleno se miden en píxeles.  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *iImageID*|Índice de base cero de la lista de imágenes. Si usa solo una lista de imágenes, establezca este parámetro en cero.|  
-|[in] *pImageList*|Puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) que contiene la lista de imágenes.|  
+|*iImageID*|[in] Índice de base cero de la lista de imágenes. Si usa solo una lista de imágenes, establezca este parámetro en cero.|  
+|*pImageList*|[in] Puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) que contiene la lista de imágenes.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) que contiene la lista anterior de la imagen para el control actual, o NULL si se ha establecido ninguna lista de imágenes de este tipo.  

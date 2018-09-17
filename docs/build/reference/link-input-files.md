@@ -1,5 +1,5 @@
 ---
-title: Archivos de entrada de vínculo | Documentos de Microsoft
+title: Archivos de entrada de vínculo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,43 +24,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5974914e736278ebb336b6814661845740855fe6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374832"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710247"
 ---
 # <a name="link-input-files"></a>Archivos de entrada de LINK
-Proporcione al vinculador con archivos que contienen objetos, importación y bibliotecas estándar, recursos, definiciones de módulo y entradas de comandos. LINK no usa las extensiones de archivo para realizar suposiciones sobre el contenido de un archivo. En su lugar, vínculo examina cada archivo de entrada para determinar qué tipo de archivo es.  
-  
- Archivos de objeto en la línea de comandos se procesan en el orden en que aparecen en la línea de comandos. Las bibliotecas se buscan, de línea de comandos con la siguiente advertencia: no resuelta símbolos que están al volver a poner en un archivo de objeto de una biblioteca se buscan en esa biblioteca primero y, a continuación, en las bibliotecas siguientes desde la línea de comandos y [/DEFAULTLIB (Especificar biblioteca predeterminada)](../../build/reference/defaultlib-specify-default-library.md) directivas y, a continuación, en cualquier biblioteca al principio de la línea de comandos.  
-  
+
+Proporcione al enlazador con archivos que contienen objetos, importar y bibliotecas estándar, los recursos, las definiciones de módulo y entradas de comandos. VÍNCULO no usa extensiones de archivo para realizar suposiciones sobre el contenido de un archivo. En su lugar, el vínculo examina cada archivo de entrada para determinar qué tipo de archivo es.
+
+Archivos de objeto en la línea de comandos se procesan en el orden en que aparecen en la línea de comandos. Las bibliotecas se buscan en orden de la línea de comandos, con la siguiente advertencia: los símbolos que están sin resolver al reunir en un archivo de objeto de una biblioteca se buscan en esa biblioteca en primer lugar y, a continuación, en las siguientes bibliotecas desde la línea de comandos y [DEFAULTLIB (especificar la biblioteca predeterminada)](../../build/reference/defaultlib-specify-default-library.md) directivas y, a continuación, a las bibliotecas al principio de la línea de comandos.
+
 > [!NOTE]
->  VÍNCULO ya no acepta un punto y coma (o cualquier otro carácter) como el inicio de un comentario en los archivos de respuesta y los archivos de orden. Punto y coma sólo se reconoce como inicio de un comentario en los archivos de definición de módulo (.def).  
-  
- VÍNCULO utiliza los siguientes tipos de archivos de entrada:  
-  
--   [.obj (archivos)](../../build/reference/dot-obj-files-as-linker-input.md)  
-  
--   [archivos .netmodule](../../build/reference/netmodule-files-as-linker-input.md)  
-  
--   [.lib (archivos)](../../build/reference/dot-lib-files-as-linker-input.md)  
-  
--   [.exp (archivos)](../../build/reference/dot-exp-files-as-linker-input.md)  
-  
--   [.def (archivos)](../../build/reference/dot-def-files-as-linker-input.md)  
-  
--   [.pdb (archivos)](../../build/reference/dot-pdb-files-as-linker-input.md)  
-  
--   [archivos .res](../../build/reference/dot-res-files-as-linker-input.md)  
-  
--   [archivos .exe](../../build/reference/dot-exe-files-as-linker-input.md)  
-  
--   [.txt (archivos)](../../build/reference/dot-txt-files-as-linker-input.md)  
-  
--   [.ilk (archivos)](../../build/reference/dot-ilk-files-as-linker-input.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+>  VÍNCULO ya no acepta un punto y coma (o cualquier otro carácter) como el inicio de un comentario en los archivos de respuesta y los archivos de pedido. Punto y coma se reconoce solo como el inicio de los comentarios en los archivos de definición de módulo (.def).
+
+VÍNCULO utiliza los siguientes tipos de archivos de entrada:
+
+- [archivos .obj](../../build/reference/dot-obj-files-as-linker-input.md)
+
+- [archivos .netmodule](../../build/reference/netmodule-files-as-linker-input.md)
+
+- [archivos .lib](../../build/reference/dot-lib-files-as-linker-input.md)
+
+- [archivos .exp](../../build/reference/dot-exp-files-as-linker-input.md)
+
+- [archivos .def](../../build/reference/dot-def-files-as-linker-input.md)
+
+- [archivos .pdb](../../build/reference/dot-pdb-files-as-linker-input.md)
+
+- [archivos .res](../../build/reference/dot-res-files-as-linker-input.md)
+
+- [archivos .exe](../../build/reference/dot-exe-files-as-linker-input.md)
+
+- [archivos .txt](../../build/reference/dot-txt-files-as-linker-input.md)
+
+- [.ilk (archivos)](../../build/reference/dot-ilk-files-as-linker-input.md)
+
+## <a name="see-also"></a>Vea también
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opciones del vinculador](../../build/reference/linker-options.md)

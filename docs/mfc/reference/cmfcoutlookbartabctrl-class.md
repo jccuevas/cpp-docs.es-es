@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718268"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Un control de pestaña que tiene el aspecto visual del **Panel de navegación** de Microsoft Outlook.  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndCtrl*  
- Un puntero a un control para agregar.  
+*pWndCtrl*<br/>
+[in] Un puntero a un control para agregar.  
   
- [in] *lpszName*  
- Especifica el nombre de pestaña.  
+*lpszName*<br/>
+[in] Especifica el nombre de pestaña.  
   
- [in] *bDetachable*  
- Si es TRUE, se creará la página como desmontable.  
+*bDetachable*<br/>
+[in] Si es TRUE, se creará la página como desmontable.  
   
- [in] *nImageID*  
- Índice de imagen en la lista de imágenes interna para la imagen que se mostrará en la nueva pestaña.  
+*nImageID*<br/>
+[in] Índice de imagen en la lista de imágenes interna para la imagen que se mostrará en la nueva pestaña.  
   
- [in] *dwControlBarStyle*  
- Especifica el estilo AFX va CBRS_ * para los paneles de acoplamiento ajustados.  
+*dwControlBarStyle*<br/>
+[in] Especifica el estilo AFX va CBRS_ * para los paneles de acoplamiento ajustados.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para agregar un control como una página nueva de una barra de outlook.  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rect*  
- Especifica el tamaño inicial y la posición, en píxeles.  
+*Rect*<br/>
+[in] Especifica el tamaño inicial y la posición, en píxeles.  
   
- [in] *pParentWnd*  
- Apunta a la ventana primaria. No debe ser NULL.  
+*pParentWnd*<br/>
+[in] Apunta a la ventana primaria. No debe ser NULL.  
   
- [in] *nID*  
- El identificador de control.  
+*nID*<br/>
+[in] El identificador de control.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el control se ha creado correctamente; en caso contrario, es 0.  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Especifica si la animación debe habilitarse o deshabilitarse.  
+*bHabilitar el*<br/>
+[in] Especifica si la animación debe habilitarse o deshabilitarse.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para habilitar y deshabilitar la animación. Cuando el usuario abre una página de ficha, el título de la página se desliza hacia arriba o hacia abajo si está habilitada la animación. Si se deshabilita la animación, la página está activada inmediatamente.  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- Determina si se muestran los botones de desplazamiento.  
+*bHabilitar el*<br/>
+[in] Determina si se muestran los botones de desplazamiento.  
   
- [in] *bIsUp*  
- Determina si se muestra la barra de desplazamiento superior.  
+*bIsUp*<br/>
+[in] Determina si se muestra la barra de desplazamiento superior.  
   
- [in] *bIsDown*  
- Determina si se muestra la barra de desplazamiento de la parte inferior.  
+*bIsDown*<br/>
+[in] Determina si se muestra la barra de desplazamiento de la parte inferior.  
   
 ### <a name="remarks"></a>Comentarios  
  Permite la visualización de los botones de desplazamiento. El marco de trabajo llama a este método cuando cambia la pestaña activa para restaurar los botones de desplazamiento.  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iTab*  
- Índice de base cero de una pestaña a abrirse.  
+*iTab*<br/>
+[in] Índice de base cero de una pestaña a abrirse.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si la ficha especificada se ha abierto correctamente; en caso contrario, es 0.  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nBorderSize*  
- Especifica el nuevo tamaño del borde en píxeles.  
+*nBorderSize*<br/>
+[in] Especifica el nuevo tamaño del borde en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
  Establece el tamaño del borde nuevo y vuelve a calcular el diseño de ventana de outlook.  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiAlign*  
- Especifica la alineación del texto.  
+*uiAlign*<br/>
+[in] Especifica la alineación del texto.  
   
- [in] *bRedraw*  
- Si es TRUE, se volverá a dibujar la ventana de outlook.  
+*bRedraw*<br/>
+[in] Si es TRUE, se volverá a dibujar la ventana de outlook.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para cambiar la alineación del texto de los botones de página.  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiID*  
- Especifica el identificador de recurso de la imagen para cargar.  
+*uiID*<br/>
+[in] Especifica el identificador de recurso de la imagen para cargar.  
   
- [in] *cx*  
- Especifica el ancho de una imagen en la lista de imágenes, en píxeles.  
+*CX*<br/>
+[in] Especifica el ancho de una imagen en la lista de imágenes, en píxeles.  
   
- [in] *clrTransp*  
- Un valor RGB que especifica el color transparente.  
+*clrTransp*<br/>
+[in] Un valor RGB que especifica el color transparente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se realiza correctamente; en caso contrario, devuelve FALSE.  

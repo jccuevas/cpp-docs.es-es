@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 48c73e220c3e80abf0535e414572427f75b04511
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683757"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718216"
 ---
 # <a name="cbasepane-class"></a>CBasePane (clase)
 Clase base para todos los paneles en MFC.  
@@ -372,8 +372,8 @@ virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *int*  
- No usado.  
+*int*<br/>
+[in] No se utiliza.  
   
 ##  <a name="addpane"></a>  CBasePane::AddPane  
  Agrega un panel para el Administrador de acoplamiento.  
@@ -383,8 +383,8 @@ void AddPane(CBasePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a un panel para agregar.  
+*pBar*<br/>
+[in] Un puntero a un panel para agregar.  
   
 ### <a name="remarks"></a>Comentarios  
  Se trata de un método de conveniencia que agrega un panel a un administrador de acoplamiento. Con este método, no es necesario escribir código que analiza el tipo del marco primario.  
@@ -399,8 +399,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *hdwp*  
- Identificador de una estructura que contiene varias posiciones de ventana.  
+*hdwp*<br/>
+[out] Identificador de una estructura que contiene varias posiciones de ventana.  
   
 ### <a name="remarks"></a>Comentarios  
  Se trata de un método de conveniencia que ajusta el diseño de acoplamiento. Con este método, no es necesario escribir código que analiza el tipo del marco primario.  
@@ -427,11 +427,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bStretch*  
- Indica si la barra se debe ajustar el tamaño del marco. El *bStretch* parámetro es distinto de cero cuando la barra no es una barra de acoplamiento (no disponible para acoplar) y es 0 si es acoplada o flotante (disponible para acoplar).  
+*bStretch*<br/>
+[in] Indica si la barra se debe ajustar el tamaño del marco. El *bStretch* parámetro es distinto de cero cuando la barra no es una barra de acoplamiento (no disponible para acoplar) y es 0 si es acoplada o flotante (disponible para acoplar).  
   
- [in] *bHorz*  
- Indica que la barra está orientada horizontal o verticalmente. El *bHorz* parámetro es distinto de cero si la barra es horizontal y es 0 si es una orientación vertical.  
+*bHorz*<br/>
+[in] Indica que la barra está orientada horizontal o verticalmente. El *bHorz* parámetro es distinto de cero si la barra es horizontal y es 0 si es una orientación vertical.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La barra de control de tamaño, en píxeles, de un `CSize` objeto.  
@@ -447,8 +447,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero al panel para acoplar.  
+*pBar*<br/>
+[in] Un puntero al panel para acoplar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se puede aceptar otro panel; en caso contrario, FALSE.  
@@ -515,8 +515,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDockBar*  
- Un puntero a otro panel.  
+*pDockBar*<br/>
+[in] Un puntero a otro panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este panel se puede acoplar a otro panel; en caso contrario, FALSE.  
@@ -597,8 +597,8 @@ virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pOrgBar*  
- Un puntero a otro panel.  
+*pOrgBar*<br/>
+[in] Un puntero a otro panel.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método copia el estado de *pOrgBar* hasta este panel.  
@@ -611,8 +611,8 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rectInitial*  
- Especifica las coordenadas iniciales de la ventana de marco reducido.  
+*rectInitial*<br/>
+[in] Especifica las coordenadas iniciales de la ventana de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la nueva ventana de marco reducido o NULL si no se pudo crear.  
@@ -639,32 +639,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwStyleEx*  
- Los estilos extendidos (consulte [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) para obtener más información).  
+*dwStyleEx*<br/>
+[in] Los estilos extendidos (consulte [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) para obtener más información).  
   
- [in] *lpszClassName*  
- El nombre de clase de ventana.  
+*lpszClassName*<br/>
+[in] El nombre de clase de ventana.  
   
- [in] *lpszWindowName*  
- Nombre de la ventana.  
+*lpszWindowName*<br/>
+[in] El nombre de la ventana.  
   
- [in] *dwStyle*  
- El estilo de ventana (consulte [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
+*dwStyle*<br/>
+[in] El estilo de ventana (consulte [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
- [in] *rect*  
- El rectángulo inicial.  
+*Rect*<br/>
+[in] El rectángulo inicial.  
   
- [in] *pParentWnd*  
- Un puntero a la ventana primaria.  
+*pParentWnd*<br/>
+[in] Un puntero a la ventana primaria.  
   
- [in] *nID*  
- Especifica el identificador del panel. Debe ser único.  
+*nID*<br/>
+[in] Especifica el identificador del panel. Debe ser único.  
   
- [in] *dwControlBarStyle*  
- Marcas de estilo para los paneles.  
+*dwControlBarStyle*<br/>
+[in] Marcas de estilo para los paneles.  
   
- [in] *pContext*  
- Un puntero a `CcreateContext`  
+*pContext*<br/>
+[in] Un puntero a `CcreateContext`  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel se ha creado correctamente; en caso contrario, FALSE.  
@@ -699,14 +699,14 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDockBar*  
- Un puntero a otro panel.  
+*pDockBar*<br/>
+[in] Un puntero a otro panel.  
   
- [in] *lpRect*  
- Especifica el rectángulo de destino.  
+*lpRect*<br/>
+[in] Especifica el rectángulo de destino.  
   
- [in] *dockMethod*  
- Especifica el método de acoplamiento.  
+*dockMethod*<br/>
+[in] Especifica el método de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la barra de control se acopla correctamente; en caso contrario, FALSE.  
@@ -724,8 +724,8 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bUseDockSite*  
- Si es TRUE, se acopla al sitio de acoplamiento. Si es FALSE, se acopla al marco primario.  
+*bUseDockSite*<br/>
+[in] Si es TRUE, se acopla al sitio de acoplamiento. Si es FALSE, se acopla al marco primario.  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  Acopla un panel acoplable a un marco.  
@@ -741,23 +741,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwAlignment*  
- El lado del marco primario que se desea acoplar el panel a.  
+*dwAlignment*<br/>
+[in] El lado del marco primario que se desea acoplar el panel a.  
   
- [in] *lpRect*  
- El tamaño deseado.  
+*lpRect*<br/>
+[in] El tamaño deseado.  
   
- [in] *dwDockFlags*  
- ignorado.  
+*dwDockFlags*<br/>
+[in] Pasa por alto.  
   
- [in] *pRelativeBar*  
- ignorado.  
+*pRelativeBar*<br/>
+[in] Pasa por alto.  
   
- [in] *nRelativeIndex*  
- ignorado.  
+*nRelativeIndex*<br/>
+[in] Pasa por alto.  
   
- [in] *bOuterEdge*  
- Si es TRUE y son otros paneles acoplables en el lado especificado por *dwAlignment*, el panel se acopla fuera de los otros paneles, más cerca del borde del marco primario. Si es FALSE, el panel está acoplado más cercanos al centro del área de cliente.  
+*bOuterEdge*<br/>
+[in] Si es TRUE y son otros paneles acoplables en el lado especificado por *dwAlignment*, el panel se acopla fuera de los otros paneles, más cerca del borde del marco primario. Si es FALSE, el panel está acoplado más cercanos al centro del área de cliente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
@@ -792,8 +792,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada llama al administrador visual actual para rellenar el fondo ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
@@ -806,8 +806,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwAlignment*  
- Especifica la alineación de acoplamiento para habilitar.  
+*dwAlignment*<br/>
+[in] Especifica la alineación de acoplamiento para habilitar.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para habilitar la alineación de acoplamiento para el marco principal. Puede pasar una combinación de marcas CBRS_ALIGN_ (para obtener más información, consulte [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
@@ -824,8 +824,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar la barra de redimensionamiento; FALSE para deshabilitarla.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar la barra de redimensionamiento; FALSE para deshabilitarla.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo usa este método para habilitar a un agarrador en lugar de usar el estilo WS_CAPTION.  
@@ -841,14 +841,14 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rectFloat*  
- Especifica las coordenadas de pantalla donde aparece el panel flotante.  
+*rectFloat*<br/>
+[in] Especifica las coordenadas de pantalla donde aparece el panel flotante.  
   
- [in] *dockMethod*  
- Especifica el método de acoplamiento a usar para el panel flotante.  
+*dockMethod*<br/>
+[in] Especifica el método de acoplamiento a usar para el panel flotante.  
   
- [in] *bMostrar*  
- Especifica si el panel flotante es visible (TRUE) o se oculta (FALSE).  
+*bMostrar*<br/>
+[in] Especifica si el panel flotante es visible (TRUE) o se oculta (FALSE).  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel se flotando correctamente; en caso contrario, FALSE.  
@@ -867,14 +867,14 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pszHelpFile*  
- Dirección del BSTR que recibe la ruta de acceso completa de la **WinHelp** archivo que está asociado con el objeto especificado, si existe.  
+*pszHelpFile*<br/>
+[in] Dirección del BSTR que recibe la ruta de acceso completa de la **WinHelp** archivo que está asociado con el objeto especificado, si existe.  
   
- [in] *varChild*  
- Especifica si va a recuperar el tema de ayuda es que el objeto o uno de los elementos secundarios del objeto. Este parámetro puede ser CHILDID_SELF (para obtener un tema de ayuda para el objeto) o un identificador secundario (para obtener un tema de ayuda para uno de los secundarios de elementos del objeto).  
+*varChild*<br/>
+[in] Especifica si va a recuperar el tema de ayuda es que el objeto o uno de los elementos secundarios del objeto. Este parámetro puede ser CHILDID_SELF (para obtener un tema de ayuda para el objeto) o un identificador secundario (para obtener un tema de ayuda para uno de los secundarios de elementos del objeto).  
   
- [in] *pidTopic*  
- Identifica el **ayuda** tema del archivo que está asociado con el objeto especificado.  
+*pidTopic*<br/>
+[in] Identifica el **ayuda** tema del archivo que está asociado con el objeto especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `CBasePane` no implementa este método. Por lo tanto, `CBasePane::get_accHelpTopic` siempre devuelve S_FALSE.  
@@ -890,8 +890,8 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pvarChildren*  
- Recibe la información que identifica al elemento secundario seleccionado.  
+*pvarChildren*<br/>
+[in] Recibe la información que identifica al elemento secundario seleccionado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `CBasePane` no implementa este método. Si *pvarChildren* es NULL, este método devuelve E_INVALIDARG. En caso contrario, este método devuelve DISP_E_MEMBERNOTFOUND.  
@@ -1017,8 +1017,8 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bBigIcon*  
- Especifica que un píxel 32 mediante el icono de 32 píxeles si es TRUE; Especifica que un píxel de 16 por 16 icono de píxel si es FALSE.  
+*bBigIcon*<br/>
+[in] Especifica que un píxel 32 mediante el icono de 32 píxeles si es TRUE; Especifica que un píxel de 16 por 16 icono de píxel si es FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador del icono de panel. Si no lo consigue, devuelve NULL.  
@@ -1067,8 +1067,8 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bNoAssert*  
- Si es TRUE, este método no comprueba para punteros no válidos. Si llama a este método cuando se cierra la aplicación, establezca este parámetro en TRUE.  
+*bNoAssert*<br/>
+[in] Si es TRUE, este método no comprueba para punteros no válidos. Si llama a este método cuando se cierra la aplicación, establezca este parámetro en TRUE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero válido a la ventana de marco reducido primario si el panel es flotante; en caso contrario, es NULL.  
@@ -1096,8 +1096,8 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *hWndTab*  
- Si el valor devuelto no es NULL, este parámetro contiene el identificador de la ventana con pestañas primaria.  
+*hWndTab*<br/>
+[out] Si el valor devuelto no es NULL, este parámetro contiene el identificador de la ventana con pestañas primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero válido a la ventana con pestañas de primaria o NULL.  
@@ -1139,14 +1139,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- Un puntero al panel se va a insertar.  
+*pControlBar*<br/>
+[in] Un puntero al panel se va a insertar.  
   
- [in] *pTarget*  
- Un puntero en el panel adyacente.  
+*pTarget*<br/>
+[in] Un puntero en el panel adyacente.  
   
- [in] *después*  
- Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.  
+*Después*<br/>
+[in] Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método tiene éxito, FALSE en caso contrario.  
@@ -1270,14 +1270,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- El punto especificado.  
+*punto*<br/>
+[in] El punto especificado.  
   
- [out] *dwBarAlignment*  
- Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[out] Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM  
   
- [out] *bOuterEdge*  
- TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
+*bOuterEdge*<br/>
+[out] TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el punto está cerca del sitio de vinculación; en caso contrario, FALSE.  
@@ -1349,14 +1349,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Nombre del perfil.  
+*lpszProfileName*<br/>
+[in] Nombre del perfil.  
   
- [in] *nIndex*  
- Índice de perfil.  
+*nIndex*<br/>
+[in] Índice de perfil.  
   
- [in] *uiID*  
- Id. de panel.  
+*uiID*<br/>
+[in] Id. de panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el estado del panel se ha cargado correctamente; en caso contrario, FALSE.  
@@ -1375,14 +1375,14 @@ virtual HDWP MoveWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rect*  
- Un rectángulo especificando la nueva ubicación y tamaño del panel.  
+*Rect*<br/>
+[in] Un rectángulo especificando la nueva ubicación y tamaño del panel.  
   
- [in] *bRepaint*  
- Si es TRUE, el panel se vuelve a dibujar. Si es FALSE, no se vuelve a dibujar el panel.  
+*bRepaint*<br/>
+[in] Si es TRUE, el panel se vuelve a dibujar. Si es FALSE, no se vuelve a dibujar el panel.  
   
- [in] *hdwp*  
- Identificador de una estructura de posición de ventana aplazada.  
+*hdwp*<br/>
+[in] Identificador de una estructura de posición de ventana aplazada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Identificador de una estructura de posición de ventana aplazada, o NULL.  
@@ -1398,8 +1398,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndOldParent*  
- Un puntero al elemento primario anterior.  
+*pWndOldParent*<br/>
+[in] Un puntero al elemento primario anterior.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco llama a este método después de que cambia el elemento primario del panel, normalmente debido a una operación de acoplamiento o flotante.  
@@ -1416,11 +1416,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndNewParent*  
- Un puntero a una nueva ventana del elemento primario.  
+*pWndNewParent*<br/>
+[in] Un puntero a una nueva ventana del elemento primario.  
   
- [in] *bDelay*  
- Especifica si se deben retrasar los ajustes de diseño.  
+*bDelay*<br/>
+[in] Especifica si se deben retrasar los ajustes de diseño.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método justo antes de los cambios de elemento primario del panel, normalmente debido a un acoplamiento, flotante o de operación de ocultar automáticamente.  
@@ -1458,11 +1458,11 @@ virtual void OnPaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentFrame*  
- Un puntero al marco primario.  
+*pParentFrame*<br/>
+[in] Un puntero al marco primario.  
   
- [in] *punto*  
- Especifica la ubicación del menú contextual.  
+*punto*<br/>
+[in] Especifica la ubicación del menú contextual.  
   
 ### <a name="remarks"></a>Comentarios  
  `OnPaneContextMenu` llama al administrador de acoplamiento, que mantiene la lista de paneles que pertenecen a la ventana de marco actual. Este método agrega los nombres de los paneles a un menú contextual y lo muestra. Los comandos en el menú de mostrar u ocultar paneles individuales.  
@@ -1477,8 +1477,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMiniFrame*  
- Un puntero a una ventana de marco reducido desde el que se quita el panel.  
+*pMiniFrame*<br/>
+[in] Un puntero a una ventana de marco reducido desde el que se quita el panel.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco llama a este método cuando se quita un panel de su ventana de marco reducido primaria (como resultado de acoplamiento, por ejemplo).  
@@ -1493,8 +1493,8 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lVal*  
- No usado.  
+*lVal*<br/>
+[in] No se utiliza.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Este método siempre devuelve TRUE.  
@@ -1513,17 +1513,17 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Especifica el punto, en coordenadas de pantalla, para comprobar.  
+*punto*<br/>
+[in] Especifica el punto, en coordenadas de pantalla, para comprobar.  
   
- [in] *nSensitivity*  
- Aumentar el área de búsqueda en esta cantidad. Un panel cumple los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
+*nSensitivity*<br/>
+[in] Aumentar el área de búsqueda en esta cantidad. Un panel cumple los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
   
- [in] *bExactBar*  
- TRUE para omitir el *nSensitivity* parámetro; en caso contrario, FALSE.  
+*bExactBar*<br/>
+[in] TRUE para omitir el *nSensitivity* parámetro; en caso contrario, FALSE.  
   
- [in] *pRTCBarType*  
- Si no es NULL, el método busca solo los paneles del tipo especificado.  
+*pRTCBarType*<br/>
+[in] Si no es NULL, el método busca solo los paneles del tipo especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El `CBasePane`-objeto derivado que contiene el punto especificado o NULL si no se ha encontrado ningún panel.  
@@ -1548,20 +1548,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a un panel que se va a quitar.  
+*pBar*<br/>
+[in] Un puntero a un panel que se va a quitar.  
   
- [in] *bDestroy*  
- Si es TRUE, se destruye el panel quitado.  
+*bDestroy*<br/>
+[in] Si es TRUE, se destruye el panel quitado.  
   
- [in] *bAdjustLayout*  
- Si es TRUE, ajustar el diseño de acoplamiento inmediatamente.  
+*bAdjustLayout*<br/>
+[in] Si es TRUE, ajustar el diseño de acoplamiento inmediatamente.  
   
- [in] *bAutoHide*  
- Si es TRUE, el diseño de acoplamiento está relacionado con la lista de barras de ocultación automática. Si es FALSE, el diseño de acoplamiento está relacionado con la lista de paneles regulares.  
+*bAutoHide*<br/>
+[in] Si es TRUE, el diseño de acoplamiento está relacionado con la lista de barras de ocultación automática. Si es FALSE, el diseño de acoplamiento está relacionado con la lista de paneles regulares.  
   
- [in] *pBarReplacement*  
- Un puntero a un panel que reemplaza el panel quitado.  
+*pBarReplacement*<br/>
+[in] Un puntero a un panel que reemplaza el panel quitado.  
   
 ##  <a name="savestate"></a>  CBasePane::SaveState  
  Guarda el estado del panel en el registro.  
@@ -1574,14 +1574,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszProfileName*  
- Nombre del perfil.  
+*lpszProfileName*<br/>
+[in] Nombre del perfil.  
   
- [in] *nIndex*  
- Índice de perfil.  
+*nIndex*<br/>
+[in] Índice de perfil.  
   
- [in] *uiID*  
- Id. de panel.  
+*uiID*<br/>
+[in] Id. de panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el estado se guardó correctamente; en caso contrario, FALSE.  
@@ -1597,8 +1597,8 @@ CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al valor predeterminado [CFont (clase)](../../mfc/reference/cfont-class.md) objeto.  
@@ -1611,8 +1611,8 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwNewStyle*  
- Una combinación OR bit a bit de los siguientes valores posibles.  
+*dwNewStyle*<br/>
+[in] Una combinación OR bit a bit de los siguientes valores posibles.  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -1629,8 +1629,8 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dockModeNew*  
- Especifica el nuevo modo de acoplamiento del panel.  
+*dockModeNew*<br/>
+[in] Especifica el nuevo modo de acoplamiento del panel.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo admite dos modos de acoplamiento: estándar y de forma inmediata.  
@@ -1647,8 +1647,8 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwAlignment*  
- Especifica la alineación nuevo.  
+*dwAlignment*<br/>
+[in] Especifica la alineación nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
  Normalmente, el marco llama a este método cuando se acopla un panel de un lado del marco principal a otro.  
@@ -1670,8 +1670,8 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwNewStyle*  
- Especifica el nuevo estilo a establecer.  
+*dwNewStyle*<br/>
+[in] Especifica el nuevo estilo a establecer.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método puede utilizarse para establecer cualquiera de los estilos CBRS_ definidos en afxres.h. Porque el estilo del panel y la alineación de panel se almacenan juntos, establezca el nuevo estilo al combinarla con la alineación actual.  
@@ -1693,26 +1693,26 @@ virtual HDWP SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndInsertAfter*  
- Identifica el `CWnd` que viene antes de que este objeto de `CWnd` objeto en el orden Z. Para obtener más información, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*pWndInsertAfter*<br/>
+[in] Identifica el `CWnd` que viene antes de que este objeto de `CWnd` objeto en el orden Z. Para obtener más información, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *x*  
- Especifica la posición del lado izquierdo de la ventana.  
+*x*<br/>
+[in] Especifica la posición del lado izquierdo de la ventana.  
   
- [in] *y*  
- Especifica la posición de la parte superior de la ventana.  
+*y*<br/>
+[in] Especifica la posición de la parte superior de la ventana.  
   
- [in] *cx*  
- Especifica el ancho de la ventana.  
+*CX*<br/>
+[in] Especifica el ancho de la ventana.  
   
- [in] *cy*  
- Especifica el alto de la ventana.  
+*CY*<br/>
+[in] Especifica el alto de la ventana.  
   
- [in] *nFlags*  
- Especifica las opciones de tamaño y posición. Para obtener más información, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*nFlags*<br/>
+[in] Especifica las opciones de tamaño y posición. Para obtener más información, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *hdwp*  
- Identificador de una estructura que contiene información de tamaño y posición de una o varias ventanas.  
+*hdwp*<br/>
+[in] Identificador de una estructura que contiene información de tamaño y posición de una o varias ventanas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Identificador de una estructura de posición de ventana aplazada actualizada, o NULL.  
@@ -1731,14 +1731,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- Especifica si se debe mostrar (TRUE) u ocultar (FALSE) un panel.  
+*bMostrar*<br/>
+[in] Especifica si se debe mostrar (TRUE) u ocultar (FALSE) un panel.  
   
- [in] *bDelay*  
- Si es TRUE, se retrasa el volver a calcular el diseño de acoplamiento.  
+*bDelay*<br/>
+[in] Si es TRUE, se retrasa el volver a calcular el diseño de acoplamiento.  
   
- [in] *bActivate*  
- Si es TRUE, el panel está activo cuando se muestra.  
+*bActivate*<br/>
+[in] Si es TRUE, el panel está activo cuando se muestra.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método muestra u oculta un panel. Use este método en lugar de `ShowWindow` porque este método notifica a los administradores de acoplamiento relevantes acerca de los cambios en la visibilidad del panel.  
@@ -1755,11 +1755,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nLength*  
- La longitud por el que se va a expandir el panel.  
+*nLength*<br/>
+[in] La longitud por el que se va a expandir el panel.  
   
- [in] *bVert*  
- Si es TRUE, ajustar el panel verticalmente. Si es FALSE, expandir el panel horizontalmente.  
+*bVert*<br/>
+[in] Si es TRUE, ajustar el panel verticalmente. Si es FALSE, expandir el panel horizontalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño del panel ajustado.  

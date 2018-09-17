@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208980"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712808"
 ---
 # <a name="arm-intrinsics"></a>Intrínsecos ARM
 El compilador de Visual C++ hace que los siguientes intrínsecos estén disponibles en la arquitectura ARM. Para obtener más información sobre ARM, consulte el [manuales de referencia de arquitectura ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) y [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) en el sitio Web de centro de información de ARM.  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  La dirección de una ubicación de memoria para leer o escribir.  
   
- `Value` (solo intrínsecos de almacén)  
- Valor que se va a escribir en la ubicación de memoria especificada.  
+ `Value`  
+ El valor para escribir en la ubicación de memoria especificado (solo intrínsecos de almacén).  
   
  **Valor devuelto (solo intrínsecos de carga)**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  Puede utilizar los intrínsecos `__iso_volatile_load8/16/32/64` y `__iso_volatile_store8/16/32/64` para realizar explícitamente accesos a memoria que no están sujetos a optimizaciones del compilador. El compilador no puede quitar, sintetizar, o cambiar el orden relativo de estas operaciones, pero no genera barreras de memoria de hardware implícitas. Por lo tanto, el hardware todavía puede reordenar los accesos de memoria observables en varios subprocesos. Más concretamente, estos intrínsecos son equivalentes a las siguientes expresiones compiladas en **/volatile: ISO**.  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

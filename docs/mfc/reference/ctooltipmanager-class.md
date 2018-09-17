@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711885"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager (clase)
 Mantiene información de tiempo de ejecución sobre información sobre herramientas. La clase `CTooltipManager` se crea una vez por cada aplicación.  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *pToolTip*  
- Una referencia a un puntero de la información sobre herramientas. Se establece para que apunte a la información sobre herramientas recién creado cuando se devuelve la función.  
+*pToolTip*<br/>
+[out] Una referencia a un puntero de la información sobre herramientas. Se establece para que apunte a la información sobre herramientas recién creado cuando se devuelve la función.  
   
- [in] *pWndParent*  
- Elemento primario de la información sobre herramientas.  
+*pWndParent*<br/>
+[in] Elemento primario de la información sobre herramientas.  
   
- [in] *nLas*  
- Tipo de la información sobre herramientas.  
+*nLas*<br/>
+[in] Tipo de la información sobre herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se ha creado correctamente una información sobre herramientas.  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *pToolTip*  
- Una referencia a un puntero a una información sobre herramientas que se va a destruir.  
+*pToolTip*<br/>
+[in, out] Una referencia a un puntero a una información sobre herramientas que se va a destruir.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para cada [CToolTipCtrl (clase)](../../mfc/reference/ctooltipctrl-class.md) creado por [CTooltipManager::CreateToolTip](#createtooltip). El control primario debe llamar a este método desde su `OnDestroy` controlador. Esto es necesario para quitar correctamente la información sobre herramientas del marco de trabajo. Este método establece *pToolTip* en NULL antes de devolver.  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nTypes*  
- Especifica los tipos de control.  
+*nTypes*<br/>
+[in] Especifica los tipos de control.  
   
- [in] *pRTC*  
- Clase en tiempo de ejecución de la información sobre herramientas personalizada.  
+*pRTC*<br/>
+[in] Clase en tiempo de ejecución de la información sobre herramientas personalizada.  
   
- [in] *pParams*  
- Parámetros de información sobre herramientas.  
+*pParams*<br/>
+[in] Parámetros de información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método establece la clase en tiempo de ejecución y los parámetros iniciales que el [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) utiliza al crear información sobre herramientas. Cuando llama un control [CTooltipManager::CreateToolTip](#createtooltip) y pasa en una información sobre herramientas de tipo que es uno de los tipos indicados por *nTypes*, el Administrador de información sobre herramientas crea un control de información sobre herramientas que es una instancia de la clase en tiempo de ejecución especificada por *pRTC* y pasa los parámetros especificados por *pParams* para el nuevo objeto tooltip.  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pTI*  
- Un puntero a un objeto TOOLINFO.  
+*PTI*<br/>
+[in] Un puntero a un objeto TOOLINFO.  
   
- [in, out] *pToolTip*  
- Un puntero al control de información sobre herramientas para el que se va a establecer el texto y la descripción.  
+*pToolTip*<br/>
+[in, out] Un puntero al control de información sobre herramientas para el que se va a establecer el texto y la descripción.  
   
- [in] *nLas*  
- Especifica el tipo de control que está asociada esta información sobre herramientas.  
+*nLas*<br/>
+[in] Especifica el tipo de control que está asociada esta información sobre herramientas.  
   
- [in] *strText*  
- Texto que se establece como el texto de información sobre herramientas.  
+*strText*<br/>
+[in] Texto que se establece como el texto de información sobre herramientas.  
   
- [in] *lpszDescr*  
- Un puntero a la descripción de la información sobre herramientas. Puede ser NULL.  
+*lpszDescr*<br/>
+[in] Un puntero a la descripción de la información sobre herramientas. Puede ser NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  El valor de *nLas* debe ser el mismo valor que el *nLas* parámetro de [CTooltipManager::CreateToolTip](#createtooltip) cuando creó la información sobre herramientas.  

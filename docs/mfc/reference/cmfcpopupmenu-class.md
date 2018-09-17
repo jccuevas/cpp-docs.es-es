@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 065529796ead2a37b9a417f5e1a2352deb429aba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204217"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711248"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu (clase)
 Implementa la funcionalidad del menú emergente de Windows y lo prolonga agregando características tales como los menús con barra desplazable e información sobre herramientas.
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pTopFrame*  
- [in] *pPopupMenu*  
+*pTopFrame*<br/>
+[in] [in] *pPopupMenu*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -330,8 +330,8 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- TRUE si el menú emergente puede mostrar entradas vacías; FALSE en caso contrario.  
+*bMostrar*<br/>
+[in] TRUE si el menú emergente puede mostrar entradas vacías; FALSE en caso contrario.  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
@@ -352,8 +352,8 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *ptScreen*  
- Un punto en coordenadas de pantalla.  
+*ptScreen*<br/>
+[in] Un punto en coordenadas de pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un parámetro MENUAREA_TYPE que indica que es el punto en relación con el menú emergente.  
@@ -395,11 +395,11 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pCustPage*  
- Un puntero a una página de personalización.  
+*pCustPage*<br/>
+[in] Un puntero a una página de personalización.  
   
- [in] *lpszTitle*  
- Cadena que contiene el título de menú.  
+*lpszTitle*<br/>
+[in] Cadena que contiene el título de menú.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método asigna los recursos para un `CMFCPopupMenu`. Para crear el elemento de menú emergente, llame a [CMFCPopupMenu::Create](#create).  
@@ -418,23 +418,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- La ventana primaria para el `CMFCPopupMenu`.  
+*pWndParent*<br/>
+[in] La ventana primaria para el `CMFCPopupMenu`.  
   
- [in] *x*  
- La coordenada de pantalla horizontal para la ubicación del menú emergente  
+*x*<br/>
+[in] La coordenada de pantalla horizontal para la ubicación del menú emergente  
   
- [in] *y*  
- La coordenada de pantalla vertical para la ubicación del menú emergente.  
+*y*<br/>
+[in] La coordenada de pantalla vertical para la ubicación del menú emergente.  
   
- [in] *hMenu*  
- Identificador de un recurso de menú.  
+*hMenu*<br/>
+[in] Identificador de un recurso de menú.  
   
- [in] *bloqueado*  
- Un parámetro booleano que indica si se puede personalizar el menú. FALSE indica que el menú emergente es personalizable.  
+*Bloqueado*<br/>
+[in] Un parámetro booleano que indica si se puede personalizar el menú. FALSE indica que el menú emergente es personalizable.  
   
- [in] *bOwnMessage*  
- Un parámetro booleano que indica cómo el marco de trabajo enruta los mensajes de menú. Vea la sección Comentarios para obtener más detalles.  
+*bOwnMessage*<br/>
+[in] Un parámetro booleano que indica cómo el marco de trabajo enruta los mensajes de menú. Vea la sección Comentarios para obtener más detalles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -458,8 +458,8 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndMain*  
- [in] *uiID*  
+*pWndMain*<br/>
+[in] [in] *uiID*  
  [in] *lpszName*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -487,11 +487,11 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iLogoSize*  
- El tamaño del logotipo, en píxeles.  
+*iLogoSize*<br/>
+[in] El tamaño del logotipo, en píxeles.  
   
- [in] *nLogoLocation*  
- Tipo de datos enumerado que indica la ubicación del logotipo.  
+*nLogoLocation*<br/>
+[in] Tipo de datos enumerado que indica la ubicación del logotipo.  
   
 ### <a name="remarks"></a>Comentarios  
  Para mostrar el logotipo, implemente el método [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) en la ventana de marco principal.  
@@ -506,8 +506,8 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar el sonido, FALSE en caso contrario.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar el sonido, FALSE en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Si habilita el sonido, el marco llama a la [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) método cuando un usuario abre un menú emergente o selecciona un comando de menú. De forma predeterminada, esta característica está habilitada.  
@@ -596,8 +596,8 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bNoSystem*  
- Un parámetro booleano que indica si este método comprueba el valor global. FALSE si desea que este método para devolver el estilo de animación para esta instancia de la [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md).  
+*bNoSystem*<br/>
+[in] Un parámetro booleano que indica si este método comprueba el valor global. FALSE si desea que este método para devolver el estilo de animación para esta instancia de la [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor enumerado que describe el tipo de animación.  
@@ -682,8 +682,8 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero de un elemento de menú.  
+*iÍndice*<br/>
+[in] Índice de base cero de un elemento de menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un elemento de menú. Es NULL si el índice no es válido.  
@@ -849,11 +849,11 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *botón*  
- Una referencia al elemento de menú para agregar.  
+*Botón*<br/>
+[in] Una referencia al elemento de menú para agregar.  
   
- [in] *iInsertAt*  
- Índice de base cero para el nuevo elemento. Si *iInsertAt* es -1, el elemento se agrega al final del menú.  
+*iInsertAt*<br/>
+[in] Índice de base cero para el nuevo elemento. Si *iInsertAt* es -1, el elemento se agrega al final del menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la posición donde se insertó el elemento. -1 si se produce un error en el método.  
@@ -869,8 +869,8 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iInsertAt*  
- Índice de base cero de la posición donde este método insertará el separador.  
+*iInsertAt*<br/>
+[in] Índice de base cero de la posición donde este método insertará el separador.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la posición donde se insertó el separador. -1 si este método produce un error.  
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- [in] *nCode*  
- [in] *pExtra*  
- [in] *pHandlerInfo*  
+*nID*<br/>
+[in] [in] *nCode*  
+*pExtra*<br/>
+[in] [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -1137,8 +1137,8 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Índice de base cero del elemento que desea eliminar.  
+*iÍndice*<br/>
+[in] Índice de base cero del elemento que desea eliminar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
@@ -1163,8 +1163,8 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nElapse*  
- La nueva velocidad de animación, en milisegundos.  
+*nElapse*<br/>
+[in] La nueva velocidad de animación, en milisegundos.  
   
 ### <a name="remarks"></a>Comentarios  
  La velocidad de animación es un valor global y afecta a todos los menús emergentes en la aplicación. Este valor especifica cuánto tiempo tarda la animación de un menú emergente a finalizar.  
@@ -1179,8 +1179,8 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *tipo*  
- Tipo de datos enumerado que especifica el tipo de animación.  
+*type*<br/>
+[in] Tipo de datos enumerado que especifica el tipo de animación.  
   
 ### <a name="remarks"></a>Comentarios  
  Consulte [CMFCPopupMenu::GetAnimationType](#getanimationtype) para obtener una lista de valores válidos para *tipo*.  
@@ -1205,8 +1205,8 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando de menú del nuevo comando de forma predeterminada.  
+*uiCmd*<br/>
+[in] El identificador de comando de menú del nuevo comando de forma predeterminada.  
   
 ### <a name="remarks"></a>Comentarios  
  El comando predeterminado en el menú emergente es el comando que está seleccionado cuando aparece el menú emergente.  
@@ -1219,8 +1219,8 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bValue*  
- TRUE si desea que el marco de trabajo para forzar el foco de entrada en la barra de menús al menú emergente se muestra. FALSE si desea que el menú emergente para conservar el foco.  
+*bValue*<br/>
+[in] TRUE si desea que el marco de trabajo para forzar el foco de entrada en la barra de menús al menú emergente se muestra. FALSE si desea que el menú emergente para conservar el foco.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método establece una marca que es global para todos los menús emergentes en la aplicación. De forma predeterminada, esta característica no está habilitada.  
@@ -1233,8 +1233,8 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bValue*  
- TRUE si desea que el marco de trabajo para dibujar sombras de menú, FALSE en caso contrario.  
+*bValue*<br/>
+[in] TRUE si desea que el marco de trabajo para dibujar sombras de menú, FALSE en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando se llama a este método, Establece una marca global en la aplicación. Este indicador afecta a todos los menús emergentes en la aplicación.  
@@ -1247,8 +1247,8 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iMaxWidth*  
- El ancho máximo para el menú emergente, en píxeles.  
+*iMaxWidth*<br/>
+[in] El ancho máximo para el menú emergente, en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
  Si el texto asociado a un comando de menú no cabe en el ancho máximo, se trunca y se reemplaza la parte que no cabe por tres puntos.  
@@ -1306,8 +1306,8 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bRightAlign*  
- Un valor booleano que indica la alineación de los menús. TRUE indica la alineación a la derecha, FALSE indica la alineación a la izquierda.  
+*bRightAlign*<br/>
+[in] Un valor booleano que indica la alineación de los menús. TRUE indica la alineación a la derecha, FALSE indica la alineación a la izquierda.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, todos los menús emergentes están alineados a la izquierda.  
@@ -1320,8 +1320,8 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSet*  
- TRUE si el menú emergente notifica su marco de elemento primario.  
+*bSet*<br/>
+[in] TRUE si el menú emergente notifica su marco de elemento primario.  
   
 ### <a name="remarks"></a>Comentarios  
  Se trata de una opción global para todos los menús emergentes en una aplicación. Si está habilitado, los menús emergentes enviará un mensaje WM_MENUSELECT al marco primario cuando el usuario selecciona un comando.  
@@ -1353,8 +1353,8 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lprectScreen*  
- Un rectángulo que especifica la región para la actualización, en coordenadas de pantalla.  
+*lprectScreen*<br/>
+[in] Un rectángulo que especifica la región para la actualización, en coordenadas de pantalla.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método es útil cuando se muestran los menús emergentes a través de controles animados u otras ventanas que tienen contenido dinámico.  
@@ -1367,8 +1367,8 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lprectScreen*  
- Un rectángulo, en coordenadas de pantalla, que especifica los límites de la región de actualización.  
+*lprectScreen*<br/>
+[in] Un rectángulo, en coordenadas de pantalla, que especifica los límites de la región de actualización.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método cuando un menú emergente que tiene una sombra se superpone a una imagen animada.  

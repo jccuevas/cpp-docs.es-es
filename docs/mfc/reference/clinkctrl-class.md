@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f81b1e675f6b0c12330d84d17b2e6b1635503dfc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690426"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704943"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl (clase)
 Proporciona la funcionalidad del control SysLink común de Windows.  
@@ -237,7 +237,7 @@ int GetIdealSize(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *cxMaxWidth*|El ancho máximo del vínculo, en píxeles.|  
+|*cxMaxWidth*|[in] El ancho máximo del vínculo, en píxeles.|  
 |[out] \* *pSize*|Un puntero a un Windows [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura. Cuando este método finaliza, el *cy* miembro de la `SIZE` estructura contiene el alto del texto de vínculo ideal para el ancho del texto de vínculo especificado por *cxMaxWidth*. El *cx* miembro de la estructura contiene el ancho del texto de vínculo que realmente se necesita.|  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -1,5 +1,5 @@
 ---
-title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Documentos de Microsoft
+title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333201"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705703"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 **Específicos de Microsoft**  
   
- Leer la memoria desde una ubicación especificada por un desplazamiento respecto al principio del segmento FS.  
+ Leer la memoria desde una ubicación especificada por un desplazamiento relativo al principio del segmento de FS.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,11 +56,11 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Offset`  
- El desplazamiento desde el principio de `FS` a leer.  
+*Desplazamiento*<br/>
+[in] El desplazamiento desde el principio del `FS` a leer.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El contenido de la memoria del byte, word, palabra doble o quadword (como indica el nombre de la función llamada) en la ubicación `FS:[Offset]`.  
+ El contenido de la memoria del byte, word, palabra doble o quadword (tal y como se indica el nombre de la función llamado) en la ubicación `FS:[Offset]`.  
   
 ## <a name="requirements"></a>Requisitos  
   

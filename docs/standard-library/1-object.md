@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840347"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719191"
 ---
 # <a name="1-object"></a>_1 (Objeto)
 
@@ -35,12 +35,12 @@ Marcadores de posición para argumentos reemplazables.
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>Comentarios
 
-Los objetos `_1, _2, ... _M` son marcadores de posición que designa el primer, segundo,..., argumento de mes, respectivamente, en una llamada de función en el objeto devuelto por [enlazar](../standard-library/functional-functions.md#bind). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.
+Los objetos `_1, _2, ... _M` son marcadores de posición que designa el primer, segundo, …, m-ésimo argumentos, respectivamente, en una llamada de función a un objeto devuelto por [enlazar](../standard-library/functional-functions.md#bind). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.
 
 En esta implementación, el valor de `M` es 20.
 

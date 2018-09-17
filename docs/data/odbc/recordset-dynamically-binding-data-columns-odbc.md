@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338816"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703135"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -91,19 +91,16 @@ Compilar listas de columnas para enlazarlas dinámicamente
      Un enfoque consiste en Agregar un bucle a su conjunto de registros principal `DoFieldExchange` función que recorra la lista de las columnas nuevas, una llamada a la función RFX correspondiente para cada columna en la lista. En cada llamada RFX, pase un nombre de columna de la lista de nombres de columna y una ubicación de almacenamiento en el miembro correspondiente de la lista de valores de resultado.  
   
 ###  <a name="_core_lists_of_columns"></a> Listas de columnas  
- Deberá trabajar con las listas de cuatro se muestran en la tabla siguiente.  
-  
- **Columnas de la tabla actual (lista 1 en la ilustración)** una lista de las columnas actualmente en la tabla del origen de datos. Esta lista podría coincidir con la lista de columnas enlazadas actualmente en el conjunto de registros.  
-  
- **Columnas enlazadas del conjunto de registros (2 de lista en la ilustración)**  
- Enlaza una lista de las columnas en el conjunto de registros. Estas columnas ya contienen instrucciones RFX su `DoFieldExchange` función.  
-  
- **Las columnas para enlazar dinámicamente (lista 3 en la ilustración)**  
- Una lista de columnas en la tabla pero no en el conjunto de registros. Estas son las columnas que desea enlazar dinámicamente.  
-  
- **Valores de columna dinámicos (lista 4 en la ilustración)**  
- Una lista que contiene almacenamiento para los valores recuperados de las columnas que enlazar dinámicamente. Elementos de esta lista se corresponden con los de columnas-para enlazar dinámicamente, uno a uno.  
-  
+
+Deberá trabajar con las listas de cuatro se muestran en la tabla siguiente.  
+
+|||
+|-|-|  
+**Columnas de la tabla actual**| (Lista en la ilustración 1) Una lista de las columnas actualmente en la tabla del origen de datos. Esta lista podría coincidir con la lista de columnas enlazadas actualmente en el conjunto de registros.|
+|**Columnas enlazadas del conjunto de registros**| (Lista en la ilustración 2) Enlaza una lista de las columnas en el conjunto de registros. Estas columnas ya contienen instrucciones RFX su `DoFieldExchange` función.|
+|**Columnas para enlazar dinámicamente**| (Lista 3 en la ilustración) Una lista de columnas en la tabla pero no en el conjunto de registros. Estas son las columnas que desea enlazar dinámicamente.|
+|**Valores de columna dinámica**| (Lista en la ilustración 4) Una lista que contiene almacenamiento para los valores recuperados de las columnas que enlazar dinámicamente. Elementos de esta lista se corresponden con los de columnas-para enlazar dinámicamente, uno a uno.|
+
 ###  <a name="_core_building_your_lists"></a> Generar las listas  
  Con una estrategia general en mente, puede activar a los detalles. Los procedimientos descritos en el resto de este tema muestran cómo generar las listas que aparecen en [listas de columnas](#_core_lists_of_columns). Los procedimientos le guiarán a través de:  
   

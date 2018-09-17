@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3254d61295e0cfe0fc398e4aa2a2f2a926dbb1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 80c501c74d0e36d7a1c564e107101782468708c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130915"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709077"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar la versión estándar del lenguaje)
 
@@ -46,27 +46,27 @@ El valor predeterminado **/std: c ++ 14** opción habilita el conjunto de caract
 - [literales de caracteres de U8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
 Para obtener más información sobre qué características C ++ 14 y C ++ 17 están habilitados cuando **/std: c ++ 14** está especificado, vea las notas de [conformidad del lenguaje Visual C++](../../visual-cpp-language-conformance.md).
-  
-El **/std: c ++ 17** opción permite que el conjunto completo de características C ++ 17 implementada por el compilador de Visual C++. Esta opción deshabilita la compatibilidad del compilador y la biblioteca estándar con las características nuevas o que se han modificado en las versiones del borrador de trabajo y las actualizaciones de defectos de C++ Standard posteriores a C++17.  
-  
-El **/std: c ++ más reciente** opción permite que el conjunto de características de lenguaje y biblioteca de C++, implementada por Visual C++ para realizar un seguimiento más C ++ 20 borrador de trabajo y defectos actualizaciones recientes del estándar de C++ que no están incluidas en C ++ 17. Utilice este modificador para obtener la entrada de blog-características de lenguaje C ++ 17 admitidas por el compilador y la biblioteca estándar. Para obtener una lista de características de la biblioteca y los idiomas admitidos, consulte [What ' s New for Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). El **/std: c ++ más reciente** opción no habilita las características protegidas por el **/ experimental** cambie.  
-  
+
+El **/std: c ++ 17** opción permite que el conjunto completo de características C ++ 17 implementada por el compilador de Visual C++. Esta opción deshabilita la compatibilidad del compilador y la biblioteca estándar con las características nuevas o que se han modificado en las versiones del borrador de trabajo y las actualizaciones de defectos de C++ Standard posteriores a C++17.
+
+El **/std: c ++ más reciente** opción permite que el conjunto de características de lenguaje y biblioteca de C++, implementada por Visual C++ para realizar un seguimiento más C ++ 20 borrador de trabajo y defectos actualizaciones recientes del estándar de C++ que no están incluidas en C ++ 17. Utilice este modificador para obtener la entrada de blog-características de lenguaje C ++ 17 admitidas por el compilador y la biblioteca estándar. Para obtener una lista de características de la biblioteca y los idiomas admitidos, consulte [What ' s New for Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). El **/std: c ++ más reciente** opción no habilita las características protegidas por el **/ experimental** cambie.
+
 El **/std** opción vigente durante una compilación en C++ se puede detectar mediante el uso de la [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) macro de preprocesador. Para obtener más información, consulte [Macros de preprocesador](../../preprocessor/predefined-macros.md).
 
 El **/std: c ++ 14** y **/std: c ++ más reciente** opciones están disponibles a partir de Visual C++ 2015 Update 3. El **/std: c ++ 17** opción está disponible a partir de Visual C++ 2017 versión 15.3. Como se mencionó anteriormente, algunos estándar C ++ 17 comportamiento está habilitado de forma el **/std: c ++ 14** opción, pero todas las demás características C ++ 17 están habilitadas de forma **/std: c ++ 17**.
-  
+
 > [!NOTE]
-> Según el nivel de versión o actualización de compilador de Visual C++, ciertas características C ++ 14 y C ++ 17 pueden no ser completamente implementadas o totalmente conforme al especificar el **/std: c ++ 14** o **/std: c ++ 17** opciones. Por ejemplo, el compilador de Visual C++ 2017 RTM no admite totalmente C ++ 14 ajustan `constexpr`, expresión SFINAE, o la búsqueda de nombres de 2 fases. Para obtener información general de conformidad del lenguaje C++ en Visual C++ por número de versión, consulte [conformidad del lenguaje Visual C++](../../visual-cpp-language-conformance.md). 
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Seleccione **propiedades de configuración**, **C o C++**, **lenguaje**.  
-  
-3.  En **estándar de lenguaje C++**, elija el estándar del lenguaje para admitir en el control desplegable y luego elija **Aceptar** o **aplicar** para guardar los cambios.  
-  
-## <a name="see-also"></a>Vea también  
-  
-[Opciones del compilador](../../build/reference/compiler-options.md)   
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
+> Según el nivel de versión o actualización de compilador de Visual C++, ciertas características C ++ 14 y C ++ 17 pueden no ser completamente implementadas o totalmente conforme al especificar el **/std: c ++ 14** o **/std: c ++ 17** opciones. Por ejemplo, el compilador de Visual C++ 2017 RTM no admite totalmente C ++ 14 ajustan `constexpr`, expresión SFINAE, o la búsqueda de nombres de 2 fases. Para obtener información general de conformidad del lenguaje C++ en Visual C++ por número de versión, consulte [conformidad del lenguaje Visual C++](../../visual-cpp-language-conformance.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+
+1. Seleccione **propiedades de configuración**, **C o C++**, **lenguaje**.
+
+1. En **estándar de lenguaje C++**, elija el estándar del lenguaje para admitir en el control desplegable y luego elija **Aceptar** o **aplicar** para guardar los cambios.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

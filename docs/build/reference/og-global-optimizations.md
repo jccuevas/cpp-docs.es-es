@@ -1,5 +1,5 @@
 ---
-title: -Og (optimizaciones globales) | Documentos de Microsoft
+title: -Og (optimizaciones globales) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377162"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722532"
 ---
 # <a name="og-global-optimizations"></a>/Og (optimizaciones globales)
 
-Desusado. Proporciona optimizaciones locales y globales, asignación automática de registros y optimización de bucles. Se recomienda que utilice [/O1 (minimizar tamaño)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/O2 (maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) en su lugar.
+Desusado. Proporciona las optimizaciones globales y locales, asignación automática de registros y la optimización de bucle. Se recomienda usar ya sea [/O1 (minimizar tamaño)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/O2 (maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,13 +40,13 @@ Desusado. Proporciona optimizaciones locales y globales, asignación automática
 
 ## <a name="remarks"></a>Comentarios
 
-**/ Og** está en desuso. Por lo general, estas optimizaciones ahora están habilitadas de forma predeterminada. Para obtener más información acerca de las optimizaciones, consulte [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/Ox (habilitar más velocidad optimizaciones)](../../build/reference/ox-full-optimization.md).
+**/ Og** está en desuso. Por lo general, estas optimizaciones ahora están habilitadas de forma predeterminada. Para obtener más información acerca de las optimizaciones, consulte [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/Ox (habilitar más las optimizaciones de velocidad)](../../build/reference/ox-full-optimization.md).
 
 Las siguientes optimizaciones están disponibles en **/Og**:
 
 - Eliminación de subexpresiones comunes locales y globales
 
-     En esta optimización, el valor de una subexpresión común se calcula una vez. En el ejemplo siguiente, si los valores de `b` y `c` no cambia entre las tres expresiones, el compilador puede asignar el cálculo de `b + c` a una variable temporal y sustituir la variable para `b + c`:
+   En esta optimización, el valor de una subexpresión común se calcula una vez. En el ejemplo siguiente, si los valores de `b` y `c` no cambian entre las tres expresiones, el compilador puede asignar el cálculo de `b + c` a una variable temporal y sustituya la variable para `b + c`:
 
     ```C
     a = b + c;
@@ -54,15 +54,15 @@ Las siguientes optimizaciones están disponibles en **/Og**:
     e = b + c;
     ```
 
-     Para la optimización de subexpresiones comunes locales, el compilador examina en secciones breves del código de subexpresiones comunes. Para la optimización de subexpresiones comunes globales, el compilador busca subexpresiones comunes en funciones completas.
+   Para la optimización de subexpresiones comunes locales, el compilador examina corto secciones de código de subexpresiones comunes. Para la optimización de subexpresiones comunes globales, el compilador busca funciones completas de subexpresiones comunes.
 
 - Asignación automática de registro
 
-     Esta optimización permite al compilador a las variables de la tienda que se usan con frecuencia y subexpresiones en los registros; el `register` se omite la palabra clave.
+   Esta optimización permite al compilador subexpresiones y variables de almacén de uso frecuente en los registros; el `register` se omite la palabra clave.
 
 - Optimización de bucle
 
-     Esta optimización elimina las subexpresiones invariables desde el cuerpo de un bucle. Un bucle óptimo sólo contiene expresiones cuyos valores varían en cada ejecución del bucle. En el ejemplo siguiente, la expresión `x + y` no cambia en el cuerpo del bucle:
+   Esta optimización elimina las subexpresiones invariables del cuerpo de un bucle. Un bucle óptimo sólo contiene expresiones cuyos valores se cambien a través de cada ejecución del bucle. En el ejemplo siguiente, la expresión `x + y` no cambia en el cuerpo del bucle:
 
     ```C
     i = -100;
@@ -71,7 +71,7 @@ Las siguientes optimizaciones están disponibles en **/Og**:
     }
     ```
 
-     Después de la optimización, `x + y` se calcula una vez en lugar de cada vez que se ejecuta el bucle:
+   Después de la optimización, `x + y` se calcula una vez en lugar de cada vez que se ejecuta el bucle:
 
     ```C
     i = -100;
@@ -81,22 +81,22 @@ Las siguientes optimizaciones están disponibles en **/Og**:
     }
     ```
 
-     La optimización de bucles es mucho más eficaz cuando el compilador no puede suponer ningún alias, que establece con [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), o [restringir](../../cpp/restrict.md).
+   Optimización de bucle es mucho más eficaz cuando el compilador no puede suponer ningún alias, lo cual se establece con [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), o [restringir](../../cpp/restrict.md).
 
-    > [!NOTE]
-    > Puede habilitar o deshabilitar la optimización global en una función por función utilizando la `optimize` pragma junto con el `g` opción.
+   > [!NOTE]
+   > Puede habilitar o deshabilitar la optimización global sobre el uso de una función por función la `optimize` pragma junto con el `g` opción.
 
- Para obtener información relacionada, consulte [/Oi (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) y [/Ox (habilitar más velocidad optimizaciones)](../../build/reference/ox-full-optimization.md).
+Para obtener información relacionada, consulte [/Oi (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) y [/Ox (habilitar más las optimizaciones de velocidad)](../../build/reference/ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
 1. Haga clic en la página de propiedades **Línea de comandos** .
 
-1. Escriba la opción del compilador en el **opciones adicionales** cuadro.
+1. Especifique la opción del compilador en el **opciones adicionales** cuadro.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 

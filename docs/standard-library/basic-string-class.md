@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706620"
 ---
 # <a name="basicstring-class"></a>basic_string (Clase)
 
@@ -3979,9 +3979,11 @@ Cadena de C que va a ser un origen de caracteres para la cadena de operando.
 *_Ch*<br/>
 Carácter que se va a copiar en la cadena de operando.
 
-* first0 * un iterador que direcciona el primer carácter que se puede quitar de la cadena de operando.
+*first0*<br/>
+Iterador que dirige al primer carácter de la cadena de operando que se va a quitar.
 
-* last0 * un iterador que direcciona el último carácter que se puede quitar de la cadena de operando.
+*last0*<br/>
+Iterador que dirige al último carácter de la cadena de operando que se va a quitar.
 
 *first*<br/>
 Iterador, const_pointer o const_iterator que dirige al primer carácter de la cadena de parámetro que se va a copiar.

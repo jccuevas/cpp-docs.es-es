@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b510b05c80ba7cdbea0bbf0ec580e88daa55fbed
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216266"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704371"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox (clase)
 Un botón de barra de herramientas que contiene un control de cuadro combinado que permite al usuario seleccionar una fuente de una lista de fuentes del sistema.  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiID*  
- El identificador de comando del cuadro combinado.  
+*uiID*<br/>
+[in] El identificador de comando del cuadro combinado.  
   
- [in] *iImage*  
- Índice de base cero de una imagen de la barra de herramientas. La imagen se encuentra en la [CMFCToolBarImages (clase)](../../mfc/reference/cmfctoolbarimages-class.md) objeto que [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md) clase mantiene.  
+*iImage*<br/>
+[in] Índice de base cero de una imagen de la barra de herramientas. La imagen se encuentra en la [CMFCToolBarImages (clase)](../../mfc/reference/cmfctoolbarimages-class.md) objeto que [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md) clase mantiene.  
   
- [in] *nFontType*  
- Los tipos de fuentes que contiene el cuadro combinado. Este parámetro puede ser una combinación (booleano OR) de los siguientes valores:  
+*nFontType*<br/>
+[in] Los tipos de fuentes que contiene el cuadro combinado. Este parámetro puede ser una combinación (booleano OR) de los siguientes valores:  
   
  DEVICE_FONTTYPE  
   
@@ -125,20 +125,20 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in] *nCharSet*  
- Si el conjunto a DEFAULT_CHARSET, el cuadro combinado contiene todos los nombra fuentes en todos los juegos de caracteres. (Si hay dos fuentes con el mismo nombre, el cuadro combinado contiene uno de ellos). Si se establece en un valor de conjunto de caracteres válido, el cuadro combinado contenga solo fuentes en el juego de caracteres especificado. Consulte [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) establece una lista de caracteres posible.  
+*nCharSet*<br/>
+[in] Si el conjunto a DEFAULT_CHARSET, el cuadro combinado contiene todos los nombra fuentes en todos los juegos de caracteres. (Si hay dos fuentes con el mismo nombre, el cuadro combinado contiene uno de ellos). Si se establece en un valor de conjunto de caracteres válido, el cuadro combinado contenga solo fuentes en el juego de caracteres especificado. Consulte [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) establece una lista de caracteres posible.  
   
- [in] *dwStyle*  
- El estilo del cuadro combinado. (consulte [estilos de cuadro combinado](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+*dwStyle*<br/>
+[in] El estilo del cuadro combinado. (consulte [estilos de cuadro combinado](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in] *iWidth*  
- El ancho en píxeles del control de edición.  
+*iWidth*<br/>
+[in] El ancho en píxeles del control de edición.  
   
- [in] *nPitchAndFamily*  
- Si establece en DEFAULT_PITCH, el cuadro combinado contiene fuentes independientemente de tono. Si se establece en FIXED_PITCH o VARIABLE_PITCH, el cuadro combinado contiene sólo las fuentes con ese tipo de paso. Actualmente no se admite el filtrado basado en la familia de fuentes.  
+*nPitchAndFamily*<br/>
+[in] Si establece en DEFAULT_PITCH, el cuadro combinado contiene fuentes independientemente de tono. Si se establece en FIXED_PITCH o VARIABLE_PITCH, el cuadro combinado contiene sólo las fuentes con ese tipo de paso. Actualmente no se admite el filtrado basado en la familia de fuentes.  
   
- [out] *pLstFontsExternal*  
- Puntero a un [CObList (clase)](../../mfc/reference/coblist-class.md) objeto que almacena las fuentes disponibles.  
+*pLstFontsExternal*<br/>
+[out] Puntero a un [CObList (clase)](../../mfc/reference/coblist-class.md) objeto que almacena las fuentes disponibles.  
   
 ### <a name="remarks"></a>Comentarios  
  Por lo general, `CMFCToolBarFontComboBox` objetos almacenan la lista de fuentes disponibles en una única compartida `CObList` objeto. Si usa la segunda sobrecarga del constructor y proporcionar un puntero válido a *pLstFontsExternal*, que `CMFCToolBarFontComboBox` objeto en su lugar, se rellenará el `CObList` que *pLstFontsExternal* señala con fuentes disponibles.  
@@ -156,8 +156,8 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iÍndice*  
- Especifica el índice de base cero de un elemento de cuadro combinado.  
+*iÍndice*<br/>
+[in] Especifica el índice de base cero de un elemento de cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un `CMFCFontInfo` objeto. Si *iÍndice* no especifica un índice de elemento válido, el valor devuelto es NULL.  
@@ -183,14 +183,14 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- Especifica el nombre de la fuente o el prefijo.  
+*lpszName*<br/>
+[in] Especifica el nombre de la fuente o el prefijo.  
   
- [in] *nCharSet*  
- Especifica el juego de caracteres.  
+*nCharSet*<br/>
+[in] Especifica el juego de caracteres.  
   
- [in] *bExact*  
- Especifica si *lpszName* contiene el nombre de fuente o el prefijo de la fuente.  
+*bExact*<br/>
+[in] Especifica si *lpszName* contiene el nombre de fuente o el prefijo de la fuente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si la fuente se ha seleccionado correctamente; en caso contrario, es 0.  

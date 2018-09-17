@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540893"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725017"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane (clase)
 La `CMFCRibbonStatusBarPane` clase implementa un elemento de la cinta de opciones que se puede agregar a una barra de estado de la cinta de opciones.  
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nCmdID*  
- Especifica el identificador de comando del panel.  
+*nCmdID*<br/>
+[in] Especifica el identificador de comando del panel.  
   
- [in] *lpszText*  
- Especifica la cadena de texto que se mostrará en el panel.  
+*lpszText*<br/>
+[in] Especifica la cadena de texto que se mostrará en el panel.  
   
- [in] *bIsStatic*  
- Si es TRUE, el panel de estado no se resaltado o seleccionado haciendo clic en él.  
+*bIsStatic*<br/>
+[in] Si es TRUE, el panel de estado no se resaltado o seleccionado haciendo clic en él.  
   
- [in] *hIcon*  
- Especifica un identificador para un icono que se mostrará en el panel.  
+*hIcon*<br/>
+[in] Especifica un identificador para un icono que se mostrará en el panel.  
   
- [in] *lpszAlmostLargeText*  
- Especifica la cadena de texto más larga que puede mostrarse en el panel.  
+*lpszAlmostLargeText*<br/>
+[in] Especifica la cadena de texto más larga que puede mostrarse en el panel.  
   
- [in] *hBmpAnimationList*  
- Especifica un identificador para una lista de imágenes que se usa para ver la animación.  
+*hBmpAnimationList*<br/>
+[in] Especifica un identificador para una lista de imágenes que se usa para ver la animación.  
   
- [in] *cxAnimation*  
- Especifica el ancho, en píxeles, del icono en la lista de imágenes que se usa para ver la animación.  
+*cxAnimation*<br/>
+[in] Especifica el ancho, en píxeles, del icono en la lista de imágenes que se usa para ver la animación.  
   
- [in] *clrTrnsp*  
- Especifica el color transparente de imágenes en la lista de imágenes que se usan para la animación.  
+*clrTrnsp*<br/>
+[in] Especifica el color transparente de imágenes en la lista de imágenes que se usan para la animación.  
   
- [in] *uiAnimationListResID*  
- Especifica un identificador de recurso de una lista de imágenes que se usa para ver la animación.  
+*uiAnimationListResID*<br/>
+[in] Especifica un identificador de recurso de una lista de imágenes que se usa para ver la animación.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Obtiene la cadena de texto más larga que puede mostrar el panel de barra de estado.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszAlmostLargeText*  
- Especifica la cadena más larga que puede mostrarse en el panel de barra de estado sin truncamiento.  
+*lpszAlmostLargeText*<br/>
+[in] Especifica la cadena más larga que puede mostrarse en el panel de barra de estado sin truncamiento.  
   
 ### <a name="remarks"></a>Comentarios  
  La biblioteca calcula el tamaño del texto que *lpszAlmostLargeText* especifica y cambia el tamaño del panel en consecuencia. El texto se truncará si todavía no se ajusta en el panel.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hBmpAnimationList*  
- Especifica un identificador para una lista de imágenes.  
+*hBmpAnimationList*<br/>
+[in] Especifica un identificador para una lista de imágenes.  
   
- [in] *cxAnimation*  
- Especifica el ancho, en píxeles, del marco en la lista de imágenes.  
+*cxAnimation*<br/>
+[in] Especifica el ancho, en píxeles, del marco en la lista de imágenes.  
   
- [in] *clrTransp*  
- Especifica el color transparente de la lista de imágenes.  
+*clrTransp*<br/>
+[in] Especifica el color transparente de la lista de imágenes.  
   
- [in] *uiAnimationListResID*  
- Especifica el identificador de recurso de la lista de imágenes.  
+*uiAnimationListResID*<br/>
+[in] Especifica el identificador de recurso de la lista de imágenes.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se ha asociado correctamente la lista de imágenes en el panel de barra de estado; FALSE en caso contrario.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nAlign*  
- Especifica la alineación del texto.  
+*nAlign*<br/>
+[in] Especifica la alineación del texto.  
   
 ### <a name="remarks"></a>Comentarios  
  *nAlign* puede tener uno de los siguientes valores:  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nFrameDelay*  
- Especifica la velocidad de fotogramas de animación, en milisegundos.  
+*nFrameDelay*<br/>
+[in] Especifica la velocidad de fotogramas de animación, en milisegundos.  
   
- [in] *nDuration*  
- Especifica cuánto tiempo para reproducir la animación, en milisegundos. Use -1 para un bucle infinito.  
+*nDuration*<br/>
+[in] Especifica cuánto tiempo para reproducir la animación, en milisegundos. Use -1 para un bucle infinito.  
   
 ### <a name="remarks"></a>Comentarios  
  Debe especificar un identificador de una lista de imágenes antes de llamar a `StartAnimation` utilizando `SetAnimationList`.  

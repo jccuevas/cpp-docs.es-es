@@ -1,5 +1,5 @@
 ---
-title: -BIND | Documentos de Microsoft
+title: -ENLAZAR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b77c778017dc78235948e8d23db136c1f63ab12d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a47004ce41d6bae3d91a81c4a61a712bc31dfbdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372441"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725899"
 ---
 # <a name="bind"></a>/BIND
-```  
-/BIND[:PATH=path]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Esta opción establece las direcciones de los puntos de entrada en la tabla de direcciones de importación para un archivo ejecutable o DLL. Utilice esta opción para reducir el tiempo de carga de un programa.  
-  
- Especifique del programa archivo ejecutable y los archivos DLL en el *archivos* argumento en la línea de comandos EDITBIN. Opcional *ruta de acceso* argumento /BIND especifica la ubicación de los archivos DLL que se utilizan en los archivos especificados. Separe varios directorios con un punto y coma (**;**). Si *ruta de acceso* no se especifica, EDITBIN buscará en los directorios especificados en la variable de entorno PATH. Si *ruta de acceso* se especifica, EDITBIN pasará por alto la variable PATH.  
-  
- De forma predeterminada, el cargador del programa establece las direcciones de puntos de entrada cuando cargue un programa. La cantidad de tiempo que este proceso tarda varía, dependiendo del número de archivos DLL y el número de puntos de entrada que se hace referencia en el programa. Si se ha modificado un programa con la opción /BIND y si las direcciones base del archivo ejecutable y sus archivos DLL no entren en conflicto con los archivos DLL que ya están cargadas, el sistema operativo no es necesario establecer estas direcciones. En una situación donde los archivos se basan incorrectamente, el sistema operativo vuelve a colocar los archivos DLL y vuelve a calcular las direcciones de punto de entrada, que agrega al tiempo de carga del programa.  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones de EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/BIND[:PATH=path]
+```
+
+## <a name="remarks"></a>Comentarios
+
+Esta opción establece las direcciones de los puntos de entrada en la tabla de direcciones de importación para un archivo ejecutable o DLL. Use esta opción para reducir el tiempo de carga de un programa.
+
+Especifique el archivo ejecutable y los archivos DLL en el programa la *archivos* argumento en la línea de comandos EDITBIN. El elemento opcional *ruta* argumento/BIND especifica la ubicación de los archivos DLL utilizado por los archivos especificados. Separe varios directorios con punto y coma (**;**). Si *ruta* no se especifica, EDITBIN buscará los directorios especificados en la variable de entorno PATH. Si *ruta* se especifica, EDITBIN pasará por alto la variable PATH.
+
+De forma predeterminada, el cargador del programa establece las direcciones de puntos de entrada cuando se carga un programa. La cantidad de tiempo que tarda este proceso varía, dependiendo del número de archivos DLL y el número de puntos de entrada hace referencia en el programa. Si se ha modificado un programa con/BIND, y si las direcciones base del archivo ejecutable y sus archivos DLL no entren en conflicto con los archivos DLL que ya están cargadas, el sistema operativo no es necesario establecer estas direcciones. En una situación donde incorrectamente se basan los archivos, el sistema operativo vuelve a colocar los archivos DLL y vuelve a calcular las direcciones de punto de entrada, que se suma al tiempo de carga del programa.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones de EDITBIN](../../build/reference/editbin-options.md)

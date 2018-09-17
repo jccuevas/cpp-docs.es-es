@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee3bf6b087777bc550a34234a8969e2127c8ec2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852489"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720257"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea (clase)
 Proporciona el área de imagen que se utiliza para modificar una imagen en un cuadro de diálogo del editor de imágenes.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *pParentDlg*|Un puntero en el cuadro de diálogo que es primario del editor de imágenes.|  
+|*pParentDlg*|[in] Un puntero en el cuadro de diálogo que es primario del editor de imágenes.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Recupera el modo de dibujo actual.  
@@ -122,7 +122,7 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *pBitmap*|Para mostrar la nueva imagen de mapa de bits.|  
+|*pBitmap*|[in] Para mostrar la nueva imagen de mapa de bits.|  
   
 ### <a name="remarks"></a>Comentarios  
  Si *pBitmap* es NULL, este método establece el tamaño del área modificable de paint en cero. En caso contrario, Establece el tamaño del área modificable de paint en el tamaño de la imagen de mapa de bits proporcionado.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *color*|El color de dibujo nuevo.|  
+|*Color*|[in] El color de dibujo nuevo.|  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando seleccione un color en la barra de paleta del editor de imágenes o selector de color, el marco llama a este método para actualizar el color de dibujo actual. El color inicial del dibujo es negro (un valor COLORREF de 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *modo*|Un [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valor que especifica el modo de dibujo actual.|  
+|*mode*|[in] Un [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valor que especifica el modo de dibujo actual.|  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

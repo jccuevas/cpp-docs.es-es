@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 142b88cf58369f09be4e06ed47fef94b845dfe71
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200351"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726029"
 ---
 # <a name="hashset-class"></a>hash_set (Clase)
 
@@ -122,13 +122,13 @@ class hash_set
 ### <a name="parameters"></a>Parámetros
 
 *Key*<br/>
- Tipo de datos de elemento que se almacenará en hash_set.
+Tipo de datos de elemento que se almacenará en hash_set.
 
 *Rasgos*<br/>
- Tipo que incluye dos objetos de función, uno de clase que es comparar un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es una clave asignación predicado unario valores de los elementos en tipos sin signo enteros de tipo `size_t`. Este argumento es opcional y `hash_compare<Key, less<Key> >` es el valor predeterminado.
+Tipo que incluye dos objetos de función, uno de clase que es comparar un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es una clave asignación predicado unario valores de los elementos en tipos sin signo enteros de tipo `size_t`. Este argumento es opcional y `hash_compare<Key, less<Key> >` es el valor predeterminado.
 
 *Asignador*<br/>
- Tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria de hash_set. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
+Tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria de hash_set. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -563,7 +563,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- La clave de los elementos cuya coincidencia debe buscarse a partir del objeto hash_set.
+La clave de los elementos cuya coincidencia debe buscarse a partir del objeto hash_set.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1030,7 +1030,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
+Clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1117,16 +1117,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parámetros
 
 *_WHERE*<br/>
- Posición del elemento que se quita del hash_set.
+Posición del elemento que se quita del hash_set.
 
 *first*<br/>
- Posición del primer elemento que se quita del hash_set.
+Posición del primer elemento que se quita del hash_set.
 
 *Último*<br/>
- Posición inmediatamente siguiente al último elemento que se quita del hash_set.
+Posición inmediatamente siguiente al último elemento que se quita del hash_set.
 
 *key*<br/>
- Clave de los elementos que se van a quitar del hash_set.
+Clave de los elementos que se van a quitar del hash_set.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1235,7 +1235,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Clave de argumento que debe coincidir con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
+Clave de argumento que debe coincidir con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1661,7 +1661,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
+Clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2151,7 +2151,7 @@ void swap(hash_set& right);
 ### <a name="parameters"></a>Parámetros
 
 *right*<br/>
- Objeto hash_set de argumentos que proporciona los elementos que se van a intercambiar con el objeto hash_set de destino.
+Objeto hash_set de argumentos que proporciona los elementos que se van a intercambiar con el objeto hash_set de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2227,7 +2227,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
+Clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_set que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 

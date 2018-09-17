@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717799"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Colocar las funciones en orden)
 
@@ -39,7 +39,7 @@ Especificar el orden de vínculo de funciones de por separado empaquetadas (COMD
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*  
+*filename*<br/>
 Un archivo de texto que especifica el orden de vínculos de las funciones COMDAT.
 
 ## <a name="remarks"></a>Comentarios
@@ -83,5 +83,5 @@ El **/Order** opción deshabilita la vinculación incremental. Es posible que ve
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)  
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

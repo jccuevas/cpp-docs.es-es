@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103780"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704264"
 ---
 # <a name="f-set-stack-size"></a>/F (Establecer el tamaño de la pila)
+
 Establece el tamaño de pila del programa en bytes.
 
 ## <a name="syntax"></a>Sintaxis
@@ -47,9 +48,9 @@ Es posible que deba aumentar el tamaño de pila si el programa obtiene mensajes 
 
 También puede establecer el tamaño de pila:
 
--   Mediante el **/pila** opción del vinculador. Para obtener más información, consulte [/pila](../../build/reference/stack.md).
+- Mediante el **/pila** opción del vinculador. Para obtener más información, consulte [/pila](../../build/reference/stack.md).
 
--   En el archivo .exe, mediante EDITBIN. Para obtener más información, consulte [referencia de EDITBIN](../../build/reference/editbin-reference.md).
+- En el archivo .exe, mediante EDITBIN. Para obtener más información, consulte [referencia de EDITBIN](../../build/reference/editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
@@ -65,5 +66,5 @@ También puede establecer el tamaño de pila:
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)   
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

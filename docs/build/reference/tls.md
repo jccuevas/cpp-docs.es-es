@@ -1,5 +1,5 @@
 ---
-title: -TLS | Documentos de Microsoft
+title: -TLS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5e510f406ceae7508f9b84f99e7ab397d22f114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f485a783dbe8b5fe9a49ed3100754115bf50b8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373529"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714680"
 ---
 # <a name="tls"></a>/TLS
-Muestra la estructura IMAGE_TLS_DIRECTORY de un ejecutable.  
-  
-## <a name="remarks"></a>Comentarios  
- / TLS muestra los campos de la estructura TLS, así como las direcciones de las funciones de devolución de llamada TLS.  
-  
- Si un programa no usa almacenamiento local de subprocesos, su imagen no contendrá ninguna estructura TLS.  Vea [subproceso](../../cpp/thread.md) para obtener más información.  
-  
- IMAGE_TLS_DIRECTORY se define en winnt.h.  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+
+Muestra la estructura IMAGE_TLS_DIRECTORY de un archivo ejecutable.
+
+## <a name="remarks"></a>Comentarios
+
+/ TLS muestra los campos de la estructura TLS, así como las direcciones de las funciones de devolución de llamada TLS.
+
+Si un programa no utiliza almacenamiento local de subprocesos, su imagen no contendrá una estructura TLS.  Consulte [subproceso](../../cpp/thread.md) para obtener más información.
+
+IMAGE_TLS_DIRECTORY se define en winnt.h.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)

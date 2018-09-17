@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1435d5fc286349efb2d44eeba65c3ee2231d111f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703903"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un panel que se puede acoplar en un sitio de vinculación o incluir en un panel con fichas.  
@@ -332,14 +332,14 @@ virtual CDockablePane* AttachToTabWnd(
  [in] [out] *pTabControlBarAttachTo*  
  Especifica el panel de destino que asocia el panel actual a. El panel de destino debe ser un panel acoplable.  
   
- [in] *dockMethod*  
- Especifica el método de acoplamiento.  
+*dockMethod*<br/>
+[in] Especifica el método de acoplamiento.  
   
- [in] *bSetActive*  
- TRUE para activar el panel con pestañas después de la operación de adjuntar; en caso contrario, FALSE.  
+*bSetActive*<br/>
+[in] TRUE para activar el panel con pestañas después de la operación de adjuntar; en caso contrario, FALSE.  
   
- [out] *ppTabbedControlBar*  
- Contiene el panel con pestañas que da como resultado de la operación de adjuntar.  
+*ppTabbedControlBar*<br/>
+[out] Contiene el panel con pestañas que da como resultado de la operación de adjuntar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al panel actual, si no es un panel con pestañas; en caso contrario, un puntero en el panel con pestañas que da como resultado de la operación de adjuntar. El valor devuelto es NULL si no se puede adjuntar el panel actual, o si se produce un error.  
@@ -375,11 +375,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bStretch*  
- No usado.  
+*bStretch*<br/>
+[in] No se utiliza.  
   
- [in] *bHorz*  
- No usado.  
+*bHorz*<br/>
+[in] No se utiliza.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `CSize` objeto que contiene el tamaño del rectángulo de panel.  
@@ -392,8 +392,8 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMiniFrame*  
- Puntero a un `CPaneFrameWnd` objeto.  
+*pMiniFrame*<br/>
+[in] Puntero a un `CPaneFrameWnd` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si *pMiniFrame* se puede acoplar al panel; en caso contrario, FALSE.  
@@ -406,8 +406,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Especifica el panel para acoplar el panel actual.  
+*pBar*<br/>
+[in] Especifica el panel para acoplar el panel actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se puede acoplar el panel especificado a este panel; en caso contrario, FALSE.  
@@ -469,8 +469,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bActiveTabOnly*  
- Al convertir un `CTabbedPane`, especifique "true" para convertir sólo la pestaña activa. Especifique FALSE para convertir todas las pestañas en el panel.  
+*bActiveTabOnly*<br/>
+[in] Al convertir un `CTabbedPane`, especifique "true" para convertir sólo la pestaña activa. Especifique FALSE para convertir todas las pestañas en el panel.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
  Determina si el panel de acoplamiento está oculto (también conocido como modo de ocultación automática).  
@@ -495,8 +495,8 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bDirection*  
- TRUE si el panel está visible; FALSE si el panel está oculto.  
+*bDirection*<br/>
+[in] TRUE si el panel está visible; FALSE si el panel está oculto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se cumple la condición de detención; en caso contrario, FALSE.  
@@ -514,8 +514,8 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pOrgBar*  
- Un puntero a un panel acoplable.  
+*pOrgBar*<br/>
+[in] Un puntero a un panel acoplable.  
   
 ### <a name="remarks"></a>Comentarios  
  `CDockablePane::CopyState` copia el estado de *pOrgBar* al panel actual mediante una llamada a los métodos siguientes:  
@@ -558,38 +558,38 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszCaption*  
- Especifica el nombre de la ventana.  
+*lpszCaption*<br/>
+[in] Especifica el nombre de la ventana.  
   
  [in] [out] *pParentWnd*  
  Especifica la ventana primaria.  
   
- [in] *rect*  
- Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.  
+*Rect*<br/>
+[in] Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE para crear el panel con un título; en caso contrario, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE para crear el panel con un título; en caso contrario, FALSE.  
   
- [in] *nID*  
- Especifica el identificador de la ventana secundaria. Este valor debe ser único si desea guardar el estado de acoplamiento para este panel de acoplamiento.  
+*nID*<br/>
+[in] Especifica el identificador de la ventana secundaria. Este valor debe ser único si desea guardar el estado de acoplamiento para este panel de acoplamiento.  
   
- [in] *dwStyle*  
- Especifica los atributos de estilo de ventana.  
+*dwStyle*<br/>
+[in] Especifica los atributos de estilo de ventana.  
   
- [in] *dwTabbedStyle*  
- Especifica el estilo de una ventana con pestañas que se crea cuando el usuario arrastra un panel en el título de este panel con pestañas.  
+*dwTabbedStyle*<br/>
+[in] Especifica el estilo de una ventana con pestañas que se crea cuando el usuario arrastra un panel en el título de este panel con pestañas.  
   
- [in] *dwControlBarStyle*  
- Especifica los atributos de estilo adicionales.  
+*dwControlBarStyle*<br/>
+[in] Especifica los atributos de estilo adicionales.  
   
  [in] [out] *pContext*  
  Especifica el contexto de creación de la ventana.  
   
- [in] *lpszWindowName*  
- Especifica el nombre de la ventana.  
+*lpszWindowName*<br/>
+[in] Especifica el nombre de la ventana.  
   
- [in] *sizeDefault*  
- Especifica el tamaño de la ventana.  
+*sizeDefault*<br/>
+[in] Especifica el tamaño de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel acoplable se haya creado correctamente; en caso contrario, FALSE.  
@@ -612,14 +612,14 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwAlignment*  
- Especifica el lado del marco principal a la que se está acoplando el panel. Si *dwAlignment* contiene la marca CBRS_ALIGN_LEFT o CBRS_ALIGN_RIGHT, este método crea una vertical (`CPaneDivider::SS_VERT`) separador; en caso contrario, este método crea una horizontal (`CPaneDivider::SS_HORZ`) divisor.  
+*dwAlignment*<br/>
+[in] Especifica el lado del marco principal a la que se está acoplando el panel. Si *dwAlignment* contiene la marca CBRS_ALIGN_LEFT o CBRS_ALIGN_RIGHT, este método crea una vertical (`CPaneDivider::SS_VERT`) separador; en caso contrario, este método crea una horizontal (`CPaneDivider::SS_HORZ`) divisor.  
   
- [in] *pParent*  
- Puntero al marco primario.  
+*pParent*<br/>
+[in] Puntero al marco primario.  
   
- [in] *pSliderRTC*  
- No usado.  
+*pSliderRTC*<br/>
+[in] No se utiliza.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Este método devuelve un puntero al divisor recién creada, o NULL si se produce un error en la creación del divisor.  
@@ -652,32 +652,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwStyleEx*  
- Especifica los atributos de estilo extendido de la nueva ventana.  
+*dwStyleEx*<br/>
+[in] Especifica los atributos de estilo extendido de la nueva ventana.  
   
- [in] *lpszCaption*  
- Especifica el nombre de la ventana.  
+*lpszCaption*<br/>
+[in] Especifica el nombre de la ventana.  
   
  [in] [out] *pParentWnd*  
  Especifica la ventana primaria.  
   
- [in] *rect*  
- Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.  
+*Rect*<br/>
+[in] Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE para crear el panel con un título; en caso contrario, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE para crear el panel con un título; en caso contrario, FALSE.  
   
- [in] *nID*  
- Especifica el identificador de la ventana secundaria. Este valor debe ser único si desea guardar el estado de acoplamiento para este panel de acoplamiento.  
+*nID*<br/>
+[in] Especifica el identificador de la ventana secundaria. Este valor debe ser único si desea guardar el estado de acoplamiento para este panel de acoplamiento.  
   
- [in] *dwStyle*  
- Especifica los atributos de estilo de ventana.  
+*dwStyle*<br/>
+[in] Especifica los atributos de estilo de ventana.  
   
- [in] *dwTabbedStyle*  
- Especifica el estilo de una ventana con pestañas que se crea cuando el usuario arrastra un panel en el título de este panel con pestañas.  
+*dwTabbedStyle*<br/>
+[in] Especifica el estilo de una ventana con pestañas que se crea cuando el usuario arrastra un panel en el título de este panel con pestañas.  
   
- [in] *dwControlBarStyle*  
- Especifica los atributos de estilo adicionales.  
+*dwControlBarStyle*<br/>
+[in] Especifica los atributos de estilo adicionales.  
   
  [in] [out] *pContext*  
  Especifica el contexto de creación de la ventana.  
@@ -720,14 +720,14 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *barContainerManager*  
- Una referencia al administrador de contenedor del contenedor que se está acoplando.  
+*barContainerManager*<br/>
+[in] Una referencia al administrador de contenedor del contenedor que se está acoplando.  
   
- [in] *dwAlignment*  
- DWORD que especifica el lado del panel al que se está acoplando el contenedor.  
+*dwAlignment*<br/>
+[in] DWORD que especifica el lado del panel al que se está acoplando el contenedor.  
   
- [in] *dockMethod*  
- No usado.  
+*dockMethod*<br/>
+[in] No se utiliza.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el contenedor correctamente se acopla al panel; en caso contrario, FALSE.  
@@ -750,8 +750,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bWasDocked*  
- Cuando el método devuelve, este valor contiene TRUE si el panel se acopla correctamente; en caso contrario, contiene FALSE.  
+*bWasDocked*<br/>
+[in] Cuando el método devuelve, este valor contiene TRUE si el panel se acopla correctamente; en caso contrario, contiene FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si el panel se acopla a una ventana con pestañas, o si una ventana con pestañas que se creó como resultado de acoplamiento, este método devuelve un puntero a la ventana con pestañas. Si el panel era en caso contrario, acoplada correctamente, este método devuelve el **esto** puntero. Si no se pudo acoplamiento, este método devuelve NULL.  
@@ -783,11 +783,11 @@ virtual BOOL DockToWindow(
  [in] [out] *pTargetWindow*  
  Especifica el panel acoplable para acoplar este panel a.  
   
- [in] *dwAlignment*  
- Especifica la alineación del panel de acoplamiento. Puede ser uno de CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM o CBRS_ALIGN_ANY. (Definidos en afxres.h).  
+*dwAlignment*<br/>
+[in] Especifica la alineación del panel de acoplamiento. Puede ser uno de CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM o CBRS_ALIGN_ANY. (Definidos en afxres.h).  
   
- [in] *lpRect*  
- Especifica el rectángulo para el panel de acoplamiento.  
+*lpRect*<br/>
+[in] Especifica el rectángulo para el panel de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel se acopla correctamente; en caso contrario, FALSE.  
@@ -805,11 +805,11 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Representa el contexto de dispositivo que se usa para dibujar.  
+*pDC*<br/>
+[in] Representa el contexto de dispositivo que se usa para dibujar.  
   
- [in] *rectCaption*  
- Especifica el rectángulo delimitador del título del panel.  
+*rectCaption*<br/>
+[in] Especifica el rectángulo delimitador del título del panel.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco llama a este método para dibujar el título de un panel acoplable.  
@@ -824,8 +824,8 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar la opción Ocultar automáticamente todas las características del panel acoplable; en caso contrario, FALSE.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar la opción Ocultar automáticamente todas las características del panel acoplable; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando un usuario mantiene el **Ctrl** clave y hace clic en el botón de anclaje para cambiar un panel a modo de ocultación automática, todos los demás paneles en el mismo contenedor también se puede cambiar al modo de ocultación automática.  
@@ -840,8 +840,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar el título; en caso contrario, FALSE.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar el título; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando el marco de trabajo crea paneles acoplables, no tienen el estilo de ventana WS_STYLE, incluso si se especifica. Esto significa que el título del panel es un área de no cliente se controla mediante el marco de trabajo, pero difiere de esta área de título de ventana estándar.  
@@ -908,11 +908,11 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pt*  
- La ubicación del puntero en coordenadas de pantalla.  
+*PT*<br/>
+[in] La ubicación del puntero en coordenadas de pantalla.  
   
- [in] *nSensitivity*  
- La distancia, en píxeles, de lejos del borde de un rectángulo el puntero debe ser para habilitar el acoplamiento.  
+*nSensitivity*<br/>
+[in] La distancia, en píxeles, de lejos del borde de un rectángulo el puntero debe ser para habilitar el acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los valores de estado siguientes:  
@@ -964,11 +964,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rectTabAreaTop*  
- `GetTabArea` rellena esta variable con el área de pestañas, si se encuentran en la parte superior del panel de pestañas. Si las pestañas se encuentran en la parte inferior del panel, esta variable se rellena con un rectángulo vacío.  
+*rectTabAreaTop*<br/>
+[in] `GetTabArea` rellena esta variable con el área de pestañas, si se encuentran en la parte superior del panel de pestañas. Si las pestañas se encuentran en la parte inferior del panel, esta variable se rellena con un rectángulo vacío.  
   
- [in] *rectTabAreaBottom*  
- `GetTabArea` rellena esta variable con el área de pestañas, si se encuentran en la parte inferior del panel de pestañas. Si se encuentra en la parte superior del panel de pestañas, esta variable se rellena con un rectángulo vacío.  
+*rectTabAreaBottom*<br/>
+[in] `GetTabArea` rellena esta variable con el área de pestañas, si se encuentran en la parte inferior del panel de pestañas. Si se encuentra en la parte superior del panel de pestañas, esta variable se rellena con un rectángulo vacío.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método solo se usa en las clases que se derivan de `CDockablePane` y tiene pestañas. Para obtener más información, consulte [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) y [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
@@ -1011,11 +1011,11 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Especifica el punto de prueba.  
+*punto*<br/>
+[in] Especifica el punto de prueba.  
   
- [in] *bDetectCaption*  
- TRUE si se deben devolver HTCAPTION si el punto está en el título del panel; en caso contrario, FALSE.  
+*bDetectCaption*<br/>
+[in] TRUE si se deben devolver HTCAPTION si el punto está en el título del panel; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los siguientes valores:  
@@ -1228,11 +1228,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndNewParent*  
- Un puntero a la nueva ventana primaria.  
+*pWndNewParent*<br/>
+[in] Un puntero a la nueva ventana primaria.  
   
- [in] *bDelay*  
- Valor booleano que especifica si se debe retrasar el recálculo del diseño de acoplamiento si el panel está desacoplado. Para obtener más información, consulte [CDockablePane::UndockPane](#undockpane).  
+*bDelay*<br/>
+[in] Valor booleano que especifica si se debe retrasar el recálculo del diseño de acoplamiento si el panel está desacoplado. Para obtener más información, consulte [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Comentarios  
  Si el panel está acoplado y el nuevo elemento primario no permitir el acoplamiento, este método desacopla el panel.  
@@ -1249,11 +1249,11 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *rectFloat*  
- Especifica la posición y tamaño del panel cuando se encuentra en un estado flotante.  
+*rectFloat*<br/>
+[in] Especifica la posición y tamaño del panel cuando se encuentra en un estado flotante.  
   
- [in] *dockMethod*  
- Especifica el método de acoplamiento. Consulte [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obtener una lista de valores posibles.  
+*dockMethod*<br/>
+[in] Especifica el método de acoplamiento. Consulte [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obtener una lista de valores posibles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel puede flotar; en caso contrario, FALSE.  
@@ -1269,8 +1269,8 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nHit*  
- Este parámetro no se utiliza.  
+*nHit*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  Si agrega un botón personalizado con el título de un panel acoplable, invalide este método para recibir notificaciones cuando un usuario presiona el botón.  
@@ -1283,8 +1283,8 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSlideOut*  
- TRUE para mostrar el panel. FALSE para ocultar el panel.  
+*bSlideOut*<br/>
+[in] TRUE para mostrar el panel. FALSE para ocultar el panel.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar los efectos personalizados de ocultar automáticamente.  
@@ -1310,14 +1310,14 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBarToReplaceWith*  
- Un puntero a un panel acoplable.  
+*pBarToReplaceWith*<br/>
+[in] Un puntero a un panel acoplable.  
   
- [in] *dockMethod*  
- No usado.  
+*dockMethod*<br/>
+[in] No se utiliza.  
   
- [in] *bRegisterWithFrame*  
- Si es TRUE, el nuevo panel está registrado con el Administrador de acoplamiento del elemento primario del panel anterior. El nuevo panel se inserta en el índice de la sección anterior en la lista de paneles que se mantiene mediante el Administrador de acoplamiento.  
+*bRegisterWithFrame*<br/>
+[in] Si es TRUE, el nuevo panel está registrado con el Administrador de acoplamiento del elemento primario del panel anterior. El nuevo panel se inserta en el índice de la sección anterior en la lista de paneles que se mantiene mediante el Administrador de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el reemplazo se realiza correctamente; en caso contrario, FALSE.  
@@ -1344,17 +1344,17 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMode*  
- TRUE para habilitar el modo de ocultación automática; FALSE para habilitar el modo normal de acoplamiento.  
+*bMode*<br/>
+[in] TRUE para habilitar el modo de ocultación automática; FALSE para habilitar el modo normal de acoplamiento.  
   
- [in] *dwAlignment*  
- Especifica la alineación del panel para crear la opción Ocultar automáticamente.  
+*dwAlignment*<br/>
+[in] Especifica la alineación del panel para crear la opción Ocultar automáticamente.  
   
  [in] [out] *pCurrAutoHideBar*  
  Un puntero a la barra de herramientas de ocultación automática actual. Puede ser NULL.  
   
- [in] *bUseTimer*  
- Especifica si utilizar el efecto de ocultar automáticamente cuando el usuario activa el panel en modo de ocultación automática u ocultar el panel inmediatamente.  
+*bUseTimer*<br/>
+[in] Especifica si utilizar el efecto de ocultar automáticamente cuando el usuario activa el panel en modo de ocultación automática u ocultar el panel inmediatamente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La barra de herramientas de ocultación automática que se creó como resultado de cambiar al modo de ocultación automática, o NULL.  
@@ -1374,11 +1374,11 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pToolBar*  
- Puntero a una barra de herramientas de ocultación automática.  
+*pToolBar*<br/>
+[in] Puntero a una barra de herramientas de ocultación automática.  
   
- [in] *pBtn*  
- Puntero a un botón de ocultación automática.  
+*pBtn*<br/>
+[in] Puntero a un botón de ocultación automática.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
  Establece el porcentaje de espacio que ocupa un panel en su contenedor.  
@@ -1388,8 +1388,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *n*  
- Un **int** que especifica el porcentaje de espacio que ocupa el panel en su contenedor.  
+*n*<br/>
+[in] Un **int** que especifica el porcentaje de espacio que ocupa el panel en su contenedor.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo ajusta el panel para utilizar el nuevo valor cuando se vuelve a calcular el diseño.  
@@ -1402,8 +1402,8 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hRestoredSlider*  
- Identificador de un divisor de panel (control deslizante).  
+*hRestoredSlider*<br/>
+[in] Identificador de un divisor de panel (control deslizante).  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando se deserializa un panel, se obtiene un divisor de paneles predeterminada restaurada. Para obtener más información, consulte [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
@@ -1416,8 +1416,8 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pRTC*  
- La información de clase en tiempo de ejecución para el panel con pestañas.  
+*pRTC*<br/>
+[in] La información de clase en tiempo de ejecución para el panel con pestañas.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para establecer la información de clase en tiempo de ejecución para los paneles con pestañas que se crean dinámicamente. Esto puede ocurrir cuando un usuario arrastra un panel con el título de otro panel, o si se llama a la [CDockablePane:: Attachtotabwnd](#attachtotabwnd) método para crear un panel con fichas mediante programación desde dos paneles acoplables.  
@@ -1443,14 +1443,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- TRUE para mostrar el panel. FALSE para ocultar el panel.  
+*bMostrar*<br/>
+[in] TRUE para mostrar el panel. FALSE para ocultar el panel.  
   
- [in] *bDelay*  
- True para retrasar ajustar el diseño de acoplamiento FALSE para ajustar el diseño de acoplamiento inmediatamente.  
+*bDelay*<br/>
+[in] True para retrasar ajustar el diseño de acoplamiento FALSE para ajustar el diseño de acoplamiento inmediatamente.  
   
- [in] *bActivate*  
- TRUE para activar el panel al que se muestra; en caso contrario, FALSE.  
+*bActivate*<br/>
+[in] TRUE para activar el panel al que se muestra; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método en lugar de la [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) al mostrar u ocultar paneles acoplables.  
@@ -1465,11 +1465,11 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSlideOut*  
- TRUE para mostrar el panel. FALSE para ocultar el panel.  
+*bSlideOut*<br/>
+[in] TRUE para mostrar el panel. FALSE para ocultar el panel.  
   
- [in] *bUseTimer*  
- TRUE para mostrar u ocultar el panel con el efecto de ocultar automáticamente; FALSE para mostrar u ocultar el panel de inmediato.  
+*bUseTimer*<br/>
+[in] TRUE para mostrar u ocultar el panel con el efecto de ocultar automáticamente; FALSE para mostrar u ocultar el panel de inmediato.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco llama a este método para animar un panel que está en modo de ocultación automática.  
@@ -1494,8 +1494,8 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bDelay*  
- True para retrasar calculando el diseño de acoplamiento FALSE para volver a calcular el diseño de acoplamiento inmediatamente.  
+*bDelay*<br/>
+[in] True para retrasar calculando el diseño de acoplamiento FALSE para volver a calcular el diseño de acoplamiento inmediatamente.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para desacoplar un panel desde la ventana de marco principal o desde un contenedor de ventana de marco reducido el multi (es decir, un panel que está flotando en una ventana de marco reducido único con otros paneles).  

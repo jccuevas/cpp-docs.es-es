@@ -1,5 +1,5 @@
 ---
-title: crítico | Documentos de Microsoft
+title: crítico | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716955"
 ---
 # <a name="critical"></a>critical
-Especifica que el código es solo pueden ejecutar en un subproceso a la vez.  
+Especifica que código se solo se ejecuta en un subproceso a la vez.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,16 +35,15 @@ Especifica que el código es solo pueden ejecutar en un subproceso a la vez.
 }  
 ```  
   
+## <a name="arguments"></a>Argumentos
+
+*name*<br/>
+(Opcional) Un nombre para identificar el código crítico. Tenga en cuenta que ese nombre debe ir entre paréntesis.  
+  
 ## <a name="remarks"></a>Comentarios  
- donde,  
+ El **críticos** directiva es compatible con ningún cláusulas de OpenMP.  
   
- (`name`) (opcional)  
- Un nombre para identificar el código crítico. Tenga en cuenta que este nombre debe incluirse entre paréntesis.  
-  
-## <a name="remarks"></a>Comentarios  
- El **crítico** directiva es compatible con ningún cláusulas de OpenMP.  
-  
- Para obtener más información, consulte [2.6.2 crítico construir](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Para obtener más información, consulte [2.6.2 críticos construir](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
 ## <a name="example"></a>Ejemplo  
   

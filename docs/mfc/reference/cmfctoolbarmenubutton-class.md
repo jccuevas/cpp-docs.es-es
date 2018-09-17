@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765936"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721726"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton (clase)
 Un botón de la barra de herramientas que contiene un menú emergente.  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *src*  
- Existente `CMFCToolBarMenuButton` objeto que se copiará en esto `CMFCToolBarMenuButton` objeto.  
+*src*<br/>
+[in] Existente `CMFCToolBarMenuButton` objeto que se copiará en esto `CMFCToolBarMenuButton` objeto.  
   
- [in] *uiID*  
- El identificador del comando que se ejecutará cuando un usuario hace clic en el botón; o -1 (UINT) para un botón de menú que no ejecute un comando directamente.  
+*uiID*<br/>
+[in] El identificador del comando que se ejecutará cuando un usuario hace clic en el botón; o -1 (UINT) para un botón de menú que no ejecute un comando directamente.  
   
- [in] *hMenu*  
- Un identificador de un menú; o NULL si el botón no tiene un menú.  
+*hMenu*<br/>
+[in] Un identificador de un menú; o NULL si el botón no tiene un menú.  
   
- [in] *iImage*  
- Índice de la imagen del botón; o -1 si este botón no tiene un icono o utiliza el icono para el comando especificado por *uiID*. El índice es el mismo para cada `CMFCToolBarImages` objeto en la aplicación.  
+*iImage*<br/>
+[in] Índice de la imagen del botón; o -1 si este botón no tiene un icono o utiliza el icono para el comando especificado por *uiID*. El índice es el mismo para cada `CMFCToolBarImages` objeto en la aplicación.  
   
- [in] *lpszText*  
- El texto del botón de menú de barra de herramientas.  
+*lpszText*<br/>
+[in] El texto del botón de menú de barra de herramientas.  
   
- [in] *bUserButton*  
- TRUE si el botón muestra una imagen definido por el usuario; FALSE si el botón muestra una imagen predefinida asociada con el comando especificado por *uiID*.  
+*bUserButton*<br/>
+[in] TRUE si el botón muestra una imagen definido por el usuario; FALSE si el botón muestra una imagen predefinida asociada con el comando especificado por *uiID*.  
   
 ### <a name="remarks"></a>Comentarios  
  Si *uiID* sirve un identificador de comando, el botón realiza ese comando cuando el usuario hace clic en él. Si *hMenu* es un identificador válido de menú, el botón proporciona un menú desplegable cuando aparece en una barra de herramientas o un submenú cuando aparece en un menú. Si ambos *uiID* y *hMenu* son válidos, el botón es un botón de expansión con una parte que realizará el comando cuando el usuario hace clic en él y una parte con una flecha hacia abajo que se desplegable un menú cuando el usuario hace clic en él. Sin embargo, si *hMenu* es válido, un usuario no podrá hacer clic en el botón para ejecutar un comando cuando el botón se inserta en un menú.  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hMenu*  
- Identificador de un menú.  
+*hMenu*<br/>
+[in] Identificador de un menú.  
   
 ### <a name="remarks"></a>Comentarios  
  Un botón de menú de la barra de herramientas puede mostrar un submenú de la lista desplegable.  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Un puntero al contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero al contexto de dispositivo.  
   
- [in] *rectImage*  
- Coordenadas de la imagen del rectángulo delimitador.  
+*rectImage*<br/>
+[in] Coordenadas de la imagen del rectángulo delimitador.  
   
- [in] *hIcon*  
- Un identificador del icono.  
+*hIcon*<br/>
+[in] Un identificador del icono.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método toma un icono de documento y lo dibuja en el botón de menú, centrado en el área especificada por *rectImage*.  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rectImage*  
- Una referencia a un `CRect` objeto que recibe las coordenadas de la imagen del rectángulo delimitador.  
+*rectImage*<br/>
+[out] Una referencia a un `CRect` objeto que recibe las coordenadas de la imagen del rectángulo delimitador.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Devuelve el número de filas en el menú desplegable cuando el menú está en modo de paleta.  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- [in] *sizeDefault*  
+*pDC*<br/>
+[in] [in] *sizeDefault*  
  [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- [in] *bDelay*  
+*conquistado*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- [in] *rect*  
- [in] *pImages*  
- [in] *bHorz*  
- [in] *bCustomizeMode*  
- [in] *bHighlight*  
- [in] *bDrawBorder*  
- [in] *bGrayDisabledButtons*  
+*pDC*<br/>
+[in] [in] *rect*  
+*pImages*<br/>
+[in] [in] *bHorz*  
+*bCustomizeMode*<br/>
+[in] [in] *bHighlight*  
+*bDrawBorder*<br/>
+[in] [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
  [in] *bSelected*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Especifica la ventana que recibe los comandos de menú desplegable. Puede ser NULL solo si el botón de menú de la barra de herramientas tiene una ventana primaria.  
+*conquistado*<br/>
+[in] Especifica la ventana que recibe los comandos de menú desplegable. Puede ser NULL solo si el botón de menú de la barra de herramientas tiene una ventana primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si un [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md) objeto se creó y se abrió correctamente; en caso contrario, FALSE.  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMenuOnly*  
- TRUE para mostrar este botón como un botón de menú cuando tiene un identificador de comando válido y un submenú, FALSE para mostrar este botón como un botón de expansión cuando tiene un identificador de comando válido y un submenú.  
+*bMenuOnly*<br/>
+[in] TRUE para mostrar este botón como un botón de menú cuando tiene un identificador de comando válido y un submenú, FALSE para mostrar este botón como un botón de expansión cuando tiene un identificador de comando válido y un submenú.  
   
 ### <a name="remarks"></a>Comentarios  
  Normalmente, cuando un botón de menú de la barra de herramientas tiene un submenú y un identificador de comando, el menú aparece como un botón de expansión que tiene un botón principal y un botón de flecha abajo. Si se llama a este método y *bMenuOnly* es TRUE, el botón en su lugar aparece como un botón de menú único con una flecha hacia abajo en el botón. Cuando el usuario hace clic en la flecha en cualquier modo, se abre el submenú y, cuando el usuario hace clic en la parte no flecha abajo del botón en cualquier modo, el marco ejecuta el comando.  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMenuPaletteMode*  
- Especifica si el menú desplegable está en modo de paleta.  
+*bMenuPaletteMode*<br/>
+[in] Especifica si el menú desplegable está en modo de paleta.  
   
- [in] *nPaletteRows*  
- Número de filas en la paleta.  
+*nPaletteRows*<br/>
+[in] Número de filas en la paleta.  
   
 ### <a name="remarks"></a>Comentarios  
  En el modo de paleta, se muestran todos los elementos de menú como una paleta de varias columnas. Especificar el número de filas mediante *nPaletteRows*.  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiBarID*  
- Especifica un nuevo desplazable Id. de barra  
+*uiBarID*<br/>
+[in] Especifica un nuevo desplazable Id. de barra  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para especificar el identificador de la barra desplazable que se crea cuando el usuario arrastra el botón de menú fuera de una barra de menús. Si el *uiBarID* parámetro es 0, el usuario no puede arrancar en el botón de menú.  

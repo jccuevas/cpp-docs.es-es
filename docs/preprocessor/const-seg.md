@@ -1,7 +1,7 @@
 ---
 title: const_seg | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540673"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705216"
 ---
 # <a name="constseg"></a>const_seg
 Especifica el segmento donde [const](../cpp/const-cpp.md) las variables se almacenan en el archivo .obj.  
@@ -34,33 +34,35 @@ Especifica el segmento donde [const](../cpp/const-cpp.md) las variables se almac
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- 
+### <a name="parameters"></a>Parámetros
+
+**push**<br/>
+(Opcional) Inserta un registro en la pila interna del compilador. Un **inserción** puede tener un *identificador* y *nombre de segmento*.  
+  
+**pop**<br/>
+(Opcional) Quita un registro de la parte superior de la pila interna del compilador.  
+  
+*identifier*<br/>
+(Opcional) Cuando se usa con **inserción**, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con **pop**, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
+  
+Uso de *identificador* permite varios registros que se saque con una sola **pop** comando.  
+  
+"*nombre de segmento*"<br/>  
+(Opcional) El nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.  
+  
+"*clase de segmento*"<br/>
+(Opcional) Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.  
+  
+## <a name="remarks"></a>Comentarios
+
 El significado de los términos *segmento* y *sección* son intercambiables en este tema.  
   
 Archivos OBJ pueden verse con el [dumpbin](../build/reference/dumpbin-command-line.md) aplicación. El segmento predeterminado en el archivo .obj para las variables `const` es .rdata. Algunas variables `const`, como las escalares, se alinean automáticamente en la secuencia de código. El código alineado no aparecerá en .rdata.  
   
 Definir un objeto que requiera una inicialización dinámica en un `const_seg` produce un comportamiento no definido.  
   
-`#pragma const_seg` sin parámetros restablece el segmento en .rdata.  
-  
-*inserción* (opcional)  
-Inserta un registro en la pila interna del compilador. Un *inserción* puede tener un *identificador* y *nombre de segmento*.  
-  
-*POP* (opcional)  
-Quita un registro de la parte superior de la pila interna del compilador.  
-  
-*identificador* (opcional)  
-Cuando se usa con *inserción*, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con *pop*, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
-  
-Uso de *identificador* permite varios registros que se saque con una sola *pop* comando.  
-  
-"*nombre de segmento*" (opcional)  
-Nombre de un segmento. Cuando se usa con *pop*, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.  
-  
-"*clase de segmento*" (opcional)  
-Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.  
-  
+`#pragma const_seg` sin parámetros restablece el segmento en .rdata.
+
 ## <a name="example"></a>Ejemplo  
   
 ```cpp  

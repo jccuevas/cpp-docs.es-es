@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336231"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724833"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager (clase)
 Una capa entre administradores visuales derivados y la API de tema de Windows.  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Un puntero a un contexto de dispositivo  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo  
   
- [in] *rect*  
- El rectángulo delimitador de la casilla de verificación.  
+*Rect*<br/>
+[in] El rectángulo delimitador de la casilla de verificación.  
   
- [in] *bHighlighted*  
- Especifica si la casilla de verificación está resaltada.  
+*bHighlighted*<br/>
+[in] Especifica si la casilla de verificación está resaltada.  
   
- [in] *nState*  
- 0 para no está activada, 1 para activado normal,  
+*nState*<br/>
+[in] 0 para no está activada, 1 para activado normal,  
   
  2 para mixto normal.  
   
- [in] *bHabilitado*  
- Especifica si la casilla de verificación está habilitada.  
+*bHabilitado*<br/>
+[in] Especifica si la casilla de verificación está habilitada.  
   
- [in] *bPressed*  
- Especifica si la casilla de verificación está presionada.  
+*bPressed*<br/>
+[in] Especifica si la casilla de verificación está presionada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si está habilitada la API de tema; en caso contrario, FALSE.  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- Rectángulo del borde de cuadro combinado.  
+*Rect*<br/>
+[in] Rectángulo del borde de cuadro combinado.  
   
- [in] *bDeshabilitado*  
- Especifica si el borde del cuadro combinado está deshabilitado.  
+*bDeshabilitado*<br/>
+[in] Especifica si el borde del cuadro combinado está deshabilitado.  
   
- [in] *bIsDropped*  
- Especifica si se quita el borde del cuadro combinado.  
+*bIsDropped*<br/>
+[in] Especifica si se quita el borde del cuadro combinado.  
   
- [in] *bIsHighlighted*  
- Especifica si se resalta el borde del cuadro combinado.  
+*bIsHighlighted*<br/>
+[in] Especifica si se resalta el borde del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si está habilitada la API de tema; en caso contrario, FALSE.  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] *pDC*|Puntero a un contexto de dispositivo.|  
-|[in] *rect*|El rectángulo delimitador del botón de lista desplegable de cuadro combinado.|  
-|[in] *bDeshabilitado*|Especifica si el botón de lista desplegable del cuadro combinado está deshabilitado.|  
-|[in] *bIsDropped*|Especifica si el botón de lista desplegable del cuadro combinado está desplegado.|  
-|[in] *bIsHighlighted*|Especifica si se resalta el botón de lista desplegable del cuadro combinado.|  
+|*pDC*|[in] Un puntero a un contexto de dispositivo.|  
+|*Rect*|[in] El rectángulo delimitador del botón de lista desplegable de cuadro combinado.|  
+|*bDeshabilitado*|[in] Especifica si el botón de lista desplegable del cuadro combinado está deshabilitado.|  
+|*bIsDropped*|[in] Especifica si el botón de lista desplegable del cuadro combinado está desplegado.|  
+|*bIsHighlighted*|[in] Especifica si se resalta el botón de lista desplegable del cuadro combinado.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si está habilitada la API de tema; en caso contrario, FALSE.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- El rectángulo delimitador del botón de inserción.  
+*Rect*<br/>
+[in] El rectángulo delimitador del botón de inserción.  
   
- [in] *pButton*  
- Un puntero a la [CMFCButton (clase)](../../mfc/reference/cmfcbutton-class.md) objeto que se va a dibujar.  
+*pButton*<br/>
+[in] Un puntero a la [CMFCButton (clase)](../../mfc/reference/cmfcbutton-class.md) objeto que se va a dibujar.  
   
- [in] *uiState*  
- ignorado. El estado se toma del *pButton*.  
+*uiState*<br/>
+[in] Pasa por alto. El estado se toma del *pButton*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si está habilitada la API de tema; en caso contrario, FALSE.  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- El rectángulo delimitador del botón de radio.  
+*Rect*<br/>
+[in] El rectángulo delimitador del botón de radio.  
   
- [in] *bHighlighted*  
- Especifica si se resalta el botón de radio.  
+*bHighlighted*<br/>
+[in] Especifica si se resalta el botón de radio.  
   
- [in] *bChecked*  
- Especifica si se activa el botón de radio.  
+*bChecked*<br/>
+[in] Especifica si se activa el botón de radio.  
   
- [in] *bHabilitado*  
- Especifica si está habilitado el botón de radio.  
+*bHabilitado*<br/>
+[in] Especifica si está habilitado el botón de radio.  
   
- [in] *bPressed*  
- Especifica si se presiona el botón de radio.  
+*bPressed*<br/>
+[in] Especifica si se presiona el botón de radio.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si está habilitada la API de tema; en caso contrario, FALSE.  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *pStatusBar*  
- Un puntero a la barra de estado. Este valor se omite.  
+*pStatusBar*<br/>
+[in] Un puntero a la barra de estado. Este valor se omite.  
   
- [in] *rectProgress*  
- El rectángulo delimitador de la barra de progreso *pDC* coordenadas.  
+*rectProgress*<br/>
+[in] El rectángulo delimitador de la barra de progreso *pDC* coordenadas.  
   
- [in] *nProgressTotal*  
- El valor de progreso total.  
+*nProgressTotal*<br/>
+[in] El valor de progreso total.  
   
- [in] *nProgressCurr*  
- El valor de progreso actual.  
+*nProgressCurr*<br/>
+[in] El valor de progreso actual.  
   
- [in] *clrBar*  
- El color inicial. `CMFCBaseVisualManager` pasa por alto esto. Las clases derivadas pueden utilizarlo para degradados de color.  
+*clrBar*<br/>
+[in] El color inicial. `CMFCBaseVisualManager` pasa por alto esto. Las clases derivadas pueden utilizarlo para degradados de color.  
   
- [in] *clrProgressBarDest*  
- Color final. `CMFCBaseVisualManager` pasa por alto esto. Las clases derivadas pueden utilizarlo para degradados de color.  
+*clrProgressBarDest*<br/>
+[in] Color final. `CMFCBaseVisualManager` pasa por alto esto. Las clases derivadas pueden utilizarlo para degradados de color.  
   
- [in] *clrProgressText*  
- Color del texto de progreso. `CMFCBaseVisualManager` pasa por alto esto. El color del texto se define mediante `afxGlobalData.clrBtnText`.  
+*clrProgressText*<br/>
+[in] Color del texto de progreso. `CMFCBaseVisualManager` pasa por alto esto. El color del texto se define mediante `afxGlobalData.clrBtnText`.  
   
- [in] *bProgressText*  
- Especifica si se debe mostrar el texto de progreso.  
+*bProgressText*<br/>
+[in] Especifica si se debe mostrar el texto de progreso.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si está habilitada la API de tema; en caso contrario, FALSE.  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *pBar*  
- Un puntero a un panel cuyo fondo debe dibujarse.  
+*pBar*<br/>
+[in] Un puntero a un panel cuyo fondo debe dibujarse.  
   
- [in] *rectClient*  
- El rectángulo delimitador del área que se va a rellenar.  
+*rectClient*<br/>
+[in] El rectángulo delimitador del área que se va a rellenar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si está habilitada la API de tema; en caso contrario, FALSE.  

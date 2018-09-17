@@ -1,5 +1,5 @@
 ---
-title: Recomendaciones de optimización | Documentos de Microsoft
+title: Recomendaciones de optimización | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63d3437a08e3c8b69b564176e0f377566ab491e6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d224f2551de968cef5dea5698099ad564b7894fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704245"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717449"
 ---
 # <a name="optimization-best-practices"></a>Recomendaciones de optimización
 
@@ -32,30 +32,30 @@ En este documento se describen algunos procedimientos recomendados para la optim
 
 Visual C++ admite *optimización guiada por perfiles* (PGO). Esta optimización utiliza datos de perfil de ejecuciones de entrenamiento de una versión instrumentada de una aplicación para controlar la optimización posterior de la aplicación. La utilización de PGO puede ocupar mucho tiempo; por tanto, no lo deberían utilizar todos los desarrolladores, sino que se recomienda utilizar PGO para la versión de lanzamiento final de un producto. Para obtener más información, consulte [optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md).
 
-Además, *optimización de todo el programa* (también se conoce como generación de código de tiempo de vínculo) y la **/O1** y **/O2** se han mejorado las optimizaciones. En general, una aplicación compilada con una de estas opciones es más rápida que la misma aplicación compilada con un compilador anterior. 
+Además, *Whole Program Optimization* (también se conoce como generación de código de tiempo de vínculo) y la **/O1** y **/O2** se han mejorado las optimizaciones. En general, una aplicación compilada con una de estas opciones es más rápida que la misma aplicación compilada con un compilador anterior.
 
-Para obtener más información, consulte [/GL (optimización de todo el programa)](../../build/reference/gl-whole-program-optimization.md) y [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).
+Para obtener más información, consulte [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) y [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).
 
 ### <a name="which-level-of-optimization-to-use"></a>Qué nivel de optimización para usar
 
 Si es posible, las últimas versiones de lanzamiento se deberían compilar con las optimizaciones guiadas por perfiles. Si no es posible generar con PGO, ya sea debido a una infraestructura insuficiente para ejecutar las compilaciones instrumentadas, o bien por no tener acceso a los escenarios, se recomienda realizar la generación con la optimización de todo el programa.
 
-El **/Gy** conmutador también es muy útil. Genera un COMDAT independiente para cada función, dando más flexibilidad al vinculador cuando quita COMDAT sin referencia y plegamiento de COMDAT. La única desventaja de utilizar **/Gy** es que puede causar problemas al depurar. Por consiguiente, por lo general se recomienda utilizarlo. Para obtener más información, consulte [/Gy (Habilitar vinculación en el nivel de función)](../../build/reference/gy-enable-function-level-linking.md).
+El **/Gy** conmutador es también muy útil. Genera un COMDAT independiente para cada función, dando más flexibilidad al vinculador cuando quita COMDAT sin referencia y plegamiento de COMDAT. La única desventaja de utilizar **/Gy** es que puede causar problemas al depurar. Por consiguiente, por lo general se recomienda utilizarlo. Para obtener más información, consulte [/Gy (Habilitar vinculación en el nivel de función)](../../build/reference/gy-enable-function-level-linking.md).
 
-Para vincular en entornos de 64 bits, se recomienda utilizar la **/OPT: REF, ICF** opción del vinculador y en entornos de 32 bits, **/OPT: ref** se recomienda. Para obtener más información, consulte [especificación /OPT (optimizaciones)](../../build/reference/opt-optimizations.md).
+Para vincular en entornos de 64 bits, se recomienda usar la **/OPT: REF, ICF** opción del vinculador y en entornos de 32 bits, **/OPT: ref** se recomienda. Para obtener más información, consulte [/OPT (optimizaciones)](../../build/reference/opt-optimizations.md).
 
 También se recomienda encarecidamente generar símbolos de depuración, incluso con versiones de lanzamiento optimizadas. No afecta al código generado y facilita la depuración de la aplicación, si fuera necesario.
 
 ### <a name="floating-point-switches"></a>Modificadores de punto flotante
 
-El **/Op** se ha quitado la opción del compilador, y se han agregado las cuatro opciones del compilador siguientes que tratar con optimizaciones de punto flotante:
+El **/op.** ha quitado la opción del compilador, y se han agregado las siguientes cuatro opciones del compilador tratar con optimizaciones de punto flotante:
 
 |||
 |-|-|
 |**/ fp: precisa**|Ésta es la recomendación predeterminada y se debería utilizar en la mayoría de los casos.|
 |**/ fp: Fast**|Se recomienda si el rendimiento es de la máxima importancia; por ejemplo, en juegos. Dará como resultado un rendimiento mucho más rápido.|
 |**/ fp: strict**|Se recomienda si necesitan excepciones en punto flotante y si se desea el comportamiento IEEE. Dará como resultado el rendimiento más lento.|
-|**/ fp: except [-]**|Puede utilizarse junto con **/fp: strict** o **/fp: precisa**, pero no **/fp: Fast**.|
+|**/ fp: except [-]**|Se puede usar junto con **/fp: strict** o **/fp: precisa**, pero no **/fp: Fast**.|
 
 Para obtener más información, consulte [/fp (Especificar comportamiento de punto flotante)](../../build/reference/fp-specify-floating-point-behavior.md).
 
@@ -103,17 +103,17 @@ Otra directiva pragma útil para limitar la profundidad del procesamiento en lí
 
 ## <a name="restrict-and-assume"></a>__restrict y \__assume
 
-Hay un par de palabras clave en Visual C++ que puede mejorar el rendimiento: [__restrict](../../cpp/extension-restrict.md) y [__assume](../../intrinsics/assume.md).
+Hay un par de palabras clave en Visual C++ que pueden mejorar el rendimiento: [__restrict](../../cpp/extension-restrict.md) y [__assume](../../intrinsics/assume.md).
 
 En primer lugar, se debería tener en cuenta que `__restrict` y `__declspec(restrict)` son diferentes. Aunque están relacionadas de algún modo, su semántica es diferente. `__restrict` es un calificador de tipo, como `const` o `volatile`, pero exclusivamente para los tipos de puntero.
 
-Un puntero que se modifica con `__restrict` se conoce como un *puntero __restrict*. Un puntero __restrict es un puntero que solo sea accesible a través de la \__restringir puntero. En otras palabras, no se puede utilizar otro puntero para tener acceso a los datos señalados por el \__restringir puntero.
+Un puntero que se modifica con `__restrict` se conoce como un *puntero __restrict*. Un puntero __restrict es un puntero que solo se puede acceder a través de la \__restrict puntero. En otras palabras, no se puede usar otro puntero para tener acceso a los datos que apunta el \__restrict puntero.
 
 `__restrict` puede ser una herramienta eficaz para el optimizador de Visual C++, pero hay que utilizarla con cuidado. Si se utiliza incorrectamente, el optimizador podría realizar una optimización que interrumpiría su aplicación.
 
-El `__restrict` palabra clave reemplaza el **/Oa** cambiar desde versiones anteriores.
+El `__restrict` reemplaza la palabra clave el **/OA** cambiar desde versiones anteriores.
 
-Con `__assume`, un desarrollador puede indicar al compilador que haga suposiciones sobre el valor de una variable.
+Con `__assume`, un desarrollador puede indicar al compilador realizar suposiciones sobre el valor de alguna variable.
 
 Por ejemplo, `__assume(a < 5);` indica al optimizador que en esa línea de código la variable `a` es menor que 5. De nuevo, esto es una sugerencia para el compilador. Si `a` es realmente 6 es en este punto del programa, el comportamiento de este después de que el compilador haya realizado la optimización puede ser distinto de lo que se esperaba. `__assume` es más útil antes de cambiar instrucciones o expresiones condicionales.
 
@@ -131,7 +131,7 @@ Las funciones intrínsecas dan al programador la capacidad para profundizar en e
 
 - El código presenta las ventajas de las optimizaciones del compilador. A medida que el compilador mejora, también lo hace la generación de código para las funciones intrínsecas.
 
-Para obtener más información, consulte [funciones intrínsecas del compilador](../../intrinsics/compiler-intrinsics.md).
+Para obtener más información, consulte [intrínsecos del compilador](../../intrinsics/compiler-intrinsics.md).
 
 ## <a name="exceptions"></a>Excepciones
 

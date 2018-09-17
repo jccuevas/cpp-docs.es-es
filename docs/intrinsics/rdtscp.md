@@ -18,14 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3702dcafbc93e34852d5d8fd4a0f1d3c222ea1a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541685"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706958"
 ---
 # <a name="rdtscp"></a>__rdtscp
+
 **Específicos de Microsoft**  
   
  Genera el `rdtscp` escribe instrucciones, `TSC_AUX[31:0`] a la memoria y devuelve el contador de marca de tiempo de 64 bits (`TSC)` resultado.  
@@ -39,8 +40,8 @@ unsigned __int64 __rdtscp(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [out] `Aux`  
- Puntero a una ubicación que contiene el contenido del Registro específicas del equipo `TSC_AUX[31:0]`.  
+*Aux*<br/>
+[out] Puntero a una ubicación que contiene el contenido del Registro específicas del equipo `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un contador de entero sin signo de 64 bits.  
@@ -84,7 +85,8 @@ TSC_AUX was 0
 ```  
   
 **FIN de Específicos de Microsoft**  
- Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
+
+Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Vea también  
  [__rdtsc](../intrinsics/rdtsc.md)   

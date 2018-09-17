@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757106"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718086"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 Proporciona la funcionalidad del control de botón de número común de Windows.  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>Parámetros  
- *nLower* y *nUpper*  
- Límites superior e inferior del control. Para `SetRange`, ni límite puede ser mayor que UD_MAXVAL o menor que UD_MINVAL; Además, la diferencia entre los dos límites no puede superar los UD_MAXVAL. `SetRange32` impone ninguna restricción sobre los límites; Utilice los enteros.  
+### <a name="parameters"></a>Parámetros
+
+*nLower* y *nUpper*<br/>
+Límites superior e inferior del control. Para `SetRange`, ni límite puede ser mayor que UD_MAXVAL o menor que UD_MINVAL; Además, la diferencia entre los dos límites no puede superar los UD_MAXVAL. `SetRange32` impone ninguna restricción sobre los límites; Utilice los enteros.  
   
 ### <a name="remarks"></a>Comentarios  
  La función miembro `SetRange32` establece el rango de 32 bits para el control de botón de número.  

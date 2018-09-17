@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954843"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726692"
 ---
 # <a name="unorderedset-class"></a>unordered_set (Clase)
 
@@ -171,7 +171,7 @@ class unordered_set;
 |Parámetro|Descripción|
 |-|-|
 |*Key*|El tipo de clave.|
-|*Hash*|El tipo de objeto de la función hash.|
+|*hash*|El tipo de objeto de la función hash.|
 |*Pred*|El tipo de objeto de función de comparación de igualdad.|
 |*Alloc*|Clase de asignador.|
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
- Valor de clave que se va a asignar.
+*keyVal*<br/>
+Valor de clave que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*  
- Número de depósito.
+*nbucket*<br/>
+Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
- Valor de clave que se va a buscar.
+*keyVal*<br/>
+Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
- Valor de clave que se va a buscar.
+*keyVal*<br/>
+Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parámetros
 
-*Where*  
- Posición del elemento que se va a quitar.
+*Where*<br/>
+Posición del elemento que se va a quitar.
 
-*Primero*  
- Posición del primer elemento que se va a quitar.
+*Primero*<br/>
+Posición del primer elemento que se va a quitar.
 
-*Último*  
- Posición situada más allá del último elemento que se va a quitar.
+*Último*<br/>
+Posición situada más allá del último elemento que se va a quitar.
 
-*Key*  
- Valor de clave de los elementos que se van a quitar.
+*Key*<br/>
+Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
- Valor de clave que se va a buscar.
+*keyVal*<br/>
+Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parámetros
 
-*factor*  
- El nuevo factor de carga máxima.
+*factor*<br/>
+El nuevo factor de carga máxima.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parámetros
 
-*nbuckets*  
- Número solicitado de depósitos.
+*nbuckets*<br/>
+Número solicitado de depósitos.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- El contenedor con el que se intercambia.
+*right*<br/>
+El contenedor con el que se intercambia.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2439,7 +2439,7 @@ unordered_set(
 |*InputIterator*|Tipo de iterador.|
 |*Al*|Objeto de asignador que se va a almacenar.|
 |*Comp.*|Objeto de función de comparación que se va a almacenar.|
-|*Hash*|Objeto de función hash que se va a almacenar.|
+|*hash*|Objeto de función hash que se va a almacenar.|
 |*bucket_count*|Número mínimo de depósitos.|
 |*Derecha*|Contenedor que se va a copiar.|
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|

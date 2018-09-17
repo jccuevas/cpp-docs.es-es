@@ -1,5 +1,5 @@
 ---
-title: paralelo | Documentos de Microsoft
+title: Parallel | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705970"
 ---
 # <a name="parallel"></a>parallel
-Define una región paralela, que es código que se ejecutará por varios subprocesos en paralelo.  
+Define una región paralela, que es código que se va a ejecutar varios subprocesos en paralelo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,11 +35,10 @@ Define una región paralela, que es código que se ejecutará por varios subproc
 }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
-  
- `clause` (opcional)  
- Cero o más cláusulas.  Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **paralelo**.  
+## <a name="arguments"></a>Argumentos
+
+*Cláusula*<br/>
+(Opcional) Cero o más cláusulas.  Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **paralelo**.  
   
 ## <a name="remarks"></a>Comentarios  
  El **paralelo** directiva es compatible con las cláusulas de OpenMP siguientes:  
@@ -60,12 +59,12 @@ Define una región paralela, que es código que se ejecutará por varios subproc
   
 -   [Compartido](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **paralelo** también puede usarse con el [secciones](../../../parallel/openmp/reference/sections-openmp.md) y [para](../../../parallel/openmp/reference/for-openmp.md) directivas.  
+ **paralelo** también se puede usar con el [secciones](../../../parallel/openmp/reference/sections-openmp.md) y [para](../../../parallel/openmp/reference/for-openmp.md) directivas.  
   
  Para obtener más información, consulte [2.3 parallel (construcción)](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo establecer el número de subprocesos y definir una región paralela. De forma predeterminada, el número de subprocesos es igual al número de procesadores lógicos en el equipo. Por ejemplo, si tiene un equipo con un procesador físico con el hyperthreading habilitado, tendrá dos procesadores lógicos y, por lo tanto, dos subprocesos.  
+ El ejemplo siguiente muestra cómo establecer el número de subprocesos y definir una región paralela. De forma predeterminada, el número de subprocesos es igual al número de procesadores lógicos en el equipo. Por ejemplo, si tiene un equipo con un procesador físico que tiene habilitado el hiperproceso, tendrá dos procesadores lógicos y, por lo tanto, dos subprocesos.  
   
 ```  
 // omp_parallel.cpp  

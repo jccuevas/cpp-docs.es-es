@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1ded79786aaed0bf917ef57f445882c3f7d05719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709961"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton (clase)
 El `CMFCButton` clase agrega funcionalidad a la [CButton](../../mfc/reference/cbutton-class.md) clase como alinear el texto del botón, combinar el texto del botón y una imagen, seleccionar un cursor y especificar una información sobre herramientas.  
@@ -223,8 +223,8 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Ben*  
- TRUE para mostrar todo el texto; FALSE para el texto para mostrar que se trunca.  
+*Ben*<br/>
+[in] TRUE para mostrar todo el texto; FALSE para el texto para mostrar que se trunca.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -238,11 +238,11 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Ben*  
- TRUE para utilizar la fuente del menú de aplicación como la fuente de texto del botón; FALSE para usar la fuente del sistema. El valor predeterminado es TRUE.  
+*Ben*<br/>
+[in] TRUE para utilizar la fuente del menú de aplicación como la fuente de texto del botón; FALSE para usar la fuente del sistema. El valor predeterminado es TRUE.  
   
- [in] *bRedraw*  
- TRUE para volver a dibujar inmediatamente la pantalla; en caso contrario, FALSE. El valor predeterminado es TRUE.  
+*bRedraw*<br/>
+[in] TRUE para volver a dibujar inmediatamente la pantalla; en caso contrario, FALSE. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
  Si no utiliza este método para especificar la fuente del texto de botón, puede especificar la fuente con el [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) método. Si no especifica una fuente, el marco de trabajo establece una fuente predeterminada.  
@@ -255,8 +255,8 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para utilizar el tema de Windows actual para dibujar los bordes del botón; FALSE para no utilizar el tema de Windows. El valor predeterminado es TRUE.  
+*bHabilitar el*<br/>
+[in] TRUE para utilizar el tema de Windows actual para dibujar los bordes del botón; FALSE para no utilizar el tema de Windows. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método afecta a todos los botones de la aplicación que se derivan los `CMFCButton` clase.  
@@ -517,14 +517,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- Una referencia a un rectángulo que delimita el botón.  
+*Rect*<br/>
+[in] Una referencia a un rectángulo que delimita el botón.  
   
- [in] *uiState*  
- El estado actual del botón. Para obtener más información, consulte el `itemState` miembro de la [DRAWITEMSTRUCT (estructura)](../../mfc/reference/drawitemstruct-structure.md) tema.  
+*uiState*<br/>
+[in] El estado actual del botón. Para obtener más información, consulte el `itemState` miembro de la [DRAWITEMSTRUCT (estructura)](../../mfc/reference/drawitemstruct-structure.md) tema.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para utilizar su propio código para dibujar un botón.  
@@ -540,14 +540,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rectClient*  
- Una referencia a un rectángulo que delimita el botón.  
+*rectClient*<br/>
+[in] Una referencia a un rectángulo que delimita el botón.  
   
- [in] *uiState*  
- El estado actual del botón. Para obtener más información, consulte el `itemState` miembro de la [DRAWITEMSTRUCT (estructura)](../../mfc/reference/drawitemstruct-structure.md) tema.  
+*uiState*<br/>
+[in] El estado actual del botón. Para obtener más información, consulte el `itemState` miembro de la [DRAWITEMSTRUCT (estructura)](../../mfc/reference/drawitemstruct-structure.md) tema.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para utilizar su propio código para dibujar el borde.  
@@ -562,11 +562,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rectClient*  
- Una referencia a un rectángulo que delimita el botón.  
+*rectClient*<br/>
+[in] Una referencia a un rectángulo que delimita el botón.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para utilizar su propio código para dibujar el rectángulo de foco.  
@@ -584,20 +584,20 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rect*  
- Una referencia a un rectángulo que delimita el botón.  
+*Rect*<br/>
+[in] Una referencia a un rectángulo que delimita el botón.  
   
- [in] *strText*  
- Texto que se va a trazar.  
+*strText*<br/>
+[in] El texto que se va a dibujar.  
   
- [in] *uiDTFlags*  
- Marcadores que especifican cómo dar formato al texto. Para obtener más información, consulte el *nFormat* parámetro de la [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) método.  
+*uiDTFlags*<br/>
+[in] Marcadores que especifican cómo dar formato al texto. Para obtener más información, consulte el *nFormat* parámetro de la [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) método.  
   
- [in] *uiState*  
- (Reservado).  
+*uiState*<br/>
+[in] Reservado.
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para utilizar su propio código para dibujar el texto del botón.  
@@ -612,11 +612,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
- [in] *rectClient*  
- Una referencia a un rectángulo que delimita el botón.  
+*rectClient*<br/>
+[in] Una referencia a un rectángulo que delimita el botón.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para utilizar su propio código para dibujar el fondo de un botón.  
@@ -629,8 +629,8 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo.  
+*pDC*<br/>
+[in] Un puntero a un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Invalide este método para utilizar su propio código para recuperar la fuente.  
@@ -645,8 +645,8 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nTimeDelay*  
- Un número no negativo que especifica el intervalo entre los mensajes que se envían a la ventana primaria. El intervalo se mide en milisegundos y su valor predeterminado es 500 milisegundos. Especifique cero para deshabilitar el modo de mensaje de repetición automática.  
+*nTimeDelay*<br/>
+[in] Un número no negativo que especifica el intervalo entre los mensajes que se envían a la ventana primaria. El intervalo se mide en milisegundos y su valor predeterminado es 500 milisegundos. Especifique cero para deshabilitar el modo de mensaje de repetición automática.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método hace que el botón Enviar constantemente WM_COMMAND (mensajes) a la ventana primaria hasta que se suelta el botón, o la *nTimeDelay* parámetro se establece en cero.  
@@ -678,41 +678,41 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hIcon*  
- Identificador del icono que contiene el mapa de bits y una máscara para la nueva imagen.  
+*hIcon*<br/>
+[in] Identificador del icono que contiene el mapa de bits y una máscara para la nueva imagen.  
   
- [in] *bAutoDestroy*  
- TRUE para especificar que los recursos de mapa de bits se destruyen automáticamente; en caso contrario, FALSE. El valor predeterminado es TRUE.  
+*bAutoDestroy*<br/>
+[in] TRUE para especificar que los recursos de mapa de bits se destruyen automáticamente; en caso contrario, FALSE. El valor predeterminado es TRUE.  
   
- [in] *hIconHot*  
- Identificador del icono que contiene la imagen del estado seleccionado.  
+*hIconHot*<br/>
+[in] Identificador del icono que contiene la imagen del estado seleccionado.  
   
- [in] *hBitmap*  
- Identificador de mapa de bits que contiene la imagen para el estado no seleccionado.  
+*hBitmap*<br/>
+[in] Identificador de mapa de bits que contiene la imagen para el estado no seleccionado.  
   
- [in] *hBitmapHot*  
- Identificador de mapa de bits que contiene la imagen del estado seleccionado.  
+*hBitmapHot*<br/>
+[in] Identificador de mapa de bits que contiene la imagen del estado seleccionado.  
   
- [in] *bMap3dColors*  
- Especifica un color transparente para el fondo del botón; es decir, la cara del botón. TRUE para utilizar el valor de color RGB (192, 192, 192); FALSE para usar el valor de color definido por `AFX_GLOBAL_DATA::clrBtnFace`.  
+*bMap3dColors*<br/>
+[in] Especifica un color transparente para el fondo del botón; es decir, la cara del botón. TRUE para utilizar el valor de color RGB (192, 192, 192); FALSE para usar el valor de color definido por `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] *uiBmpResId*  
- Identificador de recurso para la imagen no seleccionada.  
+*uiBmpResId*<br/>
+[in] Identificador de recurso para la imagen no seleccionada.  
   
- [in] *uiBmpHotResId*  
- Identificador de recurso para la imagen seleccionada.  
+*uiBmpHotResId*<br/>
+[in] Identificador de recurso para la imagen seleccionada.  
   
- [in] *hIconDisabled*  
- Controlar hasta el icono de la imagen deshabilitada.  
+*hIconDisabled*<br/>
+[in] Controlar hasta el icono de la imagen deshabilitada.  
   
- [in] *hBitmapDisabled*  
- Identificador de mapa de bits que contiene la imagen deshabilitada.  
+*hBitmapDisabled*<br/>
+[in] Identificador de mapa de bits que contiene la imagen deshabilitada.  
   
- [in] *uiBmpDsblResID*  
- Identificador de recurso del mapa de bits deshabilitado.  
+*uiBmpDsblResID*<br/>
+[in] Identificador de recurso del mapa de bits deshabilitado.  
   
- [in] *bAlphaBlend*  
- True para que use imágenes sólo de 32 bits que usan el canal alfa; Es FALSE, no utilizar imágenes de canal alfa solo. El valor predeterminado es FALSE.  
+*bAlphaBlend*<br/>
+[in] True para que use imágenes sólo de 32 bits que usan el canal alfa; Es FALSE, no utilizar imágenes de canal alfa solo. El valor predeterminado es FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -726,11 +726,11 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *crFace*  
- Un valor de color RGB.  
+*crFace*<br/>
+[in] Un valor de color RGB.  
   
- [in] *bRedraw*  
- TRUE para volver a dibujar la pantalla inmediatamente; en caso contrario, FALSE.  
+*bRedraw*<br/>
+[in] TRUE para volver a dibujar la pantalla inmediatamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para definir un nuevo color de relleno para el fondo del botón (cara). Observe que el fondo no rellena cuando el [CMFCButton::m_bTransparent](#m_btransparent) variable miembro es TRUE.  
@@ -762,41 +762,41 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hIcon*  
- Identificador del icono que contiene el mapa de bits y una máscara para la nueva imagen.  
+*hIcon*<br/>
+[in] Identificador del icono que contiene el mapa de bits y una máscara para la nueva imagen.  
   
- [in] *bAutoDestroy*  
- TRUE para especificar que los recursos de mapa de bits se destruyen automáticamente; en caso contrario, FALSE. El valor predeterminado es TRUE.  
+*bAutoDestroy*<br/>
+[in] TRUE para especificar que los recursos de mapa de bits se destruyen automáticamente; en caso contrario, FALSE. El valor predeterminado es TRUE.  
   
- [in] *hIconHot*  
- Identificador del icono que contiene la imagen del estado seleccionado.  
+*hIconHot*<br/>
+[in] Identificador del icono que contiene la imagen del estado seleccionado.  
   
- [in] *hBitmap*  
- Identificador de mapa de bits que contiene la imagen para el estado no seleccionado.  
+*hBitmap*<br/>
+[in] Identificador de mapa de bits que contiene la imagen para el estado no seleccionado.  
   
- [in] *hBitmapHot*  
- Identificador de mapa de bits que contiene la imagen del estado seleccionado.  
+*hBitmapHot*<br/>
+[in] Identificador de mapa de bits que contiene la imagen del estado seleccionado.  
   
- [in] *uiBmpResId*  
- Identificador de recurso para la imagen no seleccionada.  
+*uiBmpResId*<br/>
+[in] Identificador de recurso para la imagen no seleccionada.  
   
- [in] *uiBmpHotResId*  
- Identificador de recurso para la imagen seleccionada.  
+*uiBmpHotResId*<br/>
+[in] Identificador de recurso para la imagen seleccionada.  
   
- [in] *bMap3dColors*  
- Especifica un color transparente para el fondo del botón; es decir, la cara del botón. TRUE para utilizar el valor de color RGB (192, 192, 192); FALSE para usar el valor de color definido por `AFX_GLOBAL_DATA::clrBtnFace`.  
+*bMap3dColors*<br/>
+[in] Especifica un color transparente para el fondo del botón; es decir, la cara del botón. TRUE para utilizar el valor de color RGB (192, 192, 192); FALSE para usar el valor de color definido por `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] *hIconDisabled*  
- Controlar hasta el icono de la imagen deshabilitada.  
+*hIconDisabled*<br/>
+[in] Controlar hasta el icono de la imagen deshabilitada.  
   
- [in] *hBitmapDisabled*  
- Identificador de mapa de bits que contiene la imagen deshabilitada.  
+*hBitmapDisabled*<br/>
+[in] Identificador de mapa de bits que contiene la imagen deshabilitada.  
   
- [in] *uiBmpDsblResID*  
- Identificador de recurso del mapa de bits deshabilitado.  
+*uiBmpDsblResID*<br/>
+[in] Identificador de recurso del mapa de bits deshabilitado.  
   
- [in] *bAlphaBlend*  
- True para que use imágenes sólo de 32 bits que usan el canal alfa; Es FALSE, no utilizar imágenes de canal alfa solo. El valor predeterminado es FALSE.  
+*bAlphaBlend*<br/>
+[in] True para que use imágenes sólo de 32 bits que usan el canal alfa; Es FALSE, no utilizar imágenes de canal alfa solo. El valor predeterminado es FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -814,8 +814,8 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *hcursor*  
- El identificador de un cursor.  
+*hcursor*<br/>
+[in] El identificador de un cursor.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para asociar una imagen del cursor, por ejemplo, el cursor de mano, con el botón. El cursor se carga desde los recursos de aplicación.  
@@ -847,14 +847,14 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *Id.*  
- Uno de los identificadores de la imagen de botón que se define en el `CMenuImage::IMAGES_IDS` enumeración. Los valores de la imagen especifican imágenes como flechas, PIN y botones de radio.  
+*identificador*<br/>
+[in] Uno de los identificadores de la imagen de botón que se define en el `CMenuImage::IMAGES_IDS` enumeración. Los valores de la imagen especifican imágenes como flechas, PIN y botones de radio.  
   
- [in] *estado*  
- Uno de los identificadores de estado de imagen de botón que se define en el `CMenuImages::IMAGE_STATE` enumeración. Los Estados de imagen especificarán colores de botón como gris y negro, gris, light gray, blanco y oscuro. El valor predeterminado es `CMenuImages::ImageBlack`.  
+*state*<br/>
+[in] Uno de los identificadores de estado de imagen de botón que se define en el `CMenuImages::IMAGE_STATE` enumeración. Los Estados de imagen especificarán colores de botón como gris y negro, gris, light gray, blanco y oscuro. El valor predeterminado es `CMenuImages::ImageBlack`.  
   
- [in] *idDisabled*  
- Uno de los identificadores de la imagen de botón que se define en el `CMenuImage::IMAGES_IDS` enumeración. La imagen indica que el botón está deshabilitado. El valor predeterminado es la primera imagen del botón ( `CMenuImages::IdArrowDown`).  
+*idDisabled*<br/>
+[in] Uno de los identificadores de la imagen de botón que se define en el `CMenuImage::IMAGES_IDS` enumeración. La imagen indica que el botón está deshabilitado. El valor predeterminado es la primera imagen del botón ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -866,8 +866,8 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *clrText*  
- Un valor de color RGB.  
+*clrText*<br/>
+[in] Un valor de color RGB.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -879,8 +879,8 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *clrTextHot*  
- Un valor de color RGB.  
+*clrTextHot*<br/>
+[in] Un valor de color RGB.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -892,8 +892,8 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszToolTipText*  
- Puntero al texto del objeto ToolTip. Especifique NULL para deshabilitar la información sobre herramientas.  
+*lpszToolTipText*<br/>
+[in] Puntero al texto del objeto ToolTip. Especifique NULL para deshabilitar la información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -905,8 +905,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bCalcOnly*  
- TRUE para calcular, pero no cambiar, el nuevo tamaño del botón; FALSE para cambiar el tamaño del botón. El valor predeterminado es FALSE.  
+*bCalcOnly*<br/>
+[in] TRUE para calcular, pero no cambiar, el nuevo tamaño del botón; FALSE para cambiar el tamaño del botón. El valor predeterminado es FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `CSize` objeto que contiene el nuevo tamaño del botón.  

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa004d449190003f6438744c09c1c8023a0cbda3
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314435"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714459"
 ---
 # <a name="arrays-c-component-extensions"></a>Matrices (Extensiones de componentes de C++)
 
@@ -62,12 +62,14 @@ El primer ejemplo de la sintaxis se utiliza el **referencia nuevos** palabra cla
     {initialization-list [,...]}
 ```
 
-*calificadores* [opcional] uno o varios de estos especificadores de clase de almacenamiento: [mutable](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
+*calificadores*<br/>
+(Opcional) Uno o varios de estos especificadores de clase de almacenamiento: [mutable](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
 
 *tipo de matriz*  
 El tipo de la variable de matriz. Tipos válidos son clases de Windows Runtime y tipos fundamentales, las clases ref y structs, las clases de valor y las estructuras y punteros nativos (`type*`).
 
-*rango* [opcional] el número de dimensiones de la matriz. Debe ser 1.
+*rank*<br/>
+(Opcional) El número de dimensiones de la matriz. Debe ser 1.
 
 *identifier*  
 El nombre de la variable de matriz.
@@ -75,7 +77,8 @@ El nombre de la variable de matriz.
 *tipo de inicialización*  
 El tipo de los valores que inicializar la matriz. Por lo general, *tipo de matriz* y *tipo de inicialización* son del mismo tipo. Sin embargo, los tipos pueden ser diferentes si hay una conversión de *tipo de inicialización* a *tipo de matriz*— por ejemplo, si *tipo de inicialización* se deriva de *tipo de matriz*.
 
-*lista de inicialización* [opcional] una lista delimitada por comas de valores en entre corchetes que inicializar los elementos de la matriz. Por ejemplo, si *rango en la lista de tamaño* eran `(3)`, que declara una matriz unidimensional de 3 elementos *lista de inicialización* podría ser `{1,2,3}`.
+*lista de inicialización*<br/>
+(Opcional) Una lista delimitada por comas de valores entre llaves que inicializar los elementos de la matriz. Por ejemplo, si *rango en la lista de tamaño* eran `(3)`, que declara una matriz unidimensional de 3 elementos *lista de inicialización* podría ser `{1,2,3}`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -115,12 +118,14 @@ El primer ejemplo de la sintaxis se utiliza el **gcnew** palabra clave para asig
     {initialization-list [,...]}
 ```
 
-*calificadores* [opcional] uno o varios de estos especificadores de clase de almacenamiento: [mutable](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
+*calificadores*<br/>
+(Opcional) Uno o varios de estos especificadores de clase de almacenamiento: [mutable](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
 
 *tipo de matriz*  
 El tipo de la variable de matriz. Tipos válidos son clases de Windows Runtime y tipos fundamentales, las clases ref y structs, las clases de valor y structs, punteros nativos (`type*`) y tipos nativos de POD (datos antiguos).
 
-*rango* [opcional] el número de dimensiones de la matriz. El valor predeterminado es 1; el máximo es 32. Cada dimensión de la matriz es una matriz.
+*rank*<br/>
+(Opcional) El número de dimensiones de la matriz. El valor predeterminado es 1; el máximo es 32. Cada dimensión de la matriz es una matriz.
 
 *identifier*  
 El nombre de la variable de matriz.
@@ -131,7 +136,8 @@ El tipo de los valores que inicializar la matriz. Por lo general, *tipo de matri
 *rango en la lista de tamaño*  
 Una lista delimitada por comas del tamaño de cada dimensión de la matriz. Como alternativa, si la *lista de inicialización* parámetro se especifica, el compilador puede deducir el tamaño de cada dimensión y *rango en la lista de tamaño* puede omitirse.
 
-*lista de inicialización* [opcional] una lista delimitada por comas de valores en entre corchetes que inicializar los elementos de la matriz. O una lista delimitada por comas de anidado *lista de inicialización* elementos que inicializan los elementos de una matriz multidimensional.
+*lista de inicialización*<br/>
+(Opcional) Una lista delimitada por comas de valores entre llaves que inicializar los elementos de la matriz. O una lista delimitada por comas de anidado *lista de inicialización* elementos que inicializan los elementos de una matriz multidimensional.
 
 Por ejemplo, si *rango en la lista de tamaño* eran `(3)`, que declara una matriz unidimensional de 3 elementos *lista de inicialización* podría ser `{1,2,3}`. Si *rango en la lista de tamaño* eran `(3,2,4)`, que declara una matriz tridimensional de 3 elementos de la primera dimensión, 2 elementos en el segundo y 4 elementos en la tercera, *lista de inicialización* podría ser `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
 

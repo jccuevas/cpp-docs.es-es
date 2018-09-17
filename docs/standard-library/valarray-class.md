@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bd6b1c5ed9cf29b87dc2a218f7a5e9eda3e3dc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319063"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724820"
 ---
 # <a name="valarray-class"></a>valarray (Clase)
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>Parámetros
 
 *_Func(Type)*<br/>
- El objeto de función que se va a aplicar a cada elemento de la valarray de operando.
+El objeto de función que se va a aplicar a cada elemento de la valarray de operando.
 
 *_Func(const Type&)*<br/>
- El objeto de función para const que se va a aplicar a cada elemento de la valarray de operando.
+El objeto de función para const que se va a aplicar a cada elemento de la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*count*  
- El número de posiciones que se van a desplazar hacia adelante los elementos.
+*count*<br/>
+El número de posiciones que se van a desplazar hacia adelante los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que consiste en dividir, por elemento, la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que consiste en dividir, por elemento, la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que se va a combinar, por elemento, mediante la operación lógica `AND` con la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que se va a combinar, por elemento, mediante la operación lógica `AND` con la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- El valor que indica la cantidad de desplazamiento a la derecha o la valarray cuyos elementos indican la cantidad de desplazamiento a la derecha por elemento.
+*right*<br/>
+El valor que indica la cantidad de desplazamiento a la derecha o la valarray cuyos elementos indican la cantidad de desplazamiento a la derecha por elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- El valor que indica la cantidad de desplazamiento a la izquierda o la valarray cuyos elementos indican la cantidad de desplazamiento a la izquierda por elemento.
+*right*<br/>
+El valor que indica la cantidad de desplazamiento a la izquierda o la valarray cuyos elementos indican la cantidad de desplazamiento a la izquierda por elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que va a multiplicar, por elemento, la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que va a multiplicar, por elemento, la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a sumar, por elemento, a la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a sumar, por elemento, a la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a restar, por elemento, de la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a restar, por elemento, de la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a dividir, por elemento, en la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a dividir, por elemento, en la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray que se va a copiar en la valarray de operando.
+*right*<br/>
+La valarray que se va a copiar en la valarray de operando.
 
-*Val*  
- El valor que se va a asignar a los elementos de la valarray de operando.
+*Val*<br/>
+El valor que se va a asignar a los elementos de la valarray de operando.
 
-*_Slicearray*  
- La slice_array que se va a copiar en la valarray de operando.
+*_Slicearray*<br/>
+La slice_array que se va a copiar en la valarray de operando.
 
-*_Gslicearray*  
- La gslice_array que se va a copiar en la valarray de operando.
+*_Gslicearray*<br/>
+La gslice_array que se va a copiar en la valarray de operando.
 
-*_Maskarray*  
- La mask_array que se va a copiar en la valarray de operando.
+*_Maskarray*<br/>
+La mask_array que se va a copiar en la valarray de operando.
 
-*_Indarray*  
- La indirect_array que se va a copiar en la valarray de operando.
+*_Indarray*<br/>
+La indirect_array que se va a copiar en la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*  
- El índice del elemento al que se va a asignar un valor.
+*_Off*<br/>
+El índice del elemento al que se va a asignar un valor.
 
-*_Slicearray*  
- Una slice_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
+*_Slicearray*<br/>
+Una slice_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
-*_Gslicearray*  
- Una gslice_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
+*_Gslicearray*<br/>
+Una gslice_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
-*_Boolarray*  
- Una bool_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
+*_Boolarray*<br/>
+Una bool_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
-*_Indarray*  
- Una indirect_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
+*_Indarray*<br/>
+Una indirect_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a combinar, por elemento, mediante el **XOR** lógico exclusivo con la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a combinar, por elemento, mediante el **XOR** lógico exclusivo con la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a combinar, por elemento, mediante el `OR` bit a bit con la valarray de operando.
+*right*<br/>
+La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a combinar, por elemento, mediante el `OR` bit a bit con la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1518,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Newsize*  
- Número de elementos de la valarray cuyo tamaño se cambió.
+*_Newsize*<br/>
+Número de elementos de la valarray cuyo tamaño se cambió.
 
-*Val*  
- Valor que se asignará a los elementos de la valarray cuyo tamaño se cambió.
+*Val*<br/>
+Valor que se asignará a los elementos de la valarray cuyo tamaño se cambió.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1589,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*count*  
- El número de posiciones que se van a desplazar hacia adelante los elementos.
+*count*<br/>
+El número de posiciones que se van a desplazar hacia adelante los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1839,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>Parámetros
 
-*Recuento*  
- Número de elementos que va a haber en la valarray.
+*Recuento*<br/>
+Número de elementos que va a haber en la valarray.
 
-*Val*  
- Valor que se utilizará al inicializar los elementos de la valarray.
+*Val*<br/>
+Valor que se utilizará al inicializar los elementos de la valarray.
 
-*PTR*  
- Puntero a los valores que se usarán para inicializar los elementos de la valarray.
+*PTR*<br/>
+Puntero a los valores que se usarán para inicializar los elementos de la valarray.
 
-*Derecha*  
- Valarray existente para inicializar la nueva valarray.
+*Derecha*<br/>
+Valarray existente para inicializar la nueva valarray.
 
-*SliceArray*  
- slice_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
+*SliceArray*<br/>
+slice_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-*GsliceArray*  
- gslice_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
+*GsliceArray*<br/>
+gslice_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-*MaskArray*  
- mask_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
+*MaskArray*<br/>
+mask_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-*IndArray*  
- indirect_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
+*IndArray*<br/>
+indirect_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-*IList*  
- initializer_list que contiene los elementos que se van a copiar.
+*IList*<br/>
+initializer_list que contiene los elementos que se van a copiar.
 
 ### <a name="remarks"></a>Comentarios
 

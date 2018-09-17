@@ -1,5 +1,5 @@
 ---
-title: para (OpenMP) | Documentos de Microsoft
+title: (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694867"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721661"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Hace que el trabajo realizado un bucle dentro de una región paralela va a dividir entre subprocesos.  
+Hace que el trabajo realizado en un bucle dentro de una región paralela a dividirse entre subprocesos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,14 +33,13 @@ Hace que el trabajo realizado un bucle dentro de una región paralela va a divid
    for_statement  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+## <a name="arguments"></a>Argumentos
+
+*Cláusula*<br/>
+(Opcional) Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **para**.  
   
- `clause` (opcional)  
- Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **para**.  
-  
- `for_statement`  
- Un bucle for. Se producirá un comportamiento indefinido si el código de usuario en el de bucle cambia la variable de índice.  
+*for_Statement*<br/>
+Un bucle for. Se producirá un comportamiento indefinido si el código de usuario en el de bucle cambia la variable de índice.  
   
 ## <a name="remarks"></a>Comentarios  
  El **para** directiva es compatible con las cláusulas de OpenMP siguientes:  
@@ -51,7 +50,7 @@ Hace que el trabajo realizado un bucle dentro de una región paralela va a divid
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [ordenada](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [Ordenada](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
@@ -59,7 +58,7 @@ Hace que el trabajo realizado un bucle dentro de una región paralela va a divid
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Si **paralelo** también se especifica, `clause` cualquier cláusula puede ser aceptado por la **paralelo** o **para** directivas, excepto **nowait**.  
+ Si **paralelo** también se especifica, `clause` puede ser cualquier cláusula aceptado por el **paralelo** o **para** directivas, excepto **nowait**.  
   
  Para obtener más información, consulte [2.4.1 for (construcción)](../../../parallel/openmp/2-4-1-for-construct.md).  
   

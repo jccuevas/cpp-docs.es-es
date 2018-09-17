@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213a7c32204b8f96969b4ad7a94683916b66db10
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69e985b81072de306c818218e19bbb660e3e04a4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200847"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719738"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Restricciones de las DLL de carga retrasada
-Hay ciertas restricciones relacionadas con la carga retrasada de importaciones.  
-  
--   No se pueden admitir las importaciones de datos. Una solución alternativa consiste en administrar uno mismo la importación de datos de forma explícita con `LoadLibrary` (o `GetModuleHandle` después de saber que la aplicación auxiliar de carga retrasada cargó la DLL) y `GetProcAddress`.  
-  
--   No se admite la carga retrasada de Kernel32.dll. Esta DLL es necesaria para que las rutinas de la aplicación auxiliar de carga retrasada lleven a cabo la carga retrasada.  
-  
--   [Enlace](../../build/reference/binding-imports.md) de entrada no se admite los puntos que se reenvían.  
-  
--   Es posible que la carga retrasada de una DLL no tenga como resultado el mismo comportamiento del proceso si hay inicializaciones por procesos que se producen en el punto de entrada de la DLL de carga retrasada. Otros casos incluyen estático TLS (almacenamiento local de subproceso), declarado mediante [__declspec (Thread)](../../cpp/thread.md), que no se controla al cargar la DLL a través de `LoadLibrary`. El TLS dinámico, con `TlsAlloc`, `TlsFree`, `TlsGetValue` y `TlsSetValue`, sigue disponible para su uso en DLL estáticas o de carga retrasada.  
-  
--   Los punteros de función estáticos (globales) se deben reinicializar a las funciones importadas después de la primera llamada a la función, porque el primer uso del puntero de función apuntará al código thunk.  
-  
--   Actualmente, con el mecanismo de importación normal, no hay ninguna manera de retrasar la carga de procedimientos específicos de una DLL solamente.  
-  
--   No se admiten las convenciones de llamada personalizadas (como, por ejemplo, el uso de códigos de condición en las arquitecturas x86). Además, los registros de punto flotante no se guardan en ninguna plataforma. Si la rutina de la aplicación auxiliar personalizada o las rutinas de enlace utilizan tipos de punto flotante, tendrán que guardar y restaurar por completo el estado de punto flotante en las máquinas con convenciones de llamada de registro con parámetros de punto flotante. Tenga cuidado al realizar la carga retrasada de la DLL de CRT si llama a funciones de CRT que tomen parámetros de punto flotante en una pila de procesador de datos numéricos (NDP) en la función de ayuda.  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con vinculador para archivos DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
- [LoadLibrary (función)](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
- [GetModuleHandle (función)](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
- [GetProcAddress (función)](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [Función TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
- [Función TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
- [Función TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
- [Función TlsSetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+
+Hay ciertas restricciones relacionadas con la carga retrasada de importaciones.
+
+- No se pueden admitir las importaciones de datos. Una solución alternativa consiste en administrar uno mismo la importación de datos de forma explícita con `LoadLibrary` (o `GetModuleHandle` después de saber que la aplicación auxiliar de carga retrasada cargó la DLL) y `GetProcAddress`.
+
+- No se admite la carga retrasada de Kernel32.dll. Esta DLL es necesaria para que las rutinas de la aplicación auxiliar de carga retrasada lleven a cabo la carga retrasada.
+
+- [Enlace](../../build/reference/binding-imports.md) de entrada no se admite los puntos que se reenvían.
+
+- Es posible que la carga retrasada de una DLL no tenga como resultado el mismo comportamiento del proceso si hay inicializaciones por procesos que se producen en el punto de entrada de la DLL de carga retrasada. Otros casos incluyen estático TLS (almacenamiento local de subproceso), declarado mediante [__declspec (Thread)](../../cpp/thread.md), que no se controla al cargar la DLL a través de `LoadLibrary`. El TLS dinámico, con `TlsAlloc`, `TlsFree`, `TlsGetValue` y `TlsSetValue`, sigue disponible para su uso en DLL estáticas o de carga retrasada.
+
+- Los punteros de función estáticos (globales) se deben reinicializar a las funciones importadas después de la primera llamada a la función, porque el primer uso del puntero de función apuntará al código thunk.
+
+- Actualmente, con el mecanismo de importación normal, no hay ninguna manera de retrasar la carga de procedimientos específicos de una DLL solamente.
+
+- No se admiten las convenciones de llamada personalizadas (como, por ejemplo, el uso de códigos de condición en las arquitecturas x86). Además, los registros de punto flotante no se guardan en ninguna plataforma. Si la rutina de la aplicación auxiliar personalizada o las rutinas de enlace utilizan tipos de punto flotante, tendrán que guardar y restaurar por completo el estado de punto flotante en las máquinas con convenciones de llamada de registro con parámetros de punto flotante. Tenga cuidado al realizar la carga retrasada de la DLL de CRT si llama a funciones de CRT que tomen parámetros de punto flotante en una pila de procesador de datos numéricos (NDP) en la función de ayuda.
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[LoadLibrary (función)](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)<br/>
+[GetModuleHandle (función)](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)<br/>
+[GetProcAddress (función)](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)<br/>
+[Función TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
+[Función TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
+[Función TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
+[Función TlsSetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

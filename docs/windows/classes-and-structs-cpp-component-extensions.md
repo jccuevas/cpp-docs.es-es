@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e29b141ff89a37cee59f55624d7fecadbe6acc4c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215875"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726627"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Clases y structs (Extensiones de componentes de C++)
 
@@ -46,20 +46,20 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>Parámetros
 
-*class_access* (opcional)  
-La accesibilidad de la clase o struct fuera del ensamblado. Los valores posibles son **pública** y **privada** (**privada** es el valor predeterminado). Las clases anidadas o las estructuras no pueden tener un *class_access* especificador.
+*class_access*  
+(Opcional) La accesibilidad de la clase o struct fuera del ensamblado. Los valores posibles son **pública** y **privada** (**privada** es el valor predeterminado). Las clases anidadas o las estructuras no pueden tener un *class_access* especificador.
 
 *name*  
 Nombre de la clase o struct.
 
-*modificador* (opcional)  
-[abstracta](../windows/abstract-cpp-component-extensions.md) y [sealed](../windows/sealed-cpp-component-extensions.md) son modificadores válidos.
+*Modificador*  
+(Opcional) [abstracta](../windows/abstract-cpp-component-extensions.md) y [sealed](../windows/sealed-cpp-component-extensions.md) son modificadores válidos.
 
-*inherit_access* (opcional)  
-La accesibilidad de *base_type*. La única accesibilidad permitida es **pública** (**pública** es el valor predeterminado).
+*inherit_access*  
+(Opcional) La accesibilidad de *base_type*. La única accesibilidad permitida es **pública** (**pública** es el valor predeterminado).
 
-*base_type* (opcional)  
-Tipo base. Sin embargo, un tipo de valor no puede actuar como tipo base.
+*base_type*  
+(Opcional) Un tipo base. Sin embargo, un tipo de valor no puede actuar como tipo base.
 
 Para obtener más información, consulte las descripciones específicas del idioma de este parámetro en el tiempo de ejecución de Windows y Runtimesections de lenguaje común.
 
@@ -97,8 +97,8 @@ Consulte [clases y structs Ref](../cppcx/ref-classes-and-structs-c-cx.md) y [cla
 
 ### <a name="parameters"></a>Parámetros
 
-*base_type* (opcional)  
-Tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más interfaces y cero o uno **ref** tipos. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces.
+*base_type*  
+(Opcional) Un tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más interfaces y cero o uno **ref** tipos. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces.
 
 Cuando declara un objeto mediante el uso de la **clase ref** o **ref struct** palabras clave, se obtiene acceso al objeto mediante un identificador de objeto; es decir, un puntero de contador de referencias al objeto. Cuando la variable declarada se sale del ámbito, el compilador elimina automáticamente el objeto subyacente. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente un identificador del objeto.
 
@@ -116,8 +116,8 @@ En la tabla siguiente enumera las diferencias con la sintaxis mostrada en el **t
 
 ### <a name="parameters"></a>Parámetros
 
-*base_type* (opcional)  
-Tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más administrados, interfaces y cero o un tipo ref. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces administradas.
+*base_type*  
+(Opcional) Un tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más administrados, interfaces y cero o un tipo ref. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces administradas.
 
 El **clase ref** y **ref struct** palabras clave indican al compilador que es la clase o estructura debe asignarse en el montón. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente una referencia al objeto.
 

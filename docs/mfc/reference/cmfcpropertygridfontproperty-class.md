@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208871"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719945"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty (clase)
 La `CMFCPropertyGridFileProperty` clase es compatible con un elemento de control de lista de propiedades que se abre un cuadro de diálogo de selección de fuente.  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *strName*  
- Nombre de la propiedad.  
+*strName*<br/>
+[in] El nombre de la propiedad.  
   
- [in] *lf*  
- Una estructura de fuente lógica que especifica los atributos de la fuente.  
+*LF*<br/>
+[in] Una estructura de fuente lógica que especifica los atributos de la fuente.  
   
- [in] *dwFontDialogFlags*  
- Estilos que se aplican al cuadro de diálogo fuente que se muestra al hacer clic en el botón de lista desplegable del valor de propiedad. El valor predeterminado es la combinación bit a bit (OR) de CF_EFFECTS y CF_SCREENFONTS. Para obtener más información, consulte el *marcas* parámetro de la [CHOOSEFONT estructura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
+*dwFontDialogFlags*<br/>
+[in] Estilos que se aplican al cuadro de diálogo fuente que se muestra al hacer clic en el botón de lista desplegable del valor de propiedad. El valor predeterminado es la combinación bit a bit (OR) de CF_EFFECTS y CF_SCREENFONTS. Para obtener más información, consulte el *marcas* parámetro de la [CHOOSEFONT estructura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
- [in] *lpszDescr*  
- Descripción de la propiedad font. El valor predeterminado es NULL.  
+*lpszDescr*<br/>
+[in] Descripción de la propiedad font. El valor predeterminado es NULL.  
   
- [in] *dwData*  
- Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
+*dwData*<br/>
+[in] Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
   
- [in] *color*  
- El color de la fuente. El valor predeterminado es el color predeterminado.  
+*Color*<br/>
+[in] El color de la fuente. El valor predeterminado es el color predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
  Un `CMFCPropertyGridFontProperty` objeto representa una propiedad de fuente en un control de fuente de cuadrícula de propiedades.  

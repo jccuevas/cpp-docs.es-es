@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 55233bb264231c3ddfd286a8f3d29883ed185a15
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540716"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711183"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel (clase)
 Implementa un panel que contiene un conjunto de elementos de cinta. Cuando se dibuja el panel, muestra tantos elementos como es posible, dado el tamaño del panel.  
@@ -235,8 +235,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *pElem*  
- Puntero a un elemento de la cinta de opciones.  
+*pElem*<br/>
+[in, out] Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -262,17 +262,17 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiToolbarResID*  
- Especifica el identificador de recurso de la barra de herramientas para agregar.  
+*uiToolbarResID*<br/>
+[in] Especifica el identificador de recurso de la barra de herramientas para agregar.  
   
- [in] *uiColdResID*  
- Especifica el identificador de recurso de imágenes en frío de la barra de herramientas.  
+*uiColdResID*<br/>
+[in] Especifica el identificador de recurso de imágenes en frío de la barra de herramientas.  
   
- [in] *uiHotResID*  
- Especifica el identificador de recurso de imágenes de la barra de herramientas activas.  
+*uiHotResID*<br/>
+[in] Especifica el identificador de recurso de imágenes de la barra de herramientas activas.  
   
- [in] *uiDisabledResID*  
- Especifica el identificador de recurso de imágenes de la barra de herramientas deshabilitada.  
+*uiDisabledResID*<br/>
+[in] Especifica el identificador de recurso de imágenes de la barra de herramientas deshabilitada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Llame a este método para agregar una barra de herramientas al panel de cinta de opciones. Se agregará la barra de herramientas aparece junto al elemento de la cinta de opciones agregado por la llamada anterior a [cmfcribbonpanel:: Add](#add).  
@@ -292,14 +292,14 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- Nombre del panel de la cinta.  
+*lpszName*<br/>
+[in] Nombre del panel de la cinta.  
   
- [in] *hIcon*  
- Identificador del icono del botón predeterminado para el panel de la cinta de opciones.  
+*hIcon*<br/>
+[in] Identificador del icono del botón predeterminado para el panel de la cinta de opciones.  
   
- [in] *pPaletteButton*  
- Puntero a una galería de la cinta de opciones para el panel de la cinta de opciones.  
+*pPaletteButton*<br/>
+[in] Puntero a una galería de la cinta de opciones para el panel de la cinta de opciones.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Recupera el elemento de la cinta que está asociado con los datos especificados.  
@@ -309,8 +309,8 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwData*  
- Los datos asociados con un elemento de la cinta.  
+*dwData*<br/>
+[in] Los datos asociados con un elemento de la cinta.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un elemento de la cinta si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -325,8 +325,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- El identificador de comando de un elemento de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] El identificador de comando de un elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El elemento de la cinta de opciones que se identifica mediante el identificador de comando especificado; en caso contrario, NULL si no hay elemento de la cinta se identifica con el identificador de comando especificado.  
@@ -397,8 +397,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice de base cero del elemento que se va a recuperar.  
+*nIndex*<br/>
+[in] Especifica el índice de base cero del elemento que se va a recuperar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero válido para el elemento de la base de la cinta de opciones que se encuentra en la posición *nIndex* en el panel de la cinta, o NULL si no hay ningún elemento en el índice especificado.  
@@ -411,8 +411,8 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *arElements*  
- Una matriz que se rellena con todos los elementos de la cinta de opciones que se encuentran en el panel de la cinta.  
+*arElements*<br/>
+[out] Una matriz que se rellena con todos los elementos de la cinta de opciones que se encuentran en el panel de la cinta.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -426,11 +426,11 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Identificador de comando para un elemento de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] Identificador de comando para un elemento de la cinta de opciones.  
   
- [in] *arElements*  
- Matriz de elementos de la cinta de opciones.  
+*arElements*<br/>
+[in] Matriz de elementos de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  Se prueban únicamente los elementos de cinta de opciones que se encuentran en el panel de la cinta.  
@@ -455,8 +455,8 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pElem*  
- Puntero a un elemento de la cinta de opciones.  
+*pElem*<br/>
+[in] Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero del elemento especificado de la cinta de opciones si el método se realizó correctamente; en caso contrario,-1.  
@@ -471,8 +471,8 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *lstItems*  
- La lista de identificadores de comando para los elementos de la cinta de opciones que se encuentran en el panel de la cinta.  
+*lstItems*<br/>
+[out] La lista de identificadores de comando para los elementos de la cinta de opciones que se encuentran en el panel de la cinta.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -528,8 +528,8 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rect*  
- Este parámetro no se utiliza.  
+*Rect*<br/>
+[out] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve FALSE.  
@@ -569,8 +569,8 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pElem*  
- Puntero a un elemento de la cinta de opciones.  
+*pElem*<br/>
+[in] Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel de la cinta de opciones contiene el elemento especificado de la cinta de opciones; en caso contrario, FALSE.  
@@ -587,11 +587,11 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHighlight*  
- TRUE para resaltar el panel de la cinta; Si es FALSE, el panel de la cinta la anulación de resaltado.  
+*bHighlight*<br/>
+[in] TRUE para resaltar el panel de la cinta; Si es FALSE, el panel de la cinta la anulación de resaltado.  
   
- [in] *punto*  
- Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.  
+*punto*<br/>
+[in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -605,11 +605,11 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.  
+*punto*<br/>
+[in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.  
   
- [in] *bCheckPanelCaption*  
- TRUE para probar el título del panel de cinta de opciones; en caso contrario, FALSE.  
+*bCheckPanelCaption*<br/>
+[in] TRUE para probar el título del panel de cinta de opciones; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un elemento de la cinta si el punto especificado se encuentra en él; en caso contrario, es NULL.  
@@ -625,8 +625,8 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.  
+*punto*<br/>
+[in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero del elemento de cinta de opciones que tiene el punto especificado que se encuentra en él; en caso contrario,-1.  
@@ -644,11 +644,11 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] *pElem*  
- Puntero a un elemento de la cinta de opciones.  
+*pElem*<br/>
+[in, out] Puntero a un elemento de la cinta de opciones.  
   
- [in] *nIndex*  
- Valor basado en cero, comprendido entre -1 y el número de elementos de la cinta de opciones que figuran en la matriz.  
+*nIndex*<br/>
+[in] Valor basado en cero, comprendido entre -1 y el número de elementos de la cinta de opciones que figuran en la matriz.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el elemento de la cinta se ha insertado correctamente; en caso contrario, FALSE.  
@@ -664,8 +664,8 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice de base cero donde se inserta el separador.  
+*nIndex*<br/>
+[in] Especifica el índice de base cero donde se inserta el separador.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el separador se ha insertado correctamente; en caso contrario, FALSE.  
@@ -769,11 +769,11 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el panel de la cinta de opciones.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el panel de la cinta de opciones.  
   
- [in] *nHeight*  
- Alto del panel de la cinta.  
+*nHeight*<br/>
+[in] Alto del panel de la cinta.  
   
 ### <a name="remarks"></a>Comentarios  
  Un panel de cinta de opciones cambia su configuración de diseño cuando cambia el ancho disponible.  
@@ -788,11 +788,11 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice de base cero del elemento que se quita del panel de la cinta.  
+*nIndex*<br/>
+[in] Especifica el índice de base cero del elemento que se quita del panel de la cinta.  
   
- [in] *bDelete*  
- TRUE para eliminar el elemento que se va a quitar; en caso contrario, FALSE.  
+*bDelete*<br/>
+[in] TRUE para eliminar el elemento que se va a quitar; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el elemento ha sido eliminado y se ha eliminado (si *bEliminar* es TRUE); FALSE si no se ha quitado el elemento o si no hay ningún elemento de la cinta se encuentra en *nIndex*.  
@@ -820,8 +820,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice de base cero del elemento que se va a reemplazar.  
+*nIndex*<br/>
+[in] Especifica el índice de base cero del elemento que se va a reemplazar.  
   
  [in] [out] *pElem*  
  Un puntero válido para el elemento que reemplaza el elemento original.  
@@ -842,8 +842,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Especifica el identificador de comando del elemento a reemplazar.  
+*uiCmdID*<br/>
+[in] Especifica el identificador de comando del elemento a reemplazar.  
   
  [in] [out] *pElem*  
  Un puntero válido para el elemento que va a reemplazar el elemento original.  
@@ -862,8 +862,8 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSet*  
- TRUE para centrar las posiciones verticales de los elementos de la cinta de opciones dentro de su rectángulo de presentación; FALSE para deshabilitar esta característica.  
+*bSet*<br/>
+[in] TRUE para centrar las posiciones verticales de los elementos de la cinta de opciones dentro de su rectángulo de presentación; FALSE para deshabilitar esta característica.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -875,8 +875,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwData*  
- Especifica los datos definidos por el usuario para establecer.  
+*dwData*<br/>
+[in] Especifica los datos definidos por el usuario para establecer.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para asociar los datos definidos por el usuario con el panel de la cinta.  
@@ -900,20 +900,20 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Especifica el identificador de comando del elemento de cinta de opciones que se agrega el menú.  
+*uiCmdID*<br/>
+[in] Especifica el identificador de comando del elemento de cinta de opciones que se agrega el menú.  
   
- [in] *hMenu*  
- Especifica el identificador del menú de Windows para agregar al panel de cinta de opciones.  
+*hMenu*<br/>
+[in] Especifica el identificador del menú de Windows para agregar al panel de cinta de opciones.  
   
- [in] *bIsDefautCommand*  
- TRUE para especificar que se debe ejecutar el comando asociado al elemento de la cinta de opciones si se hace clic en el elemento de la cinta de opciones. En este caso, solo se abre el menú cuando el usuario hace clic en la flecha situada junto al elemento de la cinta de opciones. FALSE para especificar que no se debe ejecutar el comando asociado al elemento de la cinta de opciones si se hace clic en el elemento de la cinta de opciones. En este caso, el menú emergente aparece independientemente de donde el usuario hace clic en el elemento.  
+*bIsDefautCommand*<br/>
+[in] TRUE para especificar que se debe ejecutar el comando asociado al elemento de la cinta de opciones si se hace clic en el elemento de la cinta de opciones. En este caso, solo se abre el menú cuando el usuario hace clic en la flecha situada junto al elemento de la cinta de opciones. FALSE para especificar que no se debe ejecutar el comando asociado al elemento de la cinta de opciones si se hace clic en el elemento de la cinta de opciones. En este caso, el menú emergente aparece independientemente de donde el usuario hace clic en el elemento.  
   
- [in] *bRightAlign*  
- TRUE para especificar que el menú emergente está alineado a la derecha; en caso contrario, FALSE.  
+*bRightAlign*<br/>
+[in] TRUE para especificar que el menú emergente está alineado a la derecha; en caso contrario, FALSE.  
   
- [in] *uiMenuResID*  
- Especifica el identificador de recurso del menú para agregar al panel de cinta de opciones.  
+*uiMenuResID*<br/>
+[in] Especifica el identificador de recurso del menú para agregar al panel de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se ha asignado el menú para el elemento de la cinta de opciones; en caso contrario, FALSE.  
@@ -931,8 +931,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Especifica el índice de base cero del elemento de cinta de opciones para agregar.  
+*nIndex*<br/>
+[in] Especifica el índice de base cero del elemento de cinta de opciones para agregar.  
   
  [in] [out] *pRTC*  
  Un puntero a la información de clase en tiempo de ejecución para el elemento de la cinta de opciones que se agrega al panel de cinta de opciones.  
@@ -953,8 +953,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Especifica el identificador de comando del elemento de cinta de opciones para agregar.  
+*uiCmdID*<br/>
+[in] Especifica el identificador de comando del elemento de cinta de opciones para agregar.  
   
  [in] [out] *pRTC*  
  Un puntero a la información de clase en tiempo de ejecución asociado con el elemento de la cinta de opciones que se agrega al panel de cinta de opciones.  
@@ -999,8 +999,8 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSet*  
- TRUE para ajustar el ancho de los elementos de la cinta de opciones en la misma columna para el ancho del elemento de cinta de opciones más grande en la columna; FALSE para deshabilitar el ajuste de ancho.  
+*bSet*<br/>
+[in] TRUE para ajustar el ancho de los elementos de la cinta de opciones en la misma columna para el ancho del elemento de cinta de opciones más grande en la columna; FALSE para deshabilitar el ajuste de ancho.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando esta característica está habilitada en un panel de cinta de opciones, los anchos de elementos de la cinta de opciones en la misma columna se ajustan al ancho del elemento de cinta de opciones más grande en la misma columna.  
@@ -1013,8 +1013,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszKeys*  
- Keytip para el botón predeterminado del panel de cinta de opciones.  
+*lpszKeys*<br/>
+[in] Keytip para el botón predeterminado del panel de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  El botón predeterminado se muestra cuando un panel de la cinta no tiene espacio suficiente para mostrar sus elementos de la cinta de opciones.  
@@ -1027,8 +1027,8 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pButton*  
- Puntero al botón predeterminado para el panel de la cinta de opciones.  
+*pButton*<br/>
+[in] Puntero al botón predeterminado para el panel de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero en el menú emergente para el panel de la cinta si el método se realizó correctamente; en caso contrario, es NULL.  

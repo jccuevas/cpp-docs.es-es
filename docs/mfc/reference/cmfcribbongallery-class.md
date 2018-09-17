@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541885"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724801"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery (clase)
 Implementa galerías de cinta de estilo de Office 2007.  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszGroupName*  
- Especifica el nombre del grupo.  
+*lpszGroupName*<br/>
+[in] Especifica el nombre del grupo.  
   
- [in] *uiImagesPaletteResID*  
- Especifica el identificador de recurso de la lista de imágenes que contiene las imágenes para el grupo.  
+*uiImagesPaletteResID*<br/>
+[in] Especifica el identificador de recurso de la lista de imágenes que contiene las imágenes para el grupo.  
   
- [in] *cxPaletteImage*  
- Especifica el ancho en píxeles de una imagen.  
+*cxPaletteImage*<br/>
+[in] Especifica el ancho en píxeles de una imagen.  
   
- [in] *imagesGroup*  
- Una referencia a la lista de imágenes que contiene imágenes de grupo.  
+*imagesGroup*<br/>
+[in] Una referencia a la lista de imágenes que contiene imágenes de grupo.  
   
- [in] *nIconsNum*  
- Especifica el número de iconos en el grupo. Este parámetro debe especificarse solo para las instalaciones personalizadas (dibujado por el propietario) grupos.  
+*nIconsNum*<br/>
+[in] Especifica el número de iconos en el grupo. Este parámetro debe especificarse solo para las instalaciones personalizadas (dibujado por el propietario) grupos.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede dividir los elementos en una galería de la cinta en varios grupos mediante una llamada a este método. Cada grupo puede tener un título.  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pSubItem*  
- Un puntero al elemento que desea agregar al menú.  
+*pSubItem*<br/>
+[in] Un puntero al elemento que desea agregar al menú.  
   
- [in] *nIndex*  
- Especifica el índice de base cero de una ubicación donde se va a insertar el elemento.  
+*nIndex*<br/>
+[in] Especifica el índice de base cero de una ubicación donde se va a insertar el elemento.  
   
- [in] *bOnTop*  
- TRUE para especificar que debe insertarse el elemento antes de la Galería de la cinta de opciones; en caso contrario, FALSE.  
+*bOnTop*<br/>
+[in] TRUE para especificar que debe insertarse el elemento antes de la Galería de la cinta de opciones; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede combinar las galerías de la ventana emergente con elementos de menú emergente mediante una llamada a este método. Los elementos de menú pueden colocarse antes o después de la galería.  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar el menú; el cambio de tamaño en caso contrario, FALSE.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar el menú; el cambio de tamaño en caso contrario, FALSE.  
   
- [in] *bVertcalOnly*  
- TRUE para especificar que la galería puede cambiarse de tamaño verticalmente solo; FALSE para especificar que la galería puede cambiarse de tamaño tanto vertical como horizontalmente.  
+*bVertcalOnly*<br/>
+[in] TRUE para especificar que la galería puede cambiarse de tamaño verticalmente solo; FALSE para especificar que la galería puede cambiarse de tamaño tanto vertical como horizontalmente.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para habilitar o deshabilitar el cambio de tamaño de la Galería de la cinta de opciones. Cuando se habilita el cambio de tamaño, la Galería de la cinta muestra una barra de redimensionamiento que un usuario puede usar para cambiar su tamaño.  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para especificar que la barra lateral está habilitada; en caso contrario, FALSE.  
+*bHabilitar el*<br/>
+[in] TRUE para especificar que la barra lateral está habilitada; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para habilitar o deshabilitar la barra lateral de estilo de Office XP en el lado izquierdo del menú.  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nGroupIndex*  
- Especifica el índice de base cero para el grupo cuyo nombre se desea recuperar.  
+*nGroupIndex*<br/>
+[in] Especifica el índice de base cero para el grupo cuyo nombre se desea recuperar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El nombre del grupo ubicado en el índice especificado. Pasar un índice no válido provocará un error de aserción.  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nItemIndex*  
- Especifica el índice de base cero del elemento para el que se va a recuperar el texto de información sobre herramientas.  
+*nItemIndex*<br/>
+[in] Especifica el índice de base cero del elemento para el que se va a recuperar el texto de información sobre herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la cadena de información sobre herramientas asignada a un elemento en la Galería de la cinta de opciones. Puede ser NULL si no hay información sobre herramientas se asigna a ese elemento.  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Especifica el identificador de comando del elemento de menú que abre la Galería de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] Especifica el identificador de comando del elemento de menú que abre la Galería de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Cuando el usuario selecciona cualquier elemento en la Galería de la cinta, la biblioteca envía el mensaje WM_COMMAND junto con el identificador de comando del botón de menú que abre la Galería de la cinta de opciones.  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Un puntero al contexto de dispositivo que se usa para dibujar.  
+*pDC*<br/>
+[in] Un puntero al contexto de dispositivo que se usa para dibujar.  
   
- [in] *rectIcon*  
- Especifica el rectángulo delimitador del icono que se va a dibujar.  
+*rectIcon*<br/>
+[in] Especifica el rectángulo delimitador del icono que se va a dibujar.  
   
- [in] *nIconIndex*  
- Especifica el índice de base cero en la lista de imágenes de iconos de la Galería del icono que se va a dibujar.  
+*nIconIndex*<br/>
+[in] Especifica el índice de base cero en la lista de imágenes de iconos de la Galería del icono que se va a dibujar.  
   
- [in] *pIcon*  
- Un puntero en el icono que se va a dibujar.  
+*pIcon*<br/>
+[in] Un puntero en el icono que se va a dibujar.  
   
- [in] *clrText*  
- Especifica el color del texto del elemento que se va a dibujar.  
+*clrText*<br/>
+[in] Especifica el color del texto del elemento que se va a dibujar.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede invalidar este método en una clase derivada para personalizar la apariencia de una galería de la cinta de opciones.  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParent*  
- La ventana primaria de la ventana de la galería de la cinta de opciones.  
+*pParent*<br/>
+[in] La ventana primaria de la ventana de galería de la cinta de opciones.  
   
- [out] *datos*  
- Un objeto `CAccessibilityData` que recibe los datos de accesibilidad procedentes de la galería de la cinta de opciones.  
+*data*<br/>
+[out] Un `CAccessibilityData` objeto que recibe los datos de accesibilidad desde la Galería de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSet*  
- TRUE para mostrar la Galería de la cinta de opciones como un botón de menú desplegable; FALSE para mostrar el contenido de la Galería de la cinta directamente en la cinta de opciones.  
+*bSet*<br/>
+[in] TRUE para mostrar la Galería de la cinta de opciones como un botón de menú desplegable; FALSE para mostrar el contenido de la Galería de la cinta directamente en la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nGroupIndex*  
- Especifica el índice de base cero para el grupo que se está cambiando el nombre.  
+*nGroupIndex*<br/>
+[in] Especifica el índice de base cero para el grupo que se está cambiando el nombre.  
   
- [in] *lpszGroupName*  
- Especifica el nuevo nombre para el grupo.  
+*lpszGroupName*<br/>
+[in] Especifica el nuevo nombre para el grupo.  
   
 ### <a name="remarks"></a>Comentarios  
  El grupo cuyo nombre se va a cambiar debe haberse agregado con el [CMFCRibbonGallery::AddGroup](#addgroup) método.  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIconsInRow*  
- Especifica el número de elementos que aparecen en cada fila de la galería.  
+*nIconsInRow*<br/>
+[in] Especifica el número de elementos que aparecen en cada fila de la galería.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para especificar el ancho de la Galería de la cinta de opciones.  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nItemIndex*  
- Índice de base cero del elemento de paleta con la que se va a asociar la información sobre herramientas.  
+*nItemIndex*<br/>
+[in] Índice de base cero del elemento de paleta con la que se va a asociar la información sobre herramientas.  
   
- [in] *lpszToolTip*  
- El texto que aparecerá en la información sobre herramientas.  
+*lpszToolTip*<br/>
+[in] El texto que aparecerá en la información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *imagesPalette*  
- Especifica la lista de imágenes que contiene los iconos para que aparezca en la galería.  
+*imagesPalette*<br/>
+[in] Especifica la lista de imágenes que contiene los iconos para que aparezca en la galería.  
   
- [in] *uiImagesPaletteResID*  
- Especifica el identificador de recurso de la lista de imágenes que contiene los iconos para que aparezca en la galería.  
+*uiImagesPaletteResID*<br/>
+[in] Especifica el identificador de recurso de la lista de imágenes que contiene los iconos para que aparezca en la galería.  
   
- [in] *cxPaletteImage*  
- Especifica el ancho, en píxeles, de una imagen en la galería.  
+*cxPaletteImage*<br/>
+[in] Especifica el ancho, en píxeles, de una imagen en la galería.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Especifica el identificador de comando que se envía en el mensaje WM_COMMAND cuando un usuario selecciona un elemento de la galería.  
+*nID*<br/>
+[in] Especifica el identificador de comando que se envía en el mensaje WM_COMMAND cuando un usuario selecciona un elemento de la galería.  
   
 ### <a name="remarks"></a>Comentarios  
  Para determinar el elemento específico que el usuario seleccionado desde la galería, llame a la [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) método estático.  

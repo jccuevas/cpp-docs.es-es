@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315813"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722051"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Cuadro de diálogo de fuente de herramienta de texto (C++) (Editor de imágenes para iconos)
 
@@ -34,20 +34,25 @@ Utilice este cuadro de diálogo para:
 
 Para obtener acceso a este cuadro de diálogo, haga clic en el **fuente** situado en la **texto herramienta** cuadro de diálogo.
 
-**Fuente**  
-Enumera las fuentes disponibles.
+- **Fuente**
 
-**Estilo de fuente**  
-Se enumeran los estilos disponibles para la fuente especificada.
+   Enumera las fuentes disponibles.
 
-**Size**  
-Enumera los tamaños de punto disponibles para la fuente especificada.
+- **Estilo de fuente**
 
-**Ejemplo**  
-Muestra un ejemplo de cómo aparecerá el texto con la configuración de fuente especificado.
+   Se enumeran los estilos disponibles para la fuente especificada.
 
-**secuencia de comandos**  
-Enumera las secuencias de comandos de idioma disponibles para la fuente especificada. Cuando se selecciona un script de idioma diferente, el juego de caracteres para ese idioma estará disponible para la creación de documentos en varios idiomas.
+- **Size**
+
+   Enumera los tamaños de punto disponibles para la fuente especificada.
+
+- **Ejemplo**
+
+   Muestra un ejemplo de cómo aparecerá el texto con la configuración de fuente especificado.
+
+- **secuencia de comandos**
+
+   Enumera las secuencias de comandos de idioma disponibles para la fuente especificada. Cuando se selecciona un script de idioma diferente, el juego de caracteres para ese idioma estará disponible para la creación de documentos en varios idiomas.
 
 ## <a name="requirements"></a>Requisitos
 

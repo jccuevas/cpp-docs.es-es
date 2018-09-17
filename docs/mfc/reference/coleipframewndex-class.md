@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 114ddba64de255c0f034fb9dbcbe55a45ca72bba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217046"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723975"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx (clase)
 La clase `COleIPFrameWndEx` implementa un contenedor OLE compatible con MFC. Es necesario derivar la clase de ventana de marco en contexto de la aplicación desde la clase `COleIPFrameWndEx` en lugar de derivarla desde la clase [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.   
@@ -216,8 +216,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- [in] *bTail*  
+*pControlBar*<br/>
+[in] [in] *bTail*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -246,8 +246,8 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- [in] *nDockBarID*  
+*pBar*<br/>
+[in] [in] *nDockBarID*  
  [in] *lpRect*  
   
 ### <a name="remarks"></a>Comentarios  
@@ -262,11 +262,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero al panel para acoplar.  
+*pBar*<br/>
+[in] Un puntero al panel para acoplar.  
   
- [in] *pLeftOf*  
- Un puntero al panel que actúa como origen.  
+*pLeftOf*<br/>
+[in] Un puntero al panel que actúa como origen.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si la operación es correcta. En caso contrario, devuelve FALSE.  
@@ -316,12 +316,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- [in] *uiCustomizeCmd*  
- [in] *strCustomizeLabel*  
- [in] *uiViewToolbarsMenuEntryID*  
- [in] *bContextMenuShowsToolbarsOnly*  
- [in] *bViewMenuShowsToolbarsOnly*  
+*bHabilitar el*<br/>
+[in] [in] *uiCustomizeCmd*  
+*strCustomizeLabel*<br/>
+[in] [in] *uiViewToolbarsMenuEntryID*  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] [in] *bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -445,11 +445,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pButton*  
- Puntero al botón.  
+*pButton*<br/>
+[in] Puntero al botón.  
   
- [in] *strTTText*  
- Puntero al texto de información sobre herramientas.  
+*strTTText*<br/>
+[in] Puntero al texto de información sobre herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La implementación predeterminada devuelve 0.  
@@ -468,14 +468,14 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszRegEntry*  
- La entrada del registro donde la biblioteca almacena la configuración de la barra de herramientas de usuario.  
+*lpszRegEntry*<br/>
+[in] La entrada del registro donde la biblioteca almacena la configuración de la barra de herramientas de usuario.  
   
- [in] *uiUserToolbarFirst*  
- Id. de control que se asigna a la primera barra de herramientas definidas por el usuario.  
+*uiUserToolbarFirst*<br/>
+[in] Id. de control que se asigna a la primera barra de herramientas definidas por el usuario.  
   
- [in] *uiUserToolbarLast*  
- Id. de control que se asigna a la última barra de herramientas definidas por el usuario.  
+*uiUserToolbarLast*<br/>
+[in] Id. de control que se asigna a la última barra de herramientas definidas por el usuario.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para inicializar un intervalo de identificadores de control para la asignación a las barras de herramientas que los usuarios definir de forma dinámica. Los parámetros *uiUserToolbarFirst* y *uiUserToolbarLast* definir un intervalo de identificadores de control de barra de herramientas permitidos. Para deshabilitar la creación de barras de herramientas definidas por el usuario, establezca *uiUserToolbarFirst* o *uiUserToolbarLast* en -1.  
@@ -491,8 +491,8 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- [in] *pTarget*  
+*pControlBar*<br/>
+[in] [in] *pTarget*  
  [in] *después*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -523,8 +523,8 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- [in] *dwBarAlignment*  
+*punto*<br/>
+[in] [in] *dwBarAlignment*  
  [in] *bOuterEdge*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -543,10 +543,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIDResource*  
- [in] *dwDefaultStyle*  
- [in] *pParentWnd*  
- [in] *pContext*  
+*nIDResource*<br/>
+[in] [in] *dwDefaultStyle*  
+*pParentWnd*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -588,8 +588,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuPopup*  
- Un puntero al objeto de menú emergente.  
+*pMenuPopup*<br/>
+[in] Un puntero al objeto de menú emergente.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para recibir notificaciones del `CMFCPopupMenu` objetos al procesar mensajes WM_DESTROY.  
@@ -606,10 +606,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- [in] *nCode*  
- [in] *pExtra*  
- [in] *pHandlerInfo*  
+*nID*<br/>
+[in] [in] *nCode*  
+*pExtra*<br/>
+[in] [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -626,14 +626,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero al contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero al contexto de dispositivo.  
   
- [in] *pMenuButton*  
- Puntero en el botón de menú.  
+*pMenuButton*<br/>
+[in] Puntero en el botón de menú.  
   
- [in] *rectImage*  
- La imagen asociada con el elemento de menú.  
+*rectImage*<br/>
+[in] La imagen asociada con el elemento de menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La implementación predeterminada no hace nada y devuelve 0.  
@@ -652,14 +652,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero al contexto de dispositivo.  
+*pDC*<br/>
+[in] Puntero al contexto de dispositivo.  
   
- [in] *pMenu*  
- Puntero al objeto de menú emergente.  
+*pMenu*<br/>
+[in] Puntero al objeto de menú emergente.  
   
- [in] *rectLogo*  
- Puntero en el logotipo que desea mostrar.  
+*rectLogo*<br/>
+[in] Puntero en el logotipo que desea mostrar.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para mostrar un logotipo en el menú emergente asociado con la barra de menús que pertenecen a la `COleIPFrameWndEx`-objeto derivado. La implementación predeterminada no hace nada.  
@@ -710,8 +710,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bPreview*  
- [in] *pState*  
+*bPreview*<br/>
+[in] [in] *pState*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -725,8 +725,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuPane*  
- [in] *uiToolbarID*  
+*pMenuPane*<br/>
+[in] [in] *uiToolbarID*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -754,8 +754,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuPopup*  
- Puntero en el menú emergente que se mostrará.  
+*pMenuPopup*<br/>
+[in] Puntero en el menú emergente que se mostrará.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La implementación predeterminada no hace nada y devuelve un valor distinto de cero. La implementación debe devolver FALSE si no se puede mostrar el menú emergente.  
@@ -773,11 +773,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenuPopup*  
- Un puntero al menú emergente que el usuario seleccionado.  
+*pMenuPopup*<br/>
+[in] Un puntero al menú emergente que el usuario seleccionado.  
   
- [in] *pBar*  
- Un puntero al panel que hospeda el menú.  
+*pBar*<br/>
+[in] Un puntero al panel que hospeda el menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si desea que el marco de trabajo para activar el menú emergente; en caso contrario, FALSE. El valor predeterminado es TRUE.  
@@ -803,10 +803,10 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- [in] *nSensitivity*  
- [in] *bExactBar*  
- [in] *pRTCBarType*  
+*punto*<br/>
+[in] [in] *nSensitivity*  
+*bExactBar*<br/>
+[in] [in] *pRTCBarType*  
  [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -852,10 +852,10 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pControlBar*  
- [in] *bDestroy*  
- [in] *bAdjustLayout*  
- [in] *bAutoHide*  
+*pControlBar*<br/>
+[in] [in] *bDestroy*  
+*bAdjustLayout*<br/>
+[in] [in] *bAutoHide*  
  [in] *pBarReplacement*  
   
 ### <a name="remarks"></a>Comentarios  
@@ -868,8 +868,8 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *estado*  
- Especifica el estado de acoplamiento.  
+*state*<br/>
+[in] Especifica el estado de acoplamiento.  
   
 ### <a name="remarks"></a>Comentarios  
  Use esta función para especificar un nuevo estado de acoplamiento para paneles que pertenecen a la `COleIPFrameWndEx` objeto.  
@@ -885,14 +885,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *menú*  
- Una referencia a un [CMenu](../../mfc/reference/cmenu-class.md) objeto va a modificar.  
+*Menú*<br/>
+[in] Una referencia a un [CMenu](../../mfc/reference/cmenu-class.md) objeto va a modificar.  
   
- [in] *uiViewUserToolbarCmdFirst*  
- Especifica el primer comando definido por el usuario.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Especifica el primer comando definido por el usuario.  
   
- [in] *uiViewUserToolbarCmdLast*  
- Especifica el último comando definido por el usuario.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Especifica el último comando definido por el usuario.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -908,10 +908,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- [in] *bMostrar*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bMostrar*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -928,8 +928,8 @@ virtual void WinHelp(
  [in] dwData  
  Especifica datos según sea necesario para el tipo de Ayuda especificado por *nCmd*.  
   
- [in] *nCmd*  
- Especifica el tipo de ayuda solicitado. Para obtener una lista de valores posibles y cómo afectan la *dwData* parámetro, vea el [función WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) en el SDK de Windows.  
+*nCmd*<br/>
+[in] Especifica el tipo de ayuda solicitado. Para obtener una lista de valores posibles y cómo afectan la *dwData* parámetro, vea el [función WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
   

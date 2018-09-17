@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55be256ec7b400be6c46f928a2f2309d047ca2c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 84965abc66bf3aa58dce550dfb5e1b820fb25d12
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715743"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
 **Específicos de Microsoft**  
@@ -47,11 +47,11 @@ unsigned char _bittestandreset64(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in, out] `a`  
- Puntero a la memoria que se va a examinar.  
+*a*<br/>
+[in, out] Un puntero a la memoria que se va a examinar.  
   
- [in] `b`  
- La posición de bit que se va a probar.  
+*b*<br/>
+[in] La posición de bit para probar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El bit en la posición especificada.  

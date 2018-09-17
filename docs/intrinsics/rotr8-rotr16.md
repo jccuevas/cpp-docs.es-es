@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a667f857621c01900165f6e93de7f7bddc837915
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 936113d2b59bf089179c6f0c016c8a91c5edc74d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541859"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715824"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 **Específicos de Microsoft**  
@@ -44,11 +44,11 @@ unsigned short _rotr16(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `value`  
- El valor que se va a girar.  
+*valor*<br/>
+[in] El valor se va a girar.  
   
- [in] `shift`  
- El número de bits que se va a girar.  
+*shift*<br/>
+[in] El número de bits que se va a girar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El valor girado.  

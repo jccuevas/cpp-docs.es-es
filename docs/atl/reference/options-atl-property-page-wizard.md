@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77849366ecfbdaee819eff6b8938b2dadb7b8db3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3f3cf6a9e2c9924ae72624c931a4551736f8956
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711833"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opciones, Asistente para páginas de propiedades ATL
 
 Utilice esta página del Asistente para definir el nivel de agregación y de modelo de subprocesamiento de página de propiedades que se va a crear.
 
-**Modelo de subprocesos**  
-Especifica el modelo de subprocesos utilizado por la página de propiedades.
+- **Modelo de subprocesos**
 
-Consulte [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.
+   Especifica el modelo de subprocesos utilizado por la página de propiedades.
 
-|Opción|Descripción|
-|------------|-----------------|
-|**Single**|La página de propiedades solo se ejecuta en el subproceso COM principal.|
-|**Apartamento**|La página de propiedades puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.|
+   Consulte [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.
 
-**Agregación**  
-Agrega compatibilidad con la agregación para la página de propiedades que se va a crear. Consulte [agregación](../../atl/aggregation.md) para obtener más información.
+   |Opción|Descripción|
+   |------------|-----------------|
+   |**Single**|La página de propiedades solo se ejecuta en el subproceso COM principal.|
+   |**Apartamento**|La página de propiedades puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.|
 
-|Opción|Descripción|
-|------------|-----------------|
-|**Sí**|Crear una página de propiedades que se puede agregar.|
-|**No**|Crear una página de propiedades que no se puede agregar.|
-|**Solo**|Crear una página de propiedades que solo se puede crear instancias mediante agregación.|
+- **Agregación**
+
+   Agrega compatibilidad con la agregación para la página de propiedades que se va a crear. Consulte [agregación](../../atl/aggregation.md) para obtener más información.
+
+   |Opción|Descripción|
+   |------------|-----------------|
+   |**Sí**|Crear una página de propiedades que se puede agregar.|
+   |**No**|Crear una página de propiedades que no se puede agregar.|
+   |**Solo**|Crear una página de propiedades que solo se puede crear instancias mediante agregación.|
 
 ## <a name="see-also"></a>Vea también
 

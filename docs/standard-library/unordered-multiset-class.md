@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965492"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725915"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset (Clase)
 
@@ -170,7 +170,7 @@ class unordered_multiset;
 |Parámetro|Descripción|
 |-|-|
 |*Key*|El tipo de clave.|
-|*Hash*|El tipo de objeto de la función hash.|
+|*hash*|El tipo de objeto de la función hash.|
 |*Pred*|El tipo de objeto de función de comparación de igualdad.|
 |*Alloc*|Clase de asignador.|
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-keyVal para asignar el valor de clave.
+*keyVal*<br/>
+Valor de clave que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*  
- Número de depósito.
+*nbucket*<br/>
+Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
- Valor de clave que se va a buscar.
+*keyVal*<br/>
+Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*  
- Número de depósito.
+*nbucket*<br/>
+Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
- Valor de clave que se va a buscar.
+*keyVal*<br/>
+Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*Where*  
- Posición del elemento que se va a quitar.
+*Where*<br/>
+Posición del elemento que se va a quitar.
 
-*Primero*  
- Posición del primer elemento que se va a quitar.
+*Primero*<br/>
+Posición del primer elemento que se va a quitar.
 
-*Último*  
- Posición situada más allá del último elemento que se va a quitar.
+*Último*<br/>
+Posición situada más allá del último elemento que se va a quitar.
 
-*Key*  
- Valor de clave de los elementos que se van a quitar.
+*Key*<br/>
+Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*  
- Valor de clave que se va a buscar.
+*keyVal*<br/>
+Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parámetros
 
-*factor*  
- El nuevo factor de carga máxima.
+*factor*<br/>
+El nuevo factor de carga máxima.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parámetros
 
-*nbuckets*  
- Número solicitado de depósitos.
+*nbuckets*<br/>
+Número solicitado de depósitos.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- El contenedor con el que se intercambia.
+*right*<br/>
+El contenedor con el que se intercambia.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2494,7 +2495,7 @@ unordered_multiset(
 |*InputIterator*|Tipo de iterador.|
 |*Al*|Objeto de asignador que se va a almacenar.|
 |*Comp.*|Objeto de función de comparación que se va a almacenar.|
-|*Hash*|Objeto de función hash que se va a almacenar.|
+|*hash*|Objeto de función hash que se va a almacenar.|
 |*Bucket_count*|Número mínimo de depósitos.|
 |*Derecha*|Contenedor que se va a copiar.|
 |*IList*|initializer_list de la que se va a copiar.|

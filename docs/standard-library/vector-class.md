@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199500"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710240"
 ---
 # <a name="vector-class"></a>vector (Clase)
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*  
- Tipo de datos de elementos que se almacenará en el vector.
+*Type*<br/>
+Tipo de datos de elementos que se almacenará en el vector.
 
-*Asignador*  
- Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es `allocator<Type>`.
+*Asignador*<br/>
+Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es `allocator<Type>`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*  
- Posición del primer elemento en el intervalo de elementos que se va a copiar.
+*Primero*<br/>
+Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*Último*  
- Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
+*Último*<br/>
+Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
-*Recuento*  
- Número de copias de un elemento que se va a insertar en el vector.
+*Recuento*<br/>
+Número de copias de un elemento que se va a insertar en el vector.
 
-*Val*  
- Valor del elemento que se va a insertar en el vector.
+*Val*<br/>
+Valor del elemento que se va a insertar en el vector.
 
-*IList*  
- initializer_list que contiene los elementos que se van a insertar.
+*IList*<br/>
+initializer_list que contiene los elementos que se van a insertar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pos*  
- Subíndice o número de posición del elemento al que se va a hacer referencia en el vector.
+*_Pos*<br/>
+Subíndice o número de posición del elemento al que se va a hacer referencia en el vector.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>Parámetros
 
 *Val*<br/>
- El valor que se asignará al elemento que se agrega al final del vector.
+El valor que se asignará al elemento que se agrega al final del vector.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Parámetros
 
-*count*  
- Longitud mínima de almacenamiento a asignar para el vector.
+*count*<br/>
+Longitud mínima de almacenamiento a asignar para el vector.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parámetros
 
-*NewSize*  
- Nuevo tamaño del vector.
+*NewSize*<br/>
+Nuevo tamaño del vector.
 
-*Val*  
- El valor de inicialización de elementos nuevos añadido al vector si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, los nuevos objetos utilizan su constructor predeterminado.
+*Val*<br/>
+El valor de inicialización de elementos nuevos añadido al vector si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, los nuevos objetos utilizan su constructor predeterminado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*right*  
- Vector que proporciona los elementos que se van a intercambiar o vector cuyos elementos se van a intercambiar con los del vector *izquierdo*.
+*right*<br/>
+Vector que proporciona los elementos que se van a intercambiar o vector cuyos elementos se van a intercambiar con los del vector *izquierdo*.
 
-*left*  
- Un vector cuyos elementos se van a intercambiar con los del vector *derecho*.
+*left*<br/>
+Un vector cuyos elementos se van a intercambiar con los del vector *derecho*.
 
 ### <a name="example"></a>Ejemplo
 

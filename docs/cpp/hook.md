@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197402"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719295"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ Un puntero al método de controlador de eventos que se a enlazar a un evento. El
 
 - Eventos administrados: *ReceiverClass* es la clase de receptor de eventos y `HandlerMethod` es el controlador.
 
-*receptor* (opcional)<br/>
-Un puntero a una instancia de la clase del receptor de eventos. Si no especifica un receptor, el valor predeterminado es la clase del receptor o estructura en la que **__hook** se llama.
+*Receptor*<br/>
+(Opcional) Un puntero a una instancia de la clase del receptor de eventos. Si no especifica un receptor, el valor predeterminado es la clase del receptor o estructura en la que **__hook** se llama.
 
 ## <a name="usage"></a>Uso
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b70589829ec75712eedde86b71d90f0eec46fba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1dfab348aa9629cfba0b26c6c48d2ba2747e76e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754673"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717579"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Asistente para componentes ATL COM+ 1.0
 
@@ -27,35 +27,39 @@ Use esta página del Asistente para componentes ATL COM + 1.0 para especificar e
 
 Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).
 
-**Interface**  
-Indica el tipo de interfaz es compatible con el objeto. De forma predeterminada, el objeto admite una interfaz dual.
+- **Interface**
 
-|Opción|Descripción|
-|------------|-----------------|
-|**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable tiene funciones de interfaz personalizada y un enlace `IDispatch` métodos). Permite que los clientes COM y los controladores de automatización tener acceso al objeto.|
-|**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> -   **Compatible con automatización** agrega compatibilidad con automatización a la interfaz personalizada. Para proyectos con atributos, Establece el **oleautomation** atributo en la coclase.|
+   Indica el tipo de interfaz es compatible con el objeto. De forma predeterminada, el objeto admite una interfaz dual.
 
-**Uno de estos**  
-Indica que los clientes pueden llamar a este componente de forma asincrónica utilizando colas de mensajes. Agrega atribuida de componente macro personalizado (TLBATTR_QUEUEABLE, 0) al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).
+   |Opción|Descripción|
+   |------------|-----------------|
+   |**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable tiene funciones de interfaz personalizada y un enlace `IDispatch` métodos). Permite que los clientes COM y los controladores de automatización tener acceso al objeto.|
+   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> -   **Compatible con automatización** agrega compatibilidad con automatización a la interfaz personalizada. Para proyectos con atributos, Establece el **oleautomation** atributo en la coclase.|
 
-**Soporte técnico**  
-Indica compatibilidad adicional para el control de control y objeto de error.
+- **Uno de estos**
 
-|Opción|Descripción|
-|------------|-----------------|
-|**ISupportErrorInfo**|Crea la compatibilidad con la [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfaz para que el objeto puede devolver información de error al cliente.|
-|**IObjectControl**|Proporciona el acceso a los objetos a los tres [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) métodos: [activar](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), y [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
-|**IObjectConstruct**|Crea la compatibilidad con la [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) interfaz para administrar pasar parámetros desde otros métodos u objetos.|
+   Indica que los clientes pueden llamar a este componente de forma asincrónica utilizando colas de mensajes. Agrega atribuida de componente macro personalizado (TLBATTR_QUEUEABLE, 0) al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).
 
-**Transacción**  
-Indica que el objeto admite transacciones. Incluye el archivo mtxattr.h en el archivo .idl (proyectos sin atributos).
+- **Soporte técnico**
 
-|Opción|Descripción|
-|------------|-----------------|
-|**Compatible**|Especifica que el objeto nunca es la raíz de una secuencia de transacción agregando el custom(TLBATTR_TRANS_SUPPORTED,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
-|**Obligatoria**|Especifica que el objeto puede o no sea la raíz de una secuencia de transacción agregando el custom(TLBATTR_TRANS_REQUIRED,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
-|**No se admite**|Especifica que el objeto excluye las transacciones. Agrega el custom(TLBATTR_TRANS_NOTSUPP,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
-|**Se requiere nueva**|Especifica que el objeto siempre es la raíz de una secuencia de transacción agregando el custom(TLBATTR_TRANS_REQNEW,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
+   Indica compatibilidad adicional para el control de control y objeto de error.
+
+   |Opción|Descripción|
+   |------------|-----------------|
+   |**ISupportErrorInfo**|Crea la compatibilidad con la [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfaz para que el objeto puede devolver información de error al cliente.|
+   |**IObjectControl**|Proporciona el acceso a los objetos a los tres [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) métodos: [activar](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), y [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectConstruct**|Crea la compatibilidad con la [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) interfaz para administrar pasar parámetros desde otros métodos u objetos.|
+
+- **Transacción**
+
+   Indica que el objeto admite transacciones. Incluye el archivo mtxattr.h en el archivo .idl (proyectos sin atributos).
+
+   |Opción|Descripción|
+   |------------|-----------------|
+   |**Compatible**|Especifica que el objeto nunca es la raíz de una secuencia de transacción agregando el custom(TLBATTR_TRANS_SUPPORTED,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
+   |**Obligatoria**|Especifica que el objeto puede o no sea la raíz de una secuencia de transacción agregando el custom(TLBATTR_TRANS_REQUIRED,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
+   |**No se admite**|Especifica que el objeto excluye las transacciones. Agrega el custom(TLBATTR_TRANS_NOTSUPP,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
+   |**Se requiere nueva**|Especifica que el objeto siempre es la raíz de una secuencia de transacción agregando el custom(TLBATTR_TRANS_REQNEW,0) de macro de atributo de componente al archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|
 
 ## <a name="see-also"></a>Vea también
 

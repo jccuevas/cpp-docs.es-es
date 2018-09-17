@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849820"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725860"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo (clase)
 Define el aspecto de los marcadores de acoplamiento inteligente.  
@@ -119,8 +119,8 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *params*  
- Un objeto de tipo `CSmartDockingInfo` que se rellena con los parámetros actuales de acoplamiento inteligentes.  
+*params*<br/>
+[out] Un objeto de tipo `CSmartDockingInfo` que se rellena con los parámetros actuales de acoplamiento inteligentes.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  Especifica si se utiliza el color del tema actual cuando el marco de trabajo muestra marcadores de acoplamiento inteligente.  

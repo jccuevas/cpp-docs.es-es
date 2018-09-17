@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200223"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711820"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,8 +52,8 @@ Define el bloque de biblioteca en el archivo .idl.
 
 ### <a name="parameters"></a>Parámetros
 
-*tipo* (opcional)  
-Puede ser uno de los siguientes:
+*type*  
+(Opcional) Puede ser uno de los siguientes:
 
 - `dll` Agrega funciones y clases que permiten la DLL resultante funcione como servidor COM en proceso. Este es el valor predeterminado.
 
@@ -63,11 +63,11 @@ Puede ser uno de los siguientes:
 
 - `unspecified` Deshabilita la inserción de código ATL relacionado con el atributo de módulo: la inserción de la clase de módulo de ATL, la instancia global _AtlModule y entrada de funciones de punto. No deshabilita la inserción de código ATL como consecuencia de otros atributos del proyecto.
 
-*name* (opcional)  
-Nombre del bloque de biblioteca.
+*name*  
+(Opcional) El nombre del bloque de biblioteca.
 
-*versión* (opcional)  
-Número de versión que quiere asignar al bloque de biblioteca. El valor predeterminado es 1,0.
+*version*  
+(Opcional) El número de versión que desea asignar al bloque de biblioteca. El valor predeterminado es 1,0.
 
 *uuid*  
 Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Es posible que deba recuperar el *uuid* del bloque de biblioteca, lo que puede hacer con el identificador **__uuidof (** *nombrebiblioteca* **)**.
@@ -75,32 +75,32 @@ Identificador único para la biblioteca. Si omite este parámetro, se generará 
 *lcid*  
 Parámetro de localización. Consulte [lcid](/windows/desktop/Midl/lcid) para obtener más información.
 
-*control* (opcional)  
-Especifica que todas las coclases de la biblioteca son controles.
+*control*  
+(Opcional) Especifica que todas las coclases de la biblioteca de controles.
 
 *helpstring*  
 Especifica la biblioteca de tipos.
 
-*helpstringdll* (opcional)  
-Establece el nombre del archivo .dll que se va a usar para realizar una búsqueda de cadenas del documento. Consulte [helpstringdll](/windows/desktop/Midl/helpstringdll) para obtener más información.
+*helpstringdll*  
+(Opcional) Establece el nombre del archivo .dll se utiliza para realizar una búsqueda de cadena de documento. Consulte [helpstringdll](/windows/desktop/Midl/helpstringdll) para obtener más información.
 
-*HelpFile* (opcional)  
-El nombre de la **ayuda** archivo para la biblioteca de tipos.
+*helpfile*  
+(Opcional) El nombre de la **ayuda** archivo para la biblioteca de tipos.
 
-*HelpContext* (opcional)  
-El **Id. de Ayuda** para esta biblioteca de tipos.
+*helpcontext*  
+(Opcional) El **Id. de Ayuda** para esta biblioteca de tipos.
 
-*helpstringcontext* (opcional)  
-Consulte [helpstringcontext](../windows/helpstringcontext.md) para obtener más información.
+*helpstringcontext*  
+(Opcional) Consulte [helpstringcontext](../windows/helpstringcontext.md) para obtener más información.
 
-*oculto* (opcional)  
-Impide que se muestre toda la biblioteca. Este uso está diseñado para emplearlo con controles. Los hosts deben crear una biblioteca de tipos que ajuste el control con propiedades extendidas. Consulte la [oculto](/windows/desktop/Midl/hidden) atributo MIDL para obtener más información.
+*hidden*  
+(Opcional) Impide que aparezca toda la biblioteca. Este uso está diseñado para emplearlo con controles. Los hosts deben crear una biblioteca de tipos que ajuste el control con propiedades extendidas. Consulte la [oculto](/windows/desktop/Midl/hidden) atributo MIDL para obtener más información.
 
-*restringido* (opcional)  
-No es posible llamar a los miembros de la biblioteca arbitrariamente. Consulte la [restringido](/windows/desktop/Midl/restricted) atributo MIDL para obtener más información.
+*restricted*  
+(Opcional) Los miembros de la biblioteca no se puede llamar arbitrariamente. Consulte la [restringido](/windows/desktop/Midl/restricted) atributo MIDL para obtener más información.
 
-*personalizado* (opcional)  
-Uno o más atributos; esto es similar al atributo [custom](../windows/custom-cpp.md) . El primer parámetro *personalizado* es el GUID del atributo. Por ejemplo:
+*Personalizado*  
+(Opcional) Uno o más atributos; Esto es similar a la [personalizado](../windows/custom-cpp.md) atributo. El primer parámetro *personalizado* es el GUID del atributo. Por ejemplo:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]

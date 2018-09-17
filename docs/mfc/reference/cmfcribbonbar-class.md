@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce8706b36af848fadba041871233204e664cabf4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541891"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712444"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar (clase)
 La clase `CMFCRibbonBar` implementa una barra de cinta similar a la que se usaba en Office 2007.  
@@ -353,8 +353,8 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiContextID*  
- El identificador de categoría de contexto.  
+*uiContextID*<br/>
+[in] El identificador de categoría de contexto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si una categoría de contexto con *uiContextID* está activado y se encuentra; de lo contrario, FALSE.  
@@ -376,26 +376,26 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- Nombre de la categoría de cinta de opciones.  
+*lpszName*<br/>
+[in] Nombre de la categoría de cinta de opciones.  
   
- [in] *uiSmallImagesResID*  
- Identificador de recurso de la lista de imágenes pequeñas de la categoría de cinta de opciones.  
+*uiSmallImagesResID*<br/>
+[in] Identificador de recurso de la lista de imágenes pequeñas de la categoría de cinta de opciones.  
   
- [in] *uiLargeImagesResID*  
- Identificador de recurso de la lista de imágenes de gran tamaño para la categoría de cinta de opciones.  
+*uiLargeImagesResID*<br/>
+[in] Identificador de recurso de la lista de imágenes de gran tamaño para la categoría de cinta de opciones.  
   
- [in] *sizeSmallImage*  
- Especifica el tamaño de imágenes pequeñas de la categoría de cinta de opciones.  
+*sizeSmallImage*<br/>
+[in] Especifica el tamaño de imágenes pequeñas de la categoría de cinta de opciones.  
   
- [in] *sizeLargeImage*  
- Especifica el tamaño de imágenes de gran tamaño para la categoría de cinta de opciones.  
+*sizeLargeImage*<br/>
+[in] Especifica el tamaño de imágenes de gran tamaño para la categoría de cinta de opciones.  
   
- [in] *nInsertAt*  
- Índice de base cero de la ubicación de la categoría.  
+*nInsertAt*<br/>
+[in] Índice de base cero de la ubicación de la categoría.  
   
- [in] *pRTI*  
- Puntero a un [CMFCRibbonCategory (clase)](../../mfc/reference/cmfcribboncategory-class.md) clases en tiempo de ejecución para crear dinámicamente una categoría de cinta de opciones en tiempo de ejecución.  
+*pRTI*<br/>
+[in] Puntero a un [CMFCRibbonCategory (clase)](../../mfc/reference/cmfcribboncategory-class.md) clases en tiempo de ejecución para crear dinámicamente una categoría de cinta de opciones en tiempo de ejecución.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la nueva categoría de cinta de opciones si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -427,32 +427,32 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- Nombre de la categoría.  
+*lpszName*<br/>
+[in] Nombre de la categoría.  
   
- [in] *lpszContextName*  
- Nombre de la leyenda de la categoría de contexto.  
+*lpszContextName*<br/>
+[in] Nombre de la leyenda de la categoría de contexto.  
   
- [in] *uiContextID*  
- Identificador de contexto.  
+*uiContextID*<br/>
+[in] Identificador de contexto.  
   
- [in] *clrContext*  
- Color del título de categoría de contexto.  
+*clrContext*<br/>
+[in] Color del título de categoría de contexto.  
   
- [in] *uiSmallImagesResID*  
- Identificador de recurso de la imagen pequeña de una categoría de contexto.  
+*uiSmallImagesResID*<br/>
+[in] Identificador de recurso de la imagen pequeña de una categoría de contexto.  
   
- [in] *uiLargeImagesResID*  
- Identificador de recurso de la imagen grande de una categoría de contexto.  
+*uiLargeImagesResID*<br/>
+[in] Identificador de recurso de la imagen grande de una categoría de contexto.  
   
- [in] *sizeSmallImage*  
- Tamaño de una imagen pequeña.  
+*sizeSmallImage*<br/>
+[in] Tamaño de una imagen pequeña.  
   
- [in] *sizeLargeImage*  
- Tamaño de una imagen grande.  
+*sizeLargeImage*<br/>
+[in] Tamaño de una imagen grande.  
   
- [in] *pRTI*  
- Puntero a una clase en tiempo de ejecución.  
+*pRTI*<br/>
+[in] Puntero a una clase en tiempo de ejecución.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la categoría recién creada, o NULL si el `CreateObject` método *pRTI* no se puede crear la categoría especificada.  
@@ -493,20 +493,20 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- Nombre de la categoría principal de la cinta de opciones.  
+*lpszName*<br/>
+[in] Nombre de la categoría principal de la cinta de opciones.  
   
- [in] *uiSmallImagesResID*  
- Identificador de recurso de imágenes pequeñas.  
+*uiSmallImagesResID*<br/>
+[in] Identificador de recurso de imágenes pequeñas.  
   
- [in] *uiLargeImagesResID*  
- Identificador de recurso de imágenes de gran tamaño.  
+*uiLargeImagesResID*<br/>
+[in] Identificador de recurso de imágenes de gran tamaño.  
   
- [in] *sizeSmallImage*  
- El tamaño de imágenes pequeñas.  
+*sizeSmallImage*<br/>
+[in] El tamaño de imágenes pequeñas.  
   
- [in] *sizeLargeImage*  
- El tamaño de imágenes de gran tamaño.  
+*sizeLargeImage*<br/>
+[in] El tamaño de imágenes de gran tamaño.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a la nueva categoría principal de la cinta de opciones si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -544,14 +544,14 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- Nombre de la categoría.  
+*lpszName*<br/>
+[in] Nombre de la categoría.  
   
- [in] *uiSmallImagesResID*  
- Identificador de recurso de la lista de imágenes para la categoría.  
+*uiSmallImagesResID*<br/>
+[in] Identificador de recurso de la lista de imágenes para la categoría.  
   
- [in] *sizeSmallImage*  
- Tamaño de imágenes para los elementos de la cinta de opciones en la categoría.  
+*sizeSmallImage*<br/>
+[in] Tamaño de imágenes para los elementos de la cinta de opciones en la categoría.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la nueva categoría si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -567,8 +567,8 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pElement*  
- Puntero a un elemento de la cinta de opciones.  
+*pElement*<br/>
+[in] Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  El elemento de la cinta se coloca delante de los botones del sistema.  
@@ -581,8 +581,8 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bReplaceFrameCaption*  
- TRUE para reemplazar el título de la ventana de marco principal; la barra de cinta FALSE para buscar la barra de cinta en el título de la ventana de marco principal.  
+*bReplaceFrameCaption*<br/>
+[in] TRUE para reemplazar el título de la ventana de marco principal; la barra de cinta FALSE para buscar la barra de cinta en el título de la ventana de marco principal.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -597,14 +597,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentWnd*  
- Puntero a la ventana primaria de la barra de cinta de opciones.  
+*pParentWnd*<br/>
+[in] Puntero a la ventana primaria de la barra de cinta de opciones.  
   
- [in] *dwStyle*  
- Una combinación lógica de estilos para la nueva ventana.  
+*dwStyle*<br/>
+[in] Una combinación lógica de estilos para la nueva ventana.  
   
- [in] *nID*  
- Id. de la nueva ventana.  
+*nID*<br/>
+[in] Id. de la nueva ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se creó la ventana; en caso contrario, FALSE.  
@@ -628,17 +628,17 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pParentWnd*  
- Puntero a la ventana primaria de la barra de cinta de opciones.  
+*pParentWnd*<br/>
+[in] Puntero a la ventana primaria de la barra de cinta de opciones.  
   
- [in] *dwCtrlStyle*  
- Este parámetro no se utiliza.  
+*dwCtrlStyle*<br/>
+[in] No se utiliza este parámetro.  
   
- [in] *dwStyle*  
- Una combinación lógica de estilos para la nueva ventana.  
+*dwStyle*<br/>
+[in] Una combinación lógica de estilos para la nueva ventana.  
   
- [in] *nID*  
- Id. de la nueva ventana.  
+*nID*<br/>
+[in] Id. de la nueva ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se creó la ventana; en caso contrario, FALSE.  
@@ -653,8 +653,8 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bSetFocus*  
- TRUE para establecer el foco en la ventana primaria de la barra de cinta.  
+*bSetFocus*<br/>
+[in] TRUE para establecer el foco en la ventana primaria de la barra de cinta.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -669,14 +669,14 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el botón de menú.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el botón de menú.  
   
- [in] *pMenuItem*  
- Puntero a un botón de menú de la barra de herramientas.  
+*pMenuItem*<br/>
+[in] Puntero a un botón de menú de la barra de herramientas.  
   
- [in] *rectImage*  
- El rectángulo de presentación para un botón de menú.  
+*rectImage*<br/>
+[in] El rectángulo de presentación para un botón de menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se dibuja la imagen; en caso contrario, FALSE.  
@@ -700,8 +700,8 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar la característica de sugerencias de teclas; FALSE para deshabilitar la característica de sugerencias de teclas.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar la característica de sugerencias de teclas; FALSE para deshabilitar la característica de sugerencias de teclas.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando se habilita esta característica, las sugerencias de teclas se muestran cuando el usuario presiona el botón ALT o F10. Cuando el usuario presiona la tecla ALT, sugerencias de teclas se muestran con un retraso de 200 milisegundos. Este retraso permite accesos directos a ejecutarse de forma que la tecla ALT presionada no interfiere con otras combinaciones que incluyen la tecla ALT.  
@@ -714,8 +714,8 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- True para habilitar la **vista previa de impresión** de características; FALSE para deshabilitar el **vista previa de impresión** característica.  
+*bHabilitar el*<br/>
+[in] True para habilitar la **vista previa de impresión** de características; FALSE para deshabilitar el **vista previa de impresión** característica.  
   
 ### <a name="remarks"></a>Comentarios  
  Si *bHabilitar el* es FALSE y un proceso de impresión existe la categoría de versión preliminar, se eliminan.  
@@ -732,11 +732,11 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar la información sobre herramientas en la barra de cinta de opciones. FALSO para deshabilitar la información sobre herramientas en la barra de cinta.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar la información sobre herramientas en la barra de cinta de opciones. FALSO para deshabilitar la información sobre herramientas en la barra de cinta.  
   
- [in] *bEnableDescr*  
- TRUE para habilitar las descripciones de información sobre herramientas en la información sobre herramientas; FALSE para deshabilitar las descripciones de información sobre herramientas en la información sobre herramientas.  
+*bEnableDescr*<br/>
+[in] TRUE para habilitar las descripciones de información sobre herramientas en la información sobre herramientas; FALSE para deshabilitar las descripciones de información sobre herramientas en la información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
  El *bHabilitar el* parámetro determina si se muestra información sobre herramientas al mantener el mouse sobre un elemento de la cinta de opciones. El *bEnableDescr* parámetro determina si el texto descriptivo adicional aparece con el texto de información sobre herramientas.  
@@ -751,11 +751,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwData*  
- Los datos asociados con un elemento de la cinta.  
+*dwData*<br/>
+[in] Los datos asociados con un elemento de la cinta.  
   
- [in] *bVisibleOnly*  
- TRUE para buscar elementos de cinta visible solo; FALSE para buscar todos los elementos de la cinta de opciones.  
+*bVisibleOnly*<br/>
+[in] TRUE para buscar elementos de cinta visible solo; FALSE para buscar todos los elementos de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un elemento de la cinta si tiene los datos especificados y visibilidad; en caso contrario, es NULL.  
@@ -774,14 +774,14 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Identificador de comando para un elemento de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] Identificador de comando para un elemento de la cinta de opciones.  
   
- [in] *bVisibleOnly*  
- TRUE para buscar elementos de cinta visible solo; FALSE para buscar todos los elementos de la cinta de opciones.  
+*bVisibleOnly*<br/>
+[in] TRUE para buscar elementos de cinta visible solo; FALSE para buscar todos los elementos de la cinta de opciones.  
   
- [in] *bExcludeQAT*  
- TRUE para excluir elementos de la barra de herramientas de acceso rápido de la búsqueda; en caso contrario, FALSE.  
+*bExcludeQAT*<br/>
+[in] TRUE para excluir elementos de la barra de herramientas de acceso rápido de la búsqueda; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un elemento de la cinta si tiene los valores de identificador y la búsqueda de comando especificado; en caso contrario, es NULL.  
@@ -799,8 +799,8 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *dwData*  
- Los datos asociados a una categoría de cinta de opciones.  
+*dwData*<br/>
+[in] Los datos asociados a una categoría de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de una categoría de cinta de opciones si el método se realizó correctamente; en caso contrario,-1.  
@@ -859,8 +859,8 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Índice de base cero de una categoría de cinta de opciones en la lista de categorías de la cinta de opciones que se encuentra en la barra de cinta.  
+*nIndex*<br/>
+[in] Índice de base cero de una categoría de cinta de opciones en la lista de categorías de la cinta de opciones que se encuentra en la barra de cinta.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la categoría de cinta de opciones en el índice especificado; de lo contrario, NULL if *nIndex* estaba fuera del intervalo.  
@@ -896,8 +896,8 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pCategory*  
- Puntero a una categoría de cinta de opciones.  
+*pCategory*<br/>
+[in] Puntero a una categoría de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de una categoría de cinta de opciones especificada por *pCategory*; o -1 si no se encuentra la categoría de cinta de opciones.  
@@ -912,11 +912,11 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiContextID*  
- Un identificador de contexto de categoría de cinta de opciones.  
+*uiContextID*<br/>
+[in] Un identificador de contexto de categoría de cinta de opciones.  
   
- [out] *strName*  
- El nombre de un título de categoría de contexto.  
+*strName*<br/>
+[out] El nombre de un título de categoría de contexto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el método se realizó correctamente; en caso contrario, FALSE si *uiContextID* es cero o no se encontró el título de categoría de contexto.  
@@ -943,11 +943,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- Identificador de comando de un elemento de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] Identificador de comando de un elemento de la cinta de opciones.  
   
- [out] *arButtons*  
- Una matriz de punteros a elementos de la cinta de opciones.  
+*arButtons*<br/>
+[out] Una matriz de punteros a elementos de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  Varios elementos de la cinta de opciones pueden tener el mismo identificador de comando dado que algunos elementos de la cinta de opciones se pueden copiar en la barra de herramientas de acceso rápido.  
@@ -980,11 +980,11 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *lstItems*  
- La lista de identificadores de comando para los elementos de la cinta de opciones que se encuentran en la barra de cinta.  
+*lstItems*<br/>
+[out] La lista de identificadores de comando para los elementos de la cinta de opciones que se encuentran en la barra de cinta.  
   
- [in] *bHiddenOnly*  
- TRUE para excluir elementos de la cinta de opciones que se muestran; FALSE para incluir todos los elementos de la cinta de opciones en la barra de cinta.  
+*bHiddenOnly*<br/>
+[in] TRUE para excluir elementos de la cinta de opciones que se muestran; FALSE para incluir todos los elementos de la cinta de opciones en la barra de cinta.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1081,8 +1081,8 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *lstCommands*  
- La lista de identificadores de comando para los elementos de la cinta de opciones en la barra de herramientas de acceso rápido.  
+*lstCommands*<br/>
+[out] La lista de identificadores de comando para los elementos de la cinta de opciones en la barra de herramientas de acceso rápido.  
   
 ### <a name="remarks"></a>Comentarios  
  La lista no contiene elementos de la cinta de opciones que son los separadores de control.  
@@ -1183,14 +1183,14 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Ubicación del punto en coordenadas de la barra de cinta de opciones.  
+*punto*<br/>
+[in] Ubicación del punto en coordenadas de la barra de cinta de opciones.  
   
- [in] *bCheckActiveCategory*  
- TRUE para buscar la categoría activa; Si es FALSE, no para buscar la categoría activa.  
+*bCheckActiveCategory*<br/>
+[in] TRUE para buscar la categoría activa; Si es FALSE, no para buscar la categoría activa.  
   
- [in] *bCheckPanelCaption*  
- TRUE para probar el título del panel de la cinta con el punto que se encuentran en él; Si es FALSE, no para probar el título del panel de la cinta con el punto de ubicado en ella. Vea la sección Comentarios para obtener más información.  
+*bCheckPanelCaption*<br/>
+[in] TRUE para probar el título del panel de la cinta con el punto que se encuentran en él; Si es FALSE, no para probar el título del panel de la cinta con el punto de ubicado en ella. Vea la sección Comentarios para obtener más información.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al elemento de cinta de opciones situado en el punto especificado; en caso contrario, es NULL si el punto no se encuentra en un elemento de la cinta de opciones.  
@@ -1271,8 +1271,8 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pGroup*  
- Este parámetro no se utiliza.  
+*pGroup*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve FALSE.  
@@ -1325,11 +1325,11 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pButton*  
- Puntero al botón que se hizo clic.  
+*pButton*<br/>
+[in] Puntero al botón que se hizo clic.  
   
- [in] *punto*  
- Este parámetro no se utiliza.  
+*punto*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pEdit*  
- [in] *punto*  
+*pEdit*<br/>
+[in] [in] *punto*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1356,8 +1356,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bIsRTL*  
- TRUE si el diseño es de derecha a izquierda; FALSE si el diseño de izquierda a derecha.  
+*bIsRTL*<br/>
+[in] TRUE si el diseño es de derecha a izquierda; FALSE si el diseño de izquierda a derecha.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método ajusta el diseño de todos los controles en la barra de cinta de opciones para la nueva dirección de diseño.  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- [in] *x*  
- [in] *y*  
- [in] *pHit*  
+*conquistado*<br/>
+[in] [in] *x*  
+*y*<br/>
+[in] [in] *pHit*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- [in] *x*  
- [in] *y*  
- [in] *pHit*  
+*conquistado*<br/>
+[in] [in] *x*  
+*y*<br/>
+[in] [in] *pHit*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -1431,14 +1431,14 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFrameWnd*  
- Puntero a la ventana de marco principal primaria de la barra de cinta.  
+*pFrameWnd*<br/>
+[in] Puntero a la ventana de marco principal primaria de la barra de cinta.  
   
- [in] *wParam*  
- Código de tecla virtual de la tecla está presionada.  
+*wParam*<br/>
+[in] Código de tecla virtual de la tecla está presionada.  
   
- [in] *lParam*  
- Cuando se presiona la tecla de teclado de las marcas de estado.  
+*lParam*<br/>
+[in] Cuando se presiona la tecla de teclado de las marcas de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el evento de pulsación de tecla se procesó; en caso contrario, FALSE.  
@@ -1456,14 +1456,14 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFrameWnd*  
- Puntero a la ventana de marco principal primaria de la barra de cinta.  
+*pFrameWnd*<br/>
+[in] Puntero a la ventana de marco principal primaria de la barra de cinta.  
   
- [in] *wParam*  
- Código de tecla virtual de la clave que se libera.  
+*wParam*<br/>
+[in] Código de tecla virtual de la clave que se libera.  
   
- [in] *lParam*  
- Este parámetro no se utiliza.  
+*lParam*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el evento de pulsación de tecla se procesó; en caso contrario, FALSE.  
@@ -1487,8 +1487,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMsg*  
- Puntero a un mensaje.  
+*pMsg*<br/>
+[in] Puntero a un mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se ha procesado el mensaje de la barra de cinta de opciones. en caso contrario, FALSE.  
@@ -1533,8 +1533,8 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- Índice de base cero de una categoría en la lista de categorías de la cinta de opciones que se encuentra en la barra de cinta.  
+*nIndex*<br/>
+[in] Índice de base cero de una categoría en la lista de categorías de la cinta de opciones que se encuentra en la barra de cinta.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se ha eliminado la categoría especificada de la cinta de opciones; en caso contrario, FALSE.  
@@ -1552,11 +1552,11 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pCategory*  
- Una categoría de cinta de opciones que se encuentra en la barra de cinta.  
+*pCategory*<br/>
+[in] Una categoría de cinta de opciones que se encuentra en la barra de cinta.  
   
- [in] *bForceRestore*  
- TRUE para maximizar la barra de cinta si está minimizado; FALSE para mostrar la categoría activa en una ventana emergente si se minimiza la barra de cinta.  
+*bForceRestore*<br/>
+[in] TRUE para maximizar la barra de cinta si está minimizado; FALSE para mostrar la categoría activa en una ventana emergente si se minimiza la barra de cinta.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la categoría especificada se estableció como la categoría activa; en caso contrario, FALSE.  
@@ -1574,8 +1574,8 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Puntero a una ventana secundaria MDI.  
+*conquistado*<br/>
+[in] Puntero a una ventana secundaria MDI.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1589,11 +1589,11 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pButton*  
- Un puntero en el botón de la cinta de opciones de aplicación.  
+*pButton*<br/>
+[in] Un puntero en el botón de la cinta de opciones de aplicación.  
   
- [in] *sizeButton*  
- El tamaño de la cinta de opciones del botón de aplicación.  
+*sizeButton*<br/>
+[in] El tamaño de la cinta de opciones del botón de aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
  El botón de la cinta de opciones de aplicación es un botón redondeado grande situado en la esquina superior izquierda del control de la cinta de opciones.  
@@ -1614,14 +1614,14 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmdID*  
- El identificador de comando de un elemento de la cinta de opciones.  
+*uiCmdID*<br/>
+[in] El identificador de comando de un elemento de la cinta de opciones.  
   
- [in] *lpszKeys*  
- Keytip.  
+*lpszKeys*<br/>
+[in] Keytip.  
   
- [in] *lpszMenuKeys*  
- Menú keytip.  
+*lpszMenuKeys*<br/>
+[in] Menú keytip.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se establecen las sugerencias de teclas del elemento de al menos una cinta; en caso contrario, FALSE.  
@@ -1639,11 +1639,11 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pLevel*  
- Puntero al objeto de navegación de teclado actual.  
+*pLevel*<br/>
+[in] Puntero al objeto de navegación de teclado actual.  
   
- [in] *bSetFocus*  
- TRUE para establecer el foco de teclado en la barra de cinta.  
+*bSetFocus*<br/>
+[in] TRUE para establecer el foco de teclado en la barra de cinta.  
   
 ### <a name="remarks"></a>Comentarios  
  Navegación mediante el teclado de la barra de cinta se inicia cuando el usuario presiona la tecla ALT o F10. El usuario selecciona el siguiente nivel de navegación presionando keytip en la barra de cinta de opciones. El usuario puede volver al nivel de navegación anterior presionando la tecla escape.  
@@ -1658,11 +1658,11 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bmáx*  
- TRUE para mostrar los botones de sistema de una ventana secundaria MDI en la barra de cinta de opciones. FALSE para quitar los botones de sistema de una ventana secundaria MDI de la barra de cinta.  
+*bmáx*<br/>
+[in] TRUE para mostrar los botones de sistema de una ventana secundaria MDI en la barra de cinta de opciones. FALSE para quitar los botones de sistema de una ventana secundaria MDI de la barra de cinta.  
   
- [in] *conquistado*  
- Puntero a la ventana de marco principal de la barra de cinta de opciones.  
+*conquistado*<br/>
+[in] Puntero a la ventana de marco principal de la barra de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
  La barra de cinta muestra botones de sistema para una ventana secundaria MDI en la fila de pestañas cuando se maximiza una ventana secundaria MDI.  
@@ -1677,11 +1677,11 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lstCommands*  
- La lista de comandos que se colocará en la barra de herramientas de acceso rápido.  
+*lstCommands*<br/>
+[in] La lista de comandos que se colocará en la barra de herramientas de acceso rápido.  
   
- [in] *bRecalcLayout*  
- TRUE si desea volver a dibujar la cinta después de agregar los elementos de la cinta de opciones; FALSE en caso contrario.  
+*bRecalcLayout*<br/>
+[in] TRUE si desea volver a dibujar la cinta después de agregar los elementos de la cinta de opciones; FALSE en caso contrario.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar el `SetQuickAccessCommands` método en el `CMFCRibbonBar` clase.  
@@ -1696,8 +1696,8 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *estado*  
- El estado predeterminado de barra de herramientas de acceso rápido.  
+*state*<br/>
+[in] El estado predeterminado de barra de herramientas de acceso rápido.  
   
 ### <a name="remarks"></a>Comentarios  
  El estado de la barra de herramientas de acceso rápido incluye una lista de comandos y su visibilidad.  
@@ -1715,8 +1715,8 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bOnTop*  
- TRUE para colocar la barra de herramientas de acceso rápido por encima de la barra de cinta de opciones. FALSE para colocar la barra de herramientas de acceso rápido debajo de la barra de cinta de opciones.  
+*bOnTop*<br/>
+[in] TRUE para colocar la barra de herramientas de acceso rápido por encima de la barra de cinta de opciones. FALSE para colocar la barra de herramientas de acceso rápido debajo de la barra de cinta de opciones.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  Establece los tamaños grandes y regulares de información sobre herramientas se ha corregido el ancho de la barra de cinta.  
@@ -1728,11 +1728,11 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nWidthRegular*  
- El ancho, en píxeles, de la información de tamaño fijo normal.  
+*nWidthRegular*<br/>
+[in] El ancho, en píxeles, de la información de tamaño fijo normal.  
   
- [in] *nWidthLargeImage*  
- El ancho, en píxeles, de un gran tamaño se ha corregido un tamaño de información sobre herramientas.  
+*nWidthLargeImage*<br/>
+[in] El ancho, en píxeles, de un gran tamaño se ha corregido un tamaño de información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
  Si un parámetro en 0, el ancho correspondiente modificar.  
@@ -1747,11 +1747,11 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nIndex*  
- El índice de la categoría de cinta de opciones.  
+*nIndex*<br/>
+[in] El índice de la categoría de cinta de opciones.  
   
- [in] *bMostrar*  
- Si es TRUE, se muestra la categoría de cinta de opciones; en caso contrario, ocultar la categoría de cinta de opciones.  
+*bMostrar*<br/>
+[in] Si es TRUE, se muestra la categoría de cinta de opciones; en caso contrario, ocultar la categoría de cinta de opciones.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  Muestra u oculta las categorías de contexto que tienen el identificador especificado.  
@@ -1763,11 +1763,11 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiContextID*  
- El identificador de categoría de contexto.  
+*uiContextID*<br/>
+[in] El identificador de categoría de contexto.  
   
- [in] *bMostrar*  
- Si es TRUE, se muestran las categorías que tienen el identificador especificado; en caso contrario, ocultar las categorías que tienen el identificador especificado.  
+*bMostrar*<br/>
+[in] Si es TRUE, se muestran las categorías que tienen el identificador especificado; en caso contrario, ocultar las categorías que tienen el identificador especificado.  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  Las sugerencias de teclas para cada elemento de la cinta se muestra en la barra de cinta de opciones.  
@@ -1798,8 +1798,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nChar*  
- Un código de carácter de pulsación de tecla de usuario.  
+*NChar*<br/>
+[in] Un código de carácter de pulsación de tecla de usuario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el código de carácter se ha procesado por la barra de cinta de opciones. en caso contrario, FALSE.  

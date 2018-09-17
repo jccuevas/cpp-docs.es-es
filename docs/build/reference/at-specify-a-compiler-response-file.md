@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430e6372c1ca26e946c2ff26bfcfe9180dfb0dba
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720855"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Especificar un archivo de respuesta del compilador)
 
@@ -35,7 +35,7 @@ Especifica un archivo de respuesta del compilador.
 
 ## <a name="arguments"></a>Argumentos
 
-*response_file*  
+*response_file*<br/>
 Un archivo de texto que contiene comandos del compilador.
 
 ## <a name="remarks"></a>Comentarios
@@ -56,5 +56,5 @@ Desde la línea de comandos puede especificar tantas opciones de archivo de resp
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)  
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)  
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

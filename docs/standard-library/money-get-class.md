@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201756"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712862"
 ---
 # <a name="moneyget-class"></a>money_get (Clase)
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>Parámetros
 
 *CharType*<br/>
- Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
+Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
 *InputIterator*<br/>
- Tipo de iterador del que las funciones get leen su entrada.
+Tipo de iterador del que las funciones get leen su entrada.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>Parámetros
 
 *first*<br/>
- Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
+Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
 *Último*<br/>
- Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
+Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *Internacional*<br/>
- Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
+Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
 *iosbase*<br/>
- Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
+Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
 *Estado*<br/>
- Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente o no.
+Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente o no.
 
 *Val*<br/>
- Una cadena que almacena la secuencia convertida.
+Una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>Parámetros
 
 *first*<br/>
- Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
+Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
 *Último*<br/>
- Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
+Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *Internacional*<br/>
- Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
+Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
 *iosbase*<br/>
- Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
+Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
 *Estado*<br/>
- Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
+Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
 *Val*<br/>
- Una cadena que almacena la secuencia convertida.
+Una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>Parámetros
 
 *_Refs*<br/>
- Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
+Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 

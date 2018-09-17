@@ -1,5 +1,5 @@
 ---
-title: -LARGEADDRESSAWARE (procesar direcciones largas) | Documentos de Microsoft
+title: -LARGEADDRESSAWARE (procesar direcciones largas) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f81424c49c5d67713cf478f69701c52504cfa8c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0a68b18f912d7e6ca0f0f642c85e8439be0e5b67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372131"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726338"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Procesar direcciones largas)
-```  
-/LARGEADDRESSAWARE[:NO]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- La opción /LARGEADDRESSAWARE indica al vinculador que la aplicación puede controlar direcciones mayores de 2 gigabytes. En los compiladores de 64 bits, esta opción está habilitada de forma predeterminada. En los compiladores de 32 bits, / LARGEADDRESSAWARE: no está habilitado si /LARGEADDRESSAWARE no se especifica lo contrario en la línea del vinculador.  
-  
- Si se vincula una aplicación por medio de/LARGEADDRESSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) mostrará información al respecto.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Haga clic en el **vinculador** carpeta.  
-  
-3.  Haga clic en el **System** página de propiedades.  
-  
-4.  Modificar el **habilitar direcciones largas** propiedad.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
-  
--   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+```
+/LARGEADDRESSAWARE[:NO]
+```
+
+## <a name="remarks"></a>Comentarios
+
+La opción /LARGEADDRESSAWARE indica al vinculador que la aplicación puede controlar direcciones superiores a 2 gigabytes. En los compiladores de 64 bits, esta opción está habilitada de forma predeterminada. En los compiladores de 32 bits, / LARGEADDRESSAWARE: no está habilitado si /LARGEADDRESSAWARE no se especifica en la línea del vinculador.
+
+Si una aplicación se vinculó con /LARGEADDRESSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) mostrará información al respecto.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+
+1. Haga clic en el **vinculador** carpeta.
+
+1. Haga clic en el **sistema** página de propiedades.
+
+1. Modificar el **habilitar direcciones largas** propiedad.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
+
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.
+
+## <a name="see-also"></a>Vea también
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opciones del vinculador](../../build/reference/linker-options.md)

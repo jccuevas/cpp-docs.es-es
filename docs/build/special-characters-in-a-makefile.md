@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 3ae77e769672dcc88a9dd41c901424c8c8150e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894439"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709369"
 ---
 # <a name="special-characters-in-a-makefile"></a>Caracteres especiales en un archivo MAKE
 
 Para utilizar un carácter especial de NMAKE como un carácter literal, coloque un símbolo de intercalación (^) delante de él. NMAKE omite los símbolos de intercalación que preceden a otros caracteres. Los caracteres especiales son:
 
-`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`
 
 Un símbolo de intercalación (^) dentro de una cadena entre comillas se trata como un carácter de intercalación literal. Un símbolo de intercalación al final de una línea, inserta un carácter literal en una cadena o una macro.
 

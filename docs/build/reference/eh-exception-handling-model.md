@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5136826b62fb5c0e6b8e7affd06be3aa81c03d6
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572227"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713298"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modelo de control de excepciones)
 
@@ -117,8 +117,8 @@ Sin embargo, el atributo que no produce excepciones no garantiza que una funció
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)  
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)  
-[Controlar errores y excepciones](../../cpp/errors-and-exception-handling-modern-cpp.md)  
-[Especificaciones de excepciones (throw)](../../cpp/exception-specifications-throw-cpp.md)  
-[Control de excepciones estructurado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)  
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Controlar errores y excepciones](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Especificaciones de excepciones (throw)](../../cpp/exception-specifications-throw-cpp.md)
+[control de excepciones estructurado (C/C ++)](../../cpp/structured-exception-handling-c-cpp.md)

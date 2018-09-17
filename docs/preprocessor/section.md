@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538704"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726055"
 ---
 # <a name="section"></a>section
 Crea una sección en un archivo .obj.  
@@ -43,30 +43,17 @@ Cuando se define una sección, sigue siendo válida para el resto de la compilac
 *nombre de sección* es un parámetro obligatorio que será el nombre de la sección. El nombre no debe estar en conflicto con ningún nombre de sección estándar. Consulte [/SECTION](../build/reference/section-specify-section-attributes.md) para obtener una lista de los nombres no debe utilizar cuando cree una sección.  
   
 *atributos* es un parámetro opcional que consta de uno o varios atributos de separados por comas que se desean asignar a la sección. Posible *atributos* son:  
-  
-**read**  
-Permite operaciones de lectura en los datos.  
-  
-**write**  
-Permite operaciones de escritura en los datos.  
-  
-**Ejecutar**  
-Permite que el código se ejecute.  
-  
-**Compartido**  
-Comparte la sección entre todos los procesos que cargan la imagen.  
-  
-**nopage**  
-Marca la sección como no paginable; útil para controladores de dispositivo de Win32.  
-  
-**NoCache**  
-Marca la sección como no almacenable en caché; útil para controladores de dispositivo de Win32.  
-  
-**discard**  
-Marca la sección como no descartable; útil para controladores de dispositivo de Win32.  
-  
-**remove**  
-Marca la sección como no residente en memoria; controladores de dispositivos virtuales (V*x*d.) solo.  
+
+|Atributo|Descripción|
+|-|-|
+|**read**|Permite operaciones de lectura en los datos.|
+|**write**|Permite operaciones de escritura en los datos.|
+|**Ejecutar**|Permite que el código se ejecute.|
+|**Compartido**|Comparte la sección entre todos los procesos que cargan la imagen.|
+|**nopage**|Marca la sección como no paginable; útil para controladores de dispositivo de Win32.|
+|**NoCache**|Marca la sección como no almacenable en caché; útil para controladores de dispositivo de Win32.|
+|**discard**|Marca la sección como no descartable; útil para controladores de dispositivo de Win32.|
+|**remove**|Marca la sección como no residente en memoria; controladores de dispositivos virtuales (V*x*d.) solo.|
   
 Si no especifica atributos, la sección tendrá atributos de lectura y escritura.  
   

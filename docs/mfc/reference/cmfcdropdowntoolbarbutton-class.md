@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5b97912843f14c9bc73307145bd0e1542d2c01b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200659"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726588"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton (clase)
 Un tipo de botón de la barra de herramientas que se comporta como un botón normal cuando se hace clic en él. Sin embargo, se abre una barra de herramientas desplegable ( [CMFCDropDownToolBar (clase)](../../mfc/reference/cmfcdropdowntoolbar-class.md) si el usuario presiona y mantiene el botón de la barra de herramientas.  
@@ -132,8 +132,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *src*  
- Una referencia al botón de origen desde el que se va a copiar.  
+*src*<br/>
+[in] Una referencia al botón de origen desde el que se va a copiar.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para copiar otro botón de barra de herramientas en este botón de barra de herramientas. *src* debe ser de tipo `CMFCDropDownToolbarButton`.  
@@ -151,11 +151,11 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszName*  
- El texto predeterminado del botón.  
+*lpszName*<br/>
+[in] El texto predeterminado del botón.  
   
- [in] *pToolBar*  
- Un puntero a la `CMFCDropDownToolBar` objeto que se muestra cuando el usuario presiona el botón.  
+*pToolBar*<br/>
+[in] Un puntero a la `CMFCDropDownToolBar` objeto que se muestra cuando el usuario presiona el botón.  
   
 ### <a name="remarks"></a>Comentarios  
  La segunda sobrecarga del constructor de copia en el botón de lista desplegable el primer botón de la barra de herramientas que *pToolBar* especifica.  
@@ -175,8 +175,8 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- La ventana primaria del marco de la lista desplegable, o NULL para usar la ventana primaria del botón de barra de herramientas desplegable.  
+*conquistado*<br/>
+[in] La ventana primaria del marco de la lista desplegable, o NULL para usar la ventana primaria del botón de barra de herramientas desplegable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método es correcto; en caso contrario, es 0.  
@@ -196,8 +196,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *menuButton*  
- Una referencia al botón de menú de destino.  
+*MenuButton*<br/>
+[in] Una referencia al botón de menú de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método es correcto; de lo contrario, 0.  
@@ -267,14 +267,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que muestra el botón.  
+*pDC*<br/>
+[in] El contexto de dispositivo que muestra el botón.  
   
- [in] *sizeDefault*  
- El tamaño predeterminado del botón.  
+*sizeDefault*<br/>
+[in] El tamaño predeterminado del botón.  
   
- [in] *bHorz*  
- El estado de acoplamiento de la barra de herramientas primario. Este parámetro es TRUE si la barra de herramientas está acoplado horizontalmente o está flotando, o FALSE si la barra de herramientas está acoplada verticalmente.  
+*bHorz*<br/>
+[in] El estado de acoplamiento de la barra de herramientas primario. Este parámetro es TRUE si la barra de herramientas está acoplado horizontalmente o está flotando, o FALSE si la barra de herramientas está acoplada verticalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `SIZE` estructura que contiene las dimensiones del botón, en píxeles.  
@@ -290,8 +290,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- La nueva ventana primaria.  
+*pWndParent*<br/>
+[in] La nueva ventana primaria.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método invalida la implementación de la clase base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) desactivando la etiqueta de texto ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) y estableciendo el [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) y [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) los miembros de datos en FALSE.  
@@ -306,11 +306,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- La ventana primaria del botón de barra de herramientas.  
+*conquistado*<br/>
+[in] La ventana primaria del botón de barra de herramientas.  
   
- [in] *bDelay*  
- TRUE si el mensaje debe controlarse con un retraso.  
+*bDelay*<br/>
+[in] TRUE si el mensaje debe controlarse con un retraso.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el botón procesa el mensaje clic; en caso contrario, es 0.  
@@ -345,8 +345,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- La ventana primaria del botón de barra de herramientas.  
+*conquistado*<br/>
+[in] La ventana primaria del botón de barra de herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el botón procesa el mensaje de ayuda; en caso contrario, es 0.  
@@ -364,8 +364,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pMenu*  
- Para personalizar el menú.  
+*pMenu*<br/>
+[in] Para personalizar el menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Este método devuelve TRUE.  
@@ -401,29 +401,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que muestra el botón.  
+*pDC*<br/>
+[in] El contexto de dispositivo que muestra el botón.  
   
- [in] *rect*  
- El rectángulo delimitador del botón.  
+*Rect*<br/>
+[in] El rectángulo delimitador del botón.  
   
- [in] *pImages*  
- La colección de imágenes de barra de herramientas que está asociada con el botón.  
+*pImages*<br/>
+[in] La colección de imágenes de barra de herramientas que está asociada con el botón.  
   
- [in] *bHorz*  
- El estado de acoplamiento de la barra de herramientas primario. Este parámetro es TRUE cuando el botón está acoplado horizontalmente y FALSE cuando el botón está acoplado vertical.  
+*bHorz*<br/>
+[in] El estado de acoplamiento de la barra de herramientas primario. Este parámetro es TRUE cuando el botón está acoplado horizontalmente y FALSE cuando el botón está acoplado vertical.  
   
- [in] *bCustomizeMode*  
- Especifica si la barra de herramientas está en modo de personalización. Este parámetro es TRUE cuando la barra de herramientas está en modo de personalización y FALSE cuando la barra de herramientas no está en modo de personalización.  
+*bCustomizeMode*<br/>
+[in] Especifica si la barra de herramientas está en modo de personalización. Este parámetro es TRUE cuando la barra de herramientas está en modo de personalización y FALSE cuando la barra de herramientas no está en modo de personalización.  
   
- [in] *bHighlight*  
- Especifica si el botón está resaltado. Este parámetro es TRUE cuando el botón está resaltado y FALSE cuando no se resalta el botón.  
+*bHighlight*<br/>
+[in] Especifica si el botón está resaltado. Este parámetro es TRUE cuando el botón está resaltado y FALSE cuando no se resalta el botón.  
   
- [in] *bDrawBorder*  
- Especifica si el botón debe mostrar su borde. Este parámetro es TRUE cuando el botón debe mostrar su borde y FALSE cuando el botón no debe mostrar su borde.  
+*bDrawBorder*<br/>
+[in] Especifica si el botón debe mostrar su borde. Este parámetro es TRUE cuando el botón debe mostrar su borde y FALSE cuando el botón no debe mostrar su borde.  
   
- [in] *bGrayDisabledButtons*  
- Especifica si se deben sombrear los botones deshabilitados o usar la colección de imágenes deshabilitado. Este parámetro es TRUE cuando los botones deshabilitados deberían ser sombreada y FALSE cuando este método debe usar la colección de imágenes deshabilitado.  
+*bGrayDisabledButtons*<br/>
+[in] Especifica si se deben sombrear los botones deshabilitados o usar la colección de imágenes deshabilitado. Este parámetro es TRUE cuando los botones deshabilitados deberían ser sombreada y FALSE cuando este método debe usar la colección de imágenes deshabilitado.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para personalizar el dibujo del botón de barra de herramientas.  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que muestra el botón.  
+*pDC*<br/>
+[in] El contexto de dispositivo que muestra el botón.  
   
- [in] *rect*  
- El rectángulo delimitador del botón.  
+*Rect*<br/>
+[in] El rectángulo delimitador del botón.  
   
- [in] *bSelected*  
- Si se selecciona el botón. Si este parámetro es TRUE, se selecciona el botón. Si este parámetro es FALSE, no se selecciona el botón.  
+*bSelected*<br/>
+[in] Si se selecciona el botón. Si este parámetro es TRUE, se selecciona el botón. Si este parámetro es FALSE, no se selecciona el botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El ancho, en píxeles, del botón en el contexto de dispositivo especificado.  
@@ -464,8 +464,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *ar*  
- La `CArchive` objeto desde la que o que se va a serializar.  
+*cuentas por cobrar*<br/>
+[in] La `CArchive` objeto desde la que o que se va a serializar.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método extiende la implementación de la clase base ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) al serializar el identificador de recurso de la barra de herramientas primario. Cuando se está cargando el archivo ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) devuelve un valor distinto de cero), este método establece el `m_pToolBar` miembro de datos en la barra de herramientas que contiene el identificador de recurso serializado.  
@@ -478,8 +478,8 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador del comando predeterminado.  
+*uiCmd*<br/>
+[in] El identificador del comando predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para especificar un comando predeterminado que el marco de trabajo se ejecuta cuando el usuario hace clic en el botón. Un elemento con el identificador de comando especificado por *uiCmd* debe estar ubicado en la barra de herramientas de lista desplegable del elemento primario.  

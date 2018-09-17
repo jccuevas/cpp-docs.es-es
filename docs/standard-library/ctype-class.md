@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e34df871a655515bf4399b136de32db61d66ae0c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 24eb9bbad0e5732eaba523abcaa93eecd6e7c240
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204872"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719451"
 ---
 # <a name="ctype-class"></a>ctype (Clase)
 
@@ -67,7 +67,7 @@ class ctype : public ctype_base;
 ### <a name="parameters"></a>Parámetros
 
 *CharType*<br/>
- Tipo usado dentro de un programa para codificar caracteres.
+Tipo usado dentro de un programa para codificar caracteres.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -151,7 +151,7 @@ explicit ctype(size_t _Refs = 0);
 ### <a name="parameters"></a>Parámetros
 
 *_Refs*<br/>
- Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
+Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -186,19 +186,19 @@ virtual const CharType *do_is(
 ### <a name="parameters"></a>Parámetros
 
 *maskVal*<br/>
- El valor de máscara para el que se probará el carácter.
+El valor de máscara para el que se probará el carácter.
 
 *CH*<br/>
- Los caracteres cuyos atributos se van a probar.
+Los caracteres cuyos atributos se van a probar.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres cuyos atributos se van a clasificar.
+Un puntero al primer carácter del intervalo de caracteres cuyos atributos se van a clasificar.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo cuyos atributos se van a clasificar.
+Un puntero al carácter inmediatamente después del último carácter del intervalo cuyos atributos se van a clasificar.
 
 *dest*<br/>
- Un puntero al principio de la matriz en que se van a almacenar los valores de máscara que caracterizan a los atributos de cada uno de los caracteres.
+Un puntero al principio de la matriz en que se van a almacenar los valores de máscara que caracterizan a los atributos de cada uno de los caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -234,19 +234,19 @@ virtual const CharType* do_narrow(
 ### <a name="parameters"></a>Parámetros
 
 *CH*<br/>
- El carácter de tipo `Chartype` usado por la configuración regional que se va a convertir.
+El carácter de tipo `Chartype` usado por la configuración regional que se va a convertir.
 
 *default*<br/>
- El valor predeterminado que se asignará a la función miembro a caracteres de tipo `CharType` que no tienen caracteres equivalente de tipo **char**.
+El valor predeterminado que se asignará a la función miembro a caracteres de tipo `CharType` que no tienen caracteres equivalente de tipo **char**.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que se va convertir.
+Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
 *dest*<br/>
- Un puntero al primer carácter de tipo const **char** del intervalo de destino que almacena el intervalo de caracteres convertido.
+Un puntero al primer carácter de tipo const **char** del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -276,13 +276,13 @@ virtual const CharType *do_scan_is(
 ### <a name="parameters"></a>Parámetros
 
 *maskVal*<br/>
- El valor de máscara que debe coincidir con un carácter.
+El valor de máscara que debe coincidir con un carácter.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo que se va a examinar.
+Un puntero al primer carácter del intervalo que se va a examinar.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
+Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -310,13 +310,13 @@ virtual const CharType *do_scan_not(
 ### <a name="parameters"></a>Parámetros
 
 *maskVal*<br/>
- El valor de máscara que no debe coincidir con un carácter.
+El valor de máscara que no debe coincidir con un carácter.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo que se va a examinar.
+Un puntero al primer carácter del intervalo que se va a examinar.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
+Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -346,13 +346,13 @@ virtual const CharType *do_tolower(
 ### <a name="parameters"></a>Parámetros
 
 *CH*<br/>
- El carácter que se va a convertir en minúscula.
+El carácter que se va a convertir en minúscula.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -382,13 +382,13 @@ virtual const CharType *do_toupper(
 ### <a name="parameters"></a>Parámetros
 
 *CH*<br/>
- El carácter que se va a convertir en mayúscula.
+El carácter que se va a convertir en mayúscula.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -419,16 +419,16 @@ virtual const char *do_widen(
 ### <a name="parameters"></a>Parámetros
 
 *byte*<br/>
- El carácter de tipo **char** en el juego se conviertan de caracteres nativo.
+El carácter de tipo **char** en el juego se conviertan de caracteres nativo.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que se va convertir.
+Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
 *dest*<br/>
- Un puntero al primer carácter de tipo `CharType` del intervalo de destino que almacena el intervalo de caracteres convertido.
+Un puntero al primer carácter de tipo `CharType` del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -461,19 +461,19 @@ const CharType *is(
 ### <a name="parameters"></a>Parámetros
 
 *maskVal*<br/>
- El valor de máscara para el que se probará el carácter.
+El valor de máscara para el que se probará el carácter.
 
 *CH*<br/>
- Los caracteres cuyos atributos se van a probar.
+Los caracteres cuyos atributos se van a probar.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres cuyos atributos se van a clasificar.
+Un puntero al primer carácter del intervalo de caracteres cuyos atributos se van a clasificar.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo cuyos atributos se van a clasificar.
+Un puntero al carácter inmediatamente después del último carácter del intervalo cuyos atributos se van a clasificar.
 
 *dest*<br/>
- Un puntero al principio de la matriz en que se van a almacenar los valores de máscara que caracterizan a los atributos de cada uno de los caracteres.
+Un puntero al principio de la matriz en que se van a almacenar los valores de máscara que caracterizan a los atributos de cada uno de los caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -542,19 +542,19 @@ const CharType* narrow(
 ### <a name="parameters"></a>Parámetros
 
 *CH*<br/>
- El carácter de tipo `Chartype` usado por la configuración regional que se va a convertir.
+El carácter de tipo `Chartype` usado por la configuración regional que se va a convertir.
 
 *default*<br/>
- El valor predeterminado que se asignará a la función miembro a caracteres de tipo `CharType` que no tienen caracteres equivalente de tipo **char**.
+El valor predeterminado que se asignará a la función miembro a caracteres de tipo `CharType` que no tienen caracteres equivalente de tipo **char**.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que se va convertir.
+Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
 *dest*<br/>
- Un puntero al primer carácter de tipo const **char** del intervalo de destino que almacena el intervalo de caracteres convertido.
+Un puntero al primer carácter de tipo const **char** del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -606,13 +606,13 @@ const CharType *scan_is(
 ### <a name="parameters"></a>Parámetros
 
 *maskVal*<br/>
- El valor de máscara que debe coincidir con un carácter.
+El valor de máscara que debe coincidir con un carácter.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo que se va a examinar.
+Un puntero al primer carácter del intervalo que se va a examinar.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
+Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -662,13 +662,13 @@ const CharType *scan_not(
 ### <a name="parameters"></a>Parámetros
 
 *maskVal*<br/>
- El valor de máscara que no debe coincidir con un carácter.
+El valor de máscara que no debe coincidir con un carácter.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo que se va a examinar.
+Un puntero al primer carácter del intervalo que se va a examinar.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
+Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -718,13 +718,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 ### <a name="parameters"></a>Parámetros
 
 *CH*<br/>
- El carácter que se va a convertir en minúscula.
+El carácter que se va a convertir en minúscula.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -773,13 +773,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 ### <a name="parameters"></a>Parámetros
 
 *CH*<br/>
- El carácter que se va a convertir en mayúscula.
+El carácter que se va a convertir en mayúscula.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -828,16 +828,16 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 ### <a name="parameters"></a>Parámetros
 
 *byte*<br/>
- El carácter de tipo char en el juego de caracteres nativo que se convertirá.
+El carácter de tipo char en el juego de caracteres nativo que se convertirá.
 
 *first*<br/>
- Un puntero al primer carácter del intervalo de caracteres que se va convertir.
+Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
 *Último*<br/>
- Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
+Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
 *dest*<br/>
- Un puntero al primer carácter de tipo `CharType` del intervalo de destino que almacena el intervalo de caracteres convertido.
+Un puntero al primer carácter de tipo `CharType` del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 

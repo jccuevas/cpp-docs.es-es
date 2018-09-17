@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 5dde5d8bb2e7b973b505b467165a710546f2a6a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44385013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716032"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -86,6 +86,6 @@ Para obtener más información, consulte el sitio oficial [ADV180002 asesoramien
 
 ## <a name="see-also"></a>Vea también
 
-[/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)  
-[Opciones del compilador](../../build/reference/compiler-options.md)  
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)  
+[Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)
+[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

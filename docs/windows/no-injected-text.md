@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e63b0b47dcc3f53ecd5af2d51505df844f66437a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 055b14c38e3084a7368953cbce4f95373e1a77f3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599391"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706334"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -38,8 +38,8 @@ Impide que el compilador inserte el código como resultado el uso de atributo.
 
 ### <a name="parameters"></a>Parámetros
 
-*booleano* (opcional)  
-**True** si no desea que ningún código insertado, **false** para permitir la inserción de código. **True** es el valor predeterminado.
+*Valor booleano*  
+(Opcional) **true** si no desea que ningún código insertado, **false** para permitir la inserción de código. **True** es el valor predeterminado.
 
 ## <a name="remarks"></a>Comentarios
 

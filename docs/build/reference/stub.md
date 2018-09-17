@@ -1,5 +1,5 @@
 ---
-title: CÓDIGO AUXILIAR | Documentos de Microsoft
+title: CÓDIGO AUXILIAR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 385e073f877a938a3b73fa79036d27cf50c1e4ec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 151d7b425a7f397a05e3a06e9d94489a0c76f899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375206"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725119"
 ---
 # <a name="stub"></a>STUB
-Cuando se utiliza en un archivo de definición de módulo que genera un controlador de dispositivo virtual (VxD), permite especificar un nombre de archivo que contiene una estructura IMAGE_DOS_HEADER (definida en WINNT. (H) para su uso en el controlador de dispositivo virtual (VxD), en lugar del encabezado predeterminado.  
-  
-```  
-STUB:filename  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Un modo equivalente a especificar *filename* es con el [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) opción del vinculador.  
-  
- STUB es válido en un archivo de definición de módulo cuando se desea generar un VxD.  
-  
-## <a name="see-also"></a>Vea también  
- [Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)
+
+Cuando se utiliza en un archivo de definición de módulo que genera un controlador de dispositivo virtual (VxD), le permite especificar un nombre de archivo que contiene una estructura IMAGE_DOS_HEADER (definida en WINNT. H) que se usará en el controlador de dispositivo virtual (VxD), en lugar del encabezado predeterminado.
+
+```
+STUB:filename
+```
+
+## <a name="remarks"></a>Comentarios
+
+Una manera equivalente a especificar *filename* es con el [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) opción del vinculador.
+
+Código auxiliar es válido en un archivo de definición de módulo cuando se desea generar un VxD.
+
+## <a name="see-also"></a>Vea también
+
+[Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)

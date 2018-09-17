@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682332"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710156"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog (clase)
 La `CPaneDialog` clase es compatible con un cuadro de diálogo no modal, acoplable.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszWindowName*  
- El nombre del cuadro de diálogo de acoplamiento.  
+*lpszWindowName*<br/>
+[in] El nombre del cuadro de diálogo de acoplamiento.  
   
- [in] *pParentWnd*  
- Apunta a la ventana primaria.  
+*pParentWnd*<br/>
+[in] Apunta a la ventana primaria.  
   
- [in] *bHasGripper*  
- TRUE para crear el cuadro de diálogo de acoplamiento con el título (agarrador); en caso contrario, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE para crear el cuadro de diálogo de acoplamiento con el título (agarrador); en caso contrario, FALSE.  
   
- [in] *lpszTemplateName*  
- El nombre de la plantilla de cuadro de diálogo de recursos.  
+*lpszTemplateName*<br/>
+[in] El nombre de la plantilla de cuadro de diálogo de recursos.  
   
- [in] *nStyle*  
- El estilo de Windows.  
+*nStyle*<br/>
+[in] El estilo de Windows.  
   
- [in] *nID*  
- El identificador de control.  
+*nID*<br/>
+[in] El identificador de control.  
   
- [in] *nIDTemplate*  
- El identificador de recurso de la plantilla de cuadro de diálogo.  
+*nIDTemplate*<br/>
+[in] El identificador de recurso de la plantilla de cuadro de diálogo.  
   
- [in] *dwTabbedStyle*  
- El estilo de la ventana con pestañas que se produce cuando el usuario arrastra otro panel de control en el título de este panel de control. El valor predeterminado es AFX_CBRS_REGULAR_TABS. Para obtener más información, vea la sección Comentarios de la [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
+*dwTabbedStyle*<br/>
+[in] El estilo de la ventana con pestañas que se produce cuando el usuario arrastra otro panel de control en el título de este panel de control. El valor predeterminado es AFX_CBRS_REGULAR_TABS. Para obtener más información, vea la sección Comentarios de la [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
- [in] *dwControlBarStyle*  
- Atributos de estilo adicionales. El valor predeterminado es AFX_DEFAULT_DOCKING_PANE_STYLE. Para obtener más información, vea la sección Comentarios de la [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
+*dwControlBarStyle*<br/>
+[in] Atributos de estilo adicionales. El valor predeterminado es AFX_DEFAULT_DOCKING_PANE_STYLE. Para obtener más información, vea la sección Comentarios de la [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *wParam*  
- Identificador del control que va a recibir el foco de teclado predeterminado.  
+*wParam*<br/>
+[in] Identificador del control que va a recibir el foco de teclado predeterminado.  
   
- [in] *lParam*  
- Especifica los datos de inicialización adicionales.  
+*lParam*<br/>
+[in] Especifica los datos de inicialización adicionales.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si este método se realiza correctamente; en caso contrario, FALSE. Además, es TRUE establece el foco de teclado para el control especificado por el *wParam* parámetro; FALSE impide establecer el foco de teclado predeterminado.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pOccDialogInfo*  
- Puntero a una plantilla de cuadro de diálogo que se usa para crear el objeto de cuadro de diálogo. El valor de este parámetro se pasa posteriormente a la [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
+*pOccDialogInfo*<br/>
+[in] Puntero a una plantilla de cuadro de diálogo que se usa para crear el objeto de cuadro de diálogo. El valor de este parámetro se pasa posteriormente a la [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre es TRUE.  

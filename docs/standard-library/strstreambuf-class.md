@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960559"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719139"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf (Clase)
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Freezeit*  
- Un **bool** que indica si desea que la secuencia se detenga.
+*_Freezeit*<br/>
+Un **bool** que indica si desea que la secuencia se detenga.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta*  
- El carácter que se va a insertar en el búfer o `EOF`.
+*_Meta*<br/>
+El carácter que se va a insertar en el búfer o `EOF`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta*  
- El carácter que se va a insertar en el búfer o `EOF`.
+*_Meta*<br/>
+El carácter que se va a insertar en el búfer o `EOF`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*  
- La posición para buscar relativa a *_Way*.
+*_Off*<br/>
+La posición para buscar relativa a *_Way*.
 
-*_Way*  
- El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*<br/>
+El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Which*  
- Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
+*_Which*<br/>
+Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sp*  
- La posición que se va a buscar.
+*_Sp*<br/>
+La posición que se va a buscar.
 
-*_Which*  
- Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
+*_Which*<br/>
+Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Allocfunc*  
- La función que se usa para asignar memoria de búfer.
+*_Allocfunc*<br/>
+La función que se usa para asignar memoria de búfer.
 
-*count*  
- Determina la longitud del búfer señalado por *_Getptr*. Si *_Getptr* no es un argumento (primer formulario constructor), el tamaño de una asignación sugerida para los búferes.
+*count*<br/>
+Determina la longitud del búfer señalado por *_Getptr*. Si *_Getptr* no es un argumento (primer formulario constructor), el tamaño de una asignación sugerida para los búferes.
 
-*_Freefunc*  
- La función que se usa para liberar memoria de búfer.
+*_Freefunc*<br/>
+La función que se usa para liberar memoria de búfer.
 
-*_Getptr*  
- Un búfer que se usa para la entrada.
+*_Getptr*<br/>
+Un búfer que se usa para la entrada.
 
-*_Putptr*  
- Un búfer que se usa para la salida.
+*_Putptr*<br/>
+Un búfer que se usa para la salida.
 
 ### <a name="remarks"></a>Comentarios
 

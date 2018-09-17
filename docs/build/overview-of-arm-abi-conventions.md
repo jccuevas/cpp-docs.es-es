@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027328"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721453"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Información general sobre las convenciones ABI de ARM32
 
@@ -64,16 +64,16 @@ No se pueden usar instrucciones IT en código Thumb-2, salvo en los siguientes c
 - La instrucción de destino debe ser una de las siguientes:
 
    |Códigos de operación de 16 bits|Clase|Restricciones|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|Mover|Rm != PC, Rd != PC|
-    |LDR, LDR[S]B, LDR[S]H|Cargar desde memoria|Pero no formatos de literal LDR|
-    |STR, STRB, STRH|Almacenar en memoria||
-    |ADD, ADC, RSB, SBC, SUB|Sumar o restar|Pero no los formatos ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-    |CMP, CMN|Comparar|Rm != PC, Rn != PC|
-    |MUL|Multiplicar||
-    |ASR, LSL, LSR, ROR|Desplazamiento bit a bit||
-    |AND, BIC, EOR, ORR, TST|Aritmética bit a bit||
-    |BX|Bifurcación que registrar|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|Mover|Rm != PC, Rd != PC|
+   |LDR, LDR[S]B, LDR[S]H|Cargar desde memoria|Pero no formatos de literal LDR|
+   |STR, STRB, STRH|Almacenar en memoria||
+   |ADD, ADC, RSB, SBC, SUB|Sumar o restar|Pero no los formatos ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
+   |CMP, CMN|Comparar|Rm != PC, Rn != PC|
+   |MUL|Multiplicar||
+   |ASR, LSL, LSR, ROR|Desplazamiento bit a bit||
+   |AND, BIC, EOR, ORR, TST|Aritmética bit a bit||
+   |BX|Bifurcación que registrar|Rm != PC|
 
 Aunque las CPU ARMv7 actuales no pueden informar del uso de formatos de instrucción no permitidos, está previsto que sí lo hagan en las próximas versiones. Si estos formatos se detectan, cualquier programa que los use podría finalizar con una excepción de instrucción no definida.
 
@@ -233,5 +233,5 @@ El contador es un contador de ciclos auténtico, no un reloj; por lo tanto, la f
 
 ## <a name="see-also"></a>Vea también
 
-[Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-[Control de excepciones de ARM](../build/arm-exception-handling.md)  
+[Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Control de excepciones de ARM](../build/arm-exception-handling.md)

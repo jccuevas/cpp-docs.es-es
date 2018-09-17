@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766248"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711956"
 ---
 # <a name="options-atl-control-wizard"></a>Opciones, Asistente para controles ATL
 
@@ -31,10 +31,11 @@ Utilice esta página del Asistente para definir el tipo de control que se va a c
 
 ## <a name="uielement-list"></a>Lista de UIElement
 
-**Tipo de control**  
+### <a name="control-type"></a>Tipo de control
+
 El tipo de control que desea crear.
 
-- **Control estándar: un control ActiveX.**
+- **Control estándar**: un control ActiveX.
 
 - **Control compuesto**: un control ActiveX que puede contener (similar a un cuadro de diálogo) otros controles ActiveX o controles de Windows. Un control compuesto incluye lo siguiente:
 
@@ -54,10 +55,12 @@ El tipo de control que desea crear.
 
      Para obtener más información, consulte [que identifican los elementos del proyecto de Control DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-**Control mínimo**  
+### <a name="minimal-control"></a>Control mínimo
+
 Sólo admite las interfaces que son absolutamente necesarios por la mayoría de los contenedores. Puede establecer **control mínimo** para cualquiera de los tipos de control: puede crear un control estándar mínimo, un control compuesto mínimo o un control DHTML mínimo.
 
-**Agregación**  
+### <a name="aggregation"></a>Agregación
+
 Agrega compatibilidad con la agregación para el control que se va a crear. Para obtener más información, consulte [agregación](../../atl/aggregation.md).
 
 - **Sí**: crear un control que se puede agregar.
@@ -66,25 +69,28 @@ Agrega compatibilidad con la agregación para el control que se va a crear. Para
 
 - **Sólo**: crear un control que solo se puede crear instancias mediante agregación.
 
-**Modelo de subprocesos**  
+### <a name="threading-model"></a>Modelo de subprocesos
+
 Especifica que el modelo de subprocesos utilizados por el control.
 
 - **Solo**: el control sólo se ejecutará en el subproceso COM principal.
 
 - **Apartamento**: el control puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.
 
-**Interface**  
+### <a name="interface"></a>Interfaz
+
 El tipo de interfaz que expone este control en el contenedor.
 
 - **Dual**: crea una interfaz que expone propiedades y métodos a través de `IDispatch` y directamente a través de VTBL.
 
 - **Custom**: crea una interfaz que expone métodos directamente a través de VTBL.
 
-     Si selecciona **personalizado**, a continuación, puede especificar que el control es **compatible con automatización**. Si selecciona **compatible con automatización**, a continuación, el asistente agrega el [oleautomation](../../windows/oleautomation.md) atributo a la interfaz en el archivo IDL, y la interfaz puede calcularse mediante el contador de referencias universal en oleaut32.dll. Consulte [Marshaling Details](/windows/desktop/com/marshaling-details) en el SDK de Windows para obtener más información.
+   Si selecciona **personalizado**, a continuación, puede especificar que el control es **compatible con automatización**. Si selecciona **compatible con automatización**, a continuación, el asistente agrega el [oleautomation](../../windows/oleautomation.md) atributo a la interfaz en el archivo IDL, y la interfaz puede calcularse mediante el contador de referencias universal en oleaut32.dll. Consulte [Marshaling Details](/windows/desktop/com/marshaling-details) en el SDK de Windows para obtener más información.
 
-     Además, si selecciona **compatible con automatización**, a continuación, todos los parámetros de todos los métodos en el control deben ser variantes compatible.
+   Además, si selecciona **compatible con automatización**, a continuación, todos los parámetros de todos los métodos en el control deben ser variantes compatible.
 
-**Soporte técnico**  
+### <a name="support"></a>Compatibilidad
+
 Los conjuntos adicional admiten vario para el control.
 
 - **Puntos de conexión**: permite a los puntos de conexión para el objeto mediante la realización de derivar de la clase del objeto [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) y permitir que exponga una interfaz de origen.

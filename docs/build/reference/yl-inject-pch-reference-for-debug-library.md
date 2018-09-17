@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712379"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Insertar referencia PCH para biblioteca de depuración)
 
@@ -31,16 +31,16 @@ El **/Yl** opción genera un único símbolo en un archivo de encabezado precomp
 
 ## <a name="syntax"></a>Sintaxis
 
->**/Yl**  
->**/Yl**_nombre_  
->**/Yl-**  
+>**/Yl**
+> **/Yl**_nombre_
+> **/Yl-**
 
 ### <a name="arguments"></a>Argumentos
 
-*name*  
+*name*<br/>
 Nombre opcional que se usa como parte del símbolo único.
 
-*\-*  
+*\-*<br/>
 Deshabilita un guión (-) de forma explícita el **/Yl** opción del compilador.
 
 ## <a name="remarks"></a>Comentarios
@@ -75,5 +75,5 @@ Para obtener más información sobre los encabezados precompilados, vea:
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)  
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)  
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

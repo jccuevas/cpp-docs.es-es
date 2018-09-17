@@ -1,5 +1,5 @@
 ---
-title: __popcnt16, __popcnt, __popcnt64 | Documentos de Microsoft
+title: __popcnt16, __popcnt, __popcnt64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329201"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724742"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+
 **Específicos de Microsoft**  
   
- Cuenta el número de bits (recuento de llenado) en un 16, 32 o entero sin signo de 64 bits.  
+ Cuenta el número de uno de los bits (recuento de llenado) en un 16, 32 o entero sin signo de 64 bytes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,8 +49,8 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `value`  
- Los 16, 32 o entero sin signo de 64 bits para el que se desea que el recuento de llenado.  
+*valor*<br/>
+[in] El 16, 32 o entero sin signo de 64 bits para el que queremos que el recuento de llenado.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El número de bits de uno de los `value` parámetro.  
@@ -58,16 +59,16 @@ unsigned __int64 __popcnt64(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__popcnt16`|Manipulación de bits avanzadas|  
-|`__popcnt`|Manipulación de bits avanzadas|  
-|`__popcnt64`|Manipulación de bits avanzadas en modo de 64 bits.|  
+|`__popcnt16`|Manipulación de bits avanzada|  
+|`__popcnt`|Manipulación de bits avanzada|  
+|`__popcnt64`|Manipulación de bits avanzada en modo de 64 bits.|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Cada una de estas funciones intrínsecas genera el `popcnt` instrucción.  El tamaño del valor que el `popcnt` instrucción devuelve es el mismo que el tamaño de su argumento.  En modo de 32 bits no hay ningún 64-bit registros de propósito general, por lo tanto, no de 64 bits `popcnt`.  
+ Cada una de estas funciones intrínsecas genera el `popcnt` instrucción.  El tamaño del valor que el `popcnt` instrucción devuelve es el mismo que el tamaño de su argumento.  En el modo de 32 bits no hay ningún 64-bit registros de uso general, por lo tanto, no de 64 bits `popcnt`.  
   
- Para determinar la compatibilidad de hardware con el `popcnt` instrucción, llame a la `__cpuid` intrínseco con `InfoType=0x00000001` y comprobar bit 23 de `CPUInfo[2] (ECX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `popcnt` instrucciones, los resultados son imprevisibles.  
+ Para determinar la compatibilidad de hardware para el `popcnt` instrucción, llamada la `__cpuid` intrínseca con `InfoType=0x00000001` y comprobar poco 23 de `CPUInfo[2] (ECX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `popcnt` instrucciones, los resultados son impredecibles.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -107,7 +108,8 @@ __popcnt(0xffffffff) = 32
 ```  
   
 **FIN de Específicos de Microsoft**  
- Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
+
+Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195795"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715408"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -51,20 +51,20 @@ El número de columna ordinal (`DBCOLUMNINFO` ordinal) o nombre de columna (cade
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*DbType* (opcional)  
-OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para la entrada de columna.
+*DbType*  
+(Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para la entrada de columna.
 
-*precisión* (opcional)  
-La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*escala* (opcional)  
-La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Escala*  
+(Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*estado* (opcional)  
-Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*.
+*status*  
+(Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*.
 
-*longitud* (opcional)  
-Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.
+*length*  
+(Opcional) Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.
 
 ## <a name="remarks"></a>Comentarios
 

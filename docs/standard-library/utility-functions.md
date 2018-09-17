@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960312"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718344"
 ---
 # <a name="ltutilitygt-functions"></a>Funciones de &lt;utility&gt;
 
@@ -41,11 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*  
- El objeto que va a recibir el valor de new_val.
+*Val*<br/>
+El objeto que va a recibir el valor de new_val.
 
-*new_val*  
- El objeto cuyo valor se ha copiado o movido a val.
+*new_val*<br/>
+El objeto cuyo valor se ha copiado o movido a val.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -163,17 +163,17 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Index*  
- El índice de base 0 del elemento designado.
+*Index*<br/>
+El índice de base 0 del elemento designado.
 
-*T1*  
- El tipo del primer elemento par.
+*T1*<br/>
+El tipo del primer elemento par.
 
-*T2*  
- El tipo del segundo elemento par.
+*T2*<br/>
+El tipo del segundo elemento par.
 
-*incorporación de cambios*  
- Par del que se selecciona.
+*incorporación de cambios*<br/>
+Par del que se selecciona.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -234,11 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parámetros
 
-*val1*  
- Valor que inicializa el primer elemento de `pair`.
+*val1*<br/>
+Valor que inicializa el primer elemento de `pair`.
 
-*Val2*  
- Valor que inicializa el segundo elemento de `pair`.
+*Val2*<br/>
+Valor que inicializa el segundo elemento de `pair`.
 
 ### <a name="return-value"></a>Valor devuelto
 

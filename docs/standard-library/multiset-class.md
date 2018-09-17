@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27bdcea6f7ebd51f000310f4916f16bfec7840e5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686632"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708700"
 ---
 # <a name="multiset-class"></a>multiset (Clase)
 
@@ -117,15 +117,15 @@ class multiset
 ### <a name="parameters"></a>Parámetros
 
 *Key*<br/>
- Tipo de datos de elemento que se va a almacenar en la clase multiset.
+Tipo de datos de elemento que se va a almacenar en la clase multiset.
 
 *Compare*<br/>
- Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en la clase multiset. El predicado binario **less**\<Key> es el valor predeterminado.
+Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en la clase multiset. El predicado binario **less**\<Key> es el valor predeterminado.
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
 *Asignador*<br/>
- Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la clase multiset. El valor predeterminado es `allocator<Key>`.
+Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la clase multiset. El valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- Clave de los elementos del conjunto múltiple que deben coincidir.
+Clave de los elementos del conjunto múltiple que deben coincidir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -878,7 +878,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto múltiple que se está buscando.
+La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto múltiple que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -963,16 +963,16 @@ size_type erase(
 ### <a name="parameters"></a>Parámetros
 
 *Where*<br/>
- Posición del elemento que se va a quitar.
+Posición del elemento que se va a quitar.
 
 *Primero*<br/>
- Posición del primer elemento que se va a quitar.
+Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
- Posición situada más allá del último elemento que se va a quitar.
+Posición situada más allá del último elemento que se va a quitar.
 
 *Key*<br/>
- Valor de clave de los elementos que se van a quitar.
+Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -998,7 +998,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- El valor de la clave con el que debe coincidir el criterio de ordenación de un elemento del conjunto múltiple en el que se buscará.
+El valor de la clave con el que debe coincidir el criterio de ordenación de un elemento del conjunto múltiple en el que se buscará.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1441,7 +1441,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto múltiple que se está buscando.
+La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto múltiple que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2048,7 +2048,7 @@ void swap(
 ### <a name="parameters"></a>Parámetros
 
 *right*<br/>
- El conjunto múltiple de argumentos que proporciona los elementos que se van a intercambiar con el conjunto múltiple de destino.
+El conjunto múltiple de argumentos que proporciona los elementos que se van a intercambiar con el conjunto múltiple de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2117,7 +2117,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
- La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto múltiple que se está buscando.
+La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto múltiple que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 

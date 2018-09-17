@@ -1,5 +1,5 @@
 ---
-title: Crear una. Archivo BSC | Documentos de Microsoft
+title: Creación de una. Archivo BSC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ba461eb869a8f9401bd022cfc8eb1bad9f44fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a090eeb67d065c797abcb978f058ffeaff4ac57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714666"
 ---
 # <a name="building-a-bsc-file"></a>Crear un archivo .Bsc
-BSCMAKE puede generar un nuevo archivo de información de examen de los archivos .sbr recién creado. También puede mantener un archivo .bsc existente usando archivos .sbr para archivos objeto que han cambiado desde la última compilación.  
-  
--   [Cómo crear un archivo .sbr](../../build/reference/creating-an-dot-sbr-file.md)  
-  
--   [Cómo compila BSCMAKE un archivo .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)
+
+BSCMAKE puede generar un nuevo archivo de información de examen de los archivos .sbr recién creado. También puede mantener un archivo .bsc existente usando archivos .sbr para archivos de objetos que han cambiado desde la última compilación.
+
+- [Cómo crear un archivo .sbr](../../build/reference/creating-an-dot-sbr-file.md)
+
+- [Cómo compila BSCMAKE un archivo .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)

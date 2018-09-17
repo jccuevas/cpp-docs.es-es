@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9ed3a07b7994d2c7adc7a5d708d31abe9c49437f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850188"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717111"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar (clase)
 Un panel con pestañas con el aspecto visual del **Panel de navegación** en Microsoft Outlook 2000 u Outlook 2003. El `CMFCOutlookBar` objeto contiene un [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objeto y una serie de pestañas. Las pestañas pueden ser [clase CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) objetos o `CWnd`-objetos derivados. Para el usuario, la barra de Outlook aparece como una serie de botones y un área de presentación. Cuando el usuario hace clic en un botón, se muestra el panel de control o botón correspondiente .  
@@ -210,8 +210,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero a otro panel que se está acoplando hasta este panel.  
+*pBar*<br/>
+[in] Un puntero a otro panel que se está acoplando hasta este panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si otro panel se puede acoplar en el panel de barra de Outlook; en caso contrario, FALSE.  
@@ -253,26 +253,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszCaption*  
- Especifica el título de ventana.  
+*lpszCaption*<br/>
+[in] Especifica el título de ventana.  
   
- [in] *pParentWnd*  
- Especifica un puntero a una ventana primaria. No debe ser NULL.  
+*pParentWnd*<br/>
+[in] Especifica un puntero a una ventana primaria. No debe ser NULL.  
   
- [in] *rect*  
- Especifica el tamaño y posición de píxeles de la barra de outlook.  
+*Rect*<br/>
+[in] Especifica el tamaño y posición de píxeles de la barra de outlook.  
   
- [in] *nID*  
- Especifica el identificador de control. Debe ser distinto de otro identificadores utilizados en la aplicación de control.  
+*nID*<br/>
+[in] Especifica el identificador de control. Debe ser distinto de otro identificadores utilizados en la aplicación de control.  
   
- [in] *dwStyle*  
- Especifica el estilo de barra de control deseada. Para los valores posibles, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Especifica el estilo de barra de control deseada. Para los valores posibles, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *dwControlBarStyle*  
- Especifica los estilos definidos en la biblioteca especiales.  
+*dwControlBarStyle*<br/>
+[in] Especifica los estilos definidos en la biblioteca especiales.  
   
- [in] *pContext*  
- Crear el contexto.  
+*pContext*<br/>
+[in] Crear el contexto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método es correcto; en caso contrario, es 0.  
@@ -300,17 +300,17 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpszPageName*  
- La etiqueta de página.  
+*lpszPageName*<br/>
+[in] La etiqueta de página.  
   
- [in] *bActivatePage*  
- Si es TRUE, la página se convierte en activa tras su creación.  
+*bActivatePage*<br/>
+[in] Si es TRUE, la página se convierte en activa tras su creación.  
   
- [in] *dwEnabledDocking*  
- Una combinación de marcas CBRS_ALIGN_ que especifica los lados de acoplamiento habilitados cuando se desasocia la página.  
+*dwEnabledDocking*<br/>
+[in] Una combinación de marcas CBRS_ALIGN_ que especifica los lados de acoplamiento habilitados cuando se desasocia la página.  
   
- [in] *bEnableTextLabels*  
- Si es TRUE, se habilitan las etiquetas de texto para los botones que residen en la página.  
+*bEnableTextLabels*<br/>
+[in] Si es TRUE, se habilitan las etiquetas de texto para los botones que residen en la página.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la página recién creada, o NULL si no se pudo crear.  
@@ -350,17 +350,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pBar*  
- Un puntero al panel en flotante.  
+*pBar*<br/>
+[in] Un puntero al panel en flotante.  
   
- [in] *nTabID*  
- Índice de base cero de la pestaña a float.  
+*nTabID*<br/>
+[in] Índice de base cero de la pestaña a float.  
   
- [in] *dockMethod*  
- Especifica el método se usa para hacer flotar el panel.  Para obtener más información, consulte [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
+*dockMethod*<br/>
+[in] Especifica el método se usa para hacer flotar el panel.  Para obtener más información, consulte [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [in] *bHide*  
- TRUE para ocultar el panel antes flotante; en caso contrario, FALSE. A diferencia de la versión de la clase base de este método, este parámetro no tiene un valor predeterminado.  
+*bHide*<br/>
+[in] TRUE para ocultar el panel antes flotante; en caso contrario, FALSE. A diferencia de la versión de la clase base de este método, este parámetro no tiene un valor predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el panel de flota; en caso contrario, FALSE.  
@@ -391,11 +391,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rectTabAreaTop*  
- Cuando la función devuelve, contiene el tamaño y posición (en coordenadas de cliente) del área superior de ficha.  
+*rectTabAreaTop*<br/>
+[out] Cuando la función devuelve, contiene el tamaño y posición (en coordenadas de cliente) del área superior de ficha.  
   
- [out] *rectTabAreaBottom*  
- Cuando la función devuelve, contiene el tamaño y posición (en coordenadas de cliente) del área inferior de ficha.  
+*rectTabAreaBottom*<br/>
+[out] Cuando la función devuelve, contiene el tamaño y posición (en coordenadas de cliente) del área inferior de ficha.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco llama a este método para determinar el tipo de acoplamiento en el panel de destino. Cuando el marco de trabajo determina que el usuario arrastra el panel para acoplar en el área de pestañas del panel de destino, intenta agregar el primer panel como una nueva pestaña del panel de destino. En caso contrario, intenta acoplar el primer panel en un lado correspondiente del panel de destino. El marco de trabajo crea un nuevo contenedor con un control deslizante para acomodar el panel acoplado adicional.  
@@ -425,8 +425,8 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nPage*  
- Índice de base cero de la página de ficha que se ha realizado activo.  
+*nPage*<br/>
+[in] Índice de base cero de la página de ficha que se ha realizado activo.  
   
 ### <a name="remarks"></a>Comentarios  
  El efecto visual de la configuración de la pestaña activa depende de si ha habilitado la animación. Para obtener más información, consulte [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
@@ -439,8 +439,8 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nPage*  
- Índice de base cero de la página de ficha que se va a establecerse en activo.  
+*nPage*<br/>
+[in] Índice de base cero de la página de ficha que se va a establecerse en activo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si debe utilizarse la animación en la configuración de la pestaña activa de nuevo, o FALSE si se debe deshabilitar la animación.  
@@ -455,8 +455,8 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bDown*  
- TRUE si la barra de Outlook está al desplazarse hacia abajo, o FALSE si se desplaza hacia arriba.  
+*bDown*<br/>
+[in] TRUE si la barra de Outlook está al desplazarse hacia abajo, o FALSE si se desplaza hacia arriba.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -470,11 +470,11 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiPage*  
- Índice de base cero de la página en la ventana de Outlook primaria.  
+*uiPage*<br/>
+[in] Índice de base cero de la página en la ventana de Outlook primaria.  
   
- [in] *pTargetWnd*  
- Pointerto la ventana de Outlook primaria.  
+*pTargetWnd*<br/>
+[in] Pointerto la ventana de Outlook primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se ha quitado correctamente; la página personalizada en caso contrario, es 0.  
@@ -496,11 +496,11 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFont*  
- Especifica la nueva fuente.  
+*pFont*<br/>
+[in] Especifica la nueva fuente.  
   
- [in] *bRedraw*  
- Si es TRUE, se volverá a dibujar la barra de Outlook.  
+*bRedraw*<br/>
+[in] Si es TRUE, se volverá a dibujar la barra de Outlook.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para establecer una fuente para el texto mostrado en los botones de página de ficha de outlook.  
@@ -513,8 +513,8 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMode2003*  
- Si es TRUE, el modo de Office 2003 está habilitado.  
+*bMode2003*<br/>
+[in] Si es TRUE, el modo de Office 2003 está habilitado.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para habilitar o deshabilitar el modo de Office 2003. En este modo, la barra de Outlook tiene una barra de herramientas adicional con un botón de personalización. El comportamiento de la barra de Outlook se ajusta al comportamiento de la barra de Outlook de Microsoft Office 2003.  

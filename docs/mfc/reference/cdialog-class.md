@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c18a9b1e4a35a1089b8a7fb441161552bb3a3909
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217338"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724313"
 ---
 # <a name="cdialog-class"></a>CDialog (clase)
 La clase base utilizada para mostrar cuadros de diálogo en la pantalla.  
@@ -472,8 +472,8 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pFont*  
- Especifica un puntero a la fuente que se usará como la fuente predeterminada para todos los controles de este cuadro de diálogo.  
+*pFont*<br/>
+[in] Especifica un puntero a la fuente que se usará como la fuente predeterminada para todos los controles de este cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
  El cuadro de diálogo usará la fuente especificada como valor predeterminado para todos sus controles.  

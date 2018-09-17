@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9858bfe4dc1d2451e4cd5054c5909aab27ef86c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955625"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710013"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname (Clase)
 
@@ -50,11 +50,11 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*  
- Una configuración regional con nombre.
+*_Locname*<br/>
+Una configuración regional con nombre.
 
-*_Refs*  
- Un recuento de referencias inicial.
+*_Refs*<br/>
+Un recuento de referencias inicial.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ad07e225afbfe0c69b5115cfb566ef722eb81e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540700"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722669"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Específicos de Microsoft**  
@@ -39,11 +39,11 @@ unsigned __int64 __ull_rshift(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `mask`  
- El valor entero de 64-bit a desplazar a la derecha.  
+*Máscara*<br/>
+[in] El valor entero de 64-bit a desplazar a la derecha.  
   
- [in] `nBit`  
- El número de bits del desplazamiento de módulo 32 en x86 y módulo 64 en x64.  
+*nBit*<br/>
+[in] El número de bits del desplazamiento de módulo 32 en x86 y módulo 64 en x64.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Desplace la máscara `nBit` bits.  

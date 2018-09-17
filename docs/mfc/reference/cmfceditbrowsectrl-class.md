@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693977"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707471"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl (clase)
 La `CMFCEditBrowseCtrl` clase admite el control de exploración de edición, que es un cuadro de texto editable que contiene opcionalmente un botón Examinar. Cuando el usuario hace clic en el botón Examinar, el control realiza una acción personalizada o muestra un cuadro de diálogo estándar que contiene un explorador de archivos o un explorador de carpetas.  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  La `CMFCEditBrowseCtrl` clase admite los modos siguientes.  
   
- **modo personalizado**  
- Se realiza una acción personalizada cuando el usuario hace clic en el botón Examinar. Por ejemplo, puede mostrar un cuadro de diálogo específicos de la aplicación.  
+- **modo personalizado**
+
+   Se realiza una acción personalizada cuando el usuario hace clic en el botón Examinar. Por ejemplo, puede mostrar un cuadro de diálogo específicos de la aplicación.  
   
- **modo de archivo**  
- Cuando el usuario hace clic en el botón Examinar, se muestra un cuadro de diálogo de selección de archivos estándar.  
+- **modo de archivo**
+
+   Cuando el usuario hace clic en el botón Examinar, se muestra un cuadro de diálogo de selección de archivos estándar.  
   
- **modo de carpeta**  
- Cuando el usuario hace clic en el botón Examinar, se muestra un cuadro de diálogo de selección de carpeta estándar.  
+- **modo de carpeta**
+
+   Cuando el usuario hace clic en el botón Examinar, se muestra un cuadro de diálogo de selección de carpeta estándar.  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>Cómo: Especificar un Control de exploración de edición  
  Realice los pasos siguientes para incorporar un control de exploración de edición en la aplicación:  

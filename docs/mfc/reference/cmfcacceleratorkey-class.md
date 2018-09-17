@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCAcceleratorKey | Documentos de Microsoft
+title: CMFCAcceleratorKey (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7d87b7a2a76ea73989a9ab7dd845666625e91aa0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039786"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711599"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey (clase)
-Una clase auxiliar que implementa la asignación de claves virtual y el formato.  
+Una clase auxiliar que implementa la asignación de clave virtual y el formato.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,13 +50,13 @@ class CMFCAcceleratorKey : public CObject
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CMFCAcceleratorKey::Format](#format)|Convierte la estructura de la aceleración en su representación visual.|  
+|[CMFCAcceleratorKey::Format](#format)|Convierte la estructura de aceleración en su representación visual.|  
 |[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Establece la tecla de método abreviado para el `CMFCAcceleratorKey` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- Teclas de aceleración son también conocido como teclas de método abreviado. Si desea mostrar los métodos abreviados de teclado que un usuario escribe, la [clase CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapas abreviados, como Alt + Mayús + S, en un formato de texto personalizado, como "Alt + Mayús + S". Cada `CMFCAcceleratorKey` objeto asigna un único método abreviado a un formato de texto.  
+ Teclas de aceleración también conocido como son teclas de método abreviado. Si desea mostrar los métodos abreviados de teclado que un usuario escribe, la [clase CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) asignaciones de teclado accesos directos a un formato de texto personalizado, como "Alt + Mayús + S", como Alt + Mayús + S. Cada `CMFCAcceleratorKey` objeto asigna una clave de acceso directo único en un formato de texto.  
   
- Para obtener más información sobre cómo usar las teclas de método abreviado y tablas de aceleradores, consulte [CKeyboardManager clase](../../mfc/reference/ckeyboardmanager-class.md).  
+ Para obtener más información sobre cómo usar las teclas de método abreviado y tablas de aceleradores, consulte [CKeyboardManager (clase)](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo construir un `CMFCAcceleratorKey` objeto y cómo usar su `Format` método.  
@@ -80,25 +80,25 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpAccel*  
- Un puntero a una tecla de método abreviado.  
+*lpAccel*<br/>
+[in] Un puntero a una tecla de método abreviado.  
   
 ### <a name="remarks"></a>Comentarios  
- Si no proporciona una tecla de método abreviado cuando se crea un `CMFCAccleratorKey`, use la [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) método para asociar una tecla de método abreviado con su `CMFCAcceleratorKey` objeto.  
+ Si no se proporcione una tecla de método abreviado cuando creas un `CMFCAccleratorKey`, utilice el [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) para asociar una tecla de método abreviado con su `CMFCAcceleratorKey` objeto.  
   
 ##  <a name="format"></a>  CMFCAcceleratorKey::Format  
- Traduce la estructura de aceleración a su valor de cadena asociado.  
+ Convierte la estructura de aceleración en su valor de cadena asociado.  
   
 ```  
 void Format(CString& str) const;  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *str*  
- Una referencia a un `CString` donde el método escribe el método abreviado traducido del objeto.  
+*str*<br/>
+[out] Una referencia a un `CString` donde el método escribe la tecla de método abreviado traducido del objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método recupera el formato de cadena de la clave de acceso directo asociado. Puede establecer el formato de cadena de un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objeto utilizando el constructor o el método [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
+ Este método recupera el formato de cadena de la tecla de método abreviado. Puede establecer el formato de cadena de un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objeto utilizando el constructor o el método [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
 ##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  Establece la tecla de método abreviado para el [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objeto.  
@@ -108,11 +108,11 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *lpAccel*  
- Un puntero a una tecla de método abreviado.  
+*lpAccel*<br/>
+[in] Un puntero a una tecla de método abreviado.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método para establecer la tecla de método abreviado para un `CMFCAcceleratorKey` si no se proporcionó una tecla de método abreviado cuando creaste la `CMFCAcceleratorKey`.  
+ Use este método para establecer la tecla de método abreviado para un `CMFCAcceleratorKey` si no proporcionó una tecla de método abreviado cuando creó el `CMFCAcceleratorKey`.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

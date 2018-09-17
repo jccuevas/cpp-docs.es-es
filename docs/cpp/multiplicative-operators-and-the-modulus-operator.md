@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209733"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713863"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores de multiplicación y el operador de módulo
 ## <a name="syntax"></a>Sintaxis  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  Como las conversiones realizadas por los operadores multiplicativos no proporcionan condiciones de desbordamiento o subdesbordamiento, la información puede perderse si el resultado de una operación multiplicativa no se puede representar en el tipo de los operandos después de la conversión.  
   
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- En Microsoft C++, el resultado de una expresión de módulo tiene siempre el mismo signo que el primer operando.  
-  
-**FIN de Específicos de Microsoft**  
- Si la división calculada de dos enteros es inexacta y solo un operando es negativo, el resultado es el entero mayor (en magnitud, independientemente del signo) que es menor que el valor exacto que produciría la operación de división. Por ejemplo, el valor calculado de -11 / 3 es-3.666666666. El resultado de esa división entero es -3.  
+**Específicos de Microsoft**
+
+En Microsoft C++, el resultado de una expresión de módulo tiene siempre el mismo signo que el primer operando.
+
+**FIN de Específicos de Microsoft**
+
+Si la división calculada de dos enteros es inexacta y solo un operando es negativo, el resultado es el entero mayor (en magnitud, independientemente del signo) que es menor que el valor exacto que produciría la operación de división. Por ejemplo, el valor calculado de -11 / 3 es-3.666666666. El resultado de esa división entero es -3.  
   
  La relación entre los operadores multiplicativos está determinada por la identidad (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   

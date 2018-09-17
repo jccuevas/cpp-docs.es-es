@@ -1,5 +1,5 @@
 ---
-title: único | Documentos de Microsoft
+title: solo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691864"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716994"
 ---
 # <a name="single"></a>única
-Le permite especificar que una sección de código debe ejecutarse en un solo subproceso, no necesariamente el subproceso principal.  
+Le permite especificar que una sección de código debe ejecutarse en un único subproceso, no necesariamente el subproceso principal.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,8 +36,9 @@ Le permite especificar que una sección de código debe ejecutarse en un solo su
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `clause` (opcional)  
- Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **único**.  
+
+`clause`  
+(Opcional) Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **único**.  
   
 ## <a name="remarks"></a>Comentarios  
  El **único** directiva es compatible con las cláusulas de OpenMP siguientes:  
@@ -50,9 +51,9 @@ Le permite especificar que una sección de código debe ejecutarse en un solo su
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- El [maestro](../../../parallel/openmp/reference/master.md) directiva permite especificar que una sección de código debe ejecutarse solo en el subproceso principal.  
+ El [maestro](../../../parallel/openmp/reference/master.md) directiva le permite especificar que una sección de código debe ejecutarse solo en el subproceso principal.  
   
- Para obtener más información, consulte [2.4.3 único construir](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Para obtener más información, consulte [2.4.3 single construir](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Ejemplo  
   

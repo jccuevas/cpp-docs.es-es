@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ffb78d1c7893255666e5a340ce48649da72df6c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215520"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706906"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton (clase)
 Un botón de barra de herramientas que contiene un control de edición ( [clase CEdit](../../mfc/reference/cedit-class.md)).  
@@ -177,17 +177,17 @@ CMFCToolBarEditBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiID*  
- Especifica el identificador de control.  
+*uiID*<br/>
+[in] Especifica el identificador de control.  
   
- [in] *iImage*  
- Especifica el índice de base cero de una imagen de la barra de herramientas. La imagen se encuentra en la [CMFCToolBarImages (clase)](../../mfc/reference/cmfctoolbarimages-class.md) objeto que [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md) clase mantiene.  
+*iImage*<br/>
+[in] Especifica el índice de base cero de una imagen de la barra de herramientas. La imagen se encuentra en la [CMFCToolBarImages (clase)](../../mfc/reference/cmfctoolbarimages-class.md) objeto que [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md) clase mantiene.  
   
- [in] *dwStyle*  
- Especifica el estilo del control de edición.  
+*dwStyle*<br/>
+[in] Especifica el estilo del control de edición.  
   
- [in] *iWidth*  
- Especifica el ancho en píxeles del control de edición.  
+*iWidth*<br/>
+[in] Especifica el ancho en píxeles del control de edición.  
   
 ### <a name="remarks"></a>Comentarios  
  El constructor predeterminado establece el estilo del control de edición a la combinación siguiente:  
@@ -204,8 +204,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *src*  
- Una referencia al botón de origen desde el que se va a copiar.  
+*src*<br/>
+[in] Una referencia al botón de origen desde el que se va a copiar.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para copiar otro botón de barra de herramientas en este botón de barra de herramientas. *src* debe ser de tipo `CMFCToolBarEditBoxButton`.  
@@ -220,11 +220,11 @@ virtual CEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Especifica la ventana primaria del control de edición. No debe ser NULL.  
+*pWndParent*<br/>
+[in] Especifica la ventana primaria del control de edición. No debe ser NULL.  
   
- [in] *rect*  
- Especifica el tamaño y la posición del control de edición.  
+*Rect*<br/>
+[in] Especifica el tamaño y la posición del control de edición.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero para el control de edición recién creada; es NULL si no superan la creación y la inclusión del control.  
@@ -240,8 +240,8 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando del botón debe recuperar.  
+*uiCmd*<br/>
+[in] El identificador de comando del botón debe recuperar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La primera `CMFCToolBarEditBoxButton` objeto en la aplicación que tiene el identificador de comando especificado o NULL si no existe el objeto existe.  
@@ -257,8 +257,8 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de comando del botón desde la que se va a recuperar contenido.  
+*uiCmd*<br/>
+[in] El identificador de comando del botón desde la que se va a recuperar contenido.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `CString` objeto que contiene el texto del primer control de barra de herramientas de cuadro de edición que tiene el identificador de comando especificado.  
@@ -287,8 +287,8 @@ virtual void GetEditBorder(CRect& rectBorder);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] *rectBorder*  
- Una referencia a la `CRect` objeto que recibe el rectángulo delimitador.  
+*rectBorder*<br/>
+[out] Una referencia a la `CRect` objeto que recibe el rectángulo delimitador.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método recupera el rectángulo delimitador del control de edición en coordenadas de cliente. Expande el tamaño del rectángulo en cada dirección de un píxel.  
@@ -368,8 +368,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iNotifyCode*  
- El mensaje de notificación que está asociado con el comando.  
+*iNotifyCode*<br/>
+[in] El mensaje de notificación que está asociado con el comando.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el botón que procesa el mensaje WM_COMMAND, o FALSE para indicar que el mensaje debe controlarse mediante la barra de herramientas primario.  
@@ -399,8 +399,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Un puntero a la nueva ventana primaria.  
+*pWndParent*<br/>
+[in] Un puntero a la nueva ventana primaria.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método invalida la implementación de la clase base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) volviendo a interno `CEdit` objeto.  
@@ -415,11 +415,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *conquistado*  
- Sin usar.  
+*conquistado*<br/>
+[in] Sin usar.  
   
- [in] *bDelay*  
- Sin usar.  
+*bDelay*<br/>
+[in] Sin usar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el botón procesa el mensaje clic; en caso contrario, es 0.  
@@ -437,11 +437,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- El contexto de dispositivo que muestra el botón.  
+*pDC*<br/>
+[in] El contexto de dispositivo que muestra el botón.  
   
- [in] *nCtlColor*  
- Sin usar.  
+*nCtlColor*<br/>
+[in] Sin usar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Identificador del pincel de ventana global.  
@@ -481,8 +481,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- Especifica si el botón está visible. Si este parámetro es TRUE, el botón está visible. En caso contrario, el botón no está visible.  
+*bMostrar*<br/>
+[in] Especifica si el botón está visible. Si este parámetro es TRUE, el botón está visible. En caso contrario, el botón no está visible.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método extiende la implementación de la clase base ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) al mostrar el botón si *bMostrar* es TRUE. En caso contrario, este método oculta el botón.  
@@ -495,8 +495,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *iSize*  
- Nuevo ancho del botón, en píxeles.  
+*iSize*<br/>
+[in] Nuevo ancho del botón, en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método invalida la implementación de la clase de forma predeterminada, [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize), actualizando el tamaño y posición de interno `CEdit` objeto.  
@@ -513,17 +513,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Sin usar.  
+*pWndParent*<br/>
+[in] Sin usar.  
   
- [in] *iButtonIndex*  
- Sin usar.  
+*iButtonIndex*<br/>
+[in] Sin usar.  
   
- [in] *wndToolTip*  
- El control que muestra el texto de información sobre herramientas.  
+*wndToolTip*<br/>
+[in] El control que muestra el texto de información sobre herramientas.  
   
- [out] *str*  
- Un `CString` objeto que recibe el texto de información actualizada.  
+*str*<br/>
+[out] Un `CString` objeto que recibe el texto de información actualizada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el método actualiza el texto de información sobre herramientas; en caso contrario, es 0.  
@@ -539,8 +539,8 @@ virtual void SetContents(const CString& sContents);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *sContents*  
- Especifica el nuevo texto para establecer.  
+*sContents*<br/>
+[in] Especifica el nuevo texto para establecer.  
   
 ##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
  Busca un [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) objeto que tiene un identificador de comando especificado y establece el texto especificado dentro de su cuadro de texto.  
@@ -552,11 +552,11 @@ static BOOL SetContentsAll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- Especifica el identificador del control para el que se cambiará el texto de comando.  
+*uiCmd*<br/>
+[in] Especifica el identificador del control para el que se cambiará el texto de comando.  
   
- [in] *strContents*  
- Especifica el nuevo texto para establecer.  
+*strContents*<br/>
+[in] Especifica el nuevo texto para establecer.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si se ha establecido el texto; 0 si el `CMFCToolBarEditBoxButton` control con el identificador de comando especificado no existe.  
@@ -569,8 +569,8 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *uiCmd*  
- El identificador de recurso del menú contextual.  
+*uiCmd*<br/>
+[in] El identificador de recurso del menú contextual.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo usa el identificador de recurso para crear el menú contextual cuando el usuario seleccione el botón de barra de herramientas.  
@@ -583,8 +583,8 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bFlat*  
- El estilo plano de los botones del cuadro de edición. Si este parámetro es TRUE, la apariencia de estilo plano está habilitada; en caso contrario, se deshabilita la apariencia de estilo plano.  
+*bFlat*<br/>
+[in] El estilo plano de los botones del cuadro de edición. Si este parámetro es TRUE, la apariencia de estilo plano está habilitada; en caso contrario, se deshabilita la apariencia de estilo plano.  
   
 ### <a name="remarks"></a>Comentarios  
  El estilo plano de forma predeterminada para los botones de cuadro de edición es TRUE. Use la [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode) método para recuperar la apariencia de estilo plano de la aplicación.  
@@ -597,8 +597,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nStyle*  
- Para establecer un nuevo estilo.  
+*nStyle*<br/>
+[in] Para establecer un nuevo estilo.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método establece [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) a *nStyle* también deshabilita el cuadro de texto cuando la aplicación está en modo de personalización y habilita cuando la aplicación no está en modo de personalización (consulte [ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) y [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Consulte [estilos de Control de barra de herramientas](../../mfc/reference/toolbar-control-styles.md) para obtener una lista de marcas de estilo válido.  

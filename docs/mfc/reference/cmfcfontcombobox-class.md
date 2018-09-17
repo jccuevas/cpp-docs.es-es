@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686162"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725186"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox (clase)
 La `CMFCFontComboBox` clase crea un control de cuadro combinado que contiene una lista de fuentes.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDesc*  
- Apunta a un objeto de descripción de la fuente.  
+*pDesc*<br/>
+[in] Apunta a un objeto de descripción de la fuente.  
   
- [in] *lpszName*  
- Especifica un nombre de fuente.  
+*lpszName*<br/>
+[in] Especifica un nombre de fuente.  
   
- [in] *nCharSet*  
- Especifica un juego de caracteres. El valor predeterminado es DEFAULT_CHARSET. Para obtener más información, consulte el `lfCharSet` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura.  
+*nCharSet*<br/>
+[in] Especifica un juego de caracteres. El valor predeterminado es DEFAULT_CHARSET. Para obtener más información, consulte el `lfCharSet` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si un elemento en el cuadro combinado de fuente que coincide con el objeto de descripción de la fuente especificada o el nombre de la fuente y el juego de caracteres; en caso contrario, FALSE.  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nFontType*  
- Especifica el tipo de fuente. El valor predeterminado es la combinación bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Especifica el tipo de fuente. El valor predeterminado es la combinación bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Especifica el juego de caracteres de la fuente. El valor predeterminado es DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Especifica el juego de caracteres de la fuente. El valor predeterminado es DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Especifica el paso de la fuente y la familia. El valor predeterminado es DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Especifica el paso de la fuente y la familia. El valor predeterminado es DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el cuadro combinado de fuente se inicializó correctamente; en caso contrario, FALSE.  

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541648"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715564"
 ---
 # <a name="region-endregion"></a>region, endregion
 `#pragma region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa el [característica de esquematización](/visualstudio/ide/outlining) del Editor de código de Visual Studio.  
@@ -40,11 +40,11 @@ ms.locfileid: "42541648"
 ```  
   
 ### <a name="parameters"></a>Parámetros  
-*comentario* (opcional)  
-Un comentario que aparecerá en el editor de código.  
+*comment*  
+(Opcional) Un comentario que se mostrará en el editor de código.  
   
-*name* (opcional)  
-El nombre de la región.  Este nombre aparecerá en el editor de código.  
+*name*  
+(Opcional) El nombre de la región.  Este nombre aparecerá en el editor de código.  
   
 ## <a name="remarks"></a>Comentarios  
  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719126"
 ---
 # <a name="codeseg"></a>code_seg
 Especifica el segmento de texto donde se almacenan las funciones en el archivo .obj.  
@@ -34,6 +34,25 @@ Especifica el segmento de texto donde se almacenan las funciones en el archivo .
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="paramters"></a>Parámetros
+  
+**push**<br/>
+(Opcional) Inserta un registro en la pila interna del compilador. Un **inserción** puede tener un *identificador* y *nombre de segmento*.  
+  
+**pop**<br/>
+(Opcional) Quita un registro de la parte superior de la pila interna del compilador.  
+  
+*identifier*<br/>
+(Opcional) Cuando se usa con **inserción**, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con **pop**, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
+  
+*identificador* permite varios registros con un solo sacar **pop** comando.  
+  
+"*nombre de segmento*"<br/>  
+(Opcional) El nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento de texto activo.  
+  
+"*clase de segmento*"<br/>
+(Opcional) Se omite, pero se incluye por compatibilidad con versiones anteriores a la versión 2.0 de C++.  
+  
 ## <a name="remarks"></a>Comentarios  
  
 El **code_seg** directiva pragma no controla la posición del código objeto generado para las plantillas con instancias ni el código generado implícitamente por el compilador, por ejemplo, las funciones miembro especiales. Se recomienda que use el [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) atributo en su lugar, ya que proporciona control sobre la posición de todo el código objeto. Esto incluye el código generado por el compilador.  
@@ -43,24 +62,7 @@ Un *segmento* en un .obj archivo es un bloque de datos que se cargan en memoria 
 El **code_seg** directiva pragma indica al compilador que coloque todo el código objeto posterior de la unidad de traducción en un segmento de texto denominado *nombre de segmento*. De forma predeterminada, el segmento de texto usado para las funciones de un archivo .obj se denomina .text.  
   
 Un **code_seg** directiva pragma sin parámetros restablece el nombre del segmento de texto para el código objeto posterior a Text.  
-  
-*inserción* (opcional)  
-Inserta un registro en la pila interna del compilador. Un *inserción* puede tener un *identificador* y *nombre de segmento*.  
-  
-*POP* (opcional)  
-Quita un registro de la parte superior de la pila interna del compilador.  
-  
-*identificador* (opcional)  
-Cuando se usa con *inserción*, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con *pop*, extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no se extrae nada.  
-  
-*identificador* permite varios registros con un solo sacar *pop* comando.  
-  
-"*nombre de segmento*" (opcional)  
-Nombre de un segmento. Cuando se usa con *pop*, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento de texto activo.  
-  
-"*clase de segmento*" (opcional)  
-Se omite, pero se incluye por compatibilidad con las versiones de C++ anteriores a la versión 2.0.  
-  
+
 Puede usar el [DUMPBIN. EXE](../build/reference/dumpbin-command-line.md) aplicación para ver los archivos .obj. Las versiones de DUMPBIN para cada arquitectura de destino admitida se incluyen con Visual Studio.  
   
 ## <a name="example"></a>Ejemplo  

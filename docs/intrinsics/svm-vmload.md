@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3f82633c9bd48ede71853dbe383352b0b3d6f5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7ce27566075e48fb90b894a21e7a74a3ef1fdbea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692869"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705112"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Específicos de Microsoft**  
@@ -41,7 +41,7 @@ void __svm_vmload(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|La dirección física de la VMCB.|  
+|*VmcbPhysicalAddress*|[in] La dirección física de la VMCB.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `__svm_vmload` función es equivalente a la `VMLOAD` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número 24593, 3.11, revisión del documento en el [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sitio.  

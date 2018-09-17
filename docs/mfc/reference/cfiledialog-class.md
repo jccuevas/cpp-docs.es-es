@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: afd9c9e8069d6140b66a38f4686f562533dd5c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761022"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722714"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (clase)
 Encapsula el cuadro de diálogo común que se usa para abrir el archivo o archivo de las operaciones de almacenamiento.  
@@ -522,29 +522,29 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bOpenFileDialog*  
- El parámetro que especifica qué tipo de cuadro de diálogo para crear. Establézcalo en TRUE para construir un **abrir archivo** cuadro de diálogo. Establézcalo en FALSE para construir un **Guardar archivo como** cuadro de diálogo.  
+*bOpenFileDialog*<br/>
+[in] El parámetro que especifica qué tipo de cuadro de diálogo para crear. Establézcalo en TRUE para construir un **abrir archivo** cuadro de diálogo. Establézcalo en FALSE para construir un **Guardar archivo como** cuadro de diálogo.  
   
- [in] *lpszDefExt*  
- Extensión predeterminada de nombre de archivo. Si el usuario no tiene una extensión conocida (uno que tenga una asociación en el equipo del usuario) en el cuadro Nombre de archivo, la extensión especificada por *lpszDefExt* se anexa automáticamente al nombre de archivo. Si este parámetro es NULL, no se anexa ninguna extensión.  
+*lpszDefExt*<br/>
+[in] La extensión de nombre de archivo predeterminado. Si el usuario no tiene una extensión conocida (uno que tenga una asociación en el equipo del usuario) en el cuadro Nombre de archivo, la extensión especificada por *lpszDefExt* se anexa automáticamente al nombre de archivo. Si este parámetro es NULL, no se anexa ninguna extensión.  
   
- [in] *lpszFileName*  
- El nombre de archivo inicial que aparece en el cuadro Nombre de archivo. Si es NULL, no aparece ningún nombre de archivo inicial.  
+*lpszFileName*<br/>
+[in] El nombre de archivo inicial que aparece en el cuadro Nombre de archivo. Si es NULL, no aparece ningún nombre de archivo inicial.  
   
- [in] *dwFlags*  
- Una combinación de uno o más marcadores que se pueden usar para personalizar el cuadro de diálogo. Para obtener una descripción de estas marcas, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura en el SDK de Windows. Si modifica el `m_ofn.Flags` miembros de estructura, utilice un operador OR bit a bit de los cambios para mantener intactos el comportamiento predeterminado.  
+*dwFlags*<br/>
+[in] Una combinación de uno o más marcadores que se pueden usar para personalizar el cuadro de diálogo. Para obtener una descripción de estas marcas, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura en el SDK de Windows. Si modifica el `m_ofn.Flags` miembros de estructura, utilice un operador OR bit a bit de los cambios para mantener intactos el comportamiento predeterminado.  
   
- [in] *lpszFilter*  
- Una serie de pares de cadenas que especifican filtros puede aplicar al archivo. Si especifica filtros de archivo, sólo los archivos que coinciden con los criterios de filtro aparecerán en la lista de archivos. Vea la sección Comentarios para obtener más información sobre cómo trabajar con filtros de archivo.  
+*lpszFilter*<br/>
+[in] Una serie de pares de cadenas que especifican filtros puede aplicar al archivo. Si especifica filtros de archivo, sólo los archivos que coinciden con los criterios de filtro aparecerán en la lista de archivos. Vea la sección Comentarios para obtener más información sobre cómo trabajar con filtros de archivo.  
   
- [in] *pParentWnd*  
- Un puntero a la ventana principal o propietaria del cuadro de diálogo de archivo.  
+*pParentWnd*<br/>
+[in] Un puntero a la ventana principal o propietaria del cuadro de diálogo de archivo.  
   
- [in] *dwSize*  
- El tamaño de la `OPENFILENAME` estructura. Este valor depende de la versión del sistema operativo. MFC utiliza este parámetro para determinar el tipo adecuado de cuadro de diálogo para crear. El tamaño predeterminado de 0 significa que el código de MFC determinan el tamaño del cuadro de diálogo correctos para utilizar según la versión de sistema operativo en el que se ejecuta el programa.  
+*dwSize*<br/>
+[in] El tamaño de la `OPENFILENAME` estructura. Este valor depende de la versión del sistema operativo. MFC utiliza este parámetro para determinar el tipo adecuado de cuadro de diálogo para crear. El tamaño predeterminado de 0 significa que el código de MFC determinan el tamaño del cuadro de diálogo correctos para utilizar según la versión de sistema operativo en el que se ejecuta el programa.  
   
- [in] *bVistaStyle*  
- **Tenga en cuenta** este parámetro está disponible en Visual Studio 2008 y versiones posteriores y estará que el cuadro de diálogo nuevo estilo que se utilizará sólo si está ejecutando en Windows Vista o posterior.  
+*bVistaStyle*<br/>
+[in] **Nota** este parámetro está disponible en Visual Studio 2008 y versiones posteriores y estará que el cuadro de diálogo nuevo estilo que se utilizará sólo si está ejecutando en Windows Vista o posterior.  
   
  El parámetro que especifica el estilo del cuadro de diálogo de archivo. Establézcala en True para usar el nuevo estilo de Vista diálogos de archivo. En caso contrario, se usará el estilo anterior de los cuadros de diálogo. Consulte la sección Comentarios para obtener más información acerca de la que se ejecutan en la Vista.  
   
@@ -1346,11 +1346,11 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- El identificador del control que se va a establecer el texto.  
+*nID*<br/>
+[in] El identificador del control que se va a establecer el texto.  
   
- [in] *lpsz*  
- Un puntero a la cadena que contiene el texto que se establece para el control.  
+*lpsz*<br/>
+[in] Un puntero a la cadena que contiene el texto que se establece para el control.  
   
 ### <a name="remarks"></a>Comentarios  
  Ambas versiones de esta función son válidos para las aplicaciones que utilizan Unicode. Sin embargo, solo la versión con el tipo LPCSTR es válida para las aplicaciones que usan ANSI.  
@@ -1435,17 +1435,17 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nWin3ID*  
- Contiene el número de Id. del recurso de plantilla para el explorador que no es de- `CFileDialog` objeto. Esta plantilla solo se usa en Windows NT 3.51 o cuando el estilo OFN_EXPLORER no está presente.  
+*nWin3ID*<br/>
+[in] Contiene el número de Id. del recurso de plantilla para el explorador que no es de- `CFileDialog` objeto. Esta plantilla solo se usa en Windows NT 3.51 o cuando el estilo OFN_EXPLORER no está presente.  
   
- [in] *nWin4ID*  
- Contiene el número de Id. del recurso de plantilla para el Explorador de `CFileDialog` objeto. Esta plantilla se usa solo en Windows NT 4.0 y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
+*nWin4ID*<br/>
+[in] Contiene el número de Id. del recurso de plantilla para el Explorador de `CFileDialog` objeto. Esta plantilla se usa solo en Windows NT 4.0 y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
   
- [in] *lpWin3ID*  
- Contiene el nombre del recurso de plantilla para el explorador que no es de- `CFileDialog` objeto. Esta plantilla solo se usa en Windows NT 3.51 o cuando el estilo OFN_EXPLORER no está presente.  
+*lpWin3ID*<br/>
+[in] Contiene el nombre del recurso de plantilla para el explorador que no es de- `CFileDialog` objeto. Esta plantilla solo se usa en Windows NT 3.51 o cuando el estilo OFN_EXPLORER no está presente.  
   
- [in] *lpWin4ID*  
- Contiene el nombre del recurso de plantilla del explorador `CFileDialog` objeto. Esta plantilla se usa solo en Windows NT 4.0 y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
+*lpWin4ID*<br/>
+[in] Contiene el nombre del recurso de plantilla del explorador `CFileDialog` objeto. Esta plantilla se usa solo en Windows NT 4.0 y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
   
 ### <a name="remarks"></a>Comentarios  
  El sistema usará sólo una de las plantillas especificadas. El sistema determina qué plantilla utilizar según la presencia del estilo OFN_EXPLORER y el sistema operativo que se ejecuta la aplicación. Al especificar una que no son de explorador y la plantilla de estilo del explorador, es fácil admitir Windows NT 3.51, Windows NT 4.0 y versiones posteriores y Windows 95 y versiones posteriores.  

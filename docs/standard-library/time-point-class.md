@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: eb5390ad8fec7e355181c9711de1bb14d3b17820
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319024"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705983"
 ---
 # <a name="timepoint-class"></a>time_point (Clase)
 
@@ -111,8 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*  
- Un objeto `duration`.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -128,8 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*  
- Un objeto `duration`.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -150,11 +150,11 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*  
- Un objeto [duration](../standard-library/duration-class.md).
+*Duración*<br/>
+Un objeto [duration](../standard-library/duration-class.md).
 
-*TP*  
- Un objeto `time_point`.
+*TP*<br/>
+Un objeto `time_point`.
 
 ### <a name="remarks"></a>Comentarios
 
