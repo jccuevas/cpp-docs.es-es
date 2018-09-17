@@ -1,5 +1,5 @@
 ---
-title: -CONTROLADOR (controlador de modo Kernel de Windows NT) | Documentos de Microsoft
+title: -DRIVER (controlador de modo Kernel de Windows NT) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66291391ed38c27ce7446eccc6fca227c7c2c2d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ae096c502cdc94d47a516caf4c29ac4f3eceb4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373119"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705554"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Controlador de modo kernel de Windows NT)
 
@@ -33,19 +33,19 @@ ms.locfileid: "32373119"
 
 ## <a name="remarks"></a>Comentarios
 
-Use la **Driver/Driver** opción del vinculador para crear un controlador de modo kernel de Windows NT.
+Use la **/DRIVER** opción del vinculador para compilar un controlador de modo kernel de Windows NT.
 
-**/DRIVER:UPONLY** hace que el vinculador agregar el **IMAGE_FILE_UP_SYSTEM_ONLY** bits para las características en el encabezado de salida para especificar que se trata de un controlador monoprocesador (UP). El sistema operativo no cargará un controlador MONOPROCESADOR en un sistema multiprocesador (MP).
+**UPONLY** hace que el vinculador agregue el **IMAGE_FILE_UP_SYSTEM_ONLY** a las características en el encabezado de salida para especificar que se trata de un controlador monoprocesador (UP). El sistema operativo se negará a cargar un controlador en un sistema multiprocesador (MP).
 
-**/ Driver: WDM** hace que el vinculador establecer el **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** de bits en el campo DllCharacteristics del encabezado opcional.
+**/ Driver: WDM** hace que el vinculador establezca el **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit en el campo DllCharacteristics del encabezado opcional.
 
-Si **Driver/Driver** no se especifica, el vinculador no establece estos bits.
+Si **/DRIVER** no se especifica, el vinculador no establece estos bits.
 
-Si **Driver/Driver** se especifica:
+Si **/DRIVER** se especifica:
 
 - **/ Fixed: no** está en vigor. Para obtener más información, consulte [/FIXED (Dirección base fija)](../../build/reference/fixed-fixed-base-address.md).
 
-- La extensión del archivo de salida se establece en. sys. Use **/OUT** para cambiar el nombre de archivo predeterminado y la extensión. Para obtener más información, consulte [/OUT (Nombre del archivo de salida)](../../build/reference/out-output-file-name.md).
+- La extensión del archivo de salida se establece en .sys. Use **/OUT** para cambiar el nombre de archivo predeterminado y la extensión. Para obtener más información, consulte [/OUT (Nombre del archivo de salida)](../../build/reference/out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
@@ -53,15 +53,15 @@ Si **Driver/Driver** se especifica:
 
 1. Haga clic en el **vinculador** carpeta.
 
-1. Haga clic en el **System** página de propiedades.
+1. Haga clic en el **sistema** página de propiedades.
 
 1. Modificar el **controlador** propiedad.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
-- Vea [VCLinkerTool.driver propiedad](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- Consulte [VCLinkerTool.driver propiedad](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

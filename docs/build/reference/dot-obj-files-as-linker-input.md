@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691756"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704384"
 ---
 # <a name="obj-files-as-linker-input"></a>Archivos .obj como entrada del vinculador
 
@@ -42,9 +42,9 @@ Para obtener más información sobre el compilador y vinculador, vea [compatibil
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de entrada de LINK](../../build/reference/link-input-files.md)  
-[Opciones del vinculador](../../build/reference/linker-options.md)  
-[Compatibilidad con Unicode](../../text/support-for-unicode.md)  
-[Compatibilidad con Unicode en el compilador y el vinculador](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Estándar Unicode](http://www.unicode.org/)  
-[Formato PE](/windows/desktop/Debug/pe-format)  
+[Archivos de entrada de LINK](../../build/reference/link-input-files.md)<br/>
+[Opciones del vinculador](../../build/reference/linker-options.md)<br/>
+[Compatibilidad con Unicode](../../text/support-for-unicode.md)<br/>
+[Compatibilidad con Unicode en el compilador y el vinculador](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Estándar Unicode](http://www.unicode.org/)<br/>
+[Formato PE](/windows/desktop/Debug/pe-format)

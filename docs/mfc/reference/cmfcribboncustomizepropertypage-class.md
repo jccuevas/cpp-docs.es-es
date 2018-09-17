@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonCustomizePropertyPage | Documentos de Microsoft
+title: CMFCRibbonCustomizePropertyPage (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7bb2f799dedd11ed1c8e0e909e7a5b1dcbb7adc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040680"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707513"
 ---
-# <a name="cmfcribboncustomizepropertypage-class"></a>Clase CMFCRibbonCustomizePropertyPage
-Implementa una página personalizada para la **personalizar** cuadro de diálogo de las aplicaciones basadas en cinta de opciones.  
+# <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage (clase)
+Implementa una página personalizada para el **personalizar** cuadro de diálogo de las aplicaciones basadas en la cinta de opciones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,11 +55,11 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |Name|Descripción|  
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Agrega una categoría personalizada a la **comandos** cuadro combinado.|  
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
 |[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Llamado por el sistema cuando un usuario hace clic en **Aceptar** en el **personalizar** cuadro de diálogo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si desea agregar comandos personalizados para el **personalizar** cuadro de diálogo, debe controlar el mensaje AFX_WM_ON_RIBBON_CUSTOMIZE. En el controlador de mensajes, crear instancias de un `CMFCRibbonCustomizePropertyPage` objeto en la pila. Crear una lista de comandos personalizados y, a continuación, llame a `AddCustomCategory` para agregar la nueva página a la **personalizar** cuadro de diálogo.  
+ Si desea agregar comandos personalizados a la **personalizar** cuadro de diálogo, debe controlar el mensaje AFX_WM_ON_RIBBON_CUSTOMIZE. En el controlador de mensajes, una instancia de un `CMFCRibbonCustomizePropertyPage` objeto en la pila. Crear una lista de comandos personalizados y, a continuación, llame a `AddCustomCategory` para agregar la nueva página a la **personalizar** cuadro de diálogo.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo construir un `CMFCRibbonCustomizePropertyPage` objeto y agregar una categoría personalizada.  
@@ -98,8 +98,8 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *lpszName*|Especifica el nombre de la categoría personalizada.|  
-|[in] *lstIDS*|Contiene los identificadores de comando de la cinta de opciones que se mostrará en la categoría personalizada.|  
+|*lpszName*|[in] Especifica el nombre de la categoría personalizada.|  
+|*lstIDS*|[in] Contiene los identificadores de comando de cinta de opciones que se mostrará en la categoría personalizada.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método agrega una categoría denominada *lpszName* a la **comandos** cuadro combinado. Cuando el usuario selecciona la categoría, los comandos especifican en *lstIDS* aparecen en la lista de comandos.  
@@ -112,8 +112,8 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pRibbonBar*  
- Un puntero a un control de la cinta de opciones para que las opciones para personalizar.  
+*pRibbonBar*<br/>
+[in] Un puntero a un control de cinta de opciones para el que las opciones para personalizar.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
  Calleld por el sistema cuando un usuario hace clic en **Aceptar** en el **personalizar** cuadro de diálogo.  

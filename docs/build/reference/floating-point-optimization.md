@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595053"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706685"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Optimización de punto flotante de Microsoft Visual C++
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 Este tipo de redondeo adicionales puede originarse utilizando una unidad punto flotante menor de precisión, como SSE2, llevan a cabo algunos de los cálculos intermedios. Por lo tanto, la precisión de redondeo de FP es depende de la plataforma; código que se compila bien para un procesador necesariamente puede no funcionar bien para otro procesador. Se deja al usuario para determinar si las ventajas de velocidad superan los problemas de precisión.
 
 Si la optimización de FP es especialmente problemática para una función específica, se puede cambiar el modo de punto flotante localmente a fp: precisa utilizando el `float_control` pragma del compilador.
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Transformaciones algebraicas bajo fp: Fast
 

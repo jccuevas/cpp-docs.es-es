@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c56f9ea0770618e65f454acd23ea22f19d3cfa92
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711105"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert (Clase)
 
@@ -52,11 +52,11 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parámetros
 
-*codecvt*  
- La faceta [locale](../standard-library/locale-class.md) que representa el objeto de conversión.
+*codecvt*<br/>
+La faceta [locale](../standard-library/locale-class.md) que representa el objeto de conversión.
 
-*Elem*  
- Tipo de elemento de carácter ancho.
+*Elem*<br/>
+Tipo de elemento de carácter ancho.
 
 ## <a name="remarks"></a>Comentarios
 

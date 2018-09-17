@@ -1,6 +1,6 @@
 ---
-title: Compilar y ejecutar un proyecto de aplicación de consola de C++ | Documentos de Microsoft
-description: Compilar y ejecutar una aplicación de consola de Hello World en Visual C++
+title: Compilar y ejecutar un proyecto de aplicación de consola de C++ | Microsoft Docs
+description: Compilar y ejecutar una aplicación de consola Hola a todos en Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
@@ -14,82 +14,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa63175e086fcb22552d0b7fd027b380d9766739
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388093"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705788"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar y ejecutar un proyecto de aplicación de consola de C++
 
-Cuando se crea un proyecto de aplicación de consola de C++ y se especificó el código, puede compilar y ejecutar en Visual Studio y, a continuación, ejecutarlo como una aplicación independiente desde la línea de comandos.
+Cuando se crea un proyecto de aplicación de consola de C++ y se especificó el código, puede compilar y ejecutarla en Visual Studio y, a continuación, ejecutarlo como una aplicación independiente desde la línea de comandos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Hacer que Visual Studio con el desarrollo de escritorio con cargas de trabajo de C++ instalados y ejecutándose en el equipo. Si aún no está instalado, siga los pasos de [compatibilidad instalar C++ en Visual Studio](../build/vscpp-step-0-installation.md).
+- Hacer que Visual Studio con el desarrollo de escritorio con la carga de trabajo de C++ instalado y ejecutándose en el equipo. Si aún no está instalado, siga los pasos de [compatibilidad Install C++ en Visual Studio](../build/vscpp-step-0-installation.md).
 
-- Crear un "Hello, World!" proyecto y escriba su código fuente. Si aún no lo ha hecho aún, siga los pasos de [crear un proyecto de aplicación de consola de C++](../build/vscpp-step-1-create.md).
+- Crear un "Hello, World!" proyecto y escriba su código fuente. Si aún no lo ha hecho todavía, siga los pasos de [cree un proyecto de aplicación de consola C++](../build/vscpp-step-1-create.md).
 
-Si Visual Studio tiene un aspecto similar al siguiente, está listo para compilar y ejecutar la aplicación:
+Si Visual Studio tiene este aspecto, está listo para compilar y ejecutar la aplicación:
 
-   ![Listo para generar el nuevo proyecto](../build/media/vscpp-ready-to-build.png "listo para generar el nuevo proyecto")
+   ![Listo para crear el nuevo proyecto](../build/media/vscpp-ready-to-build.png "listo para compilar el proyecto nuevo")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Compilar y ejecutar el código en Visual Studio
 
-1. Para compilar el proyecto, elija **generar solución** desde el **generar** menú. El **salida** ventana muestra los resultados del proceso de compilación.
+1. Para compilar el proyecto, elija **compilar solución** desde el **compilar** menú. El **salida** ventana muestra los resultados del proceso de compilación.
 
    ![Compile el proyecto](../build/media/vscpp-build-solution.gif "compilar el proyecto")
 
 1. Para ejecutar el código, en la barra de menús, elija **depurar**, **iniciar sin depurar**.
 
-   ![Inicie el proyecto](../build/media/vscpp-start-without-debugging.gif "el proyecto de inicio")
+   ![Iniciar el proyecto](../build/media/vscpp-start-without-debugging.gif "iniciar el proyecto")
 
-    Abrirá una ventana de consola y, a continuación, ejecuta la aplicación. Cuando se inicia una aplicación de consola en Visual Studio, se ejecuta el código, a continuación, se imprime "Presione cualquier tecla para continuar. . ." para ofrecerle una oportunidad para ver el resultado.
+    Abre una ventana de consola y, a continuación, ejecuta la aplicación. Cuando se inicia una aplicación de consola en Visual Studio, ejecuta el código, a continuación, imprime "Presione cualquier tecla para continuar. . ." para ofrecerle la oportunidad de ver la salida.
 
-¡Enhorabuena! Ha creado su primer "Hello, world!" aplicación de consola en Visual Studio. Presione una tecla para cerrar la ventana de consola y vuelva a Visual Studio.
+¡Enhorabuena! Ha creado su primer "Hello, world!" ¡aplicación de consola en Visual Studio! Presione una tecla para cerrar la ventana de consola y vuelva a Visual Studio.
 
-[Produjo un problema.](#build-and-run-your-code-in-visual-studio-issues)
+[Tenido un problema.](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>Ejecutar el código en una ventana de comandos
 
-Normalmente, las aplicaciones de consola se ejecutan en el símbolo del sistema, no en Visual Studio. Una vez que la aplicación se compila en Visual Studio, puede ejecutar desde cualquier ventana de comandos. Aquí se muestra cómo buscar y ejecutar la aplicación nuevo en una ventana del símbolo del sistema.
+Normalmente, se ejecuta aplicaciones de consola en el símbolo del sistema, no en Visual Studio. Una vez compilada la aplicación mediante Visual Studio, puede ejecutarlo desde cualquier ventana de comandos. Aquí es cómo buscar y ejecutar la aplicación nueva en una ventana del símbolo del sistema.
 
-1. En **el Explorador de soluciones**, seleccione la solución HelloWorld y haga clic en para abrir el menú contextual. Elija **Abrir carpeta en el Explorador de archivos** para abrir un **Explorador de archivos** ventana en la carpeta de solución HelloWorld.
+1. En **el Explorador de soluciones**, seleccione la solución HelloWorld y haga doble clic para abrir el menú contextual. Elija **Abrir carpeta en el Explorador de archivos** para abrir un **Explorador de archivos** ventana en la carpeta de solución HelloWorld.
 
-1. En el **Explorador de archivos** ventana, abra la carpeta de depuración. Contiene la aplicación, HelloWorld.exe y un par de otros archivos de depuración. Seleccione HelloWorld.exe, mantenga presionada la tecla MAYÚS y haga clic en para abrir el menú contextual. Elija **copiar como ruta de acceso** para copiar la ruta de acceso a la aplicación en el Portapapeles.
+1. En el **Explorador de archivos** ventana, abra la carpeta de depuración. Este archivo contiene la aplicación, HelloWorld.exe y un par de otros archivos de depuración. Seleccione HelloWorld.exe, mantenga presionada la tecla MAYÚS y haga doble clic para abrir el menú contextual. Elija **copiar como ruta de acceso** para copiar la ruta de acceso a la aplicación en el Portapapeles.
 
-1. Para abrir una ventana del símbolo del sistema, presione R de Windows para abrir el **ejecutar** cuadro de diálogo. Escriba *cmd.exe* en el **abiertos** cuadro de texto, a continuación, elija **Aceptar** para ejecutar una ventana del símbolo del sistema.
+1. Para abrir una ventana del símbolo del sistema, presione R de Windows para abrir el **ejecutar** cuadro de diálogo. Escriba *cmd.exe* en el **abierto** cuadro de texto, a continuación, elija **Aceptar** para ejecutar una ventana del símbolo del sistema.
 
 1. En la ventana de símbolo del sistema, haga clic en para pegar la ruta de acceso a la aplicación en el símbolo del sistema. Presione ENTRAR para ejecutar la aplicación.
 
-   ![Ejecutar la aplicación en la línea de comandos](../build/media/vscpp-run-in-cmd.gif "ejecutar la aplicación en el símbolo del sistema")
+   ![Ejecute la aplicación en el símbolo](../build/media/vscpp-run-in-cmd.gif "ejecutar la aplicación en el símbolo del sistema")
 
 Enhorabuena, ha compilado y ejecutar una aplicación de consola en Visual Studio.
 
-[Produjo un problema.](#run-your-code-in-a-command-window-issues)
+[Tenido un problema.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Una vez que ha compilado y ejecutar esta aplicación simple, está listo para proyectos más complejos. Vea [mediante el IDE de Visual Studio para el desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) para obtener más tutoriales que explican las capacidades de Visual C++ en Visual Studio.
+Una vez que ha creado y ejecutado esta sencilla aplicación, está listo para los proyectos más complejos. Consulte [mediante el IDE de Visual Studio para el desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) para obtener más tutoriales que explican las capacidades de Visual C++ en Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Guía de solución de problemas
 
 Venir aquí para las soluciones a problemas comunes al crear su primer proyecto de C++.
 
-### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Compilar y ejecutar el código con problemas de Visual Studio
+### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Compilar y ejecutar el código en problemas de Visual Studio
 
-Si aparece un subrayado ondulado rojo en nada en el editor de código fuente, la compilación puede tener errores o advertencias. Compruebe que el código coincide con el ejemplo de ortografía y mayúsculas y signos de puntuación.
+Si aparece un subrayado ondulado rojo bajo cualquier elemento en el editor de código fuente, la compilación puede tener errores o advertencias. Compruebe que el código coincide con el ejemplo de ortografía, puntuación y caso.
 
 [Volver.](#build-and-run-your-code-in-visual-studio)
 
 ### <a name="run-your-code-in-a-command-window-issues"></a>Ejecutar el código en una ventana de comandos de problemas
 
-También puede navegar hasta la carpeta de depuración de la solución en la línea de comandos para ejecutar la aplicación. No se puede ejecutar la aplicación de otros directorios sin especificar la ruta de acceso a la aplicación. Sin embargo, puede copiar la aplicación a otro directorio y ejecútelo desde allí.
+También puede navegar a la carpeta de depuración de la solución en la línea de comandos para ejecutar la aplicación. No se puede ejecutar la aplicación de otros directorios sin especificar la ruta de acceso a la aplicación. Sin embargo, puede copiar la aplicación en otro directorio y ejecutarlo desde allí.
 
-Si no ve **copiar como ruta de acceso** en el menú contextual, descarte el menú y, a continuación, mantenga presionada la tecla MAYÚS mientras vuelva a abrirlo. Esto es solo para su comodidad. También puede copiar la ruta de acceso a la carpeta de la barra de búsqueda del explorador de archivos y péguelo en el **ejecutar** cuadro de diálogo y, a continuación, escriba el nombre de su archivo ejecutable al final. Es un poco más escritura, pero tiene el mismo resultado.
+Si no ve **copiar como ruta de acceso** en el menú contextual, descarte el menú y, a continuación, mantenga presionada la tecla MAYÚS mientras se vuelva a abrirlo. Esto es solo para su comodidad. También puede copiar la ruta de acceso a la carpeta de la barra de búsqueda del explorador de archivos y péguelo en el **ejecutar** cuadro de diálogo y, a continuación, escriba el nombre del archivo ejecutable al final. Es un poco más escritura, pero tiene el mismo resultado.
 
 [Volver.](#run-your-code-in-a-command-window)
-
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

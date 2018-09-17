@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7569c7034184adecf6bb452d7c406a762af4e20b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540300"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711665"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Específicos de Microsoft**  
@@ -41,14 +41,14 @@ void __inbytestring(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- Para leer desde el puerto.  
+*Puerto*<br/>
+[in] Para leer desde el puerto.  
   
- [out] `Buffer`  
- Los datos leídos desde el puerto se escriben aquí.  
+*búfer*<br/>
+[out] Los datos leídos desde el puerto se escriben aquí.  
   
- [in] `Count`  
- El número de bytes de datos que se va a leer.  
+*Recuento*<br/>
+[in] El número de bytes de datos que se va a leer.  
   
 ## <a name="requirements"></a>Requisitos  
   

@@ -1,5 +1,5 @@
 ---
-title: -CLRTHREADATTRIBUTE (atributo de subproceso CLR conjunto) | Documentos de Microsoft
+title: -CLRTHREADATTRIBUTE (establecer el atributo subprocesos CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,59 +17,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b83c3df380b07f125bad8426b9bf18b013b606c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bea5b75c9f0691ef74c35ed405d64fc3389c4fcd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373428"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705801"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Establecer el atributo de subproceso de CLR)
-Especificar explícitamente el atributo de subprocesamiento para el punto de entrada del programa CLR.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/CLRTHREADATTRIBUTE:{STA|MTA|NONE}  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- MTA  
- Se aplica el atributo MTAThreadAttribute al punto de entrada del programa.  
-  
- NINGUNO  
- Igual que si no se especifica/CLRTHREADATTRIBUTE.  Permite que Common Language Runtime (CLR) establecer el atributo de subprocesamiento predeterminado.  
-  
- STA  
- Se aplica el atributo STAThreadAttribute al punto de entrada del programa.  
-  
-## <a name="remarks"></a>Comentarios  
- Establecer el atributo thread solo es válido cuando se genera un .exe, ya que puede afectar al punto de entrada del subproceso principal.  
-  
- Si utiliza el punto de entrada predeterminado (main o wmain, por ejemplo), especifique el modelo de subprocesamiento mediante /CLRTHREADATTRIBUTE o colocando el atributo de subprocesamiento (STAThreadAttribute o MTAThreadAttribute) en la función de entrada predeterminada.  
-  
- Si usa un punto de entrada no es el predeterminado, especifique el modelo de subprocesamiento mediante /CLRTHREADATTRIBUTE o colocando el subprocesamiento de atributo en la función de entrada no predeterminada y, a continuación, especifique el punto de entrada no predeterminada con [/Entry](../../build/reference/entry-entry-point-symbol.md) .  
-  
- Si el modelo de subprocesamiento especificado en el código fuente no está de acuerdo con el modelo de subprocesamiento especificado con/CLRTHREADATTRIBUTE, el vinculador omite /CLRTHREADATTRIBUTE y aplica el modelo de subprocesamiento especificado en el código fuente.  
-  
- Será necesario que utilice el subprocesamiento único, por ejemplo, si su programa de CLR hospeda un objeto COM que utiliza subprocesamiento único.  Si el programa de CLR utiliza subprocesamiento múltiple, no puede hospedar un objeto COM que utiliza subprocesamiento único.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Expanda el **propiedades de configuración** nodo.  
-  
-3.  Expanda el **vinculador** nodo.  
-  
-4.  Seleccione el **avanzadas** página de propiedades.  
-  
-5.  Modificar el **CLR Thread Attribute** propiedad.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
-  
-1.  Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+Especificar explícitamente el atributo de subprocesamiento del punto de entrada del programa CLR.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+/CLRTHREADATTRIBUTE:{STA|MTA|NONE}
+```
+
+#### <a name="parameters"></a>Parámetros
+
+**MTA**<br/>
+Se aplica el atributo MTAThreadAttribute al punto de entrada del programa.
+
+**NINGUNO**<br/>
+Igual que el no especificar/CLRTHREADATTRIBUTE.  Permite que Common Language Runtime (CLR) establezca el atributo de subprocesamiento predeterminado.
+
+**STA**<br/>
+Se aplica el atributo STAThreadAttribute al punto de entrada del programa.
+
+## <a name="remarks"></a>Comentarios
+
+Establecer el atributo thread solo es válido cuando se genera un .exe, ya que afecta el punto de entrada del subproceso principal.
+
+Si usa el punto de entrada predeterminado (main o wmain, por ejemplo) Especifique el modelo de subprocesos mediante/CLRTHREADATTRIBUTE o colocando el atributo de subprocesamiento (STAThreadAttribute o MTAThreadAttribute) en la función de entrada predeterminada.
+
+Si usa un punto de entrada no predeterminado, especifique el modelo de subprocesos mediante/CLRTHREADATTRIBUTE o colocando el subprocesamiento atributo en la función de entrada no predeterminada y, a continuación, especifique el punto de entrada no predeterminada con [/Entry](../../build/reference/entry-entry-point-symbol.md) .
+
+Si el modelo de subprocesos especificado en el código fuente no está de acuerdo con el modelo de subprocesos especificado con/CLRTHREADATTRIBUTE, el vinculador omitirá/CLRTHREADATTRIBUTE y aplicar el modelo de subprocesos especificado en el código fuente.
+
+Será necesario que utilice el subprocesamiento único, por ejemplo, si su programa de CLR hospeda un objeto COM que usa el subprocesamiento único.  Si el programa de CLR usa el subprocesamiento múltiple, no se puede hospedar un objeto COM que usa el subprocesamiento único.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+
+1. Expanda el nodo **Propiedades de configuración**.
+
+1. Expanda el **vinculador** nodo.
+
+1. Seleccione el **avanzadas** página de propiedades.
+
+1. Modificar el **el atributo de subproceso de CLR** propiedad.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
+
+1. Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.
+
+## <a name="see-also"></a>Vea también
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opciones del vinculador](../../build/reference/linker-options.md)
