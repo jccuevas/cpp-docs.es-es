@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c96b5b18530cd9b983e5a4c022883919261cc22c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701615"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit (clase)
 Implementa un control de edición que se encuentra en una barra de cinta.  
@@ -181,17 +181,17 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nID*  
- Comando de identificador para el `CMFCRibbonEdit` control.  
+*nID*<br/>
+[in] Comando de identificador para el `CMFCRibbonEdit` control.  
   
- [in] *nWidth*  
- El ancho, en píxeles, del cuadro de texto para el `CMFCRibbonEdit` control.  
+*nWidth*<br/>
+[in] El ancho, en píxeles, del cuadro de texto para el `CMFCRibbonEdit` control.  
   
- [in] *lpszLabel*  
- La etiqueta para el `CMFCRibbonEdit` control.  
+*lpszLabel*<br/>
+[in] La etiqueta para el `CMFCRibbonEdit` control.  
   
- [in] *nImage*  
- Índice de la imagen pequeña que se utilizará para el `CMFCRibbonEdit` control. La colección de imágenes pequeñas se mantiene por la categoría de cinta de opciones de elemento primario.  
+*nImage*<br/>
+[in] Índice de la imagen pequeña que se utilizará para el `CMFCRibbonEdit` control. La colección de imágenes pequeñas se mantiene por la categoría de cinta de opciones de elemento primario.  
   
 ### <a name="remarks"></a>Comentarios  
  El `CMFCRibbonEdit` control no utiliza una imagen grande.  
@@ -204,8 +204,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *src*  
- Objeto `CMFCRibbonEdit` de origen.  
+*src*<br/>
+[in] El origen `CMFCRibbonEdit` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  El *src* parámetro debe ser de tipo `CMFCRibbonEdit`.  
@@ -220,11 +220,11 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWndParent*  
- Un puntero a la ventana primaria de la `CMFCRibbonEdit` objeto.  
+*pWndParent*<br/>
+[in] Un puntero a la ventana primaria de la `CMFCRibbonEdit` objeto.  
   
- [in] *dwEditStyle*  
- Especifica el estilo del cuadro de texto. Puede combinar los estilos de ventana que aparece en la sección de comentarios con el [estilos de control de edición](/windows/desktop/Controls/edit-control-styles) que se describen en el SDK de Windows.  
+*dwEditStyle*<br/>
+[in] Especifica el estilo del cuadro de texto. Puede combinar los estilos de ventana que aparece en la sección de comentarios con el [estilos de control de edición](/windows/desktop/Controls/edit-control-styles) que se describen en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero para el nuevo cuadro de texto si el método se realizó correctamente; en caso contrario, es NULL.  
@@ -273,11 +273,11 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nmín.*  
- El valor mínimo del botón de número.  
+*nmín.*<br/>
+[in] El valor mínimo del botón de número.  
   
- [in] *Nmáx.*  
- El valor máximo del botón de número.  
+*Nmáx.*<br/>
+[in] El valor máximo del botón de número.  
   
 ### <a name="remarks"></a>Comentarios  
  Botones de número muestran arriba y flecha abajo y permiten a los usuarios desplazarse por un conjunto fijo de valores.  
@@ -290,8 +290,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` objeto.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño compacto de la `CMFCRibbonEdit` objeto.  
@@ -318,8 +318,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` objeto.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño intermedio de la `CMFCRibbonEdit` objeto.  
@@ -355,8 +355,8 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bInFloatyMode*  
- TRUE si el `CMFCRibbonEdit` control está en modo flotante; de lo contrario, FALSE.  
+*bInFloatyMode*<br/>
+[in] TRUE si el `CMFCRibbonEdit` control está en modo flotante; de lo contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El ancho, en píxeles, de la `CMFCRibbonEdit` control.  
@@ -433,8 +433,8 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -446,8 +446,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -459,8 +459,8 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -478,23 +478,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pDC*  
- Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+*pDC*<br/>
+[in] Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
   
- [in] *strText*  
- El texto de presentación [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit clase").  
+*strText*<br/>
+[in] El texto para mostrar [ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit (clase)").  
   
- [in] *nTextOffset*  
- Distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.  
+*nTextOffset*<br/>
+[in] Distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.  
   
- [in] *rect*  
- El rectángulo de presentación para el `CMFCRibbonEdit` control.  
+*Rect*<br/>
+[in] El rectángulo de presentación para el `CMFCRibbonEdit` control.  
   
- [in] *bIsSelected*  
- Este parámetro no se utiliza.  
+*bIsSelected*<br/>
+[in] No se utiliza este parámetro.  
   
- [in] *bHighlighted*  
- Este parámetro no se utiliza.  
+*bHighlighted*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  El cuadro de lista de comandos muestra los controles de cinta de opciones para habilitar a los usuarios personalizar la barra de herramientas de acceso rápido.  
@@ -507,8 +507,8 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHabilitar el*  
- TRUE para habilitar el control; FALSE para deshabilitar el control.  
+*bHabilitar el*<br/>
+[in] TRUE para habilitar el control; FALSE para deshabilitar el control.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -520,8 +520,8 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bHighlight*  
- TRUE si el puntero está en los límites de la `CMFCRibbonEdit` control; en caso contrario, FALSE.  
+*bHighlight*<br/>
+[in] TRUE si el puntero está en los límites de la `CMFCRibbonEdit` control; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -533,8 +533,8 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bIsMenuKey*  
- TRUE si keytip muestra un menú emergente; en caso contrario, FALSE.  
+*bIsMenuKey*<br/>
+[in] TRUE si keytip muestra un menú emergente; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si se controló el evento; en caso contrario, FALSE.  
@@ -549,8 +549,8 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Este parámetro no se utiliza.  
+*punto*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -562,8 +562,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *punto*  
- Este parámetro no se utiliza.  
+*punto*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -575,8 +575,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bIsRTL*  
- TRUE si el diseño es de derecha a izquierda; FALSE si el diseño de izquierda a derecha.  
+*bIsRTL*<br/>
+[in] TRUE si el diseño es de derecha a izquierda; FALSE si el diseño de izquierda a derecha.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -588,8 +588,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *bMostrar*  
- TRUE para mostrar el control; FALSE para ocultar el control.  
+*bMostrar*<br/>
+[in] TRUE para mostrar el control; FALSE para ocultar el control.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -632,8 +632,8 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *strText*  
- El texto del cuadro de texto.  
+*strText*<br/>
+[in] El texto del cuadro de texto.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
  Establece la alineación del texto del cuadro de texto.  
@@ -643,8 +643,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nAlign*  
- Valor enumerado de alineación del texto. Consulte la sección Comentarios para los valores posibles.  
+*nAlign*<br/>
+[in] Valor enumerado de alineación del texto. Consulte la sección Comentarios para los valores posibles.  
   
 ### <a name="remarks"></a>Comentarios  
  El parámetro *nAlign* es uno de la siguiente edición estilos de control:  
@@ -667,8 +667,8 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *nWidth*  
- El ancho, en píxeles, del cuadro de texto.  
+*nWidth*<br/>
+[in] El ancho, en píxeles, del cuadro de texto.  
   
  *bInFloatyMode*  
  TRUE para establecer el ancho del modo flotante; FALSE para establecer el ancho del modo normal.  
