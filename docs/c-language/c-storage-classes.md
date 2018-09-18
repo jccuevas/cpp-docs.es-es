@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6bed6fa3722b320e23f5d6da94673ba928c225
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bade146edd1b83f893af72fc4e760a46187679b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111711"
 ---
 # <a name="c-storage-classes"></a>Clases de almacenamiento de C
 
@@ -60,6 +60,6 @@ El significado exacto de cada especificador de clase de almacenamiento depende d
 
 En [Especificadores de clase de almacenamiento para declaraciones de nivel externo](../c-language/storage-class-specifiers-for-external-level-declarations.md) y [Especificadores de clase de almacenamiento para declaraciones de nivel interno](../c-language/storage-class-specifiers-for-internal-level-declarations.md), se describen los elementos terminales *storage-class-specifier* de cada clase de declaración y se explica el comportamiento predeterminado cuando se omite el elemento *storage-class-specifier* de una variable. En [Especificadores de clase de almacenamiento con declaraciones de función](../c-language/storage-class-specifiers-with-function-declarations.md) se describen los especificadores de clase de almacenamiento utilizados con funciones.
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
-[Declaraciones y tipos](../c-language/declarations-and-types.md)  
+[Declaraciones y tipos](../c-language/declarations-and-types.md)
