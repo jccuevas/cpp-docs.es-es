@@ -17,22 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a55f4ac98a712d8166c3d0ca5e22e13cb8c9145
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fd89e21b10d241ea035e8c9b9c8ac8e5c3ee9cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106090"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Atributos extendidos de clase de almacenamiento de C
-**Específicos de Microsoft**  
-  
-Encontrará información más actualizada sobre este tema en [__declspec (Referencia de C++)](../cpp/declspec.md).  
-  
-La sintaxis de atributo extendido simplifica y normaliza las extensiones específicas de Microsoft para el lenguaje C. Los atributos de clase de almacenamiento que usan la sintaxis de atributo extendido son thread, naked, dllimport y dllexport.  
-  
-La sintaxis de atributo extendido para especificar información de clase de almacenamiento utiliza la palabra clave __declspec, que especifica que una instancia de un tipo determinado se debe almacenar con un atributo de clase de almacenamiento específico de Microsoft (thread, naked, dllimport o dllexport). Algunos ejemplos de otros modificadores de clase de almacenamiento son las palabras clave static y extern. Sin embargo, estas palabras clave forman parte del estándar ANSI C y, como tales, no se tratan con la sintaxis de atributo extendido.  
-  
+
+**Específicos de Microsoft**
+
+Encontrará información más actualizada sobre este tema en [__declspec (Referencia de C++)](../cpp/declspec.md).
+
+La sintaxis de atributo extendido simplifica y normaliza las extensiones específicas de Microsoft para el lenguaje C. Los atributos de clase de almacenamiento que usan la sintaxis de atributo extendido son thread, naked, dllimport y dllexport.
+
+La sintaxis de atributo extendido para especificar información de clase de almacenamiento utiliza la palabra clave __declspec, que especifica que una instancia de un tipo determinado se debe almacenar con un atributo de clase de almacenamiento específico de Microsoft (thread, naked, dllimport o dllexport). Algunos ejemplos de otros modificadores de clase de almacenamiento son las palabras clave static y extern. Sin embargo, estas palabras clave forman parte del estándar ANSI C y, como tales, no se tratan con la sintaxis de atributo extendido.
+
 ## <a name="syntax"></a>Sintaxis
 
 *storage-class-specifier*:<br/>
@@ -49,10 +50,11 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
 El espacio en blanco separa los modificadores de la declaración. Observe que el elemento *extended-decl-modifier-seq* puede estar vacío; en este caso, __declspec no tiene ningún efecto.
-  
-Los atributos de clase de almacenamiento thread, naked, dllimport y dllexport son una propiedad solo de la declaración de los datos o función a los que se aplican; no vuelven a definir los atributos de tipo de la propia función. El atributo thread afecta solo a los datos. El atributo naked solo afecta a las funciones. Los atributos dllimport y dllexport afectan a funciones y datos.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
+
+Los atributos de clase de almacenamiento thread, naked, dllimport y dllexport son una propiedad solo de la declaración de los datos o función a los que se aplican; no vuelven a definir los atributos de tipo de la propia función. El atributo thread afecta solo a los datos. El atributo naked solo afecta a las funciones. Los atributos dllimport y dllexport afectan a funciones y datos.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
 [Declaraciones y tipos](../c-language/declarations-and-types.md)
