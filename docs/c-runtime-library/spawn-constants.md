@@ -30,30 +30,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a069f9f29f6fd15c3ce21111a37757519af229
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8daaf38e60ca48b4a34deb2086bbd14eb45651e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116937"
 ---
 # <a name="spawn-constants"></a>spawn (Constantes)
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-#include <process.h>  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El argumento `mode` determina la acción que realiza el proceso de llamada antes y durante una operación spawn. A continuación se indican valores posibles de `mode`:  
-  
-|Constante|Significado|  
-|--------------|-------------|  
-|`_P_OVERLAY`|Superpone el nuevo proceso al proceso de llamada, lo que destruye el proceso de llamada (mismo efecto que las llamadas `_exec`).|  
-|`_P_WAIT`|Suspende el subproceso de llamada hasta que se completa la ejecución del proceso nuevo (`_spawn` sincrónica).|  
-|`_P_NOWAIT`, `_P_NOWAITO`|Continúa ejecutando el proceso de llamada al mismo tiempo que el nuevo proceso (`_spawn` asincrónica).|  
-|`_P_DETACH`|Continúa ejecutando el proceso de llamada; el nuevo proceso se ejecuta en segundo plano sin acceso a la consola ni al teclado. Las llamadas a `_cwait` en el nuevo proceso producirán un error. Se trata de una función `_spawn` asincrónica.|  
-  
-## <a name="see-also"></a>Vea también  
- [_spawn, _wspawn (Funciones)](../c-runtime-library/spawn-wspawn-functions.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxis
+
+```
+#include <process.h>
+```
+
+## <a name="remarks"></a>Comentarios
+
+El argumento `mode` determina la acción que realiza el proceso de llamada antes y durante una operación spawn. A continuación se indican valores posibles de `mode`:
+
+|Constante|Significado|
+|--------------|-------------|
+|`_P_OVERLAY`|Superpone el nuevo proceso al proceso de llamada, lo que destruye el proceso de llamada (mismo efecto que las llamadas `_exec`).|
+|`_P_WAIT`|Suspende el subproceso de llamada hasta que se completa la ejecución del proceso nuevo (`_spawn` sincrónica).|
+|`_P_NOWAIT`, `_P_NOWAITO`|Continúa ejecutando el proceso de llamada al mismo tiempo que el nuevo proceso (`_spawn` asincrónica).|
+|`_P_DETACH`|Continúa ejecutando el proceso de llamada; el nuevo proceso se ejecuta en segundo plano sin acceso a la consola ni al teclado. Las llamadas a `_cwait` en el nuevo proceso producirán un error. Se trata de una función `_spawn` asincrónica.|
+
+## <a name="see-also"></a>Vea también
+
+[_spawn, _wspawn (funciones)](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)
