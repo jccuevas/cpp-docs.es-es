@@ -1,5 +1,5 @@
 ---
-title: C2050 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2050 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e8f66742cc08880bbcd7c93441d98eb1b9ca4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bae3c9478d83693ecab77cdde724a1f0ef6772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106030"
 ---
-# <a name="compiler-error-c2050"></a>C2050 de Error del compilador
-expresión switch no entero  
-  
- El `switch` expresión se evalúa como un valor no entero. Para resolver el error, use valores enteros solo en instrucciones switch.  
-  
- El ejemplo siguiente genera C2050:  
-  
-```  
-// C2050.cpp  
-int main() {  
-   int a = 1;  
-   switch ("a") {   // C2050  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-   }  
-}  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2050b.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-   }  
-}  
+# <a name="compiler-error-c2050"></a>Error del compilador C2050
+
+expresión switch no integral
+
+El `switch` expresión se evalúa como un valor no entero. Para resolver el error, use los valores enteros solo en las instrucciones switch.
+
+El ejemplo siguiente genera C2050:
+
+```
+// C2050.cpp
+int main() {
+   int a = 1;
+   switch ("a") {   // C2050
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+   }
+}
+```
+
+Posible resolución:
+
+```
+// C2050b.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+   }
+}
 ```

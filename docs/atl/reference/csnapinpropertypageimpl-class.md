@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eb34b0ce7b087a457b751604ffd86e61085bf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c89f577168593dcb22570af63801fc05654eb4b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100702"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl (clase)
 
@@ -125,7 +125,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszTitle*  
+*lpszTitle*<br/>
 [in] El título de la página de propiedades.
 
 ### <a name="remarks"></a>Comentarios
@@ -326,10 +326,10 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 ### <a name="parameters"></a>Parámetros
 
-*wParam*  
+*wParam*<br/>
 [in] Especifica información adicional de dependiente del mensaje.
 
-*lParam*  
+*lParam*<br/>
 [in] Especifica información adicional de dependiente del mensaje.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -350,7 +350,7 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bChanged*  
+*bChanged*<br/>
 [in] TRUE para indicar que la configuración de la página de propiedades se han modificado desde la última vez que se aplicaron; FALSE para indicar que la configuración de la página de propiedades se han aplicado o que debe omitirse.
 
 ### <a name="remarks"></a>Comentarios

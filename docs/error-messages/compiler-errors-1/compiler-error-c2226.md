@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2226 | Documentos de Microsoft
+title: Error del compilador C2226 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfbb5cd21ac8fddcbd972cf64b641526c1cd9d62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7392fa407cb7dbe528f173422d20cbc7e32d8709
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107736"
 ---
 # <a name="compiler-error-c2226"></a>Error del compilador C2226
-error de sintaxis: tipo 'tipo' inesperado  
-  
- Se produce un error de sintaxis antes o en el especificador de tipo.
+
+error de sintaxis: tipo 'tipo' inesperado
+
+Se produce un error de sintaxis antes o en el especificador de tipo.

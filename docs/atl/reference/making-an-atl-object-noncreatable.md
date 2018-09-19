@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a77ed656d39888e85e607ee4fdd96b384d0d250
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761461"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099543"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Hacer que un objeto ATL no se pueden crear
 
@@ -46,10 +46,10 @@ Puede cambiar los atributos de un objeto basado en ATL COM para que un cliente n
 
 ## <a name="see-also"></a>Vea también
 
-[Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md)   
-[Tipos de proyecto de Visual C++](../../ide/visual-cpp-project-types.md)   
-[Crear proyectos de escritorio con asistentes para aplicaciones](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Programar con ATL y código de tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+[Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Tipos de proyecto de Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Crear proyectos de escritorio con asistentes para aplicaciones](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programar con ATL y código en tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md)
 

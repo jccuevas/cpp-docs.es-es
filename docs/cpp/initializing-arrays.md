@@ -15,57 +15,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 94f13ca235091c730f81eefb5c36f388bf3dee38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103300"
 ---
 # <a name="initializing-arrays"></a>Inicializar matrices
-Si una clase tiene un constructor, las matrices de esa clase las inicializa un constructor. Si hay menos elementos en la lista de inicializadores que en la matriz, se usa el constructor predeterminado para los elementos restantes. Si no se define ningún constructor predeterminado para la clase, la lista de inicializadores debe estar completa (es decir, debe haber un inicializador para cada elemento de la matriz).  
-  
- Considere la clase `Point`, que define dos constructores:  
-  
-```cpp 
-// initializing_arrays1.cpp  
-class Point  
-{  
-public:  
-   Point()   // Default constructor.  
-   {  
-   }  
-   Point( int, int )   // Construct from two ints  
-   {  
-   }  
-};  
-  
-// An array of Point objects can be declared as follows:  
-Point aPoint[3] = {  
-   Point( 3, 3 )     // Use int, int constructor.  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
- El primer elemento de `aPoint` se construye utilizando el constructor `Point( int, int )`; los dos elementos restantes se crean con el constructor predeterminado.  
-  
- Matrices miembro estático (si **const** o no) se pueden inicializar en sus definiciones (fuera de la declaración de clase). Por ejemplo:  
-  
-```cpp 
-// initializing_arrays2.cpp  
-class WindowColors  
-{  
-public:  
-    static const char *rgszWindowPartList[7];  
-};  
-  
-const char *WindowColors::rgszWindowPartList[7] = {  
-    "Active Title Bar", "Inactive Title Bar", "Title Bar Text",  
-    "Menu Bar", "Menu Bar Text", "Window Background", "Frame"   };  
-int main()  
-{  
-}  
-```  
+
+Si una clase tiene un constructor, las matrices de esa clase las inicializa un constructor. Si hay menos elementos en la lista de inicializadores que en la matriz, se usa el constructor predeterminado para los elementos restantes. Si no se define ningún constructor predeterminado para la clase, la lista de inicializadores debe estar completa (es decir, debe haber un inicializador para cada elemento de la matriz).
+
+Considere la clase `Point`, que define dos constructores:
+
+```cpp
+// initializing_arrays1.cpp
+class Point
+{
+public:
+   Point()   // Default constructor.
+   {
+   }
+   Point( int, int )   // Construct from two ints
+   {
+   }
+};
+
+// An array of Point objects can be declared as follows:
+Point aPoint[3] = {
+   Point( 3, 3 )     // Use int, int constructor.
+};
+
+int main()
+{
+}
+```
+
+El primer elemento de `aPoint` se construye utilizando el constructor `Point( int, int )`; los dos elementos restantes se crean con el constructor predeterminado.
+
+Matrices miembro estático (si **const** o no) se pueden inicializar en sus definiciones (fuera de la declaración de clase). Por ejemplo:
+
+```cpp
+// initializing_arrays2.cpp
+class WindowColors
+{
+public:
+    static const char *rgszWindowPartList[7];
+};
+
+const char *WindowColors::rgszWindowPartList[7] = {
+    "Active Title Bar", "Inactive Title Bar", "Title Bar Text",
+    "Menu Bar", "Menu Bar Text", "Window Background", "Frame"   };
+int main()
+{
+}
+```

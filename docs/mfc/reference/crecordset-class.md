@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23b4d3521e4068d8f7cee8aa6041d57375ec1b2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a74edb512f545f9da8d222535f84f6bac34d094f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096241"
 ---
 # <a name="crecordset-class"></a>CRecordset (clase)
 Representa un conjunto de registros seleccionados de un origen de datos.  
@@ -874,15 +874,13 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
  El `CRecordsetStatus` estructura tiene el formato siguiente:  
   
- `struct CRecordsetStatus`  
-  
- `{`  
-  
- `long m_lCurrentRecord;`  
-  
- `BOOL m_bRecordCountFinal;`  
-  
- `};`  
+```cpp
+struct CRecordsetStatus
+{
+    long m_lCurrentRecord;
+    BOOL m_bRecordCountFinal;
+};
+```
   
  Los dos miembros de `CRecordsetStatus` tienen los significados siguientes:  
   

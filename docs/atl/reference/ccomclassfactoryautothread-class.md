@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476edd2a199ca21a9067a72cac82a6ac7b608112
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 269fd977bf57f1b2daff4ec5550b1d2da97b58d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114168"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread (clase)
 
@@ -85,13 +85,13 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Si el objeto se crea como parte de un agregado y, a continuación, *pUnkOuter* debe ser el desconocido externo. En caso contrario, *pUnkOuter* debe ser NULL.
 
-*riid*  
+*riid*<br/>
 [in] IID de la interfaz solicitada. Si *pUnkOuter* es distinto de NULL, *riid* debe ser `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Un puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *ppvObj* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -112,7 +112,7 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Parámetros
 
-*manada*  
+*manada*<br/>
 [in] Si es TRUE, se incrementa el recuento de bloqueos; en caso contrario, el recuento de bloqueos es reducido.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -127,9 +127,9 @@ Una llamada a `LockServer` permite que un cliente retener un generador de clases
 
 ## <a name="see-also"></a>Vea también
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[CComClassFactory2 (clase)](../../atl/reference/ccomclassfactory2-class.md)   
-[CComClassFactorySingleton (clase)](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[CComClassFactory2 (clase)](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[CComClassFactorySingleton (clase)](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

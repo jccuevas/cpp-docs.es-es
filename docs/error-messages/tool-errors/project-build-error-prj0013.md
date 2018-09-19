@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb0ac9011697c440667a538bd1805780810fb4a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f7a151ca34d680a517c405e5cb6f91c18d35bedd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102650"
 ---
 # <a name="project-build-error-prj0013"></a>Error PRJ0013 al compilar el proyecto
-Debido a que los recursos del sistema son muy escasos, no se puede crear una canalización necesaria para iniciar la compilación.  
-  
- Este error indica que los recursos del sistema son escasos. Para resolver este error, disminuya el uso que realizan otros procesos o aplicaciones de los recursos del sistema.  
-  
- Este error puede producirse también si el nivel de seguridad es suficiente para crear canalizaciones (consulte [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).
+
+Debido a que los recursos del sistema son muy escasos, no se puede crear una canalización necesaria para iniciar la compilación.
+
+Este error indica que los recursos del sistema son escasos. Para resolver este error, disminuya el uso que realizan otros procesos o aplicaciones de los recursos del sistema.
+
+Este error puede producirse también si el nivel de seguridad es suficiente para crear canalizaciones (consulte [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).

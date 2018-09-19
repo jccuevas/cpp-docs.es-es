@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3648 | Documentos de Microsoft
+title: Error del compilador C3648 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1836df0658dd4a3d7391d0d35c36bf8ed9221a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cb86e4b34295a31e6c2d9a6fb8567efd9fbfe12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110502"
 ---
 # <a name="compiler-error-c3648"></a>Error del compilador C3648
-Esta sintaxis de reemplazo explícita requiere/CLR: oldSyntax  
-  
-Cuando se compila con la última sintaxis administrada, el compilador encontró explícito invalidar sintaxis para las versiones anteriores que ya no se admite.  
-  
-Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3648:  
-  
-```  
-// C3648.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void f();  
-};  
-  
-public ref struct R : I {  
-   virtual void I::f() {}   // C3648  
-   // try the following line instead  
-   // virtual void f() = I::f{}  
-};  
+
+Esta sintaxis de invalidación explícita requiere/CLR: oldSyntax
+
+Cuando se compila para la última sintaxis administrada, el compilador encontró explícito invalidar la sintaxis para las versiones anteriores que ya no se admite.
+
+Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3648:
+
+```
+// C3648.cpp
+// compile with: /clr
+public interface struct I {
+   void f();
+};
+
+public ref struct R : I {
+   virtual void I::f() {}   // C3648
+   // try the following line instead
+   // virtual void f() = I::f{}
+};
 ```

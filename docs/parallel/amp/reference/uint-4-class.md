@@ -1,5 +1,5 @@
 ---
-title: uint_4 (clase) | Documentos de Microsoft
+title: uint_4 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490242014a907455a9511cd54f5e46a809318691
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa93e1b7c406e1799946b56e29b9fa32a39b1996
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106303"
 ---
 # <a name="uint4-class"></a>uint_4 (Clase)
 Representa un vector corto de cuatro enteros sin signo.  
@@ -649,23 +649,23 @@ explicit inline uint_4(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_V0`  
- El valor para inicializar el elemento 0.  
+*_V0*<br/>
+El valor para inicializar el elemento 0.  
   
- `_V1`  
- El valor para inicializar el elemento 1.  
+*_V1*<br/>
+El valor para inicializar el elemento 1.  
   
- `_V2`  
- El valor para inicializar el elemento 2.  
+*_V2*<br/>
+El valor para inicializar el elemento 2.  
   
- `_V3`  
- El valor para inicializar el elemento 3.  
+*_V3*<br/>
+El valor para inicializar el elemento 3.  
   
- `_V`  
- El valor de inicialización.  
+*_V*<br/>
+El valor de inicialización.  
   
- `_Other`  
- El objeto utilizado para inicializar.  
+*_Otro*<br/>
+El objeto usado para inicializar.  
   
 ## <a name=""></a> Tamaño 
 

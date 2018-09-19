@@ -8,24 +8,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824beed4c49556f564ff933575d1bbd0d844e2d7
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: c9bb4a84b42cadeb2e076548a220725f1e867fe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099724"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, diseño estándar, POD y tipos de literales
 
 El término *diseño* hace referencia a cómo se organizan los miembros de un objeto de clase, struct o union en la memoria. En algunos casos, el diseño está bien definido por la especificación del lenguaje. Pero cuando una clase o struct contiene ciertas características del lenguaje C++, como clases base virtuales, funciones virtuales, los miembros con control de acceso diferente, el compilador es libre de elegir un diseño. Ese diseño puede variar dependiendo de qué optimizaciones se realizan y en muchos casos, objeto no puede ocupar incluso un área contigua de memoria. Por ejemplo, si una clase tiene funciones virtuales, todas las instancias de esa clase pueden compartir una tabla de función virtual único. Estos tipos son muy útiles, por supuesto, pero también tienen limitaciones. Porque no está definido el diseño no se pueden pasar a los programas escritos en otros lenguajes, como C, ya que pueden no contiguas copiarse o no confiable con funciones de bajo nivel rápido como `memcopy` o serializar a través de una red.
 
- Para habilitar los compiladores, así como los programas de C++ y metaprograms razonar sobre la idoneidad de un tipo dado para las operaciones que dependen de un diseño de memoria específica, C ++ 14 presentó tres categorías de clases simple y estructuras: *trivial*, *diseño estándar*, y *POD* o datos antiguos. La biblioteca estándar tiene las plantillas de función `is_trivial<T>`, `is_standard_layout<T>` y `is_pod<T>` que determinan si un tipo determinado pertenece a una categoría determinada.
+Para habilitar los compiladores, así como los programas de C++ y metaprograms razonar sobre la idoneidad de un tipo dado para las operaciones que dependen de un diseño de memoria específica, C ++ 14 presentó tres categorías de clases simple y estructuras: *trivial*, *diseño estándar*, y *POD* o datos antiguos. La biblioteca estándar tiene las plantillas de función `is_trivial<T>`, `is_standard_layout<T>` y `is_pod<T>` que determinan si un tipo determinado pertenece a una categoría determinada.
 
 ## <a name="trivial-types"></a>Tipos triviales
 
- Cuando una clase o struct de C++ ha proporcionado por el compilador o explícitamente su valor predeterminado, las funciones miembro especiales es un tipo trivial. Ocupa un área de memoria contiguas. Puede tener miembros con los especificadores de acceso diferentes. En C++, el compilador es libre de elegir cómo ordenar a miembros en esta situación. Por lo tanto, puede memcopy dichos objetos pero confiable no puede consumir desde un programa C. Un tipo trivial T puede copiar en una matriz de char o char sin signo y copiado en una variable T. Tenga en cuenta que debido a los requisitos de alineación, podría haber bytes de relleno entre los miembros de tipo.
+Cuando una clase o struct de C++ ha proporcionado por el compilador o explícitamente su valor predeterminado, las funciones miembro especiales es un tipo trivial. Ocupa un área de memoria contiguas. Puede tener miembros con los especificadores de acceso diferentes. En C++, el compilador es libre de elegir cómo ordenar a miembros en esta situación. Por lo tanto, puede memcopy dichos objetos pero confiable no puede consumir desde un programa C. Un tipo trivial T puede copiar en una matriz de char o char sin signo y copiado en una variable T. Tenga en cuenta que debido a los requisitos de alineación, podría haber bytes de relleno entre los miembros de tipo.
 
- Los tipos triviales tienen un constructor predeterminado trivial, constructor de copias trivial, operador de asignación de copia trivial y un destructor trivial. En cada caso, *trivial* significa que el operador/constructor/destructor no está proporcionado por el usuario y pertenece a una clase que tiene
+Los tipos triviales tienen un constructor predeterminado trivial, constructor de copias trivial, operador de asignación de copia trivial y un destructor trivial. En cada caso, *trivial* significa que el operador/constructor/destructor no está proporcionado por el usuario y pertenece a una clase que tiene
 
 - No hay funciones virtuales o las clases base virtuales
 
@@ -40,7 +40,7 @@ struct Trivial
 {
       int i;
 private:
-   int j;  
+   int j;
    };
 
 struct Trivial2
@@ -55,7 +55,7 @@ struct Trivial2
 
 ## <a name="standard-layout-types"></a>Tipos de diseño estándar
 
- Cuando una clase o estructura no tiene ciertas características del lenguaje C++, como funciones virtuales que no se encuentran en el lenguaje C, y todos los miembros tienen el mismo control de acceso, es un tipo de diseño estándar. Es capaz de memcopy y suficientemente definido por el diseño que pueden utilizarse los programas de C. Tipos de diseño estándar pueden tener funciones miembro especiales definidas por el usuario. Además, los tipos de diseño estándar tienen estas características:
+Cuando una clase o estructura no tiene ciertas características del lenguaje C++, como funciones virtuales que no se encuentran en el lenguaje C, y todos los miembros tienen el mismo control de acceso, es un tipo de diseño estándar. Es capaz de memcopy y suficientemente definido por el diseño que pueden utilizarse los programas de C. Tipos de diseño estándar pueden tener funciones miembro especiales definidas por el usuario. Además, los tipos de diseño estándar tienen estas características:
 
 - No hay funciones virtuales o las clases base virtuales
 
@@ -85,7 +85,7 @@ struct SL
 };
 ```
 
- Quizás se pueden ilustrar mejor los dos últimos requisitos con el código. En el ejemplo siguiente, aunque Base es diseño estándar, `Derived` no es un diseño estándar porque ambas (la clase más derivada) de TI y `Base` tener miembros de datos no estáticos:
+Quizás se pueden ilustrar mejor los dos últimos requisitos con el código. En el ejemplo siguiente, aunque Base es diseño estándar, `Derived` no es un diseño estándar porque ambas (la clase más derivada) de TI y `Base` tener miembros de datos no estáticos:
 
 ```cpp
 struct Base
@@ -103,7 +103,7 @@ struct Derived : public Base
 
 ```
 
- En este ejemplo `Derived` es diseño estándar porque `Base` no tiene ningún miembro de datos no estáticos:
+En este ejemplo `Derived` es diseño estándar porque `Base` no tiene ningún miembro de datos no estáticos:
 
 ```cpp
 struct Base
@@ -119,11 +119,11 @@ struct Derived : public Base
 };
 ```
 
- Derivado también sería diseño estándar si `Base` tenía los miembros de datos y `Derived` tenía solo las funciones de miembro.
+Derivado también sería diseño estándar si `Base` tenía los miembros de datos y `Derived` tenía solo las funciones de miembro.
 
 ## <a name="pod-types"></a>Tipos POD
 
- Cuando una clase o struct es trivial y diseño estándar, es un tipo POD (Plain Old Data). El diseño de memoria de los tipos POD, por tanto, es contiguo y cada miembro tiene una dirección más alta que el miembro que se declaró antes de que, por lo que copia el byte a byte y la E/S binaria pueden realizarse en estos tipos.  Tipos escalares, como int también son tipos POD. Tipos POD que son clases pueden tener solo los tipos POD como miembros de datos no estáticos.
+Cuando una clase o struct es trivial y diseño estándar, es un tipo POD (Plain Old Data). El diseño de memoria de los tipos POD, por tanto, es contiguo y cada miembro tiene una dirección más alta que el miembro que se declaró antes de que, por lo que copia el byte a byte y la E/S binaria pueden realizarse en estos tipos.  Tipos escalares, como int también son tipos POD. Tipos POD que son clases pueden tener solo los tipos POD como miembros de datos no estáticos.
 
 ## <a name="example"></a>Ejemplo
 
@@ -201,4 +201,5 @@ Un tipo literal es aquel cuyo diseño se puede determinar en tiempo de compilaci
 - Una clase que tiene un destructor trivial y uno o varios constructores constexpr que no son constructores de movimiento ni de copias. Además, todos sus miembros de datos no estáticos y sus clases base deben ser tipos literales y no volátiles.
 
 ## <a name="see-also"></a>Vea también
- [Conceptos básicos](../cpp/basic-concepts-cpp.md)
+
+[Conceptos básicos](../cpp/basic-concepts-cpp.md)

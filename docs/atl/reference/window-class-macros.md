@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106914"
 ---
 # <a name="window-class-macros"></a>Macros de clase de ventana
 
@@ -29,8 +29,8 @@ Estas macros definen las utilidades de clase de ventana.
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|Permite especificar el nombre de una nueva clase de ventana.| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Permite especificar el nombre de una nueva clase de ventana y la ventana cuyo procedimiento usará la nueva clase de la clase envolvente.| 
+|[DECLARE_WND_CLASS](#declare_wnd_class)|Permite especificar el nombre de una nueva clase de ventana.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Permite especificar el nombre de una nueva clase de ventana y la ventana cuyo procedimiento usará la nueva clase de la clase envolvente.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Permite especificar el nombre de una clase de ventana existente en el que se basará la nueva clase de ventana.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Le permite especificar los parámetros de una clase.|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>Parámetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] El nombre de la nueva clase de ventana. Si es NULL, ATL generará un nombre de clase de ventana.
 
 ### <a name="remarks"></a>Comentarios
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>Parámetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] El nombre de la nueva clase de ventana. Si es NULL, ATL generará un nombre de clase de ventana. 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in] El nombre de la clase de ventana que contiene la nueva clase de ventana. No puede ser nulo.
 
 ### <a name="remarks"></a>Comentarios
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>Parámetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] El nombre de la ventana de la clase que superclase will *OrigWndClassName*. Si es NULL, ATL generará un nombre de clase de ventana.
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in] El nombre de una clase de ventana existente.
 
 ### <a name="remarks"></a>Comentarios
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>Parámetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] El nombre de la nueva clase de ventana. Si es NULL, ATL generará un nombre de clase de ventana.
 
-*Estilo*  
+*Estilo*<br/>
 [in] El estilo de la ventana.
 
-*fondo*  
+*fondo*<br/>
 [in] El color de fondo de la ventana.
 
 ### <a name="remarks"></a>Comentarios

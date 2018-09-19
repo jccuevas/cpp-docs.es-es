@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0030 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0030 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf1c9137f8c4ed0d80955eef38b07ea86204a5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964fedd40f577a8b337c4ad0c20ba80d33ed2a23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099927"
 ---
 # <a name="project-build-error-prj0030"></a>Error PRJ0030 al compilar el proyecto
-Error de expansión de macro. Evaluar recursividad superado 32 niveles para $(macro).  
-  
- Este error se produce por recursividad en las macros. Por ejemplo, si establece la **directorio intermedio** propiedad (vea [página de propiedades General (proyecto)](../../ide/general-property-page-project.md)) en $(IntDir), se obtendrá recursividad.  
-  
- Para resolver este error, no defina macros ni propiedades en cuanto a las macros que se utilizan para definir.
+
+Error de expansión de macro. Recursividad de evaluación superado 32 niveles para $(macro).
+
+Este error se produce por recursividad en las macros. Por ejemplo, si establece la **directorio intermedio** propiedad (consulte [página de propiedades General (proyecto)](../../ide/general-property-page-project.md)) en $(IntDir), tendrá la recursividad.
+
+Para resolver este error, no defina macros o propiedades en cuanto a las macros que se usan para definir.

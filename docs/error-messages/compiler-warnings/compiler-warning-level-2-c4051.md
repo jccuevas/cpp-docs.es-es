@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 2) C4051 | Documentos de Microsoft
+title: Compilador advertencia (nivel 2) C4051 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672de8924f7a04d1849ff79349c8334ed123a418
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5074ca6f048aec06f98b6081d932ee85868cb9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103417"
 ---
 # <a name="compiler-warning-level-2-c4051"></a>Advertencia del compilador (nivel 2) C4051
-conversión de tipo; posible pérdida de datos  
-  
- Una expresión contiene dos elementos de datos con diferentes tipos base. La conversión de un tipo hace que el elemento de datos se trunque.  
-  
- Esta advertencia se puede corregir si se convierten los elementos de datos al tipo adecuado.
+
+conversión de tipo; posible pérdida de datos
+
+Una expresión contiene dos elementos de datos con diferentes tipos base. La conversión de un tipo hace que el elemento de datos se trunque.
+
+Esta advertencia se puede corregir si se convierten los elementos de datos al tipo adecuado.

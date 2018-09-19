@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f84b90613bcf542a9ace44505565951819fcaa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108448"
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 (estructura)
 
@@ -43,16 +43,16 @@ struct _ATL_MODULE70 {
 
 ## <a name="members"></a>Miembros
 
-`cbSize`  
+`cbSize`<br/>
 El tamaño de la estructura que se utiliza para el control de versiones.
 
-`m_nLockCnt`  
+`m_nLockCnt`<br/>
 Recuento de referencias para determinar cuánto tiempo el módulo debe permanecer activo.
 
-`m_pTermFuncs`  
+`m_pTermFuncs`<br/>
 Funciones de pistas que se han registrado se debe llamar cuando se cierra ATL.
 
-`m_csStaticDataInitAndTypeInfo`  
+`m_csStaticDataInitAndTypeInfo`<br/>
 Se usa para coordinar el acceso a datos internos en situaciones de multiproceso.
 
 ## <a name="remarks"></a>Comentarios

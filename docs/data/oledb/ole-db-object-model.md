@@ -1,5 +1,5 @@
 ---
-title: Modelo de objetos OLE DB | Documentos de Microsoft
+title: Modelo de objetos OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,65 +16,78 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ba9fd9b7ba5503f6ed5e1837147524f5abc7c31b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0bd4c8f18addf50dfcee525dea255f75b2fdf75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101500"
 ---
 # <a name="ole-db-object-model"></a>Modelo de objetos OLE DB
-El modelo de objetos OLE DB consta de los siguientes objetos o componentes. Los primeros cuatro objetos o componentes (orígenes de datos, sesiones, comandos y conjuntos de filas) permiten conectarse a un origen de datos y verlo. El resto, a partir de los descriptores de acceso, se refieren a trabajar con los datos cuando se muestre.  
+
+El modelo de objetos OLE DB compone de los siguientes objetos o componentes. Los primeros cuatro objetos o componentes (orígenes de datos, sesiones, comandos y conjuntos de filas) permiten conectarse a un origen de datos y verlo. El resto, a partir de los descriptores de acceso, se refieren a trabajar con los datos cuando se muestre.  
   
 ## <a name="data-sources"></a>Orígenes de datos  
- Objetos de origen de datos permiten conectarse a un origen de datos como un archivo o DBMS. Un objeto de origen de datos crea y administra la conexión y contiene información de permisos y las autenticaciones (por ejemplo, nombre de inicio de sesión y contraseña). Un objeto de origen de datos puede crear una o varias sesiones.  
+
+Objetos de origen de datos permiten conectarse a un origen de datos como un archivo o DBMS. Un objeto de origen de datos crea y administra la conexión y contiene información de permisos y autenticación (por ejemplo, el nombre de inicio de sesión y contraseña). Un objeto de origen de datos puede crear una o varias sesiones.  
   
 ## <a name="sessions"></a>Sesiones  
- Una sesión administra una determinado interacción con el origen de datos para consultar y recuperar datos. Cada sesión es una sola transacción. Una transacción es una unidad de trabajo indivisible definida por la prueba ACID. Para una definición de ACID, vea [transacciones](#vcconoledbcomponents_transactions).  
+
+Una sesión administra una interacción determinada con el origen de datos para consultar y recuperar datos. Cada sesión es una sola transacción. Una transacción es una unidad de trabajo indivisible definida por la prueba de ácido. Para una definición de ACID, vea [transacciones](#vcconoledbcomponents_transactions).  
   
- Las sesiones realizan tareas importantes como abrir conjuntos de filas y devolver el objeto de origen de datos que lo creó. Las sesiones también pueden devolver metadatos o información sobre el origen de datos (por ejemplo, información de la tabla).  
+Las sesiones realizan tareas importantes, como abrir conjuntos de filas y devolver el objeto de origen de datos que lo creó. Las sesiones también pueden devolver metadatos o información sobre el origen de datos (por ejemplo, información de la tabla).  
   
- Una sesión puede crear uno o varios comandos.  
+Una sesión puede crear uno o más comandos.  
   
 ## <a name="commands"></a>Comandos  
- Comandos ejecutan un comando de texto como una instrucción SQL. Si el comando de texto especifica un conjunto de filas, como una instancia de SQL **seleccione** instrucción, el comando crea el conjunto de filas.  
+
+Los comandos ejecutan un comando de texto como una instrucción SQL. Si el comando de texto especifica un conjunto de filas, como una instancia de SQL **seleccione** instrucción, el comando crea el conjunto de filas.  
   
- Un comando es simplemente un contenedor para un comando de texto, que es una cadena (por ejemplo, una instrucción SQL) que se pasan de un consumidor a un objeto de origen de datos para la ejecución por el almacén de datos subyacente del proveedor. Normalmente, el comando de texto es una instancia de SQL **seleccione** instrucción (en cuyo caso, porque SQL **seleccione** especifica un conjunto de filas, el comando crea automáticamente un conjunto de filas).  
+Un comando es sencillamente un contenedor para un comando de texto, que es una cadena (por ejemplo, una instrucción SQL) que se pasa de un consumidor a un objeto de origen de datos para su ejecución por el almacén de datos subyacente del proveedor. Normalmente, el comando de texto es una instancia de SQL **seleccione** instrucción (en cuyo caso, porque SQL **seleccione** especifica un conjunto de filas, el comando crea automáticamente un conjunto de filas).  
   
 ## <a name="rowsets"></a>Conjuntos de filas  
- Conjuntos de filas exponen datos en formato tabular. Un índice es un caso especial de un conjunto de filas. Puede crear conjuntos de filas de la sesión o el comando.  
+
+Conjuntos de filas de exponen los datos en formato tabular. Un índice es un caso especial de un conjunto de filas. Puede crear conjuntos de filas de la sesión o el comando.  
   
 ### <a name="schema-rowsets"></a>Conjuntos de filas de esquema  
- Los esquemas contienen metadatos (información estructural) sobre una base de datos. Conjuntos de filas de esquema son conjuntos de filas que contienen información de esquema. Algunos proveedores de OLE DB para DBMS admiten objetos de conjunto de filas de esquema. Para obtener más información sobre conjuntos de filas de esquema, consulte [obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) y [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
+
+Los esquemas contienen metadatos (información estructural) sobre una base de datos. Conjuntos de filas de esquema son conjuntos de filas que contienen información de esquema. Algunos proveedores de OLE DB para DBMS admiten objetos de conjunto de filas de esquema. Para obtener más información acerca de los conjuntos de filas de esquema, vea [obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) y [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 ### <a name="view-objects"></a>Objetos de vista  
- Un objeto de vista define un subconjunto de las filas y columnas de un conjunto de filas. No contiene datos propios. Objetos de vista no pueden combinar datos de varios conjuntos de filas.  
+
+Un objeto de vista define un subconjunto de las filas y columnas de un conjunto de filas. No contiene datos de su propio. Objetos de vista no pueden combinar datos de varios conjuntos de filas.  
   
 ## <a name="accessors"></a>Descriptores de acceso  
- Sólo OLE DB usa el concepto de descriptores de acceso. Un descriptor de acceso describe cómo se almacenan los datos en un consumidor. Contiene un conjunto de enlaces (denominado un mapa de columnas) entre campos de conjunto de filas (columnas) y los miembros de datos que se declaran en el consumidor.  
+
+Sólo OLE DB usa el concepto de descriptores de acceso. Un descriptor de acceso describe cómo se almacenan los datos en el consumidor. Contiene un conjunto de enlaces (denominado un mapa de columnas) entre los campos de conjunto de filas (columnas) y los miembros de datos que se declaran en el consumidor.  
   
 ##  <a name="vcconoledbcomponents_transactions"></a> Transacciones  
- Objetos de transacción se utilizan al confirmar o anular transacciones anidadas en que no sea el nivel más bajo. Una transacción es una unidad de trabajo indivisible definida por la prueba ACID. El acrónimo ACID:  
+
+Los objetos de transacción se utilizan al confirmar o anular transacciones anidadas en que no sea el nivel más bajo. Una transacción es una unidad de trabajo indivisible definida por la prueba de ácido. ACID es el acrónimo:  
   
--   Atomicidad: no se puede dividir en unidades más pequeñas de trabajo.  
+- Atomicidad: no puede dividirse en unidades más pequeñas de trabajo.  
   
--   Simultaneidad: puede haber más de una transacción a la vez.  
+- Simultaneidad: puede haber más de una transacción a la vez.  
   
--   Aislamiento: una transacción tiene un conocimiento limitado sobre los cambios realizados por otro.  
+- Aislamiento: una transacción tiene un conocimiento limitado acerca de los cambios realizados por otro.  
   
--   Durabilidad: la transacción realiza cambios que son persistentes.  
+- Durabilidad: la transacción realiza cambios persistentes.  
   
 ## <a name="enumerators"></a>Enumeradores  
- Los enumeradores buscan orígenes de datos disponibles y otros enumeradores. Los consumidores que no se personalizan para un origen de datos determinado usar enumeradores para buscar un origen de datos para utilizarlo.  
+
+Los enumeradores buscan orígenes de datos disponibles y otros enumeradores. Los consumidores que no se han personalizado para un origen de datos determinado utilizar enumeradores para buscar un origen de datos para utilizarlo.  
   
- Un enumerador raíz, incluido en el SDK de Microsoft Data Access, recorre el registro buscando orígenes de datos y otros enumeradores. Resto de enumeradores recorre el registro o la búsqueda de una manera específica del proveedor.  
+Un enumerador de raíz, que se incluye en el SDK de Microsoft Data Access, recorre el registro, busque los orígenes de datos y otros enumeradores. Otros enumeradores recorren el registro o la búsqueda de una manera específica del proveedor.  
   
 ## <a name="errors"></a>Errores  
- Cualquier interfaz a cualquier objeto de OLE DB puede generar errores. Errores contienen información adicional sobre un error, incluido un objeto opcional de error personalizado. Esta información se encuentra en un valor HRESULT.  
+
+Cualquier interfaz en cualquier objeto de OLE DB puede generar errores. Errores contienen información adicional sobre un error, incluido un objeto opcional de error personalizado. Esta información se encuentra en un valor HRESULT.  
   
 ## <a name="notifications"></a>Notificaciones  
- Las notificaciones se usan en grupos de consumidores cooperativos comparten un conjunto de filas (donde compartir significa que se supone que los consumidores de estar trabajando dentro de la misma transacción). Las notificaciones de permiten que los consumidores cooperativos comparten un conjunto de filas estar informado acerca de las acciones en el conjunto de filas realizadas por sus colegas.  
+
+Las notificaciones se utilizan en grupos de consumidores cooperativos comparten un conjunto de filas (donde compartir significa que se supone que los consumidores de estar trabajando dentro de la misma transacción). Las notificaciones de permiten que los consumidores cooperativos comparten un conjunto de filas para mantenerse informado sobre las acciones realizadas por sus homólogos el conjunto de filas.  
   
 ## <a name="see-also"></a>Vea también  
- [Programación de OLE DB](../../data/oledb/ole-db-programming.md)   
- [Información general sobre la programación de OLE DB](../../data/oledb/ole-db-programming-overview.md)
+
+[Programación de OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Información general sobre la programación de OLE DB](../../data/oledb/ole-db-programming-overview.md)

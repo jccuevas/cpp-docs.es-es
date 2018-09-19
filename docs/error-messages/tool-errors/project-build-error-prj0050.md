@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0050 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0050 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad17614f693e313190dba9cc767c023981dec34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3949ea0db2f1667aecf1aeeefd922b192cbf41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100596"
 ---
 # <a name="project-build-error-prj0050"></a>Error PRJ0050 al compilar el proyecto
-No se pudo registrar la salida. Asegúrese de que tiene los permisos adecuados para modificar el registro.  
-  
- El sistema de compilación de Visual C++ no pudo registrar la salida de la compilación (archivo dll o .exe). Debe haber iniciado sesión como administrador para modificar el registro.  
-  
- Si está generando un archivo .dll, puede intentar registrar el archivo .dll manualmente mediante regsvr32.exe, debería mostrarse información sobre por qué falló la compilación.  
-  
- Si no se genera un archivo .dll, examine el registro de compilación para el comando que se produzca un error.
+
+No se pudo registrar la salida. Asegúrese de que tener los permisos adecuados para modificar el registro.
+
+El sistema de compilación de Visual C++ no pudo registrar la salida de la compilación (dll o .exe). Debe haber iniciado sesión como administrador para modificar el registro.
+
+Si va a compilar un archivo .dll, puede intentar registrar el archivo .dll manualmente utilizando regsvr32.exe, esto debería mostrar información sobre el motivo del error de la compilación.
+
+Si no se genera un archivo .dll, examine el registro de compilación para el comando que se produce un error.

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2919 | Documentos de Microsoft
+title: Error del compilador C2919 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e2eb2a32f1a906814f5b347ba1ebf13eba71ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6ee01e32cd1855855fa6ac071af159be8bac0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106836"
 ---
 # <a name="compiler-error-c2919"></a>Error del compilador C2919
-'type': no se pueden usar operadores en la superficie publicada de un tipo WinRT  
-  
- El sistema de tipos de Windows Runtime no admite las funciones miembro de operadores en la superficie publicada de un tipo. Esto es porque no todos los lenguajes pueden usar las funciones miembro de operadores. Puede crear funciones miembro de operadores privadas o internas que se pueden llamar desde el código de C++ en la misma clase o unidad de compilación.  
-  
- Para corregir este problema, quite la función de miembro de operador de la interfaz pública o cámbiela por una función miembro con nombre. Por ejemplo, en lugar de `operator==`, asígnele a la función miembro el nombre `Equals`.
+
+'type': no se pueden usar operadores en la superficie publicada de un tipo WinRT
+
+El sistema de tipos de Windows Runtime no admite las funciones miembro de operadores en la superficie publicada de un tipo. Esto es porque no todos los lenguajes pueden usar las funciones miembro de operadores. Puede crear funciones miembro de operadores privadas o internas que se pueden llamar desde el código de C++ en la misma clase o unidad de compilación.
+
+Para corregir este problema, quite la función de miembro de operador de la interfaz pública o cámbiela por una función miembro con nombre. Por ejemplo, en lugar de `operator==`, asígnele a la función miembro el nombre `Equals`.

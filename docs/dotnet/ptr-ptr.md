@@ -1,5 +1,5 @@
 ---
-title: PTR::PTR | Documentos de Microsoft
+title: PTR::PTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107031"
 ---
 # <a name="ptrptr"></a>ptr::ptr
-Construye una `com::ptr` para encapsular un objeto COM.  
+Construye un `com::ptr` para encapsular un objeto COM.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,18 +40,18 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `P`  
- Puntero a interfaz COM.  
+*P*<br/>
+Puntero a interfaz COM.  
   
 ## <a name="remarks"></a>Comentarios  
- El constructor sin argumentos asigna `nullptr` para el identificador del objeto subyacente. Las llamadas posteriores a la `com::ptr` se valida el objeto interno y se produce un error silencioso hasta que realmente se crea o se adjunta un objeto.  
+ El constructor sin argumentos asigna `nullptr` para el identificador del objeto subyacente. Las llamadas posteriores a la `com::ptr` validará el objeto interno y se produce un error silencioso hasta que realmente se crea o se adjunta un objeto.  
   
- El constructor de un argumento agrega una referencia al objeto COM pero no libera la referencia del llamador, por lo que el llamador debe llamar a `Release` del objeto COM que se va a abandonar realmente el control. Cuando el `com::ptr`del destructor se denomina liberará automáticamente sus referencias en el objeto COM.  
+ El constructor de un argumento agrega una referencia al objeto COM pero no libera la referencia del llamador, por lo que el llamador debe llamar a `Release` en el objeto COM para realmente ceder el control. Cuando el `com::ptr`del se llama al destructor liberará automáticamente sus referencias en el objeto COM.  
   
- Pasar `NULL` a este constructor es el mismo que la llamada a la versión sin argumentos.  
+ Pasar `NULL` a este constructor es igual que llamar a la versión sin argumentos.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto. Muestra el uso de las dos versiones del constructor.  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto. Muestra el uso de ambas versiones del constructor.  
   
 ```  
 // comptr_ptr.cpp  

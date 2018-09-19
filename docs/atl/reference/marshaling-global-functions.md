@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106238"
 ---
 # <a name="marshaling-global-functions"></a>Funciones globales de serialización
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parámetros
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntero a la `IStream` interfaz en la secuencia utilizada para calcular las referencias.
 
 ### <a name="example"></a>Ejemplo
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un puntero a la interfaz que se van a calcular.
 
-*IID*  
+*IID*<br/>
 [in] El GUID de la interfaz que se va a serializar.
 
-*ppStream*  
+*ppStream*<br/>
 [out] Un puntero a la `IStream` interfaz en el nuevo objeto de secuencia utilizado para calcular las referencias.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>Parámetros
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntero a la secuencia que se resuelven referencias.
 
-*IID*  
+*IID*<br/>
 [in] El GUID de la interfaz que se resuelven referencias.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Un puntero a la interfaz sin cálculo de referencias.
 
 ### <a name="return-value"></a>Valor devuelto

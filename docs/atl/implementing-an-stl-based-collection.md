@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6aa360229857e3c12322cb6579aa0dbbba53d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116716"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementación de una colección de basada en la biblioteca estándar de C++
 
@@ -111,7 +111,7 @@ Ahora, puede probar el código con el cliente de su elección.
 
 ## <a name="see-also"></a>Vea también
 
-[Las colecciones y enumeradores](../atl/atl-collections-and-enumerators.md)   
-[Ejemplo ATLCollections](../visual-cpp-samples.md)   
+[Las colecciones y enumeradores](../atl/atl-collections-and-enumerators.md)<br/>
+[Ejemplo ATLCollections](../visual-cpp-samples.md)<br/>
 [Clases de directivas de copia ATL](../atl/atl-copy-policy-classes.md)
 

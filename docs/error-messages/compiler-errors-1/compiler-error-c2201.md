@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2201 | Documentos de Microsoft
+title: Error del compilador C2201 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea410297cdb8deb45c4376f8736234ad8f69699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b24e18d2f8ffdfa889cac3dae58e66dcb8d7dcc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107136"
 ---
 # <a name="compiler-error-c2201"></a>Error del compilador C2201
-'identificador': debe tener vinculación externa para exportar e importar  
-  
- El identificador exportado es `static`.  
-  
- El ejemplo siguiente genera la advertencia C2286:  
-  
-```  
-// C2201.cpp  
-// compile with: /c  
-__declspec(dllexport) static void func() {}   // C2201 func() is static  
-__declspec(dllexport) void func2() {}   // OK  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Tipos de vinculación](../../cpp/types-of-linkage.md)
+
+'identifier': debe tener una vinculación externa para exportarlo o importarlo
+
+El identificador exportado es `static`.
+
+El ejemplo siguiente genera la advertencia C2286:
+
+```
+// C2201.cpp
+// compile with: /c
+__declspec(dllexport) static void func() {}   // C2201 func() is static
+__declspec(dllexport) void func2() {}   // OK
+```
+
+## <a name="see-also"></a>Vea también
+
+[Tipos de vinculación](../../cpp/types-of-linkage.md)

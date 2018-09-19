@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2542 | Documentos de Microsoft
+title: Error del compilador C2542 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039d5853da3876dbe079ff1e4a38be4afdb34bd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81f6f9aa48a4a0ee1a0b414879ae3673c13529fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097252"
 ---
 # <a name="compiler-error-c2542"></a>Error del compilador C2542
-'identificador': el objeto de clase no tiene ningún constructor para la inicialización  
-  
- No hay ningún constructor con una lista de parámetros que coincida con la inicialización.  
-  
- Este error puede deberse a parámetros incorrectos de inicialización.
+
+'identifier': el objeto de clase no tiene ningún constructor para la inicialización
+
+No hay ningún constructor con una lista de parámetros que coincida con la inicialización.
+
+Este error puede deberse a los parámetros incorrectos en la inicialización.

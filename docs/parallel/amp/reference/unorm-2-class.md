@@ -1,5 +1,5 @@
 ---
-title: unorm_2 (clase) | Documentos de Microsoft
+title: unorm_2 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 678cb8a782d07b64b93f87963b0ead500136fbcf
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6f49d51fc939df8fc26000627552afc19a0208d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106212"
 ---
 # <a name="unorm2-class"></a>unorm_2 (Clase)
 Representa un vector corto de dos números normales sin signo.  
@@ -186,17 +186,17 @@ explicit inline unorm_2(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_V0`  
- El valor para inicializar el elemento 0.  
+*_V0*<br/>
+El valor para inicializar el elemento 0.  
   
- `_V1`  
- El valor para inicializar el elemento 1.  
+*_V1*<br/>
+El valor para inicializar el elemento 1.  
   
- `_V`  
- El valor de inicialización.  
+*_V*<br/>
+El valor de inicialización.  
   
- `_Other`  
- El objeto utilizado para inicializar.  
+*_Otro*<br/>
+El objeto usado para inicializar.  
   
 ##  <a name="unorm_2__size"></a> Tamaño 
 

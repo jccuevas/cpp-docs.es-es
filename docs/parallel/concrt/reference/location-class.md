@@ -1,5 +1,5 @@
 ---
-title: Location (clase) | Documentos de Microsoft
+title: Location (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104769"
 ---
 # <a name="location-class"></a>location (Clase)
 Una abstracción de una ubicación física en el hardware.  
@@ -50,14 +50,14 @@ class location;
 |Name|Descripción|  
 |----------|-----------------|  
 |[Actual](#current)|Devuelve un `location` objeto que representa el lugar más específico que se está ejecutando el subproceso que realiza la llamada.|  
-|[from_numa_node](#from_numa_node)|Devuelve un `location` el objeto que representa un nodo NUMA.|  
+|[from_numa_node](#from_numa_node)|Devuelve un `location` el objeto que representa un nodo NUMA determinado.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Determina si dos `location` objetos representan otra ubicación.|  
-|[operator=](#operator_eq)|Asigna el contenido de otra matriz `location` objeto a este.|  
+|[operator=](#operator_eq)|Asigna el contenido de otro `location` objeto a ésta.|  
 |[operator==](#operator_eq_eq)|Determina si dos `location` objetos representan la misma ubicación.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
@@ -89,15 +89,15 @@ static location __cdecl current();
   
 ##  <a name="from_numa_node"></a> from_numa_node 
 
- Devuelve un `location` el objeto que representa un nodo NUMA.  
+ Devuelve un `location` el objeto que representa un nodo NUMA determinado.  
   
 ```
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_NumaNodeNumber`  
- El número de nodo NUMA para construir una ubicación para.  
+*_NumaNodeNumber*<br/>
+El número de nodos NUMA para construir una ubicación para.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una ubicación que representa el nodo NUMA especificado por el `_NumaNodeNumber` parámetro.  
@@ -120,14 +120,19 @@ location(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*_ID*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+(Opcional) Puntero de enlace.
+
 ### <a name="remarks"></a>Comentarios  
- Una ubicación construido de forma predeterminada representa el sistema como un todo.  
+ Una ubicación construido de forma predeterminada, representa el sistema como un todo.  
   
 ##  <a name="operator_neq"></a> operador! = 
 
@@ -138,22 +143,23 @@ bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rhs`  
+*_Rhs*<br/>
+Operando `location`.
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si son diferentes, las dos ubicaciones `false` en caso contrario.  
+ `true` Si las dos ubicaciones son diferentes, `false` en caso contrario.  
   
 ##  <a name="operator_eq"></a> operator= 
 
- Asigna el contenido de otra matriz `location` objeto a este.  
+ Asigna el contenido de otro `location` objeto a ésta.  
   
 ```
 location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rhs`  
- Objeto `location` de origen.  
+*_Rhs*<br/>
+Objeto `location` de origen.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -166,7 +172,8 @@ bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rhs`  
+*_Rhs*<br/>
+Operando `location`.
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si las dos ubicaciones son idénticas, y `false` en caso contrario.  

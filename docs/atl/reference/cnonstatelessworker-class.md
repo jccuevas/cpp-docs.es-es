@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765127"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095604"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker (clase)
 
@@ -38,13 +38,13 @@ Recibe solicitudes de un grupo de subprocesos y los pasa a un objeto de trabajo 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class Worker>  
+template <class Worker>
 class CNonStatelessWorker
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*Trabajo*  
+*Trabajo*<br/>
 Una clase de subproceso de trabajo que cumplen el [worker (Arquetipo)](../../atl/reference/worker-archetype.md) adecuado para controlar las solicitudes en cola en [CThreadPool](../../atl/reference/cthreadpool-class.md).
 
 ## <a name="members"></a>Miembros
@@ -130,6 +130,6 @@ Esta clase no realiza las operaciones de limpieza `Terminate`.
 
 ## <a name="see-also"></a>Vea también
 
-[CThreadPool (clase)](../../atl/reference/cthreadpool-class.md)   
-[Worker (Arquetipo)](../../atl/reference/worker-archetype.md)   
+[CThreadPool (clase)](../../atl/reference/cthreadpool-class.md)<br/>
+[Worker (arquetipo)](../../atl/reference/worker-archetype.md)<br/>
 [Clases](../../atl/reference/atl-classes.md)

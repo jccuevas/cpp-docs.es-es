@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1077 | Documentos de Microsoft
+title: Error grave de NMAKE U1077 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144fa1d85e4dd63fdb9a381fd4285ba905817851
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31a1164ecd8ce17aec7058525598c68d312f14e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113037"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Error grave de NMAKE U1077
-'programa': código devuelto 'valor'  
-  
- El comando o programa en cuestión al que ha llamado NMAKE ha producido un error y ha devuelto el código de salida proporcionado.  
-  
- Para suprimir este error y continuar con la sesión de NMAKE, use la opción /I, la directiva dot **.IGNORE** o el modificador de comandos de guión (**-**).  Para continuar con la sesión de NMAKE de partes no relacionadas del árbol de dependencias, use la opción /K.
+
+'programa': código devuelto 'valor'
+
+El comando o programa en cuestión al que ha llamado NMAKE ha producido un error y ha devuelto el código de salida proporcionado.
+
+Para suprimir este error y continuar con la sesión de NMAKE, use la opción /I, la directiva dot **.IGNORE** o el modificador de comandos de guión (**-**).  Para continuar con la sesión de NMAKE de partes no relacionadas del árbol de dependencias, use la opción /K.

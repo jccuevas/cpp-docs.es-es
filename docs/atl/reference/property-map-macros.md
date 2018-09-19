@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106356"
 ---
 # <a name="property-map-macros"></a>Macros de mapa de propiedades
 
@@ -55,7 +55,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>Parámetros
 
-*theClass*  
+*theClass*<br/>
 [in] Especifica la clase que contiene la asignación de propiedad.
 
 ### <a name="remarks"></a>Comentarios
@@ -80,13 +80,13 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>Parámetros
 
-*szDesc*  
+*szDesc*<br/>
 [in] Descripción de propiedad.
 
-*Miembro*  
+*Miembro*<br/>
 [in] El miembro de datos que contiene la extensión; Por ejemplo, `m_sizeExtent`.
 
-*vt*  
+*vt*<br/>
 [in] Especifica el tipo de variante de la propiedad.
 
 ### <a name="remarks"></a>Comentarios
@@ -113,16 +113,16 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>Parámetros
 
-*szDesc*  
+*szDesc*<br/>
 [in] Descripción de propiedad.
 
-*DISPID*  
+*DISPID*<br/>
 [in] DISPID de la propiedad.
 
-*CLSID*  
+*CLSID*<br/>
 [in] El CLSID de la página de propiedades asociado. Utilice el valor especial CLSID_NULL para una propiedad que no tiene una página de propiedades asociado.
 
-*vt*  
+*vt*<br/>
 [in] El tipo de propiedad.
 
 ### <a name="remarks"></a>Comentarios
@@ -145,19 +145,19 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>Parámetros
 
-*szDesc*  
+*szDesc*<br/>
 [in] Descripción de propiedad.
 
-*DISPID*  
+*DISPID*<br/>
 [in] DISPID de la propiedad.
 
-*CLSID*  
+*CLSID*<br/>
 [in] El CLSID de la página de propiedades asociado. Utilice el valor especial CLSID_NULL para una propiedad que no tiene una página de propiedades asociado.
 
-*iidDispatch*  
+*iidDispatch*<br/>
 [in] IID de la definición de la propiedad de interfaz dual.
 
-*vt*  
+*vt*<br/>
 [in] El tipo de propiedad.
 
 ### <a name="remarks"></a>Comentarios
@@ -182,7 +182,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*  
+*CLSID*<br/>
 [in] El CLSID de una página de propiedades.
 
 ### <a name="remarks"></a>Comentarios

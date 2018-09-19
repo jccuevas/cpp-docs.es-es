@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110151"
 ---
 # <a name="caxwindow-class"></a>CAxWindow (clase)
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>Parámetros
 
-*pControl*  
+*pControl*<br/>
 [in] Un puntero a la `IUnknown` del control.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Un puntero a la `IUnknown` del host (el `AxWin` objeto).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 Identificador de un objeto de ventana existente.
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszName*  
+*lpszName*<br/>
 Un puntero a una cadena para crear el control. Debe tener el formato de una de las maneras siguientes:
 
 - Un identificador de programa, como "MSCAL. Calendar.7 "
@@ -155,13 +155,13 @@ Un puntero a una cadena para crear el control. Debe tener el formato de una de l
    > [!NOTE]
    > "MSHTML:" debe preceder el fragmento de HTML para que se designa como un flujo de MSHTML. Solo los ProgID y CLSID se admiten en plataformas Windows Mobile. Plataformas de Windows CE insertadas, que no sean de Windows Mobile con el soporte técnico de soporte técnico de IE CE todos los tipos incluidos ProgID, CLSID, URL, hacer referencia al documento activo y el fragmento de HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntero a una secuencia que se usa para inicializar las propiedades del control. Puede ser NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] La dirección de un puntero que va a recibir el `IUnknown` del contenedor. Puede ser NULL.
 
-*dwResID*  
+*dwResID*<br/>
 El identificador de recurso de un recurso HTML. El control WebBrowser se creará y se cargan con el recurso especificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszName*  
+*lpszName*<br/>
 Un puntero a una cadena para crear el control. Debe tener el formato de una de las maneras siguientes:
 
 - Un identificador de programa, como "MSCAL. Calendar.7 "
@@ -222,22 +222,22 @@ Un puntero a una cadena para crear el control. Debe tener el formato de una de l
    > [!NOTE]
    > "MSHTML:" debe preceder el fragmento de HTML para que se designa como un flujo de MSHTML. Solo los ProgID y CLSID se admiten en plataformas Windows Mobile. Plataformas de Windows CE insertadas, que no sean de Windows Mobile con el soporte técnico de soporte técnico de IE CE todos los tipos incluidos ProgID, CLSID, URL, hacer referencia al documento activo y el fragmento de HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntero a una secuencia que se usa para inicializar las propiedades del control. Puede ser NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] La dirección de un puntero que va a recibir el `IUnknown` del contenedor. Puede ser NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] La dirección de un puntero que va a recibir el `IUnknown` del control. Puede ser NULL.
 
-*iidSink*  
+*iidSink*<br/>
 [in] Identificador de interfaz de una interfaz de salida en el objeto contenido. Puede ser IID_NULL.
 
-*punkSink*  
+*punkSink*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto receptor para estar conectado al punto de conexión en el objeto contenido especificado por *iidSink*.
 
-*dwResID*  
+*dwResID*<br/>
 [in] El identificador de recurso de un recurso HTML. El control WebBrowser se creará y se cargan con el recurso especificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 Identificador de una ventana existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*  
+*IID*<br/>
 [in] Especifica el IID de la interfaz del control.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Un puntero a la interfaz del control. En la versión de la plantilla de este método, no hay ninguna necesidad de un Id. de referencia, siempre se pasa una interfaz con tipo con un UUID asociado.
 
-*Q*  
+*Q*<br/>
 [in] La interfaz que se está consultando para.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*  
+*IID*<br/>
 [in] Especifica el IID de la interfaz del control.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Un puntero a la interfaz en el host. En la versión de la plantilla de este método, no hay ninguna necesidad de un Id. de referencia, siempre se pasa una interfaz con tipo con un UUID asociado.
 
-*Q*  
+*Q*<br/>
 [in] La interfaz que se está consultando para.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parámetros
 
-*pDisp*  
+*pDisp*<br/>
 [in] Un puntero a un `IDispatch` interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in] Un puntero a un `IDocHostUIHandlerDispatch` interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -377,9 +377,9 @@ Externo `IDocHostUIHandlerDispatch` interfaz se usa los controles que consultar 
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo ATLCON](../../visual-cpp-samples.md)   
-[CWindow (clase)](../../atl/reference/cwindow-class.md)   
-[Fundamentos de controles compuestos](../../atl/atl-composite-control-fundamentals.md)   
-[Información general de clases](../../atl/atl-class-overview.md)   
+[Ejemplo ATLCON](../../visual-cpp-samples.md)<br/>
+[CWindow (clase)](../../atl/reference/cwindow-class.md)<br/>
+[Fundamentos de controles compuestos](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Preguntas más frecuentes sobre la contención de controles](../../atl/atl-control-containment-faq.md)
 

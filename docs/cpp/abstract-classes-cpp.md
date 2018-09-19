@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610e98e15e4e7bd20802d39a70354a20076ce1a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 91ed7cb82bbf9036a32ee20ecf33a8138086a98c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103959"
 ---
 # <a name="abstract-classes-c"></a>Clases abstractas (C++)
 
@@ -97,4 +97,5 @@ Cuando el objeto al que señala `pDerived` se elimina, se llama al destructor de
 > En el ejemplo anterior, la función virtual pura `base::~base` se llama implícitamente desde `derived::~derived`. También es posible llamar a funciones virtuales puras explícitamente mediante el nombre completo de la función miembro.
 
 ## <a name="see-also"></a>Vea también
-[Herencia](../cpp/inheritance-cpp.md)  
+
+[Herencia](../cpp/inheritance-cpp.md)

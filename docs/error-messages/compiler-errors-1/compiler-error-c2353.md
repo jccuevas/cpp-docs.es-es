@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2353 | Documentos de Microsoft
+title: Error del compilador C2353 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d5adf36760252a95502f38d2d7d64f9e090729
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3685db97a213f6347fccedefdaeebfdeaaffb7bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109280"
 ---
 # <a name="compiler-error-c2353"></a>Error del compilador C2353
-no se permite la especificación de excepción  
-  
- No se permiten las especificaciones de excepciones en las funciones miembro de clases administradas.  
-  
- El ejemplo siguiente genera C2353:  
-  
-```  
-// C2353.cpp  
-// compile with: /clr /c  
-ref class X {  
-   void f() throw(int);   // C2353  
-   void f();   // OK  
-};  
+
+no se permite la especificación de excepción
+
+No se permiten las especificaciones de excepción en funciones miembro de clases administradas.
+
+El ejemplo siguiente genera C2353:
+
+```
+// C2353.cpp
+// compile with: /clr /c
+ref class X {
+   void f() throw(int);   // C2353
+   void f();   // OK
+};
 ```

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338943e2168930bc48f02ef9ddbf36f738965078
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 56038ffe4c6062422ea34a439e73b0d90a37cfb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097736"
 ---
 # <a name="catlexception-class"></a>CAtlException (clase)
 
@@ -77,14 +77,14 @@ CAtlException() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*recursos humanos*  
+*recursos humanos*<br/>
 El código de error HRESULT.
 
 ##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT
 
 Convierte el objeto actual en un valor HRESULT.
 
-```  
+```
 operator HRESULT() const throw ();
 ```
 
@@ -102,5 +102,5 @@ El miembro de datos que almacena la condición de error. El valor HRESULT es est
 
 ## <a name="see-also"></a>Vea también
 
-[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
+[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

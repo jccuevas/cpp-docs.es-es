@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604b58f7f8f6074c16effa3220d17bc00c44f5b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 872644533a0fab73768392efa2c5cd016b6bb980
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095662"
 ---
 # <a name="algorithms-modern-c"></a>Algoritmos (C++ moderno)
 
@@ -31,13 +31,13 @@ Para la programación de C++ moderno, se recomienda que use los algoritmos en el
 
 Para escribir un comparador, use strict **<** y usar *lambdas con nombre* cuando sea posible.
 
-```cpp  
+```cpp
 auto comp = [](const widget& w1, const widget& w2)
      { return w1.weight() < w2.weight(); }
 
 sort( v.begin(), v.end(), comp );
 
-auto i = lower_bound( v.begin(), v.end(), comp );  
+auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
 ## <a name="loops"></a>Bucles
@@ -46,26 +46,26 @@ Cuando sea posible, use basado en rango **para** bucles o llamadas de algoritmo 
 
 En lugar del antiguo C++ así:
 
-```cpp  
+```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
-    /* ... */  
+    /* ... */
 }
 
 auto i = v.begin();
 
 for ( ; i != v.end(); ++i ) {
-    if (*i > x && *i < y) break;  
-}  
+    if (*i > x && *i < y) break;
+}
 ```
 
 Utilice C++ moderno similar al siguiente:
 
-```cpp  
+```cpp
 for_each( begin(strings), end(strings), [](string& s) {
-  // ...  
+  // ...
 } );
 
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
 ### <a name="range-based-for-loops"></a>En función de rangos para bucles

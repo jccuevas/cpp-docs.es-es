@@ -1,5 +1,5 @@
 ---
-title: C2714 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2714 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b012acdebd5ccddb056d9558bb1034ac2ba0b49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a5a8a2157fc574b9a43688bfc8fa9adcbcb676f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108500"
 ---
-# <a name="compiler-error-c2714"></a>C2714 de Error del compilador
-no se permite __alignof (void)  
-  
- Se pasó un valor no válido a un operador.  
-  
- Vea [operador __alignof](../../cpp/alignof-operator.md) para obtener más información.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C2714.  
-  
-```  
-// C2714.cpp  
-int main() {  
-   return __alignof(void);   // C2714  
-   return __alignof(char);   // OK  
-}  
+# <a name="compiler-error-c2714"></a>Error del compilador C2714
+
+no se permite __alignof (void)
+
+Se pasó un valor no válido a un operador.
+
+Consulte [operador __alignof](../../cpp/alignof-operator.md) para obtener más información.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C2714.
+
+```
+// C2714.cpp
+int main() {
+   return __alignof(void);   // C2714
+   return __alignof(char);   // OK
+}
 ```

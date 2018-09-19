@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3762 | Documentos de Microsoft
+title: Error del compilador C3762 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40134353b713c855199ae0b062e263d31c37522
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4c9f5dc1c270f59dafa9e1076e3641cd1cd2c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103352"
 ---
 # <a name="compiler-error-c3762"></a>Error del compilador C3762
-no se puede procesar el atributo 'atributo'  
-  
- Un atributo definido por el usuario que hereda de `System.Security.Permissions.SecurityAttribute` se usa para definir un atributo de seguridad. Dicho atributo no se puede usar en el mismo ensamblado donde se define.
+
+no se puede procesar el atributo 'attribute'
+
+Un atributo definido por el usuario que hereda de `System.Security.Permissions.SecurityAttribute` se utiliza para definir un atributo de seguridad. Este tipo de atributo no se puede usar en el mismo ensamblado donde se define.
