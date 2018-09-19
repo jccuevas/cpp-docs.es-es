@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3320 | Documentos de Microsoft
+title: Error del compilador C3320 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08810d38b74081cfb8573d1e33ea3a8ec4dabd4c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b67d419630d59902270638213ce7a79dd8b9e0c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078444"
 ---
 # <a name="compiler-error-c3320"></a>Error del compilador C3320
-'tipo': el tipo no puede tener el mismo nombre que la propiedad de módulo 'nombre'  
-  
-Un exportados definidos por el usuario tipo (UDT), que podría ser una estructura, clase, enumeración o unión, no puede tener el mismo nombre que el parámetro pasado a la [módulo](../../windows/module-cpp.md) la propiedad de nombre del atributo.  
-  
-## <a name="example"></a>Ejemplo  
-El ejemplo siguiente genera la advertencia C3320:  
-  
-```cpp  
-// C3320.cpp  
-#include "unknwn.h"  
-[module(name="xx")];  
-  
-[export] struct xx {   // C3320  
-// Try the following line instead  
-// [export] struct yy {  
-   int i;  
-};  
+
+'tipo': el tipo no puede tener el mismo nombre que la propiedad de módulo 'nombre'
+
+Un definido por el usuario tipo exportado (UDT), lo que sería una estructura, clase, enumeración o unión, no puede tener el mismo nombre que el parámetro pasado a la [módulo](../../windows/module-cpp.md) propiedad de nombre del atributo.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C3320:
+
+```cpp
+// C3320.cpp
+#include "unknwn.h"
+[module(name="xx")];
+
+[export] struct xx {   // C3320
+// Try the following line instead
+// [export] struct yy {
+   int i;
+};
 ```

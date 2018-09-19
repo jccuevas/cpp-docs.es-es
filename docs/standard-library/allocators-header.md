@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f860d90905c244327787182c40505207c4745201
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069175"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -68,23 +68,22 @@ donde el argumento de plantilla `Type` es el tipo administrado por la instancia 
 
 Use una creación de instancias adecuada de un asignador como segundo argumento de tipo al crear un contenedor, como en el ejemplo de código siguiente.
 
-`#include <list>`
-
-`#include <allocators>`
-
-`std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`
+```cpp
+#include <list>
+#include <allocators>
+std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
+```
 
 _List0 asigna nodos con `allocator_chunklist` y el filtro de sincronización predeterminado.
 
 Use la macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) para crear plantillas de asignador con filtros de sincronización que no sean los predeterminados:
 
-`#include <list>`
-
-`#include <allocators>`
-
-`ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);`
-
-`std::list<int, alloc<int> > _List1;`
+```cpp
+#include <list>
+#include <allocators>
+ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
+std::list<int, alloc<int> > _List1;
+```
 
 _Lst1 asigna nodos con `allocator_chunklist` y el filtro de sincronización [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
