@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3656 | Documentos de Microsoft
+title: Error del compilador C3656 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f361cc4356989b22b973972a506b28e97f39cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c04e99d137d4235a0890cca56757f2e6fad70760
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072720"
 ---
 # <a name="compiler-error-c3656"></a>Error del compilador C3656
-'override': invalidar no se puede repetir el especificador  
-  
- Una palabra clave de reemplazo explícito solo puede especificarse una vez. Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- El ejemplo siguiente genera C3656:  
-  
-```  
-// C3656.cpp  
-// compile with: /clr /c  
-public interface struct O {  
-   int f();  
-};  
-  
-public ref struct V : O {  
-   int f() override override { return 0; }   // C3656  
-   // try the following line instead  
-   // int f() override { return 0; }  
-};  
+
+'override': invalidar especificador no se puede repetir
+
+Una palabra clave de reemplazo explícito solo se puede especificar una vez. Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+El ejemplo siguiente genera C3656:
+
+```
+// C3656.cpp
+// compile with: /clr /c
+public interface struct O {
+   int f();
+};
+
+public ref struct V : O {
+   int f() override override { return 0; }   // C3656
+   // try the following line instead
+   // int f() override { return 0; }
+};
 ```

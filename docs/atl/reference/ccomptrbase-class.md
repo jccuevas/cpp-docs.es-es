@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070163"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase (clase)
 
@@ -41,13 +41,13 @@ Esta clase proporciona una base para las clases de puntero inteligente que usa l
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo de objeto que hace referencia el puntero inteligente.
 
 ## <a name="members"></a>Miembros
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 Un puntero para el cliente `IUnknown`.
 
-*IID*  
+*IID*<br/>
 El GUID del punto de conexión. Normalmente, esto es igual que la interfaz de salida administrada por el punto de conexión.
 
-*PDW*  
+*PDW*<br/>
 Un puntero a la cookie que identifica la conexión.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*P2*  
+*P2*<br/>
 La `CComPtrBase` objeto tomará posesión de este puntero.
 
 ### <a name="remarks"></a>Comentarios
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Parámetros
 
-*szProgID*  
+*szProgID*<br/>
 Puntero a un ProgID, que se utiliza para recuperar el CLSID.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Si es NULL, indica que el objeto no se está creando como parte de un agregado. Si no es NULL, es un puntero al objeto agregado `IUnknown` interfaz (el control `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Contexto en que se ejecutará el código que administra el objeto recién creado.
 
-*rclsid*  
+*rclsid*<br/>
 CLSID asociado con los datos y el código que se usará para crear el objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ppT*  
+*ppT*<br/>
 Dirección de la variable que recibirá el `CComPtrBase` puntero.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*pOther*  
+*pOther*<br/>
 `IUnknown *` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*pT*  
+*pT*<br/>
 Un puntero a un objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*pT*  
+*pT*<br/>
 Un puntero a un objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -345,7 +345,7 @@ Devuelve true si el puntero administrado por el objeto actual es menor que el pu
 
 El operador de conversión.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parámetros
 
-*Q*  
+*Q*<br/>
 El tipo de objeto cuyo puntero de interfaz es necesario.
 
-*perfil de puerto*  
+*perfil de puerto*<br/>
 Dirección de variable de salida que recibe el puntero de interfaz solicitada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punkParent*  
+*punkParent*<br/>
 Un puntero a la `IUnknown` interfaz del elemento primario.
 
 ### <a name="return-value"></a>Valor devuelto

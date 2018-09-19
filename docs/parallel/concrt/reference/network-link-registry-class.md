@@ -1,5 +1,5 @@
 ---
-title: network_link_registry (clase) | Documentos de Microsoft
+title: network_link_registry (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae551c934c4286a321772fb01a21260c36dfccff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080329"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry (Clase)
 La clase base abstracta `network_link_registry` que administra los vínculos entre los bloques de origen y de destino.  
@@ -40,8 +40,8 @@ class network_link_registry;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_Block`  
- Tipo de los datos del bloque que se almacenan en la `network_link_registry`.  
+*Al _bloque al introducir*<br/>
+Tipo de los datos del bloque que se almacenan en el `network_link_registry`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -51,7 +51,7 @@ class network_link_registry;
 |----------|-----------------|  
 |`const_pointer`|Un tipo que proporciona un puntero a un `const` elemento en un `network_link_registry` objeto.|  
 |`const_reference`|Un tipo que proporciona una referencia a un `const` elemento almacenado en un `network_link_registry` objeto para leer y realizar operaciones const.|  
-|`iterator`|Un tipo que proporciona un iterador que puede leer o modificar cualquier elemento de un `network_link_registry` objeto.|  
+|`iterator`|Un tipo que proporciona un iterador que puede leer o modificar cualquier elemento en un `network_link_registry` objeto.|  
 |`type`|Un tipo que representa el tipo de bloque que se almacenan en la `network_link_registry` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -60,12 +60,12 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|Cuando se invalida en una clase derivada, agrega un vínculo a la `network_link_registry` objeto.|  
 |[begin](#begin)|Cuando se invalida en una clase derivada, devuelve un iterador al primer elemento en el `network_link_registry` objeto.|  
-|[contiene](#contains)|Cuando se invalida en una clase derivada, busca la `network_link_registry` objeto para un bloque especificado.|  
+|[Contiene](#contains)|Cuando se invalida en una clase derivada, busca el `network_link_registry` objeto para un bloque especificado.|  
 |[count](#count)|Cuando se invalida en una clase derivada, devuelve el número de elementos de la `network_link_registry` objeto.|  
 |[remove](#remove)|Cuando se invalida en una clase derivada, quita un bloque especificado desde el `network_link_registry` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `network link registry` no es seguro para acceso simultáneo.  
+ El `network link registry` no es seguro para el acceso simultáneo.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `network_link_registry`  
@@ -84,10 +84,10 @@ virtual void add(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Link`  
- Un puntero a un bloque que se va a agregar.  
+*_Vincular*<br/>
+Un puntero a un bloque que se va a agregar.  
   
-##  <a name="begin"></a> BEGIN 
+##  <a name="begin"></a> comenzar 
 
  Cuando se invalida en una clase derivada, devuelve un iterador al primer elemento en el `network_link_registry` objeto.  
   
@@ -99,24 +99,24 @@ virtual iterator begin() = 0;
  Un iterador que direcciona el primer elemento en el `network_link_registry` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El estado final del iterador se indica mediante un `NULL` vínculo.  
+ Indica el estado final del iterador por un `NULL` vínculo.  
   
-##  <a name="contains"></a> contiene 
+##  <a name="contains"></a> Contiene 
 
- Cuando se invalida en una clase derivada, busca la `network_link_registry` objeto para un bloque especificado.  
+ Cuando se invalida en una clase derivada, busca el `network_link_registry` objeto para un bloque especificado.  
   
 ```
 virtual bool contains(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Link`  
- Un puntero a un bloque que se va a buscar en la `network_link_registry` objeto.  
+*_Vincular*<br/>
+Un puntero a un bloque que se va a buscar en el `network_link_registry` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si se encontró el bloque, `false` en caso contrario.  
   
-##  <a name="count"></a> Recuento 
+##  <a name="count"></a> recuento 
 
  Cuando se invalida en una clase derivada, devuelve el número de elementos de la `network_link_registry` objeto.  
   
@@ -125,7 +125,7 @@ virtual size_t count() = 0;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de elementos de la `network_link_registry` objeto.  
+ El número de elementos en el `network_link_registry` objeto.  
   
 ##  <a name="remove"></a> Quitar 
 
@@ -136,11 +136,11 @@ virtual bool remove(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Link`  
- Un puntero a un bloque que se va a quitar, si se encuentra.  
+*_Vincular*<br/>
+Un puntero a un bloque que se va a quitar, si se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el vínculo se ha encontrado y eliminado, `false` en caso contrario.  
+ `true` Si el vínculo ha encontrado y eliminado, `false` en caso contrario.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   

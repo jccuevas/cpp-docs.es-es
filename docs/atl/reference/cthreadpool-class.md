@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091704"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (clase)
 
@@ -44,16 +44,16 @@ Esta clase proporciona un grupo de subprocesos de trabajo que procesan una cola 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*Trabajo*  
+*Trabajo*<br/>
 La clase que se ajuste a la [worker (Arquetipo)](../../atl/reference/worker-archetype.md) que proporciona el código que se usa para procesar elementos en cola en el grupo de subprocesos de trabajo.
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 La clase que proporciona la función utilizada para crear los subprocesos en el grupo.
 
 ## <a name="members"></a>Miembros
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Dirección de la variable que, si se ejecuta correctamente, recibe el número de subprocesos en el grupo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Dirección de la variable que, si se ejecuta correctamente, recibe el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>Parámetros
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 El parámetro de trabajo que se pasarán al objeto de subproceso de trabajo `Initialize`, `Execute`, y `Terminate` métodos.
 
-*nNumThreads*  
+*nNumThreads*<br/>
 El número solicitado de subprocesos en el grupo.
 
 Si *nNumThreads* es negativo, su valor absoluto se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.
 
 Si *nNumThreads* es cero, ATLS_DEFAULT_THREADSPERPROC se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  El valor predeterminado es 2 subprocesos por procesador. Si es necesario, puede definir su propio valor entero positivo para este símbolo antes de incluir atlutil.h.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 El tamaño de pila para cada subproceso del grupo.
 
-*hCompletion*  
+*hCompletion*<br/>
 El identificador de un objeto para asociar el puerto de terminación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Solicitud*  
+*Solicitud*<br/>
 La solicitud para poner en cola.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nNumThreads*  
+*nNumThreads*<br/>
 El número solicitado de subprocesos en el grupo.
 
 Si *nNumThreads* es negativo, su valor absoluto se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre. Si se especifica 0 o ningún valor, este método usará el tiempo de espera establecido por [CThreadPool::SetTimeout](#settimeout).
 
 ### <a name="remarks"></a>Comentarios
@@ -358,6 +358,6 @@ Este método envía una solicitud de cierre a todos los subprocesos del grupo. S
 
 ## <a name="see-also"></a>Vea también
 
-[IThreadPoolConfig (interfaz)](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[IThreadPoolConfig (interfaz)](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Clases](../../atl/reference/atl-classes.md)

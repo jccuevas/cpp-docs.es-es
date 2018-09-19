@@ -19,28 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cc11c12efc2beb8ec70c9081619c799f0c8c0d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5c7f3f3ac62de6e04b3fd1fd54bde656a12a55d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073725"
 ---
 # <a name="varianttclear"></a>_variant_t::Clear
-**Específicos de Microsoft**  
-  
- Borra el encapsulado `VARIANT` objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void Clear( );  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Las llamadas `VariantClear` en encapsulado `VARIANT` objeto.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_variant_t (Clase)](../cpp/variant-t-class.md)
+
+**Específicos de Microsoft**
+
+Borra el encapsulado `VARIANT` objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void Clear( );
+```
+
+## <a name="remarks"></a>Comentarios
+
+Las llamadas `VariantClear` en encapsulado `VARIANT` objeto.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_variant_t (Clase)](../cpp/variant-t-class.md)

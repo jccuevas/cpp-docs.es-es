@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059100"
 ---
 # <a name="reduction"></a>reduction
 Especifica que una o más variables que son privadas para cada subproceso se el sujeto de una operación de reducción al final de la región paralela.  
@@ -32,14 +32,13 @@ Especifica que una o más variables que son privadas para cada subproceso se el 
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+### <a name="parameters"></a>Parámetros
   
- `operation`  
- El operador para la operación de llevar a cabo en las variables (`var`) al final de la región paralela.  
+*Operación*<br/>
+El operador para la operación de llevar a cabo en las variables (`var`) al final de la región paralela.  
   
- `var`  
- Una o más variables en el que se va a realizar la reducción escalar. Si se especifica más de una variable, separe los nombres de variable con una coma.  
+*var*<br/>
+Una o más variables en el que se va a realizar la reducción escalar. Si se especifica más de una variable, separe los nombres de variable con una coma.  
   
 ## <a name="remarks"></a>Comentarios  
  `reduction` se aplica a las siguientes directivas:  

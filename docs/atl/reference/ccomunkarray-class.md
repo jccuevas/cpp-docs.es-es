@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b977875655182f1cbc822540cf021635f525f7e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cab0ea4ecf4bfabede365b9e0fbc9d4a02e2515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057462"
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray (clase)
 
@@ -45,7 +45,7 @@ class CComUnkArray
 
 #### <a name="parameters"></a>Parámetros
 
-*nMaxSize*  
+*nMaxSize*<br/>
 El número máximo de `IUnknown` punteros que se pueden almacenar en la matriz estática.
 
 ## <a name="members"></a>Miembros
@@ -92,7 +92,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 Llame a este método para agregar un `IUnknown` puntero a la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +159,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Parámetros
 
-*ppFind*  
+*ppFind*<br/>
 El `IUnknown` puntero para el que se requiere la cookie asociada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -180,7 +180,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwCookie*  
+*dwCookie*<br/>
 Para que la cookie de asociado `IUnknown` puntero es necesario.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -197,7 +197,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwCookie*  
+*dwCookie*<br/>
 La cookie que hacen referencia a la `IUnknown` puntero va a quitar de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -206,5 +206,5 @@ Devuelve TRUE si el puntero se ha quitado, FALSE en caso contrario.
 
 ## <a name="see-also"></a>Vea también
 
-[CComDynamicUnkArray (clase)](../../atl/reference/ccomdynamicunkarray-class.md)   
+[CComDynamicUnkArray (clase)](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

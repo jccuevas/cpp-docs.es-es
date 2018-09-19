@@ -1,5 +1,5 @@
 ---
-title: out_of_memory (clase) | Documentos de Microsoft
+title: out_of_memory (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab3285e0b37b8af93803a1a2752e25b6d91ab2f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b57e27647f61b551f8ea5c2770290e1ae9627014
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070930"
 ---
 # <a name="outofmemory-class"></a>out_of_memory (clase)
 La excepción se produce cuando un método produce un error debido a la falta de memoria del sistema o del dispositivo.  
@@ -67,8 +67,8 @@ out_of_memory () throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Descripción del error.  
+*_Cuerpo*<br/>
+Descripción del error.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Nueva instancia de la clase `out_of_memory`.  

@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095461"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx (clase)
 Implementa la funcionalidad de una interfaz de un único documento (SDI) de Windows superpuesta o una ventana de marco emergente y proporciona miembros para administrar la ventana. Extiende la [CFrameWnd](../../mfc/reference/cframewnd-class.md) clase.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Valor devuelto  
  La palabra de orden superior debe ser uno de los siguientes valores.  
-  
- `0`  
- El marco de trabajo debe pasar por alto la pulsación de tecla.  
-  
- `1`  
- El marco de trabajo debería cerrar el menú.  
-  
- `2`  
- El marco de trabajo debe seleccionar uno de los elementos mostrados en el menú. La palabra de orden inferior contiene el identificador del comando para seleccionar.  
-  
-### <a name="remarks"></a>Comentarios  
+
+|||
+|-|-|
+ `0` | El marco de trabajo debe pasar por alto la pulsación de tecla.  
+ `1`  | El marco de trabajo debería cerrar el menú.  
+ `2`  | El marco de trabajo debe seleccionar uno de los elementos mostrados en el menú. La palabra de orden inferior contiene el identificador del comando para seleccionar.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  El marco llama a este método cuando el puntero se mueve.  

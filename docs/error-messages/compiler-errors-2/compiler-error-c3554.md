@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3554 | Documentos de Microsoft
+title: Error del compilador C3554 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb374e028097157ae72b621593a899af9fe2f91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b1760607a335d4dd56ec711eef76f5a68550d64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089507"
 ---
 # <a name="compiler-error-c3554"></a>Error del compilador C3554
-'decltype' no se puede combinar con ningún otro especificador de tipo  
-  
- No se puede calificar la palabra clave `decltype()` con ningún especificador de tipo. Por ejemplo, el siguiente fragmento de código genera el error C3554.  
-  
-```  
-int x;  
-unsigned decltype(x); // C3554  
+
+'decltype' no se puede combinar con ningún otro especificador de tipo
+
+No se puede calificar la palabra clave `decltype()` con ningún especificador de tipo. Por ejemplo, el siguiente fragmento de código genera el error C3554.
+
+```
+int x;
+unsigned decltype(x); // C3554
 ```

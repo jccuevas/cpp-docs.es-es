@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2289 | Documentos de Microsoft
+title: Error del compilador C2289 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d351bffc33fc754ffcb66d2428a77fb040089a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5bf284ee7ada4f32772b5f65ed0b983e08e5988
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067616"
 ---
 # <a name="compiler-error-c2289"></a>Error del compilador C2289
-el mismo calificador de tipo se ha utilizado más de una vez  
-  
- Una definición o declaración de tipo utiliza un calificador de tipo (`const`, `volatile`, `signed`o `unsigned`) más de una vez, lo que provoca un error de compatibilidad con ANSI (**/Za**).  
-  
- El ejemplo siguiente genera la advertencia C2286:  
-  
-```  
-// C2289.cpp  
-// compile with: /Za /c  
-volatile volatile int i;   // C2289  
-volatile int j;   // OK  
+
+el mismo calificador de tipo se ha utilizado más de una vez
+
+Una definición o declaración de tipo utiliza un calificador de tipo (`const`, `volatile`, `signed`o `unsigned`) más de una vez, lo que provoca un error de compatibilidad con ANSI (**/Za**).
+
+El ejemplo siguiente genera la advertencia C2286:
+
+```
+// C2289.cpp
+// compile with: /Za /c
+volatile volatile int i;   // C2289
+volatile int j;   // OK
 ```

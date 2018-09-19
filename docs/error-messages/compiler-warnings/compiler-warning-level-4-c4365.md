@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4365 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4365 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496f26046803efdd2b67cdc6d5a5ec74a3cbb90d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8188e3fc861573025a4855102e3ced14d3136fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079705"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>Advertencia del compilador (nivel 4) C4365
-'acción': conversión de 'type_1' a 'type_2', no coinciden signed/unsigned  
-  
- Por ejemplo, se intentó convertir un valor sin signo en un valor con signo.  
-  
- C4365 está desactivada de forma predeterminada.  Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4365.  
-  
-```  
-// C4365.cpp  
-// compile with: /W4  
-#pragma warning(default:4365)  
-  
-int f(int) { return 0; }  
-void Test(size_t i) {}  
-  
-int main() {  
-   unsigned int n = 10;  
-   int o = 10;  
-   n++;  
-   f(n);   // C4365  
-   f(o);   // OK  
-  
-   Test( -19 );   // C4365  
-}  
+
+'acción': conversión de 'type_1' a 'type_2', no coinciden signed/unsigned
+
+Por ejemplo, se intentó convertir un valor sin signo en un valor con signo.
+
+C4365 está desactivada de forma predeterminada.  Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4365.
+
+```
+// C4365.cpp
+// compile with: /W4
+#pragma warning(default:4365)
+
+int f(int) { return 0; }
+void Test(size_t i) {}
+
+int main() {
+   unsigned int n = 10;
+   int o = 10;
+   n++;
+   f(n);   // C4365
+   f(o);   // OK
+
+   Test( -19 );   // C4365
+}
 ```

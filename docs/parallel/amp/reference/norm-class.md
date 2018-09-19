@@ -1,5 +1,5 @@
 ---
-title: NORM (clase) | Documentos de Microsoft
+title: NORM (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087490"
 ---
 # <a name="norm-class"></a>norm (Clase)
-Representa un número de norma. Cada elemento flotante es un número de punto en el intervalo de [-1.0f, 1.0f].  
+Representa un número de la norma. Cada elemento flotante es un número de punto en el intervalo de [-1, 0F, 1, 0F].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,15 +38,15 @@ class norm;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[NORM Constructor](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar que 0,0 f.|  
+|[NORM Constructor](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar en 0, 0f.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
 |NORM::operator-||  
-|NORM::operator:||  
-|float NORM::operator|Operador de conversión. Convertir el número de la norma en flotante valor de punto.|  
+|NORM::operator--||  
+|NORM::operator float|Operador de conversión. Convertir el número de la norma en flotante valor de punto.|  
 |NORM::operator * =||  
 |NORM::operator / =||  
 |NORM::operator ++||  
@@ -64,7 +64,7 @@ class norm;
   
 ##  <a name="ctor"></a> NORM 
 
- Constructor predeterminado. Inicializar que 0,0 f.  
+ Constructor predeterminado. Inicializar en 0, 0f.  
   
 ```  
 norm(
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_V`  
- El valor utilizado para inicializar.  
+*_V*<br/>
+El valor utilizado para inicializar.  
   
- `_Other`  
- El objeto utilizado para inicializar.  
+*_Otro*<br/>
+El objeto usado para inicializar.  
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

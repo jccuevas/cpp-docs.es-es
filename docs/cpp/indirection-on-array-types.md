@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8d4f02bd40764d2a6132333aecde6dd8cd6063
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 683cd7835e669ff71c8e4566e0600b1775e42c6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086166"
 ---
 # <a name="indirection-on-array-types"></a>Direccionamiento indirecto en tipos de matriz
 
-Uso del operador de direccionamiento indirecto (<strong>\*</strong>) en un *n*-da como resultado de tipo de matriz dimensional un *n*matriz bidimensional de-1. Si *n* es 1, que se produzca un valor escalar (o elemento de matriz).  
-  
-## <a name="see-also"></a>Vea también  
- [Matrices](../cpp/arrays-cpp.md)
+Uso del operador de direccionamiento indirecto (<strong>\*</strong>) en un *n*-da como resultado de tipo de matriz dimensional un *n*matriz bidimensional de-1. Si *n* es 1, que se produzca un valor escalar (o elemento de matriz).
+
+## <a name="see-also"></a>Vea también
+
+[Matrices](../cpp/arrays-cpp.md)

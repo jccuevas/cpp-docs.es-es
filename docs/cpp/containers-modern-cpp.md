@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d740bb36c1d574e474058c05d900d605c71e55f0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1a05eada2b5828cfc654496355bddcabcafc8d60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086153"
 ---
 # <a name="containers-modern-c"></a>Contenedores (C++ moderno)
 
@@ -48,6 +48,7 @@ No use matrices de estilo C. Para obtener información sobre las API más antigu
 Para obtener más información acerca de los contenedores, consulte [contenedores de biblioteca estándar de C++](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Vea también
- [Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
- [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)  
- [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)  
+
+[Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
+[Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

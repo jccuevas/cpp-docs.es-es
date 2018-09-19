@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0b63f4054459b7d8b3c8aae45cf583f635cd95
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e364e2676242ad75f185792faa545bbb90ef1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071216"
 ---
 # <a name="ca2aex-class"></a>Clase CA2AEX
 
@@ -43,7 +43,7 @@ class CA2AEX
 
 #### <a name="parameters"></a>Parámetros
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 El tamaño del búfer usado en el proceso de traducción. La longitud predeterminada es de 128 bytes.
 
 ## <a name="members"></a>Miembros
@@ -109,10 +109,10 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*psz*  
+*psz*<br/>
 La cadena de texto que se va a convertir.
 
-*nCodePage*  
+*nCodePage*<br/>
 No se usan en esta clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -161,9 +161,9 @@ Devuelve la cadena de texto como un tipo LPSTR.
 
 ## <a name="see-also"></a>Vea también
 
-[Clase CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Clase CA2WEX](../../atl/reference/ca2wex-class.md)   
-[Clase CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Clase CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Clase CW2WEX](../../atl/reference/cw2wex-class.md)   
+[CA2CAEX (clase)](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX (clase)](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX (clase)](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX (clase)](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX (clase)](../../atl/reference/cw2wex-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

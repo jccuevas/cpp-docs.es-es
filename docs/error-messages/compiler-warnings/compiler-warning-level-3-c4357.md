@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4357 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4357 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79bb609b051def4f84924c1d9ebbcd9574d2ce77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5bf30112e152c473c4f88a98f5f1073b789216e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086751"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>Advertencia del compilador (nivel 3) C4357
-argumento de matriz de parámetros en la lista de argumentos formal para el delegado 'del' pasa por alto al generar 'function'  
-  
- El `ParamArray` se omitió el atributo, y `function` no se puede llamar con argumentos variables.  
-  
- El ejemplo siguiente genera C4357:  
-  
-```  
-// C4357.cpp  
-// compile with: /clr /W3 /c  
-using namespace System;  
-public delegate void f(int i, ... array<Object^>^ varargs);   // C4357  
-  
-public delegate void g(int i, array<Object^>^ varargs);   // OK  
+
+param argumento de matriz en la lista de argumentos formal para el delegado 'del' omitir cuando se generen 'function'
+
+El `ParamArray` omitió el atributo, y `function` no se puede llamar con argumentos variables.
+
+El ejemplo siguiente genera C4357:
+
+```
+// C4357.cpp
+// compile with: /clr /W3 /c
+using namespace System;
+public delegate void f(int i, ... array<Object^>^ varargs);   // C4357
+
+public delegate void g(int i, array<Object^>^ varargs);   // OK
 ```

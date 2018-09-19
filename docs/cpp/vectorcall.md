@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463f005388a066776d7db8b1701850e08888de76
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 335f81a204ec91361c51f7573e58b61fad91f97b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061713"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -46,7 +46,7 @@ typedef struct {
    __m256 y;
    __m256 z;
 } hva3;    // 3 element HVA type on __m256
-```  
+```
 
 Declare las funciones explícitamente con la **__vectorcall** palabra clave en los archivos de encabezado para permitir por separado que compila código vincule sin errores. Las funciones deben ser prototipos para utilizar **__vectorcall**y no se puede usar un `vararg` lista de argumentos de longitud variable.
 
@@ -60,25 +60,25 @@ En el caso de funciones miembro de clase no estáticas, si la función se define
 struct MyClass {
    void __vectorcall mymethod();
 };
-```  
+```
 
 esto:
 
 ```cpp
 void MyClass::mymethod() { return; }
-```  
+```
 
 equivale a esto:
 
 ```cpp
 void __vectorcall MyClass::mymethod() { return; }
-```  
+```
 
 El **__vectorcall** se debe especificar el modificador de convención de llamada cuando un puntero a un **__vectorcall** se crea la función. El ejemplo siguiente se crea un **typedef** para un puntero a un **__vectorcall** función que toma cuatro **doble** argumentos y devuelve un **__m256**valor:
 
 ```cpp
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
-```  
+```
 
 ## <a name="vectorcall-convention-on-x64"></a>Convención __vectorcall en x64
 
@@ -167,7 +167,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -188,7 +188,7 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 ## <a name="vectorcall-convention-on-x86"></a>Convención __vectorcall en x86
 
@@ -273,7 +273,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -294,11 +294,11 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 **Fin de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)   
+[Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

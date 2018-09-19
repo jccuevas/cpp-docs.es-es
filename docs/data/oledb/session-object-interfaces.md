@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8208a372989fac5fa7c7b0c13b83eb27a4d1444b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e8c641cc543f213b6c81950c22b97f25b31d6c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057333"
 ---
 # <a name="session-object-interfaces"></a>Interfaces del objeto de sesión
+
 En la tabla siguiente se muestra las interfaces obligatorias y opcionales definidas por OLE DB para un objeto de sesión.  
   
 |Interfaz|¿Obligatorio?|¿Implementado por plantillas OLE DB?|  
@@ -50,9 +51,10 @@ En la tabla siguiente se muestra las interfaces obligatorias y opcionales defini
 |[ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Optional|No|  
 |[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Optional|No|  
   
- El objeto de sesión crea un objeto de conjunto de filas. Si el proveedor admite comandos, la sesión también crea un objeto de comando (`CCommand`, implementación de OLE DB `TCommand`). El objeto de comando implementa la `ICommand` interfaz y se usa el `ICommand::Execute` método para ejecutar comandos en el conjunto de filas, como se muestra en la ilustración siguiente.  
+El objeto de sesión crea un objeto de conjunto de filas. Si el proveedor admite comandos, la sesión también crea un objeto de comando (`CCommand`, implementación de OLE DB `TCommand`). El objeto de comando implementa la `ICommand` interfaz y se usa el `ICommand::Execute` método para ejecutar comandos en el conjunto de filas, como se muestra en la ilustración siguiente.  
   
- ![Diagrama conceptual de proveedor](../../data/oledb/media/vc4u551.gif "vc4u551")  
+![Diagrama conceptual de proveedor](../../data/oledb/media/vc4u551.gif "vc4u551")  
   
 ## <a name="see-also"></a>Vea también  
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

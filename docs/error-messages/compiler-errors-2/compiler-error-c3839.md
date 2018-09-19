@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3839 | Documentos de Microsoft
+title: Error del compilador C3839 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb5541e07d168df36bae83f81b7b8a8a7273665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597d02ff347d399833e2376743b50f65e7674a18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092913"
 ---
 # <a name="compiler-error-c3839"></a>Error del compilador C3839
-no se puede cambiar la alineación en un tipo administrado o WinRT  
-  
- Alineación de variables en administrados o tipos de Windows Runtime está controlada por CLR o en tiempo de ejecución de Windows y no se puede modificar con [alinear](../../cpp/align-cpp.md).  
-  
- El ejemplo siguiente genera el error C3839:  
-  
-```  
-// C3839a.cpp  
-// compile with: /clr  
-ref class C  
-{  
-public:  
-   __declspec(align(32)) int m_j; // C3839  
-};  
-  
-int main()  
-{  
-}  
+
+no se puede cambiar la alineación en un tipo administrado o WinRT
+
+Alineación de variables en administrados o tipos de Windows Runtime está controlada por el CLR o en tiempo de ejecución de Windows y no se puede modificar con [alinear](../../cpp/align-cpp.md).
+
+El ejemplo siguiente genera el error C3839:
+
+```
+// C3839a.cpp
+// compile with: /clr
+ref class C
+{
+public:
+   __declspec(align(32)) int m_j; // C3839
+};
+
+int main()
+{
+}
 ```

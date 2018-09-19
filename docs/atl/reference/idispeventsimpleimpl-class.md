@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68e6b4730be3679e4309a298d40657dcecde94b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eb111b3fa1376be8a43bfc9a04c7865164bff76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084580"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl (clase)
 
@@ -42,19 +42,19 @@ Esta clase proporciona las implementaciones de la `IDispatch` métodos sin obten
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <UINT nID, class T, const IID* pdiid>  
+template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*nID*  
+*nID*<br/>
 Un identificador único para el objeto de origen. Cuando `IDispEventSimpleImpl` es la clase base para un control compuesto, utilice el identificador de recurso del control contenido deseado para este parámetro. En otros casos, utilice un entero positivo.
 
-*T*  
+*T*<br/>
 La clase del usuario, que se deriva de `IDispEventSimpleImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 El puntero para el IID de la interfaz dispinterface de evento implementado por esta clase.
 
 ## <a name="members"></a>Miembros
@@ -119,7 +119,7 @@ HRESULT Advise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto de origen del evento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -145,10 +145,10 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto de origen del evento.
 
-*piid*  
+*piid*<br/>
 Un puntero a lo IID del objeto de origen del evento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -174,10 +174,10 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto de origen del evento.
 
-*piid*  
+*piid*<br/>
 Un puntero a lo IID del objeto de origen del evento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -267,7 +267,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto de origen del evento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -287,8 +287,8 @@ Una vez que la conexión se interrumpe, eventos ya no se enrutarán a las funcio
 
 ## <a name="see-also"></a>Vea también
 
-[_ATL_FUNC_INFO (estructura)](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl (clase)](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventImpl (clase)](../../atl/reference/idispeventimpl-class.md)   
-[MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO (estructura)](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl (clase)](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventImpl (clase)](../../atl/reference/idispeventimpl-class.md)<br/>
+[MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

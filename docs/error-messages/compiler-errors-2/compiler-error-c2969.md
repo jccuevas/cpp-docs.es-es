@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2969 | Documentos de Microsoft
+title: Error del compilador C2969 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2cbaa434ec535dd90026ee6549b15f700bf9d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 796660cbefab31a58a977930537897e6c537b834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076936"
 ---
 # <a name="compiler-error-c2969"></a>Error del compilador C2969
-error de sintaxis: 'símbolo': se esperaba que la definición de función miembro finalizase con '}'  
-  
- Una definición de función miembro de plantilla tiene una llave de cierre no emparejada.  
-  
- El ejemplo siguiente genera la advertencia C2969:  
-  
-```  
-// C2969.cpp  
-// compile with: /c  
-class A {  
-   int i;  
-public:  
-   A(int i) {}  
-};  
-  
-A anA(1);  
-  
-class B {  
-   A a;  
-   B() : a(anA);   // C2969  
-   // try the following line instead  
-   // B() : a(anA) {}  
-};  
+
+error de sintaxis: 'símbolo': se esperaba que la definición de función miembro finalizase con '}'
+
+Una definición de función miembro de plantilla tiene una llave de cierre no emparejada.
+
+El ejemplo siguiente genera la advertencia C2969:
+
+```
+// C2969.cpp
+// compile with: /c
+class A {
+   int i;
+public:
+   A(int i) {}
+};
+
+A anA(1);
+
+class B {
+   A a;
+   B() : a(anA);   // C2969
+   // try the following line instead
+   // B() : a(anA) {}
+};
 ```

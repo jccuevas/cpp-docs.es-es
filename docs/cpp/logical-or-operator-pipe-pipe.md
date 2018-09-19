@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c9b143ca2f156a534f7ab803974f24771b2652
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 37a7591e185b1436bb3cd0f8b56a625f71bf8ed2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073656"
 ---
 # <a name="logical-or-operator-"></a>Operador lógico OR: ||
 
@@ -73,6 +73,7 @@ int main() {
 ```
 
 ## <a name="see-also"></a>Vea también
- [Operadores integrados de C++ prioridad y asociatividad](cpp-built-in-operators-precedence-and-associativity.md)  
- [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
- [Operadores lógicos de C](../c-language/c-logical-operators.md)
+
+[Operadores integrados de C++ prioridad y asociatividad](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores lógicos de C](../c-language/c-logical-operators.md)

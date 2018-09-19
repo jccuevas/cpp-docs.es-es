@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1904 | Documentos de Microsoft
+title: Error irrecuperable C1904 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96e95fbce8bb87638365c534f906de5c7ede282f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c84f65909ed17060ec4347975b7e7f34a782da95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079029"
 ---
 # <a name="fatal-error-c1904"></a>Error irrecuperable C1904
-interacción con el proveedor incorrecta: 'file'  
-  
- Este error indica un error de un proveedor de atributos.  
-  
- Anote las circunstancias del error, intente aislar el problema y crear un caso de prueba reproducible, a continuación, póngase en contacto con [charle con nosotros](/visualstudio/ide/talk-to-us).
+
+interacción con el proveedor incorrecta: 'file'
+
+Este error indica un error de un proveedor de atributos.
+
+Anote las circunstancias del error, intente aislar el problema y crear un caso de prueba reproducible, luego póngase en contacto con [hable con nosotros](/visualstudio/ide/talk-to-us).

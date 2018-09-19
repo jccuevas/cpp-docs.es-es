@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081304"
 ---
 # <a name="ctable-class"></a>CTable (Clase)
+
 Proporciona un medio para tener acceso directamente a un conjunto de filas sencillo (uno sin parámetros).  
   
 ## <a name="syntax"></a>Sintaxis
@@ -44,14 +45,16 @@ class CTable :
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *TAccessor*  
- Una clase de descriptor de acceso.  
+
+*TAccessor*<br/>
+Una clase de descriptor de acceso.  
   
- *TRowset*  
- Una clase de conjunto de filas.  
+*TRowset*<br/>
+Una clase de conjunto de filas.  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldbcli.h  
+
+**Encabezado:** atldbcli.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -62,9 +65,11 @@ class CTable :
 |[Abrir](#open)|Se abre en la tabla.|  
   
 ## <a name="remarks"></a>Comentarios  
- Consulte [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para obtener acceso a un conjunto de filas.  
+
+Consulte [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para obtener acceso a un conjunto de filas.  
 
 ## <a name="open"></a> CTable:: Open
+
 Se abre en la tabla.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -87,30 +92,34 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Sesión*  
- [in] La sesión para el que se abre en la tabla.  
+
+*Sesión*<br/>
+[in] La sesión para el que se abre en la tabla.  
   
- *wszTableName*  
- [in] El nombre de la tabla para poder abrirlos, se pasa como una cadena Unicode.  
+*wszTableName*<br/>
+[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena Unicode.  
   
- *szTableName*  
- [in] El nombre de la tabla para poder abrirlos, se pasa como una cadena ANSI.  
+*szTableName*<br/>
+[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena ANSI.  
   
- *dbid*  
- [in] El `DBID` de la tabla que desea abrir.  
+*dbid*<br/>
+[in] El `DBID` de la tabla que desea abrir.  
   
- *pPropSet*  
- [in] Un puntero a una matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) en el *referencia del programador OLE DB* en el SDK de Windows. El valor predeterminado es null, especifica ninguna propiedad.  
+*pPropSet*<br/>
+[in] Un puntero a una matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) en el *referencia del programador OLE DB* en el SDK de Windows. El valor predeterminado es null, especifica ninguna propiedad.  
   
- *ulPropSets*  
- [in] El número de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) pasan las estructuras en el *pPropSet* argumento.  
+*ulPropSets*<br/>
+[in] El número de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) pasan las estructuras en el *pPropSet* argumento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un HRESULT estándar.  
+
+Un HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) en el *referencia del programador de OLE DB*.  
+
+Para obtener más información, consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) en el *referencia del programador de OLE DB*.  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   

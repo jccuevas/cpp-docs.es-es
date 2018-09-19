@@ -15,16 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8775f752a541d2a250e9c1c5a0c325b684335988
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 29a462f83bff3bab158e9bcf9fa7947efb56a79b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074479"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restricciones de los controladores de excepciones
-La limitación principal de utilizar controladores de excepciones en código es que no se puede usar un **goto** instrucción para saltar en un **__try** bloque de instrucciones. En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. Puede saltar fuera de un **__try** instrucción en bloques y anidar los controladores de excepciones como desee.  
-  
-## <a name="see-also"></a>Vea también  
- [Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)   
- [Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+La limitación principal de utilizar controladores de excepciones en código es que no se puede usar un **goto** instrucción para saltar en un **__try** bloque de instrucciones. En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. Puede saltar fuera de un **__try** instrucción en bloques y anidar los controladores de excepciones como desee.
+
+## <a name="see-also"></a>Vea también
+
+[Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
+[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2122 | Documentos de Microsoft
+title: Error del compilador C2122 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6651bda63ab011fd7ef50eb6f71c3df27bb95ccd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4eab9412be46949845e1ed16bb701ae8621fac42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072249"
 ---
 # <a name="compiler-error-c2122"></a>Error del compilador C2122
-'identificador': parámetro de prototipo en permitido de lista de nombre  
-  
- El parámetro no es un tipo válido. ANSI C no admite tipos definidos por el usuario.
+
+'identifier': parámetro de prototipos de no es válido de nombre de la lista
+
+El parámetro no es un tipo válido. ANSI C no admite tipos definidos por el usuario.

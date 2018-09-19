@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091834"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl (clase)
 
@@ -54,16 +54,16 @@ Esta clase proporciona métodos para implementar un objeto de nodo del complemen
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 TRUE si el objeto es una extensión de complemento; en caso contrario, FALSE.
 
 ## <a name="members"></a>Miembros
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Parámetros
 
-*piCallback*  
+*piCallback*<br/>
 [in] Puntero a la `IContextMenuCallback` que puede agregar elementos al menú contextual.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Identifica definido por Microsoft Management Console MMC, elemento de menú puntos de inserción que se pueden usar. Esto puede ser una combinación de las marcas siguientes:
 
 - CCM_INSERTIONALLOWED_TOP elementos se pueden insertar en la parte superior de un menú contextual.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW elementos se pueden insertar en el menú de vista de la barra de herramientas o en el submenú de la vista del menú contextual de panel de resultados.
 
-*type*  
+*type*<br/>
 [in] Especifica el tipo de objeto. Puede tener uno de los valores siguientes:
 
 - Objeto de datos de CCT_SCOPE para el contexto del panel de ámbito.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Parámetros
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Especifica el identificador de comando del elemento de menú.
 
-*type*  
+*type*<br/>
 [in] Especifica el tipo de objeto. Puede tener uno de los valores siguientes:
 
 - Objeto de datos de CCT_SCOPE para el contexto del panel de ámbito.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Puntero a la `IPropertySheetCallback` interfaz.
 
-*identificador*  
+*identificador*<br/>
 [in] Especifica el identificador se utiliza para enrutar el mensaje de notificación MMCN_PROPERTY_CHANGE a la clase de datos adecuado.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Puntero a la `IExtendPropertySheet` interfaz en el objeto que contiene información contextual sobre el nodo.
 
-*type*  
+*type*<br/>
 [in] Especifica el tipo de objeto. Puede tener uno de los valores siguientes:
 
 - Objeto de datos de CCT_SCOPE para el contexto del panel de ámbito.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*  
+*CF*<br/>
 [in] El formato (texto, texto enriquecido o texto enriquecido con elementos OLE) del Portapapeles.
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntero a la secuencia que contiene los datos del objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Parámetros
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Puntero a la dirección del tipo de vista devuelta.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Puntero a la enumeración MMC_VIEW_OPTIONS, que proporciona la consola con opciones especificadas por el complemento de propietario. Este valor puede ser uno de los siguientes:
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0 x 00000001 le indica a la consola abstenerse de presentar opciones de vista de lista estándar en el **vista** menú. Permite que el complemento mostrar sus propias vistas personalizadas solo en el panel de vista de resultado. Esta es la única marca de opción definida en este momento.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Parámetros
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Un puntero a la `SCOPEDATAITEM` estructura de la `CSnapInItemImpl` objeto.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Parámetros
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Un puntero a la `RESULTDATAITEM` estructura de la `CSnapInItemImpl` objeto.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Parámetros
 
-*event*  
+*event*<br/>
 [in] Identifica una acción realizada por un usuario. Las siguientes notificaciones son posibles:
 
 - MMCN_ACTIVATE enviados cuando una ventana se activa y desactiva.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE se envía cuando el complemento puede actualizar todas las vistas cuando se produce un cambio.
 
-*arg*  
+*arg*<br/>
 [in] Depende del tipo de notificación.
 
-*param*  
+*param*<br/>
 [in] Depende del tipo de notificación.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Un puntero al objeto que implementa `IComponentData`. Este parámetro es NULL si no se reenvía la notificación de `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Un puntero al objeto que implementa `IComponent`. Este parámetro es NULL si no se reenvía la notificación de `IComponent::Notify`.
 
-*type*  
+*type*<br/>
 [in] Especifica el tipo de objeto. Puede tener uno de los valores siguientes:
 
 - Objeto de datos de CCT_SCOPE para el contexto del panel de ámbito.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Parámetros
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Distinto de cero si la función debe llamarse antes de que se agregan elementos al menú contextual; en caso contrario, es 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Identifica definido por Microsoft Management Console MMC, elemento de menú puntos de inserción que se pueden usar. Esto puede ser una combinación de las marcas siguientes:
 
 - CCM_INSERTIONALLOWED_TOP elementos se pueden insertar en la parte superior de un menú contextual.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 [in] El identificador del botón de barra de herramientas debe establecerse.
 
-*fsState*  
+*fsState*<br/>
 [in] Las marcas de estado del botón. Puede ser uno o varios de los siguientes:
 
 - TBSTATE_CHECKED el botón tiene el estilo TBSTYLE_CHECKED y se presiona.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - Salto de línea de un TBSTATE_WRAP sigue el botón. El botón también debe tener el TBSTATE_ENABLED.
 
-*fsType*  
+*fsType*<br/>
 [in] Las marcas de estado del botón. Puede ser uno o varios de los siguientes:
 
 - TBSTYLE_BUTTON crea un botón de comando estándar.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 [in] El identificador del elemento de menú debe establecerse.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Un puntero a la cadena para el elemento de menú se puede actualizar.
 
-*flags*  
+*flags*<br/>
 [in] Especifica las marcas de estado nuevo. Esto puede ser una combinación de las marcas siguientes:
 
 - MF_POPUP especifica que se trata de un submenú en el menú contextual. Elementos de menú, puntos de inserción y aún más los submenús pueden agregarse a este submenú mediante su `lCommandID` como sus `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 Especifica el identificador del botón de barra de herramientas del botón Actualizar.
 
-*fsState*  
+*fsState*<br/>
 Especifica un estado del botón de barra de herramientas. Si este estado se va a establecer, devuelve TRUE. Esto puede ser una combinación de las marcas siguientes:
 
 - HABILITADO el botón acepta la entrada del usuario. Un botón que no tiene este estado no acepta la entrada del usuario y está deshabilitado.

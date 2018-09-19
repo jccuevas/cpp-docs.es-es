@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4481 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4481 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeef5f2121808c5444af942fac0e3b72919f2354
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48ed2ba08423f7540f4e0a855aacbcab993d41aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063767"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>Advertencia del compilador (nivel 4) C4481
-ha utilizado una extensión no estándar: 'palabra clave' especificador de reemplazo  
-  
- Se utiliza una palabra clave que no está en el estándar de C++, por ejemplo, uno de los especificadores de invalidación que también funciona bajo/CLR.  Para obtener más información, vea  
-  
--   [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [Especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md)  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4481.  
-  
-```  
-// C4481.cpp  
-// compile with: /W4 /c  
-class B {  
-   virtual void f(unsigned);  
-};  
-  
-class C : B {  
-   void f(unsigned) override;   // C4481  
-   void f2(unsigned);  
-};  
+
+ha utilizado una extensión no estándar: 'keyword' especificador de invalidación
+
+Se utilizó una palabra clave que no está en el estándar de C++, por ejemplo, uno de los especificadores de invalidación que también funciona en/CLR.  Para obtener más información, vea
+
+- [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [Especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md)
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4481.
+
+```
+// C4481.cpp
+// compile with: /W4 /c
+class B {
+   virtual void f(unsigned);
+};
+
+class C : B {
+   void f(unsigned) override;   // C4481
+   void f2(unsigned);
+};
 ```

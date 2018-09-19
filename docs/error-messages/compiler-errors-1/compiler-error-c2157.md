@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2157 | Documentos de Microsoft
+title: Error del compilador C2157 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e2867ed7e95f6b135581260103c9d5e1386fb9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd17b03cc48555800e3c36cc3f5512506f011372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072080"
 ---
 # <a name="compiler-error-c2157"></a>Error del compilador C2157
-'function': se debe declarar antes de usarse en la lista pragma  
-  
- El nombre de función no se declara antes de que se le haga referencia en la lista de funciones de una pragma [alloc_text](../../preprocessor/alloc-text.md) .  
-  
- El ejemplo siguiente genera la advertencia C2157:  
-  
-```  
-// C2157.cpp  
-// compile with: /c  
-#pragma alloc_text( "func", func)   // C2157  
-  
-// OK  
-extern "C" void func();  
-#pragma alloc_text( "func", func)  
+
+'function': se debe declarar antes de usarse en la lista pragma
+
+El nombre de función no se declara antes de que se le haga referencia en la lista de funciones de una pragma [alloc_text](../../preprocessor/alloc-text.md) .
+
+El ejemplo siguiente genera la advertencia C2157:
+
+```
+// C2157.cpp
+// compile with: /c
+#pragma alloc_text( "func", func)   // C2157
+
+// OK
+extern "C" void func();
+#pragma alloc_text( "func", func)
 ```

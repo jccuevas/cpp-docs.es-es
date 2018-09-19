@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2118 | Documentos de Microsoft
+title: Error del compilador C2118 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27b4b253e2696b88763c2a9f99c0476f9c46dd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e79e396f707dc1462b17d9dd470527f199ad10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165248"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081642"
 ---
 # <a name="compiler-error-c2118"></a>Error del compilador C2118
-subíndice negativo  
-  
- El valor que define el tamaño de la matriz es menor que cero o mayor que el tamaño máximo de la matriz.  
-  
- El ejemplo siguiente genera C2118:  
-  
-```  
-// C2118.cpp  
-int main() {  
-   int array1[-1];   // C2118  
-   int array2[3];   // OK  
-}  
+
+subíndice negativo
+
+El valor que define el tamaño de la matriz es menor que cero o mayor que el tamaño máximo de la matriz.
+
+El ejemplo siguiente genera C2118:
+
+```
+// C2118.cpp
+int main() {
+   int array1[-1];   // C2118
+   int array2[3];   // OK
+}
 ```

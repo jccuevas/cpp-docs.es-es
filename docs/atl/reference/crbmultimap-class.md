@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0b81d1baddfd8d89112f7f7b9d63624a6aa3b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae9a83ff8cc8e4909e23e7751e0c82da690a0c21
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093823"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap (clase)
 
@@ -40,22 +40,22 @@ Esta clase representa una estructura de asignación que permite que cada clave p
 template<typename K,
          typename V, 
          class KTraits = CElementTraits<K>, 
-         class VTraits = CElementTraits<V>>  
+         class VTraits = CElementTraits<V>>
 class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*K*  
+*K*<br/>
 El tipo de elemento de clave.
 
-*V*  
+*V*<br/>
 El tipo de elemento de valor.
 
-*KTraits*  
+*KTraits*<br/>
 El código utilizado para copiar o mover los elementos clave. Consulte [CElementTraits (clase)](../../atl/reference/celementtraits-class.md) para obtener más detalles.
 
-*VTraits*  
+*VTraits*<br/>
 El código utilizado para copiar o mover elementos de valor.
 
 ## <a name="members"></a>Miembros
@@ -111,7 +111,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 El tamaño de bloque.
 
 ### <a name="remarks"></a>Comentarios
@@ -148,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Especifica la clave que identifica el elemento que se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -180,10 +180,10 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de posición, obtenido con o bien una llamada a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) o [CRBMultiMap::GetNextWithKey](#getnextwithkey), o una llamada anterior a `GetNextValueWithKey`.
 
-*key*  
+*key*<br/>
 Especifica la clave que identifica el elemento que se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -215,10 +215,10 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de posición, obtenido con o bien una llamada a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) o [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), o una llamada anterior a `GetNextWithKey`.
 
-*key*  
+*key*<br/>
 Especifica la clave que identifica el elemento que se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -241,10 +241,10 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 El valor de clave para agregar a la `CRBMultiMap` objeto.
 
-*valor*  
+*valor*<br/>
 Valor que se agrega a la `CRBMultiMap` objeto asociado *clave*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -269,7 +269,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Especifica la clave que identifica los elementos que se va a eliminar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -288,7 +288,7 @@ Vea el ejemplo de [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
 ## <a name="see-also"></a>Vea también
 
-[CRBTree (clase)](../../atl/reference/crbtree-class.md)   
-[CAtlMap (clase)](../../atl/reference/catlmap-class.md)   
-[CRBMap (clase)](../../atl/reference/crbmap-class.md)   
+[CRBTree (clase)](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap (clase)](../../atl/reference/catlmap-class.md)<br/>
+[CRBMap (clase)](../../atl/reference/crbmap-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

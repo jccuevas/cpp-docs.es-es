@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068343"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ Cuando se aplica a una declaración de función o una definición que devuelve u
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (Restrict)** *pointer_return_type* *función*();  
-  
+> **__declspec (Restrict)** *pointer_return_type* *función*();
+
 ## <a name="remarks"></a>Comentarios
 
 El compilador propaga **__declspec (Restrict)**. Por ejemplo, CRT `malloc` función tiene un **__declspec (Restrict)** decoración y, por lo tanto, el compilador supone que punteros inicializados en ubicaciones de memoria por `malloc` también no son proporcionado por él previamente punteros existentes.
 
-El compilador no comprueba que el puntero devuelto no es realmente un alias. Es responsabilidad del desarrollador para asegurarse de que el programa no alias no un puntero marcado con el **restringir __declspec** modificador.  
-  
+El compilador no comprueba que el puntero devuelto no es realmente un alias. Es responsabilidad del desarrollador para asegurarse de que el programa no alias no un puntero marcado con el **restringir __declspec** modificador.
+
 Para conocer la semántica similar en las variables, consulte [__restrict](../cpp/extension-restrict.md).
- 
+
 Para la otra anotación que se aplica a los alias dentro de una función, vea [__declspec (noalias)](../cpp/noalias.md).
-  
-Para obtener información sobre la **restringir** palabra clave que forma parte de C++ AMP, consulte [restringir (C++ AMP)](../cpp/restrict-cpp-amp.md).  
- 
-## <a name="example"></a>Ejemplo  
+
+Para obtener información sobre la **restringir** palabra clave que forma parte de C++ AMP, consulte [restringir (C++ AMP)](../cpp/restrict-cpp-amp.md).
+
+## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente muestra el uso de **__declspec (Restrict)**.
 
@@ -122,6 +122,7 @@ int main()
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
- [Palabras clave](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

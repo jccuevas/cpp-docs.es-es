@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0041 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0041 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93a2e5d8b589ddfbddac979aa27e0241ee02c68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1dc525ea75f58028f7359c7a063bdb45a8387a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080810"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>Error del evaluador de expresiones CXX0041
-elemento de la clase debe ser miembro estático o una función miembro  
-  
- Se utilizó un miembro no estático de una clase (o estructura o unión) sin especificar qué instancia de la clase para usar.  
-  
- Solo los miembros de datos estáticos o las funciones miembro pueden usarse sin especificar una instancia.  
-  
- Este error es idéntico a CAN0041.
+
+elemento de la clase debe ser miembro estático o una función miembro
+
+Se utilizó un miembro no estático de una clase (o estructura o unión) sin especificar qué instancia de la clase para usar.
+
+Solo los miembros de datos estáticos o las funciones miembro pueden usarse sin especificar una instancia.
+
+Este error es idéntico a CAN0041.

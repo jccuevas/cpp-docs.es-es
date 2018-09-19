@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4122 | Documentos de Microsoft
+title: Del compilador (nivel 1) de la advertencia C4122 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41f8547bc75c013a59ebd3ac8e1682049da54e3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37f7928b1aa89eb66da95b4383084b2011387e0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075426"
 ---
 # <a name="compiler-warning-level-1-c4122"></a>Advertencia del compilador (nivel 1) C4122
-'función': alloc_text solo se aplica a funciones con vinculación C  
-  
- El pragma **alloc_text** solo se aplica a las funciones declaradas con **extern c**. No se puede usar con funciones externas de C++.  
-  
- Se omite el pragma.
+
+'función': alloc_text solo se aplica a funciones con vinculación C
+
+El pragma **alloc_text** solo se aplica a las funciones declaradas con **extern c**. No se puede usar con funciones externas de C++.
+
+Se omite el pragma.

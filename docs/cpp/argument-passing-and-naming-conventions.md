@@ -23,43 +23,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e050fa16c1a6f239d17cbda64ae4edcf531cb5b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087622"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Paso de argumentos y convenciones de nomenclatura
-**Específicos de Microsoft**  
-  
- Los compiladores de Visual C++ permiten especificar convenciones para pasar argumentos y valores devueltos entre funciones y llamadores. No todas las convenciones están disponibles en todas las plataformas compatibles y algunas convenciones utilizan implementaciones específicas de la plataforma. En la mayoría de los casos, se omiten palabras clave o modificadores de compilador que especifican una convención no compatible en una plataforma concreta y se usa la convención predeterminada de la plataforma.  
-  
- En plataformas x86, todos los argumentos se amplían a 32 bits cuando se pasan. Los valores devueltos también se amplían a 32 bits y se devuelven en el registro EAX, salvo las estructuras de 8 bytes, que se devuelven en el par de registros EDX:EAX. Las estructuras de mayor tamaño se devuelven en el registro EAX como punteros a estructuras de devolución ocultas. Los parámetros se insertan en la pila de derecha a izquierda. Las estructuras distintas de POD no se devolverán en registros.  
-  
- El compilador genera código de prólogo y epílogo para guardar y restaurar los registros ESI, EDI, EBX y EBP, si se usan en la función.  
-  
+
+**Específicos de Microsoft**
+
+Los compiladores de Visual C++ permiten especificar convenciones para pasar argumentos y valores devueltos entre funciones y llamadores. No todas las convenciones están disponibles en todas las plataformas compatibles y algunas convenciones utilizan implementaciones específicas de la plataforma. En la mayoría de los casos, se omiten palabras clave o modificadores de compilador que especifican una convención no compatible en una plataforma concreta y se usa la convención predeterminada de la plataforma.
+
+En plataformas x86, todos los argumentos se amplían a 32 bits cuando se pasan. Los valores devueltos también se amplían a 32 bits y se devuelven en el registro EAX, salvo las estructuras de 8 bytes, que se devuelven en el par de registros EDX:EAX. Las estructuras de mayor tamaño se devuelven en el registro EAX como punteros a estructuras de devolución ocultas. Los parámetros se insertan en la pila de derecha a izquierda. Las estructuras distintas de POD no se devolverán en registros.
+
+El compilador genera código de prólogo y epílogo para guardar y restaurar los registros ESI, EDI, EBX y EBP, si se usan en la función.
+
 > [!NOTE]
->  Cuando se devuelve un struct, una unión o una clase desde una función por valor, todas las definiciones del tipo deben ser iguales; de lo contrario, se puede producir un error en el programa en tiempo de ejecución.  
-  
- Para obtener información sobre cómo definir su propio código de prólogo y epílogo de función, vea [llamadas a funciones Naked](../cpp/naked-function-calls.md).  
-  
- Para obtener información sobre el valor predeterminado las convenciones de llamada en el código que x64 destinos, consulte [general de x64 convenciones de llamada](../build/overview-of-x64-calling-conventions.md). Para obtener información sobre cómo llamar a problemas de convención en el código que tiene como destino plataformas ARM, vea [problemas comunes de migración de ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md).  
-  
- El compilador de Visual C/C++ admite las siguientes convenciones de llamada.  
-  
-|Palabra clave|Limpieza de la pila|Paso de parámetros|  
-|-------------|-------------------|-----------------------|  
-|[__cdecl](../cpp/cdecl.md)|Llamador|Inserta parámetros en la pila, en orden inverso (de derecha a izquierda)|  
-|[__clrcall](../cpp/clrcall.md)|N/D|Carga parámetros en la pila de expresiones CLR en orden (de izquierda a derecha).|  
-|[__stdcall](../cpp/stdcall.md)|Destinatario|Inserta parámetros en la pila, en orden inverso (de derecha a izquierda)|  
-|[__fastcall](../cpp/fastcall.md)|Destinatario|Almacenado en los registros y luego insertado en la pila|  
-|[__thiscall](../cpp/thiscall.md)|Destinatario|Insertado en la pila; **esto** puntero almacenado en ECX|  
-|[__vectorcall](../cpp/vectorcall.md)|Destinatario|Almacenado en registros y luego insertado en la pila en orden inverso (de derecha a izquierda)|  
-  
- Para obtener información relacionada, consulte [convenciones de llamada obsoletas](../cpp/obsolete-calling-conventions.md).  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Convenciones de llamada](../cpp/calling-conventions.md)
+>  Cuando se devuelve un struct, una unión o una clase desde una función por valor, todas las definiciones del tipo deben ser iguales; de lo contrario, se puede producir un error en el programa en tiempo de ejecución.
+
+Para obtener información sobre cómo definir su propio código de prólogo y epílogo de función, vea [llamadas a funciones Naked](../cpp/naked-function-calls.md).
+
+Para obtener información sobre el valor predeterminado las convenciones de llamada en el código que x64 destinos, consulte [general de x64 convenciones de llamada](../build/overview-of-x64-calling-conventions.md). Para obtener información sobre cómo llamar a problemas de convención en el código que tiene como destino plataformas ARM, vea [problemas comunes de migración de ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md).
+
+El compilador de Visual C/C++ admite las siguientes convenciones de llamada.
+
+|Palabra clave|Limpieza de la pila|Paso de parámetros|
+|-------------|-------------------|-----------------------|
+|[__cdecl](../cpp/cdecl.md)|Llamador|Inserta parámetros en la pila, en orden inverso (de derecha a izquierda)|
+|[__clrcall](../cpp/clrcall.md)|N/D|Carga parámetros en la pila de expresiones CLR en orden (de izquierda a derecha).|
+|[__stdcall](../cpp/stdcall.md)|Destinatario|Inserta parámetros en la pila, en orden inverso (de derecha a izquierda)|
+|[__fastcall](../cpp/fastcall.md)|Destinatario|Almacenado en los registros y luego insertado en la pila|
+|[__thiscall](../cpp/thiscall.md)|Destinatario|Insertado en la pila; **esto** puntero almacenado en ECX|
+|[__vectorcall](../cpp/vectorcall.md)|Destinatario|Almacenado en registros y luego insertado en la pila en orden inverso (de derecha a izquierda)|
+
+Para obtener información relacionada, consulte [convenciones de llamada obsoletas](../cpp/obsolete-calling-conventions.md).
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Convenciones de llamada](../cpp/calling-conventions.md)

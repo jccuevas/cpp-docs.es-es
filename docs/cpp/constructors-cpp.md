@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069123"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
@@ -88,7 +88,7 @@ Es preferible usar una lista de inicializadores de miembro a través de la asign
     {}
 ```
 
-El identificador debe hacer referencia a un miembro de clase; se inicializa con el valor del argumento. El argumento puede ser uno de los parámetros del constructor, una llamada de función o un [std:: initializer_list\<T >](../standard-library/initializer-list-class.md). 
+El identificador debe hacer referencia a un miembro de clase; se inicializa con el valor del argumento. El argumento puede ser uno de los parámetros del constructor, una llamada de función o un [std:: initializer_list\<T >](../standard-library/initializer-list-class.md).
 
 **Const** deben inicializarse miembros y los miembros del tipo de referencia en la lista de inicializadores de miembro.
 
@@ -96,7 +96,7 @@ En la lista de inicializadores, se deberían realizar llamadas a los constructor
 
 ## <a name="default_constructors"></a> Constructores predeterminados
 
- *Constructores predeterminados* suelen no tener ningún parámetro, pero pueden tener parámetros con valores predeterminados.
+*Constructores predeterminados* suelen no tener ningún parámetro, pero pueden tener parámetros con valores predeterminados.
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ Puede impedir que el objeto que se copia al definir el constructor de copias com
 Al intentar copiar el objeto produce el error *C2280: intentando hacer referencia a una función eliminada*.
 
 ## <a name="move_constructors"></a> Constructores de movimiento
+
 Un *constructor de movimiento* es una función miembro especial que desplaza la posesión de los datos de un objeto existente a una nueva variable sin copiar los datos originales. Toma una referencia rvalue como su primer parámetro y cualquier parámetro adicional debe tener valores predeterminados. Constructores de movimiento pueden aumentar considerablemente la eficacia del programa al pasar alrededor de los objetos grandes. Un constructor de movimiento toma una referencia rvalue como su primer parámetro. Cualquier otro parámetro debe tener valores predeterminados.
 
 ```cpp

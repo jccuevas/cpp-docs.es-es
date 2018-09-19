@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60541891832a3d466f7396086ac0918108991582
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d95a8f6b28b638b65191bc04ad094cc128f7b247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080316"
 ---
 # <a name="cpatht-class"></a>CPathT (clase)
 
@@ -82,7 +82,7 @@ class CPathT
 
 #### <a name="parameters"></a>Parámetros
 
-*StringType*  
+*StringType*<br/>
 La clase de cadena ATL/MFC que se usará para la ruta de acceso (vea [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Miembros
@@ -194,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszExtension*  
+*pszExtension*<br/>
 Para agregar la extensión de archivo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -215,7 +215,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszMore*  
+*pszMore*<br/>
 Cadena que se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -236,7 +236,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>Parámetros
 
-*iDrive*  
+*iDrive*<br/>
 El número de unidad (0 es r:, 1 es B: y así sucesivamente).
 
 ### <a name="remarks"></a>Comentarios
@@ -265,10 +265,10 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszDir*  
+*pszDir*<br/>
 La ruta de acceso del directorio.
 
-*pszFile*  
+*pszFile*<br/>
 La ruta de acceso de archivo.
 
 ### <a name="remarks"></a>Comentarios
@@ -285,7 +285,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszOther*  
+*pszOther*<br/>
 La ruta de acceso que se compara con la actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -306,10 +306,10 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parámetros
 
-*hDC*  
+*hDC*<br/>
 El contexto de dispositivo utilizado para las métricas de fuente.
 
-*nWidth*  
+*nWidth*<br/>
 El ancho, en píxeles, que se forzará la cadena para que quepa en.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -330,10 +330,10 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*nMaxChars*  
+*nMaxChars*<br/>
 El número máximo de caracteres que se van a incluirse en la nueva cadena, incluido el carácter nulo final.
 
-*dwFlags*  
+*dwFlags*<br/>
 Reservado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -356,10 +356,10 @@ CPathT() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*pszPath*  
+*pszPath*<br/>
 Puntero a una cadena de ruta de acceso.
 
-*path*  
+*path*<br/>
 La cadena de ruta de acceso.
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
@@ -480,7 +480,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pszPrefix*  
+*pszPrefix*<br/>
 El prefijo que se va a buscar. Un prefijo es uno de estos tipos: "C:\\\\",".","..",".. \\\\".
 
 ### <a name="return-value"></a>Valor devuelto
@@ -533,7 +533,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pszOther*  
+*pszOther*<br/>
 La otra ruta de acceso.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -630,7 +630,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pszSpec*  
+*pszSpec*<br/>
 Puntero a una cadena terminada en null con el tipo de archivo que se va a buscar. Por ejemplo, para comprobar si el archivo en la ruta de acceso actual es un archivo de documento, *pszSpec* debe establecerse en "* .doc".
 
 ### <a name="return-value"></a>Valor devuelto
@@ -651,7 +651,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszMore*  
+*pszMore*<br/>
 Cadena que se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -744,16 +744,16 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*pszFrom*  
+*pszFrom*<br/>
 Inicio de la ruta de acceso relativa.
 
-*dwAttrFrom*  
+*dwAttrFrom*<br/>
 Los atributos de archivo *pszFrom*. Si este valor contiene FILE_ATTRIBUTE_DIRECTORY, *pszFrom* se considera que ser un directorio; de lo contrario, *pszFrom* se supone que es un archivo.
 
-*pszTo*  
+*pszTo*<br/>
 El punto final de la ruta de acceso relativa.
 
-*dwAttrTo*  
+*dwAttrTo*<br/>
 Los atributos de archivo *pszTo*. Si este valor contiene FILE_ATTRIBUTE_DIRECTORY, *pszTo* se considera que ser un directorio; de lo contrario, *pszTo* se supone que es un archivo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -838,7 +838,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszExtension*  
+*pszExtension*<br/>
 La nueva extensión de nombre de archivo, precedida por un "." caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -919,5 +919,5 @@ typedef StringType::XCHAR XCHAR;
 
 ## <a name="see-also"></a>Vea también
 
-[Clases](../../atl/reference/atl-classes.md)   
+[Clases](../../atl/reference/atl-classes.md)<br/>
 [CStringT (clase)](../../atl-mfc-shared/reference/cstringt-class.md)

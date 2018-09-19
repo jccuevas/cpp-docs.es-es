@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28af5343f761f89678768133c9114e3cf23be8e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075233"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl (clase)
 
@@ -58,13 +58,13 @@ Esta clase implementa `IUnknown` y proporciona una implementación predeterminad
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPageImpl
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `IPropertyPageImpl`.
 
 ## <a name="members"></a>Miembros
@@ -311,7 +311,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>Parámetros
 
-*bDirty*  
+*bDirty*<br/>
 [in] Si es TRUE, estado de la página de propiedad se marca como modificada. En caso contrario, se marca como sin cambios.
 
 ### <a name="remarks"></a>Comentarios
@@ -368,7 +368,7 @@ Consulte [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-oci
 
 ## <a name="see-also"></a>Vea también
 
-[Clase IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)   
-[IPerPropertyBrowsingImpl (clase)](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[ISpecifyPropertyPagesImpl (clase)](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPropertyPage2Impl (clase)](../../atl/reference/ipropertypage2impl-class.md)<br/>
+[IPerPropertyBrowsingImpl (clase)](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl (clase)](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

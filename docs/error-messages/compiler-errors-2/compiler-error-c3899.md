@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3899 | Documentos de Microsoft
+title: Error del compilador C3899 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40f1065514437463be06a89f01e067c4324cd2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b154941051e1c6887e8e05756befd6a18c62ed72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276001"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091788"
 ---
 # <a name="compiler-error-c3899"></a>Error del compilador C3899
-'var': no se permite el uso de valor l del miembro de datos initonly directamente dentro de una región paralela en la clase 'class'  
-  
- Un [initonly (C++ / CLI)](../../dotnet/initonly-cpp-cli.md) no se puede inicializar el miembro de datos dentro de esa parte de un constructor que se encuentra en un [paralelo](../../parallel/openmp/reference/parallel.md) región.  Esto es porque el compilador realiza una reubicación interna de dicho código, que, efectivamente ya no forma parte del constructor.  
-  
- Para resolverlo, inicialice al miembro de datos initonly en el constructor, pero fuera de la región paralela.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3899.  
-  
-```  
-// C3899.cpp  
-// compile with: /clr /openmp  
-#include <omp.h>   
-  
-public ref struct R {  
-   initonly int x;  
-   R() {  
-      x = omp_get_thread_num() + 1000;   // OK  
-      #pragma omp parallel num_threads(5)  
-      {  
-         // cannot assign to 'x' here  
-         x = omp_get_thread_num() + 1000;   // C3899  
-         System::Console::WriteLine("thread {0}", omp_get_thread_num());  
-      }  
-      x = omp_get_thread_num() + 1000;   // OK  
-   }  
-};  
-  
-int main() {  
-   R^ r = gcnew R;  
-   System::Console::WriteLine(r->x);  
-}  
+
+'var': no se permite el uso de valor l del miembro de datos initonly directamente dentro de una región paralela en la clase 'class'
+
+Un [initonly (C++ / c++ / CLI)](../../dotnet/initonly-cpp-cli.md) no se puede inicializar el miembro de datos dentro de la parte de un constructor que se encuentra en un [paralelo](../../parallel/openmp/reference/parallel.md) región.  Esto es porque el compilador realiza una reubicación interna de dicho código, que efectivamente ya no forma parte del constructor.
+
+Para resolverlo, inicialice al miembro de datos initonly en el constructor, pero fuera de la región paralela.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3899.
+
+```
+// C3899.cpp
+// compile with: /clr /openmp
+#include <omp.h>
+
+public ref struct R {
+   initonly int x;
+   R() {
+      x = omp_get_thread_num() + 1000;   // OK
+      #pragma omp parallel num_threads(5)
+      {
+         // cannot assign to 'x' here
+         x = omp_get_thread_num() + 1000;   // C3899
+         System::Console::WriteLine("thread {0}", omp_get_thread_num());
+      }
+      x = omp_get_thread_num() + 1000;   // OK
+   }
+};
+
+int main() {
+   R^ r = gcnew R;
+   System::Console::WriteLine(r->x);
+}
 ```

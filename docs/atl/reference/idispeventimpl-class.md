@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093856"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl (clase)
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*nID*  
+*nID*<br/>
 Un identificador único para el objeto de origen. Cuando `IDispEventImpl` es la clase base para un control compuesto, utilice el identificador de recurso del control contenido deseado para este parámetro. En otros casos, utilice un entero positivo.
 
-*T*  
+*T*<br/>
 La clase del usuario, que se deriva de `IDispEventImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 El puntero para el IID de la interfaz dispinterface de evento implementado por esta clase. Esta interfaz se debe definir en la biblioteca de tipos que se indica con *plibid*, *wMajor*, y *wMinor*.
 
-*plibid*  
+*plibid*<br/>
 Un puntero a la biblioteca de tipos que define la interfaz de envío que apunta *pdiid*. Si **& GUID_NULL**, la biblioteca de tipos se cargará desde el objeto que origina los eventos.
 
-*wMajor*  
+*wMajor*<br/>
 La versión principal de la biblioteca de tipos. El valor predeterminado es 0.
 
-*wMinor*  
+*wMinor*<br/>
 La versión secundaria de la biblioteca de tipos. El valor predeterminado es 0.
 
-*tihclass*  
+*tihclass*<br/>
 La clase usada para administrar la información de tipo para *T*. El valor predeterminado es una clase de tipo `CComTypeInfoHolder`; sin embargo, puede invalidar este parámetro de plantilla, ya que proporciona una clase de un tipo distinto de `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Miembros
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*  
+*IID*<br/>
 [in] Una referencia al identificador de la función.
 
-*dispidMember*  
+*dispidMember*<br/>
 [in] El identificador de envío de la función.
 
-*lcid*  
+*lcid*<br/>
 [in] El contexto de la configuración regional del identificador de función.
 
-*Info*  
+*Info*<br/>
 [in] La estructura que indica cómo se llama a la función.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>Parámetros
 
-*PTI*  
+*PTI*<br/>
 [in] Un puntero a la [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaz que contiene el tipo definido por el usuario.
 
-*HRT*  
+*HRT*<br/>
 [in] Identificador de la descripción del tipo van a recuperar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -249,10 +249,10 @@ De forma predeterminada, la clase es `CComTypeInfoHolder`. `CComTypeInfoHolder` 
 
 ## <a name="see-also"></a>Vea también
 
-[_ATL_FUNC_INFO (estructura)](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl (clase)](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO (estructura)](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl (clase)](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1038 | Documentos de Microsoft
+title: Error irrecuperable C1038 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3592d583ff136a9b45486f3626d23dc4f0821259
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc8d80ff392a9e0d649a4d0fc2cac9f07207d79b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060588"
 ---
 # <a name="fatal-error-c1038"></a>Error irrecuperable C1038
-límite del compilador: función: el estado de flujo de control es demasiado complejo; simplifique la función.  
-  
- La función tiene más estados de flujo de control de los que el compilador puede controlar. Simplifique el flujo de control o divida la función en funciones más pequeñas.
+
+límite del compilador: función: el estado de flujo de control es demasiado complejo; simplifique la función.
+
+La función tiene más estados de flujo de control de los que el compilador puede controlar. Simplifique el flujo de control o divida la función en funciones más pequeñas.

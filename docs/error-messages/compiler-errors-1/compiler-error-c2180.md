@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2180 | Documentos de Microsoft
+title: Error del compilador C2180 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a43c179b837e840f800a6c468efdd9cdd6a6604b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c74912b92162cbfcada3630ed6a6845b67045d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084151"
 ---
 # <a name="compiler-error-c2180"></a>Error del compilador C2180
-la expresión de control es del tipo 'type'  
-  
- La expresión de control es `if`, `while` o `for`, o la instrucción `do` es una expresión convertida en `void`. Para corregir este problema, cambie la expresión de control por otra que produzca `bool` o un tipo que se pueda convertir en `bool`.  
-  
- El ejemplo siguiente genera el error C2180:  
-  
-```  
-// C2180.c  
-  
-int main() {  
-   while ((void)1)   // C2180  
-      return 1;  
-   while (1)         // OK  
-      return 0;  
-}  
+
+la expresión de control es del tipo 'type'
+
+La expresión de control es `if`, `while` o `for`, o la instrucción `do` es una expresión convertida en `void`. Para corregir este problema, cambie la expresión de control por otra que produzca `bool` o un tipo que se pueda convertir en `bool`.
+
+El ejemplo siguiente genera el error C2180:
+
+```
+// C2180.c
+
+int main() {
+   while ((void)1)   // C2180
+      return 1;
+   while (1)         // OK
+      return 0;
+}
 ```

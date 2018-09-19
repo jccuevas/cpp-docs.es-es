@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2286 | Documentos de Microsoft
+title: Error del compilador C2286 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ddfb523252572fb985b660f1d4dbf5b1d790df1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e4c3b8a71b29d0d1db5f3bc1eac642122844c22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089137"
 ---
 # <a name="compiler-error-c2286"></a>Error del compilador C2286
-los punteros a miembros de la representación 'identificador' ya está establecido en 'herencia': se omite la declaración  
-  
- Existen dos representaciones diferentes de miembros de puntero para la clase.  
-  
- Para obtener más información, consulte [palabras clave de herencia](../../cpp/inheritance-keywords.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C2286:  
-  
-```  
-// C2286.cpp  
-// compile with: /c  
-class __single_inheritance X;  
-class __multiple_inheritance X;   // C2286  
-class  __multiple_inheritance Y;   // OK  
+
+punteros a miembros de la representación 'identificador' ya está establecido en 'herencia': se omite la declaración
+
+Existen dos representaciones diferentes de miembros de puntero para la clase.
+
+Para obtener más información, consulte [palabras clave de herencia](../../cpp/inheritance-keywords.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C2286:
+
+```
+// C2286.cpp
+// compile with: /c
+class __single_inheritance X;
+class __multiple_inheritance X;   // C2286
+class  __multiple_inheritance Y;   // OK
 ```

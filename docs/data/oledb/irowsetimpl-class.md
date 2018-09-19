@@ -102,14 +102,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c339ffcf3fb32c7ff8ad45fca792a91c96848d9e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085555"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl (Clase)
+
 Proporciona una implementación de la `IRowset` interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -126,20 +127,22 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *T*  
- La clase derivada de `IRowsetImpl`.  
+
+*T*<br/>
+La clase derivada de `IRowsetImpl`.  
   
- *RowsetInterface*  
- Una clase derivada de `IRowsetImpl`.  
+*RowsetInterface*<br/>
+Una clase derivada de `IRowsetImpl`.  
   
- *RowClass*  
- Unidad de almacenamiento para el `HROW`.  
+*RowClass*<br/>
+Unidad de almacenamiento para el `HROW`.  
   
- *MapClass*  
- Unidad de almacenamiento para todos los identificadores de fila mantenidos por el proveedor.  
+*MapClass*<br/>
+Unidad de almacenamiento para todos los identificadores de fila mantenidos por el proveedor.  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldb.h  
+
+**Encabezado:** atldb.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -169,9 +172,11 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[m_rgRowHandles](#rgrowhandles)|Una lista de identificadores de fila.|  
   
 ## <a name="remarks"></a>Comentarios  
- [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) es la interfaz base del conjunto de filas.  
+
+[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) es la interfaz base del conjunto de filas.  
 
 ## <a name="addrefrows"></a> IRowsetImpl:: Addrefrows
+
 Agrega un contador de referencia a un identificador de fila existente.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -184,9 +189,11 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) en el *referencia del programador OLE DB*.  
 
 ## <a name="createrow"></a> IRowsetImpl:: CreateRow
+
 Un método auxiliar llamado por [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) para asignar un nuevo `HROW`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -198,19 +205,22 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *lRowsOffset*  
- Posición del cursor de la fila que se va a crear.  
+
+*lRowsOffset*<br/>
+Posición del cursor de la fila que se va a crear.  
   
- *cRowsObtained*  
- Pasa una referencia al usuario que indica el número de filas creadas.  
+*cRowsObtained*<br/>
+Pasa una referencia al usuario que indica el número de filas creadas.  
   
- *rgRows*  
- Una matriz de `HROW`devolverá al autor de llamada con los identificadores de fila recién creado.  
+*rgRows*<br/>
+Una matriz de `HROW`devolverá al autor de llamada con los identificadores de fila recién creado.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la fila no existe, este método llama a [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) y devuelve. En caso contrario, asigna una nueva instancia de la variable de plantilla RowClass y lo agrega a [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
+
+Si la fila no existe, este método llama a [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) y devuelve. En caso contrario, asigna una nueva instancia de la variable de plantilla RowClass y lo agrega a [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
   
 ## <a name="getdata"></a> IRowsetImpl:: GetData
+
 Recupera datos de copia del conjunto de filas de la fila.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -222,18 +232,21 @@ STDMETHOD(GetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
- Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IRowset::GetData`:  
+Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IRowset::GetData`:  
   
 |Parámetros de plantilla OLE DB|*Referencia del programador de OLE DB* parámetros|  
 |--------------------------------|------------------------------------------------|  
 |*pDstData*|*pData*|  
   
 ### <a name="remarks"></a>Comentarios  
- También controla la conversión de datos mediante la conversión de datos OLE DB DLL. 
+
+También controla la conversión de datos mediante la conversión de datos OLE DB DLL. 
 
 ## <a name="getdbstatus"></a> IRowsetImpl:: GetDBStatus
+
 Devuelve las marcas de estado DBSTATUS para el campo especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -244,6 +257,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
+
 *currentRow*<br/>
 [in] La fila actual.  
   
@@ -251,9 +265,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 [in] La columna para el que se solicita el estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) marcas para la columna. 
+
+El [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) marcas para la columna. 
 
 ## <a name="getnextrows"></a> IRowsetImpl:: GetNextRows
+
 Recupera filas de forma secuencial, recordando la posición anterior.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -267,9 +283,11 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) en el *referencia del programador OLE DB*. 
+
+Consulte [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) en el *referencia del programador OLE DB*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl:: IRowsetImpl
+
 El constructor.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -279,9 +297,11 @@ IRowsetImpl();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Normalmente, es necesario llamar a este método directamente.  
+
+Normalmente, es necesario llamar a este método directamente.  
 
 ## <a name="refrows"></a> IRowsetImpl:: Refrows
+
 Lo llama [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) y [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) para incrementar o liberar un recuento de referencias a un identificador de fila existente.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -295,12 +315,15 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor HRESULT estándar.  
+
+Un valor HRESULT estándar.  
 
 ## <a name="releaserows"></a> IRowsetImpl:: ReleaseRows
+
 Libera filas.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -314,9 +337,11 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) en el *referencia del programador OLE DB*.  
 
 ## <a name="restartposition"></a> IRowsetImpl:: RestartPosition
+
 Se sitúa la siguiente posición de captura su posición inicial; es decir, su posición cuando el conjunto de filas se crea.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -326,12 +351,15 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
- La posición del conjunto de filas no está definida hasta `GetNextRow` se llama. Puede mover hacia atrás en un rowet mediante una llamada a `RestartPosition` y, a continuación, captura o el desplazamiento hacia atrás.  
+
+La posición del conjunto de filas no está definida hasta `GetNextRow` se llama. Puede mover hacia atrás en un rowet mediante una llamada a `RestartPosition` y, a continuación, captura o el desplazamiento hacia atrás.  
 
 ## <a name="setdbstatus"></a> IRowsetImpl:: SetDBStatus
+
 Establece las marcas de estado DBSTATUS para el campo especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -343,22 +371,26 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *statusFlags*  
- El [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) marcas van a establecer para la columna.  
+
+*statusFlags*<br/>
+El [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) marcas van a establecer para la columna.  
   
- *currentRow*  
- La fila actual.  
+*currentRow*<br/>
+La fila actual.  
   
- *columnInfo*  
- La columna para el que se define el estado.  
+*columnInfo*<br/>
+La columna para el que se define el estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor HRESULT estándar.  
+
+Un valor HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- El proveedor reemplaza esta función para proporcionar un procesamiento especial para DBSTATUS_S_ISNULL y DBSTATUS_S_DEFAULT. 
+
+El proveedor reemplaza esta función para proporcionar un procesamiento especial para DBSTATUS_S_ISNULL y DBSTATUS_S_DEFAULT. 
 
 ## <a name="bcanfetchback"></a> IRowsetImpl:: M_bcanfetchback
+
 Indica si un proveedor admite la captura con versiones anteriores.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -368,9 +400,11 @@ unsigned m_bCanFetchBack:1;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vinculado a la `DBPROP_CANFETCHBACKWARDS` propiedad en el `DBPROPSET_ROWSET` grupo. El proveedor debe admitir `DBPROP_CANFETCHBACKWARDS` para `m_bCanFetchBackwards` sea **true**.  
+
+Vinculado a la `DBPROP_CANFETCHBACKWARDS` propiedad en el `DBPROPSET_ROWSET` grupo. El proveedor debe admitir `DBPROP_CANFETCHBACKWARDS` para `m_bCanFetchBackwards` sea **true**.  
 
 ## <a name="bcanscrollback"></a> IRowsetImpl:: M_bcanscrollback
+
 Indica si un proveedor puede tener su desplazamiento de cursor hacia atrás.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -380,9 +414,11 @@ unsigned  m_bCanScrollBack:1;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vinculado a la `DBPROP_CANSCROLLBACKWARDS` propiedad en el `DBPROPSET_ROWSET` grupo. El proveedor debe admitir `DBPROP_CANSCROLLBACKWARDS` para `m_bCanFetchBackwards` sea **true**. 
+
+Vinculado a la `DBPROP_CANSCROLLBACKWARDS` propiedad en el `DBPROPSET_ROWSET` grupo. El proveedor debe admitir `DBPROP_CANSCROLLBACKWARDS` para `m_bCanFetchBackwards` sea **true**. 
 
 ## <a name="breset"></a> IRowsetImpl:: M_breset
+
 Un indicador de bits que se usa para determinar si se define la posición del cursor en el conjunto de filas.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -392,9 +428,11 @@ unsigned m_bReset:1;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Si el consumidor llama a [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) con un valor negativo `lOffset` o *cRows* y `m_bReset` es true, `GetNextRows` mueve al final del conjunto de filas. Si `m_bReset` es false, el consumidor recibe un código de error, de acuerdo con la especificación de OLE DB. El `m_bReset` marca se establece para **true** cuando se crea por primera vez el conjunto de filas y cuando el consumidor llama a [IRowsetImpl:: RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Obtiene el conjunto **false** cuando se llama a `GetNextRows`. 
+
+Si el consumidor llama a [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) con un valor negativo `lOffset` o *cRows* y `m_bReset` es true, `GetNextRows` mueve al final del conjunto de filas. Si `m_bReset` es false, el consumidor recibe un código de error, de acuerdo con la especificación de OLE DB. El `m_bReset` marca se establece para **true** cuando se crea por primera vez el conjunto de filas y cuando el consumidor llama a [IRowsetImpl:: RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Obtiene el conjunto **false** cuando se llama a `GetNextRows`. 
 
 ## <a name="irowset"></a> IRowsetImpl:: M_irowset
+
 Un índice al conjunto de filas, que representa el cursor.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -404,6 +442,7 @@ DBROWOFFSET m_iRowset;
 ```  
 
 ## <a name="rgrowhandles"></a> IRowsetImpl:: M_rgrowhandles
+
 Una asignación de identificadores de fila que contiene actualmente el proveedor en respuesta a `GetNextRows`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -413,9 +452,11 @@ MapClass m_rgRowHandles;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Se quitan los identificadores de fila mediante una llamada a `ReleaseRows`. Consulte la [IRowsetImpl Introducción](../../data/oledb/irowsetimpl-class.md) para la definición de *MapClass*.  
+
+Se quitan los identificadores de fila mediante una llamada a `ReleaseRows`. Consulte la [IRowsetImpl Introducción](../../data/oledb/irowsetimpl-class.md) para la definición de *MapClass*.  
 
 ## <a name="see-also"></a>Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)    
- [CSimpleRow (Clase)](../../data/oledb/csimplerow-class.md)
+
+[Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[CSimpleRow (Clase)](../../data/oledb/csimplerow-class.md)
