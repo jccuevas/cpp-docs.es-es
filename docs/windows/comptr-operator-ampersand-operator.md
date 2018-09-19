@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: operator&amp; operador | Documentos de Microsoft'
+title: 'Comptr:: operator&amp; operador | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f513ac83e0ee83109f42cf87b80b4fcc4960db1f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598608"
 ---
-# <a name="comptroperatoramp-operator"></a>Comptr&amp; (operador)
-Libera la interfaz asociada a esta `ComPtr` objeto y, a continuación, recupera la dirección de la `ComPtr` objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Details::ComPtrRef<WeakRef> operator&()  
-  
-const Details::ComPtrRef<const WeakRef> operator&() const  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Una referencia débil a actual `ComPtr`.  
-  
-## <a name="remarks"></a>Comentarios  
- Este método difiere de [comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) en que este método libera una referencia al puntero de interfaz. Utilice `ComPtr::GetAddressOf` cuando solicitan la dirección del puntero de interfaz, pero no desea liberar esa interfaz.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtr (clase)](../windows/comptr-class.md)
+# <a name="comptroperatoramp-operator"></a>Comptr:: operator&amp; operador
+
+Libera la interfaz asociada a este **ComPtr** de objetos y, a continuación, recupera la dirección de la **ComPtr** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+Details::ComPtrRef<WeakRef> operator&()
+
+const Details::ComPtrRef<const WeakRef> operator&() const
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Una referencia débil a la actual **ComPtr**.
+
+## <a name="remarks"></a>Comentarios
+
+Este método difiere [Getaddressof](../windows/comptr-getaddressof-method.md) en que este método libera una referencia al puntero de interfaz. Use `ComPtr::GetAddressOf` cuando se requiere la dirección del puntero de interfaz, pero no desea liberar esa interfaz.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ComPtr (clase)](../windows/comptr-class.md)

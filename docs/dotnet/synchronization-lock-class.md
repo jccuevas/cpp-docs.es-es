@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166691"
 ---
 # <a name="synchronization-lock-class"></a>Sincronización (Clase lock)
 Proporciona un mecanismo para automatizar tomar un bloqueo que sincroniza el acceso a un objeto.  

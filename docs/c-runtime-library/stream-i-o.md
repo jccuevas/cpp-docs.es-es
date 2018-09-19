@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035235"
 ---
 # <a name="stream-io"></a>E/S de secuencia
 
@@ -88,23 +89,23 @@ Estas funciones procesan datos de diferentes tamaños y formatos, desde caracter
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Escribir datos con formato de la longitud especificada en el búfer|
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Escribir datos con formato en el búfer|
 
- Cuando un programa inicia la ejecución, el código de inicio abre automáticamente varias secuencias: entrada estándar (señalada por **stdin**), salida estándar (señalada por **stdout**) y errores estándar (señalada por **stderr**). Estas secuencias se dirigen a la consola (teclado y pantalla) de forma predeterminada. Use **freopen** para redirigir **stdin**, **stdout** o **stderr** a un archivo de disco o un dispositivo.
+Cuando un programa inicia la ejecución, el código de inicio abre automáticamente varias secuencias: entrada estándar (señalada por **stdin**), salida estándar (señalada por **stdout**) y errores estándar (señalada por **stderr**). Estas secuencias se dirigen a la consola (teclado y pantalla) de forma predeterminada. Use **freopen** para redirigir **stdin**, **stdout** o **stderr** a un archivo de disco o un dispositivo.
 
- Los archivos abiertos con las rutinas de secuencia se almacenan en búfer de forma predeterminada. Las funciones **stdout** y **stderr** se vacían siempre que están llenas o, si está escribiendo en un dispositivo de caracteres, tras cada llamada a la biblioteca. Si un programa finaliza incorrectamente, los búferes de salida pueden no ser vaciados, lo que resulta en pérdida de datos. Use **fflush** o **_flushall** para asegurarse de que el búfer asociado con un archivo especificado o todos los búferes abiertos se vacían en el sistema operativo, que puede almacenar datos en caché antes de escribir en el disco. La característica de confirmación en disco garantiza que el contenido del búfer de vaciado no se pierda si se produce un error del sistema.
+Los archivos abiertos con las rutinas de secuencia se almacenan en búfer de forma predeterminada. Las funciones **stdout** y **stderr** se vacían siempre que están llenas o, si está escribiendo en un dispositivo de caracteres, tras cada llamada a la biblioteca. Si un programa finaliza incorrectamente, los búferes de salida pueden no ser vaciados, lo que resulta en pérdida de datos. Use **fflush** o **_flushall** para asegurarse de que el búfer asociado con un archivo especificado o todos los búferes abiertos se vacían en el sistema operativo, que puede almacenar datos en caché antes de escribir en el disco. La característica de confirmación en disco garantiza que el contenido del búfer de vaciado no se pierda si se produce un error del sistema.
 
- Hay dos formas de confirmar el contenido del búfer en el disco:
+Hay dos formas de confirmar el contenido del búfer en el disco:
 
--   Vincular con el archivo COMMODE.OBJ para establecer una un indicador global de confirmación. El valor predeterminado del indicador global es **n** para "no-commit".
+- Vincular con el archivo COMMODE.OBJ para establecer una un indicador global de confirmación. El valor predeterminado del indicador global es **n** para "no-commit".
 
--   Defina el indicador de modo en **c** con **fopen** o **_fdopen**.
+- Defina el indicador de modo en **c** con **fopen** o **_fdopen**.
 
- Cualquier archivo que se abra específicamente con el indicador **c** o **n** se comporta según el indicador, independientemente del estado del indicador global commit/no-commit.
+Cualquier archivo que se abra específicamente con el indicador **c** o **n** se comporta según el indicador, independientemente del estado del indicador global commit/no-commit.
 
- Si el programa no cierra explícitamente una secuencia, la secuencia se cierra automáticamente cuando finaliza el programa. Sin embargo, debe cerrar una secuencia cuando el programa termina de usarla, ya que el número de secuencias que pueden estar abiertas al mismo tiempo es limitado. Vea [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) para obtener información sobre este límite.
+Si el programa no cierra explícitamente una secuencia, la secuencia se cierra automáticamente cuando finaliza el programa. Sin embargo, debe cerrar una secuencia cuando el programa termina de usarla, ya que el número de secuencias que pueden estar abiertas al mismo tiempo es limitado. Vea [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) para obtener información sobre este límite.
 
- La entrada puede seguir directamente a la salida solo con una llamada intermedia a **fflush** o a una función de posicionamiento de archivo (**fseek**, **fsetpos** o **rewind**). La salida puede seguir a la entrada sin una llamada intermedia a una función de posicionamiento de archivo si la operación de entrada encuentra el final del archivo.
+La entrada puede seguir directamente a la salida solo con una llamada intermedia a **fflush** o a una función de posicionamiento de archivo (**fseek**, **fsetpos** o **rewind**). La salida puede seguir a la entrada sin una llamada intermedia a una función de posicionamiento de archivo si la operación de entrada encuentra el final del archivo.
 
 ## <a name="see-also"></a>Vea también
 
 [Entrada y salida](../c-runtime-library/input-and-output.md)<br/>
- [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

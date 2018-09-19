@@ -1,5 +1,5 @@
 ---
-title: Mapas de receptor de eventos | Documentos de Microsoft
+title: Mapas de receptor de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212048"
 ---
 # <a name="event-sink-maps"></a>Mapas de receptor de eventos
-Cuando un control OLE incrustado desencadena un evento, el contenedor del control recibe el evento mediante un mecanismo, denominado un "evento mapa de receptores," proporcionado por MFC. Este mapa de receptores de eventos designa las funciones de controlador para cada evento específico, así como los parámetros de los eventos. Para obtener más información sobre los mapas de receptor de eventos, vea el artículo [contenedores de controles ActiveX](../../mfc/activex-control-containers.md).  
+Cuando un control OLE incrustado desencadena un evento, el contenedor del control recibe el evento mediante un mecanismo, denominado un "receptor mapa de eventos," proporcionado por MFC. Este mapa de receptores de eventos designa las funciones de controlador para cada evento específico, así como los parámetros de esos eventos. Para obtener más información sobre los mapas de receptor de eventos, vea el artículo [contenedores de controles ActiveX](../../mfc/activex-control-containers.md).  
   
 ### <a name="event-sink-maps"></a>Mapas de receptor de eventos  
   
@@ -32,29 +33,29 @@ Cuando un control OLE incrustado desencadena un evento, el contenedor del contro
 |[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Inicia la definición de un mapa de receptores de eventos.|  
 |[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Declara un mapa de receptores de eventos.|  
 |[END_EVENTSINK_MAP](#end_eventsink_map)|Termina la definición de un mapa de receptores de eventos.|  
-|[ON_EVENT](#on_event)|Define un controlador de eventos para un evento específico.|  
-|[ON_EVENT_RANGE](#on_event_range)|Define un controlador de eventos para un evento específico que se activa desde un conjunto de controles OLE.|  
-|[ON_EVENT_REFLECT](#on_event_reflect)|Recibe los eventos desencadenados por el control antes de que están controlados por el contenedor del control.|  
+|[ON_EVENT](#on_event)|Define un controlador de eventos para un evento concreto.|  
+|[ON_EVENT_RANGE](#on_event_range)|Define un controlador de eventos para un evento concreto que se activa desde un conjunto de controles OLE.|  
+|[ON_EVENT_REFLECT](#on_event_reflect)|Recibe eventos desencadenados por el control antes de que están controlados por el contenedor del control.|  
 |[ON_PROPNOTIFY](#on_propnotify)|Define un controlador para controlar las notificaciones de la propiedad de un control OLE.|  
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Define un controlador para controlar las notificaciones de la propiedad de un conjunto de controles OLE.|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Recibe notificaciones de propiedad enviadas por el control antes de que están controlados por el contenedor del control.|  
   
 ##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
- Comienza la definición de la asignación de receptor de eventos.  
+ Inicia la definición de la asignación de receptor de eventos.  
   
 ```   
 BEGIN_EVENTSINK_MAP(theClass, baseClass)  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `theClass`  
- Especifica el nombre de la clase de control cuyo receptor de eventos se asignan a esto es.  
+ *theClass*  
+ Especifica el nombre de la clase control asignarlo cuyo receptor de eventos.  
   
- `baseClass`  
- Especifica el nombre de la clase base de `theClass`.  
+ *baseClass*  
+ Especifica el nombre de la clase base de *theClass*.  
   
 ### <a name="remarks"></a>Comentarios  
- En el archivo de implementación (.cpp) que define las funciones de miembro para la clase, inicie el mapa de receptores de eventos con el `BEGIN_EVENTSINK_MAP` macro y, a continuación, agregue entradas de macro para cada evento que se le notifiquen y completar la asignación de receptor de eventos con el `END_EVENTSINK_MAP` macro.  
+ En el archivo de implementación (.cpp) que define las funciones de miembro para la clase, iniciar la asignación de receptor de eventos con el begin_eventsink_map (macro), a continuación, agregue entradas de macro para cada evento recibir una notificación de y completar la asignación de receptor de eventos con el END_EVENTSINK_MAP (macro).  
   
  Para obtener más información sobre los mapas de receptor de eventos y los contenedores de controles OLE, vea el artículo [contenedores de controles ActiveX](../../mfc/activex-control-containers.md).  
   
@@ -62,14 +63,14 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
   **Encabezado** afxdisp.h  
   
 ##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
- Un contenedor OLE puede proporcionar un mapa de receptores de eventos para especificar los eventos que se notificarán el contenedor.  
+ Un contenedor OLE puede proporcionar un mapa de receptores de eventos para especificar los eventos que se notificará el contenedor.  
   
 ```   
 DECLARE_EVENTSINK_MAP()   
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Use la `DECLARE_EVENTSINK_MAP` macro al final de la declaración de clase. A continuación, en el. Las funciones de los archivos CPP que define el miembro de la clase, use la `BEGIN_EVENTSINK_MAP` (macro), las entradas de macro para cada uno de los eventos que se le notifiquen y el `END_EVENTSINK_MAP` macro para declarar el final de la lista de receptores de eventos.  
+ Utilice el declare_eventsink_map (macro) al final de la declaración de clase. A continuación, en el. Archivo CPP que define las funciones miembro de la clase, use el begin_eventsink_map (macro), las entradas de la macro para cada uno de los eventos para recibir una notificación de y la END_EVENTSINK_MAP (macro) para declarar el final de la lista de receptores de eventos.  
   
  Para obtener más información sobre los mapas de receptor de eventos, vea el artículo [contenedores de controles ActiveX](../../mfc/activex-control-containers.md).  
   
@@ -87,34 +88,34 @@ END_EVENTSINK_MAP()
   **Encabezado** afxdisp.h  
   
 ##  <a name="on_event"></a>  ON_EVENT  
- Use la `ON_EVENT` macro para definir una función de controlador de eventos para un evento desencadenado por un control OLE.  
+ Utilice la macro ON_EVENT para definir una función de controlador de eventos para un evento desencadenado por un control OLE.  
   
 ```   
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `theClass`  
+ *theClass*  
  La clase a la que pertenece este mapa de receptores de eventos.  
   
- `id`  
- Id. de control del control OLE.  
+ *identificador*  
+ El identificador de control del control OLE.  
   
- `dispid`  
+ *DISPID*  
  Identificador de envío de los eventos desencadenados por el control.  
   
- `pfnHandler`  
- Puntero a una función miembro que controla el evento. Esta función debe tener un **BOOL** tipo devuelto y los tipos de parámetro que coinciden con los parámetros del evento (consulte `vtsParams`). La función debe devolver **TRUE** para indicar el evento se ha controlado; en caso contrario **FALSE**.  
+ *pfnHandler*  
+ Puntero a una función miembro que controla el evento. Esta función debe tener un tipo BOOL devolver el tipo y los tipos de parámetro que coinciden con los parámetros del evento (consulte *vtsParams*). La función debe devolver TRUE para indicar que se controló el evento; en caso contrario, FALSE.  
   
- `vtsParams`  
- Una secuencia de **VTS_** constantes que especifica los tipos de los parámetros para el evento. Éstas son las constantes mismo que se usan en las entradas de mapa de envío como `DISP_FUNCTION`.  
+ *vtsParams*  
+ Una secuencia de **VTS_** constantes que especifica los tipos de los parámetros para el evento. Estos son la mismas constantes que se usan en las entradas de mapa de envío como DISP_FUNCTION.  
   
 ### <a name="remarks"></a>Comentarios  
- El `vtsParams` argumento es una lista separada por espacios de valores de la **VTS_** constantes. Uno o varios de estos valores separados por espacios (no por comas) especifican la lista de parámetros de la función. Por ejemplo:  
+ El *vtsParams* argumento es una lista separada por espacios de los valores de la **VTS_** constantes. Uno o varios de estos valores separados por espacios (no por comas) especifican la lista de parámetros de la función. Por ejemplo:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Especifica una lista que contiene un entero corto seguido por un **BOOL**.  
+ Especifica una lista que contiene un entero corto seguido por un valor booleano.  
   
  Para obtener una lista de los **VTS_** constantes, vea [EVENT_CUSTOM](event-maps.md#event_custom).  
   
@@ -122,42 +123,42 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
   **Encabezado** afxdisp.h  
   
 ##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
- Use la `ON_EVENT_RANGE` macro para definir una función de controlador de eventos para un evento desencadenado por cualquier control OLE con un Id. de control dentro de un intervalo contiguo de identificadores.  
+ Use el on_event_range (macro) para definir una función de controlador de eventos para un evento desencadenado por cualquier control OLE tener un identificador de control dentro de un intervalo contiguo de identificadores.  
   
 ```   
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)   
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `theClass`  
+ *theClass*  
  La clase a la que pertenece este mapa de receptores de eventos.  
   
- `idFirst`  
- Id. de control del primer control OLE en el intervalo.  
+ *idFirst*  
+ El identificador de control del primer control OLE en el intervalo.  
   
- `idLast`  
- Id. de control del último control OLE en el intervalo.  
+ *idLast*  
+ El identificador de control del último control OLE en el intervalo.  
   
- `dispid`  
+ *DISPID*  
  Identificador de envío de los eventos desencadenados por el control.  
   
- `pfnHandler`  
- Puntero a una función miembro que controla el evento. Esta función debe tener un **BOOL** tipo, un primer parámetro de tipo de valor devuelto **UINT** (para el identificador del control) y los tipos de parámetro adicional que coinciden con los parámetros del evento (consulte `vtsParams`). La función debe devolver **TRUE** para indicar el evento se ha controlado; en caso contrario **FALSE**.  
+ *pfnHandler*  
+ Puntero a una función miembro que controla el evento. Esta función debe tener un valor booleano de valor devuelto tipo, un primer parámetro de tipo UINT (para el Id. de control) y los tipos de parámetro adicional que coinciden con los parámetros del evento (consulte *vtsParams*). La función debe devolver TRUE para indicar que se controló el evento; en caso contrario, FALSE.  
   
- `vtsParams`  
- Una secuencia de **VTS_** constantes que especifica los tipos de los parámetros para el evento. La primera constante debe ser de tipo **VTS_I4**, para el identificador del control. Éstas son las constantes mismo que se usan en las entradas de mapa de envío como `DISP_FUNCTION`.  
+ *vtsParams*  
+ Una secuencia de **VTS_** constantes que especifica los tipos de los parámetros para el evento. La primera constante debe ser de tipo VTS_I4, para el identificador de control. Estos son la mismas constantes que se usan en las entradas de mapa de envío como DISP_FUNCTION.  
   
 ### <a name="remarks"></a>Comentarios  
- El `vtsParams` argumento es una lista separada por espacios de valores de la **VTS_** constantes. Uno o varios de estos valores separados por espacios (no por comas) especifican la lista de parámetros de la función. Por ejemplo:  
+ El *vtsParams* argumento es una lista separada por espacios de los valores de la **VTS_** constantes. Uno o varios de estos valores separados por espacios (no por comas) especifican la lista de parámetros de la función. Por ejemplo:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Especifica una lista que contiene un entero corto seguido por un **BOOL**.  
+ Especifica una lista que contiene un entero corto seguido por un valor booleano.  
   
  Para obtener una lista de los **VTS_** constantes, vea [EVENT_CUSTOM](event-maps.md#event_custom).  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra un controlador de eventos para el evento MouseDown, implementado para tres controles ( `IDC_MYCTRL1` a través de `IDC_MYCTRL3`). La función de controlador de eventos, `OnRangeMouseDown`, se declara en el archivo de encabezado de la clase de cuadro de diálogo ( `CMyDlg`) como:  
+ En el ejemplo siguiente se muestra un controlador de eventos para el evento MouseDown, implementado para tres controles (IDC_MYCTRL1 a través de IDC_MYCTRL3). La función de controlador de eventos, `OnRangeMouseDown`, se declara en el archivo de encabezado de la clase de cuadro de diálogo ( `CMyDlg`) como:  
   
  [!code-cpp[NVC_MFCAutomation#12](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
   
@@ -169,33 +170,33 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
   **Encabezado** afxdisp.h  
   
 ##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
- El `ON_EVENT_REFLECT` macro, cuando se utiliza en el evento mapa de receptores de clase de contenedor de un control OLE, recibe los eventos desencadenados por el control antes de que están controlados por el contenedor del control.  
+ El on_event_reflect (macro), cuando se usa en el evento mapa de receptores de la clase de contenedor de un control OLE, recibe los eventos desencadenados por el control antes de que están controlados por el contenedor del control.  
   
 ```   
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `theClass`  
+ *theClass*  
  La clase a la que pertenece este mapa de receptores de eventos.  
   
  DISPID  
  Identificador de envío de los eventos desencadenados por el control.  
   
- `pfnHandler`  
- Puntero a una función miembro que controla el evento. Esta función debe tener un **BOOL** tipo devuelto y los tipos de parámetro que coinciden con los parámetros del evento (consulte `vtsParams`). La función debe devolver **TRUE** para indicar el evento se ha controlado; en caso contrario **FALSE**.  
+ *pfnHandler*  
+ Puntero a una función miembro que controla el evento. Esta función debe tener un tipo BOOL devuelven los tipos de parámetro que coinciden con los parámetros del evento y el tipo (vea *vtsParams*). La función debe devolver TRUE para indicar que se controló el evento; en caso contrario, FALSE.  
   
- `vtsParams`  
- Una secuencia de **VTS_** constantes que especifica los tipos de los parámetros para el evento. Éstas son las constantes mismo que se usan en las entradas de mapa de envío como `DISP_FUNCTION`.  
+ *vtsParams*  
+ Una secuencia de **VTS_** constantes que especifica los tipos de los parámetros para el evento. Estos son la mismas constantes que se usan en las entradas de mapa de envío como DISP_FUNCTION.  
   
 ### <a name="remarks"></a>Comentarios  
- El `vtsParams` argumento es una lista separada por espacios de valores de la **VTS_** constantes.  
+ El *vtsParams* argumento es una lista separada por espacios de los valores de la **VTS_** constantes.  
   
  Uno o varios de estos valores separados por espacios (no por comas) especifican la lista de parámetros de la función. Por ejemplo:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Especifica una lista que contiene un entero corto seguido por un **BOOL**.  
+ Especifica una lista que contiene un entero corto seguido por un valor booleano.  
   
  Para obtener una lista de los **VTS_** constantes, vea [EVENT_CUSTOM](event-maps.md#event_custom).  
   
@@ -203,7 +204,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
   **Encabezado** afxdisp.h  
   
 ##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
- Use la `ON_PROPNOTIFY` macro para definir una entrada de mapa de receptor de eventos para controlar las notificaciones de la propiedad de un control OLE.  
+ Use el on_propnotify (macro) para definir una entrada de mapa de receptor de eventos para controlar las notificaciones de la propiedad de un control OLE.  
   
 ```   
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)  
@@ -211,32 +212,32 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `theClass`  
+ *theClass*  
  La clase a la que pertenece este mapa de receptores de eventos.  
   
- `id`  
- Id. de control del control OLE.  
+ *identificador*  
+ El identificador de control del control OLE.  
   
- `dispid`  
- El identificador de envío de la propiedad implicado en la notificación.  
+ *DISPID*  
+ El identificador de envío de la propiedad implicada en la notificación.  
   
- `pfnRequest`  
- Puntero a una función miembro que controla la **OnRequestEdit** notificaciones para esta propiedad. Esta función debe tener un **BOOL** tipo de valor devuelto y un **BOOL\***  parámetro. Esta función debe establecer el parámetro en **TRUE** para permitir que la propiedad que se va a cambiar y **FALSE** para no permitir. La función debe devolver **TRUE** para indicar la notificación se ha controlado; en caso contrario **FALSE**.  
+ *pfnRequest*  
+ Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un tipo BOOL tipo de valor devuelto y un **BOOL** <strong>\*</strong> parámetro. Esta función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
- `pfnChanged`  
- Puntero a una función miembro que controla la **OnChanged** notificaciones para esta propiedad. La función debe tener un **BOOL** tipo de valor devuelto y un **UINT** parámetro. La función debe devolver **TRUE** para indicar que la notificación se ha controlado; en caso contrario **FALSE**.  
+ *pfnChanged*  
+ Puntero a una función miembro que controla la `OnChanged` notificación para esta propiedad. La función debe tener un valor booleano y devuelven el tipo y un parámetro UINT. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `vtsParams` argumento es una lista separada por espacios de valores de la **VTS_** constantes. Uno o varios de estos valores separados por espacios (no por comas) especifican la lista de parámetros de la función. Por ejemplo:  
+ El *vtsParams* argumento es una lista separada por espacios de los valores de la **VTS_** constantes. Uno o varios de estos valores separados por espacios (no por comas) especifican la lista de parámetros de la función. Por ejemplo:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Especifica una lista que contiene un entero corto seguido por un **BOOL**.  
+ Especifica una lista que contiene un entero corto seguido por un valor booleano.  
   
  Para obtener una lista de los **VTS_** constantes, vea [EVENT_CUSTOM](event-maps.md#event_custom).  
   
 ##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
- Use la `ON_PROPNOTIFY_RANGE` macro para definir una entrada de mapa de receptor de eventos para controlar las notificaciones de la propiedad de cualquier control OLE con un Id. de control dentro de un intervalo contiguo de identificadores.  
+ Use el on_propnotify_range (macro) para definir una entrada de mapa de receptor de eventos para controlar las notificaciones de la propiedad de cualquier control OLE tener un identificador de control dentro de un intervalo contiguo de identificadores.  
   
 ```  
  
@@ -245,29 +246,29 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `theClass`  
+ *theClass*  
  La clase a la que pertenece este mapa de receptores de eventos.  
   
- `idFirst`  
- Id. de control del primer control OLE en el intervalo.  
+ *idFirst*  
+ El identificador de control del primer control OLE en el intervalo.  
   
- `idLast`  
- Id. de control del último control OLE en el intervalo.  
+ *idLast*  
+ El identificador de control del último control OLE en el intervalo.  
   
- `dispid`  
- El identificador de envío de la propiedad implicado en la notificación.  
+ *DISPID*  
+ El identificador de envío de la propiedad implicada en la notificación.  
   
- `pfnRequest`  
- Puntero a una función miembro que controla la **OnRequestEdit** notificaciones para esta propiedad. Esta función debe tener un **BOOL** tipo de valor devuelto y **UINT** y **BOOL\***  parámetros. La función debe establecer el parámetro en **TRUE** para permitir que la propiedad que se va a cambiar y **FALSE** para no permitir. La función debe devolver **TRUE** para indicar que la notificación se ha controlado; en caso contrario **FALSE**.  
+ *pfnRequest*  
+ Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un `BOOL` tipo de valor devuelto y `UINT` y `BOOL*` parámetros. La función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
- `pfnChanged`  
- Puntero a una función miembro que controla la **OnChanged** notificaciones para esta propiedad. La función debe tener un **BOOL** tipo de valor devuelto y un **UINT** parámetro. La función debe devolver **TRUE** para indicar que la notificación se ha controlado; en caso contrario **FALSE**.  
+ *pfnChanged*  
+ Puntero a una función miembro que controla la `OnChanged` notificación para esta propiedad. La función debe tener un `BOOL` tipo de valor devuelto y un `UINT` parámetro. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdisp.h  
   
 ##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
- El `ON_PROPNOTIFY_REFLECT` macro, cuando se utiliza en el evento mapa de receptores de clase de contenedor de un control OLE, recibe notificaciones de propiedad enviadas por el control antes de que están controlados por el contenedor del control.  
+ El on_propnotify_reflect (macro), cuando se usa en el evento mapa de receptores de la clase de contenedor de un control OLE, recibe notificaciones de propiedad enviadas por el control antes de que están controlados por el contenedor del control.  
   
 ```  
  
@@ -276,17 +277,17 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `theClass`  
+ *theClass*  
  La clase a la que pertenece este mapa de receptores de eventos.  
   
- `dispid`  
- El identificador de envío de la propiedad implicado en la notificación.  
+ *DISPID*  
+ El identificador de envío de la propiedad implicada en la notificación.  
   
- `pfnRequest`  
- Puntero a una función miembro que controla la **OnRequestEdit** notificaciones para esta propiedad. Esta función debe tener un **BOOL** tipo de valor devuelto y un **BOOL\***  parámetro. Esta función debe establecer el parámetro en **TRUE** para permitir que la propiedad que se va a cambiar y **FALSE** para no permitir. La función debe devolver **TRUE** para indicar la notificación se ha controlado; en caso contrario **FALSE**.  
+ *pfnRequest*  
+ Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un tipo BOOL tipo de valor devuelto y un **BOOL** <strong>\*</strong> parámetro. Esta función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
- `pfnChanged`  
- Puntero a una función miembro que controla la **OnChanged** notificaciones para esta propiedad. La función debe tener un **BOOL** tipo devuelto y ningún parámetro. La función debe devolver **TRUE** para indicar la notificación se ha controlado; en caso contrario **FALSE**.  
+ *pfnChanged*  
+ Puntero a una función miembro que controla la `OnChanged` notificación para esta propiedad. La función debe tener un valor booleano y devuelven el tipo y sin parámetros. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdisp.h  

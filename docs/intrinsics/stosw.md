@@ -1,5 +1,5 @@
 ---
-title: __stosw | Documentos de Microsoft
+title: __stosw | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf0e6157f184cb91605d9da8bcaea0c22806f03c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705172"
 ---
 # <a name="stosw"></a>__stosw
 **Específicos de Microsoft**  
   
- Genera una instrucción de cadena de almacén (`rep stosw`).  
+ Genera una instrucción de cadena de la tienda (`rep stosw`).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,20 +41,20 @@ void __stosw(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [out] `Dest`  
- El destino de la operación.  
+*dest*<br/>
+[out] El destino de la operación.  
   
- [in] `Data`  
- Los datos para almacenar.  
+*Data*<br/>
+[in] Para almacenar los datos.  
   
- [in] `Count`  
- La longitud del bloque de palabras que se va a escribir.  
+*Recuento*<br/>
+[in] La longitud del bloque de las palabras que desea escribir.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

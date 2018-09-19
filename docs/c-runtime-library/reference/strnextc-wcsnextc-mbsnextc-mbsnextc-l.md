@@ -54,11 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222434"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
@@ -100,11 +101,11 @@ Cada una de estas funciones devuelve el valor entero del siguiente carácter en 
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnextc** función devuelve el valor entero del siguiente carácter multibyte en *str*, sin avanzar el puntero de cadena. **_mbsnextc** reconoce las secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso.
+El **_mbsnextc** función devuelve el valor entero del siguiente carácter multibyte en *str*, sin avanzar el puntero de cadena. **_mbsnextc** reconoce secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso.
 
-Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve 0.
+Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve 0.
 
-**Nota de seguridad** Esta API crea la posible amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+**Nota de seguridad** Esta API crea la posible amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -112,9 +113,9 @@ Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, tal y
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc** y **_wcsnextc** son versiones de cadena de caracteres anchos de y de cadena de caracteres de byte único **_mbsnextc**. **_wcsnextc** devuelve el valor entero del siguiente carácter ancho en *str*; **_strnextc** devuelve el valor entero del siguiente carácter de un solo byte en *str*. **_strnextc** y **_wcsnextc** se proporcionan solo para esta asignación y no debe usarse en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc** y **_wcsnextc** son cadenas de caracteres de byte único y las versiones de cadena de caracteres anchos de **_mbsnextc**. **_wcsnextc** devuelve el valor entero del siguiente carácter ancho en *str*; **_strnextc** devuelve el valor entero del siguiente carácter de byte único en *str*. **_strnextc** y **_wcsnextc** se proporcionan solo para esta asignación y no debe usarse en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsnextc_l** es idéntica, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_mbsnextc_l** es idéntico, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

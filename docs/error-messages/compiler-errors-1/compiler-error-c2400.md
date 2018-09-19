@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2400 | Documentos de Microsoft
+title: Error del compilador C2400 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b6eb9ea25428138297cf85fe71e9c84b2364199
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 303a0aacbcde0fcf495469ed9cb9310ddb7710e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115169"
 ---
 # <a name="compiler-error-c2400"></a>Error del compilador C2400
-error de sintaxis de ensamblador en línea en 'contexto'; se encontró 'token'  
-  
- El token provocó un error de sintaxis en el contexto especificado.  
-  
- El ejemplo siguiente genera C2400:  
-  
-```  
-// C2400.cpp  
-// processor: x86  
-int main() {  
-   __asm {  
-      heh ax,bx;   // C2400, heh is not a valid x86 instruction  
-      mov ax,bx;   // OK  
-   }  
-}  
+
+error de sintaxis de ensamblador en línea en 'contexto'; se encontró 'token'
+
+El token provocó un error de sintaxis en el contexto especificado.
+
+El ejemplo siguiente genera C2400:
+
+```
+// C2400.cpp
+// processor: x86
+int main() {
+   __asm {
+      heh ax,bx;   // C2400, heh is not a valid x86 instruction
+      mov ax,bx;   // OK
+   }
+}
 ```

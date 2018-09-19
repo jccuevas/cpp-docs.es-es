@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350060"
 ---
 # <a name="documentview-architecture"></a>Arquitectura documento/vista
 De forma predeterminada, el Asistente para aplicaciones MFC crea una aplicación esqueleto con una clase de documento y una clase de vista. MFC separa la administración de datos en estas dos clases. El documento almacena los datos y administra la impresión de los datos y coordina la actualización de varias vistas de los datos. La vista muestra los datos y administra la interacción del usuario con el mismo, incluida la selección y edición.  

@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1008 | Documentos de Microsoft
+title: Error irrecuperable C1008 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 633045581d16bece84b2fe51d7b91d8d42b124ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44dd4198d57366e06a62e795f98eae3a08851791
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085191"
 ---
 # <a name="fatal-error-c1008"></a>Error irrecuperable C1008
-no se ha especificado un archivo de entrada  
-  
- No se proporcionó al compilador un archivo de código fuente de C o C++ para compilar. Compruebe la línea de comandos de **CL** y la variable de entorno para las especificaciones de nombre de archivo.
+
+no se ha especificado un archivo de entrada
+
+No se proporcionó al compilador un archivo de código fuente de C o C++ para compilar. Compruebe la línea de comandos de **CL** y la variable de entorno para las especificaciones de nombre de archivo.

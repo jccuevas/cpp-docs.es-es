@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341096"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Agregar controles a una hoja de propiedades
 De forma predeterminada, una hoja de propiedades asigna el área de la ventana para las páginas de propiedades, el índice de tabulación y los botones Aceptar, Cancelar y aplicar. (Una hoja de propiedades no modal no tiene Aceptar, Cancelar y aplicar botones.) Puede agregar otros controles a la hoja de propiedades. Por ejemplo, puede agregar una ventana de vista previa a la derecha del área de página de propiedades para mostrar al usuario cuál sería la configuración actual si se aplica a un objeto externo.  

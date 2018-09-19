@@ -1,5 +1,5 @@
 ---
-title: espacio de nombres de simultaneidad operadores | Documentos de Microsoft
+title: espacio de nombres de simultaneidad operadores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,20 +13,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c8fbbdd0e5d2baf0ba82998a6951242b73203a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 13b9288e39e372ecb23299d355abc921353444b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059880"
 ---
-# <a name="concurrency-namespace-operators"></a>espacio de nombres de simultaneidad operadores
+# <a name="concurrency-namespace-operators"></a>los operadores del espacio de nombres de simultaneidad
 ||||  
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|  
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>  operador&#124; &#124; (operador)  
+##  <a name="operator_lor"></a>  operador&#124; &#124; operador  
  Crea una tarea que se completará correctamente cuando una de las tareas proporcionadas como argumentos se complete correctamente.  
   
 ```  
@@ -54,22 +55,22 @@ inline task<void> operator||(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ReturnType`  
- Tipo de la tarea devuelta.  
+*ReturnType*<br/>
+Tipo de la tarea devuelta.  
   
- `lhs`  
- Primera tarea que debe combinarse en la tarea resultante.  
+*LHS*<br/>
+Primera tarea que debe combinarse en la tarea resultante.  
   
- `rhs`  
- Segunda tarea que se va a combinar en la tarea resultante.  
+*RHS*<br/>
+Segunda tarea que se va a combinar en la tarea resultante.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una tarea que se completa correctamente cuando cualquiera de las tareas de entrada se ha completado correctamente. Si las tareas de entrada son de tipo `T`, el resultado de esta función será `task<std::vector<T>`. Si las tareas de entrada son del tipo `void`, la tarea de salida también será `task<void>`.  
   
 ### <a name="remarks"></a>Comentarios  
- Si las tareas se cancelan o producen excepciones, se completará la tarea devuelta en el estado cancelado, y una de las excepciones, si se encuentra alguno, se producirá cuando se llama a `get()` o `wait()` en esa tarea.  
+ Si las dos tareas se cancelan o producen excepciones, la tarea devuelta se completará en el estado cancelado, y una de las excepciones, si se encuentra alguno, se producirá cuando se llama a `get()` o `wait()` en esa tarea.  
   
-##  <a name="operator_amp_amp"></a>  operador&amp; &amp; (operador)  
+##  <a name="operator_amp_amp"></a>  operador&amp; &amp; operador  
  Crea una tarea que se completará correctamente cuando las tareas proporcionadas como argumentos se completen correctamente.  
   
 ```  
@@ -103,14 +104,14 @@ inline task<void>  operator&&(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ReturnType`  
- Tipo de la tarea devuelta.  
+*ReturnType*<br/>
+Tipo de la tarea devuelta.  
   
- `lhs`  
- Primera tarea que debe combinarse en la tarea resultante.  
+*LHS*<br/>
+Primera tarea que debe combinarse en la tarea resultante.  
   
- `rhs`  
- Segunda tarea que se va a combinar en la tarea resultante.  
+*RHS*<br/>
+Segunda tarea que se va a combinar en la tarea resultante.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Tarea que se completa correctamente cuando ambas tareas de entrada se completan correctamente. Si las tareas de entrada son de tipo `T`, el resultado de esta función será `task<std::vector<T>>`. Si las tareas de entrada son del tipo `void`, la tarea de salida también será `task<void>`.  
@@ -118,7 +119,7 @@ inline task<void>  operator&&(
 ### <a name="remarks"></a>Comentarios  
  Si una de las tareas se cancela o inicia una excepción, la tarea devuelta finalizará prematuramente con el estado cancelado y se generará una excepción (si se encuentra una) al llamar a `get()` o `wait()` en dicha tarea.  
   
-##  <a name="operator_eq_eq"></a>  Operator == (operador)  
+##  <a name="operator_eq_eq"></a>  operador == (operador)  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es igual al objeto `concurrent_vector` del lado derecho.  
   
 ```  
@@ -129,23 +130,23 @@ inline bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de los elementos almacenados en los vectores simultáneos.  
+*T*<br/>
+El tipo de datos de los elementos almacenados en los vectores simultáneos.  
   
- `A1`  
- El tipo de asignador del primer `concurrent_vector` objeto.  
+*A1*<br/>
+El tipo de asignador del primer `concurrent_vector` objeto.  
   
- `A2`  
- El tipo de asignador del segundo `concurrent_vector` objeto.  
+*A2*<br/>
+El tipo de asignador del segundo `concurrent_vector` objeto.  
   
- `_A`  
- Objeto de tipo `concurrent_vector`.  
+*_A*<br/>
+Objeto de tipo `concurrent_vector`.  
   
- `_B`  
- Objeto de tipo `concurrent_vector`.  
+*_B*<br/>
+Objeto de tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el vector simultáneo en el lado izquierdo del operador es igual que el vector simultáneo en el lado derecho del operador. en caso contrario, `false`.  
+ `true` Si el vector simultáneo en el lado izquierdo del operador es igual que el vector simultáneo en el lado derecho del operador. en caso contrario `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Dos vectores simultáneos son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
@@ -163,30 +164,30 @@ inline bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de los elementos almacenados en los vectores simultáneos.  
+*T*<br/>
+El tipo de datos de los elementos almacenados en los vectores simultáneos.  
   
- `A1`  
- El tipo de asignador del primer `concurrent_vector` objeto.  
+*A1*<br/>
+El tipo de asignador del primer `concurrent_vector` objeto.  
   
- `A2`  
- El tipo de asignador del segundo `concurrent_vector` objeto.  
+*A2*<br/>
+El tipo de asignador del segundo `concurrent_vector` objeto.  
   
- `_A`  
- Objeto de tipo `concurrent_vector`.  
+*_A*<br/>
+Objeto de tipo `concurrent_vector`.  
   
- `_B`  
- Objeto de tipo `concurrent_vector`.  
+*_B*<br/>
+Objeto de tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si los vectores simultáneos no son iguales; `false` si los vectores simultáneos son iguales.  
+ `true` Si no son iguales, los vectores simultáneos `false` si los vectores simultáneos son iguales.  
   
 ### <a name="remarks"></a>Comentarios  
  Dos vectores simultáneos son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
   
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
-##  <a name="operator_lt"></a>  operador&lt; (operador)  
+##  <a name="operator_lt"></a>  operador&lt; operador  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es menor que el objeto `concurrent_vector` del lado derecho.  
   
 ```  
@@ -197,23 +198,23 @@ inline bool operator<(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de los elementos almacenados en los vectores simultáneos.  
+*T*<br/>
+El tipo de datos de los elementos almacenados en los vectores simultáneos.  
   
- `A1`  
- El tipo de asignador del primer `concurrent_vector` objeto.  
+*A1*<br/>
+El tipo de asignador del primer `concurrent_vector` objeto.  
   
- `A2`  
- El tipo de asignador del segundo `concurrent_vector` objeto.  
+*A2*<br/>
+El tipo de asignador del segundo `concurrent_vector` objeto.  
   
- `_A`  
- Objeto de tipo `concurrent_vector`.  
+*_A*<br/>
+Objeto de tipo `concurrent_vector`.  
   
- `_B`  
- Objeto de tipo `concurrent_vector`.  
+*_B*<br/>
+Objeto de tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el vector simultáneo en el lado izquierdo del operador es menor que el vector simultáneo en el lado derecho del operador. en caso contrario, `false`.  
+ `true` Si el vector simultáneo en el lado izquierdo del operador es menor que el vector simultáneo en el lado derecho del operador. en caso contrario `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  El comportamiento de este operador es idéntico al operador equivalente para la `vector` clase en el `std` espacio de nombres.  
@@ -231,30 +232,30 @@ inline bool operator<= (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de los elementos almacenados en los vectores simultáneos.  
+*T*<br/>
+El tipo de datos de los elementos almacenados en los vectores simultáneos.  
   
- `A1`  
- El tipo de asignador del primer `concurrent_vector` objeto.  
+*A1*<br/>
+El tipo de asignador del primer `concurrent_vector` objeto.  
   
- `A2`  
- El tipo de asignador del segundo `concurrent_vector` objeto.  
+*A2*<br/>
+El tipo de asignador del segundo `concurrent_vector` objeto.  
   
- `_A`  
- Objeto de tipo `concurrent_vector`.  
+*_A*<br/>
+Objeto de tipo `concurrent_vector`.  
   
- `_B`  
- Objeto de tipo `concurrent_vector`.  
+*_B*<br/>
+Objeto de tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el vector simultáneo en el lado izquierdo del operador es menor o igual que el vector simultáneo en el lado derecho del operador. en caso contrario, `false`.  
+ `true` Si el vector simultáneo en el lado izquierdo del operador es menor o igual que el vector simultáneo en el lado derecho del operador. en caso contrario `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  El comportamiento de este operador es idéntico al operador equivalente para la `vector` clase en el `std` espacio de nombres.  
   
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
-##  <a name="operator_gt"></a>  operador&gt; (operador)  
+##  <a name="operator_gt"></a>  operador&gt; operador  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es mayor que el objeto `concurrent_vector` del lado derecho.  
   
 ```  
@@ -265,23 +266,23 @@ inline bool operator>(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de los elementos almacenados en los vectores simultáneos.  
+*T*<br/>
+El tipo de datos de los elementos almacenados en los vectores simultáneos.  
   
- `A1`  
- El tipo de asignador del primer `concurrent_vector` objeto.  
+*A1*<br/>
+El tipo de asignador del primer `concurrent_vector` objeto.  
   
- `A2`  
- El tipo de asignador del segundo `concurrent_vector` objeto.  
+*A2*<br/>
+El tipo de asignador del segundo `concurrent_vector` objeto.  
   
- `_A`  
- Objeto de tipo `concurrent_vector`.  
+*_A*<br/>
+Objeto de tipo `concurrent_vector`.  
   
- `_B`  
- Objeto de tipo `concurrent_vector`.  
+*_B*<br/>
+Objeto de tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el vector simultáneo en el lado izquierdo del operador es mayor que el vector simultáneo en el lado derecho del operador. en caso contrario, `false`.  
+ `true` Si el vector simultáneo en el lado izquierdo del operador es mayor que el vector simultáneo en el lado derecho del operador. en caso contrario `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  El comportamiento de este operador es idéntico al operador equivalente para la `vector` clase en el `std` espacio de nombres.  
@@ -299,23 +300,23 @@ inline bool operator>= (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de los elementos almacenados en los vectores simultáneos.  
+*T*<br/>
+El tipo de datos de los elementos almacenados en los vectores simultáneos.  
   
- `A1`  
- El tipo de asignador del primer `concurrent_vector` objeto.  
+*A1*<br/>
+El tipo de asignador del primer `concurrent_vector` objeto.  
   
- `A2`  
- El tipo de asignador del segundo `concurrent_vector` objeto.  
+*A2*<br/>
+El tipo de asignador del segundo `concurrent_vector` objeto.  
   
- `_A`  
- Objeto de tipo `concurrent_vector`.  
+*_A*<br/>
+Objeto de tipo `concurrent_vector`.  
   
- `_B`  
- Objeto de tipo `concurrent_vector`.  
+*_B*<br/>
+Objeto de tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el vector simultáneo en el lado izquierdo del operador es mayor o igual que el vector simultáneo en el lado derecho del operador. en caso contrario, `false`.  
+ `true` Si el vector simultáneo en el lado izquierdo del operador es mayor o igual que el vector simultáneo en el lado derecho del operador. en caso contrario `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  El comportamiento de este operador es idéntico al operador equivalente para la `vector` clase en el `std` espacio de nombres.  

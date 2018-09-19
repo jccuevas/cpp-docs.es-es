@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3056546e5a543c0058f789e293e0a63a3d53283a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107663"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 
@@ -47,13 +48,15 @@ operator&(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos conjuntos de bits cuyos elementos respectivos son que se combinarán con el bit a bit `AND`.
+*left*<br/>
+El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit `AND`.
+*right*<br/>
+El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un conjunto de bits cuyos elementos son el resultado de realizar la operación `AND` en los elementos correspondientes de `left` y `right`.
+Un conjunto de bits cuyos elementos son el resultado de realizar la `AND` operación en los elementos correspondientes de *izquierdo* y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -97,15 +100,16 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un objeto de tipo **bitset\<N >** que va a insertar en el flujo de salida como una cadena.
+*right*<br/>
+Un objeto de tipo **bitset\<N>** que se va a insertar en el flujo de salida como una cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una representación de texto de la secuencia de bits en **ostr**.
+Representación de texto de la secuencia de bits en `ostr`.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla sobrecarga **operator<<**, lo que permite que se escriba un conjunto de bits sin convertirlo primero en una cadena. La función de plantilla ejecuta eficazmente:
+Las sobrecargas de función de plantilla `operator<<`, lo que permite un conjunto de bits que escribirse sin convertirla primero en una cadena. La función de plantilla ejecuta eficazmente:
 
 **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
 
@@ -156,19 +160,21 @@ _Istr,
 
 ### <a name="parameters"></a>Parámetros
 
-`_Istr` La cadena que se escriban en el flujo de entrada que debe insertarse en bitset.
+*_Istr*<br/>
+La cadena que se escribe en el flujo de entrada para insertarla en un conjunto de bits.
 
-`right` Bitset que recibe los bits del flujo de entrada.
+*right*<br/>
+El conjunto de bits que recibe los bits del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función de plantilla devuelve la cadena `_Istr`.
+La función de plantilla devuelve la cadena *_Istr*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla sobrecarga **operator>>** para almacenar en el conjunto de bits _ *Right* el valor bitset( `str`), donde `str` es un objeto de tipo [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** extraído de `_Istr`.
+Las sobrecargas de función de plantilla `operator>>` para almacenar en el conjunto de bits _ *derecha* el conjunto de bits de valor (`str`), donde `str` es un objeto de tipo [basic_string](basic-string-class.md)  <  **CharType**, **rasgos**, **asignador** \< **CharType**>> **&** extraído *_Istr*.
 
-La función de plantilla extrae elementos de `_Istr` y los inserta en el conjunto de bits hasta que:
+La función de plantilla extrae elementos de *_Istr* y los inserta en el conjunto de bits hasta que:
 
 - Todos los elementos de bits se han extraído del flujo de entrada y se almacenan en el conjunto de bits.
 
@@ -239,13 +245,15 @@ operator^(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos conjuntos de bits cuyos elementos respectivos son que se combinarán con el bit a bit `EXCLUSIVE-OR`.
+*left*<br/>
+El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit `EXCLUSIVE-OR`.
+*right*<br/>
+El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un conjunto de bits cuyos elementos son el resultado de realizar la operación `EXCLUSIVE-OR` en los elementos correspondientes de `left` y `right`.
+Un conjunto de bits cuyos elementos son el resultado de realizar la `EXCLUSIVE-OR` operación en los elementos correspondientes de *izquierdo* y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -289,13 +297,15 @@ operator|(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos conjuntos de bits cuyos elementos respectivos son que se combinarán con el bit a bit `OR`.
+*left*<br/>
+El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit `OR`.
+*right*<br/>
+El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un conjunto de bits cuyos elementos son el resultado de realizar la operación `OR` en los elementos correspondientes de `left` y `right`.
+Un conjunto de bits cuyos elementos son el resultado de realizar la `OR` operación en los elementos correspondientes de *izquierdo* y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 

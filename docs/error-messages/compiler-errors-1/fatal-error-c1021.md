@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1021 | Documentos de Microsoft
+title: Error irrecuperable C1021 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06ec8f9aeca3b88b1c14c8dddfc625aae0b185d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcb464a676b47baa4589c17269819d3a84d058fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029917"
 ---
 # <a name="fatal-error-c1021"></a>Error irrecuperable C1021
-comando de preprocesador 'string' no válido  
-  
- `string` no es una [directiva de preprocesador](../../preprocessor/preprocessor-directives.md)válida. Para resolver el error, use un nombre de preprocesador válido para `string`.  
-  
- El ejemplo siguiente genera la advertencia C1021:  
-  
-```  
-// C1021.cpp  
-#BadPreProcName    // C1021 delete line  
+
+comando de preprocesador 'string' no válido
+
+`string` no es una [directiva de preprocesador](../../preprocessor/preprocessor-directives.md)válida. Para resolver el error, use un nombre de preprocesador válido para `string`.
+
+El ejemplo siguiente genera la advertencia C1021:
+
+```
+// C1021.cpp
+#BadPreProcName    // C1021 delete line
 ```

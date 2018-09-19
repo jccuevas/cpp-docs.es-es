@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb4b2be959dc48bbf7c5c5f786f7b803dba1a8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdc179413b3e5d77646be4ccb98f23bcff407fb7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110271"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer (Clase)
 
@@ -36,11 +37,12 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `Ty` es un puntero a una función miembro o un puntero a un objeto miembro, o bien un formulario `cv-qualified` de uno de ellos. En caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un puntero a función miembro o un puntero a miembro de objeto, o un `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,5 +1,5 @@
 ---
-title: unsupported_feature (clase) | Documentos de Microsoft
+title: unsupported_feature (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059688"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature (Clase)
 La excepción que se produce cuando se usa una característica no compatible.  
@@ -39,7 +40,7 @@ class unsupported_feature : public runtime_exception;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[unsupported_feature Constructor](#ctor)|Crea una nueva instancia de la `unsupported_feature` excepción.|  
+|[unsupported_feature (Constructor)](#ctor)|Crea una nueva instancia de la `unsupported_feature` excepción.|  
 
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
@@ -49,7 +50,7 @@ class unsupported_feature : public runtime_exception;
   
  `unsupported_feature`  
   
-## <a name="unsupported_feature__ctor"></a> unsupported_feature 
+## <a name="unsupported_feature__ctor"></a> unsupported_feature) 
 
   Crea una nueva instancia de la excepción unsupported_feature.  
   
@@ -63,8 +64,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Descripción del error.  
+*_Cuerpo*<br/>
+Descripción del error.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `unsupported_feature`.  

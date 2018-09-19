@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: operator IInspectable ** (operador) | Documentos de Microsoft'
+title: 'Comptrrefbase:: operator IInspectable ** (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e337f6bbc92718c839fc2bd12c9df9f0caa5d5aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f711a9d1f5fe92e5f35bf333fc0b3473fc0eebf4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604411"
 ---
-# <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable** (Operador)
+# <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase:: operator IInspectable\* \* operador
 
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,11 +36,11 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>Comentarios
 
-Convierte la actual [ptr_](../windows/comptrrefbase-ptr-data-member.md) miembro de datos a un puntero a-a-puntero-a la interfaz IInspectable.
+Convierte la actual [ptr_](../windows/comptrrefbase-ptr-data-member.md) miembro de datos a un puntero-a-a-puntero-to del `IInspectable` interfaz.
 
-Se genera un error si el ComPtrRefBase actual no se deriva de IInspectable.
+Se genera un error si el actual **ComPtrRefBase** no se deriva de `IInspectable`.
 
-En esta difusión está disponible solo si **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** está definido.
+En esta difusión está disponible solo si `__WRL_CLASSIC_COM__` está definido.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -49,5 +50,5 @@ En esta difusión está disponible solo si **&#95; &#95;WRL_CLASSIC_COM&#95; &#9
 
 ## <a name="see-also"></a>Vea también
 
-[ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)   
+[ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)  
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

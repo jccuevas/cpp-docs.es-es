@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2030 | Documentos de Microsoft
+title: Error del compilador C2030 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceccc1088e32382167e7e6400360b30de07fde1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0c5849c372cc4c7ebf27dbe010e65d406ad1ab1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032907"
 ---
 # <a name="compiler-error-c2030"></a>Error del compilador C2030
-un destructor con accesibilidad 'protected private' no puede ser miembro de una clase declarada 'sealed'  
-  
- Una clase de Windows en tiempo de ejecución declarada como `sealed` no puede tener un destructor privado protegido. En tipos sealed solo se permiten destructores no virtuales privados y virtuales públicos. Para obtener más información, consulte [clases y structs Ref](../../cppcx/ref-classes-and-structs-c-cx.md).  
-  
- Para corregir este error, cambie la accesibilidad del destructor.
+
+un destructor con accesibilidad 'protected private' no puede ser miembro de una clase declarada 'sealed'
+
+Una clase de Windows en tiempo de ejecución declarada como `sealed` no puede tener un destructor privado protegido. En tipos sealed solo se permiten destructores no virtuales privados y virtuales públicos. Para obtener más información, consulte [clases y structs Ref](../../cppcx/ref-classes-and-structs-c-cx.md).
+
+Para corregir este error, cambie la accesibilidad del destructor.

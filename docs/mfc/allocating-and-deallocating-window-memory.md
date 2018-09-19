@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341464"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Asignar y desasignar memoria de ventana
 No use C++ **eliminar** operador para destruir una ventana de marco o vista. En su lugar, llame a la `CWnd` función miembro `DestroyWindow`. Ventanas de marco, por lo tanto, se deben asignar en el montón con el operador **nueva**. Tenga cuidado al asignar ventanas de marco en el marco de pila o globalmente. Otras ventanas se deben asignar en el marco de pila siempre que sea posible.  

@@ -1,7 +1,7 @@
 ---
-title: . ERRB | Documentos de Microsoft
+title: . ERRB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18b3bc1706d420c6624e0194a045cc116c39b9e5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e07694e8ad8d30da76c2b3594b267bd695009870
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318231"
 ---
 # <a name="errb"></a>.ERRB
-Genera un error si *textitem* está en blanco.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-.ERRB <textitem> [[, message]]  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Genera un error si *textitem* está en blanco.
+
+## <a name="syntax"></a>Sintaxis
+
+> . ERRB *textitem* [[, *mensaje*]]
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

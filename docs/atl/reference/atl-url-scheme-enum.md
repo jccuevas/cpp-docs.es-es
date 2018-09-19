@@ -1,5 +1,5 @@
 ---
-title: Enumeración de ATL_URL_SCHEME | Documentos de Microsoft
+title: Enumeración ATL_URL_SCHEME | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,37 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d180454b3189988752c9002ddc462eb460d51ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2883232d673bd52a9afff0cd5e76ea29ceb4120
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074414"
 ---
-# <a name="atlurlscheme"></a>ATL_URL_SCHEME  
+# <a name="atlurlscheme"></a>ATL_URL_SCHEME
 
-Los miembros de esta enumeración proporcionan constantes para los esquemas entendidos [CUrl](curl-class.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      enum ATL_URL_SCHEME{  
-   ATL_URL_SCHEME_UNKNOWN = -1,  
-   ATL_URL_SCHEME_FTP     = 0,  
-   ATL_URL_SCHEME_GOPHER  = 1,  
-   ATL_URL_SCHEME_HTTP    = 2,  
-   ATL_URL_SCHEME_HTTPS   = 3,  
-   ATL_URL_SCHEME_FILE    = 4,  
-   ATL_URL_SCHEME_NEWS    = 5,  
-   ATL_URL_SCHEME_MAILTO  = 6,  
-   ATL_URL_SCHEME_SOCKS   = 7  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlutil.h  
-  
-## <a name="see-also"></a>Vea también  
- [Conceptos](../active-template-library-atl-concepts.md)   
- [CUrl::SetScheme](curl-class.md#setscheme)   
- [CUrl::GetScheme](curl-class.md#getscheme)
+Los miembros de esta enumeración proporcionan constantes para los esquemas entendidos [CUrl](curl-class.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```
+enum ATL_URL_SCHEME{
+   ATL_URL_SCHEME_UNKNOWN = -1,
+   ATL_URL_SCHEME_FTP     = 0,
+   ATL_URL_SCHEME_GOPHER  = 1,
+   ATL_URL_SCHEME_HTTP    = 2,
+   ATL_URL_SCHEME_HTTPS   = 3,
+   ATL_URL_SCHEME_FILE    = 4,
+   ATL_URL_SCHEME_NEWS    = 5,
+   ATL_URL_SCHEME_MAILTO  = 6,
+   ATL_URL_SCHEME_SOCKS   = 7
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlutil.h
+
+## <a name="see-also"></a>Vea también
+
+[Conceptos](../active-template-library-atl-concepts.md)<br/>
+[CUrl::SetScheme](curl-class.md#setscheme)<br/>
+[CUrl::GetScheme](curl-class.md#getscheme)

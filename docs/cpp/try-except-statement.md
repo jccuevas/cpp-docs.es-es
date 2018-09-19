@@ -1,5 +1,5 @@
 ---
-title: Intente-excepto instrucción | Documentos de Microsoft
+title: Pruebe-excepto instrucción | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,66 +35,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031451"
 ---
 # <a name="try-except-statement"></a>try-except (Instrucción)
 
-**Específicos de Microsoft**  
-El **intente-excepto** instrucción es una extensión de Microsoft para C y lenguajes de C++ que admite el control estructurado de excepciones.  
+**Específicos de Microsoft**
 
-## <a name="syntax"></a>Sintaxis  
-  
-> **__try**   
-> {  
->    código protegido  
-> }  
-> **__except** ( *expresión* )  
-> {  
->    código del controlador de excepción  
-> }  
+El **intente-excepto** instrucción es una extensión de Microsoft C y lenguajes C++ que admite el control estructurado de excepciones.
+
+## <a name="syntax"></a>Sintaxis
+
+> **__try** {/ / protegido código} **__except** ( *expresión* ) {/ / el código del controlador de excepción}
 
 ## <a name="remarks"></a>Comentarios
 
-El **intente-excepto** instrucción es una extensión de Microsoft para C y lenguajes de C++ que permite a las aplicaciones de destino obtener controlan cuando se producen los eventos que normalmente finalizan la ejecución del programa. Estos eventos se denominan *excepciones*, y el mecanismo que se ocupa de las excepciones se denomina *control estructurado de excepciones* (SEH).
+El **intente-excepto** instrucción es una extensión de Microsoft C y lenguajes C++ que permite a las aplicaciones de destino obtener controlan cuando se producen los eventos que normalmente finalizan la ejecución del programa. Estos eventos se denominan *excepciones*, y el mecanismo que se ocupa de las excepciones se denomina *control estructurado de excepciones* (SEH).
 
-Para obtener información relacionada, consulte el [try-finally (instrucción)](../cpp/try-finally-statement.md).
+Para obtener información relacionada, consulte el [instrucción try-finally](../cpp/try-finally-statement.md).
 
 Las excepciones pueden estar basadas en hardware o software. Aunque las aplicaciones no pueden recuperarse completamente de las excepciones de hardware o software, el control de excepciones estructurado permite mostrar información de error y capturar el estado interno de la aplicación para ayudar a diagnosticar el problema. Esto es especialmente útil en el caso de problemas intermitentes que no se pueden reproducir fácilmente.
 
 > [!NOTE]
-> El control de excepciones estructurado funciona con Win32 para archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo. Para los programas de C++, se recomienda que utilice el mecanismo de control de excepciones de C++ ([try, catch y throw](../cpp/try-throw-and-catch-statements-cpp.md) instrucciones).
+> El control de excepciones estructurado funciona con Win32 para archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo. Para los programas de C++, se recomienda utilizar el mecanismo de control de excepciones de C++ ([try, catch y throw](../cpp/try-throw-and-catch-statements-cpp.md) instrucciones).
 
-La instrucción compuesta detrás de la cláusula `__try` es el cuerpo o la sección protegida. La instrucción compuesta detrás de la cláusula `__except` es el controlador de excepción. El controlador especifica un conjunto de acciones que se realizarán si se inicia una excepción durante la ejecución del cuerpo de la sección protegida. La ejecución continúa de la siguiente manera:
+La instrucción compuesta después de la **__try** cláusula es el cuerpo o la sección protegida. La instrucción compuesta después de la **__except** cláusula es el controlador de excepciones. El controlador especifica un conjunto de acciones que se realizarán si se inicia una excepción durante la ejecución del cuerpo de la sección protegida. La ejecución continúa de la siguiente manera:
 
 1. Se ejecuta la sección protegida.
 
-2. Si no se produce ninguna excepción durante la ejecución de la sección protegida, continúa la ejecución de la instrucción después de la cláusula `__except`.  
+2. Si se produce ninguna excepción durante la ejecución de la sección protegida, la ejecución continúa en la instrucción después del **__except** cláusula.
 
-3. Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina a la sección protegida llama, el `__except` *expresión* (denominado el *filtro* expresión) se evalúa y el valor Determina cómo se controla la excepción. Existen tres valores:
+3. Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina que llame la sección protegida, la **__except** *expresión* (denominado el *filtro* expresión) se evalúa y el valor determina cómo se controla la excepción. Existen tres valores:
 
-   **EXCEPTION_CONTINUE_EXECUTION (-1)** excepción se descarta. La ejecución continúa en el punto donde se ha producido la excepción.
+   Se descarta la excepción EXCEPTION_CONTINUE_EXECUTION (-1). La ejecución continúa en el punto donde se ha producido la excepción.
 
-   **Exception_continue_search (0)** no se reconoce la excepción. La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
+   No se reconoce la excepción exception_continue_search (0). La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
 
-   **Exception_execute_handler (1)** excepción se reconoce. Se transfiere el control al controlador de excepciones mediante la ejecución de la instrucción compuesta `__except`; después, la ejecución continúa tras el bloque `__except`.
+   Exception_execute_handler (1) excepción se reconoce. Transferir el control al controlador de excepciones mediante la ejecución de la **__except** una instrucción compuesta, a continuación, continuar la ejecución después de la **__except** bloque.
 
-Dado que la expresión `__except` se evalúa como expresión de C, se limita a un valor único: el operador de expresión condicional u operador de coma. Si se requiere un mayor procesamiento, la expresión puede llamar a una rutina que devuelva uno de los tres valores enumerados anteriormente.
+Dado que el **__except** expresión se evalúa como una expresión de C, se limita a un solo valor, el operador de expresión condicional u operador de coma. Si se requiere un mayor procesamiento, la expresión puede llamar a una rutina que devuelva uno de los tres valores enumerados anteriormente.
 
 Cada aplicación puede tener su propio controlador de excepciones.
 
-No es válido saltar dentro de una instrucción `__try`, pero sí fuera. No se llama al controlador de excepción si un proceso se termina en el medio de ejecución de un **intente-excepto** instrucción.  
-  
-Para obtener más información, vea el artículo Q315937 de Knowledge Base: Cómo se detecta el desbordamiento de la pila en una aplicación de Visual C++.  
-  
+No es válido saltar dentro un **__try** instrucción, pero sí fuera. No se llama al controlador de excepción si un proceso se termina en medio de ejecución de un **intente-excepto** instrucción.
+
+Para obtener más información, vea el artículo Q315937 de Knowledge Base: Cómo se detecta el desbordamiento de la pila en una aplicación de Visual C++.
+
 ## <a name="the-leave-keyword"></a>La palabra clave __leave
 
-El `__leave` palabra clave sólo es válida en la sección protegida de un **intente-excepto** instrucción y su efecto es saltar al final de la sección protegida. La ejecución de la primera instrucción continúa después del controlador de excepciones.
+El **__leave** palabra clave sólo es válida en la sección protegida de un **intente-excepto** instrucción y su efecto es saltar al final de la sección protegida. La ejecución de la primera instrucción continúa después del controlador de excepciones.
 
-A `goto` instrucción también puede saltar fuera de la sección protegida, y no se degrada el rendimiento como ocurre en un **try-finally** instrucción porque no se realiza el desenredo de pila. Sin embargo, se recomienda usar la palabra clave `__leave` en lugar de una instrucción `goto`, porque es menos probable que se incurra en un error de programación si la sección protegida es grande o compleja.
+Un **goto** instrucción también puede saltar fuera de la sección protegida, y no afecta al rendimiento como lo hace en un **try-finally** instrucción porque el desenredo de pila no aparece. Sin embargo, se recomienda que utilice el **__leave** palabra clave en lugar de un **goto** instrucción porque es menos probable que sea un error de programación si la sección protegida es grande o compleja.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Funciones intrínsecas de control de excepciones estructurado
 
@@ -104,16 +99,16 @@ Control de excepciones estructurado proporciona dos funciones intrínsecas que e
 
 La función intrínseca `GetExceptionInformation` devuelve un puntero a una estructura que contiene información adicional sobre la excepción. A través de este puntero, se puede tener acceso al estado que tenía el equipo en el momento de producirse una excepción de hardware. La estructura es como se detalla a continuación:
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 Los tipos de puntero `PEXCEPTION_RECORD` y `PCONTEXT` se definen en el archivo de inclusión \<winnt.h >, y `_EXCEPTION_RECORD` y `_CONTEXT` se definen en el archivo de inclusión \<excpt.h >
 
-Puede usar `GetExceptionCode` en el controlador de excepciones. Sin embargo, puede usar `GetExceptionInformation` solo dentro de la expresión de filtro de excepción. La información a la que señala está normalmente en la pila y ya no está disponible cuando el control se transfiere al controlador de excepciones.
+Puede usar `GetExceptionCode` dentro del controlador de excepciones. Sin embargo, puede usar `GetExceptionInformation` solo dentro de la expresión de filtro de excepción. La información a la que señala está normalmente en la pila y ya no está disponible cuando el control se transfiere al controlador de excepciones.
 
 La función intrínseca `AbnormalTermination` está disponible dentro de un controlador de terminación. Devuelve 0 si el cuerpo de la **try-finally** instrucción finaliza secuencialmente. En todos los demás casos, devuelve 1.
 
@@ -121,10 +116,10 @@ excpt.h define algunos nombres alternativos para estos intrínsecos:
 
 `GetExceptionCode` es equivalente a `_exception_code`
 
- `GetExceptionInformation` es equivalente a `_exception_info`
+`GetExceptionInformation` es equivalente a `_exception_info`
 
- `AbnormalTermination` es equivalente a `_abnormal_termination`
-  
+`AbnormalTermination` es equivalente a `_abnormal_termination`
+
 ## <a name="example"></a>Ejemplo
 
 ```cpp
@@ -174,25 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>Salida  
-  
-```  
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**FIN de Específicos de Microsoft**  
+## <a name="output"></a>Salida
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)   
-[(C/C ++) de control de excepciones estructurado](../cpp/structured-exception-handling-c-cpp.md)   
+[Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
+[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

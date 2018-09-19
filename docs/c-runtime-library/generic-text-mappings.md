@@ -17,23 +17,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83a1e9b5581977b8f13076d76d077e146b74ff3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a33029e7c7a326efcc35166587ea0f94db3f074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033854"
 ---
 # <a name="generic-text-mappings"></a>Asignaciones de texto genérico
-A fin de simplificar la escritura de código para mercados internacionales, se definen asignaciones de texto genérico en TCHAR.H para:  
-  
--   [Tipos de datos](../c-runtime-library/data-type-mappings.md)  
-  
--   [Constantes y variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)  
-  
--   [Asignaciones de rutinas](../c-runtime-library/routine-mappings.md)  
-  
- Para obtener más información, consulte [Usar asignaciones de texto genérico](../c-runtime-library/using-generic-text-mappings.md). Las asignaciones de texto genérico son extensiones de Microsoft que no son compatibles con ANSI.  
-  
-## <a name="see-also"></a>Vea también  
- [Asignaciones de tipos de datos](../c-runtime-library/data-type-mappings.md)   
- [Ejemplo de programa de texto genérico](../c-runtime-library/a-sample-generic-text-program.md)
+
+A fin de simplificar la escritura de código para mercados internacionales, se definen asignaciones de texto genérico en TCHAR.H para:
+
+- [Tipos de datos](../c-runtime-library/data-type-mappings.md)
+
+- [Constantes y variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)
+
+- [Asignaciones de rutinas](../c-runtime-library/routine-mappings.md)
+
+Para obtener más información, consulte [Usar asignaciones de texto genérico](../c-runtime-library/using-generic-text-mappings.md). Las asignaciones de texto genérico son extensiones de Microsoft que no son compatibles con ANSI.
+
+## <a name="see-also"></a>Vea también
+
+[Asignaciones de tipos de datos](../c-runtime-library/data-type-mappings.md)<br/>
+[Ejemplo de programa de texto genérico](../c-runtime-library/a-sample-generic-text-program.md)

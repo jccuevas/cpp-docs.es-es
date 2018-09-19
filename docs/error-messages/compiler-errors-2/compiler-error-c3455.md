@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3455 | Documentos de Microsoft
+title: Error del compilador C3455 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f48f16164327645eb0c1982e9e11e8ea394276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089364"
 ---
 # <a name="compiler-error-c3455"></a>Error del compilador C3455
-'attribute': ninguno de los constructores de atributo coincidía con los argumentos  
-  
- Se usó un valor no válido para declarar un atributo.  Vea [attribute](../../windows/attribute.md) para obtener más información.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C3455.  
-  
-```  
-// C3455.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[attribute("MyAt")]   // C3455  
-// try the following line instead  
-// [attribute(All)]  
-ref struct MyAttr {  
-   MyAttr() {}  
-};  
+
+'attribute': ninguno de los constructores de atributo coincidía con los argumentos
+
+Se usó un valor no válido para declarar un atributo.  Vea [attribute](../../windows/attribute.md) para obtener más información.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C3455.
+
+```
+// C3455.cpp
+// compile with: /clr /c
+using namespace System;
+
+[attribute("MyAt")]   // C3455
+// try the following line instead
+// [attribute(All)]
+ref struct MyAttr {
+   MyAttr() {}
+};
 ```

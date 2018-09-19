@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Casttobase (método) | Documentos de Microsoft'
+title: Casttobase (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 55a4d7487be5b3565ba3945630cab4388f287a68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611829"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template<typename T>  
-static __forceinline Base* CastToBase(  
-   _In_ T* ptr  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de parámetro `ptr`.  
-  
- `ptr`  
- Puntero a un tipo `T`.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un puntero a `Base`.  
-  
-## <a name="remarks"></a>Comentarios  
- Convierte el puntero especificado a un puntero a `Base`.  
-  
- Para obtener más información acerca de `Base`, vea la sección de definiciones de tipo público en [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename T>
+static __forceinline Base* CastToBase(
+   _In_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*T*  
+El tipo de parámetro *ptr*.
+
+*ptr*  
+Puntero a un tipo *T*.
+
+## <a name="return-value"></a>Valor devuelto
+
+Un puntero a `Base`.
+
+## <a name="remarks"></a>Comentarios
+
+Convierte el puntero especificado a un puntero a `Base`.
+
+Para obtener más información acerca de `Base`, vea la sección de definiciones de tipo público en [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 1) C4612 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4612 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0983f5d0bb89eaf1daee94468b318557bc83cd05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10a0a5640386f5e5673f39d6c2c76ee18fcc7ba7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210735"
 ---
 # <a name="compiler-warning-level-1-c4612"></a>Advertencia del compilador (nivel 1) C4612
-error en el nombre de archivo de inclusión  
-  
- Esta advertencia se produce con **#pragma include_alias** cuando un nombre de archivo es incorrecto o falta.  
-  
- Los argumentos de la **#pragma include_alias** instrucción puede usar las comillas (**"***filename***"**) o corchetes angulares ( **\< ***nombre de archivo***>**), pero ambos deben usar la misma forma.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// C4612.cpp  
-// compile with: /W1 /LD  
-#pragma include_alias("StandardIO", <stdio.h>) // C4612  
+
+> error en el nombre de archivo de inclusión
+
+## <a name="remarks"></a>Comentarios
+
+Esta advertencia se produce con **#pragma include_alias** cuando un nombre de archivo es incorrecto o falta.
+
+Los argumentos para el **#pragma include_alias** instrucción puede utilizar el formulario de presupuesto ("*filename*") o corchetes angulares (\<*filename*>), pero ambos deben usar el mismo formato.
+
+## <a name="example"></a>Ejemplo
+
+```cpp
+// C4612.cpp
+// compile with: /W1 /LD
+#pragma include_alias("StandardIO", <stdio.h>) // C4612
 ```

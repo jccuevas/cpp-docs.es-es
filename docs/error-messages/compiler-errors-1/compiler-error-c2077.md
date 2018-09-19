@@ -1,5 +1,5 @@
 ---
-title: C2077 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2077 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba9395bd783307ae184cf7f23f187d4425523968
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a9025a61f9ca32679f5041256a2972ab1eaeea0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100661"
 ---
-# <a name="compiler-error-c2077"></a>C2077 de Error del compilador
-inicializador de campo no escalar 'identificador'  
-  
- Se intentó inicializar un campo de bits con un inicializador (estructura, unión, matriz o clase). Utilice un entero o un valor de punto flotante.
+# <a name="compiler-error-c2077"></a>Error del compilador C2077
+
+inicializador de campo no escalar 'identifier'
+
+Se intentó inicializar un campo de bits con un inicializador (struct, union, matriz o clase). Utilice un entero o un valor de punto flotante.

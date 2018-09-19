@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c0dae274d1f3aa61e2e8f2d3000b277edb0debd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107021"
 ---
 # <a name="isscalar-class"></a>is_scalar (Clase)
 
@@ -36,11 +37,12 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia de tipo predicado contiene true si el tipo `Ty` es un entero, un punto flotante, una enumeración, un puntero o un puntero a miembro, o bien un formulario `cv-qualified` de uno de ellos; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo integral, punto flotante tipo, un tipo de enumeración, un tipo de puntero o un puntero a miembro, o un `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 

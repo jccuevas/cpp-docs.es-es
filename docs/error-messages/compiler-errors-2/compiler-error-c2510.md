@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2510 | Documentos de Microsoft
+title: Error del compilador C2510 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 555d6d30f78c82e4c37e9fd5a047f62018b3d3d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2a672b8329bc3167452ec5e3d1d76f19161bf6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055967"
 ---
 # <a name="compiler-error-c2510"></a>Error del compilador C2510
-'identifier': el operando izquierdo de '::' debe ser una clase, una estructura o una unión  
-  
- El nombre de una clase, estructura o unión debe aparecer en el lado izquierdo del operador de resolución de ámbito (`::`).
+
+'identifier': el operando izquierdo de '::' debe ser una clase, una estructura o una unión
+
+El nombre de una clase, estructura o unión debe aparecer en el lado izquierdo del operador de resolución de ámbito (`::`).

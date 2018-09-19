@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCDragFrameImpl | Documentos de Microsoft
+title: CMFCDragFrameImpl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f743c074bc956181e8b62a02062ac2f22cdfb6e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8cd05dc5d4cdff535b8e571e94d9033d0220ccf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710169"
 ---
-# <a name="cmfcdragframeimpl-class"></a>Clase CMFCDragFrameImpl
-La `CMFCDragFrameImpl` clase dibuja el rectángulo de arrastre que aparece cuando el usuario arrastra un panel en el modo de acoplamiento estándar.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl (clase)
+La `CMFCDragFrameImpl` clase dibuja el rectángulo de arrastre que aparece cuando el usuario arrastra un panel en modo de acoplamiento estándar.  
+   Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
    
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,7 +34,7 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Un objeto de esta clase está incrustado en cada uno de ellos [clase CPane](../../mfc/reference/cpane-class.md) objeto. Por lo tanto, cada panel que usa el `CanFloat` método muestra un rectángulo de arrastre cuando el usuario arrastra.  
+ Un objeto de esta clase está incrustado en cada [clase CPane](../../mfc/reference/cpane-class.md) objeto. Por lo tanto, cada panel que usa el `CanFloat` método muestra un rectángulo de arrastre cuando el usuario lo arrastra.  
   
  Puede controlar el grosor del rectángulo de arrastre mediante [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) y [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
@@ -51,7 +52,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bClearInternalRects`  
+ [in] *bClearInternalRects*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -63,7 +64,7 @@ void Init(CWnd* pDraggedWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDraggedWnd`  
+ [in] *pDraggedWnd*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -75,7 +76,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForceMove`  
+ [in] *bForceMove*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -91,9 +92,9 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pTabbedBar`  
- [in] `bFirstTime`  
- [in] `pCBarToPlaceOn`  
+*pTabbedBar*<br/>
+[in] [in] *bFirstTime*  
+ [in] *pCBarToPlaceOn*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -105,7 +106,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pOldTargetBar`  
+ [in] *pOldTargetBar*  
   
 ### <a name="remarks"></a>Comentarios  
   

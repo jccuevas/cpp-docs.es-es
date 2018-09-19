@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af8f5c543847c91903c9cb4ddf2502c0cc59dfa0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108764"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution (Clase)
 
@@ -81,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType* el tipo de resultado entero, valor predeterminado es `int`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*IntType*<br/>
+El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -208,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*firstW* el primer iterador en la lista de los que se va a construir la distribución.
+*firstW*<br/>
+Primer iterador de la lista a partir del que se va a construir la distribución.
 
-*lastW* último iterador de la lista desde el que se va a construir la distribución (ni inclusive porque iteradores utilizan un elemento vacío para el final).
+*lastW*<br/>
+Último iterador de la lista a partir del que se va a construir la distribución (no se incluye, ya que los iteradores usan un elemento vacío para el final).
 
-*weightlist* el [initializer_list](../cpp/initializers.md) desde el que se va a construir la distribución.
+*weightlist*<br/>
+[initializer_list](../cpp/initializers.md) a partir de la que se va a construir la distribución.
 
-*recuento de* el número de elementos del intervalo de distribución. Si `count==0`, equivale al constructor predeterminado (siempre genera cero).
+*count*<br/>
+Número de elementos del intervalo de distribución. Si `count==0`, equivale al constructor predeterminado (siempre genera cero).
 
-*baja* el valor más bajo del intervalo de distribución.
+*low*<br/>
+Valor mínimo del intervalo de distribución.
 
-*alto* el valor más alto del intervalo de distribución.
+*high*<br/>
+Valor máximo del intervalo de distribución.
 
-*weightfunc* el objeto que representa la función de probabilidad para la distribución. Tanto el parámetro como el valor devuelto debe poder convertirse a `double`.
+*weightfunc*<br/>
+Objeto que representa la función de probabilidad de la distribución. El parámetro y el valor devuelto deben ser convertibles a **doble**.
 
-*parm* el `param_type` estructura utilizada para construir la distribución.
+*parm*<br/>
+La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -268,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*firstW* el primer iterador en la lista de los que se va a construir la distribución.
+*firstW*<br/>
+Primer iterador de la lista a partir del que se va a construir la distribución.
 
-*lastW* último iterador de la lista desde el que se va a construir la distribución (ni inclusive porque iteradores utilizan un elemento vacío para el final).
+*lastW*<br/>
+Último iterador de la lista a partir del que se va a construir la distribución (no se incluye, ya que los iteradores usan un elemento vacío para el final).
 
-*weightlist* el [initializer_list](../cpp/initializers.md) desde el que se va a construir la distribución.
+*weightlist*<br/>
+[initializer_list](../cpp/initializers.md) a partir de la que se va a construir la distribución.
 
-*recuento de* el número de elementos del intervalo de distribución. Si *count* es 0, equivale al constructor predeterminado (siempre genera cero).
+*count*<br/>
+Número de elementos del intervalo de distribución. Si *count* es 0, equivale al constructor predeterminado (siempre genera cero).
 
-*baja* el valor más bajo del intervalo de distribución.
+*low*<br/>
+Valor mínimo del intervalo de distribución.
 
-*alto* el valor más alto del intervalo de distribución.
+*high*<br/>
+Valor máximo del intervalo de distribución.
 
-*weightfunc* el objeto que representa la función de probabilidad para la distribución. Tanto el parámetro como el valor devuelto debe poder convertirse a `double`.
+*weightfunc*<br/>
+Objeto que representa la función de probabilidad de la distribución. El parámetro y el valor devuelto deben ser convertibles a **doble**.
 
-*derecho* la `param_type` objeto que se va a comparar con esta.
+*right*<br/>
+El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
 

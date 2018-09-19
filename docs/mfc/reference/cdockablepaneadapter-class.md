@@ -1,5 +1,5 @@
 ---
-title: Clase CDockablePaneAdapter | Documentos de Microsoft
+title: CDockablePaneAdapter (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,13 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712080"
 ---
-# <a name="cdockablepaneadapter-class"></a>Clase CDockablePaneAdapter
+# <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter (clase)
 Proporciona compatibilidad para paneles derivados de `CWnd`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,12 +47,12 @@ class CDockablePaneAdapter : public CDockablePane
 |Name|Descripción|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Devuelve la ventana ajustada.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Invalida [CDockablePane:: Loadstate](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Invalida [CDockablePane:: SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Invalida [CDockablePane:: Loadstate](cdockablepane-class.md#loadstate).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(Invalida [CDockablePane:: SaveState](cdockablepane-class.md).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>Comentarios  
- Por lo general, el marco de trabajo crea los objetos de esta clase cuando se utiliza el [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) o [cmfcbasetabctrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) métodos.  
+ Normalmente, el marco de trabajo crea una instancia de objetos de esta clase cuando se usa el [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) o [cmfcbasetabctrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) métodos.  
   
  Si desea personalizar la `CDockablePaneAdapter` comportamiento, simplemente derivar una nueva clase y establezca la información de clase en tiempo de ejecución en una ventana con fichas mediante [cmfcbasetabctrl:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
   
@@ -89,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
- El nombre del perfil.  
+*lpszProfileName*<br/>
+[in] El nombre del perfil.  
   
- [in] `nIndex`  
- El índice de perfil.  
+*nIndex*<br/>
+[in] El índice del perfil.  
   
- [in] `uiID`  
- El identificador del panel.  
+*uiID*<br/>
+[in] El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -113,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
- El nombre del perfil.  
+*lpszProfileName*<br/>
+[in] El nombre del perfil.  
   
- [in] `nIndex`  
- El índice de perfil (el valor predeterminado es el identificador del control de la ventana).  
+*nIndex*<br/>
+[in] El índice de perfil (el valor predeterminado es el identificador de control de la ventana).  
   
- [in] `uiID`  
- El identificador del panel.  
+*uiID*<br/>
+[in] El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -134,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
- Un puntero a la ventana para el adaptador de panel que va a contener.  
+*conquistado*<br/>
+[in] Un puntero a la ventana para ajustar el adaptador de panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
   

@@ -1,5 +1,5 @@
 ---
-title: __addfsbyte, __addfsword, __addfsdword | Documentos de Microsoft
+title: __addfsbyte, __addfsword, __addfsdword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714225"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 **Específicos de Microsoft**  
@@ -52,11 +53,11 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Offset`  
- El desplazamiento desde el principio de `FS`.  
+*Desplazamiento*<br/>
+[in] El desplazamiento desde el principio del `FS`.  
   
- [in] `Data`  
- El valor para agregar a la ubicación de memoria.  
+*Data*<br/>
+[in] Valor que se agrega a la ubicación de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
   

@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4965 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4965 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b731393471097fd3ba02979a48cd59513eaea9fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8613585d1f34060fb2e60f976f76c6801005aca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036649"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Advertencia del compilador (nivel 1) C4965
-conversión boxing implícita de entero 0; Utilice nullptr o conversión explícita  
-  
- Visual C++ incluye una conversión boxing implícita de tipos de valor. Una instrucción que dan como resultado una asignación nula al usar extensiones administradas para C++ ahora se convierte en una asignación a un int sometidas a conversión boxing.  
-  
- Para obtener más información, consulte [conversión Boxing](../../windows/boxing-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4965.  
-  
-```  
-// C4965.cpp  
-// compile with: /clr /W1  
-int main() {  
-   System::Object ^o = 0;   // C4965  
-  
-   // the previous line is the same as the following line  
-   // using Managed Extensions for C++  
-   // System::Object *o = __box(0);  
-  
-   // OK  
-   System::Object ^o2 = nullptr;  
-   System::Object ^o3 = safe_cast<System::Object^>(0);  
-}  
+
+conversión boxing implícita de entero 0; Utilice nullptr o conversión explícita
+
+Visual C++ incluye la conversión boxing implícita de tipos de valor. Una instrucción que dieron lugar a una asignación de valores null mediante extensiones administradas para C++ ahora se convierte en una asignación a un int con conversión boxing.
+
+Para obtener más información, consulte [Boxing](../../windows/boxing-cpp-component-extensions.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4965.
+
+```
+// C4965.cpp
+// compile with: /clr /W1
+int main() {
+   System::Object ^o = 0;   // C4965
+
+   // the previous line is the same as the following line
+   // using Managed Extensions for C++
+   // System::Object *o = __box(0);
+
+   // OK
+   System::Object ^o2 = nullptr;
+   System::Object ^o3 = safe_cast<System::Object^>(0);
+}
 ```

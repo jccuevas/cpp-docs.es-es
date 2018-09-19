@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685741"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Cómo: Crear agentes que usen directivas de programador específicas
 Un agente es un componente de aplicación que funciona de forma asincrónica con otros componentes para resolver tareas de computación mayores. Normalmente, un agente tiene un ciclo de vida establecido y mantiene el estado.  

@@ -1,7 +1,7 @@
 ---
 title: regex_constants (Clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,13 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385000"
 ---
-# <a name="regexconstants-class"></a>regex_constants (Clase)
+# <a name="regexconstants-namespace"></a>espacio de nombres regex_constants)
 
 Espacio de nombres para las marcas de expresiones regulares.
 
@@ -109,12 +110,18 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
 ## <a name="remarks"></a>Comentarios
 
 El espacio de nombres `regex_constants` encapsula varios tipos de marca y sus valores de marca asociados.
+
+|||
+|-|-|
+|[error_type](#error_type)|Marcas para notificar errores de sintaxis de expresión regular.|
+|[match_flag_type](#match_flag_type)|Marcadores para las opciones de coincidencia de expresión regular.|
+|[syntax_option_type](#syntax_option_type)|Marcas para seleccionar las opciones de sintaxis.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -213,7 +220,7 @@ El tipo es un tipo de máscara de bits que describe las opciones que se van a us
 
 Las opciones de coincidencia son las siguientes:
 
-`match_default`
+*match_default*<br/>
 
 `match_not_bol`: no tratar la primera posición de la secuencia de destino como el principio de una línea
 

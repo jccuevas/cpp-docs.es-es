@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cc88fab5584d92d79bb0dabb816898f3925546
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b813128f07376d017a3ea76d6bb359db437f6f3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100201"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t (Clase)
 
@@ -34,14 +35,16 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
     Result operator()(const Type* Pleft) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Pm` Un puntero a la función miembro de clase **tipo** se convierta en un objeto de función.
+*P. M.*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-`Pleft` El objeto que la `Pm` función miembro se llama en.
+*Pleft*<br/>
+El objeto que la *Pm* función miembro se llama en.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -49,7 +52,7 @@ Una función unaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de `Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define su función miembro `operator()` para que devuelva ( `Pleft`->\* `Pm`)() **const**.
+La clase de plantilla almacena una copia de *Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` para que devuelva ( `Pleft`->\* `Pm`)() **const**.
 
 ## <a name="example"></a>Ejemplo
 

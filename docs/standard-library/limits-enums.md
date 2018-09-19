@@ -7,11 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960653"
 ---
 # <a name="ltlimitsgt-enums"></a>Enumeraciones &lt;limits&gt;
 
@@ -34,11 +35,11 @@ enum float_denorm_style {
 
 La enumeración devuelve:
 
-- **denorm_indeterminate** si no se puede determinar en tiempo de traducción la presencia o la ausencia de formularios no normalizados.
+- `denorm_indeterminate` Si no se puede determinar la presencia o ausencia de formularios no normalizados en tiempo de traducción.
 
-- **denorm_absent** si no hay presentes formularios no normalizados.
+- `denorm_absent` Si no están presentes formularios no normalizados.
 
-- **denorm_present** si hay presentes formularios no normalizados.
+- `denorm_present` Si están presentes formularios no normalizados.
 
 ### <a name="example"></a>Ejemplo
 
@@ -61,15 +62,15 @@ enum float_round_style {
 
 La enumeración devuelve:
 
-- **round_indeterminate** si no se puede determinar el método de redondeo.
+- `round_indeterminate` Si no se puede determinar el método de redondeo.
 
-- **round_toward_zero** si se redondea hacia cero.
+- `round_toward_zero` Si el redondeo hacia cero.
 
-- **round_to_nearest** si se redondea al entero más próximo.
+- `round_to_nearest` Si redondea al entero más cercano.
 
-- **round_toward_infinity** si se redondea para evitar el cero.
+- `round_toward_infinity` Si el redondeo para evitar el cero.
 
-- **round_toward_neg_infinity** si se redondea al entero más negativo.
+- `round_toward_neg_infinity` Si redondea al entero más negativo.
 
 ### <a name="example"></a>Ejemplo
 

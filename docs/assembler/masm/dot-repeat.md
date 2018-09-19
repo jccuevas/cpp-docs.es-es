@@ -1,7 +1,7 @@
 ---
-title: . REPITA | Documentos de Microsoft
+title: . REPITA | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e3dadaa95cb4bf0ca4a17af32332d5b5471245
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8856ed0e1d86277a413baac2c56e5c5ca2ea9ff0
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43687957"
 ---
 # <a name="repeat"></a>.REPEAT
-Genera código que repite la ejecución del bloque de *instrucciones* hasta `condition` pasa a ser true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), que se convierte en true cuando CX es cero, se puede sustituir por [. Hasta que](../../assembler/masm/dot-until.md). El `condition` es opcional con **. UNTILCXZ**.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-   .REPEAT  
-statements  
-.UNTIL condition  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Genera código que se repite la ejecución del bloque de *instrucciones* hasta `condition` pasa a ser true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), que se convierte en true cuando CX es cero, se puede sustituir por [. Hasta que](../../assembler/masm/dot-until.md). El `condition` es opcional con **. UNTILCXZ**.
+
+## <a name="syntax"></a>Sintaxis
+
+> .REPEAT<br/>
+> instrucciones<br/>
+> . Hasta que la condición
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

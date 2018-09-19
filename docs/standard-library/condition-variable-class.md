@@ -30,11 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55598e4d4aad92e9f4557886bbcb3bd442917624
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109841"
 ---
 # <a name="conditionvariable-class"></a>condition_variable (Clase)
 
@@ -61,7 +62,7 @@ class condition_variable;
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador condition_variable.|
 |[notify_all](#notify_all)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.|
 |[notify_one](#notify_one)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.|
-|[espera](#wait)|Bloquea un subproceso.|
+|[Espere](#wait)|Bloquea un subproceso.|
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|
 
@@ -124,9 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parámetros
 
-`Lck` A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) objeto.
+*Lck*<br/>
+Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-`Pred` Cualquier expresión que devuelva `true` o `false`.
+*Pred*<br/>
+Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -158,21 +161,24 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parámetros
 
-`Lck` A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) objeto.
+*Lck*<br/>
+Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-`Rel_time` Un `chrono::duration` objeto que especifica la cantidad de tiempo antes de que el subproceso se reactivará.
+*Rel_time*<br/>
+Objeto `chrono::duration` que especifica la cantidad de tiempo que tiene que transcurrir hasta que el subproceso se reactive.
 
-`Pred` Cualquier expresión que devuelva `true` o `false`.
+*Pred*<br/>
+Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer método devuelve `cv_status::timeout` si la espera termina cuando ha transcurrido `Rel_time`. De lo contrario, el método devuelve `cv_status::no_timeout`.
+Devuelve el primer método `cv_status::timeout` si la espera termina cuando *Rel_time* ha transcurrido. De lo contrario, el método devuelve `cv_status::no_timeout`.
 
-El segundo método devuelve el valor de `Pred`.
+El segundo método devuelve el valor de *Pred*.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer método se bloquea hasta que se señaliza el objeto `condition_variable` mediante una llamada a [notify_one](#notify_one) o [notify_all](#notify_all), o hasta que ha transcurrido el intervalo de tiempo `Rel_time`. También se puede reactivar en falso.
+El primer método se bloquea hasta que el `condition_variable` objeto se señaliza mediante una llamada a [notify_one](#notify_one) o [notify_all](#notify_all) o hasta que el intervalo de tiempo *Rel_time* ha transcurrido. También se puede reactivar en falso.
 
 En efecto, el segundo método ejecuta el código siguiente.
 
@@ -213,17 +219,20 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parámetros
 
-`Lck` A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) objeto.
+*Lck*<br/>
+Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-`Abs_time` A [chrono:: time_point](../standard-library/time-point-class.md) objeto.
+*Abs_time*<br/>
+Un objeto [chrono::time_point](../standard-library/time-point-class.md).
 
-`Pred` Cualquier expresión que devuelva `true` o `false`.
+*Pred*<br/>
+Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Los métodos que devuelven un tipo `cv_status` devuelven `cv_status::timeout` si la espera termina cuando transcurre `Abs_time`. De lo contrario, los métodos devuelven `cv_status::no_timeout`.
+Los métodos que devuelven un `cv_status` escriba volver `cv_status::timeout` si la espera termina cuando *Abs_time* transcurre. De lo contrario, los métodos devuelven `cv_status::no_timeout`.
 
-Los métodos que devuelven un tipo `bool` devuelven el valor de `Pred`.
+Los métodos que devuelven un **bool** devolver el valor de *Pred*.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2f425e37d9471db42fa9ceec69048e3936f07c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb5390ad8fec7e355181c9711de1bb14d3b17820
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705983"
 ---
 # <a name="timepoint-class"></a>time_point (Clase)
 
@@ -76,7 +77,7 @@ class time_point;
 
 **Espacio de nombres:** std::chrono
 
-## <a name="max"></a>  time_point:: max
+## <a name="max"></a>  time_point::max
 
 Método estático que devuelve el límite superior para los valores de tipo `time_point::ref`.
 
@@ -88,7 +89,7 @@ static constexpr time_point max();
 
 En efecto, devuelve `time_point(duration::max())`.
 
-## <a name="min"></a>  time_point:: min
+## <a name="min"></a>  time_point::min
 
 Método estático que devuelve el límite inferior para valores de tipo `time_point::ref`.
 
@@ -110,7 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-`Dur` Un `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -126,7 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-`Dur` Un `duration` objeto.
+*Duración*<br/>
+Un objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -147,19 +150,21 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parámetros
 
-`Dur` A [duración](../standard-library/duration-class.md) objeto.
+*Duración*<br/>
+Un objeto [duration](../standard-library/duration-class.md).
 
-`Tp` Un `time_point` objeto.
+*TP*<br/>
+Un objeto `time_point`.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto cuyo valor `duration` almacenado es igual a [duration::zero](../standard-library/duration-class.md#zero).
 
-El segundo constructor crea un objeto cuyo valor de duración almacenado es igual a `Dur`. A menos que `is_convertible<Duration2, duration>`*sea true*, el segundo constructor no participa en la resolución de sobrecarga. Para más información, vea [<type_traits>](../standard-library/type-traits.md).
+El segundo constructor crea un objeto cuyo valor de duración almacenado es igual a *Dur*. A menos que `is_convertible<Duration2, duration>` es true, el segundo constructor no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).
 
 El tercer constructor inicializa su valor `duration` mediante `Tp.time_since_epoch()`.
 
-## <a name="time_since_epoch"></a>  time_point:: time_since_epoch
+## <a name="time_since_epoch"></a>  time_point::time_since_epoch
 
 Recupera el valor [duration](../standard-library/duration-class.md) almacenado.
 

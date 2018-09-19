@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2412 | Documentos de Microsoft
+title: Error del compilador C2412 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6abe2e7ae989acab3b8545f447d567a0e876953
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee9c3b7b414bcbfa07fb289a76e9e481da6697c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044566"
 ---
 # <a name="compiler-error-c2412"></a>Error del compilador C2412
-'label': entre mayúsculas y minúsculas etiqueta redefinida  
-  
- La etiqueta se define más de una vez en la función actual. Cambiar la ortografía de la etiqueta y sus referencias.
+
+'label': etiqueta de mayúsculas y minúsculas redefinida
+
+La etiqueta se define más de una vez en la función actual. Cambiar la ortografía de la etiqueta y sus referencias.

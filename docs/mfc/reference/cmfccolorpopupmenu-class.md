@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCColorPopupMenu | Documentos de Microsoft
+title: CMFCColorPopupMenu (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,13 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721869"
 ---
-# <a name="cmfccolorpopupmenu-class"></a>Clase CMFCColorPopupMenu
+# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu (clase)
 Representa un menú emergente que los usuarios usan para seleccionar los colores en un documento o aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -54,9 +55,9 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |||  
 |-|-|  
 |Name|Descripción|  
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Crea una barra de colores acoplable desplazable. (Invalida [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|  
+|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Crea una barra de color acoplable desplazable. (Invalida [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|  
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Devuelve el [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) que está incrustado en el menú emergente. (Invalida [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|  
-|`CMFCColorPopupMenu::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|`CMFCColorPopupMenu::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
 |[CMFCColorPopupMenu::SetPropList](#setproplist)|Establece el objeto de control de cuadrícula de propiedad de los datos incrustados `CMFCColorBar` objeto.|  
   
 ### <a name="data-members"></a>Miembros de datos  
@@ -68,9 +69,9 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |`m_wndColorBar`|La `CMFCColorBar` objeto que proporciona la selección de color.|  
   
 ### <a name="remarks"></a>Comentarios  
- Esta clase hereda la funcionalidad del menú emergente de la `CMFCPopupMenu` clase y administra un `CMFCColorBar` objeto que proporciona la selección de color. Cuando el marco de trabajo de la barra de herramientas está en modo de personalización y `m_bEnabledInCustomizeMode` miembro está establecido en `FALSE`, no se muestra el objeto de barra de colores. Para obtener más información acerca del modo de personalización, consulte [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
+ Esta clase hereda la funcionalidad del menú emergente de la `CMFCPopupMenu` clase y administra un `CMFCColorBar` objeto que proporciona la selección de color. Cuando el marco de trabajo de la barra de herramientas está en modo de personalización y la `m_bEnabledInCustomizeMode` miembro está establecido en FALSE, no se muestra el objeto de barra de colores. Para obtener más información acerca del modo de personalización, consulte [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
   
- Para obtener más información acerca de `CMFCColorBar`, consulte [CMFCColorBar clase](../../mfc/reference/cmfccolorbar-class.md).  
+ Para obtener más información acerca de `CMFCColorBar`, consulte [CMFCColorBar (clase)](../../mfc/reference/cmfccolorbar-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,54 +133,54 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `colors`  
- Una matriz de colores que el marco de trabajo se muestra en el menú emergente.  
+*Colores*<br/>
+[in] Una matriz de colores que el marco de trabajo se muestra en el menú emergente.  
   
- [in] `color`  
- El color seleccionado de forma predeterminada.  
+*Color*<br/>
+[in] El color seleccionado de forma predeterminada.  
   
- [in] `lpszAutoColor`  
- La etiqueta de texto de la *automática* botón de color (valor predeterminado), o `NULL`.  
+*lpszAutoColor*<br/>
+[in] La etiqueta de texto de la *automática* botón de color (valor predeterminado), o NULL.  
   
  La etiqueta para el botón automático estándar es **automática**.  
   
- [in] `lpszOtherColor`  
- La etiqueta de texto de la *otros* botón, que se presenta más opciones de color, o `NULL`.  
+*lpszOtherColor*<br/>
+[in] La etiqueta de texto de la *otros* botón que muestra más las opciones de color, o NULL.  
   
- La etiqueta estándar para el otro botón es **más colores...** .  
+ La etiqueta para el botón otro estándar es **más colores...** .  
   
- [in] `lpszDocColors`  
- La etiqueta de texto del botón de colores del documento. La paleta de colores del documento enumera todos los colores que utiliza actualmente el documento.  
+*lpszDocColors*<br/>
+[in] La etiqueta de texto del botón de colores del documento. La paleta de colores del documento enumera todos los colores que utiliza actualmente el documento.  
   
- [in] `lstDocColors`  
- Una lista de colores que usa actualmente el documento.  
+*lstDocColors*<br/>
+[in] Una lista de colores que usa actualmente el documento.  
   
- [in] `nColumns`  
- El número de columnas que tiene la matriz de colores.  
+*nColumns*<br/>
+[in] El número de columnas que tiene la matriz de colores.  
   
- [in] `nHorzDockRows`  
- El número de filas que tiene la barra de color cuando está acoplado horizontalmente.  
+*nHorzDockRows*<br/>
+[in] El número de filas que tiene la barra de color cuando está acoplado horizontalmente.  
   
- [in] `nVertDockColumns`  
- El número de columnas que tiene la barra de color cuando se acopla verticalmente.  
+*nVertDockColumns*<br/>
+[in] El número de columnas que tiene la barra de color cuando se acopla verticalmente.  
   
- [in] `colorAutomatic`  
- El color predeterminado que se aplica el marco de trabajo al hacer clic en el botón automático.  
+*automáticoColor*<br/>
+[in] El color predeterminado que se aplica el marco de trabajo al hacer clic en el botón automático.  
   
- [in] `uiCommandID`  
- Identificador de comando de control de barra de colores.  
+*uiCommandID*<br/>
+[in] Identificador de comando de control de barra de colores.  
   
- [in] `bStdColorDlg`  
- Un valor booleano que indica si se debe mostrar el cuadro de diálogo de color estándar del sistema o el [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) cuadro de diálogo.  
+*bStdColorDlg*<br/>
+[in] Un valor booleano que indica si se debe mostrar el cuadro de diálogo de colores estándar del sistema o el [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) cuadro de diálogo.  
   
- [in] `pParentBtn`  
- Un puntero a un botón primario.  
+*pParentBtn*<br/>
+[in] Un puntero a un botón primario.  
   
- [in] `nID`  
- Identificador del comando.  
+*nID*<br/>
+[in] El identificador de comando.  
   
 ### <a name="remarks"></a>Comentarios  
- Cada sobrecarga de constructor establece la `m_bEnabledInCustomizeMode` miembro `FALSE`.  
+ Cada sobrecarga de constructor establece el `m_bEnabledInCustomizeMode` miembro en FALSE.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo construir un `CMFCColorPopupMenu` objeto.  
@@ -187,7 +188,7 @@ CMFCColorPopupMenu(
  [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
 ##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar  
- Crea una barra de colores acoplable desplazable.  
+ Crea una barra de color acoplable desplazable.  
   
 ```  
 virtual CPane* CreateTearOffBar(
@@ -201,15 +202,15 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pWndMain`|Puntero a la ventana primaria de la barra desplazable.|  
-|[in] `uiID`|El identificador de comando de la barra desplazable.|  
-|[in] `lpszName`|El texto de la ventana de la barra desplazable.|  
+|*pWndMain*|[in] Puntero a la ventana primaria de la barra desplazable.|  
+|*uiID*|[in] El identificador de comando de la barra desplazable.|  
+|*lpszName*|[in] El texto de la ventana de la barra desplazable.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al nuevo objeto de barra de control desplazable.  
+ Un puntero al nuevo objeto de la barra de control desplazable.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método crea un [CMFCColorBar clase](../../mfc/reference/cmfccolorbar-class.md) objeto y lo convierte a un [clase CPane](../../mfc/reference/cpane-class.md) puntero. Puede convertir este valor a un [CMFCColorBar clase](../../mfc/reference/cmfccolorbar-class.md) puntero mediante una de las macros de conversión que se describe en [tipo de conversión de objetos de clase MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md).  
+ Este método crea un [CMFCColorBar (clase)](../../mfc/reference/cmfccolorbar-class.md) objeto y lo convierte a un [clase CPane](../../mfc/reference/cpane-class.md) puntero. Puede convertir este valor a un [CMFCColorBar (clase)](../../mfc/reference/cmfccolorbar-class.md) puntero mediante una de las macros de conversión se describe en [tipo de conversión de objetos de clase MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md).  
   
 ##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar  
  Devuelve el [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) que está incrustado en el menú emergente.  
@@ -222,7 +223,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
  Un puntero a los datos incrustados `CMFCPopupMenuBar`.  
   
 ### <a name="remarks"></a>Comentarios  
- El menú emergente color tiene incrustada [CMFCPopupMenuBar (clase)](../../mfc/reference/cmfcpopupmenubar-class.md) objeto. Invalide este método en una clase derivada si la aplicación utiliza un tipo incrustado diferente.  
+ El menú emergente de color tiene incrustada [CMFCPopupMenuBar (clase)](../../mfc/reference/cmfcpopupmenubar-class.md) objeto. Invalide este método en una clase derivada si la aplicación utiliza un tipo incrustado diferente.  
   
 ##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList  
  Establece el objeto de control de cuadrícula de propiedad de los datos incrustados `CMFCColorBar` objeto.  
@@ -232,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndList`  
- Puntero a un objeto de control de cuadrícula de propiedad.  
+*pWndList*<br/>
+[in] Puntero a un objeto de control de cuadrícula de propiedad.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

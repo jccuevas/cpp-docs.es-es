@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52479cc433f59d76dd40cfb752550e51652892d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 652937aba7b1c5626b617cec4e80761a22b55066
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109828"
 ---
 # <a name="ispod-class"></a>is_pod (Clase)
 
@@ -36,11 +37,12 @@ struct is_pod;
 
 ### <a name="parameters"></a>Parámetros
 
-*T* el tipo de consulta.
+*T*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-`is_pod<T>::value` es `true` si el tipo *T* es de datos antiguos sin formato (POD). De lo contrario, es `false`.
+`is_pod<T>::value` es **true** si el tipo *T* es datos antiguos sin formato (POD). De lo contrario es **false**.
 
 Los tipos aritméticos, tipos de enumeración, tipos de puntero y el puntero a tipos de miembro son POD.
 

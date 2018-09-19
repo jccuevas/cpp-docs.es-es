@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: f151bbaf692d914fa1072021e2f14262b2c72ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 25c03be7ffb504f2bec47677aec70360d0f8b38f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704267"
 ---
 # <a name="ltthreadgt-functions"></a>Funciones de &lt;thread&gt;
 
@@ -53,11 +54,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parámetros
 
-`Rel_time` A [duración](../standard-library/duration-class.md) objeto que especifica un intervalo de tiempo.
+*Rel_time*<br/>
+Un objeto [duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función bloquea el subproceso de llamada al menos durante el tiempo especificado por `Rel_time`. Esta función no produce ninguna excepción.
+La función bloquea el subproceso que realiza la llamada para al menos el tiempo especificado por *Rel_time*. Esta función no produce ninguna excepción.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -72,7 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parámetros
 
-`Abs_time` Representa un punto en el tiempo.
+*Abs_time*<br/>
+Representa un punto en el tiempo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -80,7 +83,7 @@ Esta función no produce ninguna excepción.
 
 ## <a name="swap"></a>  swap
 
-Intercambia los estados de dos objetos `thread`.
+Intercambia los Estados de dos **subproceso** objetos.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -88,9 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Left` La izquierda `thread` objeto.
+*Izquierda*<br/>
+La izquierda **subproceso** objeto.
 
-`Right` El derecho `thread` objeto.
+*Derecha*<br/>
+El derecho de **subproceso** objeto.
 
 ### <a name="remarks"></a>Comentarios
 

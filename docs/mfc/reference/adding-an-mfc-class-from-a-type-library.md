@@ -1,5 +1,5 @@
 ---
-title: Agregar una clase MFC desde una biblioteca de tipos | Documentos de Microsoft
+title: Adición de una clase MFC desde una biblioteca de tipos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 349d06d7fecb82af64fbf2d3b2ebe54689b3b292
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c79409ae6e4c7447050c26246768c0074c4e4e92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677200"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Agregar una clase MFC desde una biblioteca de tipos
-Use este asistente para crear una clase MFC desde una interfaz en una biblioteca de tipos disponibles. Puede agregar una clase MFC a un [aplicación MFC](../../mfc/reference/creating-an-mfc-application.md), [DLL de MFC](../../mfc/reference/creating-an-mfc-dll-project.md), o un [control ActiveX de MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
+Use este asistente para crear una clase MFC desde una interfaz en una biblioteca de tipos disponible. Puede agregar una clase MFC a una [Aplicación MFC](../../mfc/reference/creating-an-mfc-application.md), un archivo [DLL de MFC](../../mfc/reference/creating-an-mfc-dll-project.md) o un [control ActiveX de MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
   
 > [!NOTE]
->  No es necesario crear un proyecto MFC con la automatización habilitada para poder agregar una clase desde una biblioteca de tipos.  
+>  No es necesario crear un proyecto MFC con la automatización habilitada para agregar una clase desde una biblioteca de tipos.  
   
- Una biblioteca de tipos contiene una descripción binaria de las interfaces expuestas por un componente, que define los métodos junto con sus parámetros y tipos de valor devuelto. La biblioteca de tipos debe estar registrada para que aparezca en el **bibliotecas de tipos disponibles** lista Agregar clases desde el Asistente para la biblioteca de tipos. Vea "Dentro de COM distribuido: bibliotecas de tipo e integración del lenguaje" en MSDN library para obtener más información.  
+ Una biblioteca de tipos contiene una descripción binaria de las interfaces expuestas por un componente, definir los métodos junto con sus parámetros y tipos de valor devuelto. Se debe registrar la biblioteca de tipos para que aparezca en el **bibliotecas de tipos disponibles** lista Agregar clases desde el Asistente para la biblioteca de tipos. Vea "Dentro de COM distribuido: bibliotecas de tipo e integración del lenguaje" en MSDN library para obtener más información.  
   
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Para agregar una clase MFC desde una biblioteca de tipos  
   
-1.  En la vista **el Explorador de soluciones** o [vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en el nombre del proyecto al que desea agregar la clase.  
+1.  En el **el Explorador de soluciones** o [vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic en el nombre del proyecto al que desea agregar la clase.  
   
-2.  En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.  
+2.  En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.  
   
-3.  En el [Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo, en el panel Plantillas, haga clic en **clase MFC de Typelib**y, a continuación, haga clic en **abiertos** para mostrar el [agregar clases a partir de la biblioteca de tipos ](../../mfc/reference/add-class-from-typelib-wizard.md).  
+3.  En el [Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo, en el panel Plantillas, haga clic en **clase MFC de Typelib**y, a continuación, haga clic en **abierto** para mostrar el [agregar clases a partir de la biblioteca de tipos ](../../mfc/reference/add-class-from-typelib-wizard.md).  
   
  En el asistente, puede agregar más de una clase en una biblioteca de tipos. Del mismo modo, puede agregar clases de más de una biblioteca de tipos en una única sesión del asistente.  
   

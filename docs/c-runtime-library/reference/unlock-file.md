@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107552"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -55,11 +56,12 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parámetros
 
-*archivo* identificador de archivo.
+*file*<br/>
+Identificador de archivo.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_unlock_file** función desbloquea el archivo especificado por *archivo*. El desbloqueo de un archivo permite que otros procesos accedan a él. Esta función no debe llamarse a menos que **_lock_file** se llamó previamente en el *archivo* puntero. Al llamar a **_unlock_file** en un archivo que no esté bloqueado puede provocar un interbloqueo. A modo de ejemplo, vea [_lock_file](lock-file.md).
+El **_unlock_file** función desbloquea el archivo especificado por *archivo*. El desbloqueo de un archivo permite que otros procesos accedan a él. Esta función no debe llamarse a menos que **_lock_file** se llamó previamente en el *archivo* puntero. Una llamada a **_unlock_file** en un archivo que no esté bloqueado puede provocar un interbloqueo. A modo de ejemplo, vea [_lock_file](lock-file.md).
 
 ## <a name="requirements"></a>Requisitos
 

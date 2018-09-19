@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf42d118118a849a841967404bc626ed3b9205ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc0fdcc1ecfec18403904e75e0efbe3341137f02
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313786"
 ---
 # <a name="multiplies-struct"></a>multiplies (Struct)
 
@@ -43,16 +44,18 @@ struct multiplies<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) * std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Un tipo que admita un valor binario `operator*` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* un tipo que admita un binario `operator*` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación de multiplicación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -106,12 +109,12 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 2 4 6 8 10 12 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise products of vectors V1 & v2
- are: ( 6 24 54 96 150 216 )
-*\
+are: ( 6 24 54 96 150 216 )
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

@@ -17,13 +17,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f87ae764372990a96515a73789b373d2d6d7d01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b4b99c9b187e80a7c1e0a91badc4ccad06de593f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104256"
 ---
-# <a name="greaterequal-struct"></a>greater_equal (Struct)
+# <a name="greaterequal-struct"></a>greater_equal (struct)
 
 Predicado binario que realiza la operación mayor o igual que (`operator>=`) sobre sus argumentos.
 
@@ -43,16 +44,18 @@ struct greater_equal<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left)>= std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator>=` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator>=` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación mayor o igual que. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación mayor o igual que. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación mayor o igual que. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación mayor o igual que. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -60,7 +63,7 @@ Resultado de `Left >= Right`. La plantilla especializada realiza el reenvío dir
 
 ## <a name="remarks"></a>Comentarios
 
-El predicado binario `greater_equal`< `Type`> proporciona una ordenación débil estricta de un conjunto de valores de elementos de tipo `Type` en clases de equivalencia, si y solo si este tipo satisface los requisitos matemáticos estándar para que se pueda ordenar de esa forma. Las especializaciones para cualquier tipo de puntero producen una ordenación total de los elementos, en la que todos los elementos de valores distintos están ordenados unos con respecto a otros.
+El predicado binario `greater_equal` <  `Type`> proporciona una ordenación débil estricta de un conjunto de valores de elemento de tipo *tipo* en clases de equivalencia, si y solo si este tipo satisface el estándar de matemático requisitos para lo que se ordenan. Las especializaciones para cualquier tipo de puntero producen una ordenación total de los elementos, en la que todos los elementos de valores distintos están ordenados unos con respecto a otros.
 
 ## <a name="example"></a>Ejemplo
 

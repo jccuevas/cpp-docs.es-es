@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381786"
 ---
 # <a name="servers"></a>Servidores
 Una aplicación de servidor (o la aplicación componente) crea elementos OLE (o componentes) para su uso por aplicaciones de contenedor. Una aplicación de servidor de edición visual también admite la edición visual o la activación en contexto. Otra forma de servidor OLE es un [del servidor de automatización](../mfc/automation-servers.md). Algunas aplicaciones de servidor sólo admiten la creación de elementos incrustados; otras admiten la creación de elementos vinculados e incrustados. Algunas sólo admiten la vinculación, aunque es poco frecuente. Todas las aplicaciones de servidor deben admitir la activación por aplicaciones de contenedor cuando el usuario desea editar un elemento. Una aplicación puede ser un contenedor y un servidor. En otras palabras, puede incorporar datos en sus documentos tanto crear datos que puedan incorporarse como elementos en documentos de otras aplicaciones.  

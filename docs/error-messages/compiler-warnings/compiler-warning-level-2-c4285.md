@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 2) C4285 | Documentos de Microsoft
+title: Compilador advertencia (nivel 2) C4285 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4366142c14ec77c1c344312e50e7295c71ca93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ad828e25f647bddcc8a9ebe9662e2ba61f48d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040704"
 ---
 # <a name="compiler-warning-level-2-c4285"></a>Advertencia del compilador (nivel 2) C4285
-tipo de valor devuelto para 'identificador:: operator ->' es recursivo si se aplica utilizando una notación infija  
-  
- Especificado **operator -> ()** función no puede devolver el tipo para que se define o una referencia al tipo para el que está definido.  
-  
- El ejemplo siguiente genera C4285:  
-  
-```  
-// C4285.cpp  
-// compile with: /W2  
-class C  
-{  
-public:  
-    C operator->();   // C4285  
-   // C& operator->();  C4285, also  
-};  
-  
-int main()  
-{  
-}  
+
+tipo de valor devuelto para 'identificador:: operator ->' es recursivo si se aplica utilizando una notación infija
+
+Especificado **operador -> ()** función no puede devolver el tipo para la que está definida o una referencia al tipo para el que está definido.
+
+El ejemplo siguiente genera C4285:
+
+```
+// C4285.cpp
+// compile with: /W2
+class C
+{
+public:
+    C operator->();   // C4285
+   // C& operator->();  C4285, also
+};
+
+int main()
+{
+}
 ```

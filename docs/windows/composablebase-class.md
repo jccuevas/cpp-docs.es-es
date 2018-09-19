@@ -1,5 +1,5 @@
 ---
-title: ComposableBase (clase) | Documentos de Microsoft
+title: ComposableBase (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bea67bd87e4ca9a63b7fc5d00a8d49d04647440
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ce03608e796b21d8b6d87565490cc48c6d712d81
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594392"
 ---
 # <a name="composablebase-class"></a>ComposableBase (Clase)
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template<  
-   typename FactoryInterface = IInspectable  
->  
-class ComposableBase;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `FactoryInterface`  
-  
-## <a name="remarks"></a>Comentarios  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<
+   typename FactoryInterface = IInspectable
+>
+class ComposableBase;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*FactoryInterface*
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

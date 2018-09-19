@@ -1,5 +1,5 @@
 ---
-title: Error del compilador de recursos RC2109 | Documentos de Microsoft
+title: Error del compilador de recursos RC2109 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5a5a01458c4117fb6cb49c967cc8ca94a77226
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ef826dcdb439a28630221bdc9b4a90e9f6f324f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072971"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Error del compilador de recursos RC2109
-se esperaba una constante de diálogo numérica  
-  
- A **diálogo** instrucción requiere valores enteros para la *x, y, ancho*, y *alto* campos. Asegúrese de que estos valores estén incluidos después de la **diálogo** palabra clave y que no sean negativos.
+
+se esperaba una constante numérica del cuadro de diálogo
+
+Un **diálogo** instrucción requiere valores enteros para el *x, y, ancho*, y *alto* campos. Asegúrese de que estos valores se incluyen después de la **diálogo** palabra clave y que no son negativos.

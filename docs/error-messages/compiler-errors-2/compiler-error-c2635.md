@@ -1,5 +1,5 @@
 ---
-title: Error de compilador Error C2635 | Documentos de Microsoft
+title: Error del compilador C2635 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30916834b8adee0d1a80625624e80c5a860e57ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb7bc7b39550df7b742b2a8b940a77170e81914c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017396"
 ---
-# <a name="compiler-error-c2635"></a>Error de C2635 de Error de compilador
-no se puede convertir un 'identificador1 *' a un ' identificador2\*'; se presupone la conversión de una clase base virtual  
-  
- La conversión requiere una conversión de un `virtual` clase base a una clase derivada, lo cual no está permitida.  
-  
- El ejemplo siguiente genera el error C2635:  
-  
-```  
-// C2635.cpp  
-class B {};  
-class D : virtual public B {};  
-class E : public B {};  
-  
-int main() {  
-   B b;  
-   D d;  
-   E e;  
-  
-   D * pD = &d;  
-   E * pE = &e;  
-   pD = (D*)&b;   // C2635  
-   pE = (E*)&b;   // OK  
-}  
+# <a name="compiler-error-c2635"></a>Error del compilador C2635
+
+no se puede convertir un 'identificador1 *' a un ' identificador2\*'; se presupone la conversión de una clase base virtual
+
+La conversión requiere una conversión de un `virtual` clase base a una clase derivada, lo cual no está permitida.
+
+El ejemplo siguiente genera el error C2635:
+
+```
+// C2635.cpp
+class B {};
+class D : virtual public B {};
+class E : public B {};
+
+int main() {
+   B b;
+   D d;
+   E e;
+
+   D * pD = &d;
+   E * pE = &e;
+   pD = (D*)&b;   // C2635
+   pE = (E*)&b;   // OK
+}
 ```

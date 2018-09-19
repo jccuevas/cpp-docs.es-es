@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689719"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock y omp_set_nest_lock (Funciones)
 Cada una de estas funciones bloquea el subproceso que ejecuta la función hasta que el bloqueo especificado está disponible y, a continuación, Establece el bloqueo. Un bloqueo simple está disponible si está desbloqueada. Un bloqueo anidable está disponible si está desbloqueada, o si ya tiene propietario por el subproceso que ejecuta la función. El formato es como se detalla a continuación:  

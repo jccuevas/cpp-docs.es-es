@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336510"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Lista alfabética de funciones intrínsecas
 Las secciones siguientes describen las funciones intrínsecas específicas de Microsoft que están disponibles en algunas arquitecturas o en todas ellas. Los fabricantes de procesadores también documentan otros intrínsecos compatibles, ya sea en los archivos de encabezado o en sus sitios web. Consulte la [intrínsecos ARM](../intrinsics/arm-intrinsics.md), [x86 intrínsecos](../intrinsics/x86-intrinsics-list.md), y [x64 intrínsecos](../intrinsics/x64-amd64-intrinsics-list.md) secciones para obtener vínculos a documentación del fabricante. Funciones de biblioteca en tiempo de ejecución (CRT) de C que tienen intrínsecos implementados no se documentan aquí; Estas funciones se documentan en el [referencia de biblioteca de tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md).  

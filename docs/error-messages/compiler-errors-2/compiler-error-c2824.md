@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2824 | Documentos de Microsoft
+title: Error del compilador C2824 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc654f60d9494480e0551f4de3ec1e041938cea2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 310156e82f69622a5c4a2315e204ccaa146e2c00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077417"
 ---
 # <a name="compiler-error-c2824"></a>Error del compilador C2824
-tipo de valor devuelto para 'operator new' debe ser ' void *'  
-  
- Con punteros sin base, las sobrecargas de operador `new` debe devolver `void *`.  
-  
- El ejemplo siguiente genera C2824:  
-  
-```  
-// C2824.cpp  
-// compile with: /c  
-class   A {  
-   A* operator new(size_t i, char *m);   // C2824  
-   // try the following line instead  
-   // void* operator new(size_t i, char *m);  
-};  
+
+tipo de valor devuelto para 'operator new' debe ser ' void *'
+
+Con punteros sin base, las sobrecargas del operador `new` debe devolver `void *`.
+
+El ejemplo siguiente genera C2824:
+
+```
+// C2824.cpp
+// compile with: /c
+class   A {
+   A* operator new(size_t i, char *m);   // C2824
+   // try the following line instead
+   // void* operator new(size_t i, char *m);
+};
 ```

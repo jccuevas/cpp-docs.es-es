@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Verify (método) | Documentos de Microsoft'
+title: Método Interfacetraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c6491968541a0015110c55edf2bede40c084947
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583449"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-__forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Comprueba que Base se deriva correctamente.  
-  
- Para obtener más información acerca de `Base`, vea la sección de definiciones de tipo público en [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+__forceinline static void Verify();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Comprueba que `Base` se deriva correctamente.
+
+Para obtener más información acerca de `Base`, consulte el **Typedefs pública** sección [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

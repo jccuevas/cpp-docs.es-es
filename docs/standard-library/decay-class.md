@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0451b8565a4d021181d79d15437637e1b2f3b27
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7d3ad5bae067bb9661b6cf475d0831b2b2dfcd2a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099530"
 ---
 # <a name="decay-class"></a>decay (Clase)
 
@@ -38,7 +39,8 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` Tipo que se va a modificar.
+*T*<br/>
+Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 

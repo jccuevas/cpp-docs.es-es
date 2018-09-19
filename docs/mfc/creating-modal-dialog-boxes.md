@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342434"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Crear cuadros de diálogo modales
 Para crear un cuadro de diálogo modal, llame a cualquiera de los dos constructores públicos declarados en [CDialog](../mfc/reference/cdialog-class.md). A continuación, llamar al objeto de cuadro de diálogo [DoModal](../mfc/reference/cdialog-class.md#domodal) función de miembro para mostrar el cuadro de diálogo y administrar la interacción con él hasta que el usuario elija Aceptar o Cancelar. Esta administración por `DoModal` es lo que hace que el cuadro de diálogo modal. Para los cuadros de diálogo modales, `DoModal` carga el recurso de cuadro de diálogo.  

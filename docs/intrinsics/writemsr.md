@@ -1,5 +1,5 @@
 ---
-title: __writemsr | Documentos de Microsoft
+title: __writemsr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705138"
 ---
 # <a name="writemsr"></a>__writemsr
 **Específicos de Microsoft**  
   
- Genera la escritura a Model Specific Register (`wrmsr`) instrucción.  
+ Genera la escritura en Model Specific Register (`wrmsr`) instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +40,22 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Register`  
- El registro específico del modelo.  
+*Registro*<br/>
+[in] El registro específico del modelo.  
   
- [in] `Value`  
- Valor que se va a escribir.  
+*Valor*<br/>
+[in] El valor para escribir.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función solo puede usarse en modo kernel, y esta rutina solo está disponible como función intrínseca.  
+ Esta función solo puede usarse en modo kernel, y esta rutina solo está disponible como intrínseco.  
   
 **FIN de Específicos de Microsoft**  
   

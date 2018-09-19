@@ -22,19 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113726"
 ---
 # <a name="code-pages"></a>Páginas de códigos
 
 Una *página de códigos* es un juego de caracteres, que puede incluir números, signos de puntuación y otros glifos. Idiomas y configuraciones regionales distintas pueden usar páginas de códigos distintas. Por ejemplo, la página de códigos ANSI 1252 se usa para el inglés y para la mayoría de idiomas europeos, mientras que la página de códigos OEM 932 se usa para los caracteres Kanji del japonés.
 
- Una página de códigos puede representarse en una tabla como una asignación de caracteres para valores multibyte o de un solo byte. Muchas páginas de códigos comparten el juego de caracteres ASCII para los caracteres que están en el intervalo de 0x00 a 0x7F.
+Una página de códigos puede representarse en una tabla como una asignación de caracteres para valores multibyte o de un solo byte. Muchas páginas de códigos comparten el juego de caracteres ASCII para los caracteres que están en el intervalo de 0x00 a 0x7F.
 
- La biblioteca en tiempo de ejecución de Microsoft usa los siguientes tipos de páginas de códigos:
+La biblioteca en tiempo de ejecución de Microsoft usa los siguientes tipos de páginas de códigos:
 
 - Página de códigos ANSI predeterminada del sistema. De manera predeterminada, al iniciar el sistema en tiempo de ejecución se establece automáticamente la página de códigos multibyte en la página de códigos ANSI predeterminada del sistema, que se obtiene del sistema operativo. La llamada:
 
@@ -53,4 +54,4 @@ Una *página de códigos* es un juego de caracteres, que puede incluir números,
 ## <a name="see-also"></a>Vea también
 
 [Internacionalización](../c-runtime-library/internationalization.md)<br/>
- [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,60 +1,4 @@
----
-title: _strdec, _wcsdec, _mbsdec, _mbsdec_l | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-apiname:
-- _wcsdec
-- _strdec
-- _mbsdec
-- _mbsdec_l
-apilocation:
-- msvcrt.dll
-- msvcr80.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr100_clr0400.dll
-- msvcr110.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-- msvcr120_clr0400.dll
-- ucrtbase.dll
-- api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
-f1_keywords:
-- _strdec
-- mbsdec_l
-- strdec
-- _mbsdec
-- _mbsdec_l
-- mbsdec
-- wcsdec
-- _wcsdec
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsdec_l function
-- mbsdec function
-- tcsdec function
-- _tcsdec function
-- _strdec function
-- _wcsdec function
-- _mbsdec_l function
-- strdec function
-- wcsdec function
-- _mbsdec function
-ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c73813c406011eaadd540398d3364ec183f8deaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+)---title: "_strdec, _wcsdec, _mbsdec, _mbsdec_l | Microsoft Docs"ms.custom:" "ms.date:" 11/04/2016"ms.technology: ["cpp-estándar-libraries"] ms.topic:"reference"apiname: ["_wcsdec","_strdec","_mbsdec","_mbsdec_l"] apilocation: ["msvcrt.dll","msvcr80.dll","msvcr90.dll","msvcr100.dll" "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-multibyte-l1-1-0.dll"] apitype: f1_keywords "DLLExport": ["_strdec", "mbsdec_l", "strdec", "_mbsdec", "_mbsdec_l", "mbsdec", "wcsdec", "_wcsdec"] dev_langs: ["C++"] helpviewer_keywords: ["mbsdec_l function", "function mbsdec", "tcsdec función","_tcsdec", "function _strdec", "_wcsdec function", "function _mbsdec_l", "strdec (función)", " wcsdec (función)","_mbsdec (función)"] ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd author:"msft corob"ms.author:"corob"ms.workload: ["cplusplus"]
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -88,10 +32,10 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parámetros
 
 *start*<br/>
-Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) de la cadena de origen; *iniciar* debe preceder a *actual* en la cadena de origen.
+Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) en la cadena de origen; *iniciar* deben preceder a *actual* en la cadena de origen.
 
 *Actual*<br/>
-Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) de la cadena de origen; *actual* debe seguir *iniciar* en la cadena de origen.
+Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) en la cadena de origen; *actual* debe seguir *iniciar* en la cadena de origen.
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -104,12 +48,12 @@ Configuración regional que se va a usar.
 
 El **_mbsdec** y **_mbsdec_l** funciones devuelven un puntero al primer byte del carácter multibyte que precede inmediatamente a *actual* en la cadena que contiene *iniciar*.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información.  **_mbsdec** reconoce las secuencias de caracteres multibyte según la configuración regional que está actualmente en uso, mientras que **_mbsdec_l** es idéntica, salvo que usa el parámetro de configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información.  **_mbsdec** reconoce secuencias de caracteres multibyte según la configuración regional que está actualmente en uso, mientras que **_mbsdec_l** es idéntico, salvo que usa el parámetro de configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *iniciar* o *actual* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** a **EINVAL**.
+Si *iniciar* o *actual* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** a **EINVAL**.
 
 > [!IMPORTANT]
-> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -117,7 +61,7 @@ Si *iniciar* o *actual* es **NULL**, se invoca el controlador de parámetros no 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** y **_wcsdec** son versiones de caracteres de byte único y con caracteres anchos de **_mbsdec** y **_mbsdec_l**. **_strdec** y **_wcsdec** se proporcionan solo para esta asignación y no debe usarse en caso contrario.
+**_strdec** y **_wcsdec** son versiones de caracteres de byte único y de caracteres anchos de **_mbsdec** y **_mbsdec_l**. **_strdec** y **_wcsdec** se proporcionan solo para esta asignación y no debe usarse en caso contrario.
 
 Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
@@ -134,7 +78,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra un uso de **_tcsdec**.
+El ejemplo siguiente muestra un uso de **_tcsdec**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -160,7 +104,7 @@ int main()
 }
 ```
 
-En el ejemplo siguiente se muestra un uso de **_mbsdec**.
+El ejemplo siguiente muestra un uso de **_mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp

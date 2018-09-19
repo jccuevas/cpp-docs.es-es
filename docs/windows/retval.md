@@ -1,5 +1,5 @@
 ---
-title: retval | Documentos de Microsoft
+title: retval | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ff83b156054774a06a371e7832dc73dc95a579c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221263"
 ---
 # <a name="retval"></a>retval
-Designa el parámetro que recibe el valor devuelto del miembro.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-[retval]  
-  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El **retval** atributo C++ tiene la misma funcionalidad que la [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atributo MIDL.  
-  
- **retval** debe aparecer en el último argumento en la declaración de una función.  
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [enlazables](../windows/bindable.md) para un ejemplo de uso de **retval**.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|**out**|  
-|**Atributos no válidos**|**in**|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de parámetro](../windows/parameter-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
+
+Designa el parámetro que recibe el valor devuelto del miembro.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[retval]
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **retval** atributo de C++ tiene la misma funcionalidad que el [retval](/windows/desktop/Midl/retval) atributo MIDL.
+
+**retval** debe aparecer en el último argumento en la declaración de una función.
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [enlazable](../windows/bindable.md) para un ejemplo de uso de **retval**.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|Parámetro de interfaz, el método de interfaz|
+|**Reiterativo**|No|
+|**Atributos requeridos**|**out**|
+|**Atributos no válidos**|**in**|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos de parámetro](../windows/parameter-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  

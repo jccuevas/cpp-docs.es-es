@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1158 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1158 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094174"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Error de las herramientas del vinculador LNK1158
-no se puede ejecutar 'filename'  
-  
- El archivo ejecutable dado que se llama a [vínculo](../../build/reference/linker-command-line-syntax.md) no está en el directorio que contiene el vínculo ni en un directorio especificado en la variable de entorno PATH.  
-  
- Por ejemplo, obtendrá este error si intenta utilizar el parámetro PGOPTIMIZE el [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) opción del vinculador en un equipo con un sistema operativo de 32 bits.
+
+no se puede ejecutar 'filename'
+
+El archivo ejecutable determinado llamado [vínculo](../../build/reference/linker-command-line-syntax.md) no está en el directorio que contiene el vínculo ni en un directorio especificado en la variable de entorno PATH.
+
+Por ejemplo, obtendrá este error si intenta utilizar el parámetro PGOPTIMIZE el [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) opción del vinculador en un equipo con un sistema operativo de 32 bits.

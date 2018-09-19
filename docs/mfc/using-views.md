@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384067"
 ---
 # <a name="using-views"></a>Usar vistas
 Son las responsabilidades de la vista para mostrar gráficamente los datos del documento al usuario para que acepte e interpretar proporcionados por el usuario que las operaciones en el documento. Las tareas para escribir la clase de vista son:  

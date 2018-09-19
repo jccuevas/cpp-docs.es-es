@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades NMake (ventanas de C++) | Documentos de Microsoft
+title: NMake (página de propiedades) (Windows C++)| Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,53 +19,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 29d10b35b0855e34826c10b813a2df48cd84cfef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711976"
 ---
 # <a name="nmake-property-page"></a>NMake (página de propiedades)
-El **NMake** página de propiedades le permite especificar opciones de compilación para proyectos NMake.  
+La página de propiedades **NMake** permite especificar opciones de compilación para los proyectos NMake.  
   
- Para obtener más información acerca de los proyectos NMake, vea [crear un proyecto de archivos MAKE](../ide/creating-a-makefile-project.md). Para proyectos de archivos MAKE non_Windows, consulte [propiedades del proyecto de archivos MAKE (C++ Linux)](../linux/prop-pages/makefile-linux.md), [propiedades del proyecto General (Android archivo MAKE de C++)](/visualstudio/cross-platform/general-makefile-android-prop-page) o [NMake propiedades (C++ Android)](/visualstudio/cross-platform/nmake-android-prop-page).
+Para obtener más información sobre los proyectos NMake, vea [Crear un proyecto de archivo Make](../ide/creating-a-makefile-project.md). Para los proyectos de archivos Make que no son de Windows, vea [Propiedades del proyecto de archivos Make (C++ para Linux)](../linux/prop-pages/makefile-linux.md), [Propiedades de proyectos generales (archivos Make de C++ para Android)](/visualstudio/cross-platform/general-makefile-android-prop-page) o [Propiedades de NMake (C++ para Android)](/visualstudio/cross-platform/nmake-android-prop-page).
   
- El **NMake** página de propiedades contiene las siguientes propiedades.  
+La página de propiedades **NMake** contiene las propiedades siguientes:  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Compilar la línea de comandos**  
- Especifica el comando que se ejecutará cuando **generar** se hace clic en el **generar** menú.  
+
+- **Línea de comandos de Compilar**
+
+   Especifica el comando que se va a ejecutar cuando se hace clic en **Compilar** en el menú **Compilar**.  
   
- **Volver a generar todos los de línea de comandos**  
- Especifica el comando que se ejecutará cuando **volver a generar todo** se hace clic en el **generar** menú.  
+- **Línea de comandos de Recompilar todo**
+
+   Especifica el comando que se va a ejecutar cuando se hace clic en **Recompilar todo** en el menú **Compilar**.  
   
- **Limpiar la línea de comandos**  
- Especifica el comando que se ejecutará cuando **limpiar** se hace clic en el **generar** menú.  
+- **Línea de comandos de limpieza**
+
+   Especifica el comando que se va a ejecutar cuando se hace clic en **Limpiar** en el menú **Compilar**.  
   
- **Salida**  
- Especifica el nombre del archivo que contendrá la salida de la línea de comandos. De forma predeterminada, este nombre de archivo se basa en el nombre del proyecto.  
+- **Salida**
+
+   Especifica el nombre del archivo que contendrá la salida para la línea de comandos. De forma predeterminada, este nombre de archivo se basa en el nombre del proyecto.  
   
- **Definiciones de preprocesador**  
- Especifica las definiciones del preprocesador que el origen de archivos de uso. El valor predeterminado se determina por la plataforma actual y la configuración.  
+- **Definiciones de preprocesador**
+
+   Especifica las definiciones de preprocesador que usan los archivos de código fuente. El valor predeterminado se determina por la plataforma y la configuración actuales.  
   
- **Incluir la ruta de acceso de búsqueda**  
- Especifica los directorios donde el compilador busca los archivos de inclusión.  
+- **Ruta de acceso de búsqueda de inclusión**
+
+   Especifica los directorios donde el compilador busca los archivos de inclusión.  
   
- **Fuerza incluye**  
- Especifica los archivos que el preprocesador procesa automáticamente aun cuando no se incluyen en los archivos de proyecto.  
+- **Archivos de inclusión forzados**
+
+   Especifica los archivos que el preprocesador procesa de manera automática incluso si no se incluyen en los archivos de proyecto.  
   
- **Ruta de acceso de búsqueda de ensamblado**  
- Especifica los directorios donde .NET Framework busca cuando se intenta resolver ensamblados. NET.  
+- **Ruta de acceso de búsqueda de ensamblado**
+
+   Especifica los directorios donde .NET Framework busca cuando intenta resolver los ensamblados .NET.  
   
- **Ensamblados de uso forzados**  
- Especifica los ensamblados de .NET Framework procesa automáticamente.  
+- **Ensamblados de uso forzados**
+
+   Especifica los ensamblados que .NET Framework procesa de manera automática.  
   
- **Opciones adicionales**  
- Especifica los modificadores del compilador adicionales de IntelliSense que se usará cuando analiza los archivos de C++.  
+- **Opciones adicionales**
+
+   Especifica los modificadores del compilador adicionales que va a usar IntelliSense cuando analiza los archivos de C++.  
   
- Para obtener información sobre cómo obtener acceso a la **NMake** página de propiedades, vea [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+Para obtener información sobre cómo acceder a la página de propiedades **NMake**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
- Para obtener información acerca de cómo mediante programación el acceso a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
+Para obtener información sobre cómo acceder mediante programación a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   

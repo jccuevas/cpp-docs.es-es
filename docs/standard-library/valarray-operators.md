@@ -34,11 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703565"
 ---
 # <a name="ltvalarraygt-operators"></a>Operadores de &lt;valarray&gt;
 
@@ -77,9 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos son va a probar para desigualdad.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a probar para desigualdad.
 
-`right` El segundo de dos valarrays cuyos elementos son va a probar para desigualdad.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a probar para desigualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -91,11 +94,11 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 ### <a name="remarks"></a>Comentarios
 
-El primer operador de plantilla devuelve un objeto de clase [valarray\<bool >](../standard-library/valarray-bool-class.md), cada uno de cuyos elementos `I` es `left[I] != right[I]`.
+El primer operador de plantilla devuelve un objeto de clase [valarray\<bool >](../standard-library/valarray-bool-class.md), cuyos elementos `I` es `left[I] != right[I]`.
 
-El segundo operador de plantilla se almacena en el elemento `I` `left[I] != right`.
+El segundo operador de plantilla almacena en el elemento `I` `left[I] != right`.
 
-El tercer operador de plantilla se almacena en el elemento `I` `left != right[I]`.
+El tercer operador de plantilla almacena en el elemento `I` `left != right[I]`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -136,12 +139,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the not equal comparison test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_mod"></a>  operator%
@@ -170,13 +173,15 @@ operator%(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un valor o valarray que actúa como el dividendo en qué otro valor o valarray es va a dividir.
+*left*<br/>
+Un valor o valarray que actúa como el dividendo en el que se va a dividir otro valor o valarray.
 
-`right` Un valor o valarray que actúa como el divisor y que divide otro valor o valarray.
+*right*<br/>
+Un valor o valarray que actúa como el divisor y que divide otro valor o valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son los elementos restos de `left` dividido por `right`.
+Una valarray cuyos elementos son los restos por elemento de *izquierdo* dividido por *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -217,12 +222,12 @@ int main( )
          cout << vaREM [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial Right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
  valarray: ( 0 -3 4 -7 1 -3 ).
-*\
+*/
 ```
 
 ## <a name="op_amp"></a> operator&amp;
@@ -251,19 +256,21 @@ operator&(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit **AND** o un valor especificado del tipo de elemento que se combinarán bit a bit con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos respectivos van a combinarse con el `AND` bit a bit o un valor especificado del tipo de elemento que va a combinarse bit a bit con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit **AND** o un valor especificado del tipo de elemento que se combinarán bit a bit con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos respectivos van a combinarse con el `AND` bit a bit o un valor especificado del tipo de elemento que va a combinarse bit a bit con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son la combinación de elemento de la operación AND bit a bit de `left` y `right`.
+Una valarray cuyos elementos son la combinación por elemento de la operación AND bit a bit de *izquierdo* y *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, **longdouble**, `void`, `bool` u otros tipos de datos más complejos.
+Una operación bit a bit solo puede usarse para manipular los bits de **char** y **int** variantes y tipos de datos y no en **float**, **doble**, **longdouble**, **void**, **bool** u otros tipos de datos más complejos.
 
-El **AND** bit a bit tiene la misma tabla de verdad que el **AND** lógico pero se aplica al tipo de datos en el nivel de los bits individuales. El [operator&&](../standard-library/valarray-operators.md#amp) se aplica en el nivel de elemento, contando todos los valores distintos de cero como true, y el resultado es una valarray de valores booleanos. El **operator& AND** bit a bit, por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
+El `AND` bit a bit tiene la misma tabla de verdad que el `AND` lógico pero se aplica al tipo de datos en el nivel de los bits individuales. El [operator&&](../standard-library/valarray-operators.md#amp) se aplica en el nivel de elemento, contando todos los valores distintos de cero como true, y el resultado es una valarray de valores booleanos. El **operator& AND** bit a bit, por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
 
 ### <a name="example"></a>Ejemplo
 
@@ -304,12 +311,12 @@ int main( )
          cout << vaBWA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 2 0 4 0 6 0 8 0 10 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the bitwise operator & is the
  valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
-*\
+*/
 ```
 
 ## <a name="op_amp_amp"></a> operator&amp;&amp;
@@ -338,17 +345,19 @@ operator&&(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos respectivos son que se combinarán con la lógica **AND** o un valor especificado del tipo de elemento que se combinarán con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos respectivos van a combinarse con el `AND` lógico o un valor especificado del tipo de elemento que va a combinarse con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con la lógica **AND** o un valor especificado del tipo de elemento que se combinarán con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos respectivos van a combinarse con el `AND` lógico o un valor especificado del tipo de elemento que va a combinarse con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son de tipo booleano y son la combinación de elemento de la operación lógica **AND** el funcionamiento de `left` y `right`.
+Una valarray cuyos elementos son de tipo bool y son la combinación por elemento de la operación lógica `AND` la operación de *izquierdo* y *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-El **operador && AND** lógico se aplica en el nivel de elemento, contando todos los valores distintos de cero como true, y el resultado es una valarray de valores booleanos. La versión bit a bit de **AND**, [operator&,](../standard-library/valarray-operators.md#op_amp), por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
+La operación lógica `ANDoperator&&` se aplica en el nivel de elemento, contando todos los valores distintos de cero como true y el resultado es una valarray de valores booleanos. La versión bit a bit de `AND`, [operador &,](../standard-library/valarray-operators.md#op_amp), por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
 
 ### <a name="example"></a>Ejemplo
 
@@ -389,12 +398,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&& is the
  valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt"></a> operator&gt;
@@ -423,17 +432,19 @@ operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una valarray de valores booleanos, en la que cada uno es:
 
-- **true** si el elemento o valor de `left` es mayor que el elemento o valor correspondiente de `right`.
+- **True** si el *izquierdo* es mayor que el correspondiente elemento o valor *derecho* elemento o valor.
 
-- **false** si el elemento o valor de `left` no es mayor que el elemento o valor correspondiente de `right`.
+- **false** si el *izquierdo* elemento o valor no es mayor que el correspondiente *derecho* elemento o valor.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -478,12 +489,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than comparison test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a>  operator&gt;=
@@ -512,17 +523,19 @@ operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una valarray de valores booleanos, en la que cada uno es:
 
-- **true** si el elemento o valor de `left` es mayor o igual que el elemento o valor correspondiente de `right`.
+- **True** si el *izquierdo* elemento o valor es mayor o igual que el correspondiente *derecho* elemento o valor.
 
-- **false** si el elemento o valor de `left` es menor que el elemento o valor correspondiente de `right`.
+- **false** si el *izquierdo* es menor que el correspondiente elemento o valor *derecho* elemento o valor.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -567,12 +580,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than or equal test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_gt"></a> operator&gt;&gt;
@@ -601,9 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El valor que se va a desplazar o la valarray cuyos elementos son van a desplazar.
+*left*<br/>
+El valor que se va a desplazar o la valarray cuyos elementos se van a desplazar.
 
-`right` El valor que indica la cantidad de desplazamiento a la derecha o valarray cuyos elementos indican la cantidad de elementos de desplazamiento a la derecha.
+*right*<br/>
+El valor que indica la cantidad de desplazamiento a la derecha o la valarray cuyos elementos indican la cantidad de desplazamiento a la derecha por elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -652,12 +667,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
  valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*\
+*/
 ```
 
 ## <a name="op_lt"></a> operator&lt;
@@ -686,17 +701,19 @@ operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una valarray de valores booleanos, en la que cada uno es:
 
-- **true** si el elemento o valor de `left` es menor que el elemento o valor correspondiente de `right`.
+- **True** si el *izquierdo* es menor que el correspondiente elemento o valor *derecho* elemento o valor.
 
-- **false** si el elemento o valor de `left` no es menor que el elemento o valor correspondiente de `right`.
+- **false** si el *izquierdo* elemento o valor no es menor que el correspondiente *derecho* elemento o valor.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -741,12 +758,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the less-than comparson test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a> operator&lt;=
@@ -775,17 +792,19 @@ operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos son se va a comparar o un valor especificado que se comparará con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a comparar o un valor especificado que se va a comparar con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una valarray de valores booleanos, en la que cada uno es:
 
-- **true** si el elemento o valor de `left` es menor o igual que el elemento o valor correspondiente de `right`.
+- **True** si el *izquierdo* es menor o igual que el correspondiente elemento o valor *derecho* elemento o valor.
 
-- **false** si el elemento o valor de `left` es mayor que el elemento o valor correspondiente de `right`.
+- **false** si el *izquierdo* es mayor que el correspondiente elemento o valor *derecho* elemento o valor.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -830,12 +849,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the less than or equal test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
@@ -864,9 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El valor que se va a desplazar o la valarray cuyos elementos son van a desplazar.
+*left*<br/>
+El valor que se va a desplazar o la valarray cuyos elementos se van a desplazar.
 
-`right` El valor que indica la cantidad de desplazamiento a la izquierda o valarray cuyos elementos indican la cantidad de elementos de desplazamiento a la izquierda.
+*right*<br/>
+El valor que indica la cantidad de desplazamiento a la izquierda o la valarray cuyos elementos indican la cantidad de desplazamiento a la izquierda por elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -915,12 +936,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift is the
  valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
-*\
+*/
 ```
 
 ## <a name="op_star"></a>  operator*
@@ -949,13 +970,15 @@ operator*(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos son va a multiplicar o un valor especificado que se multiplique por cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a multiplicar o un valor especificado que se va a multiplicar con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos son va a multiplicar o un valor especificado que se multipliquen con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a multiplicar o un valor especificado que se va a multiplicar con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son el producto de elementos de `left` y `right`.
+Una valarray cuyos elementos son el producto por elemento de *izquierdo* y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -996,12 +1019,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
  valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_add"></a>  operator+
@@ -1030,13 +1053,15 @@ operator+(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos se van a ser agregados o un valor especificado para agregarse a cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a sumar o un valor especificado que se va a sumar con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos se van a ser agregados o un valor especificado que se agregará a cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a sumar o un valor especificado que se va a sumar con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son la suma de elementos de `left` y `right`.
+Una valarray cuyos elementos son la suma por elemento de *izquierdo* y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1077,12 +1102,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
  valarray: ( 2 0 4 2 6 4 8 6 ).
-*\
+*/
 ```
 
 ## <a name="operator-"></a>  operator-
@@ -1111,13 +1136,15 @@ operator-(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un valor o una valarray que actúa como el minuendo desde el que otros valores o valarrays son va a restar de formación de la diferencia.
+*left*<br/>
+Un valor o valarray que actúa como el minuendo desde el que otros valores o valarray se van a restar para formar la diferencia.
 
-`right` Un valor o una valarray que actúa como el sustraendo que se va a restar de otros valores o valarrays en que forman la diferencia.
+*right*<br/>
+Un valor o valarray que actúa como sustraendo que se va a restar de otros valores o valarray para formar la diferencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son la diferencia de elementos de `left` y `right`.
+Una valarray cuyos elementos son la diferencia por elemento de *izquierdo* y *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1164,12 +1191,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
  valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_div"></a>  operator/
@@ -1198,13 +1225,15 @@ operator/(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un valor o valarray que actúa como el dividendo en qué otro valor o valarray es va a dividir en que forman el cociente.
+*left*<br/>
+Un valor o valarray que actúa como el dividendo en el que se va a dividir otro valor o valarray para formar el cociente.
 
-`right` Un valor o una valarray que actúa como el divisor y que divide otro valor o valarray en que forman el cociente.
+*right*<br/>
+Un valor o valarray que actúa como el divisor y que divide otro valor o valarray para formar el cociente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son el cociente de elementos de `left` dividido por `right`.
+Una valarray cuyos elementos son el cociente por elemento de *izquierdo* dividido por *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1251,12 +1280,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
  valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a>  operator==
@@ -1285,9 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos se van a realizar una comprobación de igualdad.
+*left*<br/>
+La primera de las dos valarray cuyos elementos se van a probar para igualdad.
 
-`right` El segundo de dos valarrays cuyos elementos son va a probar para igualdad.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos se van a probar para igualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1299,7 +1330,7 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 ### <a name="remarks"></a>Comentarios
 
-El primer operador de plantilla devuelve un objeto de clase [valarray\<bool >](../standard-library/valarray-bool-class.md), cada uno de cuyos elementos `I` es `left[I] == right[I]`. El segundo operador de plantilla se almacena en el elemento `I` `left[I] == right`. El tercer operador de plantilla se almacena en el elemento `I` `left == right[I]`.
+El primer operador de plantilla devuelve un objeto de clase [valarray\<bool >](../standard-library/valarray-bool-class.md), cuyos elementos `I` es `left[I] == right[I]`. El segundo operador de plantilla almacena en el elemento `I` `left[I] == right`. El tercer operador de plantilla almacena en el elemento `I` `left == right[I]`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1340,12 +1371,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the equality comparison test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_xor"></a>  operator^
@@ -1374,17 +1405,19 @@ operator^(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit **XOR** o un valor especificado del tipo de elemento que se combinarán bit a bit con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos respectivos van a combinarse con el **XOR** bit a bit o un valor especificado del tipo de elemento que va a combinarse bit a bit con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit **XOR** o un valor especificado del tipo de elemento que se combinarán bit a bit con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos respectivos van a combinarse con el **XOR** bit a bit o un valor especificado del tipo de elemento que va a combinarse bit a bit con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son la combinación de uno a uno de bit a bit **XOR** el funcionamiento de `left` y `right`.
+Una valarray cuyos elementos son la combinación por elemento de bit a bit **XOR** la operación de *izquierdo* y *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-Una operación bit a bit sólo puede utilizarse para manipular los bits de `char` y `int` tipos de datos y sus variantes y no se encuentra en **float**, **doble**, `long double`, `void`, `bool` u otros, tipos de datos más complejos.
+Una operación bit a bit solo puede usarse para manipular los bits de **char** y **int** variantes y tipos de datos y no en **float**, **doble**, **long double**, **void**, **bool** u otros tipos de datos más complejos.
 
 El `OR` exclusivo bit a bit ( **XOR**) tiene la semántica siguiente: dados los bits *b*1 y *b*2, *b*1 **XOR** *b*2 es **true** si exactamente uno de los bits es true. Es **false** si ambos bits son false o si ambos bits son true.
 
@@ -1431,12 +1464,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^ is the
  valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*\
+*/
 ```
 
 ## <a name="op_or"></a>  operator&#124;
@@ -1465,17 +1498,19 @@ operator|(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit `OR` o un valor especificado del tipo de elemento que se combinarán bit a bit con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos respectivos van a combinarse con el `OR` bit a bit o un valor especificado del tipo de elemento que va a combinarse bit a bit con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con el bit a bit `OR` o un valor especificado del tipo de elemento que se combinarán bit a bit con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos respectivos van a combinarse con el `OR` bit a bit o un valor especificado del tipo de elemento que va a combinarse bit a bit con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son la combinación de uno a uno de bit a bit `OR` el funcionamiento de `left` y `right`.
+Una valarray cuyos elementos son la combinación por elemento de bit a bit `OR` la operación de *izquierdo* y *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, **longdouble**, `void`, `bool` u otros tipos de datos más complejos.
+Una operación bit a bit solo puede usarse para manipular los bits de **char** y **int** variantes y tipos de datos y no en **float**, **doble**, **longdouble**, **void**, **bool** u otros tipos de datos más complejos.
 
 El OR bit a bit tiene la misma tabla de verdad que el `OR` lógico pero se aplica al tipo de datos en el nivel de los bits individuales. Dados los bits *b*1 y *b*2, *b*1 `OR` *b*2 es **true** si al menos uno de los bits es true o **false** si los dos bits son false. El `OR`[operador&#124;&#124;](../standard-library/valarray-operators.md#op_lor) lógico se aplica en el nivel de elemento, contando todos los valores distintos de cero como **true**, y el resultado es una valarray de valores booleanos. El `operator|` OR bit a bit, por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
 
@@ -1522,12 +1557,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise OR operator| is the
  valarray: ( 1 0 1 3 3 4 7 6 7 9 ).
-*\
+*/
 ```
 
 ## <a name="op_lor"></a>  operator&#124;&#124;
@@ -1556,17 +1591,19 @@ operator||(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos valarrays de cuyos elementos respectivos son que se combinarán con la lógica `OR` o un valor especificado del tipo de elemento que se combinarán con cada elemento de una valarray.
+*left*<br/>
+La primera de las dos valarray cuyos elementos respectivos van a combinarse con el `OR` lógico o un valor especificado del tipo de elemento que va a combinarse con cada elemento de una valarray.
 
-`right` El segundo de los dos valarrays de cuyos elementos respectivos son que se combinarán con la lógica `OR` o un valor especificado del tipo de elemento que se combinarán con cada elemento de una valarray.
+*right*<br/>
+La segunda de las dos valarray cuyos elementos respectivos van a combinarse con el `OR` lógico o un valor especificado del tipo de elemento que va a combinarse con cada elemento de una valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son de tipo `bool` y son la combinación de elemento de la operación OR lógica de `left` y `right`.
+Una valarray cuyos elementos son de tipo **bool** y son la combinación por elemento de la operación OR lógica de *izquierdo* y *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-La operación lógica `OR` `operator||` se aplica en un nivel de elemento, recuento de todos los valores distintos de cero como **true**, y el resultado es una valarray de valores booleanos. La versión bit a bit de `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
+La operación lógica `OR` `operator||` se aplica en el nivel de elemento, contando todos los valores distintos de cero como **true**, y el resultado es una valarray de valores booleanos. La versión bit a bit de `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1611,12 +1648,12 @@ int main( )
          cout << vaLOR [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 0 0 3 0 0 6 0 0 9 ).
 The element-by-element result of the logical OR operator|| is the
  valarray: ( 0 0 0 1 0 1 1 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Vea también

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687158"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for (Construcción)
 El **for paralelos** directiva es un acceso directo para un **paralelo** una región que contiene solo una **para** directiva. La sintaxis de la **for paralelos** directiva es como sigue:  

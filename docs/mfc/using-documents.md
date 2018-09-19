@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950219"
 ---
 # <a name="using-documents"></a>Usar documentos
 En colaboración, documentos y vistas:  
@@ -43,7 +44,7 @@ En colaboración, documentos y vistas:
   
 -   [Controlar](../mfc/handling-commands-in-the-document.md) la mayoría de los comandos y mensajes de la aplicación.  
   
- El documento está especialmente implicado en la administración de datos. Almacenar los datos, normalmente, en variables de miembro de clase de documento. La vista utiliza estas variables para tener acceso a los datos para su presentación y actualizar. Mecanismo de serialización predeterminado del documento administra la lectura y escritura de los datos en y desde archivos. Documentos también pueden controlar comandos (pero distinto de los mensajes de Windows no **WM_COMMAND**).  
+ El documento está especialmente implicado en la administración de datos. Almacenar los datos, normalmente, en variables de miembro de clase de documento. La vista utiliza estas variables para tener acceso a los datos para su presentación y actualizar. Mecanismo de serialización predeterminado del documento administra la lectura y escritura de los datos en y desde archivos. Documentos también pueden controlar comandos (pero no los mensajes de Windows distintos de WM_COMMAND).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
   

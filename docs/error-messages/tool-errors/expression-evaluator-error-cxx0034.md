@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0034 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0034 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936f63c0015f21b3683333d5153cffa07b2b1677
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7afc09a3334b284208ec077023427c67757afac3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113050"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>Error del evaluador de expresiones CXX0034
-**tipos incompatibles con el operador**  
-  
- Los tipos de operando especificados no son válidos para la operación.  
-  
- Por ejemplo, un puntero no se multiplicará por cualquier valor.  
-  
- Puede que necesite escribir convertir los operandos a un tipo compatible con el operador.
+
+**tipos incompatibles con el operador**
+
+Los tipos de operando especificados no son válidos para la operación.
+
+Por ejemplo, un puntero no se multiplica por cualquier valor.
+
+Es posible que deba escribir convertir los operandos en un tipo compatible con el operador.

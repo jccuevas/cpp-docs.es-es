@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9e4d9fdc285535860b1cfeb34d664927798cc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9464e71757416e1a1efb7c185d11740bfc1da3c0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105866"
 ---
 # <a name="isreference-class"></a>is_reference (Clase)
 
@@ -36,11 +37,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es una referencia a un objeto o una función; de lo contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una referencia a un objeto o una función, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

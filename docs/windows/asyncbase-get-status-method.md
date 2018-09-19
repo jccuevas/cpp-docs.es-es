@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Get_status (método) | Documentos de Microsoft'
+title: Get_status (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46854ddfd6891efa2f205649d4b6410cc401e7fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31b333c14af6d57fb098d6aff0d0938092477de0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613129"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status (Método)
-Recupera un valor que indica el estado de la operación asincrónica.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-STDMETHOD(  
-   get_Status  
-)(AsyncStatus *status) override;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `status`  
- La ubicación donde se almacenará el estado. Para obtener más información, vea la enumeración de Windows::Foundation::AsyncStatus.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="remarks"></a>Comentarios  
- Este método implementa IAsyncInfo::get_Status.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Recupera un valor que indica el estado de la operación asincrónica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   get_Status
+)(AsyncStatus *status) override;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*status*  
+La ubicación donde se almacenará el estado. Para obtener más información, consulte `Windows::Foundation::AsyncStatus` enumeración.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.
+
+## <a name="remarks"></a>Comentarios
+
+Este método implementa `IAsyncInfo::get_Status`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

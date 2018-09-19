@@ -1,5 +1,5 @@
 ---
-title: C2041 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2041 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747dd5621aec556e89fee2ab8e7ff512736e408c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bee199ea3ddca7ae329fc17ed6c3c013dc460eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082175"
 ---
-# <a name="compiler-error-c2041"></a>C2041 de Error del compilador
-dígitos no válido 'character' para 'número' base  
-  
- El carácter especificado no es un dígito válido para la base (por ejemplo, octal o hexadecimal).  
-  
- El ejemplo siguiente genera C2041:  
-  
-```  
-// C2041.cpp  
-int i = 081;   // C2041  8 is not a base 8 digit  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2041b.cpp  
-// compile with: /c  
-int j = 071;  
+# <a name="compiler-error-c2041"></a>Error del compilador C2041
+
+dígitos no válido 'character' para 'número' base
+
+El carácter especificado no es un dígito válido para la base (por ejemplo, octal o hexadecimal).
+
+El ejemplo siguiente genera C2041:
+
+```
+// C2041.cpp
+int i = 081;   // C2041  8 is not a base 8 digit
+```
+
+Posible resolución:
+
+```
+// C2041b.cpp
+// compile with: /c
+int j = 071;
 ```

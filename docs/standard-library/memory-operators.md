@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e37d1506fd713f90b793c6f3f9a04b39bf53f7a4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100475"
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 
@@ -55,13 +56,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Uno de los objetos que se va a probar para desigualdad.
+*left*<br/>
+Uno de los objetos cuya desigualdad se va a comprobar.
 
-`right` Uno de los objetos que se va a probar para desigualdad.
+*right*<br/>
+Uno de los objetos cuya desigualdad se va a comprobar.
 
-`Ty1` Tipo controlado por el puntero compartido izquierdo.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-`Ty2` Tipo controlado por el puntero compartido derecho.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -153,23 +158,27 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Uno de los objetos que se va a realizar una comprobación de igualdad.
+*left*<br/>
+Uno de los objetos cuya igualdad se va a comprobar.
 
-`right` Uno de los objetos que se va a realizar una comprobación de igualdad.
+*right*<br/>
+Uno de los objetos cuya igualdad se va a comprobar.
 
-`Ty1` Tipo controlado por el puntero compartido izquierdo.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-`Ty2` Tipo controlado por el puntero compartido derecho.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los objetos son iguales, `false` si no lo son.
+**True** si los objetos son iguales, **false** si los objetos no son iguales.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer operador de la plantilla devuelve true. (Todos los asignadores predeterminados son iguales).
 
-El segundo y el tercer operador de la plantilla devuelven ` left.get() ==  right.get()`.
+El segundo y el tercer operador de la plantilla devuelven `left.get() ==  right.get()`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -257,13 +266,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-`right` Uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-`Ty1` Tipo controlado por el puntero compartido izquierdo.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-`Ty2` Tipo controlado por el puntero compartido derecho.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -287,13 +300,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-`right` Uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-`Ty1` Tipo controlado por el puntero izquierdo.
+*Ty1*<br/>
+Tipo controlado por el puntero izquierdo.
 
-`Ty2` Tipo controlado por el puntero derecho.
+*Ty2*<br/>
+Tipo controlado por el puntero derecho.
 
 ## <a name="op_lt_eq"></a> operator&lt;=
 
@@ -313,13 +330,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-`right` Uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-`Ty1` Tipo controlado por el puntero compartido izquierdo.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-`Ty2` Tipo controlado por el puntero compartido derecho.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -343,13 +364,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Uno de los objetos que se va a comparar.
+*left*<br/>
+Uno de los objetos que se va a comparar.
 
-`right` Uno de los objetos que se va a comparar.
+*right*<br/>
+Uno de los objetos que se va a comparar.
 
-`Ty1` Tipo controlado por el puntero compartido izquierdo.
+*Ty1*<br/>
+Tipo controlado por el puntero compartido izquierdo.
 
-`Ty2` Tipo controlado por el puntero compartido derecho.
+*Ty2*<br/>
+Tipo controlado por el puntero compartido derecho.
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
 
@@ -363,15 +388,20 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parámetros
 
-`Elem` El tipo de elemento de la secuencia.
+*Elem*<br/>
+El tipo del elemento de secuencia.
 
-`Tr` El tipo de los rasgos de elemento de la secuencia.
+*Tr*<br/>
+El tipo de rasgos del elemento de secuencia.
 
-`Ty` Tipo controlado por el puntero compartido.
+*Ty*<br/>
+Tipo controlado por el puntero compartido.
 
-`out` El flujo de salida.
+*out*<br/>
+Secuencia de salida.
 
-`sp` El puntero compartido.
+*SP*<br/>
+El puntero compartido.
 
 ### <a name="remarks"></a>Comentarios
 

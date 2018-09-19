@@ -1,5 +1,5 @@
 ---
-title: Convierte de estilo C con - clr (C++ / CLI) | Documentos de Microsoft
+title: Conversiones de estilo C con /CLR (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,156 +15,161 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28a92f115e2d5fdd3185285f245abf6d282efa7a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595011"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Conversiones de estilo C con /clr (C++/CLI)
-El siguiente tema se aplica solo a Common Language Runtime.  
-  
- Cuando se usa con tipos CLR, el compilador intenta asignar estilo C convierte en una de las conversiones de tipos que se enumeran a continuación, en el orden siguiente:  
-  
-1.  const_cast  
-  
-2.  safe_cast  
-  
-3.  safe_cast más const_cast  
-  
-4.  static_cast  
-  
-5.  static_cast más const_cast  
-  
- Si ninguna de las conversiones de tipos enumerados anteriormente es válida y si el tipo de la expresión y el tipo de destino son tipos de referencia CLR, conversión de estilo C se asigna a una comprobación en tiempo de ejecución (instrucción de MSIL castclass). En caso contrario, una conversión de estilo C se considera no válida y el compilador emitirá un error.  
-  
-## <a name="remarks"></a>Comentarios  
- Una conversión de estilo C no se recomienda. Cuando se compila con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), use [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
-  
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `const_cast`.  
-  
-```  
-// cstyle_casts_1.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref struct R {};  
-int main() {  
-   const R^ constrefR = gcnew R();  
-   R^ nonconstR = (R^)(constrefR);   
-}  
-```  
-  
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `safe_cast`.  
-  
-```  
-// cstyle_casts_2.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   Object ^ o = "hello";  
-   String ^ s = (String^)o;  
-}  
-```  
-  
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `safe_cast` más `const_cast`.  
-  
-```  
-// cstyle_casts_3.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref struct R {};  
-ref struct R2 : public R {};  
-  
-int main() {  
-   const R^ constR2 = gcnew R2();  
-   try {  
-   R2^ b2DR = (R2^)(constR2);  
-   }  
-   catch(InvalidCastException^ e) {  
-      System::Console::WriteLine("Invalid Exception");  
-   }  
-}  
-```  
-  
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `static_cast`.  
-  
-```  
-// cstyle_casts_4.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-struct N1 {};  
-struct N2 {  
-   operator N1() {  
-      return N1();  
-   }  
-};  
-  
-int main() {  
-   N2 n2;  
-   N1 n1 ;  
-   n1 = (N1)n2;  
-}  
-```  
-  
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `static_cast` más `const_cast`.  
-  
-```  
-// cstyle_casts_5.cpp  
-// compile with: /clr  
-using namespace System;  
-struct N1 {};  
-  
-struct N2 {  
-   operator const N1*() {  
-      static const N1 n1;  
-      return &n1;  
-   }  
-};  
-  
-int main() {  
-   N2 n2;  
-   N1* n1 = (N1*)(const N1*)n2;   // const_cast + static_cast  
-}  
-```  
-  
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a una comprobación en tiempo de ejecución.  
-  
-```  
-// cstyle_casts_6.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class R1 {};  
-ref class R2 {};  
-  
-int main() {  
-   R1^ r  = gcnew R1();  
-   try {  
-      R2^ rr = ( R2^)(r);  
-   }  
-   catch(System::InvalidCastException^ e) {  
-      Console::WriteLine("Caught expected exception");  
-   }  
-}  
-```  
-  
- El ejemplo siguiente muestra un válido conversión de estilo C, que hace que el compilador emita un error.  
-  
-```  
-// cstyle_casts_7.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   String^s = S"hello";  
-   int i = (int)s;   // C2440  
-}  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
-  
-## <a name="see-also"></a>Vea también  
- [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+
+El siguiente tema se aplica solo a Common Language Runtime.
+
+Cuando se usa con tipos CLR, el compilador intenta asignar el estilo C convertirse en una de las conversiones que se enumeran a continuación, en el orden siguiente:
+
+1. const_cast
+
+2. safe_cast
+
+3. safe_cast plus const_cast
+
+4. static_cast
+
+5. static_cast plus const_cast
+
+Si ninguna de las conversiones de tipos enumerados anteriormente es válida y si el tipo de la expresión y el tipo de destino son tipos de referencia CLR, conversión de estilo C se asigna a una comprobación de tiempo de ejecución (instrucción de MSIL castclass). En caso contrario, una conversión de estilo C se considera no válida y el compilador emite un error.
+
+## <a name="remarks"></a>Comentarios
+
+No se recomienda una conversión de estilo C. Cuando se compila con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), utilice [safe_cast](../windows/safe-cast-cpp-component-extensions.md).
+
+El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **const_cast**.
+
+```cpp
+// cstyle_casts_1.cpp
+// compile with: /clr
+using namespace System;
+
+ref struct R {};
+int main() {
+   const R^ constrefR = gcnew R();
+   R^ nonconstR = (R^)(constrefR);
+}
+```
+
+El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **safe_cast**.
+
+```cpp
+// cstyle_casts_2.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   Object ^ o = "hello";
+   String ^ s = (String^)o;
+}
+```
+
+El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **safe_cast** plus **const_cast**.
+
+```cpp
+// cstyle_casts_3.cpp
+// compile with: /clr
+using namespace System;
+
+ref struct R {};
+ref struct R2 : public R {};
+
+int main() {
+   const R^ constR2 = gcnew R2();
+   try {
+   R2^ b2DR = (R2^)(constR2);
+   }
+   catch(InvalidCastException^ e) {
+      System::Console::WriteLine("Invalid Exception");
+   }
+}
+```
+
+El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **static_cast**.
+
+```cpp
+// cstyle_casts_4.cpp
+// compile with: /clr
+using namespace System;
+
+struct N1 {};
+struct N2 {
+   operator N1() {
+      return N1();
+   }
+};
+
+int main() {
+   N2 n2;
+   N1 n1 ;
+   n1 = (N1)n2;
+}
+```
+
+El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **static_cast** plus **const_cast**.
+
+```cpp
+// cstyle_casts_5.cpp
+// compile with: /clr
+using namespace System;
+struct N1 {};
+
+struct N2 {
+   operator const N1*() {
+      static const N1 n1;
+      return &n1;
+   }
+};
+
+int main() {
+   N2 n2;
+   N1* n1 = (N1*)(const N1*)n2;   // const_cast + static_cast
+}
+```
+
+El ejemplo siguiente muestra una conversión de estilo C que se asigna a una comprobación en tiempo de ejecución.
+
+```cpp
+// cstyle_casts_6.cpp
+// compile with: /clr
+using namespace System;
+
+ref class R1 {};
+ref class R2 {};
+
+int main() {
+   R1^ r  = gcnew R1();
+   try {
+      R2^ rr = ( R2^)(r);
+   }
+   catch(System::InvalidCastException^ e) {
+      Console::WriteLine("Caught expected exception");
+   }
+}
+```
+
+El ejemplo siguiente muestra un válido conversión de estilo C, lo que hace que el compilador emita un error.
+
+```cpp
+// cstyle_casts_7.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   String^s = S"hello";
+   int i = (int)s;   // C2440
+}
+```
+
+## <a name="requirements"></a>Requisitos
+
+Opción del compilador: `/clr`
+
+## <a name="see-also"></a>Vea también
+
+[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

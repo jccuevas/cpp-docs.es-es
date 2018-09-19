@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: operator! = (operador) | Documentos de Microsoft'
+title: 'Comptr:: operator! = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,52 +15,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4874121f22daa8e4a13bf7a1d332c9b8e3db60ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578112"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator!= (Operador)
-Indica si dos objetos de ComPtr son diferentes.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-bool operator!=(  
-   const ComPtr<T>& a,  
-   const ComPtr<U>& b  
-);  
-  
-bool operator!=(  
-   const ComPtr<T>& a,  
+
+Indica si dos **ComPtr** objetos no son iguales.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+bool operator!=(
+   const ComPtr<T>& a,
+   const ComPtr<U>& b
+);
+
+bool operator!=(
+   const ComPtr<T>& a,
    decltype(__nullptr)  
-);  
-  
-bool operator!=(  
-   decltype(__nullptr),  
-   const ComPtr<T>& a  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `a`  
- Una referencia a un objeto de ComPtr.  
-  
- `b`  
- Una referencia a otro objeto de ComPtr.  
-  
-## <a name="return-value"></a>Valor devuelto  
- La primera genera operador `true` si objeto `a` no es igual al objeto `b`; en caso contrario, `false`.  
-  
- El segundo y tercer operador produce `true` si objeto `a` no es igual a `nullptr`; en caso contrario, `false`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft:: wrl Namespace](../windows/microsoft-wrl-namespace.md)   
- [ComPtr (clase)](../windows/comptr-class.md)
+);
+
+bool operator!=(
+   decltype(__nullptr),
+   const ComPtr<T>& a
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*a*  
+Una referencia a un **ComPtr** objeto.
+
+*b*  
+Una referencia a otro **ComPtr** objeto.
+
+## <a name="return-value"></a>Valor devuelto
+
+El primer rendimientos de operador **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.
+
+Los operadores de la segundo y terceros yield **true** si objeto *un* no es igual a **nullptr**; en caso contrario, **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)  
+[ComPtr (clase)](../windows/comptr-class.md)

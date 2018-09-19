@@ -1,5 +1,5 @@
 ---
-title: Editar archivos de recursos administrados | Documentos de Microsoft
+title: Edición de archivos de recursos administrados (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,25 +10,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- .resx files, editing
-- resource files, editing
-- resx files, editing
+- .resx files [C++], editing
+- resource files [C++], editing
+- resx files [C++], editing
 ms.assetid: 42593030-7897-4bf3-920c-e0b2d11c5bbd
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 269fc34ad67ce99ba390e41cda2510a2c84ec1da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d17a4d1f9fa7cb80fc8fcb3cec5599fb572c0ea0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318660"
 ---
-# <a name="editing-managed-resource-files"></a>Editar archivos de recursos administrados
-Archivos de recursos administrados (.resx) son archivos XML. Cuando agrega un archivo de recursos administrado al proyecto desde el **Agregar nuevo elemento** cuadro de diálogo, el **Editor de recursos administrados** abre de forma predeterminada.  
-  
- Para obtener más información, vea [recursos en. Formato de archivo resx](http://msdn.microsoft.com/en-us/0c476133-87e4-47e8-b0ef-4b88f4ef3dc5).  
-  
-## <a name="see-also"></a>Vea también  
- [Archivos de recursos](../windows/resource-files-visual-studio.md)
+# <a name="editing-managed-resource-files-c"></a>Edición administra los archivos de recursos (C++)
+
+Archivos de recursos administrados (.resx) son archivos XML. Cuando agrega un archivo de recursos administrado al proyecto desde el **Agregar nuevo elemento** cuadro de diálogo, el **Editor de recursos administrados** se abre de forma predeterminada.
+
+## <a name="see-also"></a>Vea también
+
+[Archivos de recursos](../windows/resource-files-visual-studio.md)

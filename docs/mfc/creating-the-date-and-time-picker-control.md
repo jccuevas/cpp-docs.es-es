@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342139"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>Crear el control de selector de fecha y hora
 ¿Cómo se crea el control de selector de fecha y hora depende de si está usando el control en un cuadro de diálogo o crear en una ventana de nondialog.  

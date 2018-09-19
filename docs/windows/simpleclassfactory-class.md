@@ -1,84 +1,122 @@
 ---
-title: SimpleClassFactory (clase) | Documentos de Microsoft
+title: SimpleClassFactory (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/7/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory
+- module/Microsoft::WRL::SimpleClassFactory::CreateInstance
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691450"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (clase)
-Proporciona un mecanismo fundamental para crear una clase base.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template<typename Base>  
-class SimpleClassFactory : public ClassFactory<>;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `Base`  
- Una clase base.  
-  
-## <a name="remarks"></a>Comentarios  
- La clase base debe proporcionar un constructor predeterminado.  
-  
- En el ejemplo de código siguiente se muestra cómo utilizar SimpleClassFactory con el [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
-  
- `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[SimpleClassFactory::CreateInstance (método)](../windows/simpleclassfactory-createinstance-method.md)|Crea una instancia de la interfaz especificada.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ClassFactory`  
-  
- `SimpleClassFactory`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+Proporciona un mecanismo fundamental para crear una clase base.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Base>
+class SimpleClassFactory : public ClassFactory<>;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*base*  
+Una clase base.
+
+## <a name="remarks"></a>Comentarios
+
+La clase base debe proporcionar un constructor predeterminado.
+
+En el ejemplo de código siguiente se muestra cómo usar `SimpleClassFactory` con el [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.
+
+`ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[SimpleClassFactory::CreateInstance (método)](#createinstance)|Crea una instancia de la interfaz especificada.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ClassFactory`
+
+`SimpleClassFactory`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="createinstance"></a>Simpleclassfactory (método)
+
+Crea una instancia de la interfaz especificada.
+
+```cpp
+STDMETHOD( CreateInstance )(
+   _Inout_opt_ IUnknown* pUnkOuter,
+   REFIID riid,
+   _Deref_out_ void** ppvObject
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*pUnkOuter*  
+Debe ser `nullptr`; en caso contrario, el valor devuelto es CLASS_E_NOAGGREGATION.
+
+SimpleClassFactory no admite la agregación. Si se admite la agregación y el objeto se crea formaba parte de un agregado, *pUnkOuter* sería un puntero al control `IUnknown` interfaz del agregado.
+
+*riid*  
+Identificador del objeto para crear la interfaz.
+
+*ppvObject*  
+Cuando finalice esta operación, puntero a una instancia del objeto especificado por el *riid* parámetro.
+
+### <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
+
+### <a name="remarks"></a>Comentarios
+
+Si `__WRL_STRICT__` está definido, se genera un error de aserción si no se deriva de la clase base especificada en el parámetro de plantilla de clase [RuntimeClass](../windows/runtimeclass-class.md), o no está configurado con el ClassicCom o WinRtClassicComMix [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeración.

@@ -1,5 +1,5 @@
 ---
-title: __outdword | Documentos de Microsoft
+title: __outdword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa7aea4b0be8eaa7b6d76e948e845d31f6ffa3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1181cfa4fc2868fe96deb1d68d4140b9ab80e29b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708687"
 ---
 # <a name="outdword"></a>__outdword
 **Específicos de Microsoft**  
   
- Genera el `out` instrucción para enviar una palabra doble `Data` fuera del puerto `Port`.  
+ Genera el `out` instrucción para enviar una palabra doble `Data` el puerto de salida `Port`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,17 +40,17 @@ void __outdword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- El puerto para enviar los datos.  
+*Puerto*<br/>
+[in] El puerto para enviar los datos.  
   
- [in] `Data`  
- La palabra doble que se envíe.  
+*Data*<br/>
+[in] La palabra doble que se enviarán.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__outdword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdword`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

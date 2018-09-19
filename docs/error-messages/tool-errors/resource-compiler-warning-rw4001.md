@@ -1,5 +1,5 @@
 ---
-title: Advertencia del compilador de recursos RW4001 | Documentos de Microsoft
+title: Advertencia del compilador de recursos RW4001 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74ff4164d1e0ace3fced51df4f8028b782e62d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e430dd0c42ced94fb01c2d29fff0270e090dc6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040354"
 ---
 # <a name="resource-compiler-warning-rw4001"></a>Advertencia del compilador de recursos RW4001
-. Opciones de procesamiento EXE (/ l /M /P /T /K /E /31 o /30)  
-  
- Especifica opciones de procesamiento EXE, pero no se produjo ningún archivo ejecutable para procesar. No utilice estas opciones con un archivo. res.
+
+. Las opciones de procesamiento del archivo EXE (/ l /M /P/t /K /E /31 o /30)
+
+Especifica opciones de procesamiento EXE, pero se ha producido ningún archivo ejecutable para procesar. No utilice estas opciones con un archivo. res.

@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181177"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -91,20 +92,20 @@ Número de caracteres que se comprobarán.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve un puntero a la primera ubicación de *c* en *búfer*. De lo contrario devuelve **NULL**.
+Si se realiza correctamente, devuelve un puntero a la primera ubicación de *c* en *búfer*. En caso contrario, devuelve NULL.
 
 ## <a name="remarks"></a>Comentarios
 
-**memchr** y **wmemchr** buscar la primera aparición de *c* en la primera *recuento* bytes de *búfer*. Se detiene cuando encuentra *c* o cuando se ha comprobado la primera *recuento* bytes.
+`memchr` y `wmemchr` buscar la primera aparición de *c* en la primera *recuento* bytes de *búfer*. Detiene cuando encuentra *c* o cuando ha comprobado los primeros *recuento* bytes.
 
-En C, estas funciones toman una ** const ** puntero para el primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a ** const ** devuelve un puntero a **const **; la versión que toma un puntero a no -** const ** devuelve un puntero a no es**const **. La macro _CRT_CONST_CORRECT_OVERLOADS se define si la **const ** y no-** const ** las versiones de estas funciones están disponibles. Si necesitas no es**const ** comportamiento para ambos overloadsin C++ C++, defina el símbolo _CONST_RETURN.
+En C, estas funciones toman una **const** puntero para el primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a **const** devuelve un puntero a **const**; la versión que toma un puntero a que no sean de**const** devuelve un puntero a que no sean de**const** . Se define la macro _CRT_CONST_CORRECT_OVERLOADS si tanto el **const** y no-**const** versiones de estas funciones están disponibles. Si necesita que no sea**const** comportamiento para ambos overloadsin C++ C++, defina el símbolo _CONST_RETURN.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**memchr**|\<memory.h> o \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> o \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 Para obtener más información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

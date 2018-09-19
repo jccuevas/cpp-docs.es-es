@@ -29,14 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930864"
 ---
 # <a name="dialog-data-exchange"></a>Intercambio de datos de cuadro de diálogo
-Si utiliza el mecanismo DDX, se establecen los valores iniciales del cuadro de diálogo variables de miembro del objeto, por lo general en su `OnInitDialog` controlador o el constructor del cuadro de diálogo. Inmediatamente antes de que se muestre el cuadro de diálogo, mecanismo DDX del marco de trabajo transfiere los valores de las variables de miembro para los controles en el cuadro de diálogo, donde aparecen cuando el propio cuadro de diálogo aparezca en respuesta a `DoModal` o **crear** . La implementación predeterminada de `OnInitDialog` en `CDialog` llamadas el `UpdateData` función miembro de clase `CWnd` para inicializar los controles en el cuadro de diálogo.  
+Si utiliza el mecanismo DDX, se establecen los valores iniciales del cuadro de diálogo variables de miembro del objeto, por lo general en su `OnInitDialog` controlador o el constructor del cuadro de diálogo. Inmediatamente antes de que se muestre el cuadro de diálogo, mecanismo DDX del marco de trabajo transfiere los valores de las variables de miembro para los controles en el cuadro de diálogo, donde aparecen cuando el propio cuadro de diálogo aparezca en respuesta a `DoModal` o `Create`. La implementación predeterminada de `OnInitDialog` en `CDialog` llamadas el `UpdateData` función miembro de clase `CWnd` para inicializar los controles en el cuadro de diálogo.  
   
  El mismo mecanismo transfiere valores desde los controles a las variables miembro cuando el usuario hace clic en el botón Aceptar (o cada vez que se llama a la `UpdateData` función miembro con el argumento **TRUE**). El mecanismo de validación de datos de cuadro de diálogo valida cualquier elemento de datos para el que especifica las reglas de validación.  
   

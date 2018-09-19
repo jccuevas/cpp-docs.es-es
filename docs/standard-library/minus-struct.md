@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10145e52931fc9ef993108c2373bf3d0fbf0519e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f377d2005625237113ebe881081f1eaf41d2b74
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318608"
 ---
 # <a name="minus-struct"></a>minus (Struct)
 
@@ -43,16 +44,18 @@ struct minus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) - std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Un tipo que admita un valor binario `operator-` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* un tipo que admita un binario `operator-` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -106,11 +109,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 1 5 9 13 17 21 )
 The vector v2 = ( -1 2 5 8 11 14 )
 The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

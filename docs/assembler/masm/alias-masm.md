@@ -1,7 +1,7 @@
 ---
-title: ALIAS (MASM) | Documentos de Microsoft
+title: ALIAS (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,33 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691067"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-El **ALIAS** directiva crea un nombre alternativo para una función.  Esto permite crear varios nombres para una función, o bibliotecas que permiten al vinculador (LINK.exe) para asignar una función antigua a una nueva función.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `actual-name`  
- El nombre real de la función o procedimiento.  Son necesarios los corchetes angulares.  
-  
- `alias`  
- El nombre alternativo o alias.  Son necesarios los corchetes angulares.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+El **ALIAS** directiva crea un nombre alternativo para una función.  Esto le permite crear varios nombres para una función o crear bibliotecas que permiten al vinculador (LINK.exe) para asignar una función antigua a una nueva función.
+
+## <a name="syntax"></a>Sintaxis
+
+> ALIAS \< *alias*> = \< *nombre real*>
+
+#### <a name="parameters"></a>Parámetros
+
+*nombre real*<br/>
+El nombre real de la función o procedimiento.  Son necesarios los corchetes angulares.
+
+*alias*<br/>
+El nombre alternativo o alias.  Son necesarios los corchetes angulares.
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

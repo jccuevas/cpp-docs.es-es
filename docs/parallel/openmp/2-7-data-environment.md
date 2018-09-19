@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690070"
 ---
 # <a name="27-data-environment"></a>2.7 Entorno de datos
 Esta sección presenta una directiva y varias cláusulas para controlar el entorno de datos durante la ejecución de regiones en paralelo, como se indica a continuación:  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f860d90905c244327787182c40505207c4745201
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069175"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -46,9 +47,10 @@ Un asignador es una clase de plantilla que describe un objeto que administra la 
 
 Los asignadores son todos plantillas de este tipo:
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 donde el argumento de plantilla `Type` es el tipo administrado por la instancia de asignador. La biblioteca estándar de C++ proporciona un asignador predeterminado, la clase de plantilla [allocator](../standard-library/allocator-class.md), que se define en [\<memory>](../standard-library/memory.md). El encabezado \<allocators> proporciona los asignadores siguientes:
 
@@ -66,27 +68,26 @@ donde el argumento de plantilla `Type` es el tipo administrado por la instancia 
 
 Use una creación de instancias adecuada de un asignador como segundo argumento de tipo al crear un contenedor, como en el ejemplo de código siguiente.
 
-`#include <list>`
-
-`#include <allocators>`
-
-`std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`
+```cpp
+#include <list>
+#include <allocators>
+std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
+```
 
 _List0 asigna nodos con `allocator_chunklist` y el filtro de sincronización predeterminado.
 
 Use la macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) para crear plantillas de asignador con filtros de sincronización que no sean los predeterminados:
 
-`#include <list>`
-
-`#include <allocators>`
-
-`ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);`
-
-`std::list<int, alloc<int> > _List1;`
+```cpp
+#include <list>
+#include <allocators>
+ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
+std::list<int, alloc<int> > _List1;
+```
 
 _Lst1 asigna nodos con `allocator_chunklist` y el filtro de sincronización [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
-Un asignador de bloques es una memoria caché o un filtro. Una memoria caché es una clase de plantilla que toma un argumento de tipo std::size_t. Define un asignador de bloques que asigna y desasigna bloques de memoria de un tamaño único. Debe obtener memoria mediante el operador `new`, pero no necesita realizar una llamada independiente al operador `new` para cada bloque. Por ejemplo, puede subasignar desde un bloque mayor o almacenar en caché bloques desasignados para una reasignación posterior.
+Un asignador de bloques es una memoria caché o un filtro. Una memoria caché es una clase de plantilla que toma un argumento de tipo std::size_t. Define un asignador de bloques que asigna y desasigna bloques de memoria de un tamaño único. Debe obtener memoria mediante el operador **nueva**, pero no necesita realizar una llamada independiente al operador **nuevo** para cada bloque. Por ejemplo, puede subasignar desde un bloque mayor o almacenar en caché bloques desasignados para una reasignación posterior.
 
 Con un compilador que no puede compilar el reenlace, el valor del argumento std:: size_t empleado al crear una instancia de la plantilla no es necesariamente el valor del argumento _Sz pasado a las funciones miembro allocate y deallocate de una memoria caché.
 
@@ -150,7 +151,7 @@ La plantilla caché `cache_freelist` toma un argumento de clase máxima que dete
 |[allocator_base](../standard-library/allocator-base-class.md)|Define la clase base y las funciones comunes necesarias para crear un asignador definido por el usuario a partir de un filtro de sincronización.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos mediante una memoria caché de tipo [cache_chunklist](../standard-library/cache-chunklist-class.md).|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_fixed_size](../standard-library/max-fixed-size-class.md).|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa un asignador que usa `operator delete` para desasignar un bloque de memoria y `operator new` para asignar un bloque de memoria.|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa un asignador que usa **operador delete** para desasignar una memoria de bloque y **operador new** para asignar un bloque de memoria.|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_unbounded](../standard-library/max-unbounded-class.md).|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_variable_size](../standard-library/max-variable-size-class.md).|

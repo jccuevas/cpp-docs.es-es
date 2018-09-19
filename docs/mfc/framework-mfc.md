@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344401"
 ---
 # <a name="framework-mfc"></a>Marco (MFC)
 El trabajo con el marco de trabajo de la biblioteca MFC (Microsoft Foundation Classes) se basa en gran medida en algunas clases principales y varias herramientas de Visual C++. Algunas clases encapsulan una gran parte de la interfaz de programación de aplicaciones (API) de Win32. Otras clases encapsulan conceptos de aplicaciones como documentos, vistas y la propia aplicación. Algunas clases encapsulan características OLE y la funcionalidad de acceso a datos ODBC y DAO.  

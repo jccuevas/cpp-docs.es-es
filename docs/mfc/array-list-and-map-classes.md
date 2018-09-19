@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345298"
 ---
 # <a name="array-list-and-map-classes"></a>Clases de matriz, lista y mapa
 Para gestionar los agregados de datos, la biblioteca de clases proporciona un grupo de clases de colección: matrices, listas y mapas, que puede contener una variedad de objetos y tipos predefinidos. Las colecciones se dimensiona dinámicamente. Estas clases se pueden usar en cualquier programa, si escritos para Windows o no. Sin embargo, son más útiles para implementar las estructuras de datos que definen las clases de documento en el marco de aplicación. Puede derivar clases de colección especializadas con facilidad desde estas, o puede crear a partir de las clases de plantilla. Para obtener más información acerca de estos métodos, vea el artículo [colecciones](../mfc/collections.md). Para obtener una lista de las clases de colección de plantilla, vea el artículo [clases de plantillas para matrices, listas y mapas](../mfc/template-classes-for-arrays-lists-and-maps.md).  

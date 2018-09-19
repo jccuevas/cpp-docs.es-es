@@ -98,11 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7718c7ed6069f2b799c1eb06e1cff1e6a95dcc19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713311"
 ---
 # <a name="deque-class"></a>deque (Clase)
 
@@ -117,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>Parámetros
 
-`Type` El tipo de datos de elemento que se almacenará en el deque.
+*Type*<br/>
+Tipo de datos de elementos que se va a almacenar en deque.
 
-`Allocator` El tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca del deque asignación y desasignación de memoria. Este argumento es opcional y el valor predeterminado es **asignador\<tipo>***.*
+*Asignador*<br/>
+Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de deque. Este argumento es opcional y el valor predeterminado es **asignador\<tipo >**.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -143,7 +146,7 @@ De lo contrario, al insertar o borrar un elemento se invalidan todos los iterado
 
 |Constructor|Descripción|
 |-|-|
-|[deque](#deque)|Construye un `deque.` Se proporcionan varios constructores para configurar el contenido del nuevo `deque` de maneras diferentes: vacío; cargado con un número especificado de elementos vacíos; contenido movido o copiado de otro `deque`; contenido copiado o movido mediante un iterador; y un elemento copiado en el `deque` `count` veces. Algunos de los constructores permiten usar un `allocator` personalizado para crear elementos.|
+|[deque](#deque)|Construye un objeto `deque`. Se proporcionan varios constructores para configurar el contenido del nuevo `deque` de maneras diferentes: vacío; cargado con un número especificado de elementos vacíos; contenido movido o copiado de otro `deque`; contenido copiado o movido mediante un iterador; y un elemento copiado en el `deque` `count` veces. Algunos de los constructores permiten usar un `allocator` personalizado para crear elementos.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -153,7 +156,7 @@ De lo contrario, al insertar o borrar un elemento se invalidan todos los iterado
 |[const_iterator](#const_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede obtener acceso a elementos de `deque` como `const` y leerlos.|
 |[const_pointer](#const_pointer)|Tipo que proporciona un puntero a un elemento de `deque` como `const.`|
 |[const_reference](#const_reference)|Tipo que proporciona una referencia a un elemento de `deque` para operaciones de lectura y de otro tipo como `const.`|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede obtener acceso a elementos del `deque` como `const` y leerlos. El deque se ve en orden inverso. Para obtener más información, vea [reverse_iterator (Clase)](../standard-library/reverse-iterator-class.md)|
+|[const_reverse_iterator](#const_reverse_iterator)|Un tipo que proporciona un iterador de acceso aleatorio que puede obtener acceso y leer los elementos de la `deque` como **const**. El deque se ve en orden inverso. Para obtener más información, vea [reverse_iterator (Clase)](../standard-library/reverse-iterator-class.md)|
 |[difference_type](#difference_type)|Tipo que proporciona la diferencia entre dos iteradores de acceso aleatorio que hacen referencia a elementos del mismo `deque`.|
 |[iterator](#iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer o modificar cualquier elemento de `deque`.|
 |[pointer](#pointer)|Tipo que proporciona un puntero a un elemento de `deque`.|
@@ -171,14 +174,14 @@ De lo contrario, al insertar o borrar un elemento se invalidan todos los iterado
 |[back](#back)|Devuelve una referencia al último elemento del `deque`.|
 |[begin](#begin)|Devuelve un iterador de acceso aleatorio que direcciona el primer elemento del `deque`.|
 |[cbegin](#cbegin)|Devuelve un iterador constante al primer elemento del `deque`.|
-|[cend](#cend)|Devuelve un iterador `const` de acceso aleatorio que apunta justo después del final del `deque`.|
+|[cend](#cend)|Devuelve un acceso aleatorio **const** iterador que apunta justo después del final de la `deque`.|
 |[clear](#clear)|Borra todos los elementos de un `deque`.|
 |[crbegin](#crbegin)|Devuelve un iterador constante de acceso aleatorio al primer elemento de `deque` que se ve en orden inverso.|
 |[crend](#crend)|Devuelve un iterador constante de acceso aleatorio al primer elemento de `deque` que se ve en orden inverso.|
 |[emplace](#emplace)|Inserta en una posición especificada del `deque` un elemento construido en contexto.|
 |[emplace_back](#emplace_back)|Agrega un elemento construido en contexto al final del `deque`.|
 |[emplace_front](#emplace_front)|Agrega un elemento construido en contexto al principio del `deque`.|
-|[empty](#empty)|Devuelve `true` si el `deque` contiene cero elementos y `false` si contiene uno o más elementos.|
+|[empty](#empty)|Devuelve **true** si el `deque` contiene cero elementos, y **false** si contiene uno o más elementos.|
 |[end](#end)|Devuelve un iterador de acceso aleatorio que apunta justo después del final del `deque`.|
 |[erase](#erase)|Quita un elemento o un intervalo de elementos de un `deque` de las posiciones especificadas.|
 |[front](#front)|Devuelve una referencia al primer elemento de `deque`.|
@@ -217,7 +220,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Comentarios
 
-**allocator_type** es un sinónimo del parámetro de plantilla **Allocator**.
+`allocator_type` es un sinónimo del parámetro de plantilla `Allocator`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -242,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parámetros
 
-`First` Posición del primer elemento del intervalo de elementos que se copian del argumento deque.
+*Primero*<br/>
+Posición del primer elemento en el intervalo de elementos que se va a copiar del argumento deque.
 
-`Last` Posición del primer elemento más allá del intervalo de elementos que se copian del argumento deque.
+*Último*<br/>
+Posición del primer elemento que se encuentra más allá del intervalo de elementos que se va a copiar del argumento deque.
 
-`Count` El número de copias de un elemento que se va a insertar en el deque.
+*Recuento*<br/>
+Número de copias de un elemento que se va a insertar en el deque.
 
-`Val` El valor del elemento que se va a insertar en el deque.
+*Val*<br/>
+Valor del elemento que se va a insertar en el deque.
 
-`IList` Initializer_list que se va a insertar en el deque.
+*IList*<br/>
+initializer_list que se va a insertar en el deque.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -324,15 +332,16 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`pos` El subíndice (o número de posición) del elemento hacer referencia en el deque.
+*punto de venta*<br/>
+Subíndice (o número de posición) del elemento al que se va a hacer referencia en el deque.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si `pos` es mayor que el tamaño del deque, **at** inicia una excepción.
+Si *pos* es mayor que el tamaño del deque, `at` produce una excepción.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si el valor devuelto de **at** se asigna a una `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de **at** se asigna a una **reference**, el objeto deque puede modificarse.
+Si el valor devuelto de `at` se asigna a un `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de `at` se asigna a un `reference`, el objeto deque se puede modificar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -377,7 +386,7 @@ El último elemento del deque. Si el deque está vacío, el valor devuelto es in
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de **back** se asigna a una `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de **back** se asigna a una **reference**, el objeto deque se puede modificar.
+Si el valor devuelto de `back` se asigna a un `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de `back` se asigna a un `reference`, el objeto deque se puede modificar.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento en un deque vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -426,7 +435,7 @@ Un iterador de acceso aleatorio que se dirige al primer elemento del deque o a l
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de **begin** se asigna a un `const_iterator`, el objeto deque no se puede modificar. Si el valor devuelto de **begin** se asigna a un **iterator**, el objeto deque se puede modificar.
+Si el valor devuelto de `begin` se asigna a un `const_iterator`, el objeto deque no se puede modificar. Si el valor devuelto de `begin` se asigna a un `iterator`, el objeto deque puede modificarse.
 
 ### <a name="example"></a>Ejemplo
 
@@ -465,7 +474,7 @@ The first element of c1 is now 20
 
 ## <a name="cbegin"></a>  deque::cbegin
 
-Devuelve un iterador `const` que direcciona el primer elemento del intervalo.
+Devuelve un **const** iterador que direcciona el primer elemento del intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -473,7 +482,7 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador `const` de acceso aleatorio que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
+Un **const** iterador de acceso aleatorio que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -491,7 +500,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  deque::cend
 
-Devuelve un iterador `const` que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -505,7 +514,7 @@ Iterador de acceso aleatorio que apunta justo después del final del intervalo.
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `end()` y `cend()`.
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -571,7 +580,7 @@ Vea el ejemplo de [back](#back).
 
 ## <a name="const_pointer"></a>  deque::const_pointer
 
-Proporciona un puntero a un elemento `const` de un deque.
+Proporciona un puntero a un **const** elemento de un deque.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -773,29 +782,29 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 
 |Parámetro|Descripción|
 |-|-|
-|`Al`|La clase de asignador que se usa con este objeto.|
-|`Count`|Número de elementos del deque construido.|
-|`Val`|Valor de los elementos del deque construido.|
-|`Right`|Deque del cual el deque construido va a ser una copia.|
-|`First`|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|`Last`|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
-|`IList`|initializer_list que se va a copiar.|
+|*Al*|La clase de asignador que se usa con este objeto.|
+|*Recuento*|Número de elementos del deque construido.|
+|*Val*|Valor de los elementos del deque construido.|
+|*Derecha*|Deque del cual el deque construido va a ser una copia.|
+|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|* IList'|initializer_list que se va a copiar.|
 
 ### <a name="remarks"></a>Comentarios
 
-Todos los constructores almacenan un objeto de asignador (`Al`) e inicializan el deque.
+Todos los constructores almacenan un objeto de asignador (*Al*) e inicializan el deque.
 
 Los dos primeros constructores especifican un deque inicial vacío y el segundo especifica también el tipo de asignador (`_Al`) que se va a usar.
 
 El tercer constructor especifica una repetición de un número especificado (`count`) de elementos del valor predeterminado para la clase `Type`.
 
-Los constructores cuarto y quinto especifican una repetición de elementos (`Count`) de valor `val`.
+Los constructores cuarto y quinto especifican una repetición de (*recuento*) elementos del valor `val`.
 
-El sexto constructor especifica una copia del deque `Right`.
+El sexto constructor especifica una copia del deque *derecha*.
 
 Los constructores séptimo y octavo copian el intervalo `[First, Last)` de un deque.
 
-El séptimo constructor mueve el deque `Right`.
+El séptimo constructor mueve el deque *derecha*.
 
 El octavo constructor copia el contenido de una initializer_list.
 
@@ -1074,8 +1083,8 @@ iterator emplace(
 
 |Parámetro|Descripción|
 |-|-|
-|`_Where`|Posición del [deque](../standard-library/deque-class.md) en la que se inserta el primer elemento.|
-|`val`|Valor del elemento insertado en el `deque`.|
+|*_WHERE*|Posición del [deque](../standard-library/deque-class.md) en la que se inserta el primer elemento.|
+|*Val*|Valor del elemento insertado en el `deque`.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1139,7 +1148,7 @@ void emplace_back(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|`val`|El elemento que se agrega al final del [deque](../standard-library/deque-class.md).|
+|*Val*|El elemento que se agrega al final del [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Ejemplo
 
@@ -1189,7 +1198,7 @@ void emplace_front(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|`val`|El elemento que se agrega al principio del [deque](../standard-library/deque-class.md).|
+|*Val*|El elemento que se agrega al principio del [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Ejemplo
 
@@ -1280,7 +1289,7 @@ Un iterador de acceso aleatorio que se dirige a la ubicación que sigue al últi
 
 ### <a name="remarks"></a>Comentarios
 
-**end** se usa para comprobar si un iterador ha llegado al final de su deque.
+`end` se usa para comprobar si un iterador ha llegado al final de su deque.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1305,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1336,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Where` Posición del elemento que se va a quitar del deque.
+*_WHERE*<br/>
+Posición del elemento que se quitará del deque.
 
-`first` Posición del primer elemento se quitó del deque.
+*first*<br/>
+Posición del primer elemento que se ha quitado del deque.
 
-`last` Posición situada más allá del último elemento se quitó del deque.
+*Último*<br/>
+Posición inmediatamente siguiente a la del último elemento que se ha quitado del deque.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1348,7 +1360,7 @@ Un iterador de acceso aleatorio que designa el primer elemento restante después
 
 ### <a name="remarks"></a>Comentarios
 
-**erase** nunca lanza una excepción.
+`erase` nunca inicia una excepción.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1410,7 +1422,7 @@ Si el deque está vacío, el valor devuelto es indefinido.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de `front` se asigna a una `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de `front` se asigna a una **reference**, el objeto deque puede modificarse.
+Si el valor devuelto de `front` se asigna a un `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de `front` se asigna a un `reference`, el objeto deque se puede modificar.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento en un deque vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -1516,12 +1528,12 @@ IList);
 
 |Parámetro|Descripción|
 |-|-|
-|`Where`|Posición del deque de destino donde se inserta el primer elemento.|
-|`Val`|Valor del elemento que se va a insertar en el deque.|
-|`Count`|Número de elementos que se van a insertar en el deque.|
-|`First`|Posición del primer elemento en el intervalo de elementos del argumento deque que se va a copiar.|
-|`Last`|Posición del primer elemento más allá del intervalo de elementos del argumento deque que se va a copiar.|
-|`IList`|initializer_list de los elementos que se van a insertar.|
+|*Where*|Posición del deque de destino donde se inserta el primer elemento.|
+|*Val*|Valor del elemento que se va a insertar en el deque.|
+|*Recuento*|Número de elementos que se van a insertar en el deque.|
+|*Primero*|Posición del primer elemento en el intervalo de elementos del argumento deque que se va a copiar.|
+|*Último*|Posición del primer elemento más allá del intervalo de elementos del argumento deque que se va a copiar.|
+|*IList*|initializer_list de los elementos que se van a insertar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1541,7 +1553,7 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Comentarios
 
-Se puede usar un tipo **iterator** para modificar el valor de un elemento.
+Un tipo `iterator` puede usarse para modificar el valor de un elemento.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1590,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`pos` La posición del elemento de deque que hace referencia.
+*punto de venta*<br/>
+La posición del elemento deque al que se va a hacer referencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1598,7 +1611,7 @@ Una referencia al elemento cuya posición se especifica en el argumento. Si la p
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de `operator[]` se asigna a una `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de `operator[]` se asigna a una **reference**, el objeto deque puede modificarse.
+Si el valor devuelto de `operator[]` se asigna a un `const_reference`, el objeto deque no se puede modificar. Si el valor devuelto de `operator[]` se asigna a un `reference`, el objeto deque se puede modificar.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento fuera de los límites del deque.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -1643,11 +1656,11 @@ deque& operator=(deque&& right);
 
 |Parámetro|Descripción|
 |-|-|
-|`right`|Deque que proporciona el nuevo contenido.|
+|*right*|Deque que proporciona el nuevo contenido.|
 
 ### <a name="remarks"></a>Comentarios
 
-La primera invalidación copia elementos en este deque desde `right`, el origen de la asignación. La segunda invalidación mueve elementos a este deque desde `right`.
+La primera invalidación copia elementos en este deque desde *derecho*, el origen de la asignación. La segunda invalidación mueve elementos a este deque desde *derecho*.
 
 Se quitan los elementos contenidos en este deque antes de que se ejecute el operador.
 
@@ -1701,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a>  deque::pointer
@@ -1714,7 +1727,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Comentarios
 
-Se puede usar un tipo **pointer** para modificar el valor de un elemento. Un [iterator](#iterator) se usa normalmente para tener acceso a un elemento de deque.
+Un tipo `pointer` puede usarse para modificar el valor de un elemento. Un [iterator](#iterator) se usa normalmente para tener acceso a un elemento de deque.
 
 ## <a name="pop_back"></a>  deque::pop_back
 
@@ -1814,7 +1827,7 @@ void push_back(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|`val`|El elemento que se agrega al final del deque.|
+|*Val*|El elemento que se agrega al final del deque.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1833,7 +1846,7 @@ void push_front(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|`val`|El elemento que se agrega al principio del deque.|
+|*Val*|El elemento que se agrega al principio del deque.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1938,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2056,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2085,15 +2098,17 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Newsize` El nuevo tamaño del deque.
+*_Newsize*<br/>
+Nuevo tamaño del deque.
 
-`val` El valor de los nuevos elementos que se pueden agregar a deque si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, a los nuevos elementos se les asigna el valor predeterminado para la clase.
+*Val*<br/>
+Valor de los nuevos elementos que se agregarán al deque si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, a los nuevos elementos se les asigna el valor predeterminado para la clase.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el tamaño del deque es menor que el tamaño solicitado, `_Newsize`, se agregan elementos al deque hasta que este alcanza el tamaño solicitado.
+Si el tamaño del deque es menor que el tamaño solicitado, *_Newsize*, se agregan elementos al deque hasta que alcance el tamaño solicitado.
 
-Si el tamaño del deque es mayor que el tamaño solicitado, se eliminan los elementos más cercanos al final del deque hasta que este alcanza el tamaño `_Newsize`.
+Si el tamaño del deque es mayor que el tamaño solicitado, se eliminan los elementos más cercanos al final del deque hasta que este alcanza el tamaño *_Newsize*.
 
 Si el tamaño actual del deque es igual que el tamaño solicitado, no se lleva a cabo ninguna acción.
 
@@ -2262,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El deque proporciona los elementos deben intercambiar o deque cuyos elementos se van a intercambiar con los del deque `left`.
+*right*<br/>
+Deque que proporciona los elementos que se van a intercambiar o deque cuyos elementos se van a intercambiar con los del deque `left`.
 
-`left` Un deque cuyos elementos se van a intercambiar con los del deque `right`.
+*left*<br/>
+Un deque cuyos elementos se van a intercambiar con los del deque *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2331,7 +2348,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`value_type` es un sinónimo del parámetro de plantilla **Type**.
+`value_type` es un sinónimo del parámetro de plantilla `Type`.
 
 ### <a name="example"></a>Ejemplo
 

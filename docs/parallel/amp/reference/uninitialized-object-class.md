@@ -1,5 +1,5 @@
 ---
-title: uninitialized_object (clase) | Documentos de Microsoft
+title: uninitialized_object (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9b10af535b0739d480326d616ee7587318bb5a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 821f3c25d195a2c92ac04fdf5f9e5a59b493c257
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113843"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object (clase)
 La excepción que se produce cuando se usa un objeto no inicializado.  
@@ -53,7 +54,7 @@ class uninitialized_object : public runtime_exception;
  **Encabezado:** amprt.h  
   
  **Espacio de nombres:** Concurrency  
-## <a name="uninitialized_object__ctor"></a> unsupported_feature 
+## <a name="uninitialized_object__ctor"></a> unsupported_feature) 
 
 Crea una nueva instancia de la excepción unsupported_feature.  
   
@@ -67,8 +68,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Descripción del error.  
+*_Cuerpo*<br/>
+Descripción del error.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `unsupported_feature`. 

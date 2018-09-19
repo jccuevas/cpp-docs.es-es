@@ -1,5 +1,5 @@
 ---
-title: invalid_compute_domain (clase) | Documentos de Microsoft
+title: invalid_compute_domain (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116014"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain (clase)
-La excepción que se produce cuando el tiempo de ejecución no puede iniciar un kernel utilizando el dominio del cálculo especificado en el [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) sitio de llamada.  
+La excepción que se produce cuando el tiempo de ejecución no puede iniciar un kernel usando el dominio del cálculo especificado en el [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) sitio de llamada.  
 
   
 ## <a name="syntax"></a>Sintaxis  
@@ -69,11 +70,11 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Descripción del error.  
+*_Cuerpo*<br/>
+Descripción del error.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una instancia de la `invalid_compute_domain` (clase)  
+ Una instancia de la `invalid_compute_domain` clase  
     
 ## <a name="see-also"></a>Vea también  
  [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

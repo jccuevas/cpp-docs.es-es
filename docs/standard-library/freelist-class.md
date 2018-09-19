@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ae7e56fd33de888ad31a24ad1e3130acc96daa28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702835"
 ---
 # <a name="freelist-class"></a>freelist (Clase)
 
@@ -34,20 +35,19 @@ Administra una lista de bloques de memoria.
 
 ```cpp
 template <std::size_t Sz, class Max>
-class freelist
- : public Max
+class freelist : public Max
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Sz`|El número de elementos de la matriz que se van a asignar.|
-|`Max`|La clase máxima que representa el número máximo de elementos que se van a almacenar en la lista libre. La clase máxima puede ser [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|El número de elementos de la matriz que se van a asignar.|
+|*Max*|La clase máxima que representa el número máximo de elementos que se van a almacenar en la lista libre. La clase máxima puede ser [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla administra una lista de bloques de memoria de tamaño `Sz` con la longitud máxima de la lista determinada por la clase máxima pasada en `Max`.
+Esta clase de plantilla administra una lista de bloques de memoria de tamaño *Sz* con la longitud máxima de la lista determinada por la clase máxima pasada en *Max*.
 
 ### <a name="constructors"></a>Constructores
 
@@ -92,7 +92,7 @@ Devuelve un puntero al bloque de memoria que se ha quitado de la lista.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve `NULL` si la lista está vacía. En caso contrario, quita el primer bloque de memoria de la lista.
+La función miembro devuelve NULL si la lista está vacía. En caso contrario, quita el primer bloque de memoria de la lista.
 
 ## <a name="push"></a>  freelist::push
 
@@ -106,15 +106,15 @@ bool push(void* ptr);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al bloque de memoria que se va a agregar a la lista libre.|
+|*ptr*|Un puntero al bloque de memoria que se va a agregar a la lista libre.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si la función `full` de la clase máxima devuelve `false`; en caso contrario, la función `push` devuelve `false`.
+**True** si el `full` función de la clase máxima devuelve **false**; en caso contrario, el `push` función devuelve **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Si la función `full` de la clase máxima devuelve `false`, esta función miembro agrega el bloque de memoria al que apunta `ptr` en el encabezado de la lista.
+Si el `full` función de la clase máxima devuelve **false**, esta función miembro agrega el bloque de memoria que apunta *ptr* al principio de la lista.
 
 ## <a name="see-also"></a>Vea también
 

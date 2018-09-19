@@ -1,5 +1,5 @@
 ---
-title: C3118 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3118 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ecc3dc79cd52631f3dba5c204cabc02e7932bc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 320d92bd97e3b5f9bb696959ee25ca33cba3544a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063429"
 ---
-# <a name="compiler-error-c3118"></a>C3118 de Error del compilador
-'interfaz': las interfaces no admiten herencia virtual  
-  
- Se intentó derivar virtualmente una interfaz. Por ejemplo,  
-  
-```  
-// C3118.cpp  
-__interface I1 {  
-};  
-  
-__interface I2 : virtual I1 {   // C3118  
-};  
-```  
-  
- genera este error.
+# <a name="compiler-error-c3118"></a>Error del compilador C3118
+
+'interface': las interfaces no admiten la herencia virtual
+
+Se intentó prácticamente heredar de una interfaz. Por ejemplo,
+
+```
+// C3118.cpp
+__interface I1 {
+};
+
+__interface I2 : virtual I1 {   // C3118
+};
+```
+
+genera este error.

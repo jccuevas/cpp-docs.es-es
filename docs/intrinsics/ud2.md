@@ -1,5 +1,5 @@
 ---
-title: __ud2 | Documentos de Microsoft
+title: __ud2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ac4213587137552fa51505b73edd7387a98c5cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687558"
 ---
 # <a name="ud2"></a>__ud2
 **Específicos de Microsoft**  
@@ -35,22 +36,22 @@ void __ud2();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El procesador produce una excepción de código de operación no válido si se ejecuta una instrucción no definida.  
+ El procesador genera una excepción de código de operación no válida si ejecuta una instrucción no definida.  
   
- El `__ud2` función es equivalente a la `UD2` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
+ El `__ud2` función es equivalente a la `UD2` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se ejecuta una instrucción no definida, lo que produce una excepción. El controlador de excepciones, a continuación, cambia el código de retorno de cero a uno.  
+ El ejemplo siguiente ejecuta una instrucción no definida, que produce una excepción. El controlador de excepciones, a continuación, cambia el código de retorno de cero a uno.  
   
 ```  
 // __ud2_intrinsic.cpp  

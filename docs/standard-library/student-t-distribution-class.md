@@ -31,11 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e48a657d15fbb6526ebc9d717825f409f10928f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ce2c5e134b93c1cefd64b7a33935d42c6bba5cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723988"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution (Clase)
 
@@ -73,11 +74,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* predeterminado es el tipo de resultado de punto flotante, `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuida según la distribución *t* de Student. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **doble** si se proporciona ninguno, distribuido según Student *t*-distribución. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -88,7 +90,7 @@ La función de propiedad `n()` devuelve el valor del parámetro de distribución
 
 Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener más detalles sobre el algoritmo de la distribución *t* de Student, vea el artículo de Wolfram MathWorld sobre [Distribución t de Students](http://go.microsoft.com/fwlink/p/?linkid=401094).
+Para obtener más detalles sobre el algoritmo de la distribución *t* de Student, vea el artículo de Wolfram MathWorld sobre [Distribución t de Students](http://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## <a name="example"></a>Ejemplo
 
@@ -182,9 +184,11 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*n* el `n` parámetro de distribución.
+*n*<br/>
+El parámetro de distribución `n`.
 
-*parm* el paquete de parámetros utilizado para construir la distribución.
+*parm*<br/>
+Paquete de parámetros utilizado para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -211,9 +215,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*n* el `n` parámetro de distribución.
+*n*<br/>
+El parámetro de distribución `n`.
 
-*derecho* la `param_type` objeto que se va a comparar con esta.
+*right*<br/>
+El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
 

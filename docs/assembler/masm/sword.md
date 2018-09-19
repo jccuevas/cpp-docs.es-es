@@ -1,7 +1,7 @@
 ---
-title: FILO | Documentos de Microsoft
+title: SWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f3e50db7c9ac7358190885d9e5b453126c8487
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a004148476f6eb0d63e91dfac5ebcc4ca2c8ad92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676163"
 ---
 # <a name="sword"></a>SWORD
-Asigna y, opcionalmente, inicializa una palabra con signo (2 bytes) de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-name SWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)   
- [WORD](../../assembler/masm/word.md)
+
+Asigna e inicializa, opcionalmente, una palabra con signo (2 bytes) de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.
+
+## <a name="syntax"></a>Sintaxis
+
+> inicializador de filo de nombre [[, inicializador]]...
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[WORD](../../assembler/masm/word.md)<br/>

@@ -53,13 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023671"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+
 Convierte un carácter a minúsculas.
 
 ## <a name="syntax"></a>Sintaxis
@@ -98,9 +100,9 @@ Cada una de estas rutinas convierte una copia de *c* a minúsculas si la convers
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas rutinas convierte una determinada letra mayúscula en una letra minúscula si es posible y pertinente. La conversión del tipo de **towlower** es específico de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el **_l** sufijo usar el conjunto actual configuración regional. Las versiones de estas funciones que tienen la **_l** sufijo toman la configuración regional como parámetro y que utilice el conjunto actual configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas rutinas convierte una determinada letra mayúscula en una letra minúscula si es posible y pertinente. La conversión del tipo **towlower** es específico de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el **_l** sufijo usar el conjunto actual configuración regional. Las versiones de estas funciones que tienen el **_l** sufijo toman la configuración regional como parámetro y usarlo en lugar de establecida actualmente configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En orden para **_tolower** para proporcionar a los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [isupper](isupper-isupper-l-iswupper-iswupper-l.md) debe devolver es distinto de cero.
+En orden para **_tolower** para proporcionar a los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [isupper](isupper-isupper-l-iswupper-iswupper-l.md) debe devolver cero.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -110,7 +112,7 @@ En orden para **_tolower** para proporcionar a los resultados esperados, [__isas
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** y **_towlower_l** no tienen dependen de la configuración regional y no están diseñadas para ser llamado directamente. Se proporcionan para uso interno exclusivo **_totlower_l**.
+> **_tolower_l** y **_towlower_l** no tienen dependen de la configuración regional y no están diseñados para ser llamado directamente. Se proporcionan para uso interno **_totlower_l**.
 
 ## <a name="requirements"></a>Requisitos
 

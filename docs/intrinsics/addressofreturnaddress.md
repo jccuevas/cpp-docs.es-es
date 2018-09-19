@@ -1,5 +1,5 @@
 ---
-title: _AddressOfReturnAddress | Documentos de Microsoft
+title: _AddressOfReturnAddress | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539691"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 **Específicos de Microsoft**  
@@ -39,12 +40,12 @@ void * _AddressOfReturnAddress();
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando `_AddressOfReturnAddress` se utiliza en un programa compilado con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la función que contiene el `_AddressOfReturnAddress` llamada se compila como una función nativa. Cuando se compila una función como administrado llama a la función que contiene `_AddressOfReturnAddress`, `_AddressOfReturnAddress` posible que no funcionen según lo previsto.  
+ Cuando `_AddressOfReturnAddress` se utiliza en un programa compilado con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la función que contiene el `_AddressOfReturnAddress` llamada se compila como una función nativa. Cuando se compila una función como administrado llama a la función que contiene `_AddressOfReturnAddress`, `_AddressOfReturnAddress` podrían no funcionar según lo previsto.  
   
  Esta rutina solo está disponible como función intrínseca.  
   
@@ -83,5 +84,5 @@ int main() {
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Palabras clave](../cpp/keywords-cpp.md)

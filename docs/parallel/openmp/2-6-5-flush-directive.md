@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692342"
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush (Directiva)
 El **vaciar** directiva, ya sea explícita o implícita, especifica un punto de secuencia "entre subprocesos" en el que debe asegurarse de que todos los subprocesos de un equipo tienen una vista coherente de ciertos objetos (especificadas a continuación) en la implementación memoria. Esto significa que las anteriores evaluaciones de expresiones que hacen referencia a esos objetos están completos y las evaluaciones subsiguientes no han comenzado aún. Por ejemplo, los compiladores deben restaurar los valores de los objetos de registros en la memoria y hardware que necesite vaciar los búferes de escritura en la memoria y volver a cargar los valores de los objetos de la memoria.  

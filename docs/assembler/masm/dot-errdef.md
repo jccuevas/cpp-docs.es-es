@@ -1,7 +1,7 @@
 ---
-title: . ERRDEF | Documentos de Microsoft
+title: . ERRDEF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaf606183260ec35b3a27b9d0209ad608d0821e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7ebce65e18106fd35c8fdd936293976bf7611182
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688800"
 ---
 # <a name="errdef"></a>.ERRDEF
-Genera un error si *nombre* es una etiqueta definida previamente, la variable o el símbolo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-.ERRDEF name [[, message]]  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Genera un error si *nombre* es una etiqueta definida anteriormente, una variable o un símbolo.
+
+## <a name="syntax"></a>Sintaxis
+
+> . Nombre ERRDEF [[, mensaje]]
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

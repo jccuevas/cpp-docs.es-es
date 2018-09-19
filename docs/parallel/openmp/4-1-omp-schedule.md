@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691055"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE** solo se aplica a **para** y **for paralelos** directivas que tengan el tipo de programación **en tiempo de ejecución**. El tamaño de tipo y el fragmento de programación para todos los bucles de este tipo se puede establecer en tiempo de ejecución al establecer esta variable de entorno que va a cualquiera de los tipos de programación reconocido como un elemento opcional *chunk_size*.  

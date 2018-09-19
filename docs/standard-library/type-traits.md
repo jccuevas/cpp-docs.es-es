@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e374ad9c0024b602c07ea91e53d45c9bf0742f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692469"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -35,7 +36,7 @@ Define las plantillas que proporcionan constantes en tiempo de compilación que 
 
 ## <a name="remarks"></a>Comentarios
 
-Las clases y las plantillas en \<type_traits > se utilizan para admitir la inferencia de tipos, la clasificación y la transformación en tiempo de compilación para detectar errores relacionados con el tipo y para ayudarle a optimizar el código genérico. Estas clases y plantillas incluyen rasgos de tipo unario que describen una propiedad de un tipo, rasgos de tipo binario que describen la relación entre los tipos y rasgos de transformación que modifican una propiedad de un tipo.
+Las clases y plantillas de \<type_traits > se utilizan para admitir la inferencia, clasificación y transformación en tiempo de compilación para detectar errores relacionados con el tipo y que le ayudarán a optimizar el código genérico. Estas clases y plantillas incluyen rasgos de tipo unario que describen una propiedad de un tipo, rasgos de tipo binario que describen la relación entre los tipos y rasgos de transformación que modifican una propiedad de un tipo.
 
 Para admitir rasgos de tipo, se define una clase auxiliar, `integral_constant`. Tiene especializaciones de plantilla `true_type` y `false_type` que forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *es true*, se deriva públicamente (ya sea de forma directa o indirecta) de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *es false*, se deriva públicamente (ya sea de forma directa o indirecta) de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
@@ -73,7 +74,7 @@ Categorías de tipo principal
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Comprueba si el tipo es `void`.|
+|[is_void](../standard-library/is-void-class.md)|Comprueba si el tipo es **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Comprueba si el tipo es `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Comprueba si el tipo es integral.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Comprueba si el tipo es un punto flotante.|
@@ -94,7 +95,7 @@ Categorías de tipo compuesto
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Comprueba si el tipo es una referencia.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Comprueba si el tipo es aritmético.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Comprueba si el tipo es `void` o aritmético.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Comprueba si el tipo es **void** o aritmético.|
 |[is_object](../standard-library/is-object-class.md)|Comprueba si el tipo es un tipo de objeto.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Comprueba si el tipo es escalar.|
 |[is_compound](../standard-library/is-compound-class.md)|Comprueba si el tipo no es escalar.|
@@ -104,8 +105,8 @@ Propiedades de tipo
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Comprueba si el tipo es `const`.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Comprueba si el tipo es `volatile`.|
+|[is_const](../standard-library/is-const-class.md)|Comprueba si el tipo es **const**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Comprueba si el tipo es **volátil**.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Comprueba si el tipo es trivial.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Comprueba si el tipo se puede copiar de manera trivial.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Comprueba si el tipo es un tipo de diseño estándar.|
@@ -141,7 +142,7 @@ Propiedades de tipo
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Comprueba si el tipo se puede construir mediante copia y se sabe que la asignación no se inicia.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Comprueba si el tipo se puede asignar mediante movimiento y se sabe que la asignación no se inicia.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Comprueba si el tipo se puede destruir y se sabe que el destructor no se inicia.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Comprueba si el tipo tiene un destructor virtual.|
+|`has_virtual_destructor`|Comprueba si el tipo tiene un destructor virtual.|
 
 Consultas de propiedad de tipo
 
@@ -163,9 +164,9 @@ Modificaciones de const y volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Genera un tipo `const` a partir del tipo.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Genera un tipo `volatile` a partir del tipo.|
-|[add_cv](../standard-library/add-cv-class.md)|Genera un tipo `const volatile` a partir del tipo.|
+|[add_const](../standard-library/add-const-class.md)|Genera un **const** tipo del tipo.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Genera un **volátil** tipo del tipo.|
+|[add_cv](../standard-library/add-cv-class.md)|Genera un **const volatile** tipo del tipo.|
 |[remove_const](../standard-library/remove-const-class.md)|Genera un tipo no constante a partir del tipo.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Genera un tipo no volátil a partir del tipo.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Genera un tipo no constante y no volátil a partir del tipo.|

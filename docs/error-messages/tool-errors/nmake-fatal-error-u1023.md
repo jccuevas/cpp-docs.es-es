@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1023 | Documentos de Microsoft
+title: Error grave de NMAKE U1023 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8c5fda3474e4c1b8bab6dfdfcdcfef6f70f9f33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11b747339292616e555f52c2f8c85edeeb622072
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118965"
 ---
 # <a name="nmake-fatal-error-u1023"></a>Error grave de NMAKE U1023
-error de sintaxis en expresión  
-  
- Una expresión no es válida.  
-  
- Compruebe los operadores permitidos y la prioridad de operador.
+
+error de sintaxis en expresión
+
+Una expresión no es válida.
+
+Compruebe los operadores permitidos y la prioridad de operador.

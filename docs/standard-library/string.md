@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954576"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -41,14 +42,14 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 - Matrices de caracteres terminadas en null, que a menudo se llaman “cadenas de C”.
 
-- Objetos de clase de plantilla, de tipo `basic_string`, que administran todos los argumentos de plantilla similares a `char`.
+- Los objetos de clase de plantilla, de tipo `basic_string`, que administran todos los **char**-como argumentos de plantilla.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nombre de tipo|Descripción|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo `char` como una `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo `wchar_t` como una `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Un tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo **char** como un `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Un tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo **wchar_t** como un `wstring`.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char32_t`.|
 
@@ -71,13 +72,13 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 |||
 |-|-|
 |[swap](../standard-library/string-functions.md#swap)|Intercambia las matrices de caracteres de dos cadenas.|
-|[stod](../standard-library/string-functions.md#stod)|Convierte una secuencia de caracteres en un `double.`|
-|[stof](../standard-library/string-functions.md#stof)|Convierte una secuencia de caracteres en una `float`.|
+|[stod](../standard-library/string-functions.md#stod)|Convierte una secuencia de caracteres en un **doble**.|
+|[stof](../standard-library/string-functions.md#stof)|Convierte una secuencia de caracteres en un **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Convierte una secuencia de caracteres en un entero.|
-|[stold](../standard-library/string-functions.md#stold)|Convierte una secuencia de caracteres en una `long double`.|
-|[stoll](../standard-library/string-functions.md#stoll)|Convierte una secuencia de caracteres en una `long long`.|
-|[stoul](../standard-library/string-functions.md#stoul)|Convierte una secuencia de caracteres en un `unsigned long`.|
-|[stoull](../standard-library/string-functions.md#stoull)|Convierte una secuencia de caracteres en un `unsigned long long`.|
+|[stold](../standard-library/string-functions.md#stold)|Convierte una secuencia de caracteres en un **long double**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Convierte una secuencia de caracteres en un **long long**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Convierte una secuencia de caracteres en un **unsigned long**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Convierte una secuencia de caracteres en un **long long sin signo**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Convierte un valor en `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Convierte un valor en una `string` ancha.|
 

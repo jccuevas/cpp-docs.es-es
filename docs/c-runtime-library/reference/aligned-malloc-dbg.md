@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093061"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,22 +63,22 @@ Tamaño de la asignación de memoria solicitada.
 Valor de la alineación, que debe ser un entero potencia de 2.
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o valor NULL.
 
 *linenumber*<br/>
-Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
+Número de línea del archivo de código fuente en la que se solicitó la operación de asignación o valor NULL.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un puntero al bloque de memoria que se asignó o **NULL** si la operación produce un error.
+Un puntero al bloque de memoria que se ha asignado o NULL si la operación produjo un error.
 
 ## <a name="remarks"></a>Comentarios
 
-**_aligned_malloc_dbg** es una versión de depuración de la [_aligned_malloc](aligned-malloc.md) (función). Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_malloc_dbg** se reduce a una llamada a **_aligned_malloc**. Ambos **_aligned_malloc** y **_aligned_malloc_dbg** asignar un bloque de memoria del montón base, pero **_aligned_malloc_dbg** ofrece varias características de depuración: búferes a cada lado de la parte de usuario del bloque para comprobar si hay pérdidas, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación.
+**_aligned_malloc_dbg** es una versión de depuración de la [_aligned_malloc](aligned-malloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_malloc_dbg** se reduce a una llamada a `_aligned_malloc`. Ambos `_aligned_malloc` y **_aligned_malloc_dbg** asignan un bloque de memoria del montón base, pero **_aligned_malloc_dbg** ofrece varias características de depuración: búferes situados a cada lado de la parte del usuario en el bloque para comprobar si hay pérdidas, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación.
 
-**_aligned_malloc_dbg** asigna el bloque de memoria con un poco más de espacio que solicitado *tamaño*. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. Cuando se asigna el bloque, la parte del usuario de bloque se rellena con el valor 0xCD y cada uno de los búferes sobrescritos se rellena con 0xFD.
+**_aligned_malloc_dbg** asigna el bloque de memoria con un poco más de espacio solicitado *tamaño*. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. Cuando se asigna el bloque, la parte del usuario de bloque se rellena con el valor 0xCD y cada uno de los búferes sobrescritos se rellena con 0xFD.
 
-**_aligned_malloc_dbg** establece **errno** a **ENOMEM** si se produce un error en una asignación de memoria o si la cantidad de memoria necesaria (incluida la sobrecarga ya mencionada) es mayor **_ HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc_dbg** valida sus parámetros. Si *alineación* no es una potencia de 2 o *tamaño* es cero, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **NULL** y establece **errno** a **EINVAL**.
+**_aligned_malloc_dbg** establece `errno` a `ENOMEM` si se produce un error en una asignación de memoria o si se supera la cantidad de memoria necesaria (incluida la sobrecarga ya mencionada) `_HEAP_MAXREQ`. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc_dbg** valida sus parámetros. Si *alineación* no es una potencia de 2 o *tamaño* es cero, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve NULL y establece `errno` a `EINVAL`.
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -95,4 +96,4 @@ Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](
 
 ## <a name="see-also"></a>Vea también
 
-[Rutinas de depuración](../../c-runtime-library/debug-routines.md)<br/>
+[Rutinas de depuración](../../c-runtime-library/debug-routines.md)

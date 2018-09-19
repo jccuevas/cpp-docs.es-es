@@ -1,5 +1,5 @@
 ---
-title: __inwordstring | Documentos de Microsoft
+title: __inwordstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073c1303661aece3340f9ac84d37ccf23e29d556
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7075a20fa552a169505b445f592448f77bcdc9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711118"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Específicos de Microsoft**  
   
- Lee datos desde el puerto especificado con el `rep insw` instrucción.  
+ Lee datos desde el puerto especificado mediante el `rep insw` instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,20 +41,20 @@ void __inwordstring(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- El puerto que leer.  
+*Puerto*<br/>
+[in] Para leer desde el puerto.  
   
- [out] `Buffer`  
- Aquí se escriben los datos que se leen del puerto.  
+*búfer*<br/>
+[out] Los datos leídos desde el puerto se escriben aquí.  
   
- [in] `Count`  
- El número de palabras de datos que se va a leer.  
+*Recuento*<br/>
+[in] El número de palabras de datos que se va a leer.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inwordstring`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

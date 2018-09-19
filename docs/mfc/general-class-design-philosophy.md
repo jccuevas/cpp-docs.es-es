@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344368"
 ---
 # <a name="general-class-design-philosophy"></a>Filosofía general de diseño de clases
 Microsoft Windows se diseñó mucho antes de que se hizo popular del lenguaje C++. Dado que miles de aplicaciones utilizan la interfaz de programación de aplicaciones (API) de Windows del lenguaje C, se mantendrá esa interfaz en el futuro. Cualquier interfaz de Windows de C++, por tanto, debe generarse sobre la API del lenguaje C procedimientos. Esto garantiza que las aplicaciones de C++ pueda coexistir con aplicaciones de C.  

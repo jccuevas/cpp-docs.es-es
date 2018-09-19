@@ -1,5 +1,5 @@
 ---
-title: Clase CPaneContainer | Documentos de Microsoft
+title: CPaneContainer (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,16 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81f516d92777583d54f5e0071ad54012dc43bb81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec78ed92829f8a8ac33e796687f812dc7ad444a1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701576"
 ---
-# <a name="cpanecontainer-class"></a>Clase CPaneContainer
+# <a name="cpanecontainer-class"></a>CPaneContainer (clase)
 La `CPaneContainer` clase es un componente básico del modelo de acoplamiento implementado por MFC. Un objeto de esta clase almacena punteros en dos paneles de acoplamiento o dos instancias de `CPaneContainer.` ; también almacena un puntero divisor que separa los paneles (o contenedores). Anidando contenedores dentro de contenedores, el marco puede compilar un árbol binario que representa diseños complejos de acoplamiento. La raíz del árbol binario se almacena en un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
  
 ## <a name="syntax"></a>Sintaxis  
   
@@ -217,7 +218,7 @@ class CPaneContainer : public CObject
 |[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||  
   
 ### <a name="remarks"></a>Comentarios  
- `CPaneContainer` los objetos se crean automáticamente por el marco de trabajo.  
+ `CPaneContainer` los objetos se crean automáticamente el marco de trabajo.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo construir una instancia de la `CPaneContainer` clase. Este fragmento de código forma parte de la [ejemplo establece el tamaño del panel](../../visual-cpp-samples.md).  
@@ -241,7 +242,7 @@ CDockablePane* AddPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -266,8 +267,8 @@ BOOL AddSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pContainer`  
- [in] `bRightNodeNew`  
+*que pContainer*<br/>
+[in] [in] *bRightNodeNew*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -285,10 +286,10 @@ virtual int CalcAvailablePaneSpace(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nRequiredOffset`  
- [in] `pBar`  
- [in] `pContainer`  
- [in] `bLeftBar`  
+*nRequiredOffset*<br/>
+[in] [in] *pBar*  
+*que pContainer*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -304,8 +305,8 @@ virtual CSize CalcAvailableSpace(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `sizeStretch`  
- [in] `bLeftBar`  
+*sizeStretch*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -337,7 +338,7 @@ virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentContainer`  
+ [in] *pParentContainer*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -355,10 +356,10 @@ CPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pManager`  
- [in] `pLeftBar`  
- [in] `pRightBar`  
- [in] `pSlider`  
+*pManager*<br/>
+[in] [in] *pLeftBar*  
+*pRightBar*<br/>
+[in] [in] *pSlider*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -372,8 +373,8 @@ virtual void DeletePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `barType`  
+*pBar*<br/>
+[in] [in] *barType*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -387,8 +388,8 @@ CPaneContainer* FindSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pObject`  
- [in] `findCriteria`  
+*pObject*<br/>
+[in] [in] *findCriteria*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -402,7 +403,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -416,7 +417,7 @@ CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -452,7 +453,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `size`  
+ [in] *tamaño*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -464,7 +465,7 @@ virtual void GetMinSizeLeft(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `size`  
+ [in] *tamaño*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -476,7 +477,7 @@ virtual void GetMinSizeRight(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `size`  
+ [in] *tamaño*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -611,8 +612,8 @@ virtual void GetWindowRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
- [in] `bIgnoreVisibility`  
+*Rect*<br/>
+[in] [in] *bIgnoreVisibility*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -646,7 +647,7 @@ BOOL IsLeftPane(CDockablePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -671,7 +672,7 @@ BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -685,7 +686,7 @@ BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -710,7 +711,7 @@ virtual void Move(CPoint ptNewLeftTop);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `ptNewLeftTop`  
+ [in] *ptNewLeftTop*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -724,8 +725,8 @@ void OnDeleteHidePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bHide`  
+*pBar*<br/>
+[in] [in] *bHide*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -739,8 +740,8 @@ virtual int OnMoveInternalPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
- [in] `hdwp`  
+*nOffset*<br/>
+[in] [in] *hdwp*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -756,8 +757,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bShow`  
+*pBar*<br/>
+[in] [in] *bMostrar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -798,7 +799,7 @@ virtual void RemovePane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -813,9 +814,9 @@ virtual void Resize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
- [in] `hdwp`  
- [in] `bRedraw`  
+*Rect*<br/>
+[in] [in] *hdwp*  
+ [in] *bRedraw*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -833,12 +834,12 @@ virtual void ResizePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
- [in] `pBar`  
- [in] `pContainer`  
- [in] `bHorz`  
- [in] `bLeftBar`  
- [in] `hdwp`  
+*nOffset*<br/>
+[in] [in] *pBar*  
+*que pContainer*<br/>
+[in] [in] *bHorz*  
+*bLeftBar*<br/>
+[in] [in] *hdwp*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -853,9 +854,9 @@ virtual void ResizePartOfPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
- [in] `bLeftPart`  
- [in] `hdwp`  
+*nOffset*<br/>
+[in] [in] *bLeftPart*  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -867,7 +868,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -881,8 +882,8 @@ void SetPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bLeft`  
+*pBar*<br/>
+[in] [in] *bLeft*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -896,8 +897,8 @@ void SetPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pContainer`  
- [in] `bLeft`  
+*que pContainer*<br/>
+[in] [in] *bLeft*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -909,7 +910,7 @@ void SetPaneDivider(CPaneDivider* pSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pSlider`  
+ [in] *pSlider*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -921,7 +922,7 @@ void SetParentPaneContainer(CPaneContainer* p);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -933,7 +934,7 @@ void SetRecentPercent(int nRecentPercent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nRecentPercent`  
+ [in] *nRecentPercent*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -947,8 +948,8 @@ BOOL SetUpByID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
- [in] `pBar`  
+*nID*<br/>
+[in] [in] *pBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -962,7 +963,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -979,11 +980,11 @@ virtual int StretchPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
- [in] `bStretchHorz`  
- [in] `bLeftBar`  
- [in] `bMoveSlider`  
- [in] `hdwp`  
+*nOffset*<br/>
+[in] [in] *bStretchHorz*  
+*bLeftBar*<br/>
+[in] [in] *bMoveSlider*  
+ [in] *hdwp*  
   
 ### <a name="return-value"></a>Valor devuelto  
   

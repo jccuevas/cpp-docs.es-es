@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fb91bc7ec37d4738aaf9f1c7ac6532079a0b71d0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313735"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits (Struct)
 
@@ -44,19 +45,19 @@ struct iterator_traits {
 
 El struct de plantilla define los tipos de miembro:
 
-- **iterator_category**: sinónimo de **Iterator::iterator_category**.
+- `iterator_category`: sinónimo de `Iterator::iterator_category`.
 
-- `value_type`: sinónimo de **Iterator::value_type**.
+- `value_type`: sinónimo de `Iterator::value_type`.
 
-- `difference_type`: sinónimo de **Iterator::difference_type**.
+- `difference_type`: sinónimo de `Iterator::difference_type`.
 
-- `distance_type`: sinónimo de **Iterator::difference_type.**
+- `distance_type`: sinónimo de `Iterator::difference_type.`
 
-- **pointer**: sinónimo de **Iterator::pointer**.
+- `pointer`: sinónimo de `Iterator::pointer`.
 
-- **reference**: sinónimo de **Iterator::reference**.
+- `reference`: sinónimo de `Iterator::reference`.
 
-Las especializaciones parciales determinan los tipos críticos asociados a un puntero de objeto del tipo **Type \*** o const **Type \***.
+Las especializaciones parciales determinan los tipos críticos asociados con un puntero de objeto del tipo **tipo** <strong>\*</strong> o **tipo const**  <strong>\*</strong>.
 
 En esta implementación también se pueden usar varias funciones de plantilla que no usan la especialización parcial:
 
@@ -117,12 +118,12 @@ int main( )
    function( vc.begin( ), vc.end( ) );
    function( li.begin( ), li.end( ) );
 }
-\* Output:
+/* Output:
 struct std::random_access_iterator_tag
 a a a a a a a a a a
 struct std::bidirectional_iterator_tag
 0 0 0 0 0 0 0 0 0 0
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

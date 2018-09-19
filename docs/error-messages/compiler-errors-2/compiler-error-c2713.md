@@ -1,5 +1,5 @@
 ---
-title: C2713 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2713 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eab5ee25df49355e82cede0f03d633f13ac20bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40c248226cd8f863bb099d16272dfa149f1dc2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102720"
 ---
-# <a name="compiler-error-c2713"></a>C2713 de Error del compilador
-un único formato de control de excepciones permitidas por función  
-  
- No se puede utilizar el control de excepciones estructurado (`__try`/`__except`) y control de excepciones de C++ (`try`/`catch`) en la misma función.
+# <a name="compiler-error-c2713"></a>Error del compilador C2713
+
+permite solo una forma de control de excepciones por función
+
+No se puede usar control de excepciones estructurado (`__try`/`__except`) y control de excepciones de C++ (`try`/`catch`) en la misma función.

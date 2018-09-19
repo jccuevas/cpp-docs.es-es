@@ -1,7 +1,7 @@
 ---
-title: Error PRJ0024 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0024 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf76aba80093bf9e8e653bdfb9fad49687a501
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215603"
 ---
 # <a name="project-build-error-prj0024"></a>Error PRJ0024 al compilar el proyecto
-Ruta de acceso de Unicode 'path' no se puede traducir a la página de códigos ANSI del usuario.  
-  
- ***ruta de acceso*** es la versión Unicode original de la cadena de ruta de acceso. Este error puede producirse en los casos donde hay una ruta de acceso de Unicode que no se puede convertir directamente a ANSI para la página de códigos del sistema actual.  
-  
- Este error puede producirse si está trabajando con un proyecto que se desarrolló en un sistema que utiliza una página de códigos que no está en el equipo.  
-  
- La resolución de este error consiste en actualizar la ruta de acceso para utilizar texto ANSI o para instalar la página de códigos en el equipo y establézcalo como el valor predeterminado del sistema.
+
+> Ruta de acceso de Unicode '*ruta*' no se puede traducir a la página de códigos ANSI del usuario.
+
+*ruta de acceso* es la versión Unicode original de la cadena de ruta de acceso. Este error puede producirse en los casos donde hay una ruta de acceso Unicode que no se puede traducir directamente a ANSI para la página de códigos del sistema actual.
+
+Este error puede producirse si está trabajando con un proyecto que se desarrolló en un sistema con una página de códigos que no se encuentra en su equipo.
+
+La resolución de este error consiste en actualizar la ruta de acceso para utilizar texto ANSI o para instalar la página de códigos en el equipo y establecerla como la predeterminada del sistema.

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965693"
 ---
 # <a name="moneybase-class"></a>money_base (Clase)
 
@@ -37,17 +38,17 @@ struct pattern
 
 ## <a name="remarks"></a>Comentarios
 
-La enumeración **part** describe los valores posibles de los elementos del campo de matriz en el patrón de estructura. Los valores de **part** son:
+La enumeración `part` describe los posibles valores de los elementos del campo de matriz en el patrón de estructura. Los valores de `part` son:
 
-- **none** para buscar cero o más espacios o no generar nada.
+- `none` Para hacer coincidir cero o más espacios o generar nada.
 
-- **sign** para buscar o generar un signo positivo o negativo.
+- `sign` para buscar o generar un signo positivo o negativo.
 
-- **space** para buscar cero o más espacios o generar un espacio.
+- `space` Para hacer coincidir cero o más espacios o generar un espacio.
 
-- **symbol** para buscar o generar un símbolo de moneda.
+- `symbol` para buscar o generar un símbolo de moneda.
 
-- **value** para buscar o generar un valor monetario.
+- `value` para buscar o generar un valor monetario.
 
 ## <a name="requirements"></a>Requisitos
 

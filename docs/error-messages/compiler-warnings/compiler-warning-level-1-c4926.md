@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4926 | Documentos de Microsoft
+title: Del compilador (nivel 1) de la advertencia C4926 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527c03d4f71048064c2120f7cfa9730de198fd46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1942c334f06dce7a8f208f01cae6e2da1b6bb6cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087947"
 ---
 # <a name="compiler-warning-level-1-c4926"></a>Advertencia del compilador (nivel 1) C4926
-'identificador': ya se ha definido el símbolo: se han omitido los atributos.  
-  
- Se encontró una declaración adelantada, pero ya existe una construcción con atributos con el mismo nombre. Se omiten los atributos de la declaración adelantada.  
-  
- El ejemplo siguiente genera la advertencia C4926:  
-  
-```  
-// C4926.cpp  
-// compile with: /W1  
-[module(name="MyLib")];  
-  
-[coclass]  
-struct a {  
-};  
-  
-[coclass]  
-struct a;   // C4926  
-  
-int main() {  
-}  
+
+'identificador': ya se ha definido el símbolo: se han omitido los atributos.
+
+Se encontró una declaración adelantada, pero ya existe una construcción con atributos con el mismo nombre. Se omiten los atributos de la declaración adelantada.
+
+El ejemplo siguiente genera la advertencia C4926:
+
+```
+// C4926.cpp
+// compile with: /W1
+[module(name="MyLib")];
+
+[coclass]
+struct a {
+};
+
+[coclass]
+struct a;   // C4926
+
+int main() {
+}
 ```

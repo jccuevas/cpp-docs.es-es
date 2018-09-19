@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381698"
 ---
 # <a name="servers-implementing-a-server"></a>Servidores: Implementar un servidor
 Este artículo explica el código que crea el Asistente para aplicaciones MFC para una aplicación de servidor de edición visual. Si no se usa al Asistente para aplicaciones, este artículo enumeran las áreas donde debe escribir código para implementar una aplicación de servidor.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a5da108c082dc4199a216d36f51d41e1748ada
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd23064123513281099fa14a690679fa046657fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106633"
 ---
 # <a name="isdestructible-class"></a>Clase is_destructible
 
@@ -36,11 +37,12 @@ struct is_destructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `T` se puede destruir. En caso contrario, es false. Los tipos que se pueden destruir son tipos de referencia, tipos de objetos y tipos en los que para algún tipo `U` igual a `remove_all_extents_t<T>` el operando no evaluado `std::declval<U&>.~U()` tiene un formato correcto. Otros tipos, incluidos los tipos incompletos, `void` y los tipos de función, no se pueden destruir.
+Una instancia del predicado de tipo contiene true si el tipo *T* puede destruir tipo es, en caso contrario, es false. Los tipos que se pueden destruir son tipos de referencia, tipos de objetos y tipos en los que para algún tipo `U` igual a `remove_all_extents_t<T>` el operando no evaluado `std::declval<U&>.~U()` tiene un formato correcto. Otros tipos, incluidos los tipos incompletos, **void**y tipos de función, no se pueden destruir.
 
 ## <a name="requirements"></a>Requisitos
 

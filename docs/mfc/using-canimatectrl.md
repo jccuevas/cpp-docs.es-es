@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381623"
 ---
 # <a name="using-canimatectrl"></a>Usar CAnimateCtrl
 Un control de animación, representado por la clase [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), es una ventana que muestra un clip en formato de Audio Video Interleaved (AVI): el formato de audio/vídeo de Windows estándar. Un clip AVI es una serie de marcos de mapa de bits, como una película.  

@@ -1,5 +1,5 @@
 ---
-title: __writeeflags | Documentos de Microsoft
+title: __writeeflags | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704865"
 ---
 # <a name="writeeflags"></a>__writeeflags
 Escribe el valor especificado en el programa de estado y control (EFLAGS) se registran.  
@@ -36,7 +37,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `Value`|El valor para escribir en el registro EFLAGS. El `Value` parámetro es de 32 bits para una plataforma de 32 bits y 64 bits para una plataforma de 64 bits.|  
+|*Valor*|[in] El valor para escribir en el registro EFLAGS. El `Value` parámetro es de 32 bits para una plataforma de 32 bits y 64 bits para una plataforma de 64 bits.|  
   
 ## <a name="remarks"></a>Comentarios  
  Estas rutinas sólo están disponibles como intrínsecos.  
@@ -45,12 +46,12 @@ void __writeeflags(unsigned __int64 Value);
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [__readeflags](../intrinsics/readeflags.md)

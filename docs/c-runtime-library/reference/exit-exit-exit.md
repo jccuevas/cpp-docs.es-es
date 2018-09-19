@@ -40,18 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb62c18f7508a21e24fb5628e8ac01162db1405e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110609"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
-Finaliza el proceso de llamada. El **salir** función termina después de la limpieza; **_exit** y **_Exit** lo finalizan inmediatamente.
+Finaliza el proceso de llamada. El **salir** función lo finaliza después de la limpieza; **_exit** y **_Exit** lo finalizan inmediatamente.
 
 > [!NOTE]
-> No utilice este método para cerrar una aplicación de plataforma Universal de Windows (UWP), excepto en pruebas o en escenarios de depuración. No se permiten formas mediante programación o la interfaz de usuario para cerrar una aplicación de tienda según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación de UWP](/windows/uwp/launch-resume/app-lifecycle). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](http://go.microsoft.com/fwlink/p/?linkid=619133).
+> No utilice este método para cerrar una aplicación plataforma Universal de Windows (UWP), excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación para UWP](/windows/uwp/launch-resume/app-lifecycle). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](https://developer.microsoft.com/en-us/windows/apps).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -69,15 +70,16 @@ void _exit(
 
 ### <a name="parameters"></a>Parámetros
 
-*estado* código de estado de salida.
+*status*<br/>
+Código de estado de salida.
 
 ## <a name="remarks"></a>Comentarios
 
-El **salir**, **_Exit** y **_exit** funciones finalizan el proceso que realiza la llamada. El **salir** función llama a destructores para los objetos de subprocesos locales, a continuación, llama, en orden de último en primero en salir (LIFO), las funciones registradas por **atexit** y **_onexit**y, a continuación, vacía todos los búferes de archivo antes de finalizar el proceso. El **_Exit** y **_exit** funciones finalizan el proceso sin destruir objetos locales de subproceso ni procesar **atexit** o **_onexit**funciones y sin vaciar los búferes de secuencia.
+El **salir**, **_Exit** y **_exit** funciones terminan el proceso de llamada. El **salir** función llama a destructores para objetos de subproceso local, a continuación, llama a, en orden de último en el primero en salir (LIFO), las funciones registradas por **atexit** y **_onexit**y, a continuación, vacía todos los búferes de archivo antes de finalizar el proceso. El **_Exit** y **_exit** funciones finalizan el proceso sin destruir objetos locales de subproceso ni procesar **atexit** o **_onexit**funciones y sin vaciar los búferes de secuencia.
 
-Aunque la **salir**, **_Exit** y **_exit** llamadas no devuelven un valor, el valor de *estado* debe ponerse a disposición en el entorno de host o espera a que el proceso que realiza la llamada, si la hay, al salir del proceso. Normalmente, el llamador establece el *estado* valor en 0 para indicar una salida normal o a algún otro valor para indicar un error. El *estado* valor está disponible para el comando por lotes del sistema operativo **ERRORLEVEL** y se representa mediante uno de dos constantes: **EXIT_SUCCESS**, que representa un valor de 0, o **EXIT_FAILURE**, que representa un valor de 1.
+Aunque el **salir**, **_Exit** y **_exit** llamadas no devuelven un valor, el valor en *estado* está disponible para el entorno de host o proceso que realiza la llamada, en espera si la hay, al salir del proceso. Normalmente, el llamador establece el *estado* valor en 0 para indicar una salida normal o a algún otro valor para indicar un error. El *estado* valor está disponible para el comando por lotes del sistema operativo **ERRORLEVEL** y se representa mediante uno de dos constantes: **EXIT_SUCCESS**, que representa un valor de 0, o **EXIT_FAILURE**, que representa un valor de 1.
 
-El **salir**, **_Exit**, **_exit**, **quick_exit**, **_cexit**, y **_c_exit** funciones se comportan como se indica a continuación.
+El **salir**, **_Exit**, **_exit**, **quick_exit**, **_cexit**, y **_c_exit** funciones se comportan como sigue.
 
 |Función|Descripción|
 |--------------|-----------------|
@@ -88,7 +90,7 @@ El **salir**, **_Exit**, **_exit**, **quick_exit**, **_cexit**, y **_c_exit** fu
 |**_cexit**|Realiza procedimientos completos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|
 |**_c_exit**|Realiza procedimientos mínimos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|
 
-Cuando se llama a la **salir**, **_Exit** o **_exit** función, no se llama a los destructores de ningún objeto temporal o automático que exista en el momento de la llamada. Un objeto automático es un objeto local no estático definido en una función. Un objeto temporal es un objeto creado por el compilador, como un valor devuelto por una llamada de función. Para destruir un objeto automático antes de llamar a **salir**, **_Exit**, o **_exit**, explícitamente llame al destructor del objeto, como se muestra aquí:
+Cuando se llama a la **salir**, **_Exit** o **_exit** función, no se llaman a los destructores de ningún objeto temporal o automático que exista en el momento de la llamada. Un objeto automático es un objeto local que no sea estático definido en una función. Un objeto temporal es un objeto creado por el compilador, como un valor devuelto por una llamada de función. Para destruir un objeto automático antes de llamar a **salir**, **_Exit**, o **_exit**explícitamente llame al destructor del objeto, como se muestra aquí:
 
 ```cpp
 void last_fn() {}
@@ -99,7 +101,7 @@ void last_fn() {}
 }
 ```
 
-No utilice **DLL_PROCESS_ATTACH** para llamar a **salir** de **DllMain**. Para salir del **DLLMain** funcionar, devolver **FALSE** de **DLL_PROCESS_ATTACH**.
+No use **DLL_PROCESS_ATTACH** para llamar a **salir** desde **DllMain**. Para salir del **DLLMain** de función, devolver **FALSE** desde **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Requisitos
 

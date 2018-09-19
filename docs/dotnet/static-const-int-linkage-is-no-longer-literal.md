@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33165001"
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>La vinculación de miembros integrales const estáticos ya no es literal
 Declaración de un miembro de constante de una clase ha cambiado de extensiones administradas para C++ a Visual C++.  

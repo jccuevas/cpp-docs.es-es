@@ -1,5 +1,5 @@
 ---
-title: 'HString:: ~ HString (destructor) | Documentos de Microsoft'
+title: 'HString:: ~ HString (destructor) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad64aa4cde3f3654c243e047f83669e5f02deea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 394cabbd09a3eb2322424cd873e4d91825fa8c51
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603404"
 ---
 # <a name="hstringhstring-destructor"></a>HString::~HString (Destructor)
-Destruye la instancia actual de la clase HString.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
+
+Destruye la instancia actual de la **HString** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 ~HString() throw()  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HString (clase)](../windows/hstring-class.md)
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HString (clase)](../windows/hstring-class.md)

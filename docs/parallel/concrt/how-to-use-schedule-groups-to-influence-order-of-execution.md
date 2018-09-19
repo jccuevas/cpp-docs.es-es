@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691201"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Cómo: Usar grupos de programación para influir en el orden de ejecución
 En el Runtime de simultaneidad, el orden en el que se programan las tareas no es determinista. Sin embargo, puede utilizar directivas de programación para influir en el orden en el que se ejecutan las tareas. Este tema muestra cómo utilizar grupos de programación junto con el [Concurrency:: SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) directiva de programador para influir en el orden en el que se ejecutan las tareas.  

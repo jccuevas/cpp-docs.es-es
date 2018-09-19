@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registerobjects (método) | Documentos de Microsoft'
+title: Registerobjects (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c9a44fed853fe2f4dcd3196e926b3848566ab4e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597031"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects (Método)
-Registra objetos COM o en tiempo de ejecución de Windows para que otras aplicaciones puedan conectarse a ellos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-HRESULT RegisterObjects(  
-   ModuleBase* module,   
-   const wchar_t* serverName);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `module`  
- Una matriz de objetos COM o en tiempo de ejecución de Windows.  
-  
- `serverName`  
- Nombre del servidor que creó el objeto.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que indica el motivo por el error en la operación.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL
- 
+
+Registra los objetos COM o en tiempo de ejecución de Windows para que otras aplicaciones pueden conectarse a ellos.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HRESULT RegisterObjects(
+   ModuleBase* module,
+   const wchar_t* serverName);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*módulo*  
+Una matriz de objetos COM o en tiempo de ejecución de Windows.
+
+*Nombre de servidor*  
+Nombre del servidor que crea los objetos.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, un HRESULT que indica el motivo del error en la operación.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
 ## <a name="see-also"></a>Vea también
+
 [Module (clase)](../windows/module-class.md)

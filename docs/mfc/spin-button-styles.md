@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b559fcda4825aec71ba4b5c1dd8c3cd319b83d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 223b7e0875a5382edf5f4d350c9343d117768c41
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953783"
 ---
 # <a name="spin-button-styles"></a>Estilos de botón de cuadro de número
 Muchas de las configuraciones de un botón de número ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) se controlan mediante estilos. Puede establecer los siguientes estilos utilizando el **propiedades** ventana en el editor de cuadro de diálogo.  
   
--   **Orientación** Vertical u Horizontal. Controla la orientación de los botones de flecha. Asociado con el `UDS_HORZ` estilo.  
+-   **Orientación** Vertical u Horizontal. Controla la orientación de los botones de flecha. Asociado al estilo UDS_HORZ.  
   
--   **Alineación** adjuntas, izquierda o derecha. Controla la ubicación del botón de número. Izquierda y derecha sitúan el botón de número situado junto a la ventana relacionada. Se reduce el ancho de la ventana relacionada para acomodar el botón de número. Asociado a la `UDS_ALIGNLEFT` y `UDS_ALIGNRIGHT` estilos.  
+-   **Alineación** adjuntas, izquierda o derecha. Controla la ubicación del botón de número. Izquierda y derecha sitúan el botón de número situado junto a la ventana relacionada. Se reduce el ancho de la ventana relacionada para acomodar el botón de número. Asociado a los estilos está y UDS_ALIGNRIGHT.  
   
--   **Auto amigo** selecciona automáticamente la ventana anterior en el orden Z como ventana relacionada con el botón de número. En una plantilla de cuadro de diálogo, éste es el control que precede al botón de número en el orden de tabulación. Asociado con el `UDS_AUTOBUDDY` estilo.  
+-   **Auto amigo** selecciona automáticamente la ventana anterior en el orden Z como ventana relacionada con el botón de número. En una plantilla de cuadro de diálogo, éste es el control que precede al botón de número en el orden de tabulación. Asociado al estilo UDS_AUTOBUDDY.  
   
--   **Establecer entero conocido** hace que el control de número aumentar y disminuir el título de la ventana relacionada a medida que cambia la posición actual. Asociado con el `UDS_SETBUDDYINT` estilo.  
+-   **Establecer entero conocido** hace que el control de número aumentar y disminuir el título de la ventana relacionada a medida que cambia la posición actual. Asociado al estilo UDS_SETBUDDYINT.  
   
--   **No hay miles** no inserta los miles separador en el valor en el título de la ventana relacionada. Asociado con el `UDS_NOTHOUSANDS` estilo.  
+-   **No hay miles** no inserta los miles separador en el valor en el título de la ventana relacionada. Asociado al estilo UDS_NOTHOUSANDS.  
   
     > [!NOTE]
     >  Establezca este estilo si desea utilizar intercambio de datos de cuadros de diálogo (DDX) para obtener el valor entero del control relacionado. `DDX_Text` no acepta separadores de miles incrustados.  
   
--   **Ajustar** hace que la posición de "ajustar" si el valor se incrementa o disminuye más allá del intervalo del control. Asociado con el `UDS_WRAP` estilo.  
+-   **Ajustar** hace que la posición de "ajustar" si el valor se incrementa o disminuye más allá del intervalo del control. Asociado al estilo UDS_WRAP.  
   
--   **Teclas de dirección** hace que el botón de número incrementar o disminuir la posición cuando se presionan las teclas flecha arriba y flecha abajo. Asociado con el `UDS_ARROWKEYS` estilo.  
+-   **Teclas de dirección** hace que el botón de número incrementar o disminuir la posición cuando se presionan las teclas flecha arriba y flecha abajo. Asociado al estilo UDS_ARROWKEYS.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   

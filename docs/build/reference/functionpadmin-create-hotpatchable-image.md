@@ -1,5 +1,5 @@
 ---
-title: /FUNCTIONPADMIN (crear una imagen) | Documentos de Microsoft
+title: /FUNCTIONPADMIN (crear una imagen) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -17,28 +17,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a5ecfcc336e198de0adcc2393f740072d70cae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a82611c453a96e9247e414d6adb777c07320482
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703994"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Crear una imagen a la que se puede aplicar una revisión reciente)
 
-Prepara una imagen para la aplicación de revisiones recientes.
+Prepara una imagen para aplicar una revisión activa.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/FUNCTIONPADMIN**[**:**_espacio_]  
+> **/FUNCTIONPADMIN**[**:**_espacio_]
 
 ### <a name="arguments"></a>Argumentos
 
 *space*<br/>
-La cantidad de relleno que se agregará al principio de cada función en bytes. En x86 el valor predeterminado es 5 bytes de relleno y en x64 el valor predeterminado es 6 bytes. En otros destinos se debe proporcionar un valor.
+La cantidad de relleno que se agregará al principio de cada función en bytes. En x86 el valor predeterminado es 5 bytes de relleno y en x64 el valor predeterminado es 6 bytes. En otros destinos, debe proporcionarse un valor.
 
 ## <a name="remarks"></a>Comentarios
 
-En orden para que el vinculador generar una imagen a, los archivos .obj deben haberse compilados con [/hotpatch (crear una imagen)](../../build/reference/hotpatch-create-hotpatchable-image.md).
+En orden para el vinculador generar una imagen a, los archivos .obj deben haberse compilados con [/hotpatch (crear una imagen)](../../build/reference/hotpatch-create-hotpatchable-image.md).
 
 Cuando se compila y vincula una imagen con una sola invocación de cl.exe, **/hotpatch** implica **/functionpadmin**.
 

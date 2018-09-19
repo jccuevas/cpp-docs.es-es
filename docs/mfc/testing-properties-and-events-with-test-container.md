@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381041"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Probar propiedades y eventos con un contenedor de prueba
 La aplicación Test Container, suministrada en Visual C++, es un contenedor de controles ActiveX para probar y depurar controles ActiveX. Contenedor de prueba permite al desarrollador de control probar la funcionalidad del control cambiando sus propiedades, invocando sus métodos y activando sus eventos. Contenedor de prueba puede mostrar registros de notificaciones de enlace de datos y también proporciona medios para probar la funcionalidad de persistencia de un control ActiveX: puede guardar las propiedades en una secuencia o a subalmacenamiento, recargue y examinar los datos de la secuencia almacenada. En esta sección se describe cómo usar las características básicas de Test Container. Para obtener más información, seleccione la **ayuda** menú mientras se ejecuta el contenedor de prueba.  

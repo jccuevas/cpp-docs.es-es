@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8916d92abcfb05dbef68e8909b8a52a82c35af24
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107002"
 ---
 # <a name="iscompound-class"></a>is_compound (Clase)
 
@@ -36,11 +37,12 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene `false` si el tipo de `Ty` es un tipo fundamental (es decir, si [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > contiene `true`); en caso contrario, contiene `true`. Por lo tanto, el predicado es `true` si `Ty` es un tipo de matriz, un tipo de función, un puntero a `void` o un objeto o una función, una referencia, una clase, una unión, una enumeración, o un puntero a miembro de clase no estática o un formulario de tipo *cv-qualified* de uno de ellos.
+Una instancia del predicado de tipo contiene **false** si el tipo de *Ty* es un tipo fundamental (es decir, si [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > contiene  **True**); en caso contrario, contiene **true**. Por lo tanto, el predicado se aplica **true** si *Ty* es un tipo de matriz, un tipo de función, un puntero a **void** o un objeto o una función, una referencia, una clase, una unión, enumeración o un puntero a miembro de clase no estática, o un *calificado para cv* formulario de uno de ellos.
 
 ## <a name="example"></a>Ejemplo
 

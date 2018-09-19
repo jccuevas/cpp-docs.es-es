@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113764"
 ---
 # <a name="friend-assemblies-c"></a>Ensamblados de confianza (C++)
 Para tiempos de ejecución es aplicable, el *friend (ensamblados)* característica de lenguaje, tipos que están en el ámbito de espacio de nombres o ámbito global en un componente de ensamblado puede tener acceso a uno o más ensamblados de cliente o elementos .netmodule.  

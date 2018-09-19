@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCBaseToolBar | Documentos de Microsoft
+title: CMFCBaseToolBar (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,13 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705242"
 ---
-# <a name="cmfcbasetoolbar-class"></a>Clase CMFCBaseToolBar
+# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar (clase)
 Clase base para las barras de herramientas.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -89,8 +90,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `size`  
- El tamaño mínimo de una barra de herramientas.  
+*size*<br/>
+[out] El tamaño mínimo de una barra de herramientas.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
  Lo llama el marco de trabajo después de realizar cambios de elemento primario del panel.  
@@ -100,8 +101,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndOldParent`  
- Un puntero a la ventana primaria anterior.  
+*pWndOldParent*<br/>
+[in] Un puntero a la ventana primaria anterior.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

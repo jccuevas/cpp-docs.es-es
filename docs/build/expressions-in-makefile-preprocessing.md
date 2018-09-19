@@ -1,5 +1,5 @@
 ---
-title: Expresiones de preprocesamiento de archivos MAKE | Documentos de Microsoft
+title: Las expresiones de preprocesamiento de archivos MAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1070eb01802bd4b39f62ae24519ad6dabca7eb90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719012"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Expresiones de preprocesamiento de archivos MAKE
-El **! IF** o **! ELSE IF** `constantexpression` consta de las constantes de tipo entero (en notación decimal o de lenguaje C), constantes de cadena o comandos. Utilice paréntesis para agrupar expresiones. Las expresiones usar estilo C con aritmética de enteros largos; los números son en forma de complemento de dos de 32 bits en el intervalo de – 2147483648 a 2147483647.  
-  
- Las expresiones pueden usar operadores que actúan sobre valores constantes, códigos de salida de comandos, cadenas, macros y rutas de acceso de sistema de archivos.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
- [Operadores de preprocesamiento de archivos MAKE](../build/makefile-preprocessing-operators.md)  
-  
- [Ejecutar un programa en el preprocesamiento](../build/executing-a-program-in-preprocessing.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Preprocesamiento de archivos MAKE](../build/makefile-preprocessing.md)
+
+El **! IF** o **! ELSE IF** `constantexpression` consta de los comandos, las constantes de cadena o constantes de tipo entero (en notación decimal o de lenguaje C). Utilice paréntesis para agrupar expresiones. Las expresiones usan estilo C entero long con signo operaciones aritméticas. los números son en forma de 32 bits de dos complementos en el intervalo de-2147483648 a 2147483647.
+
+Las expresiones pueden usar operadores que actúan sobre valores constantes, códigos de salida de comandos, cadenas, macros y rutas de acceso del sistema de archivos.
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
+
+[Operadores de preprocesamiento de archivos MAKE](../build/makefile-preprocessing-operators.md)
+
+[Ejecutar un programa en el preprocesamiento](../build/executing-a-program-in-preprocessing.md)
+
+## <a name="see-also"></a>Vea también
+
+[Preprocesamiento de archivos MAKE](../build/makefile-preprocessing.md)

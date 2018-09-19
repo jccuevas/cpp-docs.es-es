@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42583898"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS
 
@@ -120,7 +121,7 @@ Ejecute **vcpkg integrate install** para configurar Visual Studio de forma que e
 
 Ahora podrá incluir encabezados fácilmente escribiendo el encabezado o la carpeta, tarea para la que tendrá la ayuda de la función Autocompletar. No será necesario hacer nada más para vincular a bibliotecas o agregar referencias de proyecto. En la siguiente ilustración se muestra cómo Visual Studio busca encabezados azure-storage-cpp. Vcpkg coloca sus encabezados en la subcarpeta **/installed**, con particiones creadas a partir de la plataforma de destino. En el siguiente diagrama se muestra la lista de los archivos incluidos en la subcarpeta **/was** de la biblioteca:
 
-![Integración de vcpkg e Intellisense](media/vcpkg-intellisense.png "vcpkg e Intellisense")
+![Integración de vcpkg e IntelliSense](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
 
 ### <a name="per-project"></a>Por proyecto
 
@@ -216,7 +217,7 @@ El contenido de una instancia de vcpkg es:
 
 ## <a name="command-line-reference"></a>Referencia de la línea de comandos
 
-|Comando|Description|
+|Comando|Descripción|
 |---------|---------|
 |**vcpkg search [pat]**|Permite buscar los paquetes disponibles para instalar.|
 |**vcpkg install \<pkg>...**|Instala un paquete.|
@@ -238,7 +239,7 @@ El contenido de una instancia de vcpkg es:
 
 ### <a name="options"></a>Opciones
 
-|Opción|Description|
+|Opción|Descripción|
 |---------|---------|
 |**--triplet \<t>**|Permite especificar el triplo de la arquitectura de destino. El valor predeterminado es `%VCPKG_DEFAULT_TRIPLET%`; vea también **vcpkg help triplet**.|
 |**--vcpkg-root \<path>**|Permite especificar el directorio raíz de vcpkg. El predeterminado es `%VCPKG_ROOT%`.|

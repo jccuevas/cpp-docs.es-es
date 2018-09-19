@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1007 | Documentos de Microsoft
+title: Error irrecuperable C1007 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443dd1c48b7ce1d3c5c1173f6832d08d71508cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01a9ebad83f3b0596dbf21809f91c11fd73fda2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102446"
 ---
 # <a name="fatal-error-c1007"></a>Error irrecuperable C1007
-cadena de marca no reconocida en opción  
-  
- La opción de línea de comandos contiene una cadena no válida. Compruebe si hay error en la línea de comandos **CL** y la variable de entorno.
+
+cadena de marca no reconocida en opción
+
+La opción de línea de comandos contiene una cadena no válida. Compruebe si hay error en la línea de comandos **CL** y la variable de entorno.

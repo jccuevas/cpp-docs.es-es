@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690447"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31 Funciones lock seguras para subprocesos
 En el ejemplo de C++ siguiente se muestra cómo inicializar una matriz de bloqueos en una región paralela mediante `omp_init_lock` ([sección 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) en la página 42).  

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2962 | Documentos de Microsoft
+title: Error del compilador C2962 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad776236f950c94a1790cee5834b31fa4039d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68291ba1e3f7226e047af8fb6807ff1aca42d0a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049974"
 ---
 # <a name="compiler-error-c2962"></a>Error del compilador C2962
-error de sintaxis: 'token': se esperaba que la definición de función miembro de clase de plantilla finalizase con '}'  
-  
- El token provocó un error de sintaxis en una declaración de plantilla.  
-  
- Este error puede deberse a la falta de delimitadores
+
+error de sintaxis: 'token': se esperaba que la definición de función miembro de clase de plantilla finalizase con '}'
+
+El token provocó un error de sintaxis en una declaración de plantilla.
+
+Este error puede deberse a la falta de delimitadores

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2886 | Documentos de Microsoft
+title: Error del compilador C2886 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1472c475a89fc219f8fe94fdbc69ae7c8a176f24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 271ee8341cb5faa033d3fb5ec3238f36975c3531
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023584"
 ---
 # <a name="compiler-error-c2886"></a>Error del compilador C2886
-'Class:: identifier': símbolo no se puede utilizar en una declaración using de miembro  
-  
- Un `using` declaración usa un símbolo, como un nombre de espacio de nombres. Un `using` declaración es para la declaración de miembros de clase base.  
-  
- El ejemplo siguiente genera C2886:  
-  
-```  
-// C2886.cpp  
-// compile with: /c  
-namespace Z {  
-    int i;  
-}  
-  
-class B {  
-protected:  
-    int i;  
-};  
-  
-class D : public B {  
-    // Error: Z is a namespace  
-    using Z::i;   // C2886  
-  
-    // OK: B is a base class  
-    using B::i;  
-};  
+
+'Class:: identifier': símbolo no se puede usar en una declaración using de miembro
+
+Un `using` declaración usa un símbolo, como un espacio de nombres. Un `using` declaración es para declarar miembros de clase base.
+
+El ejemplo siguiente genera C2886:
+
+```
+// C2886.cpp
+// compile with: /c
+namespace Z {
+    int i;
+}
+
+class B {
+protected:
+    int i;
+};
+
+class D : public B {
+    // Error: Z is a namespace
+    using Z::i;   // C2886
+
+    // OK: B is a base class
+    using B::i;
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3210 | Documentos de Microsoft
+title: Error del compilador C3210 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24146139fce7a1e42e112f913ab35ca425a9d5d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 804586a866f6a4d2c3cf206af14e0e2f907ed1b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037117"
 ---
 # <a name="compiler-error-c3210"></a>Error del compilador C3210
-'type': declaración de acceso solo puede aplicarse a un miembro de clase base  
-  
- A [mediante declaración](../../cpp/using-declaration.md) se especificó incorrectamente.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3210.  
-  
-```  
-// C3210.cpp  
-// compile with: /c  
-struct A {  
-protected:  
-   int i;  
-};  
-  
-struct B {  
-   using A::i;   // C3210  
-};  
-  
-struct C : public A {  
-   using A::i;   // OK  
-};  
+
+'type': declaración de acceso solo se puede aplicar a un miembro de clase base
+
+Un [mediante declaración](../../cpp/using-declaration.md) se especificó incorrectamente.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3210.
+
+```
+// C3210.cpp
+// compile with: /c
+struct A {
+protected:
+   int i;
+};
+
+struct B {
+   using A::i;   // C3210
+};
+
+struct C : public A {
+   using A::i;   // OK
+};
 ```

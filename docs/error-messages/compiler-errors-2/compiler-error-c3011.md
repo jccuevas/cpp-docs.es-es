@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3011 | Documentos de Microsoft
+title: Error del compilador C3011 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb78e658c0f56798fa0c23201889809d6c68d184
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f25e3f9479b2555badbd079c3e2d939e91acbba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024416"
 ---
 # <a name="compiler-error-c3011"></a>Error del compilador C3011
-no se permiten ensamblados alineados directamente dentro de una región paralela  
-  
- Una región paralela `omp` no puede contener instrucciones de ensamblado en línea.  
-  
- El ejemplo siguiente genera la advertencia C3011:  
-  
-```  
-// C3011.cpp  
-// compile with: /openmp  
-// processor: /x86  
-int main() {  
-   int   n = 0;  
-  
-   #pragma omp parallel  
-   {  
-      _asm mov eax, n   // Delete this line to resolve this error.  
-   }   // C3011  
-}  
+
+no se permiten ensamblados alineados directamente dentro de una región paralela
+
+Una región paralela `omp` no puede contener instrucciones de ensamblado en línea.
+
+El ejemplo siguiente genera la advertencia C3011:
+
+```
+// C3011.cpp
+// compile with: /openmp
+// processor: /x86
+int main() {
+   int   n = 0;
+
+   #pragma omp parallel
+   {
+      _asm mov eax, n   // Delete this line to resolve this error.
+   }   // C3011
+}
 ```

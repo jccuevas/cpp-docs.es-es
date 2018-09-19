@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344138"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Insertar un formulario en un proyecto
 Formularios proporcionan un contenedor adecuado para los controles. Puede insertar fácilmente un formulario basado en MFC en la aplicación siempre y cuando la aplicación es compatible con las bibliotecas MFC.  

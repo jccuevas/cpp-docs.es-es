@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4d91cfdafcbe81d568bdfffa5ee1b7c99d6bf8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46ca75850aede04d54dc659e3f29166ab91abdbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102634"
 ---
 # <a name="addlvaluereference-class"></a>Clase add_lvalue_reference
 
@@ -38,11 +39,12 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` Tipo que se va a modificar.
+*T*<br/>
+Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del modificador de tipo contiene un tipo modificado que es `T` si `T` es una referencia lvalue. En caso contrario, es `T&`.
+Una instancia del modificador de tipo contiene un tipo modificado que es *T* si *T* es una referencia lvalue, de lo contrario, `T&`.
 
 ## <a name="example"></a>Ejemplo
 

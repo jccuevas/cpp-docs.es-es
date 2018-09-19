@@ -1,7 +1,7 @@
 ---
-title: Opciones del vinculador | Documentos de Microsoft
+title: Opciones del vinculador | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721297"
 ---
 # <a name="linker-options"></a>Opciones del enlazador
 
@@ -39,7 +40,7 @@ En la tabla siguiente se muestran las opciones de LINK.exe. Para más informaci�
 
 - [Palabras reservadas](../../build/reference/reserved-words.md)
 
-En la línea de comandos, opciones del enlazador no distinguen entre mayúsculas y minúsculas; Por ejemplo, /base y /BASE significan lo mismo. Para obtener más información sobre cómo especificar cada opción en la línea de comandos o en Visual Studio, vea la documentación de esa opción.
+En la línea de comandos, opciones del enlazador no distinguen mayúsculas de minúsculas; Por ejemplo, /base y /BASE significan lo mismo. Para obtener más información sobre cómo especificar cada opción en la línea de comandos o en Visual Studio, vea la documentación de esa opción.
 
 Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especificar algunas opciones del enlazador.
 
@@ -67,13 +68,14 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Controla la carga retrasada de DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Provoca la carga retrasada de la DLL especificada.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Firma parcialmente un ensamblado.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Establece marcas predeterminadas en las cargas DLL dependientes.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Compila una DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crea un controlador modo kernel.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Especifica si se generará una imagen ejecutable que se pueda reorganizar aleatoriamente en el momento de la carga con la característica de selección aleatoria del diseño del espacio de direcciones (ASLR).|
 |[/ENTRY](../../build/reference/entry-entry-point-symbol.md)|Establece la dirección inicial.|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|Informa a Microsoft de los errores internos del enlazador.|
 |[/EXPORT](../../build/reference/export-exports-a-function.md)|Exporta una función.|
-|[/ FILEALIGN](../../build/reference/filealign.md)|Alinea secciones en el archivo de salida en múltiplos de un valor especificado.|
+|[/ FILEALIGN](../../build/reference/filealign.md)|Alinea las secciones en el archivo de salida en múltiplos de un valor especificado.|
 |[/FIXED](../../build/reference/fixed-fixed-base-address.md)|Crea un programa que solo se puede cargar en su dirección base preferida.|
 |[/FORCE](../../build/reference/force-force-file-output.md)|Fuerza la finalización de un vínculo aunque haya símbolos o símbolos sin resolver definidos más de una vez.|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|Crea una imagen que se puede revisar en caliente.|
@@ -103,7 +105,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Incluye en el archivo de asignaciones la información especificada.|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|Combina secciones.|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|Especifica opciones de la línea de comandos MIDL.|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Agrega los visualizadores del depurador desde un archivo de Natvis en el archivo PDB.|
+|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Agrega los visualizadores del depurador desde un archivo Natvis a PDB.|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|Suprime la creación de un ensamblado de .NET Framework.|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|Ignora todas las bibliotecas predeterminadas (o las bibliotecas que se especifiquen) cuando se resuelven las referencias externas.|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|Crea una DLL solo de recursos.|
@@ -116,11 +118,12 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Utiliza una ubicación alternativa para guardar un archivo PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Crea un archivo de base de datos de programa (PDB) sin símbolos privados.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Especifica un archivo .pgd para las Optimizaciones guiadas por perfiles.|
-|[/ POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleta** crea una compilación instrumentada con PGO de subprocesos.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleto** crea una compilación instrumentada de PGO de subprocesos.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Produce un archivo de salida que se puede usar con el generador de perfiles de Herramientas de rendimiento.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Establece la suma de comprobación en el encabezado del .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Especifica que la imagen contendrá una tabla de controladores de excepciones seguros.|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|Invalida los atributos de una sección.|
+|[/ SOURCELINK](../../build/reference/sourcelink.md)|Especifica un archivo de SourceLink para agregar al archivo PDB.|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|Establece el tamaño de la pila en bytes.|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Asocia un programa de código auxiliar MS-DOS a un programa Win32.|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Le indica al sistema operativo cómo ejecutar el archivo .exe.|
@@ -128,10 +131,10 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Especifica el identificador de recurso de la biblioteca de tipos generados por el enlazador.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Especifica el nombre del archivo .tlb y otros archivos de salida MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Crea una aplicación diseñada específicamente para ejecutarse en Terminal Server.|
-|[/ USEPROFILE](../../build/reference/useprofile.md)|Datos de entrenamiento de optimización utiliza guiada por perfiles para crear una imagen optimizada.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Usa guiada por perfiles-optimización los datos de entrenamiento para crear una imagen optimizada.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Imprime los mensajes de progreso del enlazador.|
 |[/VERSION](../../build/reference/version-version-information.md)|Asigna un número de versión.|
-|[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Incluye todos los archivos objeto de bibliotecas estáticas especificados.|
+|[/WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Incluye todos los archivos objeto de bibliotecas estáticas especificados.|
 |[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)|Habilita la generación de un archivo de metadatos de Windows en tiempo de ejecución.|
 |[/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md)|Especifica el nombre de archivo del archivo de salida de metadatos de Windows en tiempo de ejecución (winmd) generado por la opción del enlazador [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) .|
 |[/WINMDKEYFILE](../../build/reference/winmdkeyfile-specify-winmd-key-file.md)|Especifica una clave o un par de claves para firmar un archivo de metadatos de Windows en tiempo de ejecución.|
@@ -143,5 +146,5 @@ Para obtener más información, vea [Compiler-Controlled LINK Options](../../bui
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de compilación de C/C++](../../build/reference/c-cpp-building-reference.md)  
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)  
+[Referencia de compilación de C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)

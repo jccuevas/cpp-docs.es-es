@@ -1,5 +1,5 @@
 ---
-title: Unicode y MBCS | Documentos de Microsoft
+title: Unicode y MBCS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e10c07e11cbe940b5f7cfee460ddd33f6f5ff1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af5f782a337c7dc4b85c25006d7a1470034b92b4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584276"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode y MBCS
 La biblioteca MFC (Microsoft Foundation Classes), la biblioteca en tiempo de ejecución de C para Visual C++ y el entorno de desarrollo de Visual C++ están habilitados para ayudar al usuario en la programación internacional. Proporcionan lo siguiente:  
@@ -47,7 +48,7 @@ La biblioteca MFC (Microsoft Foundation Classes), la biblioteca en tiempo de eje
 > [!NOTE]
 >  En esta documentación, MBCS se utiliza para describir toda la compatibilidad no Unicode con caracteres multibyte. En Visual C++, MBCS siempre significa DBCS. No se admiten juegos de caracteres con un ancho superior a dos bytes.  
   
- Por definición, el juego de caracteres ASCII es un subconjunto de todos los juegos de caracteres multibyte. En muchos juegos de caracteres de varios bytes, cada uno de los caracteres que está en el intervalo de 0x00 a 0x7F es idéntico al carácter que tiene el mismo valor en el juego de caracteres ASCII. Por ejemplo, en cadenas de caracteres ASCII y MBCS, el byte 1 **NULL** carácter ('\0') tiene el valor 0 x 00 e indica el carácter nulo de terminación.  
+ Por definición, el juego de caracteres ASCII es un subconjunto de todos los juegos de caracteres multibyte. En muchos juegos de caracteres de varios bytes, cada uno de los caracteres que está en el intervalo de 0x00 a 0x7F es idéntico al carácter que tiene el mismo valor en el juego de caracteres ASCII. Por ejemplo, en las cadenas de caracteres ASCII y MBCS, el carácter nulo de 1 byte ('\0') tiene el valor 0 x 00 e indica el carácter nulo de terminación.  
   
 ## <a name="see-also"></a>Vea también  
  [Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)   

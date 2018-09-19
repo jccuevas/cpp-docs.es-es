@@ -1,7 +1,7 @@
 ---
 title: space_info (Estructura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3506572586f0dc8edc3f9e97955e7612bcea46ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e078b38dd90fcda7a6973ac1b0aee13c301823d4
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691437"
 ---
 # <a name="spaceinfo-structure"></a>space_info (Estructura)
 
@@ -54,5 +55,4 @@ struct space_info   {
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<filesystem>](../standard-library/filesystem.md)<br/>
-[space](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
 [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md)<br/>

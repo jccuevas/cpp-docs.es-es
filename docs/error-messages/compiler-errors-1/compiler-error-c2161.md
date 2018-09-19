@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2161 | Documentos de Microsoft
+title: Error del compilador C2161 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62ea3ec8d0d4ac4cb47f61d23473b1faabc3a894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac32776c954974f0f2f81789c6e78de894786b73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051831"
 ---
 # <a name="compiler-error-c2161"></a>Error del compilador C2161
-'##' no puede aparecer al final de una definición de macro  
-  
- Definición de macro que termina con un operador de pegado de token (##).  
-  
- El ejemplo siguiente genera el error C2161:  
-  
-```  
-// C2161.cpp  
-// compile with: /c  
-#define mac(a,b) a   // OK  
-#define mac(a,b) a##   // C2161  
+
+'##' no puede aparecer al final de una definición de macro
+
+Definición de macro que termina con un operador de pegado de token (##).
+
+El ejemplo siguiente genera el error C2161:
+
+```
+// C2161.cpp
+// compile with: /c
+#define mac(a,b) a   // OK
+#define mac(a,b) a##   // C2161
 ```

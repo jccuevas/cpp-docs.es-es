@@ -1,7 +1,7 @@
 ---
-title: PROC | Documentos de Microsoft
+title: PROC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,77 +16,77 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48eb872d394c3b131d32d4b41c5923883ff36cee
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3ee26e181f0f40126c86a36889c43405f0b40f5e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680851"
 ---
 # <a name="proc"></a>PROC
-Marca el principio y final de un bloque de procedimiento llamado *etiqueta*. Las instrucciones del bloque se pueden llamar con la **llamar a** instrucción o [INVOKE](../../assembler/masm/invoke.md) directiva.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-   label PROC [[distance]] [[langtype]] [[visibility]] [[<prologuearg>]]   
-[[USES reglist]] [[, parameter [[:tag]]]]...  
-[FRAME [:ehandler-address] ]  
-statements  
-label ENDP  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- [Marco [:*ehandler dirección*]] sólo es válido con ml64.exe y hace que MASM generar una entrada de tabla de funciones en .pdata e información de desenredo en .xdata para una función de la estructura comportamiento de desenredo del control de excepciones.  
-  
- Cuando el **marco** se usa el atributo, debe ir seguido por un [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva.  
-  
- Vea [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obtener más información sobre el uso de ml64.exe.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
-_text SEGMENT  
-Example1 PROC FRAME  
-   push r10  
-.pushreg r10  
-   push r15  
-.pushreg r15  
-   push rbx  
-.pushreg rbx  
-   push rsi  
-.pushreg rsi  
-.endprolog  
-   ; rest of function ...  
-   ret  
-Example1 ENDP  
-_text ENDS  
-END  
-```  
-  
- El código anterior se emita la siguiente tabla de funciones e información de desenredo:  
-  
-```  
-FileHeader->Machine 34404  
-Dumping Unwind Information for file ex2.exe  
-  
-.pdata entry 1 0x00001000 0x00001023  
-  
-  Unwind data: 0x00002000  
-  
-    Unwind version: 1  
-    Unwind Flags: None  
-    Size of prologue: 0x08  
-    Count of codes: 3  
-    Frame register: rbp  
-    Frame offset: 0x0  
-    Unwind codes:  
-  
-      Code offset: 0x08, SET_FPREG, register=rbp, offset=0x00  
-      Code offset: 0x05, ALLOC_SMALL, size=0x10  
-      Code offset: 0x01, PUSH_NONVOL, register=rbp  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Marca el principio y final de un bloque de procedimiento llamado *etiqueta*. Las instrucciones en el bloque se pueden llamar con la **llamar** instrucciones o [INVOKE](../../assembler/masm/invoke.md) directiva.
+
+## <a name="syntax"></a>Sintaxis
+
+> *etiqueta* PROC [[*distancia*]] [[*langtype*]] [[*visibilidad*]] [[\<*prologuearg*>]] [[ USA *reglist*]] [[, *parámetro* [[:*etiqueta*]]]...<br/>
+> [[Marco [[:*ehandler dirección*]]]]<br/>
+> *Instrucciones*<br/>
+> *etiqueta* ENDP
+
+## <a name="remarks"></a>Comentarios
+
+[[Marco [[:*ehandler dirección*]]]] solo es válido con ml64.exe y hace que MASM generar una entrada de tabla de funciones en .pdata e información de desenredo en .xdata para estructurado de una función comportamiento de control de excepciones de desenredado.
+
+Cuando el **marco** se usa el atributo, debe ir seguido un [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva.
+
+Consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obtener más información sobre el uso de ml64.exe.
+
+## <a name="example"></a>Ejemplo
+
+```asm
+; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE
+_text SEGMENT
+Example1 PROC FRAME
+   push r10
+.pushreg r10
+   push r15
+.pushreg r15
+   push rbx
+.pushreg rbx
+   push rsi
+.pushreg rsi
+.endprolog
+   ; rest of function ...
+   ret
+Example1 ENDP
+_text ENDS
+END
+```
+
+El código anterior se emita la siguiente tabla de funciones e información de desenredo:
+
+```Output
+FileHeader->Machine 34404
+Dumping Unwind Information for file ex2.exe
+
+.pdata entry 1 0x00001000 0x00001023
+
+  Unwind data: 0x00002000
+
+    Unwind version: 1
+    Unwind Flags: None
+    Size of prologue: 0x08
+    Count of codes: 3
+    Frame register: rbp
+    Frame offset: 0x0
+    Unwind codes:
+
+      Code offset: 0x08, SET_FPREG, register=rbp, offset=0x00
+      Code offset: 0x05, ALLOC_SMALL, size=0x10
+      Code offset: 0x01, PUSH_NONVOL, register=rbp
+```
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

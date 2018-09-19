@@ -1,5 +1,5 @@
 ---
-title: 'Operadores de incremento y decremento de prefijo: ++ y--| Documentos de Microsoft'
+title: 'Operadores de incremento y decremento de prefijo: ++ y--| Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,69 +23,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071f21080bd093e5cb299471c8de7009741482f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc5ef28f7119316f0c42302d4fd1583a53e53140
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069734"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operadores de incremento y decremento prefijos: ++ y --
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-++ unary-expression  
--- unary-expression  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El operador de incremento de prefijo (`++`) suma uno a su operando; este valor incrementado es el resultado de la expresión. El operando debe ser un valor l no es de tipo **const**. El resultado es un valor L del mismo tipo que el operando.  
-  
- El operador de decremento de prefijo (**--**) es similar al operador de incremento de prefijo, salvo que el operando se reduce en uno y el resultado es este valor disminuido.  
 
- **Visual Studio 2017 15,3 y versiones posteriores** (disponible con [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): el operando de un operador de incremento o decremento no puede ser de tipo `bool`.
-  
- Los operadores de incremento y decremento de prefijo y postfijo afectan a sus operandos. La principal diferencia entre ellos es el orden en que se realiza el incremento o el decremento al evaluar una expresión. (Para obtener más información, consulte [postfijo operadores de incremento y decremento](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) En la forma de prefijo, el incremento o decremento tiene lugar antes de que el valor se use en la evaluación de la expresión, por lo que el valor de la expresión es diferente del valor del operando. En la forma de postfijo, el incremento o decremento tiene lugar después de que el valor se use en la evaluación de la expresión, por lo que el valor de la expresión es el mismo que el valor del operando. Por ejemplo, el siguiente programa imprime “`++i = 6`”:  
-  
-```  
-// expre_Increment_and_Decrement_Operators.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-  
-int main() {  
-   int i = 5;  
-   cout << "++i = " << ++i << endl;  
-}  
-```  
-  
- Un operando de tipo entero o flotante aumenta o disminuye en el valor entero 1. El tipo del resultado es el mismo que el tipo del operando. Un operando de tipo de puntero aumenta o disminuye en el tamaño del objeto al que apunta. Un puntero incrementado apunta al siguiente objeto; un puntero disminuido apunta al objeto anterior.  
-  
- Dado que los operadores de incremento y decremento tienen efectos secundarios, usar expresiones con operadores de incremento y decremento en una [macro de preprocesador](../preprocessor/macros-c-cpp.md) puede producir resultados no deseados. Considere este ejemplo:  
-  
-```  
-// expre_Increment_and_Decrement_Operators2.cpp  
-#define max(a,b) ((a)<(b))?(b):(a)  
-  
-int main()  
-{  
-   int i = 0, j = 0, k;  
-   k = max( ++i, j );  
-}  
-```  
-  
- La macro se expande en:  
-  
-```  
-k = ((++i)<(j))?(j):(++i);  
-```  
-  
- Si `i` es mayor o igual que `j` o es menor que `j` en 1, aumentará dos veces.  
-  
+## <a name="syntax"></a>Sintaxis
+
+```
+++ unary-expression
+-- unary-expression
+```
+
+## <a name="remarks"></a>Comentarios
+
+El operador de incremento de prefijo (**++**) suma uno a su operando; este valor incrementado es el resultado de la expresión. El operando debe ser un valor l no es de tipo **const**. El resultado es un valor L del mismo tipo que el operando.
+
+El operador de decremento de prefijo (**--**) es análogo al operador de incremento de prefijo, salvo que el operando se reduce en uno y el resultado es este valor disminuido.
+
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el operando de un operador de incremento o decremento no puede ser de tipo **bool**.
+
+Los operadores de incremento y decremento de prefijo y postfijo afectan a sus operandos. La principal diferencia entre ellos es el orden en que se realiza el incremento o el decremento al evaluar una expresión. (Para obtener más información, consulte [postfijo de incremento y decremento](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) En la forma de prefijo, el incremento o decremento tiene lugar antes de que el valor se use en la evaluación de la expresión, por lo que el valor de la expresión es diferente del valor del operando. En la forma de postfijo, el incremento o decremento tiene lugar después de que el valor se use en la evaluación de la expresión, por lo que el valor de la expresión es el mismo que el valor del operando. Por ejemplo, el siguiente programa imprime “`++i = 6`”:
+
+```cpp
+// expre_Increment_and_Decrement_Operators.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+
+int main() {
+   int i = 5;
+   cout << "++i = " << ++i << endl;
+}
+```
+
+Un operando de tipo entero o flotante aumenta o disminuye en el valor entero 1. El tipo del resultado es el mismo que el tipo del operando. Un operando de tipo de puntero aumenta o disminuye en el tamaño del objeto al que apunta. Un puntero incrementado apunta al siguiente objeto; un puntero disminuido apunta al objeto anterior.
+
+Dado que los operadores de incremento y decremento tienen efectos secundarios, usar expresiones con operadores de incremento o decremento en una [macro de preprocesador](../preprocessor/macros-c-cpp.md) puede producir resultados no deseados. Considere este ejemplo:
+
+```cpp
+// expre_Increment_and_Decrement_Operators2.cpp
+#define max(a,b) ((a)<(b))?(b):(a)
+
+int main()
+{
+   int i = 0, j = 0, k;
+   k = max( ++i, j );
+}
+```
+
+La macro se expande en:
+
+```cpp
+k = ((++i)<(j))?(j):(++i);
+```
+
+Si `i` es mayor o igual que `j` o es menor que `j` en 1, aumentará dos veces.
+
 > [!NOTE]
->  Las funciones insertadas de C++ son preferibles a las macros en muchos casos porque eliminan los efectos secundarios como los que se describen aquí, y permiten que el lenguaje realice una comprobación de tipos más completa.  
-  
-## <a name="see-also"></a>Vea también  
- [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operadores de incremento y decremento prefijos](../c-language/prefix-increment-and-decrement-operators.md)
+>  Las funciones insertadas de C++ son preferibles a las macros en muchos casos porque eliminan los efectos secundarios como los que se describen aquí, y permiten que el lenguaje realice una comprobación de tipos más completa.
+
+## <a name="see-also"></a>Vea también
+
+[Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)<br/>
+[Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores de incremento y decremento prefijos](../c-language/prefix-increment-and-decrement-operators.md)

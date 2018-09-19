@@ -1,5 +1,5 @@
 ---
-title: Clase CDockSite | Documentos de Microsoft
+title: Clase CDockSite | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,14 +96,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a374496c731e33d13de3ece893fe2ff046d38e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720309"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
  Proporciona la funcionalidad para organizar los paneles que se derivan de [CPane Class](../../mfc/reference/cpane-class.md) en conjuntos de filas.  
   
@@ -163,7 +164,7 @@ class CDockSite: public CBasePane
 ## <a name="remarks"></a>Comentarios  
  El marco de trabajo crea `CDockSite` objetos automáticamente cuando se llama a [cframewndex:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Las ventanas del sitio de vinculación están colocadas en el borde del área de cliente de la ventana de marco principal.  
   
- Normalmente no es necesario llamar a los servicios proporcionados por el sitio de vinculación porque [CFrameWndEx clase](../../mfc/reference/cframewndex-class.md) controla estos servicios.  
+ Normalmente no es necesario llamar a los servicios proporcionados por el sitio de vinculación porque [CFrameWndEx (clase)](../../mfc/reference/cframewndex-class.md) controla estos servicios.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo crear un objeto de la clase `CDockSite`.  
@@ -188,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pos`  
- [in] `nHeight`  
+*punto de venta*<br/>
+[in] [in] *nHeight*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -224,9 +225,9 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rectToAlignBy`  
- [in] `rectResult`  
- [in] `bMoveImmediately`  
+*rectToAlignBy*<br/>
+[in] [in] *rectResult*  
+ [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -240,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bStretch`  
- [in] `bHorz`  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -255,7 +256,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -275,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dwStyleEx`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*dwControlBarStyle*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -297,9 +298,9 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentDockBar`  
- [in] `nOffset`  
- [in] `nRowHeight`  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
+ [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -316,9 +317,9 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
- [in] `dockMethod`  
- [in] `lpRect`  
+*conquistado*<br/>
+[in] [in] *dockMethod*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -332,14 +333,14 @@ virtual BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pBarToDock`  
- Un puntero al panel quede acoplado a la izquierda del `pTargetBar`.  
+ [in] [out] *pBarToDock*  
+ Un puntero al panel para acoplar a la izquierda del *pTargetBar*.  
   
- [in] [out] `pTargetBar`  
+ [in] [out] *pTargetBar*  
  Un puntero al panel de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel está acoplado correctamente; en caso contrario, `FALSE`.  
+ TRUE si el panel está acoplado correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -362,11 +363,11 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
- El identificador de comando del panel se encuentre.  
+*nID*<br/>
+[in] El identificador de comando del panel que se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al panel con el identificador de comando especificado, o `NULL` si no se encuentra el panel.  
+ Un puntero en el panel con el identificador de comando especificado, o NULL si no se encuentra el panel.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -378,7 +379,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -423,7 +424,7 @@ const CObList& GetPaneList() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia de sólo lectura a la lista de paneles acoplados actualmente en la barra de acoplamiento.  
+ Una referencia de solo lectura a la lista de paneles actualmente está acoplada en la barra de acoplamiento.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -455,7 +456,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -471,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
- [in] `ptDelta`  
+*Rect*<br/>
+[in] [in] *ptDelta*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -500,9 +501,9 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
- [in] `nFlags`  
- [in] `ptOffset`  
+*conquistado*<br/>
+[in] [in] *nFlags*  
+ [in] *ptOffset*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -516,7 +517,7 @@ virtual void OnInsertRow(POSITION pos);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pos`  
+ [in] *pos*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -530,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pos`  
- [in] `bByShow`  
+*punto de venta*<br/>
+[in] [in] *bByShow*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -545,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRowToResize`  
- [in] `nOffset`  
+*pRowToResize*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -564,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rectAvailable`  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
+*rectAvailable*<br/>
+[in] [in] *entro*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -582,9 +583,9 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndInsertAfter`  
- [in] `rectWnd`  
- [in] `nFlags`  
+*pWndInsertAfter*<br/>
+[in] [in] *rectWnd*  
+ [in] *nFlags*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -600,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pos`  
- [in] `bShow`  
+*punto de venta*<br/>
+[in] [in] *bMostrar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -613,11 +614,11 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pt`  
- Un punto, en coordenadas de pantalla para el panel recuperar.  
+*PT*<br/>
+[in] Un punto en coordenadas de pantalla del panel recuperar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al panel situado en el punto especificado o `NULL` si ningún panel estaba presente en el punto especificado.  
+ Un puntero al panel ubicado en el punto especificado o NULL si ningún panel estaba presente en el punto especificado.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -631,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
- [in] `point`  
+*Rect*<br/>
+[in] [in] *punto*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -648,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
- [in] `dockMethod`  
+*conquistado*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -661,7 +662,7 @@ void RemoveRow(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -675,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pOldBar`  
- [in] `pNewBar`  
+*pOldBar*<br/>
+[in] [in] *pNewBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -690,7 +691,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rectNewClientArea`  
+ [in] *rectNewClientArea*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -704,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nNewWidth`  
- [in] `nNewHeight`  
+*nNewWidth*<br/>
+[in] [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -720,9 +721,9 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRow`  
- [in] `nNewSize`  
- [in] `bAdjustLayout`  
+*pRow*<br/>
+[in] [in] *nNewSize*  
+ [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -740,23 +741,23 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Un puntero al panel para mostrar u ocultar.  
   
- [in] `bShow`  
- `TRUE` para especificar que el panel se mostrará; `FALSE` para especificar que se oculta el panel.  
+*bMostrar*<br/>
+[in] TRUE para especificar que es el panel que se mostrarán; FALSE para especificar que el panel está a punto de ocultarse.  
   
- [in] `bDelay`  
- `TRUE` para especificar que el diseño del panel debe retrasarse hasta después de que se muestra el panel; en caso contrario, `FALSE`.  
+*bDelay*<br/>
+[in] TRUE para especificar que el diseño del panel debe retrasarse hasta después de que se muestre el panel; en caso contrario, FALSE.  
   
- [in] `bActivate`  
- Este parámetro no se utiliza.  
+*bActivate*<br/>
+[in] No se utiliza este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel se mostrarse u ocultarse correctamente. `FALSE` Si el panel especificado no pertenece a este sitio de vinculación.  
+ TRUE si el panel se mostrarse u ocultarse correctamente. FALSE si el panel especificado no pertenece a este sitio de vinculación.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para mostrar u ocultar paneles acoplados. Normalmente, no es necesario llamar a `CDockSite::ShowPane` directamente, porque se llama por la ventana de marco primaria o el panel de base.  
+ Llame a este método para mostrar u ocultar paneles acoplados. Normalmente, no es necesario llamar a `CDockSite::ShowPane` directamente, porque se llama mediante la ventana de marco principal o el panel de base.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 
@@ -769,9 +770,9 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRow`  
- [in] `bShow`  
- [in] `bAdjustLayout`  
+*pRow*<br/>
+[in] [in] *bMostrar*  
+ [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -785,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pFirstRow`  
- [in] `pSecondRow`  
+*pFirstRow*<br/>
+[in] [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Comentarios  
   

@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fcd8d623b4ce16f7f7af671d06dae568ec2a53d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318207"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator (Clase)
 
@@ -39,7 +40,8 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parámetros
 
-`Container` El tipo de contenedor en la parte frontal de los cuales son elementos va a insertar un `front_insert_iterator`.
+*Contenedor*<br/>
+El tipo de contenedor en cuyo inicio `front_insert_iterator` va a insertar los elementos.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -62,9 +64,9 @@ El contenedor debe satisfacer los requisitos para una secuencia de inserción en
 
 |Operador|Descripción|
 |-|-|
-|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión del iterador de salida * `i` = `x` para una inserción inicial.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción inicial.|
 |[operator++](#op_add_add)|Incrementa el `front_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|
-|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión del iterador de salida * `i` = `x` para una inserción inicial.|
+|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción inicial.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,7 +84,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Container**.
+El tipo es un sinónimo del parámetro de plantilla *Container*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -109,9 +111,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L2 is: ( 40 10 20 ).
-*\
+*/
 ```
 
 ## <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator
@@ -124,7 +126,8 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Cont` El objeto de contenedor en el que el `front_insert_iterator` consiste en Insertar elementos.
+*_Cont*<br/>
+Objeto contenedor en el que `front_insert_iterator` va a insertar elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -161,22 +164,22 @@ int main( )
 
    // Alternatively, one may use the template function
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 30;
+*Iter = 30;
 
    cout << "After the front insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++)
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L is:
- ( -2 0 2 4 6 8 10 12 14 16 ).
+( -2 0 2 4 6 8 10 12 14 16 ).
 After the front insertions, the list L is:
- ( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
-*\
+( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
+*/
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator:: operator\*
 
 Desreferencia el iterador de inserción que devuelve el elemento al que se dirige.
 
@@ -190,7 +193,7 @@ La función miembro devuelve el valor del elemento al que se dirige.
 
 ### <a name="remarks"></a>Comentarios
 
-Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si **Iter** es un iterador que dirige un elemento de una secuencia, **\*Iter** = **value** sustituye ese elemento por el valor y no cambia el número total de elementos de la secuencia.
+Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si `Iter` es un iterador que direcciona un elemento en una secuencia, a continuación,  **\*Iter** = **valor** sustituye ese elemento con el valor y no cambia el número total de elementos de la secuencia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -219,7 +222,7 @@ int main( )
    cout << ")." << endl;
 
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 20;
+*Iter = 20;
 
    // Alternatively, you may use
    front_inserter ( L ) = 30;
@@ -229,12 +232,12 @@ int main( )
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L is:
- ( -2 0 2 4 6 8 10 12 14 16 ).
+( -2 0 2 4 6 8 10 12 14 16 ).
 After the front insertions, the list L is:
- ( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
-*\
+( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
+*/
 ```
 
 ## <a name="op_add_add"></a>  front_insert_iterator::operator++
@@ -270,11 +273,11 @@ int main( )
 
    list<int> L1;
    front_insert_iterator<list<int> > iter ( L1 );
- *iter = 10;
+*iter = 10;
    iter++;
- *iter = 20;
+*iter = 20;
    iter++;
- *iter = 30;
+*iter = 30;
    iter++;
 
    list <int>::iterator vIter;
@@ -283,9 +286,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L1 is: ( 30 20 10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq"></a>  front_insert_iterator::operator=
@@ -300,7 +303,8 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El valor que se asignará al contenedor.
+*Val*<br/>
+Valor que se va a asignar al contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -331,11 +335,11 @@ int main( )
 
    list<int> L1;
    front_insert_iterator<list<int> > iter ( L1 );
- *iter = 10;
+*iter = 10;
    iter++;
- *iter = 20;
+*iter = 20;
    iter++;
- *iter = 30;
+*iter = 30;
    iter++;
 
    list <int>::iterator vIter;
@@ -344,9 +348,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L1 is: ( 30 20 10 ).
-*\
+*/
 ```
 
 ## <a name="reference"></a>  front_insert_iterator::reference
@@ -372,9 +376,9 @@ int main( )
 
    list<int> L;
    front_insert_iterator<list<int> > fiivIter( L );
- *fiivIter = 10;
- *fiivIter = 20;
- *fiivIter = 30;
+*fiivIter = 10;
+*fiivIter = 20;
+*fiivIter = 30;
 
    list<int>::iterator LIter;
    cout << "The list L is: ( ";
@@ -387,10 +391,10 @@ int main( )
    cout << "The first element in the list L is: "
         << RefFirst << "." << endl;
 }
-\* Output:
+/* Output:
 The list L is: ( 30 20 10 ).
 The first element in the list L is: 30.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Vea también

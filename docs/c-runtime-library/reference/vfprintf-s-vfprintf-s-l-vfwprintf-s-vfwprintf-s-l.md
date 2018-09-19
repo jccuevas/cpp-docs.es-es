@@ -44,11 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda1dce264597bfe7372b1cb0293dffccad4cdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f1c9d6bde39fcd763416e4c8dd50f0b756cb6b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220300"
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 
@@ -83,7 +84,7 @@ int _vfwprintf_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 *format*<br/>
@@ -99,22 +100,22 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-**vfprintf_s** y **vfwprintf_s** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si el valor *flujo* o *formato* es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, tal y como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen **errno** a **EINVAL**.
+**vfprintf_s** y **vfwprintf_s** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si bien *secuencia* o *formato* es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato y escribe los datos determinados a *flujo*.
+Cada una de estas funciones toma un puntero a una lista de argumentos, a continuación, da formato y escribe los datos especificados en *secuencia*.
 
-Estas funciones se diferencian de las versiones no seguras sólo en que las versiones seguras comprueban que el *formato* cadena contiene caracteres de formato válidos.
+Estas funciones se diferencian de las versiones no seguras únicamente en que las versiones seguras comprueban que el *formato* cadena contiene caracteres de formato válidos.
 
-**vfwprintf_s** es la versión con caracteres anchos de **vfprintf_s**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **vfprintf_s** no admite actualmente la salida en un flujo UNICODE.
+**vfwprintf_s** es la versión de caracteres anchos de **vfprintf_s**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **vfprintf_s** no admite actualmente la salida en un flujo UNICODE.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -1,5 +1,5 @@
 ---
-title: R6009 de Error de tiempo de ejecución de C | Documentos de Microsoft
+title: C Runtime Error R6009 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c44c08ec3b52cc53e1b29a0ecf23606c3ec06a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0deafa72a427543c0d885401a1d4192d61a6db65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069045"
 ---
-# <a name="c-runtime-error-r6009"></a>R6009 de Error de tiempo de ejecución de C
-No hay espacio suficiente para el entorno  
-  
+# <a name="c-runtime-error-r6009"></a>C Runtime Error R6009
+
+No hay suficiente espacio para el entorno
+
 > [!NOTE]
->  Si aparece este mensaje de error mientras se ejecuta una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de memoria muy baja, demasiada memoria usada por las variables de entorno o un error en el programa.  
->   
->  Puede intentar seguir estos pasos para corregir este error:  
->   
->  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.  
-> -   Use la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para reparar o reinstalar el programa.  
-> -   Comprobar **Windows Update** en el **el Panel de Control** las actualizaciones de software.  
-> -   Busque una versión actualizada de la aplicación. Si el problema continúa, póngase en contacto con el proveedor de la aplicación.  
-  
- **Información para programadores**  
-  
- Hubo memoria suficiente para cargar el programa, pero no hay suficiente memoria para crear el **envp** matriz.  Esto puede deberse a condiciones de muy poca memoria, o mediante el uso de variables de entorno extraordinariamente grandes. Considere una de las siguientes soluciones:  
-  
--   Aumente la cantidad de memoria disponible para el programa.  
-  
--   Reducir el número y tamaño de los argumentos de línea de comandos.  
-  
--   Reducir el tamaño del entorno quitando variables innecesarias.
+>  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de memoria muy baja, demasiada memoria usada por las variables de entorno o un error en el programa.
+>
+>  Puede intentar seguir estos pasos para corregir este error:
+>
+>  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
+> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+
+**Información para programadores**
+
+Había memoria suficiente para cargar el programa, pero no hay suficiente memoria para crear el **envp** matriz.  La causa puede ser extremadamente bajos de memoria, o bien el uso de variables de entorno inusualmente grande. Tenga en cuenta las siguientes soluciones:
+
+- Aumente la cantidad de memoria disponible para el programa.
+
+- Reducir el número y tamaño de los argumentos de línea de comandos.
+
+- Reducir el tamaño del entorno quitando variables innecesarias.

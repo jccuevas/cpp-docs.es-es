@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b914e950fd94435768c355f327d3d48a653e0d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202521"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
@@ -57,11 +58,11 @@ Nuevo modo de controlador para **malloc**; válido valor es 0 o 1.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el controlador anterior para el conjunto de modos **malloc**. A devolver el valor de 1 indica que, en caso de error para asignar memoria, **malloc** llamado previamente la rutina del controlador nuevo; un valor devuelto de 0 indica que no lo hizo. Si el *newhandlermode* argumento no es igual a 0 o 1, devuelve -1.
+Devuelve el controlador anterior para el conjunto de modos **malloc**. Un valor devuelto de 1 indica que, en caso de error para asignar memoria, **malloc** llamaban la rutina del nuevo controlador; un valor devuelto de 0 indica que no es así. Si el *newhandlermode* argumento no es igual a 0 o 1, devuelve -1.
 
 ## <a name="remarks"></a>Comentarios
 
-La función **_set_new_mode** de C++ establece el nuevo modo de controlador para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error, **malloc** consiste en llamar a la rutina del controlador nuevo según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del controlador de nuevo en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **malloc** no puede asignar memoria, **malloc** llama a la rutina del controlador de nuevo en la misma forma en que la **nueva** does de operador Cuando se produce un error por la misma razón. Para obtener más información, vea los operadores [new](../../cpp/new-operator-cpp.md) y [delete](../../cpp/delete-operator-cpp.md) en *Referencia de lenguaje C++*. Para invalidar el valor predeterminado, llame a:
+La función **_set_new_mode** de C++ establece el nuevo modo de controlador para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error, **malloc** consiste en llamar a la rutina del nuevo controlador según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del nuevo controlador en caso de error para asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **malloc** no puede asignar memoria, **malloc** llame a la rutina del nuevo controlador de la misma forma en que el **nuevo** operador Cuando se produce un error por la misma razón. Para obtener más información, vea los operadores [new](../../cpp/new-operator-cpp.md) y [delete](../../cpp/delete-operator-cpp.md) en *Referencia de lenguaje C++*. Para invalidar el valor predeterminado, llame a:
 
 ```cpp
 _set_new_mode(1);
@@ -69,7 +70,7 @@ _set_new_mode(1);
 
 temprano en el programa o vincúlelo con Newmode.obj (vea [Opciones de vínculo](../../c-runtime-library/link-options.md)).
 
-Esta función valida su parámetro. Si *newhandlermode* algo distinto de 0 ó 1, la función invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_ *** set_new_mode** devuelve -1 y establece **errno** a **EINVAL**.
+Esta función valida su parámetro. Si *newhandlermode* algo distinto de 0 o 1, la función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, <strong>_set_new_mode</strong> devuelve -1 y establece **errno** a `EINVAL`.
 
 ## <a name="requirements"></a>Requisitos
 

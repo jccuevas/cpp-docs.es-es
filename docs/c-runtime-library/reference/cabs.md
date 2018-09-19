@@ -38,11 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085294"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -58,16 +59,16 @@ double _cabs(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_cabs** devuelve el valor absoluto de su argumento si se realiza correctamente. Si se produce desbordamiento, **_cabs** devuelve **HUGE_VAL** y establece **errno** a **ERANGE**. Puede cambiar el control de errores con [_matherr](matherr.md).
+**_cabs** devuelve el valor absoluto de su argumento si se realiza correctamente. En caso de desbordamiento, **_cabs** devuelve **HUGE_VAL** y establece **errno** a **ERANGE**. Puede cambiar el control de errores con [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_cabs** función calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** genera un valor equivalente a la de la expresión `sqrt( z.x * z.x + z.y * z.y )`.
+El **_cabs** función calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** genera un valor equivalente de la expresión `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -106,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

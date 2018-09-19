@@ -1,5 +1,5 @@
 ---
-title: Macros Variádicas | Documentos de Microsoft
+title: Macros Variádicas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5918c7d91a3568799f361fcb42edb2e9c7b1445e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16549d6b7a80a8aa0f3f98cf9c7cd89c74058959
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540063"
 ---
 # <a name="variadic-macros"></a>Macros variádicas
 Las macros variádicas son macros estilo funciones que contienen un número variable de argumentos.  
   
 ## <a name="remarks"></a>Comentarios  
- Para usar macros variádicas, se pueden especificar los puntos suspensivos como argumento formal final en una definición de macro y el identificador de reemplazo `__VA_ARGS__` puede utilizarse en la definición para insertar los argumentos adicionales.  `__VA_ARGS__` se reemplaza por todos los argumentos que coinciden con los puntos suspensivos, incluyendo comas entre ellos.  
+ 
+Para utilizar macros variádicas, los puntos suspensivos se pueden especificar como el último argumento formal de una definición de macro y el identificador de reemplazo `__VA_ARGS__` puede utilizarse en la definición para insertar los argumentos adicionales.  `__VA_ARGS__` se reemplaza por todos los argumentos que coinciden con los puntos suspensivos, incluidas las comas entre ellos.  
   
- El estándar de C especifica que se debe pasar al menos un argumento a los puntos suspensivos para garantizar que la macro no se resuelva en una expresión con una coma final.  La implementación de Visual C++ suprimirá una coma final si no se pasa ningún argumento a los puntos suspensivos.  
+El estándar de C especifica que se debe pasar al menos un argumento a los puntos suspensivos para garantizar que la macro no se resuelva en una expresión con una coma final.  La implementación de Visual C++ suprimirá una coma final si no se pasa ningún argumento a los puntos suspensivos.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -57,10 +59,8 @@ int main() {
                              // suppresses the trailing comma  
 }  
 ```  
-  
-## <a name="output"></a>Salida  
-  
-```  
+    
+```Output  
 here are some varargs1(1)  
 here are some varargs2(4)  
 here are some varargs3(5)  
@@ -69,4 +69,5 @@ error
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Macros (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Macros (C/C++)](../preprocessor/macros-c-cpp.md)

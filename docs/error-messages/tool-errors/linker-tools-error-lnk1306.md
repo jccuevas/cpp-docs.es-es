@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1306 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1306 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,57 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb340a4c28f94f18e0c4b65bea8749394e002bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7cc007a4a594c8593d7820365377f1c811b1e23c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050572"
 ---
-# <a name="linker-tools-error-lnk1306"></a>Error de las herramientas del vinculador LNK1306  
-  
-> No se puede administrar la función de punto de entrada de archivo DLL; compilar a código nativo  
-  
-`DllMain` no se pueden compilar en MSIL; primero se debe compilar en código nativo.  
-  
-Para resolver este problema,  
-  
--   Compilar el archivo que contiene el punto de entrada sin **/CLR**.  
-  
--   Coloque el punto de entrada en un `#pragma unmanaged` sección.  
-  
-Para obtener más información, consulte:  
-  
--   [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [managed, unmanaged](../../preprocessor/managed-unmanaged.md)  
-  
--   [Inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md)  
-  
--   [Archivos DLL y comportamiento de la biblioteca en tiempo de ejecución de Visual C++](../../build/run-time-library-behavior.md)  
-  
-## <a name="example"></a>Ejemplo  
-  
-El ejemplo siguiente genera el error LNK1306.  
-  
-```cpp  
-// LNK1306.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-// LNK1306 error expected  
-#include <windows.h>  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-```  
-  
-Para corregir este problema, no use la opción/CLR compile este archivo, o usar un `#pragma` directiva para colocar la definición de punto de entrada en una sección no administrada como se muestra en este ejemplo:  
-  
-```cpp  
-// LNK1306fix.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-#include <windows.h>  
-#pragma managed(push, off)  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-#pragma managed(pop)  
-```  
+# <a name="linker-tools-error-lnk1306"></a>Error de las herramientas del vinculador LNK1306
+
+> No se pueden administrar la función de punto de entrada de archivo DLL; compilar a código nativo
+
+`DllMain` no se puede compilar en MSIL; se debe compilar en código nativo.
+
+Para resolver este problema,
+
+- Compile el archivo que contiene el punto de entrada sin **/CLR**.
+
+- Coloque el punto de entrada en un `#pragma unmanaged` sección.
+
+Para obtener más información, consulte:
+
+- [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [managed, unmanaged](../../preprocessor/managed-unmanaged.md)
+
+- [Inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md)
+
+- [Archivos DLL y comportamiento de la biblioteca en tiempo de ejecución de Visual C++](../../build/run-time-library-behavior.md)
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error LNK1306.
+
+```cpp
+// LNK1306.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+// LNK1306 error expected
+#include <windows.h>
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+```
+
+Para corregir este problema, no use la opción /clr para compilar este archivo, o usar un `#pragma` directiva para colocar la definición de punto de entrada en una sección no administrada como se muestra en este ejemplo:
+
+```cpp
+// LNK1306fix.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+#include <windows.h>
+#pragma managed(push, off)
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+#pragma managed(pop)
+```

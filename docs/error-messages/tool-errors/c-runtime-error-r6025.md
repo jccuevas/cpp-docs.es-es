@@ -1,5 +1,5 @@
 ---
-title: R6025 de Error en tiempo de ejecución de C | Documentos de Microsoft
+title: C Runtime Error R6025 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abdbdbf918462dfb83eff07190c32af1f1b3d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c176e77a1704e3311d8c814d1c1b530b9f94f1ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070059"
 ---
-# <a name="c-runtime-error-r6025"></a>R6025 de Error en tiempo de ejecución de C
-llamada de función virtual pura  
-  
+# <a name="c-runtime-error-r6025"></a>C Runtime Error R6025
+
+llamada de función virtual pura
+
 > [!NOTE]
->  Si aparece este mensaje de error mientras se ejecuta una aplicación, la aplicación se cerró porque tiene un problema interno. La razón más común de este error es un error en la aplicación o una instalación dañada.  
->   
->  Puede intentar seguir estos pasos para corregir este error:  
->   
->  -   Use la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para reparar o reinstalar el programa.  
-> -   Comprobar **Windows Update** en el **el Panel de Control** las actualizaciones de software.  
-> -   Busque una versión actualizada de la aplicación. Si el problema continúa, póngase en contacto con el proveedor de la aplicación.  
-  
- **Información para programadores**  
-  
- No se ha creado una instancia de ningún objeto para controlar la llamada de función virtual pura.  
-  
- Este error se debe al llamar a una función virtual de una clase base abstracta a través de un puntero que se crea mediante una conversión al tipo de la clase derivada, pero en realidad es un puntero a la clase base. Esto puede ocurrir cuando se realiza la conversión de un **void\***  a un puntero a una clase cuando la **void\***  se creó durante la construcción de la clase base.  
-  
- Para obtener más información, consulte el [soporte técnico de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) sitio Web.
+>  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema interno. La razón más común de este error es un error en la aplicación o una instalación dañada.
+>
+>  Puede intentar seguir estos pasos para corregir este error:
+>
+>  -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+
+**Información para programadores**
+
+No se ha creado una instancia de ningún objeto para controlar la llamada de función virtual pura.
+
+Este error se debe a una llamada a una función virtual en una clase base abstracta a través de un puntero que se crea mediante una conversión al tipo de la clase derivada, pero es realmente un puntero a la clase base. Esto puede ocurrir cuando se realiza la conversión de un **void** <strong>\*</strong> a un puntero a una clase cuando la **void** <strong>\*</strong> era se creó durante la construcción de la clase base.
+

@@ -1,7 +1,7 @@
 ---
-title: operador LROFFSET | Documentos de Microsoft
+title: operador LROFFSET | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,21 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245dc24b56557c26134712ca28c75945bdd97f5a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd04a306e85fbb3627729355dc05d55197d91134
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678537"
 ---
 # <a name="operator-lroffset"></a>Operador LROFFSET
-Devuelve el desplazamiento de *expresión*. Igual que **desplazamiento**, pero genera un desplazamiento resuelto cargador, lo que permite a Windows reubicar los segmentos de código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-LROFFSET expression  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Devuelve el desplazamiento de *expresión*. Igual que **desplazamiento**, pero genera un desplazamiento resuelto del cargador, lo que permite Windows reubicar los segmentos de código.
+
+## <a name="syntax"></a>Sintaxis
+
+> Expresión LROFFSET
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

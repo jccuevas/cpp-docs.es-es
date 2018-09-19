@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2254 | Documentos de Microsoft
+title: Error del compilador C2254 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773b6d8b8f0dafe560da8549139442efb31ba429
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6030f85ef1b8742b07f1be92101d740732207fa5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067095"
 ---
 # <a name="compiler-error-c2254"></a>Error del compilador C2254
-'función': el especificador puro o invalidación abstracto no se permite en la función friend  
-  
- A `friend` función se especifica como puro `virtual`.  
-  
- El ejemplo siguiente genera C2254:  
-  
-```  
-// C2254.cpp  
-// compile with: /c  
-class A {  
-public:  
-   friend void func1() = 0;   // C2254, func1 is friend  
-   void virtual func2() = 0;   // OK, pure virtual  
-   friend void func3();   // OK, friend not virtual nor pure  
-};  
-  
-void func1() {};  
-void func3() {};  
+
+'function': el especificador puro o invalidación abstracto no se permite en la función friend
+
+Un `friend` función se especifica como pura `virtual`.
+
+El ejemplo siguiente genera C2254:
+
+```
+// C2254.cpp
+// compile with: /c
+class A {
+public:
+   friend void func1() = 0;   // C2254, func1 is friend
+   void virtual func2() = 0;   // OK, pure virtual
+   friend void func3();   // OK, friend not virtual nor pure
+};
+
+void func1() {};
+void func3() {};
 ```

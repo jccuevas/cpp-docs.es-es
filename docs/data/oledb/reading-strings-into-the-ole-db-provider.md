@@ -1,5 +1,5 @@
 ---
-title: Leer cadenas desde el proveedor OLE DB | Documentos de Microsoft
+title: Leer cadenas desde el proveedor OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 073ddbea18e728ffb6777ff16c86bfa4695e05cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034856"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Leer cadenas desde el proveedor OLE DB
-El `RMyProviderRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo para el proveedor mediante una llamada a [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_szCommandText`. `Execute` lee el nombre del archivo de `m_szCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abren el archivo y llama `fgets` para recuperar las cadenas. Para cada conjunto de cadenas lee, `Execute` crea una instancia del registro de usuario (`CAgentMan`) y lo coloca en una matriz.  
+
+El `RMyProviderRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo al proveedor mediante una llamada a [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_szCommandText`. `Execute` lee el nombre del archivo `m_szCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abre el archivo y las llamadas `fgets` para recuperar las cadenas. Para cada conjunto de cadenas se lee, `Execute` crea una instancia del registro de usuario (`CAgentMan`) y lo coloca en una matriz.  
   
- Si no se puede abrir el archivo, `Execute` debe devolver **DB_E_NOTABLE**. Si devuelve **E_FAIL** en su lugar, el proveedor no funcionará con muchos consumidores y no pasará OLE DB [las pruebas de conformidad](../../data/oledb/testing-your-provider.md).  
+Si no se puede abrir el archivo, `Execute` debe devolver DB_E_NOTABLE. Si devuelve E_FAIL en su lugar, el proveedor no funcionará con muchos consumidores y no pasará a OLE DB [las pruebas de conformidad](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- El texto editado `Execute` función tiene el siguiente aspecto:  
+
+El texto editado `Execute` función tiene este aspecto:  
   
 ### <a name="code"></a>Código  
   
@@ -106,4 +109,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Implementar un proveedor sencillo de solo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementar un proveedor sencillo de solo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md)

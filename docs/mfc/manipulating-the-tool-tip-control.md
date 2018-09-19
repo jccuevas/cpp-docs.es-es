@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929833"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipular el control de información sobre herramientas
 Clase `CToolTipCtrl` proporciona un grupo de miembro funciones que controlan los distintos atributos de la `CToolTipCtrl` objeto y la ventana de información sobre herramientas.  
@@ -36,7 +37,7 @@ Clase `CToolTipCtrl` proporciona un grupo de miembro funciones que controlan los
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) y [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) recupera y establece el color del texto de la herramienta de sugerencia de ventana.  
   
- En orden para el control de información sobre herramientas recibir una notificación de mensajes importantes, como **WM_LBUTTONXXX** mensajes, debe transmitir los mensajes para el control de información sobre herramientas. El mejor método para esta retransmisión consiste en realizar una llamada a [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent), en la `PreTranslateMessage` función de la ventana propietaria. En el ejemplo siguiente se muestra un método posible (suponiendo que el control de información sobre herramientas se denomina `m_ToolTip`):  
+ En orden para el control de información sobre herramientas recibir una notificación de mensajes importantes, tales como mensajes WM_LBUTTONXXX, debe retransmitir los mensajes para el control de información sobre herramientas. El mejor método para esta retransmisión consiste en realizar una llamada a [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent), en la `PreTranslateMessage` función de la ventana propietaria. En el ejemplo siguiente se muestra un método posible (suponiendo que el control de información sobre herramientas se denomina `m_ToolTip`):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

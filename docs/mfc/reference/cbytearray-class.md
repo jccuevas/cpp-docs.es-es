@@ -1,5 +1,5 @@
 ---
-title: Clase CByteArray | Documentos de Microsoft
+title: CByteArray (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22e138b586070a0e47ffa399d2c76d086fd4b951
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335859"
 ---
 # <a name="cbytearray-class"></a>CByteArray (clase)
 Admite matrices dinámicas de bytes.  
@@ -68,7 +69,7 @@ class CByteArray : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CByteArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o un valor devuelto, sustituir un **bytes**.  
+ Las funciones miembro de `CByteArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o el valor devuelto, sustituya un BYTE.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -93,7 +94,7 @@ class CByteArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda la memoria no usada por encima del límite superior actual.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Devuelve el valor en un índice dado.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtiene el número de elementos de esta matriz.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite el acceso a los elementos de la matriz. Puede ser **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite el acceso a los elementos de la matriz. Puede ser NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtiene el número de elementos de esta matriz.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Devuelve el índice válido de mayor tamaño.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserta un elemento (o todos los elementos de otra matriz) en un índice especificado.|  
@@ -111,14 +112,14 @@ class CByteArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CByteArray` incorpora la macro `IMPLEMENT_SERIAL` para admitir la serialización y el volcado de sus elementos. Si una matriz de bytes se almacena en un archivo, ya sea con la inserción sobrecargada ( **<<**) operador o con el `Serialize` función miembro, cada elemento es, a su vez, serializar.  
+ `CByteArray` incorpora la macro IMPLEMENT_SERIAL para admitir la serialización y el volcado de sus elementos. Si una matriz de bytes se almacena en un archivo, ya sea con la inserción sobrecargada ( **<<**) operador o con el `Serialize` función miembro, cada elemento es, a su vez, serializar.  
   
 > [!NOTE]
 >  Antes de usar una matriz, use `SetSize` para establecer su tamaño y asignarle memoria. Si no usa `SetSize`, al agregar elementos a la matriz, esta se reasigna y se copia con frecuencia. La reasignación y copia frecuentes son ineficaces y pueden fragmentar la memoria.  
   
  Si necesita depurar la salida de los elementos individuales de la matriz, se debe establecer la profundidad de la `CDumpContext` objeto a 1 o mayor.  
   
- Para obtener más información sobre el uso de `CByteArray`, vea el artículo [colecciones](../../mfc/collections.md).  
+ Para obtener más información sobre el uso de `CByteArray`, consulte el artículo [colecciones](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352049"
 ---
 # <a name="ccreatecontext-structure"></a>Estructura de CCreateContext
 El marco de trabajo usa el `CCreateContext` estructura al crear las vistas que están asociadas a un documento y ventanas de marco.  

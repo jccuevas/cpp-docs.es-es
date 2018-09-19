@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108299"
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>Controlador de seguimiento de un valor al que se le ha aplicado la conversión boxing
 El uso de un controlador de seguimiento a un tipo de valor de referencia ha cambiado de extensiones administradas para C++ a Visual C++.  

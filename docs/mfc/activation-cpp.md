@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334488"
 ---
 # <a name="activation-c"></a>Activación (C++)
 En este artículo se explica el rol de activación en la edición visual de elementos OLE. Después de que un usuario ha incorporado un elemento OLE en un documento de contenedor, tendrá que se usará. Para ello, el usuario hace doble clic en el elemento, que activa ese elemento. Está editando la actividad más frecuente para la activación. Muchos elementos OLE actuales, cuando se activan para la edición, hacer que los menús y barras de herramientas en la ventana de marco actual cambian para reflejarlos que pertenecen a la aplicación de servidor que creó el elemento. Este comportamiento, conocido como en el contexto de activación, permite al usuario editar cualquier elemento incrustado en un documento compuesto sin salir de la ventana del documento contenedor.  

@@ -1,7 +1,7 @@
 ---
-title: Operadores de tiempo de ejecución | Documentos de Microsoft
+title: Operadores de tiempo de ejecución | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,14 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd671af5b72f9edcf78e5a674e6604f5687197f7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f8bacc7f86500d96e64db392dc26486c497a425b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675983"
 ---
 # <a name="run-time-operators"></a>Operadores en tiempo de ejecución
-Para obtener más información acerca de los operadores de tiempo de ejecución en el lenguaje de Microsoft Macro Assembler, consulte [referencia de operadores](../../assembler/masm/operators-reference.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Para obtener más información acerca de los operadores de tiempo de ejecución en el idioma de Microsoft Macro Assembler, consulte [referencia de operadores](../../assembler/masm/operators-reference.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

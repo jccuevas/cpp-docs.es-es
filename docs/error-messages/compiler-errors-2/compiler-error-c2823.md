@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2823 | Documentos de Microsoft
+title: Error del compilador C2823 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ad7336834d38f7236b88debc28035d8f7d68e88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09b8284626a6af6851147dc36b67e25b76f8eb01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069526"
 ---
-# <a name="compiler-error-c2823"></a>Error del compilador C2823  
-  
-> una plantilla de definición de tipo no es válida  
-  
-No se permiten plantillas de `typedef` definiciones.  
-  
-## <a name="example"></a>Ejemplo  
-  
-El ejemplo siguiente genera C2823 y muestra una forma de corregirlo:  
-  
-```cpp  
-// C2823.cpp  
-template<class T>  
-typedef struct x {  
-   T i;   // C2823 can't use T, specify data type and delete template  
-   int i;   // OK  
-} x1;  
+# <a name="compiler-error-c2823"></a>Error del compilador C2823
+
+> una plantilla de definición de tipo no es válida
+
+No se permiten plantillas de `typedef` definiciones.
+
+## <a name="example"></a>Ejemplo
+
+En el ejemplo siguiente genera C2823 y muestra cómo corregirlo:
+
+```cpp
+// C2823.cpp
+template<class T>
+typedef struct x {
+   T i;   // C2823 can't use T, specify data type and delete template
+   int i;   // OK
+} x1;
 ```

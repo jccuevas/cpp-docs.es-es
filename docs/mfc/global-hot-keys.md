@@ -1,5 +1,5 @@
 ---
-title: Teclas de acceso rápido globales | Documentos de Microsoft
+title: Teclas de acceso rápido globales | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd597271d949770ec1a5871cad3ea7be0004e288
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2ef1e2135ebd780938fb0ed194a93058fd010f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209159"
 ---
 # <a name="global-hot-keys"></a>Teclas de acceso directo globales
-Una tecla de acceso rápido global está asociada a una ventana no secundaria específica. Permite al usuario activar la ventana de cualquier parte del sistema. Una aplicación establece una tecla de acceso rápido global para una ventana concreta mediante el envío de la [mensaje WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) mensaje a esa ventana. Por ejemplo, si `m_HotKeyCtrl` es el [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objeto y `pMainWnd` es un puntero a la ventana que se activa cuando se presiona la tecla de acceso rápido, podría utilizar el siguiente código para asociar especificada en el control con la tecla de acceso rápido la ventana señalada por `pMainWnd`.  
+Tecla de acceso rápido global está asociada con una ventana no secundaria específica. Permite al usuario activar la ventana desde cualquier parte del sistema. Una aplicación establece una tecla de acceso rápido global para una ventana concreta mediante el envío de la [mensaje WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) mensaje a esa ventana. Por ejemplo, si `m_HotKeyCtrl` es el [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objeto y `pMainWnd` es un puntero a la ventana se active cuando se presiona la tecla de acceso rápido, podría usar el código siguiente para asociar especificada en el control con la tecla de acceso rápido la ventana apunta `pMainWnd`.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]  
   
- Cada vez que el usuario presiona una tecla de acceso rápido global, la ventana especificada recibe un [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) mensaje que especifica **SC_HOTKEY** como el tipo del comando. Este mensaje también activa la ventana que lo recibe. Dado que este mensaje no incluye ninguna información sobre la clave exacta que se presionó, con este método no permite distinguir entre las teclas de acceso rápido diferentes que pueden asociarse a la misma ventana. La tecla de acceso rápido sigue siendo válida hasta que la aplicación que envió **mensaje WM_SETHOTKEY** se cierra.  
+ Cada vez que el usuario presiona una tecla de acceso rápido global, la ventana especificada recibe un [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) mensaje que especifica **SC_HOTKEY** como el tipo del comando. Este mensaje también activa la ventana que lo recibe. Dado que este mensaje no incluye ninguna información en la clave exacta que se presionó, con este método no permite distinguir entre diferentes teclas de acceso directo que se pueden conectar a la misma ventana. La tecla de acceso rápido sigue siendo válida hasta que la aplicación que envió **mensaje WM_SETHOTKEY** se cierra.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

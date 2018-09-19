@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCAutoHideBar | Documentos de Microsoft
+title: CMFCAutoHideBar (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,16 +48,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719984"
 ---
-# <a name="cmfcautohidebar-class"></a>Clase CMFCAutoHideBar
+# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar (clase)
 La clase `CMFCAutoHideBar` es una clase especial de la barra de herramientas que implementa la característica Ocultar automáticamente.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.    
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
@@ -135,24 +136,24 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pAutoHideWnd`  
- La ventana que se quiere ocultar.  
+*pAutoHideWnd*<br/>
+[in] La ventana que desee ocultar.  
   
- [in] `dwAlignment`  
- Un valor que especifica la alineación del botón de ocultación automática con la ventana de la aplicación.  
+*dwAlignment*<br/>
+[in] Un valor que especifica la alineación del botón de ocultación automática con la ventana de la aplicación.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
 ### <a name="remarks"></a>Comentarios  
- El parámetro `dwAlignment` indica dónde reside el botón de ocultación automática en la aplicación. El parámetro puede establecerse en uno de los valores siguientes:  
+ El *dwAlignment* parámetro indica dónde reside el botón de ocultación automática en la aplicación. El parámetro puede establecerse en uno de los valores siguientes:  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -175,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bStretch`  
- [in] `bHorz`  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -206,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+*lpszClassName*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -250,7 +251,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando el usuario coloca el cursor del mouse sobre un `CMFCAutoHideButton`, hay un breve lapso de tiempo antes de que el marco de trabajo muestra la ventana asociada. Este parámetro determina la longitud de dicho retraso en milisegundos.  
+ Cuando el usuario coloca el cursor del mouse sobre un `CMFCAutoHideButton`, hay un ligero retraso antes de que el marco de trabajo muestra la ventana asociada. Este parámetro determina la longitud de dicho retraso en milisegundos.  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -260,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -274,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  La ventana de ocultación automática que se va a quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -290,11 +291,11 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] BOOL `bActive`  
+ [in] BOOL *bSecuencias de ActiveX*  
  TRUE para establecerlo como activo; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [CPANE:: Setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
+ Consulte [CPANE:: Setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
 ##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
@@ -304,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -319,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] BOOL `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] BOOL *bMostrar*  
  TRUE para mostrar la ventana.  
   
- [in] BOOL `bDelay`  
+ [in] BOOL *bDelay*  
  Este parámetro se ignora.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -341,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nLength`  
- En la implementación base, no se usa este valor. En las implementaciones derivadas, use este valor para indicar la longitud del panel cuyo tamaño ha cambiado.  
+*nLength*<br/>
+[in] El valor se utiliza en la implementación base. En las implementaciones derivadas, use este valor para indicar la longitud del panel cuyo tamaño ha cambiado.  
   
- [in] `bVert`  
- En la implementación base, no se usa este valor. En las implementaciones derivadas, use `TRUE` para controlar el caso donde la barra de ocultación automática está contraída verticalmente y `FALSE` para el caso donde la barra de ocultación automática está contraída horizontalmente.  
+*bVert*<br/>
+[in] El valor se utiliza en la implementación base. En las implementaciones derivadas, use True para el identificador del caso donde la barra de ocultación automática está contraída verticalmente y FALSE para el caso donde la barra de ocultación automática está contraída horizontalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño resultante del panel cuyo tamaño ha cambiado.  

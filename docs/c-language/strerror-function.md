@@ -14,56 +14,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98648a4db94f5e78c02b49a16e9717df3d771c5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 324fb9d7fd739e9e5a6ce8308eb16f53777e1480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055109"
 ---
 # <a name="strerror-function"></a>strerror (Función)
-**ANSI 4.11.6.2** Contenido de las cadenas de mensajes de error devueltas por la función `strerror`  
-  
- La función `strerror` genera estos mensajes:  
-  
-```  
-0   Error 0  
-1    
-2   No such file or directory  
-3    
-4    
-5    
-6    
-7   Arg list too long  
-8   Exec format error  
-9   Bad file number  
-10    
-11    
-12  Not enough core  
-13  Permission denied  
-14    
-15    
-16    
-17  File exists  
-18  Cross-device link  
-19    
-20    
-21    
-22  Invalid argument  
-23    
-24  Too many open files  
-25    
-26    
-27    
-28  No space left on device  
-29    
-30    
-31    
-32    
-33  Math argument  
-34  Result too large  
-35    
-36  Resource deadlock would occur  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Funciones de la biblioteca](../c-language/library-functions.md)
+
+**ANSI 4.11.6.2** Contenido de las cadenas de mensajes de error devueltas por la función `strerror`
+
+La función `strerror` genera estos mensajes:
+
+```
+0   Error 0
+1
+2   No such file or directory
+3
+4
+5
+6
+7   Arg list too long
+8   Exec format error
+9   Bad file number
+10
+11
+12  Not enough core
+13  Permission denied
+14
+15
+16
+17  File exists
+18  Cross-device link
+19
+20
+21
+22  Invalid argument
+23
+24  Too many open files
+25
+26
+27
+28  No space left on device
+29
+30
+31
+32
+33  Math argument
+34  Result too large
+35
+36  Resource deadlock would occur
+```
+
+## <a name="see-also"></a>Vea también
+
+[Funciones de la biblioteca](../c-language/library-functions.md)

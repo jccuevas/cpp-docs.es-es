@@ -1,7 +1,7 @@
 ---
-title: GOTO (MASM) | Documentos de Microsoft
+title: GOTO (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eecdab2fe91de0aae656b37c6fddafe658e60c0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0be678e2d39389cbc551c386c1890f799124b5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694021"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
-Transfiere el ensamblado a la línea marcada **: *** macrolabel*.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-GOTO   
-macrolabel  
-  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- **GOTO** se permite solo dentro de [MACRO](../../assembler/masm/macro.md), [para](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [repita](../../assembler/masm/repeat.md), y **al**bloques. La etiqueta debe ser la única directiva en la línea y debe ir precedida de un signo de dos puntos inicial.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Transfiere el ensamblado a la línea marcada **:**_macrolabel_.
+
+## <a name="syntax"></a>Sintaxis
+
+> **GOTO** *macrolabel*
+
+## <a name="remarks"></a>Comentarios
+
+**GOTO** se permite únicamente dentro de [MACRO](macro.md), [para](for-masm.md), [FORZADA](forc.md), [repita](repeat.md), y [al](while-masm.md)bloques. El *macrolabel* debe ir precedido por un signo de dos puntos inicial y debe ser la única directiva en la línea de destino.
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

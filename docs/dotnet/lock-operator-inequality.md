@@ -1,5 +1,5 @@
 ---
-title: Lock::operator! = | Documentos de Microsoft
+title: Lock::operator! = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca39249a73df4519c741182827036158169fd3ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043019"
 ---
 # <a name="lockoperator"></a>lock::operator!=
 Operador de desigualdad.  
@@ -38,11 +39,11 @@ template<class T> bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `t`  
- El objeto para comparar la desigualdad.  
+*t*<br/>
+El objeto para comparar la desigualdad.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve `true` si `t` difiere de un objeto del bloqueo, `false` en caso contrario.  
+ Devuelve `true` si `t` difiere de objeto del bloqueo, `false` en caso contrario.  
   
 ## <a name="example"></a>Ejemplo  
   

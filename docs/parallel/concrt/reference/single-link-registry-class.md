@@ -1,5 +1,5 @@
 ---
-title: single_link_registry (clase) | Documentos de Microsoft
+title: single_link_registry (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3220156d201a4dcb7edb6281298d3f248f38fc83
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 60820d2dc6b4fe0ab5c27ad746ee3f922fc39780
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045788"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry (Clase)
 El objeto `single_link_registry` es un `network_link_registry` que administra un solo bloque de origen o bloque de destino.  
@@ -40,8 +41,8 @@ class single_link_registry : public network_link_registry<_Block>;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_Block`  
- Tipo de los datos del bloque que se almacenan en la `single_link_registry` objeto.  
+*Al _bloque al introducir*<br/>
+Tipo de los datos del bloque que se almacenan en la `single_link_registry` objeto.  
   
 ## <a name="members"></a>Miembros  
   
@@ -58,7 +59,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|Agrega un vínculo a la `single_link_registry` objeto. (Invalida [network_link_registry:: Add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Devuelve un iterador al primer elemento en el `single_link_registry` objeto. (Invalida [network_link_registry:: BEGIN](network-link-registry-class.md#begin).)|  
-|[contiene](#contains)|Busca el `single_link_registry` objeto para un bloque especificado. (Invalida [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
+|[Contiene](#contains)|Busca el `single_link_registry` objeto para un bloque especificado. (Invalida [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Cuenta el número de elementos de la `single_link_registry` objeto. (Invalida [network_link_registry:: Count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Quita un vínculo desde el `single_link_registry` objeto. (Invalida [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
   
@@ -81,13 +82,13 @@ virtual void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Link`  
- Un puntero a un bloque que se va a agregar.  
+*_Vincular*<br/>
+Un puntero a un bloque que se va a agregar.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_link_target](invalid-link-target-class.md) excepción si ya hay un vínculo en este registro.  
   
-##  <a name="begin"></a> BEGIN 
+##  <a name="begin"></a> comenzar 
 
  Devuelve un iterador al primer elemento en el `single_link_registry` objeto.  
   
@@ -101,7 +102,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>Comentarios  
  El estado final se indica mediante un `NULL` vínculo.  
   
-##  <a name="contains"></a> contiene 
+##  <a name="contains"></a> Contiene 
 
  Busca el `single_link_registry` objeto para un bloque especificado.  
   
@@ -110,13 +111,13 @@ virtual bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Link`  
- Un puntero a un bloque que se va a buscar en la `single_link_registry` objeto.  
+*_Vincular*<br/>
+Un puntero a un bloque que se van a buscar en el `single_link_registry` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si no se encuentra el vínculo, `false` en caso contrario.  
   
-##  <a name="count"></a> Recuento 
+##  <a name="count"></a> recuento 
 
  Cuenta el número de elementos de la `single_link_registry` objeto.  
   
@@ -125,7 +126,7 @@ virtual size_t count();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de elementos de la `single_link_registry` objeto.  
+ El número de elementos en el `single_link_registry` objeto.  
   
 ##  <a name="remove"></a> Quitar 
 
@@ -136,11 +137,11 @@ virtual bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Link`  
- Un puntero a un bloque que se va a quitar, si se encuentra.  
+*_Vincular*<br/>
+Un puntero a un bloque que se va a quitar, si se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el vínculo se ha encontrado y eliminado, `false` en caso contrario.  
+ `true` Si el vínculo ha encontrado y eliminado, `false` en caso contrario.  
   
 ##  <a name="ctor"></a> single_link_registry) 
 
@@ -150,7 +151,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```  
   
-##  <a name="dtor"></a> ~ single_link_registry) 
+##  <a name="dtor"></a> ~ single_link_registry 
 
  Destruye el objeto `single_link_registry`.  
   

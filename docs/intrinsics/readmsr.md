@@ -1,5 +1,5 @@
 ---
-title: __readmsr | Documentos de Microsoft
+title: __readmsr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711806"
 ---
 # <a name="readmsr"></a>__readmsr
 **Específicos de Microsoft**  
   
- Genera el `rdmsr` instrucción, que lee el registro específica del modelo especificado por `register` y devuelve su valor.  
+ Genera el `rdmsr` instrucción, que lee el registro específicos del modelo especificado por `register` y devuelve su valor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,8 +39,8 @@ __int64 __readmsr(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `register`  
- El registro específico del modelo para leer.  
+*register*<br/>
+[in] El registro específico del modelo para leer.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El valor en el registro especificado.  
@@ -48,12 +49,12 @@ __int64 __readmsr(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función sólo está disponible en modo kernel y la rutina solo está disponible como función intrínseca.  
+ Esta función sólo está disponible en modo kernel y la rutina solo está disponible como intrínseco.  
   
  Para obtener más información, consulte la documentación de AMD.  
   

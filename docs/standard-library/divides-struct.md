@@ -17,13 +17,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0580d6e2128a75f7457541cc82caf2fece958b81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 55a97c1928babd32279253546ac53efd950d6c5e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110336"
 ---
-# <a name="divides-struct"></a>divides (Struct)
+# <a name="divides-struct"></a>divides (struct)
 
 Objeto de función predefinido que realiza la operación de división (`operator/`) sobre sus argumentos.
 
@@ -43,16 +44,18 @@ struct divides<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const
     -> decltype(std::forward<T>(Left)*/ std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Un tipo que admita un `operator/` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* un tipo que admita un `operator/` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de división. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación de división. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de división. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación de división. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 

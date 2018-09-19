@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d1d3e77dfc89fb67c467582c0ed7981ffae8022
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706347"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Específicos de Microsoft**  
@@ -37,8 +38,8 @@ __int64 _mm_cvttss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `value`  
- Un `__m128` estructura que contiene los valores de punto flotante de precisión sencilla.  
+*valor*<br/>
+[in] Un `__m128` estructura que contiene los valores de punto flotante de precisión sencilla.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El resultado de la conversión del primer valor de punto flotante en un entero de 64 bits.  
@@ -47,12 +48,12 @@ __int64 _mm_cvttss_si64x(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Difiere de la función intrínseca de `_mm_cvtss_si64x` sólo en esa inexactos conversiones se truncan hacia cero. Dado que el `__m128` estructura representa un registro de registros de XMM, la instrucción genera mueve los datos de un registro XMM en la memoria del sistema.  
+ La función intrínseca difiere `_mm_cvtss_si64x` únicamente en que las conversiones inexactos se truncan hacia cero. Dado que el `__m128` estructura representa un registro XMM, la instrucción genera mueve los datos de un registro XMM en la memoria del sistema.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

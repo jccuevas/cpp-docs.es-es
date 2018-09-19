@@ -1,5 +1,5 @@
 ---
-title: __writecr0 | Documentos de Microsoft
+title: __writecr0 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1437aa6f13a6f19afad36a59985c4d14e8e6a1d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7340d91d9d91171c073b5acebb282fbd1cff3bf1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702848"
 ---
 # <a name="writecr0"></a>__writecr0
 **Específicos de Microsoft**  
@@ -36,14 +37,14 @@ void writecr0(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Data`  
- El valor para escribir en el registro CR0.  
+*Data*<br/>
+[in] El valor para escribir en el registro CR0.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__writecr0`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr0`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

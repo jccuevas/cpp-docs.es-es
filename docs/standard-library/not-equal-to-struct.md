@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e50e613885215cf13504f8c9b72e0e48d5a6447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8be70ac575d5459ea6f88ed19d60dbfe0ddfda14
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108790"
 ---
-# <a name="notequalto-struct"></a>not_equal_to (Struct)
+# <a name="notequalto-struct"></a>not_equal_to (struct)
 
-Un predicado binario que realiza la operación de desigualdad (`operator!=`) sobre sus argumentos.
+Predicado binario que realiza la operación de desigualdad (`operator!=`) sobre sus argumentos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -48,11 +49,13 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator!=` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator!=` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de desigualdad. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación de desigualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de desigualdad. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación de desigualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -60,7 +63,7 @@ Resultado de `Left != Right`. La plantilla especializada realiza el reenvío dir
 
 ## <a name="remarks"></a>Comentarios
 
-Los objetos de tipo `Type` deben ser comparables en igualdad. Esto requiere que el `operator!=` definido en el conjunto de objetos satisfaga las propiedades matemáticas de una relación de equivalencia. Todos los tipos numéricos y de puntero integrados cumplen este requisito.
+Los objetos de tipo *tipo* debe ser comparable en igualdad. Esto requiere que el `operator!=` definido en el conjunto de objetos satisfaga las propiedades matemáticas de una relación de equivalencia. Todos los tipos numéricos y de puntero integrados cumplen este requisito.
 
 ## <a name="example"></a>Ejemplo
 

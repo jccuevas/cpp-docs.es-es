@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3026 | Documentos de Microsoft
+title: Error del compilador C3026 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dede783f99015d464d31f2bc46cd548dd9a7b9b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67d7d4b05f8a04a9d30c32f8e61360e70f852ed0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070748"
 ---
 # <a name="compiler-error-c3026"></a>Error del compilador C3026
-'clause': la expresión constante debe ser positiva  
-  
- Se pasó un valor entero a una cláusula, pero el valor no era un número positivo. El número debe ser positivo.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C3026:  
-  
-```  
-// C3026.cpp  
-// compile with: /openmp /link vcomps.lib  
-#include <stdio.h>  
-#include "omp.h"  
-  
-int main()  
-{  
-    int i;  
-    const int i1 = 0;  
-  
-    #pragma omp parallel for num_threads(i1)   // C3026  
-    for (i = 1; i <= 2; ++i)  
-        printf_s("Hello World - thread %d - iteration %d\n",  
-                 omp_get_thread_num(), i);  
-  
-    #pragma omp parallel for num_threads(i1 + 1)   // OK  
-    for (i = 1; i <= 2; ++i)  
-        printf_s("Hello World - thread %d - iteration %d\n",  
-                 omp_get_thread_num(), i);  
-}  
+
+'clause': la expresión constante debe ser positiva
+
+Se pasó un valor entero a una cláusula, pero el valor no era un número positivo. El número debe ser positivo.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C3026:
+
+```
+// C3026.cpp
+// compile with: /openmp /link vcomps.lib
+#include <stdio.h>
+#include "omp.h"
+
+int main()
+{
+    int i;
+    const int i1 = 0;
+
+    #pragma omp parallel for num_threads(i1)   // C3026
+    for (i = 1; i <= 2; ++i)
+        printf_s("Hello World - thread %d - iteration %d\n",
+                 omp_get_thread_num(), i);
+
+    #pragma omp parallel for num_threads(i1 + 1)   // OK
+    for (i = 1; i <= 2; ++i)
+        printf_s("Hello World - thread %d - iteration %d\n",
+                 omp_get_thread_num(), i);
+}
 ```

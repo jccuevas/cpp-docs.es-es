@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538acbf4e12c1d18e8d07337c6f428a0a0dc4b1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa94f14461ed41229d11857125a317b00c27abd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123037"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funciones de intercambio de datos de cuadro de diálogo para CRecordView y CDaoRecordView
 Este tema enumeran las funciones DDX_Field utilizadas para intercambiar datos entre un [CRecordset](../../mfc/reference/crecordset-class.md) y un [CRecordView](../../mfc/reference/crecordview-class.md) formulario o un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) y un [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formulario.  
@@ -76,16 +77,16 @@ void AFXAPI DDX_FieldCBIndex(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *index*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -119,16 +120,16 @@ void AFXAPI DDX_FieldCBString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *valor*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -162,16 +163,16 @@ void AFXAPI DDX_FieldCBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *valor*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -188,7 +189,7 @@ void AFXAPI DDX_FieldCBStringExact(
   **Encabezado** afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
- El `DDX_FieldCheck` función administra la transferencia de `int` datos entre un control de casilla de verificación en un cuadro de diálogo, vista de formulario o el objeto de vista de control y un `int` miembro de datos del cuadro de diálogo, la vista de formulario o el objeto de vista de control.  
+ El `DDX_FieldCheck` función administra la transferencia de **int** datos entre un control de casilla de verificación en un cuadro de diálogo, vista de formulario o el objeto de vista de control y un **int** miembro de datos del cuadro de diálogo, vista de formulario o control objeto de vista.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -205,16 +206,16 @@ void AFXAPI DDX_FieldCheck(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de recurso del control de casilla de verificación asociado a la propiedad de control.  
   
  *valor*  
  Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -226,7 +227,7 @@ void AFXAPI DDX_FieldCheck(
   **Encabezado** afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
- El `DDX_FieldLBIndex` función sincroniza el índice del elemento seleccionado en un control de cuadro de lista en una vista de registros y un `int` miembro de datos de campo de un conjunto de registros asociado con la vista de registros.  
+ El `DDX_FieldLBIndex` función sincroniza el índice del elemento seleccionado en un control de cuadro de lista en una vista de registros y un **int** miembro de datos de campo de un conjunto de registros asociado con la vista de registros.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -243,16 +244,16 @@ void AFXAPI DDX_FieldLBIndex(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *index*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -286,16 +287,16 @@ void AFXAPI DDX_FieldLBString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *valor*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -329,16 +330,16 @@ void AFXAPI DDX_FieldLBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *valor*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -355,7 +356,7 @@ void AFXAPI DDX_FieldLBStringExact(
   **Encabezado** afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
- El `DDX_FieldRadio` función asocia basado en cero `int` variable de miembro del conjunto de registros de una vista de registros con el botón de radio seleccionado actualmente en un grupo de botones de radio en la vista de registros.  
+ El `DDX_FieldRadio` función asocia basado en cero **int** variable de miembro del conjunto de registros de una vista de registros con el botón de radio seleccionado actualmente en un grupo de botones de radio en la vista de registros.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -372,16 +373,16 @@ void AFXAPI DDX_FieldRadio(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
- El identificador de la primera de un grupo (con estilo **WS_GROUP**) de controles de botón de radio adyacentes en la [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
+ *nIDC*  
+ El identificador de la primera de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes en la [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *valor*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -398,7 +399,7 @@ void AFXAPI DDX_FieldRadio(
   **Encabezado** afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
- El `DDX_FieldScroll` función sincroniza la posición de desplazamiento de un control de barra de desplazamiento en una vista de registros y un `int` miembro de datos de campo de un conjunto de registros asociado con la vista de registros (o cualquier variable de tipo entero que elija para asignarla a).  
+ El `DDX_FieldScroll` función sincroniza la posición de desplazamiento de un control de barra de desplazamiento en una vista de registros y un **int** miembro de datos de campo de un conjunto de registros asociado con la vista de registros (o cualquier variable de tipo entero que elija para asignarla a) .  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -415,16 +416,16 @@ void AFXAPI DDX_FieldScroll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
- El identificador de la primera de un grupo (con estilo **WS_GROUP**) de controles de botón de radio adyacentes en la [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
+ *nIDC*  
+ El identificador de la primera de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes en la [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *valor*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -441,7 +442,7 @@ void AFXAPI DDX_FieldScroll(
   **Encabezado** afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
-El `DDX_FieldSlider` función sincroniza la posición de thumb de un control deslizante en una vista de registros y un `int` miembro de datos de campo de un conjunto de registros asociado con la vista de registros (o cualquier variable de tipo entero que elija para asignarla a).  
+El `DDX_FieldSlider` función sincroniza la posición de thumb de un control deslizante en una vista de registros y un **int** miembro de datos de campo de un conjunto de registros asociado con la vista de registros (o cualquier variable de tipo entero que elija para asignarla a).  
    
 ### <a name="syntax"></a>Sintaxis  
   ```
@@ -458,16 +459,16 @@ void AFXAPI DDX_FieldSlider(
      CDaoRecordset* pRecordset );  
 ```
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de recurso del control deslizante.  
   
  *valor*  
  Una referencia al valor que se van a intercambiar. Este parámetro contiene o se utilizará para establecer la posición de posición actual del control deslizante.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero al objeto asociado `CRecordset` o `CDaoRecordset` objeto con el que se intercambian los datos.  
    
 ### <a name="remarks"></a>Comentarios  
@@ -489,7 +490,7 @@ void AFXAPI DDX_FieldSlider(
  [Macros y funciones globales](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
- El `DDX_FieldText` función administra la transferencia de `int`, **corto**, **largo**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **doble**, **BOOL**, o **bytes** datos entre un control de cuadro de edición y los miembros de datos de campo de un conjunto de registros.  
+ El `DDX_FieldText` función administra la transferencia de **int**, **corto**, **largo**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **doble**, **BOOL**, o **bytes** datos entre un control de cuadro de edición y los miembros de datos de campo de un conjunto de registros.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -602,16 +603,16 @@ void AFXAPI DDX_FieldText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
- `nIDC`  
+ *nIDC*  
  El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.  
   
  *valor*  
  Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto. El tipo de datos del valor depende de cuál de las versiones sobrecargadas de `DDX_FieldText` utiliza.  
   
- `pRecordset`  
+ *pRecordset*  
  Un puntero a la [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto con el que se intercambian los datos. This (puntero) permite `DDX_FieldText` para detectar y establecer valores Null.  
   
 ### <a name="remarks"></a>Comentarios  

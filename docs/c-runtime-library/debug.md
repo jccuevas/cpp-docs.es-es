@@ -18,16 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0047193b3c16c93c23bab648735c2cc643bf20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50ab066219832258965ec96477a2ef268e127c53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099660"
 ---
 # <a name="debug"></a>_DEBUG
-El compilador define `_DEBUG` cuando se especifica la opción /MTd o /MDd. Estas opciones especifican las versiones de depuración de la biblioteca en tiempo de ejecución de C.  
-  
- Para obtener más información, consulte [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).  
-  
-## <a name="see-also"></a>Vea también  
- [Marcas de control](../c-runtime-library/control-flags.md)
+
+El compilador define `_DEBUG` cuando se especifica la opción /MTd o /MDd. Estas opciones especifican las versiones de depuración de la biblioteca en tiempo de ejecución de C.
+
+Para obtener más información, consulte [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).
+
+## <a name="see-also"></a>Vea también
+
+[Marcas de control](../c-runtime-library/control-flags.md)

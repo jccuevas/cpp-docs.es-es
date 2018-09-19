@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2943 | Documentos de Microsoft
+title: Error del compilador C2943 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6009428a151ee9959766db6213d2447eaf836c2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4849e138cdbef97595d4aa1bbb45c277e7feb96a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047335"
 ---
 # <a name="compiler-error-c2943"></a>Error del compilador C2943
-'class': el identificador de clase de tipo se volvió a definir como argumento de tipo de una plantilla  
-  
- No puede usar una clase genérica o de plantilla, en lugar de un símbolo, como argumento de tipo genérico o de plantilla.  
-  
- El ejemplo siguiente genera la advertencia C2943:  
-  
-```  
-// C2943.cpp  
-// compile with: /c  
-template<class T>  
-class List {};  
-  
-template<class List<int> > class MyList;   // C2943  
-template<class T >  class MyList;  
+
+'class': el identificador de clase de tipo se volvió a definir como argumento de tipo de una plantilla
+
+No puede usar una clase genérica o de plantilla, en lugar de un símbolo, como argumento de tipo genérico o de plantilla.
+
+El ejemplo siguiente genera la advertencia C2943:
+
+```
+// C2943.cpp
+// compile with: /c
+template<class T>
+class List {};
+
+template<class List<int> > class MyList;   // C2943
+template<class T >  class MyList;
 ```

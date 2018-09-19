@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5fe5c06dd3017e867e73cf1107e619ec2c1edaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d42bc03e9fcb16ba8c0832a10ee96b361c525523
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699978"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t (Clase)
 
@@ -30,21 +31,23 @@ Clase de adaptadores que permite llamar a una función miembro **const** que tom
 
 ```cpp
 template <class Result, class Type, class Arg>
-class const_mem_fun1_t
- : public binary_function<const Type *, Arg, Result>
+class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 {
     explicit const_mem_fun1_t(Result (Type::* _Pm)(Arg) const);
     Result operator()(const Type* _Pleft, Arg right) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pm` Un puntero a la función miembro de clase **tipo** se convierta en un objeto de función.
+*_Pm*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-`_Pleft` El **const** objeto que la `_Pm` función miembro se llama en.
+*_Pleft*<br/>
+El **const** objeto al que el *_Pm* función miembro se llama en.
 
-`right` El argumento proporcionado para `_Pm`.
+*right*<br/>
+El argumento que se entrega a *_Pm*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -52,7 +55,7 @@ Una función binaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define la función miembro `operator()` devuelvan ( **_Pleft**->\* *Pm)(***derecha**) **const**.
+La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva ( *_Pleft*->\*<em>Pm</em>) ( *derecho* ) **const**.
 
 ## <a name="example"></a>Ejemplo
 

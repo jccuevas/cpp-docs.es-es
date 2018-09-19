@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: inline (quitar COMDAT no REFERENCIADA) | Documentos de Microsoft'
+title: '/ Zc: inline (quitar COMDAT no REFERENCIADA) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2018
 ms.technology:
@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067ba5dad4e0751a86835ea56c536a5b7250485d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9f0ff58108328979b945b32af0c0b884998639
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708537"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (Quitar COMDAT no referenciada)
 
@@ -36,15 +37,15 @@ Quita los datos o las funciones a los que no se hace referencia y que son COMDAT
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando **/Zc: inline** se especifica, el compilador no emite información de símbolos para las funciones COMDAT sin referencia o datos, o para funciones o datos que solo tienen vinculación interna. Esta optimización simplifica parte del trabajo realizado por el enlazador en versiones de lanzamiento o cuando la opción del vinculador [/OPT: ref](../../build/reference/opt-optimizations.md) se especifica. Cuando el compilador realiza esta optimización, puede reducir significativamente el tamaño del archivo .obj y mejorar la velocidad del enlazador. Esta opción del compilador no está habilitada cuando las optimizaciones están deshabilitadas ([/Od](../../build/reference/od-disable-debug.md)) o cuando [/GL (optimización de todo el programa)](../../build/reference/gl-whole-program-optimization.md) se especifica.
+Cuando **/Zc: inline** se especifica, el compilador no emite información de símbolos para las funciones COMDAT sin referencias o datos, o para las funciones o datos que solo tienen vinculación interna. Esta optimización simplifica parte del trabajo realizado por el enlazador en las versiones de lanzamiento o cuando la opción del vinculador [/OPT: ref](../../build/reference/opt-optimizations.md) se especifica. Cuando el compilador realiza esta optimización, puede reducir significativamente el tamaño del archivo .obj y mejorar la velocidad del enlazador. Esta opción del compilador no está habilitada cuando las optimizaciones están deshabilitadas ([/Od](../../build/reference/od-disable-debug.md)) o cuando [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) se especifica.
 
-De forma predeterminada, esta opción está desactivada (**/Zc:inline-**). El [/ permisivo-](permissive-standards-conformance.md) no habilita la opción **/Zc: inline**.
+De forma predeterminada, esta opción está desactivada (**/Zc:inline-**). El [/ permissive-](permissive-standards-conformance.md) no habilita la opción **/Zc: inline**.
 
-Si **/Zc: inline** se especifica, el compilador exige la C ++ 11 requisito de que todas las funciones declaradas `inline` debe tener una definición disponible en la misma unidad de traducción si se usan. Cuando no se especifica la opción, el compilador de Microsoft permite que el código no cumple este requisito que invoca funciones declaradas `inline` aunque no haya ninguna definición visible. Para más información, consulte las secciones 3.2 y 7.1.2 del estándar C++11. Esta opción del compilador se introdujo en Visual Studio 2013 Update 2.
+Si **/Zc: inline** se especifica, el compilador exige C ++ 11 requiere que todas las funciones declaradas `inline` debe tener una definición disponible en la misma unidad de traducción si se usan. Cuando no se especifica la opción, el compilador de Microsoft permite que el código no conforme que invoca funciones declaradas `inline` aunque ninguna definición esté visible. Para más información, consulte las secciones 3.2 y 7.1.2 del estándar C++11. Esta opción del compilador se introdujo en Visual Studio 2013 Update 2.
 
-Para usar el **/Zc: inline** opción, código de actualización no compatible.
+Para usar el **/Zc: inline** opción Actualizar código que no son compatibles.
 
-Este ejemplo muestra cómo el uso de una declaración de función alineada sin una definición de incumplimiento aún compila y vincula cuando el valor predeterminado **/Zc:inline-** se utiliza la opción:
+Este ejemplo muestra cómo el uso de una declaración de función alineada sin una definición de incumplimiento todavía se compila y vincula cuando el valor predeterminado **/Zc:inline-** se usa la opción:
 
 ```cpp
 // example.h
@@ -66,11 +67,11 @@ public:
 #include "example.h"
 
 void Example::inline_call() {
-   printf("inline_call was called.\n"); 
+   printf("inline_call was called.\n");
 }
 
 void Example::normal_call() {
-   printf("normal_call was called.\n"); 
+   printf("normal_call was called.\n");
    inline_call(); // with /Zc:inline-, inline_call forced into .obj file
 }
 ```
@@ -86,7 +87,7 @@ void main() {
 }
 ```
 
-Cuando **/Zc: inline** está habilitada, el mismo código provoca un [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) error, porque el compilador no emite un cuerpo de código no alineado para `Example::inline_call` en example.obj. Esto hace que la llamada no alineada de `main` haga referencia a un símbolo externo sin definir.
+Cuando **/Zc: inline** está habilitada, el mismo código provoca un [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) error, porque el compilador no emite un cuerpo de código no para `Example::inline_call` en example.obj. Esto hace que la llamada no alineada de `main` haga referencia a un símbolo externo sin definir.
 
 Para resolver este error, puede quitar la palabra clave `inline` de la declaración de `Example::inline_call`, mover la definición de `Example::inline_call` al archivo de encabezado o mover la implementación de `Example` a main.cpp. En el ejemplo siguiente, la definición se mueve al archivo de encabezado, donde estará visible para todos los autores de llamadas que incluyan el encabezado.
 
@@ -99,7 +100,7 @@ Para resolver este error, puede quitar la palabra clave `inline` de la declaraci
 class Example2 {
 public:
    inline void inline_call() {
-      printf("inline_call was called.\n"); 
+      printf("inline_call was called.\n");
    }
    void normal_call();
    Example2() {};
@@ -112,8 +113,8 @@ public:
 #include "example2.h"
 
 void Example2::normal_call() {
-   printf("normal_call was called.\n"); 
-   inline_call(); 
+   printf("normal_call was called.\n");
+   inline_call();
 }
 ```
 
@@ -132,9 +133,9 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **C/C++** > **lenguaje** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **lenguaje** página de propiedades.
 
 1. Modificar el **quitar código sin referencia y los datos** propiedad y, a continuación, elija **Aceptar**.
 

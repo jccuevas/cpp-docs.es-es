@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1164 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1164 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ad1c223c9d4b22e3763f1d24a6c2631f6342d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b07dcf360a58b07b84abe655641b758d6137d0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087449"
 ---
 # <a name="linker-tools-error-lnk1164"></a>Error de las herramientas del vinculador LNK1164
-alineación de sección de sección (número) mayor que el valor /ALIGN  
-  
- El tamaño de alineación de la sección dada en el archivo objeto supera el valor especificado con el [/alinear](../../build/reference/align-section-alignment.md) opción. El **/alinear** valor debe ser una potencia de 2 igual o superior a la alineación de sección especificada en el archivo objeto.  
-  
- Cualquier volver a compilar con una alineación de sección o un aumento menor la **/alinear** valor.
+
+alineación de sección la sección (número) mayor que el valor /ALIGN
+
+El tamaño de alineación de la sección dada en el archivo objeto supera el valor especificado con el [/alinear](../../build/reference/align-section-alignment.md) opción. El **/alinear** valor debe ser una potencia de 2 igual o superior a la alineación de sección especificada en el archivo de objeto.
+
+Cualquier nueva compilación con una alineación de sección o aumentar más pequeños el **/alinear** valor.

@@ -12,18 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b13c8ddcaed382483eb96172e93da99ad0133eac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48b9491db4e535966de946fb0285bbd72782dea4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051969"
 ---
 # <a name="filenames"></a>Nombres de archivo
-**ANSI 4.9.3** Reglas para crear nombres de archivo válidos  
-  
- Una especificación de archivo puede incluir una letra de unidad opcional (seguida de un signo de dos puntos), una serie de nombres de directorio opcionales (separados por barras diagonales inversas) y un nombre de archivo.  
-  
- Para más información, vea [Asignar nombre a un archivo](http://msdn.microsoft.com/library/windows/desktop/aa365247).  
-  
-## <a name="see-also"></a>Vea también  
- [Funciones de la biblioteca](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Reglas para crear nombres de archivo válidos
+
+Una especificación de archivo puede incluir una letra de unidad opcional (seguida de un signo de dos puntos), una serie de nombres de directorio opcionales (separados por barras diagonales inversas) y un nombre de archivo.
+
+Para más información, vea [Asignar nombre a un archivo](/windows/desktop/FileIO/naming-a-file).
+
+## <a name="see-also"></a>Vea también
+
+[Funciones de la biblioteca](../c-language/library-functions.md)

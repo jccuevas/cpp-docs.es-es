@@ -1,5 +1,5 @@
 ---
-title: Constructor Module | Documentos de Microsoft
+title: Constructor Module | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31e9f1e4536bc124bba359ece10217ef8b7f253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0459c729368dc182de955f85afda514b2ff5071
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591867"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module (Constructor)
-Inicializa una nueva instancia de la clase de módulo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-Module();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Este constructor está protegido y no se puede llamar con la `new` palabra clave. En su lugar, llame a uno [Module:: GetModule (método)](../windows/module-getmodule-method.md) o [Module:: Create (método)](../windows/module-create-method.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Vea también
- [Module (clase)](../windows/module-class.md)
+
+Inicializa una nueva instancia de la **módulo** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+Module();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Este constructor está protegido y no se puede llamar con la **nuevo** palabra clave. En su lugar, llame al [GetModule (método)](../windows/module-getmodule-method.md) o [método Module](../windows/module-create-method.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+[Module (clase)](../windows/module-class.md)

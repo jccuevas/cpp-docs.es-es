@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca83a9b9b48302e9ff4974d083d0a95796a1ef3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107580"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -53,17 +54,18 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*estado* puntero a **_CrtMemState** estructura para rellenar con el punto de comprobación de memoria.
+*state*<br/>
+Puntero a **_CrtMemState** estructura que se rellena con el punto de comprobación de memoria.
 
 ## <a name="remarks"></a>Comentarios
 
 El **_CrtMemCheckpoint** función crea una instantánea del estado actual del montón de depuración en un momento dado. Esta instantánea la pueden usar otras funciones de estado del montón, como [_CrtMemDifference](crtmemdifference.md), para ayudar a detectar pérdidas de memoria y otros problemas. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtMemState** se quitan durante el preprocesamiento.
 
-La aplicación debe pasar un puntero a una instancia asignada previamente de la **_CrtMemState** estructura, definida en Crtdbg.h, en la *estado* parámetro. Si **_CrtMemCheckpoint** encuentra un error durante la creación del punto de comprobación, la función genera una **_CRT_WARN** depurar informes que describe el problema.
+La aplicación debe pasar un puntero a una instancia asignada previamente de la **_CrtMemState** estructura, definida en Crtdbg.h, en el *estado* parámetro. Si **_CrtMemCheckpoint** encuentra un error durante la creación del punto de comprobación, la función genera una **_CRT_WARN** depurar informes que describe el problema.
 
-Para obtener más información sobre las funciones de estado del montón y la **_CrtMemState** estructura, vea [funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información sobre las funciones de estado del montón y la **_CrtMemState** estructura, vea [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Si *estado* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) está establecido en **EINVAL** y devuelve la función.
+Si *estado* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) está establecido en **EINVAL** y devuelve la función.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,5 +1,5 @@
 ---
-title: Páginas de propiedades de herramienta de generador de documento XML | Documentos de Microsoft
+title: Herramienta Generador de documentos XML (Páginas de propiedades) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 1ee18e32d1aaf2a9035b425cb3c3ef5e2db15145
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718814"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Herramienta Generador de documentos XML (Páginas de propiedades)
-La página de propiedades de la herramienta Generador de documentos XML expone la funcionalidad de xdcmake.exe. xdcmake.exe combina archivos .xdc en un archivo .xml cuando el código fuente contiene comentarios de documentación y [/doc (procesar comentarios de documentación) (C/C ++)](../build/reference/doc-process-documentation-comments-c-cpp.md) se especifica,. Vea [etiquetas recomendadas para comentarios de documentación](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) para obtener información sobre cómo agregar comentarios de documentación en código fuente.  
+La página de propiedades de la herramienta Generador de documentos XML expone la funcionalidad de xdcmake.exe. xdcmake.exe combina archivos .xdc en un archivo .xml cuando el código fuente contiene comentarios de documentación y se especifica [/doc (Procesar comentarios de documentación) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md). Vea [Etiquetas recomendadas para los comentarios de documentación](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) para obtener información sobre cómo agregar comentarios de documentación al código fuente.  
   
 > [!NOTE]
->  Opciones de XDCMake.exe en el entorno de desarrollo (páginas de propiedades) difieren de las opciones cuando se use xdcmake.exe en la línea de comandos. Para obtener información sobre cómo utilizar xdcmake.exe en la línea de comandos, consulte [XDCMake Reference](../ide/xdcmake-reference.md).  
+>  Las opciones de xdcmake.exe en el entorno de desarrollo (las páginas de propiedades) difieren de las opciones cuando se usa xdcmake.exe en la línea de comandos. Para obtener información sobre cómo usar xdcmake.exe en la línea de comandos, vea [XDCMake (Referencia)](../ide/xdcmake-reference.md).  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Suprimir el titular de inicio**  
- Suprimir mensaje de copyright.  
+- **Suprimir la pancarta de inicio**
+
+   Se suprime el mensaje de copyright.  
   
- **Archivos de documento adicionales**  
- Directorios adicionales en el que desea que el sistema del proyecto para que busque archivos .xdc. XDCMake siempre buscará archivos .xdc generados por el proyecto. Se pueden especificar varios directorios.  
+- **Archivos de documento adicionales**
+
+   Directorios adicionales en los que quiere que el sistema del proyecto busque los archivos .xdc. xdcmake siempre buscará los archivos .xdc generados por el proyecto. Se pueden especificar varios directorios.  
   
- **Archivo de documento de salida**  
- La ubicación de directorio y nombre del archivo de salida XML. Vea [comunes Macros para propiedades y comandos de generación](../ide/common-macros-for-build-commands-and-properties.md) para obtener información sobre cómo utilizar macros para especificar ubicaciones de directorio.  
+- **Archivo de documento de salida**
+
+   El nombre y la ubicación de directorio del archivo de salida .xml. Vea [Macros comunes para propiedades y comandos de compilación](../ide/common-macros-for-build-commands-and-properties.md) para obtener información sobre cómo usar las macros para especificar ubicaciones de directorio.  
   
- **Dependencias de biblioteca de documentos**  
- Si el proyecto tiene una dependencia de un proyecto .lib en la solución, puede procesar archivos .xdc del proyecto .lib en los archivos .xml para el proyecto actual.  
+- **Dependencias de la biblioteca de documentos**
+
+   Si el proyecto tiene una dependencia de un proyecto .lib en la solución, los archivos .xdc del proyecto .lib se pueden procesar en los archivos .xml para el proyecto actual.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   

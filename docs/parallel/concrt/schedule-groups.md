@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688796"
 ---
 # <a name="schedule-groups"></a>Grupos de programación
 Este documento describe el rol de los grupos de programación del Runtime de simultaneidad. A *grupo de programación* establece la afinidad o agrupa, tareas relacionadas. Cada programador tiene uno o más grupos de programación. Use los grupos de programación si necesita aplicar un grado elevado de localidad entre las tareas (por ejemplo, si resulta positivo para un grupo de tareas relacionadas ejecutarse en el mismo nodo del procesador). Por el contrario, utilice las instancias del programador cuando la aplicación tiene requisitos de calidad específicos, por ejemplo, si desea limitar la cantidad de recursos de procesamiento que se asignan a un conjunto de tareas. Para obtener más información acerca de las instancias del programador, consulte [instancias del programador](../../parallel/concrt/scheduler-instances.md).  

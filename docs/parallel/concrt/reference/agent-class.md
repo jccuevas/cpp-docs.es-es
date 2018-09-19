@@ -1,5 +1,5 @@
 ---
-title: Agent (clase) | Documentos de Microsoft
+title: Agent (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 33afc48ab06bc12937b36c4ee5ccb4ee0f170216
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047205"
 ---
 # <a name="agent-class"></a>agent (Clase)
 Una clase diseñada para usarse como una clase base para todos los agentes independientes. Se usa para ocultar el estado de otros agentes e interactuar con el paso de mensajes.  
@@ -56,10 +57,10 @@ class agent;
 |Name|Descripción|  
 |----------|-----------------|  
 |[Cancelar](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` indica a la `agent_canceled` estado.|  
-|[start](#start)|Mueve un agente de la `agent_created` estado para el `agent_runnable` de estado y el programa para su ejecución.|  
-|[status](#status)|Un origen sincrónico de la información de estado del agente.|  
-|[status_port](#status_port)|Un origen asincrónico de la información de estado del agente.|  
-|[espera](#wait)|Espera a que un agente completar su tarea.|  
+|[start](#start)|Mueve un agente de la `agent_created` estado el `agent_runnable` de estado y se programa para su ejecución.|  
+|[status](#status)|Un origen sincrónico de información de estado del agente.|  
+|[status_port](#status_port)|Un origen asincrónico de información de estado del agente.|  
+|[Espere](#wait)|Espera a que un agente completar su tarea.|  
 |[wait_for_all](#wait_for_all)|Espera a que todos los agentes especificados para completar sus tareas.|  
 |[wait_for_one](#wait_for_one)|Espera a que cualquiera de los agentes especificados para completar su tarea.|  
   
@@ -67,8 +68,8 @@ class agent;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Realiza](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|  
-|[run](#run)|Representa la tarea principal de un agente. `run` se debe invalidar en una clase derivada y especifica lo que debe hacer el agente después de que se ha iniciado.|  
+|[Listo](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|  
+|[run](#run)|Representa la tarea principal de un agente. `run` se debe invalidar en una clase derivada y especifica qué debe hacer el agente después de que se ha iniciado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [agentes asincrónicos](../../../parallel/concrt/asynchronous-agents.md).  
@@ -94,16 +95,16 @@ agent(ScheduleGroup& _PGroup);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_PScheduler`  
- La `Scheduler` objeto en que se programa la tarea de ejecución del agente.  
+*_PScheduler*<br/>
+La `Scheduler` objeto dentro de la que está programada la tarea de ejecución del agente.  
   
- `_PGroup`  
- La `ScheduleGroup` objeto en que se programa la tarea de ejecución del agente. El objeto `Scheduler` utilizado está implícito en el grupo de programación.  
+*_PGroup*<br/>
+La `ScheduleGroup` objeto dentro de la que está programada la tarea de ejecución del agente. El objeto `Scheduler` utilizado está implícito en el grupo de programación.  
   
 ### <a name="remarks"></a>Comentarios  
- El runtime usa el programador predeterminado si no se especifica la `_PScheduler` o `_PGroup` parámetros.  
+ El runtime usa el programador predeterminado si no especifica la `_PScheduler` o `_PGroup` parámetros.  
   
-##  <a name="dtor"></a> ~ agente 
+##  <a name="dtor"></a> ~ agent 
 
  Destruye al agente.  
   
@@ -112,7 +113,7 @@ virtual ~agent();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Es un error para destruir un agente que no está en un estado terminal (ya sea `agent_done` o `agent_canceled`). Esto se puede evitar esperando el agente alcanzar un estado terminal en el destructor de una clase que hereda de la `agent` clase.  
+ Es un error para destruir un agente que no está en un estado terminal (ya sea `agent_done` o `agent_canceled`). Esto puede evitarse mediante la espera del agente llegar a un estado terminal en el destructor de una clase que hereda de la `agent` clase.  
   
 ##  <a name="cancel"></a> Cancelar 
 
@@ -125,7 +126,7 @@ bool cancel();
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si se ha cancelado el agente, `false` en caso contrario. Un agente no se puede cancelar si ya ha empezado a ejecutarse o ya se ha completado.  
   
-##  <a name="done"></a> Realiza 
+##  <a name="done"></a> Listo 
 
  Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.  
   
@@ -134,25 +135,25 @@ bool done();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el agente se mueve a la `agent_done` estado, `false` en caso contrario. No se puede mover un agente que se ha cancelado para el `agent_done` estado.  
+ `true` Si el agente se mueve a la `agent_done` estado, `false` en caso contrario. No se puede mover un agente que se ha cancelado para la `agent_done` estado.  
   
 ### <a name="remarks"></a>Comentarios  
- Debe llamar a este método al final de la `run` método, cuando se sabe que la ejecución del agente ha completado.  
+ Este método debe llamarse al final de la `run` método, cuando se sabe que la ejecución del agente ha finalizado.  
   
-##  <a name="run"></a> Ejecutar 
+##  <a name="run"></a> ejecutar 
 
- Representa la tarea principal de un agente. `run` se debe invalidar en una clase derivada y especifica lo que debe hacer el agente después de que se ha iniciado.  
+ Representa la tarea principal de un agente. `run` se debe invalidar en una clase derivada y especifica qué debe hacer el agente después de que se ha iniciado.  
   
 ```
 virtual void run() = 0;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El estado del agente se cambia a `agent_started` correctamente antes de que se invoca este método. Debe invocar el método `done` en el agente con un estado adecuado antes de regresar y no se puede iniciar ninguna excepción.  
+ Se cambia el estado del agente a `agent_started` justo antes de que se invoca este método. Debe invocar el método `done` en el agente con un estado adecuado antes de devolver y es posible que no produce ninguna excepción.  
   
 ##  <a name="start"></a> Inicio 
 
- Mueve un agente de la `agent_created` estado para el `agent_runnable` de estado y el programa para su ejecución.  
+ Mueve un agente de la `agent_created` estado el `agent_runnable` de estado y se programa para su ejecución.  
   
 ```
 bool start();
@@ -163,18 +164,18 @@ bool start();
   
 ##  <a name="status"></a> Estado 
 
- Un origen sincrónico de la información de estado del agente.  
+ Un origen sincrónico de información de estado del agente.  
   
 ```
 agent_status status();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el estado actual del agente. Tenga en cuenta que este estado devuelto podría cambiar inmediatamente después de que se devuelven.  
+ Devuelve el estado actual del agente. Tenga en cuenta que este estado devuelto podría cambiar inmediatamente después de que se devuelve.  
   
 ##  <a name="status_port"></a> status_port 
 
- Un origen asincrónico de la información de estado del agente.  
+ Un origen asincrónico de información de estado del agente.  
   
 ```
 ISource<agent_status>* status_port();
@@ -183,7 +184,7 @@ ISource<agent_status>* status_port();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un origen de mensaje que puede enviar mensajes sobre el estado actual del agente.  
   
-##  <a name="wait"></a> espera 
+##  <a name="wait"></a> Espere 
 
  Espera a que un agente completar su tarea.  
   
@@ -194,19 +195,19 @@ static agent_status __cdecl wait(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_PAgent`  
- Un puntero al agente para esperar.  
+*_PAgent*<br/>
+Un puntero al agente para esperar.  
   
- `_Timeout`  
- El tiempo máximo para el que se espera, en milisegundos.  
+*_Tiempo de espera*<br/>
+El tiempo máximo de espera en milisegundos.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El `agent_status` del agente cuando finaliza la espera. Esto puede ser `agent_canceled` o `agent_done`.  
   
 ### <a name="remarks"></a>Comentarios  
- Se completa una tarea de agente cuando el agente entra en el `agent_canceled` o `agent_done` Estados.  
+ Se completa una tarea de agente cuando el agente escribe los `agent_canceled` o `agent_done` Estados.  
   
- Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente haya completado su tarea.  
+ Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente ha finalizado su tarea.  
   
 ##  <a name="wait_for_all"></a> wait_for_all 
 
@@ -221,22 +222,22 @@ static void __cdecl wait_for_all(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `count`  
- El número de punteros de agente presentes en la matriz `_PAgents`.  
+*count*<br/>
+El número de punteros de agente presentes en la matriz `_PAgents`.  
   
- `_PAgents`  
- Una matriz de punteros a los agentes para esperar.  
+*_PAgents*<br/>
+Una matriz de punteros a los agentes que esperar.  
   
- `_PStatus`  
- Un puntero a una matriz de Estados de agente. Cada valor de estado representará el estado del agente correspondiente cuando el método vuelve.  
+*_PStatus*<br/>
+Un puntero a una matriz de Estados del agente. Los valores de estado representará el estado del agente correspondiente cuando el método devuelve.  
   
- `_Timeout`  
- El tiempo máximo para el que se espera, en milisegundos.  
+*_Tiempo de espera*<br/>
+El tiempo máximo de espera en milisegundos.  
   
 ### <a name="remarks"></a>Comentarios  
- Se completa una tarea de agente cuando el agente entra en el `agent_canceled` o `agent_done` Estados.  
+ Se completa una tarea de agente cuando el agente escribe los `agent_canceled` o `agent_done` Estados.  
   
- Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente haya completado su tarea.  
+ Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente ha finalizado su tarea.  
   
 ##  <a name="wait_for_one"></a> wait_for_one 
 
@@ -252,25 +253,25 @@ static void __cdecl wait_for_one(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `count`  
- El número de punteros de agente presentes en la matriz `_PAgents`.  
+*count*<br/>
+El número de punteros de agente presentes en la matriz `_PAgents`.  
   
- `_PAgents`  
- Una matriz de punteros a los agentes para esperar.  
+*_PAgents*<br/>
+Una matriz de punteros a los agentes que esperar.  
   
- `_Status`  
- Una referencia a una variable donde se colocará el estado del agente.  
+*_Status*<br/>
+Una referencia a una variable donde se colocará el estado del agente.  
   
- `_Index`  
- Una referencia a una variable donde se colocará el índice de agente.  
+*_Index*<br/>
+Una referencia a una variable donde se colocará el índice del agente.  
   
- `_Timeout`  
- El tiempo máximo para el que se espera, en milisegundos.  
+*_Tiempo de espera*<br/>
+El tiempo máximo de espera en milisegundos.  
   
 ### <a name="remarks"></a>Comentarios  
- Se completa una tarea de agente cuando el agente entra en el `agent_canceled` o `agent_done` Estados.  
+ Se completa una tarea de agente cuando el agente escribe los `agent_canceled` o `agent_done` Estados.  
   
- Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente haya completado su tarea.  
+ Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente ha finalizado su tarea.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

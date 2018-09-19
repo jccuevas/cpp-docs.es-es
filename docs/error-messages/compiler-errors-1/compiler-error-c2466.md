@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2466 | Documentos de Microsoft
+title: Error del compilador C2466 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55e5c130b0a0454577a7155b704a18933b86198
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d43ee9d09fba77db022177a06c6ebe95c65ff79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037845"
 ---
 # <a name="compiler-error-c2466"></a>Error del compilador C2466
-no se puede asignar una matriz de tamaño constante 0  
-  
- Una matriz se asigna o se declara con tamaño cero. La expresión constante para el tamaño de la matriz debe ser un entero mayor que cero. Una declaración de matriz con un subíndice cero es válida sólo para una clase, estructura o miembro de unión y sólo con las extensiones de Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
- El ejemplo siguiente genera C2466:  
-  
-```  
-// C2466.cpp  
-// compile with: /c  
-int i[0];   // C2466  
-int j[1];   // OK  
-char *p;  
+
+no se puede asignar una matriz de tamaño constante 0
+
+Una matriz es asignada o puede declarar con tamaño cero. La expresión constante para el tamaño de la matriz debe ser un entero mayor que cero. Una declaración de matriz con un subíndice cero es válida sólo para una clase, estructura o miembro de unión y sólo con las extensiones de Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+El ejemplo siguiente genera C2466:
+
+```
+// C2466.cpp
+// compile with: /c
+int i[0];   // C2466
+int j[1];   // OK
+char *p;
 ```

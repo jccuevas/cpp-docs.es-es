@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e43c47d5f5c3da22a5a0e0df11022d3b667149bd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313902"
 ---
 # <a name="negate-struct"></a>negate (Struct)
 
@@ -43,14 +44,16 @@ struct negate<void>
   template <class Type>
   auto operator()(Type&& Left) const`
     -> decltype(-std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type` Cualquier tipo que admita un `operator-` que toma un operando del tipo especificado o deducido.
+*Type*<br/>
+Cualquier tipo que admite un `operator-` que toma un operando del tipo especificado o deducido.
 
-`Left` El operando que se va a negar. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `Type`.
+*Izquierda*<br/>
+Operando que se va a negar. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *tipo*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -92,10 +95,10 @@ int main( )
       cout << *Iter2 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( -10 -5 0 5 10 15 20 25 )
 The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

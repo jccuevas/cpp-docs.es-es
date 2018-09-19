@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4227 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4227 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f3c0cced0e27d3f981c30251d4b9e1d78169559
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fda3a31b228f16b27f4bdefd3131a0ddcb90f5b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060866"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>Advertencia del compilador (nivel 1) C4227
-ha utilizado un anacronismo: se omiten los calificadores de referencia  
-  
- Utilizar calificadores como `const` o `volatile` con referencias de C++ supone una práctica obsoleta.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// C4227.cpp  
-// compile with: /W1 /c  
-int j = 0;  
-int &const i = j;   // C4227  
+
+ha utilizado un anacronismo: se omiten los calificadores de referencia
+
+Utilizar calificadores como `const` o `volatile` con referencias de C++ es una práctica obsoleta.
+
+## <a name="example"></a>Ejemplo
+
+```
+// C4227.cpp
+// compile with: /W1 /c
+int j = 0;
+int &const i = j;   // C4227
 ```

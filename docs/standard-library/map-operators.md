@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 60813074eb112836295a72b1c11a24a8c9800313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92314d923c591cce886683fcf536a24b404ba133
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314879"
 ---
 # <a name="ltmapgt-operators"></a>Operadores de &lt;map&gt;
 
@@ -47,9 +48,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **mapa**.
+*left*<br/>
+Objeto de tipo `map`.
 
-`right` Un objeto de tipo **mapa**.
+*right*<br/>
+Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -91,10 +94,10 @@ int main( )
    else
       cout << "The maps m1 and m3 are equal." << endl;
 }
-\* Output:
+/* Output:
 The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_lt"></a> operator&lt;
@@ -109,9 +112,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **mapa**.
+*left*<br/>
+Objeto de tipo `map`.
 
-`right` Un objeto de tipo **mapa**.
+*right*<br/>
+Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -153,10 +158,10 @@ int main( )
    else
       cout << "The map m1 is not less than the map m3." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a> operator&lt;=
@@ -171,9 +176,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **mapa**.
+*left*<br/>
+Objeto de tipo `map`.
 
-`right` Un objeto de tipo **mapa**.
+*right*<br/>
+Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -217,11 +224,11 @@ int main( )
    else
       cout << "The map m1 is greater than the map m4." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is less than or equal to the map m2.
 The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a>  operator==
@@ -236,9 +243,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **mapa**.
+*left*<br/>
+Objeto de tipo `map`.
 
-`right` Un objeto de tipo **mapa**.
+*right*<br/>
+Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -280,10 +289,10 @@ int main( )
    else
       cout << "The maps m1 and m3 are not equal." << endl;
 }
-\* Output:
+/* Output:
 The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_gt"></a> operator&gt;
@@ -298,9 +307,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **mapa**.
+*left*<br/>
+Objeto de tipo `map`.
 
-`right` Un objeto de tipo **mapa**.
+*right*<br/>
+Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -342,10 +353,10 @@ int main( )
    else
       cout << "The map m1 is not greater than the map m3." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is not greater than the map m2.
 The map m1 is greater than the map m3.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a> operator&gt;=
@@ -360,9 +371,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **mapa**.
+*left*<br/>
+Objeto de tipo `map`.
 
-`right` Un objeto de tipo **mapa**.
+*right*<br/>
+Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -406,11 +419,11 @@ int main( )
    else
       cout << "The map m1 is less than the map m4." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is less than the map m2.
 Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
-*\
+*/
 ```
 
 ## <a name="op_neq_multimap"></a>  operator!= (multimap)
@@ -425,9 +438,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multimap`.
+*left*<br/>
+Objeto de tipo `multimap`.
 
-`right` Un objeto de tipo `multimap`.
+*right*<br/>
+Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -469,10 +484,10 @@ int main( )
    else
       cout << "The multimaps m1 and m3 are equal." << endl;
 }
-\* Output:
+/* Output:
 The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_lt_multimap"></a> operator&lt;
@@ -487,9 +502,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multimap`.
+*left*<br/>
+Objeto de tipo `multimap`.
 
-`right` Un objeto de tipo `multimap`.
+*right*<br/>
+Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -531,10 +548,10 @@ int main( )
    else
       cout << "The multimap m1 is not less than the multimap m3." << endl;
 }
-\* Output:
+/* Output:
 The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
-*\
+*/
 ```
 
 ## <a name="eq_multimap"></a> operator&lt;=
@@ -549,9 +566,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multimap`.
+*left*<br/>
+Objeto de tipo `multimap`.
 
-`right` Un objeto de tipo `multimap`.
+*right*<br/>
+Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -595,11 +614,11 @@ int main( )
    else
       cout << "m1 is greater than m4" << endl;
 }
-\* Output:
+/* Output:
 m1 is less than or equal to m2
 m1 is greater than m3
 m1 is less than or equal to m4
-*\
+*/
 ```
 
 ## <a name="op_eq_eq_multimap"></a>  operator==
@@ -614,9 +633,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multimap`.
+*left*<br/>
+Objeto de tipo `multimap`.
 
-`right` Un objeto de tipo `multimap`.
+*right*<br/>
+Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -658,10 +679,10 @@ int main( )
    else
       cout << "m1 and m3 are not equal" << endl;
 }
-\* Output:
+/* Output:
 m1 and m2 are not equal
 m1 and m3 are equal
-*\
+*/
 ```
 
 ## <a name="op_gt_multimap"></a> operator&gt;
@@ -676,9 +697,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multimap`.
+*left*<br/>
+Objeto de tipo `multimap`.
 
-`right` Un objeto de tipo `multimap`.
+*right*<br/>
+Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -720,10 +743,10 @@ int main( )
    else
       cout << "The multimap m1 is not greater than the multimap m3." << endl;
 }
-\* Output:
+/* Output:
 Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq_multimap"></a> operator&gt;=
@@ -738,9 +761,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multimap`.
+*left*<br/>
+Objeto de tipo `multimap`.
 
-`right` Un objeto de tipo `multimap`.
+*right*<br/>
+Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -784,11 +809,11 @@ int main( )
    else
       cout << "The multimap m1 is less than the multimap m4." << endl;
 }
-\* Output:
+/* Output:
 The multimap m1 is less than the multimap m2.
 The multimap m1 is greater than or equal to the multimap m3.
 The multimap m1 is greater than or equal to the multimap m4.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Vea también

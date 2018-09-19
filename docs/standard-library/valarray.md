@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954804"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -65,8 +66,8 @@ A estas funciones y clases de plantilla se les permite una latitud inusual con e
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|Comprueba si los elementos correspondientes de dos valarrays de igual tamaño no son iguales o si todos los elementos de una valarray no son iguales a un valor especificado del tipo de elemento de la valarray.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Obtiene el resto de dividir los elementos correspondientes de dos valarrays de igual tamaño o de dividir una valarray por un valor especificado del tipo de elemento de la valarray o de dividir un valor especificado por una valarray.|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|Obtiene el **AND** bit a bit entre los elementos correspondientes de dos valarray de igual tamaño o entre una valarray y un valor especificado del tipo de elemento.|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtiene el **AND** lógico entre los elementos correspondientes de dos valarray de igual tamaño o entre una valarray y un valor especificado del tipo de elemento de valarray.|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|Obtiene el `AND` bit a bit entre los elementos correspondientes de dos valarrays de igual tamaño o entre una valarray y un valor especificado del tipo de elemento.|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtiene el `AND` lógico entre los elementos correspondientes de dos valarrays de igual tamaño o entre una valarray y un valor especificado del tipo de elemento de valarray.|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|Comprueba si los elementos de una valarray son mayores que los elementos de una valarray de igual tamaño o si todos los elementos de una valarray son mayores o menores que un valor especificado del tipo de elemento de la valarray.|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Comprueba si los elementos de una valarray son mayores o iguales que los elementos de una valarray de igual tamaño o si todos los elementos de una valarray son mayores o iguales o menores que un valor especificado.|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Desplaza hacia la derecha los bits de cada elemento de una valarray un número especificado de posiciones o una cantidad de elementos especificada por una segunda valarray.|
@@ -92,13 +93,13 @@ A estas funciones y clases de plantilla se les permite una latitud inusual con e
 |[mask_array (Clase)](../standard-library/mask-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre matrices de subconjuntos.|
 |[slice (Clase)](../standard-library/slice-class.md)|Clase de utilidad para valarray que se usa para definir subconjuntos unidimensionales de tipo vector de una valarray.|
 |[slice_array (Clase)](../standard-library/slice-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos de segmentos proporcionando operaciones entre matrices de subconjuntos definidas por el segmento de una valarray.|
-|[valarray (Clase)](../standard-library/valarray-class.md)|La clase de plantilla describe un objeto que controla una secuencia de elementos de tipo **Type** que se almacenan como una matriz y que se diseñan para realizar operaciones matemáticas de alta velocidad, optimizadas para ofrecer un alto rendimiento a la hora de realizar cálculos.|
+|[valarray (Clase)](../standard-library/valarray-class.md)|La clase de plantilla describe un objeto que controla una secuencia de elementos de tipo `Type` que se almacenan como una matriz y diseñado para realizar operaciones matemáticas a alta velocidad, optimizadas para ofrecer un alto rendimiento.|
 
 ### <a name="specializations"></a>Especializaciones
 
 |||
 |-|-|
-|[valarray\<bool> (clase)](../standard-library/valarray-bool-class.md)|Una versión especializada de la clase de plantilla valarray\<**Type**> para elementos de tipo `bool`.|
+|[valarray\<bool> (clase)](../standard-library/valarray-bool-class.md)|Una versión especializada de la clase de plantilla valarray\<**tipo**> a elementos de tipo **bool**.|
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK4044 advertencia | Documentos de Microsoft
+title: Las herramientas del vinculador LNK4044 advertencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b921f07638751b9e0702517b125b0f9de828f81b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3341c5b883e3476467cf4e214f632f84d805e70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098906"
 ---
 # <a name="linker-tools-warning-lnk4044"></a>Advertencia de las herramientas del vinculador LNK4044
-opción desconocida 'opción'; pasa por alto  
-  
- La opción dada no es una opción válida para esta herramienta. La herramienta omite la opción.  
-  
- Para ver una lista de opciones válidas, ejecute la herramienta sin argumentos ni opciones.
+
+opción desconocida 'option'; pasa por alto
+
+La opción dada no es una opción válida para esta herramienta. La herramienta omite la opción.
+
+Para ver una lista de las opciones válidas, ejecute la herramienta sin argumentos ni opciones.

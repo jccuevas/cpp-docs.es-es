@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278a9e33fb305b73c2919c455f55b816de644e4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb2a78219cd5474f879407e75c5a89f14f87b647
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315969"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-Describe un objeto que almacena un par ordenado de objetos de tipo **float***,* el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.
+Describe un objeto que almacena un par ordenado de objetos de tipo **float**, el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parámetros
 
-`_RealVal` El valor de tipo **float** de la parte real del número complejo que se está construyendo.
+*_RealVal*<br/>
+Valor de tipo **float** de la parte real del número complejo que se está construyendo.
 
-`_ImagVal` El valor de tipo **float** de la parte imaginaria del número complejo que se está construyendo.
+*_ImagVal*<br/>
+Valor de tipo **float** de la parte imaginaria del número complejo que se está construyendo.
 
-`complexNum` Número complejo de tipo **doble** o de tipo `long double` cuyas partes reales e imaginarias se utilizan para inicializar un número complejo de tipo **float** que se está construyendo.
+*complexNum*<br/>
+El número complejo de tipo **doble** o de tipo **long double** cuyas partes reales e imaginarias se usan para inicializar un número complejo de tipo **float** que se está construyendo.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -62,7 +66,7 @@ Número complejo de tipo **float**.
 
 ## <a name="remarks"></a>Comentarios
 
-La especialización explícita de la clase de plantilla compleja en una clase compleja de tipo **float** solo se distingue de la clase de plantilla en los constructores que define. Se permite que la conversión de **float** a **double** sea implícita, pero la conversión menos segura de **float** a `long double` debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
+La especialización explícita de la clase de plantilla compleja en una clase compleja de tipo **float** solo se distingue de la clase de plantilla en los constructores que define. La conversión de **float** a **doble** puede ser implícita, pero la conversión menos segura de **float** a **long double** es debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
 
 Para obtener más información sobre la clase de plantilla `complex`, vea [complex (Clase)](../standard-library/complex-class.md). Para obtener una lista de los miembros de la clase de plantilla `complex`, vea .
 
@@ -108,7 +112,7 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
  as type float gives c1 = (4,5)
 Implicit conversion from type double to type float,
@@ -118,7 +122,7 @@ Explicit conversion from type long double to type float,
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 5
 Argument of c3 is recovered from c3 using:
  arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716812"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 
@@ -33,11 +34,13 @@ En este tema, se documentan las enumeraciones del encabezado del sistema de arch
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<experimental/filesystem > **Namespace:** std::experimental::filesystem
+**Encabezado:** \<experimental/filesystem>
+
+**Espacio de nombres:** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 
-Una enumeración de valores de máscara de bits que se usa con las funciones [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) y [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) para especificar el comportamiento.
+Una enumeración de valores de máscara de bits que se usa con las funciones [copy](filesystem-functions.md#copy) y [copy_file](filesystem-functions.md#copy_file) para especificar el comportamiento.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -94,7 +97,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-Enumeración de tipos de archivo. Los valores admitidos son normales, el directorio, not_found y desconocido.
+Enumeración de tipos de archivo. Los valores admitidos son normal, directorio, not_found y desconocido.
 
 ### <a name="syntax"></a>Sintaxis
 

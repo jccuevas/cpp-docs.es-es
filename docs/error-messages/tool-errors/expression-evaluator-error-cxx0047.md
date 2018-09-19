@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0047 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0047 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31597324c81675c268787915c4cb5ad2cfcb7db2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42e40abb4b14bc821c043b79cf7ff7786c0dcc14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040874"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>Error del evaluador de expresiones CXX0047
-lista de argumentos no coincide con una función  
-  
- Una expresión que se llamó a una función con una lista de parámetros reales que no coincidía con la lista de parámetros formales de una función con el mismo nombre definido en el programa.  
-  
- Puede llamar a funciones sobrecargadas sólo si se produce una coincidencia de parámetros exacta o una coincidencia que no requiere la construcción de un objeto.  
-  
- Este error es idéntico a CAN0047.
+
+lista de argumentos no coincide con una función
+
+Una expresión que se llamó a una función con una lista de parámetros reales que no coincidía con la lista de parámetros formales de ninguna función con el mismo nombre definido en el programa.
+
+Las funciones sobrecargadas se pueden llamar solo si hay una coincidencia exacta del parámetro o una coincidencia que no requiere la construcción de un objeto.
+
+Este error es idéntico a CAN0047.

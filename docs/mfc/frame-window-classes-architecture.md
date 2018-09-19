@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344183"
 ---
 # <a name="frame-window-classes-architecture"></a>Clases de ventana de marco (Arquitectura)
 En la arquitectura documento/vista, ventanas de marco son ventanas que contienen una ventana de vista. También admiten tener control barras asociadas a ellos.  

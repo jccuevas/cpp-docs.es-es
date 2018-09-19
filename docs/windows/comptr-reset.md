@@ -1,5 +1,5 @@
 ---
-title: ComPtr::Reset | Documentos de Microsoft
+title: ComPtr::Reset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd2ce820367b15cb5dad8baf691a835499457a55
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 86e7716ff4e9a0b4f5132abfd431a2649f22f80f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593098"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
-Libera todas las referencias del puntero a la interfaz asociada a este ComPtr.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-unsigned long Reset();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- El número de referencias liberado, si existe.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtr (clase)](../windows/comptr-class.md)
+
+Libera todas las referencias del puntero a la interfaz que está asociado a este **ComPtr**.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+unsigned long Reset();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+El número de referencias liberado, si existe.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ComPtr (clase)](../windows/comptr-class.md)

@@ -1,7 +1,7 @@
 ---
-title: NOMBRE (MASM) | Documentos de Microsoft
+title: NOMBRE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35c906f7947da9fb1f690ab043b5c6745db93bf
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: fba062aa13b7116f6dcf3c0256f86fab30d6e7be
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687406"
 ---
 # <a name="name-masm"></a>NAME (MASM)
-ignorado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-NAME  
-  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+ignorado.
+
+## <a name="syntax"></a>Sintaxis
+
+> NAME
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

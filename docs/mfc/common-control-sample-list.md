@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341044"
 ---
 # <a name="common-control-sample-list"></a>Lista de ejemplos de controles comunes
 Vea los siguientes programas de ejemplo que ilustran controles comunes:  

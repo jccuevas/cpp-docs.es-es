@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3084 | Documentos de Microsoft
+title: Error del compilador C3084 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959d2eb46d7a2c85cc25adf681c760fa1f8dc4fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44bab3f43efa186c83134a6b40e7cb3fcbcbd51d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027237"
 ---
 # <a name="compiler-error-c3084"></a>Error del compilador C3084
-'function': un finalizador o destructor no puede ser 'keyword'  
-  
- Se declaró un destructor o finalizador de forma incorrecta.  
-  
- Por ejemplo, un destructor no debería marcarse como sealed.  El destructor no será accesible para los tipos derivados.  Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md) y [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C3084.  
-  
-```  
-// C3084.cpp  
-// compile with: /clr /c  
-ref struct R {  
-protected:  
-   !R() sealed;   // C3084  
-   !R() abstract;   // C3084  
-   !R();  
-};  
+
+'function': un finalizador o destructor no puede ser 'keyword'
+
+Se declaró un destructor o finalizador de forma incorrecta.
+
+Por ejemplo, un destructor no debería marcarse como sealed.  El destructor no será accesible para los tipos derivados.  Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md) y [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C3084.
+
+```
+// C3084.cpp
+// compile with: /clr /c
+ref struct R {
+protected:
+   !R() sealed;   // C3084
+   !R() abstract;   // C3084
+   !R();
+};
 ```

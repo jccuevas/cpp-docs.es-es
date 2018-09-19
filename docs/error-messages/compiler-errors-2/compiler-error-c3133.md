@@ -1,5 +1,5 @@
 ---
-title: C3133 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3133 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f9b9763dda5bdfd4e3af68a282579cdb42c3e2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 269cc2c22d260b058f16263e4ee73e4a480920eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023402"
 ---
-# <a name="compiler-error-c3133"></a>C3133 de Error del compilador
-No se pueden aplicar atributos a varargs de C++  
-  
- Se aplicó incorrectamente un atributo. Atributos no pueden aplicarse a un botón de puntos suspensivos que representa los argumentos de variable.  
-  
- Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3133.  
-  
-```  
-// C3133.cpp  
-// compile with: /clr /c  
-ref struct MyAttr: System::Attribute {};   
-void Func([MyAttr]...);   // C3133  
-void Func2([MyAttr] int i);   // OK  
+# <a name="compiler-error-c3133"></a>Error del compilador C3133
+
+No se puede aplicar atributos a varargs de C++
+
+Se aplicó incorrectamente un atributo. No se pueden aplicar atributos a un botón de puntos suspensivos que representa los argumentos de variable.
+
+Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3133.
+
+```
+// C3133.cpp
+// compile with: /clr /c
+ref struct MyAttr: System::Attribute {};
+void Func([MyAttr]...);   // C3133
+void Func2([MyAttr] int i);   // OK
 ```

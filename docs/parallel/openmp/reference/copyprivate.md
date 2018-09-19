@@ -1,5 +1,5 @@
 ---
-title: copyprivate | Documentos de Microsoft
+title: copyprivate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071138"
 ---
 # <a name="copyprivate"></a>copyprivate
 Especifica que una o más variables deben compartirse entre todos los subprocesos.  
@@ -31,11 +32,10 @@ Especifica que una o más variables deben compartirse entre todos los subproceso
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+### <a name="parameters"></a>Parámetros
   
- `var`  
- Una o más variables para compartir. Si se especifica más de una variable, separe los nombres de variable con una coma.  
+*var*<br/>
+Una o más variables para compartir. Si se especifica más de una variable, separe los nombres de variable con una coma.  
   
 ## <a name="remarks"></a>Comentarios  
  `copyprivate` se aplica a la [único](../../../parallel/openmp/reference/single.md) directiva.  

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3253 | Documentos de Microsoft
+title: Error del compilador C3253 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e1452c3893d30fa3beea0e436da61355b902a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f47ff3ab9094e7926453ec4eb5964485cf16f945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065613"
 ---
 # <a name="compiler-error-c3253"></a>Error del compilador C3253
-'función': error con reemplazo explícito  
-  
- Se ha especificado incorrectamente un reemplazo explícito. Por ejemplo, no puede especificar una implementación para un reemplazo que también se especifica como puro. Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- El ejemplo siguiente genera C3253:  
-  
-```  
-// C3253.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void a();  
-   void b();  
-   void c();  
-};  
-  
-public ref struct R : I {  
-   virtual void a() = 0, I::a {}   // C3253  
-   virtual void b() = I::a {}   // OK  
-   virtual void c() = 0;   // OK  
-};  
+
+'function': error con invalidación explícita
+
+Invalidación explícita se especificó incorrectamente. Por ejemplo, no se puede especificar una implementación para un reemplazo que también se especifica como puro. Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+El ejemplo siguiente genera C3253:
+
+```
+// C3253.cpp
+// compile with: /clr
+public interface struct I {
+   void a();
+   void b();
+   void c();
+};
+
+public ref struct R : I {
+   virtual void a() = 0, I::a {}   // C3253
+   virtual void b() = I::a {}   // OK
+   virtual void c() = 0;   // OK
+};
 ```

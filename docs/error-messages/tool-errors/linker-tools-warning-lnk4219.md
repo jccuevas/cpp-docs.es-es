@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK4219 advertencia | Documentos de Microsoft
+title: Las herramientas del vinculador LNK4219 advertencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59cb7376957b7985b7ae2335ea472171d490ff42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf097cd8715a7c523e6e8a2ea46714481ca7d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105217"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Advertencia de las herramientas del vinculador LNK4219
-desbordamiento de la corrección de nombre de la corrección. 'Nombre de símbolo de destino' de destino está fuera del intervalo, se insertará código thunk  
-  
- El vinculador inserta un código thunk en una situación donde la dirección o desplazamiento no pudo caber en la instrucción dada porque el símbolo de destino se encuentra demasiado lejos de la ubicación de la instrucción.  
-  
- Puede que desee reordenar la imagen (usando la [/orden](../../build/reference/order-put-functions-in-order.md) opción, por ejemplo) para evitar el nivel adicional de direccionamiento indirecto.
+
+desbordamiento de corrección de nombre de la corrección. 'Nombre de símbolo de destino' de destino está fuera del intervalo, se insertará código thunk
+
+El vinculador inserta un código thunk en una situación donde la dirección o desplazamiento no pudo ajustar en la instrucción dada porque el símbolo de destino se encuentra demasiado lejos de la ubicación de la instrucción.
+
+Que es posible que desee reordenar la imagen (mediante el [/Order](../../build/reference/order-put-functions-in-order.md) opción, por ejemplo) para evitar el nivel adicional de direccionamiento indirecto.

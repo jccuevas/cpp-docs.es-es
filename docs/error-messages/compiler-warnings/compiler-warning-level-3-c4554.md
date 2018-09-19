@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4554 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4554 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad427c9d8a9091a1eea37b10e1e49ed2d8613c18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6349cada597b2089f03169071345a68179b24e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114441"
 ---
 # <a name="compiler-warning-level-3-c4554"></a>Advertencia del compilador (nivel 3) C4554
-'operador': Compruebe la prioridad de operador para posibles errores; Utilice paréntesis para aclarar la prioridad  
-  
- El ejemplo siguiente genera C4554:  
-  
-```  
-// C4554.cpp  
-// compile with: /W3 /WX  
-int main() {  
-   int a = 0, b = 0, c = 0;  
-   a = a << b + c;   // C4554  
-   // probably intended (a << b) + c,  
-   // but will get a << (b + c)  
-}  
+
+'operador': Compruebe la prioridad de operador para posibles errores; Utilice paréntesis para indicar la prioridad
+
+El ejemplo siguiente genera C4554:
+
+```
+// C4554.cpp
+// compile with: /W3 /WX
+int main() {
+   int a = 0, b = 0, c = 0;
+   a = a << b + c;   // C4554
+   // probably intended (a << b) + c,
+   // but will get a << (b + c)
+}
 ```

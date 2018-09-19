@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3753 | Documentos de Microsoft
+title: Error del compilador C3753 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0d9cb2db2729e5ccb1787e2505fdf0aed1f7a12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90462bf9487a60ddcd1add092492e390f7ea71a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086692"
 ---
 # <a name="compiler-error-c3753"></a>Error del compilador C3753
-no se permite una propiedad genérica  
-  
- Listas de parámetros genéricos solamente pueden aparecer en clases administradas, structs o funciones.  
-  
- Para obtener más información, consulte [genéricos](../../windows/generics-cpp-component-extensions.md) y [propiedad](../../windows/property-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3753.  
-  
-```  
-// C3753.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   generic <typename T>  
-   property int i;   // C3753 error  
-};  
+
+no se permiten propiedades genéricas
+
+Listas de parámetros genéricos solamente pueden aparecer en clases administradas, structs o funciones.
+
+Para obtener más información, consulte [genéricos](../../windows/generics-cpp-component-extensions.md) y [propiedad](../../windows/property-cpp-component-extensions.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3753.
+
+```
+// C3753.cpp
+// compile with: /clr /c
+ref struct A {
+   generic <typename T>
+   property int i;   // C3753 error
+};
 ```

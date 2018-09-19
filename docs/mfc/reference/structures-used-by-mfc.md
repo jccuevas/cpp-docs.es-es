@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371350"
 ---
 # <a name="structures-used-by-mfc"></a>Estructuras utilizadas por MFC
 En la tabla siguiente se enumera las estructuras que se llaman desde diversas funciones de miembro. Para obtener más información sobre el uso de la estructura individual, consulte las clases y funciones de miembro indicadas en la lista Vea también para cada estructura.  

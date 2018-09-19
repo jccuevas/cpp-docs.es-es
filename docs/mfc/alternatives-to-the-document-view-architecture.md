@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b99d8fb82b014fc2221f1ec1c0e6ad08ee75b4c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930292"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas a la arquitectura documento/vista
 Aplicaciones MFC suelen usar la arquitectura documento/vista para administrar la información, formatos de archivo y la representación visual de los datos a los usuarios. Para la mayoría de las aplicaciones de escritorio, la arquitectura documento/vista es una arquitectura de aplicaciones adecuada y eficaz. Esta arquitectura separa los datos de la vista y, en la mayoría de los casos, simplifica la aplicación y reduce el código redundante.  
@@ -40,11 +41,11 @@ Aplicaciones MFC suelen usar la arquitectura documento/vista para administrar la
   
  Los asistentes de Visual C++, así como los editores de código fuente y cuadro de diálogo, trabajar con la aplicación generada igual que lo harían con cualquier otra aplicación generados por el asistente. La aplicación puede admitir barras de herramientas, barras de desplazamiento y una barra de estado y tiene un **sobre** cuadro. La aplicación no registrará las plantillas de documento y no contendrá una clase de documento.  
   
- Tenga en cuenta que la aplicación generada tiene una clase de vista, **CChildView**, derivado del `CWnd`. MFC crea y coloca una instancia de la clase de vista dentro de las ventanas de marco creadas por la aplicación. MFC sigue exigiendo el uso de una ventana de vista, porque simplifica la colocación y administrar el contenido de la aplicación. También puede agregar código de dibujo a la `OnPaint` miembro de esta clase. El código debería agregar barras de desplazamiento a la vista en lugar de al marco.  
+ Tenga en cuenta que la aplicación generada tiene una clase de vista, `CChildView`, derivado del `CWnd`. MFC crea y coloca una instancia de la clase de vista dentro de las ventanas de marco creadas por la aplicación. MFC sigue exigiendo el uso de una ventana de vista, porque simplifica la colocación y administrar el contenido de la aplicación. También puede agregar código de dibujo a la `OnPaint` miembro de esta clase. El código debería agregar barras de desplazamiento a la vista en lugar de al marco.  
   
  Dado que la arquitectura documento/vista proporcionada por MFC es responsable de implementar muchas de las características básicas de una aplicación, su ausencia en el proyecto significa que usted es responsable de implementar muchas características importantes de la aplicación:  
   
--   Proporcionados por el Asistente para aplicaciones MFC, el menú de la aplicación contiene solo `New` y `Exit` comandos en el **archivo** menú. (El `New` comando solo se admite para las aplicaciones MDI, no en aplicaciones SDI sin documento/vista admiten.) El recurso de menú generado no admitirá una lista de elementos utilizados Recientemente (usado más recientemente).  
+-   Proporcionados por el Asistente para aplicaciones MFC, el menú de la aplicación contiene solo **New** y **Exit** comandos en el **archivo** menú. (El **New** comando solo se admite para las aplicaciones MDI, no en aplicaciones SDI sin documento/vista admiten.) El recurso de menú generado no admitirá una lista de elementos utilizados Recientemente (usado más recientemente).  
   
 -   Debe agregar funciones controladoras e implementaciones para los comandos que admita la aplicación, incluidos los **abiertos** y **guardar** en el **archivo** menú. MFC proporciona normalmente código para admitir estas características, pero esa compatibilidad está estrechamente relacionada a la arquitectura documento/vista.  
   
@@ -52,9 +53,9 @@ Aplicaciones MFC suelen usar la arquitectura documento/vista para administrar la
   
  Se recomienda encarecidamente utilizar al Asistente para aplicaciones MFC para crear aplicaciones sin la arquitectura documento/vista, ya que el asistente garantiza una arquitectura MFC correcta. Sin embargo, si se debe evitar mediante el asistente, aquí tiene varios enfoques para omitir la arquitectura documento/vista en el código:  
   
--   Tratar el documento como un apéndice no utilizado e implemente el código de administración de datos en la clase de vista, como se indica anteriormente. Sobrecarga para el documento es relativamente baja. Una sola [CDocument](../mfc/reference/cdocument-class.md) objeto incurre en una pequeña cantidad de sobrecarga por sí solo, además de la mínima sobrecarga de **CDocument**de clases base, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) y [ CObject](../mfc/reference/cobject-class.md). Tanto las últimas clases son pequeñas.  
+-   Tratar el documento como un apéndice no utilizado e implemente el código de administración de datos en la clase de vista, como se indica anteriormente. Sobrecarga para el documento es relativamente baja. Una sola [CDocument](../mfc/reference/cdocument-class.md) objeto incurre en una pequeña cantidad de sobrecarga por sí solo, además de la mínima sobrecarga de `CDocument`de clases base, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) y [CObject](../mfc/reference/cobject-class.md). Tanto las últimas clases son pequeñas.  
   
-     Declarado en **CDocument**:  
+     Declarado en `CDocument`:  
   
     -   Dos `CString` objetos.  
   

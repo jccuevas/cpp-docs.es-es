@@ -13,11 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: c3e5c1e82e98379ff2cefae48f8af89f8fc0b698
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9990ecb01ea6de68713cedc49fbddadeb9ad7c30
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726354"
 ---
 # <a name="lttuplegt-operators"></a>Operadores de &lt;tuple&gt;
 
@@ -39,7 +40,8 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del elemento n-tuple.
+*TN*<br/>
+Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -103,7 +105,8 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del elemento n-tuple.
+*TN*<br/>
+Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -167,7 +170,8 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del elemento n-tuple.
+*TN*<br/>
+Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -231,7 +235,8 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del elemento n-tuple.
+*TN*<br/>
+Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -295,7 +300,8 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del elemento n-tuple.
+*TN*<br/>
+Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -359,7 +365,8 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del elemento n-tuple.
+*TN*<br/>
+Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
 

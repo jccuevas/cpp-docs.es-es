@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110417"
 ---
 # <a name="stack-class"></a>stack (Clase)
 
@@ -49,17 +50,19 @@ class stack
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* tipo de los datos del elemento que se almacenará en la pila.
+*Type*<br/>
+Tipo de datos de los elementos que se van a almacenar en la pila.
 
-`Container` El tipo de contenedor subyacente usado para implementar la pila. El valor predeterminado es la clase `deque`*\<Type>*.
+*Contenedor*<br/>
+Tipo del contenedor subyacente que se usa para implementar la pila. El valor predeterminado es la clase `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Comentarios
 
-Los elementos de la clase **Type** estipulada en el primer parámetro de plantilla de un objeto de pila son sinónimos de [value_type](#value_type) y deben coincidir con el tipo de elemento de la clase contenedora subyacente **Container** estipulada por el segundo parámetro de plantilla. El **Type** debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
+Los elementos de la clase `Type` estipulada en la primera plantilla de parámetro de un objeto de pila son sinónimos de [value_type](#value_type) y debe coincidir con el tipo de elemento de la clase de contenedor subyacente `Container` estipulado por la segundo parámetro de plantilla. El `Type` debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
 
-Entre las clases contenedoras subyacentes adecuadas para la pila se incluyen [deque](../standard-library/deque-class.md), [list](../standard-library/list-class.md) y [vector](../standard-library/vector-class.md), o cualquier otro contenedor de secuencias que admita las operaciones **back**, `push_back` y `pop_back`. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
+Incluyen adecuada las clases contenedoras subyacentes de la pila [deque](../standard-library/deque-class.md), [list (clase)](../standard-library/list-class.md), y [vector (clase)](../standard-library/vector-class.md), o cualquier otro contenedor de secuencias que admita las operaciones `back`, `push_back`, y `pop_back`. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
 
-Los objetos de la pila solo se pueden someter a una comparación de igualdad si los elementos de la clase **Type** se pueden someter a una comparación de igualdad. Asimismo, solo se pueden someter a una comparación de tipo menor que si los elementos de la clase **Type** se pueden someter a una comparación de tipo menor que.
+La pila de objetos son comparables de igualdad si y solo si los elementos de la clase `Type` son comparables igualdad y menor-que comparable si y solo si los elementos de la clase `Type` son menores-que comparable.
 
 - La clase de pila es compatible con una estructura de datos LIFO (el último en entrar es el primero en salir). Un buen símil sería una pila de platos. Solo se pueden insertar e inspeccionar elementos (platos) en la parte superior de la pila, que es el último elemento al final del contenedor base, y solo se pueden quitar de ahí. La restricción de acceder únicamente al elemento superior es el motivo por el que se usa la clase stack.
 
@@ -226,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El elemento agregado a la parte superior de la pila.
+*Val*<br/>
+El elemento agregado a la parte superior de la pila.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -333,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El contenedor de los cuales es la pila construida a ser una copia.
+*right*<br/>
+El contenedor del que la pila construida va a ser una copia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -392,7 +397,7 @@ Una referencia al último elemento del contenedor en la parte superior de la pil
 
 La pila no debe estar vacía para aplicar la función miembro. La parte superior de la pila es la posición ocupada por el elemento agregado más recientemente y es el último elemento al final del contenedor.
 
-Si el valor devuelto de **top** se asigna a una `const_reference`, el objeto de pila no se puede modificar. Si el valor devuelto de **top** se asigna a una **referencia**, el objeto de pila se puede modificar.
+Si el valor devuelto de `top` se asigna a un `const_reference`, no se puede modificar el objeto de pila. Si el valor devuelto de `top` se asigna a un `reference`, se puede modificar el objeto de pila.
 
 ### <a name="example"></a>Ejemplo
 

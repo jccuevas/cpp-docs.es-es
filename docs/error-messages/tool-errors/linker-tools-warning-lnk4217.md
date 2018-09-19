@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK4217 advertencia | Documentos de Microsoft
+title: Las herramientas del vinculador LNK4217 advertencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625f3a1b8a67f198b1cb4ca37bd1350229ec20db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c650eddd8078419f63df48cc91705d2e86eb5c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067987"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Advertencia de las herramientas del vinculador LNK4217
-el símbolo 'symbol' importado en la función 'function' definido localmente  
-  
- [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) se especificó un símbolo, aunque el símbolo está definido localmente. Quitar el `__declspec` modificador para resolver esta advertencia.  
-  
- `symbol` es el nombre del símbolo que se define dentro de la imagen. `function` es la función que importa el símbolo.  
-  
- Esta advertencia no aparecerá cuando se compila con la opción [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- LNK4217 también puede producirse si intenta vincular dos módulos juntos, cuando en su lugar, compile el segundo módulo con la biblioteca de importación del primer módulo.  
-  
-```  
-// LNK4217.cpp  
-// compile with: /LD  
-#include "windows.h"  
-__declspec(dllexport) void func(unsigned short*) {}  
-```  
-  
- Y luego,  
-  
-```  
-// LNK4217b.cpp  
-// compile with: /c  
-#include "windows.h"  
-__declspec(dllexport) void func(unsigned short*) {}  
-```  
-  
- Al intentar vincular estos dos módulos suponga LNK4217, compile el segundo ejemplo con la biblioteca de importación del primer ejemplo para resolver.
+
+el símbolo 'symbol' importado en la función 'función' definido localmente
+
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) se especificó para un símbolo, aunque el símbolo está definido localmente. Quitar el `__declspec` modificador para resolver esta advertencia.
+
+`symbol` es el nombre del símbolo que se define dentro de la imagen. `function` es la función que se importa el símbolo.
+
+Esta advertencia no aparecerá cuando se compila con la opción [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+
+LNK4217 también puede producirse si intenta vincular dos módulos juntos, cuando en su lugar, debe compilar el segundo módulo con la biblioteca de importación del primer módulo.
+
+```
+// LNK4217.cpp
+// compile with: /LD
+#include "windows.h"
+__declspec(dllexport) void func(unsigned short*) {}
+```
+
+Y luego,
+
+```
+// LNK4217b.cpp
+// compile with: /c
+#include "windows.h"
+__declspec(dllexport) void func(unsigned short*) {}
+```
+
+Al intentar vincular estos dos módulos suponga LNK4217, compile el segundo ejemplo con la biblioteca de importación de la primera muestra a resolver.

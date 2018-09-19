@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 4) C4127 | Documentos de Microsoft
+title: Del compilador (nivel 4) de la advertencia C4127 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,31 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98b2eb42cfc66c27faf74c3d6e46e981851a0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094902"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Advertencia del compilador (nivel 4) C4127
-la expresión condicional es constante  
-  
- La expresión de control de una instrucción `if` o un bucle `while` se evalúa como una constante. Debido a su uso idiomática comunes, constantes triviales, como 1 o `true` desencadenar la advertencia, a menos que sean resultado de una operación en una expresión. Si la expresión de control de un `while` bucle es una constante porque se sale del bucle en el centro, considere la posibilidad de reemplazar el `while` en bucle con un `for` bucle. Se puede omitir la inicialización, la prueba de terminación y el incremento de un `for` bucle, lo cual hace que el bucle infinito, al igual que `while(1)`, y puede salir del bucle desde el cuerpo de la `for` instrucción.  
-  
- El ejemplo siguiente muestra dos maneras C4127 se genera y muestra cómo utilizar un bucle for para evitar la advertencia:  
-  
-```  
-// C4127.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-int main() {  
-   if (1 == 1) {}   // C4127  
-   while (42) { break; }   // C4127  
-  
-   // OK  
-   for ( ; ; ) {  
-      printf("test\n");  
-      break;  
-   }  
-}  
+
+> la expresión condicional es constante
+
+## <a name="remarks"></a>Comentarios
+
+La expresión de control de una instrucción `if` o un bucle `while` se evalúa como una constante. Debido a su uso idiomático comunes, a partir de Visual Studio 2015 update 3, constantes trivial como 1 o `true` no desencadenan la advertencia, a menos que sean el resultado de una operación en una expresión.
+
+Si la expresión de control de un `while` bucle es una constante porque se sale del bucle en el centro, considere reemplazar el `while` bucle con un `for` bucle. Se puede omitir la inicialización, la prueba de terminación y el incremento de un `for` bucle, lo que hace que el bucle infinito, al igual que `while(1)`, y puede salir del bucle desde el cuerpo de la `for` instrucción.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente muestra dos maneras C4127 se genera y se muestra cómo usar un bucle evitar la advertencia:
+
+```cpp
+// C4127.cpp
+// compile with: /W4
+#include <stdio.h>
+int main() {
+   if (true) {}           // OK in VS2015 update 3 and later
+   if (1 == 1) {}         // C4127
+   while (42) { break; }  // C4127
+
+   // OK
+   for ( ; ; ) {
+      printf("test\n");
+      break;
+   }
+}
 ```

@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: c72058f78a779c6fbac91cac07e9ffef1244a046
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af86ef68d734d72169a8bc8b506206cc72d3af4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709545"
 ---
 # <a name="ltunorderedsetgt-operators"></a>Operadores de &lt;unordered_set&gt;
 
@@ -31,13 +32,15 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `unordered_set`.
+*left*<br/>
+Objeto de tipo `unordered_set`.
 
-`right` Un objeto de tipo `unordered_set`.
+*right*<br/>
+Objeto de tipo `unordered_set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los unordered_set no son iguales, `false` si son iguales.
+**True** si los unordered_set no son iguales; **false** si son iguales.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -98,13 +101,15 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `unordered_set`.
+*left*<br/>
+Objeto de tipo `unordered_set`.
 
-`right` Un objeto de tipo `unordered_set`.
+*right*<br/>
+Objeto de tipo `unordered_set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los unordered_set son iguales, `false` si no son iguales.
+**True** si los unordered_set son iguales; **false** si no son iguales.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -165,13 +170,15 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `unordered_multiset`.
+*left*<br/>
+Objeto de tipo `unordered_multiset`.
 
-`right` Un objeto de tipo `unordered_multiset`.
+*right*<br/>
+Objeto de tipo `unordered_multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los unordered_multiset no son iguales, `false` si son iguales.
+**True** si los unordered_multiset no son iguales; **false** si son iguales.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -235,13 +242,15 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `unordered_multiset`.
+*left*<br/>
+Objeto de tipo `unordered_multiset`.
 
-`right` Un objeto de tipo `unordered_multiset`.
+*right*<br/>
+Objeto de tipo `unordered_multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los unordered_multiset son iguales, `false` si no son iguales.
+**True** si los unordered_multiset son iguales; **false** si no son iguales.
 
 ### <a name="remarks"></a>Comentarios
 

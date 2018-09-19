@@ -1,5 +1,5 @@
 ---
-title: Genericreleasenotifier (Constructor) | Documentos de Microsoft
+title: Genericreleasenotifier (Constructor) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612317"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier (Constructor)
-Inicializa una nueva instancia de la clase genericreleasenotifier.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      GenericReleaseNotifier(  
-   T callback,   
-   bool release  
-) throw() : ReleaseNotifier(release), callback_(callback);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `callback`  
- Una expresión lambda, functor o controlador de eventos de puntero a función que se puede invocar con el operador de la función de paréntesis (`()`).  
-  
- `release`  
- Especifique `true` para habilitar la llamada subyacente [módulo:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; en caso contrario, especifique `false`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Module::GenericReleaseNotifier (clase)](../windows/module-genericreleasenotifier-class.md)
+
+Inicializa una nueva instancia de la **genericreleasenotifier** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*devolución de llamada*  
+Una expresión lambda, functor o controlador de eventos de puntero a función que se puede invocar con el operador de paréntesis de función (`()`).
+
+*release*  
+Especificar **true** para habilitar una llamada subyacente [módulo:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; en caso contrario, especifique **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Module::GenericReleaseNotifier (clase)](../windows/module-genericreleasenotifier-class.md)

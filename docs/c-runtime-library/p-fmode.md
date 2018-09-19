@@ -27,32 +27,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520f81062f1bbbb295f17c6bc041afb8b5f2877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c4dcea9e3f35bf5fd8dbfbed9273562ac3db551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056344"
 ---
 # <a name="pfmode"></a>__p__fmode
-Apunta a la variable global `_fmode`, que especifica el *modo de traducción de archivos* predeterminado para las operaciones de E/S de archivo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-int* __p__fmode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Puntero a la variable global `_fmode`.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `__p__fmode` es solo para uso interno y no debe llamarse desde código de usuario.  
-  
- El modo de traducción de archivos especifica la traducción `binary` o `text` para las operaciones de E/S [_open](../c-runtime-library/reference/open-wopen.md) y [_pipe](../c-runtime-library/reference/pipe.md). Para obtener más información, consulte [_fmode](../c-runtime-library/fmode.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
+
+Apunta a la variable global `_fmode`, que especifica el *modo de traducción de archivos* predeterminado para las operaciones de E/S de archivo.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+int* __p__fmode(
+   );
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Puntero a la variable global `_fmode`.
+
+## <a name="remarks"></a>Comentarios
+
+La función `__p__fmode` es solo para uso interno y no debe llamarse desde código de usuario.
+
+El modo de traducción de archivos especifica la traducción `binary` o `text` para las operaciones de E/S [_open](../c-runtime-library/reference/open-wopen.md) y [_pipe](../c-runtime-library/reference/pipe.md). Para obtener más información, consulte [_fmode](../c-runtime-library/fmode.md).
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
 |__p\__fmode|stdlib.h|

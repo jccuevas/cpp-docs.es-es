@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5003c94793bc3b8195ebad48b438786b85ce84
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5dce174d9c6edca45946ba8ad60165e62e3591fd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718489"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -33,9 +34,14 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parámetros
 
-`Elem` El tipo de elemento de caracteres anchos.
-`Maxcode` El número máximo de caracteres para la faceta de configuración regional.
-`Mode` Información de configuración para la faceta de configuración regional.
+*Elem*<br/>
+Tipo de elemento de carácter ancho.
+
+*Maxcode*<br/>
+Número máximo de caracteres de la faceta de configuración regional.
+
+*Modo*<br/>
+Información de configuración de la faceta de configuración regional.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -43,4 +49,6 @@ El flujo de bytes puede escribirse en un archivo binario o en un archivo de text
 
 ## <a name="requirements"></a>Requisitos
 
-Encabezado: Espacio de nombres <codecvt>: std
+Encabezado: \<codecvt > \
+
+Namespace: std

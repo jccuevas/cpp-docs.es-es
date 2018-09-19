@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341253"
 ---
 # <a name="commonly-added-member-functions"></a>Funciones miembro que se agregan con frecuencia
 Si el cuadro de diálogo contiene botones de comando aparte de Aceptar o cancelar, tiene que escribir funciones miembro de controlador de mensajes en la clase de cuadro de diálogo para responder a los mensajes de notificación de controles que se generan. Para obtener un ejemplo, vea el [Scribble](../visual-cpp-samples.md) programa de ejemplo. También puede controlar mensajes de notificación de controles de otros controles en el cuadro de diálogo.  

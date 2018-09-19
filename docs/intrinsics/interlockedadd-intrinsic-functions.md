@@ -1,5 +1,5 @@
 ---
-title: Funciones intrínsecas _interlockedadd | Documentos de Microsoft
+title: Funciones intrínsecas _interlockedadd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709532"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAdd
 **Específicos de Microsoft**  
@@ -85,11 +86,11 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in, out] `Addend`  
- Puntero al entero al que se agregará; lo reemplaza el resultado de la suma.  
+*Sumando*<br/>
+[in, out] Puntero al entero al que se agregará; reemplaza el resultado de la suma.  
   
- [in] `Value`  
- El valor que se va a agregar.  
+*Valor*<br/>
+[in] Valor que se agrega.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Ambas funciones devuelven el resultado de la suma.  
@@ -175,5 +176,5 @@ Return value: ffff00ffffffff
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)

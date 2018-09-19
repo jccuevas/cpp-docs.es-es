@@ -1,5 +1,5 @@
 ---
-title: Definir funciones insertadas de C++ con dllexport y dllimport | Documentos de Microsoft
+title: Definir funciones insertadas de C++ con dllexport y dllimport | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165f110a7464e3393c68a469f1ad1220ef174452
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5299018f8c8e92cd4bfe45889f379c88064007e1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037091"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>Definir funciones insertadas de C++ con dllexport y dllimport
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Puede definir como alineada una función con el atributo `dllexport`. En este caso, siempre se crean instancias de la función, y siempre se exporta, independientemente de si un módulo del programa hace referencia o no a la función. Se supone que otro programa importa la función.  
-  
- También puede definir como alineada una función declarada con el atributo **dllimport**. En este caso, la función se puede expandir (según las especificaciones de /Ob), pero nunca se pueden crear instancias de ella. En concreto, si se toma la dirección de una función alineada importada, se devuelve la dirección de la función que reside en la DLL. Este comportamiento es el mismo que cuando se toma la dirección de una función importada no alineada.  
-  
- Estas reglas se aplican a las funciones insertadas cuyas definiciones aparecen dentro de una definición de clase. Además, los datos y cadenas locales estáticos en funciones insertadas mantienen las mismas identidades entre la DLL y el cliente que en un solo programa (es decir, un archivo ejecutable sin interfaz DLL).  
-  
- Tome precauciones cuando proporcione funciones insertadas importadas. Por ejemplo, si actualiza la DLL, no suponga que el cliente utilizará la versión modificada de la DLL. Para asegurarse de que se carga la versión correcta, recompile el cliente de DLL también.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [dllexport, dllimport](../cpp/dllexport-dllimport.md)
+
+## <a name="microsoft-specific"></a>Específicos de Microsoft
+
+Puede definir como alineada una función con el **dllexport** atributo. En este caso, siempre se crean instancias de la función, y siempre se exporta, independientemente de si un módulo del programa hace referencia o no a la función. Se supone que otro programa importa la función.
+
+También puede definir como alineada una función declarada con el atributo **dllimport**. En este caso, la función se puede expandir (según las especificaciones de /Ob), pero nunca se pueden crear instancias de ella. En concreto, si se toma la dirección de una función alineada importada, se devuelve la dirección de la función que reside en la DLL. Este comportamiento es el mismo que cuando se toma la dirección de una función importada no alineada.
+
+Estas reglas se aplican a las funciones insertadas cuyas definiciones aparecen dentro de una definición de clase. Además, los datos y cadenas locales estáticos en funciones insertadas mantienen las mismas identidades entre la DLL y el cliente que en un solo programa (es decir, un archivo ejecutable sin interfaz DLL).
+
+Tome precauciones cuando proporcione funciones insertadas importadas. Por ejemplo, si actualiza la DLL, no suponga que el cliente utilizará la versión modificada de la DLL. Para asegurarse de que se carga la versión correcta, recompile el cliente de DLL también.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[dllexport, dllimport](../cpp/dllexport-dllimport.md)

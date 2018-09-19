@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 66cf60dd3d70719fe42645215b1190c9fb752ff3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dda1415ea875b01c943a0a275122458f399f69c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105885"
 ---
 # <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator&gt; (operadores)
 
@@ -34,9 +35,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` La izquierda `scoped_allocator_adaptor` objeto.
+*left*<br/>
+Objeto `scoped_allocator_adaptor` izquierdo.
 
-`right` El derecho `scoped_allocator_adaptor` objeto.
+*right*<br/>
+Objeto `scoped_allocator_adaptor` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -55,9 +58,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` La izquierda `scoped_allocator_adaptor` objeto.
+*left*<br/>
+Objeto `scoped_allocator_adaptor` izquierdo.
 
-`right` El derecho `scoped_allocator_adaptor` objeto.
+*right*<br/>
+Objeto `scoped_allocator_adaptor` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 

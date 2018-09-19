@@ -1,5 +1,5 @@
 ---
-title: Error de compilador un error C2088 | Documentos de Microsoft
+title: Error del compilador C2088 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d35b736c8945b71a53c4ac5b7372dfed642fed44
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75281567b0e4419303607bf90a479ff628e8abf2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096878"
 ---
-# <a name="compiler-error-c2088"></a>Error de C2088 de Error de compilador
-'operador': no válido para 'class-key'  
-  
- No se ha definido el operador para la estructura o unión. Este error sólo es válido para el código de C.  
-  
- El ejemplo siguiente genera un error C2088 tres veces:  
-  
-```  
-// C2088.c  
-struct S {  
-   int m_i;   
-} s;  
-  
-int main() {  
-   int i = s * 1;   // C2088  
-   struct S s2 = +s;   // C2088  
-   s++;   // C2088  
-}  
+# <a name="compiler-error-c2088"></a>Error del compilador C2088
+
+'operador': no válido para 'class-key'
+
+El operador no se definió para la estructura o unión. Este error sólo es válido para el código de C.
+
+El ejemplo siguiente genera C2088 tres veces:
+
+```
+// C2088.c
+struct S {
+   int m_i;
+} s;
+
+int main() {
+   int i = s * 1;   // C2088
+   struct S s2 = +s;   // C2088
+   s++;   // C2088
+}
 ```

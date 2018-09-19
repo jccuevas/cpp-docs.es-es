@@ -9,30 +9,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680544"
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novedades de Visual C++ en [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Novedades de Visual C++ en Visual Studio 2017
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] incluye muchas actualizaciones y correcciones del entorno de Visual C++. Hemos corregido más de 250 errores y problemas en el compilador y en las herramientas. Muchos los han enviado los clientes a través de las opciones [Notificar un problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) y [Proporcionar una sugerencia](https://visualstudio.uservoice.com/) en **Enviar comentarios**. ¡Muchas gracias por notificárnoslos! Para más información sobre todas las novedades de Visual Studio, visite [Novedades de [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
+Visual Studio 2017 incluye muchas actualizaciones y revisiones del entorno de Visual C++. Hemos corregido más de 250 errores y problemas en el compilador y en las herramientas. Muchos los han enviado los clientes a través de las opciones [Notificar un problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) y [Proporcionar una sugerencia](https://visualstudio.uservoice.com/) en **Enviar comentarios**. ¡Muchas gracias por notificárnoslos! Para obtener más información sobre todas las novedades de Visual Studio, visite [Novedades de Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio).
 
-<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
+<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>compilador C++
 
 ### <a name="c-conformance-improvements"></a>Mejoras de conformidad de C++
 
 En esta versión, hemos actualizado el compilador C++ y la biblioteca estándar con compatibilidad mejorada con características de C ++ 11 y C ++ 14, así como la compatibilidad preliminar para determinadas características que se esperan que estén en C ++ 17 estándar. Para obtener información detallada, vea [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
-**Versión 15.5 de Visual Studio 2017**:  
 
-   El compilador admite aproximadamente un 75 % de las características nuevas de C++17, incluidos los enlaces estructurados, las expresiones lambda `constexpr`, `if constexpr`, las variables alineadas, las expresiones fold y la adición de `noexcept` al sistema de tipos. Están disponibles en la opción **/std:c++17**. Para obtener más información, consulte [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
+**Versión 15.5 de Visual Studio 2017**: el compilador admite aproximadamente un 75 % de las características nuevas de C++17, incluidos los enlaces estructurados, las expresiones lambda `constexpr`, `if constexpr`, las variables alineadas, las expresiones fold y la adición de `noexcept` al sistema de tipos. Están disponibles en la opción **/std:c++17**. Para obtener más información, consulte [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
-**Visual Studio 2017 versión 15.7**:  
-
-El conjunto de herramientas del compilador MSVC en Visual Studio versión 15.7 ahora cumple con el estándar de C++. Para obtener más información, vea [Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) (Anuncio: MSVC cumple con el estándar de C++) y [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md).
+**Versión 15.7 de Visual Studio 2017**: el conjunto de herramientas del compilador MSVC en Visual Studio, versión 15.7, ahora cumple con el estándar de C++. Para obtener más información, vea [Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) (Anuncio: MSVC cumple con el estándar de C++) y [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md).
 
 ### <a name="new-compiler-options"></a>Nuevas opciones del compilador
 
@@ -42,7 +40,7 @@ El conjunto de herramientas del compilador MSVC en Visual Studio versión 15.7 a
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): permite tiempos de vínculo incremental hasta un 30 % más rápidos (frente a Visual Studio 2015), ya que no copia toda la información de depuración en el archivo PDB. En su lugar, el archivo PDB apunta a la información de depuración de los archivos de biblioteca y del objeto usados para crear el ejecutable. Consulte [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (Ciclo de compilación en C++ más rápido en VS "15" con /Debug:fastlink) y [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/) (Recomendaciones para acelerar las compilaciones en C++ en Visual Studio).
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] permite usar [/sdl](build/reference/sdl-enable-additional-security-checks.md) con [/await](build/reference/await-enable-coroutine-support.md). Se ha eliminado la limitación de [/RTC](build/reference/rtc-run-time-error-checks.md) con corrutinas.
+- Visual Studio 2017 permite usar [/sdl](build/reference/sdl-enable-additional-security-checks.md) con [/await](build/reference/await-enable-coroutine-support.md). Se ha eliminado la limitación de [/RTC](build/reference/rtc-run-time-error-checks.md) con corrutinas.
 
    **Visual Studio 2017 versión 15.3**:  
 - [/std:c++14 y /std:c++latest](build/reference/std-specify-language-standard-version.md): estas opciones del compilador permiten participar en versiones específicas del lenguaje de programación ISO C++ en un proyecto. La mayoría de las nuevas características del borrador estándar están protegidas con la opción **/std:c++latest**.
@@ -394,12 +392,10 @@ Ahora puede crear y depurar aplicaciones móviles con Visual Studio que pueden t
 C++ viene como un componente opcional de la carga de trabajo de la Aplicación Windows universal.  Actualmente, la actualización de proyectos de C++ se debe hacer de forma manual. Si abre un proyecto de UWP orientado a v140 en Visual Studio 2017, deberá seleccionar el conjunto de herramientas de la plataforma v141 en las páginas de propiedades del proyecto si no tiene instalado Visual Studio 2015.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nuevas opciones de C++ en la Plataforma universal de Windows (UWP)
+Ahora dispone de nuevas opciones para escribir y empaquetar aplicaciones de C++ para la Plataforma universal de Windows y la Tienda Windows: puede usar la infraestructura Puente de dispositivo de escritorio para empaquetar la aplicación de escritorio existente para su implementación a través de la Tienda Windows o a través de los canales existentes mediante la instalación de prueba. Las nuevas capacidades de Windows 10 le permiten agregar funcionalidad de Plataforma universal de Windows a su aplicación de escritorio de varias maneras. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
 
-Ahora tiene nuevas opciones para escribir y empaquetar aplicaciones de C++ para la Plataforma universal de Windows y Microsoft Store. Puede utilizar Desktop App Converter para empaquetar su aplicación de escritorio existente para la implementación mediante Microsoft Store. Para obtener más información, vea [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) (Usar el tiempo de ejecución de Visual C++ en el proyecto Centennial) y [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
-
-**Versión 15.5 de Visual Studio 2017**:
-
-Se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que permite empaquetar aplicaciones de escritorio mediante el uso de Desktop Bridge. Está disponible en **Archivo > Nuevo > Proyecto**, en **Instaladas > Visual C++ > Plataforma universal de Windows**, siempre que la carga de trabajo Aplicación universal de Windows esté instalada.
+**Visual Studio 2017, versión 15.5**  
+Se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que simplifica en gran medida la tarea de empaquetar aplicaciones de escritorio mediante el uso del Puente de dispositivo de escritorio. Está disponible en **Archivo | Nuevo | Proyecto | Instalado | Visual C++ | Plataforma universal de Windows**. Para obtener más información, consulte [Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Al escribir código nuevo, ahora puede usar C++/WinRT, una proyección del lenguaje C++ estándar para Windows Runtime que se implementa solamente en los archivos de encabezado. Permite crear y usar las API de Windows Runtime con cualquier compilador de C++ conforme a los estándares. C++/WinRT está diseñado para proporcionar a los desarrolladores de C++ acceso de primera a la API de Windows moderna. Para obtener más información, vea [C++/WinRT Available on GitHub](https://moderncpp.com/) (C++/WinRT está disponible en GitHub).
 
@@ -407,7 +403,7 @@ En la [compilación 17025 de la versión preliminar de Insider de Windows SDK](h
 
 ## <a name="clangc2-platform-toolset"></a>Conjunto de herramientas de la plataforma Clang/C2
 
-El conjunto de herramientas Clang/C2 que se incluye con [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ahora es compatible con el modificador **/bigobj**, fundamental para la compilación de proyectos grandes. También incluye varias correcciones de errores importantes, tanto en el front-end y el back-end del compilador.
+El conjunto de herramientas Clang/C2 que se incluye con Visual Studio 2017 ahora es compatible con el modificador **/bigobj**, que es fundamental para la creación de proyectos grandes. También incluye varias correcciones de errores importantes, tanto en el front-end y el back-end del compilador.
 
 ## <a name="c-code-analysis"></a>Análisis de código de C++
 

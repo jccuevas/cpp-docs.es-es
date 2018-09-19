@@ -54,17 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb937cfdce7ed933c637cb48d370515134b66dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2dce749440d3321c07d549a2862048206dee45ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070813"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
+
 Devuelve un puntero a la primera aparición de una cadena de búsqueda en una cadena.
 
 > [!IMPORTANT]
-> **_mbsstr** y **_mbsstr_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbsstr` y `_mbsstr_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -135,33 +137,33 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la primera aparición de *strSearch* en *str*, o **NULL** si *strSearch* no aparece en *str* . Si *strSearch* señala a una cadena de longitud cero, la función devuelve *str*.
+Devuelve un puntero a la primera aparición de *strSearch* en *str*, o NULL si *strSearch* no aparece en *str*. Si *strSearch* señala a una cadena de longitud cero, la función devuelve *str*.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strstr** función devuelve un puntero a la primera aparición de *strSearch* en *str*. En la búsqueda no se incluyen los caracteres nulos de finalización. **wcsstr** es la versión con caracteres anchos de **strstr** y **_mbsstr** es la versión de caracteres multibyte. Los argumentos y el valor devuelto de **wcsstr** son caracteres anchos cadenas; los de **_mbsstr** son cadenas de caracteres multibyte. **_mbsstr** valida sus parámetros. Si *str* o *strSearch* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, **_mbsstr** establece **errno** a **EINVAL** y devuelve 0. **strstr** y **wcsstr** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
+El `strstr` función devuelve un puntero a la primera aparición de *strSearch* en *str*. En la búsqueda no se incluyen los caracteres nulos de finalización. `wcsstr` es la versión con caracteres anchos de `strstr` y `_mbsstr` es la versión de caracteres multibyte. Los argumentos y el valor devuelto de `wcsstr` son cadenas de caracteres anchos; los de `_mbsstr` son cadenas de caracteres multibyte. `_mbsstr` valida sus parámetros. Si *str* o *strSearch* es NULL, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, `_mbsstr` establece `errno` EINVAL y devuelve 0. `strstr` y `wcsstr` no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
 
 > [!IMPORTANT]
-> Estas funciones podrían provocar la amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer se pueden usar para atacar un sistema, porque pueden permitir la ejecución de código arbitrario, lo que podría dar lugar a un aumento de privilegios injustificado. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Estas funciones podrían provocar la amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer se pueden usar para atacar un sistema, porque pueden permitir la ejecución de código arbitrario, lo que podría dar lugar a un aumento de privilegios injustificado. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-En C, estas funciones toman una ** const ** puntero para el primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a ** const ** devuelve un puntero a **const **; la versión que toma un puntero a no -** const ** devuelve un puntero a no es**const **. La macro **_CRT_CONST_CORRECT_OVERLOADS** se define si tanto el **const ** y no-** const ** las versiones de estas funciones están disponibles. Si necesitas no es**const ** comportamiento para ambas sobrecargas de C++, defina el símbolo **_CONST_RETURN**.
+En C, estas funciones toman una **const** puntero para el primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a **const** devuelve un puntero a **const**; la versión que toma un puntero a que no sean de**const** devuelve un puntero a que no sean de **Const**. Se define la macro _CRT_CONST_CORRECT_OVERLOADS si tanto el **const** y no-**const** versiones de estas funciones están disponibles. Si necesita que no sea**const** comportamiento para ambas sobrecargas de C++, defina el símbolo _CONST_RETURN.
 
-El valor de salida se ve afectado por el valor de la categoría de configuración regional de **LC_CTYPE**; para obtener más información, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual para este comportamiento dependiente de la configuración regional; las versiones que tienen la **_l** sufijo son idénticas salvo que usan en su lugar el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría de configuración regional de LC_CTYPE; Para obtener más información, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual de este comportamiento dependiente de la configuración regional; las versiones que tienen el **_l** sufijo son idénticas salvo que usan en su lugar el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsstr**|**strstr**|**_mbsstr**|**wcsstr**|
-|**N/D**|**N/D**|**_mbsstr_l**|**N/D**|
+|`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
+|**N/D**|**N/D**|`_mbsstr_l`|**N/D**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**strstr**|\<string.h>|
-|**wcsstr**|\<string.h> o \<wchar.h>|
-|**_mbsstr**, **_mbsstr_l**|\<mbstring.h>|
+|`strstr`|\<string.h>|
+|`wcsstr`|\<string.h> o \<wchar.h>|
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
 Para obtener más información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

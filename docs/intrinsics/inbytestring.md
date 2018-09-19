@@ -1,5 +1,5 @@
 ---
-title: __inbytestring | Documentos de Microsoft
+title: __inbytestring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fb619a3fbc38925f2d91ae344b00bf1be34db5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7569c7034184adecf6bb452d7c406a762af4e20b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711665"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Específicos de Microsoft**  
   
- Lee datos desde el puerto especificado con el `rep insb` instrucción.  
+ Lee datos desde el puerto especificado mediante el `rep insb` instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,20 +41,20 @@ void __inbytestring(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- El puerto que leer.  
+*Puerto*<br/>
+[in] Para leer desde el puerto.  
   
- [out] `Buffer`  
- Aquí se escriben los datos que se leen del puerto.  
+*búfer*<br/>
+[out] Los datos leídos desde el puerto se escriben aquí.  
   
- [in] `Count`  
- El número de bytes de datos que se va a leer.  
+*Recuento*<br/>
+[in] El número de bytes de datos que se va a leer.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__inbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbytestring`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

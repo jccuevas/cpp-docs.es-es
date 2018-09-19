@@ -1,5 +1,5 @@
 ---
-title: Operadores relacionales _bstr_t | Documentos de Microsoft
+title: Operadores relacionales _bstr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,46 +39,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 556a56de97c6e1b547b9a67387acfcdd3205913c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0804e2a3e9d2f1fc37fae1eb72599f481e6b8c7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021010"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t (Operadores relacionales)
-**Específicos de Microsoft**  
-  
- Compara dos objetos `_bstr_t`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      bool operator!( ) const throw( );   
-bool operator==(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator!=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>=(  
-   const _bstr_t& str   
-) const throw( );  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven **true** si las comparaciones se sostienen; en caso contrario, devuelve **false**.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_bstr_t (Clase)](../cpp/bstr-t-class.md)
+
+**Específicos de Microsoft**
+
+Compara dos objetos `_bstr_t`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+bool operator!( ) const throw( ); 
+bool operator==(const _bstr_t& str) const throw( );
+bool operator!=(const _bstr_t& str) const throw( );
+bool operator<(const _bstr_t& str) const throw( );
+bool operator>(const _bstr_t& str) const throw( );
+bool operator<=(const _bstr_t& str) const throw( );
+bool operator>=(const _bstr_t& str) const throw( );
+```
+
+## <a name="remarks"></a>Comentarios
+
+Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven TRUE si las comparaciones se sostienen en caso contrario, devuelve FALSE.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_bstr_t (Clase)](../cpp/bstr-t-class.md)

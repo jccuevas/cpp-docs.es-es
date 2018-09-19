@@ -1,5 +1,5 @@
 ---
-title: OMP_SCHEDULE | Documentos de Microsoft
+title: OMP_SCHEDULE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5052aaadc673e38a844ea5b0d1e11ff3a96f3fbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115052"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 Modifica el comportamiento de la [programación](../../../parallel/openmp/reference/schedule.md) cláusula cuando `schedule(runtime)` se especifica en un `for` o `parallel for` directiva.  
@@ -31,14 +32,13 @@ Modifica el comportamiento de la [programación](../../../parallel/openmp/refere
 set OMP_SCHEDULE[=type[,size]]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+## <a name="arguments"></a>Argumentos
+
+*size*<br/>
+(Opcional) Especifica el tamaño de las iteraciones. `size` Debe ser un entero positivo. El valor predeterminado es 1, excepto cuando `type` es estático. No es válido cuando `type` es `runtime`.  
   
- `size` (opcional)  
- Especifica el tamaño de las iteraciones. `size` Debe ser un entero positivo. El valor predeterminado es 1, excepto cuando `type` es estático. No es válido cuando `type` es `runtime`.  
-  
- `type`  
- El tipo de programación:  
+*type*<br/>
+El tipo de programación:  
   
 -   `dynamic`  
   
@@ -49,7 +49,7 @@ set OMP_SCHEDULE[=type[,size]]
 -   `static`  
   
 ## <a name="remarks"></a>Comentarios  
- El valor predeterminado en la implementación de Visual C++ del estándar OpenMP es `OMP_SCHEDULE=static,0`.  
+ El valor predeterminado de la implementación de Visual C++ del estándar OpenMP es `OMP_SCHEDULE=static,0`.  
   
  Para obtener más información, consulte [OMP_SCHEDULE 4.1](../../../parallel/openmp/4-1-omp-schedule.md).  
   

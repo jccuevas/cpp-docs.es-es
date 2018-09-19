@@ -1,5 +1,5 @@
 ---
-title: PTR::CreateInstance | Documentos de Microsoft
+title: PTR::CreateInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f03a4f0cfb2b231e9a453009155308f7bf407db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112218"
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 Crea una instancia de un objeto COM dentro de un `com::ptr`.  
@@ -71,28 +72,28 @@ void CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `progid`  
- Cadena de `ProgID`.  
+*progid*<br/>
+Cadena de `ProgID`.  
   
- `pouter`  
- Puntero a interfaz IUnknown del objeto agregado (IUnknown de control). Si `pouter` no se especifica, `NULL` se utiliza.  
+*pouter*<br/>
+Puntero a interfaz de IUnknown del objeto agregado (IUnknown de control). Si `pouter` no se especifica, `NULL` se utiliza.  
   
- `cls_context`  
- Contexto en el que se ejecutará el código que administra el objeto recién creado. Los valores se toman de la `CLSCTX` enumeración. Si `cls_context` no se especifica, el valor se usa CLSCTX_ALL.  
+*cls_context*<br/>
+Contexto en que se ejecutará el código que administra el objeto recién creado. Los valores se toman de la `CLSCTX` enumeración. Si `cls_context` no se especifica, el valor se usa CLSCTX_ALL.  
   
- `rclsid`  
- `CLSID` asociado con los datos y el código que se usará para crear el objeto.  
+*rclsid*<br/>
+`CLSID` asociado con los datos y el código que se usará para crear el objeto.  
   
 ## <a name="exceptions"></a>Excepciones  
  Si el `com::ptr` ya posee una referencia a un objeto COM, `CreateInstance` produce <xref:System.InvalidOperationException>.  
   
- Esta función llama a `CoCreateInstance` y utiliza <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> para convertir cualquier error `HRESULT` a una excepción adecuada.  
+ Esta función llama a `CoCreateInstance` y usa <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> para convertir cualquier error `HRESULT` a una excepción adecuada.  
   
 ## <a name="remarks"></a>Comentarios  
- `CreateInstance` utiliza `CoCreateInstance` para crear una nueva instancia del objeto especificado, identificado desde un ProgID o CLSID. El `com::ptr` hace referencia al objeto recién creado y liberará automáticamente todas las propias referencias tras la destrucción.  
+ `CreateInstance` usa `CoCreateInstance` para crear una nueva instancia del objeto especificado, identificado desde un ProgID o CLSID. El `com::ptr` hace referencia al objeto recién creado y liberará automáticamente las referencias de todos los que se poseen tras la destrucción.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto. Los constructores de clase utilizan dos formas diferentes de `CreateInstance` para crear el objeto de documento de un ProgID o CLSID además un CLSCTX.  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto. Los constructores de clase utilizan dos formas diferentes de `CreateInstance` para crear el objeto de documento desde un ProgID o CLSID además un CLSCTX.  
   
 ```  
 // comptr_createinstance.cpp  

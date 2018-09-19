@@ -1,5 +1,5 @@
 ---
-title: __svm_vmsave | Documentos de Microsoft
+title: __svm_vmsave | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b1a76d4dca7a7177a44c56fc7c25832ace89c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722857"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Específicos de Microsoft**  
   
- Almacena un subconjunto de estado del procesador en el bloque de control de la máquina virtual especificada (VMCB).  
+ Almacena un subconjunto de estado del procesador en el bloque de control de máquina virtual especificada (VMCB).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,22 +41,22 @@ void __svm_vmsave(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|La dirección física de la VMCB.|  
+|*VmcbPhysicalAddress*|[in] La dirección física de la VMCB.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `__svm_vmsave` función es equivalente a la `VMSAVE` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento "Manual volumen del programador de arquitectura AMD64 2: programación de sistema," número de documento 24593, revisión 3.11 o posterior, en el [Corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sitio.  
+ El `__svm_vmsave` función es equivalente a la `VMSAVE` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número de documento 24593, revisión 3.11 o posterior, en el [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmsave`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [__svm_vmrun](../intrinsics/svm-vmrun.md)   
  [__svm_vmload](../intrinsics/svm-vmload.md)

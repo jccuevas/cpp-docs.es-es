@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689641"
 ---
 # <a name="24-work-sharing-constructs"></a>2.4 Construcciones de uso compartido
 Una construcción de uso compartido de trabajo distribuye la ejecución de la instrucción asociada entre los miembros del equipo que se encuentra. Las directivas de uso compartido no iniciarán nuevos subprocesos y no hay ninguna barrera implícita en la entrada a una construcción de uso compartido.  

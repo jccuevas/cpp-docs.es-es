@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161551747455bae1347e5059ec3afffd2649294c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72ab821d32b63800c9edeaef070bd745ef8eae86
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108881"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic (Clase)
 
@@ -36,11 +37,12 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es un tipo aritmético, es decir, un tipo entero, un tipo de punto flotante o una forma `cv-qualified` de uno de ellos; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es tipo de punto de un tipo aritmético, es decir, un tipo entero o flotante o un `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 

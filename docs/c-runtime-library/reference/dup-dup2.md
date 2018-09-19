@@ -38,11 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad477dc09ce6c8bee2d69e479f8e1615639cb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 820172e1e6ab4ad007c89b2b40f03512134f0f0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215958"
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 
@@ -65,15 +66,15 @@ Cualquier descriptor de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_dup** devuelve un nuevo descriptor de archivo. **_dup2** devuelve 0 para indicar una operación correcta. Si se produce un error, cada función devuelve -1 y establece **errno** a **EBADF** si el descriptor de archivo no es válido o a **EMFILE** si no hay más descriptores de archivo disponibles. En el caso de un descriptor de archivo no válido, la función invoca también al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
+**_dup** devuelve un nuevo descriptor de archivo. **_dup2** devuelve 0 para indicar el éxito. Si se produce un error, cada función devuelve -1 y establece **errno** a **EBADF** si el descriptor de archivo no es válido o a **EMFILE** si no hay más descriptores de archivo disponibles. En el caso de un descriptor de archivo no válido, la función invoca también al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_dup** y **_dup2** funciones asociar un segundo descriptor de archivo a un archivo abierto actualmente. Estas funciones se pueden usar para asociar un descriptor de archivo predefinido, como el de **stdout**, con un archivo diferente. Las operaciones en el archivo se pueden realizar con cualquiera de los dos descriptores de archivo. El tipo de acceso permitido al archivo no se ve afectado por la creación de un nuevo descriptor. **_dup** devuelve el siguiente descriptor de archivo disponibles para el archivo especificado. **_dup2** fuerza *fd2* para hacer referencia al mismo archivo como *fd1*. Si *fd2* está asociado con un archivo abierto en el momento de la llamada, dicho archivo se cierra.
+El **_dup** y **_dup2** funciones asociación un segundo descriptor de archivo a un archivo abierto actualmente. Estas funciones se pueden usar para asociar un descriptor de archivo predefinidos, como por ejemplo **stdout**, con un archivo diferente. Las operaciones en el archivo se pueden realizar con cualquiera de los dos descriptores de archivo. El tipo de acceso permitido al archivo no se ve afectado por la creación de un nuevo descriptor. **_dup** devuelve el siguiente descriptor de archivo disponibles para el archivo especificado. **_dup2** fuerza *fd2* para hacer referencia al mismo archivo como *fd1*. Si *fd2* está asociado con un archivo abierto en el momento de la llamada, dicho archivo se cierra.
 
-Ambos **_dup** y **_dup2** aceptan descriptores de archivo como parámetros. Para pasar un flujo (**archivo \*** ) a cualquiera de estas funciones, use [_fileno](fileno.md). El **fileno** rutina devuelve el descriptor de archivo asociado actualmente a la secuencia especificada. En el ejemplo siguiente se muestra cómo asociar **stderr** (definido como **archivo \***  en Stdio.h) con un descriptor de archivo:
+Ambos **_dup** y **_dup2** aceptan descriptores de archivo como parámetros. Para pasar una secuencia (`FILE *`) a cualquiera de estas funciones, use [_fileno](fileno.md). El **fileno** rutina devuelve el descriptor de archivo asociado actualmente a la secuencia dada. El ejemplo siguiente muestra cómo asociar **stderr** (definido como `FILE *` en Stdio.h) con un descriptor de archivo:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -86,7 +87,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

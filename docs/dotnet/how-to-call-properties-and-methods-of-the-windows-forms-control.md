@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131360"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Cómo: Llamar a propiedades y métodos del control de formularios Windows Forms
 Dado que [:: GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) devuelve un puntero a <xref:System.Windows.Forms.Control?displayProperty=fullName>y no un puntero a `WindowsControlLibrary1::UserControl1`, es aconsejable agregar un miembro del tipo de control de usuario e inicializarlo en [iView:: OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Ahora puede llamar a métodos y propiedades mediante `m_ViewControl`.  

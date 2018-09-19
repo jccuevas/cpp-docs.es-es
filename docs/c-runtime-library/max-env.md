@@ -18,23 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d4de09242f8758d8420bf100461dc88e4b51e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff4b60a5c35b1448e1d27b51ba354f4a95658b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034292"
 ---
 # <a name="maxenv"></a>_MAX_ENV
-La longitud máxima permitida de la cadena de una variable de entorno.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Constantes de entorno](../c-runtime-library/environmental-constants.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+La longitud máxima permitida de la cadena de una variable de entorno.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="see-also"></a>Vea también
+
+[Constantes de entorno](../c-runtime-library/environmental-constants.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

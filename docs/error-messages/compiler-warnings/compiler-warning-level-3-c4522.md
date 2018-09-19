@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4522 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4522 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e57f32c715b6e6f0846025d5010631c746589bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65662d3e62abbeb06127c7b5a49479a23fb20a7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070943"
 ---
 # <a name="compiler-warning-level-3-c4522"></a>Advertencia del compilador (nivel 3) C4522
-'class': varios operadores de asignación especificados  
-  
- La clase tiene múltiples operadores de asignación de un tipo único. Esta advertencia es informativa; los constructores son invocables en el programa.  
-  
- Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4522.  
-  
-```  
-// C4522.cpp  
-// compile with: /EHsc /W3  
-#include <iostream>  
-  
-using namespace std;  
-class A {  
-public:  
-   A& operator=( A & o ) { cout << "A&" << endl; return *this; }  
-   A& operator=( const A &co ) { cout << "const A&" << endl; return *this; }   // C4522  
-};  
-  
-int main() {  
-   A o1, o2;  
-   o2 = o1;  
-   const A o3;  
-   o1 = o3;  
-}  
+
+'class': varios operadores de asignación especificados
+
+La clase tiene múltiples operadores de asignación de un tipo único. Esta advertencia es informativa; los constructores son invocables en el programa.
+
+Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4522.
+
+```
+// C4522.cpp
+// compile with: /EHsc /W3
+#include <iostream>
+
+using namespace std;
+class A {
+public:
+   A& operator=( A & o ) { cout << "A&" << endl; return *this; }
+   A& operator=( const A &co ) { cout << "const A&" << endl; return *this; }   // C4522
+};
+
+int main() {
+   A o1, o2;
+   o2 = o1;
+   const A o3;
+   o1 = o3;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de implementación | Documentos de Microsoft
+title: Ejemplos de implementación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327416"
 ---
 # <a name="deployment-examples"></a>Ejemplos de implementación
-Esta sección contiene ejemplos que muestran cómo implementar aplicaciones de Visual C++.  
+Esta sección contiene ejemplos en los que se muestra cómo implementar aplicaciones de Visual C++.  
   
 ## <a name="examples"></a>Ejemplos  
  [Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  

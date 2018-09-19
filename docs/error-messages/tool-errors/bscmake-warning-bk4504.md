@@ -1,5 +1,5 @@
 ---
-title: Advertencia de BSCMAKE BK4504 | Documentos de Microsoft
+title: Advertencia de BSCMAKE BK4504 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a17aa8b4e2a98d3bda5d21ea84962791b8051dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8a2da8903dade37faf3b14175b65f3169efd908
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049778"
 ---
 # <a name="bscmake-warning-bk4504"></a>Advertencia de BSCMAKE BK4504
-archivo contiene demasiadas referencias; se omitirá las demás referencias de este origen  
-  
- El archivo .cpp que contiene más de 64.000 referencias de símbolos. Cuando BSCMAKE ha encontrado 64.000 referencias en un archivo, pasa por alto todas las referencias adicionales.  
-  
- Para corregir el problema, divida el archivo en dos o más archivos, cada uno de los cuales tiene menos de 64.000 referencias de símbolos o usar el `#pragma component(browser)` directiva de preprocesador para símbolos de límite que se generan para las referencias determinadas. Para obtener más información, consulte [componente](../../preprocessor/component.md).
+
+archivo contiene demasiadas referencias; omitiendo las demás referencias de este origen
+
+El archivo .cpp contiene más de 64.000 referencias de símbolos. Cuando BSCMAKE ha encontrado 64.000 referencias en un archivo, omite todas las referencias adicionales.
+
+Para corregir el problema, ya sea dividir el archivo en dos o más archivos, cada uno de los cuales tiene menos de 64 000 referencias de símbolos, o utilice el `#pragma component(browser)` directiva de preprocesador para símbolos de límite que se generan para las referencias determinadas. Para obtener más información, consulte [componente](../../preprocessor/component.md).

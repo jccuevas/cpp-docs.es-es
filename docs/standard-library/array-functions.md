@@ -18,15 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108731"
 ---
 # <a name="ltarraygt-functions"></a>Funciones &lt;array&gt;
 
-El encabezado \<array> incluye dos funciones no miembro, `get` y `swap`, que operan en objetos `array`.
+El \<matriz > encabezado incluye dos funciones no miembro, `get` y `swap`, que operan en **matriz** objetos.
 
 |||
 |-|-|
@@ -49,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Index` El desplazamiento del elemento.
+*Index*<br/>
+El desplazamiento del elemento.
 
-`T` El tipo de un elemento.
+*T*<br/>
+El tipo de un elemento.
 
-`N` El número de elementos de la matriz.
+*N*<br/>
+Número de elementos de la matriz.
 
-`arr` Seleccione en la matriz.
+*arr*<br/>
+La matriz de la que se selecciona.
 
 ### <a name="example"></a>Ejemplo
 
@@ -91,7 +96,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Especialización de plantilla no miembro de `std::swap` que intercambia dos objetos `array`.
+Una especialización de plantilla que no es miembro de `std::swap` que intercambia dos **matriz** objetos.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -100,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de un elemento.
+*Ty*<br/>
+El tipo de un elemento.
 
-`N` El tamaño de la matriz.
+*N*<br/>
+Se refiere al tamaño de la matriz.
 
-`left` Primera matriz que se va a intercambiar.
+*left*<br/>
+Primera matriz que se va a intercambiar.
 
-`right` Segunda matriz que se va a intercambiar.
+*right*<br/>
+Segunda matriz que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 

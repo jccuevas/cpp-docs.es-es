@@ -14,16 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3979916452fbea9154e28070c96dce9e278059a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f5b39c90d9f9d873905c21a2f61b8114a8979cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096774"
 ---
 # <a name="time-zone"></a>Time Zone
-**ANSI 4.12.1** Zona horaria local y horario de verano  
-  
- La zona horaria local es Hora estándar del Pacífico. Microsoft C admite el horario de verano.  
-  
-## <a name="see-also"></a>Vea también  
- [Funciones de la biblioteca](../c-language/library-functions.md)
+
+**ANSI 4.12.1** Zona horaria local y horario de verano
+
+La zona horaria local es Hora estándar del Pacífico. Microsoft C admite el horario de verano.
+
+## <a name="see-also"></a>Vea también
+
+[Funciones de la biblioteca](../c-language/library-functions.md)

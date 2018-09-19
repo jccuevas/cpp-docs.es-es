@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929095"
 ---
 # <a name="html-basics"></a>Conceptos básicos de HTML
 Mayoría de los exploradores tiene la capacidad de examinar el código fuente HTML de las páginas que examina. Al ver el origen, verá un número de etiquetas HTML (lenguaje de marcado de hipertexto), incluido entre corchetes angulares (<>), entremezclados con texto.  
@@ -29,7 +30,7 @@ Mayoría de los exploradores tiene la capacidad de examinar el código fuente HT
   
 1.  Abra el Bloc de notas o en cualquier editor de texto sin formato.  
   
-2.  Desde el **archivo** menú, elija `New`.  
+2.  Desde el **archivo** menú, elija **nuevo**.  
   
 3.  Escriba las líneas siguientes:  
   
@@ -43,7 +44,7 @@ Mayoría de los exploradores tiene la capacidad de examinar el código fuente HT
   
 4.  Desde el **archivo** menú, elija **guardar**y guarde el archivo como c:\webpages\First.htm. Dejar el archivo abierto en el editor.  
   
-5.  Conmutador en el explorador y desde el **archivo** menú, elija **abiertos**, o tipo `file://C:/webpages/first.htm` en el cuadro de edición de dirección URL del explorador. Debería ver una página en blanco con el título de ventana "Top HTML Tags."  
+5.  Conmutador en el explorador y desde el **archivo** menú, elija **abiertos**, o tipo *file://C:/webpages/first.htm* en el cuadro de edición de dirección URL del explorador. Debería ver una página en blanco con el título de ventana "Top HTML Tags."  
   
      Observe que las etiquetas están emparejadas y se incluyen entre corchetes angulares. Las etiquetas no distinguen mayúsculas de minúsculas y mayúsculas y minúsculas se usan a menudo para que destaquen mejor.  
   

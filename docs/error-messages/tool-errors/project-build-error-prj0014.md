@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0014 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0014 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074751"
 ---
 # <a name="project-build-error-prj0014"></a>Error PRJ0014 al compilar el proyecto
-Error del objeto job utilizado para controlar los procesos de compilación.  No puede continuar la compilación.  
-  
- Se produjo un error en el entorno de desarrollo.  
-  
- Para resolver este error, cierre y vuelva a cargar el proyecto. Si es necesario, salga y reinicie Visual Studio.
+
+Error del objeto job utilizado para controlar los procesos de compilación.  La compilación no puede continuar.
+
+Se produjo un error en el entorno de desarrollo.
+
+Para resolver este error, cierre y vuelva a cargar el proyecto. Si es necesario, salga y reinicie Visual Studio.

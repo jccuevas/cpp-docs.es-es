@@ -12,16 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0688ed7c670f4601ac25a8878a59bd977b77536f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126db1ffe203c050c69b32d74bb295bab143c9ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106251"
 ---
 # <a name="reading-pointer-values"></a>Lectura de valores de puntero
-**ANSI 4.9.6.2** La entrada de la conversión **%p** en la función `fscanf`  
-  
- Cuando se especifica el carácter de formato **%p**, la función `fscanf` convierte punteros de valores ASCII hexadecimales en la dirección correcta.  
-  
-## <a name="see-also"></a>Vea también  
- [Funciones de la biblioteca](../c-language/library-functions.md)
+
+**ANSI 4.9.6.2** La entrada de la conversión **%p** en la función `fscanf`
+
+Cuando se especifica el carácter de formato **%p**, la función `fscanf` convierte punteros de valores ASCII hexadecimales en la dirección correcta.
+
+## <a name="see-also"></a>Vea también
+
+[Funciones de la biblioteca](../c-language/library-functions.md)

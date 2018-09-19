@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb647b164ad63a952141e70b9b72e3fab3fda3c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701186"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
 **Específicos de Microsoft**  
   
- Genera la instrucción MOVNTI. Escribe los datos `Source` a una ubicación de memoria especificada por `Dest`, sin dañar las memorias caché.  
+ Genera MOVNTI (instrucción). Escribe los datos `Source` a una ubicación de memoria especificada por `Dest`, sin contaminar las memorias caché.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,17 +41,17 @@ void _mm_stream_si64x(
   
 #### <a name="parameters"></a>Parámetros  
   
- [out] `Dest`  
- Un puntero a la ubicación para escribir los datos de origen.  
+*dest*<br/>
+[out] Un puntero a la ubicación para escribir los datos de origen.  
   
- [in] `Source`  
- Los datos para escribir.  
+*Source*<br/>
+[in] Para escribir los datos.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

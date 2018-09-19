@@ -1,5 +1,5 @@
 ---
-title: 2.6.4 atomic (construcción) | Documentos de Microsoft
+title: 2.6.4 atomic (construcción) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208138"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic (Construcción)
-El `atomic` Directiva garantiza que una ubicación de memoria específica se actualiza de forma atómica, en lugar de exponer a la posibilidad de que varios subprocesos de escritura simultáneas. La sintaxis de la `atomic` directiva es como sigue:  
+El `atomic` Directiva garantiza que una ubicación de memoria específica se actualiza de forma atómica, en lugar de exponerlos a la posibilidad de múltiples simultáneas de escritura de subprocesos. La sintaxis de la `atomic` directiva es como sigue:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
@@ -29,29 +30,29 @@ El `atomic` Directiva garantiza que una ubicación de memoria específica se act
   
  *x binop*= *expr*  
   
- x ++.  
+ x ++  
   
  ++ x  
   
- x:  
+ x--  
   
  --x  
   
  En las expresiones anteriores:  
   
--   *x* es una expresión de valor l con tipo escalar.  
+-   *x* es una expresión de valor l con el tipo escalar.  
   
--   *Expr* es una expresión con un tipo escalar y no hace referencia el objeto designado por *x*.  
+-   *Expr* es una expresión con tipo escalar, y no hace referencia el objeto designado por *x*.  
   
--   `binop` no es un operador sobrecargado y es uno de +, *, -, / &, ^, &#124;, <\<, o >>.  
+-   `binop` no es un operador sobrecargado y es uno de +, \*, -, / &, ^, &#124;, <\<, o >>.  
   
- Aunque es definido por la implementación si una implementación reemplaza todas `atomic` directivas con **crítico** directivas que tengan el mismo único *nombre*, el `atomic` (directiva) permite una mejor optimización. A menudo las instrucciones de hardware están disponibles que puede realizar la actualización atómica con la menor carga.  
+ Aunque es definido por la implementación si una implementación reemplaza toda `atomic` directivas con **críticos** directivas que tienen el mismo único *nombre*, el `atomic` directiva permite una mejor optimización. A menudo las instrucciones de hardware están disponibles que puede realizar la actualización atómica con la menor carga.  
   
- Solo los carga y la memoria del objeto designado por *x* son atómico; la evaluación de *expr* no es atómica. Para evitar condiciones de carrera, todas las actualizaciones de la ubicación en paralelo deben protegerse con la `atomic` directiva, excepto las que se sabe que están libres de las condiciones de carrera.  
+ Solo la carga y el almacén del objeto designado por *x* son atómica; la evaluación de *expr* no es atómica. Para evitar condiciones de carrera, todas las actualizaciones de la ubicación en paralelo deben protegerse con el `atomic` la directiva, excepto los que se sabe que están libres de las condiciones de carrera.  
   
- Restricciones a la `atomic` directiva son los siguientes:  
+ Restricciones para el `atomic` directiva son los siguientes:  
   
--   Todas las referencias atómicas a la ubicación de almacenamiento x a lo largo del programa deben tener un tipo compatible.  
+-   Todas las referencias atómicas a la ubicación de almacenamiento x en todo el programa deben tener un tipo compatible.  
   
 ## <a name="examples"></a>Ejemplos:  
   

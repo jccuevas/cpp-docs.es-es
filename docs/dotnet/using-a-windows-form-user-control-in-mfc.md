@@ -1,5 +1,5 @@
 ---
-title: Con un Windows forman el Control de usuario en MFC | Documentos de Microsoft
+title: Uso de un Windows forman el Control de usuario en MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 1/08/2018
 ms.technology:
@@ -20,35 +20,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ceb424d6c5061ac5ccafc62d8748be4de3ab3d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222113"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilizar un control de usuario de Windows Forms en MFC
 
-Con las clases de soporte de formularios Windows Forms de MFC, puede hospedar controles de formularios Windows Forms dentro de las aplicaciones MFC como un control ActiveX en cuadros de diálogo MFC o vistas. Además, los formularios Windows Forms se pueden hospedar como cuadros de diálogo MFC.
+Utilizando las clases de soporte técnico de formularios Windows Forms de MFC, puede hospedar controles de formularios Windows Forms en aplicaciones MFC como un control ActiveX en cuadros de diálogo MFC o vistas. Además, los formularios Windows Forms se pueden hospedar como cuadros de diálogo MFC.
 
 Las secciones siguientes describen cómo:
 
-- Hospedar un control de formularios Windows Forms en un cuadro de diálogo MFC.
+- Hospedar un control de Windows Forms en un cuadro de diálogo MFC.
 
-- Hospedar un control de usuario de formularios Windows Forms como vista MFC.
+- Hospedar un control de usuario de Windows Forms como vista MFC.
 
 - Hospedar un formulario Windows Forms como un cuadro de diálogo MFC.
 
 > [!NOTE]
-> Integración de formularios Windows Forms de MFC funciona sólo en los proyectos que se vinculen dinámicamente a MFC (proyectos en el que `_AFXDLL` está definido).
+> Integración de formularios Windows Forms de MFC sólo funciona en los proyectos que vinculen dinámicamente a MFC (proyectos en los que `_AFXDLL` está definido).
 
 > [!NOTE]
-> Cuando se compila la aplicación mediante una copia privada (modificada) de las interfaces de formularios Windows Forms de MFC DLL (mfcmifc80.dll), no se podrá instalar en la GAC, a menos que reemplazar la clave de Microsoft con su propia clave de proveedor. Para obtener más información sobre la firma de un ensamblado, vea [programar con ensamblados](/dotnet/framework/app-domains/programming-with-assemblies) y [ensamblados de nombre seguro (firma de ensamblados) (C++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Al compilar la aplicación con una copia privada (modificada) de las interfaces de formularios Windows Forms de MFC DLL (mfcmifc80.dll), no se podrá instalar en la GAC, a menos que reemplace la clave de Microsoft por su propia clave de proveedor. Para obtener más información sobre la firma de ensamblados, vea [programar con ensamblados](/dotnet/framework/app-domains/programming-with-assemblies) y [ensamblados de nombre seguro (firma de ensamblados) (C++ / c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Para aplicaciones de ejemplo utilizando formularios Windows Forms, vea [ejemplo BirthdayPicker: muestra recursos de .NET Framework con formularios Windows Forms](http://msdn.microsoft.com/ac932aed-5502-4667-be29-709bca435317), [ejemplo Calculator: calculadora de bolsillo de Windows Forms](http://msdn.microsoft.com/2283b516-3b7e-45f2-80c4-fdcfb366ce25)y [ Ejemplo Scribble: Aplicación de dibujo MDI](http://msdn.microsoft.com/f025da3e-659b-4222-b991-554a1b8b2358).
-
-Para una aplicación de ejemplo que muestra formularios Windows Forms utilizados con MFC, vea [integración de Windows Forms y MFC](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
-
-Si la aplicación MFC utiliza formularios Windows Forms, debe redistribuir mfcmifc80.dll con la aplicación. Para obtener más información, consulte [redistribuir la biblioteca MFC](../ide/redistributing-the-mfc-library.md).
+Si la aplicación MFC utiliza Windows Forms, deberá redistribuir mfcmifc80.dll con la aplicación. Para obtener más información, consulte [redistribuir la biblioteca MFC](../ide/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>En esta sección
 

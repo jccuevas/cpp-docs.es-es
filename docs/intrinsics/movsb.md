@@ -1,5 +1,5 @@
 ---
-title: __movsb | Documentos de Microsoft
+title: __movsb | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c72910a6b8084d015f151d7e701f6b63ffd1d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720140"
 ---
 # <a name="movsb"></a>__movsb
 **Específicos de Microsoft**  
   
- Genera una cadena mover (`rep movsb`) instrucción.  
+ Genera una cadena de mover (`rep movsb`) instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,25 +41,25 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [out] `Destination`  
- Un puntero al destino de la copia.  
+*Destino*<br/>
+[out] Un puntero al destino de la copia.  
   
- [in] `Source`  
- Un puntero al origen de la copia.  
+*Source*<br/>
+[in] Un puntero al origen de la copia.  
   
- [in] `Count`  
- Número de bytes que se van a copiar.  
+*Recuento*<br/>
+[in] El número de bytes para copiar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsb`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado es que la primera `Count` bytes que señala `Source` se copian en el `Destination` cadena.  
+ El resultado es que la primera `Count` bytes señalada por `Source` se copian en el `Destination` cadena.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

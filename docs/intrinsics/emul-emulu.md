@@ -1,5 +1,5 @@
 ---
-title: __emul, __emulu | Documentos de Microsoft
+title: __emul, __emulu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f3bf997006d98cfbd05a47140baf53ef7032876
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719425"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Específicos de Microsoft**  
   
- Lleva a cabo multiplicaciones que lo que puede contener un entero de 32 bits un desbordamiento.  
+ Realiza multiplicaciones que desbordan lo que puede contener un entero de 32 bits.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,11 +46,11 @@ unsigned __int64 __emulu(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `a`  
- El primer operando de entero de la multiplicación.  
+*a*<br/>
+[in] El primer operando de entero de la multiplicación.  
   
- [in] `b`  
- El segundo operando de entero de la multiplicación.  
+*b*<br/>
+[in] El segundo operando de entero de la multiplicación.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El resultado de la multiplicación.  
@@ -58,8 +59,8 @@ unsigned __int64 __emulu(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

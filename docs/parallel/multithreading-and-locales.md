@@ -1,5 +1,5 @@
 ---
-title: Subprocesamiento múltiple y configuraciones regionales | Documentos de Microsoft
+title: Multithreading y configuraciones regionales | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19cc3817faab71c209586ad952162229f846e0a7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1e6bef9e707636d18ed5ecb78098661a753111ba
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132186"
 ---
 # <a name="multithreading-and-locales"></a>Subprocesamiento múltiple y configuraciones regionales
-La biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++ proporcionan compatibilidad para cambiar la configuración regional del programa. Este tema describen los problemas que surgen al utilizar la funcionalidad de configuración regional de las dos bibliotecas en una aplicación multiproceso.  
+La biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++ proporcionan compatibilidad para cambiar la configuración regional del programa. En este tema se describe los problemas que surgen al utilizar la funcionalidad de configuración regional de las dos bibliotecas en una aplicación multiproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- Con la biblioteca en tiempo de ejecución de C, puede crear aplicaciones multiproceso con la `_beginthread` y `_beginthreadex` funciones. En este tema solo cubre las aplicaciones multiproceso creadas mediante estas funciones. Para obtener más información, consulte [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
+
+Con la biblioteca en tiempo de ejecución de C, puede crear aplicaciones multiproceso con el `_beginthread` y `_beginthreadex` funciones. En este tema solo cubre aplicaciones multiproceso con comportamiento creadas mediante estas funciones. Para obtener más información, consulte [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Para cambiar la configuración regional mediante la biblioteca en tiempo de ejecución de C, use la [setlocale](../preprocessor/setlocale.md) función. En versiones anteriores de Visual C++, esta función siempre pueda modificar la configuración regional a lo largo de toda la aplicación. Ahora existe compatibilidad para establecer la configuración regional por subproceso. Esto se realiza mediante la [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) función. Para especificar que [setlocale](../preprocessor/setlocale.md) sólo debe cambiar la configuración regional en el subproceso actual, llamada `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` en ese subproceso. Por el contrario, una llamada a `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` hará que ese subproceso que se utilizan la configuración regional global y las llamadas a [setlocale](../preprocessor/setlocale.md) en que el subproceso cambiará la configuración regional de todos los subprocesos que no se ha habilitado explícitamente la configuración regional por subproceso.  
+Para cambiar la configuración regional mediante la biblioteca en tiempo de ejecución de C, use el [setlocale](../preprocessor/setlocale.md) función. En versiones anteriores de Visual C++, esta función siempre podría modificar la configuración regional en toda la aplicación. Ahora existe compatibilidad para establecer la configuración regional por subproceso. Esto se realiza mediante el [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) función. Para especificar que [setlocale](../preprocessor/setlocale.md) sólo debe cambiar la configuración regional en el subproceso actual, llamada `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` en ese subproceso. Por el contrario, una llamada a `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` hará que el subproceso para usar la configuración regional global y las llamadas a [setlocale](../preprocessor/setlocale.md) en que el subproceso cambiará la configuración regional en todos los subprocesos que no se ha habilitado explícitamente la configuración regional por subproceso.  
   
- Para cambiar la configuración regional mediante la biblioteca en tiempo de ejecución de C++, use la [locale (clase)](../standard-library/locale-class.md). Mediante una llamada a la [Locale:: global](../standard-library/locale-class.md#global) método, se cambiará la configuración regional de cada subproceso que no habilitó explícitamente la configuración regional por subproceso. Para cambiar la configuración regional de un único subproceso o parte de una aplicación, basta con crear una instancia de un `locale` objeto en dicho subproceso o parte del código.  
+Para cambiar la configuración regional mediante la biblioteca en tiempo de ejecución de C++, use el [locale (clase)](../standard-library/locale-class.md). Mediante una llamada a la [Locale:: global](../standard-library/locale-class.md#global) método, cambia la configuración regional de cada subproceso que no se ha habilitado explícitamente la configuración regional por subproceso. Para cambiar la configuración regional en un único subproceso o parte de una aplicación, simplemente cree una instancia de un `locale` objeto en ese subproceso o parte del código.  
   
 > [!NOTE]
->  Al llamar a [Locale:: global](../standard-library/locale-class.md#global) cambia la configuración regional para la biblioteca estándar de C++ y la biblioteca de C en tiempo de ejecución. Sin embargo, al llamar a [setlocale](../preprocessor/setlocale.md) solo cambia la configuración regional de la biblioteca en tiempo de ejecución de C; la biblioteca estándar de C++ no se verán afectadas.  
+> Una llamada a [Locale:: global](../standard-library/locale-class.md#global) cambia la configuración regional para la biblioteca estándar de C++ y la biblioteca de C en tiempo de ejecución. Sin embargo, una llamada a [setlocale](../preprocessor/setlocale.md) solo cambia la configuración regional para la biblioteca en tiempo de ejecución de C; la biblioteca estándar de C++ no se ve afectado.  
   
- Los ejemplos siguientes muestran cómo utilizar el [setlocale](../preprocessor/setlocale.md) función, el [locale (clase)](../standard-library/locale-class.md)y el [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) función puede cambiar la configuración regional de una aplicación en los diferentes escenarios.  
+Los ejemplos siguientes muestran cómo usar el [setlocale](../preprocessor/setlocale.md) función, el [locale (clase)](../standard-library/locale-class.md)y el [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) función para cambiar la configuración regional de una aplicación en varios escenarios diferentes.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Subproceso un, a continuación, procede a cambiar la configuración regional mediante la [setlocale](../preprocessor/setlocale.md) función de la biblioteca de C en tiempo de ejecución.  
+ 
+En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Subproceso después procede a cambiar la configuración regional mediante la [setlocale](../preprocessor/setlocale.md) función de la biblioteca de C en tiempo de ejecución.  
   
- Puesto que un subproceso tiene regional para cada subproceso está habilitada, solo las funciones de biblioteca en tiempo de ejecución de C en el subproceso A empezarán a utilizar la configuración regional "francesa". Las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal continuarán utilizando la configuración regional "C". Además, dado que [setlocale](../preprocessor/setlocale.md) no afecta a la configuración regional de la biblioteca estándar de C++, biblioteca estándar de C++ todos los objetos seguirán utilizando la configuración regional "C".  
+Puesto que un subproceso tiene regional para cada subproceso está habilitada, solo las funciones de biblioteca en tiempo de ejecución de C en el menú Inicio de un subproceso con la configuración regional "francés". Las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal seguirán usando la configuración regional "C". Además, dado que [setlocale](../preprocessor/setlocale.md) no afecta a la configuración regional de la biblioteca estándar de C++, biblioteca estándar de C++ todos los objetos seguirán utilizando la configuración regional "C".  
   
-```  
+```cpp  
 // multithread_locale_1.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -137,11 +140,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Subproceso un, a continuación, procede a cambiar la configuración regional mediante la [Locale:: global](../standard-library/locale-class.md#global) método de la biblioteca estándar de C++.  
+ 
+En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Subproceso después procede a cambiar la configuración regional mediante la [Locale:: global](../standard-library/locale-class.md#global) método de la biblioteca estándar de C++.  
   
- Puesto que un subproceso tiene regional para cada subproceso está habilitada, solo las funciones de biblioteca en tiempo de ejecución de C en el subproceso A empezarán a utilizar la configuración regional "francesa". Las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal continuarán utilizando la configuración regional "C". Sin embargo, dado que la [Locale:: global](../standard-library/locale-class.md#global) método cambia la configuración regional "global", todos los objetos de la biblioteca estándar de C++ en todos los subprocesos empezar a usar la configuración regional "francesa".  
+Puesto que un subproceso tiene regional para cada subproceso está habilitada, solo las funciones de biblioteca en tiempo de ejecución de C en el menú Inicio de un subproceso con la configuración regional "francés". Las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal seguirán usando la configuración regional "C". Sin embargo, dado que el [Locale:: global](../standard-library/locale-class.md#global) método cambia la configuración regional "global", todos los objetos de biblioteca estándar de C++ en todos los subprocesos empezar a usar la configuración regional "francés".  
   
-```  
+```cpp  
 // multithread_locale_2.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -235,11 +239,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Continuación, el subproceso B procede a cambiar la configuración regional mediante la [setlocale](../preprocessor/setlocale.md) función de la biblioteca de C en tiempo de ejecución.  
+ 
+En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Subproceso B, a continuación, procede a cambiar la configuración regional mediante la [setlocale](../preprocessor/setlocale.md) función de la biblioteca de C en tiempo de ejecución.  
   
- Puesto que el subproceso B no tiene habilitada la configuración regional por subproceso, las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal empezar a usar la configuración regional "francesa". Las funciones de biblioteca en tiempo de ejecución de C en continuar con el subproceso A usar la configuración regional "C" porque el subproceso A tiene habilitada la configuración regional por subproceso. Además, dado que [setlocale](../preprocessor/setlocale.md) no afecta a la configuración regional de la biblioteca estándar de C++, biblioteca estándar de C++ todos los objetos seguirán utilizando la configuración regional "C".  
+Puesto que el subproceso B no tiene habilitada la configuración regional por subproceso, las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal empezar a usar la configuración regional "francés". Las funciones de biblioteca en tiempo de ejecución de C en pasar de un subproceso a utilizar la configuración regional "C" porque un subproceso tiene habilitada la configuración regional por subproceso. Además, dado que [setlocale](../preprocessor/setlocale.md) no afecta a la configuración regional de la biblioteca estándar de C++, biblioteca estándar de C++ todos los objetos seguirán utilizando la configuración regional "C".  
   
-```  
+```cpp  
 // multithread_locale_3.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -337,11 +342,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Continuación, el subproceso B procede a cambiar la configuración regional mediante la [Locale:: global](../standard-library/locale-class.md#global) método de la biblioteca estándar de C++.  
+ 
+En este ejemplo, el subproceso principal genera dos subprocesos secundarios. El primer subproceso, el subproceso A, habilita la configuración regional por subproceso llamando a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. El segundo subproceso, el subproceso B, así como el subproceso principal, no habilite la configuración regional por subproceso. Subproceso B, a continuación, procede a cambiar la configuración regional mediante la [Locale:: global](../standard-library/locale-class.md#global) método de la biblioteca estándar de C++.  
   
- Puesto que el subproceso B no tiene habilitada la configuración regional por subproceso, las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal empezar a usar la configuración regional "francesa". Las funciones de biblioteca en tiempo de ejecución de C en continuar con el subproceso A usar la configuración regional "C" porque el subproceso A tiene habilitada la configuración regional por subproceso. Sin embargo, dado que la [Locale:: global](../standard-library/locale-class.md#global) método cambia la configuración regional "global", todos los objetos de la biblioteca estándar de C++ en todos los subprocesos empezar a usar la configuración regional "francesa".  
+Puesto que el subproceso B no tiene habilitada la configuración regional por subproceso, las funciones de biblioteca en tiempo de ejecución de C en el subproceso B y en el subproceso principal empezar a usar la configuración regional "francés". Las funciones de biblioteca en tiempo de ejecución de C en pasar de un subproceso a utilizar la configuración regional "C" porque un subproceso tiene habilitada la configuración regional por subproceso. Sin embargo, dado que el [Locale:: global](../standard-library/locale-class.md#global) método cambia la configuración regional "global", todos los objetos de biblioteca estándar de C++ en todos los subprocesos empezar a usar la configuración regional "francés".  
   
-```  
+```cpp  
 // multithread_locale_4.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -439,12 +445,13 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Compatibilidad con multithreading código antiguo (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
- [setlocale](../preprocessor/setlocale.md)   
- [Internacionalización](../c-runtime-library/internationalization.md)   
- [Configuración regional](../c-runtime-library/locale.md)   
- [\<clocale >](../standard-library/clocale.md)   
- [\<locale>](../standard-library/locale.md)   
- [locale (Clase)](../standard-library/locale-class.md)
+
+[Compatibilidad con multithreading código antiguo (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)   
+[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+[setlocale](../preprocessor/setlocale.md)   
+[Internacionalización](../c-runtime-library/internationalization.md)   
+[Configuración regional](../c-runtime-library/locale.md)   
+[\<clocale >](../standard-library/clocale.md)   
+[\<locale>](../standard-library/locale.md)   
+[locale (Clase)](../standard-library/locale-class.md)

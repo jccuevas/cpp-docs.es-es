@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: operator T * operador | Documentos de Microsoft'
+title: 'Comptrref:: operator T * operador | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595424"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* (Operador)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-operator T*();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Devuelve el valor de la [ptr_](../windows/comptrrefbase-ptr-data-member.md) miembro de datos del objeto ComPtrRef actual.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtrRef (clase)](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+operator T*();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Devuelve el valor de la [ptr_](../windows/comptrrefbase-ptr-data-member.md) miembro de datos del elemento actual **ComPtrRef** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[ComPtrRef (clase)](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

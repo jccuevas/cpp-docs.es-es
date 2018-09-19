@@ -1,5 +1,5 @@
 ---
-title: Herramienta manifiesto aislada propiedades COM (Visual C++) | Documentos de Microsoft
+title: Propiedades COM aislado de la herramienta Manifiesto (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 5439e04fdb2563748bc21fb494cc09fd7bd5c929
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720101"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Aislamiento de COM, herramienta manifiesto, propiedades de configuración, &lt;Projectname&gt; cuadro de diálogo páginas de propiedades
-Utilice este cuadro de diálogo para especificar **COM aislado** opciones para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM aislado, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de &lt;Nombre_Proyecto&gt; (Cuadro de diálogo)
+Use este cuadro de diálogo para especificar opciones de **COM aislado** para [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- Para obtener acceso a este cuadro de diálogo de la página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el **herramienta manifiesto** nodo bajo **propiedades comunes**y, a continuación, seleccione **COM aislado**.  
+Para acceder a este cuadro de diálogo de página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el nodo **Herramienta Manifiesto** bajo **Propiedades comunes** y, después, seleccione **COM aislado**.  
   
 ## <a name="task-list"></a>Lista de tareas  
   
 -   [Procedimiento para compilar aplicaciones aisladas que empleen componentes COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Archivo de biblioteca de tipos**  
- Utiliza la opción/tlb para especificar el nombre del archivo de biblioteca de tipo (archivo .tlb) que la herramienta Manifiesto utilizará para generar el archivo de manifiesto.  
+- **Archivo de biblioteca de tipos**
+
+   Usa la opción /tlb para especificar el nombre del archivo de biblioteca de tipos (archivo .tlb) que la herramienta Manifiesto va a usar para generar el archivo de manifiesto.  
   
- **Archivo de Script de registro**  
- Utiliza la opción /rgs para especificar el nombre del archivo de script de registrador (archivo .rgs) que la herramienta Manifiesto utilizará para generar el archivo de manifiesto.  
+- **Archivo de script de registro**
+
+   Usa la opción /rgs para especificar el nombre del archivo de script de registro (archivo .rgs) que la herramienta Manifiesto va a usar para generar el archivo de manifiesto.  
   
- **Nombre de archivo del componente**  
- Utiliza la opción /dll para especificar el nombre del recurso que generará la herramienta de manifiesto. Debe especificar un valor para esta propiedad cuando los valores para cada uno **archivo de biblioteca de tipos** o **archivo de Script de registrador** se especifican.  
+- **Nombre de archivo del componente**
+
+   Usa la opción /dll para especificar el nombre del recurso que la herramienta Manifiesto va a generar. Debe escribir un valor para esta propiedad cuando se especifiquen valores para **Archivo de biblioteca de tipos** o **Archivo de script de registro**.  
   
- **Archivo de reemplazo**  
- Utiliza la opción /replacements para especificar la ruta de acceso completa al archivo que contiene los valores de las cadenas reemplazables en el archivo .rgs.  
+- **Archivo de reemplazo**
+
+   Usa la opción /replacements para especificar la ruta de acceso completa al archivo que contiene los valores para las cadenas reemplazables en el archivo .rgs.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicaciones aisladas](http://msdn.microsoft.com/library/aa375190)   
+ [Aplicaciones aisladas](/windows/desktop/SbsCs/isolated-applications)   
  [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Páginas de propiedades de la herramienta manifiesto](../ide/manifest-tool-property-pages.md)   
+ [Páginas de propiedades de la herramienta Manifiesto](../ide/manifest-tool-property-pages.md)   
  [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)   

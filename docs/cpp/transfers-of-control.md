@@ -1,5 +1,5 @@
 ---
-title: Transferencias del Control | Documentos de Microsoft
+title: Transferencias del Control | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,48 +15,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ee906061c7b51ade818b164c1d371a88ef3d462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bd8542bf13aa34efea3ffad2007b0f5eb672f79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031423"
 ---
 # <a name="transfers-of-control"></a>Transferencias del control
-Puede usar el `goto` instrucción o un **caso** etiquetar en un `switch` instrucción para especificar un programa que se bifurque más allá de un inicializador. Este código no es válido a menos que la declaración que contenga el inicializador esté en un bloque dentro del bloque en el que aparezca la instrucción de salto.  
-  
- En el ejemplo siguiente se muestra un bucle que declara e inicializa los objetos `total`, `ch` y `i`. Hay también una instrucción `goto` errónea que transfiere el control más allá de un inicializador.  
-  
-```  
-// transfers_of_control.cpp  
-// compile with: /W1  
-// Read input until a nonnumeric character is entered.  
-int main()  
-{  
-   char MyArray[5] = {'2','2','a','c'};  
-   int i = 0;  
-   while( 1 )  
-   {  
-      int total = 0;  
-  
-      char ch = MyArray[i++];  
-  
-      if ( ch >= '0' && ch <= '9' )  
-      {  
-         goto Label1;  
-  
-         int i = ch - '0';  
-      Label1:  
-         total += i;   // C4700: transfers past initialization of i.  
-      } // i would be destroyed here if  goto error were not present  
-   else  
-      // Break statement transfers control out of loop,  
-      //  destroying total and ch.  
-      break;  
-   }  
-}  
-```  
-  
- En el ejemplo anterior, la instrucción `goto` intenta transferir el control más allá de la inicialización de `i`. Sin embargo, si se declarara `i` pero no se inicializara, la transferencia sería válida.  
-  
- Los objetos `total` y `ch`, declarado en el bloque que sirve como el *instrucción* de la `while` instrucción, se destruyen cuando se sale de dicho bloque mediante el `break` instrucción.  
-  
+
+Puede usar el **goto** instrucción o un **caso** etiquetar en un **cambiar** instrucción para especificar un programa que se bifurque más allá de un inicializador. Este código no es válido a menos que la declaración que contenga el inicializador esté en un bloque dentro del bloque en el que aparezca la instrucción de salto.
+
+En el ejemplo siguiente se muestra un bucle que declara e inicializa los objetos `total`, `ch` y `i`. También hay un erróneos **goto** instrucción que transfiere el control más allá de un inicializador.
+
+```cpp
+// transfers_of_control.cpp
+// compile with: /W1
+// Read input until a nonnumeric character is entered.
+int main()
+{
+   char MyArray[5] = {'2','2','a','c'};
+   int i = 0;
+   while( 1 )
+   {
+      int total = 0;
+
+      char ch = MyArray[i++];
+
+      if ( ch >= '0' && ch <= '9' )
+      {
+         goto Label1;
+
+         int i = ch - '0';
+      Label1:
+         total += i;   // C4700: transfers past initialization of i.
+      } // i would be destroyed here if  goto error were not present
+   else
+      // Break statement transfers control out of loop,
+      //  destroying total and ch.
+      break;
+   }
+}
+```
+
+En el ejemplo anterior, el **goto** instrucción intenta transferir el control más allá de la inicialización de `i`. Sin embargo, si se declarara `i` pero no se inicializara, la transferencia sería válida.
+
+Los objetos `total` y `ch`, declarado en el bloque que actúa como el *instrucción* de la **mientras** instrucción, se destruyen cuando se sale de dicho bloque mediante el  **salto** instrucción.

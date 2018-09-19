@@ -1,5 +1,5 @@
 ---
-title: _com_error::HelpContext | Documentos de Microsoft
+title: _com_error::HelpContext | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7123fcf5859ce3fc373b29b4cb3e7b32109b464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c2a1810410194f1261da907199a3b6665e5be30
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074375"
 ---
 # <a name="comerrorhelpcontext"></a>_com_error::HelpContext
-**Específicos de Microsoft**  
-  
- Llamadas **IErrorInfo:: GetHelpContext** función.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-DWORD HelpContext( ) const throw( );  
-  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve el resultado de **IErrorInfo:: GetHelpContext** para el **IErrorInfo** objeto registrado dentro del `_com_error` objeto. Si no hay ningún **IErrorInfo** se registra el objeto, devuelve cero.  
-  
-## <a name="remarks"></a>Comentarios  
- Cualquier error al llamar a la **IErrorInfo:: GetHelpContext** método se pasa por alto.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_com_error (Clase)](../cpp/com-error-class.md)
+
+**Específicos de Microsoft**
+
+Llama a la función `IErrorInfo::GetHelpContext`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+DWORD HelpContext( ) const throw( );
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve el resultado de `IErrorInfo::GetHelpContext` para el `IErrorInfo` objeto grabado dentro del `_com_error` objeto. Si no hay ningún `IErrorInfo` se registra el objeto, éste devuelve un cero.
+
+## <a name="remarks"></a>Comentarios
+
+Cualquier error durante la llamada a la `IErrorInfo::GetHelpContext` se omite el método.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_com_error (Clase)](../cpp/com-error-class.md)

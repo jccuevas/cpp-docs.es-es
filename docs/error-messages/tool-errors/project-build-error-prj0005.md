@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0005 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0005 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b02e831c9adc8d7ff7fce759334263f847d24cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be1ac49d5d6fa3b85b327305bc4919d183b962e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016519"
 ---
 # <a name="project-build-error-prj0005"></a>Error PRJ0005 al compilar el proyecto
-No se puede crear un archivo temporal en el directorio "directory".  
-  
- Error en la llamada para crear un archivo temporal. Causas del error son:  
-  
--   Se ha quedado sin nombres de archivo temporal.  
-  
--   El directorio temporal es de solo lectura.  
-  
--   No hay ningún directorio temporal o una variable de entorno TMP.  
-  
--   El equipo está fuera del espacio libre en disco.
+
+No se puede crear un archivo temporal en el directorio 'directorio'.
+
+Error en la llamada para crear un archivo temporal. Las causas del error incluyen:
+
+- Se ha quedado sin nombres de archivo temporal.
+
+- El directorio temporal es de solo lectura.
+
+- No hay ningún directorio temporal o una variable de entorno TMP.
+
+- El equipo no tiene suficiente espacio libre en disco.

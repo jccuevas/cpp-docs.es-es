@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345096"
 ---
 # <a name="internet-and-networking-classes"></a>Clases de Internet y redes
 Estas clases permiten intercambiar información con otro equipo mediante un Socket de Windows o de Internet Win32 (WinInet). Hay también un conjunto de clases para la manipulación de Windows Sockets.  

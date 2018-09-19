@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2094 | Documentos de Microsoft
+title: Error del compilador C2094 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4db86a805118cbdbf74f21737b4a331fc59237c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e3591fef423bc24562a2f2edf18f7f2774cfcc4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073530"
 ---
 # <a name="compiler-error-c2094"></a>Error del compilador C2094
-la etiqueta 'identifier' no estaba definida  
-  
-La etiqueta que utiliza una instrucción [goto](../../cpp/goto-statement-cpp.md) no existe en la función.  
-  
-## <a name="example"></a>Ejemplo  
-El ejemplo siguiente genera la advertencia C2094:  
-  
-```cpp  
-// C2094.c  
-int main() {  
-   goto test;  
-}   // C2094  
-```  
-  
- Posible resolución:  
-  
-```cpp  
-// C2094b.c  
-int main() {  
-   goto test;  
-   test:   
-   {  
-   }  
-}  
+
+la etiqueta 'identifier' no estaba definida
+
+La etiqueta que utiliza una instrucción [goto](../../cpp/goto-statement-cpp.md) no existe en la función.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C2094:
+
+```cpp
+// C2094.c
+int main() {
+   goto test;
+}   // C2094
+```
+
+Posible resolución:
+
+```cpp
+// C2094b.c
+int main() {
+   goto test;
+   test:
+   {
+   }
+}
 ```

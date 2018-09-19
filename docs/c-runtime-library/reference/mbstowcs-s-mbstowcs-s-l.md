@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f366e01fbaa8da5c0dbc96ff4da324611e132f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3457195b07335345476153038d7ab38606607a2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217364"
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -95,7 +96,7 @@ El tamaño de la *wcstr* búfer en palabras.
 Dirección de una secuencia de caracteres multibyte terminados en nulo.
 
 *count*<br/>
-El número máximo de caracteres anchos para almacenar en la *wcstr* búfer, sin incluir el carácter nulo de terminación o [_TRUNCATE](../../c-runtime-library/truncate.md).
+El número máximo de caracteres anchos a almacenar en el *wcstr* búfer, sin incluir el terminador nulo, o [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -108,35 +109,35 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |---------------------|------------------------------|
 |*wcstr* es **NULL** y *sizeInWords* > 0|**EINVAL**|
 |*mbstr* es **NULL**|**EINVAL**|
-|El búfer de destino es demasiado pequeño para contener la cadena convertida (a menos que *recuento* es **_TRUNCATE**; vea las notas siguientes)|**ERANGE**|
+|El búfer de destino es demasiado pequeño para contener la cadena convertida (a menos que *recuento* es **_TRUNCATE**; vea Comentarios más abajo)|**ERANGE**|
 |*wcstr* no **NULL** y *sizeInWords* == 0|**EINVAL**|
 
 Si se produce alguna de estas condiciones, se invoca la excepción de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve un código de error y establece **errno** como se indica en la tabla.
 
 ## <a name="remarks"></a>Comentarios
 
-El **mbstowcs_s** función convierte una cadena de caracteres multibyte señalada por *mbstr* en caracteres anchos almacenados en el búfer señalado por *wcstr*. La conversión continuará para cada carácter hasta que se cumpla alguna de estas condiciones:
+El **mbstowcs_s** función convierte una cadena de caracteres multibyte que apunta *mbstr* en caracteres anchos almacenados en el búfer señalado por *wcstr*. La conversión continuará para cada carácter hasta que se cumpla alguna de estas condiciones:
 
 - Se encuentra un carácter multibyte nulo
 
 - Se encuentra un carácter multibyte no válido
 
-- El número de caracteres anchos almacenados en el *wcstr* almacenar en búfer es igual a *recuento*.
+- El número de caracteres anchos almacenados en el *wcstr* búfer equals *recuento*.
 
 La cadena de destino siempre termina en nulo (aun en caso de error).
 
-Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **mbstowcs_s** convierte tanto de la cadena como quepan en el búfer de destino, dejando espacio para un valor null terminador.
+Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **mbstowcs_s** convierte tanto de la cadena como cabe en el búfer de destino, dejando espacio para un valor null terminador.
 
-Si **mbstowcs_s** convierte correctamente la cadena de origen, coloca el tamaño en caracteres anchos de la cadena convertida, incluido el terminador null, en  *&#42;pReturnValue* (proporciona *pReturnValue* no **NULL**). Esto ocurre incluso si la *wcstr* argumento es **NULL** y proporciona una manera de determinar el tamaño de búfer necesario. Tenga en cuenta que si *wcstr* es **NULL**, *recuento* se omite, y *sizeInWords* debe ser 0.
+Si **mbstowcs_s** convierte correctamente la cadena de origen, pone el tamaño en caracteres anchos de la cadena convertida, incluido el terminador nulo, en  *&#42;pReturnValue* (proporcionado *pReturnValue* no **NULL**). Esto ocurre incluso si la *wcstr* argumento es **NULL** y proporciona una manera de determinar el tamaño de búfer necesario. Observe que si *wcstr* es **NULL**, *recuento* se omite, y *sizeInWords* debe ser 0.
 
-Si **mbstowcs_s** encuentra un carácter multibyte no válido, coloca 0  *&#42;pReturnValue*, Establece el búfer de destino en una cadena vacía, establece **errno** a  **EILSEQ**y devuelve **EILSEQ**.
+Si **mbstowcs_s** encuentra un carácter multibyte no válido, pone 0 en  *&#42;pReturnValue*, Establece el búfer de destino en una cadena vacía, establece **errno** a  **EILSEQ**y devuelve **EILSEQ**.
 
-Si las secuencias señaladas por *mbstr* y *wcstr* se superponen, el comportamiento de **mbstowcs_s** no está definido.
+Si las secuencias señaladas por *mbstr* y *wcstr* se superponen, el comportamiento de **mbstowcs_s** es indefinido.
 
 > [!IMPORTANT]
 > Asegúrese de que *wcstr* y *mbstr* no se superponen y que *recuento* refleja correctamente el número de caracteres multibyte a convertir.
 
-**mbstowcs_s** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_mbstowcs_s_l** es idéntica, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**mbstowcs_s** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_mbstowcs_s_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -153,7 +154,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

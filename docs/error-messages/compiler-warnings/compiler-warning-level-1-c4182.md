@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4182 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4182 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79e86076a9d8218d08bd7437e2a06878b6ee91ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80c0cdac45238a4734b02d34f4c540c62a2f0c09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056578"
 ---
 # <a name="compiler-warning-level-1-c4182"></a>Advertencia del compilador (nivel 1) C4182
-\#incluir es el nivel de anidamiento 'número' profundas; posible recursividad infinita  
-  
- El compilador se quedó sin espacio en el montón debido al número de archivos de inclusión anidados. Un archivo de inclusión está anidado cuando se incluye desde otro archivo de inclusión.  
-  
- Este mensaje es informativo y precede al error [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md).
+
+\#incluir es el nivel de anidamiento 'número' profundas; posible recursividad infinita
+
+El compilador se quedó sin espacio en el montón debido al número de archivos de inclusión anidados. Un archivo de inclusión está anidado cuando se incluye desde otro archivo de inclusión.
+
+Este mensaje es informativo y precede al error [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md).

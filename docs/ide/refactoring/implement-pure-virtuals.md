@@ -1,5 +1,5 @@
 ---
-title: Implementar virtuales puros | Documentos de Microsoft
+title: Implementar virtuales puras | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -11,30 +11,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33328031"
 ---
-# <a name="implement-pure-virtuals"></a>Implementar virtuales puros
-**¿Qué:** permite generar inmediatamente el código necesario para implementar todos los métodos virtuales puros en una clase. 
+# <a name="implement-pure-virtuals"></a>Implementar virtuales puras
+**Qué:** Permite generar inmediatamente el código necesario para implementar todos los métodos virtuales puros en una clase. 
 
-**Cuándo:** desea heredar de una clase con funciones virtuales puras.  
+**Cuándo:** quiere heredar de una clase con funciones virtuales puras.  
 
-**Por este motivo:** podría implementar manualmente las funciones virtuales puras todos los uno por uno, sin embargo, esta característica generará automáticamente todas las firmas de método.
+**Por qué:** Podría implementar manualmente todas las funciones virtuales puras una por una, pero esta característica generará de manera automática todas las firmas de método.
 
 **Cómo**:
 
-1. Coloque el cursor de texto o el mouse sobre la clase en la que va a implementar las funciones virtuales puras de la clase base.
+1. Coloque el cursor de texto o el ratón sobre la clase en la que quiera implementar las funciones virtuales puras de la clase base.
 
    ![Código resaltado](images/virtuals_highlight.png)
 
 1. A continuación, realice alguno de los siguientes procedimientos:
    * **Teclado**
-     * Presione **Ctrl +.** Para activar el **acciones rápidas y refactorizaciones** menú y seleccione **implementar todas las virtuales puras para clase*ClassName*'** en el menú contextual, donde  *ClassName* es el nombre de la clase seleccionada.
+     * Presione **Ctrl +.** para activar el menú **Acciones rápidas y refactorizaciones** y seleccione **Implementar todas las virtuales puras para la clase "*NombreDeClase*"** en el menú contextual, donde *NombreDeClase* es el nombre de la clase seleccionada.
    * **Mouse**
-     * Haga clic en y seleccione el **acciones rápidas y refactorizaciones** menú y seleccione **implementar todas las virtuales puras para clase*ClassName*'** en el menú contextual, donde  *ClassName* es el nombre de la clase seleccionada.
+     * Haga clic con el botón derecho y seleccione el menú **Acciones rápidas y refactorizaciones**, y seleccione **Implementar todas las virtuales puras para la clase "*NombreDeClase*"** en el menú contextual, donde *NombreDeClase* es el nombre de la clase seleccionada.
 
-1. Las firmas de método virtual puro estará listo para implementarse, creado automáticamente.
+1. Las firmas de métodos virtuales puros se crearán automáticamente y estarán listas para la implementación.
 
-   ![Implementar virtuales puros resultado](images/virtuals_result.png)
+   ![Resultado de implementar virtuales puras](images/virtuals_result.png)

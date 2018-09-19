@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103324"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -56,13 +57,14 @@ void _free_locale(
 
 ### <a name="parameters"></a>Parámetros
 
-*configuración regional* objeto de configuración regional que se va a liberar.
+*locale*<br/>
+Objeto de configuración regional que se va a liberar.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_free_locale** función se utiliza para liberar el objeto de configuración regional obtenido en una llamada a **_get_current_locale** o **_create_locale**.
+El **_free_locale** función se usa para liberar el objeto de configuración regional obtenido de una llamada a **_get_current_locale** o **_create_locale**.
 
-El nombre anterior de esta función, **__free_locale** (con dos caracteres de subrayado iniciales) está en desuso.
+El nombre anterior de esta función, **__free_locale** (con dos caracteres de subrayado iniciales) ha quedado en desuso.
 
 ## <a name="requirements"></a>Requisitos
 

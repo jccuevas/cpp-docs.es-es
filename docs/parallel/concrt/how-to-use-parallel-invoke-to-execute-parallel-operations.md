@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691175"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Cómo: Usar parallel.invoke para ejecutar operaciones paralelas
 Este ejemplo muestra cómo utilizar el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para mejorar el rendimiento de un programa que realiza varias operaciones en un origen de datos compartido. Dado que ninguna de ellas modifica el origen, se pueden ejecutar en paralelo de manera sencilla.  

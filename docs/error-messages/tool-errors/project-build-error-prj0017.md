@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0017 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0017 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 769c7b2d6c20fdc6daba6f1df2f576987c146641
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28348626417f6b4c961be4486f6d7573a0a67780
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076065"
 ---
 # <a name="project-build-error-prj0017"></a>Error PRJ0017 al compilar el proyecto
-El directorio de trabajo actual no es válido.  
-  
- La ruta de acceso al directorio de trabajo actual es mayor que _MAXPATH. Para resolver este error, no cree el proyecto en un nivel profundo de este tipo.
+
+El directorio de trabajo actual no es válido.
+
+La ruta de acceso al directorio de trabajo actual es mayor que _MAXPATH. Para resolver este error, no cree el proyecto en un nivel profundo de este tipo.

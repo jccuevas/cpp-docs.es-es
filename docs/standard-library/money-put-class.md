@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8b872d9aeb718c1e86d460d8ef60beac8f3632
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108907"
 ---
 # <a name="moneyput-class"></a>money_put (Clase)
 
@@ -46,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
+*CharType*<br/>
+Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-`OutputIterator` El tipo de iterador para que las funciones monetary put escriben sus resultados.
+*OutputIterator*<br/>
+Tipo de iterador en el que las funciones monetary put escriben sus resultados.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -116,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parámetros
 
-`next` Un iterador que direcciona el primer elemento de la cadena insertada.
+*next*<br/>
+Un iterador que se dirige al primer elemento de la cadena insertada.
 
-`_Intl` Un valor booleano que indica el tipo de símbolo de divisa esperado en la secuencia: **true** si internacionales, **false** si nacionales.
+*_Intl*<br/>
+Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-`_Iosbase` Un formato de marca que al conjunto indica que el símbolo de moneda es opcional; en caso contrario, es necesario
+*_Iosbase*<br/>
+Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-`_Fill` Un carácter que se utiliza para el espaciado.
+*_Fill*<br/>
+Un carácter que se usa para el espaciado.
 
-`val` Un objeto de cadena que se va a convertir.
+*Val*<br/>
+Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -132,9 +140,9 @@ Un iterador de salida que se dirige a la posición siguiente del último element
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función miembro virtual protegida genera elementos secuenciales que comienzan por `next` para producir un campo de salida monetario del objeto [string_type](#string_type) `val`. La secuencia controlada por `val` debe comenzar con uno o más dígitos decimales, opcionalmente precedidos por un signo menos (-), que representa la cantidad. La función devuelve un iterador que designa el primer elemento más allá del campo de salida monetario que se ha generado.
+La primera función miembro virtual protegida genera elementos secuenciales, empezando por *siguiente* para producir un campo de salida monetario el [string_type](#string_type) objeto *val*. La secuencia controlada por *val* debe comenzar con uno o más dígitos decimales, opcionalmente precedidos por un signo menos (-), que representa la cantidad. La función devuelve un iterador que designa el primer elemento más allá del campo de salida monetario que se ha generado.
 
-La segunda función miembro virtual protegida se comporta de la misma manera que la primera, a excepción de que primero convierte `val` de manera eficaz en una secuencia de dígitos decimales, precedida de manera opcional por un signo menos y, después, convierte esa secuencia como se ha descrito anteriormente.
+La segunda función miembro virtual protegida comporta igual que la primera, excepto que TI eficazmente primero convierte *val* en una secuencia de dígitos decimales, opcionalmente precedido por un signo menos, a continuación, convierte esa secuencia como anterior.
 
 El formato de un campo de salida monetario se determina por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class) fac devuelta mediante la llamada (eficaz) a [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -194,11 +202,12 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Refs` Valor de entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs*<br/>
+Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles del parámetro `_Refs` y su importancia son:
+Los valores posibles de la *_Refs* parámetro y su importancia son:
 
 - 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
@@ -233,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>Parámetros
 
-`next` Un iterador que direcciona el primer elemento de la cadena insertada.
+*next*<br/>
+Un iterador que se dirige al primer elemento de la cadena insertada.
 
-`_Intl` Un valor booleano que indica el tipo de símbolo de divisa esperado en la secuencia: **true** si internacionales, **false** si nacionales.
+*_Intl*<br/>
+Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-`_Iosbase` Un formato de marca que al conjunto indica que el símbolo de moneda es opcional; en caso contrario, es necesario
+*_Iosbase*<br/>
+Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-`_Fill` Un carácter que se utiliza para el espaciado.
+*_Fill*<br/>
+Un carácter que se usa para el espaciado.
 
-`val` Un objeto de cadena que se va a convertir.
+*Val*<br/>
+Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -285,7 +299,7 @@ money_put( ) = "CAD1,000.12"
 
 ## <a name="string_type"></a> money_put::string_type
 
-Un tipo que describe una cadena que contiene caracteres de tipo **CharType**.
+Tipo que describe una cadena que contiene caracteres de tipo `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

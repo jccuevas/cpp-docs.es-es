@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3228 | Documentos de Microsoft
+title: Error del compilador C3228 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c949aef15e9049f47b68094ae89b297bee1fc700
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1818cbae07af904a468447e16fcb95384e5dcd17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054693"
 ---
 # <a name="compiler-error-c3228"></a>Error del compilador C3228
-'función': el argumento de tipo genérico para 'param' no puede ser 'tipo', debe ser un tipo de valor o un tipo de controlador.  
-  
- Se pasó un tipo incorrecto como argumento de tipo genérico.  
-  
- El ejemplo siguiente genera la advertencia C3228:  
-  
-```  
-// C3228.cpp  
-// compile with: /clr  
-class A {};  
-  
-value class B {};  
-  
-generic <class T>  
-void Test() {}  
-  
-ref class C {  
-public:  
-   generic <class T>  
-   static void f() {}  
-};  
-  
-int main() {  
-   C::f<A>();   // C3228  
-   C::f<B>();   // OK  
-  
-   Test<C>();   // C3228  
-   Test<C ^>();   // OK  
-}  
+
+'función': el argumento de tipo genérico para 'param' no puede ser 'tipo', debe ser un tipo de valor o un tipo de controlador.
+
+Se pasó un tipo incorrecto como argumento de tipo genérico.
+
+El ejemplo siguiente genera la advertencia C3228:
+
+```
+// C3228.cpp
+// compile with: /clr
+class A {};
+
+value class B {};
+
+generic <class T>
+void Test() {}
+
+ref class C {
+public:
+   generic <class T>
+   static void f() {}
+};
+
+int main() {
+   C::f<A>();   // C3228
+   C::f<B>();   // OK
+
+   Test<C>();   // C3228
+   Test<C ^>();   // OK
+}
 ```

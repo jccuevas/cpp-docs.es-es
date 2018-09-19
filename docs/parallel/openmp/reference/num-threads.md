@@ -1,5 +1,5 @@
 ---
-title: num_threads | Documentos de Microsoft
+title: num_threads | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd57950d083c4f89ee2aa5962ad1e07a55a9a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016291"
 ---
 # <a name="numthreads"></a>num_threads
 Establece el número de subprocesos en un equipo de subproceso.  
@@ -31,14 +32,13 @@ Establece el número de subprocesos en un equipo de subproceso.
 num_threads(num)  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+### <a name="parameters"></a>Parámetros
   
- `num`  
- El número de subprocesos  
+*num*<br/>
+El número de subprocesos  
   
 ## <a name="remarks"></a>Comentarios  
- El `num_threads` cláusula tiene la misma funcionalidad que la [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) (función).  
+ El `num_threads` cláusula tiene la misma funcionalidad que el [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) función.  
   
  `num_threads` se aplica a las siguientes directivas:  
   
@@ -51,7 +51,7 @@ num_threads(num)
  Para obtener más información, consulte [2.3 parallel (construcción)](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Ejemplo  
- Vea [paralelo](../../../parallel/openmp/reference/parallel.md) para obtener un ejemplo del uso de `num_threads` cláusula.  
+ Consulte [paralelo](../../../parallel/openmp/reference/parallel.md) para obtener un ejemplo del uso de `num_threads` cláusula.  
   
 ## <a name="see-also"></a>Vea también  
  [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

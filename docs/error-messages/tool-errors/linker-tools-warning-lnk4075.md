@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK4075 advertencia | Documentos de Microsoft
+title: Las herramientas del vinculador LNK4075 advertencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd9a4ecdad30a0be2d45300367f6f79a65a6b31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a021a9345975dcb197ab578901baf22f76db846
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059659"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Advertencia de las herramientas del vinculador LNK4075
-se omite "opción1" debido a la especificación "opción2"  
-  
- La segunda opción reemplaza la primera.  
-  
- Se especifican las opciones del vinculador mutuamente excluyentes.  Examine las opciones del vinculador.  Donde se especifican las opciones del vinculador depende de cómo va a compilar el proyecto.  
-  
--   Si va a compilar en el entorno de desarrollo, buscar en las páginas de propiedades vinculador para el proyecto y ver dónde se especifican ambas opciones del vinculador.  Vea [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md) para obtener más información.  
-  
--   Si se compila en la línea de comandos, examine las opciones del vinculador especificadas no existe.  
-  
--   Si compila con scripts de compilación, examine las secuencias de comandos para ver dónde se especifican estas opciones del vinculador.  
-  
- Cuando encuentre donde se especifican las opciones del vinculador mutuamente excluyentes, quite una de las opciones del vinculador.  
-  
- Algunos ejemplos específicos:  
-  
--   Si vincula un módulo que se compiló con **/Zi**, lo cual implica una opción interna del vinculador llama/EDITANDCONTINUE y un módulo que se compiló con/OPT: REF, / OPT: ICF o/incremental: no, que no implica ningún/EDITANDCONTINUE, que se van a obtener LNK4075.  Vea [/Z7, / Zi, /ZI (formato de información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md) para obtener más información.
+
+omitiendo la opción "1" debido a la especificación "option2"
+
+La segunda opción reemplaza la primera.
+
+Se especifican las opciones del vinculador mutuamente excluyentes.  Examine las opciones del vinculador.  Donde se especifican las opciones del vinculador depende de cómo va a compilar el proyecto.
+
+- Si va a compilar en el entorno de desarrollo, busque en las páginas de propiedades del enlazador para el proyecto y ver donde se especifican ambas opciones del vinculador.  Consulte [trabajar con las propiedades del proyecto](../../ide/working-with-project-properties.md) para obtener más información.
+
+- Si compila en la línea de comandos, examine las opciones del enlazador especificadas no existe.
+
+- Si compila con los scripts de compilación, examine las secuencias de comandos para ver dónde se especifican estas opciones del vinculador.
+
+Cuando encuentre donde se especifican las opciones del vinculador mutuamente excluyentes, quite una de las opciones del vinculador.
+
+Algunos ejemplos específicos:
+
+- Si vincula un módulo que se compiló con **/Zi**, lo que implica una opción del vinculador interno llama/EDITANDCONTINUE y un módulo que se compiló con/OPT: REF, / OPT: ICF o/incremental: no, lo que no implica ningún/EDITANDCONTINUE, podrá obtener LNK4075.  Consulte [/Z7, / Zi, /ZI (formato de la información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md) para obtener más información.

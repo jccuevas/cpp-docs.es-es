@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4dbc01c83f9561c8174d2a14365a6a8c94e6ded
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab7d4f434bf958c3bf47dc1f91101d35cf04add7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954964"
 ---
 # <a name="working-with-a-tab-control"></a>Trabajar con un control de pestaña
-La manera más fácil de usar un control de ficha ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) es agregándolo a un recurso de plantilla de cuadro de diálogo con el editor de cuadro de diálogo. También puede usar un control de pestaña por sí mismo. Llamadas MFC **a InitCommonControls** para usted. Las tareas clave son los siguientes:  
+La manera más fácil de usar un control de ficha ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) es agregándolo a un recurso de plantilla de cuadro de diálogo con el editor de cuadro de diálogo. También puede usar un control de pestaña por sí mismo. MFC llama `InitCommonControls` para usted. Las tareas clave son los siguientes:  
   
 -   [Crear el control de pestaña](../mfc/creating-the-tab-control.md)  
   

@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfbe14743ffff91a4a1749f0394a6deb8f0547a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83ae0a746e31c211517563a018e5b7da18e3350a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955601"
 ---
 # <a name="cdockstate-class"></a>Clase CDockState
 Una clase serializada `CObject` que carga, descarga o desactiva el estado de una o más barras de control de acoplamiento en memoria persistente (un archivo).  
@@ -106,7 +107,7 @@ void LoadState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszProfileName`  
+ *lpszProfileName*  
  Apunta a una cadena teminated null que especifica el nombre de una sección en el archivo de inicialización o una clave en el registro de Windows donde se almacena información de estado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -127,7 +128,7 @@ void SaveState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszProfileName`  
+ *lpszProfileName*  
  Apunta a una cadena teminated null que especifica el nombre de una sección en el archivo de inicialización o una clave en el registro de Windows donde se almacena información de estado.  
   
 ### <a name="remarks"></a>Comentarios  

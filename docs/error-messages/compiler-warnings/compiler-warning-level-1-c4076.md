@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4076 | Documentos de Microsoft
+title: Del compilador (nivel 1) de la advertencia C4076 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f0a8066b8e79b75f3d5ede37f4e5ad6b61db168
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037884"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>Advertencia del compilador (nivel 1) C4076
-'typemod': no se puede utilizar con el tipo 'typename'  
-  
- Un modificador de tipo, tanto si es **signed** como `unsigned`, no se puede usar con un tipo no entero. ***typemod*** se omite.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C4076:  
-  
-```  
-// C4076.cpp  
-// compile with: /W1 /LD  
-unsigned double x;   // C4076  
+
+> '*modificador de tipo*': no se puede usar con el tipo '*typename*'
+
+## <a name="remarks"></a>Comentarios
+
+Un modificador de tipo, ya sea **firmado** o **sin signo**, no se puede usar con un tipo no entero. *modificador de tipo* se omite.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C4076; Para corregirlo, quite el **sin signo** modificador de tipo:
+
+```cpp
+// C4076.cpp
+// compile with: /W1 /LD
+unsigned double x;   // C4076
 ```

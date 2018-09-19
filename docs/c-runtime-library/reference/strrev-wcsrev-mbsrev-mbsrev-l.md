@@ -56,11 +56,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b99b08fc7761f5fb2d15761bf7726ac0faf64d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c9c2f461df538f405af8295c65f67dbefe46bb7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198099"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
@@ -101,14 +102,14 @@ Devuelve un puntero a la cadena modificada. No se reserva ningún valor devuelto
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strrev** función invierte el orden de los caracteres de *str*. El carácter nulo de finalización no cambia de lugar. **_wcsrev** y **_mbsrev** son versiones de caracteres multibyte y anchos de **_strrev**. Los argumentos y el valor devuelto de **_wcsrev** son caracteres anchos cadenas; los de **_mbsrev** son cadenas de caracteres multibyte. Para **_mbsrev**, el orden de bytes de cada carácter multibyte en *str* no cambia. Estas tres funciones se comportan exactamente igual.
+El **_strrev** función invierte el orden de los caracteres de *str*. El carácter nulo de finalización no cambia de lugar. **_wcsrev** y **_mbsrev** son versiones de caracteres anchos y caracteres multibyte de **_strrev**. Los argumentos y el valor devuelto de **_wcsrev** son caracteres anchos cadenas; los de **_mbsrev** son cadenas de caracteres multibyte. Para **_mbsrev**, el orden de bytes de cada carácter multibyte en *str* no cambia. Estas tres funciones se comportan exactamente igual.
 
-**_mbsrev** valida sus parámetros. Si el valor *string1* o *string2* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsrev** devuelve **NULL** y establece **errno** a **EINVAL**. **_strrev** y **_wcsrev** no validan sus parámetros.
+**_mbsrev** valida sus parámetros. Si bien *string1* o *cadena2* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsrev** devuelve **NULL** y establece **errno** a **EINVAL**. **_strrev** y **_wcsrev** no validan sus parámetros.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usan la configuración regional actual y las que tienen la **_l** sufijo en su lugar, use el parámetro de configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usan la configuración regional actual y las que tienen el **_l** sufijo en su lugar, use el parámetro de configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

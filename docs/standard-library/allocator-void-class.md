@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953559"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; (Clase)
 
-Especialización del asignador de la clase de plantilla para el tipo `void` que define los tipos que tienen sentido en este contexto.
+Una especialización del asignador de clase de plantilla al tipo **void**, define los tipos que tengan sentido en este contexto.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,7 +51,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Comentarios
 
-La clase especializa explícitamente la clase de plantilla [allocator](../standard-library/allocator-class.md) de tipo *void.* Sus constructores y el operador de asignación se comportan igual que para la clase de plantilla, aunque solo define los siguientes tipos:
+La clase especializa explícitamente la clase de plantilla [asignador](../standard-library/allocator-class.md) tipo **void**. Sus constructores y el operador de asignación se comportan igual que para la clase de plantilla, aunque solo define los siguientes tipos:
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 

@@ -1,5 +1,5 @@
 ---
-title: Clase CMultiPaneFrameWnd | Documentos de Microsoft
+title: CMultiPaneFrameWnd (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,16 +90,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738c8c3fa25fcfe0a657685b370f8e973d483861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4bc80f8370924377a089b3cb9838030943b9943
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706750"
 ---
-# <a name="cmultipaneframewnd-class"></a>Clase CMultiPaneFrameWnd
-El `CMultiPaneFrameWnd` clase extiende [CPaneFrameWnd clase](../../mfc/reference/cpaneframewnd-class.md). Puede admitir varios paneles. En lugar de un único identificador incrustado para una barra de controles, `CMultiPaneFrameWnd` contiene un [CPaneContainerManager clase](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite al usuario acoplar un `CMultiPaneFrameWnd` a otro y dinámicamente crear varios flotante, con fichas en Windows.  
+# <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd (clase)
+El `CMultiPaneFrameWnd` extiende la clase [CPaneFrameWnd (clase)](../../mfc/reference/cpaneframewnd-class.md). Puede admitir varios paneles. En lugar de un único identificador incrustado para una barra de control, `CMultiPaneFrameWnd` contiene un [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite al usuario acoplar un `CMultiPaneFrameWnd` a otro y dinámicamente crear varios flotante, con pestañas en Windows.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -127,7 +128,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::DockPane](#dockpane)|Acopla el panel. (Invalida [CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|  
 |[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||  
 |[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Devuelve el texto del título. (Invalida [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|  
-|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Devuelve una referencia al objeto de administrador interna del contenedor.|  
+|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Devuelve una referencia al objeto de administrador de contenedor interno.|  
 |[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Devuelve el primer panel visible que se encuentra en una ventana de marco reducido. (Invalida [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|  
 |[CMultiPaneFrameWnd::GetPane](#getpane)|Devuelve un panel que se encuentra en la ventana de marco reducido. (Invalida [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|  
 |[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Devuelve el número de paneles que se encuentran en una ventana de marco reducido. (Invalida [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|  
@@ -152,13 +153,13 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Invalida [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
   
 ## <a name="remarks"></a>Comentarios  
- La mayoría de los métodos de esta clase invalidar los métodos en el [CPaneFrameWnd clase](../../mfc/reference/cpaneframewnd-class.md) clase.  
+ La mayoría de los métodos de esta clase invalidan los métodos en el [CPaneFrameWnd (clase)](../../mfc/reference/cpaneframewnd-class.md) clase.  
   
- Si usa un panel de la `AFX_CBRS_AUTO_ROLLUP` estilo y el usuario acopla ese panel a una ventana de marco de varios paneles, el usuario puede resumir de la ventana, independientemente de la configuración de estilo de los otros paneles acoplados.  
+ Si un panel usa el estilo AFX_CBRS_AUTO_ROLLUP y el usuario acopla ese panel en una ventana de marco de varios paneles, el usuario puede resumir de la ventana, independientemente de la configuración de estilo de los otros paneles acoplados.  
   
- El marco de trabajo crea automáticamente un `CMultiPaneFrameWnd` objeto cuando el usuario desplaza un panel que usa el `CBRS_FLOAT_MULTI` estilo.  
+ El marco crea automáticamente un `CMultiPaneFrameWnd` objeto cuando el usuario desplaza un panel que usa el estilo CBRS_FLOAT_MULTI.  
   
- Para obtener información acerca de cómo derivar una clase a partir de la `CPaneFrameWnd` clase y crear dinámicamente, vea [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
+ Para obtener información acerca de cómo derivar una clase desde el `CPaneFrameWnd` clase y crear dinámicamente, consulte [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CMultiPaneFrameWnd` objeto. Este fragmento de código forma parte de la [ejemplo establece el tamaño del panel](../../visual-cpp-samples.md).  
@@ -187,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *conquistado*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -199,7 +200,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -236,11 +237,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndToDock`  
- [in] `ptMouse`  
- [in] `rectResult`  
- [in] `bDrawTab`  
- [in] `ppTargetBar`  
+*pWndToDock*<br/>
+[in] [in] *ptMouse*  
+*rectResult*<br/>
+[in] [in] *bDrawTab*  
+ [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -263,7 +264,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -306,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDockedFrame`  
- [in] `dockMethod`  
+*pDockedFrame*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -321,7 +322,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDockedBar`  
+ [in] *pDockedBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -335,7 +336,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -373,17 +374,17 @@ virtual CWnd* GetPane() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getpanecontainermanager"></a>  CMultiPaneFrameWnd::GetPaneContainerManager  
- Devuelve una referencia al objeto de administrador interna del contenedor.  
+ Devuelve una referencia al objeto de administrador de contenedor interno.  
   
 ```  
 CPaneContainerManager& GetPaneContainerManager();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia al objeto de administrador interna del contenedor.  
+ Una referencia al objeto de administrador de contenedor interno.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método puede utilizarse para tener acceso interno [CPaneContainerManager clase](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
+ Este método puede utilizarse para tener acceso interno [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 
@@ -418,9 +419,9 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+*pControlBar*<br/>
+[in] [in] *pTarget*  
+ [in] *después*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -436,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
- [in] `uiID`  
+*lpszProfileName*<br/>
+[in] [in] *uiID*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -489,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bShow`  
+*pBar*<br/>
+[in] [in] *bMostrar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -505,9 +506,9 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bCheckVisibility`  
+*punto*<br/>
+[in] [in] *nSensitivity*  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -533,9 +534,9 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bDestroy`  
- [in] `bNoDelayedDestroy`  
+*pBar*<br/>
+[in] [in] *bDestroy*  
+ [in] *bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -549,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBarOrg`  
- [in] `pBarReplaceWith`  
+*pBarOrg*<br/>
+[in] [in] *pBarReplaceWith*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -564,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
- [in] `uiID`  
+*lpszProfileName*<br/>
+[in] [in] *uiID*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -579,7 +580,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -591,7 +592,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDockManager`  
+ [in] *pDockManager*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -603,7 +604,7 @@ void SetLastFocusedPane(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -618,9 +619,9 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `preDockState`  
- [in] `pBarToDock`  
- [in] `dockMethod`  
+*preDockState*<br/>
+[in] [in] *pBarToDock*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -634,7 +635,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -648,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Comentarios  
   

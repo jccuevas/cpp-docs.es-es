@@ -1,5 +1,5 @@
 ---
-title: Características de registro Ver clases (acceso a datos MFC) | Documentos de Microsoft
+title: Clases (acceso a datos MFC) de la vista de características de registro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b6717c0ef1167e01df2f5e8de14408b23a9dbb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1c99b8b271b4948584d9bdb25c74518fe835573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093225"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>Características de las clases de vistas de registros (acceso a datos MFC)
-Puede realizar programación de acceso a datos basado en formularios con la clase [CFormView](../mfc/reference/cformview-class.md), pero [CRecordView](../mfc/reference/crecordview-class.md) suele ser una clase se deriva de mejor. Además su `CFormView` características, `CRecordView`:  
+
+Puede hacer la programación de acceso a datos basada en formularios con la clase [CFormView](../mfc/reference/cformview-class.md), pero [CRecordView](../mfc/reference/crecordview-class.md) suele ser una clase mejor derivar. Además su `CFormView` características, `CRecordView`:  
   
--   Proporciona el intercambio de datos de cuadros de diálogo (DDX) entre los controles del formulario y el objeto de conjunto de registros asociado.  
+- Proporciona el intercambio de datos de cuadro de diálogo (DDX) entre los controles de formulario y el objeto de conjunto de registros asociado.  
   
--   Controla los comandos Mover primero, mover siguiente, mover anterior y Mover último para navegar por los registros en el objeto de conjunto de registros asociado.  
+- Controla los comandos Mover primero, mover siguiente, mover anterior y Mover último para navegar por los registros en el objeto de conjunto de registros asociado.  
   
--   Actualiza los cambios en el registro actual cuando el usuario se mueve a otro registro.  
+- Actualiza los cambios en el registro actual cuando el usuario se mueve a otro registro.  
   
- Para obtener más información sobre la navegación, consulte [vistas de registros: permitir la navegación en una vista de registros](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
+Para obtener más información sobre la navegación, consulte [vistas de registros: permitir la navegación en una vista de registros](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de registros (acceso a datos MFC)](../data/record-views-mfc-data-access.md)   
- [Lista de controladores ODBC](../data/odbc/odbc-driver-list.md)
+
+[Vistas de registros (acceso a datos MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Lista de controladores ODBC](../data/odbc/odbc-driver-list.md)

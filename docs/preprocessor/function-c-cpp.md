@@ -1,5 +1,5 @@
 ---
-title: función) (C/C ++) | Documentos de Microsoft
+title: función (C++/C) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e24dac191e05cc3b47192cb6ec7fb0fc48dd447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76ab5b2911d349c62ff18967e7a660cdc3589ddd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538699"
 ---
 # <a name="function-cc"></a>function (C/C++)
 Especifica que se generen llamadas a funciones especificadas en la lista de argumentos de pragma.  
@@ -30,18 +31,18 @@ Especifica que se generen llamadas a funciones especificadas en la lista de argu
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 #pragma function( function1 [, function2, ...] )  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Si usas el **intrínseco** pragma (u /Oi) para indicar al compilador que genere funciones intrínsecas (las funciones intrínsecas se generan como código alineado, no como llamadas a funciones), puede usar el **función** pragma Para forzar explícitamente una llamada de función. Una vez vista una directiva pragma function, se aplica a la primera definición de función que contenga una función intrínseca especificada. El efecto continúa hasta el final del archivo de origen o a la apariencia de un **intrínseco** pragma especificando la misma función intrínseca. El **función** pragma puede utilizarse solo fuera de una función, en el nivel global.  
+
+Si usas el `intrinsic` pragma (u /Oi) para indicar al compilador que genere funciones intrínsecas (funciones intrínsecas se generan como código en línea, no como llamadas a funciones), puede usar el **función** pragma para forzar explícitamente una llamada de función. Una vez vista una directiva pragma function, se aplica a la primera definición de función que contenga una función intrínseca especificada. El efecto continúa hasta el final del archivo de origen o a la apariencia de un `intrinsic` pragma especificando la misma función intrínseca. El **función** pragma puede utilizarse solo fuera de una función, en el nivel global.  
   
- Para obtener listas de las funciones que tienen formas intrínsecas, vea [#pragma intrinsic](../preprocessor/intrinsic.md).  
+Para obtener listas de las funciones que tienen formas intrínsecas, vea [intrínseco #pragma](../preprocessor/intrinsic.md).  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // pragma_directive_function.cpp  
 #include <ctype.h>  
 #include <stdio.h>  
@@ -91,5 +92,6 @@ str is 'Now************'
 str is '!!!!!!!!!!!!!!!'  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vea también
+
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

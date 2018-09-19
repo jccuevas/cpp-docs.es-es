@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216982"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -102,7 +103,7 @@ El tamaño en bytes de la *mbstr* búfer.
 Apunta a la cadena de caracteres anchos que se va a convertir.
 
 *count*<br/>
-El número máximo de bytes que se va a almacenar en el *mbstr* búfer, sin incluir el carácter nulo de terminación o [_TRUNCATE](../../c-runtime-library/truncate.md).
+El número máximo de bytes para almacenar en el *mbstr* búfer, sin incluir el carácter nulo final, o [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -115,7 +116,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |---------------------|------------------------------|
 |*mbstr* es **NULL** y *sizeInBytes* > 0|**EINVAL**|
 |*wcstr* es **NULL**|**EINVAL**|
-|El búfer de destino es demasiado pequeño para contener la cadena convertida (a menos que *recuento* es **_TRUNCATE**; vea las notas siguientes)|**ERANGE**|
+|El búfer de destino es demasiado pequeño para contener la cadena convertida (a menos que *recuento* es **_TRUNCATE**; vea Comentarios más abajo)|**ERANGE**|
 
 Si se produce alguna de estas condiciones, se invoca la excepción de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve un código de error y establece **errno** como se indica en la tabla.
 
@@ -127,22 +128,22 @@ El **wcstombs_s** función convierte una cadena de caracteres anchos que apunta 
 
 - Se encuentre un carácter ancho que no se pueda convertir
 
-- El número de bytes almacenados en el *mbstr* almacenar en búfer es igual a *recuento*.
+- El número de bytes almacenados en el *mbstr* búfer equals *recuento*.
 
 La cadena de destino siempre termina en nulo (aun en caso de error).
 
-Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **wcstombs_s** convierte tanto de la cadena como quepan en el búfer de destino, dejando espacio para un valor null terminador. Si la cadena se trunca, el valor devuelto es **STRUNCATE**, y la conversión se considera correcta.
+Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **wcstombs_s** convierte tanto de la cadena como cabe en el búfer de destino, dejando espacio para un valor null terminador. Si la cadena se trunca, el valor devuelto es **STRUNCATE**, y la conversión se considera correcta.
 
-Si **wcstombs_s** convierte correctamente la cadena de origen, coloca el tamaño en bytes de la cadena convertida, incluido el terminador null, en  *&#42;pReturnValue* (proporciona  *pReturnValue* no **NULL**). Esto ocurre incluso si la *mbstr* argumento es **NULL** y proporciona una manera de determinar el tamaño de búfer necesario. Tenga en cuenta que si *mbstr* es **NULL**, *recuento* se omite.
+Si **wcstombs_s** convierte correctamente la cadena de origen, pone el tamaño en bytes de la cadena convertida, incluido el terminador nulo, en  *&#42;pReturnValue* (proporcionado  *pReturnValue* no **NULL**). Esto ocurre incluso si la *mbstr* argumento es **NULL** y proporciona una manera de determinar el tamaño de búfer necesario. Observe que si *mbstr* es **NULL**, *recuento* se omite.
 
-Si **wcstombs_s** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, coloca 0  *&#42;pReturnValue*, Establece el búfer de destino en una cadena vacía, establece **errno**  a **EILSEQ**y devuelve **EILSEQ**.
+Si **wcstombs_s** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, pone 0 en  *&#42;pReturnValue*, Establece el búfer de destino en una cadena vacía, establece **errno**  a **EILSEQ**y devuelve **EILSEQ**.
 
-Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs_s** no está definido.
+Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs_s** es indefinido.
 
 > [!IMPORTANT]
-> Asegúrese de que *wcstr* y *mbstr* no se superponen y que *recuento* refleja correctamente el número de caracteres anchos que se va a convertir.
+> Asegúrese de que *wcstr* y *mbstr* no se superponen y que *recuento* refleja correctamente el número de caracteres anchos a convertir.
 
-**wcstombs_s** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_wcstombs_s_l** es idéntico a **wcstombs** salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**wcstombs_s** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_wcstombs_s_l** es idéntico al **wcstombs** salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -156,7 +157,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra el comportamiento de la **wcstombs_s** (función).
+Este programa muestra el comportamiento de la **wcstombs_s** función.
 
 ```C
 // crt_wcstombs_s.c
@@ -207,4 +208,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

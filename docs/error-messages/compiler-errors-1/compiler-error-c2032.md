@@ -1,5 +1,5 @@
 ---
-title: C2032 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2032 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1db268222f3b9f7ca6f9ce297680866185e6661d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab02ca695ec94f25054e3490232b782a46a53a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064014"
 ---
-# <a name="compiler-error-c2032"></a>C2032 de Error del compilador
-'identificador': función no puede ser miembro de 'estructuraounión' struct/union  
-  
- La estructura o unión tiene una función miembro, que se admite en C++, pero no en C. Para resolver el error, compile como un programa de C++ o quite la función miembro.  
-  
- El ejemplo siguiente genera C2032:  
-  
-```  
-// C2032.c  
-struct z {  
-   int i;  
-   void func();   // C2032  
-};  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2032b.c  
-// compile with: /c  
-struct z {  
-   int i;  
-};  
+# <a name="compiler-error-c2032"></a>Error del compilador C2032
+
+'identifier': función no puede ser miembro del struct/union 'estructuraounión'
+
+La estructura o unión tiene una función miembro, que se admite en C++, pero no en C. Para resolver el error, compile como un programa de C++ o quite la función miembro.
+
+El ejemplo siguiente genera C2032:
+
+```
+// C2032.c
+struct z {
+   int i;
+   void func();   // C2032
+};
+```
+
+Posible resolución:
+
+```
+// C2032b.c
+// compile with: /c
+struct z {
+   int i;
+};
 ```

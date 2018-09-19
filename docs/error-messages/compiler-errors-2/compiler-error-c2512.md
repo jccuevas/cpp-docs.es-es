@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2512 | Documentos de Microsoft
+title: Error del compilador C2512 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286be19ca407039a77d51503a34c7a27da1c3d5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1fbba98237879927fd82d6535c0c2688c1c304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036928"
 ---
 # <a name="compiler-error-c2512"></a>Error del compilador C2512
 
-> '*identificador*': no hay disponible un constructor predeterminado adecuado  
+> '*identificador*': no hay disponible un constructor predeterminado adecuado
 
-A *constructor predeterminado*, un constructor que no requiere argumentos, no está disponible para la clase especificada, estructura o unión. El compilador proporciona un constructor predeterminado solo si no se proporciona ningún constructor definido por el usuario.
+Un *constructor predeterminado*, un constructor que no requiere argumentos, no está disponible para la clase especificada, estructura o unión. El compilador proporciona un constructor predeterminado solo si no se proporciona ningún constructor definido por el usuario.
 
-Si proporciona un constructor que toma un parámetro distinto de void y desea permitir que la clase que se creará sin parámetros (por ejemplo, que los elementos de una matriz), también debe proporcionar un constructor predeterminado. El constructor predeterminado puede ser un constructor con valores predeterminados para todos los parámetros.
+Si proporciona un constructor que toma un parámetro distinto de void y desea permitir que la clase se cree sin parámetros (por ejemplo, como los elementos de matriz), también debe proporcionar un constructor predeterminado. El constructor predeterminado puede ser un constructor con valores predeterminados para todos los parámetros.
 
 ## <a name="example"></a>Ejemplo
 
-Una causa común de error error C2512 es al definir un constructor de clase o struct que acepta argumentos y, a continuación, intenta declarar una instancia de la clase o struct sin ningún argumento. Por ejemplo, `struct B` a continuación declara un constructor que requiere un `char *` argumento, pero no uno que no toma ningún argumento. En `main`, se declara una instancia de B, pero se proporciona ningún argumento. El compilador genera el error C2512 porque no se puede encontrar un constructor predeterminado para B.
+Una causa común de error C2512 es al definir un constructor de clase o struct que tome argumentos y, a continuación, intenta declarar una instancia de la clase o struct sin ningún argumento. Por ejemplo, `struct B` a continuación declara un constructor que requiere un `char *` argumento, pero no uno que no toma ningún argumento. En `main`, se declara una instancia de B, pero se proporciona ningún argumento. El compilador genera el error C2512 porque no se puede encontrar un constructor predeterminado para B.
 
 ```cpp
 // C2512.cpp
@@ -49,4 +50,4 @@ int main() {
 }
 ```
 
-Puede solucionar este problema mediante la definición de un constructor predeterminado para la estructura o clase, como `B() {}`, o un constructor donde todos los argumentos tienen valores predeterminados, como `B (char * = nullptr) {}`.
+Puede solucionar este problema definiendo un constructor predeterminado para la estructura o clase, como `B() {}`, o un constructor donde todos los argumentos tienen valores predeterminados, como `B (char * = nullptr) {}`.

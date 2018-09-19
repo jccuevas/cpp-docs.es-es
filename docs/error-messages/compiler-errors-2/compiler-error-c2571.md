@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2571 | Documentos de Microsoft
+title: Error del compilador C2571 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dea582cf5d1211d57eac94a7f70458a51542ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30cc078251d0511da77e08690db275a788973ffb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067940"
 ---
 # <a name="compiler-error-c2571"></a>Error del compilador C2571
-'función': función virtual no puede estar en la unión 'unión'  
-  
- Se declara una unión con una función virtual. Puede declarar una función virtual solo en una clase o estructura.  Soluciones posibles:  
-  
-1.  Cambie la unión a una clase o estructura.  
-  
-2.  Hacer que la función no virtual.  
-  
- El ejemplo siguiente genera C2571:  
-  
-```  
-// C2571.cpp  
-// compile with: /c  
-union A {  
-   virtual void func1();   // C2571  
-   void func2();   // OK  
-};  
+
+'function': función virtual no puede estar en la unión "union"
+
+Se declara una unión con una función virtual. Puede declarar una función virtual solo en una clase o estructura.  Soluciones posibles:
+
+1. Cambie la unión a una clase o estructura.
+
+1. Hacer que la función no virtual.
+
+El ejemplo siguiente genera C2571:
+
+```
+// C2571.cpp
+// compile with: /c
+union A {
+   virtual void func1();   // C2571
+   void func2();   // OK
+};
 ```

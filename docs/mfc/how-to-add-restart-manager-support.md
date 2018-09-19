@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: agregar compatibilidad con el Administrador de reinicio | Documentos de Microsoft'
+title: 'Cómo: agregar compatibilidad con el Administrador de reinicio | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2916bd96bf36333a81b2e8a88e62cc8f562e9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b30491b2cb46ab0e8b25edc2d39e6616817c9b4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538729"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Cómo: Agregar compatibilidad con el Administrador de reinicio
 
@@ -30,11 +31,11 @@ El Administrador de reinicio es una característica agregada a Visual Studio par
 > [!NOTE]
 >  Puede reemplazar el comportamiento predeterminado del Administrador de reinicio para guardar los datos y reiniciar la aplicación.  
   
- De forma predeterminada, las aplicaciones MFC crean mediante el Asistente para proyectos de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] son compatibles con el Administrador de reinicio cuando las aplicaciones se ejecutan en un equipo que tenga un Windows Vista o un sistema operativo posterior. Si no desea que la aplicación admita el Administrador de reinicio, puede deshabilitarlo en el asistente para nuevo proyecto.  
+ De forma predeterminada, las aplicaciones MFC creadas con el Asistente para proyectos de Visual Studio admiten el Administrador de reinicio cuando las aplicaciones se ejecutan en un equipo que tiene una Vista de Windows o un sistema operativo posterior. Si no desea que la aplicación admita el Administrador de reinicio, puede deshabilitarlo en el asistente para nuevo proyecto.  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>Para agregar compatibilidad con el Administrador de reinicio a una aplicación existente  
   
-1.  Abra una aplicación de MFC existente en [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+1.  Abra una aplicación MFC existente en Visual Studio.  
   
 2.  Abra el archivo de código fuente de la aplicación principal. De forma predeterminada, es el archivo .cpp que tiene el mismo nombre que la aplicación. Por ejemplo, el archivo de código fuente de la aplicación principal para MyProject es MyProject.cpp.  
   
@@ -46,12 +47,12 @@ El Administrador de reinicio es una característica agregada a Visual Studio par
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
  ```  
   
-5.  Asegúrese de que el método `InitInstance` de la aplicación llama a su método principal `InitInstance` : [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) o `CWinAppEx::InitInstance`. El método `InitInstance` es responsable de comprobar el parámetro `m_dwRestartManagerSupportFlags` .  
+5.  Asegúrese de que el método `InitInstance` de la aplicación llama a su método principal `InitInstance` : [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) o `CWinAppEx::InitInstance`. El `InitInstance` método es responsable de comprobar la *m_dwRestartManagerSupportFlags* parámetro.  
   
 6.  Compile y ejecute la aplicación.  
   
 ## <a name="see-also"></a>Vea también  
- [Clase CDataRecoveryHandler](../mfc/reference/cdatarecoveryhandler-class.md)   
+ [CDataRecoveryHandler (clase)](../mfc/reference/cdatarecoveryhandler-class.md)   
  [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)   
  [CWinApp (clase)](../mfc/reference/cwinapp-class.md)   
  [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)   

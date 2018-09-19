@@ -1,5 +1,5 @@
 ---
-title: Configuración de la aplicación, Asistente para archivos DLL de MFC | Documentos de Microsoft
+title: Configuración de la aplicación, Asistente para archivos DLL de MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a243b790881452a983c43fb92d8ebea18c26bcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04fcf796c7d08cc2733edbf23b66c591e07ec71a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704982"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Configuración de la aplicación, Asistente para archivos DLL de MFC
-Utilice esta página del Asistente para la DLL de MFC para diseñar y agregar características básicas a un nuevo proyecto DLL de MFC.  
+Utilice esta página del Asistente para la DLL de MFC para diseñar y agregar características básicas a un nuevo proyecto de DLL de MFC.  
   
 ## <a name="dll-type"></a>Tipo de archivo DLL  
  Seleccione el tipo de archivo DLL que desee crear.  
   
- **DLL de MFC regular mediante compartido DLL de MFC**  
- Seleccione esta opción para vincular la biblioteca MFC con el programa como un archivo DLL compartido. Con esta opción, no se puede compartir objetos MFC entre el archivo DLL y la aplicación que realiza la llamada. El programa realiza llamadas a la biblioteca MFC en tiempo de ejecución. Esta opción reduce los requisitos de disco y memoria del programa si se compone de varios archivos ejecutables que utilizan la biblioteca MFC. Programas de Win32 y MFC pueden llamar a funciones en el archivo DLL. Debe redistribuir la DLL de MFC con este tipo de proyecto.  
+- **DLL de MFC regular mediante compartido DLL de MFC**
+
+   Seleccione esta opción para vincular la biblioteca MFC con el programa como un archivo DLL compartido. Con esta opción, no se puede compartir objetos MFC entre el archivo DLL y la aplicación que realiza la llamada. El programa realiza llamadas a la biblioteca MFC en tiempo de ejecución. Esta opción reduce los requisitos de disco y memoria del programa si se compone de varios archivos ejecutables que utilizan la biblioteca MFC. Programas de Win32 y MFC pueden llamar a funciones en el archivo DLL. Debe redistribuir las DLL de MFC con este tipo de proyecto.  
   
- **Vincula estáticamente regular DLL de MFC con MFC**  
- Seleccione esta opción para vincular estáticamente el programa a la biblioteca MFC en tiempo de compilación. Programas de Win32 y MFC pueden llamar a funciones en el archivo DLL. Aunque esta opción aumenta el tamaño del programa, no es necesario redistribuir la DLL de MFC con este tipo de proyecto. No se puede compartir objetos MFC entre el archivo DLL y la aplicación que realiza la llamada.  
+- **MFC DLL con MFC vinculada estáticamente**
+
+   Seleccione esta opción para vincular estáticamente el programa a la biblioteca MFC en tiempo de compilación. Programas de Win32 y MFC pueden llamar a funciones en el archivo DLL. Aunque esta opción aumenta el tamaño del programa, no es necesario redistribuir la DLL de MFC con este tipo de proyecto. No se puede compartir objetos MFC entre el archivo DLL y la aplicación que realiza la llamada.  
   
- **Archivo DLL de extensión MFC**  
- Seleccione esta opción si desea que el programa para realizar llamadas a la biblioteca MFC en tiempo de ejecución, y si desea compartir objetos MFC entre el archivo DLL y la aplicación que realiza la llamada. Esta opción reduce los requisitos de disco y memoria del programa, si se compone de varios archivos ejecutables que utilizan la biblioteca MFC. Sólo los programas MFC pueden llamar a funciones en el archivo DLL. Debe redistribuir la DLL de MFC con este tipo de proyecto.  
+- **Archivo DLL de extensión MFC**
+
+   Seleccione esta opción si desea que el programa para realizar llamadas a la biblioteca MFC en tiempo de ejecución, y si desea compartir objetos MFC entre el archivo DLL y la aplicación que realiza la llamada. Esta opción reduce los requisitos de disco y memoria de programa, si se compone de varios archivos ejecutables que utilizan la biblioteca MFC. Sólo los programas MFC pueden llamar a funciones en el archivo DLL. Debe redistribuir las DLL de MFC con este tipo de proyecto.  
   
 ## <a name="additional-features"></a>Características adicionales  
- Seleccione si la DLL de MFC debe admitir la automatización y si deben admitir Windows sockets.  
+
+Seleccione si la DLL de MFC debe admitir la automatización y si deben admitir sockets de Windows.  
   
- **Automatización**  
- Seleccione **automatización** para permitir que el programa manipular objetos implementados en otro programa. Seleccionar **automatización** también expone el programa a otros clientes de automatización. Vea [automatización](../../mfc/automation.md) para obtener más información.  
+- **Automatización**
+
+   Seleccione **automatización** para permitir que el programa manipular objetos implementados en otro programa. Seleccionar **automatización** también expone el programa a otros clientes de automatización. Consulte [automatización](../../mfc/automation.md) para obtener más información.  
   
- **Sockets de Windows**  
- Seleccione esta opción para indicar que el programa compatible con Windows sockets. Windows sockets permite escribir programas que se comunican a través de redes TCP/IP.  
+- **Sockets de Windows**
+
+   Seleccione esta opción para indicar que el programa admite sockets de Windows. Sockets de Windows le permiten escribir programas que se comunican a través de redes TCP/IP.  
   
- Cuando la DLL de MFC con Windows sockets se crea con compatibilidad, [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) inicializa admite para los sockets y el archivo de encabezado MFC StdAfx.h incluye AfxSock.h.  
+   Cuando la DLL de MFC con Windows sockets se crea el soporte técnico, [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) inicializa la compatibilidad con sockets y el archivo de encabezado MFC StdAfx.h incluye AfxSock.h.  
   
 ## <a name="see-also"></a>Vea también  
  [Asistente para archivos DLL de MFC](../../mfc/reference/mfc-dll-wizard.md)   

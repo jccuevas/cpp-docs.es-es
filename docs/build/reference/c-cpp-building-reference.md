@@ -1,5 +1,5 @@
 ---
-title: Referencia de compilación de C/c ++ | Documentos de Microsoft
+title: Referencia de compilación de C/c ++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,69 +17,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d26f729f660b3e51677303bb91b99e665a1a950
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 116ddca6ed9f5e0b3ea02652958931f88cc8fc13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703227"
 ---
 # <a name="cc-building-reference"></a>Referencia de compilación de C/C++
-Visual C++ proporciona dos formas de compilar un programa de C o C++. La manera más fácil (y más común) es [crear dentro del entorno de desarrollo de Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). El otro mecanismo consiste en [construido a partir de un símbolo del sistema mediante herramientas de línea de comandos](../../build/building-on-the-command-line.md). En cualquier caso, puede crear los archivos de origen con el editor de código fuente de Visual C++ o un editor de terceros de su elección.  
-  
- Si el programa utiliza un archivo MAKE en lugar de un archivo .vcxproj, todavía puede crear en el entorno de desarrollo como un [proyecto externo](../../ide/building-external-projects.md).  
-  
-## <a name="in-this-section"></a>En esta sección  
- [Compilación de un programa de C/C++](../../build/reference/compiling-a-c-cpp-program.md)  
- Describe el compilador, que crea un archivo de objeto que contiene código máquina, directivas del vinculador, secciones, referencias externas y nombres de función/datos.  
-  
- [Vinculación](../../build/reference/linking.md)  
- Describe al vinculador, que combina el código de los archivos de objeto creados por el compilador y de las bibliotecas vinculadas estáticamente, resuelve las referencias de nombres y crea un archivo ejecutable.  
-  
- [Versiones de lanzamiento](../../build/reference/release-builds.md)  
- Presenta información sobre por qué y cuándo se desea cambiar de depuración para una compilación de versión de compilación y también se tratan algunos de los problemas que pueden producirse al cambiar de una depuración a una versión de lanzamiento.  
-  
- [Optimizar el código](../../build/reference/optimizing-your-code.md)  
- Proporciona vínculos a temas que describen los mecanismos para optimizar el código:  
-  
- [Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)  
- Proporciona las siguientes herramientas de línea de comandos para ver y manipular el resultado de la compilación:  
-  
- [Errores de compilación de C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
- Presenta la sección de errores de compilación en la tabla de contenido.  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- [Referencia del preprocesador de C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)  
- Explica el preprocesador, que prepara archivos de código fuente para el compilador mediante la conversión de macros, operadores y directivas.  
-  
- [Descripción de los pasos de compilación personalizada y los eventos de compilación](../../ide/understanding-custom-build-steps-and-build-events.md)  
- Describe la personalización del proceso de compilación.  
-  
- [Compilar un programa de C o C++](../../build/building-c-cpp-programs.md)  
- Ofrece vínculos a temas en los que se describe la compilación de programas desde la línea de comandos o desde el entorno de desarrollo integrado de Visual Studio.  
-  
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)  
- Describe las opciones del compilador en el entorno de desarrollo o en la línea de comandos de configuración.  
-  
- [Opciones del compilador](../../build/reference/compiler-options.md)  
- Proporciona vínculos a temas que describen las opciones del compilador.  
-  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)  
- Describe las opciones de configuración del vinculador dentro o fuera del entorno de desarrollo integrado.  
-  
- [Opciones del vinculador](../../build/reference/linker-options.md)  
- Proporciona vínculos a temas que describen las opciones del vinculador.  
-  
- [Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)  
- Describe la utilidad de mantenimiento de información de examen de Microsoft (BSCMAKE. (EXE), que crea un archivo de información de examen (.bsc) a partir de .sbr archivos creados durante la compilación.  
-  
- [Referencia de LIB](../../build/reference/lib-reference.md)  
- Describe el Administrador de bibliotecas de Microsoft (LIB.exe), que crea y administra una biblioteca de archivos objeto con formato de archivo de objeto común (COFF).  
-  
- [Referencia de EDITBIN](../../build/reference/editbin-reference.md)  
- Describe el Editor de archivos de Microsoft COFF Binary (EDITBIN. (EXE), que modifica los archivos binarios de formato de archivo de objeto común (COFF).  
-  
- [Referencia de DUMPBIN](../../build/reference/dumpbin-reference.md)  
- Describe el Microsoft COFF Binary File Dumper (DUMPBIN. (EXE), que muestra información acerca de los archivos binarios de formato de archivo de objeto común (COFF).  
-  
- [Referencia de NMAKE](../../build/nmake-reference.md)  
- Describe la utilidad de mantenimiento de programas de Microsoft (NMAKE. (EXE), que es una herramienta que genera proyectos tomando como base los comandos contenidos en un archivo de descripción.
+
+Visual C++ proporciona dos formas de crear un programa de C o C++. La manera más fácil (y más común) es [compilar dentro del entorno de desarrollo de Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). La otra forma es [construido a partir de un símbolo del sistema mediante herramientas de línea de comandos](../../build/building-on-the-command-line.md). En cualquier caso, puede crear los archivos de origen mediante el editor de código fuente de Visual C++ o un editor de terceros de su elección.
+
+Si el programa utiliza un archivo MAKE en lugar de un archivo .vcxproj, todavía puede crear en el entorno de desarrollo como un [proyecto externo](../../ide/building-external-projects.md).
+
+## <a name="in-this-section"></a>En esta sección
+
+[Compilar un programa de C o C++](../../build/reference/compiling-a-c-cpp-program.md) describe el compilador, que crea un archivo de objeto que contiene código máquina, directivas del vinculador, secciones, las referencias externas y los nombres de función/datos.
+
+[Vinculación](../../build/reference/linking.md) describe el vinculador, que combina el código de los archivos de objeto creados por el compilador y de las bibliotecas vinculadas estáticamente, resuelve las referencias de nombre y crea un archivo ejecutable.
+
+[Versiones de lanzamiento](../../build/reference/release-builds.md) presenta información acerca de por qué y cuándo cambiar de una compilación de depuración a una versión de lanzamiento y también se describen algunos de los problemas que puede surgir al cambiar de una depuración a una versión de lanzamiento.
+
+[Optimizar el código](../../build/reference/optimizing-your-code.md) proporciona vínculos a temas que describen los mecanismos para optimizar el código:
+
+[Herramientas de compilación de C/C ++](../../build/reference/c-cpp-build-tools.md) proporciona las siguientes herramientas de línea de comandos para ver y manipular el resultado de la compilación:
+
+[Errores de compilación de C/C ++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) presenta la sección de errores de compilación en la tabla de contenido.
+
+## <a name="related-sections"></a>Secciones relacionadas
+
+[Referencia del preprocesador de C/C ++](../../preprocessor/c-cpp-preprocessor-reference.md) describe el preprocesador, que prepara archivos de código fuente para el compilador mediante la conversión de macros, operadores y directivas.
+
+[Introducción a los pasos de compilación personalizada y eventos de compilación](../../ide/understanding-custom-build-steps-and-build-events.md) explica personalizar el proceso de compilación.
+
+[Creación de un programa de C o C++](../../build/building-c-cpp-programs.md) proporciona vínculos a temas que describen cómo generar un programa desde la línea de comandos o desde el entorno de desarrollo integrado de Visual Studio.
+
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md) describe las opciones de configuración del compilador en el entorno de desarrollo o en la línea de comandos.
+
+[Opciones del compilador](../../build/reference/compiler-options.md) proporciona vínculos a temas que describen las opciones del compilador.
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md) describe las opciones de configuración del vinculador dentro o fuera del entorno de desarrollo integrado.
+
+[Opciones del vinculador](../../build/reference/linker-options.md) proporciona vínculos a temas que describen las opciones del vinculador.
+
+[Referencia de BSCMAKE](../../build/reference/bscmake-reference.md) describe la utilidad de mantenimiento de información de examen de Microsoft (BSCMAKE. (EXE), que genera un archivo de información de examen (.bsc) de .sbr creados durante la compilación de archivos.
+
+[Referencia de LIB](../../build/reference/lib-reference.md) describe el Administrador de bibliotecas de Microsoft (LIB.exe), que crea y administra una biblioteca de archivos de objeto de formato de archivo de objeto común (COFF).
+
+[Referencia de EDITBIN](../../build/reference/editbin-reference.md) describe el Editor de archivos de Microsoft COFF Binary (EDITBIN. (EXE), que modifica los archivos binarios de formato de archivo de objeto común (COFF).
+
+[Referencia de DUMPBIN](../../build/reference/dumpbin-reference.md) describe el Microsoft COFF Binary File Dumper (DUMPBIN. (EXE), que muestra información acerca de los archivos binarios de formato de archivo de objeto común (COFF).
+
+[Referencia de NMAKE](../../build/nmake-reference.md) describe la utilidad de mantenimiento de programas de Microsoft (NMAKE. (EXE), que es una herramienta que compila proyectos en función de los comandos contenidos en un archivo de descripción.

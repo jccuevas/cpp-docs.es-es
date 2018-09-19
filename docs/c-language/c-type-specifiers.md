@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764269"
 ---
 # <a name="c-type-specifiers"></a>Especificadores de tipos de C
 
@@ -28,18 +29,18 @@ Los especificadores de tipo en las declaraciones definen el tipo de una declarac
 ## <a name="syntax"></a>Sintaxis
 
 *type-specifier*:  
-&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;*typedef-name*  
+&nbsp;&nbsp;&nbsp;&nbsp;**void**  
+&nbsp;&nbsp;&nbsp;&nbsp;**char**  
+&nbsp;&nbsp;&nbsp;&nbsp;**short**  
+&nbsp;&nbsp;&nbsp;&nbsp;**int**  
+&nbsp;&nbsp;&nbsp;&nbsp;**long**  
+&nbsp;&nbsp;&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;&nbsp;&nbsp;**double**  
+&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
+&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
 
 Los tipos **signed char**, **signed int**, **signed short int** y **signed long int**, así como sus homólogos **unsigned** y **enum**, se denominan tipos *enteros*. Los especificadores de tipo **float**, **double** y **long double** se conocen como tipos *flotantes* o de *punto flotante*. Se puede utilizar cualquier especificador de tipo entero o de punto flotante en una declaración de variable o de función. Si en una declaración no se proporciona *type-specifier*, se considera que es **int**.
 
@@ -78,7 +79,7 @@ pi = pu;  /* Now generates warning */
 
 Las expresiones de tipo **void** se evalúan para ver si tienen efectos secundarios. No se puede utilizar el valor (inexistente) de una expresión que tiene el tipo **void** de ninguna forma, ni puede convertirse una expresión **void**, mediante conversión implícita o explícita, a ningún tipo, excepto **void**. Si utiliza una expresión de cualquier otro tipo en un contexto en el que se requiera una expresión **void**, su valor quedará descartado.
 
-Por conformidad con la especificación ANSI, **void\*\*** no se puede utilizar como **int\*\***. Solo **void\*** se puede utilizar como puntero a un tipo sin especificar.
+Por conformidad con la especificación ANSI, <strong>void\*\*</strong> no se puede utilizar como <strong>int\*\*</strong>. Solo **void**<strong>\*</strong> se puede utilizar como puntero a un tipo sin especificar.
 
 **FIN de Específicos de Microsoft**
 

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3420 | Documentos de Microsoft
+title: Error del compilador C3420 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7614d07cf98ae9fe857809bf9400d36a48ab0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3997bc0744bf1e1db34fe7ce1de666ebd3e3b8cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078574"
 ---
 # <a name="compiler-error-c3420"></a>Error del compilador C3420
-'finalizador': un finalizador no puede ser virtual  
-  
- Solo se puede llamar a un finalizador de forma no virtual desde su tipo envolvente. Por consiguiente, es un error declarar un finalizador virtual.  
-  
- Para obtener más información, consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C3420.  
-  
-```  
-// C3420.cpp  
-// compile with: /clr /c  
-ref class R {  
-   virtual !R() {}   // C3420  
-};  
+
+'finalizador': un finalizador no puede ser virtual
+
+Solo se puede llamar a un finalizador de forma no virtual desde su tipo envolvente. Por consiguiente, es un error declarar un finalizador virtual.
+
+Para obtener más información, consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C3420.
+
+```
+// C3420.cpp
+// compile with: /clr /c
+ref class R {
+   virtual !R() {}   // C3420
+};
 ```

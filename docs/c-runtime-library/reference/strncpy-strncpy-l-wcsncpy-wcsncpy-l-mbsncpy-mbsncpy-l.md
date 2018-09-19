@@ -71,11 +71,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b4ec53451b750e92d952a57257709e9a0cde09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f01e69129b0884b3385b7a17289a067f36f65e3a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213242"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -181,14 +182,14 @@ Devuelve *strDest*. No se reserva ningún valor devuelto para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strncpy** función copia los primeros *recuento* caracteres de *strSource* a *strDest* y devuelve *strDest* . Si *recuento* es menor o igual que la longitud de *strSource*, un carácter null no se adjunta automáticamente a la cadena copiada. Si *recuento* es mayor que la longitud de *strSource*, la cadena de destino se rellena con caracteres nulos hasta la longitud *recuento*. El comportamiento de **strncpy** es indefinido si las cadenas de origen y de destino se superponen.
+El **strncpy** función copia inicial *recuento* caracteres de *strSource* a *strDest* y devuelve *strDest* . Si *recuento* es menor o igual que la longitud de *strSource*, un carácter nulo no se adjunta automáticamente a la cadena copiada. Si *recuento* es mayor que la longitud de *strSource*, la cadena de destino se rellena con caracteres nulos hasta la longitud *recuento*. El comportamiento de **strncpy** es indefinido si las cadenas de origen y destino se superponen.
 
 > [!IMPORTANT]
-> **strncpy** no comprueba si hay espacio suficiente en *strDest*; Esto facilita una posible causa de saturaciones de búfer. El *recuento* argumento limita el número de caracteres que se copian; no es un límite en el tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> **strncpy** no comprueba si hay espacio suficiente en *strDest*; Esto facilita una posible causa de saturaciones del búfer. El *recuento* argumento limita el número de caracteres copiados; no es un límite del tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-Si *strDest* o *strSource* es un **NULL** puntero, o si *recuento* es menor o igual a cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+Si *strDest* o *strSource* es un **NULL** puntero, o si *recuento* es menor o igual a cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
-**wcsncpy** y **_mbsncpy** son versiones de caracteres multibyte y anchos de **strncpy**. Los argumentos y el valor devuelto de **wcsncpy** y **_mbsncpy** varían en consecuencia. Por lo demás, estas seis funciones se comportan exactamente igual.
+**wcsncpy** y **_mbsncpy** son versiones de caracteres anchos y caracteres multibyte de **strncpy**. Los argumentos y el valor devuelto de **wcsncpy** y **_mbsncpy** varían en consecuencia. Por lo demás, estas seis funciones se comportan exactamente igual.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
@@ -202,7 +203,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** y **_wcsncpy_l** no tienen dependen de la configuración regional; se proporcionan solo para **_tcsncpy_l** y no están diseñados para ser llamado directamente.
+> **_strncpy_l** y **_wcsncpy_l** no que dependen de la configuración regional; se proporcionan solo para **_tcsncpy_l** y no están pensadas para llamarse directamente.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -216,7 +217,7 @@ Para obtener más información sobre la compatibilidad de plataformas, vea [Comp
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra el uso de **strncpy** y cómo se puede emplear mal para provocar errores de programa y los problemas de seguridad. El compilador genera una advertencia para cada llamada a **strncpy** similar a **crt_strncpy_x86.c(15): advertencia C4996: 'strncpy': esta función o variable puede no ser seguro. Considere la posibilidad de usar strncpy_s en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS. Consulte la ayuda en línea para obtener información detallada.**
+En el ejemplo siguiente se muestra el uso de **strncpy** y cómo se puede usar incorrectamente para provocar errores de programa y problemas de seguridad. El compilador genera una advertencia para cada llamada a **strncpy** similar a **crt_strncpy_x86.c (15): advertencia C4996: 'strncpy': esta función o variable puede no ser segura. Considere la posibilidad de usar strncpy_s en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS. Consulte la ayuda en línea para obtener información detallada.**
 
 ```C
 // crt_strncpy_x86.c

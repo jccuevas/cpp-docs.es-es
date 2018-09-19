@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsectiontraits:: Getinvalidvalue (método) | Documentos de Microsoft'
+title: Método Criticalsectiontraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72c9dce0765029ee31e079315baec72afd16a46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4a23445cc9df0553a40d4f78a7ce3095a343d5d0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599241"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue (Método)
-Una plantilla CriticalSection se especializa para que la plantilla no siempre es válida.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Siempre devuelve un puntero a una sección crítica no válida.  
-  
-## <a name="remarks"></a>Comentarios  
- El *tipo* modificador se define como `typedef CRITICAL_SECTION* Type;`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** handletraits  
-  
-## <a name="see-also"></a>Vea también  
- [CriticalSectionTraits (estructura)](../windows/criticalsectiontraits-structure.md)
+
+Se especializa un **CriticalSection** plantilla para que la plantilla no siempre es válida.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Siempre devuelve un puntero a una sección crítica no válida.
+
+## <a name="remarks"></a>Comentarios
+
+El `Type` modificador se define como `typedef CRITICAL_SECTION* Type;`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** handletraits
+
+## <a name="see-also"></a>Vea también
+
+[CriticalSectionTraits (estructura)](../windows/criticalsectiontraits-structure.md)

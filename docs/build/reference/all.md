@@ -1,5 +1,5 @@
 ---
-title: -TODO | Documentos de Microsoft
+title: -TODAS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c080a8fe1a03310bbade9ddeab339edef1bec5cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfae81486f6edcc20a0277b403e40914bebb6fef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705125"
 ---
 # <a name="all"></a>/ALL
-```  
-/ALL  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Esta opción muestra toda la información disponible excepto el código desensamblado. Use [/DISASM](../../build/reference/disasm.md) para mostrar el código desensamblado. Puede usar [/RAWDATA](../../build/reference/rawdata.md): NONE con todo para omitir los detalles binarios sin formato del archivo.  
-  
- Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/ALL
+```
+
+## <a name="remarks"></a>Comentarios
+
+Esta opción muestra toda la información disponible excepto el código desensamblado. Use [/DISASM](../../build/reference/disasm.md) para mostrar el desensamblado. Puede usar [/RAWDATA](../../build/reference/rawdata.md): NONE con todo para omitir los detalles binarios sin formato del archivo.
+
+Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)

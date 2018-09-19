@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aad6fdd96df22375e93207e70dfd0f7cf1f44c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b136dc29431164de195eeebf9085c2377664f869
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105684"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -58,19 +59,24 @@ void qsort_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*base* inicio de la matriz de destino.
+*base*<br/>
+Inicio de la matriz de destino.
 
-*número* tamaño en elementos de matriz.
+*Número*<br/>
+Tamaño de la matriz en elementos.
 
-*ancho* tamaño del elemento en bytes.
+*width*<br/>
+Tamaño del elemento en bytes.
 
-*comparar* función de comparación. El primer argumento es el *contexto* puntero. El segundo argumento es un puntero a la *clave* para la búsqueda. El tercer argumento es un puntero al elemento de matriz que se comparará con *clave*.
+*compare*<br/>
+Función de comparación. El primer argumento es el *contexto* puntero. El segundo argumento es un puntero a la *clave* para la búsqueda. El tercer argumento es un puntero al elemento de matriz que se comparará con *clave*.
 
-*contexto* un puntero a un contexto, que puede ser cualquier objeto que la *comparar* rutina necesita tener acceso a.
+*context*<br/>
+Un puntero a un contexto, que puede ser cualquier objeto que la *comparar* rutina debe tener acceso.
 
 ## <a name="remarks"></a>Comentarios
 
-El **qsort_s** función implementa un algoritmo de ordenación rápida para ordenar una matriz de *número* elementos, cada uno de los *ancho* bytes. El argumento *base* es un puntero a la base de la matriz se ordenen. **qsort_s** sobrescribe esta matriz con los elementos ordenados. El argumento *comparar* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica la relación. **qsort_s** llamadas el *comparar* rutinas una o varias veces durante la ordenación, pasar punteros a dos elementos de la matriz en cada llamada:
+El **qsort_s** función implementa un algoritmo de ordenación rápida para ordenar una matriz de *número* elementos, cada uno de *ancho* bytes. El argumento *base* es un puntero a la base de la matriz esté ordenada. **qsort_s** sobrescribe esta matriz con los elementos ordenados. El argumento *comparar* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y devuelve un valor que especifica su relación. **qsort_s** llamadas la *comparar* rutinarias una o varias veces durante la ordenación, pasando punteros a dos elementos de la matriz en cada llamada:
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -80,7 +86,7 @@ La rutina debe comparar los elementos y luego devolver uno de los siguientes val
 
 |Valor devuelto|Descripción|
 |------------------|-----------------|
-|< 0|**elem1** inferior a **elem2**|
+|< 0|**elem1** menor **elem2**|
 |0|**elem1** equivalente a **elem2**|
 |> 0|**elem1** mayor **elem2**|
 
@@ -97,7 +103,7 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 |any|any|any|any|<= 0|**EINVAL**|
 |any|any|**NULL**|any|any|**EINVAL**|
 
-**qsort_s** tiene el mismo comportamiento que **qsort** pero tiene la *contexto* parámetros y conjuntos de **errno**. Si se pasa un *contexto* parámetro, las funciones de comparación pueden utilizar un puntero de objeto para tener acceso a la funcionalidad del objeto u otra información que no es accesible a través de un puntero de elemento. La adición de la *contexto* parámetro hace **qsort_s** más segura porque *contexto* puede usarse para evitar errores de reentrada introducidos mediante el uso de variables estáticas para realizar compartir información disponible para el *comparar* función.
+**qsort_s** tiene el mismo comportamiento que **qsort** pero tiene la *contexto* parámetro y establece **errno**. Al pasar un *contexto* parámetro, las funciones de comparación pueden usar un puntero de objeto para tener acceso a la funcionalidad del objeto u otra información que no es accesible a través de un puntero de elemento. La adición de la *contexto* parámetro hace que **qsort_s** más seguro, ya *contexto* puede usarse para evitar errores de reentrada introducidos mediante el uso de variables estáticas para realizar compartir la información disponible para el *comparar* función.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -111,7 +117,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar el *contexto* parámetro en el **qsort_s** (función). El *contexto* parámetro resulta más fácil realizar ordenaciones segura para subprocesos. En lugar de usar las variables estáticas que deben sincronizarse para garantizar la seguridad para subprocesos, pasar otro *contexto* parámetro en cada tipo. En este ejemplo, un objeto de configuración regional se usa como el *contexto* parámetro.
+En el ejemplo siguiente se muestra cómo usar el *contexto* parámetro en el **qsort_s** función. El *contexto* parámetro hace que sea más fácil realizar ordenaciones seguras para subprocesos. En lugar de usar variables estáticas que deben sincronizarse para garantizar la seguridad de subprocesos, pase otro *contexto* parámetro en cada ordenación. En este ejemplo, un objeto de configuración regional se usa como el *contexto* parámetro.
 
 ```cpp
 // crt_qsort_s.cpp

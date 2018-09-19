@@ -1,5 +1,5 @@
 ---
-title: Message (clase) | Documentos de Microsoft
+title: Message (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042238"
 ---
 # <a name="message-class"></a>message (Clase)
 El sobre del mensaje básico que contiene la carga de datos que se pasa entre bloques de mensajería.  
@@ -39,8 +40,8 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de la carga dentro del mensaje.  
+*T*<br/>
+El tipo de datos de la carga dentro del mensaje.  
   
 ## <a name="members"></a>Miembros  
   
@@ -61,9 +62,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Agrega al recuento de referencias para el `message` objeto. Se utiliza para los bloques de mensaje que necesitan el recuento de referencias para determinar la duración del mensaje.|  
+|[add_ref](#add_ref)|Agrega el recuento de referencias para el `message` objeto. Se usa para los bloques de mensajes que necesitan el recuento de referencias para determinar la duración del mensaje.|  
 |[msg_id](#msg_id)|Devuelve el identificador de la `message` objeto.|  
-|[remove_ref](#remove_ref)|Resta el recuento de referencias para el `message` objeto. Se utiliza para los bloques de mensaje que necesitan el recuento de referencias para determinar la duración del mensaje.|  
+|[remove_ref](#remove_ref)|Resta el recuento de referencias para el `message` objeto. Se usa para los bloques de mensajes que necesitan el recuento de referencias para determinar la duración del mensaje.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -72,7 +73,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 |[carga](#payload)|La carga de la `message` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [los bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
+ Para obtener más información, consulte [bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `message`  
@@ -84,14 +85,14 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ##  <a name="add_ref"></a> add_ref 
 
- Agrega al recuento de referencias para el `message` objeto. Se utiliza para los bloques de mensaje que necesitan el recuento de referencias para determinar la duración del mensaje.  
+ Agrega el recuento de referencias para el `message` objeto. Se usa para los bloques de mensajes que necesitan el recuento de referencias para determinar la duración del mensaje.  
   
 ```
 long add_ref();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El nuevo valor del recuento de referencias.  
+ El nuevo valor del recuento de referencia.  
   
 ##  <a name="ctor"></a> Mensaje 
 
@@ -113,17 +114,17 @@ message(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_P`  
- La carga de este mensaje.  
+*_P*<br/>
+La carga de este mensaje.  
   
- `_Id`  
- El identificador único de este mensaje.  
+*_ID*<br/>
+El identificador único de este mensaje.  
   
- `_Msg`  
- Una referencia o un puntero a un `message` objeto.  
+*_Msg*<br/>
+Una referencia o puntero a un `message` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El constructor que toma un puntero a un `message` objeto como un argumento produce un [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_Msg` es `NULL`.  
+ El constructor que toma un puntero a un `message` objeto como un argumento, se produce un [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_Msg` es `NULL`.  
   
 ##  <a name="dtor"></a> ~ mensaje 
 
@@ -154,14 +155,14 @@ T const payload;
   
 ##  <a name="remove_ref"></a> remove_ref 
 
- Resta el recuento de referencias para el `message` objeto. Se utiliza para los bloques de mensaje que necesitan el recuento de referencias para determinar la duración del mensaje.  
+ Resta el recuento de referencias para el `message` objeto. Se usa para los bloques de mensajes que necesitan el recuento de referencias para determinar la duración del mensaje.  
   
 ```
 long remove_ref();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El nuevo valor del recuento de referencias.  
+ El nuevo valor del recuento de referencia.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

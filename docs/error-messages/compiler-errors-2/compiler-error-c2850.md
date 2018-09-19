@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2850 | Documentos de Microsoft
+title: Error del compilador C2850 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e53f54aee2acdd163de0195c7475049fe2d6346
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e3cc7065ed5a0a91ad77ea5a6c44b38622b8e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057891"
 ---
 # <a name="compiler-error-c2850"></a>Error del compilador C2850
-'construcción': solamente se permite en el ámbito de archivo; no puede estar en una construcción anidada  
-  
- Construcciones, como algunas pragmas, solo pueden aparecer en el ámbito global.  
-  
- El ejemplo siguiente genera C2850:  
-  
-```  
-// C2850.cpp  
-// compile with: /c /Yc  
-// try the following line instead  
-// #pragma hdrstop  
-namespace X {  
-   #pragma hdrstop   // C2850  
-};  
+
+'construcción': sólo se permite en el ámbito de archivo; no puede estar en una construcción anidada
+
+Construcciones, como algunas pragmas, solo pueden aparecer en el ámbito global.
+
+El ejemplo siguiente genera C2850:
+
+```
+// C2850.cpp
+// compile with: /c /Yc
+// try the following line instead
+// #pragma hdrstop
+namespace X {
+   #pragma hdrstop   // C2850
+};
 ```

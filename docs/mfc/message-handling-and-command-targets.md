@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929361"
 ---
 # <a name="message-handling-and-command-targets"></a>Control de mensajes y destinos de comando
 La interfaz de envío de comandos `IOleCommandTarget` define un mecanismo sencillo y extensible para consultar y ejecutar comandos. Este mecanismo es más sencillo que de automatización `IDispatch` porque se basa completamente en un conjunto estándar de comandos; comandos no suelen tienen argumentos, y no está implicada ninguna información de tipo (seguridad de tipos se reduce para argumentos del comando).  
@@ -32,7 +33,7 @@ La interfaz de envío de comandos `IOleCommandTarget` define un mecanismo sencil
   
  `IOleCommandTarget` controla los siguientes escenarios:  
   
--   Cuando un objeto está activado, sólo se muestran generalmente las barras de herramientas del objeto y las barras de herramientas del objeto pueden tener botones para algunos de los comandos del contenedor como in situ **impresión**, **vista previa de impresión**,  **Guardar**, `New`, **Zoom**y otros. (Activación en contexto estándares recomienda que los objetos quiten estos botones de sus barras de herramientas, o en menos deshabiliten. Este diseño permite que estos comandos estén habilitados y se enruten al controlador correcto.) Actualmente, no hay ningún mecanismo para el objeto que se va a enviar estos comandos para el contenedor.  
+-   Cuando un objeto está activado, sólo se muestran generalmente las barras de herramientas del objeto y las barras de herramientas del objeto pueden tener botones para algunos de los comandos del contenedor como in situ **impresión**, **vista previa de impresión**,  **Guardar**, **New**, **Zoom**y otros. (Activación en contexto estándares recomienda que los objetos quiten estos botones de sus barras de herramientas, o en menos deshabiliten. Este diseño permite que estos comandos estén habilitados y se enruten al controlador correcto.) Actualmente, no hay ningún mecanismo para el objeto que se va a enviar estos comandos para el contenedor.  
   
 -   Cuando un documento activo está incrustado en un contenedor de documentos activos (por ejemplo, Cuaderno de Office), el contenedor que tenga que enviar comandos tales **impresión**, **Configurar página**, **propiedades**y otros en el documento activo independiente.  
   
@@ -55,7 +56,7 @@ interface IOleCommandTarget : IUnknown
     }  
 ```  
   
- El `QueryStatus` este método comprueba si un determinado conjunto de comandos, el conjunto que se identifican con un **GUID**, se admite. Esta llamada rellena una matriz de **OLECMD** valores (estructuras) con la lista admitida de comandos, así como devolver el texto que describe el nombre de un comando o información de estado. Cuando el llamador desea invocar un comando, puede pasar el comando (y el conjunto **GUID**) a **Exec** junto con opciones y argumentos, recibir un valor devuelto.  
+ El `QueryStatus` este método comprueba si un determinado conjunto de comandos, el conjunto que se identifican con un **GUID**, se admite. Esta llamada rellena una matriz de **OLECMD** valores (estructuras) con la lista admitida de comandos, así como devolver el texto que describe el nombre de un comando o información de estado. Cuando el llamador desea invocar un comando, puede pasar el comando (y el conjunto **GUID**) a `Exec` junto con opciones y argumentos, recibir un valor devuelto.  
   
 ## <a name="see-also"></a>Vea también  
  [Contenedores de documentos activos](../mfc/active-document-containers.md)

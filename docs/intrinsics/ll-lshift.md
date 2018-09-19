@@ -1,5 +1,5 @@
 ---
-title: __ll_lshift | Documentos de Microsoft
+title: __ll_lshift | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702083"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Específicos de Microsoft**  
@@ -39,11 +40,11 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Mask`  
- Valor entero de 64 bits que se desplazan hacia la izquierda.  
+*Máscara*<br/>
+[in] El valor del entero de 64 bits para desplazarse a la izquierda.  
   
- [in] `nBit`  
- El número de bits que se va a desplazar.  
+*nBit*<br/>
+[in] El número de bits del desplazamiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
  La máscara desplazado a la izquierda `nBit` bits.  
@@ -52,14 +53,14 @@ unsigned __int64 __ll_lshift(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Si compila el programa mediante la arquitectura de 64 bits y `nBit` es superior a 63, el número de bits de desplazamiento es `nBit` módulo 64. Si compila el programa mediante la arquitectura de 32 bits y `nBit` es mayor que 31, el número de bits de desplazamiento es `nBit` módulo 32.  
+ Si compila un programa con la arquitectura de 64 bits y `nBit` es superior a 63, es el número de bits del desplazamiento `nBit` módulo 64. Si compila un programa con la arquitectura de 32 bits y `nBit` es mayor que 31, el número de bits del desplazamiento es `nBit` módulo 32.  
   
- El `ll` en el nombre indica que se trata de una operación en `long long` (`__int64`).  
+ El `ll` en el nombre indica que esta es una operación en `long long` (`__int64`).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -88,7 +89,7 @@ int main()
 10000  
 ```  
   
- **Tenga en cuenta** hay ninguna versión sin signo de la operación de desplazamiento a la izquierda. Esto es porque `__ll_lshift` ya utiliza un parámetro de entrada sin signo. A diferencia de desplazamiento a la derecha, no hay ninguna dependencia de inicio de sesión para el desplazamiento a la izquierda, porque el bit menos significativo en el resultado siempre se establece en cero independientemente del signo del valor desplazado.  
+ **Tenga en cuenta** hay ninguna versión sin signo de la operación de desplazamiento a la izquierda. Esto es porque `__ll_lshift` ya usa un parámetro de entrada sin signo. A diferencia de desplazamiento a la derecha, no hay ninguna dependencia de inicio de sesión para el desplazamiento a la izquierda, porque el bit menos significativo en el resultado siempre se establece en cero, independientemente del signo del valor desplazado a la.  
   
 **FIN de Específicos de Microsoft**  
   

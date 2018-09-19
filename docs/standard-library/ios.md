@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7ae83cd92ac8441d842e704446d519f57d4f65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961488"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -36,7 +37,7 @@ Define varios tipos y funciones básicos para el funcionamiento de iostreams. Es
 
 ## <a name="remarks"></a>Comentarios
 
-Un grupo grande de funciones son los manipuladores. Un manipulador declarado en \<ios> modifica los valores almacenados en su objeto de argumento de la clase [ios_base](../standard-library/ios-base-class.md). Otros manipuladores realizan acciones en flujos controlados por objetos de un tipo derivado de esta clase, tales como una especialización de una de las clases de plantilla [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Por ejemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) borra la marca de formato `ios_base::skipws` en el objeto **str**, que puede ser de uno de estos tipos.
+Un grupo grande de funciones son los manipuladores. Un manipulador declarado en \<ios> modifica los valores almacenados en su objeto de argumento de la clase [ios_base](../standard-library/ios-base-class.md). Otros manipuladores realizan acciones en flujos controlados por objetos de un tipo derivado de esta clase, tales como una especialización de una de las clases de plantilla [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Por ejemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) borra la marca del formato `ios_base::skipws` en el objeto `str`, que puede ser de uno de estos tipos.
 
 También puede llamar a un manipulador insertándolo en un flujo de salida o extrayéndolo de un flujo de entrada, gracias a las operaciones especiales de inserción y extracción proporcionadas para las clases derivadas de `ios_base`. Por ejemplo:
 

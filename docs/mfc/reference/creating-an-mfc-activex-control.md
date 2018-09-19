@@ -1,7 +1,7 @@
 ---
-title: Crear un Control ActiveX MFC | Documentos de Microsoft
+title: Crear un Control ActiveX MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,24 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 616aa79f41fd3c7abadbd45a020caa9e58d7b56d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0278ce0349b24680252100704031645c995fef51
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535085"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Crear un control ActiveX MFC
 Los programas de control ActiveX son programas modulares diseñados para ofrecer un tipo específico de funcionalidad a una aplicación primaria. Por ejemplo, puede crear un control, como un botón, para utilizarlo en un cuadro de diálogo o una barra de herramientas para su uso en una página Web.  
+
+>[!IMPORTANT]
+> ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información, consulte [controles ActiveX](../activex-controls.md).
   
  La manera más fácil de crear un control ActiveX de MFC es utilizar el [Asistente para controles ActiveX de MFC](../../mfc/reference/mfc-activex-control-wizard.md).  
   
 ### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Para crear un control ActiveX de MFC mediante el Asistente para controles ActiveX MFC  
   
-1.  Siga las instrucciones del tema de Ayuda [crear un proyecto con un Asistente para aplicaciones de Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Siga las instrucciones descritas en el tema de Ayuda [Crear un proyecto con el Asistente para aplicaciones de Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  En el **nuevo proyecto** cuadro de diálogo, seleccione la **ActiveX Control MFC** icono en el panel Plantillas para abrir el Asistente para controles de ActiveX de MFC.  
+2.  En el **nuevo proyecto** cuadro de diálogo, seleccione el **ActiveX Control de MFC** icono en el panel Plantillas para abrir el Asistente para controles de ActiveX de MFC.  
   
-3.  Definir la [configuración de la aplicación](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [nombres del control](../../mfc/reference/control-names-mfc-activex-control-wizard.md), y [controlar la configuración de](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) mediante el Asistente para controles de ActiveX de MFC.  
+3.  Definir la [configuración de la aplicación](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [nombres del control](../../mfc/reference/control-names-mfc-activex-control-wizard.md), y [controlar la configuración](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) mediante el Asistente para controles de ActiveX de MFC.  
   
     > [!NOTE]
     >  Omita este paso para mantener la configuración predeterminada del asistente.  
@@ -48,5 +52,5 @@ Los programas de control ActiveX son programas modulares diseñados para ofrecer
 ## <a name="see-also"></a>Vea también  
  [Agregar funcionalidad con los asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Páginas de propiedades](../../ide/property-pages-visual-cpp.md)   
- [Implementación de aplicaciones](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCPropertyGridFontProperty | Documentos de Microsoft
+title: CMFCPropertyGridFontProperty (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,13 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719945"
 ---
-# <a name="cmfcpropertygridfontproperty-class"></a>Clase CMFCPropertyGridFontProperty
+# <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty (clase)
 La `CMFCPropertyGridFileProperty` clase es compatible con un elemento de control de lista de propiedades que se abre un cuadro de diálogo de selección de fuente.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -53,7 +54,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 |`CMFCPropertyGridFontProperty::FormatProperty`|Da formato a la representación de texto de un valor de propiedad. (Invalida [cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Recupera el color de fuente que el usuario selecciona en el cuadro de diálogo fuente.|  
 |[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Recupera la fuente que el usuario selecciona en el cuadro de diálogo fuente.|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|`CMFCPropertyGridFontProperty::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
 |`CMFCPropertyGridFontProperty::OnClickButton`|Lo llama el marco cuando el usuario hace clic en un botón que se encuentra en una propiedad. (Invalida [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -82,29 +83,29 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `strName`  
- Nombre de la propiedad.  
+*strName*<br/>
+[in] El nombre de la propiedad.  
   
- [in] `lf`  
- Una estructura de fuente lógica que especifica los atributos de la fuente.  
+*LF*<br/>
+[in] Una estructura de fuente lógica que especifica los atributos de la fuente.  
   
- [in] `dwFontDialogFlags`  
- Estilos que se aplican al cuadro de diálogo fuente que se muestra al hacer clic en el botón de lista desplegable del valor de propiedad. El valor predeterminado es la combinación bit a bit (OR) de CF_EFFECTS y CF_SCREENFONTS. Para obtener más información, consulte el `Flags` parámetro de la [CHOOSEFONT estructura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+*dwFontDialogFlags*<br/>
+[in] Estilos que se aplican al cuadro de diálogo fuente que se muestra al hacer clic en el botón de lista desplegable del valor de propiedad. El valor predeterminado es la combinación bit a bit (OR) de CF_EFFECTS y CF_SCREENFONTS. Para obtener más información, consulte el *marcas* parámetro de la [CHOOSEFONT estructura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
- [in] `lpszDescr`  
- Descripción de la propiedad font. El valor predeterminado es `NULL`.  
+*lpszDescr*<br/>
+[in] Descripción de la propiedad font. El valor predeterminado es NULL.  
   
- [in] `dwData`  
- Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
+*dwData*<br/>
+[in] Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
   
- [in] `color`  
- El color de la fuente. El valor predeterminado es el color predeterminado.  
+*Color*<br/>
+[in] El color de la fuente. El valor predeterminado es el color predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
  Un `CMFCPropertyGridFontProperty` objeto representa una propiedad de fuente en un control de fuente de cuadrícula de propiedades.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCPropertyGridFontProperty` clase. Este ejemplo forma parte de la [ejemplo nuevos controles](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCPropertyGridFontProperty` clase. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
@@ -128,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura que describe la fuente seleccionada.  
+ Un puntero a un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura que describe la fuente seleccionada.  
   
 ### <a name="remarks"></a>Comentarios  
   

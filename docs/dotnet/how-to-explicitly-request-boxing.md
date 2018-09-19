@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127349"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>Cómo: Solicitar explícitamente la conversión boxing
 Puede solicitar explícitamente la conversión boxing asignando una variable a una variable de tipo `Object`.  

@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3238ffcbd03f40c6eac0423d0212a65719fb33d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961856"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipuladores de flujos de salida con un argumento (int o long)
 
-La biblioteca de clases iostream proporciona un conjunto de macros para crear manipuladores parametrizados. Los manipuladores con un solo argumento `int` o `long` son un caso especial. Para crear un manipulador de flujo de salida que acepte un solo argumento `int` o `long` (como `setw`), debe usar la macro _Smanip, que se define en \<iomanip>. Este ejemplo define un manipulador `fillblank` que inserta un número específico de espacios en blanco en la secuencia:
+La biblioteca de clases iostream proporciona un conjunto de macros para crear manipuladores parametrizados. Manipuladores con un único **int** o **largo** argumento son un caso especial. Para crear un manipulador de flujo de salida que acepta un único **int** o **largo** argumento (al igual que `setw`), debe usar la macro _Smanip, que se define en \<iomanip >. Este ejemplo define un manipulador `fillblank` que inserta un número específico de espacios en blanco en la secuencia:
 
 ## <a name="example"></a>Ejemplo
 

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _getche_nolock
@@ -43,11 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e83d398330e2c7fbbf80ca5b14ef7b1099e56bc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 319c9e56cfbd4e52d9edac841ff6d4d8df73528c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572193"
 ---
 # <a name="getchenolock-getwchenolock"></a>_getche_nolock, _getwche_nolock
 
@@ -69,7 +71,7 @@ Devuelve el carácter leído. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-**_getche_nolock** y **_getwche_nolock** son idénticas a **_getche** y **_getwche** salvo que no protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_getche_nolock** y **_getwche_nolock** son idénticas a **_getche** y **_getwche** , salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

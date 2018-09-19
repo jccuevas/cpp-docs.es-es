@@ -1,5 +1,5 @@
 ---
-title: C2755 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2755 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a018554de91003b54ffc403f1527ca07f2d4a75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56ecf997df2aeb1a41b5021d61b24073e871b55f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064927"
 ---
-# <a name="compiler-error-c2755"></a>C2755 de Error del compilador
-'param': parámetro sin tipo de una especialización parcial debe ser un identificador simple  
-  
- El parámetro de tipo no debe ser un identificador simple para que el compilador puede resolver en tiempo de compilación en un único identificador o un valor constante.  
-  
- El ejemplo siguiente genera C2755:  
-  
-```  
-// C2755.cpp  
-template<int I, int J>  
-struct A {};  
-  
-template<int I>   
-struct A<I,I*5> {};   // C2755  
-// try the following line instead  
-// struct A<I,5> {};  
+# <a name="compiler-error-c2755"></a>Error del compilador C2755
+
+'param': parámetro sin tipo de una especialización parcial debe ser un identificador simple
+
+El parámetro sin tipo debe ser un identificador simple para que el compilador puede resolver en tiempo de compilación para un único identificador o un valor constante.
+
+El ejemplo siguiente genera C2755:
+
+```
+// C2755.cpp
+template<int I, int J>
+struct A {};
+
+template<int I>
+struct A<I,I*5> {};   // C2755
+// try the following line instead
+// struct A<I,5> {};
 ```

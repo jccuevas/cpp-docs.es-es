@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691504"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 Ejemplos donde se muestra un anidamiento incorrecto de directivas de uso compartido
 Los ejemplos de esta sección muestra las reglas de anidamiento de directivas. Para obtener más información sobre el anidamiento de directivas, consulte [sección 2.9](../../parallel/openmp/2-9-directive-nesting.md) en la página 33.  

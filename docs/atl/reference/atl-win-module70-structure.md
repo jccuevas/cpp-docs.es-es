@@ -1,5 +1,5 @@
 ---
-title: Estructura de _ATL_WIN_MODULE70 | Documentos de Microsoft
+title: _ATL_WIN_MODULE70 (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: c000175c031868136aad44e59644d0fa122d213e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084515"
 ---
-# <a name="atlwinmodule70-structure"></a>Estructura de _ATL_WIN_MODULE70
-Uso en código basado en ventanas en ATL.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+# <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 (estructura)
+
+Utilizado por el código basado en ventanas en ATL.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize; 
@@ -37,31 +39,31 @@ struct _ATL_WIN_MODULE70 {
     _AtlCreateWndData* m_pCreateWndList;
     CSimpleArray<ATOM> m_rgWindowClassAtoms;
 };
-```  
-  
-## <a name="members"></a>Miembros  
- `cbSize`  
- El tamaño de la estructura que se utiliza para controlar las versiones.  
-  
- `m_csWindowCreate`  
- Se usa para serializar el acceso a código de registro de la ventana. Utilizada internamente por ATL.  
-  
- **m_pCreateWndList**  
- Se usa para enlazar windows a sus objetos. Utilizada internamente por ATL.  
-  
- **m_rgWindowClassAtoms**  
- Se utiliza para realizar un seguimiento de los registros de clase de ventana para que se pueden eliminar del registro correctamente en la finalización. Utilizada internamente por ATL.  
-  
-## <a name="remarks"></a>Comentarios  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) se define como una definición de tipo de `_ATL_WIN_MODULE70`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlbase.h  
-  
-## <a name="see-also"></a>Vea también  
- [Clases y structs](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Miembros
 
+`cbSize`<br/>
+El tamaño de la estructura que se utiliza para el control de versiones.
 
+`m_csWindowCreate`<br/>
+Se usa para serializar el acceso a código de registro de la ventana. Lo utiliza internamente ATL.
 
+`m_pCreateWndList`<br/>
+Se usa para enlazar a sus objetos de windows. Lo utiliza internamente ATL.
+
+`m_rgWindowClassAtoms`<br/>
+Se usa para realizar un seguimiento de los registros de clase de ventana para que se pueden anular el registro correctamente en la finalización. Lo utiliza internamente ATL.
+
+## <a name="remarks"></a>Comentarios
+
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) se define como un typedef de `_ATL_WIN_MODULE70`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlbase.h
+
+## <a name="see-also"></a>Vea también
+
+[Clases y structs](../../atl/reference/atl-classes.md)
 

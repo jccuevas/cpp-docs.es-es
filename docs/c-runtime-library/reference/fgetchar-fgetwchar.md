@@ -42,11 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194323"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -61,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_fgetchar** devuelve el carácter leído como un **int** o devolver **EOF** para indicar un error o el final del archivo. **_ *** fgetwchar** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho que se corresponde con el carácter leído o devuelve **WEOF** para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error de una condición de final de archivo.
+**\_fgetchar** devuelve el carácter leído como un **int** o devuelve `EOF` para indicar un error o el final del archivo. **\_fgetwchar** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter leído, o bien devuelve `WEOF` para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de final de archivo.
 
 ## <a name="remarks"></a>Comentarios
 
 Estas funciones leen un solo carácter de **stdin**. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
 
-**_fgetchar** es equivalente a `fgetc( stdin )`. También es equivalente a **getchar**, pero implementado solo como una función, en lugar de como una función y una macro. **_fgetwchar** es la versión con caracteres anchos de **_fgetchar**.
+**_fgetchar** es equivalente a `fgetc( stdin )`. También es equivalente a **getchar**, pero implementado solo como una función, en lugar de una función y una macro. **_fgetwchar** es la versión de caracteres anchos de **_fgetchar**.
 
 Estas funciones no son compatibles con el estándar ANSI.
 
@@ -84,7 +85,7 @@ Estas funciones no son compatibles con el estándar ANSI.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola:**stdin**, **stdout**, y **stderr**: se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

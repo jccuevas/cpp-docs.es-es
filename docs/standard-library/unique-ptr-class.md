@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e2505a77643053c60c4ce1a164dc89cc1e0952
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725197"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr (Clase)
 
@@ -103,13 +104,17 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`Right` A `unique_ptr`.
+*Derecha*<br/>
+Objeto `unique_ptr`.
 
-`Nptr` Un `rvalue` de tipo `std::nullptr_t`.
+*Nptr*<br/>
+Interfaz `rvalue` cuyo tipo es `std::nullptr_t`.
 
-`Ptr` A `pointer`.
+*PTR*<br/>
+Objeto `pointer`.
 
-`Deleter` A `deleter` función a la que está enlazado a un `unique_ptr`.
+*Eliminador*<br/>
+Una función `deleter` enlazada a `unique_ptr`.
 
 ## <a name="exceptions"></a>Excepciones
 
@@ -123,7 +128,7 @@ Use la función auxiliar [make_unique](../standard-library/memory-functions.md#m
 
 `unique_ptr` administra de forma única un recurso. Cada objeto `unique_ptr` almacena un puntero al objeto que posee o almacena un puntero null. Un recurso no puede ser propiedad de más de un objeto `unique_ptr`. Cuando se destruye un objeto `unique_ptr` que posee un recurso determinado, se libera el recurso. Un objeto `unique_ptr` se puede mover, pero no se puede copiar. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-El recurso se libera llamando a un objeto almacenado `deleter` de tipo `Del` que sabe cómo se asignan los recursos de un `unique_ptr` determinado. El valor predeterminado `deleter` `default_delete<T>` se da por supuesto que el recurso que señala `ptr` se asigna con `new`, y que se puede liberar llamando a `delete _Ptr`. (Una especialización parcial `unique_ptr<T[]>`administra los objetos de matriz asignados con `new[]`, y tiene el `deleter` `default_delete<T[]>` predeterminado, especializado en llamar a delete[] `ptr`.)
+El recurso se libera llamando a un objeto almacenado `deleter` de tipo `Del` que sabe cómo se asignan los recursos de un `unique_ptr` determinado. El valor predeterminado `deleter` `default_delete<T>` se da por supuesto que el recurso que apunta `ptr` se asigna con `new`, y que se puede liberar llamando a `delete _Ptr`. (Una especialización parcial `unique_ptr<T[]>`administra los objetos de matriz asignados con `new[]`, y tiene el `deleter` `default_delete<T[]>` predeterminado, especializado en llamar a delete[] `ptr`.)
 
 El puntero almacenado en un recurso propio, `stored_ptr` tiene el tipo `pointer`. Es `Del::pointer` si se define y `T *` si no se define. El objeto almacenado `deleter` `stored_deleter` no ocupa ningún espacio en el objeto si `deleter` no tiene estado. Observe que `Del` puede ser un tipo de referencia.
 
@@ -157,7 +162,7 @@ El puntero almacenado en un recurso propio, `stored_ptr` tiene el tipo `pointer`
 
 |Operador|Descripción|
 |-|-|
-|`operator bool`|El operador devuelve un valor de un tipo que pueda convertirse en `bool`. El resultado de la conversión en `bool` es `true` cuando `get() != pointer()`, si no `false`.|
+|**operator bool**|El operador devuelve un valor de un tipo que se pueda convertir a **bool**. El resultado de la conversión a **bool** es **true** cuando `get() != pointer()`en caso contrario, **false**.|
 |`operator->`|La función miembro devuelve `stored_ptr`.|
 |`operator*`|La función miembro devuelve `*stored_ptr`.|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|Asigna el valor de `unique_ptr` (o un `pointer-type`) al `unique_ptr` actual.|
@@ -251,7 +256,7 @@ Tipo sinónimo de `Del::pointer` si se define; de lo contrario, es `Type *`.
 
 ## <a name="release"></a>  unique_ptr::release
 
-Libera la propiedad del puntero almacenado devuelto al llamador y establece el valor del puntero almacenado en `nullptr`.
+Libera la propiedad del puntero almacenado devuelto al llamador y establece el valor del puntero almacenado en **nullptr**.
 
 ```cpp
 pointer release();
@@ -314,7 +319,7 @@ Deleting Sample(3)
 
 ## <a name="reset"></a>  unique_ptr::reset
 
-Toma posesión del parámetro de puntero y, luego, elimina el puntero almacenado original. Si el nuevo puntero es el mismo que el puntero almacenado original, `reset` elimina el puntero y establece el puntero almacenado en `nullptr`.
+Toma posesión del parámetro de puntero y, luego, elimina el puntero almacenado original. Si el nuevo puntero es el mismo que el puntero almacenado original, `reset` elimina el puntero y establece el puntero almacenado en **nullptr**.
 
 ```cpp
 void reset(pointer ptr = pointer());
@@ -325,13 +330,13 @@ void reset(nullptr_t ptr);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Puntero al recurso del que tomar posesión.|
+|*ptr*|Puntero al recurso del que tomar posesión.|
 
 ### <a name="remarks"></a>Comentarios
 
-Use `reset` para cambiar el [puntero](#pointer) almacenado propiedad de `unique_ptr` a `ptr` y, luego, eliminar el puntero almacenado original. Si `unique_ptr` no estaba vacío, `reset` invoca la función eliminadora devuelta por [get_deleter](#get_deleter) en el puntero almacenado original.
+Use `reset` cambiar almacenado [puntero](#pointer) que pertenecen a la `unique_ptr` a *ptr* y, a continuación, elimine el puntero almacenado original. Si `unique_ptr` no estaba vacío, `reset` invoca la función eliminadora devuelta por [get_deleter](#get_deleter) en el puntero almacenado original.
 
-Como `reset` almacena en primer lugar el nuevo puntero `ptr` y, después, elimina el puntero almacenado original, es posible que `reset` elimine de forma inmediata `ptr` si es el mismo que el puntero almacenado original.
+Dado que `reset` en primer lugar, almacena el nuevo puntero *ptr*y, a continuación, elimina el puntero almacenado original, es posible que `reset` eliminar inmediatamente *ptr* si es el mismo que el original puntero almacenado.
 
 ## <a name="swap"></a>  unique_ptr::swap
 
@@ -343,7 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un `unique_ptr` usado para intercambiar punteros.
+*right*<br/>
+`unique_ptr` usado para intercambiar punteros.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -376,15 +382,15 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Puntero al recurso que se va a asignar a un `unique_ptr.`.|
-|`_Deleter`|`deleter` que se asignará a un `unique_ptr`.|
-|`right`|`rvalue reference` a un `unique_ptr` desde el que los campos `unique_ptr` se asignan al `unique_ptr` recién construido.|
+|*ptr*|Puntero al recurso que se va a asignar a un `unique_ptr.`.|
+|*_Deleter*|`deleter` que se asignará a un `unique_ptr`.|
+|*right*|`rvalue reference` a un `unique_ptr` desde el que los campos `unique_ptr` se asignan al `unique_ptr` recién construido.|
 
 ### <a name="remarks"></a>Comentarios
 
-Los dos primeros constructores construyen un objeto que no administra ningún recurso. El tercer constructor almacena `ptr` en `stored_ptr`. El cuarto constructor almacena `ptr` en `stored_ptr` y `deleter` en `stored_deleter`.
+Los dos primeros constructores construyen un objeto que no administra ningún recurso. El tercer constructor almacena *ptr* en `stored_ptr`. El cuarto constructor almacena *ptr* en `stored_ptr` y `deleter` en `stored_deleter`.
 
-El quinto constructor almacena `ptr` en `stored_ptr` y coloca `deleter` dentro de `stored_deleter`. El sexto y el séptimo constructor almacenan `right.release()` en `stored_ptr` y colocan `right.get_deleter()` dentro de `stored_deleter`.
+El quinto constructor almacena *ptr* en `stored_ptr` y mueve `deleter` en `stored_deleter`. El sexto y el séptimo constructor almacenan `right.release()` en `stored_ptr` y colocan `right.get_deleter()` dentro de `stored_deleter`.
 
 ## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
 

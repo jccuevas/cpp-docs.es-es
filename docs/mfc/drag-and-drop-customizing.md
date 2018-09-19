@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344248"
 ---
 # <a name="drag-and-drop-customizing"></a>Arrastrar y colocar: Personalización
 La implementación predeterminada de la característica de arrastrar y colocar es suficiente para la mayoría de las aplicaciones. Sin embargo, algunas aplicaciones pueden requerir que se puede cambiar este comportamiento estándar. Este artículo explica los pasos necesarios para cambiar estos valores predeterminados. Además, puede usar esta técnica para establecer las aplicaciones que no son compatibles con documentos compuestos como orígenes de colocación.  

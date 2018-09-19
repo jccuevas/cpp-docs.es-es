@@ -1,5 +1,5 @@
 ---
-title: fenv_access | Documentos de Microsoft
+title: fenv_access | Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f74f20b1dcb20c1449d21e91181f8bfb17075b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539862"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-Deshabilita (**en**) o habilita (**desactivar*) las optimizaciones que podrían cambiar el entorno de punto flotante marca pruebas y los cambios de modo.
+Deshabilita (**en**) o habilita (**desactivar**) las optimizaciones que pudieran cambiar el entorno de punto flotante marcar las pruebas y los cambios de modo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,9 +34,9 @@ Deshabilita (**en**) o habilita (**desactivar*) las optimizaciones que podrían 
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, **fenv_access** es **desactivar**. Si el compilador puede suponer el código no tener acceso o manipular el entorno de punto flotante, entonces pueden realizar muchas de las optimizaciones de código de punto flotante. Establecer **fenv_access** a **en** para informar al compilador que el código tiene acceso el entorno de punto flotante para probar los indicadores de estado, excepciones, o para establecer marcadores de modo de control. El compilador deshabilita estas optimizaciones para que el código pueda acceder el entorno de punto flotante de forma coherente. 
+De forma predeterminada, **fenv_access** es **desactivar**. Si el compilador puede suponer el código de no tener acceso o manipular el entorno de punto flotante, que puede realizar muchas optimizaciones de código de punto flotante. Establecer **fenv_access** a **en** para informar al compilador que el código tiene acceso a la del entorno de punto flotante para probar las marcas de estado, excepciones, o para establecer las marcas de modo de control. El compilador deshabilita estas optimizaciones para que el código puede acceder al entorno de punto flotante constantemente. 
 
-Para obtener más información sobre el comportamiento de punto flotante, consulte [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).
+Para obtener más información sobre el comportamiento de punto flotante, vea [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Los tipos de optimizaciones que están sujetos a **fenv_access** son:
 
@@ -84,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-Si marca como comentario `#pragma fenv_access (on)` del ejemplo anterior, observe que el resultado es diferente porque el compilador realiza la evaluación en tiempo de compilación, que no utiliza el modo de control.
+Si marque como comentario `#pragma fenv_access (on)` respecto al ejemplo anterior, tenga en cuenta que el resultado es diferente porque el compilador realiza la evaluación de tiempo de compilación, que no utiliza el modo de control.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

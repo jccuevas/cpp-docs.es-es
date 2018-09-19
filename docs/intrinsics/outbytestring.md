@@ -1,5 +1,5 @@
 ---
-title: __outbytestring | Documentos de Microsoft
+title: __outbytestring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61fcd7875fd98e73c2d4cbd6502a98624daed5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718840"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Específicos de Microsoft**  
   
- Genera el `rep outsb` instrucción, que envía la primera `Count` bytes de datos que señala `Buffer` al puerto especificado por `Port`.  
+ Genera el `rep outsb` instrucción, que envía el primer `Count` bytes de datos apunta a `Buffer` al puerto especificado por `Port`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,20 +41,20 @@ void __outbytestring(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- El puerto para enviar los datos.  
+*Puerto*<br/>
+[in] El puerto para enviar los datos.  
   
- [in] `Buffer`  
- Los datos que se envía el puerto especificado.  
+*búfer*<br/>
+[in] Los datos se envíen el puerto especificado.  
   
- [in] `Count`  
- El número de bytes de datos que se enviarán.  
+*Recuento*<br/>
+[in] El número de bytes de datos que se envían.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbytestring`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

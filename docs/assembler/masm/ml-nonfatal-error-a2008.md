@@ -1,7 +1,7 @@
 ---
-title: Error recuperable A2008 de ML | Documentos de Microsoft
+title: Error recuperable A2008 de ML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,30 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50f7329f698d23f875a29bc316067c39e8d1b8c1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 774cf4c2a51bf084fb63e572cc99b0c8e3cba26f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679380"
 ---
 # <a name="ml-nonfatal-error-a2008"></a>Error recuperable A2008 de ML
-**error de sintaxis:**  
-  
- Un símbolo (token) en la ubicación actual produjo un error de sintaxis.  
-  
- Puede haberse producido uno de los siguientes:  
-  
--   Un prefijo de punto se agregó o se omite en una directiva.  
-  
--   Una palabra reservada (como **C** o **tamaño**) se utiliza como identificador.  
-  
--   Se utilizó una instrucción que no estaba disponible con la selección actual del procesador o coprocesador.  
-  
--   Un operador de tiempo de ejecución de comparación (como `==`) se utiliza en una instrucción de ensamblado condicional en lugar de un operador relacional (como [EQ](../../assembler/masm/operator-eq.md)).  
-  
--   Una instrucción o la directiva se proporcionó operandos insuficientes.  
-  
--   Se usó una directiva obsoleta.  
-  
-## <a name="see-also"></a>Vea también  
- [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)
+
+**error de sintaxis:**
+
+Un token en la ubicación actual produjo un error de sintaxis.
+
+Puede haberse producido uno de los siguientes:
+
+- Se agregó un prefijo de punto o se omite en una directiva.
+
+- Una palabra reservada (como **C** o **tamaño**) se utiliza como identificador.
+
+- Se utilizó una instrucción que no estaba disponible con la selección actual del procesador o coprocesador.
+
+- Un operador de tiempo de ejecución de comparación (como `==`) se usó en una instrucción condicional de ensamblado en lugar de un operador relacional (como [EQ](../../assembler/masm/operator-eq.md)).
+
+- Una instrucción o la directiva se ha especificado demasiado pocos operandos.
+
+- Se usó una directiva obsoleta.
+
+## <a name="see-also"></a>Vea también
+
+[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -7,11 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 083d928198d8d83d8a56d8a74a6204e94c86aa67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c96ac897d870e1f8dc153847797379b6720dc7b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103251"
 ---
 # <a name="lthashsetgt-functions"></a>Funciones de &lt;hash_set&gt;
 
@@ -34,13 +35,15 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El hash_set proporciona los elementos deben intercambiar o hash_set cuyos elementos se van a intercambiar con los del hash_set `left`.
+*right*<br/>
+El objeto hash_set que proporciona los elementos deben intercambiar o el objeto hash_set cuyos elementos se van a intercambiar con los del objeto hash_set *izquierdo*.
 
-`left` El hash_set cuyos elementos se van a intercambiar con los del hash_set `right`.
+*left*<br/>
+El objeto hash_set cuyos elementos se van a intercambiar con los del objeto hash_set *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla `swap` es un algoritmo especializado en la clase contenedora hash_set para ejecutar la función miembro `left.`[swap](../standard-library/hash-set-class.md#swap)( `right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+El `swap` función de plantilla es un algoritmo especializado en la clase contenedora hash_set para ejecutar la función miembro `left.` [intercambio](../standard-library/hash-set-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
 **template \<class T> void swap(T&, T&),**
 
@@ -63,13 +66,15 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El hash_multiset proporciona los elementos deben intercambiar o hash_multiset cuyos elementos se van a intercambiar con los del hash_multiset `left`.
+*right*<br/>
+El objeto hash_multiset que proporciona los elementos deben intercambiar o el objeto hash_multiset cuyos elementos se van a intercambiar con los del objeto hash_multiset *izquierdo*.
 
-`left` El hash_multiset cuyos elementos se van a intercambiar con los del hash_multiset `right`.
+*left*<br/>
+El objeto hash_multiset cuyos elementos se van a intercambiar con los del objeto hash_multiset *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla `swap` es un algoritmo especializado en el objeto hash_multiset de la clase contenedora para ejecutar la función miembro `left.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+El `swap` función de plantilla es un algoritmo especializado en la clase contenedora hash_multiset para ejecutar la función miembro `left.` [intercambio](../standard-library/hash-multiset-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
 **template \<class T> void swap(T&, T&),**
 

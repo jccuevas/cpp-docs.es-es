@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32aceae204f50d98e84f1286042854e725917623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a32df3211d77a255421ceb794b6bd891f930733a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108545"
 ---
 # <a name="memfunt-class"></a>mem_fun_t (Clase)
 
-Clase de adaptadores que permite llamar a una función miembro **non_const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.
+Clase de adaptadores que permite un `non_const` función miembro que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,9 +41,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pm` Un puntero a la función miembro de clase **tipo** se convierta en un objeto de función.
+*_Pm*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-`_Pleft` El objeto que la `_Pm` función miembro se llama en.
+*_Pleft*<br/>
+El objeto que la *_Pm* función miembro se llama en.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -50,7 +53,7 @@ Una función unaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define su función miembro `operator()` para que devuelva ( `_Pleft`->* `_Pm`)( ).
+La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` para que devuelva ( `_Pleft`->* `_Pm`)( ).
 
 ## <a name="example"></a>Ejemplo
 

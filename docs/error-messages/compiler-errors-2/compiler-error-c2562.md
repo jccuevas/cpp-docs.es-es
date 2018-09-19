@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2562 | Documentos de Microsoft
+title: Error del compilador C2562 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3fd1a5eae008785a688bcbade674425fc8b2ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69151b71de84c678c09ecafe099344a08d28a8a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114233"
 ---
 # <a name="compiler-error-c2562"></a>Error del compilador C2562
-'identificador': función 'void' Devuelve un valor  
-  
- La función se declara como `void` pero devuelve un valor.  
-  
- Este error puede deberse a un prototipo de función incorrecto.  
-  
- Este error puede corregirse si se especifica el tipo de valor devuelto en la declaración de función.  
-  
- El ejemplo siguiente genera C2562:  
-  
-```  
-// C2562.cpp  
-// compile with: /c  
-void testfunc() {  
-   int i;  
-   return i;   // C2562 delete the return to resolve  
-}  
+
+'identifier': función 'void' que devuelve un valor
+
+La función se declara como `void` pero devuelve un valor.
+
+Este error puede deberse a un prototipo de función incorrecto.
+
+Este error puede corregirse si se especifica el tipo de valor devuelto en la declaración de función.
+
+El ejemplo siguiente genera C2562:
+
+```
+// C2562.cpp
+// compile with: /c
+void testfunc() {
+   int i;
+   return i;   // C2562 delete the return to resolve
+}
 ```

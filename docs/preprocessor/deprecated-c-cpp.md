@@ -1,5 +1,5 @@
 ---
-title: en desuso) (C/C ++) | Documentos de Microsoft
+title: en desuso (C/C ++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2280d5245292625bfc29815475eaca63d4d500bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d51ee23ab4e4be9cf24b913cb0c4ffa325a9bbf5
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541833"
 ---
 # <a name="deprecated-cc"></a>(C/C++) en desuso
-El **en desuso** permite de pragma que indique que un tipo de función o cualquier otro identificador puede ya no admitirse en una futura versión o ya no debe usarse.  
+El **en desuso** permite pragma indicar que una función, tipo o cualquier otro identificador ya no es posible que admite en una futura versión o ya no se debe usar.  
 > [!NOTE]
-> Para obtener información sobre C ++ 14 `[[deprecated]]` atributo y orientación sobre cuándo usar este atributo vs el modificador declspec de Microsoft o la directiva pragma, consulte [atributos estándar de C++](../cpp/attributes.md) atributo.
+> Para obtener información acerca de C ++ 14 `[[deprecated]]` atributo y una guía sobre cuándo usar ese atributo vs el modificador declspec de Microsoft o la directiva pragma, consulte [atributos estándar de C++](../cpp/attributes.md) atributo.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,17 +37,17 @@ El **en desuso** permite de pragma que indique que un tipo de función o cualqui
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando el compilador encuentra un identificador especificado por un **en desuso** pragma, que emite la advertencia del compilador [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
+Cuando el compilador encuentra un identificador especificado por un **en desuso** pragma, que emite la advertencia del compilador [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
   
- Puede desusar nombres de macro. Coloque el nombre de la macro entre comillas; de lo contrario se producirá la expansión de la macro.  
+Puede desusar nombres de macro. Coloque el nombre de la macro entre comillas; de lo contrario se producirá la expansión de la macro.  
   
- Dado que la **en desuso** pragma funciona en todos los identificadores coincidentes y no tiene en cuenta las firmas, no es la mejor opción para dejar en desuso versiones específicas de funciones sobrecargadas. Cualquier nombre de la función de búsqueda de coincidencias se incluyen en el ámbito, genera la advertencia.
+Dado que el **en desuso** pragma funciona en todos los identificadores que coinciden y no tiene en cuenta las firmas, no es la mejor opción para dejar de usar las versiones específicas de funciones sobrecargadas. Cualquier nombre de función que se incluyen en el ámbito desencadena la advertencia.
 
-  Se recomienda usar C ++ 14 `[[deprecated]]` atributo, siempre que sea posible, en lugar de la **en desuso** pragma. Específico de Microsoft [__declspec (deprecated)](../cpp/deprecated-cpp.md) modificador de declaración también es una opción mejor en muchos casos que el **en desuso** pragma. El `[[deprecated]]` atributo y `__declspec(deprecated)` modificador le permiten especificar el estado desusado para formas concretas de funciones sobrecargadas. La advertencia diagnóstico sólo aparece en las referencias a la función sobrecargada concreta el atributo o modificador que se aplica a.  
+Se recomienda usar C ++ 14 `[[deprecated]]` atributo, cuando sea posible, en lugar de la **en desuso** pragma. Específico de Microsoft [__declspec (deprecated)](../cpp/deprecated-cpp.md) modificador declaración también es una opción mejor en muchos casos que el **en desuso** pragma. El `[[deprecated]]` atributo y `__declspec(deprecated)` modificador le permiten especificar el estado en desuso para formas concretas de funciones sobrecargadas. Las referencias a la función sobrecargada específica solo aparece la advertencia diagnóstico el atributo o modificador se aplica a.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // pragma_directive_deprecated.cpp  
 // compile with: /W3  
 #include <stdio.h>  
@@ -65,9 +66,9 @@ int main() {
 }  
 ```  
   
- En el ejemplo siguiente se muestra cómo desusar una clase:  
+En el ejemplo siguiente se muestra cómo desusar una clase:  
   
-```  
+```cpp  
 // pragma_directive_deprecated2.cpp  
 // compile with: /W3  
 #pragma deprecated(X)  
@@ -82,4 +83,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

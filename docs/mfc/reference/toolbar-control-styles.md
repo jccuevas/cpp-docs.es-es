@@ -1,5 +1,5 @@
 ---
-title: Estilos de Control de barra de herramientas | Documentos de Microsoft
+title: Estilos de Control de barra de herramientas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885840"
 ---
 # <a name="toolbar-control-styles"></a>Estilos de control ToolBar
-[Clase CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) tiene un conjunto de indicadores de estilo que determinan la apariencia y comportamiento del botón. Puede establecer una combinación de estas marcas mediante una llamada a [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Este tema enumeran los valores de marca de estilo y sus significados.  
+[Clase CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) tiene un conjunto de marcas de estilo que determinan el aspecto y comportamiento del botón. Puede establecer una combinación de estas marcas mediante una llamada a [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). En este tema se enumera los valores de estilo de indicador y sus significados.  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Los siguientes valores determinan el tipo de botón que representa el control:  
+ Los valores siguientes determinan el tipo de botón que representa el control:  
   
  TBBS_BUTTON  
- Pulsador estándar (valor predeterminado).  
+ Botón de comando estándar (valor predeterminado).  
   
  TBBS_CHECKBOX  
- casilla de verificación.  
+ Casilla de verificación.  
   
  TBBS_CHECKGROUP  
- El inicio de un grupo de casillas de verificación.  
+ Inicio de un grupo de casillas.  
   
  TBBS_GROUP  
- El inicio de un grupo de botones.  
+ Inicio de un grupo de botones.  
   
  TBBS_SEPARATOR  
  Separador.  
@@ -47,13 +48,13 @@ ms.lasthandoff: 05/04/2018
  Casilla de verificación está activada.  
   
  TBBS_DISABLED  
- El control está deshabilitado.  
+ Control está deshabilitado.  
   
  TBBS_INDETERMINATE  
  Casilla de verificación está en un estado indeterminado.  
   
  TBBS_PRESSED  
- Se presionó el botón.  
+ Botón está presionado.  
   
  El valor siguiente cambia el diseño del botón en la barra de herramientas:  
   
@@ -61,16 +62,16 @@ ms.lasthandoff: 05/04/2018
  Coloca el elemento en una nueva línea o en una nueva columna sin separación de columnas.  
   
 ## <a name="remarks"></a>Comentarios  
- El estilo actual se almacena en [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). No establezca un nuevo valor `m_nStyle` directamente, porque algunas clases derivadas realizan otros procesamientos adicionales cuando se llama a `SetStyles`.  
+ El estilo actual se almacena en [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). No establezca un nuevo valor en `m_nStyle` directamente, ya que algunas clases derivadas realizan un procesamiento adicional cuando se llama a `SetStyles`.  
   
- El administrador visual determina la apariencia de los botones en cada estado. Vea [Administrador de visualización](../../mfc/visualization-manager.md) para obtener más información.  
+ El administrador visual determina el aspecto de botones en cada estado. Consulte [Administrador de visualización](../../mfc/visualization-manager.md) para obtener más información.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtoolbarbutton.h  
   
 ## <a name="see-also"></a>Vea también  
  [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)   
- [Clase CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CMFCToolBarButton (clase)](../../mfc/reference/cmfctoolbarbutton-class.md)   
  [Administrador de visualización](../../mfc/visualization-manager.md)
 
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348242"
 ---
 # <a name="printing"></a>Impresión
 Microsoft Windows implementa una presentación independientes del dispositivo. En MFC, esto significa que las mismas llamadas de dibujo, en la `OnDraw` función miembro de la clase de vista, son responsables del dibujo de la pantalla y en otros dispositivos, como las impresoras. Para la vista preliminar, el dispositivo de destino es una salida de impresora simulada para la presentación.  

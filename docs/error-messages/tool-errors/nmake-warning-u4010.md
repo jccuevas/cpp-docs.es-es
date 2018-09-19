@@ -1,5 +1,5 @@
 ---
-title: Advertencia de NMAKE U4010 | Documentos de Microsoft
+title: Advertencia de NMAKE U4010 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc8c99bb4a9b5daf7f630771d0f240479aaf5f3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a640245db460f4cd8cd658c097955a69a59d1fb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117509"
 ---
 # <a name="nmake-warning-u4010"></a>Advertencia de NMAKE U4010
-'target': error al generar; Se especificó/k, continuando...  
-  
- Un comando en el bloque de comandos para el destino dado devolvió un código de salida distinto de cero. La opción /K indicó a NMAKE para continuar el procesamiento relacionado con partes de la compilación y emitir un código de salida 1 cuando finaliza la sesión NMAKE.  
-  
- Si el destino dado es un dependiente de otro destino, NMAKE emite la advertencia [U4011](../../error-messages/tool-errors/nmake-warning-u4011.md) después de esta advertencia.
+
+'target': error al generar; Se especificó/k, continuando...
+
+Un comando en el bloque de comandos para el destino dado devolvió un código de salida distinto de cero. La opción /K indicó a NMAKE para continuar el procesamiento relacionado con las partes de la compilación y para emitir un código de salida 1 cuando finaliza la sesión de NMAKE.
+
+Si el destino especificado es dependiente de otro destino, emite la advertencia de NMAKE [U4011](../../error-messages/tool-errors/nmake-warning-u4011.md) después de esta advertencia.

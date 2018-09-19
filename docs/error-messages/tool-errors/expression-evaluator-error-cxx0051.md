@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0051 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0051 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a922738aa9ba3672e1f8f7c801f02d13a90a99c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b89fb8de6bd9331a85d79ec8d8e21ba746c5c88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065054"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Error del evaluador de expresiones CXX0051
-más de un símbolo sobrecargado especificado en el punto de interrupción  
-  
- El evaluador de expresiones no pudo determinar cuál de más de un símbolo sobrecargado para usarlo como un punto de interrupción.  
-  
- Este error es idéntico a CAN0051.
+
+más de un símbolo sobrecargado especificado en el punto de interrupción
+
+El evaluador de expresiones no pudo determinar cuál de más de un símbolo sobrecargado para usarlo como un punto de interrupción.
+
+Este error es idéntico a CAN0051.

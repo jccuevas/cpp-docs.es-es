@@ -1,5 +1,5 @@
 ---
-title: PGOSWEEP | Documentos de Microsoft
+title: PGOSWEEP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -15,15 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ded5b692d7c51e5a46a325a69ad6969083025ff5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed12828d9170aac576a97c63b9988bb4b303ef58
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711924"
 ---
 # <a name="pgosweep"></a>pgosweep
 
-Se usan en optimización guiada por perfiles para escribir todos los datos de perfil de un programa en ejecución en el archivo .pgc.
+Se usa en la optimización guiada por perfiles para escribir todos los datos de perfil de un programa en ejecución en el archivo .pgc.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,12 +32,12 @@ Se usan en optimización guiada por perfiles para escribir todos los datos de pe
 
 ### <a name="parameters"></a>Parámetros
 
-*Opciones de* (opcional)<br/>
-Los valores válidos para *opciones* son:
+*options*<br/>
+(Opcional) Los valores válidos para *opciones* son:
 
-- **/?** o **/help** muestra el mensaje de ayuda.
+- **/?** o **/ayuda** muestra el mensaje de ayuda.
 
-- **/ NoReset** conserva el recuento de las estructuras de datos en tiempo de ejecución.
+- **/NoReset** conserva el recuento de las estructuras de datos en tiempo de ejecución.
 
 *Imagen*<br/>
 La ruta de acceso completa de un archivo .exe o .dll que se creó mediante la [/genprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md), [/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md), o [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) opción.
@@ -46,14 +47,14 @@ El archivo .pgc donde este comando escribe los datos recuentos.
 
 ## <a name="remarks"></a>Comentarios
 
-El **pgosweep** comando funciona en programas que se crearon con la [/GENPROFILE o/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) opción o las regiones [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) opción. Interrumpe un programa en ejecución y escribe los datos de perfil en un nuevo archivo .pgc. De forma predeterminada, el comando restablece los recuentos después de cada operación de escritura. Si especifica la **/NoReset** opción, el comando registrar los valores, pero no restablecerlas en el programa en ejecución. Esta opción le proporciona los datos duplicados si se recuperan los datos de perfil más adelante.
+El **pgosweep** comando funciona en programas que se crearon con la [/GENPROFILE o/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) opción o el desuso [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) opción. Interrumpe un programa en ejecución y escribe los datos de perfil en un nuevo archivo .pgc. De forma predeterminada, el comando restablece los recuentos después de cada operación de escritura. Si especifica la **/NoReset** opción, el comando registrar los valores, pero no restablecerlas en el programa en ejecución. Esta opción le ofrece datos duplicados si se recuperan los datos de perfil más adelante.
 
-Un uso alternativo para **pgosweep** consiste en recuperar información de perfil para el funcionamiento normal de la aplicación. Por ejemplo, podría ejecutar **pgosweep** poco después de iniciar la aplicación y descartar ese archivo. Esto quitará los datos de perfil asociados a los costos de inicio. A continuación, puede ejecutar **pgosweep** antes de finalizar la aplicación. Ahora los datos recopilados tienen información de perfil solo desde el momento en que el usuario puede interactuar con el programa.
+Un uso alternativo para **pgosweep** es recuperar información de perfil para el funcionamiento normal de la aplicación. Por ejemplo, podría ejecutar **pgosweep** poco después de iniciar la aplicación y descartar ese archivo. Esto eliminaría los datos de perfil asociados con los costos iniciales. A continuación, puede ejecutar **pgosweep** antes de finalizar la aplicación. Ahora los datos recopilados tienen información de perfil solo desde el momento en el usuario puede interactuar con el programa.
 
-Cuando asigne un nombre a un archivo .pgc (mediante el uso de la *pgcfile* parámetro) puede usar el formato estándar, que es *appname! n*.pgc. Si utiliza este formato, el compilador busca automáticamente estos datos en el **/ / useprofile LTCG** o **/LTCG: PGO** fase. Si no utiliza el formato estándar, debe usar [pgomgr](pgomgr.md) para combinar los archivos .pgc que existan.
+Cuando dé nombre a un archivo .pgc (mediante el uso de la *pgcfile* parámetro) puede usar el formato estándar, que es *appname! n*.pgc. Si utiliza este formato, el compilador busca automáticamente estos datos en el **/ / useprofile LTCG** o **/LTCG: PGO** fase. Si no utiliza el formato estándar, debe usar [pgomgr](pgomgr.md) para combinar los archivos PGC.
 
 > [!NOTE]
-> Puede iniciar esta herramienta solo desde un símbolo del sistema de Visual Studio developer. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
+> Puede iniciar esta herramienta solo desde un símbolo del sistema de Visual Studio para desarrolladores. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
 
 Para obtener información sobre cómo capturar los datos de perfil desde dentro del archivo ejecutable, consulte [PgoAutoSweep](pgoautosweep.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Las funciones del espacio de nombres de Concurrency::Graphics::Direct3D | Documentos de Microsoft
+title: Funciones del espacio de nombres Concurrency::Graphics::Direct3D | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,21 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 78fbf9c260b1a53bb16628846033ef15ab04684f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110190"
 ---
-# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funciones del espacio de nombres de Concurrency::Graphics::Direct3D
+# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funciones del espacio de nombres Concurrency::Graphics::Direct3D
 ||||  
 |-|-|-|  
 |[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>  get_sampler)  
- Obtener la interfaz de estado de la muestra de D3D en el Acelerador determinado ver que representa el objeto de muestra especificado.  
+##  <a name="get_sampler"></a>  get_sampler  
+ Obtenga la interfaz de estado de muestra de D3D en el Acelerador proporcionada vista que representa el objeto de muestra especificado.  
   
 ```  
 IUnknown* get_sampler(
@@ -37,17 +38,17 @@ IUnknown* get_sampler(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Av`  
- Vista de aceleradores de D3D en el que el estado de la muestra de D3D consiste en crear.  
+*_Av*<br/>
+Una vista del Acelerador D3D en el que el estado de la muestra de D3D consiste en crear.  
   
- `_Sampler`  
- Un objeto de muestra para el que se crea la interfaz de estado de muestra de D3D subyacente.  
+*_Sampler*<br/>
+Un objeto de muestra para el que se crea la interfaz de estado de muestra de D3D subyacente.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Puntero de interfaz IUnknown que se corresponde con el estado de la muestra de D3D que representa la muestra de determinado.  
+ El puntero de interfaz IUnknown correspondiente al estado de muestrario de D3D que representa el muestrario especificado.  
   
-##  <a name="get_texture"></a>  get_texture)  
- Obtiene la interfaz de textura Direct3D subyacente especificado [textura](texture-class.md) objeto.  
+##  <a name="get_texture"></a>  get_texture  
+ Obtiene la interfaz de textura de Direct3D subyacente especificado [textura](texture-class.md) objeto.  
   
 ```  
 template<
@@ -77,31 +78,31 @@ _Ret_ IUnknown *get_texture(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `value_type`  
- El tipo de elemento de la textura.  
+*value_type*<br/>
+El tipo de elemento de la textura.  
   
- `_Rank`  
- El rango de la textura.  
+*_Rank*<br/>
+El rango de la textura.  
   
- `_Texture`  
- Una textura o una vista de textura asociados a la accelerator_view para el que se devuelve la interfaz de textura Direct3D subyacente.  
+*_Texture*<br/>
+Una textura o una vista de textura asociado al elemento accelerator_view para el que se devuelve la interfaz de textura de Direct3D subyacente.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El puntero de interfaz IUnknown correspondiente a la textura Direct3D subyacente de la textura.  
+ El puntero de interfaz IUnknown correspondiente a la textura de Direct3D que subyace a la textura.  
   
 ##  <a name="make_sampler"></a>  make_sampler  
- Crear una muestra de un puntero de interfaz de estado de muestra de D3D.  
+ Cree una muestra de un puntero de interfaz de estado de muestra de D3D.  
   
 ```  
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_D3D_sampler`  
- Puntero de interfaz IUnknown del estado de muestra de D3D para crear la muestra de.  
+*_D3D_sampler*<br/>
+Puntero de interfaz IUnknown del estado para crear el ejemplo de muestra D3D.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una muestra de representa el estado de muestra de D3D proporcionado.  
+ Una muestra representa el estado del muestrario de D3D proporcionado.  
   
 ##  <a name="make_texture"></a>  make_texture  
  Crea un [textura](texture-class.md) objeto mediante el uso de los parámetros especificados.  
@@ -118,26 +119,26 @@ texture<value_type, _Rank> make_texture(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `value_type`  
- El tipo de los elementos de la textura.  
+*value_type*<br/>
+El tipo de los elementos de la textura.  
   
- `_Rank`  
- El rango de la textura.  
+*_Rank*<br/>
+El rango de la textura.  
   
- `_Av`  
- Vista de aceleradores de D3D en los que es necesario crear la textura.  
+*_Av*<br/>
+Una vista del Acelerador D3D en el que es necesario crear la textura.  
   
- `_D3D_texture`  
- Puntero de interfaz IUnknown de la textura de D3D para crear la textura de.  
+*_D3D_texture*<br/>
+Puntero de interfaz IUnknown de la textura D3D para crear la textura de.  
   
- `_View_format`  
- El formato DXGI a usar para las vistas creadas de esta textura. Pasar DXGI_FORMAT_UNKNOWN (valor predeterminado) para derivar el formato desde el formato subyacente del _D3D_texture y la value_type de esta plantilla. El formato proporcionado debe ser compatible con el formato subyacente de _D3D_texture.  
+*_View_format*<br/>
+El formato DXGI que se usará para las vistas creadas desde esta textura. Pase DXGI_FORMAT_UNKNOWN (el valor predeterminado) para derivar el formato del formato subyacente de _D3D_texture y la value_type de esta plantilla. El formato proporcionado debe ser compatible con el formato subyacente de _D3D_texture.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una textura mediante la textura de D3D proporcionada.  
+ Una textura utilizando la textura D3D proporcionada.  
   
 ##  <a name="msad4"></a>  msad4  
- Compara un valor de referencia de 4 bytes y un valor de origen de 8 bytes y se acumula un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de la diferencia absoluta de alineaciones que sean diferentes de byte entre el valor de referencia y el valor de origen.  
+ Compara un valor de referencia de 4 bytes y un valor de origen de 8 bytes y acumula un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de distintas alineaciones de bytes entre el valor de referencia y el valor de origen.  
   
 ```  
 inline uint4 msad4(
@@ -147,17 +148,17 @@ inline uint4 msad4(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Reference`  
- La matriz de referencia de 4 bytes en un valor de uint  
+*R_eferencia*<br/>
+La matriz de referencia de 4 bytes en un valor uint  
   
- `_Source`  
- La matriz de origen de 8 bytes en un vector de dos valores de uint.  
+*_Source*<br/>
+La matriz de origen de 8 bytes en un vector de dos valores uint.  
   
- `_Accum`  
- Un vector de 4 valores va a agregar a la suma enmascarada de absoluta las diferencias entre las alineaciones de bytes diferentes entre el valor de referencia y el valor de origen.  
+*_Accum*<br/>
+Un vector de 4 valores que se agregarán a la suma enmascarada de diferencias absolutas de las distintas alineaciones de bytes entre el valor de referencia y el valor de origen.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de la diferencia absoluta de alineaciones que sean diferentes de byte entre el valor de referencia y el valor de origen.  
+ Devuelve un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de distintas alineaciones de bytes entre el valor de referencia y el valor de origen.  
 
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp_graphics.h  

@@ -19,16 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8ba4986abf097a5827d3db7f93dbbd0a9640862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d4db2fa67924a6925a19d2714c604f2c9aaa4e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705658"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
+
 **Específicos de Microsoft**  
   
- Genera el `extrq` instrucciones para extraer los bits especificados de los 64 bits inferiores del primer argumento.  
+Genera el `extrq` instrucciones para extraer los bits especificados de los 64 bits inferiores de su primer argumento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,17 +47,17 @@ __m128i _mm_extracti_si64(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Source`  
- Un campo de 128 bits con datos de entrada en sus 64 bits inferiores.  
+*Source*<br/>
+[in] Un campo de 128 bits con datos de entrada en sus 64 bits inferiores.  
   
- [in]  `Descriptor`  
- Un campo de 128 bits que describe el campo de bits para extraer.  
+*Descriptor*<br/>
+[in] Un campo de 128 bits que describe el campo de bits para extraer.  
   
- [in]  `Length`  
- Un entero que especifica la longitud del campo que desea extraer.  
+*Longitud*<br/>
+[in] Un entero que especifica la longitud del campo que desea extraer.  
   
- [in]  `Index`  
- Un entero que especifica el índice del campo que se va a extraer  
+*Index*<br/>
+[in] Un entero que especifica el índice del campo para extraer  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un campo de 128 bits con el campo extraído en sus bits menos significativos.  
@@ -70,13 +72,13 @@ __m128i _mm_extracti_si64(
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función intrínseca genera el `extrq` instrucciones para extraer los bits de `Source`. Hay dos versiones de este intrínsecas: `_mm_extracti_si64` es la versión inmediata, y `_mm_extract_si64` es el que no es inmediato.  Cada versión se extrae de `Source` un campo de bits definido por su longitud y el índice de su bit menos significativo. Los valores de la longitud y el índice se toman mod 64, lo que -1 y 127 se interpretan como 63. Si la suma de los índices (reducidos) y la longitud de campo (reducida) es mayor que 64, los resultados son indefinidos. Un valor de cero para la longitud de campo se interpreta como 64. Si el índice de bits y de longitud de campo es ambos cero, 63:0 de bits de `Source` se extraen. Si la longitud de campo es cero, pero el índice de bits es distinto de cero, los resultados son indefinidos.  
+ Esta función intrínseca genera el `extrq` instrucciones para extraer los bits de `Source`. Hay dos versiones de este intrínsecas: `_mm_extracti_si64` es la versión inmediata, y `_mm_extract_si64` es lo que no es inmediato.  Cada versión se extrae de `Source` un campo de bits definido por su longitud y el índice de su bit menos significativo. Los valores de la longitud y el índice se toman mod 64, -1 y 127 se interpreta como 63. Si la suma del índice (menor) y de longitud de campo (reducida) es mayor que 64, los resultados son indefinidos. Un valor de cero para la longitud de campo se interpreta como 64. Si el índice del campo de longitud y el bit es ambos cero, 63:0 bits de `Source` se extraen. Si la longitud de campo es cero, pero el índice de bits es distinto de cero, los resultados son indefinidos.  
   
- En una llamada a _mm_extract_si64, el `Descriptor` contiene el índice en bits 13:8 y la longitud de campo de los datos que deben extraerse en bits 5:0..  
+ En una llamada a _mm_extract_si64, el `Descriptor` contiene el índice de 13:8 de bits y la longitud de campo de los datos que deben extraerse en bits 5:0..  
   
- Si se llama a `_mm_extracti_si64` con argumentos que el compilador no puede determinar como constantes de tipo entero, el compilador genera código para empaquetar esos valores en un registro de registros de XMM (`Descriptor`) y llamar a `_mm_extract_si64`.  
+ Si se llama a `_mm_extracti_si64` con argumentos que el compilador no puede determinar que las constantes de tipo entero, el compilador genera código para empaquetar esos valores en un registro XMM (`Descriptor`) y llamar a `_mm_extract_si64`.  
   
- Para determinar la compatibilidad de hardware con el `extrq` instrucción, llame a la `__cpuid` intrínseco con `InfoType=0x80000001` y comprobar bit 6 de `CPUInfo[2] (ECX)`. Este bit será 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta el código que usa este hardware intrínseco que no admite la `extrq` instrucciones, los resultados son imprevisibles.  
+ Para determinar la compatibilidad de hardware para el `extrq` instrucción, llamada la `__cpuid` intrínseca con `InfoType=0x80000001` y comprobar poco 6 de `CPUInfo[2] (ECX)`. Este bit será 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta el código que usa este hardware intrínseco que no es compatible con la `extrq` instrucciones, los resultados son impredecibles.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -113,8 +115,9 @@ result2 = 0x30eca86
 result3 = 0x30eca86  
 ```  
   
-**FIN de Específicos de Microsoft**  
- Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
+**FIN de Específicos de Microsoft**
+
+Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Vea también  
  [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   

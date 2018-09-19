@@ -1,5 +1,5 @@
 ---
-title: _bittestandset, _bittestandset64 | Documentos de Microsoft
+title: _bittestandset, _bittestandset64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928391912d325faaf2e70a27519fdf969539fbca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ae2708069141c8ed78e4e736d1b0664a166b4da
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715501"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 **Específicos de Microsoft**  
@@ -46,11 +47,11 @@ unsigned char _bittestandset64(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in, out] `a`  
- Puntero a la memoria que se va a examinar.  
+*a*<br/>
+[in, out] Un puntero a la memoria que se va a examinar.  
   
- [in] `b`  
- La posición de bit que se va a probar.  
+*b*<br/>
+[in] La posición de bit para probar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El bit en la posición especificada.  
@@ -59,8 +60,8 @@ unsigned char _bittestandset64(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_bittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandset`|x86, ARM, x64|  
+|`_bittestandset64`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

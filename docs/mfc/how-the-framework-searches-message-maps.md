@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345786"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Cómo busca el marco los mapas de mensajes
 El marco de trabajo busca en la tabla de mapa de mensajes para buscar coincidencias con los mensajes entrantes. Una vez que se escribe una entrada de mapa de mensajes para cada mensaje que desea que una clase para controlar y escribir los controladores correspondientes, el marco de trabajo llamará automáticamente a los controladores. Los siguientes temas explican la búsqueda de mapa de mensajes:  

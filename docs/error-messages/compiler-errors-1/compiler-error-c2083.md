@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2083 | Documentos de Microsoft
+title: Error del compilador C2083 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39bc842e62254db7e524071970cb8f8c65e4a321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adf2787f8aea3611abd9eeac054df6bb054d802a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103287"
 ---
 # <a name="compiler-error-c2083"></a>Error del compilador C2083
-comparación struct/union no válida  
-  
- Se está comparando directamente una estructura o una unión con otro tipo definido por el usuario. Esta operación no se permite a menos que se haya definido un operador de comparación o que exista una conversión a un tipo escalar.
+
+comparación struct/union no válida
+
+Se está comparando directamente una estructura o una unión con otro tipo definido por el usuario. Esta operación no se permite a menos que se haya definido un operador de comparación o que exista una conversión a un tipo escalar.

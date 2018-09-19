@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686586"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>Cómo: Usar la clase transformer en una canalización de datos
 Este tema contiene un ejemplo básico que muestra cómo utilizar el [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) clase en una canalización de datos. Para obtener un ejemplo más completo que usa una canalización de datos para realizar el procesamiento de imágenes, vea [Tutorial: crear una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  

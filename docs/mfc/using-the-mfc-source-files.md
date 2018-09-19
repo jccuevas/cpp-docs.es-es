@@ -21,18 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73177d8b73d5f4be6d886b0bda84f1e1241488cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69079e6f74743a82aa9e9b9b1c13703e480c904c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951548"
 ---
 # <a name="using-the-mfc-source-files"></a>Usar los archivos de código fuente de MFC
 La biblioteca (Microsoft Foundation Classes) proporciona el código fuente completo. Archivos de encabezado (. h) están en el directorio \atlmfc\include; archivos de implementación (.cpp) están en el directorio \atlmfc\src\mfc.  
   
  Esta serie de artículos explica las convenciones que utiliza MFC para comentar las distintas partes de cada clase, lo que significan estos comentarios y qué se puede esperar encontrar en cada sección. Los asistentes de Visual C++ usan convenciones similares para las clases que crean para usted y probablemente encontrará estas convenciones útil para su propio código.  
   
- Es posible que esté familiarizado con la **público**, `protected`, y `private` palabras clave de C++. Al examinar los archivos de encabezado MFC, encontrará que cada clase puede tener varios de cada uno de ellos. Por ejemplo, podrían ser funciones y variables de miembro público en más de un **público** palabra clave. Esto es porque MFC separa las variables miembro y funciones que se basan en su uso, no por el tipo de acceso permitido. MFC utiliza `private` con moderación; incluso elementos consideran detalles de implementación suelen estar protegidos y muchas veces son públicos. Aunque no se recomienda el acceso a los detalles de implementación, MFC deja la decisión para usted.  
+ Es posible que esté familiarizado con la **público**, **protegido**, y **privada** palabras clave de C++. Al examinar los archivos de encabezado MFC, encontrará que cada clase puede tener varios de cada uno de ellos. Por ejemplo, podrían ser funciones y variables de miembro público en más de un **público** palabra clave. Esto es porque MFC separa las variables miembro y funciones que se basan en su uso, no por el tipo de acceso permitido. MFC utiliza **privada** con moderación; incluso elementos consideran detalles de implementación suelen estar protegidos y muchas veces son públicos. Aunque no se recomienda el acceso a los detalles de implementación, MFC deja la decisión para usted.  
   
  En los archivos de código fuente MFC y los archivos que crea el Asistente para aplicaciones MFC, encontrará comentarios como éstos en las declaraciones de clase (normalmente en este orden):  
   

@@ -1,5 +1,5 @@
 ---
-title: C2779 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2779 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1f16bd0e756895b0da98fd43d0d6b2fdee6e8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43067c780accfea1d55f9fd9c9dbce69fe41a43a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046789"
 ---
-# <a name="compiler-error-c2779"></a>C2779 de Error del compilador
-'declaration': los métodos de propiedad solo puede asociarse con miembros de datos no estáticos  
-  
- El `property` atributo extendido incorrectamente se aplica a un miembro de datos estáticos.  
-  
- El ejemplo siguiente genera C2779:  
-  
-```  
-// C2779.cpp  
-struct A {  
-   static __declspec(property(put=PutProp))  
-   // try the following line instead  
-   __declspec(property(put=PutProp))  
-      int prop;   // C2779  
-   int PutProp(void);  
-};  
+# <a name="compiler-error-c2779"></a>Error del compilador C2779
+
+'declaration': los métodos de propiedad solo pueden asociarse con los miembros de datos no estáticos
+
+El `property` atributo extendido incorrectamente se aplica a un miembro de datos estáticos.
+
+El ejemplo siguiente genera C2779:
+
+```
+// C2779.cpp
+struct A {
+   static __declspec(property(put=PutProp))
+   // try the following line instead
+   __declspec(property(put=PutProp))
+      int prop;   // C2779
+   int PutProp(void);
+};
 ```

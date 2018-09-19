@@ -1,5 +1,5 @@
 ---
-title: __svm_skinit | Documentos de Microsoft
+title: __svm_skinit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e47608b7ec58e433d9be5e2f2178a825b6be2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8c59ad4af53a38ee28450e51adf9cdf81ec7bad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687290"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Específicos de Microsoft**  
@@ -43,17 +44,17 @@ void __svm_skinit(
 |`SLB`|La dirección física de 32 bits de un byte de 64K bloque de cargador seguro (SLB).|  
   
 ## <a name="remarks"></a>Comentarios  
- El `__svm_skinit` función es equivalente a la `SKINIT` instrucción máquina. Esta función forma parte de un sistema de seguridad que utiliza el procesador y un módulo de plataforma de confianza (TPM) para comprobar y cargar software confianza llamado a un núcleo de seguridad (SK). Un monitor de máquina virtual es un ejemplo de un núcleo de seguridad. El sistema de seguridad comprueba los componentes de programa cargadas durante el proceso de inicialización y protege los componentes contra la manipulación por interrupciones, acceso al dispositivo u otro programa, si el equipo es un multiprocesador.  
+ El `__svm_skinit` función es equivalente a la `SKINIT` instrucción máquina. Esta función forma parte de un sistema de seguridad que utiliza el procesador y un módulo de plataforma segura (TPM) para comprobar y cargar el software de confianza llama a un núcleo de seguridad (SK). Un monitor de máquina virtual es un ejemplo de un núcleo de seguridad. El sistema de seguridad comprueba los componentes de programa carga durante el proceso de inicialización y protege los componentes de la manipulación mediante otro programa, acceso a los dispositivos o las interrupciones si el equipo es un multiprocesador.  
   
- El `SLB` parámetro especifica la dirección física de un bloque de 64 KB de memoria caché denominada el *seguros cargador bloque* (SLB). El SLB contiene un programa llamado el cargador seguro que establece el entorno operativo para el equipo y posteriormente se carga el núcleo de seguridad.  
+ El `SLB` parámetro especifica la dirección física de un bloque de 64 KB de memoria denominada el *bloque de cargador seguro* (SLB). El SLB contiene un programa llamado el cargador seguro que establece el entorno operativo para el equipo y posteriormente se carga el núcleo de seguridad.  
   
- Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento "volumen de Manual del programador de arquitectura AMD64 2: programación de sistema," número 24593, 3.11, de revisión del documento en el [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sitio.  
+ Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número 24593, 3.11, revisión del documento en el [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__svm_skinit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_skinit`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

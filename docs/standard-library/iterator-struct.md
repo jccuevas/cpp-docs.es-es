@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963633"
 ---
 # <a name="iterator-struct"></a>iterator (Struct)
 
-Struct base vacío usado para garantizar que una clase de iterador definida por el usuario funciona correctamente con **iterator_trait**.
+Un struct base vacío que se utiliza para garantizar que una clase de iterador definida por el usuario funciona correctamente con `iterator_trait`s.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,7 +47,7 @@ El struct de plantilla se usa como tipo base para todos los iteradores. Define l
 
 - `iterator_category` (sinónimo para el parámetro de plantilla `Category`).
 
-- `value_type` (sinónimo para el parámetro de plantilla **Type**).
+- `value_type` (sinónimo para el parámetro de plantilla `Type`).
 
 - `difference_type` (sinónimo para el parámetro de plantilla `Distance`).
 
@@ -56,7 +57,7 @@ El struct de plantilla se usa como tipo base para todos los iteradores. Define l
 
 - `reference` (sinónimo para el parámetro de plantilla `Reference`).
 
-Tenga en cuenta que `value_type` no debe ser un tipo constante, incluso si **pointer** apunta a un objeto de **Type** const y la referencia designa un objeto de **Type** const.
+Tenga en cuenta que `value_type` no debe estar a tipo de constante, incluso si `pointer` apunta a un objeto de **const** `Type` y la referencia designa un objeto de **const** `Type`.
 
 ## <a name="example"></a>Ejemplo
 

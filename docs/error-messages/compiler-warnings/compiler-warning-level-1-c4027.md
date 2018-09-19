@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4027 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4027 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad35c43f602dcaa83f550db887275db3e5213c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b919eeece5529d1914fadf5724088e3e64e73db9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089520"
 ---
 # <a name="compiler-warning-level-1-c4027"></a>Advertencia del compilador (nivel 1) C4027
-función declarada sin lista de parámetros formales  
-  
- La declaración de función no toma parámetros formales, pero existen parámetros formales en la definición de función o parámetros reales en una llamada. Las llamadas posteriores a esta función suponen que la función toma parámetros reales de los tipos encontrados en la definición de función o la llamada.
+
+función declarada sin lista de parámetros formales
+
+La declaración de función no toma parámetros formales, pero existen parámetros formales en la definición de función o parámetros reales en una llamada. Las llamadas posteriores a esta función suponen que la función toma parámetros reales de los tipos encontrados en la definición de función o la llamada.

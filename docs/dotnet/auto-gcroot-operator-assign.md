@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::operator = | Documentos de Microsoft
+title: auto_gcroot::operator = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4bc0f671ea0c156b05eabe092bc3cc85b5cd9fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91503568b093dfb7052cd6d6e99fc63f1c780a73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102749"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator=
 Operador de asignación.  
@@ -45,15 +46,15 @@ auto_gcroot<_element_type> & operator=(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_right`  
- El objeto o `auto_gcroot` que se asignará a la actual `auto_gcroot`.  
+*a la _derecha*<br/>
+El objeto o `auto_gcroot` que se asignará a la actual `auto_gcroot`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Actual `auto_gcroot`, ahora propietario `_right`.  
+ Actual `auto_gcroot`ahora propietario `_right`.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // msl_auto_gcroot_operator_equals.cpp  
 // compile with: /clr  
 #include <msclr\auto_gcroot.h>  

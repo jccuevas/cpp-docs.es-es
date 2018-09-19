@@ -15,30 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1e71502f818321dc8893f89f21993c25b032602
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 576735841748d0b99053d038f8d5f674d5692f00
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930194"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Procesar mensajes de notificación en los controles de cuadro combinado extendido
-A medida que los usuarios interactúan con el cuadro combinado extendido, el control (`CComboBoxEx`) envía mensajes de notificación a su ventana primaria, normalmente un objeto de vista o cuadro de diálogo. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario activa la lista desplegable o hace clic en el cuadro de edición del control, se envía la notificación **CBEN_BEGINEDIT** .  
+A medida que los usuarios interactúan con el cuadro combinado extendido, el control (`CComboBoxEx`) envía mensajes de notificación a su ventana primaria, normalmente un objeto de vista o cuadro de diálogo. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario activa la lista desplegable o hace clic en el cuadro de edición del control, se envía la notificación CBEN_BEGINEDIT.  
   
  Use la ventana Propiedades para agregar controladores de notificación a la clase primaria para aquellos mensajes que desee implementar.  
   
  En la lista siguiente se describen las distintas notificaciones que envía el control de cuadro combinado extendido.  
   
--   **CBEN_BEGINEDIT** Se envía cuando el usuario activa la lista desplegable o hace clic en el cuadro de edición del control.  
+-   CBEN_BEGINEDIT se envía cuando el usuario activa la lista desplegable o hace clic en el cuadro de edición del control.  
   
--   **CBEN_DELETEITEM** Se envía cuando se elimina un elemento.  
+-   CBEN_DELETEITEM se envía cuando se ha eliminado un elemento.  
   
--   **CBEN_DRAGBEGIN** Se envía cuando el usuario comienza a arrastrar la imagen del elemento que se muestra en la parte de edición del control.  
+-   CBEN_DRAGBEGIN se envía cuando el usuario comienza a arrastrar la imagen del elemento mostrado en la parte de edición del control.  
   
--   **CBEN_ENDEDIT** Se envía cuando el usuario finaliza una operación en el cuadro de edición o selecciona un elemento de la lista desplegable del control.  
+-   CBEN_ENDEDIT se envía cuando el usuario finaliza una operación en el cuadro de edición o selecciona un elemento de la lista del control desplegable.  
   
--   **CBEN_GETDISPINFO** Se envía para recuperar información de visualización sobre un elemento de devolución de llamada.  
+-   CBEN_GETDISPINFO se envía para recuperar información de visualización sobre un elemento de devolución de llamada.  
   
--   **CBEN_INSERTITEM** Se envía cuando se inserta un nuevo elemento en el control.  
+-   CBEN_INSERTITEM se envía cuando se ha insertado un nuevo elemento en el control.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CComboBoxEx](../mfc/using-ccomboboxex.md)   

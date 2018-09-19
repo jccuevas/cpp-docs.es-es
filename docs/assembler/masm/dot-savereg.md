@@ -1,7 +1,7 @@
 ---
-title: . SAVEREG | Documentos de Microsoft
+title: . SAVEREG | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50b7a91efd7069e148222d3e3da44178974d6ba
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e7010664cd2e80841d9e35d8fcf72d195cecf796
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688994"
 ---
 # <a name="savereg"></a>.SAVEREG
-Genera una una `UWOP_SAVE_NONVOL` o un `UWOP_SAVE_NONVOL_FAR` entrada de código para el registro especificado de desenredo (`reg`) y desplazamiento (`offset`) utilizando el desplazamiento actual del prólogo. MASM elegirá la codificación más eficaz.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-.SAVEREG reg, offset  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- . SAVEREG permite a los usuarios ml64.exe especificar cómo se desenreda una función de marco y solo se permite en el prólogo, que abarca desde el [PROC](../../assembler/masm/proc.md) declaración de marco para el [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva. Estas directivas no generan código; solo generan `.xdata` y `.pdata`. . SAVEREG debe ir precedida de instrucciones que realmente se implementan las acciones que puede desenredar. Es una buena práctica para ajustar las directivas de desenredado y el código que están concebidos para desenredar en una macro para asegurarse de acuerdo.  
-  
- Para obtener más información, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Genera una un `UWOP_SAVE_NONVOL` o un `UWOP_SAVE_NONVOL_FAR` desenredo de la entrada de código para el registro especificado (`reg`) y el desplazamiento (`offset`) mediante el desplazamiento actual del prólogo. MASM elegirá la codificación más eficaz.
+
+## <a name="syntax"></a>Sintaxis
+
+> . SAVEREG registro, desplazamiento
+
+## <a name="remarks"></a>Comentarios
+
+. SAVEREG permite a los usuarios ml64.exe especificar cómo se desenreda una función de marco y solo se permite en el prólogo, que se extiende desde el [PROC](../../assembler/masm/proc.md) declaración de marco para el [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva. Estas directivas no generan código; solo generan `.xdata` y `.pdata`. . SAVEREG debe ir precedido de instrucciones que implementan las acciones que no resulte dañada. Es una buena práctica para ajustar las directivas de desenredado y el código que están diseñadas para desenredo en una macro para asegurarse de acuerdo.
+
+Para obtener más información, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

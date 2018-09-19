@@ -1,5 +1,5 @@
 ---
-title: Clases de información (ATL) del sitio | Documentos de Microsoft
+title: Clases de información (ATL) de sitio | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2279eb951888a1b323455f3e8a2545cc1b1d7f2d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ac1821f34269a54fc0fb10a3ae797a815d5acd9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758328"
 ---
-# <a name="site-information-classes"></a>Clases de información de sitio
-Las clases siguientes permiten a un objeto para comunicarse con su sitio:  
-  
--   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se utiliza para los objetos que no son controles.  
-  
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se utiliza con los controles.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)
+# <a name="site-information-classes"></a>Clases de información del sitio
+
+Las clases siguientes permiten a un objeto para comunicarse con su sitio:
+
+- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se usa para los objetos que no son controles.
+
+- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) recupera y establece un puntero al sitio de un objeto. Se utiliza con los controles.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)
 

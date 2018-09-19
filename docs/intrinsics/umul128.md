@@ -1,5 +1,5 @@
 ---
-title: _umul128 | Documentos de Microsoft
+title: _umul128 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6998b51be8fd11092c4266fa7eee7434be8e5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721310"
 ---
 # <a name="umul128"></a>_umul128
 **Específicos de Microsoft**  
@@ -38,14 +39,14 @@ unsigned __int64 _umul128(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Multiplier`  
- El primer entero de 64 bits que se va a multiplicar.  
+*Multiplicador*<br/>
+[in] El primer entero de 64 bits se va a multiplicar.  
   
- [in] `Multiplicand`  
- El segundo entero de 64 bits que se va a multiplicar.  
+*Multiplicando*<br/>
+[in] El segundo entero de 64 bits se va a multiplicar.  
   
- [out] `HighProduct`  
- Los 64 bits superiores del producto.  
+*HighProduct*<br/>
+[out] Los 64 bits superiores del producto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Los 64 bits inferiores del producto.  
@@ -54,7 +55,7 @@ unsigned __int64 _umul128(
   
 |Función intrínseca|Arquitectura|Header|  
 |---------------|------------------|------------|  
-|`_umul128`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_umul128`|ARM, x64|\<INTRIN.h >|  
   
 ## <a name="example"></a>Ejemplo  
   

@@ -1,5 +1,5 @@
 ---
-title: scheduler_worker_creation_error (clase) | Documentos de Microsoft
+title: scheduler_worker_creation_error (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077c5a52cf7ac8383fa3b917b3d53867e19ca370
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114389"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error (Clase)
 Esta clase describe una excepción producida debido a un error al crear un contexto de ejecución del trabajo en el runtime de simultaneidad.  
@@ -42,7 +43,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 |[scheduler_worker_creation_error](#ctor)|Sobrecargado. Construye un objeto `scheduler_worker_creation_error`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta excepción normalmente se produce cuando se produce un error en una llamada al sistema operativo para crear contextos de ejecución desde dentro del Runtime de simultaneidad. Contextos de ejecución son subprocesos en los que se ejecutan las tareas en el Runtime de simultaneidad. El código de error que normalmente se devolvería desde una llamada al método Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se pueden recuperar mediante el método de clase base `get_error_code`.  
+ Esta excepción se produce normalmente cuando se produce un error en una llamada al sistema operativo para crear contextos de ejecución desde dentro del Runtime de simultaneidad. Contextos de ejecución son subprocesos que ejecutan tareas en el Runtime de simultaneidad. El código de error que se devolvería normalmente una llamada al método Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se puede recuperar mediante el método de clase base `get_error_code`.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -70,11 +71,11 @@ explicit _CRTIMP scheduler_worker_creation_error(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
- `_Hresult`  
- El `HRESULT` valor del error que provocó la excepción.  
+*_Hresult*<br/>
+El `HRESULT` valor del error que provocó la excepción.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

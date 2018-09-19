@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0039 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0039 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8681d73d2889433516b205a47c500193bbeabdb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5397426618c5dfcbaa6307105781ff2e6f2eb97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048336"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>Error del evaluador de expresiones CXX0039
-símbolo es ambiguo  
-  
- El evaluador de expresiones de C no puede determinar qué instancia de un símbolo para usarlo en una expresión. El símbolo se produce más de una vez en el árbol de herencia.  
-  
- Debe utilizar el operador de resolución de ámbito (`::`) para especificar explícitamente la instancia a utilizar en la expresión.  
-  
- Este error es idéntico a CAN0039.
+
+símbolo es ambiguo
+
+El evaluador de expresiones de C no puede determinar qué instancia de un símbolo para usarlo en una expresión. El símbolo aparece más de una vez en el árbol de herencia.
+
+Debe usar el operador de resolución de ámbito (`::`) para especificar la instancia para usar en la expresión de explícitamente.
+
+Este error es idéntico a CAN0039.

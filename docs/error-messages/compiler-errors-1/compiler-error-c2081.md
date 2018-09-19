@@ -1,5 +1,5 @@
 ---
-title: C2081 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2081 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165217b3ea4d50dc965927419786a01a6cc92af3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48f2cdecaea38beed14735bb3f94c8422a28c747
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030461"
 ---
-# <a name="compiler-error-c2081"></a>C2081 de Error del compilador
-'identificador': nombre en permitido de la lista de parámetros formales  
-  
- El identificador produjo un error de sintaxis.  
-  
- Este error puede deberse a utilizando el estilo antiguo para la lista de parámetros formales. Debe especificar el tipo de parámetros formales en la lista de parámetros formales.  
-  
- El ejemplo siguiente genera C2081:  
-  
-```  
-// C2081.c  
-void func( int i, j ) {}  // C2081, no type specified for j  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2081b.c  
-// compile with: /c  
-void func( int i, int j ) {}  
+# <a name="compiler-error-c2081"></a>Error del compilador C2081
+
+'identifier': nombre de no es válido de lista de parámetros formales
+
+El identificador produjo un error de sintaxis.
+
+Este error puede deberse a utilizando el estilo anterior de la lista de parámetros formales. Debe especificar el tipo de parámetros formales en la lista de parámetros formales.
+
+El ejemplo siguiente genera C2081:
+
+```
+// C2081.c
+void func( int i, j ) {}  // C2081, no type specified for j
+```
+
+Posible resolución:
+
+```
+// C2081b.c
+// compile with: /c
+void func( int i, int j ) {}
 ```

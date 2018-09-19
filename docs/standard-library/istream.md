@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3e55aaa8cfc659672632a897efc7543effaf26
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956559"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -39,8 +40,8 @@ Define el basic_istream de clase de plantilla que remita extracciones para las i
 
 |Nombre de tipo|Descripción|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Tipo `basic_iostream` especializado en `char`.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Tipo `basic_istream` especializado en `char`.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Un tipo `basic_iostream` especializado en **char**.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Un tipo `basic_istream` especializado en **char**.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Tipo `basic_iostream` especializado en **wchar**.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Tipo `basic_istream` especializado en **wchar**.|
 
@@ -62,7 +63,7 @@ Define el basic_istream de clase de plantilla que remita extracciones para las i
 |Clase|Descripción|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Clase de secuencia que puede realizar tanto operaciones de entrada como de salida.|
-|[basic_istream](../standard-library/basic-istream-class.md)|La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de flujo con elementos de tipo **Elem**, también conocido como [char_type](../standard-library/basic-ios-class.md#char_type), cuyos rasgos de caracteres están determinados por la clase **Tr**, también conocida como [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_istream](../standard-library/basic-istream-class.md)|La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia con elementos de tipo `Elem`, también conocida como [char_type](../standard-library/basic-ios-class.md#char_type), cuyos rasgos de caracteres están determinados por la clase `Tr`, también conocida como [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>Vea también
 

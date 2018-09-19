@@ -51,11 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03251c9f0442ffa3cda6b00b6528e424e1fe9007
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0e2271093237fbfdbc7f5e0492b1db220c469d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210366"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -102,22 +103,22 @@ Para obtener más información, vea [Sintaxis de especificación de formato: Fun
 
 ## <a name="return-value"></a>Valor devuelto
 
-Número de caracteres escritos o un valor negativo si se produce un error en la salida. Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y se devuelve -1.
+Número de caracteres escritos o un valor negativo si se produce un error en la salida. Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y se devuelve -1.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, utiliza el **_putch** función para dar formato y escribir los datos especificados en la consola. (**_vcwprintf_p** utiliza **_putwch** en lugar de **_putch**. **_vcwprintf_p** es la versión con caracteres anchos de **_vcprintf_p**. Toma una cadena de caracteres anchos como argumento).
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, usa el **_putch** función para dar formato y escribir los datos especificados en la consola. (**_vcwprintf_p** usa **_putwch** en lugar de **_putch**. **_vcwprintf_p** es la versión de caracteres anchos de **_vcprintf_p**. Toma una cadena de caracteres anchos como argumento).
 
-Las versiones de estas funciones que tienen la **_l** sufijo son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
+Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
 
 Cada *argumento* (si existe) se convierte y se muestra según la especificación de formato correspondiente de *formato*. La especificación de formato admite parámetros posicionales, lo que permite especificar el orden en el que se usan los argumentos en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Estas funciones no convierten los caracteres de avance de línea en combinaciones retorno de carro-avance de línea (CR-LF) cuando producen valores de salida.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-Estas funciones validan el puntero de entrada y la cadena de formato. Si *formato* o *argumento* es **NULL**, o si la cadena de formato contiene caracteres de formato no válidos, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+Estas funciones validan el puntero de entrada y la cadena de formato. Si *formato* o *argumento* es **NULL**, o si la cadena de formato contiene caracteres de formato no válidos, estas funciones invocan el controlador de parámetros no válidos, tal como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

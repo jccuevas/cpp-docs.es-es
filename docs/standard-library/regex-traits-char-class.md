@@ -1,7 +1,7 @@
 ---
 title: regex_traits&lt;char&gt; (Clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2491fd14ccb7c165665cfb948836b7351dc907ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f5d02ebae152a78bfc99682afc20e33ba71b015
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691567"
 ---
 # <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; (Clase)
 
-Especialización de regex_traits para char.
+Especialización de `regex_traits` para **char**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,7 +36,7 @@ class regex_traits<char>
 
 ## <a name="remarks"></a>Comentarios
 
-La clase es una especialización explícita de la clase de plantilla [regex_traits](../standard-library/regex-traits-class.md) para los elementos del tipo `char` (de modo que pueda aprovechar las funciones de biblioteca que manipulan objetos de este tipo).
+La clase es una especialización explícita de la clase de plantilla [regex_traits](../standard-library/regex-traits-class.md) elementos del tipo **char** (de modo que pueda aprovechar las funciones de biblioteca que manipulan objetos de este tipo).
 
 ## <a name="requirements"></a>Requisitos
 

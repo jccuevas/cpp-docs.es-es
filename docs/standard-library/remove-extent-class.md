@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12be6ffa2eba8d53a8972994ebf03138947df404
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcd99de00e7cc5bf2689476df03c5d97d65e2be5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107402"
 ---
 # <a name="removeextent-class"></a>remove_extent (Clase)
 
@@ -39,11 +40,12 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` Tipo que se va a modificar.
+*T*<br/>
+Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia de `remove_extent<T>` contiene un tipo modificado que es `T1` cuando `T` tiene la forma `T1[N]`; si no es `T`.
+Una instancia de `remove_extent<T>` contiene un tipo modificado que es `T1` cuando *T* tiene el formato `T1[N]`en caso contrario, *T*.
 
 ## <a name="example"></a>Ejemplo
 

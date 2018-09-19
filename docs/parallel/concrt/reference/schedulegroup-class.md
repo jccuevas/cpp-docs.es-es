@@ -1,5 +1,5 @@
 ---
-title: ScheduleGroup (clase) | Documentos de Microsoft
+title: ScheduleGroup (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040001"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup (Clase)
 Representa una abstracción para un grupo de programación. Los grupos de programación organizan un conjunto de trabajos relacionados que se benefician de programarse juntos ya sea temporalmente, mediante la ejecución de otra tarea en el mismo grupo antes de trasladarse a otro grupo, o espacialmente, mediante la ejecución de varios elementos del mismo grupo en el mismo nodo NUMA o socket físico.  
@@ -74,7 +75,7 @@ virtual unsigned int Id() const = 0;
   
 ##  <a name="operator_delete"></a> operador delete 
 
- Un `ScheduleGroup` objeto sea destruido internamente por el tiempo de ejecución cuando se liberan todas las referencias externas a él. No se puede eliminar explícitamente.  
+ Un `ScheduleGroup` objeto se destruye internamente por el tiempo de ejecución cuando se liberan todas las referencias externas a él. No se puede eliminar explícitamente.  
   
 ```
 void operator delete(
@@ -88,8 +89,8 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>Parámetros  
- `_PObject`  
- Un puntero al objeto que se va a eliminar.  
+*_PObject*<br/>
+Un puntero al objeto que se va a eliminar.  
   
 ##  <a name="reference"></a> Referencia 
 
@@ -103,9 +104,9 @@ virtual unsigned int Reference() = 0;
  El recuento de referencias incrementado recientemente.  
   
 ### <a name="remarks"></a>Comentarios  
- Esto se utiliza normalmente para administrar la duración del grupo de programación para la creación. Cuando el recuento de referencias de un grupo de programación cae a cero, se elimina el grupo de programación en tiempo de ejecución. Un grupo de programación creado mediante el [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) método, o la [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) método empieza con un recuento de referencias de uno.  
+ Esto normalmente se usa para administrar la duración del grupo de programación para la composición. Cuando el recuento de referencias de un grupo de programación llega a cero, el grupo de programación se elimina el tiempo de ejecución. Un grupo de programación creado mediante el [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) método, o la [CreateScheduleGroup](scheduler-class.md#createschedulegroup) método comienza con un recuento de referencias de uno.  
   
-##  <a name="release"></a> la versión 
+##  <a name="release"></a> Versión 
 
  Disminuye el contador de referencias del grupo de programación.  
   
@@ -117,9 +118,9 @@ virtual unsigned int Release() = 0;
  El recuento de referencias disminuido recientemente.  
   
 ### <a name="remarks"></a>Comentarios  
- Esto se utiliza normalmente para administrar la duración del grupo de programación para la creación. Cuando el recuento de referencias de un grupo de programación cae a cero, se elimina el grupo de programación en tiempo de ejecución. Después de haber llamado el `Release` método hacen referencia el número especificado de veces que se quite la creación del recuento y cualquier referencia adicional colocada mediante el `Reference` método, no puede utilizar el grupo de programación adicional. Si lo hace, se producirá un comportamiento indefinido.  
+ Esto normalmente se usa para administrar la duración del grupo de programación para la composición. Cuando el recuento de referencias de un grupo de programación llega a cero, el grupo de programación se elimina el tiempo de ejecución. Después de haber llamado el `Release` método hacen referencia el número específico de veces que se quite la creación del recuento y cualquier referencia adicional colocada con la `Reference` método, no puede utilizar el grupo de programación adicional. Si lo hace, dará como resultado un comportamiento indefinido.  
   
- Un grupo de programación está asociado a una instancia del programador determinada. Debe asegurarse de que todas las referencias al grupo de programación se liberan antes de que se liberan todas las referencias al programador, porque pueden provocar en el que se destruya el programador. Hace lo contrario da como resultado un comportamiento indefinido.  
+ Un grupo de programación está asociado a una instancia del programador determinado. Debe asegurarse de que todas las referencias al grupo de programación se liberan antes de que se liberan todas las referencias al programador, ya que podría producir en el programador está destruyendo. Hacer en caso contrario, da como resultado un comportamiento indefinido.  
   
 ##  <a name="dtor"></a> ~ ScheduleGroup 
 
@@ -138,14 +139,14 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Proc`  
- Un puntero a función que se ejecuta para llevar a cabo el cuerpo de la tarea ligera.  
+*_Proc*<br/>
+Un puntero a la función que se ejecutan para realizar el cuerpo de la tarea ligera.  
   
- `_Data`  
- Un puntero void para los datos que se pasarán como un parámetro en el cuerpo de la tarea.  
+*_Datos*<br/>
+Un puntero void para los datos que se pasa como parámetro al cuerpo de la tarea.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a la `ScheduleTask` método coloca implícitamente un recuento de referencias en el grupo de programación que se quita el tiempo de ejecución en el momento adecuado cuando se ejecuta la tarea.  
+ Una llamada a la `ScheduleTask` método implícitamente coloca un recuento de referencias en el grupo de programación que se quita el tiempo de ejecución en el momento adecuado cuando se ejecuta la tarea.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   

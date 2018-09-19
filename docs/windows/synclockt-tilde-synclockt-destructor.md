@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT (destructor) | Documentos de Microsoft'
+title: 'SyncLockT:: ~ synclockt (destructor) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d75e3e0592d21672397e8d54c565734d53e72614
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599785"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT (Destructor)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-~SyncLockT();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Desinicializa una instancia de la clase SyncLockT.  
-  
- Este destructor también desbloquea la instancia actual de SyncLockT.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SyncLockT (clase)](../windows/synclockt-class.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+~SyncLockT();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Desinicializa una instancia de la **SyncLockT** clase.
+
+Este destructor también desbloquea actual **SyncLockT** instancia.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SyncLockT (clase)](../windows/synclockt-class.md)

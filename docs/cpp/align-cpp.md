@@ -1,5 +1,5 @@
 ---
-title: Alinear (C++) | Documentos de Microsoft
+title: Alinear (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076299"
 ---
 # <a name="align-c"></a>align (C++)
 
-En Visual Studio 2015 y versiones posteriores, use el estándar C ++ 11 `alignas` especificador para la alineación del control. Para obtener más información, consulte [alineación](../cpp/alignment-cpp-declarations.md).
+En Visual Studio 2015 y versiones posteriores, utilice el estándar C ++ 11 `alignas` especificador de alineación del control. Para obtener más información, consulte [alineación](../cpp/alignment-cpp-declarations.md).
 
 **Específicos de Microsoft**
 
@@ -33,7 +34,7 @@ Use `__declspec(align(#))` para controlar con precisión la alineación de datos
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (align (** *#* **))** *declarador*  
+> **__declspec (align (** *#* **))** *declarador*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -41,15 +42,15 @@ Las aplicaciones de escritura que utilizan las últimas instrucciones de procesa
 
 \# es el valor de alineación. Las entradas válidas son potencias enteras de dos desde 1 hasta 8192 (bytes), como 2, 4, 8, 16, 32 o 64. `declarator` corresponde a los datos que se declaran como alineados.
 
-Para obtener información sobre cómo devolver un valor de tipo `size_t` que es el requisito de alineación del tipo, consulte [__alignof](../cpp/alignof-operator.md). Para obtener información acerca de cómo declarar punteros sin alinear cuando se destinan a procesadores de 64 bits, consulte [__unaligned](../cpp/unaligned.md).
+Para obtener información acerca de cómo devolver un valor de tipo `size_t` que es el requisito de alineación del tipo, vea [__alignof](../cpp/alignof-operator.md). Para obtener información acerca de cómo declarar punteros sin alinear cuando el destino son procesadores de 64 bits, consulte [__unaligned](../cpp/unaligned.md).
 
-Puede utilizar `__declspec(align(#))` al definir `struct`, `union` o `class`, o al declarar una variable.
+Puede usar `__declspec(align(#))` al definir un **struct**, **unión**, o **clase**, o al declarar una variable.
 
-El compilador no garantiza ni intenta se conserve el atributo de alineación de datos durante una operación de transformación de datos o copia. Por ejemplo, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) puede copiar una estructura declarada con `__declspec(align(#))` en cualquier ubicación. Tenga en cuenta que normal asignadores: por ejemplo, [malloc](../c-runtime-library/reference/malloc.md), C++ [new (operador)](new-operator-cpp.md)y los asignadores de Win32: devuelven memoria que no normalmente está lo suficientemente alineada para `__declspec(align(#))` estructuras o matrices de estructuras. Para garantizar que el destino de una operación de transformación de datos o copia está correctamente alineado, utilice [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), o escribir su propio asignador.
+El compilador no garantiza ni intenta se conserve el atributo de alineación de datos durante una operación de transformación de datos o copia. Por ejemplo, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) puede copiar una estructura declarada con `__declspec(align(#))` en cualquier ubicación. Tenga en cuenta que normal asignadores — por ejemplo, [malloc](../c-runtime-library/reference/malloc.md), C++ [new (operador)](new-operator-cpp.md)y los asignadores de Win32: devuelven memoria que no normalmente es lo suficientemente alineada para `__declspec(align(#))` estructuras o matrices de estructuras. Para garantizar que el destino de una operación de transformación de datos o copia está correctamente alineado, utilice [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), o escribir su propio asignador.
 
 No puede especificar la alineación de los parámetros de funciones. Cuando los datos que tiene un atributo de alineación se pasan como un valor en la pila, la alineación se controla mediante la convención de llamada. Si la alineación de los datos es importante en la función llamada, copie el parámetro en la memoria alineada correctamente antes de su uso.
 
-Sin `__declspec(align(#))`, el compilador suele alinea los datos en los límites naturales basándose en el procesador de destino y el tamaño de los datos, hasta los límites de 4 bytes en procesadores de 32 bits y los límites de 8 bytes en procesadores de 64 bits. Datos en clases o estructuras está alineados en la clase o estructura como mínimo de su alineación natural y el valor actual de empaquetado (desde #pragma `pack` o **/Zp** opción del compilador).
+Sin `__declspec(align(#))`, el compilador suele alinea los datos en los límites naturales basándose en el procesador de destino y el tamaño de los datos, hasta los límites de 4 bytes en procesadores de 32 bits y los límites de 8 bytes en procesadores de 64 bits. Los datos en clases o estructuras se alinean dentro de la clase o la estructura en el nivel mínimo de su alineación natural y el valor actual de empaquetado (desde #pragma `pack` o la opción `/Zp` del compilador).
 
 Este ejemplo muestra el uso de `__declspec(align(#))`:
 
@@ -59,7 +60,7 @@ __declspec(align(32)) struct Str1{
 };
 ```
 
-Ahora, este tipo tiene un atributo de alineación de 32 bytes. Esto significa que todas las instancias estáticas y automáticas empiezan en un límite de 32 bytes. Tipos de estructura adicionales declarados con este tipo como un miembro conservan el atributo de alineación de este tipo, es decir, cualquier estructura con `Str1` como un elemento tiene un atributo de alineación de al menos 32.
+Ahora, este tipo tiene un atributo de alineación de 32 bytes. Esto significa que todas las instancias estáticas y automáticas empiezan en un límite de 32 bytes. Tipos de estructura adicionales declarados con este tipo como un miembro de conservan el atributo de alineación de este tipo, es decir, cualquier estructura con `Str1` como un elemento tiene un atributo de alineación de al menos 32.
 
 Tenga en cuenta que `sizeof(struct Str1)` es igual a 32. Esto implica que si se crea una matriz de objetos Str1, y si la base de la matriz tiene una alineación de 32 bytes, cada miembro de la matriz tiene también una alineación de 32 bytes. Para crear una matriz cuya base esté alineada correctamente en la memoria dinámica, utilice [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), o escribir su propio asignador.
 
@@ -98,7 +99,7 @@ En los ejemplos siguientes se muestra cómo `__declspec(align(#))` afecta al tam
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-En este ejemplo, la `S1` estructura se define mediante el uso de `__declspec(align(32))`. Todos los usos de `S1` para una definición de variable o en otro tipo de declaraciones tienen una alineación de 32 bytes. `sizeof(struct S1)` devuelve 32 y `S1` tiene 16 bytes de relleno a continuación de los 16 bytes necesarios para contener los cuatro enteros. Cada miembro `int` requiere una alineación de 4 bytes, pero la alineación de la propia estructura se declara como 32. Por lo tanto, la alineación global es 32.
+En este ejemplo, la `S1` estructura se define mediante el uso de `__declspec(align(32))`. Todos los usos de `S1` para una definición de variable o en otro tipo de declaraciones tienen una alineación de 32 bytes. `sizeof(struct S1)` devuelve 32 y `S1` tiene 16 bytes de relleno a continuación de los 16 bytes necesarios para contener los cuatro enteros. Cada **int** miembro requiere una alineación de 4 bytes, pero la alineación de la propia estructura se declara como 32. Por lo tanto, la alineación global es 32.
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -178,20 +179,20 @@ void fn() {
 }
 ```
 
-La alineación cuando la memoria se asignó en el montón depende de qué función de asignación se invoque.  Por ejemplo, si utiliza `malloc`, el resultado depende del tamaño de operando. Si *arg* > = 8, la memoria devuelta tiene una alineación de 8 bytes. Si *arg* < 8, la alineación de la memoria devuelta es la primera potencia de 2 inferior a *arg*. Por ejemplo, si utiliza malloc(7), la alineación es de 4 bytes.
+La alineación cuando la memoria se asignó en el montón depende de qué función de asignación se invoque.  Por ejemplo, si utiliza `malloc`, el resultado depende del tamaño de operando. Si *arg* > = 8, la memoria devuelta es la alineación de 8 bytes. Si *arg* < 8, la alineación de la memoria devuelta es la primera potencia de 2 inferior a *arg*. Por ejemplo, si utiliza malloc(7), la alineación es de 4 bytes.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definir tipos nuevos con __declspec(align(#))
 
 Puede definir un tipo con una característica de alineación.
 
-Por ejemplo, puede definir un `struct` con una alineación de valor de esta forma:
+Por ejemplo, puede definir un `struct` con una valor de alineación de este modo:
 
 ```cpp
 struct aType {int a; int b;};
 typedef __declspec(align(32)) struct aType bType;
 ```
 
-Ahora, `aType` y `bType` son el mismo tamaño (8 bytes), pero las variables de tipo `bType` tienen una alineación de 32 bytes.
+Ahora, `aType` y `bType` son el mismo tamaño (8 bytes), pero las variables de tipo `bType` son la alineación de 32 bytes.
 
 ##  <a name="vclrfthreadlocalstorageallocation"></a> Alinear los datos en almacenamiento Local de subprocesos
 
@@ -218,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Cómo alinear trabajos con empaquetado de datos
 
-El **/Zp** opción del compilador y el `pack` pragma tiene el efecto de empaquetar datos para los miembros de estructura y unión. Este ejemplo se muestra cómo **/Zp** y `__declspec(align(#))` trabajan juntos:
+El `/Zp` opción del compilador y el `pack` pragma tienen el efecto de empaquetar los datos para los miembros de estructura y unión. Este ejemplo se muestra cómo `/Zp` y `__declspec(align(#))` funcionan conjuntamente:
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -231,7 +232,7 @@ struct S {
 };
 ```
 
-En la tabla siguiente se muestra el desplazamiento de cada miembro en una variedad de **/Zp** (o #pragma `pack`) valores, que muestra cómo interactúan ambos.
+En la tabla siguiente se muestra el desplazamiento de cada miembro bajo diversos valores de `/Zp` (o #pragma `pack`), mostrando cómo interactúan ambos.
 
 |Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,6 +252,6 @@ El desplazamiento de un objeto se basa en el desplazamiento del objeto anterior 
 
 ## <a name="see-also"></a>Vea también
 
-[__declspec](../cpp/declspec.md)  
-[Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)  
-[Información general sobre las convenciones de llamada x64](../build/overview-of-x64-calling-conventions.md)  
+[__declspec](../cpp/declspec.md)<br/>
+[Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Información general sobre las convenciones de llamada x64](../build/overview-of-x64-calling-conventions.md)

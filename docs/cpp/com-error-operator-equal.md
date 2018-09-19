@@ -1,5 +1,5 @@
 ---
-title: _com_error::operator = | Documentos de Microsoft
+title: _com_error::operator = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744a4b344a336ec502e184e9be9ffb236c863708
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2fe53c7040bc248d63bd3d14f90f915bdcd689a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061037"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
-**Específicos de Microsoft**  
-  
- Asigna un objeto `_com_error` existente a otro.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      _com_error& operator = (  
-   const _com_error& that   
-) throw ( );  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `that`  
- Un objeto `_com_error`.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_com_error (Clase)](../cpp/com-error-class.md)
+
+**Específicos de Microsoft**
+
+Asigna un objeto `_com_error` existente a otro.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+_com_error& operator = (
+   const _com_error& that
+) throw ( );
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*que*<br/>
+Un objeto `_com_error`.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_com_error (Clase)](../cpp/com-error-class.md)

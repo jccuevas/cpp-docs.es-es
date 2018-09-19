@@ -43,11 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220e2befc40dba342a7f8c2aa4c94294bc667ce0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103923"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -74,21 +75,26 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>Parámetros
 
-*ruta de acceso* ruta de acceso completa.
+*path*<br/>
+Ruta de acceso completa.
 
-*unidad* letra de unidad, seguida de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
+*Unidad*<br/>
+Letra de unidad, seguida de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
 
-*dir* ruta de acceso de directorio, incluida la barra diagonal final. Barras diagonales ( **/** ), barras diagonales inversas ( **\\** ), o ambos pueden ser utilizados. Puede pasar **NULL** para este parámetro si no necesita la ruta de acceso de directorio.
+*dir*<br/>
+Ruta de directorio, incluida la barra diagonal final. Barras diagonales ( **/** ), barras diagonales inversas ( **\\** ), o ambos pueden ser utilizados. Puede pasar **NULL** para este parámetro si no necesita la ruta de acceso de directorio.
 
-*fname* basar el nombre de archivo (sin extensión). Puede pasar **NULL** para este parámetro si no es necesario el nombre de archivo.
+*fname*<br/>
+Nombre de archivo base (sin extensión). Puede pasar **NULL** para este parámetro si no es necesario el nombre de archivo.
 
-*ext* extensión de nombre de archivo, incluido el período inicial (**.**). Puede pasar **NULL** para este parámetro si no necesita la extensión de nombre de archivo.
+*ext*<br/>
+Extensión de nombre de archivo, incluido el punto inicial (**.**). Puede pasar **NULL** para este parámetro si no necesita la extensión de nombre de archivo.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_splitpath** función divide una ruta de acceso en sus cuatro componentes. **_splitpath** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath** es una versión con caracteres anchos de **_splitpath**; los argumentos a **_wsplitpath** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+El **_splitpath** función divide una ruta de acceso en los cuatro componentes respectivos. **_splitpath** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath** es una versión con caracteres anchos de **_splitpath**; los argumentos de **_wsplitpath** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-**Nota de seguridad** Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Nota de seguridad** Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer). Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -109,11 +115,11 @@ En la tabla siguiente se enumeran los valores de las constantes de manifiesto.
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Si la ruta de acceso completa no contiene un componente (por ejemplo, un nombre de archivo), **_splitpath** asigna vacía cadenas a los búferes correspondientes.
+Si la ruta de acceso completa no contiene ningún componente (por ejemplo, un nombre de archivo), **_splitpath** asigna cadenas vacías a los búferes correspondientes.
 
-Puede pasar **NULL** a **_splitpath** para cualquier parámetro distinto de *ruta de acceso* que no es necesario.
+Puede pasar **NULL** a **_splitpath** para cualquier parámetro distinto *ruta de acceso* que no es necesario.
 
-Si *ruta de acceso* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **EINVAL**.
+Si *ruta* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

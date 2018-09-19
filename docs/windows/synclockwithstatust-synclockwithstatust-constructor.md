@@ -1,5 +1,5 @@
 ---
-title: Constructor de Synclockwithstatust | Documentos de Microsoft
+title: Constructor Synclockwithstatust | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,48 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85d0adfd03b6822b949523643aa97f7a7d8b088b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607635"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT (Constructor)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-SyncLockWithStatusT(  
-   _Inout_ SyncLockWithStatusT&& other  
-);  
-  
-explicit SyncLockWithStatusT(  
-   typename SyncTraits::Type sync,  
-   DWORD status  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `other`  
- Una referencia a valor r a otro objeto de SyncLockWithStatusT.  
-  
- `sync`  
- Una referencia a otro objeto de SyncLockWithStatusT.  
-  
- `status`  
- El valor de la [status_](../windows/synclockwithstatust-status-data-member.md) miembro de datos de la `other` parámetro o el `sync` parámetro.  
-  
-## <a name="remarks"></a>Comentarios  
- Inicializa una nueva instancia de la clase de SyncLockWithStatusT.  
-  
- El primer constructor inicializa el objeto de SyncLockWithStatusT actual de SyncLockWithStatusT otro especificado por el parámetro `other`y, a continuación, se invalidan el otro objeto de SyncLockWithStatusT. El segundo constructor es `protected`y se inicializa el objeto de SyncLockWithStatusT actual en un estado no válido.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)   
- [SyncLockWithStatusT::GetStatus (método)](../windows/synclockwithstatust-getstatus-method.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+SyncLockWithStatusT(
+   _Inout_ SyncLockWithStatusT&& other
+);
+
+explicit SyncLockWithStatusT(
+   typename SyncTraits::Type sync,
+   DWORD status
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*other*  
+Una referencia rvalue a otro **SyncLockWithStatusT** objeto.
+
+*sync*  
+Una referencia a otro **SyncLockWithStatusT** objeto.
+
+*status*  
+El valor de la [status_](../windows/synclockwithstatust-status-data-member.md) miembro de datos de la *otros* parámetro o el *sincronización* parámetro.
+
+## <a name="remarks"></a>Comentarios
+
+Inicializa una nueva instancia de la **SyncLockWithStatusT** clase.
+
+El primer constructor inicializa actual **SyncLockWithStatusT** objeto desde otro **SyncLockWithStatusT** especificado por el parámetro *otros*y, a continuación, invalida el otro **SyncLockWithStatusT** objeto. Es el segundo constructor **protegido**e inicializa actual **SyncLockWithStatusT** objeto a un estado no válido.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)  
+[SyncLockWithStatusT::GetStatus (método)](../windows/synclockwithstatust-getstatus-method.md)

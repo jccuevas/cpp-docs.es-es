@@ -1,5 +1,5 @@
 ---
-title: Clase CMiniFrameWnd | Documentos de Microsoft
+title: CMiniFrameWnd (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,13 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2772ec96558c4aa1d1f5fcb573166a37a31c0592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201210"
 ---
-# <a name="cminiframewnd-class"></a>Clase CMiniFrameWnd
+# <a name="cminiframewnd-class"></a>CMiniFrameWnd (clase)
 Representa una ventana de marco de altura media, como las que se suelen ver alrededor de las barras de herramientas flotantes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -53,11 +54,11 @@ class CMiniFrameWnd : public CFrameWnd
 |[CMiniFrameWnd::CreateEx](#createex)|Crea un `CMiniFrameWnd` objeto (con opciones adicionales) después de la construcción.|  
   
 ## <a name="remarks"></a>Comentarios  
- Estas ventanas de marco reducido se comportan como ventanas de marco normal, excepto que no tiene botones Minimizar y maximizar o menús y basta con hacer clic en el menú del sistema para descartar en ellos.  
+ Estas ventanas de marco reducido se comportan como ventanas de marco normal, excepto que no tiene los botones Minimizar y maximizar o los menús y basta con hacer clic en el menú del sistema para descartarlas.  
   
- Para usar un `CMiniFrameWnd` de objeto, defina primero el objeto. A continuación, llame a la [crear](#create) función de miembro para mostrar la ventana de marco reducido.  
+ Para usar un `CMiniFrameWnd` de objetos, definir primero el objeto. A continuación, llame a la [crear](#create) función miembro para mostrar la ventana de marco reducido.  
   
- Para obtener más información sobre cómo usar `CMiniFrameWnd` objetos, vea el artículo [acoplar y desacoplar barras de herramientas](../../mfc/docking-and-floating-toolbars.md).  
+ Para obtener más información sobre cómo usar `CMiniFrameWnd` objetos, consulte el artículo [acoplamiento y barras de herramientas flotante](../../mfc/docking-and-floating-toolbars.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -97,53 +98,53 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpClassName`  
- Apunta a una cadena de caracteres terminada en null que designa la clase de Windows. El nombre de clase puede ser cualquier nombre registrado con la información global de [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función. Si **NULL**, la clase de ventana se registrará automáticamente por el marco de trabajo. MFC proporciona la clase de forma predeterminada los estilos y los atributos siguientes:  
+ *lpClassName*  
+ Apunta a una cadena de caracteres terminada en null que se nombra la clase de Windows. El nombre de clase puede ser cualquier nombre registrado con global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función. Si es NULL, la clase de ventana se registrará automáticamente el marco de trabajo. MFC proporciona la clase predeterminada de los siguientes estilos y atributos:  
   
--   Conjuntos de bits de estilo **CS_DBLCLKS**, que envía haga doble clic en los mensajes al procedimiento de ventana cuando el usuario hace doble clic del mouse.  
+-   Estilo de conjuntos de bits CS_DBLCLKS, que envía haga doble clic en los mensajes al procedimiento de ventana cuando el usuario hace doble clic del mouse.  
   
--   Conjuntos de bits de estilo **CS_HREDRAW** y **CS_VREDRAW**, que dirigir el contenido del área de cliente que se vuelva a dibujar cuando la ventana cambia de tamaño.  
+-   Establece los bits de estilo CS_HREDRAW y CS_VREDRAW, que dirigen el contenido del área de cliente se vuelva a dibujar cuando la ventana cambia de tamaño.  
   
--   Establece el cursor de clase en el estándar de Windows **IDC_ARROW**.  
+-   Establece el cursor de la clase a la IDC_ARROW estándar de Windows.  
   
--   Establece el pincel de fondo de la clase **NULL**, por lo que la ventana no borra el fondo.  
+-   Establece el pincel de fondo de la clase con valores NULL, por lo que la ventana no borrará el fondo.  
   
--   Establece el icono de clase en el icono del logotipo de Windows estándar, marca mostrando.  
+-   Establece el icono de clase en el icono del logotipo de Windows estándar, marca saludando.  
   
--   Establece la ventana para el tamaño predeterminado y la posición, como se indica por Windows.  
+-   Establece la ventana de tamaño y posición, como se indica en Windows.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Apunta a una cadena de caracteres terminada en null que contiene el nombre de la ventana.  
   
- `dwStyle`  
- Especifica los atributos de estilo de ventana. Estos pueden incluir estilos de ventana estándar y uno o varios de los estilos especiales siguientes:  
+ *dwStyle*  
+ Especifica los atributos de estilo de ventana. Estos pueden incluir los estilos de ventana estándar y uno o varios de los siguientes estilos especiales:  
   
-- **MFS_MOVEFRAME** permite que la ventana de marco reducido que se moverá haciendo clic en cualquiera de los bordes de la ventana, no solo el título.  
+- MFS_MOVEFRAME permite que la ventana de marco reducido va a mover, haga clic en cualquiera de los bordes de la ventana, no solo el título.  
   
-- **MFS_4THICKFRAME** deshabilita el cambio de tamaño de la ventana de marco reducido.  
+- MFS_4THICKFRAME deshabilita el cambio de tamaño de la ventana de marco reducido.  
   
-- **MFS_SYNCACTIVE** sincroniza la activación de la ventana de marco reducido para la activación de su ventana primaria.  
+- MFS_SYNCACTIVE sincroniza la activación de la ventana de marco reducido para la activación de su ventana primaria.  
   
-- **MFS_THICKFRAME** permite que la ventana de marco reducido deben preverse tan pequeña como puede permitir que el contenido del área de cliente.  
+- ¿MFS_THICKFRAME permite permiten tener un tamaño tan pequeña como el contenido del área cliente de la ventana de marco reducido.  
   
-- **MFS_BLOCKSYSMENU** deshabilita el acceso al menú de sistema y el menú de control y los convierte en parte de la leyenda (barra de título).  
+- MFS_BLOCKSYSMENU deshabilita el acceso al menú del sistema y el menú de control y los convierte en parte de la leyenda (barra de título).  
   
- Vea [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores de estilo de ventana posible. La combinación típica utilizada para ventanas de marco reducido es **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
+ Consulte [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores de estilo de ventana posible. La combinación típica que se utiliza para ventanas de marco reducido es WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.  
   
- `rect`  
+ *Rect*  
  Un `RECT` estructura que especifica las dimensiones deseadas de la ventana.  
   
- `pParentWnd`  
- Apunta a la ventana primaria. Use **NULL** para ventanas de nivel superior.  
+ *pParentWnd*  
+ Apunta a la ventana primaria. Utilice NULL para ventanas de nivel superior.  
   
- `nID`  
- Si la ventana de marco reducido se crea como una ventana secundaria, este es el identificador del control secundario; en caso contrario es 0.  
+ *nID*  
+ Si la ventana de marco reducido se crea como una ventana secundaria, este es el identificador del control secundario; en caso contrario, es 0.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- **Crear** inicializa el nombre de clase y el nombre de la ventana de la ventana y registra los valores predeterminados para el estilo y el elemento primario.  
+ `Create` Inicializa el nombre de la ventana de la clase y nombre de la ventana y registra los valores predeterminados para su estilo y el elemento primario.  
   
 ##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Crea un objeto `CMiniFrameWnd`.  
@@ -160,44 +161,44 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwExStyle`  
- Especifica el estilo extendido de la `CMiniFrameWnd` que se está creando. Aplicar cualquiera de los [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) a la ventana.  
+ *dwExStyle*  
+ Especifica el estilo extendido de la `CMiniFrameWnd` va a crear. Aplicar cualquiera de los [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) a la ventana.  
   
- `lpClassName`  
- Apunta a una cadena de caracteres terminada en null que designa la clase de Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura). El nombre de clase puede ser cualquier nombre registrado con la información global de [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función ni en ninguno de los nombres de clase de control predefinido. No debe ser **NULL**.  
+ *lpClassName*  
+ Apunta a una cadena de caracteres terminada en null que se nombra la clase de Windows (un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura). El nombre de clase puede ser cualquier nombre registrado con global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función o cualquiera de los nombres de clase de control predefinido. No debe ser NULL.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Apunta a una cadena de caracteres terminada en null que contiene el nombre de la ventana.  
   
- `dwStyle`  
- Especifica los atributos de estilo de ventana. Vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores posibles.  
+ *dwStyle*  
+ Especifica los atributos de estilo de ventana. Consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores posibles.  
   
- `rect`  
- El tamaño y la posición de la ventana, en coordenadas de cliente de `pParentWnd`.  
+ *Rect*  
+ El tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.  
   
- `pParentWnd`  
- Señala al objeto de ventana primaria.  
+ *pParentWnd*  
+ Señala al objeto de ventana principal.  
   
- `nID`  
+ *nID*  
  El identificador de la ventana secundaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- El `CreateEx` los parámetros especifican el **WNDCLASS**, estilo de ventana y posición inicial (opcionalmente) y el tamaño de la ventana. `CreateEx` También especifica primario (si existe) y el Id. de la ventana  
+ El `CreateEx` los parámetros especifican el WNDCLASS, estilo de ventana y la posición inicial (opcionalmente) y tamaño de la ventana. `CreateEx` También especifica el elemento primario (si existe) y el Id. de la ventana  
   
- Cuando `CreateEx` se ejecuta, Windows envía la [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), y [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) mensajes en la ventana.  
+ Cuando `CreateEx` envíos de Windows que se ejecuta el [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), y [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) mensajes en la ventana.  
   
- Para extender el control de mensajes de forma predeterminada, derive una clase de `CMiniFrameWnd`, agregue un mapa de mensajes a la nueva clase y proporcionan funciones miembro para los mensajes anteriores. Invalidar `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.  
+ Para extender el control de mensajes de forma predeterminada, derive una clase de `CMiniFrameWnd`, agregue un mapa de mensajes a la nueva clase y proporcionar funciones de miembro para los mensajes anteriores. Invalidar `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.  
   
- Invalidar más **en *** mensaje* controladores para agregar más funcionalidad a la clase derivada de mensaje.  
+ Invalidar aún más `On` *mensaje* controladores para agregar más funcionalidad a la clase derivada de mensaje.  
   
- Si el **WS_VISIBLE** estilo se proporciona, Windows envía todos los mensajes necesarios para activar y mostrar la ventana de la ventana. Si el estilo de ventana especifica una barra de título, el título de ventana que señala el `lpszWindowName` parámetro aparece en la barra de título.  
+ Si se especifica el estilo WS_VISIBLE, Windows envía todos los mensajes necesarios para activar y mostrar la ventana a la ventana. Si el estilo de ventana especifica una barra de título, el título de ventana que apunta el *lpszWindowName* parámetro se muestra en la barra de título.  
   
- El `dwStyle` parámetro puede ser cualquier combinación de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ El *dwStyle* parámetro puede ser cualquier combinación de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- Ya no se admiten las ventanas de cuadro de herramientas de paleta de estilo antiguas. El estilo anterior, que no tenía un botón de cierre de "X", se admite cuando se ejecuta una aplicación MFC en versiones anteriores de Windows, pero ya no se admite en Visual C++. NET. Solo el nuevo `WS_EX_TOOLWINDOW` estilo ahora se admite; para obtener una descripción de este estilo, consulte [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
+ Ya no se admiten las ventanas de cuadro de herramientas de paleta de estilo antiguas. El estilo anterior, que no tenía un botón de cierre de "X", se admite cuando se ejecuta una aplicación MFC en versiones anteriores de Windows, pero ya no se admite en Visual C++. NET. Ahora se admite el nuevo estilo WS_EX_TOOLWINDOW; Para obtener una descripción de este estilo, consulte [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
 ## <a name="see-also"></a>Vea también  
  [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md)   

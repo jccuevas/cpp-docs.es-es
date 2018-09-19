@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: ddcc5ab787e4eba060960207a5260a571a64ff4d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2d8efe00e5fc03e882086e3c7cfa5c0b7f3ee0c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101072"
 ---
 # <a name="ltqueuegt-operators"></a>Operadores &lt;queue&gt;
 
@@ -43,9 +44,11 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **cola**.
+*left*<br/>
+Objeto de tipo `queue`.
 
-`right` Un objeto de tipo **cola**.
+*right*<br/>
+Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -108,9 +111,11 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **cola**.
+*left*<br/>
+Objeto de tipo `queue`.
 
-`right` Un objeto de tipo **cola**.
+*right*<br/>
+Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -169,9 +174,11 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **cola**.
+*left*<br/>
+Objeto de tipo `queue`.
 
-`right` Un objeto de tipo **cola**.
+*right*<br/>
+Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -232,9 +239,11 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **cola**.
+*left*<br/>
+Objeto de tipo `queue`.
 
-`right` Un objeto de tipo **cola**.
+*right*<br/>
+Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -296,9 +305,11 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **cola**.
+*left*<br/>
+Objeto de tipo `queue`.
 
-`right` Un objeto de tipo **cola**.
+*right*<br/>
+Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -360,9 +371,11 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **cola**.
+*left*<br/>
+Objeto de tipo `queue`.
 
-`right` Un objeto de tipo **cola**.
+*right*<br/>
+Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 

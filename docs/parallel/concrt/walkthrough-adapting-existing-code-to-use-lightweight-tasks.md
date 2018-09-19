@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adaptar el código existente para usar tareas ligeras | Documentos de Microsoft'
+title: 'Tutorial: Adaptar el código existente para usar tareas ligeras | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fe3bb4b576bd1f9160b4a3cdc3142be5cdff05
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b4a48720a55487531e7dcfc2c38c9a0bf54c88a8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214336"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Tutorial: Adaptar el código existente para usar tareas ligeras
 En este tema se muestra cómo adaptar código existente que usa la API de Windows para crear y ejecutar un subproceso para una tarea ligera.  
   
- A *tarea ligera* es una tarea que se programa directamente desde un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) o [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objeto. Las tareas ligeras son útiles cuando se adapta código existente para usar la funcionalidad de programación del Runtime de simultaneidad.  
+ Un *tarea ligera* es una tarea que se programa directamente desde un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) o [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objeto. Las tareas ligeras son útiles cuando se adapta código existente para usar la funcionalidad de programación del Runtime de simultaneidad.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Antes de empezar este tutorial, lea el tema [programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
@@ -32,7 +33,7 @@ En este tema se muestra cómo adaptar código existente que usa la API de Window
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- En el siguiente ejemplo se muestra el uso típico de la API de Windows para crear y ejecutar un subproceso. Este ejemplo se utiliza la [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) función para llamar a la `MyThreadFunction` en un subproceso independiente.  
+ En el siguiente ejemplo se muestra el uso típico de la API de Windows para crear y ejecutar un subproceso. Este ejemplo se usa el [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) función para llamar a la `MyThreadFunction` en un subproceso independiente.  
   
 ### <a name="code"></a>Código  
  [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
@@ -60,7 +61,7 @@ Parameters = 50, 100
   
  [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
   
-4.  Modificar el `MyData` estructura debe incluir un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto que señala a la aplicación principal que la tarea ha terminado.  
+4.  Modificar el `MyData` estructura para incluir un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto que señala a la aplicación principal que la tarea ha finalizado.  
   
  [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
   
@@ -80,7 +81,7 @@ Parameters = 50, 100
   
  [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
   
-9. Al final de la `MyThreadFunction` función, llame a la [concurrency::event::set](reference/event-class.md#set) método para indicar a la aplicación principal que la tarea ha terminado.  
+9. Al final de la `MyThreadFunction` de función, llame a la [concurrency::event::set](reference/event-class.md#set) método para señalar a la aplicación principal que la tarea ha finalizado.  
   
  [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
   

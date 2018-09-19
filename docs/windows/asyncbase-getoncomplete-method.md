@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Getoncomplete (método) | Documentos de Microsoft'
+title: Getoncomplete (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eab2a577d0c7b31f833a8dcc0208f9939b729ad9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607474"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete (Método)
-Copia la dirección del controlador de eventos de finalización actual a la variable especificada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-STDMETHOD(  
-   GetOnComplete  
-)(TComplete** completeHandler);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `completeHandler`  
- La ubicación donde se almacena la dirección del controlador de eventos de finalización actual.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Copia la dirección del controlador de eventos de finalización actual a la variable especificada.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   GetOnComplete
+)(TComplete** completeHandler);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*completeHandler*  
+La ubicación donde se almacena la dirección del controlador de eventos de finalización actual.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

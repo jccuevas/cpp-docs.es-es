@@ -1,5 +1,5 @@
 ---
-title: Clase CPaneContainerManager | Documentos de Microsoft
+title: CPaneContainerManager (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,15 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bdbaf70cd0290376132a7558293ec587fbebaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 679445f9d80a971f0febe2ba92e7826c3ada5ca1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721622"
 ---
-# <a name="cpanecontainermanager-class"></a>Clase CPaneContainerManager
-La `CPaneContainerManager` clase administra el almacenamiento y la presentación del diseño de acoplamiento actual.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cpanecontainermanager-class"></a>CPaneContainerManager (clase)
+La `CPaneContainerManager` clase administra el almacenamiento y la presentación de diseño de acoplamiento actual.  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -190,7 +191,7 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo crea automáticamente instancias de `CPaneContainerManager` objetos y o bien los incrusta en [CPaneDivider clase](../../mfc/reference/cpanedivider-class.md) objetos o en [CMultiPaneFrameWnd clase](../../mfc/reference/cmultipaneframewnd-class.md) objetos.  
+ El marco crea automáticamente las instancias de `CPaneContainerManager` objetos y las incrusta ya sea en [CPaneDivider (clase)](../../mfc/reference/cpanedivider-class.md) objetos o en [CMultiPaneFrameWnd (clase)](../../mfc/reference/cmultipaneframewnd-class.md) objetos.  
   
  El `CPaneContainerManager` clase almacena un puntero a la raíz de un árbol binario que se crea a partir [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) objetos.  
   
@@ -215,7 +216,7 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBarToAdd`  
+ [in] *pControlBarToAdd*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -236,11 +237,11 @@ virtual BOOL AddPaneContainerManager(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `srcManager`  
- [in] `bOuterEdge`  
- [in] `pTargetControlBar`  
- [in] `dwAlignment`  
- [in] `bCopy`  
+*srcManager*<br/>
+[in] [in] *bOuterEdge*  
+*pTargetControlBar*<br/>
+[in] [in] *dwAlignment*  
+ [in] *bCopy*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -256,8 +257,8 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pTargetControlBar`  
- [in] `srcManager`  
+*pTargetControlBar*<br/>
+[in] [in] *srcManager*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -273,8 +274,8 @@ void AddPanesToList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `plstControlBars`  
- [in] `plstSliders`  
+*plstControlBars*<br/>
+[in] [in] *plstSliders*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -286,7 +287,7 @@ void AddPaneToList(CDockablePane* pControlBarToAdd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBarToAdd`  
+ [in] *pControlBarToAdd*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -300,8 +301,8 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBarToAdd`  
- [in] `pRecentContainer`  
+*pBarToAdd*<br/>
+[in] [in] *pRecentContainer*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -322,13 +323,13 @@ void CalcRects(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rectOriginal`  
- [in] `rectInserted`  
- [in] `rectSlider`  
- [in] `dwSliderStyle`  
- [in] `dwAlignment`  
- [in] `sizeMinOriginal`  
- [in] `sizeMinInserted`  
+*rectOriginal*<br/>
+[in] [in] *rectInserted*  
+*rectSlider*<br/>
+[in] [in] *dwSliderStyle*  
+*dwAlignment*<br/>
+[in] [in] *sizeMinOriginal*  
+ [in] *sizeMinInserted*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -351,7 +352,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -367,8 +368,8 @@ virtual BOOL CheckForMiniFrameAndCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
- [in] `ppTargetControlBar`  
+*punto*<br/>
+[in] [in] *ppTargetControlBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -385,9 +386,9 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentWnd`  
- [in] `pDefaultSlider`  
- [in] `pContainerRTC`  
+*pParentWnd*<br/>
+[in] [in] *pDefaultSlider*  
+ [in] *pContainerRTC*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -423,7 +424,7 @@ virtual void EnableGrippers(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -437,8 +438,8 @@ virtual CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bLeftBar`  
+*pBar*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -452,7 +453,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -466,7 +467,7 @@ virtual void GetAvailableSpace(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -526,10 +527,10 @@ virtual void GetMinMaxOffset(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pSlider`  
- [in] `nMinOffset`  
- [in] `nMaxOffset`  
- [in] `nStep`  
+*pSlider*<br/>
+[in] [in] *nMinOffset*  
+*nMaxOffset*<br/>
+[in] [in] *nPaso*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -541,7 +542,7 @@ virtual void GetMinSize(CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `size`  
+ [in] *tamaño*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -608,7 +609,7 @@ virtual void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -634,11 +635,11 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBarToInsert`  
- [in] `pTargetControlBar`  
- [in] `dwAlignment`  
- [in] `lpRect`  
- [in] `dockMethod`  
+*pControlBarToInsert*<br/>
+[in] [in] *pTargetControlBar*  
+*dwAlignment*<br/>
+[in] [in] *lpRect*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -698,10 +699,10 @@ virtual int OnPaneDividerMove(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pSlider`  
- [in] `uFlags`  
- [in] `nOffset`  
- [in] `hdwp`  
+*pSlider*<br/>
+[in] [in] *uFlags*  
+*nOffset*<br/>
+[in] [in] *hdwp*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -717,8 +718,8 @@ virtual BOOL OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bShow`  
+*pBar*<br/>
+[in] [in] *bMostrar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -737,11 +738,11 @@ virtual CDockablePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bExactBar`  
- [in] `bIsTabArea`  
- [in] `bCaption`  
+*punto*<br/>
+[in] [in] *nSensitivity*  
+*bExactBar*<br/>
+[in] [in] *bIsTabArea*  
+ [in] *bCaption*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -782,7 +783,7 @@ virtual void RemovePaneDivider(CPaneDivider* pSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pSlider`  
+ [in] *pSlider*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -794,7 +795,7 @@ virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -810,8 +811,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBarOld`  
- [in] `pBarNew`  
+*pBarOld*<br/>
+[in] [in] *pBarNew*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -834,11 +835,11 @@ virtual void ResizePaneContainers(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
- [in] `hdwp`  
- [in] `rect`  
+*Entro*<br/>
+[in] [in] *bExpand*  
+*nOffset*<br/>
+[in] [in] *hdwp*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -850,7 +851,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -862,7 +863,7 @@ void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pSlider`  
+ [in] *pSlider*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -874,7 +875,7 @@ void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pContainerRTC`  
+ [in] *pContainerRTC*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -886,7 +887,7 @@ virtual void SetResizeMode(BOOL bResize);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bResize`  
+ [in] *bResize*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -898,7 +899,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -906,5 +907,5 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
  [CObject (clase)](../../mfc/reference/cobject-class.md)   
- [Clase CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   
+ [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md)   
  [CPaneDivider (clase)](../../mfc/reference/cpanedivider-class.md)

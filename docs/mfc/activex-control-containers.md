@@ -1,7 +1,7 @@
 ---
-title: Contenedores de controles ActiveX | Documentos de Microsoft
+title: Contenedores de controles ActiveX | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,24 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73496f892cc55ef59b2d84228ae9ae0416d3e8a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7d8a6498edf33bbf51fa9ab0de04d5d58ebd11a
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534851"
 ---
 # <a name="activex-control-containers"></a>Contenedores de controles ActiveX
-Un contenedor de controles ActiveX es un contenedor que es totalmente compatible con controles ActiveX y puede incorporarlos a sus propias ventanas o cuadros de diálogo. Un control ActiveX es un elemento de software reutilizable que puede usar en muchos proyectos de desarrollo. Controles permiten a tener acceso a las bases de datos, supervisar datos y realizar varias selecciones dentro de las aplicaciones de usuario de la aplicación. Para obtener más información sobre los controles ActiveX, vea el artículo [controles ActiveX MFC](../mfc/mfc-activex-controls.md).  
+Un contenedor de controles ActiveX es un contenedor que es totalmente compatible con los controles ActiveX y puede incorporarlos a sus propias ventanas o cuadros de diálogo. Un control ActiveX es un elemento de software reutilizable que puede usar en muchos proyectos de desarrollo. Controles permiten a los usuarios de su aplicación tener acceso a las bases de datos, supervisar los datos y realizar varias selecciones dentro de sus aplicaciones. Para obtener más información sobre los controles ActiveX, vea el artículo [controles ActiveX MFC](../mfc/mfc-activex-controls.md).  
+
+>[!IMPORTANT]
+> ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información, consulte [controles ActiveX](activex-controls.md).
   
- Contenedores de controles suelen tardar dos formas en un proyecto:  
+ Contenedores de controles suelen tener dos formas en un proyecto:  
   
--   Cuadro de diálogo ventanas como vistas de formulario, donde se utiliza en algún lugar un control ActiveX en el cuadro de diálogo y cuadros de diálogo.  
+-   Cuadro de diálogo ventanas como vistas de formulario, donde se usa en algún lugar un control ActiveX en el cuadro de diálogo y cuadros de diálogo.  
   
--   Windows en una aplicación, donde se utiliza un control ActiveX en una barra de herramientas, o en otra ubicación en la ventana de usuario.  
+-   Windows en una aplicación, donde un control ActiveX se utiliza en una barra de herramientas o en otra ubicación en la ventana de usuario.  
   
- Expone el contenedor del control interactúa con el control a través de ActiveX [métodos](../mfc/mfc-activex-controls-methods.md) y [propiedades](../mfc/mfc-activex-controls-properties.md). Estos métodos y propiedades, que se pueden acceder y modificar el contenedor del control, se obtiene acceso a través de una clase de contenedor en el proyecto de contenedor de controles ActiveX. El control ActiveX incrustado también puede interactuar con el contenedor activando (enviar) [eventos](../mfc/mfc-activex-controls-events.md) para notificar al contenedor que se ha producido una acción. Puede elegir el contenedor del control para que actúe sobre estas notificaciones o no.  
+ Expone el contenedor del control interactúa con el control a través de ActiveX [métodos](../mfc/mfc-activex-controls-methods.md) y [propiedades](../mfc/mfc-activex-controls-properties.md). Estos métodos y propiedades, que pueden acceder y modificar el contenedor de control, se accede a través de una clase de contenedor en el proyecto de contenedor de controles ActiveX. El control ActiveX incrustado también puede interactuar con el contenedor activando (enviar) [eventos](../mfc/mfc-activex-controls-events.md) para notificar al contenedor que se ha producido una acción. Puede elegir el contenedor del control actuar en estas notificaciones o no.  
   
- Artículos adicionales describen temas diversos, desde crear un proyecto de contenedor del control ActiveX a aspectos básicos de implementación relacionados con contenedores de controles ActiveX creados con Visual C++:  
+ Otros artículos explican varios temas, desde la creación de un proyecto de contenedor del control ActiveX a aspectos básicos de implementación relacionados con los contenedores de control ActiveX creados con Visual C++:  
   
 -   [Creación de un contenedor de controles ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md)  
   
@@ -54,7 +58,7 @@ Un contenedor de controles ActiveX es un contenedor que es totalmente compatible
   
  Para obtener más información sobre el uso de controles ActiveX en un cuadro de diálogo, vea el [Editor de cuadro de diálogo](../windows/dialog-editor.md) temas.  
   
- Para obtener una lista de artículos que explican los detalles sobre el desarrollo de controles ActiveX utilizando Visual C++ y las clases de controles ActiveX en MFC, vea [controles ActiveX en MFC](../mfc/mfc-activex-controls.md). Los artículos se agrupan por categorías funcionales.  
+ Para obtener una lista de artículos que explican los detalles de desarrollo de controles ActiveX utilizando Visual C++ y las clases de controles ActiveX de MFC, vea [controles ActiveX MFC](../mfc/mfc-activex-controls.md). Los artículos se agrupan por categorías funcionales.  
   
 ## <a name="see-also"></a>Vea también  
  [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Detach (método) | Documentos de Microsoft'
+title: Método Makeallocator | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d609b685bb5e3d24d561e66050769b6b7728e691
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607167"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-__forceinline void Detach();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Desasocia la memoria asignada por el [Allocate](../windows/makeallocator-allocate-method.md) método MakeAllocator del objeto actual.  
-  
- Si se llama a Detach(), es responsabilidad suya eliminar la memoria proporcionada por el método de asignación.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [MakeAllocator (clase)](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+__forceinline void Detach();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Desasocia la memoria asignada por el [Allocate](../windows/makeallocator-allocate-method.md) método desde la actual **MakeAllocator** objeto.
+
+Si se llama a **Detach()**, usted es responsable de eliminar la memoria proporcionada por el `Allocate` método.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[MakeAllocator (clase)](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: _variant_t (extractores) | Documentos de Microsoft
+title: _variant_t (extractores) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,67 +58,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a9d4e13a4b7382d15e601eba16a5a12edd2d00f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034153"
 ---
 # <a name="variantt-extractors"></a>_variant_t (Extractores)
-**Específicos de Microsoft**  
-  
- Extraer datos de encapsulado **VARIANT** objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-operator short( ) const;   
-operator long( ) const;   
-operator float( ) const;   
-operator double( ) const;   
-operator CY( ) const;   
-operator _bstr_t( ) const;   
-operator IDispatch*( ) const;   
-operator bool( ) const;   
-operator IUnknown*( ) const;   
-operator DECIMAL( ) const;   
-operator BYTE( ) const;  
-operator VARIANT() const throw();  
-operator char() const;  
-operator unsigned short() const;  
-operator unsigned long() const;  
-operator int() const;  
-operator unsigned int() const;  
-operator __int64() const;  
-operator unsigned __int64() const;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Extrae datos sin procesar de encapsulado **VARIANT**. Si el **VARIANT** ya no es del tipo adecuado, **VariantChangeType** se usa para intentar la conversión, y se genera un error en caso de error:  
-  
--   **operator short ()** extrae un **corto** valor entero.  
-  
--   **operator long ()** extrae un **largo** valor entero.  
-  
--   **operator float ()** extrae un **float** valor numérico.  
-  
--   **operator double ()** extrae un **doble** valor entero.  
-  
--   **operator CY ()** extrae un **CY** objeto.  
-  
--   **bool (operador)** extrae un `bool` valor.  
-  
--   **operator DECIMAL ()** extrae un **DECIMAL** valor.  
-  
--   **operator BYTE ()** extrae un **bytes** valor.  
-  
--   **_bstr_t (operador)** extrae una cadena, que se encapsula en un `_bstr_t` objeto.  
-  
--   **operador IDispatch\*()** extrae un puntero dispinterface de encapsulado **VARIANT**. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a **versión** para liberarlo.  
-  
--   **operador IUnknown\*()** extrae un puntero a interfaz COM encapsulado **VARIANT**. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a **versión** para liberarlo.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_variant_t (Clase)](../cpp/variant-t-class.md)
+
+**Específicos de Microsoft**
+
+Extraer datos de encapsulado `VARIANT` objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+operator short( ) const; 
+operator long( ) const; 
+operator float( ) const; 
+operator double( ) const; 
+operator CY( ) const; 
+operator _bstr_t( ) const; 
+operator IDispatch*( ) const; 
+operator bool( ) const; 
+operator IUnknown*( ) const; 
+operator DECIMAL( ) const; 
+operator BYTE( ) const;
+operator VARIANT() const throw();
+operator char() const;
+operator unsigned short() const;
+operator unsigned long() const;
+operator int() const;
+operator unsigned int() const;
+operator __int64() const;
+operator unsigned __int64() const;
+```
+
+## <a name="remarks"></a>Comentarios
+
+Extrae datos sin procesar encapsulado `VARIANT`. Si el `VARIANT` ya no es del tipo adecuado, `VariantChangeType` sirve para intentar la conversión, y se genera un error en caso de error:
+
+- **operator short ()** extrae un **corto** valor entero.
+
+- **operator long ()** extrae un **largo** valor entero.
+
+- **operator float ()** extrae un **float** valor numérico.
+
+- **operator double ()** extrae un **doble** valor entero.
+
+- **operator CY ()** extrae un `CY` objeto.
+
+- **bool (operador)** extrae un **bool** valor.
+
+- **operator DECIMAL ()** extrae un `DECIMAL` valor.
+
+- **operator BYTE ()** extrae un `BYTE` valor.
+
+- **operator _bstr_t ()** extrae una cadena, que se encapsula en un `_bstr_t` objeto.
+
+- **operador IDispatch\*()** extrae un puntero dispinterface de encapsulado `VARIANT`. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a `Release` lo libere.
+
+- **operador IUnknown\*()** extrae un puntero de interfaz COM encapsulado `VARIANT`. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a `Release` lo libere.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_variant_t (Clase)](../cpp/variant-t-class.md)

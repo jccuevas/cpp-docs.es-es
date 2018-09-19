@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ed4e022326d650b1012ad5244d8b18e9c789cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb904d67463cefd9fecdb33c7367bfde79e27f8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928520"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Controladores para mensajes estándar de Windows
-Predeterminado controladores para mensajes estándares de Windows (**WM_**) están predefinidas en la clase `CWnd`. La biblioteca de clases basará los nombres de estos controladores en el nombre del mensaje. Por ejemplo, el controlador para el `WM_PAINT` mensaje se declara en `CWnd` como:  
+Predeterminado controladores para mensajes estándares de Windows (**WM_**) están predefinidas en la clase `CWnd`. La biblioteca de clases basará los nombres de estos controladores en el nombre del mensaje. Por ejemplo, el controlador para el **WM_PAINT** mensaje se declara en `CWnd` como:  
   
  `afx_msg void OnPaint();`  
   
@@ -38,13 +39,13 @@ Predeterminado controladores para mensajes estándares de Windows (**WM_**) est�
  En algunos casos, el controlador debe llamar al controlador de la clase base para que la clase o clases base y las ventanas pueden operar en el mensaje. Donde se llamó a controlador de la clase base en la invalidación depende de las circunstancias. En ocasiones, debe llamar primero al controlador de clase base y a veces la última. En ocasiones se requieren el controlador de clase base condicionalmente, si decide no controlar el mensaje por sí mismo. A veces, debe llamar al controlador de clase base, a continuación, ejecutar condicionalmente su propio código del controlador, según el valor o estado devuelto por el controlador de clase base.  
   
 > [!CAUTION]
->  No es seguro modificar los argumentos que se pasan a un controlador si pretende pasarlos a un controlador de clase base. Por ejemplo, es posible que vea tentado de modificar el `nChar` argumento de la `OnChar` controlador (para convertir a mayúsculas, por ejemplo). Este comportamiento es bastante oscuro, pero si necesita para lograr este efecto, utilice la `CWnd` función miembro **SendMessage** en su lugar.  
+>  No es seguro modificar los argumentos que se pasan a un controlador si pretende pasarlos a un controlador de clase base. Por ejemplo, es posible que vea tentado de modificar el *nChar* argumento de la `OnChar` controlador (para convertir a mayúsculas, por ejemplo). Este comportamiento es bastante oscuro, pero si necesita para lograr este efecto, utilice la `CWnd` función miembro `SendMessage` en su lugar.  
   
- ¿Cómo determina la manera adecuada para invalidar un mensaje determinado cuando la ventana Propiedades crea el esqueleto de la función de controlador para un mensaje determinado, un `OnCreate` controlador para `WM_CREATE`, por ejemplo, esboza en la forma de tal como se recomienda invalidar la función miembro. En el ejemplo siguiente, se recomienda que el controlador primero llamar al controlador de clase base y continuar solo a condición de que no devuelve -1.  
+ ¿Cómo determina la manera adecuada para invalidar un mensaje determinado cuando la ventana Propiedades crea el esqueleto de la función de controlador para un mensaje determinado, un `OnCreate` controlador para **WM_CREATE**, por ejemplo, esboza en la forma de la función miembro reemplazada recomendada. En el ejemplo siguiente, se recomienda que el controlador primero llamar al controlador de clase base y continuar solo a condición de que no devuelve -1.  
   
  [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- Por convención, los nombres de estos controladores empiezan con el prefijo "On". Algunos de estos controladores no toman ningún argumento, mientras que otras usan varias. Algunas también tienen un tipo de valor devuelto distinto de `void`. Los controladores predeterminados para todos los **WM_** mensajes están documentados en la *referencia de MFC* como funciones miembro de clase `CWnd` cuyos nombres empiezan por "On". Las declaraciones de función de miembro en `CWnd` tienen el prefijo **afx_msg**.  
+ Por convención, los nombres de estos controladores empiezan con el prefijo "On". Algunos de estos controladores no toman ningún argumento, mientras que otras usan varias. Algunas también tienen un tipo de valor devuelto distinto de **void**. Los controladores predeterminados para todos los **WM_** mensajes están documentados en la *referencia de MFC* como funciones miembro de clase `CWnd` cuyos nombres empiezan por "On". Las declaraciones de función de miembro en `CWnd` tienen el prefijo **afx_msg**.  
   
 ## <a name="see-also"></a>Vea también  
  [Declaración de funciones del controlador de mensajes](../mfc/declaring-message-handler-functions.md)

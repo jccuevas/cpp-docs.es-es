@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7d9ba59d7f1539f690d7b04c70139c263490368
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0089d190b28489d2274df2209890bc3a391b6f66
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103858"
 ---
 # <a name="alignmentof-class"></a>alignment_of (Clase)
 
@@ -36,11 +37,12 @@ struct alignment_of;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-La consulta de tipo contiene el valor de la alineación del tipo `Ty`.
+La consulta de tipo contiene el valor de la alineación del tipo *Ty*.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adda28e4c6cc2a7ba7a387e125bd873b2107b687
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12647c6f2243b0804343f0485737a28c79afc6f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100240"
 ---
 # <a name="ismoveassignable-class"></a>Clase is_move_assignable
 
@@ -35,7 +36,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 

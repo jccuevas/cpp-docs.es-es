@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c7eb281ecc7a7175614c5c72c54c7267cf55e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aae9adaf1037297dfae9ba78f6f872544a5555ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081681"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -52,15 +53,16 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>Parámetros
 
-*memblock* un puntero al bloque de memoria que se devolvió a la [_aligned_malloc](aligned-malloc.md) o [_aligned_offset_malloc](aligned-offset-malloc.md) (función).
+*memblock*<br/>
+Un puntero al bloque de memoria que se devuelve a la [_aligned_malloc](aligned-malloc.md) o [_aligned_offset_malloc](aligned-offset-malloc.md) función.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_aligned_free_dbg** función es una versión de depuración de la [_aligned_free](aligned-free.md) (función). Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_free_dbg** se reduce a una llamada a **_aligned_free**. Ambos **_aligned_free** y **_aligned_free_dbg** liberar un bloque de memoria del montón base, pero **_aligned_free_dbg** admite una característica de depuración: la posibilidad de mantener liberados bloques en la lista del montón vinculada para simular condiciones de memoria insuficiente.
+El **_aligned_free_dbg** función es una versión de depuración de la [_aligned_free](aligned-free.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_free_dbg** se reduce a una llamada a `_aligned_free`. Ambos `_aligned_free` y **_aligned_free_dbg** liberan un bloque de memoria del montón base, pero **_aligned_free_dbg** admite una característica de depuración: bloquea la posibilidad de mantener liberados en la lista vinculada del montón para simular condiciones de memoria insuficiente.
 
-**_aligned_free_dbg** realiza una comprobación de validez en todos los archivos especificados y ubicaciones de bloques antes de realizar la operación de liberación. No se espera que la aplicación proporcione esta información. Cuando se libera un bloque de memoria, el administrador del montón de depuración comprueba automáticamente la integridad de los búferes situados a cada lado de la parte del usuario y emite un informe de error en caso de sobrescritura. Si el **_CRTDBG_DELAY_FREE_MEM_DF** campo de bits de la [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca está establecida, el bloque liberado se rellena con el valor 0xDD, recibe el **_FREE_BLOCK** tipo, de bloque y se mantiene en la lista del montón vinculada de bloques de memoria.
+**_aligned_free_dbg** realiza una comprobación de validez en todos los archivos especificados y las ubicaciones de bloques antes de realizar la operación de liberación. No se espera que la aplicación proporcione esta información. Cuando se libera un bloque de memoria, el administrador del montón de depuración comprueba automáticamente la integridad de los búferes situados a cada lado de la parte del usuario y emite un informe de error en caso de sobrescritura. Si el campo de tipo bit el _CRTDBG_DELAY_FREE_MEM_DF el [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca está establecida, el bloque liberado se rellena con el valor 0xDD, asigna el tipo de bloque _FREE_BLOCK y mantiene en la lista vinculada del montón de bloques de memoria.
 
-Si se produce un error al liberar memoria, **errno** se configura con información del sistema operativo de la naturaleza del error. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si se produce un error al liberar memoria, en `errno` se muestra información sobre la naturaleza del error proporcionada por el sistema operativo. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -74,4 +76,4 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="see-also"></a>Vea también
 
-[Rutinas de depuración](../../c-runtime-library/debug-routines.md)<br/>
+[Rutinas de depuración](../../c-runtime-library/debug-routines.md)

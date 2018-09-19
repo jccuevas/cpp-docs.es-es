@@ -1,5 +1,5 @@
 ---
-title: reducción | Documentos de Microsoft
+title: reducción | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059100"
 ---
 # <a name="reduction"></a>reduction
-Especifica que una o más variables que son privadas para cada subproceso son el asunto de una operación de reducción al final de la región paralela.  
+Especifica que una o más variables que son privadas para cada subproceso se el sujeto de una operación de reducción al final de la región paralela.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,14 +32,13 @@ Especifica que una o más variables que son privadas para cada subproceso son el
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+### <a name="parameters"></a>Parámetros
   
- `operation`  
- El operador para la operación a realizar en las variables (`var`) al final de la región paralela.  
+*Operación*<br/>
+El operador para la operación de llevar a cabo en las variables (`var`) al final de la región paralela.  
   
- `var`  
- Uno más más variables en el que se va a realizar la reducción escalar. Si se especifica más de una variable, separe los nombres de variable con una coma.  
+*var*<br/>
+Una o más variables en el que se va a realizar la reducción escalar. Si se especifica más de una variable, separe los nombres de variable con una coma.  
   
 ## <a name="remarks"></a>Comentarios  
  `reduction` se aplica a las siguientes directivas:  
@@ -126,10 +126,10 @@ int main( )
              "%d to %d, is %d\n", 1, 10, nSum);  
   
     if (bSucceed)  
-        printf_s("All of the the functions, func1 through "  
+        printf_s("All of the functions, func1 through "  
                  "func5 succeeded!\n");  
     else  
-        printf_s("One or more of the the functions, func1 "  
+        printf_s("One or more of the functions, func1 "  
                  "through func5 failed!\n");  
   
     if (nCount != NUM_THREADS)   
@@ -161,7 +161,7 @@ int main( )
 ```Output  
 The parallel section was executed 4 times in parallel.  
 The sum of the consecutive integers from 1 to 10, is 55  
-All of the the functions, func1 through func5 succeeded!  
+All of the functions, func1 through func5 succeeded!  
 ```  
   
 ## <a name="see-also"></a>Vea también  

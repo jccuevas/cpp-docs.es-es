@@ -1,5 +1,5 @@
 ---
-title: _com_error (operadores) | Documentos de Microsoft
+title: _com_error (operadores) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed14ac91770e01a469259a1b5dde012f65503b62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c03c7b5f6b04e7082a797a074b53c1d9ef77d0f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016669"
 ---
 # <a name="comerror-operators"></a>_com_error (Operadores)
-Para obtener información sobre la `_com_error` operadores, vea [clase _com_error](../cpp/com-error-class.md).  
-  
-## <a name="see-also"></a>Vea también  
- [_com_error (Clase)](../cpp/com-error-class.md)
+
+Para obtener información sobre la **_com_error** operadores, vea [clase _com_error](../cpp/com-error-class.md).
+
+## <a name="see-also"></a>Vea también
+
+[_com_error (Clase)](../cpp/com-error-class.md)

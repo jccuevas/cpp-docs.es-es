@@ -38,11 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107562"
 ---
 # <a name="srand"></a>srand
 
@@ -58,11 +59,12 @@ void srand(
 
 ### <a name="parameters"></a>Parámetros
 
-*valor de inicialización* valor de inicialización de generación de números pseudoaleatorios
+*Valor de inicialización*<br/>
+Valor de inicialización para la generación de números pseudoaleatorios
 
 ## <a name="remarks"></a>Comentarios
 
-El **srand** función establece el punto de partida para generar una serie de enteros pseudoaleatorios en el subproceso actual. Para reinicializar el generador para crear la misma secuencia de resultados, llame a la **srand** función y utilizan el mismo *inicialización* nuevo argumento. Cualquier otro valor para *inicialización* establece el generador en otro punto de partida en la secuencia pseudoaleatoria. **RAND** recupera los números pseudoaleatorios que se generan. Al llamar a **rand** antes de cualquier llamada a **srand** genera la misma secuencia que llamar al método **srand** con *inicialización* pasa como 1.
+El **srand** función establece el punto de partida para generar una serie de enteros pseudoaleatorios en el subproceso actual. Para reinicializar el generador para crear la misma secuencia de resultados, llame a la **srand** funcionar y utilizar el mismo *inicialización* nuevo argumento. Cualquier otro valor para *inicialización* establece el generador en otro punto de partida en la secuencia pseudoaleatoria. **RAND** recupera los números pseudaleatorios que se generan. Una llamada a **rand** antes de cualquier llamada a **srand** genera la misma secuencia que una llamada a **srand** con *inicialización* pasa como 1.
 
 ## <a name="requirements"></a>Requisitos
 

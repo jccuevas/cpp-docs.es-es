@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0029 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0029 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 216474bbb7a67cb3c435770ab418ab4b7f4e5c4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687708db71eedf9b8f62dc88efc1bfe473cde1d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017019"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>Error del evaluador de expresiones CXX0029
-no es puntero struct  
-  
- El operador de selección de miembro (**->**) se aplicó a una expresión que no es un puntero a una estructura.  
-  
- Compruebe que toda la expresión entre paréntesis correctamente o tipo de convertir la expresión de dirección para el tipo de puntero de la estructura adecuada.  
-  
- Este error es idéntico a CAN0029.
+
+no es puntero struct
+
+El operador de selección de miembro (**->**) se aplicó a una expresión que no es un puntero a una estructura.
+
+Compruebe que toda la expresión está entre paréntesis correctamente, o el tipo puede convertir la expresión de dirección para el tipo de puntero de la estructura adecuada.
+
+Este error es idéntico a CAN0029.

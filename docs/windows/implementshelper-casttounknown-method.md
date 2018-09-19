@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Casttounknown (método) | Documentos de Microsoft'
+title: Método Implementshelper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b786bb41e9f0667ebbb81329b2f0977525d4ba96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598067"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Puntero a la interfaz IUnknown subyacente.  
-  
-## <a name="remarks"></a>Comentarios  
- Obtiene un puntero a la interfaz IUnknown subyacente para la estructura implementa actual.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [ImplementsHelper (estructura)](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Puntero subyacente `IUnknown` interfaz.
+
+## <a name="remarks"></a>Comentarios
+
+Obtiene un puntero subyacente `IUnknown` interfaz actual `Implements` estructura.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[ImplementsHelper (estructura)](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

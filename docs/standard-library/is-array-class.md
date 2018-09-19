@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f4594044ce135ed6927f9d0108863cca12845d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be69e6afb47bf64e7c390388f5a5f9470f157d91
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103871"
 ---
 # <a name="isarray-class"></a>is_array (Clase)
 
@@ -36,11 +37,12 @@ struct is_array;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `Ty` es un tipo array; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de matriz, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

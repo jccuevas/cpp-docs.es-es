@@ -40,11 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455bf63cdac425217c40068853b302edefb94f16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df9e064ac7af761a858c6e18d99526a9b3c7ffb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103793"
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 
@@ -63,11 +64,12 @@ void _wperror(
 
 ### <a name="parameters"></a>Parámetros
 
-*mensaje* mensaje de cadena para imprimir.
+*message*<br/>
+Mensaje de cadena para imprimir.
 
 ## <a name="remarks"></a>Comentarios
 
-El **perror** función imprime un mensaje de error **stderr**. **_wperror** es una versión con caracteres anchos de **_perror**; el *mensaje* argumento pasado a **_wperror** es una cadena de caracteres anchos. **_wperror** y **_perror** se comportan exactamente igual.
+El **perror** función imprime un mensaje de error **stderr**. **_wperror** es una versión con caracteres anchos de **_perror**; el *mensaje* argumento **_wperror** es una cadena de caracteres anchos. **_wperror** y **_perror** se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -75,13 +77,13 @@ El **perror** función imprime un mensaje de error **stderr**. **_wperror** es u
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*mensaje* se imprime en primer lugar, seguido por un coma, después por el mensaje de error de sistema de la última llamada a biblioteca que generó el error y, finalmente, por un carácter de nueva línea. Si *mensaje* es un puntero nulo o un puntero a una cadena nula, **perror** imprime el mensaje de error del sistema.
+*mensaje* se imprime en primer lugar, seguido por un coma, a continuación, el mensaje de error del sistema de la última llamada a biblioteca que generó el error y, finalmente, por un carácter de nueva línea. Si *mensaje* es un puntero nulo o un puntero a una cadena nula, **perror** imprime el mensaje de error del sistema.
 
-El número de error se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida en ERRNO.H). Se obtiene acceso a los mensajes de error del sistema a través de la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que es una matriz de mensajes ordenados por número de error. **pError** imprime el mensaje de error adecuado mediante la **errno** valor como un índice para **_sys_errlist**. El valor de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se define como el número máximo de elementos de la **_sys_errlist** matriz.
+El número de error se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida en ERRNO.H). Se obtiene acceso a los mensajes de error del sistema a través de la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que es una matriz de mensajes ordenados por número de error. **pError** imprime el mensaje de error adecuado mediante la **errno** valor como un índice en **_sys_errlist**. El valor de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se define como el número máximo de elementos de la **_sys_errlist** matriz.
 
-Para obtener resultados precisos, llame a **perror** inmediatamente después de una rutina de biblioteca devuelva un error. De lo contrario, pueden sobrescribir las llamadas subsiguientes el **errno** valor.
+Para obtener resultados precisos, llame a **perror** inmediatamente después de una rutina de biblioteca devuelva un error. En caso contrario, las llamadas subsiguientes pueden sobrescribir el **errno** valor.
 
-En las ventanas del sistema operativo, algunas **errno** valores enumeran en ERRNO. H están sin utilizar. Estos valores están reservados para su uso en el sistema operativo UNIX. Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener una lista de **errno** valores utilizados por el sistema operativo Windows. **pError** imprime una cadena vacía para cualquier **errno** valor no se utiliza con estas plataformas.
+En el Windows del sistema operativo, algunas **errno** valores enumeran en ERRNO. H se usan. Estos valores están reservados para su uso en el sistema operativo UNIX. Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener una lista de **errno** valores utilizados por el sistema operativo Windows. **pError** imprime una cadena vacía para cualquier **errno** valor no utilizado por estas plataformas.
 
 ## <a name="requirements"></a>Requisitos
 

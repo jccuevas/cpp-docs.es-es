@@ -1,5 +1,5 @@
 ---
-title: Variables globales de ATL | Documentos de Microsoft
+title: Variables globales ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2017
 ms.technology:
@@ -17,28 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4664c99eb49b57f258be399c042fa14b60bbecdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f32ff38008e55e656bf8901541ffc5ec7246bed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085997"
 ---
 # <a name="atl-global-variables"></a>Variables globales de ATL
 
-## <a name="patlmodule"></a>_pAtlModule  
-Una variable global que lo almacena un puntero al módulo actual.  
+## <a name="patlmodule"></a>_pAtlModule
 
-```cpp  
-__declspec(selectany) CAtlModule * _pAtlModule  
-```  
-### <a name="remarks"></a>Comentarios  
-Métodos en esta variable global pueden utilizarse para proporcionar la funcionalidad que proporciona la clase CComModule (ya obsoleta) en Visual C++ 6.0.
+Una variable global que almacenar un puntero al módulo actual.  
 
-### <a name="example"></a>Ejemplo  
+```cpp
+__declspec(selectany) CAtlModule * _pAtlModule
+```
 
-```cpp  
-LONG lLocks = _pAtlModule->GetLockCount();  
-```  
-### <a name="requirements"></a>Requisitos  
- **Encabezado:** atlbase.h  
+### <a name="remarks"></a>Comentarios
 
+Métodos en esta variable global se pueden usar para proporcionar la funcionalidad que proporciona la clase CComModule (ya obsoleta) en Visual C++ 6.0.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+LONG lLocks = _pAtlModule->GetLockCount();
+```
+
+### <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlbase.h

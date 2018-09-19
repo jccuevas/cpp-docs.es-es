@@ -1,5 +1,5 @@
 ---
-title: R6032 de Error de tiempo de ejecución de C | Documentos de Microsoft
+title: C Runtime Error R6032 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f82690dd9b8f7c224db473b15627b632dcc96d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43155f24411fb5206a03d607f0551c2d34294aeb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024208"
 ---
-# <a name="c-runtime-error-r6032"></a>R6032 de Error de tiempo de ejecución de C
-No hay espacio suficiente para obtener información de configuración regional  
-  
+# <a name="c-runtime-error-r6032"></a>C Runtime Error R6032
+
+No hay espacio suficiente para obtener información de configuración regional
+
 > [!NOTE]
->  Si aparece este mensaje de error mientras se ejecuta una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de muy poca memoria o a un error en el programa.  
->   
->  Puede intentar seguir estos pasos para corregir este error:  
->   
->  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.  
-> -   Use la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para reparar o reinstalar el programa.  
-> -   Comprobar **Windows Update** en el **el Panel de Control** las actualizaciones de software.  
-> -   Busque una versión actualizada de la aplicación. Si el problema continúa, póngase en contacto con el proveedor de la aplicación.  
-  
- **Información para programadores**  
-  
- El tiempo de ejecución mantiene información acerca de la configuración regional de cada subproceso para que pueden procesar llamadas a funciones dependientes de la configuración regional. Si se produce un error en la asignación de memoria para esta información, el tiempo de ejecución es no puede continuar porque hay demasiados de sus funciones básicas dependen de él.
+>  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición muy poca memoria o a un error en el programa.
+>
+>  Puede intentar seguir estos pasos para corregir este error:
+>
+>  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
+> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+
+**Información para programadores**
+
+El tiempo de ejecución mantiene información sobre la configuración regional en cada subproceso para que pueden procesar las llamadas a funciones de configuración regional. Si se produce un error en la asignación de memoria para esta información, el tiempo de ejecución no puede continuar porque muchos de sus funciones básicas dependen de él.

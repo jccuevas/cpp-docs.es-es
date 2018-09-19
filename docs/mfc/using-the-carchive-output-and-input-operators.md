@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 617157c3adce8521eb54156988cb098c0e709fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953290"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Mediante el CArchive &lt; &lt; y &gt; &gt; operadores
 `CArchive` Proporciona <\< y >> operadores para escribir y leer los tipos de datos simples, así como `CObject`s a y desde un archivo.  
@@ -39,13 +40,13 @@ ms.lasthandoff: 05/04/2018
   
      [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- Por lo general, almacenar y cargar datos desde y hacia un archivo a través de un archivo en el `Serialize` funciones de `CObject`-las clases derivadas, que deben haber declarado con la **DECLARE_SERIALIZE** macro. Una referencia a un `CArchive` objeto se pasa a la `Serialize` (función). Se llama a la `IsLoading` función de la `CArchive` objeto para determinar si el `Serialize` ha llamado a función para cargar datos desde el archivo o almacenar datos en el archivo.  
+ Por lo general, almacenar y cargar datos desde y hacia un archivo a través de un archivo en el `Serialize` funciones de `CObject`-las clases derivadas, que deben haber declarado con la macro DECLARE_SERIALIZE. Una referencia a un `CArchive` objeto se pasa a la `Serialize` (función). Se llama a la `IsLoading` función de la `CArchive` objeto para determinar si el `Serialize` ha llamado a función para cargar datos desde el archivo o almacenar datos en el archivo.  
   
  El `Serialize` función de un serializable `CObject`-clase derivada suele tener el formato siguiente:  
   
  [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- La plantilla de código anterior es exactamente el mismo que el Asistente para aplicaciones crea para el `Serialize` función del documento (una clase derivada de **CDocument)**. Esta plantilla de código le ayuda a escribir código que es más fácil revisarlos, porque el código de almacenamiento y el código de carga siempre deben ser paralelos, como en el ejemplo siguiente:  
+ La plantilla de código anterior es exactamente el mismo que el Asistente para aplicaciones crea para el `Serialize` función del documento (una clase derivada de `CDocument`). Esta plantilla de código le ayuda a escribir código que es más fácil revisarlos, porque el código de almacenamiento y el código de carga siempre deben ser paralelos, como en el ejemplo siguiente:  
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/04/2018
   
 ||||  
 |-|-|-|  
-|`CObject*`|**SIZE y CSize**|**float**|  
+|`CObject*`|**TAMAÑO** y `CSize`|**float**|  
 |**WORD**|`CString`|**PUNTO de** y `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` y `CRect`|  
 |**Double**|**LONG**|`CTime` y `CTimeSpan`|  

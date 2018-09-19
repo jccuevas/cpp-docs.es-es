@@ -1,5 +1,5 @@
 ---
-title: C2795 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2795 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2431319c6da69dcb144dbb47b4fbb0e01c1eaa78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 628aa2c0465018b635d015c56a0b38f69365bd88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060088"
 ---
-# <a name="compiler-error-c2795"></a>C2795 de Error del compilador
-'super:: función' no es una función miembro  
-  
- Este mensaje de error aparece siempre que se intenta usar [super](../../cpp/super.md) para tener acceso a un miembro que no sea una función miembro.
+# <a name="compiler-error-c2795"></a>Error del compilador C2795
+
+'super:: función' no es una función miembro
+
+Este mensaje de error aparece siempre que se intenta usar [super](../../cpp/super.md) para tener acceso a un miembro que no sea una función miembro.

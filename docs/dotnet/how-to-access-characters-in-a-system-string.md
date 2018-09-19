@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129754"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Cómo: Tener acceso a caracteres en un objeto System::String
 Puede obtener acceso a caracteres de un <xref:System.String> objeto para las llamadas de alto rendimiento a no administrado, las funciones que toman `wchar_t*` cadenas. El método produce un puntero interior al primer carácter de la <xref:System.String> objeto. This (puntero) se puede manipular directamente o anclado y pasa a una función que espera un normal `wchar_t` cadena.  

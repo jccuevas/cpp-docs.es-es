@@ -1,5 +1,5 @@
 ---
-title: C3154 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3154 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33afc69bb44488d56b51797c72f2cd5ea4105420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92a888020e306e762ffb242cb92636cc14680bf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074661"
 ---
-# <a name="compiler-error-c3154"></a>C3154 de Error del compilador
-Se esperaba ',' antes de puntos suspensivos. No coma separada puntos suspensivos que no se admiten en las funciones de matriz de parámetros.  
-  
- Una función de argumento variable no se ha declarado correctamente.  
-  
- Para obtener más información, vea [listas de argumentos Variable (...) (C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3154.  
-  
-```  
-// C3154.cpp  
-// compile with: /clr  
-ref struct R {  
-   void Func(int ... array<int> ^);   // C3154  
-   void Func2(int i, ... array<int> ^){}   // OK  
-   void Func3(array<int> ^){}   // OK  
-   void Func4(... array<int> ^){}   // OK  
-};  
-  
-int main() {  
-   R ^ r = gcnew R;  
-   r->Func4(1,2,3);  
-}  
+# <a name="compiler-error-c3154"></a>Error del compilador C3154
+
+Se esperaba ',' antes de puntos suspensivos. No coma separada por puntos suspensivos no compatible con funciones de matriz.
+
+No se declaró correctamente una función de argumento variable.
+
+Para obtener más información, consulte [listas de argumentos variables (...) (C++ / C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3154.
+
+```
+// C3154.cpp
+// compile with: /clr
+ref struct R {
+   void Func(int ... array<int> ^);   // C3154
+   void Func2(int i, ... array<int> ^){}   // OK
+   void Func3(array<int> ^){}   // OK
+   void Func4(... array<int> ^){}   // OK
+};
+
+int main() {
+   R ^ r = gcnew R;
+   r->Func4(1,2,3);
+}
 ```

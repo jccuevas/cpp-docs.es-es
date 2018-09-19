@@ -1,5 +1,5 @@
 ---
-title: norm_4 (clase) | Documentos de Microsoft
+title: norm_4 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,11 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058099"
 ---
 # <a name="norm4-class"></a>norm_4 (Clase)
 Representa un vector corto de cuatro números normales.  
@@ -682,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_V0`  
- El valor para inicializar el elemento 0.  
+*_V0*<br/>
+El valor para inicializar el elemento 0.  
   
- `_V1`  
- El valor para inicializar el elemento 1.  
+*_V1*<br/>
+El valor para inicializar el elemento 1.  
   
- `_V2`  
- El valor para inicializar el elemento 2.  
+*_V2*<br/>
+El valor para inicializar el elemento 2.  
   
- `_V3`  
- El valor para inicializar el elemento 3.  
+*_V3*<br/>
+El valor para inicializar el elemento 3.  
   
- `_V`  
- El valor de inicialización.  
+*_V*<br/>
+El valor de inicialización.  
   
- `_Other`  
- El objeto utilizado para inicializar.  
+*_Otro*<br/>
+El objeto usado para inicializar.  
   
 ##  <a name="norm_4__size"></a> Tamaño 
 

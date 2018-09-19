@@ -18,26 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d9e21589fde2ff53d56908342620fe23aca5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e52cdb6e72825bbb2d4824123837ce9630bcb1b3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931715"
 ---
 # <a name="ready-to-use-map-classes"></a>Clases de mapa listas para usar
 Las clases siguientes son las clases de mapa listas para usar.  
   
  [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)  
- Usa `void` punteros como claves para buscar otros `void` punteros.  
+ Usa **void** punteros como claves para buscar otros **void** punteros.  
   
  [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)  
- Usa `void` punteros como claves para buscar datos de tipo **WORD**.  
+ Usa **void** punteros como claves para buscar datos de tipo **WORD**.  
   
  [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)  
  Usa `CString` objetos como claves para buscar `CObject` punteros.  
   
  [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)  
- Usa `CString` objetos como claves para buscar `void` punteros.  
+ Usa `CString` objetos como claves para buscar **void** punteros.  
   
  [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)  
  Usa `CString` objetos como claves para buscar otros `CString` objetos.  
@@ -46,7 +47,7 @@ Las clases siguientes son las clases de mapa listas para usar.
  Utiliza los datos de tipo **WORD** para buscar `CObject` punteros.  
   
  [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)  
- Utiliza los datos de tipo **WORD** para buscar `void` punteros.  
+ Utiliza los datos de tipo **WORD** para buscar **void** punteros.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../mfc/class-library-overview.md)

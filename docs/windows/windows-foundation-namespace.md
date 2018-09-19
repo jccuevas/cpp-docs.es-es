@@ -1,5 +1,5 @@
 ---
-title: Namespace Windows::Foundation | Documentos de Microsoft
+title: Namespace Windows::Foundation | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 439746381b0b5d4932edd5c8717b2d3555005416
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1b5445b36fa0e1527fbd228ff7ce1929266b30
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685368"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation (Espacio de nombres)
-Habilita la funcionalidad fundamental de Windows en tiempo de ejecución, como la creación de objeto y el generador.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-namespace Windows::Foundation;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="functions"></a>Funciones  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[ActivateInstance (función)](../windows/activateinstance-function.md)|Registra y recupera una instancia de un tipo especificado definido en un identificador de clase especificada.|  
-|[GetActivationFactory (función)](../windows/getactivationfactory-function.md)|Recupera un generador de activación para el tipo especificado por el parámetro de plantilla.|  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Namespace:** Windows  
-  
-## <a name="see-also"></a>Vea también  
- [Namespace de Windows](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)
+
+Habilita la funcionalidad fundamental de Windows en tiempo de ejecución, como la creación de objetos y fábrica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+namespace Windows::Foundation;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="functions"></a>Funciones
+
+|Name|Descripción|
+|----------|-----------------|
+|[ActivateInstance (función)](../windows/activateinstance-function.md)|Registra y recupera una instancia de un tipo especificado definido en un identificador de clase especificado.|
+|[GetActivationFactory (función)](../windows/getactivationfactory-function.md)|Recupera un generador de activación para el tipo especificado por el parámetro de plantilla.|
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Namespace:** Windows
+
+## <a name="see-also"></a>Vea también
+
+[Espacios de nombres UWP de Windows](/uwp/api/)

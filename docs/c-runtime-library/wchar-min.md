@@ -16,20 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c5ce0d525ab561d08cb6138d49d1c8091f50629
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a82c06f290eeec0d5e2d5bb7fbf2f166265a4fb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097749"
 ---
 # <a name="wcharmin"></a>WCHAR_MIN
-Valor mínimo para el tipo `wchar_t`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-#include <wchar.h>  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+Valor mínimo para el tipo `wchar_t`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+#include <wchar.h>
+```
+
+## <a name="see-also"></a>Vea también
+
+[Constantes globales](../c-runtime-library/global-constants.md)

@@ -1,5 +1,5 @@
 ---
-title: ModuleType (enumeración) | Documentos de Microsoft
+title: ModuleType (enumeración) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe8d41aded38db7cde5316e04cfa1689845aa4e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595477"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType (enumeración)
-Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-enum ModuleType;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="values"></a>Valores  
-  
-|Nombre|Descripción|  
-|----------|-----------------|  
-|`InProc`|Un servidor en proceso.|  
-|`OutOfProc`|Un servidor fuera de proceso.|  
-|`DisableCaching`|Deshabilitar el mecanismo de almacenamiento en caché en el módulo.|  
-|`InProcDisableCaching`|Combinación de `InProc` y `DisableCaching`.|  
-|`OutOfProcDisableCaching`|Combinación de `OutOfProc` y `DisableCaching`.|  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+enum ModuleType;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="values"></a>Valores
+
+|Nombre|Descripción|
+|----------|-----------------|
+|`InProc`|Un servidor en proceso.|
+|`OutOfProc`|Un servidor fuera de proceso.|
+|`DisableCaching`|Deshabilitar el mecanismo de almacenamiento en caché en el módulo.|
+|`InProcDisableCaching`|Combinación de `InProc` y `DisableCaching`.|
+|`OutOfProcDisableCaching`|Combinación de `OutOfProc` y `DisableCaching`.|
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: no_namespace | Documentos de Microsoft
+title: no_namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d4558b0fd6a4014bc9601d5260882af444f87e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eded6b4d543248cc7bf53a0e4ba622b2b74c8b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538898"
 ---
 # <a name="nonamespace"></a>no_namespace
 **Específicos de C++**  
   
- Especifica que el compilador no genera el espacio de nombres.  
+Especifica que el compilador no genera el espacio de nombres.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +35,14 @@ no_namespace
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El contenido de la biblioteca de tipos en el archivo de encabezado `#import` se define normalmente en un espacio de nombres. El espacio de nombres se especifica en el **biblioteca** instrucción del archivo IDL original. Si se especifica el atributo `no_namespace`, el compilador no genera este espacio de nombres.  
+ 
+El contenido de la biblioteca de tipos en el archivo de encabezado `#import` se define normalmente en un espacio de nombres. El espacio de nombres se especifica en el `library` instrucción del archivo IDL original. Si el **no_namespace** atributo se especifica, el compilador no genera este espacio de nombres.  
   
- Si desea utilizar un nombre de espacio de nombres diferente, a continuación, utilice la [rename_namespace](../preprocessor/rename-namespace.md) atributo en su lugar.  
+Si desea usar un nombre de espacio de nombres diferente, a continuación, utilice el [rename_namespace](../preprocessor/rename-namespace.md) atributo en su lugar.  
   
- **FIN de específicos de C++**  
+**FIN de específicos de C++**  
   
 ## <a name="see-also"></a>Vea también  
- [atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Clase CDockingPanesRow | Documentos de Microsoft
+title: CDockingPanesRow (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,16 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43372dd34088b8adda3f5fc8a9f5573695f0c93c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d98940ffbd1c6ff021712ee50721908d7760abee
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712132"
 ---
-# <a name="cdockingpanesrow-class"></a>Clase CDockingPanesRow
+# <a name="cdockingpanesrow-class"></a>CDockingPanesRow (clase)
 Administra una lista de paneles ubicados en la misma fila horizontal o vertical (columna) de un sitio de vinculación.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -200,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
- [in] `dockMethod`  
- [in] `lpRect`  
- [in] `bAddLast`  
+*pControlBar*<br/>
+[in] [in] *dockMethod*  
+*lpRect*<br/>
+[in] [in] *bAddLast*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -217,13 +218,13 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
- [in] `dockMethod`  
+*pControlBar*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Organiza acoplar paneles en una fila según el margen especificado y parámetros de espaciado.  
+ Organiza acoplar paneles en una fila de acuerdo con el margen especificado y los parámetros de espaciado.  
   
 ```  
 virtual void ArrangePanes(
@@ -232,11 +233,11 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nMargin`  
- Especifica el desplazamiento, en píxeles, del primer panel desde la esquina superior izquierda de la fila.  
+*nMargin*<br/>
+[in] Especifica el desplazamiento, en píxeles, del primer panel desde la esquina superior izquierda de la fila.  
   
- [in] `nSpacing`  
- Especifica el espaciado, en píxeles, entre los paneles.  
+*nSpacing*<br/>
+[in] Especifica el espaciado, en píxeles, entre los paneles.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para organizar los paneles en la fila donde acoplará. Después de llamar a este método, debe llamar a `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
@@ -251,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bStretch`  
- [in] `bHorz`  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -269,9 +270,9 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentDockBar`  
- [in] `nOffset`  
- [in] `nHeight`  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
+ [in] *nHeight*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -314,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bMoveBackToVirtualRect`  
- [in] `pBarToExclude`  
+*bMoveBackToVirtualRect*<br/>
+[in] [in] *pBarToExclude*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -327,7 +328,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bUseVirtualRect`  
+ [in] *bUseVirtualRect*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -341,7 +342,7 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -353,7 +354,7 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -389,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `lst`  
+*pBar*<br/>
+[in] [in] *lst*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -413,7 +414,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bSkipHiddenBars`  
+ [in] *bSkipHiddenBars*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -493,7 +494,7 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -505,7 +506,7 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -563,7 +564,7 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -598,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
- [in] `ptOffset`  
- [in] `bSwapControlBars`  
- [in] `hdwp`  
- [in] `rectTarget`  
- [in] `nOffset`  
- [in] `bForward`  
- [in] `nAbsolutOffset`  
+*pControlBar*<br/>
+[in] [in] *ptOffset*  
+*bSwapControlBars*<br/>
+[in] [in] *hdwp*  
+*rectTarget*<br/>
+[in] [in] *nOffset*  
+*bForward*<br/>
+[in] [in] *nAbsolutOffset*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -617,7 +618,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -638,7 +639,7 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -652,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBarOld`  
- [in] `pBarNew`  
+*pBarOld*<br/>
+[in] [in] *pBarNew*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -671,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rectNewParentBarArea`  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
+*rectNewParentBarArea*<br/>
+[in] [in] *entro*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -686,7 +687,7 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -700,7 +701,7 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `int`  
+ [in] *int*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -714,7 +715,7 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -728,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nExtraSpace`  
- [in] `rowExtraAlign`  
+*nExtraSpace*<br/>
+[in] [in] *rowExtraAlign*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -743,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bShow`  
- [in] `bDelay`  
+*bMostrar*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -759,9 +760,9 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pControlBar`  
- [in] `bShow`  
- [in] `bDelay`  
+*pControlBar*<br/>
+[in] [in] *bMostrar*  
+ [in] *bDelay*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -775,7 +776,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bDelay`  
+ [in] *bDelay*  
   
 ### <a name="remarks"></a>Comentarios  
   

@@ -76,13 +76,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a06bbfb66030a8f037ce83323486d10107bf505
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020321"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
+
 Compara el número de caracteres especificado de dos cadenas sin distinción entre mayúsculas y minúsculas.
 
 > [!IMPORTANT]
@@ -143,21 +145,21 @@ Indica la relación entre las subcadenas, como se muestra a continuación.
 
 |Valor devuelto|Descripción|
 |------------------|-----------------|
-|< 0|*cadena1* subcadena es menor que *string2* subcadena.|
-|0|*cadena1* subcadena es idéntica a *string2* subcadena.|
-|> 0|*cadena1* es mayor que la subcadena *string2* subcadena.|
+|< 0|*cadena1* subcadena es menor que *cadena2* subcadena.|
+|0|*cadena1* es idéntica a la subcadena *cadena2* subcadena.|
+|> 0|*cadena1* es mayor que la subcadena *cadena2* subcadena.|
 
 Un error de validación de parámetros, estas funciones devuelven **_NLSCMPERROR**, que se define en \<string.h > y \<mbstring.h >.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strnicmp** función ordinal compara, a lo sumo, los primeros *recuento* caracteres de *string1* y *string2*. La comparación se realiza sin distinguir entre mayúsculas y minúsculas, ya que todos los caracteres se convierten a minúsculas. **_strnicmp** es una versión entre mayúsculas y minúsculas de **strncmp**. La comparación finaliza si se llega a un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres. Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan caracteres, la cadena más corta es menor.
+El **_strnicmp** función compara ordinalmente, a lo sumo, la primera *recuento* caracteres de *string1* y *cadena2*. La comparación se realiza sin distinguir entre mayúsculas y minúsculas, ya que todos los caracteres se convierten a minúsculas. **_strnicmp** es una versión de mayúsculas y minúsculas **strncmp**. La comparación finaliza si se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres. Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres, la cadena más corta es menor.
 
-Los caracteres 91 a 96 en la tabla ASCII ("[", "\\", "]", "^", "_" y "\`") se consideran menores que cualquier carácter alfabético. Esta ordenación es idéntica a la de **stricmp**.
+Los caracteres 91 a 96 en la tabla ASCII ("[", "\\", "]", "^", "_" y "\`") se consideran menores que cualquier carácter alfabético. Esta clasificación es idéntica de **stricmp**.
 
-**_wcsnicmp** y **_mbsnicmp** son versiones de caracteres multibyte y anchos de **_strnicmp**. Los argumentos de **_wcsnicmp** son caracteres anchos cadenas; los de **_mbsnicmp** son cadenas de caracteres multibyte. **_mbsnicmp** reconoce las secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Estas tres funciones se comportan exactamente igual. Estas funciones se ven afectadas por la configuración regional: las versiones que no tienen la **_l** sufijo usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones que tienen la **_l** sufijo en su lugar, use la *configuración regional* que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_wcsnicmp** y **_mbsnicmp** son versiones de caracteres anchos y caracteres multibyte de **_strnicmp**. Los argumentos de **_wcsnicmp** son caracteres anchos cadenas; los de **_mbsnicmp** son cadenas de caracteres multibyte. **_mbsnicmp** reconoce secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Estas tres funciones se comportan exactamente igual. Estas funciones se ven afectadas por la configuración regional, las versiones que no tienen la **_l** sufijo usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones que tienen el **_l** sufijo en su lugar, use el *configuración regional* que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Todas estas funciones validan sus parámetros. Si el valor *string1* o *string2* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
+Todas estas funciones validan sus parámetros. Si bien *string1* o *cadena2* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -171,8 +173,8 @@ Todas estas funciones validan sus parámetros. Si el valor *string1* o *string2*
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**_strnicmp**, **_strnicmp_l**|<string.h>|
-|**_wcsnicmp**, **_wcsnicmp_l**|<string.h> o <wchar.h>|
+|**_strnicmp**, **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> o \<wchar.h>|
 |**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).

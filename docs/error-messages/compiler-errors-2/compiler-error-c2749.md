@@ -1,5 +1,5 @@
 ---
-title: C2749 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2749 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1738bdcc66e05512932fcd9029484dc55e3fc4a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cccc06d9202297e1c86d87735621e12dd346cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095227"
 ---
-# <a name="compiler-error-c2749"></a>C2749 de Error del compilador
-'type': solamente puede producir o detectar el identificador a una clase administrada con/CLR: safe  
-  
- Cuando se usa **/CLR: safe**, solo se puede producir o detectar un tipo de referencia.  
-  
- Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C2749:  
-  
-```  
-// C2749.cpp  
-// compile with: /clr:safe  
-ref struct MyStruct {  
-public:  
-   int i;  
-};  
-  
-int main() {  
-   MyStruct ^x = gcnew MyStruct;  
-  
-   // Delete the following 4 lines to resolve.  
-   try {   
-      throw (1);   // C2749  
-   }  
-   catch(int){}  
-  
-   // OK  
-   try {  
-      throw (x);  
-   }  
-   catch(MyStruct ^){}   
-}  
+# <a name="compiler-error-c2749"></a>Error del compilador C2749
+
+'type': solamente puede producir o detectar el identificador a una clase administrada con/CLR: safe
+
+Cuando se usa **/CLR: safe**, solo se puede producir o detectar un tipo de referencia.
+
+Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C2749:
+
+```
+// C2749.cpp
+// compile with: /clr:safe
+ref struct MyStruct {
+public:
+   int i;
+};
+
+int main() {
+   MyStruct ^x = gcnew MyStruct;
+
+   // Delete the following 4 lines to resolve.
+   try {
+      throw (1);   // C2749
+   }
+   catch(int){}
+
+   // OK
+   try {
+      throw (x);
+   }
+   catch(MyStruct ^){}
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: OnClose (método) | Documentos de Microsoft'
+title: Método Asyncbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a0cce7f51ef7974d0520f0bdfd2f025a09ecaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fd6bd03b1e5aa3f690d93a5c51cc6664e0547c2e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597354"
 ---
 # <a name="asyncbaseonclose-method"></a>AsyncBase::OnClose (Método)
-Cuando se invalida en una clase derivada, cierra una operación asincrónica.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-virtual void OnClose(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)   
- [AsyncBase::Close (método)](../windows/asyncbase-close-method.md)
+
+Cuando se invalida en una clase derivada, cierra una operación asincrónica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+virtual void OnClose(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)  
+[AsyncBase::Close (método)](../windows/asyncbase-close-method.md)

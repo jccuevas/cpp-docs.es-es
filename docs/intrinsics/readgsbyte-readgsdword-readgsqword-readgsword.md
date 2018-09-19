@@ -1,5 +1,5 @@
 ---
-title: __readgsbyte, __readgsdword, __readgsqword, __readgsword | Documentos de Microsoft
+title: __readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,16 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cc4c44807a40425d4531c747526148837e0a25c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711170"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 **Específicos de Microsoft**  
   
- Leer la memoria desde una ubicación especificada por un desplazamiento respecto al principio del segmento GS.  
+ Leer la memoria desde una ubicación especificada por un desplazamiento relativo al principio del segmento GS.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,20 +52,20 @@ unsigned __int64 __readgsqword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Offset`  
- El desplazamiento desde el principio de `GS` a leer.  
+*Desplazamiento*<br/>
+[in] El desplazamiento desde el principio del `GS` a leer.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El contenido de la memoria del byte, word, palabra doble o quadword (como indica el nombre de la función llamada) en la ubicación `GS:[Offset]`.  
+ El contenido de la memoria del byte, word, palabra doble o quadword (tal y como se indica el nombre de la función llamado) en la ubicación `GS:[Offset]`.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|x64|  
+|`__readgsdword`|x64|  
+|`__readgsqword`|x64|  
+|`__readgsword`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: Advertencia del compilador C4961 | Documentos de Microsoft
+title: Advertencia del compilador C4961 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68027aa11bedc6e9ad94fddc71a217a5e91bd2ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397ada023e5640cacd53fe45ffd0d250c5799d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105156"
 ---
 # <a name="compiler-warning-c4961"></a>Advertencia del compilador C4961
-No se combinó ningún dato de perfil en 'archivo .pgd'; se han deshabilitado las optimizaciones guiadas por perfil.  
-  
- Ningún dato de perfil (archivos .pgc) estaba disponible, por lo que no se pueden realizar las optimizaciones guiadas por perfil.
+
+No se combinó ningún dato de perfil en 'archivo .pgd'; se han deshabilitado las optimizaciones guiadas por perfil.
+
+Ningún dato de perfil (archivos .pgc) estaba disponible, por lo que no se pueden realizar las optimizaciones guiadas por perfil.

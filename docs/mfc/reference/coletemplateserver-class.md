@@ -1,5 +1,5 @@
 ---
-title: Clase COleTemplateServer | Documentos de Microsoft
+title: COleTemplateServer (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,13 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212281"
 ---
-# <a name="coletemplateserver-class"></a>Clase COleTemplateServer
+# <a name="coletemplateserver-class"></a>COleTemplateServer (clase)
 Se utiliza para servidores de edición visual OLE, servidores de automatización y contenedores de vínculos (aplicaciones que admiten vínculos con incrustaciones).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,16 +52,16 @@ class COleTemplateServer : public COleObjectFactory
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Se conecta a una plantilla de documento al subyacente `COleObjectFactory` objeto.|  
+|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Se conecta a una plantilla de documento subyacente `COleObjectFactory` objeto.|  
 |[COleTemplateServer::Unregister](#unregister)|Anula el registro de la plantilla de documento asociado.|  
 |[COleTemplateServer:: UpdateRegistry](#updateregistry)|Registra el tipo de documento con el registro del sistema OLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase se deriva de la clase [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); por lo general, puede usar `COleTemplateServer` directamente en lugar de derivar su propia clase. `COleTemplateServer` usa un [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objeto para administrar los documentos de servidor. Use `COleTemplateServer` al implementar un servidor completo, es decir, un servidor que se pueden ejecutar como una aplicación independiente. Servidores completos suelen ser aplicaciones de múltiples documentos (MDI) de la interfaz, aunque se admiten las aplicaciones de único documento (SDI) de la interfaz. Una `COleTemplateServer` objeto es necesario para cada tipo de documento de servidor que admite una aplicación; es decir, si la aplicación de servidor es compatible con las hojas de cálculo y gráficos, debe tener dos `COleTemplateServer` objetos.  
+ Esta clase se deriva de la clase [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); por lo general, puede usar `COleTemplateServer` directamente en lugar de derivar su propia clase. `COleTemplateServer` usa un [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objeto para administrar los documentos de servidor. Use `COleTemplateServer` al implementar un servidor completo, es decir, un servidor que se puede ejecutar como una aplicación independiente. Servidores completos suelen ser aplicaciones de múltiples documentos (MDI) de la interfaz, aunque se admiten las aplicaciones de único documento (SDI) de la interfaz. Una `COleTemplateServer` objeto necesario para cada tipo de documento de servidor compatibles con la aplicación; es decir, si la aplicación de servidor es compatible con las hojas de cálculo y gráficos, debe tener dos `COleTemplateServer` objetos.  
   
- `COleTemplateServer` invalida el `OnCreateInstance` función de miembro definida por `COleObjectFactory`. Esta función miembro se llama el marco de trabajo para crear un objeto de C++ del tipo adecuado.  
+ `COleTemplateServer` invalida el `OnCreateInstance` función de miembro definida por `COleObjectFactory`. Esta función miembro se llama el marco de trabajo para crear un objeto de C++ del tipo correcto.  
   
- Para obtener más información acerca de los servidores, vea el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md).  
+ Para obtener más información acerca de los servidores, consulte el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,10 +83,10 @@ COleTemplateServer();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener una breve descripción del uso de la `COleTemplateServer` de clases, consulte la [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) general sobre la clase.  
+ Para obtener una breve descripción del uso de la `COleTemplateServer` de clases, vea el [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) información general de clases.  
   
 ##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
- Se conecta a la plantilla de documento que señala `pDocTemplate` al subyacente [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objeto.  
+ Se conecta a la que señala a la plantilla de documento *pDocTemplate* subyacente [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objeto.  
   
 ```  
 void ConnectTemplate(
@@ -95,17 +96,17 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Referencia al identificador de clase OLE que solicita la plantilla.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  Puntero a la plantilla de documento.  
   
- `bMultiInstance`  
- Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si **TRUE**, varias instancias de la aplicación se inicien para que cada solicitud crear un objeto.  
+ *bMultiInstance al*  
+ Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si es TRUE, se inician múltiples instancias de la aplicación para que cada solicitud crear un objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) del SDK de Windows.  
+ Para obtener más información, consulte [clave CLSID](/windows/desktop/com/clsid-key-hklm) en el SDK de Windows.  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Anula el registro de la plantilla de documento asociado.  
@@ -121,7 +122,7 @@ BOOL Unregister();
  EnterRemarks  
   
 ##  <a name="updateregistry"></a>  COleTemplateServer:: UpdateRegistry  
- Carga la información de tipo de archivo de la cadena de plantilla de documento y coloca dicha información en el registro del sistema OLE.  
+ Carga información de tipo de archivo de la cadena de plantilla de documento y coloca dicha información en el registro del sistema OLE.  
   
 ```  
 void UpdateRegistry(
@@ -132,40 +133,40 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nAppType`  
- Un valor de la **OLE_APPTYPE** enumeración, que se define en AFXDISP. H. Puede tener uno de los siguientes valores:  
+ *nAppType*  
+ Un valor de la enumeración OLE_APPTYPE, que se define en AFXDISP. H. Puede tener uno de los siguientes valores:  
   
-- `OAT_INPLACE_SERVER` Servidor tiene interfaz de usuario completa del servidor.  
+- OAT_INPLACE_SERVER Server tiene interfaz de usuario de servidor completo.  
   
-- `OAT_SERVER` El servidor admite solo incrustar.  
+- OAT_SERVER Server admite solo la incrustación de objetos.  
   
-- `OAT_CONTAINER` Contenedor admite vínculos a objetos incrustados.  
+- OAT_CONTAINER contenedor es compatible con vínculos a objetos incrustados.  
   
-- `OAT_DISPATCH_OBJECT` Objeto es `IDispatch`-compatibles con.  
+- Objeto OAT_DISPATCH_OBJECT es `IDispatch`-capaz.  
   
-- **OAT_DOC_OBJECT_SERVER** Server admite tanto incrustación y el modelo de componente de objetos de documento.  
+- Servidor OAT_DOC_OBJECT_SERVER admite tanto la incrustación y el modelo de objeto de documento de componentes.  
   
- `rglpszRegister`  
- Una lista de entradas que se escribe en el registro sólo si no hay entradas.  
+ *rglpszRegister*  
+ Una lista de entradas que se escribe en el registro solo si hay entradas.  
   
- `rglpszOverwrite`  
- Una lista de entradas que se escribe en el registro independientemente de que existan las entradas anteriores.  
+ *rglpszOverwrite*  
+ Una lista de entradas que se escribe en el registro, independientemente de que existan las entradas anteriores.  
   
- `bRegister`  
- Determina si la clase se va a registrar. Si `bRegister` es **TRUE**, la clase se registra con el registro del sistema. En caso contrario, anula el registro de la clase.  
+ *bInscríbase al*  
+ Determina si la clase es que se registrarán. Si *bInscríbase al* es TRUE, la clase se registra con el registro del sistema. En caso contrario, anula el registro de la clase.  
   
 ### <a name="remarks"></a>Comentarios  
- Se carga la información de registro mediante una llamada a [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Las subcadenas que se recuperan los identificados por los índices son **regFileTypeId**, **regFileTypeName**, y **fileNewName**, tal y como se describe en el `GetDocString` páginas de referencia.  
+ Se carga la información de registro mediante una llamada a [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Las subcadenas que se recuperan las identificadas por los índices son `regFileTypeId`, `regFileTypeName`, y `fileNewName`, tal y como se describe en el `GetDocString` páginas de referencia.  
   
- Si el **regFileTypeId** subcadena está vacía o si la llamada a `GetDocString` se produce un error por cualquier otro motivo, esta función produce un error y no se especifica la información de archivo en el registro.  
+ Si el `regFileTypeId` subcadena está vacía o si la llamada a `GetDocString` se produce un error por cualquier otra razón, esta función se produce un error y no se especifica la información de archivo en el registro.  
   
- La información de los argumentos `rglpszRegister` y `rglpszOverwrite` se escribe en el registro mediante una llamada a [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). La información de forma predeterminada, que se registra cuando los dos argumentos son **NULL**, es adecuado para la mayoría de las aplicaciones. Para obtener información sobre la estructura de la información de estos argumentos, vea `AfxOleRegisterServerClass`.  
+ La información de los argumentos *rglpszRegister* y *rglpszOverwrite* se escribe en el registro mediante una llamada a [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). La información de forma predeterminada, que se registra cuando los dos argumentos son NULL, es adecuada para la mayoría de las aplicaciones. Para obtener información sobre la estructura de la información de estos argumentos, vea `AfxOleRegisterServerClass`.  
   
- Para obtener más información, consulta [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo HIERSVR](../../visual-cpp-samples.md)   
  [COleObjectFactory (clase)](../../mfc/reference/coleobjectfactory-class.md)   
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [Clase COleServerDoc](../../mfc/reference/coleserverdoc-class.md)   
+ [COleServerDoc (clase)](../../mfc/reference/coleserverdoc-class.md)   
  [COleServerItem (clase)](../../mfc/reference/coleserveritem-class.md)

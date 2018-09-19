@@ -11,11 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6310281aa86c48ae0a8b0fb313e79994d0b9b538
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 305b7c40e6fd6bc7b185854fedd0df81cf84ccbd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101890"
 ---
 # <a name="ltistreamgt-functions"></a>Funciones &lt;istream&gt;
 
@@ -41,9 +42,11 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Una secuencia.
+*left*<br/>
+Flujo.
 
-`right` Una secuencia.
+*right*<br/>
+Flujo.
 
 ## <a name="ws"></a>  ws
 
@@ -55,7 +58,8 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parámetros
 
-`_Istr` Una secuencia.
+*_Istr*<br/>
+Flujo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -65,7 +69,7 @@ La secuencia.
 
 El manipulador extrae y descarta todos los elementos `ch` para los que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) sea true.
 
-La función llama a [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) si encuentra el final del archivo al extraer elementos. Devuelve `_Istr`.
+La función llama a [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) si encuentra el final del archivo al extraer elementos. Devuelve *_Istr*.
 
 ### <a name="example"></a>Ejemplo
 

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87709026e9cc088b03f6e04dd30bd49d2cf3707b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 648b0e1addd509652ba67e09d32dbdd060f29e87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074427"
 ---
 # <a name="system-calls"></a>Llamadas del sistema
 
@@ -38,6 +39,6 @@ Las siguientes funciones son llamadas del sistema operativo Windows.
 ## <a name="see-also"></a>Vea también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Control de archivos](../c-runtime-library/file-handling.md)<br/>
- [Control de directorio](../c-runtime-library/directory-control.md)<br/>
- [E/S de bajo nivel](../c-runtime-library/low-level-i-o.md)<br/>
+[Control de archivos](../c-runtime-library/file-handling.md)<br/>
+[Control de directorio](../c-runtime-library/directory-control.md)<br/>
+[E/S de bajo nivel](../c-runtime-library/low-level-i-o.md)<br/>

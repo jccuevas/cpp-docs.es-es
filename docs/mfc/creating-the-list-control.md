@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342051"
 ---
 # <a name="creating-the-list-control"></a>Crear el control de lista
 Cómo controlar la lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) se crea depende de si está utilizando el control directamente o utilizando la clase [CListView](../mfc/reference/clistview-class.md) en su lugar. Si usa `CListView`, el marco de trabajo construye la vista como parte de su secuencia de creación de documento/vista. Crear la vista de lista, crea el control de la lista también (los dos son lo mismo). El control se crea en la vista [OnCreate](../mfc/reference/cwnd-class.md#oncreate) función de controlador. En este caso, el control está listo para agregar elementos a través de una llamada a [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

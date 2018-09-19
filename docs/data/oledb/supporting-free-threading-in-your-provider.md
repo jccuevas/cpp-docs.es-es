@@ -1,5 +1,5 @@
 ---
-title: Admitir el subprocesamiento libre en un proveedor | Documentos de Microsoft
+title: Admitir el subprocesamiento libre en un proveedor | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf12ffedca5140193564dc6a9a49203ced6d870a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087999"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Admitir el subprocesamiento libre en un proveedor
-Todas las clases de proveedor de OLE DB son seguras para subprocesos y entradas del registro se establecen en consecuencia. Es una buena idea para admitir el subprocesamiento libre para ayudar a proporcionar un alto nivel de rendimiento en situaciones multiusuario. Para ayudar a mantener su proveedor de subprocesos, debe comprobar que el código está bloqueado correctamente. Cada vez que intenta escribir o almacena los datos, debe bloquear el acceso con secciones críticas.  
+
+Todas las clases de proveedor OLE DB son seguras para subprocesos y las entradas del registro se establecen en consecuencia. Es una buena idea para admitir el subprocesamiento libre para ayudar a proporcionar un alto nivel de rendimiento en situaciones multiusuario. Para ayudar a mantener su proveedor de seguros para subprocesos, debe comprobar que el código está bloqueado correctamente. Cada vez que escribe o almacena datos, debe bloquear el acceso con secciones críticas.  
   
- Cada objeto de plantilla de proveedor OLE DB tiene su propia sección crítica. Para facilitar el bloqueo, cada clase nueva que cree debe ser una clase de plantilla que toma la clase primaria nombre como un argumento.  
+Cada objeto de plantilla de proveedor OLE DB tiene su propia sección crítica. Para facilitar el bloqueo, cada clase nueva que cree debe ser una clase de plantilla que toma la clase primaria nombre como argumento.  
   
- En el ejemplo siguiente se muestra cómo bloquear el código:  
+El ejemplo siguiente muestra cómo bloquear el código:  
   
-```  
+```cpp  
 template <class T>  
 class CMyObject<T> : public...  
   
@@ -46,9 +48,10 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Para obtener más información acerca de cómo proteger las secciones críticas con `Lock` y `Unlock`, consulte [subprocesamiento múltiple: cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+Para obtener más información acerca de cómo proteger las secciones críticas con `Lock` y `Unlock`, consulte [Multithreading: uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- También debe comprobar que todos los métodos de invalidación (como `Execute`) son seguras para subprocesos.  
+También debe comprobar que los métodos de invalidación (como `Execute`) son seguros para subprocesos.  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

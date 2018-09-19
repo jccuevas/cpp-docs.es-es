@@ -1,5 +1,5 @@
 ---
-title: Instrucción if-else (C++) | Documentos de Microsoft
+title: if-else (instrucción) (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.technology:
@@ -19,45 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031464"
 ---
 # <a name="if-else-statement-c"></a>if-else (Instrucción) (C++)
-Controla la bifurcación condicional. Las instrucciones de la *bloque if* se ejecuta sólo si el *expresión if* se evalúa como un valor distinto de cero (o `true`). Si el valor de *expresión* es distinto de cero, *statement1* y cualquier otra instrucción en el bloque se ejecutan y el bloque-else, si está presente, se omite. Si el valor de *expresión* es cero, a continuación, se omite el bloque if y el bloque-else, si está presente, se ejecuta. Las expresiones que se evalúan como distinto de cero son
-- `true`
-- un puntero no nulo,
-- cualquier valor distinto de cero aritmético, o 
-- Escriba un tipo de clase que define una conversión no ambigua a un aritmética, booleano o de puntero. (Para obtener información acerca de las conversiones, vea [conversiones estándar](../cpp/standard-conversions.md).)   
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-if ( expression )  
+
+Controla la bifurcación condicional. Las instrucciones de la *bloques if* se ejecutan solo si el *expresión if* se evalúa como un valor distinto de cero (o TRUE). Si el valor de *expresión* es distinto de cero, *statement1* y cualquier otra instrucción en el bloque se ejecutan y el bloque-else, si está presente, se omite. Si el valor de *expresión* es cero, a continuación, se omite el bloque if y el bloque-else, si está presente, se ejecuta. Son expresiones que se evalúan como distinto de cero
+- true
+- un puntero no null,
+- cualquier valor distinto de cero aritmético, o
+- Escriba un tipo de clase que define una conversión no ambigua a una aritmética, booleano o de puntero. (Para obtener información sobre las conversiones, vea [conversiones estándar](../cpp/standard-conversions.md).)
+
+## <a name="syntax"></a>Sintaxis
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -69,11 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
-## <a name="example"></a>Ejemplo  
-```  
-// if_else_statement.cpp  
+}
+```
+
+## <a name="example"></a>Ejemplo
+
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -101,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -116,18 +119,19 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
-## <a name="if-statement-with-an-initializer"></a>Si la instrucción con un inicializador
-**Visual Studio 2017 15,3 y versiones posteriores** (disponible con [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): una **si** instrucción también puede contener una expresión que declara e inicializa una variable con nombre. Utilice este formulario de la instrucción if cuando sólo se necesita la variable dentro del ámbito del bloque if. 
+```
+## <a name="if_with_init"></a> Si la instrucción con un inicializador
+
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): un **si** instrucción también puede contener una expresión que se declara e inicializa una variable con nombre. Utilice este formulario de la instrucción if cuando la variable solo es necesario dentro del ámbito del bloque de if.
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
 #include <string>
 #include <algorithm>
-
 
 using namespace std;
 
@@ -156,22 +160,21 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
- En todos los formularios de la **si** instrucción, *expresión*, que puede tener cualquier valor excepto una estructura, se evalúa, incluidos todos los efectos secundarios. El control se transfiere desde el **si** instrucción a la siguiente instrucción en el programa a menos que uno de la *instrucción*contenga un [salto](../cpp/break-statement-cpp.md), [continuar](../cpp/continue-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md).  
-  
- El **else** cláusula de una `if...else` instrucción está asociada con el más cercano anterior **si** instrucción en el mismo ámbito que no tiene su correspondiente **else** instrucción.   
+En todos los formularios de la **si** instrucción, *expresión*, que puede tener cualquier valor excepto una estructura, se evalúa, incluidos todos los efectos. Control pasa de la **si** instrucción a la siguiente instrucción en el programa a menos que uno de los *instrucción*s contiene un [salto](../cpp/break-statement-cpp.md), [continuar](../cpp/continue-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md).
 
-## <a name="constexpr-if-statements"></a>constexpr si las instrucciones
-**Visual Studio 2017 15,3 y versiones posteriores** (disponible con [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): en plantillas de función, puede usar un **constexpr si** instrucción para tomar decisiones de bifurcación de tiempo de compilación sin tener que recurrir a varias sobrecargas de función. Por ejemplo, puede escribir una sola función ese parámetro de identificadores para desempaquetar (no se necesita ninguna sobrecarga de parámetro de cero): 
+El **else** cláusula de una `if...else` instrucción está asociada con el más cercano anterior **si** instrucción en el mismo ámbito que no tiene la correspondiente **else** instrucción.
+
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Si las instrucciones de constexpr
+
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): en las plantillas de función, puede usar un **si constexpr** instrucción para tomar decisiones de bifurcación de tiempo de compilación sin tener que recurrir a varias sobrecargas de función. Por ejemplo, puede escribir una sola función ese parámetro de identificadores para desempaquetar (no se necesita ninguna sobrecarga de parámetro de cero):
 
 ```cpp
 template <class T, class... Rest>
@@ -181,10 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -193,9 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
-## <a name="see-also"></a>Vea también  
- [Instrucciones de selección](../cpp/selection-statements-cpp.md)   
- [Palabras clave](../cpp/keywords-cpp.md)   
- [switch (Instrucción) (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Vea también
+
+[Instrucciones de selección](../cpp/selection-statements-cpp.md)<br/>
+[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[switch (Instrucción) (C++)](../cpp/switch-statement-cpp.md)

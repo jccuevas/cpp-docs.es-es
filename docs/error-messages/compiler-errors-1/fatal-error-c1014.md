@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1014 | Documentos de Microsoft
+title: Error irrecuperable C1014 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52f0d998e124412c3cf81de4efa762d1c0c346e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c85cff5895326b9a96e9254cebb27fc267550f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103976"
 ---
 # <a name="fatal-error-c1014"></a>Error irrecuperable C1014
-Hay demasiados archivos de inclusión: profundidad = nivel  
-  
- El anidamiento de directivas `#include` es demasiado profundo. Las directivas anidadas pueden incluir archivos abiertos. El archivo de código fuente que contiene la directiva se cuenta como un archivo.
+
+Hay demasiados archivos de inclusión: profundidad = nivel
+
+El anidamiento de directivas `#include` es demasiado profundo. Las directivas anidadas pueden incluir archivos abiertos. El archivo de código fuente que contiene la directiva se cuenta como un archivo.

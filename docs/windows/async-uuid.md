@@ -1,5 +1,5 @@
 ---
-title: async_uuid | Documentos de Microsoft
+title: async_uuid | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1117ba3933d714486f314510d0288f0c63bf4b8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202381"
 ---
 # <a name="asyncuuid"></a>async_uuid
-Especifica el UUID que hace que el compilador MIDL para definir versiones sincrónicas y asincrónicas de una interfaz COM.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      [async_uuid (  
-   uuid  
-)]  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *uuid*  
- UUID que identifica la versión de la interfaz.  
-  
-## <a name="remarks"></a>Comentarios  
- El **async_uuid** atributo C++ tiene la misma funcionalidad que la [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) atributo MIDL.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// cpp_attr_ref_async_uuid.cpp  
-// compile with: /LD  
-#include <Windows.h>  
-[module(name="Test")];  
-[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),   
-async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]  
-__interface ICustom {  
-   HRESULT Custom([in] long l, [out, retval] long *pLong);  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|`interface`|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|**dual**, **dispinterface**|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de interfaz](../windows/interface-attributes.md)   
+
+Especifica el UUID que indica al compilador MIDL para definir las versiones sincrónicas y asincrónicas de una interfaz COM.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[async_uuid (
+   uuid
+)]
+```
+
+### <a name="parameters"></a>Parámetros
+
+*uuid*  
+Un UUID que identifica la versión de la interfaz.
+
+## <a name="remarks"></a>Comentarios
+
+El **async_uuid** atributo de C++ tiene la misma funcionalidad que el [async_uuid](/windows/desktop/Midl/async-uuid) atributo MIDL.
+
+## <a name="example"></a>Ejemplo
+
+```cpp
+// cpp_attr_ref_async_uuid.cpp
+// compile with: /LD
+#include <Windows.h>
+[module(name="Test")];
+[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),
+async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]
+__interface ICustom {
+   HRESULT Custom([in] long l, [out, retval] long *pLong);
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|`interface`|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|**dual**, **dispinterface**|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos de interfaz](../windows/interface-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2904 | Documentos de Microsoft
+title: Error del compilador C2904 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 003f907cd82abb5d3aa2ce8502074cc39d16699b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f305ccab68a5b0d59cb3d4246b51fed61c6bf7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061570"
 ---
 # <a name="compiler-error-c2904"></a>Error del compilador C2904
-'identifier': el nombre ya se usó para una plantilla en el ámbito actual  
-  
- Compruebe el código en busca de nombres duplicados.  
-  
- El ejemplo siguiente genera la advertencia C2904:  
-  
-```  
-// C2904.cpp  
-// compile with: /c  
-void X();  // X is declared as a function  
-template<class T> class X{};  // C2904  
+
+'identifier': el nombre ya se usó para una plantilla en el ámbito actual
+
+Compruebe el código en busca de nombres duplicados.
+
+El ejemplo siguiente genera la advertencia C2904:
+
+```
+// C2904.cpp
+// compile with: /c
+void X();  // X is declared as a function
+template<class T> class X{};  // C2904
 ```

@@ -23,18 +23,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 452c6803ea05f051727a1417aee49c3a56759141
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5fceb2681befa5ed9c8c82facb85442aed2d646
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023350"
 ---
 # <a name="ansi-c-compliance"></a>Conformidad con ANSI C
-La convención de nomenclatura de todos los identificadores específicos de Microsoft en el sistema en tiempo de ejecución (por ejemplo, funciones, macros, constantes, variables y definiciones de tipo) cumple la norma ANSI. En esta documentación, cualquier función de tiempo de ejecución que sigue las normas ANSI/ISO C se indica como conforme con ANSI. Las aplicaciones conformes con ANSI solo deben usar estas funciones compatible con ANSI.  
-  
- Los nombres de funciones específicas de Microsoft y las variables globales comienzan con un único guión bajo. Estos nombres se pueden invalidar solo localmente, dentro del ámbito de su código. Por ejemplo, cuando se incluyen los archivos de encabezado de tiempo de ejecución de Microsoft, puede invalidar localmente la función específica de Microsoft denominada `_open` al declarar una variable local del mismo nombre. Sin embargo, no se puede utilizar este nombre para su propia función o variable globales.  
-  
- Los nombres de macros y constantes de manifiesto específicas de Microsoft empiezan con dos guiones bajos o con un único guión bajo inicial seguido inmediatamente por una letra mayúscula. El ámbito de estos identificadores es absoluto. Por ejemplo, no se puede usar el identificador específico de Microsoft **_UPPER** por esta razón.  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad](../c-runtime-library/compatibility.md)
+
+La convención de nomenclatura de todos los identificadores específicos de Microsoft en el sistema en tiempo de ejecución (por ejemplo, funciones, macros, constantes, variables y definiciones de tipo) cumple la norma ANSI. En esta documentación, cualquier función de tiempo de ejecución que sigue las normas ANSI/ISO C se indica como conforme con ANSI. Las aplicaciones conformes con ANSI solo deben usar estas funciones compatible con ANSI.
+
+Los nombres de funciones específicas de Microsoft y las variables globales comienzan con un único guión bajo. Estos nombres se pueden invalidar solo localmente, dentro del ámbito de su código. Por ejemplo, cuando se incluyen los archivos de encabezado de tiempo de ejecución de Microsoft, puede invalidar localmente la función específica de Microsoft denominada `_open` al declarar una variable local del mismo nombre. Sin embargo, no se puede utilizar este nombre para su propia función o variable globales.
+
+Los nombres de macros y constantes de manifiesto específicas de Microsoft empiezan con dos guiones bajos o con un único guión bajo inicial seguido inmediatamente por una letra mayúscula. El ámbito de estos identificadores es absoluto. Por ejemplo, no se puede usar el identificador específico de Microsoft **_UPPER** por esta razón.
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad](../c-runtime-library/compatibility.md)

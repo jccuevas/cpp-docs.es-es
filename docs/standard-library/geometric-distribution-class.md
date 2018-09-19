@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca6120a8cd649b1c4d3d5d662cb987d950b9b4e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110391"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution (Clase)
 
@@ -75,9 +76,11 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType* el tipo de resultado entero, valor predeterminado es `int`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*IntType*<br/>
+El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG* El motor de generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG*<br/>
+El uniforme generador motor de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -227,9 +230,11 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*p* el `p` parámetro de distribución.
+*p*<br/>
+El parámetro de distribución `p`.
 
-*parm* la estructura de parámetros utilizada para construir la distribución.
+*parm*<br/>
+La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -256,9 +261,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*p* el `p` parámetro de distribución.
+*p*<br/>
+El parámetro de distribución `p`.
 
-*derecho* el `param_type` instancia para esta opción para comparar.
+*right*<br/>
+La instancia `param_type` que comparar con esta.
 
 ### <a name="remarks"></a>Comentarios
 

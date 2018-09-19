@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: sobrecargar funciones con punteros internos y punteros nativos (C++ / CLI) | Documentos de Microsoft'
+title: 'Cómo: sobrecargar funciones con punteros internos y punteros nativos (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,63 +15,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c019114726f696461de58d2dc4110a3150318c8f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598006"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Cómo: Sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)
-Las funciones se pueden sobrecargar dependiendo de si el tipo de parámetro es un puntero interior o un puntero nativo.  
-  
+
+Las funciones se pueden sobrecargar dependiendo de si el tipo de parámetro es un puntero interior o puntero nativo.
+
 > [!IMPORTANT]
->  Esta característica de lenguaje es compatible con la **/CLR** opción del compilador, pero no en el **/ZW** opción del compilador.  
-  
-## <a name="example"></a>Ejemplo  
-  
-### <a name="code"></a>Código  
-  
-```  
-// interior_ptr_overload.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-// C++ class  
-struct S {  
-   int i;  
-};  
-  
-// managed class  
-ref struct G {  
-   int i;  
-};  
-  
-// can update unmanaged storage  
-void f( int* pi ) {  
-   *pi = 10;  
-   Console::WriteLine("in f( int* pi )");  
-}  
-  
-// can update managed storage  
-void f( interior_ptr<int> pi ) {  
-   *pi = 10;   
-   Console::WriteLine("in f( interior_ptr<int> pi )");  
-}  
-  
-int main() {  
-   S *pS = new S;   // C++ heap  
-   G ^pG = gcnew G;   // common language runtime heap  
-   f( &pS->i );  
-   f( &pG->i );  
-};  
-```  
-  
-### <a name="output"></a>Salida  
-  
-```  
+> Esta característica del lenguaje es compatible con la `/clr` opción del compilador, pero no mediante el `/ZW` opción del compilador.
+
+## <a name="example"></a>Ejemplo
+
+### <a name="code"></a>Código
+
+```cpp
+// interior_ptr_overload.cpp
+// compile with: /clr
+using namespace System;
+
+// C++ class
+struct S {
+   int i;
+};
+
+// managed class
+ref struct G {
+   int i;
+};
+
+// can update unmanaged storage
+void f( int* pi ) {
+   *pi = 10;
+   Console::WriteLine("in f( int* pi )");
+}
+
+// can update managed storage
+void f( interior_ptr<int> pi ) {
+   *pi = 10;
+   Console::WriteLine("in f( interior_ptr<int> pi )");
+}
+
+int main() {
+   S *pS = new S;   // C++ heap
+   G ^pG = gcnew G;   // common language runtime heap
+   f( &pS->i );
+   f( &pG->i );
+};
+```
+
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+```
+
+## <a name="see-also"></a>Vea también
+
+[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

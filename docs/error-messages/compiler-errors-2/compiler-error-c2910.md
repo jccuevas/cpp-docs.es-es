@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2910 | Documentos de Microsoft
+title: Error del compilador C2910 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,70 +16,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec2baafae0647964a56afaed3286140f8b9f759
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d726fffa61ed80352626df7a6f89467c420152bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136132"
 ---
 # <a name="compiler-error-c2910"></a>Error del compilador C2910
-'función': no se puede especializar de forma explícita  
-  
- El compilador detectó un intento de especializar de forma explícita una función dos veces.  
-  
- El ejemplo siguiente genera el error C2910:  
-  
-```  
-// C2910.cpp  
-// compile with: /c  
-template <class T>  
-struct S;  
-  
-template <> struct S<int> { void f() {} };  
-template <> void S<int>::f() {}   // C2910 delete this specialization  
-```  
-  
- También puede generarse el error C2910 si se intenta especializar explícitamente un miembro no es de plantilla. Es decir, solo explícitamente pueden especializar una plantilla de función.  
-  
- El ejemplo siguiente genera el error C2910:  
-  
-```  
-// C2910b.cpp  
-// compile with: /c  
-template <class T> struct A {  
-   A(T* p);  
-};  
-  
-template <> struct A<void> {  
-   A(void* p);  
-};  
-  
-template <class T>  
-inline A<T>::A(T* p) {}  
-  
-template <> A<void>::A(void* p){}   // C2910  
-// try the following line instead  
-// A<void>::A(void* p){}  
-```  
-  
- Este error también se generará como resultado del trabajo de conformidad del compilador efectuado en Visual Studio .NET 2003:.  
-  
- Para obtener código será válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++, quite `template <>`.  
-  
- El ejemplo siguiente genera el error C2910:  
-  
-```  
-// C2910c.cpp  
-// compile with: /c  
-template <class T> class A {  
-   void f();  
-};  
-  
-template <> class A<int> {  
-   void f();  
-};  
-  
-template <> void A<int>::f() {}   // C2910  
-// try the following line instead  
-// void A<int>::f(){}   // OK  
+
+'function': no se puede especializar explícitamente
+
+El compilador detectó un intento de especializar de forma explícita una función dos veces.
+
+El ejemplo siguiente genera el error C2910:
+
+```
+// C2910.cpp
+// compile with: /c
+template <class T>
+struct S;
+
+template <> struct S<int> { void f() {} };
+template <> void S<int>::f() {}   // C2910 delete this specialization
+```
+
+C2910 también puede generarse si intenta especializar explícitamente un miembro que no son de plantilla. Es decir, solo explícitamente puede especializar una plantilla de función.
+
+El ejemplo siguiente genera el error C2910:
+
+```
+// C2910b.cpp
+// compile with: /c
+template <class T> struct A {
+   A(T* p);
+};
+
+template <> struct A<void> {
+   A(void* p);
+};
+
+template <class T>
+inline A<T>::A(T* p) {}
+
+template <> A<void>::A(void* p){}   // C2910
+// try the following line instead
+// A<void>::A(void* p){}
+```
+
+Este error también se generará como resultado del trabajo de conformidad del compilador efectuado en Visual Studio .NET 2003:.
+
+Quitar de código será válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++, `template <>`.
+
+El ejemplo siguiente genera el error C2910:
+
+```
+// C2910c.cpp
+// compile with: /c
+template <class T> class A {
+   void f();
+};
+
+template <> class A<int> {
+   void f();
+};
+
+template <> void A<int>::f() {}   // C2910
+// try the following line instead
+// void A<int>::f(){}   // OK
 ```

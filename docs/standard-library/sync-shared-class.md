@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963464"
 ---
 # <a name="syncshared-class"></a>sync_shared (Clase)
 
@@ -43,7 +44,7 @@ class sync_shared
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Cache`|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Caché*|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funciones miembro
 
@@ -71,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`count`|El número de elementos de la matriz que se van a asignar.|
+|*count*|El número de elementos de la matriz que se van a asignar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -93,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|
+|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -112,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Cache`|El tipo de caché asociado al filtro de sincronización.|
-|`Other`|La caché para comparar la igualdad.|
+|*Caché*|El tipo de caché asociado al filtro de sincronización.|
+|*Otros problemas*|La caché para comparar la igualdad.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el resultado de `cache.equals(Other.cache)`, donde `cache` representa el objeto de caché, en `true`. De lo contrario, es `false`.
+**True** si el resultado de `cache.equals(Other.cache)`, donde `cache` representa el objeto de caché, es **true**; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 

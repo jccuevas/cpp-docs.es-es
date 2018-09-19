@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953277"
 ---
 # <a name="canimationtimereventhandler-class"></a>Clase CAnimationTimerEventHandler
 Implementa una devolución de llamada, a la que llama la API de animación cuando se producen eventos de control de tiempo.  
@@ -76,10 +77,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pAnimationController`  
+ *pAnimationController*  
  Un puntero al controlador de animación, que recibe eventos.  
   
- `ppTimerEventHandler`  
+ *ppTimerEventHandler*  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se realiza correctamente, devuelve S_OK. En caso contrario, devuelve un código de error HRESULT.  
@@ -112,7 +113,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `fps`  
+ *fps*  
   
 ### <a name="return-value"></a>Valor devuelto  
  S_OK si el método tiene éxito; en caso contrario E_FAIL.  
@@ -125,7 +126,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pAnimationController`  
+ *pAnimationController*  
  Un puntero al controlador de animación, que recibe eventos.  
   
 ## <a name="see-also"></a>Vea también  

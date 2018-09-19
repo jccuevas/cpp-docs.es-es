@@ -34,15 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108324"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-Habilitar o deshabilitar la compatibilidad de la **%n** dar formato de [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-familia de funciones.
+Habilitar o deshabilitar la compatibilidad de la **%n** formatear en [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-familia de funciones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,15 +55,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parámetros
 
-*habilitar* un valor distinto de cero para habilitar **%n** admitir, 0 para deshabilitar la **%n** admite.
+*habilitar*<br/>
+Un valor distinto de cero para habilitar **%n** admitir, 0 para deshabilitar **%n** admite.
 
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
-El estado de **%n** admite antes de llamar a esta función: if distinto de cero **%n** se habilita la compatibilidad, 0 si se deshabilitó.
+El estado de **%n** admite antes de llamar a esta función: distinto de cero if **%n** se ha habilitado la compatibilidad, 0 si se deshabilitó.
 
 ## <a name="remarks"></a>Comentarios
 
-Por razones de seguridad, compatibilidad con la **%n** especificador de formato está deshabilitada de forma predeterminada en **printf** y todas sus variantes. Si **%n** se encuentra en un **printf** especificación de formato, el comportamiento predeterminado consiste en que se invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Al llamar a **_set_printf_count_output** con un argumento distinto de cero provocarán **printf**-familia de funciones para interpretar **%n** tal y como se describe en [formato Sintaxis de especificación: funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Por motivos de seguridad, compatibilidad con la **%n** especificador de formato está deshabilitado de forma predeterminada en **printf** y todas sus variantes. Si **%n** se encuentra en un **printf** especificación de formato, el comportamiento predeterminado consiste en invocar el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Una llamada a **_set_printf_count_output** con un argumento distinto de cero provocará **printf**-familia de funciones para interpretar **%n** como se describe en [formato Sintaxis de especificación: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954600"
 ---
 # <a name="using-tree-controls"></a>Usar controles de árbol
 Uso típico de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sigue el modelo siguiente:  
@@ -30,7 +31,7 @@ Uso típico de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-clas
   
 -   Colocar datos en el control mediante una llamada a la `CTreeCtrl`del [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) función una vez para cada elemento de datos. `InsertItem` Devuelve un identificador para el elemento que se puede utilizar para hacer referencia a él más adelante, como cuando se agregan elementos secundarios. Es un buen momento para inicializar los datos en `OnInitDialog` (para los controles de cuadros de diálogo) o `OnInitialUpdate` (para las vistas).  
   
--   Cuando el usuario interactúa con el control, enviará varios mensajes de notificación. Puede especificar una función para controlar cada uno de los mensajes que desea controlar mediante la adición de un **ON_NOTIFY_REFLECT** macro en el mapa de mensajes de la ventana de control o mediante la adición de un `ON_NOTIFY` macro al mapa de mensajes de la ventana primaria. Vea [mensajes de notificación de controles de árbol](../mfc/tree-control-notification-messages.md) más adelante en este tema para obtener una lista de las notificaciones posibles.  
+-   Cuando el usuario interactúa con el control, enviará varios mensajes de notificación. Puede especificar una función para controlar cada uno de los mensajes que desea controlar mediante la adición de una macro ON_NOTIFY_REFLECT en mapa de mensajes de la ventana de control o agregando una macro ON_NOTIFY al mapa de mensajes de la ventana primaria. Vea [mensajes de notificación de controles de árbol](../mfc/tree-control-notification-messages.md) más adelante en este tema para obtener una lista de las notificaciones posibles.  
   
 -   Llame a las distintas funciones de miembro Set para establecer valores para el control. Los cambios que puede realizar incluyen establecer la sangría y cambiar el texto, imágenes o datos asociados a un elemento.  
   

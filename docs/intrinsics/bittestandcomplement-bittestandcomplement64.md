@@ -1,5 +1,5 @@
 ---
-title: _bittestandcomplement, _bittestandcomplement64 | Documentos de Microsoft
+title: _bittestandcomplement, _bittestandcomplement64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1c3eb6f6447363fee7bafca33b8ea59c1c7e45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e52bb1fcd0b8d7321ead43c79003032a089a22fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723364"
 ---
 # <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 **Específicos de Microsoft**  
@@ -46,11 +47,11 @@ unsigned char _bittestandcomplement64(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in, out] `a`  
- Puntero a la memoria que se va a examinar.  
+*a*<br/>
+[in, out] Un puntero a la memoria que se va a examinar.  
   
- [in] `b`  
- La posición de bit que se va a probar.  
+*b*<br/>
+[in] La posición de bit para probar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El bit en la posición especificada.  
@@ -59,8 +60,8 @@ unsigned char _bittestandcomplement64(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_bittestandcomplement`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandcomplement64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandcomplement`|x86, ARM, x64|  
+|`_bittestandcomplement64`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

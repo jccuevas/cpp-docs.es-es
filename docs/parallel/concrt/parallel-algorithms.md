@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694890"
 ---
 # <a name="parallel-algorithms"></a>Algoritmos paralelos
 Parallel Patterns Library (PPL) proporciona algoritmos que realizan el trabajo de forma simultánea en colecciones de datos. Estos algoritmos son similares a las proporcionadas por la biblioteca estándar de C++.  

@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6dbd817e6bcb9c7ff526bef98bd5c2c8c1f1bb3e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955175"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Cambio de tamaño y zoom en contexto de MFC/OLE
 > [!NOTE]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 -   El contenedor y el servidor deben mostrar los objetos para poder editarlo mediante las mismas métricas. Esto significa que se utiliza un modo de asignación en función del número de *lógico* píxeles por pulgada, no físicos píxeles por pulgada, al representar en el dispositivo de pantalla.  
   
 > [!NOTE]
->  Dado que la activación en contexto solo se aplica a los elementos que se incrustan (no vinculados), solo zoom se aplica a objetos incrustados. Verá las API en ambos `COleServerDoc` y `COleServerItem` que se usan para ajustar el zoom. El motivo de este dichotomy es que sólo las funciones que son válidas para los elementos vinculados e incrustados son en `COleServerItem` (Esto le permite tener una implementación común) y funciones que solo son válidas para los objetos incrustados se encuentran en el `COleServerDoc` clase (desde la perspectiva del servidor, es el `document` incrustados).  
+>  Dado que la activación en contexto solo se aplica a los elementos que se incrustan (no vinculados), solo zoom se aplica a objetos incrustados. Verá las API en ambos `COleServerDoc` y `COleServerItem` que se usan para ajustar el zoom. El motivo de este dichotomy es que sólo las funciones que son válidas para los elementos vinculados e incrustados son en `COleServerItem` (Esto le permite tener una implementación común) y funciones que solo son válidas para los objetos incrustados se encuentran en el `COleServerDoc` clase (desde la perspectiva del servidor, es el **documento** incrustados).  
   
  La mayor parte de la carga se coloca en el implementador de servidor, en que el servidor debe tener en cuenta el factor de zoom del contenedor y modificar su edición interfaz según corresponda. Pero ¿cómo se determina el factor de zoom que está usando el contenedor en el servidor  
   
@@ -57,7 +58,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  El rectángulo de posición está determinado por el contenedor. Se devuelve al servidor durante la activación en contexto al `COleClientItem::OnGetItemPosition` se llama y se actualiza cuando el contenedor llama el servidor `COleServerDoc::OnSetItemRects` (con una llamada a `COleClientItem::SetItemRects`).  
   
- La extensión de contenedor es ligeramente más compleja para calcular. Si el contenedor se denomina `COleServerItem::OnSetExtent` (con una llamada a `COleClientItem::SetExtent`), a continuación, la extensión de contenedor es este valor convertido en píxeles en función del número de píxeles por pulgada lógica. Si el contenedor no llamado SetExtent (que suele ser el caso), la extensión de contenedor es el tamaño devuelto desde `COleServerItem::OnGetExtent`. Por lo tanto, si el contenedor no llamado SetExtent, el marco de trabajo se da por supuesto que si lo hiciera el contenedor habría lo han llamado con 100% de la extensión natural (el valor devuelto de **COleServerItem::GetExtent**). Expresado de otra forma, el marco de trabajo, se da por supuesto que el contenedor muestra 100% (no más, pero no menos) del elemento.  
+ La extensión de contenedor es ligeramente más compleja para calcular. Si el contenedor se denomina `COleServerItem::OnSetExtent` (con una llamada a `COleClientItem::SetExtent`), a continuación, la extensión de contenedor es este valor convertido en píxeles en función del número de píxeles por pulgada lógica. Si el contenedor no llamado SetExtent (que suele ser el caso), la extensión de contenedor es el tamaño devuelto desde `COleServerItem::OnGetExtent`. Por lo tanto, si el contenedor no llamado SetExtent, el marco de trabajo se da por supuesto que si lo hiciera el contenedor habría lo han llamado con 100% de la extensión natural (el valor devuelto de `COleServerItem::GetExtent`). Expresado de otra forma, el marco de trabajo, se da por supuesto que el contenedor muestra 100% (no más, pero no menos) del elemento.  
   
  Es importante tener en cuenta que aunque `COleServerItem::OnSetExtent` y `COleServerItem::OnGetExtent` tienen nombres similares, no controlará el mismo atributo del elemento. `OnSetExtent` se llama para comunicar el servidor de la cantidad del objeto está visible en el contenedor (sin tener en cuenta el factor de zoom) y `OnGetExtent` se llama por el contenedor para determinar el tamaño ideal del objeto.  
   
@@ -70,7 +71,7 @@ Position Rectangle (PR) / Container Extent (CE)
  Esta función se invoca cuando el contenedor de muestra "más" del objeto. Mayoría de los contenedores no llamará a este en absoluto. La implementación predeterminada almacena el último valor recibido desde el contenedor en 'm_sizeExtent', que se usa en `COleServerDoc::GetZoomFactor` al calcular el valor de extensión de contenedor se ha descrito anteriormente.  
   
 ## <a name="coleserverdoconsetitemrects"></a>COleServerDoc::OnSetItemRects  
- Esta función se invoca cuando el documento activo en contexto. Se llama cuando el contenedor actualiza la posición del elemento o el recorte que se aplica al elemento. El rectángulo de posición, como se dijo anteriormente, proporciona el numerador para el cálculo del factor de zoom. Puede solicitar un servidor que puede cambiar la posición de los elementos mediante una llamada a `COleServerDoc::RequestPositionChange`. El contenedor puede o no puede responder a esta solicitud mediante una llamada a `OnSetItemRects` (con una llamada a **COleServerItem::SetItemRects**).  
+ Esta función se invoca cuando el documento activo en contexto. Se llama cuando el contenedor actualiza la posición del elemento o el recorte que se aplica al elemento. El rectángulo de posición, como se dijo anteriormente, proporciona el numerador para el cálculo del factor de zoom. Puede solicitar un servidor que puede cambiar la posición de los elementos mediante una llamada a `COleServerDoc::RequestPositionChange`. El contenedor puede o no puede responder a esta solicitud mediante una llamada a `OnSetItemRects` (con una llamada a `COleServerItem::SetItemRects`).  
   
 ## <a name="coleserverdocondraw"></a>COleServerDoc::OnDraw  
  Es importante tener en cuenta que el metarchivo creado mediante la invalidación de `COleServerItem::OnDraw` produce exactamente el mismo metarchivo, con independencia del factor de zoom actual. El contenedor escalará el metarchivo según corresponda. Se trata de una diferencia importante entre la vista `OnDraw` y el elemento de servidor `OnDraw`. Los identificadores de vista zoom, el elemento simplemente crea un *puede acercar* Metarchivo y deja hasta el contenedor para hacer el zoom adecuado.  
@@ -78,13 +79,13 @@ Position Rectangle (PR) / Container Extent (CE)
  La mejor manera de asegurarse de que el servidor se comporta correctamente consiste en usar la implementación de `COleServerDoc::GetZoomFactor` si el documento está activo en contexto.  
   
 ## <a name="mfc-support-for-in-place-resizing"></a>Compatibilidad con MFC para cambiar el tamaño en contexto  
- MFC implementa por completo la interfaz de cambio de tamaño en contexto como se describe en la especificación de OLE 2. La interfaz de usuario es compatible con la `COleResizeBar` de la clase, un mensaje personalizado **WM_SIZECHILD**y un tratamiento especial de este mensaje en `COleIPFrameWnd`.  
+ MFC implementa por completo la interfaz de cambio de tamaño en contexto como se describe en la especificación de OLE 2. La interfaz de usuario es compatible con la `COleResizeBar` (clase), un mensaje personalizado WM_SIZECHILD y un tratamiento especial de este mensaje en `COleIPFrameWnd`.  
   
  Puede que desee implementar un tratamiento distinto de este mensaje a lo que se proporciona el marco de trabajo. Como se describió anteriormente, el marco de trabajo deja los resultados de cambio de tamaño vigentes hasta el contenedor, el servidor responde a los cambios en el factor de zoom. Si el contenedor reacciona estableciendo tanto extensión de contenedor y el rectángulo de posición durante el procesamiento de su `COleClientItem::OnChangeItemPosition` (denominado como resultado de una llamada a `COleServerDoc::RequestPositionChange`), a continuación, se producirá el cambio de tamaño en contexto para mostrar "más o menos" del elemento en la edición ventana. Si el contenedor reacciona estableciendo simplemente el rectángulo de posición durante el procesamiento de `COleClientItem::OnChangeItemPosition`, cambiará el factor de zoom y el elemento se mostrará "acercado o alejar".  
   
  Un servidor puede controlar (hasta cierto punto), lo que sucede durante esta negociación. Por ejemplo, una hoja de cálculo, podría decidir mostrar más o menos celdas cuando el usuario cambia el tamaño de la ventana mientras se edita el elemento de contexto. Un procesador de textos podría optar por cambiar los márgenes de página"" para que sean la misma que la ventana y ajustar el texto en el margen nuevo. Implementan servidores esto cambiando la extensión natural (el tamaño devuelto desde `COleServerItem::OnGetExtent`) cuando se realiza el cambio de tamaño. Esto hará que el rectángulo de posición y la extensión de contenedor que se va a cambiar en la misma cantidad, lo que produce el mismo factor de zoom, pero un mayor o menor área de visualización. Además, más o menos del documento estará visible en el metarchivo generado por `OnDraw`. En este caso, el propio documento cambia cuando el usuario cambia el tamaño del elemento, en lugar de simplemente el área de visualización.  
   
- Puede implementar el cambio de tamaño personalizado y seguir aprovechando la interfaz de usuario proporcionada por `COleResizeBar` invalidando el **WM_SIZECHILD** el mensaje en su `COleIPFrameWnd` clase. Para obtener más información sobre las características específicas de **WM_SIZECHILD**, consulte [Nota técnica 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
+ Puede implementar el cambio de tamaño personalizado y seguir aprovechando la interfaz de usuario proporcionada por `COleResizeBar` invalidando el mensaje WM_SIZECHILD en su `COleIPFrameWnd` clase. Para obtener más información sobre las características específicas de WM_SIZECHILD, consulte [Nota técnica 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Notas técnicas por número](../mfc/technical-notes-by-number.md)   

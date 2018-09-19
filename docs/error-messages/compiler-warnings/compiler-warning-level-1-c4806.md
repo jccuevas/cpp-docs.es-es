@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4806 | Documentos de Microsoft
+title: Del compilador (nivel 1) de la advertencia C4806 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d5b36a653680285523c7cebb605238b37d57c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b580500c3887fe60b7864280ad5ca1804752f2ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062610"
 ---
 # <a name="compiler-warning-level-1-c4806"></a>Advertencia del compilador (nivel 1) C4806
-'operación': operación no segura: ningún valor del tipo 'tipo' promovido al tipo 'tipo' puede igualar la constante proporcionada.  
-  
- Este mensaje advierte de código como `b == 3`, donde `b` tiene un tipo `bool`. Las reglas de promoción provocan que `bool` se promueva a `int`. Está permitido, pero nunca puede ser **true**. El ejemplo siguiente genera la advertencia C4806:  
-  
-```  
-// C4806.cpp  
-// compile with: /W1  
-int main()  
-{  
-   bool b = true;  
-   // try..  
-   // int b = true;  
-  
-   if (b == 3)   // C4806  
-   {  
-      b = false;  
-   }  
-}  
+
+'operación': operación no segura: ningún valor del tipo 'tipo' promovido al tipo 'tipo' puede igualar la constante proporcionada.
+
+Este mensaje advierte de código como `b == 3`, donde `b` tiene un tipo `bool`. Las reglas de promoción provocan que `bool` se promueva a `int`. Está permitido, pero nunca puede ser **true**. El ejemplo siguiente genera la advertencia C4806:
+
+```
+// C4806.cpp
+// compile with: /W1
+int main()
+{
+   bool b = true;
+   // try..
+   // int b = true;
+
+   if (b == 3)   // C4806
+   {
+      b = false;
+   }
+}
 ```

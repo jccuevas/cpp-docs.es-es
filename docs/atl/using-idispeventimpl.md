@@ -1,5 +1,5 @@
 ---
-title: ¡Con IDispEventImpl (ATL) | Documentos de Microsoft
+title: Usar IDispEventImpl (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,67 +16,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 520d1129234a26ff6eb4c402154969ad7e166211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48afac392d02edfd3d312583642367bc6726e536
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106797"
 ---
-# <a name="using-idispeventimpl"></a>¡Con IDispEventImpl
-Cuando se usa `IDispEventImpl` para controlar los eventos, deberá:  
-  
--   Derive la clase de [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
-  
--   Agregue un mapa de receptores de eventos a la clase.  
-  
--   Agregar entradas en el mapa de receptor de eventos mediante el [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) o [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) macro.  
-  
--   Implemente los métodos que está interesado en el control.  
-  
--   Aconsejar y desaconsejar el origen del evento.  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente muestra cómo controlar la **DocumentChange** eventos desencadenados por de Word **aplicación** objeto. Este evento se define como un método en el **ApplicationEvents** dispinterface.  
-  
- El ejemplo está tomado del [ejemplo ATLEventHandling](../visual-cpp-samples.md).  
-  
- `[`  
-  
- `uuid(000209F7-0000-0000-C000-000000000046),`  
-  
- `hidden`  
-  
- `]`  
-  
- `dispinterface ApplicationEvents {`  
-  
- `properties:`  
-  
- `methods:`  
-  
- `[id(0x00000001), restricted, hidden]`  
-  
- `void Startup();`  
-  
- `[id(0x00000002)]`  
-  
- `void Quit();`  
-  
- `[id(0x00000003)]`  
-  
- `void DocumentChange();`  
-  
- `};`  
-  
- El ejemplo se utiliza `#import` para generar los archivos de encabezado necesarios desde la biblioteca de tipos de Word. Si desea utilizar este ejemplo con otras versiones de Word, debe especificar el archivo mso dll correcto. Por ejemplo, Office 2000 proporciona mso9.dll y OfficeXP proporciona mso.dll. Este código se ha simplificado de stdafx.h:  
-  
- [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
-  
- Aparece el siguiente código en NotSoSimple.h. El código relevante se anota mediante comentarios:  
-  
- [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
-  
-## <a name="see-also"></a>Vea también  
- [Control de eventos](../atl/event-handling-and-atl.md)   
- [Ejemplo ATLEventHandling](../visual-cpp-samples.md)
+# <a name="using-idispeventimpl"></a>Usar IDispEventImpl
+
+Cuando se usa `IDispEventImpl` para controlar eventos, tendrá que:
+
+- Derive la clase de [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
+
+- Agregar un mapa de receptores de eventos a la clase.
+
+- Agregar entradas en el mapa de receptor de eventos mediante el [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) o [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) macro.
+
+- Implemente los métodos que le interesa en el control.
+
+- Aconsejar y desaconsejar el origen del evento.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente muestra cómo controlar el `DocumentChange` eventos desencadenados por la palabra **aplicación** objeto. Este evento se define como un método en el `ApplicationEvents` dispinterface.
+
+El ejemplo proviene del [ejemplo ATLEventHandling](../visual-cpp-samples.md).  
+
+```cpp
+[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
+dispinterface ApplicationEvents {
+properties:
+methods:
+    [id(0x00000001), restricted, hidden]
+    void Startup();
+
+    [id(0x00000002)]
+    void Quit();
+
+    [id(0x00000003)]
+    void DocumentChange();
+};
+```
+
+El ejemplo se utiliza `#import` para generar los archivos de encabezado requeridos desde la biblioteca de tipos de Word. Si desea usar este ejemplo con otras versiones de Word, debe especificar el archivo dll de mso correcto. Por ejemplo, Office 2000 proporciona mso9.dll y OfficeXP proporciona mso.dll. Este código se ha simplificado de stdafx.h:
+
+[!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
+
+Aparece el siguiente código en NotSoSimple.h. El código relevante se anota mediante comentarios:
+
+[!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
+
+## <a name="see-also"></a>Vea también
+
+[Control de eventos](../atl/event-handling-and-atl.md)<br/>
+[Ejemplo ATLEventHandling](../visual-cpp-samples.md)
 

@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027357"
 ---
 # <a name="c-pragmas"></a>Pragmas de C
 
@@ -36,8 +37,8 @@ Una instrucción *pragma* indica al compilador que realice una acción determina
 
 Vea [Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) para obtener una descripción de las instrucciones pragma del Compilador de Microsoft Visual C++.
 
- **FIN de Específicos de Microsoft**
+**FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de código fuente y programas origen](../c-language/source-files-and-source-programs.md)  
+[Archivos de código fuente y programas origen](../c-language/source-files-and-source-programs.md)

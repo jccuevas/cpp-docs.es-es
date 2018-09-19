@@ -44,11 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79ab8362eaa911b7a4aa936d6351aa29f610fa8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc03a459a190144217ca15a9ab13bef395d5128
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103728"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 
@@ -73,21 +74,24 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*dest* destino de copia.
+*dest*<br/>
+Destino de la copia.
 
-*src* carácter Multibyte que se va a copiar.
+*src*<br/>
+Carácter multibyte que se va a copiar.
 
-*configuración regional* configuración regional que se use.
+*locale*<br/>
+Configuración regional que se va a usar.
 
 ## <a name="remarks"></a>Comentarios
 
 El **_mbccpy** función copia un carácter multibyte de *src* a *dest*.
 
-Esta función valida sus parámetros. Si **_mbccpy** se pasa un puntero nulo para *dest* o *src*, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL**.
+Esta función valida sus parámetros. Si **_mbccpy** se pasa un puntero nulo para *dest* o *src*, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL**.
 
-**_mbccpy** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_mbccpy_l** es idéntico a **_mbccpy** salvo que **_mbccpy_l** usa la configuración regional que se pasa para todo comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_mbccpy** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_mbccpy_l** es idéntico al **_mbccpy** , salvo que **_mbccpy_l** usa la configuración regional que se pasa para cualquier comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-**Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada.
+**Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer). Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

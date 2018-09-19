@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0048 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0048 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dca56b5114e8c0ec98d65e43edaca19a7e23663
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07877215a2b230a7ef2f75d83b71b7d03e4e7d34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031866"
 ---
 # <a name="expression-evaluator-error-cxx0048"></a>Error del evaluador de expresiones CXX0048
-secuencia de llamada no compatible  
-  
- Una función especificada en la expresión utiliza una secuencia de llamada no compatible con el evaluador de expresiones de C. No se puede llamar a esta función en una expresión de la ventana Inspección.  
-  
- Este error es idéntico a CAN0048.
+
+secuencia de llamada no compatible
+
+Una función especificada en la expresión utiliza una secuencia de llamada no admitida el evaluador de expresiones de C. No se puede llamar a esta función en una expresión de la ventana Inspección.
+
+Este error es idéntico a CAN0048.

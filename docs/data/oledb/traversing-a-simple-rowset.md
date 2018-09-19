@@ -1,5 +1,5 @@
 ---
-title: Recorrer un conjunto de filas Simple | Documentos de Microsoft
+title: Recorrer un conjunto de filas Simple | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028641"
 ---
 # <a name="traversing-a-simple-rowset"></a>Recorrer un conjunto de filas simple
-En el ejemplo siguiente se muestra un acceso rápido y sencillo de base de datos que implican comandos. El siguiente código de consumidor, en un proyecto ATL, recupera los registros de una tabla denominada *intérpretes* un Microsoft Access la base de datos mediante el proveedor Microsoft OLE DB para ODBC. El código crea un [CTable](../../data/oledb/ctable-class.md) objeto de tabla con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Abre una conexión, se abre una sesión en la conexión y abre la tabla en la sesión.  
+
+El ejemplo siguiente muestra un acceso rápido y sencillo de base de datos que implican los comandos. El siguiente código de consumidor, en un proyecto ATL, recupera los registros de una tabla denominada *artistas* en una Microsoft Access de base de datos mediante el proveedor Microsoft OLE DB para ODBC. El código crea un [CTable](../../data/oledb/ctable-class.md) objeto de tabla con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Abre una conexión, se abre una sesión en la conexión y abre la tabla en la sesión.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -52,9 +54,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- El registro de usuario, `CArtists`, tiene este aspecto:  
+El registro de usuario, `CArtists`, tiene este aspecto:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  
@@ -72,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

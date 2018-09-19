@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: AddRef (método) | Documentos de Microsoft'
+title: Método Activationfactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4800f8d6e4c361cf44918bc790c0d8edb7591f08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b3790e0fb3d1b304359677ddedab2b65dcfe89d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575746"
 ---
 # <a name="activationfactoryaddref-method"></a>ActivationFactory::AddRef (Método)
-Incrementa el recuento de referencias del objeto ActivationFactory actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-STDMETHOD_(  
-   ULONG,  
-   AddRef  
-)();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ActivationFactory (clase)](../windows/activationfactory-class.md)
+
+Incrementa el recuento de referencias del elemento actual **ActivationFactory** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ActivationFactory (clase)](../windows/activationfactory-class.md)

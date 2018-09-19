@@ -14,18 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c58f32847084407d19afea8f2946f8b3041efa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cd4f968543ff777b9178c8f6fa6b3c1699ee465
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965661"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
 Incluya el encabezado estándar \<mutex> para definir las clases `mutex`, `recursive_mutex`, `timed_mutex` y `recursive_timed_mutex`; las plantillas `lock_guard` y `unique_lock`; y tipos y funciones auxiliares que definen regiones de código de exclusión mutua.
 
 > [!WARNING]
-> A partir de Visual Studio 2015, los tipos de sincronización de la biblioteca estándar de C++ se basan en los primitivos de sincronización de Windows y ya no utilizan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en \<mutex> no deben usarse con ninguna función o tipo ConcRT.
+> A partir de Visual Studio 2015, los tipos de sincronización de la biblioteca estándar de C++ se basan en las primitivas de sincronización de Windows y ya no utilizan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en \<mutex> no deben usarse con ninguna función o tipo ConcRT.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -36,23 +37,23 @@ Incluya el encabezado estándar \<mutex> para definir las clases `mutex`, `recur
 ## <a name="remarks"></a>Comentarios
 
 > [!NOTE]
-> En el código compilado mediante **/CLR**, este encabezado está bloqueado.
+> En el código que se compila con **/CLR**, este encabezado está bloqueado.
 
 Las clases `mutex` y `recursive_mutex` son *tipos de exclusión mutua*. Un tipo de exclusión mutua tiene un constructor predeterminado y un destructor que no inicia excepciones. Estos objetos tienen métodos que proporcionan exclusión mutua cuando varios subprocesos intentan bloquear el mismo objeto. En concreto, un tipo de exclusión mutua contiene los métodos `lock`, `try_lock` y `unlock`:
 
 - El método `lock` bloquea el subproceso que realiza la llamada hasta que el subproceso obtenga la propiedad de la exclusión mutua. Su valor devuelto se omite.
 
-- El método `try_lock` intenta obtener la propiedad de la exclusión mutua sin bloquear. Su tipo de valor devuelto se puede convertir a `bool` y `true` si el método obtiene la propiedad, pero en caso contrario es `false`.
+- El método `try_lock` intenta obtener la propiedad de la exclusión mutua sin bloquear. Su tipo de valor devuelto es convertible a **bool** y es **true** si el método obtiene la propiedad, pero en caso contrario es **false**.
 
 - El método `unlock` libera la propiedad de la exclusión mutua del subproceso que llama.
 
 Puede usar tipos de exclusión mutua como argumentos de tipo para crear instancias de las plantillas `lock_guard` y `unique_lock`. Puede usar objetos de estos tipos como el argumento `Lock` para las funciones miembro de espera en la plantilla [condition_variable_any](../standard-library/condition-variable-any-class.md).
 
-Un *tipo de exclusión mutua cronometrado* satisface los requisitos de un tipo de exclusión mutua. Además, tiene los métodos `try_lock_for` y `try_lock_until` que deben ser invocables mediante el uso de un argumento y deben devolver un tipo que se pueda convertir en `bool`. Un tipo de exclusión mutua cronometrado puede definir estas funciones mediante argumentos adicionales, siempre que todos esos argumentos adicionales tengan valores predeterminados.
+Un *tipo de exclusión mutua cronometrado* satisface los requisitos de un tipo de exclusión mutua. Además, tiene la `try_lock_for` y `try_lock_until` métodos que deben ser invocables mediante el uso de un argumento y deben devolver un tipo que se pueda convertir a **bool**. Un tipo de exclusión mutua cronometrado puede definir estas funciones mediante argumentos adicionales, siempre que todos esos argumentos adicionales tengan valores predeterminados.
 
-- Se debe poder llamar al método `try_lock_for` mediante el uso de un argumento, `Rel_time`, cuyo tipo es una creación de instancias de [chrono::duration](../standard-library/duration-class.md). El método intenta obtener la propiedad de la exclusión mutua, pero devuelve dentro del período de tiempo designado por `Rel_time`, independientemente de que la operación se haya realizado o no correctamente. El valor devuelto se convierte en `true` si el método obtiene la propiedad; de lo contrario, se convierte en `false`.
+- Se debe poder llamar al método `try_lock_for` mediante el uso de un argumento, `Rel_time`, cuyo tipo es una creación de instancias de [chrono::duration](../standard-library/duration-class.md). El método intenta obtener la propiedad de la exclusión mutua, pero devuelve dentro del período de tiempo designado por `Rel_time`, independientemente de que la operación se haya realizado o no correctamente. El valor devuelto se convierte en **true** si el método obtiene la propiedad; en caso contrario, el valor devuelto convierte a **false**.
 
-- Se debe poder llamar al método `try_lock_until` mediante el uso de un argumento, `Abs_time`, cuyo tipo es una creación de instancias de [chrono::time_point](../standard-library/time-point-class.md). El método intenta obtener la propiedad de la exclusión mutua, pero devuelve antes de que se supere el tiempo designado por `Abs_time`, independientemente de que la operación se haya realizado o no correctamente. El valor devuelto se convierte en `true` si el método obtiene la propiedad; de lo contrario, se convierte en `false`.
+- Se debe poder llamar al método `try_lock_until` mediante el uso de un argumento, `Abs_time`, cuyo tipo es una creación de instancias de [chrono::time_point](../standard-library/time-point-class.md). El método intenta obtener la propiedad de la exclusión mutua, pero devuelve antes de que se supere el tiempo designado por `Abs_time`, independientemente de que la operación se haya realizado o no correctamente. El valor devuelto se convierte en **true** si el método obtiene la propiedad; en caso contrario, el valor devuelto convierte a **false**.
 
 Un tipo de exclusión mutua también se conoce como un *tipo bloqueable*. Si no proporciona la función miembro `try_lock`, es un *tipo bloqueable básico*. Un tipo de exclusión mutua cronometrado también se conoce como un *tipo bloqueable cronometrado*.
 
@@ -80,8 +81,8 @@ Un tipo de exclusión mutua también se conoce como un *tipo bloqueable*. Si no 
 |----------|-----------------|
 |[adopt_lock_t (Estructura)](../standard-library/adopt-lock-t-structure.md)|Representa un tipo que se utiliza para definir un `adopt_lock`.|
 |[defer_lock_t (Estructura)](../standard-library/defer-lock-t-structure.md)|Representa un tipo que define un objeto `defer_lock` que se utiliza para seleccionar uno de los constructores sobrecargados de `unique_lock`.|
-|[once_flag (Estructura)](../standard-library/once-flag-structure.md)|Representa un `struct` que se utiliza con la función de plantilla `call_once` para asegurarse de que solo se llame una vez al código de inicialización, incluso ante la presencia de varios subprocesos de ejecución.|
-|[try_to_lock_t (Estructura)](../standard-library/try-to-lock-t-structure.md)|Representa un `struct` que define un objeto `try_to_lock` y que se utiliza para seleccionar uno de los constructores sobrecargados de `unique_lock`.|
+|[once_flag (Estructura)](../standard-library/once-flag-structure.md)|Representa un **struct** que se utiliza con la función de plantilla `call_once` para asegurarse de que la inicialización se llama al código una sola vez, incluso en presencia de varios subprocesos de ejecución.|
+|[try_to_lock_t (Estructura)](../standard-library/try-to-lock-t-structure.md)|Representa un **struct** que define un `try_to_lock` de objetos y se utiliza para seleccionar uno de los constructores sobrecargados de `unique_lock`.|
 
 ### <a name="variables"></a>Variables
 

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129400"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Cómo: serializar cadenas ANSI mediante la interoperabilidad de C++
 Este tema muestra cómo pueden ser cadenas ANSI pasado utilizando la interoperabilidad de C++, pero .NET Framework <xref:System.String> representa las cadenas en formato Unicode, por lo que la conversión a ANSI requiere un paso adicional. Para interoperar con otros tipos de cadena, vea los temas siguientes:  

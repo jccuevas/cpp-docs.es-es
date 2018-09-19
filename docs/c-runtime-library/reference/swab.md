@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2975e63f79818e5eac430056258b72b9c6641a49
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100279"
 ---
 # <a name="swab"></a>_swab
 
@@ -58,21 +59,24 @@ void _swab(
 
 ## <a name="parameters"></a>Parámetros
 
-*src* datos se copian y se intercambian.
+*src*<br/>
+Datos que se van a copiar e intercambiar.
 
-*dest* ubicación de almacenamiento de datos se intercambió.
+*dest*<br/>
+Ubicación de almacenamiento de los datos intercambiados.
 
-*n* número de bytes que se copian y se intercambian.
+*n*<br/>
+Número de bytes que se van a copiar e intercambiar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **swab** función no devuelve un valor. La función establece **errno** a **EINVAL** si la *src* o *dest* puntero es null o *n* es menor que cero y los parámetros no válidos se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+El **swab** función no devuelve un valor. La función establece **errno** a **EINVAL** si el *src* o *dest* puntero es null o *n* es menor a cero y los parámetros no válidos se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
 ## <a name="remarks"></a>Comentarios
 
-Si *n* es par, el **_swab** función copias *n* bytes a partir de *src*, se intercambia cada par de bytes adyacentes y almacena el resultado en *dest*. Si *n* es impar, **_swab** se copia y se intercambia la primera *n*-1 bytes de *src*, y no se copia el byte final. El **_swab** función normalmente se utiliza para preparar los datos binarios para la transferencia a un equipo que utiliza un orden de bytes diferentes.
+Si *n* es par, el **_swab** función copias *n* bytes a partir de *src*, intercambia cada par de bytes contiguos y almacena el resultado en *dest*. Si *n* es impar, **_swab** copia e intercambia los primeros *n*-1 bytes de *src*, y no se copia el byte final. El **_swab** función normalmente se utiliza para preparar los datos binarios para transferirlos a un equipo que usa un orden de bytes diferente.
 
 ## <a name="requirements"></a>Requisitos
 

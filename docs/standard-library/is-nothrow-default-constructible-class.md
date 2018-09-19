@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bf12a91fc4dd1485e0129e8ce9049d3401c181c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11480e8a2ee4272c80b775bb93006b1074da7b19
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109815"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>Clase is_nothrow_default_constructible
 
@@ -35,11 +36,12 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` tiene un constructor predeterminado nothrow; en caso contrario, contiene false. Una instancia del predicado de tipo es equivalente a `is_nothrow_constructible<Ty>`.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow constructor predeterminado, en caso contrario, es false. Una instancia del predicado de tipo es equivalente a `is_nothrow_constructible<Ty>`.
 
 ## <a name="requirements"></a>Requisitos
 

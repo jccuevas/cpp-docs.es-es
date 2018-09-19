@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4709 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4709 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab1727ab667a4434805f969b32957e654814166
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df12a377c3d365eaf274e58f9d573753aa1f0a57
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078990"
 ---
 # <a name="compiler-warning-level-4-c4709"></a>Advertencia del compilador (nivel 4) C4709
-operador de coma en la expresión de índice de matriz  
-  
- Cuando se produce una coma en una expresión de índice de matriz, el compilador usa el valor después de la última coma.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4709:  
-  
-```  
-// C4709.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-  
-int main()   
-{  
-    int arr[2][2];  
-    arr[0][0] = 10;  
-    arr[0][1] = 11;  
-  
-    // Prints 10, not 11  
-    printf_s("\n%d",arr[0][1,0]);   // C4709  
-}  
+
+operador de comas dentro de la expresión de índice de matriz
+
+Cuando se produce una coma en una expresión de índice de matriz, el compilador usa el valor después de la última coma.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4709:
+
+```
+// C4709.cpp
+// compile with: /W4
+#include <stdio.h>
+
+int main()
+{
+    int arr[2][2];
+    arr[0][0] = 10;
+    arr[0][1] = 11;
+
+    // Prints 10, not 11
+    printf_s("\n%d",arr[0][1,0]);   // C4709
+}
 ```

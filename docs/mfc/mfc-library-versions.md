@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931770"
 ---
 # <a name="mfc-library-versions"></a>Versiones de la biblioteca MFC
 
@@ -88,7 +89,7 @@ Las versiones de la biblioteca de ANSI/MBCS para MFC admiten ambos conjuntos de 
 
 Para establecer la configuración del proyecto para usar un solo byte, multibyte o carácter de toda la cadena y carácter compatibilidad con Unicode en el IDE, utilice el **propiedades del proyecto** cuadro de diálogo. En el **propiedades de configuración** > **General** , establezca el **del juego de caracteres** propiedad **no establece** para usar un juego de caracteres de un solo byte. Establezca la propiedad en **utilizar juego de caracteres multibyte** para usar un juego de caracteres multibyte, o a **utilizar juego de caracteres Unicode** para utilizar Unicode codificada como UTF-16.
 
-Proyectos MFC utilizan el símbolo de preprocesador  **\_UNICODE** para indicar la compatibilidad de Unicode de caracteres anchos de UTF-16, y  **\_MBCS** para indicar la compatibilidad con MBCS. Estas opciones son mutuamente excluyentes en un proyecto.
+Proyectos MFC utilizan el símbolo de preprocesador \_UNICODE para indicar la compatibilidad de Unicode de caracteres anchos de UTF-16, y \_compatibilidad con MBCS para indicar MBCS. Estas opciones son mutuamente excluyentes en un proyecto.
 
 ## <a name="mfc-static-library-naming-conventions"></a>Convenciones de nomenclatura de biblioteca estática de MFC
 

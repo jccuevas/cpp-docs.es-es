@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCVisualManagerVS2005 | Documentos de Microsoft
+title: CMFCVisualManagerVS2005 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,14 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a48cbe09d493ecc86bf8927ad4c66fd03d7662f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9b2574010445f301a77d56adda11bff51f33267
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705879"
 ---
-# <a name="cmfcvisualmanagervs2005-class"></a>Clase CMFCVisualManagerVS2005
-`CMFCVisualManagerVS2005` Proporciona una aplicación un aspecto de Microsoft Visual Studio 2005.  
+# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 (clase)
+`CMFCVisualManagerVS2005` Proporciona a una aplicación un aspecto de Microsoft Visual Studio 2005.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,8 +70,8 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|El marco de trabajo llama a este método cuando dibuja un panel que está acoplado y con pestañas. (Invalida [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|El marco de trabajo llama a este método para determinar el tamaño del borde de una ventana /mditabs antes de que dibuja la ventana. (Invalida [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|El marco llama a este método cuando dibuja un panel que está acoplado y por fichas. (Invalida [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|El marco llama a este método para determinar el tamaño del borde de una ventana /mditabs antes de que dibuja la ventana. (Invalida [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(Invalida [CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|  
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(Invalida [CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|  
 |[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Devuelve si se superponen los botones de ocultación automática en el administrador visual actual. (Invalida [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|  
@@ -87,12 +88,12 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Invalida [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice la clase CMFCVisualManagerVS2005 para cambiar la apariencia visual de la aplicación para que se parecen a las de la [!INCLUDE[vsprvsext](../../mfc/reference/includes/vsprvsext_md.md)].  
+ Utilice la clase CMFCVisualManagerVS2005 para cambiar la apariencia visual de la aplicación para que se parecen a las de Microsoft Visual Studio 2005.  
   
- Todos los miembros de esta clase son funciones virtuales que se derivan de los antecesores de esta clase, [CMFCVisualManager clase](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Todos los miembros de esta clase son funciones virtuales que se derivan el antecesor de esta clase, [CMFCVisualManager (clase)](../../mfc/reference/cmfcvisualmanager-class.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el administrador visual VS 2005. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
+ El ejemplo siguiente muestra cómo usar el administrador visual de VS 2005. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]  
   
@@ -142,7 +143,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPropList`  
+ [in] *pPropList*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -165,15 +166,15 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pTabWnd`  
- [in] `clrDark`  
- [in] `clrBlack`  
- [in] `clrHighlight`  
- [in] `clrFace`  
- [in] `clrDarkShadow`  
- [in] `clrLight`  
- [in] `pbrFace`  
- [in] `pbrBlack`  
+*pTabWnd*<br/>
+[in] [in] *clrDark*  
+*clrBlack*<br/>
+[in] [in] *clrHighlight*  
+*clrFace*<br/>
+[in] [in] *clrDarkShadow*  
+*clrLight*<br/>
+[in] [in] *pbrFace*  
+ [in] *pbrBlack*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -200,10 +201,10 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rectBounds`  
- [in] `rectBorderSize`  
- [in] `pButton`  
+*pDC*<br/>
+[in] [in] *rectBounds*  
+*rectBorderSize*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -222,13 +223,13 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `pButton`  
- [in] `bActive`  
- [in] `bHorz`  
- [in] `bMaximized`  
- [in] `bDisabled`  
- [in] `nImageID`  
+*pDC*<br/>
+[in] [in] *pButton*  
+*bSecuencias de ActiveX*<br/>
+[in] [in] *bHorz*  
+*bMaximized*<br/>
+[in] [in] *bDeshabilitado*  
+ [in] *nImageID*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -245,11 +246,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `pBar`  
- [in] `bActive`  
- [in] `rectCaption`  
- [in] `rectButtons`  
+*pDC*<br/>
+[in] [in] *pBar*  
+*bSecuencias de ActiveX*<br/>
+[in] [in] *rectCaption*  
+ [in] *rectButtons*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -267,10 +268,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsHoriz`  
+*pDC*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsHoriz*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -287,11 +288,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rectTab`  
- [in] `iTab`  
- [in] `bIsActive`  
- [in] `pTabWnd`  
+*pDC*<br/>
+[in] [in] *rectTab*  
+*iTab*<br/>
+[in] [in] *bIsActive*  
+ [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -305,8 +306,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rect`  
+*pDC*<br/>
+[in] [in] *rect*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -321,9 +322,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
+*pDC*<br/>
+[in] [in] *rect*  
+ [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -338,9 +339,9 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
+*pDC*<br/>
+[in] [in] *rect*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -356,10 +357,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rect`  
- [in] `pBrush`  
- [in] `pButton`  
+*pDC*<br/>
+[in] [in] *rect*  
+*pBrush*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -375,10 +376,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rectCaption`  
- [in] `pFrameWnd`  
- [in] `bActive`  
+*pDC*<br/>
+[in] [in] *rectCaption*  
+*pFrameWnd*<br/>
+[in] [in] *bSecuencias de ActiveX*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -396,7 +397,7 @@ virtual void OnUpdateSystemColors();
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Clase CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
- [Clase CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
+ [CMFCVisualManager (clase)](../../mfc/reference/cmfcvisualmanager-class.md)   
+ [CMFCVisualManagerOfficeXP (clase)](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [CMFCVisualManagerWindows (clase)](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
  [CMFCVisualManagerOffice2003 (clase)](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

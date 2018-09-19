@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1240 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1240 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f21d12e9d3b2673e5dfcf65dc726e9d3cc6a36
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0aa394d11726597bd720bfd2d206f41ab9e077e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111893"
 ---
 # <a name="linker-tools-error-lnk1240"></a>Error de las herramientas del vinculador LNK1240
-no se pudo compilar contenido IDL  
-  
- El vinculador generó MIDL para compilar IDL incrustado, pero hubo un problema. Compruebe los errores especificados por MIDL.
+
+no se pudo compilar contenido IDL
+
+El vinculador generó MIDL para compilar IDL incrustado, pero hubo un problema. Compruebe los errores especificados por MIDL.

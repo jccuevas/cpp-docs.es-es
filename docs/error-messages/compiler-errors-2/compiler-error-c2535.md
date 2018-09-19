@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2535 | Documentos de Microsoft
+title: Error del compilador C2535 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dc791cd7782cc758aa51b0c61d87a79570c13c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98e1920b2163a318fbdba3b64d56bf74a8cd809f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085906"
 ---
 # <a name="compiler-error-c2535"></a>Error del compilador C2535
-'identificador' : función miembro ya definida o declarada  
-  
- Este error podría producirse al utilizar la misma lista de parámetros formales en más una definición o declaración de una función sobrecargada.  
-  
- Si aparece el error C2535 debido a la función Dispose, vea [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.  
-  
- Si compila un proyecto ATL, vea el artículo de Knowledge Base Q241852.  
-  
- El ejemplo siguiente genera el error C2535:  
-  
-```  
-// C2535.cpp  
-// compile with: /c  
-class C {  
-public:  
-   void func();   // forward declaration  
-   void func() {}   // C2535  
-};  
+
+'identificador' : función miembro ya definida o declarada
+
+Este error podría producirse al utilizar la misma lista de parámetros formales en más una definición o declaración de una función sobrecargada.
+
+Si obtiene el error C2535 debido a la función Dispose, vea [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.
+
+Si compila un proyecto ATL, vea el artículo de Knowledge Base Q241852.
+
+El ejemplo siguiente genera el error C2535:
+
+```
+// C2535.cpp
+// compile with: /c
+class C {
+public:
+   void func();   // forward declaration
+   void func() {}   // C2535
+};
 ```

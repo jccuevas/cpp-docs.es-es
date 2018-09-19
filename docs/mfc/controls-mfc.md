@@ -1,5 +1,5 @@
 ---
-title: Controles (MFC) | Documentos de Microsoft
+title: Controles (MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206880"
 ---
 # <a name="controls-mfc"></a>Controles (MFC)
 Los controles de formularios son objetos con los que pueden interactuar los usuarios para escribir o manipular datos. Aparecen normalmente en los cuadros de diálogo o en las barras de herramientas. En esta familia de temas se abordan tres clases principales de controles:  
@@ -53,7 +54,7 @@ Los controles de formularios son objetos con los que pueden interactuar los usua
   
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Controles comunes y clases MFC de Windows  
   
-|Control|clase MFC|Descripción|¿Nuevo en Windows 95|  
+|Control|clase MFC|Descripción|Nuevo en Windows 95|  
 |-------------|---------------|-----------------|------------------------|  
 |[animación](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Muestra cuadros sucesivos de un clip de vídeo AVI|Sí|  
 |botón|[CButton](../mfc/reference/cbutton-class.md)|Botones de comando que producen una acción; también se utilizan para las casillas, los botones de radio y los cuadros de grupo|No|  
@@ -80,7 +81,7 @@ Los controles de formularios son objetos con los que pueden interactuar los usua
 |[información sobre herramientas](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Pequeña ventana emergente que describe el propósito de un botón de la barra de herramientas o de otra herramienta|Sí|  
 |[árbol](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Ventana que muestra una lista jerárquica de elementos|Sí|  
   
-### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
+### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre  
   
 -   Un control individual: vea la tabla [Controles comunes de Windows y clases MFC](#_core_windows_common_controls_and_mfc_classes) en este tema para obtener vínculos a todos los controles.  
   
@@ -106,7 +107,7 @@ Los controles de formularios son objetos con los que pueden interactuar los usua
   
 -   [Muestras](../mfc/common-control-sample-list.md)  
   
- Para obtener información acerca de los controles comunes de Windows en el SDK de Windows, vea [controles comunes](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Para obtener información acerca de los controles comunes de Windows en el SDK de Windows, consulte [controles comunes](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Vea también  
  [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)   

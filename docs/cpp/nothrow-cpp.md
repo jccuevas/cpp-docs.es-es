@@ -1,5 +1,5 @@
 ---
-title: nothrow (C++) | Documentos de Microsoft
+title: nothrow (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2018
 ms.technology:
@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69a706577cf112c3d8a3b7748f72679f7213936d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65b8a0420bc996812eed5996757e05d50aafc030
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023532"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
 **Específicos de Microsoft**
 
-Atributo extendido `__declspec` que se puede usar en la declaración de funciones.
+Un **__declspec** atributo extendido que se puede usar en la declaración de funciones.
 
-## <a name="syntax"></a>Sintaxis  
-  
+## <a name="syntax"></a>Sintaxis
+
 > *tipo de valor devuelto* __declspec (nothrow) [*convención de llamada*] *nombre de la función* ([*lista de argumentos*])
 
 ## <a name="remarks"></a>Comentarios
 
-Se recomienda que todo el código nuevo use el [noexcept](noexcept-cpp.md) operador en lugar de `__declspec(nothrow)`.
+Se recomienda que todo el código nuevo use los [noexcept](noexcept-cpp.md) operador lugar `__declspec(nothrow)`.
 
-Este atributo indica al compilador que la función declarada y las funciones a las que llama nunca iniciarán una excepción. Sin embargo, no aplica la directiva. En otras palabras, nunca hace [std:: Terminate](../standard-library/exception-functions.md#terminate) que se debe invocar, a diferencia de `noexcept`, o bien en **std:c ++ 17** (Visual Studio 2017 15.5 y versiones posteriores), el modo `throw()`.
+Este atributo indica al compilador que la función declarada y las funciones a las que llama nunca iniciarán una excepción. Sin embargo, no aplica la directiva. En otras palabras, nunca hace [std:: Terminate](../standard-library/exception-functions.md#terminate) que se invocará, a diferencia de `noexcept`, o en **std: c ++ 17** (Visual Studio 2017 versión 15.5 y versiones posterior), de modo `throw()`.
 
-Con el modelo de control asincrónico de excepciones, que ahora es el predeterminado, el compilador puede eliminar los mecanismos de seguimiento de la duración de algunos objetos que no se pueden desenredar en esa función, y reducir significativamente el tamaño del código. Dada la siguiente directiva de preprocesador, las tres declaraciones de función siguientes son equivalentes en **/std:c ++ 14** modo:
+Con el modelo de control asincrónico de excepciones, que ahora es el predeterminado, el compilador puede eliminar los mecanismos de seguimiento de la duración de algunos objetos que no se pueden desenredar en esa función, y reducir significativamente el tamaño del código. Dado que la directiva de preprocesador siguiente, las tres declaraciones de función siguientes son equivalentes en **/std: c ++ 14** modo:
 
 ```cpp
 #define WINAPI __declspec(nothrow) __stdcall
@@ -49,14 +50,14 @@ void __declspec(nothrow) __stdcall f2();
 void __stdcall f3() throw();
 ```
 
-En **/std:c ++ 17** modo, `throw()` no es equivalente a los otros usuarios que utilicen `__declspec(nothrow)` porque hace que `std::terminate` que se invocará si se produce una excepción de la función.
+En **/std: c ++ 17** modo, `throw()` no es equivalente a los demás que utilizan `__declspec(nothrow)` porque hace que `std::terminate` que se invocará si se produce una excepción de la función.
 
-El `void __stdcall f3() throw();` declaración usa la sintaxis definida por el estándar de C++. En C ++ 17 el `throw()` palabra clave está en desuso.
+El `void __stdcall f3() throw();` declaración usa la sintaxis definida por el estándar de C++. En C ++ 17 el `throw()` palabra clave ha quedado en desuso.
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[__declspec](../cpp/declspec.md)  
-[noexcept](noexcept-cpp.md)  
-[Palabras clave](../cpp/keywords-cpp.md)  
+[__declspec](../cpp/declspec.md)<br/>
+[noexcept](noexcept-cpp.md)<br/>
+[Palabras clave](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonLinkCtrl | Documentos de Microsoft
+title: CMFCRibbonLinkCtrl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,15 +42,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712522"
 ---
-# <a name="cmfcribbonlinkctrl-class"></a>Clase CMFCRibbonLinkCtrl
+# <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl (clase)
 Implementa un hipervínculo que se coloca en una cinta. El hipervínculo abre una página web cuando se hace clic en él.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -95,7 +96,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
  **Encabezado:** afxRibbonLinkCtrl.h  
   
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
- Construye e inicializa un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objeto.  
+ Crea e inicializa un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objeto.  
   
 ```  
 CMFCRibbonLinkCtrl(
@@ -105,17 +106,17 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
- Especifica el identificador de comando del comando que se ejecuta cuando se hace clic en el control de vínculo.  
+*nID*<br/>
+[in] Especifica el identificador de comando del comando que se ejecuta cuando se hace clic en el control de vínculo.  
   
- [in] `lpszText`  
- Especifica la etiqueta que se muestra en el control de vínculo.  
+*lpszText*<br/>
+[in] Especifica la etiqueta que se muestra en el control de vínculo.  
   
- [in] `lpszLink`  
- Especifica el hipervínculo asociado con el control de vínculo.  
+*lpszLink*<br/>
+[in] Especifica el hipervínculo asociado al control de vínculo.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el constructor de la `CMFCRibbonLinkCtrl` clase. Este fragmento de código forma parte de la [ejemplo de Gadgets de cinta de opciones](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo usar el constructor de la `CMFCRibbonLinkCtrl` clase. Este fragmento de código forma parte de la [ejemplo Gadgets de la cinta de opciones](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -127,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -139,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -165,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -190,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CDC*`  
- [in] `CRect`  
+ [in] *CDC**  
+ [in] *CRect*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -216,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -228,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -249,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la página Web asociada se abrió correctamente; en caso contrario, `FALSE`.  
+ TRUE si la página Web asociada se abrió correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Se abre una página web con el hipervínculo asociado con el `CMFCRibbonLinkCtrl` objeto.  
+ Se abre una página Web con el hipervínculo asociado con el `CMFCRibbonLinkCtrl` objeto.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Establece el valor del hipervínculo.  
@@ -262,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLink`  
- Especifica el texto del hipervínculo.  
+*lpszLink*<br/>
+[in] Especifica el texto del hipervínculo.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

@@ -1,5 +1,5 @@
 ---
-title: Error de compilador Error C2751 | Documentos de Microsoft
+title: Error del compilador C2751 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fe5354061c0839cd7569c018e84b0e4f2905e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97a4021eb4cc5092f4bb9424e141666aea4a00f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021790"
 ---
-# <a name="compiler-error-c2751"></a>Error de C2751 de Error de compilador
-'parámetro': no se puede calificar el nombre de un parámetro de función  
-  
- No se puede utilizar un nombre completo como un parámetro de función.  
-  
- El ejemplo siguiente genera el error C2751:  
-  
-```  
-// C2751.cpp  
-namespace std {  
-   template<typename T>  
-   class list {};  
-}  
-  
-#define list std::list  
-void f(int &list){}   // C2751  
+# <a name="compiler-error-c2751"></a>Error del compilador C2751
+
+'parámetro': no se puede calificar el nombre de un parámetro de función
+
+No se puede utilizar un nombre completo como un parámetro de función.
+
+El ejemplo siguiente genera el error C2751:
+
+```
+// C2751.cpp
+namespace std {
+   template<typename T>
+   class list {};
+}
+
+#define list std::list
+void f(int &list){}   // C2751
 ```

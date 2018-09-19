@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0028 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0028 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42c6e55cdce7294d7d2bc2e2a5634f362a539363
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f90e7f6629ae50f734ac127d05c6c70d002133a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062623"
 ---
 # <a name="project-build-error-prj0028"></a>Error PRJ0028 al compilar el proyecto
-Archivo temporal 'nombre_archivo' incluye contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.  
-  
- Se especificó un valor con el [/MIDL (especificar las opciones de línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) opción del vinculador que no se pudo resolver por la página de códigos del sistema.  
-  
- La página de códigos que se usa cuando se especifica el comando MIDL (la página de códigos de entrada) debe ser el mismo que la página de códigos del sistema.
+
+Archivo temporal 'archivo' incluye contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.
+
+Se especificó un valor con el [/MIDL (especificar opciones de línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) opción del vinculador que no se pudo resolver la página de códigos del sistema.
+
+La página de códigos que se usa cuando se especifica el comando MIDL (la página de códigos de entrada) debe ser la misma que la página de códigos del sistema.

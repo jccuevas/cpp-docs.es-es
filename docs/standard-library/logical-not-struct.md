@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ea50f3e8ad70de8473df88bde60673f7b5caa35
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108712"
 ---
-# <a name="logicalnot-struct"></a>logical_not (Struct)
+# <a name="logicalnot-struct"></a>logical_not (struct)
 
-Objeto de función predefinido que realiza la operación NOT lógica (`operator!`) sobre su argumento.
+Objeto de función predefinido que realiza la operación not lógica (`operator!`) sobre su argumento.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,14 +44,16 @@ struct logical_not<void>
   template <class Type>
   auto operator()(Type&& Left) const`
      -> decltype(!std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type` Cualquier tipo que admita un `operator!` que toma un operando del tipo especificado o deducido.
+*Type*<br/>
+Cualquier tipo que admite un `operator!` que toma un operando del tipo especificado o deducido.
 
-`Left` El operando de la operación lógica no operación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `Type`.
+*Izquierda*<br/>
+Operando de la operación not lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *tipo*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -95,10 +98,10 @@ int main( )
 }
 /* Output:
 Original deque:
- d1 = ( false true false true false true false )
+d1 = ( false true false true false true false )
 The deque with its values negated is:
- d2 = ( true false true false true false true )
- */
+d2 = ( true false true false true false true )
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

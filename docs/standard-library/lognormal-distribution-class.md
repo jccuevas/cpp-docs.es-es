@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fb8a30f8dde14801b89b1e2d36e349ea8e93a5c6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107114"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution (Clase)
 
@@ -77,11 +78,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* predeterminado es el tipo de resultado de punto flotante, `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuido según la distribución log-normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución Log-Normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -203,11 +205,14 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*m* el `m` parámetro de distribución.
+*m*<br/>
+El parámetro de distribución `m`.
 
-*s* el `s` parámetro de distribución.
+*s*<br/>
+El parámetro de distribución `s`.
 
-*parm* el `param_type` estructura utilizada para construir la distribución.
+*parm*<br/>
+La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -235,11 +240,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*m* el `m` parámetro de distribución.
+*m*<br/>
+El parámetro de distribución `m`.
 
-*s* el `s` parámetro de distribución.
+*s*<br/>
+El parámetro de distribución `s`.
 
-*derecho* el `param_type` estructura que se utiliza para comparar.
+*right*<br/>
+La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios
 

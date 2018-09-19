@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: swap (método) | Documentos de Microsoft'
+title: Método Comptr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45bc87ec63088fe8f44411a8e86438ebab706e3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b983d30a06a872ae20afa130c3a42ef0df1b0846
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601391"
 ---
 # <a name="comptrswap-method"></a>ComPtr::Swap (Método)
-Intercambia la interfaz administrada por la clase ComPtr actual con la interfaz administrada por la ComPtr especificada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void Swap(  
-   _Inout_ ComPtr&& r  
-);  
-  
-void Swap(  
-   _Inout_ ComPtr& r  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `r`  
- Una ComPtr.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtr (clase)](../windows/comptr-class.md)
+
+Intercambia la interfaz administrada por el actual **ComPtr** con la interfaz administrada por especificado **ComPtr**.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void Swap(
+   _Inout_ ComPtr&& r
+);
+
+void Swap(
+   _Inout_ ComPtr& r
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*r*  
+Un **ComPtr**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ComPtr (clase)](../windows/comptr-class.md)

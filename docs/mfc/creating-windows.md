@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341903"
 ---
 # <a name="creating-windows"></a>Crear ventanas
 El marco de trabajo crea automáticamente la mayoría de las ventanas que necesita en un programa marco. [Creación de documento/vista](../mfc/document-view-creation.md) muestra cómo el marco de trabajo crea las ventanas de marco asociadas a documentos y vistas. Pero con fines especiales que puede crear sus propias ventanas, incluidas las ventanas secundarias propias de ventanas de marco o vistas, además de la proporcionada por el marco de trabajo de windows.  

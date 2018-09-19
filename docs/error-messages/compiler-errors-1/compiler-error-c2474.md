@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2474 | Documentos de Microsoft
+title: Error del compilador C2474 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b42e93630bdfba0400c30aafa1b6436f5b9e868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd33c74a0f5fe179b0dfdd5754d15f24bf0026ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092575"
 ---
 # <a name="compiler-error-c2474"></a>Error del compilador C2474
-'keyword': falta un punto y coma adyacente que podría ser una palabra clave o un identificador.  
-  
- El compilador esperaba encontrar un punto y coma y no pudo determinar su intención. Agregue el punto y coma para solucionar este error.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C2474.  
-  
-```  
-// C2474.cpp  
-// compile with: /clr /c  
-  
-ref class A {  
-   ref class B {}  
-   property int i;   // C2474 error  
-};  
-  
-// OK  
-ref class B {  
-   ref class D {};  
-   property int i;  
-};  
-  
-ref class E {  
-   ref class F {} property;   
-   int i;  
-};  
+
+'keyword': falta un punto y coma adyacente que podría ser una palabra clave o un identificador.
+
+El compilador esperaba encontrar un punto y coma y no pudo determinar su intención. Agregue el punto y coma para solucionar este error.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C2474.
+
+```
+// C2474.cpp
+// compile with: /clr /c
+
+ref class A {
+   ref class B {}
+   property int i;   // C2474 error
+};
+
+// OK
+ref class B {
+   ref class D {};
+   property int i;
+};
+
+ref class E {
+   ref class F {} property;
+   int i;
+};
 ```

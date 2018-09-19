@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133341"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Cómo: serializar cadenas COM mediante la interoperabilidad de C++
 Este tema muestra cómo puede ser una cadena BSTR (el formato de cadena básico preferido en programación COM) pase de una en una función no administrada y viceversa. Para interoperar con otros tipos de cadenas, vea los temas siguientes:  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347034"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg (Controlador)
 Para llevar a cabo el enrutamiento de comandos, llama a cada destino del comando el `OnCmdMsg` función miembro del destino del comando siguiente en la secuencia. Uso de destinos de comandos `OnCmdMsg` para determinar si puede controlar un comando y las enrute a otro destino de comando si no se puede controlarla.  

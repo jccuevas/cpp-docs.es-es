@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2891 | Documentos de Microsoft
+title: Error del compilador C2891 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01741d1cc67f0045c46ab392212625b9e1a2d8ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d81662cb02fa3c8f6af75009daf4dab9b70196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016564"
 ---
 # <a name="compiler-error-c2891"></a>Error del compilador C2891
-'parámetro': no se puede adquirir la dirección de un parámetro de plantilla  
-  
- No se puede adquirir la dirección de un parámetro de plantilla a menos que sea un valor l. Parámetros de tipo no son valores l porque no tienen ninguna dirección. También los valores sin tipo en listas de parámetros de plantilla que no son valores l no tiene una dirección. Este es un ejemplo de código que causa el Error del compilador C2891, porque el valor que se pasa como el parámetro de plantilla es una copia del argumento de plantilla generado por el compilador.  
-  
-```  
-template <int i> int* f() { return &i; }  
-```  
-  
- Parámetros de plantilla que son valores l, como tipos de referencia, puede su dirección realizadas.  
-  
-```  
-template <int& r> int* f() { return &r; }  
-```  
-  
- Para corregir este error, no tomar la dirección de un parámetro de plantilla a menos que sea un valor l.
+
+'parámetro': no se puede adquirir la dirección de un parámetro de plantilla
+
+No se puede adquirir la dirección de un parámetro de plantilla a menos que sea un valor l. Parámetros de tipo no son valores l, ya que no hay ninguna dirección. Los valores sin tipo en listas de parámetros de plantilla que no son valores l no tienen también una dirección. Esto es un ejemplo de código que causa el Error del compilador C2891, porque el valor pasado como parámetro de plantilla es una copia generada por el compilador del argumento de plantilla.
+
+```
+template <int i> int* f() { return &i; }
+```
+
+Parámetros de plantilla que son valores l, tales como tipos de referencia, puede su dirección realizadas.
+
+```
+template <int& r> int* f() { return &r; }
+```
+
+Para corregir este error, no tomar la dirección de un parámetro de plantilla a menos que sea un valor l.

@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2d25646c929519c00348dabaae754f149e61ad1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931107"
 ---
 # <a name="active-documents"></a>Documentos activos
 Documentos activos amplían la tecnología de documentos compuestos de OLE. Estas extensiones se proporcionan en forma de interfaces adicionales que administran vistas, para que funcione dentro de los contenedores y mantengan el control de su presentación y las funciones de impresión objetos. Este proceso permite mostrar documentos en marcos externos (por ejemplo, el enlazador de Microsoft Office o Microsoft Internet Explorer) y en marcos nativos (por ejemplo, los puertos de vista del producto).  
   
  Esta sección describe la funcional [requisitos para documentos activos](#requirements_for_active_documents). El documento activo posee un conjunto de datos y tiene acceso al almacenamiento donde se pueden guardar y recuperar los datos. Puede crear y administrar una o varias vistas en sus datos. Además de admitir la incrustación habitual y las interfaces de activación en contexto de documentos OLE, el documento activo comunica su capacidad para crear vistas a través de `IOleDocument`. Mediante esta interfaz, el contenedor puede pedir a crear (y posiblemente enumerar) en las vistas que puede mostrar el documento activo. A través de esta interfaz, el documento activo también puede proporcionar información diversa acerca de sí mismo, por ejemplo, si admite varias vistas o rectángulos complejos.  
   
- Éste es el **IOleDocument** interfaz. Tenga en cuenta que la **IEnumOleDocumentViews** interfaz es un enumerador OLE estándar para **IOleDocumentView \***  tipos.  
+ Éste es el `IOleDocument` interfaz. Tenga en cuenta que la `IEnumOleDocumentViews` interfaz es un enumerador OLE estándar para `IOleDocumentView*` tipos.  
   
 ```  
 interface IOleDocument : IUnknown  
@@ -60,16 +61,16 @@ interface IOleDocument : IUnknown
   
 -   Admite las características básicas de incrustación de documentos OLE, incluida **crear desde archivo**. Esto requiere las interfaces `IPersistFile`, `IOleObject`, y `IDataObject`.  
   
--   Admite una o varias vistas, cada uno de los cuales es capaz de activación en contexto. Es decir, las vistas deben admitir la interfaz `IOleDocumentView` , así como las interfaces `IOleInPlaceObject` y `IOleInPlaceActiveObject` (usando el contenedor **IOleInPlaceSite** y **IOleInPlaceFrame** interfaces).  
+-   Admite una o varias vistas, cada uno de los cuales es capaz de activación en contexto. Es decir, las vistas deben admitir la interfaz `IOleDocumentView` , así como las interfaces `IOleInPlaceObject` y `IOleInPlaceActiveObject` (usando el contenedor `IOleInPlaceSite` y `IOleInPlaceFrame` interfaces).  
   
 -   Admite las interfaces estándar de documentos activos `IOleDocument`, `IOleCommandTarget`, y `IPrint`.  
   
  El conocimiento de cuándo y cómo usar las interfaces del contenedor está implícito en estos requisitos.  
   
 ##  <a name="requirements_for_view_objects"></a> Requisitos para los objetos de vista  
- Un documento activo puede crear una o varias vistas de sus datos. Funcionalmente, estas vistas son similares a los puertos a un método concreto para mostrar los datos. Si un documento activo sólo admite una vista única, el documento activo y esa vista solo se pueden implementar mediante una sola clase. **IOleDocument:: CreateView** devuelve el mismo objeto `IOleDocumentView` puntero de interfaz.  
+ Un documento activo puede crear una o varias vistas de sus datos. Funcionalmente, estas vistas son similares a los puertos a un método concreto para mostrar los datos. Si un documento activo sólo admite una vista única, el documento activo y esa vista solo se pueden implementar mediante una sola clase. `IOleDocument::CreateView` Devuelve el mismo objeto `IOleDocumentView` puntero de interfaz.  
   
- Para representar dentro de un contenedor de documentos activos, debe ser compatible con un componente de vista **IOleInPlaceObject** y **IOleInPlaceActiveObject** además `IOleDocumentView`:  
+ Para representar dentro de un contenedor de documentos activos, debe ser compatible con un componente de vista `IOleInPlaceObject` y `IOleInPlaceActiveObject` además `IOleDocumentView`:  
   
 ```  
 interface IOleDocumentView : IUnknown  
@@ -96,11 +97,11 @@ interface IOleDocumentView : IUnknown
     }  
 ```  
   
- Cada vista tiene un sitio de vista asociado que encapsula el marco de la vista y el puerto de vista (HWND y un área rectangular en la ventana). El sitio expone esta funcionalidad mediante el estándar **IOleInPlaceSite** interfaz. Tenga en cuenta que es posible tener más de un puerto de vista en un solo HWND.  
+ Cada vista tiene un sitio de vista asociado que encapsula el marco de la vista y el puerto de vista (HWND y un área rectangular en la ventana). El sitio expone esta funcionalidad mediante el estándar `IOleInPlaceSite` interfaz. Tenga en cuenta que es posible tener más de un puerto de vista en un solo HWND.  
   
- Normalmente, cada tipo de vista tiene una representación impresa diferente. Por lo tanto, las vistas y los sitios de vista correspondientes deben implementar las interfaces de impresión si `IPrint` y `IContinueCallback`, respectivamente. El marco de la vista debe negociar con el proveedor de vista a través de **IPrint** cuando comienza la impresión, para que los encabezados, pies de página, márgenes y elementos relacionados se impriman correctamente. El proveedor de vista notifica al marco los eventos relacionados con la impresión a través de `IContinueCallback`. Para obtener más información sobre el uso de estas interfaces, vea [imprimir mediante programación](../mfc/programmatic-printing.md).  
+ Normalmente, cada tipo de vista tiene una representación impresa diferente. Por lo tanto, las vistas y los sitios de vista correspondientes deben implementar las interfaces de impresión si `IPrint` y `IContinueCallback`, respectivamente. El marco de la vista debe negociar con el proveedor de vista a través de `IPrint` cuando comienza la impresión, para que los encabezados, pies de página, márgenes y elementos relacionados se impriman correctamente. El proveedor de vista notifica al marco los eventos relacionados con la impresión a través de `IContinueCallback`. Para obtener más información sobre el uso de estas interfaces, vea [imprimir mediante programación](../mfc/programmatic-printing.md).  
   
- Tenga en cuenta que si un documento activo sólo admite una sola vista, a continuación, el documento activo y esa vista se pueden implementar mediante una sola clase concreta. **IOleDocument:: CreateView** simplemente devuelve el mismo objeto `IOleDocumentView` puntero de interfaz. En resumen, no es necesario que haya dos instancias de un objeto independiente cuando se requiere una única vista.  
+ Tenga en cuenta que si un documento activo sólo admite una sola vista, a continuación, el documento activo y esa vista se pueden implementar mediante una sola clase concreta. `IOleDocument::CreateView` simplemente devuelve el mismo objeto `IOleDocumentView` puntero de interfaz. En resumen, no es necesario que haya dos instancias de un objeto independiente cuando se requiere una única vista.  
   
  Un objeto de vista también puede ser un destino del comando. Implementando `IOleCommandTarget` una vista puede recibir comandos que se originan en la interfaz de usuario del contenedor (como **New**, **abiertos**, **Guardar como**,  **Impresión** en el **archivo** menú; y **copia**, **pegar**, **deshacer** en el **editar** menú). Para obtener más información, consulte [control de mensajes y destinos de comando](../mfc/message-handling-and-command-targets.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: TOOLTIPTEXT (estructura) | Documentos de Microsoft
+title: TOOLTIPTEXT (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64a93529905e84fe043947772e55b9332b5106e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097164"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT (Estructura)
-En la escritura su [controlador de notificación de sugerencia de herramienta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), debe usar el `TOOLTIPTEXT` estructura. Los miembros de la `TOOLTIPTEXT` estructura son:  
+Escribir su [controlador de notificación de información sobre herramienta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), deberá usar el **TOOLTIPTEXT** estructura. Los miembros de la **TOOLTIPTEXT** estructura son:  
   
- `typedef struct {`  
+```cpp
+typedef struct {
+    NMHDR     hdr;        // required for all WM_NOTIFY messages
+    LPTSTR    lpszText;   // see below
+    TCHAR     szText[80]; // buffer for tool tip text
+    HINSTANCE hinst;      // see below
+    UINT      uflags;     // flag indicating how to interpret the
+                          // idFrom member of the NMHDR structure
+                          // that is included in the structure
+} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
+```
   
- `NMHDR     hdr;        // required for all WM_NOTIFY messages`  
+ *HDR*  
+ Identifica la herramienta que necesita el texto. El único miembro de esta estructura que necesita es el identificador de comando. del control Será el identificador de comando del control en el *idFrom* miembro de la **NMHDR** estructura, obtiene acceso con la sintaxis `hdr.idFrom`. Consulte [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) para obtener una explicación de los miembros de la **NMHDR** estructura.  
   
- `LPTSTR    lpszText;   // see below`  
+ *lpszText*  
+ Dirección de una cadena que recibe el texto para una herramienta.  
   
- `TCHAR     szText[80]; // buffer for tool tip text`  
+ *szText*  
+ Búfer que recibe el texto de sugerencia. Una aplicación puede copiar el texto a este búfer como una alternativa a especificar una dirección de la cadena.  
   
- `HINSTANCE hinst;      // see below`  
+ *hinst*  
+ Identificador de la instancia que contiene una cadena que se usará como el texto de sugerencia. Si *lpszText* es la dirección del texto de sugerencia de herramienta, este miembro es NULL.  
   
- `UINT      uflags;     // flag indicating how to interpret the`  
+Cuando controle el `TTN_NEEDTEXT` notificación de mensaje, especifique la cadena que se mostrará en una de las maneras siguientes:  
   
- `// idFrom member of the NMHDR structure`  
+-   Copie el texto en el búfer especificado por el *szText* miembro.  
   
- `// that is included in the structure`  
+-   Copie la dirección del búfer que contiene el texto a la *lpszText* miembro.  
   
- `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
-  
- `hdr`  
- Identifica la herramienta que necesita texto. El único miembro de esta estructura que tendrá que es el identificador del comando. del control Identificador de comando del control estará en el `idFrom` miembro de la `NMHDR` estructura, obtiene acceso con la sintaxis `hdr.idFrom`. Vea [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) para obtener una explicación de los miembros de la `NMHDR` estructura.  
-  
- `lpszText`  
- Dirección de una cadena que recibe el texto de una herramienta.  
-  
- `szText`  
- Búfer que recibe el texto de información sobre herramientas. Una aplicación puede copiar el texto en este búfer como una alternativa a especificar una dirección de cadena.  
-  
- `hinst`  
- Identificador de la instancia que contiene una cadena que se usará como el texto de información sobre herramientas. Si `lpszText` es la dirección del texto de información sobre herramientas, este miembro es NULL.  
-  
- Al controlar la `TTN_NEEDTEXT` notificación de mensaje, especifique la cadena que se mostrará en una de las maneras siguientes:  
-  
--   Copie el texto en el búfer especificado por el `szText` miembro.  
-  
--   Copie la dirección del búfer que contiene el texto para el `lpszText` miembro.  
-  
--   Copie el identificador de un recurso de cadena para el `lpszText` miembro y copie el identificador de la instancia que contiene el recurso al que el `hinst` miembro.  
+-   Copie el identificador de un recurso de cadena a la *lpszText* miembro y copie el identificador de la instancia que contiene el recurso para el *hinst* miembro.  
   
 ## <a name="see-also"></a>Vea también  
  [Información sobre herramientas en ventanas no derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)

@@ -1,7 +1,7 @@
 ---
-title: operador LOWWORD | Documentos de Microsoft
+title: operador LOWWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,21 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243c929fc0b8d7e003fa2543213eb58b028578bf
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: af2582bb109645cbe0c0133c90b962e16db92572
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680123"
 ---
 # <a name="operator-lowword"></a>Operador LOWWORD
-Devuelve los 16 bits inferiores de *expresión*. Expresiones MASM son valores de 64 bits.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-LOWWORD expression  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Devuelve los 16 bits inferiores de *expresión*. Expresiones MASM son valores de 64 bits.
+
+## <a name="syntax"></a>Sintaxis
+
+> Expresión LOWWORD
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

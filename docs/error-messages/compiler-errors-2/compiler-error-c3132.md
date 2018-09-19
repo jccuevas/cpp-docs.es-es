@@ -1,5 +1,5 @@
 ---
-title: C3132 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3132 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2ecc863bc06542e4bb2e78e71ce95279c004f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ffa46ef8e7f56d4be7ca88d2553623910cbcd43f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091652"
 ---
-# <a name="compiler-error-c3132"></a>C3132 de Error del compilador
-'parámetro de función': las matrices de parámetros solo pueden aplicarse a un argumento formal del tipo 'matriz unidimensional administrada'  
-  
- El [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) atributo se aplica a un parámetro que no era una matriz unidimensional.  
-  
- El ejemplo siguiente genera C3132:  
-  
-```  
-// C3132.cpp  
-// compile with: /clr /c  
-using namespace System;  
-void f( [ParamArray] Int32[,] );   // C3132  
-void g( [ParamArray] Int32[] );   // C3132  
-  
-void h( [ParamArray] array<Char ^> ^ MyArray );   // OK  
-  
+# <a name="compiler-error-c3132"></a>Error del compilador C3132
+
+'parámetro de función': las matrices de parámetros solo se pueden aplicar a un argumento formal de tipo 'matriz unidimensional administrada'
+
+El [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) se aplicó el atributo a un parámetro que no era una matriz unidimensional.
+
+El ejemplo siguiente genera C3132:
+
+```
+// C3132.cpp
+// compile with: /clr /c
+using namespace System;
+void f( [ParamArray] Int32[,] );   // C3132
+void g( [ParamArray] Int32[] );   // C3132
+
+void h( [ParamArray] array<Char ^> ^ MyArray );   // OK
+
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4400 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4400 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7164b323e5108b44ea40da699ffb906508f731a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd22db0313d2d0ea6494908259e7d098336f6dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016200"
 ---
 # <a name="compiler-warning-level-4-c4400"></a>Advertencia del compilador (nivel 4) C4400
-'type': no se admiten los calificadores const/volatile en este tipo  
-  
- El [const](../../cpp/const-cpp.md)y [volátiles](../../cpp/volatile-cpp.md)calificadores no funcionarán con variables de tipos de common language runtime.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4400.  
-  
-```  
-// C4400.cpp  
-// compile with: /clr /W4  
-// C4401 expected  
-using namespace System;  
-#pragma warning (disable : 4101)  
-int main() {  
-   const String^ str;   // C4400  
-   volatile String^ str2;   // C4400  
-}  
+
+'type': no se admiten los calificadores const/volatile en este tipo
+
+El [const](../../cpp/const-cpp.md)y [volátil](../../cpp/volatile-cpp.md)calificadores no funcionará con las variables de tipos common language runtime.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4400.
+
+```
+// C4400.cpp
+// compile with: /clr /W4
+// C4401 expected
+using namespace System;
+#pragma warning (disable : 4101)
+int main() {
+   const String^ str;   // C4400
+   volatile String^ str2;   // C4400
+}
 ```

@@ -1,7 +1,7 @@
 ---
-title: . IF | Documentos de Microsoft
+title: . IF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ab0e2fc510b4be8c5a9a8c0c3d0fb1c4347f0b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f7bd5ba5821b4dcfb2d088e31816f50540445018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691549"
 ---
 # <a name="if"></a>.IF
-Genera código que prueba `condition1` (por ejemplo, AX 7 >) y ejecuta el *instrucciones* si esa condición es true.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-   .IF condition1   
-statements  
-[[.ELSEIF condition2   
-   statements]]  
-[[.ELSE  
-   statements]]  
-.ENDIF  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Si un [. ELSE](../../assembler/masm/dot-else.md) sigue, sus instrucciones se ejecuta si la condición original era false. Tenga en cuenta que las condiciones se evalúan en tiempo de ejecución.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Genera código que comprueba `condition1` (por ejemplo, AX > 7) y ejecuta el *instrucciones* si esa condición es true.
+
+## <a name="syntax"></a>Sintaxis
+
+> . IF condition1<br/>
+> instrucciones<br/>
+> [[. ELSEIF condition2<br/>
+> instrucciones]]<br/>
+> [[. ELSE<br/>
+> instrucciones]]<br/>
+> .ENDIF
+
+## <a name="remarks"></a>Comentarios
+
+Si un [. ELSE](../../assembler/masm/dot-else.md) sigue, sus instrucciones se ejecuta si la condición original era false. Tenga en cuenta que las condiciones se evalúan en tiempo de ejecución.
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

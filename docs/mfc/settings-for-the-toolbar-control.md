@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379712"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Configuración del control Toolbar
 Los botones de una barra de herramientas pueden mostrar un mapa de bits, una cadena o ambas cosas. De forma predeterminada, el tamaño de la imagen se establece en las dimensiones de 16 por 15 píxeles. Todos los botones tienen el mismo ancho, en píxeles de 24 por 22 de forma predeterminada. Alto de la barra de herramientas viene determinado por el alto de los botones y el ancho de la barra de herramientas es el mismo que el ancho del área de cliente de la ventana primaria, también de forma predeterminada.  

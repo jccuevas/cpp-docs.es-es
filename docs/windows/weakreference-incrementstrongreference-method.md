@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: Incrementstrongreference (método) | Documentos de Microsoft'
+title: Incrementstrongreference (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee53e068c13f52c01e997680b57915051a8efad8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c8e9ba093c6be4b1e0d5747c16a8dc8887cd2c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591093"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-ULONG IncrementStrongReference();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- El recuento de referencia segura incrementado.  
-  
-## <a name="remarks"></a>Comentarios  
- Incrementa el recuento de referencia segura del objeto WeakReference actual.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+ULONG IncrementStrongReference();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+El recuento de referencia segura incrementado.
+
+## <a name="remarks"></a>Comentarios
+
+Incrementa el recuento de referencia segura del actual **WeakReference** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
 [WeakReference (clase)](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

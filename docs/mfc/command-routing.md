@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346287"
 ---
 # <a name="command-routing"></a>enrutamiento de comandos
 Su responsabilidad a la hora de trabajar con comandos se limita a crear conexiones de mapa de mensajes entre los comandos y sus funciones de controlador, una tarea para la cual se usa la ventana Propiedades. También debe escribir la mayoría de los controladores de comando.  

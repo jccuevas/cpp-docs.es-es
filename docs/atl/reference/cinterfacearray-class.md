@@ -1,5 +1,5 @@
 ---
-title: Clase CInterfaceArray | Documentos de Microsoft
+title: CInterfaceArray (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,64 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039340"
 ---
-# <a name="cinterfacearray-class"></a>Clase CInterfaceArray
-Esta clase proporciona métodos útiles para construir una matriz de punteros de interfaz COM.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+# <a name="cinterfacearray-class"></a>CInterfaceArray (clase)
+
+Esta clase proporciona métodos útiles al construir una matriz de punteros de interfaz COM.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `I`  
- Una interfaz COM que especifican el tipo de puntero que se almacenará.  
-  
- `piid`  
- Un puntero a lo IID de `I`.  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|El constructor para la matriz de interfaz.|  
-  
-## <a name="remarks"></a>Comentarios  
- Esta clase proporciona un constructor y los métodos derivados para la creación de una matriz de punteros de interfaz COM. Use [CInterfaceList](../../atl/reference/cinterfacelist-class.md) cuando se requiere una lista.  
-  
- Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `CAtlArray`  
-  
- `CInterfaceArray`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlcoll.h  
-  
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray  
- El constructor.  
-  
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*I*<br/>
+Una interfaz COM que especifica el tipo de puntero que se almacenará.
+
+*piid*<br/>
+Un puntero para el IID de *me*.
+
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|El constructor de la matriz de interfaz.|
+
+## <a name="remarks"></a>Comentarios
+
+Esta clase proporciona un constructor y los métodos derivados para crear una matriz de punteros de interfaz COM. Use [CInterfaceList](../../atl/reference/cinterfacelist-class.md) cuando se necesita una lista.
+
+Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`CAtlArray`
+
+`CInterfaceArray`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlcoll.h
+
+##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+
+El constructor.
+
 ```
 CInterfaceArray() throw();
-```  
-  
-### <a name="remarks"></a>Comentarios  
- Inicializa la matriz de puntero inteligente.  
-  
-## <a name="see-also"></a>Vea también  
- [Clase CAtlArray](../../atl/reference/catlarray-class.md)   
- [Clase CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
- [Clase CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Información general de clases](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Comentarios
+
+Inicializa la matriz de puntero inteligente.
+
+## <a name="see-also"></a>Vea también
+
+[CAtlArray (clase)](../../atl/reference/catlarray-class.md)<br/>
+[CComQIPtr (clase)](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits (clase)](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION (búsqueda de manifiesto) | Documentos de Microsoft
+title: -ALLOWISOLATION (búsqueda de manifiesto) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,44 +18,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e063aa51e136dfcc7a4445948e8a68d7a99bca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9197e67e46932f08a266258c41dab7922af2900
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318985"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Manifestar bucle)
-Especifica el comportamiento de la búsqueda de manifiesto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/ALLOWISOLATION[:NO]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- **/ALLOWISOLATION:no** indica la DLL se cargan como si no hubiera ningún manifiesto y hace que el vinculador establecer el `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` de bits en el encabezado opcional `DllCharacteristics` campo.  
-  
- **/ ALLOWISOLATION** hace que el sistema operativo realice búsquedas y cargas de manifiestos.  
-  
- **/ ALLOWISOLATION** es el valor predeterminado.  
-  
- Cuando se deshabilita el aislamiento de un archivo ejecutable, el cargador de Windows no intentará encontrar un manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tendrá un contexto de activación predeterminado, incluso si hay un manifiesto dentro del ejecutable o en el mismo directorio que el ejecutable con nombre * ejecutable-name ***. exe.manifest**.  
-  
- Para obtener más información, consulte [Manifest Files Reference](http://msdn.microsoft.com/library/aa375632).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Expanda el **propiedades de configuración** nodo.  
-  
-3.  Expanda el **vinculador** nodo.  
-  
-4.  Seleccione el **archivo de manifiesto** página de propiedades.  
-  
-5.  Modificar el **Permitir aislamiento** propiedad.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+Especifica el comportamiento de la búsqueda de manifiesto.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+/ALLOWISOLATION[:NO]
+```
+
+## <a name="remarks"></a>Comentarios
+
+**/ALLOWISOLATION:no** indica los archivos DLL se carga como si no hubiera ningún manifiesto y hace que el vinculador establezca el `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit en el encabezado opcional `DllCharacteristics` campo.
+
+**/ ALLOWISOLATION** hace que el sistema operativo realice cargas y búsquedas de manifiestos.
+
+**/ ALLOWISOLATION** es el valor predeterminado.
+
+Cuando se deshabilita el aislamiento de un archivo ejecutable, el cargador de Windows no intentará encontrar un manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tendrá un contexto de activación predeterminado, incluso si hay un manifiesto dentro del ejecutable o en el mismo directorio que el ejecutable con el nombre <em>nombre-ejecutable</em>**. exe.manifest**.
+
+Para obtener más información, consulte [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+
+1. Seleccione el **propiedades de configuración** > **vinculador** > **archivo de manifiesto** página de propiedades.
+
+1. Modificar el **Permitir aislamiento** propiedad.
+
+## <a name="see-also"></a>Vea también
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opciones del vinculador](../../build/reference/linker-options.md)

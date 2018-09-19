@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd49410f9982788e9403f0cb83ca8656473417d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d7544d92d55ec4a1f6d15f3c1d4358970bf2deb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928346"
 ---
 # <a name="messages"></a>Mensajes
-El bucle de mensajes en el **ejecutar** función miembro de clase `CWinApp` recupera los mensajes generados por diferentes eventos en cola. Por ejemplo, cuando el usuario hace clic en el mouse, Windows envía varios mensajes relacionados con el mouse (ratón), como `WM_LBUTTONDOWN` cuando se presiona el botón primario del mouse y `WM_LBUTTONUP` cuando se suelta el botón primario del mouse. La implementación del marco de trabajo del bucle de mensajes de la aplicación envía el mensaje a la ventana apropiada.  
+El bucle de mensajes en el `Run` función miembro de clase `CWinApp` recupera los mensajes generados por diferentes eventos en cola. Por ejemplo, cuando el usuario hace clic en el mouse, Windows envía varios mensajes relacionados con el mouse (ratón), como WM_LBUTTONDOWN cuando se presiona el botón primario del mouse y WM_LBUTTONUP cuando se suelta el botón primario del mouse. La implementación del marco de trabajo del bucle de mensajes de la aplicación envía el mensaje a la ventana apropiada.  
   
  Las categorías de mensajes importantes se describen en [categorías de mensaje](../mfc/message-categories.md).  
   

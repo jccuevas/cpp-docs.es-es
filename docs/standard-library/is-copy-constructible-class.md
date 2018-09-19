@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb4cc6588b61563d547cdbf8e332c66d1909e94d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a73527315b142bd8a650db67c1be29664e11be74
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105333"
 ---
 # <a name="iscopyconstructible-class"></a>Clase is_copy_constructible
 
@@ -35,11 +36,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `Ty` es una clase que tiene un constructor de copia; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de copias, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,5 +1,5 @@
 ---
-title: Línea de comandos D9041 advertencia | Documentos de Microsoft
+title: Advertencia de la línea de comandos D9041 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22573d26e09e14789f4cbd64d68f4082125c2b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70bf82cfdca787898a02fb52926981bfd1a1b3e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033386"
 ---
 # <a name="command-line-warning-d9041"></a>Advertencia de la línea de comandos D9041
-valor no válido 'value' para '/ option'; se supone 'valor'; Agregue ' / analyze' a las opciones de línea de comandos cuando se especifica esta advertencia  
-  
- Un número de advertencia de análisis de código se agrega a la **/wd**, **/we**, **/wo**, o **/wl** opción de línea de comandos sin especificar también el **/ analyze** opción de línea de comandos. Para solucionar este error, agregue el **/ analyze** opción de línea de comandos, o quitar el número de advertencia no válido con la correspondiente **/w** opción de línea de comandos.  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo de línea de comandos siguiente se genera la advertencia D9041:  
-  
-```  
-cl /EHsc /LD /wd6001 filename.cpp  
-```  
-  
- Para corregir la advertencia, agregue el **/ analyze** opción de línea de comandos. Si **/ analyze** no es compatible con la versión del compilador, quite el número de advertencia no válido de la **/wd** opción.  
-  
-## <a name="see-also"></a>Vea también  
- [Errores de línea de comandos de D8000 a través de D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
- [Opciones del compilador](../../build/reference/compiler-options.md)
+
+valor no válido 'value' para '/ option'; Suponiendo que 'valor'; Agregue ' / analyze' a las opciones de línea de comandos cuando especifique esta advertencia
+
+Un número de advertencia de análisis de código se agregó a la **/wd**, **/we**, **/wo**, o **/wl** opción de línea de comandos sin especificar también el **/ analyze** opción de línea de comandos. Para solucionar este error, agregue el **/ analyze** opción de línea de comandos, o quitar el número de advertencia no válido con la correspondiente **/w** opción de línea de comandos.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo de línea de comandos siguiente genera la advertencia D9041:
+
+```
+cl /EHsc /LD /wd6001 filename.cpp
+```
+
+Para corregir la advertencia, agregue el **/ analyze** opción de línea de comandos. Si **/ analyze** no es se admite en la versión del compilador, quite el número de advertencia no válido desde el **/wd** opción.
+
+## <a name="see-also"></a>Vea también
+
+[Errores de la línea de comandos de D8000 a D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)

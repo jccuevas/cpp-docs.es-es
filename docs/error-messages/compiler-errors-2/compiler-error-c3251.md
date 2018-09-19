@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3251 | Documentos de Microsoft
+title: Error del compilador C3251 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7835d537c151ec1eba74d506e803c4f35685586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e58daedc0a2054bbeef885446694165f96bc44d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083969"
 ---
 # <a name="compiler-error-c3251"></a>Error del compilador C3251
-no se puede invocar el método de clase base en una instancia de tipo de valor  
-  
- El siguiente error se produce porque `GetClass` es un miembro de `Microsoft.Runtime.Object`, no de `Microsoft.Runtime.Integer4`.
+
+no se puede invocar el método de clase base en una instancia de tipo de valor
+
+El siguiente error se produce porque `GetClass` es un miembro de `Microsoft.Runtime.Object`, no de `Microsoft.Runtime.Integer4`.

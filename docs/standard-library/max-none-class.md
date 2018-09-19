@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97cb713eda7a11874893bc9fc8a13b3b0784f29a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 44981141be5bfb4f18cb278e724ab905aebcc5cf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964176"
 ---
 # <a name="maxnone-class"></a>max_none (Clase)
 
@@ -47,7 +48,7 @@ class max_none
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Max`|Clase máxima que determina el número máximo de elementos que se van a almacenar en `freelist`.|
+|*Max*|Clase máxima que determina el número máximo de elementos que se van a almacenar en `freelist`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
@@ -77,11 +78,11 @@ void allocated(std::size_t _Nx = 1);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`_Nx`|Valor de incremento.|
+|*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro no hace nada. Se llama después de cada vez que `cache_freelist::allocate` realiza una llamada correcta al operador `new`. El argumento `_Nx` es el número de bloques de memoria del fragmento asignado por el operador `new`.
+Esta función miembro no hace nada. Se llama después de cada llamada correcta por `cache_freelist::allocate` al operador **nuevo**. El argumento *_Nx* es el número de bloques de memoria del fragmento asignado por el operador **nuevo**.
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
@@ -95,11 +96,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`_Nx`|Valor de incremento.|
+|*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro no hace nada. Se llama a esta función miembro después de cada vez que `cache_freelist::deallocate` realiza una llamada al operador `delete`. El argumento `_Nx` es el número de bloques de memoria del fragmento desasignado por el operador `delete`.
+La función miembro no hace nada. Se llama a esta función miembro después de cada llamada por `cache_freelist::deallocate` al operador **eliminar**. El argumento *_Nx* es el número de bloques de memoria del fragmento desasignado por el operador **eliminar**.
 
 ## <a name="full"></a>  max_none::full
 
@@ -111,11 +112,11 @@ bool full();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Esta función miembro siempre devuelve `true`.
+Esta función miembro siempre devuelve **true**.
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve `true`, `deallocate` coloca el bloque de memoria en la lista libre. Si devuelve False, `deallocate` llama al operador `delete` para que desasigne el bloque.
+Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve **true**, `deallocate` coloca el bloque de memoria en la lista libre; si devuelve false, `deallocate` llama al operador **eliminar** desasignar el bloque.
 
 ## <a name="released"></a>  max_none::released
 

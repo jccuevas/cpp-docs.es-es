@@ -1,5 +1,5 @@
 ---
-title: virtual (especificador) | Documentos de Microsoft
+title: virtual (especificador) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200fdb93e7baf8ff229b0445b7ad7a8ceab90d19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 580952727023593da23fd2740da4be23406724b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053510"
 ---
 # <a name="virtual-specifier"></a>virtual (Especificador)
-El [virtuales](../cpp/virtual-cpp.md) palabra clave puede aplicarse solo a funciones miembro de clase no estática. Eso significa que el enlace de las llamadas a la función se aplazará hasta el momento de la ejecución. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).  
-  
+
+El [virtual](../cpp/virtual-cpp.md) palabra clave se puede aplicar solo a funciones miembro de clase no estática. Eso significa que el enlace de las llamadas a la función se aplazará hasta el momento de la ejecución. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).

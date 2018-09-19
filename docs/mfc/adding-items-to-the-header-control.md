@@ -1,5 +1,5 @@
 ---
-title: Agregar elementos al Control de encabezado | Documentos de Microsoft
+title: Agregar elementos al Control de encabezado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206152"
 ---
 # <a name="adding-items-to-the-header-control"></a>Agregar elementos al control de encabezado
-Después de crear el control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) en su ventana primaria, agregue tantos "elementos de encabezado" según sea necesario: normalmente uno por cada columna.  
+Después de crear el control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) en su ventana primaria, agregue tantos "elementos de encabezado" según sea necesario: normalmente uno por columna.  
   
 ### <a name="to-add-a-header-item"></a>Para agregar un elemento de encabezado  
   
-1.  Preparar una [estructura HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) estructura.  
+1.  Preparar una [estructura HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estructura.  
   
 2.  Llame a [:: InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), pasando la estructura.  
   
 3.  Repita los pasos 1 y 2 para elementos adicionales.  
   
- Para obtener más información, consulte [agregar un elemento a un Control de encabezado](http://msdn.microsoft.com/library/windows/desktop/bb775238) del SDK de Windows.  
+ Para obtener más información, consulte [agregando un elemento a un Control de encabezado](/windows/desktop/Controls/header-controls) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)   

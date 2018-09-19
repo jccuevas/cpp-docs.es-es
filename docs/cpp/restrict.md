@@ -1,5 +1,5 @@
 ---
-title: restringir | Documentos de Microsoft
+title: restringir | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,39 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5f91288671eaa3dcf4700ec35dae63ffaef172
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068343"
 ---
 # <a name="restrict"></a>restrict
 
 **Específicos de Microsoft**
 
-Cuando se aplica a una declaración de función o una definición que devuelve un tipo de puntero, `restrict` indica al compilador que la función devuelve un objeto que no es *con alias*, es decir, hace referencia a ningún otro puntero. Esto permite al compilador realizar optimizaciones adicionales.
+Cuando se aplica a una declaración de función o una definición que devuelve un tipo de puntero, **restringir** indica al compilador que la función devuelve un objeto que no es *con alias*, es decir, al que hace referencia por ningún otro punteros. Esto permite que el compilador realice optimizaciones adicionales.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (Restrict)** *pointer_return_type* *función*();  
-  
+> **__declspec (Restrict)** *pointer_return_type* *función*();
+
 ## <a name="remarks"></a>Comentarios
 
-El compilador propaga `__declspec(restrict)`. Por ejemplo, CRT `malloc` función tiene un `__declspec(restrict)` decoración y, por lo tanto, el compilador supone que los punteros inicializados en ubicaciones de memoria por `malloc` también no son un alias existente previamente punteros.
+El compilador propaga **__declspec (Restrict)**. Por ejemplo, CRT `malloc` función tiene un **__declspec (Restrict)** decoración y, por lo tanto, el compilador supone que punteros inicializados en ubicaciones de memoria por `malloc` también no son proporcionado por él previamente punteros existentes.
 
-El compilador no comprueba que el puntero devuelto no es realmente un alias. Es responsabilidad del programador garantizar que el programa no utilice un alias de un puntero marcado con el modificador `restrict __declspec`.  
-  
-Para una semántica similar en las variables, consulte [__restrict](../cpp/extension-restrict.md).
- 
+El compilador no comprueba que el puntero devuelto no es realmente un alias. Es responsabilidad del desarrollador para asegurarse de que el programa no alias no un puntero marcado con el **restringir __declspec** modificador.
+
+Para conocer la semántica similar en las variables, consulte [__restrict](../cpp/extension-restrict.md).
+
 Para la otra anotación que se aplica a los alias dentro de una función, vea [__declspec (noalias)](../cpp/noalias.md).
-  
-Para obtener información sobre la **restringir** palabra clave que forma parte de C++ AMP, consulte [restringir (C++ AMP)](../cpp/restrict-cpp-amp.md).  
- 
-## <a name="example"></a>Ejemplo  
 
-El siguiente ejemplo muestra el uso de `__declspec(restrict)`.
+Para obtener información sobre la **restringir** palabra clave que forma parte de C++ AMP, consulte [restringir (C++ AMP)](../cpp/restrict-cpp-amp.md).
 
-Cuando `__declspec(restrict)` se aplica a una función que devuelve un puntero, esto indica al compilador que la memoria que señala el valor devuelto no es un alias. En este ejemplo, los punteros `mempool` y `memptr` son globales, por lo que el compilador no puede estar seguro de que la memoria que hacen referencia no es un alias. Sin embargo, se utilizan dentro de `ma` y su llamador `init` de forma que devuelve la memoria que no es lo contrario, al que hace referencia el programa, por lo que `__decslpec(restrict)` se usa para el optimizador. Esto es similar a cómo los encabezados de CRT decoran las funciones de asignación como `malloc` utilizando `__declspec(restrict)` para indicar que siempre devuelven memoria que no se puede tener un alias existente punteros.
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente muestra el uso de **__declspec (Restrict)**.
+
+Cuando **__declspec (Restrict)** se aplica a una función que devuelve un puntero, esto indica al compilador que la memoria que apunta el valor devuelto no es un alias. En este ejemplo, los punteros `mempool` y `memptr` son globales, por lo que el compilador no puede estar seguro de que la memoria que hacen referencia no es un alias. Sin embargo, se utilizan dentro de `ma` y su llamador `init` de manera que devuelve la memoria que no es lo contrario, al que hace referencia el programa, por lo que **__decslpec(restrict)** se usa para el optimizador. Esto es similar a cómo los encabezados de CRT decoran las funciones de asignación como `malloc` utilizando **__declspec (Restrict)** para indicar que siempre devuelven memoria que no se puede tener un alias existente punteros.
 
 ```C
 // declspec_restrict.c
@@ -122,6 +123,6 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Palabras clave](../cpp/keywords-cpp.md)  
-[__declspec](../cpp/declspec.md)  
-[__declspec(noalias)](../cpp/noalias.md)  
+[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

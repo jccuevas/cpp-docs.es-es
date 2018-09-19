@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 493c3dc0faf42e0f08f88afd3ac405cfbd7404aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9cddada58773102311027399a0b139b19568445
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099608"
 ---
 # <a name="isenum-class"></a>is_enum (Clase)
 
@@ -36,11 +37,12 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es un tipo de enumeración o una forma `cv-qualified` de un tipo de enumeración; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de enumeración o un `cv-qualified` forma de un tipo de enumeración, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

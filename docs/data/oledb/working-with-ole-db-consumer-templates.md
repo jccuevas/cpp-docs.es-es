@@ -1,5 +1,5 @@
 ---
-title: Trabajar con plantillas de consumidor OLE DB | Documentos de Microsoft
+title: Trabajar con plantillas de consumidor OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,56 +16,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9118732b1c52934b0d914340e592dfa0eac5da18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e20106795fbef536ae288649818a254a5688b82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064157"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Trabajar con plantillas de consumidor OLE DB
+
 Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas de consumidor OLE DB en escenarios comunes:  
   
--   [Simplificar el acceso a datos con atributos de base de datos](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
+- [Simplificar el acceso a datos con atributos de base de datos](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
+- [Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
--   [Recorrer un conjunto de filas simple](../../data/oledb/traversing-a-simple-rowset.md)  
+- [Recorrer un conjunto de filas simple](../../data/oledb/traversing-a-simple-rowset.md)  
   
--   [Realizar consultas parametrizadas](../../data/oledb/issuing-a-parameterized-query.md)  
+- [Realizar consultas parametrizadas](../../data/oledb/issuing-a-parameterized-query.md)  
   
--   [Obtener datos](../../data/oledb/fetching-data.md)  
+- [Obtener datos](../../data/oledb/fetching-data.md)  
   
--   [Actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md)  
+- [Actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md)  
   
--   [Usar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)  
+- [Usar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)  
   
--   [Usar descriptores de acceso](../../data/oledb/using-accessors.md)  
+- [Usar descriptores de acceso](../../data/oledb/using-accessors.md)  
   
--   [Obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
+- [Obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
--   [Admitir transacciones en OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
+- [Admitir transacciones en OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
--   [Usar las vistas de registros de OLE DB](../../data/oledb/using-ole-db-record-views.md)  
+- [Usar las vistas de registros de OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
--   [Usar un conjunto de registros ADO existente](../../data/oledb/using-an-existing-ado-recordset.md)  
+- [Usar un conjunto de registros ADO existente](../../data/oledb/using-an-existing-ado-recordset.md)  
   
--   [Actualizar una columna cuando otra tabla contiene una referencia a la fila](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
+- [Actualizar una columna cuando otra tabla contiene una referencia a la fila](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   
--   [Usar marcadores](../../data/oledb/using-bookmarks.md)  
+- [Usar marcadores](../../data/oledb/using-bookmarks.md)  
   
--   [Recuperar un objeto BLOB](../../data/oledb/retrieving-a-blob.md)  
+- [Recuperar un objeto BLOB](../../data/oledb/retrieving-a-blob.md)  
   
--   [Recibir notificaciones](../../data/oledb/receiving-notifications.md)  
+- [Recibir notificaciones](../../data/oledb/receiving-notifications.md)  
   
- Para obtener un ejemplo de creación e implementación de un consumidor OLE DB, vea [crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).  
+Para obtener un ejemplo de creación e implementación de un consumidor OLE DB, consulte [crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).  
   
- También puede encontrar ejemplos de cómo usar las plantillas de consumidor OLE DB en los ejemplos siguientes:  
+También puede encontrar ejemplos de cómo usar las plantillas de consumidor OLE DB en los ejemplos siguientes:  
   
--   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+- [CatDB](https://github.com/Microsoft/VCSamples)  
   
--   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
+- [DBViewer](https://github.com/Microsoft/VCSamples)  
   
--   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
+- [MultiRead](https://github.com/Microsoft/VCSamples)  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

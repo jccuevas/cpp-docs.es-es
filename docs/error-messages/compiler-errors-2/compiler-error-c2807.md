@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2807 | Documentos de Microsoft
+title: Error del compilador C2807 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538cdfe6ce8c199a213077e26c16fce65e55b9b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a0f1627e19ad3368ad99559b6b576d165347643
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110541"
 ---
 # <a name="compiler-error-c2807"></a>Error del compilador C2807
-el segundo parámetro formal para 'operador operador' postfijo debe ser 'int'  
-  
- El segundo parámetro a un operador de postfijo tiene un tipo incorrecto.  
-  
- El ejemplo siguiente genera C2807:  
-  
-```  
-// C2807.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X operator++ ( X );   // C2807 nonvoid parameter  
-   X operator++ ( int );   // OK, int parameter  
-};  
+
+el segundo parámetro formal para 'operador operador' postfijo debe ser 'int'
+
+El segundo parámetro a un operador de postfijo tiene un tipo incorrecto.
+
+El ejemplo siguiente genera C2807:
+
+```
+// C2807.cpp
+// compile with: /c
+class X {
+public:
+   X operator++ ( X );   // C2807 nonvoid parameter
+   X operator++ ( int );   // OK, int parameter
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Desplazable Interfaces de las clases (ATL) | Documentos de Microsoft
+title: Las clases (ATL) de Interfaces divisibles | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7f61a815293d27139c2739544b0e08e89583e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ea912ec843cdf91d45b2a6e588c25ffd7749546
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762946"
 ---
-# <a name="tear-off-interfaces-classes"></a>Clases de Interfaces de desplazable
-Las clases siguientes proporcionan compatibilidad para interfaces divisibles:  
-  
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa **IUnknown** para una interfaz desplazable.  
-  
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa **IUnknown** para una interfaz desplazable "en caché".  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)
+# <a name="tear-off-interfaces-classes"></a>Las clases de Interfaces divisibles
+
+Las clases siguientes proporcionan compatibilidad para interfaces divisibles:
+
+- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa `IUnknown` para una interfaz desplazable.
+
+- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa `IUnknown` para una interfaz divisibles "en caché".
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)
 

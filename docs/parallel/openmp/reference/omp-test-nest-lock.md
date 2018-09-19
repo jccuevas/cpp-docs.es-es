@@ -1,5 +1,5 @@
 ---
-title: omp_test_nest_lock | Documentos de Microsoft
+title: omp_test_nest_lock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc1bc552de1ee781e4d1e87f4b1d0d49f080fdfa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4fdc3f89f4f12873a10a1d66349c6ac9efd56f71
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017057"
 ---
 # <a name="omptestnestlock"></a>omp_test_nest_lock
-Intenta establecer un bloqueo anidable pero no impide la ejecución de subprocesos.  
+Intenta establecer un bloqueo anidable pero no bloquea la ejecución de subprocesos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,11 +34,10 @@ int omp_test_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+### <a name="parameters"></a>Parámetros
   
- `lock`  
- Una variable de tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que se inicializó con [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
+*lock*<br/>
+Una variable de tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que se inicializó con [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [3.2.5 omp_test_lock y omp_test_nest_lock funciones](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  

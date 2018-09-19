@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1200 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1200 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab32939c55dce5e27f907f3d23e639b24741cdc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03ecd51142bf30230b6b177a36e007345e93bf2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059321"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Error de las herramientas del vinculador LNK1200
-Error al leer la base de datos de programa 'filename'  
-  
- No se pudo leer la base de datos de programa (PDB).  
-  
- Este error puede deberse a daños en el archivo.  
-  
- Si `filename` es el archivo PDB de un archivo objeto, vuelva a compilar el archivo de objeto mediante [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
-  
- Si `filename` es el archivo PDB para el archivo de salida principal y este error se produjo durante una vinculación incremental, elimine el archivo PDB y vuelva a vincular.
+
+Error al leer la base de datos de programa 'filename'
+
+No se pudo leer la base de datos de programa (PDB).
+
+Este error puede deberse a daños en el archivo.
+
+Si `filename` es el archivo PDB de un archivo de objeto, vuelva a compilar el archivo de objeto mediante [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+
+Si `filename` es el archivo PDB para el archivo de salida principal, y este error se produjo durante una vinculación incremental, elimine el archivo PDB y volver a vincular.

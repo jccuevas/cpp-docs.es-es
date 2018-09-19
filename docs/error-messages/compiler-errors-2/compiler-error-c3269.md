@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3269 | Documentos de Microsoft
+title: Error del compilador C3269 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e4e2a2df4271a3a0213b8abedc385f22c871aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84cb9acdd6444b934e7ec51691d87a6912880de2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061817"
 ---
 # <a name="compiler-error-c3269"></a>Error del compilador C3269
-'función': una función miembro de tipo administrado o WinRTtype no se puede declarar con '...'  
-  
-Las funciones de miembro de clase administradas y WinRT no pueden declarar listas de parámetros de longitud variable.  
-  
-El ejemplo siguiente genera el error C3269 y muestra cómo corregirlo:  
-  
-```  
-// C3269_2.cpp  
-// compile with: /clr  
-  
-ref struct A  
-{  
-   void func(int i, ...)   // C3269  
-   // try the following line instead  
-   // void func(int i )  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
+
+'function': no se puede declarar una función miembro de tipo administrado o WinRTtype con '...'
+
+Las funciones de miembro de clase administradas y WinRT no pueden declarar listas de parámetros de longitud variable.
+
+El ejemplo siguiente genera el error C3269 y muestra cómo corregirlo:
+
+```
+// C3269_2.cpp
+// compile with: /clr
+
+ref struct A
+{
+   void func(int i, ...)   // C3269
+   // try the following line instead
+   // void func(int i )
+   {
+   }
+};
+
+int main()
+{
+}
+```

@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Start (método) | Documentos de Microsoft'
+title: Método Asyncbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d81a3f29e99f49b03eb76f44af60c42d433e0bdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611237"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start (Método)
-Inicia la operación asincrónica.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-STDMETHOD(  
-   Start  
-)(void);  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si la operación inicia o ya ha iniciado. en caso contrario, E_ILLEGAL_STATE_CHANGE.  
-  
-## <a name="remarks"></a>Comentarios  
- Start() es una implementación predeterminada de IAsyncInfo::Start y no lleva a cabo ningún trabajo real. Para iniciar una operación asincrónica, invalide el método virtual puro OnStart().  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Inicia la operación asincrónica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   Start
+)(void);
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si la operación se inicia o ya está iniciado; en caso contrario, E_ILLEGAL_STATE_CHANGE.
+
+## <a name="remarks"></a>Comentarios
+
+**Start()** es una implementación predeterminada de `IAsyncInfo::Start`, y no se realiza ningún trabajo real. Para iniciar una operación asincrónica, invalidar el `OnStart()` método virtual puro.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

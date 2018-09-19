@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e06da627d18fa643cb64fda870c986264c573641
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 606ff0197f73a697aa3dad3bea779de80b060705
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020841"
 ---
 # <a name="type-conversions-c"></a>Conversiones de tipos (C)
-Las conversiones de tipos dependen del operador especificado y del tipo del operando o de los operadores. Las conversiones de tipos se realizan en los casos siguientes:  
-  
--   Cuando se asigna un valor de un tipo a una variable de un tipo diferente o un operador convierte el tipo del operando o los operandos antes de realizar una operación  
-  
--   Cuando un valor de un tipo se convierte explícitamente a un tipo diferente  
-  
--   Cuando se pasa un valor como argumento a una función o cuando se devuelve un tipo de una función  
-  
- Un carácter, un entero corto o un campo de bits entero, todos con signo o sin él o un tipo de objeto o de enumeración se pueden usar en una expresión siempre que se pueda usar un entero. Si `int` puede representar todos los valores del tipo original, el valor se convierte en `int`; si no, se convierte en `unsigned int`. Este proceso se denomina “promoción entera”. Las promociones enteras conservan el valor. Es decir, se garantiza que el valor después de la promoción es igual que el valor antes de la promoción. Vea [Conversiones aritméticas usuales](../c-language/usual-arithmetic-conversions.md) para obtener más información.  
-  
-## <a name="see-also"></a>Vea también  
- [Expresiones y asignaciones](../c-language/expressions-and-assignments.md)
+
+Las conversiones de tipos dependen del operador especificado y del tipo del operando o de los operadores. Las conversiones de tipos se realizan en los casos siguientes:
+
+- Cuando se asigna un valor de un tipo a una variable de un tipo diferente o un operador convierte el tipo del operando o los operandos antes de realizar una operación
+
+- Cuando un valor de un tipo se convierte explícitamente a un tipo diferente
+
+- Cuando se pasa un valor como argumento a una función o cuando se devuelve un tipo de una función
+
+Un carácter, un entero corto o un campo de bits entero, todos con signo o sin él o un tipo de objeto o de enumeración se pueden usar en una expresión siempre que se pueda usar un entero. Si `int` puede representar todos los valores del tipo original, el valor se convierte en `int`; si no, se convierte en `unsigned int`. Este proceso se denomina “promoción entera”. Las promociones enteras conservan el valor. Es decir, se garantiza que el valor después de la promoción es igual que el valor antes de la promoción. Vea [Conversiones aritméticas usuales](../c-language/usual-arithmetic-conversions.md) para obtener más información.
+
+## <a name="see-also"></a>Vea también
+
+[Expresiones y asignaciones](../c-language/expressions-and-assignments.md)

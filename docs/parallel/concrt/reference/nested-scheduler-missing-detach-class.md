@@ -1,5 +1,5 @@
 ---
-title: nested_scheduler_missing_detach (clase) | Documentos de Microsoft
+title: nested_scheduler_missing_detach (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26027693209bc5b4687686efeae5d190ed374607
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f3887672f9d0934dbcc38d6db549e383f7976b10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110983"
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach (Clase)
 Esta clase describe una excepción que se produce cuando el runtime de simultaneidad detecta que se dejó de llamar al método `CurrentScheduler::Detach` en un contexto adjunto a un segundo programador mediante el método `Attach` del objeto `Scheduler`.  
@@ -42,7 +43,7 @@ class nested_scheduler_missing_detach : public std::exception;
 |[nested_scheduler_missing_detach](#ctor)|Sobrecargado. Construye un objeto `nested_scheduler_missing_detach`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Se produce esta excepción cuando se anida un programador dentro de otra mediante una llamada a la `Attach` método de una `Scheduler` objeto en un contexto que ya es propiedad de o adjunta a otro programador. El Runtime de simultaneidad produce esta excepción según la ocasión cuando puede detectar el escenario como una ayuda para localizar el problema. No todas las instancias de olvida llamar a la `CurrentScheduler::Detach` método se garantiza que producen esta excepción.  
+ Esta excepción se produce únicamente cuando se anida un programador dentro de otra mediante una llamada a la `Attach` método de un `Scheduler` objeto en un contexto que ya es propiedad o se adjunta a otro programador. El Runtime de simultaneidad produce esta excepción según la ocasión cuando puede detectar el escenario como una ayuda para localizar el problema. No todas las instancias de olvidarse de llamar a la `CurrentScheduler::Detach` se garantiza que el método va a producir esta excepción.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -65,8 +66,8 @@ nested_scheduler_missing_detach() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   

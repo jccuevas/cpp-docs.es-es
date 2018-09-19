@@ -1,5 +1,5 @@
 ---
-title: Exclusión mutua Class1 | Documentos de Microsoft
+title: Mutex (Class1) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,54 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b20c270f7848a346d717357f474d89e37ea117a4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600033"
 ---
-# <a name="mutex-class1"></a>Exclusión mutua Class1
-Representa un objeto de sincronización que controla de forma exclusiva un recurso compartido.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class Mutex : public HandleT<HandleTraits::MutexTraits>  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|**SyncLock**|Sinónimo de una clase que admita bloqueos sincrónicos.|  
-  
-### <a name="public-constructor"></a>Constructor público  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[Mutex::Mutex (constructor)](../windows/mutex-mutex-constructor.md)|Inicializa una nueva instancia de la clase de exclusión mutua.|  
-  
-### <a name="public-members"></a>Miembros públicos  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[Mutex::Lock (método)](../windows/mutex-lock-method.md)|Espera a que el objeto actual o el objeto de exclusión mutua asociado con el identificador especificado, libera la exclusión mutua o ha transcurrido el intervalo de tiempo de espera especificado.|  
-  
-### <a name="public-operator"></a>Operador público  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[Mutex::operator= (operador)](../windows/mutex-operator-assign-operator.md)|Asigna (se desplaza) la exclusión mutua especificada del objeto para el objeto actual de la exclusión mutua.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `Mutex`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)
+# <a name="mutex-class1"></a>Mutex (Class1)
+
+Representa un objeto de sincronización que controla de forma exclusiva un recurso compartido.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+class Mutex : public HandleT<HandleTraits::MutexTraits>
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|`SyncLock`|Un sinónimo de una clase que admita bloqueos sincrónicos.|
+
+### <a name="public-constructor"></a>Constructor público
+
+|nombre|Descripción|
+|----------|-----------------|
+|[Mutex::Mutex (constructor)](../windows/mutex-mutex-constructor.md)|Inicializa una nueva instancia de la **Mutex** clase.|
+
+### <a name="public-members"></a>Miembros públicos
+
+|nombre|Descripción|
+|----------|-----------------|
+|[Mutex::Lock (método)](../windows/mutex-lock-method.md)|Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.|
+
+### <a name="public-operator"></a>Operador público
+
+|nombre|Descripción|
+|----------|-----------------|
+|[Mutex::operator= (operador)](../windows/mutex-operator-assign-operator.md)|Asigna (mueve) especificado **Mutex** el objeto actual **Mutex** objeto.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`Mutex`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87eb15654be3f709da92d561d048b3a7961c985f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099621"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator (Clase)
 
@@ -39,7 +40,8 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parámetros
 
-`Container` El tipo de contenedor en la parte posterior de qué elementos están va a insertar un `back_insert_iterator`.
+*Contenedor*<br/>
+El tipo de contenedor en cuyo final `back_insert_iterator` va a insertar los elementos.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -62,9 +64,9 @@ El contenedor debe satisfacer los requisitos para una secuencia de inserción en
 
 |Operador|Descripción|
 |-|-|
-|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida * `i` = `x` para una inserción al final.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción al final.|
 |[operator++](#op_add_add)|Incrementa el `back_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|
-|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión de iterador de salida * `i` = `x` para una inserción al final.|
+|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción al final.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,7 +84,8 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Cont` El contenedor que el `back_insert_iterator` consiste en Insertar un elemento en.
+*_Cont*<br/>
+Contenedor en el que `back_insert_iterator` va a insertar un elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -120,9 +123,9 @@ int main( )
 
    // Alternatively, insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 600;
+*backiter = 600;
    backiter++;
- *backiter = 700;
+*backiter = 700;
 
    cout << "After the insertions, the vector vec is: ( ";
    for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++)
@@ -190,7 +193,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator*
+## <a name="op_star"></a>  back_insert_iterator:: operator\*
 
 Operador de desreferencia usado para implementar la expresión de iterador de salida \* *i* = *x*.
 
@@ -233,9 +236,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -294,9 +297,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;      // Increment to the next element
- *backiter = 40;
+*backiter = 40;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -322,7 +325,8 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El valor que se va a insertar en el contenedor.
+*Val*<br/>
+Valor que se va a insertar en el contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -365,9 +369,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";

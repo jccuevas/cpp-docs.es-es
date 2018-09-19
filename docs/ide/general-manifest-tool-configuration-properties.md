@@ -1,5 +1,5 @@
 ---
-title: Manifiesto de propiedades de configuración de la herramienta (Visual C++) | Documentos de Microsoft
+title: Propiedades de configuración de la herramienta Manifiesto (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1953e7c37c07f66845510efe037015a537aa7baa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 149facb5ed934b68d3407f9acc17238482021f06
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716321"
 ---
-# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>General, herramienta manifiesto, propiedades de configuración, &lt;Projectname&gt; cuadro de diálogo páginas de propiedades
-Utilice este cuadro de diálogo para especificar las opciones generales de [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>General, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de &lt;NombreDeProyecto&gt; (Cuadro de diálogo)
+Use este cuadro de diálogo para especificar las opciones generales de [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- Para obtener acceso a este cuadro de diálogo de la página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el **herramienta manifiesto** nodo bajo **propiedades de configuración**y, a continuación, seleccione **General**.  
+ Para acceder a este cuadro de diálogo de página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el nodo **Herramienta Manifiesto** bajo **Propiedades de configuración** y, después, seleccione **General**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Suprimir el titular de inicio**  
- **Sí (/ nologo)** especifica que los datos de copyright de Microsoft estándares se ocultan cuando se inicia la herramienta de manifiesto. Utilice esta opción para suprimir la salida no deseado en los archivos de registro, cuando ejecute mt.exe como parte de un proceso de compilación o de un entorno de compilación.  
+- **Suprimir la pancarta de inicio**
+
+   **Sí (/nologo)** especifica que los datos de copyright de Microsoft estándar se ocultan cuando se inicia la herramienta Manifiesto. Use esta opción para suprimir la salida no deseada en los archivos de registro, cuando ejecute mt.exe como parte de un proceso de compilación o desde un entorno de compilación.  
   
- **Resultados detallados**  
- **Sí (/verbose)** especifica que se mostrará información adicional de compilación durante la generación del manifiesto.  
+- **Resultado detallado**
+
+   **Sí (/verbose)** especifica que se mostrará información adicional de compilación durante la generación del manifiesto.  
   
- **Identidad del ensamblado**  
- Utiliza la opción /identity para especificar una cadena de identidad, que incluye los atributos para el [ \<assemblyIdentity > elemento](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una cadena de identidad comienza con el valor de la `name` atributo y va seguida por *atributo* = *valor* pares. Los atributos en una cadena de identidad se delimitan mediante una coma.  
+- **Identidad del ensamblado**
+
+   Usa la opción /identity para especificar una cadena de identidad, que incluye los atributos para el [Elemento \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una cadena de identidad comienza con el valor para el atributo `name`, seguido por pares *atributo* = *valor*. Los atributos de una cadena de identidad se delimitan mediante una coma.  
   
- El siguiente es un ejemplo de cadena de identidad:  
+   A continuación se muestra una cadena de identidad de ejemplo:  
   
- `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
+   `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
   
 ## <a name="see-also"></a>Vea también  
  [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Páginas de propiedades de la herramienta manifiesto](../ide/manifest-tool-property-pages.md)   
+ [Páginas de propiedades de la herramienta Manifiesto](../ide/manifest-tool-property-pages.md)   
  [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)   

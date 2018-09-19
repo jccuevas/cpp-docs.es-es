@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d4368fa2b88d22f0b07bc10bba4769d05375041
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad5631fc5d689ccb6632ac230aebdaf40f18f80
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106488"
 ---
 # <a name="istriviallymoveconstructible-class"></a>Clase is_trivially_move_constructible
 
@@ -35,25 +36,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es una clase que tiene un constructor de movimiento trivial; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de movimiento trivial, en caso contrario, es false.
 
-Un constructor de movimiento para una clase `Ty` es trivial si:
+Un constructor de movimiento para una clase *Ty* es trivial si:
 
 se declara de forma implícita
 
 sus tipos de parámetro son equivalentes a los de una declaración implícita
 
-la clase `Ty` no tiene ninguna función virtual
+la clase *Ty* no tiene ninguna función virtual
 
-la clase `Ty` no tiene ninguna base virtual
+la clase *Ty* tiene ninguna base virtual
 
 la clase no tiene ningún miembro de datos no estáticos volátil
 
-todas las bases directas de la clase `Ty` tienen constructores de movimiento trivial
+todas las bases directas de la clase *Ty* tienen constructores de movimiento trivial
 
 las clases de todos los miembros de datos no estáticos del tipo de clase tienen constructores de movimiento triviales
 

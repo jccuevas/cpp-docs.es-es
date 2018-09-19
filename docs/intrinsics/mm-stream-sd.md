@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_sd | Documentos de Microsoft
+title: _mm_stream_sd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8a65066ad19b78319867782255d70da8d5b721
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fb8608e03a514228ecdbaf321124c17a00aeb5c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700172"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
+
 **Específicos de Microsoft**  
   
- Escribe datos de 64 bits en una ubicación de memoria sin dañar las memorias caché.  
+ Escribe datos de 64 bits en una ubicación de memoria sin contaminar las memorias caché.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,11 +40,11 @@ void _mm_stream_sd(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [out] `Dest`  
- Un puntero a la ubicación donde se escribirán los datos de origen.  
+*dest*<br/>
+[out] Un puntero a la ubicación donde se escribirán los datos de origen.  
   
- [in] `Source`  
- Un valor de 128 bits que contiene el `double` valor que se escribirá en la parte inferior de 64 bits...  
+*Source*<br/>
+[in] Un valor de 128 bits que contiene el `double` valor que se escribirá en la parte inferior de 64 bits...  
   
 ## <a name="return-value"></a>Valor devuelto  
  Ninguno.  
@@ -56,9 +58,9 @@ void _mm_stream_sd(
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función intrínseca genera el `movntsd` instrucción. Para determinar la compatibilidad de hardware con esta instrucción, llame a la `__cpuid` intrínseco con `InfoType=0x80000001` y comprobar bit 6 de `CPUInfo[2] (ECX)`. Este bit es 1 si el hardware es compatible con esta instrucción y 0 en caso contrario.  
+ Esta función intrínseca genera el `movntsd` instrucción. Para determinar la compatibilidad de hardware para esta instrucción, llame a la `__cpuid` intrínseca con `InfoType=0x80000001` y comprobar poco 6 de `CPUInfo[2] (ECX)`. Este bit es 1 si el hardware es compatible con esta instrucción y 0 en caso contrario.  
   
- Si se ejecuta código que utiliza el `_mm_stream_sd` intrínseco en hardware que no es compatible con la `movntsd` instrucciones, los resultados son imprevisibles.  
+ Si ejecuta el código que utiliza el `_mm_stream_sd` intrínseco en hardware que no es compatible con la `movntsd` instrucciones, los resultados son impredecibles.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -88,7 +90,8 @@ d[0] = -1, d[1] = 1
 ```  
   
 **FIN de Específicos de Microsoft**  
- Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
+
+Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Vea también  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   

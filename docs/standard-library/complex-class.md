@@ -20,15 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103258"
 ---
 # <a name="complex-class"></a>complex (Clase)
 
-La clase de plantilla describe un objeto que almacena dos objetos de tipo **Type**, uno que representa la parte real de un número complejo y otro que representa la parte imaginaria.
+La clase de plantilla describe un objeto que almacena dos objetos de tipo `Type`, uno que representa la parte real de un número complejo y otro que representa la parte imaginaria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>Comentarios
 
-Un objeto de clase **Type**:
+Un objeto de clase `Type`:
 
 - Tiene un constructor público predeterminado, un destructor, un constructor de copias y un operador de asignación, con un comportamiento convencional.
 
@@ -49,9 +50,9 @@ Un objeto de clase **Type**:
 
 - Define, en la medida que sean necesarios, los operadores aritméticos y las funciones matemáticas que se definen para los tipos de punto flotante con un comportamiento convencional.
 
-En concreto, no pueden existir diferencias sutiles entre la construcción de la copia y la construcción predeterminada seguida por una asignación. Ninguna de las operaciones en objetos de clase **Type** puede iniciar excepciones.
+En concreto, no pueden existir diferencias sutiles entre la construcción de la copia y la construcción predeterminada seguida por una asignación. Ninguna de las operaciones en objetos de clase `Type` pueden producir excepciones.
 
-Las especializaciones explícitas de la clase de plantilla compleja existen para los tres tipos de punto flotante. En esta implementación, un valor de cualquier otro tipo **Type** está convertido al tipo **double** para cálculos reales, con el resultado **double** asignado de nuevo al objeto almacenado de tipo **Type**`.`
+Las especializaciones explícitas de la clase de plantilla compleja existen para los tres tipos de punto flotante. En esta implementación, un valor de cualquier otro tipo `Type` está encasillado en **doble** para cálculos reales, con el **doble** asignado al objeto almacenado de tipo de resultado `Type``.`
 
 ### <a name="constructors"></a>Constructores
 
@@ -107,11 +108,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parámetros
 
-`_RealVal` El valor de la parte real que se usa para inicializar el número complejo que se está construyendo.
+*_RealVal*<br/>
+El valor de la parte real que se usa para inicializar el número complejo que se está construyendo.
 
-`_ImagVal` El valor de la parte imaginaria que se usa para inicializar el número complejo que se está construyendo.
+*_ImagVal*<br/>
+El valor de la parte imaginaria que se usa para inicializar el número complejo que se está construyendo.
 
-`complexNum` Número complejo cuyas partes reales e imaginarias se usan para inicializar el número complejo que se está construyendo.
+*complexNum*<br/>
+Número complejo cuyas partes reales e imaginarias se utilizan para inicializar el número complejo que se está construyendo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -186,7 +190,8 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un número complejo cuya valor imaginario es que deben extraerse.
+*right*<br/>
+Un número complejo cuya valor imaginario va a extraerse.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -242,7 +247,8 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un número complejo o un número que es el mismo tipo que el parámetro del número complejo de destino.
+*right*<br/>
+Un número complejo o un número que es del mismo tipo que el parámetro del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -325,7 +331,8 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un número complejo o un número que es el mismo tipo que el parámetro del número complejo de destino.
+*right*<br/>
+Un número complejo o un número que es del mismo tipo que el parámetro del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -399,7 +406,7 @@ The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)
 The complex number cr1 added to the complex number cl1 is:
- cl1 += cr1 = (5,3)
+cl1 += cr1 = (5,3)
 The modulus of cl1 is: 5.83095
 The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.
 
@@ -407,7 +414,7 @@ The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)
 The complex number cr2 added to the complex number cl2 is:
- cl2 += cr2 = (3,4)
+cl2 += cr2 = (3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -427,9 +434,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-`complexNum` Un número complejo que se va a restar el número complejo de destino.
+*complexNum*<br/>
+Un número complejo que se va a restar del número complejo de destino.
 
-`_RealPart` Un número real que se va a restar el número complejo de destino.
+*_RealPart*<br/>
+Un número real que se va a restar del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -502,18 +511,18 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The difference between the two complex numbers is:
- cs1 = cl1 - cr1 = (1,5)
+cs1 = cl1 - cr1 = (1,5)
 Complex number cr1 subtracted from complex number cl1 is:
- cl1 -= cr1 = (1,5)
+cl1 -= cr1 = (1,5)
 The modulus of cl1 is: 5.09902
 The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.
 
 The left-side complex number is cl2 = (2,4)
 The right-side complex number is cr2 = 5
 The difference between the two complex numbers is:
- cs2 = cl2 - cr2 = (-3,4)
+cs2 = cl2 - cr2 = (-3,4)
 Complex number cr2 subtracted from complex number cl2 is:
- cl2 -= cr2 = (-3,4)
+cl2 -= cr2 = (-3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
@@ -533,9 +542,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-`complexNum` Un número complejo que se va a restar el número complejo de destino.
+*complexNum*<br/>
+Un número complejo que se va a restar del número complejo de destino.
 
-`_RealPart` Un número real que se va a restar el número complejo de destino.
+*_RealPart*<br/>
+Un número real que se va a restar del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -633,7 +644,8 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un número complejo o un número que es el mismo tipo que el parámetro del número complejo de destino.
+*right*<br/>
+Un número complejo o un número que es del mismo tipo que el parámetro del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -665,7 +677,7 @@ int main( )
 
    cl1  = cr1;
    cout << "The complex number cr1 assigned to the complex number cl1 is:"
-        << "\n cl1 = cr1 = " << cl1 << endl;
+        << "\ncl1 = cr1 = " << cl1 << endl;
 
    // Example of the second member function
    // type double assigned to type complex<double>
@@ -676,11 +688,11 @@ int main( )
 
    cl2 = cr2;
    cout << "The complex number cr2 assigned to the complex number cl2 is:"
-        << "\n cl2 = cr2 = " << cl2 << endl;
+        << "\ncl2 = cr2 = " << cl2 << endl;
 
    cl2 = complex<double>(3.0, 4.0);
    cout << "The complex number (3, 4) assigned to the complex number cl2 is:"
-        << "\n cl2 = " << cl2 << endl;
+        << "\ncl2 = " << cl2 << endl;
 }
 ```
 
@@ -688,13 +700,13 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The complex number cr1 assigned to the complex number cl1 is:
- cl1 = cr1 = (2,-1)
+cl1 = cr1 = (2,-1)
 The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The complex number cr2 assigned to the complex number cl2 is:
- cl2 = cr2 = (5,0)
+cl2 = cr2 = (5,0)
 The complex number (3, 4) assigned to the complex number cl2 is:
- cl2 = (3,4)
+cl2 = (3,4)
 ```
 
 ## <a name="real"></a>  complex::real
@@ -710,7 +722,8 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un número complejo cuyo valor real es que deben extraerse.
+*right*<br/>
+Un número complejo cuyo valor real es que deben extraerse.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -762,7 +775,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`value_type` es un sinónimo del parámetro de plantilla **Type** de clase compleja.
+`value_type` es un sinónimo de la clase compleja `Type` parámetro de plantilla.
 
 ### <a name="example"></a>Ejemplo
 
@@ -791,5 +804,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Vea también
 
-[Miembros complejos](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

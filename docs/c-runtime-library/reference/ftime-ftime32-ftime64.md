@@ -45,11 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fd388e2963a0e28389fbf7cc2c4bd146ac9b61e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107060"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -65,24 +66,25 @@ void _ftime64( struct __timeb64 *timeptr );
 
 ### <a name="parameters"></a>Parámetros
 
-*timeptr* puntero a un **_timeb**, **__timeb32**, o **__timeb64** estructura.
+*timeptr*<br/>
+Puntero a un **_timeb**, **__timeb32**, o **__timeb64** estructura.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_ftime** función obtiene la hora local actual y la almacena en la estructura que señala *timeptr*. El **_timeb**, **__timeb32**, y **__timeb64** estructuras se definen en \<sys\\timeb.h >. Contienen cuatro campos, que se enumeran en la tabla siguiente.
+El **_ftime** función obtiene la hora local actual y lo almacena en la estructura que señala *timeptr*. El **_timeb**, **__timeb32**, y **__timeb64** estructuras se definen en \<sys\\timeb.h >. Contienen cuatro campos, que se enumeran en la tabla siguiente.
 
 |Campo|Descripción|
 |-|-|
 |**dstflag**|Distinto de cero si el horario de verano está en vigor para la zona horaria local. (Consulte [_tzset](tzset.md) para obtener una explicación de cómo se determina el horario de verano).|
 |**millitm**|Fracción de segundo en milisegundos.|
 |**time**|La hora en segundos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC).|
-|**Zona horaria**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **zona horaria** se establece el valor de la variable global **_timezone** (consulte **_tzset**).|
+|**Zona horaria**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **timezone** se establece el valor de la variable global **_timezone** (consulte **_tzset**).|
 
-El **_ftime64** función, que usa el **__timeb64** estructura, permite expresar una hasta 23:59:59, 31 de diciembre de 3000, UTC; las fechas de creación del archivo, mientras que **_ftime32**solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
+El **_ftime64** función, que usa el **__timeb64** estructura, permite la creación del archivo fechas expresarse a través de 23:59:59, 31 de diciembre de 3000, UTC; mientras que **_ftime32**solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 
-El **_ftime** función es equivalente a **_ftime64**, y **_timeb** contiene una hora de 64 bits, a menos que **_USE_32BIT_TIME_T** se define, en cuyo caso el comportamiento anterior está en vigor; **_ftime** usa uno de 32 bits y **_timeb** contiene un tiempo de 32 bits.
+El **_ftime** es equivalente a la función **_ftime64**, y **_timeb** contiene una hora de 64 bits, a menos que **_USE_32BIT_TIME_T** se define, en cuyo caso el comportamiento anterior está en vigor; **_ftime** usa un tiempo de 32 bits y **_timeb** contiene un tiempo de 32 bits.
 
-**_ftime** valida sus parámetros. Si pasa un puntero nulo como *timeptr*, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece **errno** a **EINVAL**.
+**_ftime** valida sus parámetros. Si pasa un puntero nulo como *timeptr*, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece **errno** a **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

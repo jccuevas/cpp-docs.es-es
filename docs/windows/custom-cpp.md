@@ -1,5 +1,5 @@
 ---
-title: personalizado (C++) | Documentos de Microsoft
+title: personalizado (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220366"
 ---
 # <a name="custom-c"></a>custom (C++)
-Define los metadatos de un objeto en la biblioteca de tipos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      [ custom(  
-   uuid,   
-   value  
-) ];  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *uuid*  
- Identificador único.  
-  
- *valor*  
- Un valor que se pueden colocar en una variante.  
-  
-## <a name="remarks"></a>Comentarios  
- El **personalizado** atributo C++ hará que la información se coloquen en la biblioteca de tipos. Necesitará una herramienta que lee el valor personalizado de la biblioteca de tipos.  
-  
- El **personalizado** atributo tiene la misma funcionalidad que la [personalizado](http://msdn.microsoft.com/library/windows/desktop/aa366766) atributo MIDL.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|COM no `interface`, **clase**, `enum`s, `idl_module` métodos, los miembros de interfaz, los parámetros de la interfaz, `typedef`s, **union**s, `struct`s|  
-|**Reiterativo**|Sí|  
-|**Atributos requeridos**|**coclase** (cuando se usa en la clase)|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos independientes](../windows/stand-alone-attributes.md)   
- [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atributos de parámetro](../windows/parameter-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
- [Atributos de clase](../windows/class-attributes.md)   
- [Atributos de interfaz](../windows/interface-attributes.md)   
+
+Define los metadatos de un objeto en la biblioteca de tipos.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ custom(
+   uuid,
+   value
+) ];
+```
+
+### <a name="parameters"></a>Parámetros
+
+*uuid*  
+Identificador único.
+
+*valor*  
+Un valor que se puede colocar en una variante.
+
+## <a name="remarks"></a>Comentarios
+
+El **personalizado** atributo de C++ hará que la información para colocarse en la biblioteca de tipos. Necesitará una herramienta que lee el valor personalizado de la biblioteca de tipos.
+
+El **personalizado** atributo tiene la misma funcionalidad que el [personalizado](/windows/desktop/Midl/custom) atributo MIDL.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|No COM **interfaz**, **clase**, **enum**s, `idl_module` métodos, los miembros de interfaz, los parámetros de la interfaz, **typedef**s, **unión**s, **struct**s|
+|**Reiterativo**|Sí|
+|**Atributos requeridos**|**coclase** (cuando se usa en la clase)|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos independientes](../windows/stand-alone-attributes.md)  
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos de parámetro](../windows/parameter-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  
+[Atributos de clase](../windows/class-attributes.md)  
+[Atributos de interfaz](../windows/interface-attributes.md)  

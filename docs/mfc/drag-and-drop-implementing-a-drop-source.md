@@ -19,20 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928985"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Arrastrar y colocar: Implementar un origen de colocación
 En este artículo se explica cómo obtener la aplicación para proporcionar datos a una operación de arrastrar y colocar.  
   
- Implementación básica de un origen de colocación es relativamente sencilla. El primer paso es determinar qué eventos inician una operación de arrastre. Recomienda directrices de interfaz de usuario definen el principio de una operación de arrastre como la selección de datos y un `WM_LBUTTONDOWN` eventos que se producen en un punto dentro de los datos seleccionados. Los ejemplos de MFC OLE [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md) siga estas instrucciones.  
+ Implementación básica de un origen de colocación es relativamente sencilla. El primer paso es determinar qué eventos inician una operación de arrastre. Recomienda directrices de interfaz de usuario definen el principio de una operación de arrastre como la selección de datos y un **WM_LBUTTONDOWN** eventos que se producen en un punto dentro de los datos seleccionados. Los ejemplos de MFC OLE [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md) siga estas instrucciones.  
   
  Si la aplicación es un contenedor y los datos seleccionados están vinculado o un objeto incrustado de tipo `COleClientItem`, llame a su `DoDragDrop` función miembro. En caso contrario, construir un `COleDataSource` objeto, inicialícelo con la selección y llamar al objeto de origen de datos `DoDragDrop` función miembro. Si la aplicación es un servidor, use `COleServerItem::DoDragDrop`. Para obtener información acerca de cómo personalizar el comportamiento estándar de arrastrar y colocar, vea el artículo [arrastrar y colocar: personalización](../mfc/drag-and-drop-customizing.md).  
   
- Si `DoDragDrop` devuelve `DROPEFFECT_MOVE`, eliminar inmediatamente los datos de origen del documento de origen. Ningún otro tipo de valor devuelto de `DoDragDrop` no tiene ningún efecto en un origen de colocación.  
+ Si `DoDragDrop` devuelve **DROPEFFECT_MOVE**, eliminar inmediatamente los datos de origen del documento de origen. Ningún otro tipo de valor devuelto de `DoDragDrop` no tiene ningún efecto en un origen de colocación.  
   
  Para obtener más información, consulte:  
   

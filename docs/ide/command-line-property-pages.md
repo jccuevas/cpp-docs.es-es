@@ -1,5 +1,5 @@
 ---
-title: Páginas de propiedades de línea de comandos | Documentos de Microsoft
+title: Páginas de propiedades Línea de comandos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327816"
 ---
 # <a name="command-line-property-pages"></a>páginas de propiedades Línea de comandos
-La mayoría de las carpetas de página de propiedad contiene un **línea de comandos** página de propiedades. Esta página muestra qué propiedades se establecen en la carpeta. El **línea de comandos** página de propiedades también contiene un **opciones adicionales** cuadro donde puede especificar las propiedades que son válidas para la herramienta pero para los que no hay ninguna propiedad en la carpeta.  
+La mayoría de las carpetas de página de propiedades contienen una página de propiedades **Línea de comandos**. En esta página se muestran qué propiedades se establecen en la carpeta. La página de propiedades **Línea de comandos** también contiene un cuadro **Opciones adicionales** donde puede especificar las propiedades que son válidas para la herramienta pero para las que no hay ninguna propiedad en la carpeta.  
   
- Cualquier comando que escriba en el cuadro de edición se pasarán a través de la herramienta para la carpeta. Ninguna comprobación ni comprobaciones se realizará en la entrada, ni tampoco se producirá ninguna comprobación de dependencia.  
+ Cualquier comando que escriba en el cuadro de edición se pasará a través de la herramienta para la carpeta. No se realiza ninguna comprobación en la entrada, ni tampoco hay comprobaciones de dependencia.  
   
- Para obtener información sobre cómo obtener acceso a la **línea de comandos** páginas de propiedades, vea [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+ Para obtener información sobre cómo acceder a las páginas de propiedades **Línea de comandos**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   

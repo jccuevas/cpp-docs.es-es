@@ -1,5 +1,5 @@
 ---
-title: Clase CLinearTransition | Documentos de Microsoft
+title: CLinearTransition (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64b53cafc60e556ac142cdaf1f56608e5ab3de70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211746"
 ---
 # <a name="clineartransition-class"></a>Clase CLinearTransition
 Encapsula una transición lineal.  
@@ -45,7 +46,7 @@ class CLinearTransition : public CBaseTransition;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CLinearTransition::CLinearTransition](#clineartransition)|Construye un objeto de transición lineal y la inicializa con el valor final y la duración.|  
+|[CLinearTransition::CLinearTransition](#clineartransition)|Construye un objeto de transición lineal y lo inicializa con la duración y el valor final.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -61,7 +62,7 @@ class CLinearTransition : public CBaseTransition;
 |[CLinearTransition::m_duration](#m_duration)|La duración de la transición.|  
   
 ## <a name="remarks"></a>Comentarios  
- Durante una transición lineal, el valor de la variable de animación realiza la transición linealmente respecto de su valor inicial a un valor final especificado. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador de nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
+ Durante una transición lineal, el valor de la variable de animación realiza la transición linealmente desde su valor inicial para un valor final especificado. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -74,7 +75,7 @@ class CLinearTransition : public CBaseTransition;
  **Encabezado:** afxanimationcontroller.h  
   
 ##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
- Construye un objeto de transición lineal y la inicializa con el valor final y la duración.  
+ Construye un objeto de transición lineal y lo inicializa con la duración y el valor final.  
   
 ```  
 CLinearTransition(
@@ -83,10 +84,10 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  La duración de la transición.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  El valor de la variable de animación al final de la transición.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
@@ -99,8 +100,8 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
-`pLibrary`  
- Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
+*pLibrary*  
+ Un puntero a un [IUIAnimationTransitionLibrary interfaz](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define una biblioteca de transiciones estándares.  
   
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; en caso contrario, FALSE.  

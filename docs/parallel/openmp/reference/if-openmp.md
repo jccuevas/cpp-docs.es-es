@@ -1,5 +1,5 @@
 ---
-title: Si (OpenMP) | Documentos de Microsoft
+title: Si (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2467c295c4f2724ec6d258e844f2bdaa84cfe29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020958"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
 Especifica si se debe ejecutar un bucle en paralelo o en serie.  
@@ -31,11 +32,10 @@ Especifica si se debe ejecutar un bucle en paralelo o en serie.
 if(expression)  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+### <a name="parameters"></a>Parámetros
   
- `expression`  
- Una expresión entera que, si se evalúa como True (distinto de cero,) hace que el código en la región paralela para ejecutar en paralelo. Si la expresión se evalúa como false (cero), la región paralela se ejecuta en serie (con un solo subproceso).  
+*Expresión*<br/>
+Una expresión entera que, si se evalúa como True (distinto de cero,) hace que el código en la región paralela para ejecutar en paralelo. Si la expresión se evalúa como false (cero), la región paralela se ejecuta en serie (mediante un único subproceso).  
   
 ## <a name="remarks"></a>Comentarios  
  `if` se aplica a las siguientes directivas:  

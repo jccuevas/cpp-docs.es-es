@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108397f6c3c3c088839230f2b48b505300149345
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a04265a68a03edc9f957161991d2ddd91a8e6096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958184"
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag (Struct)
 
-Una clase que proporciona un tipo de valor devuelto para la función **iterator_category** que representa un iterador bidireccional.
+Una clase que proporciona un tipo de valor devuelto para `iterator_category` función que representa un iterador bidireccional.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,7 +38,7 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 
 Las clases de etiquetas de categoría se usan como etiquetas de compilación para la selección de algoritmos. La función de plantilla debe buscar la categoría más específica de su argumento de iterador para que pueda usar el algoritmo más eficaz en tiempo de compilación. Para cada tipo de iterador `Iterator`, `iterator_traits`< `Iterator`>:: **iterator_category** debe definirse para que sea la etiqueta de categoría más específica que describe el comportamiento del iterador.
 
-El tipo es igual a **iterator**\< **Iter**>:: **iterator_category** cuando **Iter** describe un objeto que puede actuar como un iterador bidireccional.
+El tipo es igual a **iterador** \< **Iter**>:: **iterator_category** cuando `Iter` describe un objeto que puede actuar como un bidireccional iterador.
 
 ## <a name="example"></a>Ejemplo
 

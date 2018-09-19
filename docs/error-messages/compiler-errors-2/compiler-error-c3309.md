@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3309 | Documentos de Microsoft
+title: Error del compilador C3309 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390740c3a7083ede314f58a7bc68432c243583ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7d9d5f80d6c3a32f77637725e8ca53f1fdbfd51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055486"
 ---
 # <a name="compiler-error-c3309"></a>Error del compilador C3309
-'macro_name': el nombre de módulo no puede ser una macro ni una palabra clave  
-  
- El valor que se pasa a la propiedad name del atributo de módulo no puede ser un símbolo para que el preprocesador se expanda; debe ser un literal de cadena.  
-  
- El ejemplo siguiente genera la advertencia C3309:  
-  
-```  
-// C3309.cpp  
-#define NAME MyModule  
-[module(name="NAME")];   // C3309  
-// Try the following line instead  
-// [module(name="MyModule")];  
-[coclass]  
-class MyClass {  
-public:  
-   void MyFunc();  
-};  
-  
-int main() {  
-}  
+
+'macro_name': el nombre de módulo no puede ser una macro ni una palabra clave
+
+El valor que se pasa a la propiedad name del atributo de módulo no puede ser un símbolo para que el preprocesador se expanda; debe ser un literal de cadena.
+
+El ejemplo siguiente genera la advertencia C3309:
+
+```
+// C3309.cpp
+#define NAME MyModule
+[module(name="NAME")];   // C3309
+// Try the following line instead
+// [module(name="MyModule")];
+[coclass]
+class MyClass {
+public:
+   void MyFunc();
+};
+
+int main() {
+}
 ```

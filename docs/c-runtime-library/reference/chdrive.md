@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f95169f62fa2eaf9c562bff463ad84c0827db9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b6d8d53ea3b7331de08ea2aa2a00e5fdfb106c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684328"
 ---
 # <a name="chdrive"></a>_chdrive
 
@@ -66,9 +67,9 @@ Cero (0) si la unidad de trabajo actual se ha cambiado correctamente; de lo cont
 
 ## <a name="remarks"></a>Comentarios
 
-Si *unidad* está fuera del intervalo comprendido entre 1 y 26, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la **_chdrive** función devuelve -1, **errno** está establecido en **EACCES**, y **_doserrno** está establecido en  **ERROR_INVALID_DRIVE**.
+Si *unidad* está fuera del intervalo comprendido entre 1 y 26, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, el **_chdrive** función devuelve -1, **errno** está establecido en **EACCES**, y **_doserrno** está establecido en  **ERROR_INVALID_DRIVE**.
 
-La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, vaya a [Catálogo de referencia y API de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=150542) y busque **SetCurrentDirectory**.
+La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, consulte [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
 
 La función **_chdrive** solo cambia la unidad de trabajo actual; **_chdir** cambia el directorio de trabajo actual.
 

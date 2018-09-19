@@ -1,5 +1,5 @@
 ---
-title: Con un conjunto de registros ADO existente | Documentos de Microsoft
+title: Uso de un conjunto de registros ADO existente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065353"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilizar un conjunto de registros ADO existente
-Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), use ADO para abrir un conjunto de registros (correspondiente a un conjunto de filas en las plantillas de consumidor OLE DB). Cuando tenga un conjunto de registros, haga lo siguiente para conectarse a un conjunto de filas de OLE DB:  
+
+Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), utilice ADO para abrir un conjunto de registros (correspondiente a un conjunto de filas en las plantillas de consumidor OLE DB). Cuando haya un conjunto de registros, haga lo siguiente para conectarse a un conjunto de filas de OLE DB:  
   
-1.  Llame a `QueryInterface` para el `IRowset` y `IAccessor` punteros.  
+1. Llame a `QueryInterface` para el `IRowset` y `IAccessor` punteros.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -36,11 +38,11 @@ Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), us
     ```  
   
     > [!NOTE]
-    >  *lpUnk* apunta a la **IUnknown** objeto del conjunto de registros ADO.  
+    >  *lpUnk* apunta a la `IUnknown` objeto del conjunto de registros ADO.  
   
-2.  Asociar el descriptor de acceso y el conjunto de filas a sus clases de plantillas de consumidor OLE DB adecuados.  
+1. Asociar el descriptor de acceso y el conjunto de filas a sus clases de plantillas de consumidor OLE DB apropiados.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   
@@ -50,4 +52,5 @@ Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), us
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar descriptores de acceso](../../data/oledb/using-accessors.md)
+
+[Usar descriptores de acceso](../../data/oledb/using-accessors.md)

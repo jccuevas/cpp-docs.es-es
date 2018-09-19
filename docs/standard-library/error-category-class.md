@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028234"
 ---
 # <a name="errorcategory-class"></a>error_category (Clase)
 
@@ -87,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`_Errval`|El valor del código de error que se almacenará en la [error_condition](../standard-library/error-condition-class.md).|
+|*_Errval*|El valor del código de error que se almacenará en la [error_condition](../standard-library/error-condition-class.md).|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -111,13 +112,13 @@ virtual bool equivalent(const error_code& _Code,
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`_Errval`|El valor del código de error que se va a comparar.|
-|`_Cond`|El objeto [error_condition](../standard-library/error-condition-class.md) que se va a comparar.|
-|`_Code`|El objeto [error_code](../standard-library/error-code-class.md) que se va a comparar.|
+|*_Errval*|El valor del código de error que se va a comparar.|
+|*_Cond*|El objeto [error_condition](../standard-library/error-condition-class.md) que se va a comparar.|
+|*_Fragmentos*|El objeto [error_code](../standard-library/error-code-class.md) que se va a comparar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si la categoría y el valor son iguales; de lo contrario, `false`.
+**True** si la categoría y valor son iguales; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -137,11 +138,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`val`|El valor del código de error que se va a describir.|
+|*Val*|El valor del código de error que se va a describir.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un nombre descriptivo del código de error `val` para la categoría.
+Devuelve un nombre descriptivo del código de error *val* para la categoría.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -171,7 +172,7 @@ bool operator==(const error_category& right) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`right`|El objeto cuya igualdad se va a comprobar.|
+|*right*|El objeto cuya igualdad se va a comprobar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -193,11 +194,11 @@ bool operator!=(const error_category& right) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`right`|El objeto cuya desigualdad se va a comprobar.|
+|*right*|El objeto cuya desigualdad se va a comprobar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el objeto `error_category` no es igual que el objeto `error_category` pasado en `right`. De lo contrario, **False**.
+**True** si el `error_category` objeto no es igual que el `error_category` objeto pasado en *derecho*; de lo contrario **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -215,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`right`|Objeto `error_category` que se va a comparar.|
+|*right*|Objeto `error_category` que se va a comparar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -235,7 +236,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-Esta definición de tipo es un sinónimo de `int`.
+Esta definición de tipo es un sinónimo de **int**.
 
 ## <a name="see-also"></a>Vea también
 

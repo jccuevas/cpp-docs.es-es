@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK2008 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK2008 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086816"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Error de las herramientas del vinculador LNK2008
-Destino de la corrección no está alineado 'symbol_name'  
-  
- LINK encontró un destino de la corrección en el archivo de objeto que no se ha alineado correctamente.  
-  
- Este error puede deberse a personalizado producirlo una alineación de (por ejemplo, #pragma [pack](../../preprocessor/pack.md)), [alinear](../../cpp/align-cpp.md) modificador, o bien mediante código de lenguaje ensamblador que modifica la alineación.  
-  
- Si el código no utiliza ninguno de los pasos anteriores, esto puede deberse al compilador.
+
+Destino de la corrección no está alineado 'symbol_name'
+
+VÍNCULO puede encontrar un destino de la corrección en el archivo de objeto que no se ha alineado correctamente.
+
+Este error puede deberse a producirlo personalizado una alineación (por ejemplo, #pragma [pack](../../preprocessor/pack.md)), [alinear](../../cpp/align-cpp.md) modificador, o mediante código de lenguaje de ensamblado que modifica la alineación.
+
+Si el código no utiliza ninguno de los pasos anteriores, esto puede deberse al compilador.

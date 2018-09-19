@@ -1,5 +1,5 @@
 ---
-title: C2019 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2019 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f9f36bef278edc4c40c732b86c012180535f74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6f1ae1b22cca0d00e990f64ccaf469359563f8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038703"
 ---
-# <a name="compiler-error-c2019"></a>C2019 de Error del compilador
-se esperaba una directiva del preprocesador; se encontró 'carácter'  
-  
- El carácter seguido de un `#` inicio de sesión, pero no es la primera letra de una directiva de preprocesador.  
-  
- El ejemplo siguiente genera C2019:  
-  
-```  
-// C2019.cpp  
-#!define TRUE 1   // C2019  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2019b.cpp  
-// compile with: /c  
-#define TRUE 1  
+# <a name="compiler-error-c2019"></a>Error del compilador C2019
+
+se esperaba una directiva del preprocesador; se encontró 'carácter'
+
+El carácter seguido de un `#` inicio de sesión, pero no es la primera letra de una directiva de preprocesador.
+
+El ejemplo siguiente genera C2019:
+
+```
+// C2019.cpp
+#!define TRUE 1   // C2019
+```
+
+Posible resolución:
+
+```
+// C2019b.cpp
+// compile with: /c
+#define TRUE 1
 ```

@@ -1,5 +1,5 @@
 ---
-title: InterfaceList (estructura) | Documentos de Microsoft
+title: InterfaceList (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 61a8e7b36448a485705b914fbb37892271d7d9fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597171"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template <  
-   typename T,  
-   typename U  
->  
-struct InterfaceList;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `T`  
- Un nombre de la interfaz; la primera interfaz en la lista recursiva.  
-  
- `U`  
- Un nombre de la interfaz; las interfaces restantes en la lista recursiva.  
-  
-## <a name="remarks"></a>Comentarios  
- Se utiliza para crear una lista recursiva de interfaces.  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|`FirstT`|Sinónimo de parámetro de plantilla `T`.|  
-|`RestT`|Sinónimo de parámetro de plantilla `U`.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `InterfaceList`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template <
+   typename T,
+   typename U
+>
+struct InterfaceList;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*T*  
+Un nombre de interfaz la primera interfaz en la lista recursiva.
+
+*U*  
+Un nombre de interfaz las interfaces restantes en la lista recursiva.
+
+## <a name="remarks"></a>Comentarios
+
+Se utiliza para crear una lista recursiva de las interfaces.
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|`FirstT`|Sinónimo de parámetro de plantilla *T*.|
+|`RestT`|Sinónimo de parámetro de plantilla *U*.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`InterfaceList`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

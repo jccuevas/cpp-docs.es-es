@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1044c82c2864d71047e4fe3c7461d03a17d9d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b29d0df8342ce00a2ddb0d46970d9504a06edd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956686"
 ---
 # <a name="styles-for-the-progress-control"></a>Estilos para el control de progreso
-Cuando se crea inicialmente el control de progreso ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use el `dwStyle` para especificar los estilos de ventana que desee para el control de progreso. La siguiente lista detalla los estilos de ventana aplicables. El control pasa por alto cualquier estilo de ventana distintos a los que se enumeran aquí. Siempre debe crear el control como una ventana secundaria, normalmente de un elemento primario de cuadro de diálogo.  
+Cuando se crea inicialmente el control de progreso ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use la *dwStyle* parámetro para especificar los estilos de ventana que desee para el control de progreso. La siguiente lista detalla los estilos de ventana aplicables. El control pasa por alto cualquier estilo de ventana distintos a los que se enumeran aquí. Siempre debe crear el control como una ventana secundaria, normalmente de un elemento primario de cuadro de diálogo.  
   
 |Estilo de ventana|Efecto|  
 |------------------|------------|  
-|`WS_BORDER`|Crea un borde alrededor de la ventana.|  
-|**WS_CHILD**|Crea una ventana secundaria (siempre se debe utilizar para `CProgressCtrl`).|  
-|**WS_CLIPCHILDREN**|Excluye el área ocupada por ventanas secundarias cuando dibuja dentro de la ventana primaria. Se utiliza al crear la ventana primaria.|  
-|**WS_CLIPSIBLINGS**|Ventanas secundarias de clips relacionados entre sí.|  
-|**WS_DISABLED**|Crea una ventana que está inicialmente deshabilitada.|  
-|**WS_VISIBLE**|Crea una ventana que esté visible inicialmente.|  
-|**WS_TABSTOP**|Especifica que el control puede recibir el foco cuando el usuario presiona la tecla TAB para desplazarse a ella.|  
+|WS_BORDER|Crea un borde alrededor de la ventana.|  
+|WS_CHILD|Crea una ventana secundaria (siempre se debe utilizar para `CProgressCtrl`).|  
+|WS_CLIPCHILDREN|Excluye el área ocupada por ventanas secundarias cuando dibuja dentro de la ventana primaria. Se utiliza al crear la ventana primaria.|  
+|WS_CLIPSIBLINGS|Ventanas secundarias de clips relacionados entre sí.|  
+|WS_DISABLED|Crea una ventana que está inicialmente deshabilitada.|  
+|WS_VISIBLE|Crea una ventana que esté visible inicialmente.|  
+|WS_TABSTOP|Especifica que el control puede recibir el foco cuando el usuario presiona la tecla TAB para desplazarse a ella.|  
   
- Además, puede especificar dos estilos que se aplican solo al control de progreso, `PBS_VERTICAL` y `PBS_SMOOTH`.  
+ Además, puede especificar dos estilos que se aplican solo al control de progreso, PBS_VERTICAL y PBS_SMOOTH.  
   
- Use `PBS_VERTICAL` para orientar el control verticalmente, en lugar de horizontalmente. Use `PBS_SMOOTH` para rellenar el control por completo, en lugar de mostrar pequeños cuadrados delineado con que rellenar el control de forma incremental.  
+ Utilice PBS_VERTICAL para orientar el control verticalmente, en lugar de horizontalmente. Utilice PBS_SMOOTH para rellenar el control por completo, en lugar de mostrar pequeños cuadrados delineado con que rellenar el control de forma incremental.  
   
- Sin `PBS_SMOOTH` estilo:  
+ Sin el estilo PBS_SMOOTH:  
   
  ![Estilo de barra de progreso estándar](../mfc/media/vc4ruw1.gif "vc4ruw1")  
   
- Con `PBS_SMOOTH` y `PBS_VERTICAL` estilos:  
+ Con los estilos PBS_SMOOTH y PBS_VERTICAL:  
   
  ![Estilo, suave y vertical de la barra de progreso](../mfc/media/vc4ruw2.gif "vc4ruw2")  
   

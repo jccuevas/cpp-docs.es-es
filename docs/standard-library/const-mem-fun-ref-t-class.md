@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c86f71912c5fe4cf3f5d2fc0df37c8530a8517
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99f9219c8f22cf0050c667eac679070151b82ef6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100338"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t (Clase)
 
@@ -31,18 +32,20 @@ Clase de adaptadores que permite llamar a una función miembro **const** que no 
 ```cpp
 template <class Result, class Type>
 class const_mem_fun_ref_t
- : public unary_function<Type, Result>
+: public unary_function<Type, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
     Result operator()(const Type& left) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Pm` Un puntero a la función miembro de clase **tipo** se convierta en un objeto de función.
+*P. M.*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-`left` El objeto que la `Pm` función miembro se llama en.
+*left*<br/>
+El objeto que la *Pm* función miembro se llama en.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -50,7 +53,7 @@ Una función unaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de `Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define la función miembro `operator()` devuelvan ( **izquierdo**.\* `Pm`) () **const**.
+La clase de plantilla almacena una copia de *Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva ( **izquierdo**.\* `Pm`) () **const**.
 
 ## <a name="example"></a>Ejemplo
 

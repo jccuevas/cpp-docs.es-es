@@ -1,5 +1,5 @@
 ---
-title: Wrappers Namespace | Documentos de Microsoft
+title: Wrappers Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,40 +23,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3af5add0a934b59cf3027b7beb0ea000a7ae1415
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595712"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details (Espacio de nombres)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-namespace Microsoft::WRL::Wrappers::Details;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="classes"></a>Clases  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[SyncLockT (clase)](../windows/synclockt-class.md)|Representa un tipo que puede llevar a cabo exclusivo o compartido posesión de un recurso.|  
-|[SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)|Representa un tipo que puede llevar a cabo exclusivo o compartido posesión de un recurso.|  
-  
-### <a name="methods"></a>Métodos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CompareStringOrdinal (método)](../windows/comparestringordinal-method.md)|Compara dos especificado `HSTRING` objetos y devuelve un entero que indica su posición relativa en un criterio de ordenación.|  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+namespace Microsoft::WRL::Wrappers::Details;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="classes"></a>Clases
+
+|Name|Descripción|
+|----------|-----------------|
+|[SyncLockT (clase)](../windows/synclockt-class.md)|Representa un tipo que puede tardar exclusivo o propiedad compartida de un recurso.|
+|[SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)|Representa un tipo que puede tardar exclusivo o propiedad compartida de un recurso.|
+
+### <a name="methods"></a>Métodos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CompareStringOrdinal (método)](../windows/comparestringordinal-method.md)|Compara dos especificado `HSTRING` objetos y devuelve un entero que indica su posición relativa en un criterio de ordenación.|
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

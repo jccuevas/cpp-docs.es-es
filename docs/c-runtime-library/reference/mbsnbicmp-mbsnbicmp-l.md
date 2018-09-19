@@ -50,11 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15038e42b87a9803312df79eb5d235f1add51669
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c9da102f81654062518ca8e886aab1c49df623
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314968"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -87,23 +88,23 @@ El valor devuelto indica la relación entre las subcadenas.
 
 |Valor devuelto|Descripción|
 |------------------|-----------------|
-|< 0|*cadena1* subcadena menor *string2* subcadena.|
-|0|*cadena1* subcadena idéntica a *string2* subcadena.|
-|> 0|*cadena1* subcadena mayor *string2* subcadena.|
+|< 0|*cadena1* subcadena menor *cadena2* subcadena.|
+|0|*cadena1* idéntico de la subcadena *cadena2* subcadena.|
+|> 0|*cadena1* subcadena mayor *cadena2* subcadena.|
 
 Produce un error, **_mbsnbicmp** devuelve **_NLSCMPERROR**, que se define en String.h y Mbstring.h.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnbicmp** función realiza una comparación ordinal de a lo sumo *recuento* bytes de *string1* y *string2*. La comparación se realiza mediante la conversión de cada carácter a minúscula. [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) es una versión entre mayúsculas y minúsculas de **_mbsnbicmp**. La comparación finaliza si se llega a un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres. Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan caracteres, la cadena más corta es menor.
+El **_mbsnbicmp** función realiza una comparación ordinal de a lo sumo *recuento* bytes de *string1* y *cadena2*. La comparación se realiza mediante la conversión de cada carácter a minúscula. [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) es una versión entre mayúsculas y minúsculas de **_mbsnbicmp**. La comparación finaliza si se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres. Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres, la cadena más corta es menor.
 
 **_mbsnbicmp** es similar a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), salvo por que compara cadenas hasta *recuento* bytes en lugar de caracteres.
 
-Dos cadenas que contienen caracteres situados entre la 'Z' y la 'a' en la tabla ASCII ('[', '\\', ']', '^', '_' y '\`') se comparan de forma distinta. Por ejemplo, las dos cadenas "ABCDE" y "ABCD ^" comparar una manera si la comparación es minúscula ("abcde" > "abcd ^") y viceversa ("ABCDE" < "ABCD ^") si está en mayúscula.
+Dos cadenas que contienen caracteres situados entre la 'Z' y la 'a' en la tabla ASCII ('[', '\\', ']', '^', '_' y '\`') se comparan de forma distinta. Por ejemplo, las dos cadenas "ABCDE" y "ABCD ^" comparan de un modo si la comparación es minúscula ("abcde" > "abcd ^") y la otra manera ("ABCDE" < "ABCD ^") si está en mayúsculas.
 
-**_mbsnbicmp** reconoce las secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. La configuración regional actual no le afecta.
+**_mbsnbicmp** reconoce secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. La configuración regional actual no le afecta.
 
-Si el valor *string1* o *string2* es un puntero nulo, **_mbsnbicmp** invoca el controlador de parámetros no válidos, tal y como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** a **EINVAL**.
+Si bien *string1* o *cadena2* es un puntero nulo, **_mbsnbicmp** invoca el controlador de parámetros no válidos, como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -116,7 +117,7 @@ Si el valor *string1* o *string2* es un puntero nulo, **_mbsnbicmp** invoca el c
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**_mbsnbicmp**|<mbstring.h>|
+|**_mbsnbicmp**|\<mbstring.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

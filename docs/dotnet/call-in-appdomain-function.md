@@ -1,5 +1,5 @@
 ---
-title: call_in_appdomain (función) | Documentos de Microsoft
+title: call_in_appdomain (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105250"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain (Función)
 Ejecuta una función en un dominio de aplicación especificado.  
@@ -48,17 +49,17 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `appdomainId`  
- El dominio de aplicación en el que se va a llamar a la función.  
+*appdomainId*<br/>
+El appdomain en el que se va a llamar a la función.  
   
- `voidFunc`  
- Puntero a un `void` función que toma parámetros N (0 < = N < = 15).  
+*voidFunc*<br/>
+Puntero a un `void` función que toma parámetros N (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Puntero a no`void` función que toma parámetros N (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Puntero a una que no sean de`void` función que toma parámetros N (0 < = N < = 15).  
   
- `arg1...argN`  
- Cero a 15 parámetros que se pasan a `voidFunc` o `nonvoidFunc` en el otro dominio de aplicación.  
+*Arg1... argN*<br/>
+Cero a 15 parámetros que se pasarán al `voidFunc` o `nonvoidFunc` en el otro dominio de aplicación.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El resultado de ejecutar `voidFunc` o `nonvoidFunc` en el dominio de aplicación especificado.  

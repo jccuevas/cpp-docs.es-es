@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa06581dc28293073e8094dad779be0eebabbd10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953495"
 ---
 # <a name="cformview-class"></a>Clase CFormView
 La clase base utilizada para las vistas de formulario.  
@@ -83,10 +84,10 @@ CFormView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene el número de identificación de un recurso de plantilla de cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  

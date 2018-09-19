@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932252"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Derivar controles de un control estándar
 Como con cualquier [CWnd](../mfc/reference/cwnd-class.md)-clase derivada, puede modificar el comportamiento de un control derivando una nueva clase de una clase de control existente.  
   
 ### <a name="to-create-a-derived-control-class"></a>Para crear una clase derivada de control  
   
-1.  Derive la clase de una clase de control existente y, opcionalmente, invalide el **crear** función miembro para que proporcione los argumentos necesarios para la clase base **crear** función.  
+1.  Derive la clase de una clase de control existente y, opcionalmente, invalide el `Create` función miembro para que proporcione los argumentos necesarios para la clase base `Create` función.  
   
 2.  Proporcionar funciones de miembro de controlador de mensajes y entradas de mapa de mensajes para modificar el comportamiento del control en respuesta a los mensajes de Windows específicos. Vea [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md).  
   

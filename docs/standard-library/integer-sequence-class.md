@@ -24,11 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58700d1f52189afb1d8baf3456bac4ed84920fab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 909bcb8446c7d876828a6d020cd20a7398ec04d5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108751"
 ---
 # <a name="integersequence-class"></a>Clase integer_sequence
 
@@ -43,9 +44,11 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Parámetros
 
-T el tipo de los valores; debe ser un tipo integral: bool, char, char16_t, char32_t, wchar_t, o con o sin signo a tipos enteros.
+*T*<br/>
+Tipo de los valores; debe ser un tipo integral: bool, char, char16_t, char32_t, wchar_t o tipos enteros con o sin signo.
 
-Paquete de parámetros sin tipo Vals un que representa una secuencia de valores de tipo entero T.
+*Vals*<br/>
+Paquete de parámetros sin tipo que representa una secuencia de valores de tipo entero T.
 
 ## <a name="members"></a>Miembros
 
@@ -128,7 +131,7 @@ Para realizar `index_sequence` para un paquete de parámetros, use `index_sequen
 
 ## <a name="requirements"></a>Requisitos
 
-Encabezado: <type_traits>
+Encabezado: \<type_traits\>
 
 Espacio de nombres: std
 

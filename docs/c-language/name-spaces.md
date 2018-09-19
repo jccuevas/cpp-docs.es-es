@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390065"
 ---
 # <a name="name-spaces"></a>Espacios de nombres
 El compilador configura “espacios de nombres” para distinguir entre los identificadores utilizados para los diferentes tipos de elementos. Los nombres de cada espacio de nombres deben ser únicos para evitar conflictos, pero un nombre idéntico puede aparecer en más de un espacio de nombres. Esto significa que se puede utilizar el mismo identificador para dos o más elementos diferentes, siempre que los elementos estén en diferentes espacios de nombres. El compilador puede resolver referencias en función del contexto sintáctico del identificador en el programa.  

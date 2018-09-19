@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2253 | Documentos de Microsoft
+title: Error del compilador C2253 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022db574e40317417c64cf9143c7d9b88468ca1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bb9c78551195c1f451e9aa982c5ecc1a19c71d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072347"
 ---
 # <a name="compiler-error-c2253"></a>Error del compilador C2253
-'función': el especificador puro o invalidación abstracto sólo se permite en la función virtual  
-  
- Una función no virtual se especifica como puro `virtual`.  
-  
- El ejemplo siguiente genera C2253:  
-  
-```  
-// C2253.cpp  
-// compile with: /c  
-class A {  
-public:  
-   void func1() = 0;   // C2253 not virtual  
-   virtual void func2() = 0;   // OK  
-};  
-```  
-  
- El ejemplo siguiente genera C2253:  
-  
-```  
-// C2253_2.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   property int Prop_3 {  
-      int get() abstract;   // C2253  
-      // try the following line instead  
-      // virtual int get() abstract;  
-  
-      void set(int i) abstract;   // C2253  
-      // try the following line instead  
-      // virtual void set(int i) abstract;  
-   }  
-};  
+
+'function': el especificador puro o invalidación abstracto solo se permite en la función virtual
+
+Una función no virtual se especifica como pura `virtual`.
+
+El ejemplo siguiente genera C2253:
+
+```
+// C2253.cpp
+// compile with: /c
+class A {
+public:
+   void func1() = 0;   // C2253 not virtual
+   virtual void func2() = 0;   // OK
+};
+```
+
+El ejemplo siguiente genera C2253:
+
+```
+// C2253_2.cpp
+// compile with: /clr /c
+ref struct A {
+   property int Prop_3 {
+      int get() abstract;   // C2253
+      // try the following line instead
+      // virtual int get() abstract;
+
+      void set(int i) abstract;   // C2253
+      // try the following line instead
+      // virtual void set(int i) abstract;
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1056 | Documentos de Microsoft
+title: Error grave de NMAKE U1056 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19890e290c98fd9602d755ad35f9d47204bd6c24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0a83c62bedf995708d5e99fee19f05696d05c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065704"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Error grave de NMAKE U1056
-no se puede encontrar el procesador de comandos  
-  
- El procesador de comandos no estaba en la ruta de acceso especificada en el **COMSPEC** o **ruta de acceso** variables de entorno.  
-  
- NMAKE utiliza COMMAND.COM o CMD. EXE como un procesador de comandos al ejecutar comandos. Busca primero el procesador de comandos en la ruta de acceso establecido **COMSPEC**. Si **COMSPEC** no existe, los directorios especificados en las búsquedas NMAKE **ruta de acceso**.
+
+no se puede encontrar el procesador de comandos
+
+El procesador de comandos no estaba en la ruta de acceso especificada en el **COMSPEC** o **ruta** variables de entorno.
+
+NMAKE utiliza COMMAND.COM o CMD. EXE como un procesador de comandos al ejecutar comandos. Busca primero el procesador de comandos en la ruta de acceso establecido **COMSPEC**. Si **COMSPEC** no existe, los directorios especificados en las búsquedas NMAKE **ruta de acceso**.

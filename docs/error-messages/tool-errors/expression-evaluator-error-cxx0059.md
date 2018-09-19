@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0059 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0059 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050468"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Error del evaluador de expresiones CXX0059
-operando izquierdo es una clase no es un nombre de función  
-  
- El operando izquierdo de una llamada de función es un nombre de clase y no se pudo resolver una llamada a función. Si se omite el nombre de una función miembro en una expresión puede producir este error.  
-  
- Este error es idéntico a CAN0059.
+
+operando izquierdo es una clase no es un nombre de función
+
+El operando izquierdo de una llamada de función es un nombre de clase y no se pudo resolver en una llamada de función. Si se omite el nombre de una función miembro en una expresión puede producir este error.
+
+Este error es idéntico a CAN0059.

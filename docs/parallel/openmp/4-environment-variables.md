@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691006"
 ---
 # <a name="4-environment-variables"></a>4. Variables de entorno
 Este capítulo describen las variables de entorno de OpenMP C y C++ API (o equivalente mecanismos específicos de la plataforma) que controlan la ejecución de código paralelo.  Los nombres de variables de entorno deben estar en mayúsculas. Los valores asignados a ellos distinguen mayúsculas de minúsculas y pueden tener espacios en blanco iniciales y finales.  Se omiten las modificaciones realizadas en los valores después de que ha iniciado el programa.  

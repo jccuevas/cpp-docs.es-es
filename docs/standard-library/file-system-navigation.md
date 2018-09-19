@@ -12,15 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5b1eeef0e5f07b0867eb79afc76ba9037a95e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e6e14e0b94000972873b6050f0e8154891b4e57
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026804"
 ---
 # <a name="file-system-navigation"></a>Exploración del sistema de archivos
 
-El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve `false` en Windows.
+El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve **false** en Windows.
 
 ## <a name="overview"></a>Información general
 

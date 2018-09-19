@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2172 | Documentos de Microsoft
+title: Error del compilador C2172 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21dbef0cccd2cbd5221854972ca030e601695e3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d71acb91503900733ea805225670ce9e979e6d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060101"
 ---
 # <a name="compiler-error-c2172"></a>Error del compilador C2172
-'función': el parámetro real no es un puntero: número de parámetro  
-  
- El parámetro `number` no es un puntero. La función espera un puntero.
+
+'función': el parámetro real no es un puntero: número de parámetro
+
+El parámetro `number` no es un puntero. La función espera un puntero.

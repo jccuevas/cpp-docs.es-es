@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2845 | Documentos de Microsoft
+title: Error del compilador C2845 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e0d74548ff546993c5c8f752709de7418c62965
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4314a6e79a5052d3e9e05aa453ce3ae842ded74c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107799"
 ---
 # <a name="compiler-error-c2845"></a>Error del compilador C2845
-'operador': la aritmética con punteros no se permite en este tipo  
-  
- No se puede incrementar el puntero a una clase administrada.  
+
+'operador': no se permite en este tipo de aritmética de puntero
+
+No se puede incrementar el puntero a una clase administrada.

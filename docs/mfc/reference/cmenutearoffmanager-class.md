@@ -1,5 +1,5 @@
 ---
-title: Clase CMenuTearOffManager | Documentos de Microsoft
+title: CMenuTearOffManager (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,16 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700939"
 ---
-# <a name="cmenutearoffmanager-class"></a>Clase CMenuTearOffManager
+# <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager (clase)
 Administra menús con barra desplazable. Un menú con barra desplazable es un menú de la barra de menús. El usuario puede quitar un menú con barra desplazable de la barra de menús y provocar que el menú con barra desplazable quede flotante.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
    
 ## <a name="syntax"></a>Sintaxis  
   
@@ -73,10 +74,10 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>Comentarios  
- Para poder usar desplazable menús en la aplicación, debe tener un `CMenuTearOffManager` objeto. En la mayoría de los casos, no cree ni inicialice un `CMenuTearOffManager` objeto directamente. Esto se controla automáticamente cuando se llama a la [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) (función).  
+ Para poder utilizar menús desplazable en la aplicación, debe tener un `CMenuTearOffManager` objeto. En la mayoría de los casos, no crear ni inicializar un `CMenuTearOffManager` objeto directamente. Esto se controla automáticamente cuando se llama a la [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) función.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo crear e inicializar un `CMenuTearOffManager` objeto mediante una llamada a la `CWinAppEX::EnableTearOffMenus` método. Este fragmento de código forma parte del [ejemplo de WordPad](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo construir e inicializar un `CMenuTearOffManager` objeto mediante una llamada a la `CWinAppEX::EnableTearOffMenus` método. Este fragmento de código forma parte del [ejemplo de WordPad](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
@@ -98,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -111,7 +112,7 @@ CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- En la mayoría de los casos, no debería crear un `CMenuTearOffManager` manualmente. El marco de trabajo de la aplicación crea el `CMenuTearOffManager` objeto cuando se llama a [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
+ En la mayoría de los casos, no debería crear un `CMenuTearOffManager` manualmente. El marco de la aplicación crea el `CMenuTearOffManager` objeto cuando se llama a [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -135,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszRegEntry`  
- Una cadena que contiene la ruta de acceso de una entrada del registro. Las aplicaciones se almacena la configuración de barras desplazable en esta entrada del registro.  
+*lpszRegEntry*<br/>
+[in] Una cadena que contiene la ruta de acceso de una entrada del registro. Las aplicaciones se almacena la configuración de barras desplazable en esta entrada del registro.  
   
- [in] `uiTearOffMenuFirst`  
- El primer identificador de menú para un menú desplazable.  
+*uiTearOffMenuFirst*<br/>
+[in] El primer identificador de menú para un menú desplazable.  
   
- [in] `uiTearOffMenuLast`  
- El último identificador de menú para un menú desplazable.  
+*uiTearOffMenuLast*<br/>
+[in] El último identificador de menú para un menú desplazable.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- El intervalo de identificadores de menú `uiTearOffMenuFirst` para `uiTearOffMenuLast` debe ser un intervalo continuo. El intervalo define el número de desplazable menús que pueden aparecer a la vez en la aplicación.  
+ El intervalo de identificadores de menú de *uiTearOffMenuFirst* a *uiTearOffMenuLast* debe ser un intervalo continuo. El intervalo define el número de menús desplazable que puede aparecer al mismo tiempo en la aplicación.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -158,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiID`  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -172,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `str`  
+ [in] *str*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -186,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hmenu`  
+ [in] *hmenu*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -200,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdId`  
- [in] `bUse`  
+*uiCmdId*<br/>
+[in] [in] *bUtilice*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -213,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hMenu`  
+ [in] *hMenu*  
   
 ### <a name="remarks"></a>Comentarios  
   

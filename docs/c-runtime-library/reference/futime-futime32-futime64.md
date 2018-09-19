@@ -42,11 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864bba5b88c7e52b55bd86a61edaaac2d22b0346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056825"
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 
@@ -79,13 +80,13 @@ Puntero a una estructura que contiene la nueva fecha de modificación.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. Si se produce un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EBADF**, que indica un descriptor de archivo no válido o **EINVAL**, que indica un no válido parámetro.
+Si la operación se realiza correctamente, devuelve 0. Si se produce un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EBADF**, que indica un descriptor de archivo no válido, o **EINVAL**, que indica un no válido parámetro.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_futime** rutina establece la fecha de modificación y la hora de acceso en el archivo abierto asociado *fd*. **_futime** es idéntico a [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), salvo que el argumento es el descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo. El **_utimbuf** estructura contiene campos para la nueva fecha de modificación y la hora de acceso. Ambos campos deben contener valores válidos. **_utimbuf32** y **_utimbuf64** son idénticas a **_utimbuf** excepto para el uso de los tipos en tiempo de 32 bits y 64 bits, respectivamente. **_futime** y **_utimbuf** usar un tipo en tiempo de 64 bits y **_futime** es un comportamiento idéntico al **_futime64**. Si necesita imponer el comportamiento anterior, defina **_USE_32BIT_TIME_T**. Si lo hace esto hace que **_futime** como un comportamiento idéntico al **_futime32** y hace que la **_utimbuf** estructura que se utiliza el tipo en tiempo de 32 bits, lo que equivale a **__utimbuf32**.
+El **_futime** rutina establece la fecha de modificación y la hora de acceso en el archivo abierto asociado *fd*. **_futime** es idéntico al [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), salvo que su argumento es el descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo. El **_utimbuf** estructura contiene campos para la nueva fecha de modificación y la hora de acceso. Ambos campos deben contener valores válidos. **_utimbuf32** y **_utimbuf64** son idénticas a **_utimbuf** excepto para el uso de los tipos en tiempo de 32 bits y 64 bits, respectivamente. **_futime** y **_utimbuf** usan un tipo de tiempo de 64 bits y **_futime** es un comportamiento idéntico a **_futime64**. Si necesita forzar el comportamiento anterior, defina **_USE_32BIT_TIME_T**. Si lo hace esto hace que **_futime** sea un comportamiento idéntico a **_futime32** y hace que el **_utimbuf** estructura que se utiliza el tipo en tiempo de 32 bits, lo que equivale a **__utimbuf32**.
 
-**_futime64**, que usa el **__utimbuf64** estructura, puede leer y modificar las fechas de archivo a través de 23:59:59, 31 de diciembre de 3000, UTC; mientras que una llamada a **_futime32** se produce un error si la fecha en el archivo es posterior a las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para estas funciones.
+**_futime64**, que usa el **__utimbuf64** estructura, puede leer y modificar fechas de archivo hasta las 23:59:59, 31 de diciembre de 3000, UTC; mientras que una llamada a **_futime32** se produce un error si la fecha en el archivo es más adelante a las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para estas funciones.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,20 +143,20 @@ Arbitrary file contents.
 ### <a name="sample-output"></a>Resultados del ejemplo
 
 ```Output
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:40 AM                24 crt_futime.c_input
+03/25/2004  10:40 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:41 AM                24 crt_futime.c_input
+03/25/2004  10:41 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
 File time modified

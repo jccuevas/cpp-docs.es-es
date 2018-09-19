@@ -1,7 +1,7 @@
 ---
 title: once_flag (Estructura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,23 +14,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 67cfbe06461598fbd04e124629399baa63fdd5d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104340"
 ---
 # <a name="onceflag-structure"></a>once_flag (Estructura)
 
-Representa un `struct` que se usa con la función de plantilla [call_once](../standard-library/mutex-functions.md#call_once) para asegurarse de que solo se llame una vez al código de inicialización, incluso ante la presencia de varios subprocesos de ejecución.
+Representa un **struct** que se utiliza con la función de plantilla [call_once](../standard-library/mutex-functions.md#call_once) para asegurarse de que la inicialización se llama al código una sola vez, incluso en presencia de varios subprocesos de ejecución.
 
 ## <a name="syntax"></a>Sintaxis
 
-struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag& operator=(const once_flag&); };
+estructura once_flag {constexpr once_flag() noexcept;};
 
 ## <a name="remarks"></a>Comentarios
 
-El `once_flag` `struct` tiene solo un constructor predeterminado.
+El `once_flag` **struct** solo tiene un constructor predeterminado.
 
 Los objetos de tipo `once_flag` pueden crearse, pero no pueden copiarse.
 

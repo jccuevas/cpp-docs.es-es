@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable del compilador de recursos RW1022 | Documentos de Microsoft
+title: Error irrecuperable del compilador de recursos RW1022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57bb435d17cf1d539d558b5dead9c299f83494a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: caaefc045a31ca64aa9843927d550ef66285cb2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099855"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>Error irrecuperable del compilador de recursos RW1022
-**Error al escribir archivo de E/S**  
-  
- El compilador de recursos no pudo escribir en un archivo.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Espacio en disco insuficiente. Espacio libre debe ser igual al menos dos veces el tamaño del archivo ejecutable que se va a crear.  
-  
-2.  El volumen es de solo lectura.  
-  
-3.  Sector defectuoso.  
-  
-4.  Infracción de uso compartido.
+
+**Error al escribir archivo de E/S**
+
+El compilador de recursos no pudo escribir en un archivo.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. Espacio en disco insuficiente. Espacio libre debe ser igual al menos dos veces el tamaño del archivo ejecutable que se va a crear.
+
+1. El volumen es de solo lectura.
+
+1. Sector defectuoso.
+
+1. Infracción de uso compartido.

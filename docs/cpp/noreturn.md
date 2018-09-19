@@ -1,5 +1,5 @@
 ---
-title: noreturn | Documentos de Microsoft
+title: noreturn | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90fab865a02b7ad00bd25b6d74f2d19b2678875c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6133fc70c5c2b8bb8f794746c1d5ca11be97b817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031046"
 ---
 # <a name="noreturn"></a>noreturn
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Este atributo `__declspec` indica al compilador que una función no devuelve resultados. En consecuencia, el compilador sabe que el código después de una llamada a un **__declspec (noreturn)** función no es accesible.  
-  
- Si el compilador encuentra una función con una ruta de acceso de control que no devuelve un valor, genera una advertencia (C4715) o un mensaje de error (C2202). Si no se puede tener acceso a la ruta de acceso de control debido a una función que nunca devuelve resultados, puede usar **__declspec (noreturn)** para evitar esta advertencia o error.  
-  
+
+## <a name="microsoft-specific"></a>Específicos de Microsoft
+
+Esto **__declspec** atributo indica al compilador que no devuelve una función. Como consecuencia, el compilador sabe que el código después de una llamada a un **__declspec (noreturn)** función es inaccesible.
+
+Si el compilador encuentra una función con una ruta de acceso de control que no devuelve un valor, genera una advertencia (C4715) o un mensaje de error (C2202). Si no se puede alcanzar la ruta de acceso de control debido a una función que nunca devuelve resultados, puede usar **__declspec (noreturn)** para evitar esta advertencia o error.
+
 > [!NOTE]
->  Agregar **__declspec (noreturn)** a una función que se espera que devuelvan puede dar lugar a un comportamiento indefinido.  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, la **else** cláusula no contiene una instrucción return.  Declarar `fatal` como **__declspec (noreturn)** evita un mensaje de advertencia o error.  
-  
-```  
-// noreturn2.cpp  
-__declspec(noreturn) extern void fatal () {}  
-  
-int main() {  
-   if(1)  
-     return 1;  
-   else if(0)  
-     return 0;  
-   else  
-     fatal();  
-}  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [__declspec](../cpp/declspec.md)   
- [Palabras clave](../cpp/keywords-cpp.md)
+>  Agregar **__declspec (noreturn)** a una función que se espera que devuelva puede provocar un comportamiento indefinido.
+
+## <a name="example"></a>Ejemplo
+
+En el ejemplo siguiente, la **else** cláusula no contiene una instrucción return.  Declarar `fatal` como **__declspec (noreturn)** evita un error o mensaje de advertencia.
+
+```cpp
+// noreturn2.cpp
+__declspec(noreturn) extern void fatal () {}
+
+int main() {
+   if(1)
+     return 1;
+   else if(0)
+     return 0;
+   else
+     fatal();
+}
+```
+
+## <a name="see-also"></a>Vea también
+
+[__declspec](../cpp/declspec.md)<br/>
+[Palabras clave](../cpp/keywords-cpp.md)

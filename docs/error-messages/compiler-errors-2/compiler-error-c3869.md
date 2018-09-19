@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3869 | Documentos de Microsoft
+title: Error del compilador C3869 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb19652f6b9006783cea4cee687156a0c1fb4b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84b4ce32f6c4916e0e178d488bf725d257f4d887
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020172"
 ---
 # <a name="compiler-error-c3869"></a>Error del compilador C3869
-restricción gcnew le falta la lista de parámetros vacía '()'  
-  
- El `gcnew` se especificó una restricción especial sin la lista de parámetros vacía. Vea [restricciones en parámetros de tipo genérico (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3869.  
-  
-```  
-// C3869.cpp  
-// compile with: /c /clr  
-using namespace System;  
-generic <typename T>  
-where T : gcnew   // C3869  
-// try the following line instead  
-// where T : gcnew()  
-ref class List {};  
+
+la restricción gcnew no tiene lista de parámetros vacía '()'
+
+El `gcnew` restricciones especiales se especificó sin la lista de parámetros vacía. Consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3869.
+
+```
+// C3869.cpp
+// compile with: /c /clr
+using namespace System;
+generic <typename T>
+where T : gcnew   // C3869
+// try the following line instead
+// where T : gcnew()
+ref class List {};
 ```

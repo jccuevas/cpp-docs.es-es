@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2313 | Documentos de Microsoft
+title: Error del compilador C2313 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984e9e5e9163137537c9da2cd8c14bd1271ebeb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57e291788f261f0e62bd476b3027dfa809594ce3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024947"
 ---
 # <a name="compiler-error-c2313"></a>Error del compilador C2313
-'type1': está capturado por una referencia ('type2') en el número de línea  
-  
- El tipo de excepción tiene dos controladores. El tipo del segundo elemento catch es una referencia del tipo de la primera.  
-  
- El ejemplo siguiente genera la advertencia C2313:  
-  
-```  
-// C2313.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-class C {};  
-int main() {  
-    try {  
-        throw "ooops!";  
-    }  
-    catch( C& ) {}  
-    catch( C ) {}   // C2313  
-}  
+
+'type1': está capturado por una referencia ('type2') en el número de línea
+
+El tipo de excepción tiene dos controladores. El tipo del segundo elemento catch es una referencia del tipo de la primera.
+
+El ejemplo siguiente genera la advertencia C2313:
+
+```
+// C2313.cpp
+// compile with: /EHsc
+#include <eh.h>
+class C {};
+int main() {
+    try {
+        throw "ooops!";
+    }
+    catch( C& ) {}
+    catch( C ) {}   // C2313
+}
 ```

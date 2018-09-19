@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67ffb39df8f02df233a31cfffeea5ab5ddcdf933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7cb34fd44214ac503c8b9e201d07dbe1a6eb85de
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965771"
 ---
 # <a name="slicearray-class"></a>slice_array (Clase)
 
@@ -57,7 +58,7 @@ La clase de plantilla se crea indirectamente por determinadas operaciones valarr
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-Solo se construye un objeto **slice_array\<Type>** escribiendo una expresión con el formato [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), para un segmento **sl** de valarray **va**. Las funciones miembro de la clase slice_array se comportarán como las firmas de función correspondientes definidas para **valarray\<Type>**, excepto en que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por slice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el segmento, el número de elementos y la distancia entre los elementos. Una slice_array obtenida de valarray **va** declarada por **va**[ `slice`(2, 5, 3)] selecciona elementos con los índices de 2, 5, 8, 11 y 14 de **va**. Los índices deben ser válidos para que el procedimiento sea válido.
+Construir un `slice_array<Type>` objeto escribiendo una expresión de formato [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), para un segmento `sl` de valarray `va`. Las funciones miembro de la clase slice_array se comportarán como las firmas de función correspondientes definidas para `valarray<Type>`, excepto que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por slice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el segmento, el número de elementos y la distancia entre los elementos. Una slice_array obtenida de valarray `va` declarado por **va**[ `slice`(2, 5, 3)] selecciona elementos con índices de 2, 5, 8, 11 y 14 de `va`. Los índices deben ser válidos para que el procedimiento sea válido.
 
 ## <a name="example"></a>Ejemplo
 

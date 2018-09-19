@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4960 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4960 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1281bc86ad363c02df5c39ed41f616a6fff1a9b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed6ba083017c84cd6af05b917ff8417b0394d7c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085724"
 ---
 # <a name="compiler-warning-level-4-c4960"></a>Advertencia del compilador (nivel 4) C4960
-'function' es demasiado grande para generar un perfil  
-  
- Al usar [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), el compilador detectó un módulo de entrada con una función mayor que 65 535 instrucciones. Una función tan grande no está disponible para optimizaciones guiadas por perfil.  
-  
- Para resolver esta advertencia, reduzca el tamaño de la función.
+
+'function' es demasiado grande para generar un perfil
+
+Al usar [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), el compilador detectó un módulo de entrada con una función mayor que 65 535 instrucciones. Una función tan grande no está disponible para optimizaciones guiadas por perfil.
+
+Para resolver esta advertencia, reduzca el tamaño de la función.

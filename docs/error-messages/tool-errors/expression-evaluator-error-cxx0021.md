@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0021 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0021 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996fc46982d809da5e0b37b83f2940102892167e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ef765286d022b26aeed0ca98c9f43f94f5d17f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025781"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>Error del evaluador de expresiones CXX0021
-struct o union utilizadas como escalar  
-  
- Se usó una estructura o unión en una expresión, pero no se especificó ningún elemento.  
-  
- Al manipular una estructura o unión variable, el nombre de la variable puede aparecer por sí mismo, sin un calificador de campo. Si se utiliza una estructura o unión en una expresión, se deben calificar con el elemento específico deseado.  
-  
- Especifique el elemento cuyo valor es que se usará en la expresión.  
-  
- Este error es idéntico a CAN0021.
+
+struct o union utilizados como escalar
+
+Se utilizó una estructura o unión en una expresión, pero no se especificó ningún elemento.
+
+Al manipular una estructura o variable de unión, el nombre de la variable puede aparecer por sí mismo, sin un calificador de campo. Si se usa una estructura o unión en una expresión, se deben calificar con el elemento específico deseado.
+
+Especifique el elemento cuyo valor es que se usará en la expresión.
+
+Este error es idéntico a CAN0021.

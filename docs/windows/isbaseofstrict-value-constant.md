@@ -1,5 +1,5 @@
 ---
-title: Isbaseofstrict (constante) | Documentos de Microsoft
+title: Isbaseofstrict constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eaaf0b410861f28cd5b339f75a73c594b1bcba45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7159e75b03c6440dfc5742de9f98d93da47d904
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583859"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>IsBaseOfStrict::value (Constante)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-static const bool value = __is_base_of(Base, Derived);  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Indica si un tipo es la base de otro.  
-  
- `value` es `true` si tipo `Base` es una clase base del tipo `Derived`, de lo contrario es `false`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** internal.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [IsBaseOfStrict (estructura)](../windows/isbaseofstrict-structure.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+static const bool value = __is_base_of(Base, Derived);
+```
+
+## <a name="remarks"></a>Comentarios
+
+Indica si un tipo es la base de otro.
+
+**valor** es **true** si tipo `Base` es una clase base del tipo `Derived`, de lo contrario es **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** internal.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[IsBaseOfStrict (estructura)](../windows/isbaseofstrict-structure.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

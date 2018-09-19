@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342204"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Crear una clase de diálogo con los Asistentes para código
 En la tabla siguiente se enumera las tareas relacionadas con el cuadro de diálogo Ayuda asistentes para código para administrar.  

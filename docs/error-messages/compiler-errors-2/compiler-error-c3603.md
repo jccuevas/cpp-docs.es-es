@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3603 | Documentos de Microsoft
+title: Error del compilador C3603 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec4b4b1df536a176fa05ea9095878ab5e1492cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67adc99491a15503ee5580df37a612eb73013686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075896"
 ---
 # <a name="compiler-error-c3603"></a>Error del compilador C3603
-'Símbolo': tipo 'Tipo' no se admite  
-  
- Se intentó utilizar un tipo de datos que todavía no se admite en tiempo de ejecución de .NET en un objeto administrado.
+
+'Símbolo': tipo 'Tipo' todavía no se admite
+
+Se intentó usar un tipo de datos que no es compatible aún con el tiempo de ejecución de .NET en un objeto administrado.

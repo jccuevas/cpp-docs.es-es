@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73bdd8186f2ce56e4a6ecec0fa4f9468d9da8e8c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102712"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible (clase)
 
@@ -35,21 +36,22 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `Ty` es una clase que tiene un constructor trivial; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor trivial; en caso contrario, es false.
 
-Un constructor predeterminado para una clase `Ty` es trivial si:
+Un constructor predeterminado para una clase *Ty* es trivial si:
 
 - es un constructor predeterminado declarado implícitamente
 
-- la clase `Ty` no tiene ninguna función virtual
+- la clase *Ty* no tiene ninguna función virtual
 
-- la clase `Ty` no tiene ninguna base virtual
+- la clase *Ty* tiene ninguna base virtual
 
-- todas las bases directas de la clase `Ty` tienen constructores triviales
+- todas las bases directas de la clase *Ty* tienen constructores triviales
 
 - las clases de todos los miembros de datos no estáticos del tipo de clase tienen constructores triviales
 

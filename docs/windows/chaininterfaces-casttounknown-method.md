@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Casttounknown (método) | Documentos de Microsoft'
+title: Método Chaininterfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 696d632037f2a1fdc68e298b247e46720b81a343
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e7428e2263beb57eb73e024815000d61e75d5f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612562"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown (Método)
-Convierte el puntero de interfaz del tipo definido por el `I0` parámetro de plantilla a un puntero a IUnknown.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un puntero a IUnknown.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)
+
+Convierte el puntero de interfaz del tipo definido por el *I0* parámetro de plantilla en un puntero a `IUnknown`.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Un puntero a `IUnknown`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)

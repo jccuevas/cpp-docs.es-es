@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre | Documentos de Microsoft
+title: Cambiar nombre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -11,10 +11,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33339818"
 ---
 # <a name="rename"></a>Cambiar nombre
 **Qué:** Le permite cambiar el nombre de los identificadores de símbolos de código, como campos, variables locales, métodos, espacios de nombres, propiedades y tipos.
@@ -36,15 +37,15 @@ ms.lasthandoff: 05/04/2018
      * Seleccione **Editar > Refactorizar > Cambiar nombre**.
      * Haga clic con el botón derecho en el código y seleccione **Cambiar nombre**.
 
-1. En el **cambiar el nombre de** ventana que aparece, escriba el nuevo nombre para el elemento seleccionado y haga clic en el **vista previa** botón.  Cambiar el **ámbito de búsqueda** si desea ampliar o reducir el ámbito del cambio de nombre.
+1. En la ventana **Cambiar nombre** que aparece, escriba el nombre nuevo para el elemento seleccionado y haga clic en el botón **Vista previa**.  Cambie el **Ámbito de búsqueda** si quiere ampliar o reducir el ámbito del cambio de nombre.
 
-   ![cambiar el nombre de cuadro de diálogo](images/rename_dialog.png)
+   ![Cuadro de diálogo Cambiar nombre](images/rename_dialog.png)
 
    > [!TIP]
-   > Puede omitir la vista previa activando el **vista previa de Skip cambia si las referencias se confirman** opción.
+   > Puede omitir la vista previa si activa la opción **Omitir la vista previa de los cambios si todas las referencias están confirmadas**.
 
-1. Cuando el **cambiar el nombre de vista previa de cambios -** muestra la ventana, asegúrese de que los cambios que está solicitando se están realizando correctamente.  Utilice las casillas de verificación en la mitad superior de la ventana para habilitar o deshabilitar el cambio de nombre de cualquier elemento.
+1. Cuando aparezca la ventana **Obtener vista previa de cambios - Cambiar nombre**, asegúrese de que los cambios que está solicitando se están realizando de manera correcta.  Use las casillas de la mitad superior de la ventana para habilitar o deshabilitar el cambio de nombre de cualquier elemento.
 
-   ![Cambiar el nombre de vista previa](images/rename_preview.png)
+   ![Vista previa de Cambiar nombre](images/rename_preview.png)
 
-1. Si todo es correcto, haga clic en el **aplicar** botón y el elemento se cambiará en el código fuente.
+1. Cuando todo parezca correcto, haga clic en el botón **Aplicar** y se cambiará el nombre del elemento en el código fuente.

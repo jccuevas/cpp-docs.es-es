@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351435"
 ---
 # <a name="mfc-application-architecture-classes"></a>Clases de arquitectura de aplicaciones MFC
 Clases de esta categoría contribuyen a la arquitectura de una aplicación de marco de trabajo. Proporciona funcionalidad común para la mayoría de las aplicaciones. Rellene el marco de trabajo para agregar la funcionalidad específica de la aplicación. Normalmente, para ello, derivar nuevas clases de las clases de arquitectura y, a continuación, agregar los nuevos miembros o reemplazar las funciones miembro existentes.  

@@ -1,5 +1,5 @@
 ---
-title: simultaneidad Namespace | Documentos de Microsoft
+title: simultaneidad Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4d5e7499bb1734b2093a60039e28b6f9f85920df
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681190"
 ---
 # <a name="concurrency-namespace"></a>concurrency (Espacio de nombres)
 El espacio de nombres `Concurrency` proporciona las clases y funciones que dan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../../../parallel/concrt/concurrency-runtime.md).  
@@ -46,12 +47,6 @@ namespace concurrency;
 ```  
   
 ## <a name="members"></a>Miembros  
-  
-### <a name="namespaces"></a>Espacios de nombres  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Concurrency::Extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -80,8 +75,8 @@ namespace concurrency;
 |[concurrent_queue (clase)](concurrent-queue-class.md)|La clase `concurrent_queue` es una clase de contenedor de secuencias que permite el acceso primero en entrar, primero en salir a sus elementos. Habilita un conjunto limitado de operaciones seguras para simultaneidad, como `push` y `try_pop`.|  
 |[concurrent_unordered_map (clase)](concurrent-unordered-map-class.md)|La clase `concurrent_unordered_map` es un contenedor seguro para simultaneidad que controla una secuencia de variación de longitud de elementos del tipo `std::pair<const K, _Element_type>`. La secuencia se representa de una manera que habilita la anexión segura para simultaneidad, el acceso a elementos, el acceso a iterador y las operaciones de recorrido de iterador.|  
 |[concurrent_unordered_multimap (clase)](concurrent-unordered-multimap-class.md)|La clase `concurrent_unordered_multimap` es un contenedor seguro para simultaneidad que controla una secuencia de elementos de longitud variable del tipo `std::pair<const K, _Element_type>`. La secuencia se representa de una manera que habilita la anexión segura para simultaneidad, el acceso a elementos, el acceso a iterador y las operaciones de recorrido de iterador.|  
-|[concurrent_unordered_multiset (clase)](concurrent-unordered-multiset-class.md)|La `concurrent_unordered_multiset` clase es un contenedor seguro para simultaneidad que controla una secuencia de longitud variable de elementos de tipo K. La secuencia se representa de una manera que habilita seguro para simultaneidad anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador.|  
-|[concurrent_unordered_set (clase)](concurrent-unordered-set-class.md)|La `concurrent_unordered_set` clase es un contenedor seguro para simultaneidad que controla una secuencia de longitud variable de elementos de tipo K. La secuencia se representa de una manera que habilita seguro para simultaneidad anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador.|  
+|[concurrent_unordered_multiset (clase)](concurrent-unordered-multiset-class.md)|La `concurrent_unordered_multiset` clase es un contenedor seguro para simultaneidad que controla una secuencia de longitud variable de elementos de tipo K. La secuencia se representa en una forma que permita segura para simultaneidad anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador.|  
+|[concurrent_unordered_set (clase)](concurrent-unordered-set-class.md)|La `concurrent_unordered_set` clase es un contenedor seguro para simultaneidad que controla una secuencia de longitud variable de elementos de tipo K. La secuencia se representa en una forma que permita segura para simultaneidad anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador.|  
 |[concurrent_vector (clase)](concurrent-vector-class.md)|La clase `concurrent_vector` es una clase de contenedor de secuencia que permite el acceso aleatorio a cualquier elemento. Habilita las operaciones de anexión segura para simultaneidad, acceso de elemento, acceso de iterador e iterador transversal.|  
 |[context (clase)](context-class.md)|Representa una abstracción para un contexto de ejecución.|  
 |[context_self_unblock (clase)](context-self-unblock-class.md)|Esta clase describe una excepción que se produce cuando se llama al método `Unblock` de un objeto `Context` desde el mismo contexto. Esto indicaría que un contexto especificado ha intentado desbloquearse a sí mismo.|  
@@ -134,15 +129,15 @@ namespace concurrency;
 |[structured_task_group (clase)](structured-task-group-class.md)|La clase `structured_task_group` representa una colección muy estructurada de trabajos paralelos. Puede poner en cola tareas individuales paralelas a `structured_task_group` mediante objetos `task_handle`, y esperar a que se completen, o cancelar el grupo de tareas antes de que haya finalizado su ejecución, que anulará cualquier tarea cuya ejecución no haya comenzado.|  
 |[target_block (clase)](target-block-class.md)|La clase `target_block` es una clase base abstracta que proporciona funcionalidad de administración de vínculo básica y comprueba errores solo para bloques de destino.|  
 |[task (clase) (Runtime de simultaneidad)](task-class.md)|La clase `task` de la biblioteca de patrones de procesamiento paralelo (PPL). Un objeto `task` representa el trabajo que se puede ejecutar de forma asincrónica y de forma simultánea con otras tareas y trabajos paralelos generados por los algoritmos paralelos en el runtime de simultaneidad. Genera un resultado de tipo `_ResultType` al finalizar correctamente. Las tareas de tipo `task<void>` no producen ningún resultado. Es posible esperar y cancelar una tarea de forma independiente al resto de tareas. También se puede componer con otras tareas mediante continuaciones (`then`), así como con patrones de unión (`when_all`) y elección (`when_any`).|  
-|[task_canceled (clase)](task-canceled-class.md)|Esta clase describe una excepción producida por la capa de tareas de PPL para obligar a que se cancele la tarea actual. También se produce por la `get()` método [tarea](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), para una tarea cancelada.|  
+|[task_canceled (clase)](task-canceled-class.md)|Esta clase describe una excepción producida por la capa de tareas de PPL para obligar a que se cancele la tarea actual. También se produce por la `get()` método [tarea](task-class.md), para una tarea cancelada.|  
 |[task_completion_event (clase)](task-completion-event-class.md)|La clase `task_completion_event` permite retrasar la ejecución de una tarea hasta que se satisfaga una condición, o iniciar una tarea en respuesta a un evento externo.|  
-|[task_continuation_context (clase)](task-continuation-context-class.md)|La clase `task_continuation_context` permite especificar dónde se desea que se ejecute una continuación. Sólo es útil utilizar esta clase desde una aplicación de UWP. Para las aplicaciones en tiempo de ejecución que no sean de Windows, el contexto de ejecución de la continuación de la tarea es determinado por el tiempo de ejecución y no es configurable.|  
+|[task_continuation_context (clase)](task-continuation-context-class.md)|La clase `task_continuation_context` permite especificar dónde se desea que se ejecute una continuación. Sólo es útil utilizar esta clase desde una aplicación para UWP. Para las aplicaciones en tiempo de ejecución que no son de Windows, el contexto de ejecución de la continuación tarea es determinado por el tiempo de ejecución y no es configurable.|  
 |[task_group (clase)](task-group-class.md)|La clase `task_group` representa una colección de trabajo paralelo que es posible esperar o cancelar.|  
 |[task_handle (clase)](task-handle-class.md)|La clase `task_handle` representa un elemento de trabajo individual paralelo. Encapsula las instrucciones y los datos necesarios para ejecutar una parte del trabajo.|  
 |[task_options (clase) (Runtime de simultaneidad)](task-options-class-concurrency-runtime.md)|Representa las opciones permitidas para crear una tarea|  
 |[timer (clase)](timer-class.md)|Un bloque de mensajería `timer` es un bloque `source_block` con destino único, capaz de enviar un mensaje a su destino cuando un período de tiempo especificado ha transcurrido o en intervalos concretos.|  
 |[transformer (clase)](transformer-class.md)|Un bloque de mensajería `transformer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado capaz de almacenar un número ilimitado de mensajes de un tipo diferente.|  
-|[Clase unbounded_buffer](unbounded-buffer-class.md)|Un bloque de mensajería `unbounded_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado capaz de almacenar un número ilimitado de mensajes.|  
+|[unbounded_buffer (clase)](unbounded-buffer-class.md)|Un bloque de mensajería `unbounded_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado capaz de almacenar un número ilimitado de mensajes.|  
 |[unsupported_os (clase)](unsupported-os-class.md)|Esta clase describe una excepción que se produce cuando se usa un sistema operativo no compatible.|  
   
 ### <a name="structures"></a>Estructuras  
@@ -164,7 +159,7 @@ namespace concurrency;
 |[IUMSUnblockNotification (estructura)](iumsunblocknotification-structure.md)|Representa una notificación del Administrador de recursos indicando que un proxy del subproceso que había bloqueado y desencadenado un valor devuelto al contexto de programación designado del programador, se ha desbloqueado y está listo para su programación. Esta interfaz no es válida una vez que el contexto de ejecución asociado del proxy del subproceso, devuelto desde el método `GetContext`, se vuelve a programar.|  
 |[IVirtualProcessorRoot (estructura)](ivirtualprocessorroot-structure.md)|Una abstracción para un subproceso de hardware en el que un proxy del subproceso puede ejecutarse.|  
 |[scheduler_interface (estructura)](scheduler-interface-structure.md)|Interfaz de Scheduler|  
-|[scheduler_ptr (estructura) (Runtime de simultaneidad)](scheduler-ptr-structure-concurrency-runtime.md)|Representa un puntero a un programador. Esta clase existe para permitir la especificación de una duración compartida mediante shared_ptr o simplemente permitir una referencia sin formato mediante un puntero sin formato.|  
+|[scheduler_ptr (estructura) (Runtime de simultaneidad)](scheduler-ptr-structure-concurrency-runtime.md)|Representa un puntero a un programador. Esta clase existe para permitir la especificación de una duración compartida mediante shared_ptr o simplemente una referencia sin formato mediante un puntero sin formato.|  
   
 ### <a name="enumerations"></a>Enumeraciones  
   
@@ -193,7 +188,7 @@ namespace concurrency;
 |[asend (función)](concurrency-namespace-functions.md#asend)|Sobrecargado. Una operación de envío asincrónica, que programa una tarea para propagar los datos al bloque de destino.|  
 |[cancel_current_task (función)](concurrency-namespace-functions.md#cancel_current_task)|Cancela la tarea que se está ejecutando actualmente. Se puede llamar a esta función desde el cuerpo de una tarea para anular la ejecución de la tarea y hacer que obtenga el estado `canceled`.<br /><br /> No está admitido que llame a esta función si no está dentro del cuerpo de un objeto `task`. Esto dará lugar a un comportamiento indefinido como, por ejemplo, un bloqueo en la aplicación.|  
 |[create_async (función)](concurrency-namespace-functions.md#create_async)|Crea una construcción asincrónica de Windows Runtime basada en un objeto o función lambda que se ha proporcionado. El tipo devuelto de `create_async` es `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` en función de la signatura de la expresión lambda pasada al método.|  
-|[create_task (función)](concurrency-namespace-functions.md#create_task)|Sobrecargado. Crea un PPL [tarea](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) objeto. `create_task` se puede usar en cualquier lugar en el que se ha utilizado un constructor de tarea. Se proporciona principalmente por comodidad, porque permite el uso de la palabra clave `auto` cuando se crean tareas.|  
+|[create_task (función)](concurrency-namespace-functions.md#create_task)|Sobrecargado. Crea un PPL [tarea](task-class.md) objeto. `create_task` se puede usar en cualquier lugar en el que se ha utilizado un constructor de tarea. Se proporciona principalmente por comodidad, porque permite el uso de la palabra clave `auto` cuando se crean tareas.|  
 |[CreateResourceManager (función)](concurrency-namespace-functions.md#createresourcemanager)|Devuelve una interfaz que representa la instancia singleton del Administrador de recursos del runtime de simultaneidad. El Administrador de recursos es el responsable de asignar recursos a los programadores que desean cooperar entre sí.|  
 |[DisableTracing (función)](concurrency-namespace-functions.md#disabletracing)|Deshabilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW no está registrada de forma predeterminada.|  
 |[EnableTracing (función)](concurrency-namespace-functions.md#enabletracing)|Habilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW ahora está registrada de forma predeterminada.|  

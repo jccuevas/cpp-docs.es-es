@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139766"
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Cómo: Convertir System::String en wchar_t* o char*
 Puede usar `PtrToStringChars` en Vcclr.h para convertir <xref:System.String> a nativa `wchar_t *` o `char *`.  Siempre devuelve un puntero de cadena ancho de Unicode porque las cadenas CLR son internamente Unicode. A continuación, puede convertir todo tal como se muestra en el ejemplo siguiente.  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd7ab0593d3a8d6486f2f29cd796656407e14cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bba1380df8acf85aaf6729b5a6bf80465439773d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101656"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>Clase is_nothrow_move_constructible
 
@@ -35,11 +36,12 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` tiene un constructor de movimiento nothrow; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow constructor de movimiento, en caso contrario, es false.
 
 ## <a name="requirements"></a>Requisitos
 

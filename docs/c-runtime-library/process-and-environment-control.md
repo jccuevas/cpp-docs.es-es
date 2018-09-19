@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085763"
 ---
 # <a name="process-and-environment-control"></a>Control de proceso y de entorno
 
@@ -55,7 +56,7 @@ Utilice las rutinas del control de proceso para iniciar, detener, y administrar 
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Llamar a las funciones registradas por **atexit** y **_onexit**, vaciar todos los búferes, cerrar todos los archivos abiertos y terminar el proceso|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminar el proceso inmediatamente sin llamar a **atexit** o **_onexit** ni vaciar los búferes|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obtener valor de la variable de entorno|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Obtener número de identificador del proceso|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Obtener número de identificador del proceso|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurar el entorno de pila guardado; usarlo para ejecutar un valor **goto** no local|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Programar rutinas para su ejecución al finalizar el programa; usarlas para compatibilidad con Microsoft C/C++ versión 7.0 y anteriores|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Esperar al nuevo procesador de comandos y cerrar el flujo en la canalización asociada|
@@ -76,11 +77,11 @@ Utilice las rutinas del control de proceso para iniciar, detener, y administrar 
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Crear y ejecutar un proceso nuevo con la variable **PATH**, el entorno especificado y la matriz de argumentos|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Ejecutar comando del sistema operativo|
 
- En el sistema operativo Windows, el proceso generado es equivalente al proceso que genera. Cualquier proceso puede usar **_cwait** para esperar a cualquier otro proceso cuyo identificador de proceso se conoce.
+En el sistema operativo Windows, el proceso generado es equivalente al proceso que genera. Cualquier proceso puede usar **_cwait** para esperar a cualquier otro proceso cuyo identificador de proceso se conoce.
 
- La diferencia entre las familias de **_exec** y **_spawn** es que una función **_spawn** puede devolver el control del nuevo proceso al proceso de llamada. En una función **_spawn**, tanto el proceso de llamada como el nuevo proceso están presentes en la memoria, a menos que se especifique **_P_OVERLAY**. En una función **_exec**, el nuevo proceso se superpone al proceso de llamada, por lo que el control no puede volver al proceso de llamada a menos que se produzca un error en el intento de iniciar la ejecución del nuevo proceso.
+La diferencia entre las familias de **_exec** y **_spawn** es que una función **_spawn** puede devolver el control del nuevo proceso al proceso de llamada. En una función **_spawn**, tanto el proceso de llamada como el nuevo proceso están presentes en la memoria, a menos que se especifique **_P_OVERLAY**. En una función **_exec**, el nuevo proceso se superpone al proceso de llamada, por lo que el control no puede volver al proceso de llamada a menos que se produzca un error en el intento de iniciar la ejecución del nuevo proceso.
 
- Las diferencias entre las funciones de la familia de **_exec**, así como entre las de la familia de **_spawn**, guardan relación con el método usado para buscar el archivo que se ejecutará como el nuevo proceso, la forma en que los argumentos se pasan al nuevo proceso y el método de establecer el entorno, tal y como se muestra en la tabla siguiente. Utilice una función que pase una lista de argumentos cuando el número de argumentos sea constante o se conozca en tiempo de compilación. Utilice una función que pase un puntero a una matriz que contiene los argumentos cuando el número de argumentos deba determinarse en tiempo de ejecución. La información de la tabla siguiente también se aplica a sus homólogos de caracteres anchos de las funciones **_spawn** y **_exec**.
+Las diferencias entre las funciones de la familia de **_exec**, así como entre las de la familia de **_spawn**, guardan relación con el método usado para buscar el archivo que se ejecutará como el nuevo proceso, la forma en que los argumentos se pasan al nuevo proceso y el método de establecer el entorno, tal y como se muestra en la tabla siguiente. Utilice una función que pase una lista de argumentos cuando el número de argumentos sea constante o se conozca en tiempo de compilación. Utilice una función que pase un puntero a una matriz que contiene los argumentos cuando el número de argumentos deba determinarse en tiempo de ejecución. La información de la tabla siguiente también se aplica a sus homólogos de caracteres anchos de las funciones **_spawn** y **_exec**.
 
 ### <a name="spawn-and-exec-function-families"></a>Familias de _spawn y _exec (Función)
 

@@ -1,5 +1,5 @@
 ---
-title: __wbinvd | Documentos de Microsoft
+title: __wbinvd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74b466ed641474283e26217ae728c57f28edd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ccee7703550bff7980e1cf07b30f29d284e2a3a5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540315"
 ---
 # <a name="wbinvd"></a>__wbinvd
 **Específicos de Microsoft**  
@@ -38,12 +39,12 @@ void __wbinvd(void);
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__wbinvd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__wbinvd`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función sólo está disponible en modo de kernel con un nivel de privilegios (CPL) de 0, y la rutina solo está disponible como función intrínseca.  
+ Esta función sólo está disponible en modo kernel con un nivel de privilegios (CPL) de 0, y la rutina solo está disponible como intrínseco.  
   
 **FIN de Específicos de Microsoft**  
   

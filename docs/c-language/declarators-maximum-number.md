@@ -14,16 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124863b551729c590dbbd9724a266201d0bff851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c5675c62f4cdef11366ecbe640a2e84dc78282a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075220"
 ---
 # <a name="declarators-maximum-number"></a>Declaradores: número máximo
-**ANSI 3.5.4** Número máximo de declaradores que pueden modificar una operación aritmética, una estructura o un tipo de unión  
-  
- Microsoft C no limita el número de declaradores. El número solo está limitado por la memoria disponible.  
-  
-## <a name="see-also"></a>Vea también  
- [Comportamiento definido por la implementación](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.5.4** Número máximo de declaradores que pueden modificar una operación aritmética, una estructura o un tipo de unión
+
+Microsoft C no limita el número de declaradores. El número solo está limitado por la memoria disponible.
+
+## <a name="see-also"></a>Vea también
+
+[Comportamiento definido por la implementación](../c-language/implementation-defined-behavior.md)

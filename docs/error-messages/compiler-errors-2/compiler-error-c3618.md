@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3618 | Documentos de Microsoft
+title: Error del compilador C3618 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78fb928c9e86105c97f1feb37ae8765c5e68b153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28371c211238aaabdadcb6c2b21284beb672dbe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111646"
 ---
 # <a name="compiler-error-c3618"></a>Error del compilador C3618
-'función': no se puede definir un método marcado como DllImport  
-  
- Un método marcado con <xref:System.Runtime.InteropServices.DllImportAttribute> se define de la manera especificada. DLL.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3618.  
-  
-```  
-// C3618.cpp  
-// compile with: /clr /c  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-[ DllImport("user32.dll", EntryPoint="MessageBox", CharSet=CharSet::Ansi) ]  // CHANGED   
-void Func();   
-  
-void Func() {}   // C3618, remove this function definition to resolve  
+
+'function': no se puede definir un método marcado como DllImport
+
+Un método marcado con <xref:System.Runtime.InteropServices.DllImportAttribute> se define en la instancia especificada. ARCHIVO DLL.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3618.
+
+```
+// C3618.cpp
+// compile with: /clr /c
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[ DllImport("user32.dll", EntryPoint="MessageBox", CharSet=CharSet::Ansi) ]  // CHANGED
+void Func();
+
+void Func() {}   // C3618, remove this function definition to resolve
 ```

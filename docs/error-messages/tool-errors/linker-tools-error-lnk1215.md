@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1215 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1215 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 031703687c5ba57e1daaa299e9a276a64e3055a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dab72efea41e775f3ba028b374312975daf48d6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044839"
 ---
 # <a name="linker-tools-error-lnk1215"></a>Error de las herramientas del vinculador LNK1215
-Error en la operación de metadatos (HRESULT): error  
-  
- El vinculador recibió un error del tiempo de ejecución .NET al intentar realizar una actualización de metadatos mediante el tiempo de ejecución. NET.  
-  
- `HRESULT` es el valor HRESULT del método de .NET en tiempo de ejecución. `error` es el. Texto proporcionado por el NET.  
-  
- Es probable que tenga un vinculador y no coincidan en tiempo de ejecución. NET; Vuelva a instalar Visual C++.
+
+Error en la operación de metadatos (HRESULT): error
+
+El vinculador recibió un error de .NET runtime al intentar realizar una actualización de metadatos a través de .NET runtime.
+
+`HRESULT` es el valor HRESULT del método en tiempo de ejecución. NET. `error` es el. Texto proporcionado por la red.
+
+Es probable que tenga un vinculador no coincidente y en tiempo de ejecución. NET; Vuelva a instalar Visual C++.

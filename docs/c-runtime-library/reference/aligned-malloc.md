@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656785fab5e5ffc8a6fa13711d2964f43cdc7d87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b500471a3580af9045f1c42707a543669da48c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063182"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -62,7 +63,7 @@ Valor de la alineación, que debe ser un entero potencia de 2.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un puntero al bloque de memoria que se asignó o **NULL** si la operación produce un error. El puntero es un múltiplo de *alineación*.
+Un puntero al bloque de memoria que se ha asignado o NULL si la operación produjo un error. El puntero es múltiplo de *alineación*.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -70,7 +71,7 @@ Un puntero al bloque de memoria que se asignó o **NULL** si la operación produ
 
 **_aligned_malloc** está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no se puede modificar las variables globales y que el puntero devuelto no es un alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
 
-Esta función establece **errno** a **ENOMEM** si produce un error en la asignación de memoria o si el tamaño solicitado es mayor que **_HEAP_MAXREQ**. Para obtener más información acerca de **errno**, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc** valida sus parámetros. Si *alineación* no es una potencia de 2 o *tamaño* es cero, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **NULL** y establece **errno** a **EINVAL**.
+Esta función establece `errno` en `ENOMEM` si se produce un error en la asignación de memoria o si el tamaño solicitado es mayor que `_HEAP_MAXREQ`. Para obtener más información sobre `errno`, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc** valida sus parámetros. Si *alineación* no es una potencia de 2 o *tamaño* es cero, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve NULL y establece `errno` a `EINVAL`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -162,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>Vea también
 
-[Alineación de datos](../../c-runtime-library/data-alignment.md)<br/>
+[Alineación de datos](../../c-runtime-library/data-alignment.md)

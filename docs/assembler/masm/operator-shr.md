@@ -1,7 +1,7 @@
 ---
-title: operador SHR | Documentos de Microsoft
+title: operador SHR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,21 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d152f05dd2558235799ef3cf172e54143b6491ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d6d9523059b441aa219ac6586c8c1980c0786a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679623"
 ---
 # <a name="operator-shr"></a>Operador SHR
-Devuelve el resultado de desplazar los bits de *expresión* derecho *recuento* número de bits.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-expression SHR count  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Devuelve el resultado de desplazar los bits de *expresión* derecho *recuento* número de bits.
+
+## <a name="syntax"></a>Sintaxis
+
+> expresión de recuento SHR
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

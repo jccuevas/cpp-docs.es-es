@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688705"
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Comportamientos definido por la implementación de OpenMP C o C++
 Este apéndice resume los comportamientos que se describen como "definido por la implementación" en esta API.  Cada comportamiento se referencia cruzada en su descripción en la especificación principal.  

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2106 | Documentos de Microsoft
+title: Error del compilador C2106 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0d8b55bed4b86e44ada9f81dc2bf0269af604ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68dd34810041b9d71056d4bb4afc9beadcaffa81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030747"
 ---
 # <a name="compiler-error-c2106"></a>Error del compilador C2106
-'operador': operando izquierdo debe ser l-value  
-  
- El operador debe tener un valor l como operando izquierdo.  
-  
- El ejemplo siguiente genera C2106:  
-  
-```  
-// C2106.cpp  
-int main() {  
-   int a;  
-   1 = a;   // C2106  
-   a = 1;   // OK  
-}  
+
+'operator': operando izquierdo debe ser valor l
+
+El operador debe tener un valor l como operando izquierdo.
+
+El ejemplo siguiente genera C2106:
+
+```
+// C2106.cpp
+int main() {
+   int a;
+   1 = a;   // C2106
+   a = 1;   // OK
+}
 ```

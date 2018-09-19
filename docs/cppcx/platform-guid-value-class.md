@@ -1,5 +1,5 @@
 ---
-title: 'Clase de valor Platform:: GUID | Documentos de Microsoft'
+title: Clase de valor Platform | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,156 +11,164 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100436"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid (Clase de valor)
-Representa un tipo [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) en el sistema de tipos de Windows en tiempo de ejecución.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-public value struct Guid  
-```  
-  
-### <a name="members"></a>Miembros  
- Guid tiene los métodos Equals(), GetHashCode() y ToString() que se derivan de [Platform::Object Class](../cppcx/platform-object-class.md), y el método GetTypeCode() que se deriva de [Platform::Type Class](../cppcx/platform-type-class.md). Guid también tiene los siguientes miembros.  
-  
-|Miembro|Descripción|  
-|------------|-----------------|  
-|[Guid](#ctor)|Inicializa una nueva instancia del struct Guid.|  
-|[operator==](#operator-equality)|Operador Equals (de igualdad).|  
-|[operator!=](#operator-not-equal)|Operador Not Equals (de desigualdad).|  
-|[operator()](#operator-call)|Convierte un Guid en un GUID.|  
-  
-### <a name="remarks"></a>Comentarios  
- Para obtener un ejemplo sobre cómo generar un nuevo elemento Platform::Guid mediante el uso de la función de Windows [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), consulte [WinRT component: How to generate a GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)(Componente de WinRT: ¿Cómo generar un GUID?).  
-  
-### <a name="requirements"></a>Requisitos  
- **Cliente mínimo admitido:** Windows 8  
-  
- **Servidor mínimo admitido:** Windows Server 2012  
-  
- **Espacio de nombres:** Plataforma  
-  
- **Metadatos:** platform.winmd  
 
- 
+Representa un [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) tipo en el sistema de tipos en tiempo de ejecución de Windows.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+public value struct Guid
+```
+
+### <a name="members"></a>Miembros
+
+Guid tiene los métodos Equals(), GetHashCode() y ToString() que se derivan de [Platform::Object Class](../cppcx/platform-object-class.md), y el método GetTypeCode() que se deriva de [Platform::Type Class](../cppcx/platform-type-class.md). Guid también tiene los siguientes miembros.
+
+|Miembro|Descripción|
+|------------|-----------------|
+|[Guid](#ctor)|Inicializa una nueva instancia del struct Guid.|
+|[operator==](#operator-equality)|Operador Equals (de igualdad).|
+|[operator!=](#operator-not-equal)|Operador Not Equals (de desigualdad).|
+|[operator()](#operator-call)|Convierte un Guid en un GUID.|
+
+### <a name="remarks"></a>Comentarios
+
+¿Para obtener un ejemplo de cómo generar un nuevo Platform:: GUID mediante la función Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), consulte [componente WinRT: cómo generar un GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+
+### <a name="requirements"></a>Requisitos
+
+**Cliente mínimo admitido:** Windows 8
+
+**Servidor mínimo admitido:** Windows Server 2012
+
+**Espacio de nombres:** Plataforma
+
+**Metadatos:** platform.winmd
+
 ## <a name="ctor"></a> Constructores de GUID
-Inicializa una nueva instancia de un struct Guid.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-  
-    Guid(  
-        unsigned int a,   
-        unsigned short b,   
-        unsigned short c,   
-        unsigned char d,   
-        unsigned char e,   
-        unsigned char f,   
-        unsigned char g,   
-        unsigned char h,   
-        unsigned char i,   
-        unsigned char j,   
-        unsigned char k  );  
-  
-    Guid(GUID m);  
-  
-    Guid(  
-        unsigned int a,   
-        unsigned short b,   
-        unsigned short c,   
-        Array<unsigned char>^ n );  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- `a`  
- Los cuatro primeros bytes del identificador exclusivo global (GUID).  
-  
- `b`  
- Los dos bytes siguientes del identificador exclusivo global (GUID).  
-  
- `c`  
- Los dos bytes siguientes del identificador exclusivo global (GUID).  
-  
- `d`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `e`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `f`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `g`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `h`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `i`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `j`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `k`  
- El byte siguiente del identificador exclusivo global (GUID).  
-  
- `m`  
- Un GUID, tal como se definió.  
-  
- `n`  
- Los ocho bytes restantes del identificador exclusivo global (GUID).  
-  
+
+Inicializa una nueva instancia de un struct Guid.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+Guid(
+    unsigned int a,
+    unsigned short b,
+    unsigned short c,
+    unsigned char d,
+    unsigned char e,
+    unsigned char f,
+    unsigned char g,
+    unsigned char h,
+    unsigned char i,
+    unsigned char j,
+    unsigned char k );
+
+Guid(GUID m);
+
+Guid(
+    unsigned int a,
+    unsigned short b,
+    unsigned short c,
+    Array<unsigned char>^ n );
+```
+
+### <a name="parameters"></a>Parámetros
+
+*a*<br/>
+Los cuatro primeros bytes del identificador exclusivo global (GUID).
+
+*b*<br/>
+Los dos bytes siguientes del identificador exclusivo global (GUID).
+
+*c*<br/>
+Los dos bytes siguientes del identificador exclusivo global (GUID).
+
+*d*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*e*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*f*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*g*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*h*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*i*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*J*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*k*<br/>
+El byte siguiente del identificador exclusivo global (GUID).
+
+*m*<br/>
+Un GUID, tal como se define.
+
+*n*<br/>
+Los ocho bytes restantes del identificador exclusivo global (GUID).
 
 ## <a name="operator-equality"></a> GUID::operator == (operador)
-Compara dos GUID.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Platform::Guid::operator==  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
- Es True si los dos GUID son iguales.
+
+Compara dos GUID.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+Platform::Guid::operator==
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+True si los dos GUID son iguales.
 
 ## <a name="operator-inequality"></a> GUID::operator! = (operador)
-Compara dos GUID.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Platform::Guid::operator!=  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
- Es True si los dos GUID no son iguales.
 
+Compara dos GUID.
 
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+Platform::Guid::operator!=
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+True si los dos GUID no son iguales.
 
 ## <a name="operator-call"></a> ::Operator() (operador)
-Convierte implícitamente un [estructura GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID a Platform:: GUID.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Platform::Guid operator()  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
- Un struct de Guid.  
-  
-  
-## <a name="see-also"></a>Vea también  
- [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)
+
+Convierte implícitamente un [estructura GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID en Platform::.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+Platform::Guid operator();
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Un struct de Guid.
+
+## <a name="see-also"></a>Vea también
+
+[Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

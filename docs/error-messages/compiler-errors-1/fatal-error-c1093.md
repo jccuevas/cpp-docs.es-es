@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1093 | Documentos de Microsoft
+title: Error irrecuperable C1093 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e7bfe845c35b31f5a1b0833c600e6947be8592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9bc1e7e3d3996eedd0fe464832c1ee91986e302f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052665"
 ---
 # <a name="fatal-error-c1093"></a>Error irrecuperable C1093
-Llamada a la API 'nombre de la función' produjo un error 'ubicación de llamada': 'texto de tiempo de ejecución'  
-  
- Error en la llamada a una función. NET. ***texto de tiempo de ejecución*** puede o no puede ser suministrado por el runtime de COM.  
-  
- Para obtener más información acerca de los mensajes de error del sistema, vea el archivo de sistema winerror.h, y [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).
+
+> Llamada de API '*nombre de la función*'Error'*ubicación de llamada*': '*texto en tiempo de ejecución*'
+
+Error en la llamada a una función. NET. El *texto en tiempo de ejecución* cadena puede ser o no puede ser suministrado por el runtime de COM.
+
+Para obtener más información acerca de los mensajes de error del sistema, consulte el archivo winerror.h del sistema, y [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

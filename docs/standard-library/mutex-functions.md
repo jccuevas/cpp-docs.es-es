@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e352d43f4ff7c6fa655bd14d2c7f595cfed32ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106709"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>Funciones y variables &lt;mutex&gt;
 
@@ -49,15 +50,18 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Parámetros
 
-`Flag` A [once_flag](../standard-library/once-flag-structure.md) objeto que se asegura de que el objeto que se puede llamar solo se llama una vez.
+*Marca*<br/>
+Un objeto [once_flag](../standard-library/once-flag-structure.md) que garantiza que solo se llama una vez al objeto que se puede llamar.
 
-`F` Un objeto que se puede llamar.
+*F*<br/>
+Un objeto al que se puede llamar.
 
-`A` Una lista de argumentos.
+*A*<br/>
+Lista de argumentos.
 
 ### <a name="remarks"></a>Comentarios
 
-Si `Flag` no es válido, la función produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `invalid_argument`. De otro modo, la función de plantilla usa su argumento `Flag` para garantizar que llama correctamente a `F(A...)` exactamente una vez, independientemente de cuántas veces se llame a la función de plantilla. Si `F(A...)` se cierra emitiendo una excepción, la llamada no se ha realizado correctamente.
+Si *marca* no es válido, la función produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `invalid_argument`. En caso contrario, la función de plantilla usa su *marca* argumento para asegurarse de que llama a `F(A...)` correctamente exactamente una vez, independientemente de cuántas veces se llama la función de plantilla. Si `F(A...)` se cierra emitiendo una excepción, la llamada no se ha realizado correctamente.
 
 ## <a name="defer_lock"></a> defer_lock (Variable)
 

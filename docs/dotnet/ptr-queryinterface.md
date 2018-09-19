@@ -1,5 +1,5 @@
 ---
-title: PTR::QueryInterface | Documentos de Microsoft
+title: PTR::QueryInterface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090146"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-El propio objeto COM de una interfaz de consulta y se adjunta el resultado a otro `com::ptr`.  
+Consulta al objeto COM que se poseen una interfaz y adjunta el resultado a otro `com::ptr`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `other`  
- El `com::ptr` que obtendrá la interfaz.  
+*other*<br/>
+El `com::ptr` que obtendrá la interfaz.  
   
 ## <a name="exceptions"></a>Excepciones  
- Internamente, `QueryInterface` se llama en el propio objeto COM y cualquier error `HRESULT` se convierte en una excepción por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+ Internamente, `QueryInterface` se llama en el objeto COM que se poseen y cualquier error `HRESULT` se convierte en una excepción por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice este método para crear un contenedor COM de una interfaz diferente del objeto COM que posee el contenedor actual. Este método llama a `QueryInterface` a través del propio objeto COM para solicitar un puntero a una interfaz específica de la COM del objeto y conecta el puntero de interfaz devuelto en el pasado `com::ptr`.  
+ Utilice este método para crear un contenedor COM para una interfaz diferente del objeto COM que son propiedad del contenedor actual. Este método llama a `QueryInterface` a través del objeto COM que se poseen para solicitar un puntero a una interfaz de COM específica de objetos y adjunta el puntero de interfaz devuelto a en el pasado `com::ptr`.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto. El `WriteTopLevelNode` utiliza la función miembro `QueryInterface` para rellenar una variable local `com::ptr` con una `IXMLDOMNode` y, a continuación, pasa el `com::ptr` (de referencia de seguimiento) a una función de miembro privado que se escribe las propiedades de nombre y el texto del nodo en la consola.  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto. El `WriteTopLevelNode` usa la función miembro `QueryInterface` para rellenar una variable local `com::ptr` con un `IXMLDOMNode` y, a continuación, pasa el `com::ptr` (mediante el seguimiento de referencia) a una función de miembro privado que escribe el nombre y texto de las propiedades de nodo en la consola.  
   
 ```  
 // comptr_queryinterface.cpp  

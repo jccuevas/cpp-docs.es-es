@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928546"
 ---
 # <a name="document-classes"></a>Clases de documento
 Objetos de clase de documento, creados por objetos de plantilla de documento, administran los datos de la aplicación. Se deriva una clase de los documentos de una de estas clases.  
@@ -28,7 +29,7 @@ Objetos de clase de documento, creados por objetos de plantilla de documento, ad
  Objetos de clase de documento interactúan con objetos de vista. Ver objetos representan el área de cliente de una ventana, mostrar datos de un documento y permiten a los usuarios interactuar con él. Documentos y vistas se crean un objeto de plantilla de documento.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- La clase base para documentos específicos de la aplicación. Derive la clase de documento o clases de **CDocument**.  
+ La clase base para documentos específicos de la aplicación. Derive la clase de documento o clases de `CDocument`.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  Se utiliza para la implementación de documento compuesto, así como compatibilidad con el contenedor básico. Actúa como un contenedor para las clases derivadas de [CDocItem](../mfc/reference/cdocitem-class.md). Esta clase puede usarse como clase base para el contenedor de documentos y es la clase base para `COleServerDoc`.  

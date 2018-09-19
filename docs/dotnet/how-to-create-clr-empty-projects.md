@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: crear proyectos vacíos de CLR | Documentos de Microsoft'
+title: 'Cómo: crear proyectos vacíos de CLR | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c6910d8ff234573a6cb05c68275f81641831e73b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c46aacc776c60b7deb03495187d08a3227f43aa4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677372"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Cómo: Crear proyectos vacíos de CLR
-Para crear un proyecto vacío de CLR, use la **proyecto vacío de CLR** plantilla, que está disponible en la **nuevo proyecto** cuadro de diálogo.  
+Para crear un proyecto vacío de CLR, use el **proyecto vacío de CLR** plantilla, que está disponible desde el **nuevo proyecto** cuadro de diálogo.  
   
 > [!NOTE]
->  Las características del IDE pueden depender de la edición o configuración activa, y ser diferentes de las que se describen en la Ayuda. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Las características del IDE pueden depender de la edición o configuración activa, y ser diferentes de las que se describen en la Ayuda. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-a-clr-empty-project"></a>Para crear un proyecto vacío de CLR  
   
@@ -39,7 +40,7 @@ Para crear un proyecto vacío de CLR, use la **proyecto vacío de CLR** plantill
 3.  En el cuadro **Nombre** , escriba un nombre único para la aplicación.  
   
     > [!NOTE]
-    >  También puede especificar otros valores del proyecto y la solución en el **nuevo proyecto** cuadro de diálogo, pero estos valores no son necesarios.  
+    >  También puede especificar otras opciones de soluciones y proyectos desde el **nuevo proyecto** cuadro de diálogo, pero estos valores no son necesarios.  
   
 4.  Haga clic en **Aceptar**.  
   

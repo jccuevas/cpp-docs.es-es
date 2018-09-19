@@ -19,17 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c33d22f30275c9d6581d6c1cd97de4ffe68bc08
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083982"
 ---
 # <a name="time-management"></a>Administración del tiempo
 
 Use estas funciones para obtener la hora actual y convertirla, ajustarla y almacenarla según sea necesario. La hora actual es la hora del sistema.
 
- Las rutinas **_ftime** y **localtime** usan la variable de entorno **TZ**. Si no se establece el valor de **TZ**, la biblioteca en tiempo de ejecución intenta usar la información de zona horaria especificada por el sistema operativo. Si esta información no está disponible, estas funciones usan el valor predeterminado de PST8PDT. Para obtener más información sobre **TZ**, consulte [_tzset](../c-runtime-library/reference/tzset.md); consulte también [_daylight, timezone y _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Las rutinas **_ftime** y **localtime** usan la variable de entorno **TZ**. Si no se establece el valor de **TZ**, la biblioteca en tiempo de ejecución intenta usar la información de zona horaria especificada por el sistema operativo. Si esta información no está disponible, estas funciones usan el valor predeterminado de PST8PDT. Para obtener más información sobre **TZ**, consulte [_tzset](../c-runtime-library/reference/tzset.md); consulte también [_daylight, timezone y _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ### <a name="time-routines"></a>Rutinas de tiempo
 
@@ -38,7 +39,7 @@ Use estas funciones para obtener la hora actual y convertirla, ajustarla y almac
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Convertir la hora de tipo **struct tm** a cadena de caracteres. Las versiones de estas funciones con el sufijo **_s** son más seguras.|
 |[clock](../c-runtime-library/reference/clock.md)|Devolver el tiempo de reloj transcurrido en el proceso.|
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Convertir la hora del tipo **time_t**, **__time32_t** o **__time64_t** a cadena de caracteres. Las versiones de estas funciones con el sufijo **_s** son más seguras.|
-|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcular la diferencia entre dos horas.|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|
+|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcular la diferencia entre dos horas.|[System::DateTime::Subtract](https://msdn.microsoft.com/library/system.datetime.subtract.aspx)|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Almacenar la hora actual del sistema en la variable de tipo **struct _timeb** o de tipo **struct __timeb64**. Las versiones de estas funciones con el sufijo **_s** son más seguras.|
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Definir la hora de modificación del archivo abierto.|
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Convertir la hora del tipo **time_t** al **struct tm** o del tipo **__time64_t** al **struct tm**. Las versiones de estas funciones con el sufijo **_s** son más seguras.|

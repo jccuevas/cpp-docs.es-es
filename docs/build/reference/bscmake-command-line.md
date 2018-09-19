@@ -1,5 +1,5 @@
 ---
-title: Línea de comandos BSCMAKE | Documentos de Microsoft
+title: Línea de comandos BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7866d2960acdd89c3015470ef3971307ba162cd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bda0457eecdf6ef7c846d7c12e24078faa4d0da5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720049"
 ---
 # <a name="bscmake-command-line"></a>Línea de comandos de BSCMAKE
-Para ejecutar BSCMAKE, use la siguiente sintaxis de línea de comandos:  
-  
-```  
-BSCMAKE [options] sbrfiles  
-```  
-  
- Opciones solo pueden aparecer en el `options` campo en la línea de comandos.  
-  
- El *sbrfiles* campo especifica uno o más archivos .sbr creados mediante un compilador o ensamblador. Separe los nombres de los archivos .sbr con espacios o tabulaciones. Debe especificar la extensión; No hay ningún valor predeterminado. Puede especificar una ruta de acceso con el nombre de archivo y se pueden utilizar comodines de sistema operativo (* y?).  
-  
- Durante una generación incremental, puede especificar nuevos archivos .sbr que no formaban parte de la generación original. Si desea que todas las contribuciones que se mantiene en el archivo de información de examen, debe especificar todos los archivos .sbr (incluidos los archivos truncados) que se usaron originalmente para crear el archivo .bsc. Si se omite un archivo .sbr, se quita la contribución de ese archivo para el archivo de información de examen.  
-  
- No especifique un archivo .sbr truncado para una compilación completa. Una compilación completa requiere las contribuciones de todos los archivos .sbr especificados. Antes de realizar una compilación completa, vuelva a compilar el proyecto y crear un nuevo archivo .sbr para cada archivo vacío.  
-  
- El comando siguiente ejecuta BSCMAKE para generar un archivo denominado Main.bsc a partir de tres archivos. sbr:  
-  
-```  
-BSCMAKE main.sbr file1.sbr file2.sbr  
-```  
-  
- Para obtener información relacionada, consulte [archivo de comandos de BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) y [opciones de BSCMAKE](../../build/reference/bscmake-options.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)
+
+Para ejecutar BSCMAKE, use la sintaxis de línea de comandos siguiente:
+
+```
+BSCMAKE [options] sbrfiles
+```
+
+Las opciones solo pueden aparecer en el `options` campo en la línea de comandos.
+
+El *sbrfiles* campo especifica uno o más archivos .sbr creados mediante un compilador o ensamblador. Separe los nombres de los archivos .sbr con espacios o tabulaciones. Debe especificar la extensión; No hay ningún valor predeterminado. Puede especificar una ruta de acceso con el nombre de archivo, y puede usar caracteres comodín del sistema operativo (\* y?).
+
+Durante una compilación incremental, puede especificar nuevos archivos .sbr que no formaban parte de la compilación original. Si desea que todas las contribuciones a permanecer en el archivo de información de examen, debe especificar todos los archivos .sbr (incluidos los archivos truncados) que se usaron originalmente para crear el archivo .bsc. Si se omite un archivo .sbr, se quita la contribución de dicho archivo para el archivo de información de examen.
+
+No especifique un archivo .sbr truncado para una compilación completa. Una compilación completa requiere que las contribuciones de todos los archivos .sbr especificado. Antes de realizar una compilación completa, vuelva a compilar el proyecto y cree un nuevo archivo .sbr para cada archivo vacío.
+
+El comando siguiente ejecuta BSCMAKE para generar un archivo denominado Main.bsc a partir de tres archivos .sbr:
+
+```
+BSCMAKE main.sbr file1.sbr file2.sbr
+```
+
+Para obtener información relacionada, consulte [archivo de comandos de BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) y [opciones de BSCMAKE](../../build/reference/bscmake-options.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)

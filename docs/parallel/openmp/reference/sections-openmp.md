@@ -1,5 +1,5 @@
 ---
-title: secciones (OpenMP) | Documentos de Microsoft
+title: secciones (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708037"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
-Identifica las secciones de código para ser dividido entre todos los subprocesos.  
+Identifica las secciones de código se divide entre todos los subprocesos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,12 +39,11 @@ Identifica las secciones de código para ser dividido entre todos los subproceso
 }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
-  
- `clause` (opcional)  
- Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **secciones**.  
-  
+## <a name="arguments"></a>Argumentos
+
+*Cláusula*<br/>
+(Opcional) Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **secciones**.
+
 ## <a name="remarks"></a>Comentarios  
  El **secciones** directiva puede contener cero o más **sección** directivas.  
   
@@ -59,7 +59,7 @@ Identifica las secciones de código para ser dividido entre todos los subproceso
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- Si **paralelo** también se especifica, `clause` cualquier cláusula puede ser aceptado por la **paralelo** o **secciones** directivas, excepto `nowait`.  
+ Si **paralelo** también se especifica, `clause` puede ser cualquier cláusula aceptado por el **paralelo** o **secciones** directivas, excepto `nowait`.  
   
  Para obtener más información, consulte [2.4.2 sections (construcción)](../../../parallel/openmp/2-4-2-sections-construct.md).  
   

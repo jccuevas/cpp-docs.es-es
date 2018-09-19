@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Srwlock_ | Documentos de Microsoft
+title: Miembro de datos Srwlock_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eec019d9eb120f1918cb81c9d7ba88f13d81ee38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608565"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ (Miembro de datos)
-Contiene la variable subyacente de bloqueo para el objeto de SRWLock actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-SRWLOCK SRWLock_;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SRWLock (clase)](../windows/srwlock-class.md)
+
+Contiene la variable subyacente de bloqueo actual **SRWLock** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+SRWLOCK SRWLock_;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SRWLock (clase)](../windows/srwlock-class.md)

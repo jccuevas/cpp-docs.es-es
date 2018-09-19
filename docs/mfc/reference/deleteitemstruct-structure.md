@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f56a09742276c7fcb1bd66ff1a36b1d17cdf882
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c844ad428143c82e8214eab74262b326bf2c9a4
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123245"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT (Estructura)
 El `DELETEITEMSTRUCT` estructura describe un elemento eliminado de cuadro de lista o cuadro combinado dibujado por el propietario.  
@@ -38,23 +39,23 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `CtlType`  
- Especifica **odt_combobox** (un cuadro de lista dibujado por el propietario) o **ODT_COMBOBOX** (un cuadro combinado dibujado por el propietario).  
+ *CtlType*  
+ Especifica odt_combobox (un cuadro de lista dibujado por el propietario) o ODT_COMBOBOX (un cuadro combinado dibujado por el propietario).  
   
- `CtlID`  
+ *CtlID*  
  Especifica el identificador del cuadro de lista o cuadro combinado.  
   
- `itemID`  
+ *itemID*  
  Especifica el índice del elemento en el cuadro de lista o cuadro combinado que se va a quitar.  
   
- `hwndItem`  
+ *hwndItem*  
  Identifica el control.  
   
- `itemData`  
- Especifica los datos definidos por la aplicación para el elemento. Este valor se pasa al control en el **lParam** parámetro del mensaje que agrega el elemento en el cuadro de lista o cuadro combinado.  
+ *itemData*  
+ Especifica los datos definidos por la aplicación para el elemento. Este valor se pasa al control en el *lParam* parámetro del mensaje que agrega el elemento en el cuadro de lista o cuadro combinado.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se quita un elemento desde el cuadro de lista o cuadro combinado o cuando se destruye el cuadro de lista o cuadro combinado, Windows envía la `WM_DELETEITEM` mensaje hasta el propietario de cada elemento eliminado. El **lParam** parámetro del mensaje contiene un puntero a esta estructura.  
+ Cuando se quita un elemento desde el cuadro de lista o cuadro combinado o cuando se destruye el cuadro de lista o cuadro combinado, Windows envía el mensaje WM_DELETEITEM hasta el propietario de cada elemento eliminado. El *lParam* parámetro del mensaje contiene un puntero a esta estructura.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  

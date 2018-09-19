@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930521"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Administrar los datos de estado de los módulos MFC
-En este artículo se describe los datos de estado de los módulos MFC y cómo se actualiza este estado cuando el flujo de ejecución (el código de ruta de acceso tiene a través de una aplicación cuando se ejecuta) entra y sale de un módulo. Cambiar estados de módulos con el `AFX_MANAGE_STATE` y `METHOD_PROLOGUE` macros también se explica.  
+En este artículo se describe los datos de estado de los módulos MFC y cómo se actualiza este estado cuando el flujo de ejecución (el código de ruta de acceso tiene a través de una aplicación cuando se ejecuta) entra y sale de un módulo. También se describe el cambio de Estados de módulo mediante las macros AFX_MANAGE_STATE y METHOD_PROLOGUE.  
   
 > [!NOTE]
 >  El término "módulo" aquí hace referencia a un programa ejecutable, o a un archivo DLL (o conjunto de archivos DLL) que funcionan independientemente del resto de la aplicación, pero usa una copia compartida de la DLL de MFC. Un control ActiveX es un ejemplo típico de un módulo.  

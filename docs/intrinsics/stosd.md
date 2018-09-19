@@ -1,5 +1,5 @@
 ---
-title: __stosd | Documentos de Microsoft
+title: __stosd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f019a0c2c62b991b2799f1a5d6d89402054c0260
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723390"
 ---
 # <a name="stosd"></a>__stosd
 **Específicos de Microsoft**  
   
- Genera una instrucción de cadena de almacén (`rep stosd`).  
+ Genera una instrucción de cadena de la tienda (`rep stosd`).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,25 +41,25 @@ void __stosd(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [out] `Dest`  
- El destino de la operación.  
+*dest*<br/>
+[out] El destino de la operación.  
   
- [in] `Data`  
- Los datos para almacenar.  
+*Data*<br/>
+[in] Para almacenar los datos.  
   
- [in] `Count`  
- La longitud del bloque de palabras dobles para escribir.  
+*Recuento*<br/>
+[in] La longitud del bloque de palabras dobles para escribir.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado es que la palabra doble `Data` se escribe en un bloque de `Count` palabras dobles en la ubicación de memoria que señala `Dest`.  
+ El resultado es que la palabra doble `Data` se escribe en un bloque de `Count` palabras dobles en la ubicación de memoria a la que señala a `Dest`.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

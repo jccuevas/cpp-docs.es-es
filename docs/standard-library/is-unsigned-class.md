@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66128074d7beb52ab73f2e6b48371999d38e83a5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 5007132e8927938a2770849ec338484f2388c1c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110042"
 ---
 # <a name="isunsigned-class"></a>is_unsigned (Clase)
 
@@ -36,11 +37,12 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es un tipo entero sin signo o un tipo entero sin signo `cv-qualified`; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo entero sin signo o un `cv-qualified` sin signo de tipo entero en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

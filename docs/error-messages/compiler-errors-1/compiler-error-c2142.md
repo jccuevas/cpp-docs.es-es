@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2142 | Documentos de Microsoft
+title: Error del compilador C2142 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11fd3cd62b236daa93424f53a0896888a89fe33d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32301087ac1f06f1958ca8de7d2f66645dafb3d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032505"
 ---
 # <a name="compiler-error-c2142"></a>Error del compilador C2142
-las declaraciones de función son diferentes, los parámetros de variables especificados sólo en uno de ellos  
-  
- Una declaración de la función contiene una lista de parámetros variable. Otra declaración no lo hace. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) únicamente.  
-  
- El ejemplo siguiente genera C2142:  
-  
-```  
-// C2142.c  
-// compile with: /Za /c  
-void func();  
-void func( int, ... );   // C2142  
-void func2( int, ... );   // OK  
+
+las declaraciones de función difieren, los parámetros de variable especificados sólo en uno de ellos
+
+Una declaración de la función contiene una lista de parámetros de variable. Otra declaración no es así. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) solo.
+
+El ejemplo siguiente genera C2142:
+
+```
+// C2142.c
+// compile with: /Za /c
+void func();
+void func( int, ... );   // C2142
+void func2( int, ... );   // OK
 ```

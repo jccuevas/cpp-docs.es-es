@@ -1,7 +1,7 @@
 ---
 title: regex_error (Clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae7d6e9e3a50ad6a0b78d2b47a732b6b5fa9fc0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7358af41e1a7172daec619bec3e701ff4541fd0c
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384987"
 ---
 # <a name="regexerror-class"></a>regex_error (Clase)
 
@@ -31,25 +32,65 @@ Informa de un objeto basic_regex incorrecto.
 
 ```cpp
 class regex_error
- : public std::runtime_error {
-public:
-    explicit regex_error(regex_constants::error_code error);
-
-    regex_constants::error_code code() const;
-
-
-};
+: public std::runtime_error
 ```
 
 ## <a name="remarks"></a>Comentarios
 
 La clase describe un objeto de excepción que se produce para notificar un error en la construcción o el uso de un objeto `basic_regex` .
 
+### <a name="constructors"></a>Constructores
+
+|Constructor|Descripción|
+|-|-|
+|[regex_error](#regex_error)|Construye el objeto.|
+
+### <a name="member-functions"></a>Funciones miembro
+
+|Función miembro|Descripción|
+|-|-|
+|[Código](#code)|Devuelve el código de error.|
+
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** \<regex>
 
 **Espacio de nombres:** std
+
+## <a name="example"></a>Ejemplo
+
+```cpp
+// std__regex__regex_error.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
+
+int main()
+    {
+    std::regex_error paren(std::regex_constants::error_paren);
+
+    try
+        {
+        std::regex rx("(a");
+        }
+    catch (const std::regex_error& rerr)
+        {
+        std::cout << "regex error: "
+            << (rerr.code() == paren.code() ? "unbalanced parentheses" : "")
+            << std::endl;
+        }
+    catch (...)
+        {
+        std::cout << "unknown exception" << std::endl;
+        }
+
+    return (0);
+    }
+```
+
+```Output
+regex error: unbalanced parentheses
+```
 
 ## <a name="code"></a> regex_error::code
 
@@ -63,43 +104,6 @@ regex_constants::error_code code() const;
 
 La función miembro devuelve el valor que se pasó al constructor del objeto.
 
-### <a name="example"></a>Ejemplo
-
-```cpp
-// std__regex__regex_error_code.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex_error paren(std::regex_constants::error_paren);
-
-    try
-        {
-        std::regex rx("(a");
-        }
-    catch (const std::regex_error& rerr)
-        {
-        std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
-            << std::endl;
-        }
-    catch (...)
-        {
-        std::cout << "unknown exception" << std::endl;
-        }
-
-    return (0);
-    }
-
-```
-
-```Output
-regex error: unbalanced parentheses
-```
-
 ## <a name="regex_error"></a> regex_error::regex_error
 
 Construye el objeto.
@@ -110,48 +114,12 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parámetros
 
-`error` El código de error.
+*Error*<br/>
+Código de error.
 
 ### <a name="remarks"></a>Comentarios
 
-El constructor crea un objeto que contiene el valor `error`.
-
-### <a name="example"></a>Ejemplo
-
-```cpp
-// std__regex__regex_error_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex_error paren(std::regex_constants::error_paren);
-
-    try
-        {
-        std::regex rx("(a");
-        }
-    catch (const std::regex_error& rerr)
-        {
-        std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
-            << std::endl;
-        }
-    catch (...)
-        {
-        std::cout << "unknown exception" << std::endl;
-        }
-
-    return (0);
-    }
-
-```
-
-```Output
-regex error: unbalanced parentheses
-```
+El constructor crea un objeto que contiene el valor *error*.
 
 ## <a name="see-also"></a>Vea también
 

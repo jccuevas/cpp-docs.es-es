@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a7ec98b2c6fc4de1a85b0f942dd109dfe94839f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a90c7e2ea7af1200b3e6cfee895b69b29352fb21
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314875"
 ---
 # <a name="ltsetgt-operators"></a>Operadores de &lt;set&gt;
 
@@ -45,9 +46,11 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **establecer**.
+*left*<br/>
+Objeto de tipo `set`.
 
-`right` Un objeto de tipo **establecer**.
+*right*<br/>
+Objeto de tipo `set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -88,10 +91,10 @@ int main( )
    else
       cout << "The sets s1 and s3 are equal." << endl;
 }
-\* Output:
+/* Output:
 The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_lt"></a>  operator&lt; (set)
@@ -104,9 +107,11 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **establecer**.
+*left*<br/>
+Objeto de tipo `set`.
 
-`right` Un objeto de tipo **establecer**.
+*right*<br/>
+Objeto de tipo `set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -147,10 +152,10 @@ int main( )
    else
       cout << "The set s1 is not less than the set s3." << endl;
 }
-\* Output:
+/* Output:
 The set s1 is less than the set s2.
 The set s1 is not less than the set s3.
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a>  operator&lt;= (set)
@@ -163,9 +168,11 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **establecer**.
+*left*<br/>
+Objeto de tipo `set`.
 
-`right` Un objeto de tipo **establecer**.
+*right*<br/>
+Objeto de tipo `set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -212,11 +219,11 @@ int main( )
    else
       cout << "The set s1 is greater than the set s4." << endl;
 }
-\* Output:
+/* Output:
 Set s1 is less than or equal to the set s2.
 The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a>  operator== (set)
@@ -229,9 +236,11 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **establecer**.
+*left*<br/>
+Objeto de tipo `set`.
 
-`right` Un objeto de tipo **establecer**.
+*right*<br/>
+Objeto de tipo `set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -272,10 +281,10 @@ int main( )
    else
       cout << "The sets s1 and s3 are not equal." << endl;
 }
-\* Output:
+/* Output:
 The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_gt"></a>  operator&gt; (set)
@@ -288,9 +297,11 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **establecer**.
+*left*<br/>
+Objeto de tipo `set`.
 
-`right` Un objeto de tipo **establecer**.
+*right*<br/>
+Objeto de tipo `set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -331,10 +342,10 @@ int main( )
    else
       cout << "The set s1 is not greater than the set s3." << endl;
 }
-\* Output:
+/* Output:
 The set s1 is not greater than the set s2.
 The set s1 is greater than the set s3.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a>  operator&gt;= (set)
@@ -347,9 +358,11 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **establecer**.
+*left*<br/>
+Objeto de tipo `set`.
 
-`right` Un objeto de tipo **establecer**.
+*right*<br/>
+Objeto de tipo `set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -396,11 +409,11 @@ int main( )
    else
       cout << "The set s1 is less than the set s4." << endl;
 }
-\* Output:
+/* Output:
 The set s1 is less than the set s2.
 Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
-*\
+*/
 ```
 
 ## <a name="op_neq_multiset"></a>  operator!= (multiset)
@@ -413,9 +426,11 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multiset`.
+*left*<br/>
+Objeto de tipo `multiset`.
 
-`right` Un objeto de tipo `multiset`.
+*right*<br/>
+Objeto de tipo `multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -456,10 +471,10 @@ int main( )
    else
       cout << "The multisets s1 and s3 are equal." << endl;
 }
-\* Output:
+/* Output:
 The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_lt_multiset"></a>  operator&lt; (multiset)
@@ -472,9 +487,11 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multiset`.
+*left*<br/>
+Objeto de tipo `multiset`.
 
-`right` Un objeto de tipo `multiset`.
+*right*<br/>
+Objeto de tipo `multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -519,10 +536,10 @@ int main( )
       cout << "The multiset s1 is not less than "
            << "the multiset s3." << endl;
 }
-\* Output:
+/* Output:
 The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
-*\
+*/
 ```
 
 ## <a name="op_lt_eq_multiset"></a>  operator&lt;= (multiset)
@@ -535,9 +552,11 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multiset`.
+*left*<br/>
+Objeto de tipo `multiset`.
 
-`right` Un objeto de tipo `multiset`.
+*right*<br/>
+Objeto de tipo `multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -590,11 +609,11 @@ int main( )
       cout << "The multiset s1 is greater than "
            << "the multiset s4." << endl;
 }
-\* Output:
+/* Output:
 The multiset s1 is less than or equal to the multiset s2.
 The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
-*\
+*/
 ```
 
 ## <a name="op_eq_eq_multiset"></a>  operator== (multiset)
@@ -607,9 +626,11 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multiset`.
+*left*<br/>
+Objeto de tipo `multiset`.
 
-`right` Un objeto de tipo `multiset`.
+*right*<br/>
+Objeto de tipo `multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -650,10 +671,10 @@ int main( )
    else
       cout << "The multisets s1 and s3 are not equal." << endl;
 }
-\* Output:
+/* Output:
 The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_gt_multiset"></a>  operator&gt; (multiset)
@@ -666,9 +687,11 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multiset`.
+*left*<br/>
+Objeto de tipo `multiset`.
 
-`right` Un objeto de tipo `multiset`.
+*right*<br/>
+Objeto de tipo `multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -713,10 +736,10 @@ int main( )
       cout << "The multiset s1 is not greater than "
            << "the multiset s3." << endl;
 }
-\* Output:
+/* Output:
 The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq_multiset"></a>  operator&gt;= (multiset)
@@ -729,9 +752,11 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `multiset`.
+*left*<br/>
+Objeto de tipo `multiset`.
 
-`right` Un objeto de tipo `multiset`.
+*right*<br/>
+Objeto de tipo `multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -784,11 +809,11 @@ int main( )
       cout << "The multiset s1 is less than "
            << "the multiset s4." << endl;
 }
-\* Output:
+/* Output:
 The multiset s1 is less than the multiset s2.
 The multiset s1 is greater than or equal to the multiset s3.
 The multiset s1 is greater than or equal to the multiset s4.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Vea también

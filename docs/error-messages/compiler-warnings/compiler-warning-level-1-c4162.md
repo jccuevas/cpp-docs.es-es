@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4162 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4162 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2789f6aa63c8a547a34ec6adfd89c1e1163c68e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a36fa6a63443bf2272df7ce6125fd77afedf100f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027185"
 ---
 # <a name="compiler-warning-level-1-c4162"></a>Compilador advertencia (nivel 1) C4162
-'identificador': ninguna función con vinculación C encuentra  
-  
- Una función con vinculación C se ha declarado pero no se encuentra.  
-  
- Para resolver esta advertencia, compile en un archivo .c (invocar el compilador de C).  Si se debe invocar el compilador de C++, coloque a extern "C" antes de la declaración de función.  
-  
- El ejemplo siguiente genera C4162  
-  
-```  
-// C4162.cpp  
-// compile with: /c /W1  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)   // C4162  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
-```  
-  
- Posible resolución:  
-  
-```  
-// C4162b.cpp  
-// compile with: /c  
-extern "C"  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
+
+'identifier': ninguna función con vinculación C encontró
+
+Se declara una función con vinculación C, pero no se encuentra.
+
+Para resolver esta advertencia, compile en un archivo .c (invocar el compilador de C).  Si se debe invocar el compilador de C++, coloque a extern "C" antes de la declaración de función.
+
+El ejemplo siguiente genera C4162
+
+```
+// C4162.cpp
+// compile with: /c /W1
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)   // C4162
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
+```
+
+Posible resolución:
+
+```
+// C4162b.cpp
+// compile with: /c
+extern "C"
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
 ```

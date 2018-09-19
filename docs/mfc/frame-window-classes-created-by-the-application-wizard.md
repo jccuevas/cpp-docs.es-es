@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345057"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Clases de ventana de marco creadas por el Asistente para aplicaciones
 Cuando se usa el [Asistente para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md) para crear una aplicación esquema, además de la aplicación, documento y las clases de vista, el Asistente para aplicaciones crea una clase derivada de la ventana de marco de ventana de marco principal de la aplicación. La clase se denomina `CMainFrame` forma predeterminada y los archivos que contienen se denominan MAINFRM. H y MAINFRM. CPP.  

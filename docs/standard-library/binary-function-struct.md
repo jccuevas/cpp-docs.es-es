@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aa8c65632f2a4c1555e211985d3b3005fabe11
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316931"
 ---
 # <a name="binaryfunction-struct"></a>binary_function (Struct)
 
@@ -40,11 +41,9 @@ struct binary_function {
 
 El struct de plantilla sirve como base para las clases que definen una función miembro con el formato:
 
-**result_type operator()**( **constfirst_argument_type&**,
+> *result_type* ** operator() (const ** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**&) const**
 
-**const second_argument_type&** ) **const**
-
-Todas estas funciones binarias pueden hacer referencia a su primer tipo de argumento como **first_argument_type**, a su segundo tipo de argumento como **second_argument_type** y a su tipo de valor devuelto como ***result_type***.
+Todas estas funciones binarias pueden hacer referencia a su primer tipo de argumento como *first_argument_type*, a su segundo tipo de argumento como *second_argument_type* y a su tipo de valor devuelto como *result_type*.
 
 ## <a name="example"></a>Ejemplo
 
@@ -99,12 +98,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )
 The vector v2 = ( -0 -2 -4 -6 -8 -10 )
 The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
-*\
-
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

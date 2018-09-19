@@ -1,5 +1,5 @@
 ---
-title: Index (clase) | Documentos de Microsoft
+title: Index (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da6dae3aa76e593a3a98ff25b4d327faf284459e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097138"
 ---
 # <a name="index-class"></a>index (Clase)
 Define un *N*-dimensional índice pographics-cpp-amp.md.  
@@ -35,8 +36,8 @@ class index;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango o el número de dimensiones.  
+*_Rank*<br/>
+El rango o número de dimensiones.  
   
 ## <a name="members"></a>Miembros  
   
@@ -51,13 +52,13 @@ class index;
 |Name|Descripción|  
 |----------|-----------------|  
 |[operator--](#operator--)|Disminuye cada elemento de la `index` objeto.|  
-|[operator(mod)=](#operator_mod_eq)|Calcula el módulo (resto) de cada elemento de la `index` del objeto cuando dicho elemento se divide por un número.|  
-|[operator*=](#operator_star_eq)|Multiplica cada elemento de la `index` objeto mediante un número.|  
-|[operator/=](#operator_div_eq)|Divide cada elemento de la `index` objeto mediante un número.|  
-|[Index:: operator\[\]](#operator_at)|Devuelve el elemento situado en el índice especificado.|  
+|[operator(mod)=](#operator_mod_eq)|Calcula el módulo (resto) de cada elemento en el `index` cuando dicho elemento se divide por un número de objetos.|  
+|[operator*=](#operator_star_eq)|Multiplica cada elemento de la `index` objeto según un número.|  
+|[operator/=](#operator_div_eq)|Divide cada elemento de la `index` objeto según un número.|  
+|[Index:: operator\[\]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|  
 |[operator++](#operator_add_add)|Incrementa cada elemento de la `index` objeto.|  
-|[operator+=](#operator_add_eq)|Suma el número especificado para cada elemento de la `index` objeto.|  
-|[operator=](#operator_eq)|Copia el contenido del elemento especificado `index` objeto en éste.|  
+|[operator+=](#operator_add_eq)|Agrega el número especificado a cada elemento de la `index` objeto.|  
+|[operator=](#operator_eq)|Copia el contenido del elemento especificado `index` objeto en este.|  
 |[operator-=](#operator_-_eq)|Resta el número especificado de cada elemento de la `index` objeto.|  
 
   
@@ -71,7 +72,7 @@ class index;
  `index`  
   
 ## <a name="remarks"></a>Comentarios  
- El `index` estructura representa un vector de coordenadas de *N* enteros que especifica una posición única en una *N*-espacio de dimensiones. Los valores del vector se ordenan de la más importante a la menos importante. Puede recuperar los valores de los componentes mediante [operador =](#operator_eq).  
+ El `index` estructura representa un vector de coordenadas de *N* enteros que especifica una posición única en un *N*-espacio de dimensiones. Los valores del vector se ordenan del más significativo al menos significativo. Puede recuperar los valores de los componentes mediante [operador =](#operator_eq).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp.h  
@@ -118,14 +119,14 @@ La ubicación de índice en un índice unidimensional.
 _I0  
 La longitud de la dimensión más significativa.  
 _I1  
-La longitud de la dimensión siguiente-a-más significativo.  
+La longitud de la dimensión para la mayoría-significativo.  
 _I2  
 La longitud de la dimensión menos significativa.  
-_Other  
+_Otro  
 Un objeto de índice en el que se basa el nuevo objeto de índice.  
 
-## <a name="operator--"></a>  operador--
-Disminuye cada elemento de objeto de índice.  
+## <a name="operator--"></a>  operator--
+Disminuye cada elemento del objeto index.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
 
@@ -134,10 +135,10 @@ index operator--(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-values"></a>Valores devueltos
-Para el operador de prefijo, el objeto de índice (* esto). Para el operador de sufijo, un nuevo objeto de índice.
+Para el operador de prefijo, el objeto de índice (* esto). Para el operador sufijo, un nuevo objeto de índice.
 
 ## <a name="operator_mod_eq"></a>  Operator(MOD) =   
-Calcula el módulo (resto) de cada elemento en el objeto index cuando dicho elemento se divide por el número especificado.
+Calcula el módulo (resto) de cada elemento en el objeto de índice cuando dicho elemento se divide por el número especificado.
 
 ```  
 index<_Rank>& operator%=(
@@ -145,11 +146,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>Parámetros
-_Rhs el número que se va a dividir por para encontrar el módulo.
-El objeto de índice de valor devuelto.
+El número que se divide por para encontrar el módulo _Rhs.
+Devuelve el valor del objeto de índice.
 
 ## <a name="operator_star_eq"></a>  operador * =   
-Multiplica cada elemento en el objeto de índice en el número especificado.
+Multiplica cada elemento en el objeto de índice por el número especificado.
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -168,7 +169,7 @@ index<_Rank>& operator/=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parámetros
-_Rhs el número que se va a dividir.
+El número que se divide por _Rhs.
 
 ## <a name="operator_at"></a> operator\[\]  
 Devuelve el componente del índice en la ubicación especificada.
@@ -184,10 +185,10 @@ int& operator[] (
 ```
 
 ### <a name="parameters"></a>Parámetros
-_Index un entero comprendido entre 0 y el rango menos 1.
+Un entero comprendido entre 0 y el rango menos 1 _index.
 
 ### <a name="return-value"></a>Valor devuelto
-El elemento situado en el índice especificado.
+El elemento que se encuentra en el índice especificado.
 
 ### <a name="remarks"></a>Comentarios
 En el ejemplo siguiente se muestra los valores del componente del índice.
@@ -200,7 +201,7 @@ std::cout << idx[2] << "\n";
 ```
 
 ## <a name="operator_add_add"></a>  operator ++   
-Incrementa cada elemento de objeto de índice.
+Incrementa cada elemento del objeto index.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
 
@@ -209,10 +210,10 @@ index<_Rank> operator++(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-value"></a>Valor devuelto
-Para el operador de prefijo, el objeto de índice (* esto). Para el operador de sufijo, un nuevo objeto de índice.
+Para el operador de prefijo, el objeto de índice (* esto). Para el operador sufijo, un nuevo objeto de índice.
 
-## <a name="operator_add_eq"></a>  += (operador)   
-Suma el número especificado para cada elemento de objeto de índice.
+## <a name="operator_add_eq"></a>  operator +=   
+Agrega el número especificado a cada elemento del objeto index.
 ```  
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
@@ -223,26 +224,26 @@ index<_Rank>& operator+=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parámetros
-_Rhs el número para agregar.
+El número para agregar _Rhs.
 
 ### <a name="return-value"></a>Valor devuelto
 El objeto de índice.
 
 ## <a name="operator_eq"></a>  operator=   
-Copia el contenido del objeto de índice especificado en éste.
+Copia el contenido del objeto de índice especificado en este.
 ```  
 index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parámetros
-_Other el objeto de índice que lo copien.
+_Otro para copiar desde el objeto de índice.
 
 ### <a name="return-value"></a>Valor devuelto
 Una referencia a este objeto de índice.
 
 ## <a name="operator_-_eq"></a>  operador =
-Resta el número especificado de cada elemento de objeto de índice.
+Resta el número especificado de cada elemento del objeto de índice.
 ```  
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
@@ -253,13 +254,13 @@ index<_Rank>& operator-=(
 ) restrict(amp,cpu);
 ```  
 ### <a name="parameters"></a>Parámetros
-_Rhs el número que se resta.
+_Rhs el número que se va a restar.
 
 ### <a name="return-value"></a>Valor devuelto
 El objeto de índice.   
 
-## <a name="rank"></a>  Rango  
-  Obtiene el rango del objeto de índice.
+## <a name="rank"></a>  rango  
+  Obtiene el rango del objeto index.
 ```
 static const int rank = _Rank;
 ``` 

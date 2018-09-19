@@ -1,5 +1,5 @@
 ---
-title: -TSAWARE | Documentos de Microsoft
+title: -TSAWARE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19457258ae9fe2017430c6445fa9b7d876343680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4516a415695b8ebf0594d393981b3fa3211f1ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726342"
 ---
 # <a name="tsaware"></a>/TSAWARE
-```  
-/TSAWARE[:NO]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- La opción /TSAWARE de la utilidad EDITBIN permite modificar una imagen de programa del mismo modo que si hubiera usado el [/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md) opción del vinculador.  
-  
-## <a name="see-also"></a>Vea también  
- [Opciones de EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/TSAWARE[:NO]
+```
+
+## <a name="remarks"></a>Comentarios
+
+La opción /TSAWARE la utilidad EDITBIN permite modificar una imagen de programa del mismo modo como si hubiera usado el [/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md) opción del vinculador.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones de EDITBIN](../../build/reference/editbin-options.md)

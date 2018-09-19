@@ -20,21 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082227"
 ---
 # <a name="locale"></a>Configuración regional
 
 *Locale* hace referencia a los valores de país o región y de idioma que se pueden usar para personalizar un programa. Entre las categorías dependientes de la configuración regional se encuentran los formatos de presentación de fechas y de valores de moneda. Para obtener más información, vea [Categorías de configuración regional](../c-runtime-library/locale-categories.md).
 
- Use la función [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para cambiar o consultar parte de la información, o toda ella, de configuración regional del programa o subproceso actual, mientras usa funciones sin el sufijo **_l**. Las funciones con el sufijo **_l** usan el parámetro de configuración regional que se pasa para la información de configuración regional solo durante la ejecución de esa función concreta. Para crear una configuración regional y usarla con una función que tenga el sufijo **_l**, use [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Para liberar esta configuración regional, use [_free_locale](../c-runtime-library/reference/free-locale.md). Para obtener la configuración regional actual, use [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
+Use la función [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para cambiar o consultar parte de la información, o toda ella, de configuración regional del programa o subproceso actual, mientras usa funciones sin el sufijo **_l**. Las funciones con el sufijo **_l** usan el parámetro de configuración regional que se pasa para la información de configuración regional solo durante la ejecución de esa función concreta. Para crear una configuración regional y usarla con una función que tenga el sufijo **_l**, use [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Para liberar esta configuración regional, use [_free_locale](../c-runtime-library/reference/free-locale.md). Para obtener la configuración regional actual, use [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
- Use [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) para determinar si cada subproceso tiene su propia configuración regional o todos los subprocesos de un programa comparten la misma configuración regional. Para obtener más información, vea [Configuraciones regionales y páginas de códigos](../text/locales-and-code-pages.md).
+Use [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) para determinar si cada subproceso tiene su propia configuración regional o todos los subprocesos de un programa comparten la misma configuración regional. Para obtener más información, vea [Configuraciones regionales y páginas de códigos](../text/locales-and-code-pages.md).
 
- Existen versiones más seguras de las funciones de la tabla siguiente, que se indican mediante el sufijo **_s** (“segura”). Para obtener más información, consulta [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Existen versiones más seguras de las funciones de la tabla siguiente, que se indican mediante el sufijo **_s** (“segura”). Para obtener más información, consulta [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="locale-dependent-routines"></a>Rutinas dependientes de la configuración regional
 
@@ -81,4 +82,4 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>Vea también
 
 [Internacionalización](../c-runtime-library/internationalization.md)<br/>
- [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953706"
 ---
 # <a name="cdcrendertarget-class"></a>Clase CDCRenderTarget
 Un contenedor para ID2D1DCRenderTarget.  
@@ -93,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pTarget`  
+ *pTarget*  
  Interfaz de destino de representación existente. No puede ser NULL  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -106,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dc`  
+ *dc*  
  El contexto de dispositivo para que el destino de representación emite los comandos de dibujo  
   
- `rect`  
+ *Rect*  
  Las dimensiones del identificador de un contexto de dispositivo (HDC) al que está enlazado el destino de representación  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -130,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `props`  
+ *props*  
  El modo de representación, formato de píxel, opciones de comunicación remota, información de PPP y la compatibilidad de DirectX mínima requerida para la representación de hardware.  
   
 ### <a name="return-value"></a>Valor devuelto  

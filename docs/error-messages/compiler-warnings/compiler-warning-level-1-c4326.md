@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 1) C4326 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4326 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 838c79d6ba897905dad18788adc5ee682ff2fa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cee18a9ccc807370cf2fb40748939f211a4ba52f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211009"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>Advertencia del compilador (nivel 1) C4326
-tipo de valor devuelto de 'function' debe ser 'type1' en lugar de 'tipo2'  
-  
- Una función ha devuelto un tipo distinto de ***type1***. Por ejemplo, si se usa [/Za](../../build/reference/za-ze-disable-language-extensions.md), main no devuelve un `int`.  
-  
- El ejemplo siguiente genera C4326:  
-  
-```  
-// C4326.cpp  
-// compile with: /Za /W1  
-char main()  
-{   // C4326 try int main  
-}  
+
+> tipo de valor devuelto '*función*'debe ser'*type1*'en lugar de'*type2*'
+
+## <a name="remarks"></a>Comentarios
+
+Una función devuelve un tipo distinto *type1*. Por ejemplo, mediante [/Za](../../build/reference/za-ze-disable-language-extensions.md), **principal** no devolvió un **int**.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4326 y muestra cómo corregirlo:
+
+```cpp
+// C4326.cpp
+// compile with: /Za /W1
+char main()
+{
+    // C4326, instead use int main()
+}
 ```

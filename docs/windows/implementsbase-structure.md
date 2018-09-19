@@ -1,5 +1,5 @@
 ---
-title: ImplementsBase (estructura) | Documentos de Microsoft
+title: ImplementsBase (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c65f47e77b7109ab1f6abfdd22b02bc34c31ef48
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600274"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-struct ImplementsBase;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Utilizado para validar los tipos de parámetro de plantilla en [Implements (estructura)](../windows/implements-structure.md).  
-  
- ImplementsBase (estructura) está vacía en el diseño.  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `ImplementsBase`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+struct ImplementsBase;
+```
+
+## <a name="remarks"></a>Comentarios
+
+Utilizado para validar los tipos de parámetro de plantilla en [Implements (estructura)](../windows/implements-structure.md).
+
+El **ImplementsBase** estructura está vacía por diseño.
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`ImplementsBase`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

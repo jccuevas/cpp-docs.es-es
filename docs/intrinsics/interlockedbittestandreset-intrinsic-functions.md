@@ -1,5 +1,5 @@
 ---
-title: funciones intrínsecas _interlockedbittestandreset | Documentos de Microsoft
+title: funciones intrínsecas _interlockedbittestandreset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c292d344727f2cc473dc444853a2c46d94150dd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12935c6a735d72bb1eb25627c78d69f362073a90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724382"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>Funciones intrínsecas _interlockedbittestandreset
 **Específicos de Microsoft**  
@@ -81,11 +82,11 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `a`  
- Puntero a la memoria que se va a examinar.  
+*a*<br/>
+[in] Un puntero a la memoria que se va a examinar.  
   
- [in] `b`  
- La posición de bit que se va a probar.  
+*b*<br/>
+[in] La posición de bit para probar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El valor original del bit en la posición especificada por `b`.  
@@ -94,14 +95,14 @@ unsigned char _interlockedbittestandreset64_HLERelease(
   
 |Función intrínseca|Arquitectura|Header|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_interlockedbittestandreset`|x86, ARM, x64|\<INTRIN.h >|  
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<INTRIN.h >|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h >|  
+|`_interlockedbittestandreset64`|x64|\<INTRIN.h >|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Comentarios  
- En x86 y procesadores [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], estos intrínsecos usan la instrucción `lock btr`, que lee y establece el bit especificado en cero en una operación atómica.  
+ En procesadores x86 y x64, estos intrínsecos usan la `lock btr` instrucción, que lee y establece el bit especificado en cero en una operación atómica.  
   
  En procesadores ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` para adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos ARM con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.  
   
@@ -112,5 +113,5 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)

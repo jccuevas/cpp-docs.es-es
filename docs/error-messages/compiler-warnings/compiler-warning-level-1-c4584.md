@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4584 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4584 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3f92142fe42451ca7ae8272463d9347a263121
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9db97bf35034f7ca628f860924bfb9a1fccc942f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036259"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>Advertencia del compilador (nivel 1) C4584
-'clase1': clase base 'clase2' ya es una clase base de 'Clase3'  
-  
- La clase definida se hereda de dos clases: una de las cuales se hereda de otro. Por ejemplo:  
-  
-```  
-// C4584.cpp  
-// compile with: /W1 /LD  
-class A {  
-};  
-  
-class B : public A {  
-};  
-  
-class C : public A, public B { // C4584  
-};  
-```  
-  
- En este caso, se emitirá una advertencia en la clase C, porque hereda de la clase A y clase B, que también hereda de la clase A. Esta advertencia sirve como recordatorio de que debe calificar totalmente el uso de los miembros de estas clases base o se generará un error del compilador debido a la ambigüedad en cuanto a qué miembro de clase se hace referencia.
+
+'class1': clase base 'clase2' ya es una clase base de 'Clase3'
+
+La clase definida se hereda de dos clases, uno de los cuales hereda de la otra. Por ejemplo:
+
+```
+// C4584.cpp
+// compile with: /W1 /LD
+class A {
+};
+
+class B : public A {
+};
+
+class C : public A, public B { // C4584
+};
+```
+
+En este caso, podría generarse una advertencia en la clase C, ya que hereda de una clase y clase B, que también se hereda de la clase A. Esta advertencia sirve como recordatorio de que debe calificar totalmente el uso de los miembros de estas clases base o se generará un error del compilador debido a la ambigüedad en cuanto a qué miembro de clase se hace referencia.

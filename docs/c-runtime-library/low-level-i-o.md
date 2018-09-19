@@ -20,17 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018319"
 ---
 # <a name="low-level-io"></a>E/S de bajo nivel
 
 Estas funciones invocan el sistema operativo directamente para la operación cuyo nivel es más bajo que el que ofrecen las E/S de secuencias. Las llamadas para entradas y salidas de bajo nivel no se almacenan en el búfer ni aplican formato a los datos.
 
- Las rutinas de bajo nivel pueden acceder a los flujos estándar abiertos al iniciar el programa mediante los descriptores de archivo predefinidos siguientes.
+Las rutinas de bajo nivel pueden acceder a los flujos estándar abiertos al iniciar el programa mediante los descriptores de archivo predefinidos siguientes.
 
 |Secuencia|Descriptor del archivo|
 |------------|---------------------|
@@ -38,7 +39,7 @@ Estas funciones invocan el sistema operativo directamente para la operación cuy
 |**stdout**|1|
 |**stderr**|2|
 
- Las rutinas de E/S de bajo nivel establecen la variable global [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) cuando se produce un error. Debe incluir STDIO.H al usar funciones de bajo nivel solo si su programa requiere una constante que se define en STDIO.H, por ejemplo, el indicador de fin de archivo (**EOF**).
+Las rutinas de E/S de bajo nivel establecen la variable global [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) cuando se produce un error. Debe incluir STDIO.H al usar funciones de bajo nivel solo si su programa requiere una constante que se define en STDIO.H, por ejemplo, el indicador de fin de archivo (**EOF**).
 
 ## <a name="low-level-io-functions"></a>Funciones de E/S de bajo nivel
 
@@ -63,5 +64,5 @@ Estas funciones invocan el sistema operativo directamente para la operación cuy
 ## <a name="see-also"></a>Vea también
 
 [Entrada y salida](../c-runtime-library/input-and-output.md)<br/>
- [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Llamadas del sistema](../c-runtime-library/system-calls.md)<br/>
+[Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Llamadas del sistema](../c-runtime-library/system-calls.md)<br/>

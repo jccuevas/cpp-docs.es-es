@@ -1,5 +1,5 @@
 ---
-title: Inicialización de ensamblados mixtos | Documentos de Microsoft
+title: Inicialización de ensamblados mixtos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -21,17 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204547"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicialización de ensamblados mixtos
 
-Los desarrolladores de Windows siempre deben ser cuidadoso con la representación de un bloqueo del cargador cuando se ejecuta el código durante la `DllMain`. Sin embargo, hay algunas consideraciones adicionales que entran en juego cuando se trabaja con C++ / clr ensamblados de modo mixto.
+Los desarrolladores de Windows siempre deben ser precavido a la hora de bloqueo del cargador cuando se ejecuta código durante `DllMain`. Sin embargo, hay algunas consideraciones adicionales que entran en juego cuando se trabaja con C / c++ / clr ensamblados de modo mixto.
 
-El código de [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) no debe tener acceso al CLR. Esto significa que `DllMain` no debe hacer llamadas a funciones administradas directa o indirectamente; no se debe declarar ni implementar código administrado en `DllMain`; y no se debe producir la recolección de elementos no usados ni la carga automática de bibliotecas dentro de `DllMain`.
+Código de [DllMain](/windows/desktop/Dlls/dllmain) no debe tener acceso al CLR. Esto significa que `DllMain` no debe hacer llamadas a funciones administradas directa o indirectamente; no se debe declarar ni implementar código administrado en `DllMain`; y no se debe producir la recolección de elementos no usados ni la carga automática de bibliotecas dentro de `DllMain`.
   
 ## <a name="causes-of-loader-lock"></a>Causas del bloqueo del cargador
 
@@ -96,9 +97,9 @@ Hay una serie de soluciones para el interbloqueo causado por la inicialización 
 
 ### <a name="user-supplied-functions-affecting-startup"></a>Funciones proporcionadas por el usuario que afectan al inicio
 
-Hay varias funciones proporcionadas por el usuario de las que dependen las bibliotecas para la inicialización durante el inicio. Por ejemplo, cuando se sobrecargan globalmente operadores en C++, como la `new` y `delete` operadores, las versiones proporcionadas por el usuario se utilizan en todas partes, incluido en la inicialización de la biblioteca estándar de C++ y la destrucción. Como resultado, biblioteca estándar de C++ y los inicializadores estáticos proporcionados por el usuario invocarán cualquier versión proporcionada por el usuario de estos operadores.
+Hay varias funciones proporcionadas por el usuario de las que dependen las bibliotecas para la inicialización durante el inicio. Por ejemplo, cuando todo el mundo, como la sobrecarga de operadores en C++ el `new` y `delete` operadores, las versiones proporcionadas por el usuario se utilizan en todas partes, incluidos en la inicialización de la biblioteca estándar de C++ y la destrucción. Como resultado, biblioteca estándar de C++ y los inicializadores estáticos proporcionados por el usuario invocarán cualquier versión proporcionada por el usuario de estos operadores.
 
-Si las versiones proporcionadas por el usuario se compilan en MSIL, estos inicializadores tratarán de ejecutar instrucciones MSIL mientras se mantiene el bloqueo del cargador. Un proporcionados por el usuario `malloc` tiene las mismas consecuencias. Para resolver este problema, estas sobrecargas o definiciones proporcionadas por el usuario deben implementarse como código nativo mediante la directiva #pragma `unmanaged` .
+Si las versiones proporcionadas por el usuario se compilan en MSIL, estos inicializadores tratarán de ejecutar instrucciones MSIL mientras se mantiene el bloqueo del cargador. Proporcionado por el usuario `malloc` tiene las mismas consecuencias. Para resolver este problema, estas sobrecargas o definiciones proporcionadas por el usuario deben implementarse como código nativo mediante la directiva #pragma `unmanaged` .
 
 Para obtener más información sobre este escenario, vea "Impedimentos para la realización del diagnóstico".
 
@@ -122,9 +123,9 @@ En algunos casos es difícil detectar el origen de los interbloqueos. En las sig
 
 En determinados casos, las implementaciones de funciones en archivos de encabezado pueden complicar el diagnóstico. Las funciones insertadas y el código de plantilla requieren que las funciones se especifiquen en un archivo de encabezado.  El lenguaje C++ especifica la Regla de una definición, que obliga a que todas las implementaciones de funciones con el mismo nombre sean semánticamente equivalentes. Por lo tanto, no es necesario que el vinculador de C++ tenga en cuenta ninguna consideración especial al combinar archivos objeto que tengan implementaciones duplicadas de una función determinada.
 
-Antes de Visual Studio 2005, el vinculador se limita a elegir la mayor de estas definiciones semánticamente equivalentes para dar cabida a escenarios y declaraciones adelantadas cuando se usan opciones de optimización diferentes para archivos de código fuente. Esto crea un problema en el caso de las DLL de .NET/nativas mixtas.
+Antes de Visual Studio 2005, el vinculador se limita a elegir el mayor de estas definiciones semánticamente equivalentes para dar cabida a escenarios y declaraciones adelantadas cuando se usan opciones de optimización diferentes para archivos de origen diferentes. Esto crea un problema en el caso de las DLL de .NET/nativas mixtas.
 
-Dado que puede ser el mismo encabezado incluyen archivos de C++ con **/CLR** habilitados y deshabilitados, o un #include se puede ajustar en #pragma `unmanaged` bloque, es posible tener tanto versiones MSIL y nativas de funciones que proporcionan implementaciones en encabezados. Las implementaciones MSIL y nativas tienen semánticas diferentes con respecto a la inicialización en un bloqueo del cargador, lo que efectivamente infringe la Regla de una definición. Por lo tanto, cuando el vinculador elige la mayor implementación, puede elegir la versión MSIL de una función, aunque se haya compilado explícitamente en código nativo en otro lugar mediante la directiva #pragma unmanaged. Para asegurarse de que nunca se llame a una versión MSIL de una plantilla o función insertada en un bloqueo del cargador, todas las definiciones de cada función de ese tipo llamadas en un bloqueo del cargador deben modificarse con la directiva #pragma `unmanaged` . Si el archivo de encabezado es de terceros, la forma más sencilla de lograrlo es insertar y extraer la directiva #pragma unmanaged en torno a la directiva #include para el archivo de encabezado incorrecto. (Consulte [managed, unmanaged](../preprocessor/managed-unmanaged.md) para obtener un ejemplo.) En cambio, esta estrategia no funcionará para los encabezados que contengan otro código que deba llamar directamente a API de .NET.
+Dado que puede ser el mismo encabezado incluyen archivos de C++ con **/CLR** habilitados y deshabilitados, o un #include puede colocarse dentro de #pragma `unmanaged` bloque, es posible tener MSIL y las versiones nativas de funciones que proporcionan implementaciones en encabezados. Las implementaciones MSIL y nativas tienen semánticas diferentes con respecto a la inicialización en un bloqueo del cargador, lo que efectivamente infringe la Regla de una definición. Por lo tanto, cuando el vinculador elige la mayor implementación, puede elegir la versión MSIL de una función, aunque se haya compilado explícitamente en código nativo en otro lugar mediante la directiva #pragma unmanaged. Para asegurarse de que nunca se llame a una versión MSIL de una plantilla o función insertada en un bloqueo del cargador, todas las definiciones de cada función de ese tipo llamadas en un bloqueo del cargador deben modificarse con la directiva #pragma `unmanaged` . Si el archivo de encabezado es de terceros, la forma más sencilla de lograrlo es insertar y extraer la directiva #pragma unmanaged en torno a la directiva #include para el archivo de encabezado incorrecto. (Consulte [managed, unmanaged](../preprocessor/managed-unmanaged.md) para obtener un ejemplo.) En cambio, esta estrategia no funcionará para los encabezados que contengan otro código que deba llamar directamente a API de .NET.
 
 Para la comodidad de los usuarios que se encuentran ante un bloqueo del cargador, el vinculador elegirá la implementación nativa frente a la administrada cuando se le presenten ambas. Esto evita los problemas mencionados anteriormente. Hay dos excepciones a esta regla en esta versión debido a dos problemas sin resolver del compilador:
 
@@ -166,31 +167,31 @@ Para identificar la función MSIL específica a la que se llamó en un bloqueo d
 
 1. Establezca el modo del depurador en modo solo nativo.
 
-   Para ello, abra el **propiedades** cuadrícula para el proyecto de inicio de la solución. Seleccione **propiedades de configuración** > **depuración**. Establecer el **el tipo de depurador** a **solo nativo**.
+   Para ello, abra el **propiedades** cuadrícula para el proyecto de inicio de la solución. Seleccione **propiedades de configuración** > **depuración**. Establecer el **el tipo de depurador** a **sólo nativo**.
 
 1. Inicie al depurador (F5).
   
 1. Cuando el **/CLR** se genera el diagnóstico, elija **vuelva a intentar** y, a continuación, elija **interrumpir**.
   
-1. Abra la ventana Pila de llamadas. (En la barra de menús, elija **depurar** > **Windows** > **pila de llamadas**.) Genera el problema `DllMain` o inicializador estático se identifica con una flecha verde. Si no se identifica la función incorrecta, deben llevarse a cabo los pasos siguientes para encontrarla.
+1. Abra la ventana Pila de llamadas. (En la barra de menús, elija **depurar** > **Windows** > **pila de llamadas**.) Los infractores `DllMain` o inicializador estático se identifica con una flecha verde. Si no se identifica la función incorrecta, deben llevarse a cabo los pasos siguientes para encontrarla.
 
-1. Abra la **inmediato** ventana (en la barra de menús, elija **depurar** > **Windows** > **inmediato**.)
+1. Abra el **inmediato** ventana (en la barra de menús, elija **depurar** > **Windows** > **inmediato**.)
 
-1. Escriba .load sos.dll en la **inmediato** ventana para cargar el servicio de depuración de SOS.
+1. Escriba .load sos.dll en el **inmediato** ventana para cargar el servicio de depuración de SOS.
   
-1. Tipo! dumpstack en la **inmediato** ventana para obtener una lista completa de interno **/CLR** pila.
+1. Escriba! dumpstack en la **inmediato** ventana para obtener una lista completa de interno **/CLR** pila.
 
-1. Busque la primera instancia (cerca de la parte inferior de la pila) de _CorDllMain (si `DllMain` hace que el problema) o _VTableBootstrapThunkInitHelperStub o GetTargetForVTableEntry (si el inicializador estático causa el problema). La entrada de la pila justo debajo de esta llamada es la invocación de la función implementada por MSIL que intentó ejecutarse en el bloqueo del cargador.
+1. Busque la primera instancia (cerca de la parte inferior de la pila) de _CorDllMain (si `DllMain` hace que el problema) o _VTableBootstrapThunkInitHelperStub o GetTargetForVTableEntry (si un inicializador estático causa el problema). La entrada de la pila justo debajo de esta llamada es la invocación de la función implementada por MSIL que intentó ejecutarse en el bloqueo del cargador.
 
-1. Vaya al archivo de origen y la línea número identificado en el paso anterior y corrija el problema mediante los escenarios y soluciones que se describe en la sección de escenarios.
+1. Vaya al archivo de origen y la línea número identificado en el paso anterior y corrija el problema con los escenarios y soluciones que se describe en la sección de escenarios.
 
 ## <a name="example"></a>Ejemplo
 
 ### <a name="description"></a>Descripción
 
-El ejemplo siguiente muestra cómo evitar el bloqueo del cargador pasando código de `DllMain` en el constructor de un objeto global.
+El ejemplo siguiente muestra cómo evitar el bloqueo del cargador pasando código de `DllMain` al constructor de un objeto global.
 
-En este ejemplo, hay un objeto administrado global cuyo constructor contiene el objeto administrado que se encontraba originalmente en `DllMain`. La segunda parte de este ejemplo hace referencia al ensamblado. Para ello, crea una instancia del objeto administrado para invocar el constructor del módulo que realiza la inicialización.
+En este ejemplo, hay un objeto administrado global cuyo constructor contiene el objeto administrado que estaba originalmente en `DllMain`. La segunda parte de este ejemplo hace referencia al ensamblado. Para ello, crea una instancia del objeto administrado para invocar el constructor del módulo que realiza la inicialización.
 
 ### <a name="code"></a>Código
 
@@ -221,7 +222,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved) {
 }
 ```
 
-Este ejemplo muestra los problemas de inicialización de ensamblados mixtos:
+En este ejemplo se muestra a los problemas de inicialización de ensamblados mixtos:
 
 ```cpp
 // initializing_mixed_assemblies_2.cpp

@@ -1,5 +1,5 @@
 ---
-title: '&lt;param&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;param&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078795"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 La etiqueta \<param> debe usarse en el comentario de una declaración de método para describir uno de los parámetros del método.  
@@ -34,20 +35,20 @@ La etiqueta \<param> debe usarse en el comentario de una declaración de método
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `name`  
- Nombre de un parámetro de método.  Ponga el nombre entre comillas simples o dobles.  El compilador emite una advertencia si no encuentra `name`.  
+*name*<br/>
+Nombre de un parámetro de método.  Ponga el nombre entre comillas simples o dobles.  El compilador emite una advertencia si no encuentra `name`.  
   
- `description`  
- Descripción del parámetro.  
+*description*<br/>
+Descripción del parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- El texto de la \<param > etiquetas se mostrarán en IntelliSense, el [Examinador de objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)y en el informe Web de comentario de código.  
+ El texto de la etiqueta \<param> se mostrará en IntelliSense, el [Examinador de objetos](/visualstudio/ide/viewing-the-structure-of-code) y en el informe web de comentario de código.  
   
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2979 | Documentos de Microsoft
+title: Error del compilador C2979 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07a28faaf7452a96759879b001cb9b078dd86f88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66f43af14474c042d7a4a311bbe672394a2f2d1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053354"
 ---
 # <a name="compiler-error-c2979"></a>Error del compilador C2979
-no se admite especializaciones explícitas en genéricos  
-  
- Se declaró una clase genérica incorrectamente.  Vea [genéricos](../../windows/generics-cpp-component-extensions.md) para obtener más información.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C2979.  
-  
-```  
-// C2979.cpp  
-// compile with: /clr /c  
-generic <>   
-ref class Utils {};   // C2979 error  
-  
-generic <class T>  
-ref class Utils2 {};   // OK  
+
+no se admite especializaciones explícitas en genéricos
+
+Se declaró una clase genérica incorrectamente.  Consulte [genéricos](../../windows/generics-cpp-component-extensions.md) para obtener más información.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C2979.
+
+```
+// C2979.cpp
+// compile with: /clr /c
+generic <>
+ref class Utils {};   // C2979 error
+
+generic <class T>
+ref class Utils2 {};   // OK
 ```

@@ -1,13 +1,18 @@
 ---
 layout: HubPage
-ms.topic: hub-page
-title: "Documentación de Visual C++ | Microsoft Docs"
-description: "Obtenga información sobre cómo usar C++ para desarrollar aplicaciones, servicios y herramientas para sus plataformas y dispositivos."
-ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.topic: conceptual
+title: Documentación de Visual C++ | Microsoft Docs
+description: Obtenga información sobre cómo usar C++ para desarrollar aplicaciones, servicios y herramientas para sus plataformas y dispositivos.
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7c07a1e14d0aaf29d695fda9a70e7d813c4613db
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198333"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -154,7 +159,7 @@ ms.lasthandoff: 03/08/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/en-us/windows/uwp/gaming/e2e">
+                                <a href="https://msdn.microsoft.com/windows/uwp/gaming/e2e">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

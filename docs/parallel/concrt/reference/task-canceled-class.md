@@ -1,5 +1,5 @@
 ---
-title: task_canceled (clase) | Documentos de Microsoft
+title: task_canceled (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f535a4cce75d388437025967b9c0c9b1ae0fd7a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1e3351700d9e7e7ea466b667e47b105a7229f3d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083007"
 ---
 # <a name="taskcanceled-class"></a>task_canceled (Clase)
 Esta clase describe una excepción producida por la capa de tareas de PPL para obligar a que se cancele la tarea actual. También se produce por la `get()` método [tarea](/visualstudio/extensibility/debugger/task-class-internal-members), para una tarea cancelada.  
@@ -62,8 +63,8 @@ task_canceled() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

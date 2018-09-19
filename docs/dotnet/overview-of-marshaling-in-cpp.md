@@ -1,7 +1,7 @@
 ---
-title: Información general de la serialización en C++ | Documentos de Microsoft
+title: Información general de la serialización en C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,25 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 747d9a67f7796b5a62115acf55343370aea77bdf
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207870"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Información general de la serialización en C++
-En modo mixto, deben serializar los datos entre los tipos nativos y los administrados. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] introdujo la biblioteca de cálculo de referencias para ayudarle a calcular y convertir los datos de una manera sencilla.  
-  
- También puede usar la biblioteca de serialización con o sin un [marshal_context (clase)](../dotnet/marshal-context-class.md). Algunas conversiones requieren un contexto. Otras conversiones pueden implementarse utilizando la [marshal_as](../dotnet/marshal-as.md) función. En la tabla siguiente se enumeran las conversiones actuales compatibles y se indica si requieren un contexto y el archivo de serializar que se debe incluir:  
+En modo mixto, deben serializar los datos entre los tipos nativos y los administrados. Visual Studio 2008 introdujo la *biblioteca de serialización* para ayudar a calcular y convertir los datos de una manera sencilla.  La biblioteca de serialización consta de un conjunto de funciones y una `marshal_context` clases que realizan el cálculo de referencias para los tipos comunes. La biblioteca está definida en estos encabezados en el **incluyen/msclr** directorio para su edición de Visual Studio:
+
+|Header|Descripción|  
+|---------------|-----------------|
+|serializar.h|`marshal_context` clase y las funciones de cálculo de referencias sin contexto|
+|serializar_atl.h| Funciones de serialización de tipos ATL|
+|serializar_cppstd.h|Funciones de serialización de tipos estándares de C++|
+|serializar_windows.h|Funciones de serialización de tipos de Windows|
+
+
+La ruta de acceso predeterminada para **msclr** carpeta es algo parecido a esto dependiendo de qué edición tiene y el número de compilación:
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
+ Puede usar la biblioteca de serialización con o sin un [marshal_context Class](../dotnet/marshal-context-class.md). Algunas conversiones requieren un contexto. Otras conversiones se pueden implementar mediante el [marshal_as](../dotnet/marshal-as.md) función. En la tabla siguiente se enumeran las conversiones actuales compatibles y se indica si requieren un contexto y el archivo de serializar que se debe incluir:  
   
 |De tipo|A tipo|Método serializar|Incluir archivo|  
 |---------------|-------------|--------------------|------------------|  
-|System::String^|const char *|marshal_context|serializar.h|  
-|const char *|System::String^|serializar_as|serializar.h|  
-|char*|System::String^|serializar_as|serializar.h|  
-|System::String^|const wchar_t*|serializar_context|marshal.h|  
-|const wchar_t *|System::String^|serializar_as|serializar.h|  
-|wchar_t*|System::String^|serializar_as|serializar.h|  
+|System::String^|const char \*|serializar_context|serializar.h|  
+|const char \*|System::String^|serializar_as|serializar.h|  
+|Char \*|System::String^|serializar_as|serializar.h|  
+|System::String^|const wchar_t\*|serializar_context|serializar.h|  
+|const wchar_t \*|System::String^|serializar_as|serializar.h|  
+|wchar_t \*|System::String^|serializar_as|serializar.h|  
 |System::IntPtr|HANDLE|serializar_as|serializar_windows.h|  
 |HANDLE|System::IntPtr|serializar_as|serializar_windows.h|  
 |System::String^|BSTR|serializar_context|serializar_windows.h|  
@@ -61,7 +76,7 @@ En modo mixto, deben serializar los datos entre los tipos nativos y los administ
 > [!NOTE]
 >  Si ha incrustado valores `NULL`en la cadena, el resultado de calcular la cadena no se puede garantizar. Los valores `NULL` incrustados pueden hacer que la cadena se trunque o no pueda conservarse.  
   
- Los encabezados de la biblioteca de cálculo de referencias se encuentran en el directorio de inclusión en el subdirectorio msclr. Este ejemplo muestra cómo incluir el directorio msclr en una declaración de encabezado de inclusión:  
+Este ejemplo muestra cómo incluir el directorio msclr en una declaración de encabezado de inclusión:  
   
  `#include "msclr\marshal_cppstd.h"`  
   

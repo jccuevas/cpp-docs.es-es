@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382384"
 ---
 # <a name="using-cmonthcalctrl"></a>Usar CMonthCalCtrl
 El control de calendario mensual ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementa una interfaz de usuario de tipo calendario. Esto proporciona al usuario con un método muy intuitivo y reconocible de escribir o seleccionar una fecha. El control también proporciona la aplicación con los medios para obtener y establecer la información de fecha en el control mediante los tipos de datos existentes. De forma predeterminada, el control de calendario mensual muestra el día actual y el mes. Sin embargo, el usuario es capaz de desplazarse a los meses anteriores y siguientes y seleccione un mes concreto o año.  

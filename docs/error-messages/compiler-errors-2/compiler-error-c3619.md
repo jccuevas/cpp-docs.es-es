@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3619 | Documentos de Microsoft
+title: Error del compilador C3619 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75fed82a989691bc63911b87b9264ed95512dce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae68bd0fef3f43bfbc430ea2d41cead339424c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086715"
 ---
 # <a name="compiler-error-c3619"></a>Error del compilador C3619
-no se puede declarar una plantilla dentro de un tipo administrado o WinRT  
-  
-Las plantillas de clase no se permiten en una clase o interfaz administrada o WinRT.  
-  
-Error C3619 solo es accesible mediante la opción del compilador obsoleta **/CLR: oldSyntax**.  
+
+no se puede declarar una plantilla dentro de un tipo administrado o WinRT
+
+Las plantillas de clase no se permiten en una clase o interfaz administrada o WinRT.
+
+Solo es accesible a través de la opción del compilador obsoleto C3619 **/CLR: oldSyntax**.

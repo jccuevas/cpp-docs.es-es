@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1103 | Documentos de Microsoft
+title: Error irrecuperable C1103 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f991fd7449eda11651dcca4adc73190e276e35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9e48d827c58ebf41ce3cf3862cbfbeaa494cf76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055954"
 ---
 # <a name="fatal-error-c1103"></a>Error irrecuperable C1103
-error irrecuperable al importar el id. de programa: 'mensaje'  
-  
- El compilador detectó un problema al importar una biblioteca de tipos.  Por ejemplo, no se puede especificar una biblioteca de tipos con id. de programa y también `no_registry`.  
-  
- Para obtener más información, consulte [#import (directiva)](../../preprocessor/hash-import-directive-cpp.md).  
-  
- El ejemplo siguiente genera el error C1103:  
-  
-```  
-// C1103.cpp  
-#import "progid:a.b.id.1.5" no_registry auto_search   // C1103  
+
+error irrecuperable al importar el id. de programa: 'mensaje'
+
+El compilador detectó un problema al importar una biblioteca de tipos.  Por ejemplo, no se puede especificar una biblioteca de tipos con id. de programa y también `no_registry`.
+
+Para obtener más información, consulte [directiva #import](../../preprocessor/hash-import-directive-cpp.md).
+
+El ejemplo siguiente genera el error C1103:
+
+```
+// C1103.cpp
+#import "progid:a.b.id.1.5" no_registry auto_search   // C1103
 ```

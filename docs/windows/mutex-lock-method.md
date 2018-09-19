@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: lock (método) | Documentos de Microsoft'
+title: Método Mutex | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600878"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock (Método)
-Espera a que el objeto actual o el objeto de exclusión mutua asociado con el identificador especificado, libera la exclusión mutua o ha transcurrido el intervalo de tiempo de espera especificado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `milliseconds`  
- El intervalo de tiempo de espera, en milisegundos. El valor predeterminado es INFINITE, que espera indefinidamente.  
-  
- `h`  
- El identificador de un objeto de exclusión mutua.  
-  
-## <a name="return-value"></a>Valor devuelto  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers
- 
- ## <a name="see-also"></a>Vea también
- [Mutex (clase)](../windows/mutex-class1.md)
+
+Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*milisegundos*  
+El intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, que espera indefinidamente.
+
+*h*  
+El identificador de un **Mutex** objeto.
+
+## <a name="return-value"></a>Valor devuelto
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+[Mutex (clase)](../windows/mutex-class1.md)

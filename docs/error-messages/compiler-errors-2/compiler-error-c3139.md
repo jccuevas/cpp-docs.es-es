@@ -1,5 +1,5 @@
 ---
-title: C3139 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3139 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06d63ef93c4924e0ee5e8808c5783ee5a0fb7f79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac401381dffab11ddb59eb05a5cafe13373d7791
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026457"
 ---
-# <a name="compiler-error-c3139"></a>C3139 de Error del compilador
-'struct': no se puede exportar un tipo definido por el usuario sin miembros  
-  
- Intentó aplicar el [exportar](../../windows/export.md) atributo a un UDT vacío (tipo definido por el usuario). Por ejemplo:  
-  
-```  
-// C3139.cpp  
-#include "unknwn.h"  
-[emitidl];  
-[module(name=xx)];  
-  
-[export] struct MyStruct {   // C3139 empty type  
-};  
-int main(){}  
+# <a name="compiler-error-c3139"></a>Error del compilador C3139
+
+'struct': no se puede exportar un tipo definido por el usuario sin miembros
+
+Se intentó aplicar el [exportar](../../windows/export.md) atributo a un UDT vacío (tipo definido por el usuario). Por ejemplo:
+
+```
+// C3139.cpp
+#include "unknwn.h"
+[emitidl];
+[module(name=xx)];
+
+[export] struct MyStruct {   // C3139 empty type
+};
+int main(){}
 ```

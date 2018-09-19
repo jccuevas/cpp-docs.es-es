@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedb88ae44faaea9d65b41dcc98a4e83354ea71b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710806"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution (Clase)
 
@@ -76,11 +77,12 @@ public:
    result_type min() const;
    result_type max() const;
 };
- ```
+```
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* predeterminado es el tipo de resultado de punto flotante, `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*<br/>
+El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -198,17 +200,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*un* el límite inferior para los valores aleatorios, ambos inclusivos.
+*a*<br/>
+Límite inferior para los valores aleatorios (incluido).
 
-*b* el límite superior para los valores aleatorios, exclusivos.
+*b*<br/>
+Límite superior para los valores aleatorios (excluido).
 
-*parm* el `param_type` estructura utilizada para construir la distribución.
+*parm*<br/>
+La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
 **Condición previa:** `a < b`
 
-El primer constructor crea un objeto cuyo valor `a` almacenado contiene el valor *a* y cuyo valor `b` almacenado contiene el valor *b*.
+El primer constructor crea un objeto cuyo almacenado *un* valor contiene el valor *un* y cuyo almacenado *b* valor contiene el valor *b*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
@@ -230,11 +235,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*un* el límite inferior para los valores aleatorios, ambos inclusivos.
+*a*<br/>
+Límite inferior para los valores aleatorios (incluido).
 
-*b* el límite superior para los valores aleatorios, exclusivos.
+*b*<br/>
+Límite superior para los valores aleatorios (excluido).
 
-*derecho* la `param_type` objeto que se va a comparar con esta.
+*right*<br/>
+El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
 

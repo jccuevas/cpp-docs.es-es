@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122074"
 ---
 # <a name="csyncobject-class"></a>CSyncObject (clase)
 Una clase virtual pura que proporciona funcionalidad común para objetos de sincronización en Win32.  
@@ -88,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pstrName`  
- El nombre del objeto. Si **NULL**, *pstrName* será null.  
+ *pstrName*  
+ El nombre del objeto. Si es NULL, *pstrName* será null.  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  Llame a esta función para obtener acceso a los recursos controlados por el objeto de sincronización.  
@@ -99,8 +100,8 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwTimeout`  
- Especifica la cantidad de tiempo en milisegundos de espera para que el objeto de sincronización esté disponible (envía una señal). Si **infinito**, `Lock` esperará hasta que el objeto está señalado antes de devolver.  
+ *dwTimeout*  
+ Especifica la cantidad de tiempo en milisegundos de espera para que el objeto de sincronización esté disponible (envía una señal). Si es infinito, `Lock` esperará hasta que el objeto está señalado antes de devolver.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realizó correctamente; en caso contrario es 0.  
@@ -123,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, el identificador del objeto de sincronización; en caso contrario, **NULL**.  
+ Si se realiza correctamente, el identificador del objeto de sincronización; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede usar el identificador para llamar directamente a las API de Windows.  
@@ -138,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lCount`  
+ *lCount*  
  No se usa por la implementación predeterminada.  
   
- `lpPrevCount`  
+ *lpPrevCount*  
  No se usa por la implementación predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Implementación predeterminada siempre devuelve **TRUE**.  
+ Implementación predeterminada siempre devuelve TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de la declaración con dos parámetros siempre devuelve **TRUE**. Esta función se invoca para liberar el acceso al objeto de sincronización pertenece al subproceso que realiza la llamada. La segunda declaración se proporciona para los objetos de sincronización como semáforos que permiten tener más de un acceso de un recurso controlado.  
+ La implementación predeterminada de la declaración con dos parámetros siempre devuelve TRUE. Esta función se invoca para liberar el acceso al objeto de sincronización pertenece al subproceso que realiza la llamada. La segunda declaración se proporciona para los objetos de sincronización como semáforos que permiten tener más de un acceso de un recurso controlado.  
   
 ## <a name="see-also"></a>Vea también  
  [CObject (clase)](../../mfc/reference/cobject-class.md)   

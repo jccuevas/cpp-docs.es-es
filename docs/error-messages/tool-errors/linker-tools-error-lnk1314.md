@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1314 Error | Documentos de Microsoft
+title: Error de las LNK1314 las herramientas del vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a4afa4d5cd0be19163204d48e0a29b3b359a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8863c22bea588417025164bf2d303d01cfe6d7b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042954"
 ---
 # <a name="linker-tools-error-lnk1314"></a>Error de las herramientas del vinculador LNK1314
-esté dañado o no es válida de la tabla de símbolos COFF (estático definido o label (símbolo))  
-  
- El contenido generado por el compilador para una sección en el objeto dado parece estar dañado.  
-  
- Este error puede representar un error del compilador.
+
+no válida o dañada tabla de símbolos COFF (estático indefinido o label (símbolo))
+
+El contenido generado por el compilador para una sección en el objeto dado parece estar dañado.
+
+Este error puede representar un error del compilador.

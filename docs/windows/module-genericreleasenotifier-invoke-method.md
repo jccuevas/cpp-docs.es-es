@@ -1,5 +1,5 @@
 ---
-title: 'Genericreleasenotifier:: Invoke (método) | Documentos de Microsoft'
+title: 'Genericreleasenotifier:: Invoke (método) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 116b313a0055bcdca9841e740f1720d18fb6c7f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600672"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke (Método)
-Llama al controlador de eventos asociado con el objeto de genericreleasenotifier actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void Invoke();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Module::GenericReleaseNotifier (clase)](../windows/module-genericreleasenotifier-class.md)
+
+Llama al controlador de eventos asociado con el actual **genericreleasenotifier** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void Invoke();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Module::GenericReleaseNotifier (clase)](../windows/module-genericreleasenotifier-class.md)

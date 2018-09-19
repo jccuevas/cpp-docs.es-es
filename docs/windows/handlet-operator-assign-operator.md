@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: operator = (operador) | Documentos de Microsoft'
+title: 'Handlet:: operator = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf539082ef88abb5fb27f09d92b73403dc2d03a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611347"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= (Operador)
-Mueve el valor del objeto HandleT especificado al objeto HandleT actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-HandleT& operator=(  
-   _Inout_ HandleT&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `h`  
- Una referencia a valor r a un identificador.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Una referencia al objeto HandleT actual.  
-  
-## <a name="remarks"></a>Comentarios  
- Esta operación invalida el objeto HandleT especificado por el parámetro `h`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+
+Mueve el valor del elemento especificado **HandleT** el objeto actual **HandleT** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HandleT& operator=(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*  
+Una referencia rvalue a un identificador.
+
+## <a name="return-value"></a>Valor devuelto
+
+Una referencia a la actual **HandleT** objeto.
+
+## <a name="remarks"></a>Comentarios
+
+Esta operación invalida la **HandleT** objeto especificado por el parámetro *h*.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

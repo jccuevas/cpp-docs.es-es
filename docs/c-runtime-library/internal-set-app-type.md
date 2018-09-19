@@ -29,37 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854873987cd83b89efc5c9006c1e091023c91226
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22d4c6da3b897d0158f790a0146e3f10f7aa385c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093132"
 ---
 # <a name="setapptype"></a>__set_app_type
-Establece el tipo de aplicación actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-void __set_app_type (  
-   int at  
-   )  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `at`  
- Valor que indica el tipo de aplicación. Los valores posibles son:  
-  
-|Valor|Description|  
-|-----------|-----------------|  
-|_UNKNOWN_APP|Tipo de aplicación desconocido.|  
-|_CONSOLE_APP|Aplicación de consola (línea de comandos).|  
-|_GUI_APP|Aplicación GUI (Windows).|  
-  
-## <a name="remarks"></a>Comentarios  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
+
+Establece el tipo de aplicación actual.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void __set_app_type (
+   int at
+   )
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*at*<br/>
+Valor que indica el tipo de aplicación. Los valores posibles son:
+
+|Valor|Descripción|
+|-----------|-----------------|
+|_UNKNOWN_APP|Tipo de aplicación desconocido.|
+|_CONSOLE_APP|Aplicación de consola (línea de comandos).|
+|_GUI_APP|Aplicación GUI (Windows).|
+
+## <a name="remarks"></a>Comentarios
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
 |__set_app_type|internal.h|

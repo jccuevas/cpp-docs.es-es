@@ -1,5 +1,5 @@
 ---
-title: Ejecutar como miembro del grupo de usuarios | Documentos de Microsoft
+title: Ejecutar como miembro del grupo de usuarios | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,16 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586327"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Ejecutar como miembro del grupo de usuarios
 Este tema explica cómo configurar las cuentas de usuario de Windows como un miembro del grupo Usuarios (opuesto al grupo Administradores) aumenta la seguridad reduciendo las posibilidades de resultar infectado por código malintencionado.  
@@ -35,7 +36,7 @@ Este tema explica cómo configurar las cuentas de usuario de Windows como un mie
  Ejecutar como un administrador hace al sistema vulnerable a varios tipos de ataques a la seguridad, como "caballos de Troya" y "saturaciones del búfer". Simplemente visitar un sitio de Internet como administrador puede dañar el sistema, ya que el código malintencionado que se descarga de un sitio de Internet puede atacar al equipo. Si el ataque llega a ser efectivo, hereda sus permisos de administrador y puede realizar a continuación acciones como eliminar todos los archivos, reformatear la unidad de disco duro y crear nuevas cuentas de usuario con acceso administrativo.  
   
 ## <a name="non-administrator-user-groups"></a>Grupos de usuarios que no son administradores  
- Las cuentas de usuario de Windows que utilizan normalmente los desarrolladores se deben agregar a los grupos Usuarios o Usuarios avanzados. Los desarrolladores también se deben agregar al grupo Depuración. Ser integrante del grupo Usuarios permite realizar tareas rutinarias, incluida la ejecución de programas y la visita a sitios de Internet sin exponer el equipo a riesgos innecesarios. Como miembro del grupo Usuarios avanzados, también puede realizar tareas como la instalación de aplicaciones, instalación de impresoras y la mayoría de las operaciones del Panel de control. Si debe realizar tareas administrativas como actualizar el sistema operativo o configurar parámetros del sistema, tendrá que iniciar una sesión con una cuenta de administrador durante el tiempo que realice las tareas administrativas. Como alternativa, las ventanas **runas** comando se puede usar para iniciar aplicaciones específicas con acceso administrativo.  
+ Las cuentas de usuario de Windows que utilizan normalmente los desarrolladores se deben agregar a los grupos Usuarios o Usuarios avanzados. Los desarrolladores también se deben agregar al grupo Depuración. Ser integrante del grupo Usuarios permite realizar tareas rutinarias, incluida la ejecución de programas y la visita a sitios de Internet sin exponer el equipo a riesgos innecesarios. Como miembro del grupo Usuarios avanzados, también puede realizar tareas como la instalación de aplicaciones, instalación de impresoras y la mayoría de las operaciones del Panel de control. Si debe realizar tareas administrativas como actualizar el sistema operativo o configurar parámetros del sistema, tendrá que iniciar una sesión con una cuenta de administrador durante el tiempo que realice las tareas administrativas. Como alternativa, el Windows **runas** comando puede utilizarse para iniciar aplicaciones específicas con acceso administrativo.  
   
 ## <a name="exposing-customers-to-security-risks"></a>Exponer a los clientes a riesgos de seguridad  
  No ser integrante del grupo Administradores es particularmente importante para los desarrolladores porque, además de proteger los equipos de desarrollo, evita que éstos escriban sin querer código que requiera que los clientes se unan al grupo Administradores para ejecutar las aplicaciones que desarrolla. Si durante el desarrollo se introduce código que requiere acceso de administrador, fallará en tiempo de ejecución, alertándole del hecho de que la aplicación ahora requiere que los clientes ejecuten como Administradores.  

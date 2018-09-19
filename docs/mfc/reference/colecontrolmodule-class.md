@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369744"
 ---
 # <a name="colecontrolmodule-class"></a>Clase COleControlModule
 La clase base de la que se deriva un objeto de módulo de control OLE.  

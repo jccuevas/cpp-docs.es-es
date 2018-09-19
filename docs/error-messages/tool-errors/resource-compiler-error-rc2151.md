@@ -1,5 +1,5 @@
 ---
-title: Error del compilador de recursos RC2151 | Documentos de Microsoft
+title: Error del compilador de recursos RC2151 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a15f3f1237df9e4b706a2c2048dddd6d5db395d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109787"
 ---
 # <a name="resource-compiler-error-rc2151"></a>Error del compilador de recursos RC2151
-no se puede volver a usar las constantes de cadena  
-  
- Usa el mismo valor dos veces en un **STRINGTABLE** instrucción. Asegúrese de que no mezcla superpuestos valores decimales y hexadecimales.  
-  
- Cada identificador en un **STRINGTABLE** deben ser únicos. Para obtener la máxima eficacia utilice constantes contiguas que comiencen con un múltiplo de 16.
+
+No se puede volver a usar las constantes de cadena
+
+Utiliza el mismo valor dos veces en un **STRINGTABLE** instrucción. Asegúrese de que no mezcla superpuestos valores hexadecimales y decimales.
+
+Cada identificador en un **STRINGTABLE** deben ser únicos. Para lograr la máxima eficacia uso contiguos las constantes que se inician en un múltiplo de 16.

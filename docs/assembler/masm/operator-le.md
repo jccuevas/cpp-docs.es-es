@@ -1,7 +1,7 @@
 ---
-title: operador LE | Documentos de Microsoft
+title: operador LE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,21 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c77a86d8249a7d2a050b1628d21d20fd3f7dafc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ce5a9bbade469e9ea1f9b4769f9575c75624f82f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691165"
 ---
 # <a name="operator-le"></a>Operador LE
-Devuelve true (-1) si *expression1* es menor o igual que *expression2*, o devuelve un valor falso (0) si no lo está.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-expression1 LE expression2  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Devuelve true (-1) si *expression1* es menor o igual que *expression2*, o devuelve false (0) si no lo está.
+
+## <a name="syntax"></a>Sintaxis
+
+> Expresión1 LE Expresión2
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

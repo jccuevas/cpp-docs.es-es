@@ -1,5 +1,5 @@
 ---
-title: accelerator_view_removed (clase) | Documentos de Microsoft
+title: accelerator_view_removed (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020266"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed (Clase)
-La excepción que se produce cuando se produce un error en una llamada de DirectX subyacente porque el mecanismo de detección y recuperación de tiempo de espera de Windows.  
+La excepción que se produce cuando una llamada de DirectX subyacente produce un error porque el mecanismo de detección y recuperación de tiempo de espera de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -76,11 +77,11 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Descripción del error.  
+*_Cuerpo*<br/>
+Descripción del error.  
   
- `_View_removed_reason`  
- Un código de error HRESULT que indica la causa de la eliminación de la `accelerator_view` objeto.  
+*_View_removed_reason*<br/>
+Un código de error HRESULT que indica la causa de la eliminación de la `accelerator_view` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una nueva instancia de la clase accelerator_view_removed ().  

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3116 | Documentos de Microsoft
+title: Error del compilador C3116 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde589df31e6e3b75f9a0153d7383ab1e85ed180
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1104b731fa565991615eb88cc34fa946e2bfb505
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077856"
 ---
 # <a name="compiler-error-c3116"></a>Error del compilador C3116
-'especificador de almacenamiento': clase de almacenamiento no es válida para el método de interfaz  
-  
- Se utiliza `typedef`, `register`, o `static` como la clase de almacenamiento para un método de interfaz. Estas clases de almacenamiento no se permiten en los miembros de interfaz.  
-  
- El ejemplo siguiente genera C3116:  
-  
-```  
-// C3116.cpp  
-__interface ImyInterface  
-{  
-   static void myFunc();   // C3116  
-};  
+
+'especificador de almacenamiento': clase de almacenamiento no es válida para el método de interfaz
+
+Ha utilizado `typedef`, `register`, o `static` como la clase de almacenamiento para un método de interfaz. Estas clases de almacenamiento no se permiten en los miembros de interfaz.
+
+El ejemplo siguiente genera C3116:
+
+```
+// C3116.cpp
+__interface ImyInterface
+{
+   static void myFunc();   // C3116
+};
 ```

@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721739"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine (Clase)
 
@@ -45,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-`UIntType` El tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-`W` **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **Intervalo corto**. Número de valores íntegros. **Condición previa:** `0 < S < R`
+*S*<br/>
+**Intervalo corto**. Número de valores íntegros. **Condición previa:** `0 < S < R`
 
-`R` **Intervalo largo**. Determina la recurrencia en la serie generada.
+*R*<br/>
+**Intervalo largo**. Determina la recurrencia en la serie generada.
 
 ## <a name="members"></a>Miembros
 
@@ -67,7 +72,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 La clase de plantilla `substract_with_carry_engine` es una mejora respecto al [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ninguno de estos motores es tan rápido o tiene unos resultados de mayor calidad que el [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un indicador portador de más valores `R`. Estos valores consisten en los últimos valores `R` devueltos si `operator()` se ha llamado al menos `R` veces, de lo contrario, en los valores `N` que se han devuelto y los últimos valores `R - N`de la inicialización.
+Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un carry de indicador de signo más *R* valores. Estos valores consisten en los últimos *R* valores que se devuelve si `operator()` se ha llamado al menos *R* agota el tiempo, en caso contrario, el `N` valores que se han devuelto y los últimos `R - N` valores de la inicialización.
 
 El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `M - 1`.
 
@@ -79,7 +84,7 @@ Aunque puede construir un generador directamente a partir de este motor, tambié
 `ranlux48_base`: se usa como base para `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Para más detalles sobre el algoritmo de motor de resta con llevadas, vea el artículo de la Wikipedia sobre el [generador de Fibonacci retardado](http://go.microsoft.com/fwlink/p/?linkid=402445).
+Para más detalles sobre el algoritmo de motor de resta con llevadas, vea el artículo de la Wikipedia sobre el [generador de Fibonacci retardado](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
 
 ## <a name="requirements"></a>Requisitos
 

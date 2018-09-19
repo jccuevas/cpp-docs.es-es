@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_ss | Documentos de Microsoft
+title: _mm_stream_ss | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714394"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
 **Específicos de Microsoft**  
   
- Escribe datos de 32 bits en una ubicación de memoria sin dañar las memorias caché.  
+ Escribe datos de 32 bits en una ubicación de memoria sin contaminar las memorias caché.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>Parámetros  
   
- [out] `Dest`  
- Un puntero a la ubicación donde se escriben los datos de origen.  
+*dest*<br/>
+[out] Un puntero a la ubicación donde se escriben los datos de origen.  
   
- [in] `Source`  
- Un número de 128 bits que contiene el `float` valor que se escribirá en la parte inferior de 32 bits...  
+*Source*<br/>
+[in] Un número de 128 bits que contiene el `float` valor escribirse en la parte inferior de 32 bits...  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -60,9 +61,9 @@ void _mm_stream_ss(
   
 ## <a name="remarks"></a>Comentarios  
   
-Esta función intrínseca genera el `movntss` instrucción. Para determinar la compatibilidad de hardware con esta instrucción, llame a la `__cpuid` intrínseco con `InfoType=0x80000001` y comprobar bit 6 de `CPUInfo[2] (ECX)`. Este bit es 1 cuando se admite la instrucción y 0 en caso contrario.  
+Esta función intrínseca genera el `movntss` instrucción. Para determinar la compatibilidad de hardware para esta instrucción, llame a la `__cpuid` intrínseca con `InfoType=0x80000001` y comprobar poco 6 de `CPUInfo[2] (ECX)`. Este bit es 1 cuando se admite la instrucción y 0 en caso contrario.  
   
-Si se ejecuta código que utiliza el `_mm_stream_ss` intrínseco en hardware que no es compatible con la `movntss` instrucciones, los resultados son imprevisibles.  
+Si ejecuta el código que utiliza el `_mm_stream_ss` intrínseco en hardware que no es compatible con la `movntss` instrucciones, los resultados son impredecibles.  
   
 ## <a name="example"></a>Ejemplo  
   

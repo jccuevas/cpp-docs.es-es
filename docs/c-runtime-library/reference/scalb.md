@@ -1,5 +1,5 @@
 ---
-title: _scalb, _scalbf | Documentos de Microsoft
+title: _scalb, _scalbf | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,11 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207525"
 ---
 # <a name="scalb-scalbf"></a>_scalb, _scalbf
 
@@ -70,13 +71,13 @@ Exponente de entero largo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un valor exponencial si es correcto. Si se produce desbordamiento (según cuál sea el signo de *x*), **_scalb** devuelve **HUGE_VAL**; el **errno** variable se establece en  **ERANGE**.
+Devuelve un valor exponencial si es correcto. En caso de desbordamiento (según cuál sea el signo de *x*), **_scalb** devuelve **HUGE_VAL**; el **errno** variable se establece en  **ERANGE**.
 
 Para obtener más información sobre este y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_scalb** función calcula el valor de *x* * 2<sup>*exp*</sup>.
+El **_scalb** función calcula el valor de *x* \* 2<sup>*exp*</sup>.
 
 ## <a name="requirements"></a>Requisitos
 

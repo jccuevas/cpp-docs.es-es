@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1309 | Documentos de Microsoft
+title: Error irrecuperable C1309 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91b6ab39e8a2907b03d1fe8bf6ed6094f6c14238
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf033bd134c039cf2f626842e9958abde23d811
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108560"
 ---
 # <a name="fatal-error-c1309"></a>Error irrecuperable C1309
-Versiones de C2. DLL y PGODB\<versión >. ARCHIVO DLL  
-  
- El conjunto de herramientas que se utiliza para crear y usar [optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md) contiene componentes que no coinciden.  Si no puede solucionar manualmente este error, vuelva a instalar Visual C++.
+
+Discrepancia de versiones de C2. Archivo DLL y PGODB\<versión >. ARCHIVO DLL
+
+El conjunto de herramientas que se usa para crear y usar [optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md) contiene componentes que no coinciden.  Si no puede solucionar manualmente este error, vuelva a instalar Visual C++.

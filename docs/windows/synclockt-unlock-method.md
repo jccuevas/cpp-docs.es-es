@@ -1,5 +1,5 @@
 ---
-title: 'Synclockt:: Unlock (método) | Documentos de Microsoft'
+title: Método Synclockt | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f050916f9957531e9275cf76fd3efb6f612cc988
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598857"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void Unlock();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Devuelve el control de los recursos mantenidos por el objeto de SyncLockT actual, si existe.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SyncLockT (clase)](../windows/synclockt-class.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void Unlock();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Devuelve el control de los recursos mantenidos por el actual **SyncLockT** objeto, si existe.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SyncLockT (clase)](../windows/synclockt-class.md)

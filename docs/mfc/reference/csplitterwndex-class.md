@@ -1,5 +1,5 @@
 ---
-title: Clase CSplitterWndEx | Documentos de Microsoft
+title: Clase CSplitterWndEx | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707348"
 ---
 # <a name="csplitterwndex-class"></a>Clase CSplitterWndEx
 
@@ -54,7 +55,7 @@ class CSplitterWndEx : public CSplitterWnd
 ## <a name="remarks"></a>Comentarios  
  Invalidar el `OnDrawSplitter` método para personalizar la apariencia de los componentes gráficos de una ventana divisora.  
   
- El `CSplitterWndEx` clase se utiliza junto con la [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), y [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) métodos, que son se implementa mediante un administrador visual. Para hacer que un administrador visual dibujar una ventana divisora en la aplicación, reemplace las declaraciones de la `CSplitterWnd` clase con la `CSplitterWndEx` clase. Para las aplicaciones de la ventana de marco, se declara la clase de ventana divisora en la clase CMainFrame que se encuentra en mainfrm.h. Para obtener un ejemplo, vea el `OutlookDemo` en el directorio de ejemplos.  
+ El `CSplitterWndEx` clase se utiliza junto con el [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), y [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) métodos, que son implementado por un administrador visual. Para hacer que un administrador visual dibujar una ventana divisora en la aplicación, sustituir las declaraciones de la `CSplitterWnd` clase con la `CSplitterWndEx` clase. Para las aplicaciones de la ventana de marco, se declara la clase de ventana divisora en la clase CMainFrame que se encuentra en mainfrm.h. Para obtener un ejemplo, vea el `OutlookDemo` ejemplo en el directorio Samples.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](cobject-class.md)  
@@ -80,14 +81,14 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- Puntero al contexto de dispositivo. Si este parámetro es `NULL`, el marco de trabajo se vuelve a dibujar la ventana activa.  
+*pDC*<br/>
+[in] Puntero al contexto de dispositivo. Si este parámetro es NULL, el marco de trabajo se vuelve a dibujar la ventana activa.  
   
- [in] `nType`  
- Uno de los `CSplitterWnd::ESplitType` valores de enumeración que especifica el elemento de ventana divisora para dibujar. Los valores válidos son `splitBox`, `splitBar`, `splitIntersection` y `splitBorder`.  
+*nLas*<br/>
+[in] Uno de los `CSplitterWnd::ESplitType` valores de enumeración que especifica el elemento de la ventana de separador se va a dibujar. Los valores válidos son `splitBox`, `splitBar`, `splitIntersection` y `splitBorder`.  
   
- [in] `rect`  
- Un rectángulo delimitador que especifica las dimensiones y la ubicación para dibujar el elemento de ventana de separación especificada.  
+*Rect*<br/>
+[in] Un rectángulo delimitador que especifica las dimensiones y la ubicación para dibujar el elemento de la ventana divisora especificado.  
   
 ### <a name="remarks"></a>Comentarios  
   

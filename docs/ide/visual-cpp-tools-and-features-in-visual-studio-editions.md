@@ -1,5 +1,5 @@
 ---
-title: Herramientas de Visual C++ y características en ediciones de Visual Studio | Documentos de Microsoft
+title: Herramientas y características de Visual C++ en las ediciones de Visual Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -16,13 +16,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 79814d96bac185e73cc1c42a98be6d7b35e9a75d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578285"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Herramientas de Visual C++ y características en ediciones de Visual Studio
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Herramientas y características de Visual C++ en las ediciones de Visual Studio
 
 En las siguientes tablas se muestran las características de Visual C++ que están disponibles en Visual Studio. Una X en la celda indica que la característica está disponible y una celda vacía, que la característica no está disponible. Las notas entre paréntesis indican que una característica está disponible, pero con restricciones.
 
@@ -33,7 +34,7 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |Plataforma|Visual Studio Express para Windows 10|Visual Studio Express para escritorio de Windows|Visual Studio Community/Professional|Visual Studio Enterprise|
 |Escritorio de Windows||X|X|X|
 |Plataforma universal de Windows (teléfono, tableta, PC, Xbox, IoT y HoloLens)|X||X|X|
-|Almacén de Microsoft 8.1|||X|X|
+|Microsoft Store 8.1|||X|X|
 |Windows Phone 8.0|||X|X|
 |Android|||X|X|
 |iOS|||X|X|
@@ -44,8 +45,8 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Compilador de X86 de 32 bits|X|X|X|X|
 |Compilador cruzado de X86_arm|X||X|X|
-|Compilador [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] de 64 bits|||X|X|
-|Compilador cruzado de X86_ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|X|X|X|X|
+|Compilador x64 de 64 bits|||X|X|
+|Compilador cruzado X86_ x64|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>Encabezados y bibliotecas
 
@@ -65,10 +66,10 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Plantillas XAML para UWP, Windows 8.1, Windows Phone 8.0|X||X|X|
 |Aplicación Direct3D|X||X|X|
-|DLL (Universal de Windows)|X||X|X|
-|Biblioteca estática (Universal de Windows)|X||X|X|
+|DLL (Windows universal)|X||X|X|
+|Biblioteca estática (Windows universal)|X||X|X|
 |Componente de Windows Runtime|X||X|X|
-|Aplicación de prueba de unidad (Universal de Windows)|X||X|X|
+|Aplicación de prueba unitaria (Windows universal)|X||X|X|
 |Proyecto ATL|||X|X|
 |Biblioteca de clases (CLR)||X|X|X|
 |Aplicación de consola CLR||X|X|X|
@@ -184,6 +185,6 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 ## <a name="see-also"></a>Vea también
 
 [Instalar Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Novedades en Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Novedades de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)<br/>
 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686)<br/>

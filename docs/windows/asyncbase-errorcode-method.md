@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: ErrorCode (método) | Documentos de Microsoft'
+title: Método Asyncbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abd3eae18d793739866b6c0dd8a1b6a994093c93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7336824d04745440a1f6152ebacfed2afc62258e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602383"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode (Método)
-Recupera el código de error de la operación asincrónica actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-inline void ErrorCode(  
-   HRESULT *error  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `error`  
- La ubicación donde esta operación almacena el código de error actual.  
-  
-## <a name="remarks"></a>Comentarios  
- Esta operación es segura para subprocesos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Recupera el código de error para la operación asincrónica actual.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+inline void ErrorCode(
+   HRESULT *error
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Error*  
+La ubicación donde esta operación almacena el código de error actual.
+
+## <a name="remarks"></a>Comentarios
+
+Esta operación es segura para subprocesos.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

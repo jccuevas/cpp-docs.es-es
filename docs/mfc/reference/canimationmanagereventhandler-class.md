@@ -1,5 +1,5 @@
 ---
-title: Clase CAnimationManagerEventHandler | Documentos de Microsoft
+title: CAnimationManagerEventHandler (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541697"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Clase CAnimationManagerEventHandler
 Implementa una devolución de llamada, a la que llama la API de animación cuando se cambia el estado de un administrador de animación.  
@@ -52,11 +53,11 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 |Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Crea una instancia de `CAnimationManagerEventHandler` objeto.|  
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Se llama cuando se cambia el estado de administrador de animación. (Invalida `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Almacena un puntero al controlador de animación para eventos de ruta.|  
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Se llama cuando ha cambiado un estado de administrador de animaciones. (Invalida `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|  
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Almacena un puntero al controlador de animación para el enrutamiento de eventos.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este controlador de eventos se crea y se pasa al método de IUIAnimationManager::SetManagerEventHandler, cuando se llama a CAnimationController::EnableAnimationManagerEvent.  
+ Este controlador de eventos se crea y se pasa al método IUIAnimationManager::SetManagerEventHandler, al llamar a CAnimationController::EnableAnimationManagerEvent.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CUIAnimationCallbackBase`  
@@ -69,7 +70,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
  **Encabezado:** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Se requiere Visual Studio 2010 SP1.  
   
  Construye un objeto CAnimationManagerEventHandler.  
   
@@ -78,7 +79,7 @@ CAnimationManagerEventHandler();
 ```  
   
 ##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Se requiere Visual Studio 2010 SP1.  
   
  Crea una instancia del objeto CAnimationManagerEventHandler.  
   
@@ -89,19 +90,19 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pAnimationController`  
- Un puntero al controlador de animación, que recibe eventos.  
+ *pAnimationController*  
+ Un puntero al controlador de animación, que se va a recibir eventos.  
   
- `ppManagerEventHandler`  
- Salida. Si el método se ejecuta correctamente, contiene un puntero al objeto COM que se va a controlar las actualizaciones de estado para un administrador de animación.  
+ *ppManagerEventHandler*  
+ Salida. Si el método se ejecuta correctamente, contiene un puntero al objeto COM que se va a controlar las actualizaciones de estado para un administrador de animaciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se realiza correctamente, devuelve S_OK. En caso contrario, devuelve un código de error HRESULT.  
   
 ##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Se requiere Visual Studio 2010 SP1.  
   
- Se llama cuando se cambia el estado de administrador de animación.  
+ Se llama cuando ha cambiado un estado de administrador de animaciones.  
   
 ```  
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -110,27 +111,27 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `newStatus`  
+ *newStatus*  
  Nuevo estado.  
   
- `previousStatus`  
+ *previousStatus*  
  Estado anterior.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La implementación actual siempre devuelve S_OK;  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Se requiere Visual Studio 2010 SP1.  
   
- Almacena un puntero al controlador de animación para eventos de ruta.  
+ Almacena un puntero al controlador de animación para el enrutamiento de eventos.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pAnimationController`  
- Un puntero al controlador de animación, que recibe eventos.  
+ *pAnimationController*  
+ Un puntero al controlador de animación, que se va a recibir eventos.  
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)

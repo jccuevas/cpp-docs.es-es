@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1092 | Documentos de Microsoft
+title: Error irrecuperable C1092 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f5b5d903fe1fb2d3182a7b08f7bf82ddf334fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9852b7b3d695d5414e52727ce672ee3258f6840b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077157"
 ---
 # <a name="fatal-error-c1092"></a>Error irrecuperable C1092
-La función Editar y continuar no admite cambios en los tipos de datos; se requiere compilación  
-  
- Ha cambiado o agregado un tipo de datos desde la última compilación correcta.  
-  
--   Editar y continuar no admite cambios en los tipos de datos existentes, incluidas las definiciones de clase, estructura o enumeración. Debe detener la depuración y compilar la aplicación.  
-  
--   Editar y continuar no admite la adición de nuevos tipos de datos si un archivo de base de datos de programa, como vc*x*0.pdb (donde *x* es la versión principal de Visual C++ en uso) es de solo lectura. Para agregar tipos de datos, el compilador debe abrir el archivo .pdb en modo de escritura.  
-  
-### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Para quitar este error sin tener que terminar la sesión de depuración actual  
-  
-1.  Cambie el tipo de datos a su estado anterior al error.  
-  
-2.  En el menú **Depurar** , elija **Aplicar cambios en el código**.  
-  
-### <a name="to-remove-this-error-without-changing-your-source-code"></a>Para quitar este error sin cambiar el código fuente  
-  
-1.  En el menú **Depurar** , elija **Detener depuración**.  
-  
-2.  En el menú **Compilar** , elija **Compilar**.  
-  
- Para obtener más información, consulte [Cambios admitidos en el código](/visualstudio/debugger/supported-code-changes-cpp).
+
+La función Editar y continuar no admite cambios en los tipos de datos; se requiere compilación
+
+Ha cambiado o agregado un tipo de datos desde la última compilación correcta.
+
+- Editar y continuar no admite cambios en los tipos de datos existentes, incluidas las definiciones de clase, estructura o enumeración. Debe detener la depuración y compilar la aplicación.
+
+- Editar y continuar no admite la adición de nuevos tipos de datos si un archivo de base de datos de programa, como vc*x*0.pdb (donde *x* es la versión principal de Visual C++ en uso) es de solo lectura. Para agregar tipos de datos, el compilador debe abrir el archivo .pdb en modo de escritura.
+
+### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Para quitar este error sin terminar la sesión de depuración actual
+
+1. Cambie el tipo de datos a su estado anterior al error.
+
+1. En el menú **Depurar** , elija **Aplicar cambios en el código**.
+
+### <a name="to-remove-this-error-without-changing-your-source-code"></a>Para quitar este error sin cambiar el código fuente
+
+1. En el menú **Depurar** , elija **Detener depuración**.
+
+1. En el menú **Compilar** , elija **Compilar**.
+
+Para obtener más información, consulte [Cambios admitidos en el código](/visualstudio/debugger/supported-code-changes-cpp).

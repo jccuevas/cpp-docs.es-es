@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3709 | Documentos de Microsoft
+title: Error del compilador C3709 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42cb78c54dd1529a02733b5d8e0246ab6806289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0e64a07257cf55df028383cd5347ad64eb702f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091730"
 ---
 # <a name="compiler-error-c3709"></a>Error del compilador C3709
-'función': sintaxis incorrecta para especificar un evento en __hook /\__unhook  
-  
- Cuando se especifica un origen de eventos con [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md), el primer parámetro debe ser un método de evento válido y el segundo parámetro debe ser un objeto de origen de evento válido (no un método).  
-  
- El ejemplo siguiente genera C3709:  
-  
-```  
-// C3709.cpp  
-// compile with: /LD  
-[event_source(native)]  
-class CEventSrc  
-{  
-public:  
-   __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec  
-{  
-public:  
-   void handler1()  
-   {  
-   }  
-  
-   void HookEvents(CEventSrc* pSrc)  
-   {  
-      __hook(bad, pSrc, CEventRec::handler1);   // C3709  
-      // Try the following line instead:  
-      // __hook(&CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc)  
-   {  
-      __unhook(&CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-};  
+
+'function': sintaxis incorrecta para especificar un evento en __hook /\__unhook
+
+Al especificar un origen de eventos con [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md), el primer parámetro debe ser un método de evento válido y el segundo parámetro debe ser un objeto de origen de evento válido (no un método).
+
+El ejemplo siguiente genera C3709:
+
+```
+// C3709.cpp
+// compile with: /LD
+[event_source(native)]
+class CEventSrc
+{
+public:
+   __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec
+{
+public:
+   void handler1()
+   {
+   }
+
+   void HookEvents(CEventSrc* pSrc)
+   {
+      __hook(bad, pSrc, CEventRec::handler1);   // C3709
+      // Try the following line instead:
+      // __hook(&CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+
+   void UnhookEvents(CEventSrc* pSrc)
+   {
+      __unhook(&CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+};
 ```

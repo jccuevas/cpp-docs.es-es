@@ -1,7 +1,7 @@
 ---
-title: Tareas de programación de Internet MFC | Documentos de Microsoft
+title: Tareas de programación de Internet MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,30 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df7efbc8d29b2e36c6911255389cc270e7bf5e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e8d8fab6fe78c6ca1e32f7973327d2285cfcd20
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534916"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Tareas de programación para Internet de MFC
-Esta sección contiene instrucciones detalladas para agregar compatibilidad con Internet a las aplicaciones. Temas incluyen cómo utilizar las clases MFC para habilitar Internet para las aplicaciones existentes y cómo agregar compatibilidad con documentos activos a un componente COM existente. ¿Desea crear un documento con cotizaciones actualizados al minuto, puntuaciones de fútbol de Pittsburgh, y la temperatura más reciente de Microsoft Antártida proporciona una serie de tecnologías que le permitirán hacerlo a través de Internet.  
+Esta sección contiene instrucciones detalladas para agregar compatibilidad con Internet a las aplicaciones. Los temas incluyen cómo usar las clases MFC para habilitar Internet para las aplicaciones existentes y cómo agregar compatibilidad con documentos activos a un componente COM existente. ¿Desea crear un documento con cotizaciones de bolsa actualizados al minuto, las puntuaciones de fútbol de Pittsburgh, y la temperatura actual en la Antártida Microsoft proporciona una serie de tecnologías que le ayudarán a hacerlo a través de Internet.  
   
- Tecnologías activas incluyen los controles ActiveX (antes controles OLE) y documentos activos; WinInet para recuperar fácilmente y guardar archivos a través de Internet; y monikers asincrónicos para la descarga de datos eficaz. Visual C++ proporciona asistentes que le ayudarán a empezar a trabajar rápidamente con una aplicación de inicio. Para obtener una introducción a estas tecnologías, consulte [conceptos básicos de programación de Internet de MFC](../mfc/mfc-internet-programming-basics.md) y [COM en MFC](../mfc/mfc-com.md).  
+ Tecnologías activas incluyen los controles ActiveX (antes controles OLE) y documentos activos; WinInet para recuperar fácilmente y guardar archivos a través de Internet; y monikers asincrónicos para la descarga de datos eficaz. Visual C++ proporciona asistentes que le ayudarán a empezar a trabajar rápidamente con una aplicación de inicio. Para obtener una introducción a estas tecnologías, consulte [Fundamentos de programación de Internet de MFC](../mfc/mfc-internet-programming-basics.md) y [COM en MFC](../mfc/mfc-com.md).  
   
- Tiene siempre deseados a un archivo de FTP, pero aún no lo ha aprendido WinSock y programación de las clases WinInet de protocolos de red encapsular estos protocolos, proporcionándole un sencillo conjunto de funciones que puede utilizar para escribir una aplicación cliente en Internet para descargar archivos uso de HTTP, FTP y gopher. Puede utilizar WinInet para buscar directorios en el disco duro o todo el mundo. Forma transparente puede recopilar datos de varios tipos y lo presenta al usuario en una interfaz integrada.  
+ Deseado siempre a un archivo de FTP, pero aún no lo ha aprendido WinSock y programación de las clases WinInet de protocolos de red encapsular estos protocolos, proporcionándole un sencillo conjunto de funciones que puede usar para escribir una aplicación cliente en Internet para descargar archivos uso de HTTP, FTP y gopher. Puede usar WinInet para buscar directorios en el disco duro o en todo el mundo. Transparente, puede recopilar datos de varios tipos diferentes y presentarlos al usuario en una interfaz integrada.  
   
- ¿Tiene grandes cantidades de datos que se va a descargar asincrónica monikers proporcionan una solución de COM (Component Object Model) para la representación progresiva de objetos grandes. También puede utilizarse WinInet de forma asincrónica.  
+ ¿Tiene grandes cantidades de datos que se va a descargar asincrónico monikers proporcionan una solución de COM (Component Object Model) para la representación progresiva de objetos grandes. También puede utilizarse WinInet de forma asincrónica.  
   
- La tabla siguiente describen algunas de las cosas que puede hacer con estas tecnologías.  
+ En la tabla siguiente se describe algunas de las cosas que puede hacer con estas tecnologías.  
   
 |Tiene|Desea|Debe|  
 |--------------|-----------------|----------------|  
-|Un servidor Web.|Realizar un seguimiento de los inicios de sesión e información detallada sobre las solicitudes URL.|Escribir un filtro, solicitar notificaciones de eventos de inicio de sesión y asignación de dirección URL.|  
+|Un servidor Web.|Realizar un seguimiento de los inicios de sesión y obtener información detallada acerca de las solicitudes URL.|Escribir un filtro, solicitar notificaciones de eventos de inicio de sesión y la asignación de dirección URL.|  
 |Un explorador Web.|Proporcionar contenido dinámico.|Crear controles ActiveX y documentos activos.|  
-|Una aplicación basada en el documento.|Agregar compatibilidad para un archivo FTP.|Utilizar WinInet o monikers asincrónicos.|  
+|Una aplicación basada en el documento.|Agregar compatibilidad con FTP un archivo.|Usar WinInet o monikers asincrónicos.|  
   
- Vea los temas siguientes para obtener más información para ayudarle a comenzar:  
+ Vea los temas siguientes para obtener más información comenzar:  
   
 -   [Opciones de diseño de aplicaciones](../mfc/application-design-choices.md)  
   
@@ -47,8 +48,6 @@ Esta sección contiene instrucciones detalladas para agregar compatibilidad con 
 -   [Controles ActiveX en Internet](../mfc/activex-controls-on-the-internet.md)  
   
 -   [Actualización de un control ActiveX existente](../mfc/upgrading-an-existing-activex-control.md)  
-  
--   [Documentos activos en Internet](../mfc/active-documents-on-the-internet.md)  
   
 -   [Monikers asincrónicos en Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   

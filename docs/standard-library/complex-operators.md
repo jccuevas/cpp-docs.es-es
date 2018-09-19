@@ -19,11 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110199"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; (Operadores)
 
@@ -57,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*left*<br/>
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
 
-`right` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*right*<br/>
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -171,7 +174,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  operator*
+## <a name="op_star"></a> operator\*
 
 Multiplica dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.
 
@@ -195,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar por el * operación.
+*left*<br/>
+El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la \* operación.
 
-`right` El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar por el * operación.
+*right*<br/>
+El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la \* operación.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -294,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que va a agregar la operación +.
+*left*<br/>
+El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.
 
-`right` El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que va a agregar la operación +.
+*right*<br/>
+El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -304,7 +311,7 @@ El número complejo que es el resultado de la adición de los dos números cuyo 
 
 ### <a name="remarks"></a>Comentarios
 
-La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado. Devuelve el operador unario `left`.
+La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado. El operador unario devuelve *izquierdo*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -401,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -432,13 +439,15 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar-operación.
+*left*<br/>
+El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.
 
-`right` El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar-operación.
+*right*<br/>
+El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número complejo que es el resultado de la resta de `right` desde `left`, los dos números cuyos valores los especifican las entradas de parámetro.
+El número complejo que es el resultado de la resta de *derecho* desde *izquierdo*, los dos números cuyos valores se especifican las entradas de parámetro.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -541,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -569,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un número complejo o un número que es del tipo de parámetro para un número complejo que es el numerador se divida por el denominador con el / operación.
+*left*<br/>
+Un número complejo o un número que es del tipo de parámetro para un número complejo que es el numerador que se dividirá por el denominador con la operación /.
 
-`right` Un número complejo o un número que es del tipo de parámetro para un número complejo que es el denominador que se utilizará para dividir el numerador con el / operación.
+*right*<br/>
+Un número complejo o un número que es del tipo de parámetro para un número complejo que es el denominador que se usará para dividir el numerador con la operación /.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -677,13 +688,15 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-`Ostr` El flujo de salida en la que se está entrando número complejo.
+*Ostr*<br/>
+El flujo de salida en que se introduce el número complejo.
 
-`right` El número complejo que se va a escribirse en el flujo de salida
+*right*<br/>
+El número complejo que se introduce en el flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Escribe el valor del número complejo especificado para `Ostr` en formato cartesiano: ( *parte real, parte imaginaria* ).
+Escribe el valor del número complejo especificado para el *Ostr* en formato cartesiano: ( *parte real, parte imaginaria* ).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -748,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*left*<br/>
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
 
-`right` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*right*<br/>
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -876,13 +891,15 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parámetros
 
-`Istr` El flujo de entrada desde el que se extrae el número complejo.
+*ISTR*<br/>
+El flujo de entrada del que se extrae el número complejo.
 
-`right` Número complejo que se extraen del flujo de entrada.
+*right*<br/>
+El número complejo que se extrae del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Lee el valor del número complejo especificado de `Istr` y lo devuelve en `right`.
+Lee el valor del número complejo especificado desde *Istr* y lo devuelve a *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 

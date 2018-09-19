@@ -1,5 +1,5 @@
 ---
-title: __outwordstring | Documentos de Microsoft
+title: __outwordstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c49f76175ced83fb9a9b7e72e1c1fc7dbb68e20
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720673"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Específicos de Microsoft**  
   
- Genera el `rep outsw` instrucción, lo que envía `Count` palabras que empiezan en `Buffer` fuera del puerto de E/S especificado por `Port`.  
+ Genera el `rep outsw` instrucción, que envía `Count` palabras que empiezan en `Buffer` fuera del puerto de E/S especificado por `Port`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,20 +41,20 @@ void __outwordstring(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- El puerto para enviar los datos.  
+*Puerto*<br/>
+[in] El puerto para enviar los datos.  
   
- [in] `Buffer`  
- Un puntero a los datos que se envía el puerto especificado.  
+*búfer*<br/>
+[in] Un puntero a los datos se envíen el puerto especificado.  
   
- [in] `Count`  
- El número de palabras que se va a enviar.  
+*Recuento*<br/>
+[in] El número de palabras para enviar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

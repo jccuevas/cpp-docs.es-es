@@ -1,5 +1,5 @@
 ---
-title: Crear declaración / definición | Documentos de Microsoft
+title: Crear declaración o definición | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -11,30 +11,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33331288"
 ---
 # <a name="create-declaration--definition"></a>Crear declaración o definición
-**¿Qué:** permite generar inmediatamente la declaración o definición de una función.
+**Qué:** Permite generar inmediatamente la declaración o definición de una función.
 
-**Cuándo:** tiene una función que se necesita una declaración, o viceversa.  
+**Cuándo:** Tiene una función que necesita una declaración, o viceversa.  
 
-**Por este motivo:** podría crear manualmente la definición de declaración, pero esto lo creará automáticamente, crear el archivo de encabezado/código si es necesario.
+**Por qué:** Podría crear manualmente la definición o declaración, pero esto la creará de manera automática, creando el archivo de encabezado o código si es necesario.
 
 **Cómo**:
 
-1. Coloque el cursor de texto o el mouse sobre la función para la que desea crear la definición o declaración.
+1. Coloque el cursor de texto o el ratón sobre la función para la que quiera crear la declaración o definición.
 
    ![Código resaltado](images/createdefinition_highlight.png)
 
 1. A continuación, realice alguno de los siguientes procedimientos:
    * **Teclado**
-     * Presione **Ctrl +.** Para activar el **acciones rápidas y refactorizaciones** menú y seleccione **crear declaración / definición** en el menú contextual.
+     * Presione **Ctrl +.** para activar el menú **Acciones rápidas y refactorizaciones** y seleccione **Crear declaración o definición** en el menú contextual.
    * **Mouse**
-     * Haga clic en y seleccione el **acciones rápidas y refactorizaciones** menú y seleccione **crear declaración / definición** en el menú contextual.
+     * Haga clic con el botón derecho en el menú **Acciones rápidas y refactorizaciones** y seleccione **Crear declaración o definición** en el menú contextual.
 
-1. Se creará la declaración o definición de la función en el archivo de origen o de encabezado, que verá en una ventana de vista previa emergente.  Si el archivo de origen o de encabezado no existe, se también se crean y se incluirán en el proyecto.
+1. Se creará la declaración o definición de la función en el archivo de código fuente o de encabezado, que verá en una ventana de vista previa emergente.  Si el archivo de código fuente o de encabezado no existe, también se creará y se incluirá en el proyecto.
 
-   ![Crear declaración / definición dar como resultado](images/createdefinition_result.png)
+   ![Resultado de crear la declaración o definición](images/createdefinition_result.png)

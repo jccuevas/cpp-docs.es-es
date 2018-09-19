@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable del compilador de recursos RC1208 | Documentos de Microsoft
+title: Error irrecuperable del compilador de recursos RC1208 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4e4c1c6c922983635bacfb997ba991f57dbc52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a5c1f21052cab8b9441865c835e7e3cc26ade5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039743"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>Error irrecuperable del compilador de recursos RC1208
-tiene el archivo de entrada. Extensión de RES  
-  
- El archivo. Res se utilizan para la salida del compilador de recursos. El archivo. Extensión RC debe utilizarse para las secuencias de comandos del compilador de recursos.
+
+tiene el archivo de entrada. Extensión de RES
+
+El archivo. Res se utilizan para la salida del compilador de recursos. El archivo. Extensión RC se debe usar para las secuencias de comandos del compilador de recursos.

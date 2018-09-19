@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de11114eafe423e80c885f3b1a5d00a70b449e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dcd4b578f0b498995dcd92e314f9dcc1bf63551
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101046"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic (Clase)
 
@@ -36,11 +37,12 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es una clase que declara o hereda una función virtual; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que declara o hereda una función virtual, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

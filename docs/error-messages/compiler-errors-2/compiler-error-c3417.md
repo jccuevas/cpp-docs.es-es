@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3417 | Documentos de Microsoft
+title: Error del compilador C3417 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b83c3b6cf5697ca2e52f9f8ad6afdc2754edd4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b21636c3500625f262355750d32aa0fa3faeb5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073855"
 ---
 # <a name="compiler-error-c3417"></a>Error del compilador C3417
-'member': tipos de valor no pueden contener funciones miembro especiales definidas por el usuario  
-  
- Tipos de valor no pueden contener funciones como un constructor de instancia predeterminado, un destructor o un constructor de copias.  
-  
- El ejemplo siguiente genera C3517:  
-  
-```  
-// C3417.cpp  
-// compile with: /clr /c  
-value class VC {  
-   VC(){}   // C3417  
-  
-   // OK  
-   static VC(){}  
-   VC(int i){}  
-};  
+
+'member': tipos de valor no pueden contener funciones miembro especiales definidas por el usuario
+
+Tipos de valor no pueden contener funciones como un constructor de instancia predeterminado, un destructor o un constructor de copias.
+
+El ejemplo siguiente genera C3517:
+
+```
+// C3417.cpp
+// compile with: /clr /c
+value class VC {
+   VC(){}   // C3417
+
+   // OK
+   static VC(){}
+   VC(int i){}
+};
 ```

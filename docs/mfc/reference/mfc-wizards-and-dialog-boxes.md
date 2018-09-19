@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376283"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Asistentes y cuadros de diálogo de MFC
 Los asistentes de (Microsoft Foundation Classes) generan código reutilizable para diversos tipos de componentes y los objetos. Puede ejecutar los asistentes, abra el menú contextual para un proyecto en **el Explorador de soluciones** y elegir **agregar**, **clase**.  

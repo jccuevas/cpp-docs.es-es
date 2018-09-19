@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f431542ab85b4ae540622651967f3a5520ff5f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9543ed9bec188ab810bbfd3e0ac52a764fc2fdd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110404"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function (Clase)
 
@@ -42,17 +43,19 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`pfunc` La función binaria que se va a convertir.
+*pfunc*<br/>
+La función binaria que se va a convertir.
 
-`left` El objeto que la  *\*pfunc* se llama en.
+*left*<br/>
+El objeto al que *\*pfunc* está llamado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La clase de plantilla almacena una copia de **pfunc**. Define su función miembro `operator()` para que devuelva (\* **pfunc**)(_ *Left*).
+La clase de plantilla almacena una copia de `pfunc`. Define su función miembro `operator()` para que devuelva (\* **pfunc**)(_ *Left*).
 
 ## <a name="remarks"></a>Comentarios
 
-Un puntero de función unaria es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función unaria como un parámetro, pero no es adaptable. Para usarlo como un adaptador, por ejemplo al enlazar un valor a este o usándolo con un negador, debe proporcionarse con los tipos anidados **argument_type** y **result_type** que hacen posible dicha adaptación. La conversión mediante `pointer_to_unary_function` permite a los adaptadores de función que funcionen con punteros de función binaria.
+Un puntero de función unaria es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función unaria como un parámetro, pero no es adaptable. Para usarlo con un adaptador, por ejemplo al enlazar un valor a este o usándolo con un negador, debe proporcionarse con los tipos anidados `argument_type` y `result_type` que hacen posible dicha adaptación. La conversión mediante `pointer_to_unary_function` permite a los adaptadores de función que funcionen con punteros de función binaria.
 
 ## <a name="example"></a>Ejemplo
 

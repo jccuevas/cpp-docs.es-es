@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable del compilador de recursos RC1015 | Documentos de Microsoft
+title: Error irrecuperable del compilador de recursos RC1015 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7744242e44ecfc72ee57ab979969ad81b209e57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a72cba53ebe9a286ac2e7cbbf2c41b78f4e4e08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100771"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>Error irrecuperable del compilador de recursos RC1015
-no puede abrir el archivo 'filename' de inclusión  
-  
- El archivo de inclusión especificado no existe, no se pudo abrir o no se encontró.  
-  
- Asegúrese de que la configuración del entorno es válida y de que se especifica la ruta de acceso correcta para el archivo. Asegúrese de que están disponibles para el compilador de recursos suficientes identificadores de archivo. Si el archivo está en una unidad de red, asegúrese de que tiene permisos para abrir el archivo.  
-  
- Error RC1015 puede producirse incluso si el archivo de inclusión existe en un directorio especificado como directorio de inclusión adicional en las propiedades de configuración -> recursos -> página de propiedades General; Especifique la ruta de acceso completa al archivo de inclusión.  
-  
- Para obtener más información, vea el artículo de Knowledge Base Q326987: del RC1015 Error al usar recursos vista si la ruta de acceso de inclusión es demasiado largo.
+
+no puede abrir el archivo 'filename' include
+
+El archivo de inclusión especificado no existe, no se pudo abrir o no se encontró.
+
+Asegúrese de que la configuración del entorno es válida y de que se especifica la ruta de acceso correcta para el archivo. Asegúrese de que están disponibles para el compilador de recursos suficientes identificadores de archivo. Si el archivo está en una unidad de red, asegúrese de que tiene permisos para abrir el archivo.
+
+RC1015 puede producirse incluso si existe el archivo de inclusión en un directorio especificado como directorio de inclusión adicional en las propiedades de configuración -> recursos -> página de propiedades General; Especifique la ruta de acceso completa al archivo de inclusión.
+
+Para obtener más información, consulte el artículo de Knowledge Base Q326987: RC1015 Error cuando utiliza recursos vista si la ruta de inclusión es demasiado largo.

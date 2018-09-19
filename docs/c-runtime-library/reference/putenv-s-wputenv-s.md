@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - putenv_s
@@ -40,11 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84d7a68530a748c9b1ad7c553fad80ed4e7c86b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de777c05d3b5186966e78b80e6fb1b10221d031a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571979"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 
@@ -89,7 +91,7 @@ Si se produce una de las condiciones de error, estas funciones invocan el contro
 
 ## <a name="remarks"></a>Comentarios
 
-El **_putenv_s** función agrega nuevas variables de entorno o modifica los valores de variables de entorno existente. Las variables de entorno definen el entorno en el que se ejecuta un proceso (por ejemplo, la ruta de búsqueda predeterminada para vincular bibliotecas a un programa). **_wputenv_s** es una versión con caracteres anchos de **_putenv_s**; el *envstring* argumento pasado a **_wputenv_s** es una cadena de caracteres anchos.
+El **_putenv_s** función agrega nuevas variables de entorno o modifica los valores de variables de entorno existente. Las variables de entorno definen el entorno en el que se ejecuta un proceso (por ejemplo, la ruta de búsqueda predeterminada para vincular bibliotecas a un programa). **_wputenv_s** es una versión con caracteres anchos de **_putenv_s**; el *envstring* argumento **_wputenv_s** es una cadena de caracteres anchos.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -97,16 +99,16 @@ El **_putenv_s** función agrega nuevas variables de entorno o modifica los valo
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
 
-*VarName* es el nombre de la variable de entorno que se agregan o modifican y *value_string* es el valor de la variable. Si *varname* ya forma parte del entorno, su valor se sustituye por *value_string*; en caso contrario, la nueva *varname* variable y su *value_string*  se agregan al entorno. Puede quitar una variable del entorno especificando una cadena vacía (es decir, "") para *value_string*.
+*VarName* es el nombre de variable de entorno se agregan o modifican y *value_string* es el valor de la variable. Si *varname* ya forma parte del entorno, su valor se sustituye por *value_string*; en caso contrario, el nuevo *varname* variable y su *value_string*  se agregan al entorno. Puede quitar una variable del entorno especificando una cadena vacía (es decir, "") para *value_string*.
 
-**_putenv_s** y **_wputenv_s** solo afectan al entorno local en el proceso actual; no se pueden usar para modificar el entorno de nivel de comandos. Solo funcionan en estructuras de datos a las que puede tener acceso la biblioteca en tiempo de ejecución y no en el "segmento" de entorno que el sistema operativo crea para un proceso. Cuando finaliza el proceso actual, el entorno vuelve al nivel del proceso de llamada, que en la mayoría de los casos es el nivel del sistema operativo. Sin embargo, el entorno modificado se puede pasar a los nuevos procesos creados por **_spawn**, **_exec**, o **system**, y estos nuevos procesos obtienen los nuevos elementos que son agregar **_putenv_s** y **_wputenv_s**.
+**_putenv_s** y **_wputenv_s** solo afectan al entorno local en el proceso actual; no se pueden utilizar para modificar el entorno de nivel de comando. Solo funcionan en estructuras de datos a las que puede tener acceso la biblioteca en tiempo de ejecución y no en el "segmento" de entorno que el sistema operativo crea para un proceso. Cuando finaliza el proceso actual, el entorno vuelve al nivel del proceso de llamada, que en la mayoría de los casos es el nivel del sistema operativo. Sin embargo, el entorno modificado se puede pasar a los nuevos procesos creados por **_spawn**, **_exec**, o **sistema**, estos nuevos procesos obtienen los nuevos elementos que son agregado por **_putenv_s** y **_wputenv_s**.
 
-No cambie una entrada de entorno directamente; en su lugar, use **_putenv_s** o **_wputenv_s** para cambiarlo. En concreto, la liberación directa de elementos de la **[] _environ** matriz global puede provocar la memoria no válidas llevarla a cabo.
+No cambie directamente; una entrada de entorno en su lugar, use **_putenv_s** o **_wputenv_s** para cambiarlo. En concreto, liberando directamente elementos de la **[] _environ** matriz global puede provocar que la memoria no válida solucionarse.
 
-**getenv** y **_putenv_s** usan la variable global **_environ** para tener acceso a la tabla de entorno. **_wgetenv** y **_wputenv_s** usar **_wenviron**. **_putenv_s** y **_wputenv_s** pueden cambiar el valor de **_environ** y **_wenviron**e invalidar así el *envp*argumento pasado a **principal** y **_wenvp** argumento pasado a **wmain**. Por lo tanto, resulta más seguro usar **_environ** o **_wenviron** para tener acceso a la información del entorno. Para obtener más información sobre la relación de **_putenv_s** y **_wputenv_s** a variables globales, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
+**getenv** y **_putenv_s** usan la variable global **_environ** para tener acceso a la tabla de entorno. **_wgetenv** y **_wputenv_s** usar **_wenviron**. **_putenv_s** y **_wputenv_s** puede cambiar el valor de **_environ** y **_wenviron**e invalidar así el *envp*argumento **principal** y **_wenvp** argumento **wmain**. Por lo tanto, resulta más seguro usar **_environ** o **_wenviron** para tener acceso a la información del entorno. Para obtener más información sobre la relación de **_putenv_s** y **_wputenv_s** a variables globales, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> El **_putenv_s** y **_getenv_s** familias de funciones no son seguras para subprocesos. **_getenv_s** podría devolver un puntero de cadena mientras **_putenv_s** se modifica la cadena y, por tanto, generarían errores aleatorios. Asegúrese de que las llamadas a estas funciones están sincronizadas.
+> El **_putenv_s** y **_getenv_s** familias de funciones no son seguros para subprocesos. **_getenv_s** podría devolver un puntero de cadena mientras **_putenv_s** se modifica la cadena y, por tanto, generarían errores aleatorios. Asegúrese de que las llamadas a estas funciones están sincronizadas.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -119,7 +121,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo que muestra cómo utilizar **_putenv_s**, consulte [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+Para obtener un ejemplo que muestra cómo usar **_putenv_s**, consulte [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 ## <a name="see-also"></a>Vea también
 

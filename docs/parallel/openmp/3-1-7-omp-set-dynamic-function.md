@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687873"
 ---
 # <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic (Función)
 El **omp_set_dynamic ()** función habilita o deshabilita el ajuste dinámico del número de subprocesos disponibles para la ejecución de regiones en paralelo. El formato es como se detalla a continuación:  

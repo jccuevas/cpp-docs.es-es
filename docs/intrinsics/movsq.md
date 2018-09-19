@@ -1,5 +1,5 @@
 ---
-title: __movsq | Documentos de Microsoft
+title: __movsq | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72ed2d47c995e19bdfa473c0abd79034e3e51430
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720946"
 ---
 # <a name="movsq"></a>__movsq
 **Específicos de Microsoft**  
@@ -40,25 +41,25 @@ void __movsq(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [out] `Dest`  
- El destino de la operación.  
+*dest*<br/>
+[out] El destino de la operación.  
   
- [in] `Source`  
- El origen de la operación.  
+*Source*<br/>
+[in] El origen de la operación.  
   
- [in] `Count`  
- El número de palabras cuádruples para copiar.  
+*Recuento*<br/>
+[in] El número de palabras cuádruples para copiar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado es que la primera `Count` palabras cuádruples señalada por `Source` se copian en el `Dest` cadena.  
+ El resultado es que la primera `Count` palabras cuádruples apunta `Source` se copian en el `Dest` cadena.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

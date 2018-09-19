@@ -1,5 +1,5 @@
 ---
-title: __shiftleft128 | Documentos de Microsoft
+title: __shiftleft128 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc63cdd252e2acb23d8a6e842138d91e6c9b9c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57846bab53e50f1644dcdc3ec817472e47793840
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725210"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Específicos de Microsoft**  
@@ -38,14 +39,14 @@ unsigned __int64 __shiftleft128(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `LowPart`  
- Los 64 bits inferiores de la cantidad de 128 bits que se va a desplazar.  
+*Parte inferior*<br/>
+[in] Los 64 bits inferiores de la cantidad de 128 bits para desplazar.  
   
- [in] `HighPart`  
- Los 64 bits superiores de la cantidad de 128 bits que se va a desplazar.  
+*HighPart*<br/>
+[in] Los 64 bits superiores de la cantidad de 128 bits para desplazar.  
   
- [in] `Shift`  
- El número de bits que se va a desplazar.  
+*Mayús*<br/>
+[in] El número de bits del desplazamiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Los 64 bits superiores del resultado.  
@@ -54,7 +55,7 @@ unsigned __int64 __shiftleft128(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftleft128`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

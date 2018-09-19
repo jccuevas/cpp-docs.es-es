@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690275"
 ---
 # <a name="44-ompnested"></a>4.4 OMP_NESTED
 El `OMP_NESTED` variable de entorno habilita o deshabilita el paralelismo anidado a menos que paralelismo anidado está habilitado o deshabilitado mediante una llamada a la `o` **mp_set_nested** rutina de biblioteca. Si establece en **TRUE**, paralelismo anidado está habilitado; si se establece en **FALSE**anidado paralelismo está deshabilitado. El valor predeterminado es **FALSE**.  

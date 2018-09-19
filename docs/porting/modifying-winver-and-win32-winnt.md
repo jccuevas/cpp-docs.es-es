@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194184"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modificar WINVER y _WIN32_WINNT
 
@@ -58,11 +59,11 @@ Esto tiene como destino el sistema operativo de Windows 10. Estos valores se mue
 Si no ve todas estas versiones de Windows en la copia de SDKDDKVer.h que está revisando, probablemente esté utilizando una versión anterior del SDK de Windows. De forma predeterminada, los proyectos de Win32 de Visual Studio 2017 usan el SDK de Windows 10.   
   
 > [!NOTE]
->  No se garantiza que los valores funcionen si incluye encabezados de MFC internos en la aplicación.  
+> No se garantiza que los valores funcionen si incluye encabezados de MFC internos en la aplicación.  
   
-También puede definir esta macro mediante la opción del compilador **/D** . Para obtener más información, vea [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
+También puede definir esta macro mediante la opción del compilador `/D`. Para obtener más información, vea [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
-Para obtener más información sobre el significado de estas macros, consulte [Uso de los encabezados de Windows](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
+Para obtener más información sobre el significado de estas macros, consulte [Uso de los encabezados de Windows](/windows/desktop/WinProg/using-the-windows-headers).  
   
 ## <a name="see-also"></a>Vea también  
 

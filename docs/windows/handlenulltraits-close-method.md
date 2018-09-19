@@ -1,5 +1,5 @@
 ---
-title: 'Handlenulltraits:: Close (método) | Documentos de Microsoft'
+title: Método Handlenulltraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1319b6a75f92e057975d0f8d2c7e2753df47141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 155fb5a07f747e4107e630b0db65d321ee726e2c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602221"
 ---
 # <a name="handlenulltraitsclose-method"></a>HANDLENullTraits::Close (Método)
-Cierra el identificador especificado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-inline static bool Close(  
-   _In_ Type h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `h`  
- El identificador de cierre.  
-  
-## <a name="return-value"></a>Valor devuelto  
- **True** si controlar `h` cerrado correctamente; en caso contrario, **false**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** handletraits  
-  
-## <a name="see-also"></a>Vea también  
- [HANDLENullTraits (estructura)](../windows/handlenulltraits-structure.md)
+
+Cierra el identificador especificado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*  
+Para cerrar el identificador.
+
+## <a name="return-value"></a>Valor devuelto
+
+**True** si controlar *h* cerrado correctamente; en caso contrario, **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** handletraits
+
+## <a name="see-also"></a>Vea también
+
+[HANDLENullTraits (estructura)](../windows/handlenulltraits-structure.md)

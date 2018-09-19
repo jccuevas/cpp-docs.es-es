@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56c5ef5f8cc5a3061b18ec2ffcdc83bf850d641
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff3d6f9376678240f53113d925a868adfcb4da6d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314526"
 ---
 # <a name="plus-struct"></a>plus (Struct)
 
@@ -43,16 +44,18 @@ struct plus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) + std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Un tipo que admita un valor binario `operator+` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* un tipo que admita un binario `operator+` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -101,11 +104,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 0 4 8 12 16 20 )
 The vector v2 = ( -4 -6 -8 -10 -12 -14 )
 The element-wise sums are: ( -4 -2 0 2 4 6 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

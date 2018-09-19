@@ -1,5 +1,5 @@
 ---
-title: Error de compilador Error C2693 | Documentos de Microsoft
+title: Error del compilador C2693 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bed9c0dcad60febf343357ee3e0762ab3d93ef6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ecf51f5fdbe7d1c6b5d5070e048c69bfc840460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051261"
 ---
-# <a name="compiler-error-c2693"></a>Error C2693 de Error de compilador
-'operador' : comparación no válida de referencias a una matriz administrada o de WinRT  
-  
- No puede probar una matriz administrada o de WinRT para cualquier clase de desigualdad. Por ejemplo, puede realizar una prueba para ver si las matrices administradas son iguales, pero no para ver si una matriz es mayor o menor que otra.  
+# <a name="compiler-error-c2693"></a>Error del compilador C2693
+
+'operador' : comparación no válida de referencias a una matriz administrada o de WinRT
+
+No puede probar una matriz administrada o de WinRT para cualquier clase de desigualdad. Por ejemplo, puede realizar una prueba para ver si las matrices administradas son iguales, pero no para ver si una matriz es mayor o menor que otra.

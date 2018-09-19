@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1302 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1302 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa84a411f91303c84acb44e2e6c0ab3d975e19f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc85b37d58e12602c02c2207c1f38bda9344e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045515"
 ---
 # <a name="linker-tools-error-lnk1302"></a>Error de las herramientas del vinculador LNK1302
-solamente se pueden vincular elementos .netmodule seguros; no se puede vincular el archivo .netmodule  
-  
- Un archivo .netmodule (compilado con **/LN**) se pasó al vinculador en un intento del usuario de invocar la vinculación de MSIL.  Un módulo de C++ es válido para la vinculación de MSIL si se ha compilado con **/CLR: safe**.  
-  
- Para corregir este error, compile con **/CLR: safe** para permitir la vinculación MSIL o pase el **/CLR** o **/CLR: pure** archivos obj al vinculador en lugar del módulo.  
-  
- Para obtener más información, consulte  
-  
--   [/LN (Crear un módulo MSIL)](../../build/reference/ln-create-msil-module.md)  
-  
--   [Archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md)
+
+solo admite la vinculación de elementos .netmodule seguros; no se puede vincular el archivo .netmodule
+
+Un archivo .netmodule (compilado con **/LN**) se pasó un usuario está intentando invocar la vinculación de MSIL al vinculador.  Un módulo de C++ es válido para la vinculación de MSIL si se ha compilado con **/CLR: safe**.
+
+Para corregir este error, compile con **/CLR: safe** para habilitar la vinculación de MSIL o pasar el **/CLR** o **/CLR: pure** archivo obj al vinculador en lugar del módulo.
+
+Para obtener más información, consulte
+
+- [/LN (Crear un módulo MSIL)](../../build/reference/ln-create-msil-module.md)
+
+- [Archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md)

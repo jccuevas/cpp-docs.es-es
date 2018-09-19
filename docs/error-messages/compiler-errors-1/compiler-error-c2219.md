@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2219 | Documentos de Microsoft
+title: Error del compilador C2219 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9993cd89501ba6d25786b58edb73161a9151024f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0433a9c0fd8cb81dffdf5122ff5c5116d272bc67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048024"
 ---
 # <a name="compiler-error-c2219"></a>Error del compilador C2219
-error de sintaxis: el calificador de tipo debe ser posterior a ' *'  
-  
- Calificador de tipo (`const` o `volatile`) aparece donde no está permitido.
+
+error de sintaxis: calificador de tipo debe ser posterior a ' *'
+
+Calificador de tipo (`const` o `volatile`) aparece donde no está permitido.

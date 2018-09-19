@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0006 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0006 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636708042b2291e4edd295baa0da1ffb57dde4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c44f950955db71e2f81873513a9052e345799d4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070267"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>Error del evaluador de expresiones CXX0006
-Falta un paréntesis izquierdo  
-  
- Se encontraron paréntesis sin correspondencia en la expresión. Vuelva a escribir la expresión con paréntesis equilibrados.  
-  
- Este error es idéntico a CAN0006.
+
+Falta un paréntesis izquierdo
+
+Se encontraron paréntesis sin correspondencia en la expresión. Vuelva a escribir la expresión con paréntesis equilibrados.
+
+Este error es idéntico a CAN0006.

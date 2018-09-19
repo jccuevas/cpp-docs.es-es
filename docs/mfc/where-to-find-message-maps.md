@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383398"
 ---
 # <a name="where-to-find-message-maps"></a>Dónde buscar mapas de mensajes
 Cuando se crea una nueva aplicación esquema con el Asistente para aplicaciones, el Asistente para la aplicación escribe un mapa de mensajes para cada clase de destino del comando que crea para usted. Esto incluye la aplicación derivada, documento, vista y las clases de ventana de marco. Algunos de estos mapas de mensajes ya disponen de entradas suministradas por el Asistente para aplicaciones para determinados mensajes y comandos predefinidos, y otras son simplemente los marcadores de posición para los controladores que va a agregar.  

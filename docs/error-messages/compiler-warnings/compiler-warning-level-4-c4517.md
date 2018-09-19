@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4517 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4517 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcfca18512d7a5af18bf978fc4f6549799bbdc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f71fca2804a6869fbb58073eb0c11a3ac1f18153
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098899"
 ---
 # <a name="compiler-warning-level-4-c4517"></a>Advertencia del compilador (nivel 4) C4517
-las declaraciones de acceso están en desuso; las declaraciones using de miembro son una alternativa mejor  
-  
- El Comité de ANSI C++ ha declarado las declaraciones de acceso (cambiar el acceso de un miembro en una clase derivada sin la [con](../../cpp/using-declaration.md) palabra clave) a estar obsoletas. Pueden que las futuras versiones de C++ no admite las declaraciones de acceso.
+
+las declaraciones de acceso están desusadas; declaraciones using de miembros son una alternativa mejor
+
+El Comité de ANSI C++ ha declarado las declaraciones de acceso (cambiar el acceso de un miembro en una clase derivada sin la [mediante](../../cpp/using-declaration.md) palabra clave) a estar obsoletas. Las declaraciones de acceso no pueden admitir futuras versiones de C++.

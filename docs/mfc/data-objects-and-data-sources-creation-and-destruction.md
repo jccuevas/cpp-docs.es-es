@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931881"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objetos de datos y orígenes de datos: Creación y destrucción
 Como se explica en el artículo [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md), objetos de datos y orígenes de datos representan ambas caras de una transferencia de datos. En este artículo explica cuándo se deben crear y destruir estos objetos y orígenes para realizar a las transferencias de datos correctamente, incluidas estas acciones:  
@@ -71,14 +72,14 @@ Como se explica en el artículo [objetos de datos y orígenes de datos (OLE)](..
   
 5.  La aplicación llama a la función miembro `SetClipboard` (o la función miembro `DoDragDrop` si se trata de una operación de arrastrar y colocar) que pertenece al objeto creado en el paso 3.  
   
-6.  Si se trata de un **cortar** operación o `DoDragDrop` devuelve `DROPEFFECT_MOVE`, los datos seleccionados en el paso 1 se eliminan del documento.  
+6.  Si se trata de un **cortar** operación o `DoDragDrop` devuelve **DROPEFFECT_MOVE**, los datos seleccionados en el paso 1 se eliminan del documento.  
   
  Este escenario se implementa en los ejemplos OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md). Para cada clase derivada de `CView` de la aplicación, examine el código fuente para todas las funciones excepto `GetClipboardData` y `OnGetClipboardData`. Estas dos funciones están en las implementaciones de clase derivada `COleClientItem` o `COleServerItem`. Estos programas de ejemplo constituyen una buena muestra de cómo implementar estos conceptos.  
   
  Otra situación en la que puede que quiera crear un objeto `COleDataSource` sucede cuando modifica el comportamiento predeterminado de una operación de arrastrar y colocar. Para obtener más información, consulte el [arrastrar y colocar: personalización](../mfc/drag-and-drop-customizing.md) artículo.  
   
 ##  <a name="_core_destroying_data_sources"></a> Destruir orígenes de datos  
- La aplicación responsable de los orígenes de datos debe destruirlos. En situaciones donde se entrega el origen de datos a OLE, como una llamada a [COleDataSource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), debe llamar a **pDataSrc -> InternalRelease**. Por ejemplo:  
+ La aplicación responsable de los orígenes de datos debe destruirlos. En situaciones donde se entrega el origen de datos a OLE, como una llamada a [COleDataSource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), debe llamar a `pDataSrc->InternalRelease`. Por ejemplo:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

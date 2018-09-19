@@ -1,5 +1,5 @@
 ---
-title: CREATESTRUCT (estructura) | Documentos de Microsoft
+title: CREATESTRUCT (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 594f71d5166261dbb1bb08422a564157bfce2721
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203666"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT (Estructura)
 El `CREATESTRUCT` estructura define los parámetros de inicialización pasados al procedimiento de ventana de una aplicación.  
@@ -45,41 +46,41 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `lpCreateParams`  
- Puntos de datos que se utilizarán para crear la ventana.  
+ *lpCreateParams*  
+ Puntos de datos que se usará para crear la ventana.  
   
- `hInstance`  
- Identifica el identificador de instancia del módulo del módulo al que pertenece la nueva ventana.  
+ *hInstance*  
+ Identifica el identificador de instancia de módulo del módulo que posee la ventana nueva.  
   
- `hMenu`  
+ *hMenu*  
  Identifica el menú que va a usar la nueva ventana. Si una ventana secundaria, contiene el identificador entero.  
   
- `hwndParent`  
- Identifica la ventana que posee la nueva ventana. Este miembro es **NULL** si la nueva ventana es una ventana de nivel superior.  
+ *hwndParent*  
+ Identifica la ventana que posee la ventana nueva. Este miembro es NULL si la nueva ventana es una ventana de nivel superior.  
   
- `cy`  
+ *CY*  
  Especifica el alto de la nueva ventana.  
   
- `cx`  
+ *CX*  
  Especifica el ancho de la nueva ventana.  
   
- `y`  
- Especifica la coordenada y de la esquina superior izquierda de la nueva ventana. Coordenadas son relativas a la ventana primaria si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son con respecto al origen de la pantalla.  
+ *y*  
+ Especifica la coordenada y de la esquina superior izquierda de la nueva ventana. Las coordenadas son relativas a la ventana principal si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son en relación con el origen de la pantalla.  
   
- `x`  
- Especifica la coordenada x de la esquina superior izquierda de la nueva ventana. Coordenadas son relativas a la ventana primaria si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son con respecto al origen de la pantalla.  
+ *x*  
+ Especifica la coordenada x de la esquina superior izquierda de la nueva ventana. Las coordenadas son relativas a la ventana principal si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son en relación con el origen de la pantalla.  
   
- `style`  
+ *Estilo*  
  Especifica la nueva ventana [estilo](../../mfc/reference/styles-used-by-mfc.md).  
   
- `lpszName`  
+ *lpszName*  
  Apunta a una cadena terminada en null que especifica el nombre de la ventana nueva.  
   
- `lpszClass`  
- Señala a una cadena terminada en null que especifica el nombre de clase de Windows de la nueva ventana (una [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura; para obtener más información, consulte el SDK de Windows).  
+ *lpszClass*  
+ Señala a una cadena terminada en null que especifica el nombre de la ventana nueva de la clase de Windows (un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura; para obtener más información, consulte el SDK de Windows).  
   
- `dwExStyle`  
- Especifica la [estilo extendido](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) de la nueva ventana.  
+ *dwExStyle*  
+ Especifica el [estilo extendido](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) para la nueva ventana.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** winuser.h  

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3292 | Documentos de Microsoft
+title: Error del compilador C3292 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a7f91bb9d47f2675525cf17096deddae30be71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc5f89978a7ecaff526fa05ca7a47494aada987
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112465"
 ---
 # <a name="compiler-error-c3292"></a>Error del compilador C3292
-el espacio de nombres cli no se puede abrir de nuevo  
-  
- El espacio de nombres cli no se puede declarar en su código.  Para obtener más información, consulte [plataforma, predeterminado y cli espacios de nombres](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C3292.  
-  
-```  
-// C3292.cpp  
-// compile with: /clr /c  
-namespace cli {};   // C3292  
+
+el espacio de nombres cli no se puede abrir de nuevo
+
+El espacio de nombres cli no se puede declarar en su código.  Para obtener más información, consulte [de plataforma, predeterminado y cli de espacios de nombres](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C3292.
+
+```
+// C3292.cpp
+// compile with: /clr /c
+namespace cli {};   // C3292
 ```

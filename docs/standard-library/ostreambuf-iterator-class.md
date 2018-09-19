@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cec1f3fe6a3a1955b18dacd695d5a459b5550c05
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318699"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator
 
@@ -44,9 +45,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char`.
+*CharType*<br/>
+Tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es **char**.
 
-`Traits` El tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
+*Rasgos*<br/>
+Tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -77,7 +80,7 @@ La clase ostreambuf_iterator debe satisfacer los requisitos de un iterador de sa
 
 |Operador|Descripción|
 |-|-|
-|[operator*](#op_star)|Desreferencia el operador usado para implementar la expresión de iterador de salida * `i` = `x`.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operador de incremento no funcional que devuelve un objeto `ostreambuf_iterator` al mismo objeto que señalaba antes de que se llamara a la operación.|
 |[operator=](#op_eq)|El operador inserta un carácter en el búfer del flujo asociado.|
 
@@ -97,7 +100,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **CharType**.
+El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -123,18 +126,18 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
-\* Output:
+/* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
-*\
+by charOutBuf are: OUT.
+*/
 ```
 
 ## <a name="failed"></a> ostreambuf_iterator::failed
@@ -171,9 +174,9 @@ int main( )
 
 *charOut = 'a';
    charOut ++;
- *charOut  = 'b';
+*charOut  = 'b';
    charOut ++;
- *charOut = 'c';
+*charOut = 'c';
    cout << " are characters output individually." << endl;
 
    bool b1 = charOut.failed ( );
@@ -182,13 +185,13 @@ int main( )
    else
        cout << "No insertions failed." << endl;
 }
-\* Output:
+/* Output:
 abc are characters output individually.
 No insertions failed.
-*\
+*/
 ```
 
-## <a name="op_star"></a> ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator:: operator\*
 
 Un operador de desreferencia no funcional usado para implementar la expresión de iterador de salida \* *i* = *x*.
 
@@ -224,15 +227,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;   // no effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a> ostreambuf_iterator::operator++
@@ -272,15 +275,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="op_eq"></a> ostreambuf_iterator::operator=
@@ -293,7 +296,8 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Char` Carácter que se va a insertar en el búfer de secuencia.
+*_Char*<br/>
+El carácter que se va a insertar en el búfer de secuencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -323,15 +327,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="ostreambuf_iterator_ostreambuf_iterator"></a> ostreambuf_iterator::ostreambuf_iterator
@@ -345,13 +349,15 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-`strbuf` El objeto de streambuf de salida que se usa para inicializar el puntero de búfer de la secuencia de salida.
+*strbuf*<br/>
+El objeto streambuf de salida que se ha usado para inicializar el puntero de búfer de flujo de salida.
 
-`Ostr` El objeto de flujo de salida que se usa para inicializar el puntero de búfer de la secuencia de salida.
+*Ostr*<br/>
+El objeto de flujo de salida que se ha usado para inicializar el puntero de búfer de flujo de salida.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el puntero de búfer de flujo de salida con `strbuf`.
+El primer constructor inicializa el puntero de búfer de flujo de salida con *strbuf*.
 
 El segundo constructor inicializa el puntero de búfer de flujo de salida con `Ostr`. `rdbuf`. El puntero almacenado no debe ser un puntero nulo.
 
@@ -373,19 +379,19 @@ int main( )
 
 *charOut = 'O';
    charOut ++;
- *charOut  = 'U';
+*charOut  = 'U';
    charOut ++;
- *charOut = 'T';
+*charOut = 'T';
    cout << " are characters output individually." << endl;
 
    ostreambuf_iterator<char> strOut ( cout );
    string str = "These characters are being written to the output stream.\n ";
    copy ( str.begin ( ), str. end ( ), strOut );
 }
-\* Output:
+/* Output:
 OUT are characters output individually.
 These characters are being written to the output stream.
-*\
+*/
 ```
 
 ## <a name="ostreambuf_iterator_ostream_type"></a> ostreambuf_iterator::ostream_type
@@ -414,7 +420,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de `basic_streambuf`\< **CharType**, **Traits**>, una clase de secuencia para búferes de E/S que se convierte en `streambuf` cuando se especializa en el tipo de carácter `char`.
+El tipo es un sinónimo de `basic_streambuf` \< **CharType**, **rasgos**>, una clase de secuencia para búferes de E/S que se convierte en `streambuf` si está especializada en el tipo de carácter **char**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -430,7 +436,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Traits**.
+El tipo es un sinónimo del parámetro de plantilla `Traits`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -456,18 +462,18 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
-\* Output:
+/* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
-*\
+by charOutBuf are: OUT.
+*/
 ```
 
 ## <a name="see-also"></a>Vea también

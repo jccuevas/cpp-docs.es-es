@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonUndoButton | Documentos de Microsoft
+title: CMFCRibbonUndoButton (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,14 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709195"
 ---
-# <a name="cmfcribbonundobutton-class"></a>Clase CMFCRibbonUndoButton
-La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos de usuario más reciente. Los usuarios pueden seleccionar uno o varios de los comandos más recientes de la lista desplegable para rehacer o deshacer.  
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton (clase)
+La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos más recientes del usuario. Los usuarios pueden seleccionar uno o varios de los comandos más recientes en la lista desplegable para rehacer o deshacer.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +48,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construye un nuevo `CMFCRibbonUndoButton` objeto utilizando el identificador de comando que especifique, etiqueta de texto e imágenes de la lista de imágenes del objeto primario.|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construye un nuevo `CMFCRibbonUndoButton` objeto con el identificador de comando que especifique, etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -62,7 +63,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
  La `CMFCRibbonUndoButton` clase utiliza una pila para representar la lista desplegable.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCRibbonUndoButton` clase y agregue una nueva acción a la lista de acciones. Este fragmento de código forma parte de la [ejemplo de Gadgets de cinta de opciones](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCRibbonUndoButton` de clases y agregue una nueva acción a la lista de acciones. Este fragmento de código forma parte de la [ejemplo Gadgets de la cinta de opciones](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
@@ -88,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
- La etiqueta de acción que se mostrará en la lista desplegable.  
+*lpszLabel*<br/>
+[in] La etiqueta de acción que se mostrará en la lista desplegable.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Borra la lista de acciones, que es la lista desplegable.  
@@ -99,7 +100,7 @@ void CleanUpUndoList();
 ```  
   
 ##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- Construye un nuevo `CMFCRibbonUndoButton` objeto utilizando el identificador de comando que especifique, etiqueta de texto e imágenes de la lista de imágenes del objeto primario.  
+ Construye un nuevo `CMFCRibbonUndoButton` objeto con el identificador de comando que especifique, etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.  
   
 ```  
 CMFCRibbonUndoButton(
@@ -116,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
- Especifica el identificador de comando.  
+*nID*<br/>
+[in] Especifica el identificador de comando.  
   
- [in] `lpszText`  
- Especifica la etiqueta de texto del botón.  
+*lpszText*<br/>
+[in] Especifica la etiqueta de texto del botón.  
   
- [in] `nSmallImageIndex`  
- Índice de base cero en la lista de imágenes del objeto primario para la imagen del botón pequeño.  
+*nSmallImageIndex*<br/>
+[in] Índice de base cero en la lista de imágenes del objeto primario para la imagen del botón pequeño.  
   
- [in] `nLargeImageIndex`  
- Índice de base cero en la lista de imágenes del objeto primario para el de imagen grande del botón.  
+*nLargeImageIndex*<br/>
+[in] Índice de base cero en la lista de imágenes del objeto primario para el de la imagen grande del botón.  
   
- [in] `hIcon`  
- Un identificador a un icono que puede usar como imagen del botón.  
+*hIcon*<br/>
+[in] Identificador de un icono que se puede usar como imagen de un botón.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Determina el número de elementos que el usuario seleccionado en la lista desplegable.  
@@ -149,7 +150,7 @@ virtual BOOL HasMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Siempre devuelve `TRUE`.  
+ Siempre devuelve TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   

@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0046 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0046 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f8092f5233d1a0e1501c3c0ea16164b96c137e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28cffba8a424d5a8cf2160dd6a5f8718259a54b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022492"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>Error del evaluador de expresiones CXX0046
-lista de argumentos necesario para la función miembro  
-  
- Una expresión llamó a una función miembro, pero no especificó ningún parámetro actual.  
-  
- Este error es idéntico a CAN0046.
+
+lista de argumentos necesaria para la función miembro
+
+Una expresión llama a una función miembro, pero no especificó ningún parámetro real.
+
+Este error es idéntico a CAN0046.

@@ -1,6 +1,6 @@
 ---
 title: Cómo notificar un problema con el conjunto de herramientas de Visual C++ | Microsoft Docs
-ms.date: 5/11/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,11 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
-ms.sourcegitcommit: 06b1f7bde6b3f8bed0f3db91d14e2d974444c1e3
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583902"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
@@ -334,7 +335,7 @@ Una *reproducción de vínculo* es el contenido generado por el vinculador de un
 
 1. Escriba **mkdir linkrepro** para crear un directorio para la reproducción de vínculo.
 
-1. Escriba el comando **set link\_repro=linkrepro** para establecer la variable de entorno **link\_repro** en el directorio que acaba de crear.
+1. Escriba el comando **set link\_repro=linkrepro** para establecer la variable de entorno **link\_repro** en el directorio que acaba de crear. Si la compilación se ejecuta desde un directorio diferente, como suele ser el caso de los proyectos más complejos, es mejor establecer **link\_repro** en la ruta de acceso completa al directorio linkrepro.
 
 1. Para generar el proyecto de reproducción en Visual Studio, escriba el comando **devenv** en la ventana de la consola del símbolo del sistema para desarrolladores. De este modo se garantiza que el valor de la variable de entorno **link\_repro** sea visible en Visual Studio. Para compilar el proyecto en la línea de comandos, utilice los argumentos de línea de comandos capturados más arriba para duplicar la compilación de reproducción.
 
@@ -357,7 +358,7 @@ Cree la reproducción como un proyecto IDE mínimo, comprima toda la estructura 
 Puede enviarnos el informe de dos maneras. Puede usar la [herramienta integrada Notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) de Visual Studio o las páginas de la [comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/). También puede ir directamente a las páginas de nuestra comunidad de desarrolladores; para ello, seleccione el botón **Product feedback** (Comentario sobre el producto) situado en la parte inferior de esta página. La elección depende de si quiere utilizar las herramientas integradas en el IDE para realizar capturas de pantalla y organizar el informe para su publicación en las páginas de la comunidad de desarrolladores o si prefiere usar el sitio web directamente.
 
 > [!NOTE]
-> Independientemente de cómo envíe el informe, Microsoft respeta su privacidad. Microsoft se compromete a cumplir todas las leyes y los reglamentos sobre privacidad de datos. Para obtener información sobre cómo tratamos los datos que nos envía, vea la [Declaración de privacidad de la familia de productos de Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
+> Independientemente de cómo envíe el informe, Microsoft respeta su privacidad. Microsoft se compromete a cumplir todas las leyes y los reglamentos sobre privacidad de datos. Para obtener información sobre cómo tratamos los datos que nos envía, vea la [Declaración de privacidad de Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ### <a name="use-the-report-a-problem-tool"></a>Usar la herramienta Notificar un problema
 

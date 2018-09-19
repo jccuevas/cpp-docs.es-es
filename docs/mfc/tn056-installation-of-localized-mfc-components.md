@@ -1,5 +1,5 @@
 ---
-title: 'TN056: Instalación de componentes de MFC localizados | Documentos de Microsoft'
+title: 'TN056: Instalación de componentes de MFC localizados | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,16 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10addbf21c276a98c980002e4e9a9ea08538455
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c157dee9e1c8b604822d81fb87e2aef25ef97c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682289"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056: Instalación de componentes de MFC localizados
-Esta nota técnica, que se trata la instalación de componentes MFC localizados, ahora está obsoleta.  
+Esta nota técnica, que describe la instalación de componentes MFC localizados, ahora está obsoleta.  
   
- **Vea**[implementar aplicaciones](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4) para adicionales **información sobre la redistribución de aplicaciones de Visual C++.   Consulte también** [Nota técnica 57](../mfc/tn057-localization-of-mfc-components.md) para obtener más información sobre la localización de MFC (aplicaciones).  
+ **Consulte** [Nota técnica 57](../mfc/tn057-localization-of-mfc-components.md) para obtener más información sobre la localización de aplicaciones MFC.  
   
 ## <a name="see-also"></a>Vea también  
  [Notas técnicas por número](../mfc/technical-notes-by-number.md)   

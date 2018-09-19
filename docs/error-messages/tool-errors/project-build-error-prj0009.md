@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0009 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0009 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5692ec643f5e3fe1adebf68048a6c435ab05d6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efeb110823e801dd86a503a7069c4898f400769e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057189"
 ---
 # <a name="project-build-error-prj0009"></a>Error PRJ0009 al compilar el proyecto
-Crear registro no se pudo abrir para escritura.  
-  
- **Asegúrese de que el archivo no está abierto en otro proceso y no está protegida contra escritura.**  
-  
- Después de establecer el **crear registro** propiedad **Sí** y llevar a cabo una compilación o recompilación, Visual C++ no pudo abrir el registro de compilación en modo exclusivo.  
-  
- Inspeccionar el **crear registro** configuración abriendo el **opciones** cuadro de diálogo (en el **herramientas** menú, haga clic en **opciones** comando) y, a continuación, seleccionar **generación de VC ++** en el **proyectos** carpeta. El archivo de compilación se denomina BuildLog.htm y se escribe en el directorio intermedio $(IntDir).  
-  
- Posibles razones para este error:  
-  
--   Se ejecuta dos procesos de Visual C++ y trate de generar la misma configuración del mismo proyecto en ambos al mismo tiempo.  
-  
--   Se abre el archivo de registro de compilación en un proceso que bloquea el archivo.  
-  
--   El usuario no tiene permiso para crear un archivo.  
-  
--   El usuario actual no tiene acceso de escritura al archivo BuildLog.htm.
+
+Crear registro no se pudo abrir para escritura.
+
+**Asegúrese de que el archivo no está abierto por otro proceso y no está protegido contra escritura.**
+
+Después de establecer el **registro de generación** propiedad **Sí** y realizar una compilación o recompilación, Visual C++ no pudo abrir el registro de compilación en modo exclusivo.
+
+Inspeccionar el **registro de generación** establecer abriendo el **opciones** cuadro de diálogo (en el **herramientas** menú, haga clic en **opciones** comando) y, a continuación, seleccionar **generación de VC ++** en el **proyectos** carpeta. El archivo de compilación se denomina BuildLog.htm y se escribe en el directorio intermedio $(IntDir).
+
+Posibles razones para este error:
+
+- Son dos procesos de Visual C++ en ejecución e intenta realizar la compilación de la misma configuración del mismo proyecto en ambas al mismo tiempo.
+
+- Se abre el archivo de registro de compilación en un proceso que bloquea el archivo.
+
+- El usuario no tiene permiso para crear un archivo.
+
+- El usuario actual no tiene acceso de escritura al archivo BuildLog.htm.

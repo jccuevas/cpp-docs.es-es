@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Firecompletion (método) | Documentos de Microsoft'
+title: Firecompletion (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cd18d340a11575ed9f6f52d92a5910dcee1faec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 19b796b1fbc618bb909b186aa86d3c893c8536c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600261"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion (Método)
-Se invoca el controlador de evento de finalización o restablece al delegado de progreso interno.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void FireCompletion(  
-   void  
-) override;  
-  
-virtual void FireCompletion();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- La primera versión de FireCompletion() restablece la variable de delegado de progreso interno. La segunda versión, invoca el controlador de eventos de finalización si la operación asincrónica ha finalizado.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Invoca el controlador de eventos de finalización o restablece al delegado de progreso interno.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void FireCompletion(
+   void
+) override;
+
+virtual void FireCompletion();
+```
+
+## <a name="remarks"></a>Comentarios
+
+La primera versión de **FireCompletion()** restablece la variable de delegado de progreso interno. La segunda versión invoca el controlador de eventos de finalización si se ha completado la operación asincrónica.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

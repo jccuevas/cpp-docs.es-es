@@ -52,11 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213652"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
@@ -100,18 +101,18 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_vscprintf** devuelve el número de caracteres que se generará si la cadena que señala a la lista de argumentos se impriman o se envíen a un archivo o códigos de búfer con el formato especificado. El valor devuelto no incluye el carácter nulo de finalización. **_vscwprintf** realiza la misma función para los caracteres anchos.
+**_vscprintf** devuelve el número de caracteres que se generarían si la cadena señalada por la lista de argumentos se imprimiera o enviara a un archivo o códigos de búfer mediante el formato especificado. El valor devuelto no incluye el carácter nulo de finalización. **_vscwprintf** realiza la misma función para caracteres anchos.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 
-Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen **errno** a **EINVAL**.
+Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada *argumento* (si existe) se convierten según la especificación de formato correspondiente de *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md).
+Cada *argumento* (si existe) se convierte según la especificación de formato correspondiente de *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 > [!IMPORTANT]
-> Garantizar que, si *formato* es una cadena definida por el usuario, terminadas en null y tiene el número correcto y tipo de parámetros. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Garantizar que, si *formato* es una cadena definida por el usuario, se termina en null y tiene el número correcto y el tipo de parámetros. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

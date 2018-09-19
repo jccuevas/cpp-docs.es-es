@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCDesktopAlertDialog | Documentos de Microsoft
+title: CMFCDesktopAlertDialog (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,16 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815f9e8177cc908d7d76ca6d0f3130d1d50c93ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5eb06eb9b3a764589008949485aa8e62f15d3d6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710091"
 ---
-# <a name="cmfcdesktopalertdialog-class"></a>Clase CMFCDesktopAlertDialog
-El `CMFCDesktopAlertDialog` clase se utiliza junto con la [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) para mostrar un cuadro de diálogo personalizado en una ventana emergente.  
+# <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog (clase)
+El `CMFCDesktopAlertDialog` clase se utiliza junto con el [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) para mostrar un cuadro de diálogo personalizado en una ventana emergente.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -89,8 +90,8 @@ BOOL CreateFromParams(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `params`  
- [in] `pParent`  
+*params*<br/>
+[in] [in] *pParent*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -126,7 +127,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -136,5 +137,5 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
  [Clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
- [Clase CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
+ [CMFCDesktopAlertWndInfo (clase)](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
  [CDialogEx (clase)](../../mfc/reference/cdialogex-class.md)

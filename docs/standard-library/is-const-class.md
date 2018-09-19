@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83c929548d95ec0a741fd4b65c372402d22f2679
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099556"
 ---
 # <a name="isconst-class"></a>is_const (Clase)
 
@@ -36,11 +37,12 @@ struct is_const;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si `Ty` es `const-qualified`.
+Una instancia del predicado de tipo contiene true si *Ty* es `const-qualified`.
 
 ## <a name="example"></a>Ejemplo
 

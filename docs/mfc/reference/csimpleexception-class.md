@@ -1,5 +1,5 @@
 ---
-title: Clase CSimpleException | Documentos de Microsoft
+title: CSimpleException (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,13 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 109801ff1dc974488abdc61e6b6fb4af4fafb1bd
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853038"
 ---
-# <a name="csimpleexception-class"></a>Clase CSimpleException
+# <a name="csimpleexception-class"></a>CSimpleException (clase)
 Esta clase es una clase base para excepciones MFC de recursos críticos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,22 +48,22 @@ class AFX_NOVTABLE CSimpleException : public CException
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CSimpleException::GetErrorMessage](#geterrormessage)|Proporciona información sobre un error que se ha producido.|  
+|[CSimpleException::GetErrorMessage](#geterrormessage)|Proporciona texto sobre un error que se ha producido.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CSimpleException` es la clase base para excepciones de MFC de recursos críticos y controla la propiedad y la inicialización de un mensaje de error. Las siguientes clases utilizan `CSimpleException` como su clase base:  
+ `CSimpleException` es la clase base para las excepciones de MFC recursos críticos y controla la propiedad e inicialización de un mensaje de error. Las siguientes clases utilizan `CSimpleException` como su clase base:  
   
 |||  
 |-|-|  
 |[CMemoryException (clase)](../../mfc/reference/cmemoryexception-class.md)|Excepción de memoria insuficiente|  
 |[CNotSupportedException (clase)](../../mfc/reference/cnotsupportedexception-class.md)|Solicitudes de una operación no admitida|  
-|[CResourceException (clase)](../../mfc/reference/cresourceexception-class.md)|Recursos de Windows no se encuentra o no puede crear|  
+|[CResourceException (clase)](../../mfc/reference/cresourceexception-class.md)|Recursos de Windows no se encuentra o no se pueden crear|  
 |[CUserException (clase)](../../mfc/reference/cuserexception-class.md)|No se encontró la excepción que indica un recurso|  
 |[CInvalidArgException (clase)](../../mfc/reference/cinvalidargexception-class.md)|Excepción que indica un argumento no válido|  
   
- Dado que `CSimpleException` es una clase base abstracta, no puede declarar un `CSimpleException` objeto directamente. En su lugar, se deben declarar objetos derivados, como los de la tabla anterior. Si va a declarar su propia clase derivada, utilice las clases anteriores como un modelo.  
+ Dado que `CSimpleException` es una clase base abstracta, no puede declarar un `CSimpleException` objeto directamente. En su lugar, debe declarar objetos derivados, como los de la tabla anterior. Si va a declarar su propia clase derivada, utilice las clases anteriores como un modelo.  
   
- Para obtener más información, consulte el [CException (clase)](../../mfc/reference/cexception-class.md) tema y [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ Para obtener más información, consulte el [clase CException](../../mfc/reference/cexception-class.md) tema y [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -83,11 +84,11 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bAutoDelete`  
- Especifique **TRUE** si la memoria para el `CSimpleException` objeto se ha asignado en el montón. Esto hará que la `CSimpleException` objeto que se eliminará cuando el **eliminar** función miembro se llama para eliminar la excepción. Especifique **FALSE** si la `CSimpleException` objeto está en la pila o es un objeto global. En este caso, el `CSimpleException` objeto no se podrá eliminar cuando el **eliminar** se llama la función miembro.  
+ *bAutoDelete*  
+ Especifique "true" si la memoria para el `CSimpleException` se asignó el objeto en el montón. Esto hará que el `CSimpleException` objeto que se eliminará cuando el `Delete` función miembro se llama para eliminar la excepción. Especifique FALSE si el `CSimpleException` objeto está en la pila o es un objeto global. En este caso, el `CSimpleException` objeto no se podrá eliminar cuando el `Delete` se llama a la función miembro.  
   
 ### <a name="remarks"></a>Comentarios  
- General, nunca se necesita llamar directamente a este constructor. Una función que produce una excepción debe crearse una instancia de un `CException`-clase derivada y llamar a su constructor, o bien debe usar uno de lo MFC iniciar funciones, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), se producirá un tipo predefinido.  
+ General, nunca necesitará llamar directamente a este constructor. Una función que produce una excepción debe crear una instancia de un `CException`-clase derivada y llamar a su constructor, o bien debe usar uno de MFC throw funciones, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), inicien un tipo predefinido.  
   
 ##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  Llame a esta función miembro para proporcionar el texto sobre un error que se ha producido.  
@@ -100,17 +101,17 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszError`  
+ *lpszError*  
  Un puntero a un búfer que recibirá un mensaje de error.  
   
- `nMaxError`  
- El número máximo de caracteres que puede contener el búfer, incluido el **NULL** terminador.  
+ *nMaxError*  
+ El número máximo de caracteres que puede contener el búfer, incluido el terminador NULL.  
   
- `pnHelpContext`  
- La dirección de un **UINT** que va a recibir el identificador de contexto de ayuda. Si **NULL**, no se devolverá ningún identificador.  
+ *pnHelpContext*  
+ La dirección de un tipo UINT que recibirá el identificador de contexto de ayuda. Si es NULL, no se devolverá ningún identificador.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; en caso contrario, devuelve 0 si ningún error de texto del mensaje está disponible.  
+ Distinto de cero si la función se realiza correctamente; en caso contrario, devuelve 0 si ningún error de texto del mensaje está disponible.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  

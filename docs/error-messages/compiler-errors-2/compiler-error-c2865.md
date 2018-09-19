@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2865 | Documentos de Microsoft
+title: Error del compilador C2865 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b2c6c831fde18f9054e139a120d834a75b6950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc0a49f8e6ab42f7e607cd5f4f7cc91f6895abe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035173"
 ---
 # <a name="compiler-error-c2865"></a>Error del compilador C2865
-'función': comparación no válida de handle_or_pointer  
-  
- Puede comparar las referencias a [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md) o administrar los tipos de referencia de igualdad para comprobar si hacen referencia al mismo objeto (==) o a objetos diferentes (! =).  
-  
- No puede comparar ellos para la ordenación debido a que el tiempo de ejecución de .NET puede pasarse objetos administrados en cualquier momento, cambiar el resultado de la prueba.
+
+'function': comparación no válida para handle_or_pointer
+
+Puede comparar las referencias a [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md) o tipos de referencia para la igualdad para comprobar si hacen referencia al mismo objeto (==) o a objetos diferentes administrados (! =).
+
+No se puede compararlos para ordenar porque el tiempo de ejecución .NET podría mover objetos administrados en cualquier momento, cambiar el resultado de la prueba.

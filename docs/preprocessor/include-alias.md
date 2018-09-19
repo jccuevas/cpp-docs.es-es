@@ -1,5 +1,5 @@
 ---
-title: include_alias | Documentos de Microsoft
+title: include_alias | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544503"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -49,7 +50,7 @@ Algunos sistemas de archivos permiten nombres de archivo de encabezado más larg
 #include "GraphicsMenu.h"
 ```
 
-El alias que se esté buscando debe coincidir exactamente con la especificación, tanto en uso de mayúsculas y minúsculas, como de ortografía y comillas dobles o corchetes angulares. El **include_alias** pragma realiza una búsqueda de coincidencias en los nombres de archivo de cadenas simple; no se realiza ninguna otra validación del nombre de archivo. Por ejemplo, dadas las siguientes directivas,
+El alias que se esté buscando debe coincidir exactamente con la especificación, tanto en uso de mayúsculas y minúsculas, como de ortografía y comillas dobles o corchetes angulares. El **include_alias** pragma realiza la búsqueda de coincidencias en los nombres de archivo de cadena simple; se realiza ninguna otra validación de nombre de archivo. Por ejemplo, dadas las siguientes directivas,
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -57,7 +58,7 @@ El alias que se esté buscando debe coincidir exactamente con la especificación
 #include "sys/mymath.h"
 ```
 
-no se realiza ninguna operación de alias (sustitución), ya que las cadenas del archivo de encabezado no coinciden exactamente. Además, los nombres de encabezado utilizados como argumentos para las opciones del compilador /Yu y/Yc, o la **hdrstop** pragma, no se sustituyen. Por ejemplo, si el archivo de código fuente contiene la siguiente directiva,
+no se realiza ninguna operación de alias (sustitución), ya que las cadenas del archivo de encabezado no coinciden exactamente. Además, los nombres de encabezado utilizados como argumentos para el `/Yu` y `/Yc` opciones del compilador, o el `hdrstop` pragma, no se sustituyen. Por ejemplo, si el archivo de código fuente contiene la siguiente directiva,
   
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -76,7 +77,7 @@ Puede usar el **include_alias** pragma para asignar cualquier nombre de archivo 
 #include <stdio.h>
 ```
 
-No mezcle los nombres de archivo delimitados por comillas con los nombres de archivo entre corchetes angulares. Por ejemplo, dadas las dos anteriores **#pragma include_alias** directivas, el compilador no realiza ninguna sustitución en las siguientes `#include` directivas:
+No mezcle los nombres de archivo delimitados por comillas con los nombres de archivo entre corchetes angulares. Por ejemplo, dadas las dos anteriores `#pragma include_alias` directivas, el compilador no realiza ninguna sustitución en las siguientes `#include` directivas:
 
 ```cpp
 #include <api.h>
@@ -89,14 +90,14 @@ Además, la directiva siguiente genera un error:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Tenga en cuenta que el nombre de archivo indicado en mensajes de error, o como el valor de la **&#95; &#95;archivo&#95; &#95;** (macro), es el nombre del archivo después de haber realizado la sustitución. Por ejemplo, ver los resultados después de las siguientes directivas:
+Tenga en cuenta que el nombre de archivo indicado en mensajes de error, o como el valor de predefinido `__FILE__` macro, es el nombre del archivo después de haber realizado la sustitución. Por ejemplo, puede ver la salida después de las siguientes directivas:
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )
 #include "VeryLongFileName.H"
 ```
 
-Un error en VERYLONGFILENAME. H produce el siguiente mensaje de error:
+Un error en VERYLONGFILENAME. H, genera el mensaje de error siguiente:
 
 ```Output
 myfile.h(15) : error C2059 : syntax error

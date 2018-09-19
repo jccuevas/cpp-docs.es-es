@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4377 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4377 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef049f85cd17bfeaba243b84da9fca93ae4036b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 613ebe183b61c6b9894ed3b726f90061e2b24ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047179"
 ---
 # <a name="compiler-warning-level-1-c4377"></a>Advertencia del compilador (nivel 1) C4377
-los tipos nativos son privados de forma predeterminada; -d1PrivateNativeTypes está en desuso  
-  
- En versiones anteriores, los tipos nativos en ensamblados eran públicos de forma predeterminada y una opción de compilador interno y no documentada (**/d1PrivateNativeTypes**) se usa para hacer que sean privadas.  
-  
- Todos los tipos, nativos y CLR, ahora son privados de forma predeterminada en un ensamblado, por lo que **/d1PrivateNativeTypes** ya no es necesario.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4377.  
-  
-```  
-// C4377.cpp  
-// compile with: /clr /d1PrivateNativeTypes /W1  
-// C4377 warning expected  
-int main() {}  
+
+tipos nativos son privados de forma predeterminada; -d1PrivateNativeTypes está en desuso
+
+En versiones anteriores, los tipos nativos en ensamblados eran públicos de forma predeterminada y una opción de compilador interno y no documentada (**/d1PrivateNativeTypes**) se usó para que sean privados.
+
+Todos los tipos, nativos y CLR, ahora son privados de forma predeterminada en un ensamblado, por lo que **/d1PrivateNativeTypes** ya no es necesario.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4377.
+
+```
+// C4377.cpp
+// compile with: /clr /d1PrivateNativeTypes /W1
+// C4377 warning expected
+int main() {}
 ```

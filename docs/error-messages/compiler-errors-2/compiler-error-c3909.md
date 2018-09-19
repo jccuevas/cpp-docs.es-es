@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3909 | Documentos de Microsoft
+title: Error del compilador C3909 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e89dd422b1289d926ab04a0f17ae4d6185d19d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb3526f537a2eceb006f6af9e9b0faba44bf9cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058710"
 ---
 # <a name="compiler-error-c3909"></a>Error del compilador C3909
-aWinRT o declaración de evento administrado debe aparecer en un tipo administrado o WinRT  
-  
- Se declaró un evento de Windows Runtime o administrado en un tipo nativo. Para corregir este error, declare los eventos en tipos de Windows Runtime o en tipos administrados.  
-  
- Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).  
-  
- El ejemplo siguiente genera el error C3909 y muestra cómo corregirlo:  
-  
-```  
-// C3909.cpp  
-// compile with: /clr /c  
-delegate void H();  
-class X {  
-   event H^ E;   // C3909 - use ref class X instead  
-};  
-  
-ref class Y {  
-   static event H^ E {  
-      void add(H^) {}  
-      void remove( H^ h ) {}  
-      void raise( ) {}  
-   }  
-};  
+
+aWinRT o declaración de evento administrado debe aparecer en un tipo administrado o WinRT
+
+Se declaró un evento de Windows Runtime o administrado en un tipo nativo. Para corregir este error, declare los eventos en tipos de Windows Runtime o en tipos administrados.
+
+Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).
+
+El ejemplo siguiente genera el error C3909 y muestra cómo corregirlo:
+
+```
+// C3909.cpp
+// compile with: /clr /c
+delegate void H();
+class X {
+   event H^ E;   // C3909 - use ref class X instead
+};
+
+ref class Y {
+   static event H^ E {
+      void add(H^) {}
+      void remove( H^ h ) {}
+      void raise( ) {}
+   }
+};
 ```

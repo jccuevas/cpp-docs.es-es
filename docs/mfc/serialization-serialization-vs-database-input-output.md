@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379582"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serialización: Serialización frente. Base de datos de entrada/salida
 Este artículo explica cuándo se debe utilizar objetos de documentos y la serialización de entrada basado en archivos/salida (E/S) y cuando otras técnicas de E/S son adecuados, ya que la aplicación lee y escribe datos en una base por transacción, como en las aplicaciones de base de datos. Si no utiliza la serialización, también no necesita el archivo abierto, guardar y guardar como comandos. Los temas tratados son:  

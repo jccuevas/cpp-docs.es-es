@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK4204 advertencia | Documentos de Microsoft
+title: Las herramientas del vinculador LNK4204 advertencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f000fa42357a299c943eda0cd5f8697aee138f4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee6164f20bbf91a8cb0b88d8a1333107f239d3f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136242"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Advertencia de las herramientas del vinculador LNK4204
-'filename' falta información de depuración para hacer referencia al módulo; se vinculará el objeto sin información de depuración  
-  
- El archivo .pdb tiene una firma errónea. El vinculador continuará vinculando el objeto sin información de depuración. Puede que desee volver a compilar el archivo de objeto mediante la [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción.  
-  
- LNK4204 puede producirse si algunos de los objetos de la biblioteca hacen referencia a un archivo que ya no existe. Esto puede ocurrir al volver a generar la solución, por ejemplo; un archivo de objeto se puede eliminar y no vuelve a generar debido a un error de compilación. En este caso, tendrá que compilar con **/Z7**, o **/Fd**para actualizar los objetos para hacer referencia a una único archivo por biblioteca (que no sea el nombre de archivo .pdb predeterminado).  Para obtener más información, consulte [/Fd (Nombre del archivo de base de datos del programa)](../../build/reference/fd-program-database-file-name.md).  Asegúrese de que el archivo .pdb se guarda con la biblioteca cada vez que se actualiza en el sistema de control de código fuente.
+
+Falta información de depuración para hacer referencia al módulo; 'filename' vinculación de objetos como si no hay información de depuración
+
+El archivo .pdb tiene una firma errónea. El vinculador continuará vincular el objeto sin información de depuración. Puede que desee volver a compilar el archivo de objeto mediante el [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción.
+
+LNK4204 puede producirse si algunos de los objetos en la biblioteca hacen referencia a un archivo que ya no existe. Esto podría suceder al volver a generar la solución, por ejemplo: un archivo objeto podría ser eliminado y no recompila debido a un error de compilación. En este caso, tendrá que compilar con **/Z7**, o **/Fd**, para actualizar los objetos para hacer referencia a una único archivo por biblioteca (es decir, no el nombre del archivo .pdb de forma predeterminada).  Para obtener más información, consulte [/Fd (Nombre del archivo de base de datos del programa)](../../build/reference/fd-program-database-file-name.md).  Asegúrese de que el archivo .pdb se guarda con la biblioteca cada vez se actualiza en el sistema de control de código fuente.

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2232 | Documentos de Microsoft
+title: Error del compilador C2232 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504f92a72b500548c2231958afa98ccdc177e12d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0e7c20de3de097fc09b80459e96158282ef7bba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026054"
 ---
 # <a name="compiler-error-c2232"></a>Error del compilador C2232
-'->': operando izquierdo tiene el ''tipo class-key,'.' use  
-  
- El operando situado a la izquierda del operador `->` no es un puntero. Utilice el operador punto (.) para una clase, estructura o unión.  
-  
- El ejemplo siguiente genera la advertencia C2232:  
-  
-```  
-// C2232.c  
-struct X {  
-    int member;  
-} x, *px;  
-int main() {  
-    x->member = 0;   // C2232, x is not a pointer  
-  
-    px->member = 0;  
-    x.member = 0;  
-}  
+
+'->': operando izquierdo tenga 'class-key' tipo'.' use
+
+El operando situado a la izquierda del operador `->` no es un puntero. Utilice el operador punto (.) para una clase, estructura o unión.
+
+El ejemplo siguiente genera la advertencia C2232:
+
+```
+// C2232.c
+struct X {
+    int member;
+} x, *px;
+int main() {
+    x->member = 0;   // C2232, x is not a pointer
+
+    px->member = 0;
+    x.member = 0;
+}
 ```

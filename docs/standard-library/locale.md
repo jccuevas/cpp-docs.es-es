@@ -1,5 +1,5 @@
 ---
-title: '&lt;configuración regional&gt; | Documentos de Microsoft'
+title: '&lt;configuración regional&gt; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81483b21f42f17320cb6d7b636fe5dd1f4c5e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee98361507236744608145dde6e326964a71b82
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953582"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -60,27 +61,27 @@ Define funciones y clases de plantilla que los programas de C++ pueden utilizar 
 |Clase|Descripción|
 |-|-|
 |[codecvt](../standard-library/codecvt-class.md)|Clase de plantilla que proporciona una faceta utilizada para convertir entre las codificaciones de caracteres internas y externas.|
-|[codecvt_base](../standard-library/codecvt-base-class.md)|Una clase base de la clase codecvt que se usa para definir un tipo de enumeración al que se hace referencia como **result**, que se usa como el tipo de valor devuelto para las funciones miembro de la faceta para indicar el resultado de una conversión.|
+|[codecvt_base](../standard-library/codecvt-base-class.md)|Una clase base para la clase codecvt que se utiliza para definir un tipo de enumeración denomina `result`, que se usa como el tipo de valor devuelto para las funciones miembro de faceta para indicar el resultado de una conversión.|
 |[codecvt_byname](../standard-library/codecvt-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las conversiones.|
 |[collate](../standard-library/collate-class.md)|Una clase de plantilla de intercalación que proporciona una faceta que controla las convenciones para la ordenación de cadenas.|
-|[collate_byname](../standard-library/collate-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las convenciones de ordenación de cadenas.|
+|[collate_byname)](../standard-library/collate-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las convenciones de ordenación de cadenas.|
 |[ctype](../standard-library/ctype-class.md)|Una clase de plantilla que proporciona una faceta que se utiliza para ordenar caracteres, convertir entre mayúsculas y minúsculas, y entre el conjunto de caracteres nativo y el que usa la configuración regional.|
-|[CType\<char >](../standard-library/ctype-char-class.md)|Una clase que es una especialización explícita de la clase de plantilla **ctype\<CharType**> escriba `char`, que describe un objeto que puede actuar como una faceta de configuración regional para caracterizar distintas propiedades de un carácter de tipo `char`.|
-|[ctype_base](../standard-library/ctype-base-class.md)|Una clase base para la clase ctype que se utiliza para definir los tipos de enumeración usados para clasificar o comprobar caracteres individualmente o dentro de intervalos completos.|
-|[ctype_byname](../standard-library/ctype-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta ctype de una configuración regional concreta, habilitando la clasificación y conversión de caracteres entre mayúsculas y minúsculas y entre los conjuntos de caracteres especificados en la configuración regional y nativa.|
+|[CType\<char >](../standard-library/ctype-char-class.md)|Una clase que es una especialización explícita de la clase de plantilla `ctype<CharType>` escriba **char**, que describe un objeto que puede actuar como una faceta de configuración regional para caracterizar distintas propiedades de un carácter de tipo **char**.|
+|[ctype_base)](../standard-library/ctype-base-class.md)|Una clase base para la clase ctype que se utiliza para definir los tipos de enumeración usados para clasificar o comprobar caracteres individualmente o dentro de intervalos completos.|
+|[ctype_byname)](../standard-library/ctype-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta ctype de una configuración regional concreta, habilitando la clasificación y conversión de caracteres entre mayúsculas y minúsculas y entre los conjuntos de caracteres especificados en la configuración regional y nativa.|
 |[locale](../standard-library/locale-class.md)|Una clase que describe un objeto de configuración regional que encapsula la información específica de la configuración regional como un conjunto de facetas que definen colectivamente un entorno adaptado concreto.|
 |[messages](../standard-library/messages-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para recuperar mensajes adaptados de un catálogo de mensajes internacionalizados para una configuración regional concreta.|
-|[messages_base](../standard-library/messages-base-class.md)|Una clase base que describe un tipo `int` para el catálogo de mensajes.|
+|[messages_base)](../standard-library/messages-base-class.md)|Una clase base que describe un **int** tipo para el catálogo de mensajes.|
 |[messages_byname](../standard-library/messages-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta de mensajes de una configuración regional concreta, lo que permite la recuperación de mensajes adaptados.|
-|[money_base](../standard-library/money-base-class.md)|Una clase base para la clase ctype que se utiliza para definir los tipos de enumeración usados para clasificar o comprobar caracteres individualmente o dentro de intervalos completos.|
+|[money_base)](../standard-library/money-base-class.md)|Una clase base para la clase ctype que se utiliza para definir los tipos de enumeración usados para clasificar o comprobar caracteres individualmente o dentro de intervalos completos.|
 |[money_get](../standard-library/money-get-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de secuencias de tipo **CharType** en valores monetarios.|
 |[money_put](../standard-library/money-put-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de valores monetarios en secuencias de tipo **CharType**.|
-|[moneypunct](../standard-library/moneypunct-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo **CharType** usa para representar un campo monetario de entrada o salida.|
-|[moneypunct_byname](../standard-library/moneypunct-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta moneypunct de una configuración regional concreta que permite el formato de los campos monetarios de entrada o de salida.|
+|[moneypunct](../standard-library/moneypunct-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo **CharType** utilizado para representar un campo de entrada monetario o un campo de salida monetario.|
+|[moneypunct_byname)](../standard-library/moneypunct-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta moneypunct de una configuración regional concreta que permite el formato de los campos monetarios de entrada o de salida.|
 |[num_get](../standard-library/num-get-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de secuencias de tipo **CharType** en valores numéricos.|
 |[num_put](../standard-library/num-put-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de valores numéricos en secuencias de tipo **CharType**.|
-|[numpunct](../standard-library/numpunct-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta local para describir las secuencias de tipo **CharType** usadas para representar información sobre el formato y la puntuación de expresiones numéricas y booleanas.|
-|[numpunct_byname](../standard-library/numpunct-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta moneypunct de una configuración regional concreta, lo que habilita el formato y la puntuación de expresiones numéricas y booleanas.|
+|[numpunct](../standard-library/numpunct-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo **CharType** usadas para representar información sobre el formato y la puntuación de expresiones numéricas y booleanas.|
+|[numpunct_byname)](../standard-library/numpunct-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta moneypunct de una configuración regional concreta, lo que habilita el formato y la puntuación de expresiones numéricas y booleanas.|
 |[time_base](../standard-library/time-base-class.md)|Una clase que actúa como clase base para las facetas de la clase de plantilla time_get y que define el tipo enumerado dateorder y varias de sus constantes.|
 |[time_get](../standard-library/time-get-class.md)|Una clase de plantilla que describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de secuencias de tipo **CharType** en valores de hora.|
 |[time_get_byname](../standard-library/time-get-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta de configuración regional de tipo time_get\<**CharType**, **InputIterator**>.|

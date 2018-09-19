@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686677"
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 El **OMP_DYNAMIC** variable de entorno habilita o deshabilita el ajuste dinámico del número de subprocesos disponibles para la ejecución de regiones en paralelo, a menos que realizar un ajuste dinámico explícitamente está habilitado o deshabilitado mediante una llamada a la **omp_set_dynamic ()** rutina de biblioteca. Su valor debe ser **TRUE** o **FALSE**.  

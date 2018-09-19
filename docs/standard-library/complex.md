@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726705"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Define la clase de plantilla de contenedores **complejo** y sus plantillas auxiliares.
+Define la clase de plantilla contenedor `complex` y sus plantillas auxiliares.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,33 +38,29 @@ Define la clase de plantilla de contenedores **complejo** y sus plantillas auxil
 
 Un número complejo es un par ordenado de números reales. En términos puramente geométricos, el plano complejo es el plano real y bidimensional. Las cualidades especiales del plano complejo que lo diferencian del plano real se deben a que tiene una estructura algebraica adicional. Esta estructura algebraica tiene dos operaciones fundamentales:
 
-- Adición, definida como (*una*, *b*) + (*c*, *d.*) = (*una* + *c* , *b* + *d.*)
+- Adición, definida como (*un*, *b*) + (*c*, *d.*) = (*un* + *c* , *b* + *d.*)
 
-- Multiplicación, definida como (*una*, *b*) \* (*c*, *d.*) = (*ac*  -  *bd*, *ad* + *bc*)
+- Multiplicación definida como (*un*, *b*) \* (*c*, *d.*) = (*ac*  -  *bd*, *ad* + *bc*)
 
 El conjunto de números complejos con las operaciones de suma compleja y multiplicación compleja son un campo en el sentido algebraico estándar:
 
 - Las operaciones de suma y multiplicación son conmutativas y asociativas, y la multiplicación se distribuye sobre la suma exactamente como lo hace con la suma y multiplicación reales en el campo de los números reales.
 
-- Número complejo (0, 0) es la identidad aditiva y (1, 0) es la identidad de multiplicación.
+- El número complejo (0, 0) es la identidad aditiva y (1, 0) es la identidad multiplicativa.
 
-- El inverso aditivo de un número complejo (*una*, *b*) es (-*una*, -*b*) y el inverso multiplicativo de todos estos números complejos excepto (0, 0) es
+- El inverso aditivo de un número complejo (*un*, *b*) es (-*un*, -*b*) y el inverso multiplicativo de todos estos números complejos excepto (0, 0) es
 
-   (*una*/ (*una*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*una*<sup>2</sup> + *b*<sup>2</sup>))
+   (*un*/ (*un*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*un*<sup>2</sup> + *b*<sup>2</sup>))
 
 Mediante la representación de un número complejo *z* = (*una*, *b*) en el formulario *z* = *una*  +  *bi*, donde *i*<sup>2</sup> = -1, las reglas para el álgebra del conjunto de números reales se puede aplicar al conjunto de números complejos y a sus componentes. Por ejemplo:
 
-   (1 + 2*i*) \* (2 + 3*i*)  
-   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
-   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*i*  
-   = -4 + 7*i*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* = -4 + 7*i*
 
-El sistema de números complejos es un campo, pero no es un campo ordenado. No hay ningún orden de los números complejos, como sucede con el campo de números reales y sus subconjuntos, por lo que las desigualdades no se puede aplicar a números complejos como se hace con los números reales.
+El sistema de números complejos es un campo, pero no es un campo ordenado. No hay ningún orden de los números complejos, como sucede con el campo de números reales y sus subconjuntos, por lo que las desigualdades no se puede aplicar a números complejos tal como están para números reales.
 
 Existen tres formas comunes de representar un número complejo *z*:
 
-- Cartesiana: *z* = *una* + *bi*
+- Cartesiana: *z* = *un* + *bi*
 
 - Polar: *z* = *r* (cos *p* + *i* sen *p*)
 
@@ -79,7 +76,7 @@ Los términos usados en estas representaciones estándar de un número complejo 
 
 - El ángulo de fase o argumento *p* en radianes.
 
-A menos que se especifique lo contrario, las funciones que pueden devolver varios valores se deben devolver un valor principal de sus argumentos mayor que - π y menor que o igual a + π mantenerlos único con valores. Todos los ángulos deben expresarse en radianes, donde hay 2π radianes (360 grados) en un círculo.
+A menos que se especifique lo contrario, las funciones que pueden devolver varios valores se deben devolver un valor principal de sus argumentos mayor que - π y menor que o igual a + π mantenerlos solo con valores. Todos los ángulos deben expresarse en radianes, donde hay 2π radianes (360 grados) en un círculo.
 
 ### <a name="functions"></a>Funciones
 

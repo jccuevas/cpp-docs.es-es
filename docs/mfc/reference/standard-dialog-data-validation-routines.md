@@ -1,5 +1,5 @@
 ---
-title: Rutinas de validación de datos de cuadros de diálogo estándar | Documentos de Microsoft
+title: Rutinas de validación de datos de cuadro de diálogo estándar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f553f6fdf789e1b7130b5ca4b4d1fe4a762b7e9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886042"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutinas de validación de datos de cuadros de diálogo estándar
-Este tema enumeran las rutinas de validación (DDV) de datos de cuadro de diálogo estándar utilizadas para los controles de cuadro de diálogo comunes de MFC.  
+En este tema se enumera las rutinas de validación (DDV) de datos de cuadro de diálogo estándar utilizadas para los controles de cuadro de diálogo comunes de MFC.  
   
 > [!NOTE]
 >  Las rutinas de intercambio de datos de cuadro de diálogo estándar se definen en el afxdd_.h del archivo de encabezado. Sin embargo, las aplicaciones deben incluir afxwin.h.  
@@ -30,21 +31,21 @@ Este tema enumeran las rutinas de validación (DDV) de datos de cuadro de diálo
   
 |||  
 |-|-|  
-|[DDV_MaxChars](#ddv_maxchars)|Comprueba que el número de caracteres en un valor de control determinado no supere un máximo especificado.|  
-|[DDV_MinMaxByte](#ddv_minmaxbyte)|Comprueba el valor de un control determinado no supera una determinada **bytes** intervalo.|  
-|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Comprueba el que valor de un control determinado no supere un intervalo de tiempo determinado.|  
-|[DDV_MinMaxDouble](#ddv_minmaxdouble)|Comprueba el valor de un control determinado no supera una determinada **doble** intervalo.|  
-|[DDV_MinMaxDWord](#ddv_minmaxdword)|Comprueba el valor de un control determinado no supera una determinada **DWORD** intervalo.|  
-|[DDV_MinMaxFloat](#ddv_minmaxfloat)|Comprueba el valor de un control determinado no supera una determinada **float** intervalo.|  
-|[DDV_MinMaxInt](#ddv_minmaxint)|Comprueba el valor de un control determinado no supera una determinada **int** intervalo.|  
-|[DDV_MinMaxLong](#ddv_minmaxlong)|Comprueba el valor de un control determinado no supera una determinada **largo** intervalo.|  
-|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|Comprueba el valor de un control determinado no supera una determinada **LONGLONG** intervalo.|  
-|[DDV_MinMaxMonth](#ddv_minmaxmonth)|Comprueba el que valor de un control determinado no supere un intervalo de fechas determinado.|  
-|[DDV_MinMaxShort](#ddv_minmaxshort)|Comprueba el valor de un control determinado no supera una determinada **corto** intervalo.|  
+|[DDV_MaxChars](#ddv_maxchars)|Comprueba que el número de caracteres en un valor de un control determinado no superar un máximo especificado.|  
+|[DDV_MinMaxByte](#ddv_minmaxbyte)|Comprueba un valor de control determinada no supera un determinado **bytes** intervalo.|  
+|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Comprueba el que valor de un control determinado no supera un intervalo de tiempo determinado.|  
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|Comprueba un valor de control determinada no supera un determinado **doble** intervalo.|  
+|[DDV_MinMaxDWord](#ddv_minmaxdword)|Comprueba un valor de control determinada no supera un determinado **DWORD** intervalo.|  
+|[DDV_MinMaxFloat](#ddv_minmaxfloat)|Comprueba un valor de control determinada no supera un determinado **float** intervalo.|  
+|[DDV_MinMaxInt](#ddv_minmaxint)|Comprueba un valor de control determinada no supera un determinado **int** intervalo.|  
+|[DDV_MinMaxLong](#ddv_minmaxlong)|Comprueba un valor de control determinada no supera un determinado **largo** intervalo.|  
+|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|Comprueba un valor de control determinada no supera un determinado **LONGLONG** intervalo.|  
+|[DDV_MinMaxMonth](#ddv_minmaxmonth)|Comprueba el que valor de un control determinado no supera un intervalo de fechas determinado.|  
+|[DDV_MinMaxShort](#ddv_minmaxshort)|Comprueba un valor de control determinada no supera un determinado **corto** intervalo.|  
 |[DDV_MinMaxSlider](#ddv_minmaxslider)|Comprueba que el valor de un control deslizante determinado se encuentra dentro del intervalo especificado.|  
-|[DDV_MinMaxUInt](#ddv_minmaxuint)|Comprueba el valor de un control determinado no supera una determinada **UINT** intervalo.|  
-|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Comprueba el que valor de un control determinado se sitúa entre dos valores especificados.| 
-|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Comprueba el valor de un control determinado no supera una determinada **ULONGLONG** intervalo.|  
+|[DDV_MinMaxUInt](#ddv_minmaxuint)|Comprueba un valor de control determinada no supera un determinado **UINT** intervalo.|  
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Comprueba el que valor de un control determinado se encuentra entre dos valores especificados.| 
+|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Comprueba un valor de control determinada no supera un determinado **ULONGLONG** intervalo.|  
   
 
   
@@ -59,23 +60,23 @@ void AFXAPI DDV_MaxChars(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `nChars`  
+ *nChars*  
  Número máximo de caracteres permitidos.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
- Llame a `DDV_MinMaxByte` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxByte` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxByte(
@@ -86,26 +87,26 @@ void AFXAPI DDV_MinMaxByte(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
- Valor mínimo (de tipo **bytes**) permitido.  
+ *propiedades minVal*  
+ Valor mínimo (de tipo bytes) permitido.  
   
- `maxVal`  
- Valor máximo (de tipo **bytes**) permitido.  
+ *maxVal*  
+ Valor máximo (de tipo bytes) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
- Llame a `DDV_MinMaxDateTime` para comprobar que el valor de fecha y hora en el selector de fecha y hora control ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) asociado a *refValue* se sitúa entre `refMinRange` y `refMaxRange`.  
+ Llame a `DDV_MinMaxDateTime` para comprobar que el valor de fecha y hora en el selector de fecha y hora control ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) asociado con *refValue* se encuentra entre *refMinRange*y *refMaxRange*.  
   
 ```   
 void AFXAPI DDV_MinMaxDateTime(
@@ -122,26 +123,26 @@ void AFXAPI DDV_MinMaxDateTime(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
- Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección. No es necesario eliminar el objeto.  
+ *pDX*  
+ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección. No es necesario eliminar este objeto.  
   
  *refValue*  
- Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) o [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto asociado a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control. Este objeto contiene los datos que se va a validar.  
+ Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) o [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto asociado a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control. Este objeto contiene los datos que se va a validarse.  
   
- `refMinRange`  
+ *refMinRange*  
  Mínimo valor permitido de fecha y hora.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Valor de fecha y hora máximo permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
- Llame a `DDV_MinMaxDouble` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxDouble` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxDouble(
@@ -152,26 +153,26 @@ void AFXAPI DDV_MinMaxDouble(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
+ *propiedades minVal*  
  Valor mínimo (de tipo **doble**) permitido.  
   
- `maxVal`  
+ *maxVal*  
  Valor máximo (de tipo **doble**) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
- Llame a `DDV_MinMaxDWord` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxDWord` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxDWord(
@@ -182,26 +183,26 @@ void AFXAPI DDV_MinMaxDWord(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
- Valor mínimo (de tipo `DWORD`) permitido.  
+ *propiedades minVal*  
+ Valor mínimo (de tipo DWORD) permitido.  
   
- `maxVal`  
- Valor máximo (de tipo `DWORD`) permitido.  
+ *maxVal*  
+ Valor máximo (de tipo DWORD) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
- Llame a `DDV_MinMaxFloat` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxFloat` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxFloat(
@@ -212,26 +213,26 @@ void AFXAPI DDV_MinMaxFloat(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
+ *propiedades minVal*  
  Valor mínimo (de tipo **float**) permitido.  
   
- `maxVal`  
+ *maxVal*  
  Valor máximo (de tipo **float**) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
- Llame a `DDV_MinMaxInt` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxInt` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxInt(
@@ -242,26 +243,26 @@ void AFXAPI DDV_MinMaxInt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
- Valor mínimo (de tipo `int`) permitido.  
+ *propiedades minVal*  
+ Valor mínimo (de tipo **int**) permitido.  
   
- `maxVal`  
- Valor máximo (de tipo `int`) permitido.  
+ *maxVal*  
+ Valor máximo (de tipo **int**) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
- Llame a `DDV_MinMaxLong` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxLong` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxLong(
@@ -272,26 +273,26 @@ void AFXAPI DDV_MinMaxLong(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
+ *propiedades minVal*  
  Valor mínimo (de tipo **largo**) permitido.  
   
- `maxVal`  
+ *maxVal*  
  Valor máximo (de tipo **largo**) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
- Llame a `DDV_MinMaxLongLong` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxLongLong` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxLongLong(
@@ -302,26 +303,26 @@ void AFXAPI DDV_MinMaxLongLong(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
- Valor mínimo (de tipo **LONGLONG**) permitido.  
+ *propiedades minVal*  
+ Valor mínimo (de tipo LONGLONG) permitido.  
   
- `maxVal`  
- Valor máximo (de tipo **LONGLONG**) permitido.  
+ *maxVal*  
+ Valor máximo (de tipo LONGLONG) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
- Llame a `DDV_MinMaxMonth` para comprobar que el valor de fecha y hora en el calendario mensual control ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) asociado a *refValue* se sitúa entre `refMinRange` y `refMaxRange`.  
+ Llame a `DDV_MinMaxMonth` para comprobar que el valor de fecha y hora en el calendario mensual control ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) asociado con *refValue* se encuentra entre *refMinRange* y *refMaxRange*.  
   
 ```   
 void AFXAPI DDV_MinMaxMonth(
@@ -338,26 +339,26 @@ void AFXAPI DDV_MinMaxMonth(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *refValue*  
- Una referencia a un objeto de tipo `CTime` o `COleDateTime` asociada a una variable de miembro del cuadro de diálogo, vista de formulario o el objeto de vista de control. Este objeto contiene los datos que se va a validar. Fases de MFC referencia this cuando `DDV_MinMaxMonth` se llama.  
+ Una referencia a un objeto de tipo `CTime` o `COleDateTime` asociado a una variable de miembro del cuadro de diálogo, vista de formulario o controlar el objeto de vista. Este objeto contiene los datos que se va a validarse. Pasadas MFC esta referencia cuando `DDV_MinMaxMonth` se llama.  
   
- `refMinRange`  
+ *refMinRange*  
  Mínimo valor permitido de fecha y hora.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Valor de fecha y hora máximo permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
- Llame a `DDV_MinMaxShort` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxShort` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxShort(
@@ -368,26 +369,26 @@ void AFXAPI DDV_MinMaxShort(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
+ *propiedades minVal*  
  Valor mínimo (de tipo **corto**) permitido.  
   
- `maxVal`  
+ *maxVal*  
  Valor máximo (de tipo **corto**) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
- Llame a `DDV_MinMaxSlider` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxSlider` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxSlider(
@@ -398,26 +399,26 @@ void AFXAPI DDV_MinMaxSlider(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia al valor que se debe validar. Este parámetro contiene o establece la posición de posición actual del control deslizante.  
+ Una referencia al valor que se va a validar. Este parámetro contiene o establece la posición de control de posición actual del control deslizante.  
   
- `minVal`  
+ *propiedades minVal*  
  Valor mínimo permitido.  
   
- `maxVal`  
+ *maxVal*  
  Valor máximo permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md). Para obtener información acerca de los controles deslizantes, consulte [usar CSliderCtrl](../../mfc/using-csliderctrl.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md). Para obtener información acerca de los controles deslizantes, consulte [usar CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
- Llame a `DDV_MinMaxUInt` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxUInt` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxUInt(
@@ -428,26 +429,26 @@ void AFXAPI DDV_MinMaxUInt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
- Valor mínimo (de tipo **UINT**) permitido.  
+ *propiedades minVal*  
+ Valor mínimo (de tipo UINT) permitido.  
   
- `maxVal`  
- Valor máximo (de tipo **UINT**) permitido.  
+ *maxVal*  
+ Valor máximo (de tipo UINT) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
- Llame a `DDV_MinMaxULongLong` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+ Llame a `DDV_MinMaxULongLong` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
   
 ```   
 void AFXAPI DDV_MinMaxULongLong(
@@ -458,20 +459,20 @@ void AFXAPI DDV_MinMaxULongLong(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
- Valor mínimo (de tipo **ULONGLONG**) permitido.  
+ *propiedades minVal*  
+ Valor mínimo (de tipo ULONGLONG) permitido.  
   
- `maxVal`  
- Valor máximo (de tipo **ULONGLONG**) permitido.  
+ *maxVal*  
+ Valor máximo (de tipo ULONGLONG) permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
 
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
@@ -481,7 +482,7 @@ void AFXAPI DDV_MinMaxULongLong(
  [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
 
  ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
-Llame a `DDV_MinMaxUnsigned` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
+Llame a `DDV_MinMaxUnsigned` para comprobar que el valor en el control asociado *valor* se encuentra entre *propiedades minVal* y *maxVal*.  
    
 ### <a name="syntax"></a>Sintaxis    
 ```
@@ -492,20 +493,20 @@ Llame a `DDV_MinMaxUnsigned` para comprobar que el valor en el control asociado 
        unsigned maxVal );  
 ```
 ### <a name="parameters"></a>Parámetros  
- `pDX`  
+ *pDX*  
  Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.  
   
  *valor*  
- Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se validan los datos.  
+ Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.  
   
- `minVal`  
+ *propiedades minVal*  
  Valor mínimo (de tipo **sin signo** ) permitido.  
   
- `maxVal`  
+ *maxVal*  
  Valor máximo (de tipo **sin signo** ) permitido.  
    
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de DDV, vea [intercambio de datos de cuadros de diálogo y validación](../dialog-data-exchange-and-validation.md).  
+ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadro de diálogo y validación](../dialog-data-exchange-and-validation.md).  
    
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdd_.h  

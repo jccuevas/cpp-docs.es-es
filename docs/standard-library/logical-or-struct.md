@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9591e11774550f198de601f36fce0350f76cf6bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 86074c341e26965778aaa5668c219c721a984d79
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318913"
 ---
 # <a name="logicalor-struct"></a>logical_or (Struct)
 
@@ -34,7 +35,7 @@ template <class Type = void>
 struct logical_or : public binary_function<Type, Type, bool>
 {
     bool operator()(const Type& Left, const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator||
 template <>
@@ -43,16 +44,18 @@ struct logical_or<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) || std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator||` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator||` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de disyunción lógica. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación de disyunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de disyunción lógica. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación de disyunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -111,14 +114,14 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 Original deque:
- d1 = ( true true false false true false false )
+d1 = ( true true false false true false false )
 Original deque:
- d2 = ( false false false true true true true )
+d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
- d3 = ( true true false true true true true )
-*\
+d3 = ( true true false true true true true )
+*/
 
 ```
 

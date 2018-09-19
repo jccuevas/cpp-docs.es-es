@@ -50,11 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86822cfeb26428a53e94d50a3d831732241007ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d714499ebb33d1d4dc2636ab80b2ad727ccac39
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195163"
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
@@ -98,14 +99,14 @@ Cada una de estas rutinas devuelve un puntero al carácter que sigue inmediatame
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsinc** función devuelve un puntero al primer byte del carácter multibyte que sigue inmediatamente a *actual*. **_mbsinc** reconoce las secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) que está actualmente en uso; **_mbsinc_l** es idéntica, salvo que usa el parámetro de configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El **_mbsinc** función devuelve un puntero al primer byte del carácter multibyte que sigue inmediatamente a *actual*. **_mbsinc** reconoce secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) que está actualmente en uso; **_mbsinc_l** es idéntico, salvo que usa el parámetro de configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-La función de texto genérico **_tcsinc**, definida en Tchar.h, se asigna a **_mbsinc** si **_MBCS** se ha definido, o a **_wcsinc** si **_UNICODE** se ha definido. En caso contrario, **_tcsinc** se asigna a **_strinc**. **_strinc** y **_wcsinc** son versiones de caracteres de byte único y con caracteres anchos de **_mbsinc**. **_strinc** y **_wcsinc** se proporcionan solo para esta asignación y no debe usarse en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
+La función de texto genérico **_tcsinc**, definida en Tchar.h, se asigna a **_mbsinc** si **_MBCS** se ha definido, o a **_wcsinc** si **_UNICODE** se ha definido. En caso contrario, **_tcsinc** se asigna a **_strinc**. **_strinc** y **_wcsinc** son versiones de caracteres de byte único y de caracteres anchos de **_mbsinc**. **_strinc** y **_wcsinc** se proporcionan solo para esta asignación y no debe usarse en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
-Si *actual* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** a **EINVAL**.
+Si *actual* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** a **EINVAL**.
 
 > [!IMPORTANT]
-> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ## <a name="requirements"></a>Requisitos
 

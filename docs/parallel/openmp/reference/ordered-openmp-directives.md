@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696219"
 ---
 # <a name="ordered-openmp-directives"></a>ordered (Directivas de OpenMP)
 Especifica que el código en una ejecución en paralelo para bucle debe ejecutarse como un bucle secuencial.  

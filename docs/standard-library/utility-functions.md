@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: a26a4a0cab0bdea8a7a642cc760da0f3fc79b471
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718344"
 ---
 # <a name="ltutilitygt-functions"></a>Funciones de &lt;utility&gt;
 
@@ -40,9 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El objeto que va a recibir el valor de new_val.
+*Val*<br/>
+El objeto que va a recibir el valor de new_val.
 
-`new_val` El objeto cuyo valor es copiado o movido a val.
+*new_val*<br/>
+El objeto cuyo valor se ha copiado o movido a val.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -98,12 +101,12 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Type`|Tipo del valor pasado en `Arg`, que puede ser diferente que el tipo de `Arg`. Lo suele determinar un argumento de plantilla de la función de reenvío.|
-|`Arg`|Argumento que se va a convertir.|
+|*Type*|El tipo del valor pasado en *Arg*, que puede ser diferente que el tipo de *Arg*. Lo suele determinar un argumento de plantilla de la función de reenvío.|
+|*arg*|Argumento que se va a convertir.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve una referencia de valor R a `Arg` si el valor pasado en `Arg` era originalmente un valor R o una referencia a un valor R; de lo contrario, devuelve `Arg` sin modificar su tipo.
+Devuelve una referencia rvalue para *Arg* si el valor pasado en *Arg* era originalmente un valor r o una referencia a un valor r; de lo contrario, devuelve *Arg* sin modificar su tipo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -160,21 +163,25 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Index` El índice basado en 0 del elemento designado.
+*Index*<br/>
+El índice de base 0 del elemento designado.
 
-`T1` El tipo del primer elemento par.
+*T1*<br/>
+El tipo del primer elemento par.
 
-`T2` El tipo del segundo elemento par.
+*T2*<br/>
+El tipo del segundo elemento par.
 
-`pr` El par seleccionar desde.
+*incorporación de cambios*<br/>
+Par del que se selecciona.
 
 ### <a name="remarks"></a>Comentarios
 
 Las funciones de plantilla devuelven una referencia a un elemento de su argumento `pair` .
 
-En el caso de sobrecargas indexadas, si el valor de `Index` es 0, las funciones devuelven `pr.first` y si el valor de `Index` es 1, las funciones devuelven `pr.second`. El tipo `RI` es el tipo del elemento devuelto.
+Para las sobrecargas indexadas, si el valor de *índice* es 0, las funciones devuelven `pr.first` y si el valor de *índice* es 1, las funciones devuelven `pr.second`. El tipo `RI` es el tipo del elemento devuelto.
 
-En el caso de las sobrecargas que no tienen un parámetro de índice, el elemento para devolver se deduce mediante el argumento de tipo. Al llamar a `get<T>(Tuple)` , se producirá un error de compilador si `pr` contiene más o menos de un elemento de tipo T.
+En el caso de las sobrecargas que no tienen un parámetro de índice, el elemento para devolver se deduce mediante el argumento de tipo. Una llamada a `get<T>(Tuple)` se producirá un error del compilador si *pr* contiene más o menos de un elemento de tipo T.
 
 ### <a name="example"></a>Ejemplo
 
@@ -227,9 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parámetros
 
-`Val1` Valor que inicializa el primer elemento de `pair`.
+*val1*<br/>
+Valor que inicializa el primer elemento de `pair`.
 
-`Val2` Valor que inicializa el segundo elemento de `pair`.
+*Val2*<br/>
+Valor que inicializa el segundo elemento de `pair`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -268,8 +277,8 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Type`|Un tipo inferido a partir del tipo del argumento pasado en `Arg`, junto con las reglas de contracción de referencias.|
-|`Arg`|Argumento que se va a convertir. Aunque el tipo de `Arg` parece estar especificado como una referencia rvalue, `move` también acepta argumentos lvalue porque las referencias lvalue pueden enlazarse con las referencias rvalue.|
+|*Type*|Pasa un tipo inferido a partir del tipo del argumento *Arg*, junto con las reglas de contracción de referencias.|
+|*arg*|Argumento que se va a convertir. Aunque el tipo de *Arg* parece estar especificado como una referencia rvalue, `move` también acepta argumentos lvalue porque las referencias de valor l se pueden enlazar a las referencias rvalue.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -277,11 +286,11 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 ### <a name="remarks"></a>Comentarios
 
-El argumento de plantilla `Type` no está pensado para especificarse explícitamente, sino para deducirse a partir del tipo del valor pasado en `Arg`. El tipo de `Type` se ajusta más en función de las reglas de contracción de referencias.
+El argumento de plantilla *tipo* no está pensado para especificarse explícitamente, sino para deducirse a partir del valor pasado en el tipo de *Arg*. El tipo de *tipo* aún más se ajusta según las reglas de contracción de referencias.
 
-`move` no mueve su argumento. En lugar de esto, al convertir incondicionalmente su argumento (que podría ser un lvalue) en una referencia rvalue, permite al compilador mover posteriormente, en lugar de copiar, el valor pasado en `Arg` si su tipo tiene habilitado el movimiento. Si su tipo no tiene habilitado el movimiento, se copia.
+`move` no mueve su argumento. En su lugar, al convertir incondicionalmente su argumento, que podría ser un valor l, en una referencia rvalue, permite al compilador mover posteriormente, en lugar de copia, el valor pasado en *Arg* si su tipo tiene habilitado el movimiento. Si su tipo no tiene habilitado el movimiento, se copia.
 
-Si el valor pasado en `Arg` es lvalue (es decir, tiene nombre o se puede tomar su dirección), se invalida cuando se produce el movimiento. No haga referencia al valor pasado en `Arg` por su nombre o dirección una vez que se haya movido.
+Si el valor pasado en *Arg* es un valor l, es decir, tiene un nombre o se puede obtener su dirección, se invalida cuando se produce el movimiento. No hacen referencia al valor pasado en *Arg* por su nombre o dirección una vez que se han movido.
 
 ## <a name="swap"></a>  swap
 
@@ -296,8 +305,8 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`left`|Objeto de tipo `pair`.|
-|`right`|Objeto de tipo `pair`.|
+|*left*|Objeto de tipo `pair`.|
+|*right*|Objeto de tipo `pair`.|
 
 ### <a name="remarks"></a>Comentarios
 

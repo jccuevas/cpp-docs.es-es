@@ -1,5 +1,5 @@
 ---
-title: Clase CD2DRectF | Documentos de Microsoft
+title: Clase CD2DRectF | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338277"
 ---
 # <a name="cd2drectf-class"></a>Clase CD2DRectF
 Contenedor para `D2D1_RECT_F`.  
@@ -47,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|Devuelve un `boolean` valor que indica si una expresión no contiene datos válidos ( `null`).|  
+|[CD2DRectF::IsNull](#isnull)|Devuelve un **booleano** valor que indica si una expresión no contiene datos válidos (NULL).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -80,19 +81,19 @@ CD2DRectF(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  rectángulo de origen  
   
- `fLeft`  
+ *fLeft*  
  Coordenada izquierda de origen  
   
- `fTop`  
+ *fTop*  
  Coordenada superior de origen  
   
- `fRight`  
+ *Más*  
  Coordenada derecha de origen  
   
- `fBottom`  
+ *fBottom*  
  Coordenada inferior de origen  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  
@@ -103,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- TRUE si la parte superior del rectángulo, izquierda, inferior y derecho valores son iguales a 0; en caso contrario, FALSE.  
+ TRUE si son iguales a 0; superior, izquierdo, inferior y valores correctos del rectángulo en caso contrario, FALSE.  
   
 ##  <a name="operator_crect"></a>  CRect CD2DRectF::operator  
- Convierte CD2DRectF al objeto CRect.  
+ Convierte CD2DRectF objeto CRect.  
   
 ```  
 operator CRect();

@@ -1,5 +1,5 @@
 ---
-title: C2095 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2095 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7214862ba35c627987c6dace2d5d4c8c4d042fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42fa7432dce465257b8179ba8a52b2654e0e5507
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032484"
 ---
-# <a name="compiler-error-c2095"></a>C2095 de Error del compilador
-'función': el parámetro real es de tipo 'void': parámetro 'número'  
-  
- El parámetro pasado a la función es de tipo `void`, lo que no está permitido. Utilice un puntero a void ( `void *`) en su lugar.  
-  
- El `number` indica qué parámetro es `void`.
+# <a name="compiler-error-c2095"></a>Error del compilador C2095
+
+'function': parámetro real es de tipo 'void': parámetro 'número'
+
+El parámetro pasado a la función es de tipo `void`, lo que no está permitido. Uso de un puntero a void ( `void *`) en su lugar.
+
+El `number` indica qué parámetro es `void`.

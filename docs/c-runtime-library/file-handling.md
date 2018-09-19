@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95971cceab5673755b33bd99c3365bee62610bf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036363"
 ---
 # <a name="file-handling"></a>Control de archivos
 
@@ -85,13 +86,13 @@ Estas rutinas proporcionan una forma de cambiar la representación del archivo, 
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Devolver el identificador de archivo del sistema operativo asociado al descriptor de archivo del tiempo de ejecución de C existente|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Asociar el descriptor de archivo del tiempo de ejecución de C al identificador de archivo del sistema operativo existente|
 
- Las siguientes funciones de Win32 también abren archivos y canalizaciones:
+Las siguientes funciones de Win32 también abren archivos y canalizaciones:
 
-- [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858.aspx)
+- [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 
-- [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)
+- [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)
 
-- [CreateNamedPipe](http://msdn.microsoft.com/library/windows/desktop/aa365150.aspx)
+- [CreateNamedPipe](/windows/desktop/api/winbase/nf-winbase-createnamedpipea)
 
 ## <a name="see-also"></a>Vea también
 

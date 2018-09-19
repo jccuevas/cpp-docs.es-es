@@ -1,5 +1,5 @@
 ---
-title: __assume | Documentos de Microsoft
+title: __assume | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec83775a007e3a07582f218c5588ae4fe7909b20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104327"
 ---
 # <a name="assume"></a>__assume
 **Específicos de Microsoft**  
@@ -37,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `expression`  
- Cualquier expresión que se supone que se evalúa como verdadera.  
+*Expresión*<br/>
+Cualquier expresión que se supone que se evalúa como verdadera.  
   
 ## <a name="remarks"></a>Comentarios  
  El optimizador supone que la condición representada por `expression` es verdadera en el punto donde aparece la palabra clave y sigue siendo verdadera hasta que se modifica `expression` (por ejemplo, mediante la asignación a una variable). El uso selectivo de las sugerencias que `__assume` pasa al optimizador puede mejorar la optimización.  
@@ -58,7 +59,7 @@ __assume(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__assume`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|x86, ARM, x64|  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -120,5 +121,5 @@ int main(int p)
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Palabras clave](../cpp/keywords-cpp.md)

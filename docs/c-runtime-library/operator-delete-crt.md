@@ -25,13 +25,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bafea205b79c940dd79da3bb27909348930ac4df
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ecc88272aa31a30292d395b741fdced415eae95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115442"
 ---
 # <a name="operator-delete-crt"></a>operator delete (CRT)
 
-A partir de Visual Studio 2013, el entorno de tiempo de ejecución de C de Windows Universal ya no admite las funciones operator new y operator delete de C++. Ahora forman parte de la biblioteca estándar de C++. Para obtener más información, vea [Operadores new y delete](../cpp/new-and-delete-operators.md) y [new operator](../cpp/delete-operator-cpp.md) en la referencia del lenguaje C++. 
+A partir de Visual Studio 2013, el entorno de tiempo de ejecución de C de Windows Universal ya no admite las funciones operator new y operator delete de C++. Ahora forman parte de la biblioteca estándar de C++. Para obtener más información, vea [Operadores new y delete](../cpp/new-and-delete-operators.md) y [new operator](../cpp/delete-operator-cpp.md) en la referencia del lenguaje C++.
 

@@ -1,5 +1,5 @@
 ---
-title: -FC (ruta de acceso completa del archivo de código fuente en diagnósticos) | Documentos de Microsoft
+title: -FC (ruta de acceso completa del archivo de código fuente en diagnósticos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a721b6887b6c5c07d96a79b06f05e6d7855250b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d34fe85354d218d2499dbece70964c2e55e2592
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702712"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (Ruta de acceso completa de archivo de código fuente en diagnósticos)
 
-Hace que el compilador mostrar la ruta de acceso completa de archivos de código fuente que se pasó al compilador en diagnósticos.
+Hace que el compilador mostrar la ruta de acceso completa de los archivos de código fuente pasados al compilador en diagnósticos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +35,7 @@ Hace que el compilador mostrar la ruta de acceso completa de archivos de código
 
 ## <a name="remarks"></a>Comentarios
 
-Tenga en cuenta el ejemplo de código siguiente:
+Tenga en cuenta el siguiente ejemplo de código:
 
 ```cpp
 // compiler_option_FC.cpp
@@ -51,19 +52,19 @@ Con **/FC**, el texto de diagnóstico tendría un aspecto similar al siguiente t
 
 - c:\test\compiler_option_FC.cpp(5): error C2143: error de sintaxis: falta ';' antes de '}'
 
- **/FC** también es necesario si desea ver la ruta de acceso completa de un nombre de archivo al utilizar el &#95; &#95;archivo&#95; &#95; macro. Vea [Macros predefinidas](../../preprocessor/predefined-macros.md) para obtener más información sobre &#95; &#95;archivo&#95;&#95;.
+**/FC** también es necesario si desea ver la ruta de acceso completa de un nombre de archivo cuando se usa el &#95; &#95;archivo&#95; &#95; macro. Consulte [Predefined Macros](../../preprocessor/predefined-macros.md) para obtener más información sobre &#95; &#95;archivo&#95;&#95;.
 
-El **/FC** opción está implícito en **/Zi**. Para obtener más información acerca de **/Zi**, consulte [/Z7, / Zi, /ZI (formato de información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md).
+El **/FC** opción está implícita en **/Zi**. Para obtener más información acerca de **/Zi**, consulte [/Z7, / Zi, /ZI (formato de la información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-**/FC** genera rutas de acceso completas en minúsculas.
+**/FC** da como resultado las rutas de acceso completas en minúsculas.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **C/C++** > **avanzadas** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **avanzadas** página de propiedades.
 
-1. Modificar el **Use rutas de acceso completas** propiedad.
+1. Modificar el **rutas de acceso completas** propiedad.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
@@ -71,5 +72,5 @@ El **/FC** opción está implícito en **/Zi**. Para obtener más información a
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)   
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

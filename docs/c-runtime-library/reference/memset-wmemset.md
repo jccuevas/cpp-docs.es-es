@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbc05c0e337560982f69a5ca920340bc1b0de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b26f0c200f19cab4bb2710be686b25a9dce014
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202015"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -77,9 +78,9 @@ El valor de *dest*.
 
 ## <a name="remarks"></a>Comentarios
 
-Establece el primer argumento *recuento* caracteres de *dest* al carácter *c*.
+Establece los primeros *recuento* caracteres de *dest* al carácter *c*.
 
-**Nota de seguridad** Asegúrese de que el búfer de destino tiene espacio suficiente para al menos *recuento* caracteres. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+**Nota de seguridad** Asegúrese de que el búfer de destino tenga suficiente espacio para al menos *recuento* caracteres. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ## <a name="requirements"></a>Requisitos
 

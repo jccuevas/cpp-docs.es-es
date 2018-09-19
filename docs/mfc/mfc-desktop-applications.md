@@ -1,5 +1,5 @@
 ---
-title: Aplicaciones de escritorio de MFC | Documentos de Microsoft
+title: Las aplicaciones de escritorio de MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,10 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755000"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicaciones de escritorio de MFC
 La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office.  
@@ -82,7 +83,7 @@ La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orie
  [Categorías de gráfico de jerarquías](hierarchy-chart-categories.md)  
  Describe el gráfico de jerarquías de MFC por categoría.  
   
- [Clases compartidas de ATL y MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)  
+ [Clases compartidas ATL y MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)  
  Proporciona vínculos a las clases que se comparten entre MFC y ATL.  
   
  [Ejemplos de MFC](../visual-cpp-samples.md)  

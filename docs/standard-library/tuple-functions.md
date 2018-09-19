@@ -17,11 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712769"
 ---
 # <a name="lttuplegt-functions"></a>Funciones de &lt;tuple&gt;
 
@@ -63,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parámetros
 
-`Index` Índice del elemento que se va a obtener.
+*Index*<br/>
+Índice del elemento que se va a obtener.
 
-`Types` La secuencia de tipos declarados en la tupla, en el orden de declaración.
+*Tipos*<br/>
+Secuencia de tipos que se declara en la tupla, en el orden de declaración.
 
-`T` El tipo de elemento que se va a obtener.
+*T*<br/>
+Tipo del elemento que se va a obtener.
 
-`Tuple` Un std:: Tuple que contiene cualquier número de elementos.
+*Tuple*<br/>
+Un std::tuple que contiene cualquier número de elementos.
 
 ### <a name="remarks"></a>Comentarios
 
-Las funciones de plantilla devuelven una referencia al valor del índice `Index`, o de tipo `T` en el objeto `tuple` .
+Las funciones de plantilla devuelven una referencia al valor del índice *índice*, o de tipo *T* en el `tuple` objeto.
 
 Al llamar a `get<T>(Tuple)` se producirá un error del compilador si la tupla contiene más o menos de un elemento de tipo T.
 
@@ -117,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del parámetro Nth (función).
+*TN*<br/>
+El tipo del enésimo parámetro de función.
 
-`tN` El valor del parámetro Nth (función).
+*tN*<br/>
+El valor del enésimo parámetro de función.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -162,7 +169,7 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  Lazo
+## <a name="tie"></a>  valor equivalente
 
 Crea una `tuple` a partir de referencias de elemento.
 
@@ -173,7 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo base del elemento n-tuple.
+*TN*<br/>
+El tipo base del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
 

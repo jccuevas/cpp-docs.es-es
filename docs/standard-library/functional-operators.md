@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e84ed8ed97a529d67c6d136fd8464cd13c8a502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dd9d4dfa7c10d19112cd8154ddcf3b7a70bf3034
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103897"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; (Operadores)
 
@@ -43,11 +44,14 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parámetros
 
-`Fty` El tipo de función que va a contener.
+*Fty*<br/>
+Tipo de función que se va a contener.
 
-`f` El objeto de función
+*f*<br/>
+Objeto de función
 
-`npc` Un puntero nulo.
+*NPC*<br/>
+Un puntero nulo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -100,11 +104,14 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parámetros
 
-`Fty` El tipo de función que va a contener.
+*Fty*<br/>
+Tipo de función que se va a contener.
 
-`f` El objeto de función
+*f*<br/>
+Objeto de función
 
-`npc` Un puntero nulo.
+*NPC*<br/>
+Un puntero nulo.
 
 ### <a name="remarks"></a>Comentarios
 

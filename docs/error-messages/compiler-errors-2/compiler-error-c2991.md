@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2991 | Documentos de Microsoft
+title: Error del compilador C2991 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1605c7b12a08b0fdb3701a94b2b5cf2e649c98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09b26d60968b9befc3bc9b027b46f09c269dd9a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091626"
 ---
 # <a name="compiler-error-c2991"></a>Error del compilador C2991
-redefinición del parámetro de tipo 'parameter'  
-  
- Se produjo un conflicto de tipos entre dos definiciones de plantilla o genéricas de `parameter`. Al definir varios parámetros genéricos o de plantilla, se deben usar tipos equivalentes.  
-  
- El ejemplo siguiente genera la advertencia C2991:  
-  
-```  
-// C2991.cpp  
-// compile with: /c  
-template<class T, class T> struct TC {};   // C2991  
-// try the following line instead  
-// template<class T, class T2> struct TC {};  
-```  
-  
- También se puede producir C2991 al usar genéricos:  
-  
-```  
-// C2991b.cpp  
-// compile with: /clr /c  
-generic<class T,class T> ref struct GC {};   // C2991  
-// try the following line instead  
-// generic<class T,class T2> ref struct GC {};  
+
+redefinición del parámetro de tipo 'parameter'
+
+Se produjo un conflicto de tipos entre dos definiciones de plantilla o genéricas de `parameter`. Al definir varios parámetros genéricos o de plantilla, se deben usar tipos equivalentes.
+
+El ejemplo siguiente genera la advertencia C2991:
+
+```
+// C2991.cpp
+// compile with: /c
+template<class T, class T> struct TC {};   // C2991
+// try the following line instead
+// template<class T, class T2> struct TC {};
+```
+
+También se puede producir C2991 al usar genéricos:
+
+```
+// C2991b.cpp
+// compile with: /clr /c
+generic<class T,class T> ref struct GC {};   // C2991
+// try the following line instead
+// generic<class T,class T2> ref struct GC {};
 ```

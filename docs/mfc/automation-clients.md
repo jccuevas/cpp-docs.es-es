@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929044"
 ---
 # <a name="automation-clients"></a>clientes de automatización
 Automatización permite a la aplicación para manipular objetos implementados en otra aplicación o exponga objetos para que se puedan manipular. Un cliente de automatización es una aplicación que puede manipular objetos expuestos por otra aplicación. La aplicación que expone los objetos se denomina servidor de automatización. El cliente usa los objetos de la aplicación de servidor mediante el acceso a funciones y propiedades de esos objetos.  
@@ -37,7 +38,7 @@ Automatización permite a la aplicación para manipular objetos implementados en
   
  Clientes enlazados estáticos utilizan una clase de proxy que está vinculada estáticamente con la aplicación cliente. Esta clase proporciona una encapsulación de C++ con seguridad de tipos de operaciones y las propiedades de la aplicación de servidor.  
   
- La clase `COleDispatchDriver` proporciona el soporte técnico principal para el cliente de automatización. Mediante el `Add New Item` cuadro de diálogo, se creará una clase derivada de `COleDispatchDriver`.  
+ La clase `COleDispatchDriver` proporciona el soporte técnico principal para el cliente de automatización. Mediante el **Agregar nuevo elemento** cuadro de diálogo, se creará una clase derivada de `COleDispatchDriver`.  
   
  A continuación, especifique el archivo de biblioteca de tipos que describe las propiedades y funciones del objeto de la aplicación de servidor. El cuadro de diálogo Agregar elemento leerá este archivo y crea el `COleDispatchDriver`-clase derivada, con funciones miembro que la aplicación puede llamar para obtener acceso a objetos de la aplicación de servidor en C++ de una manera de seguridad de tipos. Funcionalidad adicional que se hereda de `COleDispatchDriver` simplifica el proceso de llamada al servidor de automatización adecuado.  
   

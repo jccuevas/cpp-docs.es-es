@@ -1,5 +1,5 @@
 ---
-title: Funciones intrínsecas _InterlockedAnd | Documentos de Microsoft
+title: Funciones intrínsecas _interlockedand | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -66,11 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 009c3dd2fd7e7ce123f760ae832c2c4e25fedd92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707868"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAnd
 **Específicos de Microsoft**  
@@ -179,11 +180,11 @@ __int64 _InterlockedAnd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in, out] `value`  
- Un puntero al primer operando, que será sustituido por el resultado.  
+*valor*<br/>
+[in, out] Un puntero al primer operando, sean reemplazadas por el resultado.  
   
- [in] `mask`  
- Segundo operando.  
+*Máscara*<br/>
+[in] El segundo operando.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El valor original del primer operando.  
@@ -192,10 +193,10 @@ __int64 _InterlockedAnd64_rel(
   
 |Función intrínseca|Arquitectura|Encabezado|  
 |---------------|------------------|------------|  
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<INTRIN.h >|  
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<INTRIN.h >|  
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<INTRIN.h >|  
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Comentarios  
  El número en el nombre de cada función especifica el tamaño en bits de los argumentos.  
@@ -233,5 +234,5 @@ int main()
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)

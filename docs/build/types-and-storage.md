@@ -1,5 +1,5 @@
 ---
-title: Tipos y almacenamiento | Documentos de Microsoft
+title: Tipos y almacenamiento de información | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d53749ace6b9021bd04e681fc74eb0e5ae4a5e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa17bd261a722e169b1a98f908fb9be0f1a591e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700211"
 ---
 # <a name="types-and-storage"></a>Tipos y almacenamiento
-Esta sección describe la enumeración y el almacenamiento de tipos de datos para el [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] arquitectura.  
-  
--   [Tipos escalares](../build/scalar-types.md)  
-  
--   [Agregados y uniones](../build/aggregates-and-unions.md)  
-  
--   [Ejemplos de alineación de estructuras](../build/examples-of-structure-alignment.md)  
-  
--   [Campos de bits](../build/bitfields.md)  
-  
--   [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Convenciones de software x64](../build/x64-software-conventions.md)
+
+Esta sección describe la enumeración y el almacenamiento de tipos de datos para el x64 arquitectura.
+
+- [Tipos escalares](../build/scalar-types.md)
+
+- [Agregados y uniones](../build/aggregates-and-unions.md)
+
+- [Ejemplos de alineación de estructuras](../build/examples-of-structure-alignment.md)
+
+- [Campos de bits](../build/bitfields.md)
+
+- [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)
+
+## <a name="see-also"></a>Vea también
+
+[Convenciones de software x64](../build/x64-software-conventions.md)

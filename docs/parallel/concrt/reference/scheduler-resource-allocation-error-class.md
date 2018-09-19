@@ -1,5 +1,5 @@
 ---
-title: scheduler_resource_allocation_error (clase) | Documentos de Microsoft
+title: scheduler_resource_allocation_error (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b11a548bc98c44697de45c628205dc3e720971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101701"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error (Clase)
 Esta clase describe una excepción que se produce debido a un error al adquirir un recurso crítico en el runtime de simultaneidad.  
@@ -49,7 +50,7 @@ class scheduler_resource_allocation_error : public std::exception;
 |[get_error_code](#get_error_code)|Devuelve el código de error que provocó la excepción.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta excepción normalmente se produce cuando se produce un error en una llamada al sistema operativo desde el Runtime de simultaneidad. El código de error que normalmente se devolvería desde una llamada al método Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se puede recuperar mediante el `get_error_code` método.  
+ Esta excepción se produce normalmente cuando se produce un error en una llamada al sistema operativo desde el Runtime de simultaneidad. El código de error que se devolvería normalmente una llamada al método Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se puede recuperar mediante el `get_error_code` método.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -86,11 +87,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
- `_Hresult`  
- El `HRESULT` valor del error que provocó la excepción.  
+*_Hresult*<br/>
+El `HRESULT` valor del error que provocó la excepción.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

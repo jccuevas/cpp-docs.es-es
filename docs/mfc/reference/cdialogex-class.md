@@ -1,5 +1,5 @@
 ---
-title: Clase CDialogEx | Documentos de Microsoft
+title: CDialogEx (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,13 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716311"
 ---
-# <a name="cdialogex-class"></a>Clase CDialogEx
+# <a name="cdialogex-class"></a>CDialogEx (clase)
 La clase `CDialogEx` especifica el color de fondo y la imagen de fondo de un cuadro de diálogo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -58,7 +59,7 @@ class CDialogEx : public CDialog
   
  Las imágenes del cuadro de diálogo se almacenan en un archivo de recursos. El marco de trabajo elimina automáticamente cualquier imagen que se cargue desde el archivo de recursos. Para eliminar mediante programación la imagen de fondo actual, llame a la [CDialogEx::SetBackgroundImage](#setbackgroundimage) método o implemente un `OnDestroy` controlador de eventos. Cuando se llama a la [CDialogEx::SetBackgroundImage](#setbackgroundimage) método, pase un `HBITMAP` parámetro como identificador de la imagen. El objeto `CDialogEx` tomará posesión de la imagen y la elimina si la marca `m_bAutoDestroyBmp` es `TRUE`.  
   
- A `CDialogEx` objeto puede ser un elemento primario de un [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto. El [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto llama el `CDialogEx::SetActiveMenu` método cuando el [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto se abre. A continuación, el `CDialogEx` objeto controla cualquier evento de menú hasta que el [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto está cerrado.  
+ Un `CDialogEx` objeto puede ser un elemento primario de un [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md) objeto. El [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md) de objeto llama el `CDialogEx::SetActiveMenu` método cuando el [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md) objeto se abre. A continuación, el `CDialogEx` objeto controla cualquier evento de menú hasta que el [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md) objeto está cerrado.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIDTemplate`  
- El identificador de recurso de una plantilla de cuadro de diálogo.  
+*nIDTemplate*<br/>
+[in] El identificador de recurso de una plantilla de cuadro de diálogo.  
   
- [in] `lpszTemplateName`  
- El nombre de recurso de una plantilla de cuadro de diálogo.  
+*lpszTemplateName*<br/>
+[in] El nombre de recurso de una plantilla de cuadro de diálogo.  
   
- [in] `pParent`  
- Un puntero a la ventana primaria. El valor predeterminado es `NULL`.  
+*pParent*<br/>
+[in] Un puntero a la ventana primaria. El valor predeterminado es NULL.  
   
- [in] `pParentWnd`  
- Un puntero a la ventana primaria. El valor predeterminado es `NULL`.  
+*pParentWnd*<br/>
+[in] Un puntero a la ventana primaria. El valor predeterminado es NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -115,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
- Un valor de color RGB.  
+*Color*<br/>
+[in] Un valor de color RGB.  
   
- [in] `bRepaint`  
- `TRUE` Para actualizar inmediatamente la pantalla; en caso contrario, `FALSE`. El valor predeterminado es `TRUE`.  
+*bRepaint*<br/>
+[in] TRUE para actualizar inmediatamente la pantalla; en caso contrario, FALSE. El valor predeterminado es TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -141,29 +142,29 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hBitmap`  
- Identificador de la imagen de fondo.  
+*hBitmap*<br/>
+[in] Identificador de la imagen de fondo.  
   
- [in] `uiBmpResId`  
- El identificador de recurso de la imagen de fondo.  
+*uiBmpResId*<br/>
+[in] El identificador de recurso de la imagen de fondo.  
   
- [in] `location`  
- Uno de los `CDialogEx::BackgroundLocation` valores que especifican la ubicación de la imagen. Los valores válidos son BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT y BACKGR_BOTTOMRIGHT. El valor predeterminado es BACKGR_TILE.  
+*Ubicación*<br/>
+[in] Uno de los `CDialogEx::BackgroundLocation` valores que especifican la ubicación de la imagen. Los valores válidos incluyen BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT y BACKGR_BOTTOMRIGHT. El valor predeterminado es BACKGR_TILE.  
   
- [in] `bAutoDestroy`  
- `TRUE` para destruir automáticamente la imagen de fondo; en caso contrario, `FALSE`.  
+*bAutoDestroy*<br/>
+[in] TRUE para destruir automáticamente la imagen de fondo. en caso contrario, FALSE.  
   
- [in] `bRepaint`  
- `TRUE` Para volver a dibujar inmediatamente el cuadro de diálogo; en caso contrario, `FALSE`.  
+*bRepaint*<br/>
+[in] TRUE para volver a dibujar inmediatamente el cuadro de diálogo; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
- En el segundo método de sobrecarga sintaxis, `TRUE` si el método es correcto; en caso contrario, `FALSE`.  
+ En el segundo método sobrecargar sintaxis, TRUE si el método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- La imagen que especifique no se ajusta para adaptarse al área de cliente de cuadro de diálogo.  
+ La imagen que especifique no se ajusta para ajustar el área de cliente del cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)   
+ [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md)   
  [CContextMenuManager (clase)](../../mfc/reference/ccontextmenumanager-class.md)

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345669"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Clases de vistas derivadas disponibles en MFC
 La siguiente tabla muestra las clases de vista de MFC y sus relaciones entre sí. Las capacidades de la clase de vista dependen de la que deriva la clase de vista MFC.  

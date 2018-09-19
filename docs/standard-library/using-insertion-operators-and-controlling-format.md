@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb6d17a771b5a1e24b8d09532f432b95ce5d736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959812"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usar operadores de inserción y controlar el formato
 
@@ -36,7 +37,7 @@ Puede controlar el formato con las opciones siguientes:
 
 ## <a name="vclrfoutputwidthanchor3"></a> Ancho de salida
 
-Para alinear la salida, especifique el ancho de salida para cada elemento colocando el manipulador `setw` del flujo o llamando a la función miembro **width**. En este ejemplo se alinean a la derecha los valores de una columna de, como mínimo, 10 caracteres de ancho.
+Para alinear la salida, especifique el ancho de salida para cada elemento colocando el `setw` manipulador del flujo o llamando a la `width` función miembro. En este ejemplo se alinean a la derecha los valores de una columna de, como mínimo, 10 caracteres de ancho.
 
 ```cpp
 // output_width.cpp
@@ -64,7 +65,7 @@ int main( )
 
 Los espacios en blanco iniciales se agregan a cualquier valor con menos de 10 caracteres de ancho.
 
-Para rellenar un campo, use la función miembro **fill**, que establece el valor del carácter de relleno para los campos que tienen un ancho especificado. El valor predeterminado es un espacio en blanco. Para rellenar la columna de números con asteriscos, modifique el bucle **for** anterior como sigue:
+Para rellenar un campo, use el `fill` función miembro, que establece el valor del carácter de relleno para los campos que tienen un ancho especificado. El valor predeterminado es un espacio en blanco. Para rellenar la columna de números con asteriscos, modifique el bucle **for** anterior como sigue:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -103,7 +104,7 @@ int main( )
 }
 ```
 
-La función miembro **width** se declara en \<iostream>. Si usa `setw` o cualquier otro manipulador con argumentos, se debe incluir \<iomanip>. En la salida, las cadenas se imprimen en un campo de ancho 6 y números enteros en un campo de ancho 10:
+El `width` función miembro se declara en \<iostream >. Si usa `setw` o cualquier otro manipulador con argumentos, se debe incluir \<iomanip>. En la salida, las cadenas se imprimen en un campo de ancho 6 y números enteros en un campo de ancho 10:
 
 ```Output
   Zoot      1.23
@@ -112,7 +113,7 @@ La función miembro **width** se declara en \<iostream>. Si usa `setw` o cualqui
   Stan   4358.24
 ```
 
-Ni `setw` ni **width** truncan valores. Si la salida con formato supera el ancho, se imprime el valor completo, sujeto a la configuración de precisión del flujo. Tanto `setw` como **width** afectan únicamente al campo siguiente. El ancho de campo revierte a su comportamiento predeterminado (el ancho necesario) después de que se haya impreso un campo, pero las opciones de formato de flujo seguirán vigentes hasta que se modifiquen.
+Ni `setw` ni `width` truncan valores. Si la salida con formato supera el ancho, se imprime el valor completo, sujeto a la configuración de precisión del flujo. Ambos `setw` y `width` afectan únicamente al campo siguiente. El ancho de campo revierte a su comportamiento predeterminado (el ancho necesario) después de que se haya impreso un campo, pero las opciones de formato de flujo seguirán vigentes hasta que se modifiquen.
 
 ## <a name="vclrfalignmentanchor4"></a> Alineación
 
@@ -135,11 +136,11 @@ Al         653.7
 Stan     4358.24
 ```
 
-La marca de alinear a la izquierda se establece usando el manipulador [setiosflags](../standard-library/iomanip-functions.md#setiosflags) con el enumerador `left`. Este enumerador se define en la clase [ios](../standard-library/basic-ios-class.md), de manera que su referencia debe incluir el prefijo **ios::**. El manipulador [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) desactiva la marca de alinear a la izquierda. A diferencia de **width** y `setw`, el efecto de `setiosflags` y `resetiosflags` es permanente.
+La marca de alinear a la izquierda se establece usando el manipulador [setiosflags](../standard-library/iomanip-functions.md#setiosflags) con el enumerador `left`. Este enumerador se define en la clase [ios](../standard-library/basic-ios-class.md), de manera que su referencia debe incluir el prefijo **ios::**. El manipulador [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) desactiva la marca de alinear a la izquierda. A diferencia de `width` y `setw`, el efecto de `setiosflags` y `resetiosflags` es permanente.
 
 ## <a name="vclrfprecisionanchor5"></a> Precisión
 
-El valor predeterminado de precisión de punto flotante es seis. Por ejemplo, el número 3466.9768 se imprime como 3466.98. Para cambiar el modo de impresión de este valor, use el manipulador [setprecision](../standard-library/iomanip-functions.md#setprecision). El manipulador tiene dos marcas: [fixed](../standard-library/ios-functions.md#fixed) y [scientific](../standard-library/ios-functions.md#scientific). Si se establece [fixed](../standard-library/ios-functions.md#fixed), el número se imprime como 3466,976800. Si se establece **scientific**, se imprime como 3,4669773 + 003.
+El valor predeterminado de precisión de punto flotante es seis. Por ejemplo, el número 3466.9768 se imprime como 3466.98. Para cambiar el modo de impresión de este valor, use el manipulador [setprecision](../standard-library/iomanip-functions.md#setprecision). El manipulador tiene dos marcas: [fixed](../standard-library/ios-functions.md#fixed) y [scientific](../standard-library/ios-functions.md#scientific). Si se establece [fixed](../standard-library/ios-functions.md#fixed), el número se imprime como 3466,976800. Si `scientific` está establecido, se imprime como 3,4669773 + 003.
 
 Para mostrar los números de punto flotante que se muestran en [Alineación](#vclrfalignmentanchor4) con un dígito significativo, reemplace el bucle **for** como sigue:
 
@@ -179,7 +180,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-Si cambia la marca **ios::fixed** por **ios::scientific**, el programa imprime lo siguiente:
+Si cambia el `ios::fixed` marca `ios::scientific`, el programa imprime lo:
 
 ```cpp
 Zoot    1.2e+00
@@ -188,11 +189,11 @@ Al      6.5e+02
 Stan    4.4e+03
 ```
 
-De nuevo, el programa imprime un dígito después del punto decimal. Si se establece **ios::fixed** o **ios::scientific**, el valor de precisión determina el número de dígitos después del punto decimal. Si no se establece ninguna de estas marcas, el valor de precisión determina el número total de dígitos significativos. El manipulador `resetiosflags` borra estas marcas.
+De nuevo, el programa imprime un dígito después del punto decimal. Si bien `ios::fixed` o `ios::scientific` está establecido, el valor de precisión determina el número de dígitos después del separador decimal. Si no se establece ninguna de estas marcas, el valor de precisión determina el número total de dígitos significativos. El manipulador `resetiosflags` borra estas marcas.
 
 ## <a name="vclrfradixanchor6"></a> Base
 
-Los manipuladores **dec**, **oct** y **hex** establecen la base predeterminada para entrada y salida. Por ejemplo, si inserta el manipulador **hex** en el flujo de salida, el objeto traduce correctamente la representación interna de datos de números enteros a un formato de salida hexadecimal. Los números se muestran con dígitos de la letra a a la f en minúsculas si la marca [uppercase](../standard-library/ios-functions.md#uppercase) es evidente (valor predeterminado). De lo contrario, se muestran en mayúsculas. La base predeterminada es **dec** (decimal).
+El `dec`, `oct`, y `hex` manipuladores establecen el radix predeterminado para la entrada y salida. Por ejemplo, si inserta el `hex` manipulador en el flujo de salida, el objeto traduce correctamente la representación interna de datos de enteros en un formato de salida hexadecimal. Los números se muestran con dígitos de la letra a a la f en minúsculas si la marca [uppercase](../standard-library/ios-functions.md#uppercase) es evidente (valor predeterminado). De lo contrario, se muestran en mayúsculas. El radix predeterminado es `dec` (decimal).
 
 ## <a name="quoted-strings-c14"></a>Cadena entrecomillada (C++14)
 
@@ -210,13 +211,13 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-Este comportamiento se puede solucionar manualmente, pero asegúrese de ida y vuelta de cadena más fácil, C ++ 14 agrega el `std::quoted` transmitir manipulador en \<iomanip >. Tras la inserción, `quoted()` rodea la cadena con un delimitador (comilla doble ' " ' de forma predeterminada) y tras la extracción manipula el flujo para extraer todos los caracteres hasta que se encuentra el delimitador final. Las comillas incrustadas se escapan con un carácter de escape ("\\\\" de forma predeterminada).
+Este comportamiento se puede solucionar manualmente, pero hacer más fácil, C ++ 14 de ida y vuelta de cadena se agrega el `std::quoted` transmitir manipulador en \<iomanip >. Tras la inserción, `quoted()` rodea la cadena con un delimitador (comilla doble ' " ' de forma predeterminada) y tras la extracción manipula el flujo para extraer todos los caracteres hasta que se encuentra el delimitador final. Las comillas incrustadas se escapan con un carácter de escape ("\\\\" de forma predeterminada).
 
-Los delimitadores están presentes en el objeto de secuencia; no están presentes en la cadena extraída, pero están presentes en la cadena devuelta por [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str).
+Los delimitadores están presentes solo en el objeto de secuencia; no están presentes en la cadena extraída, pero están presentes en la cadena devuelta por [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str).
 
 El comportamiento del espacio en blanco de las operaciones de inserción y extracción es independiente de cómo se representa una cadena en el código, de forma que el operador entrecomillado será útil al margen de si la cadena de entrada es un literal de cadena sin formato o una cadena normal. La cadena de entrada, con independencia de su formato, puede tener comillas, saltos de línea, tabulaciones , etc., insertados y todos ellos se conservarán con el manipulador quoted().
 
-Para obtener más información y ejemplos de código completos, vea [entre comillas](../standard-library/iomanip-functions.md#quoted).
+Para obtener más información y ejemplos de código completo, vea [entre comillas](../standard-library/iomanip-functions.md#quoted).
 
 ## <a name="see-also"></a>Vea también
 

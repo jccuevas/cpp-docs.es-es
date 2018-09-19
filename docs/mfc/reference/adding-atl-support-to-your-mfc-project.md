@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347073"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Agregar compatibilidad con ATL a un proyecto MFC
 Si ya ha creado una aplicación basada en MFC, puede agregar compatibilidad para Active Template Library (ATL) fácilmente mediante la ejecución de agregar compatibilidad de ATL para proyectos de MFC.  

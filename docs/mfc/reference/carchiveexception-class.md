@@ -1,5 +1,5 @@
 ---
-title: Clase CArchiveException | Documentos de Microsoft
+title: CArchiveException (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,13 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53e82838ba952656d7067ce2294d9abdde11479c
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335749"
 ---
-# <a name="carchiveexception-class"></a>Clase CArchiveException
+# <a name="carchiveexception-class"></a>CArchiveException (clase)
 Representa una condición de excepción de serialización  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -68,7 +69,7 @@ class CArchiveException : public CException
  **Encabezado:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- Construye un `CArchiveException` objeto, que almacena el valor de `cause` en el objeto.  
+ Construye un `CArchiveException` objeto, que almacena el valor de *provocar* en el objeto.  
   
 ```  
 CArchiveException(
@@ -77,14 +78,14 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cause`  
+ *Causa*  
  Una variable de tipo enumerado que indica el motivo de la excepción. Para obtener una lista de los enumeradores, consulte la [m_cause](#m_cause) miembro de datos.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Señala a una cadena que contiene el nombre de la `CArchive` objeto ocasionando la excepción.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede crear un `CArchiveException` objeto en el montón y producir usted mismo o dejar que la función global [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) controlan por usted.  
+ Puede crear un `CArchiveException` en el montón de objeto y producir usted mismo o dejar que la función global [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) controle automáticamente.  
   
  No utilice este constructor directamente; en su lugar, llame a la función global `AfxThrowArchiveException`.  
   
@@ -96,29 +97,29 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este miembro de datos es una variable pública de tipo `int`. Sus valores se definen mediante un `CArchiveException` tipo enumerado. A continuación se indican los enumeradores y el significado de cada uno de ellos:  
+ Este miembro de datos es una variable pública de tipo **int**. Sus valores se definen mediante un `CArchiveException` tipo enumerado. A continuación se indican los enumeradores y el significado de cada uno de ellos:  
   
-- **CArchiveException::none** se produjo ningún error.  
+- `CArchiveException::none` Se produjo ningún error.  
   
-- **CArchiveException::genericException** error no especificado.  
+- `CArchiveException::genericException` Error no especificado.  
   
-- **CArchiveException::readOnly** intentó escribir en un archivo abierto para la carga.  
+- `CArchiveException::readOnly` Se intentó escribir en un archivo abierto para la carga.  
   
-- **CArchiveException::endOfFile** alcanzó final de archivo al leer un objeto.  
+- `CArchiveException::endOfFile` Se ha llegado al final del archivo al leer un objeto.  
   
-- **CArchiveException::writeOnly** intentó leer de un archivo abierto para almacenar.  
+- `CArchiveException::writeOnly` Se intentó leer de un archivo abierto para almacenar.  
   
-- **CArchiveException::badIndex** formato de archivo no válido.  
+- `CArchiveException::badIndex` Formato de archivo no válido.  
   
-- **CArchiveException::badClass** intentó leer un objeto en un objeto de un tipo incorrecto.  
+- `CArchiveException::badClass` Se intentó leer un objeto en un objeto del tipo incorrecto.  
   
-- **CArchiveException::badSchema** intentó leer un objeto con una versión diferente de la clase.  
+- `CArchiveException::badSchema` Se intentó leer un objeto con una versión diferente de la clase.  
   
     > [!NOTE]
     >  Estos enumeradores de causa de `CArchiveException` son distintos de los enumeradores de causa de `CFileException`.  
   
     > [!NOTE]
-    > **CArchiveException::generic** está en desuso. Use **genericException** en su lugar. Si **genérico** se utiliza en una aplicación y se compila con/CLR, habrá errores de sintaxis que no son fáciles de descifrar.  
+    > `CArchiveException::generic` está desusada. Utilice `genericException` en su lugar. Si **genérico** se usa en una aplicación y se compila con/CLR, habrá errores de sintaxis que no son fáciles de descifrar.  
   
 ##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  Especifica el nombre del archivo para esta condición de excepción.  

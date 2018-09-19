@@ -1,5 +1,5 @@
 ---
-title: float_control | Documentos de Microsoft
+title: float_control | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,98 +18,104 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 958aef828d857b0e8d4043be0e2417cd8a349512
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109778"
 ---
 # <a name="floatcontrol"></a>float_control
-Especifica el comportamiento de punto flotante de una función.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-float_control( value,setting [push] | push | pop )  
-```  
-  
-## <a name="flags"></a>Marcas  
- `value`, `setting` **[inserción]**  
- Especifica un comportamiento en punto flotante. `value` puede ser **precisa** o **excepto**. Para obtener más información, consulte [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md). `setting` puede ser **en** o **desactivar**.  
-  
- Si `value` es **precisa**, la configuración de **precisa** y **excepto** se especifican. **excepto** sólo se puede establecer en **en** cuando **precisa** también se establece en **en**.  
-  
- Si la parte opcional **inserción** símbolo (token) se agrega la actual configuración para `value` se inserta en la pila interna del compilador.  
-  
- **push**  
- Inserta el valor de `float_control` actual en la pila interna del compilador.  
-  
- **pop**  
- Quita el `float_control` de la parte superior de la pila interna del compilador y hace que el nuevo `float_control` configuración.  
-  
-## <a name="remarks"></a>Comentarios  
- No se puede activar `float_control precise` cuando **excepto** se encuentra en. De forma similar, **precisa** no se puede desactivar cuando `fenv_access` se encuentra en. Para pasar del modelo estricto a un modelo rápido con la instrucción pragma `float_control`, utilice el código siguiente:  
-  
-```  
-#pragma float_control(except, off)  
-#pragma fenv_access(off)  
-#pragma float_control(precise, off)  
-```  
-  
- Para pasar del modelo rápido a un modelo estricto con la instrucción pragma `float_control`, utilice el código siguiente:  
-  
-```  
-#pragma float_control(precise, on)  
-#pragma fenv_access(on)  
-#pragma float_control(except, on)  
-```  
-  
- Las directivas pragma de punto flotante incluyen:  
-  
--   [fenv_access](../preprocessor/fenv-access.md)  
-  
--   [fp_contract](../preprocessor/fp-contract.md)  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo detectar una excepción de desbordamiento de punto flotante mediante la instrucción pragma `float_control`.  
-  
-```  
-// pragma_directive_float_control.cpp  
-// compile with: /EHa  
-#include <stdio.h>  
-#include <float.h>  
-  
-double func( ) {  
-   return 1.1e75;  
-}  
-  
-#pragma float_control (except,on)  
-  
-int main( ) {  
-   float u[1];  
-   unsigned int currentControl;  
-   errno_t err;  
-  
-   err = _controlfp_s(&currentControl, ~_EM_OVERFLOW, _MCW_EM);  
-   if (err != 0)  
-      printf_s("_controlfp_s failed!\n");  
-  
-   try  {  
-      u[0] = func();  
-      printf_s ("Fail");     
-      return(1);  
-   }   
-  
-   catch (...)  {  
-      printf_s ("Pass");  
-      return(0);  
-   }  
-}  
-```  
-  
-```Output  
-Pass  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+Especifica el comportamiento de punto flotante de una función.
+
+## <a name="syntax"></a>Sintaxis
+
+> **#pragma float_control** [ **(** [ *valor* **,** *configuración* [ **, inserción** ]] | [ **inserción** | **pop** ] **)** ]
+
+## <a name="options"></a>Opciones
+
+*valor*, *configuración* [, **inserción**]<br/>
+Especifica un comportamiento en punto flotante. *valor* puede ser **precisa**, **strict**, o **excepto**. Para obtener más información, consulte [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md). El *configuración* puede estar **en** o **desactivar**.
+
+Si *valor* es **strict**, la configuración de las opciones **strict** y **excepto** especificados por *configuración* . **excepto** sólo se puede establecer en **en** cuando **precisa** o **strict** también se establece en **en**.
+
+Si el elemento opcional **inserción** token se agrega actual para *valor* se inserta en la pila interna del compilador.
+
+**push**<br/>
+Insertar actual **float_control** configuración de sesión en la pila interna del compilador
+
+**pop**<br/>
+Quita el **float_control** de la parte superior de la pila interna del compilador y hace que el nuevo **float_control** configuración.
+
+## <a name="remarks"></a>Comentarios
+
+No puede usar **float_control** para activar **precisa** cuando **excepto** está activado. De forma similar, **precisa** no puede desactivarse cuando [fenv_access](../preprocessor/fenv-access.md) está activado. Para pasar del modelo estricto a un modelo rápido mediante el uso de la **float_control** pragma, use el código siguiente:
+
+```cpp
+#pragma float_control(except, off)
+#pragma fenv_access(off)
+#pragma float_control(precise, off)
+```
+
+Para pasar del modelo rápido a un modelo estricto con la **float_control** pragma, use el código siguiente:
+
+```cpp
+#pragma float_control(precise, on)
+#pragma fenv_access(on)
+#pragma float_control(except, on)
+```
+
+Si se especifica ninguna opción, **float_control** no tiene ningún efecto.
+
+Las directivas pragma de punto flotante incluyen:
+
+- [fenv_access](../preprocessor/fenv-access.md)
+
+- [fp_contract](../preprocessor/fp-contract.md)
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente muestra cómo detectar una excepción de punto flotante de desbordamiento mediante la instrucción pragma **float_control**.
+
+```cpp
+// pragma_directive_float_control.cpp
+// compile with: /EHa
+#include <stdio.h>
+#include <float.h>
+
+double func( ) {
+   return 1.1e75;
+}
+
+#pragma float_control (except, on)
+
+int main( ) {
+   float u[1];
+   unsigned int currentControl;
+   errno_t err;
+
+   err = _controlfp_s(&currentControl, ~_EM_OVERFLOW, _MCW_EM);
+   if (err != 0)
+      printf_s("_controlfp_s failed!\n");
+
+   try  {
+      u[0] = func();
+      printf_s ("Fail");
+      return(1);
+   }
+
+   catch (...)  {
+      printf_s ("Pass");
+      return(0);
+   }
+}
+```
+
+```Output
+Pass
+```
+
+## <a name="see-also"></a>Vea también
+
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

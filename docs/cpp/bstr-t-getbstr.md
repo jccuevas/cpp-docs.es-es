@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetBSTR | Documentos de Microsoft
+title: _bstr_t::GetBSTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c9903170f62652357264a3ea2de0839496e9e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a62cd1c08409fb5915ebf42fa118c1e6124e29f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071866"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
-**Específicos de Microsoft**  
-  
- Señala al principio del objeto `BSTR` incluido en `_bstr_t`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-BSTR& GetBSTR( );  
-  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Principio del objeto `BSTR` incluido en `_bstr_t`.  
-  
-## <a name="remarks"></a>Comentarios  
- `GetBSTR` afecta a todos los objetos de `_bstr_t` que comparten `BSTR`. Varios `_bstr_t` pueden compartir `BSTR` mediante el uso del constructor copy y `operator=`.  
-  
-## <a name="example"></a>Ejemplo  
- Vea [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo de uso `GetBSTR`.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_bstr_t (Clase)](../cpp/bstr-t-class.md)
+
+**Específicos de Microsoft**
+
+Señala al principio del objeto `BSTR` incluido en `_bstr_t`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+BSTR& GetBSTR( );
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Principio del objeto `BSTR` incluido en `_bstr_t`.
+
+## <a name="remarks"></a>Comentarios
+
+**GetBSTR** afecta a todos los `_bstr_t` objetos que comparten un `BSTR`. Más de un `_bstr_t` puede compartir un `BSTR` mediante el uso del constructor de copias y **operador =**.
+
+## <a name="example"></a>Ejemplo
+
+Consulte [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo con **GetBSTR**.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_bstr_t (Clase)](../cpp/bstr-t-class.md)

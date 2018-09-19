@@ -49,11 +49,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df2168da257c6d1d07cff6400122830da60b5fef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca1591bba9518b1b5f6122f51bf60f5a23fc7a26
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319011"
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp, wcscmp, _mbscmp
 
@@ -86,19 +87,19 @@ Cadenas terminadas en NULL que se van a comparar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto para cada una de estas funciones indica la relación ordinal de *string1* a *string2*.
+El valor devuelto para cada una de estas funciones indica la relación ordinal de *string1* a *cadena2*.
 
 |Valor|Relación de string1 y string2|
 |-----------|----------------------------------------|
 |< 0|*cadena1* es menor que *cadena2*|
-|0|*cadena1* es idéntico a *cadena2*|
+|0|*cadena1* es idéntico al *cadena2*|
 |> 0|*cadena1* es mayor que *cadena2*|
 
 Un error de validación de parámetros, **_mbscmp** devuelve **_NLSCMPERROR**, que se define en \<string.h > y \<mbstring.h >.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strcmp** función realiza una comparación ordinal de *string1* y *string2* y devuelve un valor que indica su relación. **wcscmp** y **_mbscmp** son, respectivamente, versiones de caracteres multibyte y anchos de **strcmp**. **_mbscmp** reconoce las secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Además, si *string1* o *string2* es un puntero nulo, **_mbscmp** invoca el controlador de parámetros no válidos, tal y como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbscmp** devuelve **_NLSCMPERROR** y establece **errno** a **EINVAL**. **strcmp** y **wcscmp** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
+El **strcmp** función realiza una comparación ordinal de *string1* y *cadena2* y devuelve un valor que indica su relación. **wcscmp** y **_mbscmp** son, respectivamente, versiones de caracteres anchos y caracteres multibyte de **strcmp**. **_mbscmp** reconoce secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Además, si *string1* o *cadena2* es un puntero nulo, **_mbscmp** invoca el controlador de parámetros no válidos, tal y como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbscmp** devuelve **_NLSCMPERROR** y establece **errno** a **EINVAL**. **strcmp** y **wcscmp** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -106,20 +107,20 @@ El **strcmp** función realiza una comparación ordinal de *string1* y *string2*
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
-El **strcmp** funciones se diferencian de los **strcoll** funciones que **strcmp** comparaciones son ordinales y no se ven afectadas por la configuración regional. **strcoll** compara las cadenas de manera lexicográfica usando la **LC_COLLATE** categoría de la configuración regional actual. Para obtener más información sobre la **LC_COLLATE** categoría, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md).
+El **strcmp** funciones se diferencian de las **strcoll** funciones en el que **strcmp** comparaciones son ordinales y no se ven afectadas por la configuración regional. **strcoll** compara las cadenas de manera lexicográfica usando la **LC_COLLATE** categoría de la configuración regional actual. Para obtener más información sobre la **LC_COLLATE** categoría, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
 En la configuración regional "C", el orden de los caracteres del juego de caracteres (juego de caracteres ASCII) es el mismo que en los caracteres lexicográficos. Sin embargo, en otras configuraciones regionales, el orden de los caracteres del juego de caracteres puede diferir del orden lexicográfico. Por ejemplo, en algunas configuraciones regionales europeas el carácter “a” (valor 0x61) precede el carácter “ä” (valor 0xE4) en el juego de caracteres, pero el carácter “ä” precede el carácter “a” lexicográficamente.
 
-En configuraciones regionales en el que se diferencian el juego de caracteres y el orden de los caracteres lexicográficos son distintos, puede usar **strcoll** en lugar de **strcmp** para realizar la comparación lexicográfica de cadenas. Como alternativa, puede usar **strxfrm** en las cadenas originales y después usar **strcmp** en las cadenas resultantes.
+En las configuraciones regionales para el que el juego de caracteres y el orden lexicográfico de los caracteres son diferentes, puede usar **strcoll** en lugar de **strcmp** para la comparación lexicográfica de cadenas. Como alternativa, puede usar **strxfrm** de las cadenas originales y luego usar **strcmp** en las cadenas resultantes.
 
-El **strcmp** funciones distinguen mayúsculas de minúsculas. **_stricmp**, **_wcsicmp**, y **_mbsicmp** comparan cadenas convirtiéndolas primero en su forma minúscula. Dos cadenas que contienen caracteres situados entre "Z" y "a" en la tabla ASCII ('[','\\', ']', ' ^', '_' y '\`') comparan de forma diferente, dependiendo de si son mayúsculas o minúsculas. Por ejemplo, las dos cadenas "ABCDE" y "ABCD ^" comparar una manera si la comparación es minúscula ("abcde" > "abcd ^") y viceversa ("ABCDE" < "ABCD ^") si la comparación es mayúscula.
+El **strcmp** funciones distinguen mayúsculas de minúsculas. **_stricmp**, **_wcsicmp**, y **_mbsicmp** comparan cadenas convirtiéndolas primero en su forma minúscula. Dos cadenas que contienen caracteres que se encuentran entre la 'Z' y 'a' en la tabla ASCII ('[','\\', ']', ' ^', '_' y '\`') comparan de forma diferente, dependiendo de si son mayúsculas o minúsculas. Por ejemplo, las dos cadenas "ABCDE" y "ABCD ^" comparan de un modo si la comparación es minúscula ("abcde" > "abcd ^") y la otra manera ("ABCDE" < "ABCD ^") si la comparación es mayúscula.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**strcmp**|<string.h>|
-|**wcscmp**|<string.h> o <wchar.h>|
+|**strcmp**|\<string.h>|
+|**wcscmp**|\<string.h> o \<wchar.h>|
 |**_mbscmp**|\<mbstring.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).

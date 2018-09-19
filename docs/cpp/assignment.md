@@ -1,5 +1,5 @@
 ---
-title: Asignación | Documentos de Microsoft
+title: Asignación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,51 +15,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd08215c3849bf487578b28b1824afbec14c52
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4955fb16d76bc68166bf314b9e1e8c02cd8e244
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131478"
 ---
 # <a name="assignment"></a>Asignación
-El operador de asignación (**=**), en sentido estricto, es un operador binario. La declaración es idéntica a cualquier otro operador binario, con las excepciones siguientes:  
-  
--   Debe ser una función miembro no estática. Ningún `operator=` se puede declarar como función no miembro.  
-  
--   Las clases derivadas no lo heredan.  
-  
--   El compilador puede generar una función `operator=` predeterminada para los tipos de clase si no existe ninguna. (Para obtener más información sobre predeterminado `operator=` funciones, vea [miembro a miembro asignación e inicialización](http://msdn.microsoft.com/en-us/94048213-8b49-4416-8069-b1b7a6f271f9).)  
-  
- El ejemplo siguiente muestra cómo declarar un operador de asignación:  
-  
-```  
-// assignment.cpp  
-class Point  
-{  
-public:  
-   Point &operator=( Point & );  // Right side is the argument.  
-   int _x, _y;  
-};  
-  
-// Define assignment operator.  
-Point &Point::operator=( Point &ptRHS )  
-{  
-   _x = ptRHS._x;  
-   _y = ptRHS._y;  
-  
-   return *this;  // Assignment operator returns left side.  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Observe que el argumento proporcionado es el lado derecho de la expresión. El operador devuelve el objeto para preservar el comportamiento del operador de asignación, que devuelve el valor del lado izquierdo después de que se complete la asignación. Esto permite escribir instrucciones tales como:  
-  
-```  
-pt1 = pt2 = pt3;  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Sobrecarga de operadores](../cpp/operator-overloading.md)
+
+El operador de asignación (**=**), en realidad, es un operador binario. La declaración es idéntica a cualquier otro operador binario, con las excepciones siguientes:
+
+- Debe ser una función miembro no estática. No **operador =** se pueden declarar como una función no miembro.
+- Las clases derivadas no lo heredan.
+- Valor predeterminado es **operador =** función puede generarse mediante el compilador para los tipos de clase, si no existe ninguno.
+
+El ejemplo siguiente muestra cómo declarar un operador de asignación:
+
+```cpp
+class Point
+{
+public:
+    int _x, _y;
+
+    // Right side of copy assignment is the argument.
+    Point& operator=(const Point&);
+};
+
+// Define copy assignment operator.
+Point& Point::operator=(const Point& otherPoint)
+{
+    _x = otherPoint._x;
+    _y = otherPoint._y;
+
+    // Assignment operator returns left side of assignment.
+    return *this;
+}
+
+int main()
+{
+    Point pt1, pt2;
+    pt1 = pt2;
+}
+```
+
+El argumento proporcionado es el lado derecho de la expresión. El operador devuelve el objeto para preservar el comportamiento del operador de asignación, que devuelve el valor del lado izquierdo después de que se complete la asignación. Esto permite el encadenamiento de asignaciones, tales como:
+
+```cpp
+pt1 = pt2 = pt3;
+```
+
+El operador de asignación de copia no es debe confundirse con el constructor de copias. Esto último se llama durante la construcción de un nuevo objeto desde otra existente:
+
+```cpp
+// Copy constructor is called--not overloaded copy assignment operator!
+Point pt3 = pt1;
+
+// The previous initialization is similar to the following:
+Point pt4(pt1); // Copy constructor call.
+```
+
+> [!NOTE]
+> Es conveniente seguir el [regla de tres](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) que una clase que define un operador de asignación de copia debe definir explícitamente el constructor de copia, destructor y, a partir de C ++ 11, mueven el constructor y mover la asignación de operador.
+
+## <a name="see-also"></a>Vea también
+
+- [Sobrecarga de operadores](../cpp/operator-overloading.md)
+- [Constructores de copia y operadores de asignación de copia (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

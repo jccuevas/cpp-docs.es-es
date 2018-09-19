@@ -1,5 +1,5 @@
 ---
-title: 'Srwlockexclusivetraits:: Getinvalidvalue (método) | Documentos de Microsoft'
+title: Método Srwlockexclusivetraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599fb1d4b204e170a01f01c60e03959a30075c1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5883d2b9b432afea134eaa5daf1b4105994e236a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605489"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>SRWLockExclusiveTraits::GetInvalidValue (Método)
-Recupera un objeto SRWLockExclusiveTraits que siempre es válido.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un objeto SRWLockExclusiveTraits vacío.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** handletraits  
-  
-## <a name="see-also"></a>Vea también  
- [SRWLockExclusiveTraits (estructura)](../windows/srwlockexclusivetraits-structure.md)
+
+Recupera un **SRWLockExclusiveTraits** objeto que no siempre es válido.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Un valor vacío **SRWLockExclusiveTraits** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** handletraits
+
+## <a name="see-also"></a>Vea también
+
+[SRWLockExclusiveTraits (estructura)](../windows/srwlockexclusivetraits-structure.md)

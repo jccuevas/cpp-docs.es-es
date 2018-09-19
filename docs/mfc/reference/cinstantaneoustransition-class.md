@@ -1,5 +1,5 @@
 ---
-title: Clase CInstantaneousTransition | Documentos de Microsoft
+title: CInstantaneousTransition (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d782f0f896837474c24255703a60e228737ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209219"
 ---
 # <a name="cinstantaneoustransition-class"></a>Clase CInstantaneousTransition
 Encapsula una transición instantánea.  
@@ -58,7 +59,7 @@ class CInstantaneousTransition : public CBaseTransition;
 |[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|El valor de la variable de animación al final de la transición.|  
   
 ## <a name="remarks"></a>Comentarios  
- Durante una transición instantánea, el valor de la variable de animación cambia al instante de su valor actual a un valor final especificado. La duración de esta transición siempre es cero. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador de nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
+ Durante una transición instantánea, el valor de la variable de animación cambia al instante desde su valor actual en un valor final especificado. La duración de esta transición es siempre cero. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -78,7 +79,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblFinalValue`  
+ *dblFinalValue*  
  El valor de la variable de animación al final de la transición.  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
@@ -91,8 +92,8 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
-`pLibrary`  
- Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
+*pLibrary*  
+ Un puntero a un [IUIAnimationTransitionLibrary interfaz](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define una biblioteca de transiciones estándares.  
 
   
 ### <a name="return-value"></a>Valor devuelto  

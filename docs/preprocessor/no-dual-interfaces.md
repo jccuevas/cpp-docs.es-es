@@ -1,5 +1,5 @@
 ---
-title: no_dual_interfaces | Documentos de Microsoft
+title: no_dual_interfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8923adb4cf2e92d72bf656064c6de8fc66e2a91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539475"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
 **Específicos de C++**  
   
- Cambia la manera en que el compilador genera las funciones de contenedor para los métodos de interfaz dual.  
+Cambia la manera en que el compilador genera las funciones de contenedor para los métodos de interfaz dual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +35,12 @@ no_dual_interfaces
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Normalmente, el contenedor llamará al método a través de la tabla de funciones virtuales para la interfaz. Con `no_dual_interfaces`, el contenedor llama en su lugar **IDispatch:: Invoke** para invocar el método.  
+ 
+Normalmente, el contenedor llamará al método a través de la tabla de funciones virtuales para la interfaz. Con **no_dual_interfaces**, el contenedor en su lugar llama `IDispatch::Invoke` para invocar el método.  
   
- **FIN de específicos de C++**  
+**FIN de específicos de C++**  
   
 ## <a name="see-also"></a>Vea también  
- [atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

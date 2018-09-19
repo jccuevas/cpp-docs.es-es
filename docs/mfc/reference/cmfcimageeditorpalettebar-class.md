@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCImageEditorPaletteBar | Documentos de Microsoft
+title: CMFCImageEditorPaletteBar (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851462"
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>Clase CMFCImageEditorPaletteBar
-Proporciona la funcionalidad de la barra de paleta en un cuadro de diálogo del editor de imágenes.  
+# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar (clase)
+Proporciona funcionalidad de la barra de paleta en un cuadro de diálogo del editor de imágenes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,12 +44,12 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |-|-|  
 |Name|Descripción|  
 |[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Devuelve el alto de los botones de barra de herramientas. (Invalida [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina si la barra de herramientas puede mostrar botones que extendió bordes. (Invalida [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina si la barra de herramientas puede mostrar botones que se han ampliado a los bordes. (Invalida [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
 ### <a name="remarks"></a>Comentarios  
- Esta clase no está diseñada para utilizarse directamente desde el código.  
+ Esta clase no está pensada para utilizarse directamente desde el código.  
   
- El marco de trabajo utiliza esta clase para mostrar una barra de paleta en un cuadro de diálogo del editor de imágenes. Para obtener más información sobre el cuadro de diálogo del editor de imágenes, vea [CMFCImageEditorDialog clase](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ El marco de trabajo utiliza esta clase para mostrar una barra de la paleta en un cuadro de diálogo del editor de imágenes. Para obtener más información sobre el cuadro de diálogo del editor de imágenes, consulte [CMFCImageEditorDialog (clase)](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -81,14 +82,14 @@ virtual int GetRowHeight() const;
  El alto de cada botón en la barra de herramientas.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Determina si la barra de herramientas puede mostrar botones que extendió bordes.  
+ Determina si la barra de herramientas puede mostrar botones que se han ampliado a los bordes.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Este método devuelve `FALSE`.  
+ Este método devuelve FALSE.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

@@ -1,35 +1,36 @@
 ---
-title: Integración de WRL (C++ / CX) | Documentos de Microsoft
+title: Integración de WRL (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102699"
 ---
 # <a name="wrl-integration-ccx"></a>Integración de WRL (C++/CX)
 
-Puede mezclar libremente código WRL con [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) código. En la misma unidad de traducción, puede usar objetos declarados con identificador a objeto WRL (`^`) notación y [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] puntero inteligente (`ComPtr<T>`) notación. Sin embargo, debes controlar manualmente los valores devueltos, y [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT códigos de error y las excepciones de WRL.
-  
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>Desarrollo de[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 
+Puede mezclar libremente código WRL con código de biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución. En la misma unidad de traducción puedes usar objetos declarados con el identificador al objeto WRL (`^`) puntero inteligente de notación y WRL (`ComPtr<T>`) notación. Sin embargo, debe controlar manualmente los valores devueltos y los códigos de error de WRL HRESULT y excepciones de WRL.
 
-Para obtener más información acerca de la creación y el consumo [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] de componentes, vea [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](../windows/windows-runtime-cpp-template-library-wrl.md).
+## <a name="wrl-development"></a>Desarrollo de WRL
+
+Para obtener más información sobre la creación y consumo de componentes WRL, consulte [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Ejemplo
 
-El fragmento de código siguiente se muestra el uso de WRL y [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] para consumir [!INCLUDE[wrt](includes/wrt-md.md)] clases y examinar un archivo de metadatos.
+El fragmento de código siguiente se muestra mediante WRL y WRL para consumir las clases en tiempo de ejecución de Windows y examinar un archivo de metadatos.
 
-El ejemplo está tomado de un fragmento de código en el foro de aplicaciones de almacén de Microsoft de creación. El autor de este fragmento de código proporciona los avisos de declinación de responsabilidades y las estipulaciones siguientes:
+El ejemplo está tomado de un fragmento de código en el foro de aplicaciones de creación de Microsoft Store. El autor de este fragmento de código proporciona los avisos de declinación de responsabilidades y las estipulaciones siguientes:
 
-1. C++ no proporciona API específicas para aplicar reflexión en tipos de [!INCLUDE[wrt](includes/wrt-md.md)] , pero los archivos de metadatos de Windows (.winmd) para un tipo son totalmente conformes a los archivos de metadatos CLR. Windows proporciona las nuevas API de detección de metadatos (RoGetMetaDataFile) para obtener el archivo .winmd para un tipo determinado. Sin embargo, estas API son de uso limitado para los programadores de C++ porque no puedes crear instancias de una clase.
+1. C++ no proporciona API específicas para reflejarse en los tipos en tiempo de ejecución de Windows, pero los archivos de metadatos de Windows (.winmd) para un tipo son totalmente compatibles con los archivos de metadatos CLR. Windows proporciona las nuevas API de detección de metadatos (RoGetMetaDataFile) para obtener el archivo .winmd para un tipo determinado. Sin embargo, estas API son de uso limitado para los programadores de C++ porque no puedes crear instancias de una clase.
 
 1. Una vez compilado el código, también necesitarás pasar Runtimeobject.lib y Rometadata.lib al vinculador.
 
@@ -114,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>Vea también
 
-[Interoperar con otros lenguajes](interoperating-with-other-languages-c-cx.md)  
+[Interoperar con otros lenguajes](interoperating-with-other-languages-c-cx.md)

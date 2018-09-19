@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3c95b3510c9cdd839f7428d62af9b428287a83f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101708"
 ---
 # <a name="issame-class"></a>is_same (Clase)
 
@@ -36,13 +37,15 @@ struct is_same;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty1` El primer tipo de consulta.
+*Ty1*<br/>
+Primer tipo que se va a consultar.
 
-`Ty2` El segundo tipo a la consulta.
+*Ty2*<br/>
+Segundo tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si los tipos `Ty1` y `Ty2` son iguales; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si los tipos *Ty1* y *Ty2* son del mismo tipo, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930695"
 ---
 # <a name="registration"></a>Registro
 Cuando un usuario desea insertar un elemento OLE en una aplicación, OLE presenta una lista de tipos de objeto que puede elegir. OLE obtiene esta lista de la base de datos de registro de sistema, que contiene la información proporcionada por las aplicaciones de servidor. Cuando un servidor se registra, las entradas que se coloca en la base de datos de registro de sistema (el registro) describen cada tipo de objeto que proporciona, extensiones y la ruta de acceso a sí misma, entre otros datos de archivos.  
@@ -58,7 +59,7 @@ Cuando un usuario desea insertar un elemento OLE en una aplicación, OLE present
   
  Cuando se inicia la aplicación de servidor, debe asegurarse de que puede realizar el registro de la instancia. Registro de la instancia informa a la DLL del sistema OLE que el servidor esté activo y preparado para recibir solicitudes de los contenedores. No se agrega una entrada a la base de datos de registro. Realizar el registro de la instancia del servidor mediante una llamada a la `ConnectTemplate` función de miembro definida por `COleTemplateServer`. Esto conectará el `CDocTemplate` el objeto a la `COleTemplateServer` objeto.  
   
- El `ConnectTemplate` función toma tres parámetros: el servidor **CLSID**, un puntero a la `CDocTemplate` objeto y una marca que indica si el servidor admite varias instancias. Un miniservidor debe ser capaz de admitir varias instancias, es decir, debe ser posible que varias instancias del servidor para ejecutarse de manera simultánea, uno para cada contenedor. Por lo tanto, pasar **TRUE** para este indicador cuando inicie un miniservidor.  
+ El `ConnectTemplate` función toma tres parámetros: el servidor *CLSID*, un puntero a la `CDocTemplate` objeto y una marca que indica si el servidor admite varias instancias. Un miniservidor debe ser capaz de admitir varias instancias, es decir, debe ser posible que varias instancias del servidor para ejecutarse de manera simultánea, uno para cada contenedor. Por lo tanto, pasar **TRUE** para este indicador cuando inicie un miniservidor.  
   
  Si está escribiendo un miniservidor, por definición, que siempre se va a iniciar un contenedor. Todavía debe analizar la línea de comandos para comprobar si la opción "/ incrustación". La ausencia de esta opción en la línea de comandos significa que el usuario intentó iniciar el miniservidor como una aplicación independiente. Si esto ocurre, registrar el servidor con la base de datos de registro del sistema y, a continuación, mostrar un cuadro de mensaje que informa al usuario para iniciar el miniservidor como una aplicación de contenedor.  
   

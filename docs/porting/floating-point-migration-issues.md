@@ -12,11 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6578486ada758482b270cd5505338e2acf3eb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578433"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migración de punto flotante  
   
@@ -32,7 +33,7 @@ Cuando las funciones matemáticas se movieron a CRT universal en Visual Studio 2
   
 Muchas de las funciones de la biblioteca matemática de punto flotante tienen implementaciones diferentes para distintas arquitecturas de CPU. Por ejemplo, puede que el CRT x86 de 32 bits tenga una implementación distinta que el CRT x64 de 64 bits. Además, algunas de las funciones pueden tener varias implementaciones para una determinada arquitectura de CPU. La implementación más eficaz se selecciona dinámicamente en tiempo de ejecución en función de los conjuntos de instrucciones compatibles con la CPU. Por ejemplo, en el CRT x86 de 32 bits, algunas funciones tienen una implementación x87 y una implementación SSE2. Cuando se ejecuta en una CPU que admite SSE2, se usa la implementación SSE2 más rápida. Cuando se ejecuta en una CPU que no admite SSE2, se usa la implementación x87 más lenta. Puede ver esto al migrar código antiguo, ya que la opción predeterminada de arquitectura del compilador x86 ha cambiado a [/arch:SSE2](../build/reference/arch-x86.md) en Visual Studio 2012. Dado que es posible que diferentes implementaciones de las funciones de la biblioteca matemática usen distintas instrucciones de CPU y distintos algoritmos para generar sus resultados, puede que las funciones generen diferentes resultados en diferentes plataformas. En la mayoría de los casos, los resultados se encuentran dentro de +/-1 ulp del resultado redondeado correctamente, pero los resultados reales pueden variar de una CPU a otra.  
   
-Las mejoras en la corrección de la generación de código en diferentes modos de punto flotante en Visual Studio también pueden afectar a los resultados de las operaciones de punto flotante cuando el código antiguo se compara con el código nuevo, incluso si se usan las mismas marcas de compilador. Por ejemplo, es posible que el código generado por Visual Studio 2010 cuando se ha especificado [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (valor predeterminado) o **/fp:strict** no haya propagado correctamente los valores no numéricos (NaN) intermedios en las expresiones. Por lo tanto, podría darse que algunas expresiones que generaban un resultado numérico en compiladores antiguos ahora generen correctamente un resultado NaN. También podría ver algunas diferencias debido a que las optimizaciones de código habilitadas para **/fp:fast** ahora aprovechan más características del procesador. Estas optimizaciones pueden usar menos instrucciones, pero podrían afectar a los resultados generados porque se han quitado algunas operaciones intermedias que antes eran visibles.  
+Las mejoras en la corrección de la generación de código en diferentes modos de punto flotante en Visual Studio también pueden afectar a los resultados de las operaciones de punto flotante cuando el código antiguo se compara con el código nuevo, incluso si se usan las mismas marcas de compilador. Por ejemplo, es posible que el código generado por Visual Studio 2010 cuando se ha especificado [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (valor predeterminado) o `/fp:strict` no haya propagado correctamente los valores no numéricos (NaN) intermedios en las expresiones. Por lo tanto, podría darse que algunas expresiones que generaban un resultado numérico en compiladores antiguos ahora generen correctamente un resultado NaN. También podría ver algunas diferencias debido a que las optimizaciones de código habilitadas para `/fp:fast` ahora aprovechan más características del procesador. Estas optimizaciones pueden usar menos instrucciones, pero podrían afectar a los resultados generados porque se han quitado algunas operaciones intermedias que antes eran visibles.  
   
 ## <a name="how-to-get-identical-results"></a>Cómo obtener resultados idénticos  
   

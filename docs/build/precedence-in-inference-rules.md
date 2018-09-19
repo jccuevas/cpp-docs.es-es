@@ -1,5 +1,5 @@
 ---
-title: Prioridad en las reglas de inferencia | Documentos de Microsoft
+title: Prioridad en las reglas de inferencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725236"
 ---
 # <a name="precedence-in-inference-rules"></a>Prioridad en las reglas de inferencia
-Si una regla de inferencia se definió varias veces, NMAKE utiliza la definición de prioridad más alta. En la lista siguiente muestra el orden de prioridad, de mayor a menor:  
-  
-1.  Una regla de inferencia definida en un archivo MAKE; las definiciones posteriores tienen precedencia.  
-  
-2.  Una regla de inferencia definida en Tools.ini; las definiciones posteriores tienen precedencia.  
-  
-3.  Una regla de inferencia predefinidas.  
-  
-## <a name="see-also"></a>Vea también  
- [Reglas de inferencia](../build/inference-rules.md)
+
+Si se definió una regla de inferencia, NMAKE utiliza la definición de la prioridad más alta. En la lista siguiente se muestra el orden de prioridad de mayor a menor:
+
+1. Regla de inferencia definida en un archivo MAKE; las definiciones posteriores tienen la prioridad.
+
+1. Una regla de inferencia definida en Tools.ini; las definiciones posteriores tienen la prioridad.
+
+1. Una regla de inferencia predefinidas.
+
+## <a name="see-also"></a>Vea también
+
+[Reglas de inferencia](../build/inference-rules.md)

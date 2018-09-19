@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: Setunknown (método) | Documentos de Microsoft'
+title: Setunknown (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28b25645b21d3101e2f2b2004f02f29482320808
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1f127b8435f934e5cf203de2aaa6f2d0c3a58d13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603075"
 ---
 # <a name="weakreferencesetunknown-method"></a>WeakReference::SetUnknown (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void SetUnknown(  
-   _In_ IUnknown* unk  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `unk`  
- Un puntero a la `IUnknown` interfaz de un objeto.  
-  
-## <a name="remarks"></a>Comentarios  
- Establece la referencia segura del elemento actual `WeakReference` objeto al puntero de interfaz especificado.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void SetUnknown(
+   _In_ IUnknown* unk
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*UNK*  
+Un puntero a la `IUnknown` interfaz de un objeto.
+
+## <a name="remarks"></a>Comentarios
+
+Establece la referencia segura del actual **WeakReference** objeto en el puntero de interfaz especificado.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
 ## <a name="see-also"></a>Vea también
+
 [WeakReference (clase)](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

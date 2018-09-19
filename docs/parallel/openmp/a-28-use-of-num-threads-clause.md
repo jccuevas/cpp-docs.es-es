@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689121"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28 Uso de la cláusula num_threads
 En el ejemplo siguiente se muestra la `num_threads` cláusula ([sección 2.3](../../parallel/openmp/2-3-parallel-construct.md) en página 8). La región paralela se ejecuta con un máximo de 10 subprocesos.  

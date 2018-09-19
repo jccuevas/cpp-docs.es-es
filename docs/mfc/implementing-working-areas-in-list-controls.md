@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347365"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementar las áreas de trabajo en los controles de lista
 De forma predeterminada, un control de lista organiza todos los elementos de un modo de cuadrícula estándar. Sin embargo, se admite otro método, las áreas, que organiza los elementos de lista en rectangulares grupos de trabajo. Para una imagen de un control de lista que implementa áreas de trabajo, vea Usar controles de vista de lista en el SDK de Windows.  

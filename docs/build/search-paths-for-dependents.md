@@ -1,5 +1,5 @@
 ---
-title: Rutas de búsqueda para dependientes | Documentos de Microsoft
+title: Rutas de búsqueda para dependientes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 577fc7e44bfff35cf7efdcff20dc4cdca1c7001e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1fd407f99abb98fb949b6d5bcc45b10c6ff9121
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706319"
 ---
 # <a name="search-paths-for-dependents"></a>Rutas de búsqueda para dependientes
-Cada dependiente tiene una ruta de acceso de búsqueda opcional, especificar como sigue:  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-{directory[;directory...]}dependent  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- NMAKE busca una dependencia en primer lugar en el directorio actual y, a continuación, en directorios en el orden especificado. Una macro puede especificar parte o la totalidad de una ruta de acceso de búsqueda. Incluya los nombres de directorio entre llaves ({}); Separe varios directorios con un punto y coma (;). No se permiten espacios ni tabulaciones.  
-  
-## <a name="see-also"></a>Vea también  
- [Dependientes](../build/dependents.md)
+
+Cada dependiente tiene una ruta de acceso de búsqueda opcional, especificar como sigue:
+
+## <a name="syntax"></a>Sintaxis
+
+```
+{directory[;directory...]}dependent
+```
+
+## <a name="remarks"></a>Comentarios
+
+NMAKE busca una dependencia en primer lugar en el directorio actual y, a continuación, en los directorios en el orden especificado. Parte o la totalidad de una ruta de búsqueda, puede especificar una macro. Los nombres de directorio encerrarlo entre llaves ({}); Separe varios directorios con punto y coma (;). No se permiten espacios o tabulaciones.
+
+## <a name="see-also"></a>Vea también
+
+[Dependientes](../build/dependents.md)

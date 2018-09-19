@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391807"
 ---
 # <a name="filename-search-functions"></a>Funciones de búsqueda de nombre de archivo
 Estas funciones buscan y cierran búsquedas de los nombres de archivos especificados:  

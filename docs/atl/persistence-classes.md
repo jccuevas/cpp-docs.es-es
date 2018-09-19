@@ -1,5 +1,5 @@
 ---
-title: Clases de persistencia (ATL) | Documentos de Microsoft
+title: Clases de persistencia (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16490105f0ec2ded73f45e54d0f8a6700264893c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46a42c92115ee60a0387e58b2acd5ce640e60eae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015642"
 ---
 # <a name="persistence-classes"></a>Clases de persistencia
-Las siguientes clases de implementan la persistencia de objeto:  
-  
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) permite a un cliente cargar y guardar las propiedades de un objeto a una bolsa de propiedades.  
-  
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) permite a un cliente cargar y guardar datos persistentes de un objeto en una secuencia.  
-  
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) permite a un cliente cargar y guardar datos persistentes de un objeto a un almacenamiento.  
-  
-## <a name="related-articles"></a>Artículos relacionados  
- [Tutorial ATL](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../atl/atl-class-overview.md)   
- [Macros de mapa de propiedades](../atl/reference/property-map-macros.md)
+
+Las clases siguientes implementan la persistencia de objeto:
+
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) permite que un cliente cargar y guardar propiedades de un objeto en un contenedor de propiedades.
+
+- [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) permite que un cliente cargar y guardar datos persistentes de un objeto en una secuencia.
+
+- [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) permite que un cliente cargar y guardar datos persistentes de un objeto en un almacenamiento.
+
+## <a name="related-articles"></a>Artículos relacionados
+
+[Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../atl/atl-class-overview.md)<br/>
+[Macros de mapa de propiedades](../atl/reference/property-map-macros.md)
 

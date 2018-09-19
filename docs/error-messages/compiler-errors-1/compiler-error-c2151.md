@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2151 | Documentos de Microsoft
+title: Error del compilador C2151 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfd708c64beffe3be3e7bf127547c904cc39709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae236956d991aae2b62db704acbd4d736cbc56bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101558"
 ---
 # <a name="compiler-error-c2151"></a>Error del compilador C2151
-más de un atributo de idioma  
-  
- Una función tiene más de una palabra clave ( `__cdecl`, `__stdcall`, o `__fastcall`) especificar una convención de llamada.
+
+más de un atributo de idioma
+
+Una función tiene más de una palabra clave ( `__cdecl`, `__stdcall`, o `__fastcall`) especificando una convención de llamada.

@@ -1,5 +1,5 @@
 ---
-title: Delimitadores para etiquetas de documentación de Visual C++ | Documentos de Microsoft
+title: Delimitadores para etiquetas de documentación en Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033919"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitadores para etiquetas de documentación en Visual C++
-El uso de etiquetas de documentación requiere delimitadores, que indican al compilador que un comentario de documentación empieza y termina.  
+El uso de etiquetas de documentación requiere delimitadores, que indican al compilador dónde empieza y dónde acaba un comentario de documentación.  
   
  Puede usar los siguientes tipos de delimitadores con las etiquetas de documentación XML:  
+|||
+|-|-|
+|`///`  | Este es el formato que se muestra en los ejemplos de documentación y que usan las plantillas de proyecto de Visual C++.  |
+| `/** */`  | Se trata de delimitadores de múltiples líneas.  |
   
- `///`  
- Esta es la forma que se muestran en los ejemplos de documentación y utilizada por las plantillas de proyecto de Visual C++.  
+Hay varias reglas de formato cuando se usan los delimitadores `/** */`:  
   
- `/** */`  
- Se trata de delimitadores de múltiples líneas.  
+-   Para la línea que contiene el delimitador `/**`, si el resto de la línea es espacio en blanco, la línea no se procesa en busca de comentarios. Si el primer carácter es un espacio en blanco, ese carácter de espacio en blanco se omite y se procesa el resto de la línea. En caso contrario, todo el texto de la línea situado después del delimitador `/**` se procesa como parte del comentario.  
   
- Hay algunas reglas de formato cuando se usa el `/** */` delimitadores:  
+-   Para la línea que contiene el delimitador `*/`, si solo hay espacio en blanco hasta el delimitador `*/`, esa línea se omite. En caso contrario, el texto de la línea hasta el delimitador `*/` se procesa como parte del comentario y está sujeto a las reglas de coincidencia de patrones que se describen en el punto siguiente.  
   
--   Para la línea que contiene el `/**` delimitador, si el resto de la línea es el espacio en blanco, la línea no se procesa para comentarios. Si el primer carácter es un espacio en blanco, se omite ese carácter de espacio en blanco y se procesa el resto de la línea. En caso contrario, todo el texto de la línea situado después del delimitador `/**` se procesa como parte del comentario.  
+-   Para las líneas después de la que comienza con el delimitador `/**`, el compilador busca un patrón común al principio de cada línea que consta de espacio en blanco opcional y un asterisco (`*`), seguido de más espacio en blanco opcional. Si el compilador encuentra un conjunto común de caracteres al principio de cada línea, omitirá este patrón para todas las líneas después del delimitador `/**`, hasta y, posiblemente, incluyendo la línea que contiene el delimitador `*/`.  
   
--   Para la línea que contiene el `*/` delimitador, si hay solo espacios en blanco hasta el `*/` delimitador, esa línea se omite. En caso contrario, el texto de la línea hasta el delimitador `*/` se procesa como parte del comentario y está sujeto a las reglas de coincidencia de patrones que se describen en el punto siguiente.  
+Algunos ejemplos:  
   
--   Para las líneas después de la que comienza con la `/**` delimitador, el compilador busca un patrón común al principio de cada línea que consta de espacio en blanco opcional y un asterisco (`*`), seguido de más espacio en blanco opcional. Si el compilador encuentra un conjunto común de caracteres al principio de cada línea, omitirá este patrón para todas las líneas después de la `/**` delimitador, hasta y, posiblemente, incluyendo la línea que contiene el `*/` delimitador.  
-  
- Algunos ejemplos:  
-  
--   La única parte del comentario siguiente que se procesará es la línea que comienza con `<summary>`. Los siguientes formatos de dos etiqueta generará los mismos comentarios:  
+-   La única parte del comentario siguiente que se procesará es la línea que comienza con `<summary>`. Los dos formatos de etiqueta siguientes generarán los mismos comentarios:  
   
     ```  
     /**  
@@ -50,7 +49,7 @@ El uso de etiquetas de documentación requiere delimitadores, que indican al com
     /** <summary>text</summary> */  
     ```  
   
--   El compilador aplica un patrón de "*" para pasar por alto al principio de la segunda y tercera líneas.  
+-   El compilador aplica un patrón de " \* " para ignorar al principio de la segunda y la tercera línea.  
   
     ```  
     /**  
@@ -58,7 +57,7 @@ El uso de etiquetas de documentación requiere delimitadores, que indican al com
      *  text </summary>*/  
     ```  
   
--   El compilador no encuentra ningún patrón en este comentario porque no hay ningún asterisco en la segunda línea. Por lo tanto, todo el texto en la segunda y tercera líneas, seguridad hasta el `*/`, se procesará como parte del comentario.  
+-   El compilador no encuentra ningún patrón en este comentario porque no hay ningún asterisco en la segunda línea. Por tanto, todo el texto de la segunda y la tercera línea, hasta `*/`, se procesará como parte del comentario.  
   
     ```  
     /**  
@@ -66,7 +65,7 @@ El uso de etiquetas de documentación requiere delimitadores, que indican al com
        text </summary>*/  
     ```  
   
--   El compilador no encuentra ningún patrón en este comentario por dos motivos. En primer lugar, no hay ninguna línea que comienza con un número coherente de espacios antes del asterisco. En segundo lugar, la quinta línea comienza con una tabulación, por lo tanto los espacios no coinciden. Por lo tanto, todo el texto de la segunda línea hasta el `*/` se procesará como parte del comentario.  
+-   El compilador no encuentra ningún patrón en este comentario por dos razones. En primer lugar, no hay ninguna línea que comience con un número coherente de espacios antes del asterisco. En segundo lugar, la quinta línea comienza con una tabulación, por lo tanto los espacios no coinciden. Por tanto, todo el texto de la segunda línea, hasta `*/`, se procesará como parte del comentario.  
   
     ```  
     /**  

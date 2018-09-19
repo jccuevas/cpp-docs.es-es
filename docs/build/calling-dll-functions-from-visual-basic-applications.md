@@ -1,5 +1,5 @@
 ---
-title: Llamar a funciones DLL desde aplicaciones de Visual Basic | Documentos de Microsoft
+title: Llamar a funciones DLL desde aplicaciones de Visual Basic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,67 +20,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894569"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Llamar a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic
-Para que aplicaciones de Visual Basic (o aplicaciones programadas en otros lenguajes, como Pascal o Fortran) para llamar a funciones en un archivo DLL de C o C++, las funciones deben exportarse con la convención llamada correcta sin ninguna decoración de nombres realizarla el compilador.  
-  
- `__stdcall` crea la convención de llamada correcta para la función (la función llamada limpia la pila y parámetros se pasan de derecha a izquierda) pero decora el nombre de la función de forma diferente. Por lo que, cuando **__declspec (dllexport)** se utiliza en una función exportada en un archivo DLL, se exporta el nombre representativo.  
-  
- El `__stdcall` la decoración de nombres se agrega como prefijo el nombre del símbolo con un carácter de subrayado (_) y anexa el símbolo con un signo de arroba (@) carácter seguido del número de bytes en la lista de argumentos (el espacio de pila requerido). Como resultado, la función cuando se declara como:  
-  
-```  
-int __stdcall func (int a, double b)  
-```  
-  
- se representa como:  
-  
-```  
-_func@12  
-```  
-  
- La convención de llamada de C (`__cdecl`) decora el nombre como `_func`.  
-  
- Para obtener el nombre representativo, use [/MAP](../build/reference/map-generate-mapfile.md). El uso de **__declspec (dllexport)** hace lo siguiente:  
-  
--   Si la función se exporta con la convención de llamada de C (**_cdecl**), quita el carácter de subrayado (_) inicial cuando se exporta el nombre.  
-  
--   Si la función que se va a exportar no utiliza la convención de llamada de C (por ejemplo, `__stdcall`), exporta el nombre representativo.  
-  
- Porque no hay ninguna manera de invalidar donde se produce la limpieza de la pila, debe utilizar `__stdcall`. Para quitar la decoración de nombres con `__stdcall`, deberá especificarlos utilizando alias en la sección EXPORTS del archivo .def. Esto se muestra como se indica a continuación para la siguiente declaración de función:  
-  
-```  
-int  __stdcall MyFunc (int a, double b);  
-void __stdcall InitCode (void);  
-```  
-  
- En. Archivo DEF:  
-  
-```  
-EXPORTS  
-   MYFUNC=_MyFunc@12  
-   INITCODE=_InitCode@0  
-```  
-  
- Archivos DLL ser llamado por los programas escritos en Visual Basic, es necesaria en el archivo .def la técnica de alias que se muestra en este tema. Si el alias se realiza en el programa de Visual Basic, no es necesario el uso de alias en el archivo .def. Se puede realizar en el programa de Visual Basic agregando una cláusula de alias a la [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) instrucción.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
-  
--   [Exportación desde un archivo DLL](../build/exporting-from-a-dll.md)  
-  
--   [Exportar desde un archivo DLL mediante archivos. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Exportar desde un archivo DLL mediante__declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
--   [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje c.](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
-  
--   [Determinar qué método de exportación para usar](../build/determining-which-exporting-method-to-use.md)  
-  
--   [Nombres representativos](../build/reference/decorated-names.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)
+
+Para que aplicaciones de Visual Basic (o aplicaciones en otros lenguajes como Pascal o Fortran) llamar a funciones en un archivo DLL de C o C++, las funciones deberán exportarse con la convención de llamada correcta sin ninguna decoración de nombre realizada por el compilador
+
+`__stdcall` crea la convención de llamada correcta para la función (la función llamada limpia la pila y los parámetros se pasan de derecha a izquierda) pero decora el nombre de la función de forma diferente. Por tanto, cuando **__declspec (dllexport)** se utiliza en una función exportada en un archivo DLL, se exporta el nombre representativo.
+
+El `__stdcall` decoración prefijo al nombre de símbolo con un carácter de subrayado (_) y anexa el símbolo con un signo de arroba (**\@**) carácter seguido del número de bytes en la lista de argumentos (el espacio de pila requerido). Como resultado, la función cuando se declara como:
+
+```C
+int __stdcall func (int a, double b)
+```
+
+se decorará como `_func@12` en la salida.
+
+La convención de llamada de C (`__cdecl`) decora el nombre como `_func`.
+
+Para obtener el nombre representativo, utilice [/MAP](../build/reference/map-generate-mapfile.md). El uso de **__declspec (dllexport)** hace lo siguiente:
+
+- Si la función se exporta con la convención de llamada de C (**_cdecl**), quita el carácter de subrayado (_) inicial cuando se exporta el nombre.
+
+- Si la función que se va a exportar no utiliza la convención de llamada de C (por ejemplo, `__stdcall`), exporta el nombre representativo.
+
+Dado que no hay ninguna manera de invalidar donde se produce la limpieza de la pila, debe utilizar `__stdcall`. Para quitar la decoración de nombres con `__stdcall`, deberá especificarlos utilizando alias en la sección EXPORTS del archivo .def. Esto se muestra como se indica a continuación para la siguiente declaración de función:
+
+```C
+int  __stdcall MyFunc (int a, double b);
+void __stdcall InitCode (void);
+```
+
+En. Archivo DEF:
+
+```
+EXPORTS
+   MYFUNC=_MyFunc@12
+   INITCODE=_InitCode@0
+```
+
+Para que archivos DLL ser llamado por programas escritos en Visual Basic, la técnica de alias que se muestra en este tema es necesario en el archivo. def. Si el alias se realiza en el programa de Visual Basic, no es necesario el uso del alias en el archivo. def. Puede realizarse en el programa de Visual Basic agregando una cláusula de alias para el [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) instrucción.
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
+
+- [Exportación desde un archivo DLL](../build/exporting-from-a-dll.md)
+
+- [Exportar desde un archivo DLL mediante archivos. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Exportar desde un archivo DLL mediante __declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+
+- [Determinar qué método de exportación para usar](../build/determining-which-exporting-method-to-use.md)
+
+- [Nombres representativos](../build/reference/decorated-names.md)
+
+## <a name="see-also"></a>Vea también
+
+[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Clase CMapPtrToPtr | Documentos de Microsoft
+title: CMapPtrToPtr (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,13 +44,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d3e6ca79794eafe64ee2797c12ec8a82a3bb064
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038226"
 ---
-# <a name="cmapptrtoptr-class"></a>Clase CMapPtrToPtr
+# <a name="cmapptrtoptr-class"></a>CMapPtrToPtr (clase)
 Admite mapas de punteros void con clave de punteros void.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -60,11 +61,9 @@ class CMapPtrToPtr : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CMapPtrToPtr` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un puntero `CObject` como un parámetro o un valor devuelto de función, utilice un puntero a `void`. Siempre que vea un `CString` o un **const** puntero a `char` como un parámetro de función o un valor devuelto, utilice un puntero a `void`.  
+ Las funciones miembro de `CMapPtrToPtr` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o el valor devuelto, utilice un puntero a **void**. Siempre que vea un `CString` o un **const** puntero a **char** como un parámetro de función o valor devuelto, utilice un puntero a **void**.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  por ejemplo, se traduce en  
   
@@ -88,11 +87,11 @@ class CMapPtrToPtr : public CObject
 |[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcula el valor hash de una clave especificada.|  
 |[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicializa la tabla hash.|  
 |[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Comprueba si la condición de mapa está vacío (no hay elementos).|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Busca un puntero void en función de la clave de puntero void. El valor del puntero, no la entidad que señala, se utiliza para la comparación de claves.|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Busca un puntero void en función de la clave de un puntero void. El valor de puntero, no la entidad que señala, se usa para la comparación de la clave.|  
 |[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Devuelve una referencia a la clave asociada con el valor de clave especificado.|  
 |[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Quita todos los elementos de esta asignación.|  
 |[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Quita un elemento especificado por una clave.|  
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserta un elemento en la asignación; reemplaza un elemento existente si se encuentra una clave coincidente.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserta un elemento en el mapa; reemplaza un elemento existente si se encuentra una clave coincidente.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -101,13 +100,13 @@ class CMapPtrToPtr : public CObject
 |[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CMapPtrToPtr` incorpora la macro `IMPLEMENT_DYNAMIC` para admitir el acceso a tipos en tiempo de ejecución y el volcado en un objeto `CDumpContext`. Si se necesita un volcado de elementos de mapa individuales (valores de puntero), debe establecer la profundidad del contexto de volcado en 1 o mayor.  
+ `CMapPtrToPtr` incorpora la macro IMPLEMENT_DYNAMIC para admitir el acceso a los tipos de tiempo de ejecución y el volcado en un `CDumpContext` objeto. Si necesita un volcado de elementos de mapa individuales (valores de puntero), debe establecer la profundidad del contexto de volcado en 1 o mayor.  
   
- Puntero al puntero mapas no se pueden serializar.  
+ No se pueden serializar el puntero al puntero mapas.  
   
  Cuando se elimina un objeto `CMapPtrToPtr`, o cuando se quitan sus elementos, solo se quitan los punteros, no las entidades a las que hacen referencia.  
   
- Para obtener más información sobre `CMapPtrToPtr`, vea el artículo [colecciones](../../mfc/collections.md).  
+ Para obtener más información sobre `CMapPtrToPtr`, consulte el artículo [colecciones](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  

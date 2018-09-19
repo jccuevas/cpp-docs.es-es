@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2190 | Documentos de Microsoft
+title: Error del compilador C2190 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8a40aa3ae2169233874ae806d65a63d1644283e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fdca31d191700057a255d99c6d943f4b4e6a981
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092848"
 ---
 # <a name="compiler-error-c2190"></a>Error del compilador C2190
-primera lista de parámetros más de segundo  
-  
- Una función de C se ha declarado una segunda vez con una lista de parámetros más corta. C no admite funciones sobrecargadas.  
-  
- El ejemplo siguiente genera C2190:  
-  
-```  
-// C2190.c  
-// compile with: /Za /c  
-void func( int, float );  
-void func( int  );   // C2190, different parameter list  
-void func2( int  );   // OK  
+
+primera lista de parámetros más larga que la segunda
+
+Una función de C se ha declarado una segunda vez con una lista de parámetros más corta. C no admite funciones sobrecargadas.
+
+El ejemplo siguiente genera C2190:
+
+```
+// C2190.c
+// compile with: /Za /c
+void func( int, float );
+void func( int  );   // C2190, different parameter list
+void func2( int  );   // OK
 ```

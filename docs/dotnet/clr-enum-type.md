@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111502"
 ---
 # <a name="clr-enum-type"></a>Tipo de enumeración de CLR
 Ha cambiado la declaración y el comportamiento de las enumeraciones de extensiones administradas para C++ a Visual C++.  

@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonApplicationButton | Documentos de Microsoft
+title: CMFCRibbonApplicationButton (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,13 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701394"
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>Clase CMFCRibbonApplicationButton
+# <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton (clase)
 Implementa un botón especial situado en la esquina superior izquierda de la ventana de la aplicación. Cuando se hace clic, el botón abre un menú que contiene normalmente los comandos comunes del menú **Archivo** , tales como **Abrir**, **Guardar**y **Salir**.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,11 +49,11 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 |Name|Descripción|  
 |----------|-----------------|  
 |`CMFCRibbonApplicationButton::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
-|`CMFCRibbonApplicationButton::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Asigna una imagen para el botón de la aplicación de la cinta de opciones.|  
+|`CMFCRibbonApplicationButton::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Asigna una imagen en el botón de la aplicación de cinta de opciones.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar varios métodos en la `CMFCRibbonApplicationButton` clase. En el ejemplo se muestra cómo asignar una imagen para el botón de la aplicación y cómo establecer la información sobre herramientas. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCRibbonApplicationButton` clase. El ejemplo muestra cómo asignar una imagen para el botón de la aplicación y cómo establecer la información sobre herramientas. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
@@ -70,7 +71,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
  **Encabezado:** afxRibbonBar.h  
   
 ##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
- Construye e inicializa un [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) objeto.  
+ Crea e inicializa un [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) objeto.  
   
 ```  
 CMFCRibbonApplicationButton();  
@@ -79,17 +80,17 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `uiBmpResID`  
+ *uiBmpResID*  
  El identificador de recurso de la imagen para mostrar en el botón de la aplicación.  
   
- `hBmp`  
- Un identificador a un mapa de bits que se muestra en el botón de la aplicación.  
+ *hBmp*  
+ Identificador de un mapa de bits que se muestra en el botón de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
- El botón de la aplicación de la cinta de opciones es un botón especial que se encuentra en la esquina superior izquierda de la ventana de la aplicación. Cuando un usuario hace clic en este botón, la aplicación abre un menú que contiene normalmente comunes **archivo** comandos, como **abiertos**, **guardar**, y **Exit**.  
+ Botón de la aplicación de cinta es un botón especial que se encuentra en la esquina superior izquierda de la ventana de la aplicación. Cuando un usuario hace clic en este botón, la aplicación abre un menú que contiene normalmente comunes **archivo** comandos, como **abierto**, **guardar**, y **Exit**.  
   
 ##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
- Asigna una imagen para el botón de la aplicación.  
+ Asigna una imagen en el botón de la aplicación.  
   
 ```  
 void SetImage(UINT uiBmpResID);  
@@ -97,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiBmpResID`  
- El identificador de recurso de la imagen para mostrar en el botón de la aplicación.  
+*uiBmpResID*<br/>
+[in] El identificador de recurso de la imagen para mostrar en el botón de la aplicación.  
   
- [in] `hBmp`  
- Un identificador a un mapa de bits que se muestra en el botón de la aplicación.  
+*hBmp*<br/>
+[in] Identificador de un mapa de bits que se muestra en el botón de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para asignar una nueva imagen en el botón de la aplicación de cinta después de crear el botón. El botón de la aplicación se encuentra en la esquina superior izquierda de la ventana de la aplicación.  

@@ -1,5 +1,5 @@
 ---
-title: Comandos y tablas | Documentos de Microsoft
+title: Comandos y tablas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,27 +22,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 23d2739807a065b93b10a209a9ea68070b36970b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fefd4241d1412ec6ea319db9ca6669856715e631
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028121"
 ---
 # <a name="commands-and-tables"></a>Comandos y tablas
-Comandos y tablas permiten tener acceso a conjuntos de filas; es decir, abrir conjuntos de filas, ejecutar comandos y enlazar las columnas. El [CCommand](../../data/oledb/ccommand-class.md) y [CTable](../../data/oledb/ctable-class.md) clases crean instancias de los objetos de comando y tabla, respectivamente. Estas clases derivan de [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) tal como se muestra en la ilustración siguiente.  
+
+Comandos y tablas permiten tener acceso a los conjuntos de filas; es decir, abrir conjuntos de filas, ejecutar comandos y enlazar las columnas. El [CCommand](../../data/oledb/ccommand-class.md) y [CTable](../../data/oledb/ctable-class.md) clases crean instancias de los objetos de comando y tabla, respectivamente. Estas clases derivan de [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) tal como se muestra en la ilustración siguiente.  
   
- ![CCommand y CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
-Comandos y las clases de la tabla  
+![CCommand y CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
+Comando y las clases Table  
   
- En la tabla anterior, `TAccessor` puede ser cualquier tipo de descriptor de acceso que se muestran en [tipos de descriptor de acceso](../../data/oledb/accessors-and-rowsets.md). *TRowset* puede ser cualquier tipo de conjunto de filas que se muestran en [tipos de conjunto de filas](../../data/oledb/accessors-and-rowsets.md). *TMultiple* especifica el tipo de resultado (uno o varios conjuntos de resultados).  
+En la tabla anterior, `TAccessor` puede aparecer en cualquier tipo de descriptor de acceso [tipos de descriptor de acceso](../../data/oledb/accessors-and-rowsets.md). *TRowset* puede ser cualquier tipo de conjunto de filas mostrada en [tipos de conjunto de filas](../../data/oledb/accessors-and-rowsets.md). *TMultiple* especifica el tipo de resultado (uno o varios conjuntos de resultados).  
   
- El [el Asistente para consumidores OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) le permite especificar si desea que un objeto de comando o tabla.  
+El [el Asistente para consumidores OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) le permite especificar si desea que un objeto de comando o una tabla.  
   
--   Para los orígenes de datos sin comandos, puede usar el `CTable` clase. Normalmente se utiliza para conjuntos de filas simples que no especifican parámetros y no requieren múltiples resultados. Esta clase abre una tabla en un origen de datos mediante un nombre de tabla que especifique.  
+- Para orígenes de datos sin comandos, puede usar el `CTable` clase. Normalmente se utiliza para conjuntos de filas simples que no especifican ningún parámetro y no requieren múltiples resultados. Esta sencilla clase abre una tabla en un origen de datos con un nombre de tabla que especifique.  
   
--   Orígenes de datos que admiten los comandos, puede usar el `CCommand` clase en su lugar. Para ejecutar un comando, llame al [abiertos](../../data/oledb/ccommand-open.md) en esta clase. Como alternativa, puede llamar a `Prepare` para preparar un comando que se desea ejecutar más de una vez.  
+- Para orígenes de datos que admiten los comandos, puede usar el `CCommand` clase en su lugar. Para ejecutar un comando, llame a [abierto](../../data/oledb/ccommand-open.md) en esta clase. Como alternativa, puede llamar a `Prepare` para preparar un comando que desea ejecutar más de una vez.  
   
-     **CCommand** tiene tres argumentos de plantilla: un tipo de descriptor de acceso, un tipo de conjunto de filas y un tipo de resultado (`CNoMultipleResults`, de forma predeterminada, o `CMultipleResults`). Si especifica `CMultipleResults`, `CCommand` clase admite la **IMultipleResults** interfaz y administra varios conjuntos de filas. El [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ejemplo muestra cómo controlar múltiples resultados.  
+     `CCommand` tiene tres argumentos de plantilla: un tipo de descriptor de acceso, un tipo de conjunto de filas y un tipo de resultado (`CNoMultipleResults`, de forma predeterminada, o `CMultipleResults`). Si especifica `CMultipleResults`, `CCommand` clase admite la `IMultipleResults` interfaz y administra varios conjuntos de filas. El [DBVIEWER](https://github.com/Microsoft/VCSamples) ejemplo muestra cómo controlar múltiples resultados.  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

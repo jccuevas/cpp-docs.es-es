@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4efef4c7dfb907120778390874a5e56222889350
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46018d2ec8747b1fac459e1ac1d28b59eea2385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203477"
 ---
 # <a name="debug-routines"></a>Rutinas de depuración
 
@@ -72,7 +73,7 @@ Para usar estas rutinas es necesario definir la marca [_DEBUG](../c-runtime-libr
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Asigna un número especificado de bloques de memoria del montón con espacio adicional para un encabezado de depuración y búferes de sobrescritura|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Cambia el tamaño de un bloque de memoria especificado del montón, expandiendo o contrayendo el bloque|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Libera un bloque de memoria del montón|
-|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Crea un nombre de ruta de acceso absoluta o completa para el nombre de ruta de acceso relativa especificado, usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) para asignar memoria.|[System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)|
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Crea un nombre de ruta de acceso absoluta o completa para el nombre de ruta de acceso relativa especificado, usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) para asignar memoria.|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
 |[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Obtiene el directorio de trabajo actual, usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) para asignar memoria.|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Asigna un bloque de memoria del montón con espacio adicional para un encabezado de depuración y búferes de sobrescritura|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Calcula el tamaño de un bloque de memoria del montón|

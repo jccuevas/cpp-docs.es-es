@@ -1,5 +1,5 @@
 ---
-title: int_4 (clase) | Documentos de Microsoft
+title: int_4 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,11 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a29ce2e9ec7b8401e2b9aaf499eabb5c0ceea2b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066185"
 ---
 # <a name="int4-class"></a>int_4 (Clase)
 Representa un vector corto de cuatro enteros.  
@@ -668,23 +669,23 @@ explicit inline int_4(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_V0`  
- El valor para inicializar el elemento 0.  
+*_V0*<br/>
+El valor para inicializar el elemento 0.  
   
- `_V1`  
- El valor para inicializar el elemento 1.  
+*_V1*<br/>
+El valor para inicializar el elemento 1.  
   
- `_V2`  
- El valor para inicializar el elemento 2.  
+*_V2*<br/>
+El valor para inicializar el elemento 2.  
   
- `_V3`  
- El valor para inicializar el elemento 3.  
+*_V3*<br/>
+El valor para inicializar el elemento 3.  
   
- `_V`  
- El valor de inicialización.  
+*_V*<br/>
+El valor de inicialización.  
   
- `_Other`  
- El objeto utilizado para inicializar.  
+*_Otro*<br/>
+El objeto usado para inicializar.  
   
 ##  <a name="int_4__size"></a> Tamaño 
 

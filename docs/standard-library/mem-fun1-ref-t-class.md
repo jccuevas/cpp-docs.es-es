@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d354e469b6b6a19d51ecedbc7f2106c21e82dab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b50f703dde69669c57e0f639e748ee596a3f1ab
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106592"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t (Clase)
 
-Clase de adaptadores que permite llamar a una función miembro **non_const** que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de referencia.
+Clase de adaptadores que permite un `non_const` función miembro que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de referencia.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,11 +44,14 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pm` Un puntero a la función miembro de clase **tipo** se convierta en un objeto de función.
+*_Pm*<br/>
+Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-`left` El objeto que la `_Pm` función miembro se llama en.
+*left*<br/>
+El objeto que la *_Pm* función miembro se llama en.
 
-`right` El argumento proporcionado para `_Pm`.
+*right*<br/>
+El argumento que se entrega a *_Pm*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -55,7 +59,7 @@ Una función binaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define la función miembro `operator()` devuelvan ( **izquierdo**.\* `_Pm`) ( **derecho**).
+La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva ( **izquierdo**.\* `_Pm`) ( **derecho**).
 
 ## <a name="example"></a>Ejemplo
 

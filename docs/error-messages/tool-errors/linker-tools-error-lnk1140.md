@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1140 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1140 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0d59589a1882aca4ef2deb419e1e4f1081e52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f850360bc749a41e548cebae9f58f9fc7d3d420
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044709"
 ---
 # <a name="linker-tools-error-lnk1140"></a>Error de las herramientas del vinculador LNK1140
-Hay demasiados módulos para la base de datos de programa; vincule con/PDB: ninguno  
-  
- El proyecto contiene más de 4096 módulos.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo  
-  
-1.  Vuelva a vincular con [/PDB: NONE](../../build/reference/pdb-use-program-database.md).  
-  
-2.  Compile algunos módulos sin información de depuración.  
-  
-3.  Reduzca el número de módulos.
+
+demasiados módulos para la base de datos de programa; vincule con/PDB: NONE
+
+El proyecto contiene más de 4096 módulos.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
+
+1. Vuelva a vincular con [/PDB: NONE](../../build/reference/pdb-use-program-database.md).
+
+1. Algunos módulos se compile sin información de depuración.
+
+1. Reduzca el número de módulos.

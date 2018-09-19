@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 339b3cdb2e2470fea976ef8257e6a84f089d3dd9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712561"
 ---
 # <a name="isassignable-class"></a>Clase is_assignable
 
@@ -35,13 +36,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-Para el tipo del objeto que recibe la asignación.
+*En*<br/>
+El tipo del objeto que recibe la asignación.
 
-Desde el tipo del objeto que proporciona el valor.
+*From*<br/>
+El tipo del objeto que proporciona el valor.
 
 ## <a name="remarks"></a>Comentarios
 
-La expresión no evaluada `declval<To>() = declval<From>()` debe tener un formato correcto. Tanto `From` como `To` deben ser tipos completos, `void` o matrices de límite desconocido.
+La expresión no evaluada `declval<To>() = declval<From>()` debe tener un formato correcto. Ambos `From` y `To` deben ser tipos completos, **void**, o matrices de límite desconocido.
 
 ## <a name="requirements"></a>Requisitos
 

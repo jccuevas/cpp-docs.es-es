@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a553c2975dd5a58673bd4caa6e7c9ba25d33183
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106618"
 ---
 # <a name="conditional-class"></a>conditional (Clase)
 
@@ -39,15 +40,18 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-`B` El valor que determina el tipo seleccionado.
+*B*<br/>
+Valor que determina el tipo seleccionado.
 
-`T1` El resultado de tipo cuando B es true.
+*T1*<br/>
+Resultado del tipo cuando B es true.
 
-`T2` El resultado de tipo cuando B es false.
+*T2*<br/>
+Resultado del tipo cuando B es false.
 
 ## <a name="remarks"></a>Comentarios
 
-La definición de tipo de miembro de plantilla `conditional<B, T1, T2>::type` se evalúa como `T1` cuando `B` se evalúa como `true`, y se evalúa como `T2` cuando `B` se evalúa como `false`.
+El typedef de miembro de plantilla `conditional<B, T1, T2>::type` se evalúa como *T1* cuando *B* se evalúa como **true**y se evalúa como *T2* cuando  *B* se evalúa como **false**.
 
 ## <a name="requirements"></a>Requisitos
 

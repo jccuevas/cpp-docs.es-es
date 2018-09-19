@@ -55,17 +55,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4a9cd6c4533b3b59fdb3c5cab17ffaba071fb08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ceeff060436701efb60aeb59987ae087c191b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960286"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex >
 
 El &lt;shared_mutex > encabezado proporciona primitivas de sincronización para la protección de datos compartidos que se pueden tener acceso varios subprocesos. Además del control de acceso exclusivo proporcionado por las clases mutex, las clases mutex compartidas también permiten la propiedad compartida por varios subprocesos para el acceso no exclusivo. Las exclusiones mutuas compartidas pueden usarse para controlar los recursos que varios subprocesos pueden leer sin causar una condición de carrera, pero se deben escribir exclusivamente por un único subproceso.
 
-El encabezado &lt;shared_mutex > define las clases de `shared_mutex` y `shared_timed_mutex`, la clase de plantilla `shared_lock`y la función de plantilla `swap` para comparten el soporte técnico de la exclusión mutua.
+El encabezado &lt;shared_mutex > define las clases `shared_mutex` y `shared_timed_mutex`, la clase de plantilla `shared_lock`y la función de plantilla `swap` para compartir el soporte técnico de la exclusión mutua.
 
 |Clases|Descripción|
 |-------------|-----------------|
@@ -100,20 +101,20 @@ Un tipo de exclusión mutua compartida admite los métodos adicionales `lock_sha
 
 - El método `unlock_shared` libera la propiedad compartida de la exclusión mutua del subproceso que llama.
 
-- El método `try_lock_shared` intenta obtener la propiedad compartida de la exclusión mutua sin bloquear. Su tipo de valor devuelto se puede convertir a `bool` y `true` si el método obtiene la propiedad, pero en caso contrario es `false`.
+- El método `try_lock_shared` intenta obtener la propiedad compartida de la exclusión mutua sin bloquear. Su tipo de valor devuelto es convertible a **bool** y es **true** si el método obtiene la propiedad, pero en caso contrario es **false**.
 
 La clase `shared_timed_mutex` es un *tipo de exclusión mutua compartida temporizada*, un tipo que cumple los requisitos de exclusión mutua compartida y de exclusión mutua temporizada.
 
 Un tipo de exclusión mutua compartida temporizada admite los métodos adicionales `try_lock_shared_for` y `try_lock_shared_until`:
 
-- El método `try_lock_shared_for` intenta obtener la propiedad compartida de la exclusión mutua hasta que haya transcurrido el tiempo especificado por el parámetro. Si la duración no es positiva, el método es equivalente a `try_lock_shared`. El método no devuelve dentro de la duración especificada, a menos que se obtenga la propiedad compartida. Su valor devuelto es `true` si el método obtiene la propiedad, pero en caso contrario es `false`.
+- El método `try_lock_shared_for` intenta obtener la propiedad compartida de la exclusión mutua hasta que haya transcurrido el tiempo especificado por el parámetro. Si la duración no es positiva, el método es equivalente a `try_lock_shared`. El método no devuelve dentro de la duración especificada, a menos que se obtenga la propiedad compartida. Su valor devuelto es **true** si el método obtiene la propiedad, pero en caso contrario es **false**.
 
-- El método `try_lock_shared_until` intenta obtener la propiedad compartida de la exclusión mutua hasta que haya transcurrido el tiempo absoluto especificado. Si ya ha pasado el tiempo especificado, el método es equivalente a `try_lock_shared`. El método no devuelve antes del tiempo especificado, a menos que se obtenga la propiedad compartida. Su valor devuelto es `true` si el método obtiene la propiedad, pero en caso contrario es `false`.
+- El método `try_lock_shared_until` intenta obtener la propiedad compartida de la exclusión mutua hasta que haya transcurrido el tiempo absoluto especificado. Si ya ha pasado el tiempo especificado, el método es equivalente a `try_lock_shared`. El método no devuelve antes del tiempo especificado, a menos que se obtenga la propiedad compartida. Su valor devuelto es **true** si el método obtiene la propiedad, pero en caso contrario es **false**.
 
 La clase de plantilla `shared_lock` extiende el soporte para el bloqueo temporizado y transfiere la propiedad a una exclusión mutua compartida. La propiedad de la exclusión mutua puede obtenerse en el momento de la construcción o después, y se puede transferir a otro objeto `shared_lock`. Los objetos de tipo `shared_lock` se pueden mover pero no copiar.
 
 > [!WARNING]
-> A partir de Visual Studio 2015, los tipos de sincronización de la biblioteca estándar de C++ se basan en los primitivos de sincronización de Windows y ya no utilizan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en &lt;shared_mutex > no debe usarse con cualquier función o tipo ConcRT.
+> A partir de Visual Studio 2015, los tipos de sincronización de la biblioteca estándar de C++ se basan en las primitivas de sincronización de Windows y ya no utilizan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en &lt;shared_mutex > no debe usarse con ninguna función o tipo ConcRT.
 
 ## <a name="classes"></a>Clases
 
@@ -224,7 +225,7 @@ private:
 
 ## <a name="functions"></a>Funciones
 
-###  <a name="function_swap"></a> Intercambiar
+###  <a name="function_swap"></a> intercambio
 
 Intercambia los objetos `shared_lock`.
 
@@ -243,5 +244,5 @@ Intercambia el contenido de dos objetos `shared_lock`. De forma efectiva es igua
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
+[Referencia de los archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
 [&lt;mutex >](../standard-library/mutex.md)

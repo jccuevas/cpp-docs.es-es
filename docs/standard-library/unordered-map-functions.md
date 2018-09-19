@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665bdfd08fffdfcb662c175b9af44b8e9ed42a1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3a6d8a925f493a8299cf1afd8e851456277a68e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715525"
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funciones de &lt;unordered_map&gt;
 
@@ -41,19 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`Key` el tipo de clave.
+*Key*<br/>
+El tipo de clave.
 
-`Ty` El tipo asignado.
+*Ty*<br/>
+El tipo asignado.
 
-`Hash` El tipo de objeto de función hash.
+*hash*<br/>
+El tipo de objeto de la función hash.
 
-`Pred` Tipo de objeto de función de comparación de igualdad.
+*Pred*<br/>
+El tipo de objeto de función de comparación de igualdad.
 
-`Alloc` La clase de asignador.
+*Alloc*<br/>
+Clase de asignador.
 
-`left` El primer contenedor que se intercambia.
+*left*<br/>
+El primer contenedor que se va a cambiar.
 
-`right` El segundo contenedor que se va a intercambiar.
+*right*<br/>
+El segundo contenedor que se va a cambiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -128,19 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`Key` el tipo de clave.
+*Key*<br/>
+El tipo de clave.
 
-`Ty` El tipo asignado.
+*Ty*<br/>
+El tipo asignado.
 
-`Hash` El tipo de objeto de función hash.
+*hash*<br/>
+El tipo de objeto de la función hash.
 
-`Pred` Tipo de objeto de función de comparación de igualdad.
+*Pred*<br/>
+El tipo de objeto de función de comparación de igualdad.
 
-`Alloc` La clase de asignador.
+*Alloc*<br/>
+Clase de asignador.
 
-`left` El primer contenedor que se intercambia.
+*left*<br/>
+El primer contenedor que se va a cambiar.
 
-`right` El segundo contenedor que se va a intercambiar.
+*right*<br/>
+El segundo contenedor que se va a cambiar.
 
 ### <a name="remarks"></a>Comentarios
 

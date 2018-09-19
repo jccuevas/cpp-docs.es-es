@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1221 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1221 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ce9b1b6ca1c7b873f6c87a6428a9cc6c0b2e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6347bc4e7a14f335a006b666e03851fa8979801
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023324"
 ---
 # <a name="linker-tools-error-lnk1221"></a>Error de las herramientas del vinculador LNK1221
-no se pueden inferir de un subsistema y debe definirse  
-  
- El vinculador no tiene información suficiente para inferir el subsistema que desee cambiar.  
-  
- Para corregir este error, utilice [/Subsystem](../../build/reference/subsystem-specify-subsystem.md).
+
+no se pueden inferir de un subsistema y debe definirse
+
+El vinculador no tiene información suficiente para inferir el subsistema que desea dirigirse.
+
+Para corregir este error, use [/Subsystem](../../build/reference/subsystem-specify-subsystem.md).

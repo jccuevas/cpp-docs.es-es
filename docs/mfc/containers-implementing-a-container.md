@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930080"
 ---
 # <a name="containers-implementing-a-container"></a>Contenedores: Implementar un contenedor
 En este artículo se resume el procedimiento para implementar un contenedor y apunta a otros artículos que proporcionan que explicaciones más detalladas acerca de la implementación de contenedores. También se muestran algunas características OLE opcionales que desea implementar y los artículos que describen estas características.  
   
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>Para preparar la clase derivada de CWinApp  
   
-1.  Inicializar las bibliotecas OLE mediante una llamada a **AfxOleInit** en el `InitInstance` función miembro.  
+1.  Inicializar las bibliotecas OLE mediante una llamada a `AfxOleInit` en el `InitInstance` función miembro.  
   
 2.  Llame a `CDocTemplate::SetContainerInfo` en `InitInstance` para asignar el menú y el Acelerador de recursos que usa cuando un elemento incrustado está activado en contexto. Para obtener más información acerca de este tema, consulte [activación](../mfc/activation-cpp.md).  
   
@@ -38,7 +39,7 @@ En este artículo se resume el procedimiento para implementar un contenedor y ap
   
 2.  Invalidar `IsSelected` para comprobar si el elemento pasado a la está seleccionado actualmente.  
   
-3.  Implemente un **OnInsertObject** controlador de mensaje para mostrar el **Insertar objeto** cuadro de diálogo.  
+3.  Implemente un `OnInsertObject` controlador de mensaje para mostrar el **Insertar objeto** cuadro de diálogo.  
   
 4.  Implemente un `OnSetFocus` controlador para transferir el foco de la vista a una OLE activo en contexto incrustado elemento de mensaje.  
   
@@ -50,9 +51,9 @@ En este artículo se resume el procedimiento para implementar un contenedor y ap
   
 1.  Derivar una clase de [COleClientItem](../mfc/reference/coleclientitem-class.md). Objetos de esta clase representan los elementos que se han incrustado en o vinculado en el documento OLE.  
   
-2.  Invalidar **OnChange**, `OnChangeItemPosition`, y `OnGetItemPosition`. Estas funciones controlan el ajuste de tamaño, posición y modificar los elementos vinculados e incrustados.  
+2.  Invalidar `OnChange`, `OnChangeItemPosition`, y `OnGetItemPosition`. Estas funciones controlan el ajuste de tamaño, posición y modificar los elementos vinculados e incrustados.  
   
- El Asistente para aplicaciones derivará la clase automáticamente, pero es probable que deba reemplazar **OnChange** y las demás funciones mostradas con ella en el paso 2 del procedimiento anterior. Las implementaciones de esqueleto deben personalizarse para la mayoría de las aplicaciones, dado que estas funciones se implementan de forma diferente de una aplicación a la siguiente. Para obtener ejemplos de esto, vea los ejemplos MFC [DRAWCLI](../visual-cpp-samples.md) y [contenedor](../visual-cpp-samples.md).  
+ El Asistente para aplicaciones derivará la clase automáticamente, pero es probable que deba reemplazar `OnChange` y las demás funciones mostradas con ella en el paso 2 del procedimiento anterior. Las implementaciones de esqueleto deben personalizarse para la mayoría de las aplicaciones, dado que estas funciones se implementan de forma diferente de una aplicación a la siguiente. Para obtener ejemplos de esto, vea los ejemplos MFC [DRAWCLI](../visual-cpp-samples.md) y [contenedor](../visual-cpp-samples.md).  
   
  Debe agregar un número de elementos a la estructura de menús de la aplicación contenedora para admitir OLE. Para obtener más información al respecto, consulte [menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).  
   

@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67a509c17558c7b388aa288612d73ea26062ec0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5338ddeb802d13d100e5e3026152793f866c90f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961030"
 ---
 # <a name="algorithms"></a>Algoritmos
 
@@ -42,7 +43,7 @@ La descripción de las funciones de plantilla de algoritmo emplea varias frases 
 
 - Las expresiones como *X* - *Y*, donde *X* e *Y* pueden ser iteradores distintos de los iteradores de acceso aleatorio, se han diseñado en el sentido matemático. La función no evalúa necesariamente al operador **-** si debe determinar dicho valor. Lo mismo se aplica a expresiones como *X* + *N* y *X* - *N*, donde *N* es un tipo entero.
 
-Varios algoritmos hacen uso de un predicado que realiza una comparación en pares, como con `operator==`, para producir un resultado `bool`. La función de predicado `operator==`, o cualquiera que la sustituya, no debe modificar ninguno de sus operandos. Debe producir el mismo resultado `bool` cada vez que se evalúa y debe producir el mismo resultado si una copia de cualquiera de los operandos se sustituye por el operando.
+Varios algoritmos hacen uso de un predicado que realiza una comparación en pares, como con `operator==`, para producir un **bool** resultado. La función de predicado `operator==`, o cualquiera que la sustituya, no debe modificar ninguno de sus operandos. Debe producir el mismo **bool** resultado cada vez que se evalúa y debe producir el mismo resultado si una copia de cualquiera de los operandos se sustituye por el operando.
 
 Varios algoritmos hacen uso de un predicado que debe imponer una ordenación débil estricta en pares de elementos de una secuencia. Para el predicado `pr`(*X*, *Y*):
 
@@ -52,11 +53,11 @@ Varios algoritmos hacen uso de un predicado que debe imponer una ordenación dé
 
 - Ordenación significa que `pr`(*X*, *Y*) && `pr`(*Y*, Z) implica `pr`(*X*, Z).
 
-Algunos de estos algoritmos usan el predicado *X* \< *Y* de forma implícita. Otros predicados que normalmente cumplen el requisito de ordenación débil estricta son *X* > *Y*, **menos**(*X*, *Y*) y `greater`(*X*, *Y*). Pero tenga en cuenta que predicados como *X* \<= *Y* y *X* >= *Y* no cumplen este requisito.
+Algunos de estos algoritmos usan el predicado *X* \< *Y* de forma implícita. Otros predicados que normalmente cumplen el requisito de ordenación débil estricta son *X* > *Y*, `less`(*X*, *Y*), y `greater`(*X*, *Y*). Pero tenga en cuenta que predicados como *X* \<= *Y* y *X* >= *Y* no cumplen este requisito.
 
-Una secuencia de elementos designados por los iteradores del intervalo [`First`, `Last`) es una secuencia ordenada por operator**<** si, para cada *N* del intervalo [0, `Last` - `First`) y para cada *M* del intervalo (N, `Last` - `First`), el predicado !(\*(`First` + *M*) < \*(*First* + *N*)) es verdadero. (Tenga en cuenta que los elementos se ordenan en orden ascendente). La función de predicado **operator<**, o cualquiera que la sustituya, no debe modificar ninguno de sus operandos. Debe producir el mismo resultado `bool` cada vez que se evalúa y debe producir el mismo resultado si una copia de cualquiera de los operandos se sustituye por el operando. Además, debe imponer una ordenación débil estricta en los operandos que compara.
+Una secuencia de elementos designados por los iteradores del intervalo [`First`, `Last`) es una secuencia ordenada por operator**<** si, para cada *N* del intervalo [0, `Last` - `First`) y para cada *M* del intervalo (N, `Last` - `First`), el predicado !(\*(`First` + *M*) < \*(*First* + *N*)) es verdadero. (Tenga en cuenta que los elementos se ordenan en orden ascendente). La función de predicado `operator<`, o cualquiera que la sustituya, no debe modificar ninguno de sus operandos. Debe producir el mismo resultado `bool` cada vez que se evalúa y debe producir el mismo resultado si una copia de cualquiera de los operandos se sustituye por el operando. Además, debe imponer una ordenación débil estricta en los operandos que compara.
 
-Una secuencia de elementos designados por los iteradores del intervalo [`First`, `Last`) es una secuencia de montón ordenada por **operator<** si, para cada *N* en el intervalo [1, `Last` - `First`), el predicado !(\*`First` < \*(`First` + *N*)) es verdadero. (El primer elemento es el mayor). En caso contrario, se conoce su estructura interna únicamente a las funciones de plantilla [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), y [push_heap](../standard-library/algorithm-functions.md#push_heap). Al igual que con una secuencia ordenada, la función de predicado **operator<**, o cualquiera que la sustituya, no debe modificar ninguno de sus operandos, y debe imponer una ordenación débil estricta en los operandos que compara. Debe producir el mismo resultado `bool` cada vez que se evalúa y debe producir el mismo resultado si una copia de cualquiera de los operandos se sustituye por el operando.
+Una secuencia de elementos designados por los iteradores del intervalo [`First`, `Last`) es un montón, ordenada por `operator<` si, para cada *N* en el intervalo [1, `Last`  -  `First`) el ¡predicado! (\*`First` < \*(`First` + *N*)) es true. (El primer elemento es el mayor). Si no se conoce su estructura interna solo a las funciones de plantilla [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), y [push_heap](../standard-library/algorithm-functions.md#push_heap). Igual que con una secuencia ordenada, la función de predicado `operator<`, o cualquiera que la sustituya, no debe modificar ninguno de sus operandos, y debe imponer una ordenación débil estricta en los operandos que compara. Debe producir el mismo **bool** resultado cada vez que se evalúa y debe producir el mismo resultado si una copia de cualquiera de los operandos se sustituye por el operando.
 
 Los algoritmos de la biblioteca estándar de C++ se encuentran en los archivos de encabezado [\<algorithm>](../standard-library/algorithm.md) y [\<numeric>](../standard-library/numeric.md).
 

@@ -1,5 +1,5 @@
 ---
-title: C2708 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2708 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30b2e5c1856a604ae314316cd71d6acc00a7c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0accd68881cccad5e34530a6c157a4e8179b283
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111100"
 ---
-# <a name="compiler-error-c2708"></a>C2708 de Error del compilador
-'identificador': longitud de parámetros reales en bytes es distinta respecto llamada anterior o referencia  
-  
- A [__stdcall](../../cpp/stdcall.md) función debe ir precedida de un prototipo. En caso contrario, el compilador interpreta la primera llamada a la función como un prototipo y este error se produce cuando el compilador encuentra una llamada que no coincide.  
-  
- Para corregir este error, agregue un prototipo de función.
+# <a name="compiler-error-c2708"></a>Error del compilador C2708
+
+'identifier': la longitud de parámetros reales en bytes difiere de la llamada anterior o referencia
+
+Un [__stdcall](../../cpp/stdcall.md) función debe ir precedida de un prototipo. En caso contrario, el compilador interpreta la primera llamada a la función como un prototipo y este error se produce cuando el compilador encuentra una llamada que no coincide.
+
+Para corregir este error, agregue un prototipo de función.

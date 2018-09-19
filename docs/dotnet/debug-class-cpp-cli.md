@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106211"
 ---
 # <a name="debug-class-ccli"></a>Debug (Clase) (C++/CLI)
 Cuando se usa <xref:System.Diagnostics.Debug> en una aplicación de Visual C++, el comportamiento no cambia entre una depuración y una versión de lanzamiento.  

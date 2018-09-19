@@ -1,5 +1,5 @@
 ---
-title: Advertencia de línea de comandos D9027 | Documentos de Microsoft
+title: Advertencia de la línea de comandos D9027 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe2493290c4e4cc5b744136b8e7036c6559220a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105ebbf62027ac3d9377c513c4f7c59e261b983d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112530"
 ---
 # <a name="command-line-warning-d9027"></a>Advertencia de la línea de comandos D9027
-archivo de código fuente '\<filename >' omite  
-  
- CL.exe ha omitido el archivo de origen de entrada.  
-  
- Esta advertencia puede deberse a un espacio entre la opción /Fo y un nombre de archivo de salida en una línea de comandos con la opción/c. Por ejemplo:  
-  
-```  
-cl /c /Fo output.obj input.c   
-```  
-  
- Dado que hay un espacio entre /Fo y `output.obj`, CL.exe toma `output.obj` como el nombre del archivo de entrada. Para corregir el problema, quite el espacio:  
-  
-```  
-cl /c /Fooutput.obj input.c   
+
+archivo de código fuente '\<filename >' omite
+
+CL.exe omite el archivo de origen de entrada.
+
+Esta advertencia puede deberse a un espacio entre la opción /Fo y un nombre de archivo de salida en una línea de comandos con la opción /c. Por ejemplo:
+
+```
+cl /c /Fo output.obj input.c
+```
+
+Dado que hay un espacio entre /Fo y `output.obj`, CL.exe toma `output.obj` como el nombre del archivo de entrada. Para corregir el problema, quite el espacio:
+
+```
+cl /c /Fooutput.obj input.c
 ```

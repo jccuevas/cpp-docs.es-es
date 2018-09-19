@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690083"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10 Especificar un orden secuencial
 Ordenada secciones ([sección 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) en página 22) son útiles para secuencialmente ordenar la salida de trabajo que se realiza en paralelo. El siguiente programa imprime los índices en orden secuencial:  

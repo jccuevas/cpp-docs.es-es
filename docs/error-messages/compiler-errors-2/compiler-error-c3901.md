@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3901 | Documentos de Microsoft
+title: Error del compilador C3901 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f35893eddea6aa37dbd11b84b14ea69aa9affbcb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7027b73c4d8899adb8b644fc52208780b996eab9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085581"
 ---
 # <a name="compiler-error-c3901"></a>Error del compilador C3901
-'función_de_descriptores_de_acceso': debe tener el tipo de valor devuelto 'tipo'  
-  
- Tipo de valor devuelto del método get de al menos uno debe coincidir con el tipo de propiedad. Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).  
-  
- El ejemplo siguiente genera C3901:  
-  
-```  
-// C3901.cpp  
-// compile with: /clr /c  
-using namespace System;  
-ref class X {  
-   property String^ Name {  
-      void get();   // C3901  
-      // try the following line instead  
-      // String^ get();  
-   };  
-};  
-  
-ref class Y {  
-   property double values[int, int] {  
-      int get(int, int);   // C3901  
-      // try the following line instead  
-      // double get(int, int);  
-   };  
-};  
+
+'función_de_descriptores_de_acceso': debe tener el tipo de valor devuelto 'type'
+
+Tipo de valor devuelto del método get de al menos uno debe coincidir con el tipo de propiedad. Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+
+El ejemplo siguiente genera C3901:
+
+```
+// C3901.cpp
+// compile with: /clr /c
+using namespace System;
+ref class X {
+   property String^ Name {
+      void get();   // C3901
+      // try the following line instead
+      // String^ get();
+   };
+};
+
+ref class Y {
+   property double values[int, int] {
+      int get(int, int);   // C3901
+      // try the following line instead
+      // double get(int, int);
+   };
+};
 ```

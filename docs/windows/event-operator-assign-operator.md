@@ -1,5 +1,5 @@
 ---
-title: 'Event:: operator = (operador) | Documentos de Microsoft'
+title: 'Event:: operator = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c95ac2e16ef4f4b279f0da287a4ca2a3d0f18a7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610468"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= (Operador)
-Asigna la referencia de evento especificada a la instancia de evento actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-WRL_NOTHROW Event& operator=(  
-   _Inout_ Event&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `h`  
- Una referencia a valor r a una instancia de evento.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un puntero a la instancia actual de eventos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [Event (clase) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/event-class-windows-runtime-cpp-template-library.md)
+
+Asigna especificado **eventos** referencia a la actual **eventos** instancia.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+WRL_NOTHROW Event& operator=(
+   _Inout_ Event&& h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*  
+Una referencia rvalue para un **eventos** instancia.
+
+## <a name="return-value"></a>Valor devuelto
+
+Un puntero a la actual **eventos** instancia.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[Event (clase) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/event-class-windows-runtime-cpp-template-library.md)

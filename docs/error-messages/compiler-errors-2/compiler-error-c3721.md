@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3721 | Documentos de Microsoft
+title: Error del compilador C3721 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0bd4942dba3c49ecc06b015d6ed14b297d09ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6c2ff97e44ab679e59b3377e80e78398f12211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039562"
 ---
 # <a name="compiler-error-c3721"></a>Error del compilador C3721
-'signature': firma no compatible para el evento  
-  
- Un evento se ha declarado incorrectamente. Para obtener más información, consulte [__event](../../cpp/event.md).  
-  
- Solo es accesible mediante la opción del compilador obsoleta C3721 **/CLR: oldSyntax**.  
+
+'firma': signatura no compatible para el evento
+
+Un evento se ha declarado incorrectamente. Para obtener más información, consulte [__event](../../cpp/event.md).
+
+Solo es accesible a través de la opción del compilador obsoleto C3721 **/CLR: oldSyntax**.

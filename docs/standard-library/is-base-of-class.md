@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed73314d5cef6849c84a8e1019e1fd2d6c8ead86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6085624ca80fa676da89e10686b84323e1a7db89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110284"
 ---
 # <a name="isbaseof-class"></a>is_base_of (Clase)
 
@@ -36,13 +37,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parámetros
 
-`Base` La clase base para comprobar.
+*base*<br/>
+Clase base que se va a comprobar.
 
-`Derived` El tipo derivado va a comprobar.
+*Derivados*<br/>
+Tipo derivado que se va a comprobar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `Base` es una clase base del tipo `Derived`; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Base* es una clase base del tipo *Derived*, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

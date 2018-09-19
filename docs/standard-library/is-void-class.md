@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13fee96611e2a2618de6ea6e1671ece9986a22d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3690eab417f4c817e571026e501f36a19671da2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100994"
 ---
 # <a name="isvoid-class"></a>is_void (Clase)
 
@@ -36,11 +37,12 @@ struct is_void;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `T` es `void` o un formulario de tipo cv-qualified (const, volatile, const volatile) de `void`. En caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *T* es **void** o un formulario completo del visualizador de simultaneidad de **void**, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

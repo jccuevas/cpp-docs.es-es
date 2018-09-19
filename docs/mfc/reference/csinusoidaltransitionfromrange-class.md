@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078688"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Clase CSinusoidalTransitionFromRange
 Encapsula una transición de intervalo sinusoidal que tiene un intervalo determinado de oscilación.  
@@ -92,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pLibrary`  
+ *pLibrary*  
  Un puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándares.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -111,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  La duración de la transición.  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  El valor de la variable de animación en un Valle de la onda sinusoidal.  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  El valor de la variable de animación en un pico de la onda sinusoidal.  
   
- `period`  
+ *período*  
  El período de oscilación de la onda sinusoidal en segundos.  
   
- `slope`  
+ *pendiente*  
  La pendiente al principio de la transición.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: lock (método) | Documentos de Microsoft'
+title: Método CriticalSection | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4fedde29441c9c14b68dec5cff998be57d216e29
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607665"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock (Método)
-Esperas de propiedad del objeto de sección crítica especificado. La función devuelve cuando el subproceso que realiza la llamada se concede la propiedad.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-SyncLock Lock();  
-  
-   static SyncLock Lock(  
-   _In_ CRITICAL_SECTION* cs  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `cs`  
- Un objeto de sección crítica especificado por el usuario.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un objeto de bloqueo que puede usarse para desbloquear la sección crítica actual.  
-  
-## <a name="remarks"></a>Comentarios  
- La primera **bloqueo** el objeto de sección crítica actual afecta a la función. El segundo **bloqueo** function afecta a una sección crítica especificado por el usuario.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [CriticalSection (clase)](../windows/criticalsection-class.md)
+
+Espera a que la propiedad del objeto especificado de sección crítica. La función devuelve cuando el subproceso de llamada se concede la propiedad.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+SyncLock Lock();
+
+   static SyncLock Lock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*CS*  
+Un objeto de sección crítica especificado por el usuario.
+
+## <a name="return-value"></a>Valor devuelto
+
+Un objeto de bloqueo que puede usarse para desbloquear la sección crítica actual.
+
+## <a name="remarks"></a>Comentarios
+
+La primera **bloqueo** el objeto de sección crítica actual afecta a la función. El segundo **bloqueo** función afecta a una sección crítica especificado por el usuario.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[CriticalSection (clase)](../windows/criticalsection-class.md)

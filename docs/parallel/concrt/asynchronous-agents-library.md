@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689001"
 ---
 # <a name="asynchronous-agents-library"></a>biblioteca de agentes asincrónicos
 La biblioteca de agentes asincrónicos (o simplemente *biblioteca de agentes*) proporciona un modelo de programación que le permite aumentar la solidez del desarrollo de aplicaciones habilitadas para simultaneidad. La biblioteca de agentes es una biblioteca de plantillas de C++ que promueve un modelo de programación basado en actores y el paso de mensajes en proceso para tareas genéricas de flujo de datos y canalización. La Biblioteca de agentes se basa en los componentes de programación y administración de recursos del Runtime de simultaneidad.  

@@ -1,5 +1,5 @@
 ---
-title: 'Clase com:: PTR | Documentos de Microsoft'
+title: 'Clase com:: PTR | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066732"
 ---
 # <a name="comptr-class"></a>com::ptr (Clase)
-Un contenedor para un objeto COM que puede usarse como un miembro de una clase CLR.  El contenedor también automatiza la administración de la duración del objeto COM, liberando propiedad todas las referencias en el objeto cuando se llama a su destructor. Análoga a [clase CComPtr](../atl/reference/ccomptr-class.md).  
+Un contenedor para un objeto COM que se puede usar como un miembro de una clase CLR.  El contenedor también automatiza la administración de la duración del objeto COM, liberar la propiedad de todas las referencias en el objeto cuando se llama a su destructor. Análoga a [clase CComPtr](../atl/reference/ccomptr-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,18 +38,18 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_interface_type`  
- Interfaz COM.  
+*_interface_type*<br/>
+Interfaz COM.  
   
 ## <a name="remarks"></a>Comentarios  
- Un `com::ptr` también puede usarse como una variable de la función local para simplificar diversas tareas de COM y para automatizar la administración de la duración.  
+ Un `com::ptr` también puede utilizarse como una variable de la función local para simplificar las diversas tareas de COM y automatizar la administración de la duración.  
   
- A `com::ptr` no se puede utilizar directamente como un parámetro de función; utilice un [operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md) o un [identificador a un operador de objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) en su lugar.  
+ Un `com::ptr` no se puede usar directamente como un parámetro de función; utilice un [operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md) o un [identificador de operador de objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) en su lugar.  
   
- Un `com::ptr` no se puede devolver directamente desde una función; utilice en su lugar un identificador.  
+ Un `com::ptr` no se puede devolver directamente desde una función; utilice un identificador en su lugar.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  Llamar a los métodos públicos de los resultados de la clase de llamadas en el objeto contenido `IXMLDOMDocument` objeto.  El ejemplo crea una instancia de un documento XML, lo rellena con algunos datos XML simple y un recorrido simplificado de los nodos en el árbol de documento analizado para imprimir el XML en la consola.  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  Llamar a los métodos públicos de los resultados de la clase en las llamadas a los contenidos `IXMLDOMDocument` objeto.  El ejemplo crea una instancia de un documento XML, lo rellena con algo de XML simple y un tutorial simplificado de los nodos en el árbol de documento analizado para imprimir el XML en la consola.  
   
 ```  
 // comptr.cpp  

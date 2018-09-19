@@ -1,7 +1,7 @@
 ---
-title: Error recuperable A2004 de ML | Documentos de Microsoft
+title: Error recuperable A2004 de ML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,16 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44270884c052da24c4f295323aa232a3a2e050e3
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e85ae836dbe52e9f5a698fd682ed82cba713f259
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681486"
 ---
 # <a name="ml-nonfatal-error-a2004"></a>Error recuperable A2004 de ML
-**conflicto de tipos de símbolos: identificador**  
-  
- El [EXTERNDEF](../../assembler/masm/externdef.md) o [etiqueta](../../assembler/masm/label-masm.md) directiva se usó en una variable, el símbolo, la estructura de datos o la etiqueta que se definió en el mismo módulo pero con un tipo diferente.  
-  
-## <a name="see-also"></a>Vea también  
- [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)
+
+**conflicto de tipos de símbolos: identificador**
+
+El [EXTERNDEF](../../assembler/masm/externdef.md) o [etiqueta](../../assembler/masm/label-masm.md) directiva se usó en una variable, símbolos, estructura de datos o etiqueta que se definió en el mismo módulo, pero con un tipo diferente.
+
+## <a name="see-also"></a>Vea también
+
+[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>

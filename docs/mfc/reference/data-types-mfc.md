@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos (MFC) | Documentos de Microsoft
+title: Tipos de datos (MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,22 +34,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199874"
 ---
 # <a name="data-types-mfc"></a>Tipos de datos (MFC)
-Este tema enumeran los tipos de datos que suelen usados en la biblioteca Microsoft Foundation Class. La mayoría de los tipos de datos es los mismos que en el Kit de desarrollo de Software de plataforma (SDK), mientras que otras son exclusivas de MFC.  
+En este tema se enumera los tipos de datos más usados en la biblioteca Microsoft Foundation Class. La mayoría de los tipos de datos es los mismos que en el Kit de desarrollo de plataforma de Software (SDK), mientras que otras son exclusivas de MFC.  
   
- Para obtener información sobre los tipos de datos que se utilizan en el SDK de Windows y en MFC, vea [tipos de datos de Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Para obtener información sobre los tipos de datos utilizados en el SDK de Windows y MFC, vea [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).  
   
  Tipos de datos únicos para la biblioteca Microsoft Foundation Class incluyen lo siguiente:  
   
--   **POSICIÓN** un valor utilizado para indicar la posición de un elemento de una colección; utilizado por las clases de colección de MFC.  
+-   COLOCAR un valor que se usa para indicar la posición de un elemento en una colección: usa las clases de colección de MFC.  
   
--   **LPCRECT** puntero de 32 bits a una constante (modificable) `RECT` estructura.  
+-   Puntero de 32 bits LPCRECT una constante (no modificable) `RECT` estructura.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../mfc/class-library-overview.md)   

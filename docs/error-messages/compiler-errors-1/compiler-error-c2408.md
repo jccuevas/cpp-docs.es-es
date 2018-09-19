@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2408 | Documentos de Microsoft
+title: Error del compilador C2408 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20a965fba2f914c0d6e4e940479963485bf9926
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aaafc5bac40a7322afb54675c7774231edd324f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021465"
 ---
 # <a name="compiler-error-c2408"></a>Error del compilador C2408
-tipo no válido en el operador PTR en 'context'  
-  
- El primer parámetro del operador `PTR` no es una especificación de tipo válida.
+
+tipo no válido en el operador PTR en 'context'
+
+El primer parámetro del operador `PTR` no es una especificación de tipo válida.

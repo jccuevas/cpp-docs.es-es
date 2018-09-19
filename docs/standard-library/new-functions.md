@@ -7,11 +7,12 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c52376f504e526c03d4f2c2afd39c029761f3c99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6192805f0f427f86267a646b11d9f1d3365a1d57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716045"
 ---
 # <a name="ltnewgt-functions"></a>Funciones &lt;new&gt;
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="nothrow"></a> nothrow
 
-Proporciona un objeto que se usará como argumento para las versiones `nothrow` de **new** y **delete**.
+Proporciona un objeto que se usará como un argumento para el **nothrow** versiones de **nueva** y **eliminar**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -37,7 +38,7 @@ Vea [operator new](../standard-library/new-operators.md#op_new) y [operator new&
 
 ## <a name="set_new_handler"></a> set_new_handler
 
-Instala una función de usuario que se va a llamar cuando `operator new` no pueda asignar memoria.
+Una función de usuario que se va a llamar cuando se instala **operador new** se produce un error en su intento de asignar memoria.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -45,7 +46,8 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-`Pnew` New_handler para instalarse.
+*Pnew*<br/>
+El `new_handler` para instalarse.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -53,7 +55,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>Comentarios
 
-La función almacena `Pnew` en un puntero del [controlador nuevo](../standard-library/new-typedefs.md#new_handler) estático que mantiene y, después, devuelve el valor almacenado previamente en el puntero. El controlador nuevo se usa mediante [operator new](../standard-library/new-operators.md#op_new)( **size_t**).
+La función almacena *Pnew* en estático [nuevo controlador](../standard-library/new-typedefs.md#new_handler) puntero que mantiene y, a continuación, devuelve el valor almacenado previamente en el puntero. Está usando el nuevo controlador [new (operador)](../standard-library/new-operators.md#op_new)(**size_t**).
 
 ### <a name="example"></a>Ejemplo
 

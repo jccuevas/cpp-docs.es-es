@@ -1,5 +1,5 @@
 ---
-title: Usar procedimientos almacenados | Documentos de Microsoft
+title: Uso de procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5b49daa44fc8c88316134915945ad7ee01bb81a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7b68e7494303e06245a713abc8f1d6e0424773e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114649"
 ---
 # <a name="using-stored-procedures"></a>Utilizar procedimientos almacenados
+
 Un procedimiento almacenado es un objeto ejecutable almacenado en una base de datos. Llamar a un procedimiento almacenado es similar a invocar un comando SQL. Usar procedimientos almacenados en el origen de datos (en lugar de ejecutar o preparar una instrucción en la aplicación cliente) puede proporcionar varias ventajas, incluido un mayor rendimiento, tráfico de red reducido y coherencia mejorada y la precisión.  
   
- Un procedimiento almacenado puede tener cualquier número de (incluido cero) entrada o parámetros de salida y puede pasar un valor devuelto. Puede crear los valores de parámetro codificar de forma rígida como valores de datos específicos, o usar un marcador de parámetro (un signo de interrogación '?').  
+Un procedimiento almacenado puede tener cualquier número de (incluido el cero) entrada o parámetros de salida y puede pasar un valor devuelto. Puede crear los valores de parámetro codificar de forma rígida como valores de datos específicas o usar un marcador de parámetro (un signo de interrogación '?').  
   
 > [!NOTE]
->  CLR de SQL Server los procedimientos almacenados creados con Visual C++ deben compilarse con la **/CLR: safe** opción del compilador.  
+>  CLR de SQL Server se deben compilar los procedimientos almacenados creados mediante Visual C++ con el `/clr:safe` opción del compilador.  
   
- El proveedor OLE DB para SQL Server (SQLOLEDB) admite los siguientes mecanismos que usan los procedimientos para devolver los datos almacenan:  
+El proveedor OLE DB para SQL Server (SQLOLEDB) admite los siguientes mecanismos que se usan para devolver datos de los procedimientos almacenan:  
   
--   Cada instrucción SELECT del procedimiento genera un conjunto de resultados.  
+- Cada instrucción SELECT del procedimiento genera un conjunto de resultados.  
   
--   El procedimiento puede devolver datos mediante parámetros output.  
+- El procedimiento puede devolver datos a través de los parámetros de salida.  
   
--   El procedimiento puede tener un número entero código de retorno.  
+- El procedimiento puede tener un número entero de código de retorno.  
   
 > [!NOTE]
->  No se puede utilizar procedimientos almacenados con el proveedor OLE DB para Jet porque ese proveedor no admite procedimientos almacenados; sólo se permiten constantes en cadenas de consulta.  
+>  No se puede utilizar procedimientos almacenados con el proveedor OLE DB para Jet porque ese proveedor no admite procedimientos almacenados; solo se permiten constantes en las cadenas de consulta.  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

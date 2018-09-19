@@ -1,5 +1,5 @@
 ---
-title: Crear y establecer las guías y márgenes | Documentos de Microsoft
+title: Creación y configuración, guías y márgenes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,8 +10,8 @@ dev_langs:
 helpviewer_keywords:
 - guides, clearing
 - guides
-- Dialog editor, guides and margins
-- dialog box controls, placement
+- Dialog Editor [C++], guides and margins
+- dialog box controls [C++], placement
 - controls [C++], guides and margins
 - guides, creating
 - guides, moving
@@ -22,47 +22,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ceee8a6275ef612cb26eff042d29efa35e8aa5c
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318764"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Crear y establecer las guías y los márgenes
-Si va a mover controles, agregar controles o reorganizar un diseño actual, guías pueden ayudar a alinear los controles con precisión dentro de un cuadro de diálogo. Las guías aparecen como líneas de puntos azul en el cuadro de diálogo que se muestra en el editor y sus flechas correspondientes en las reglas (en la parte superior y en el lado izquierdo del editor de cuadro de diálogo).  
-  
- Cuando se crea un cuadro de diálogo, se muestran cuatro márgenes. Los márgenes son guías modificadas, que aparecen como líneas de puntos de color azul.  
-  
-### <a name="to-create-a-guide"></a>Para crear una guía  
-  
-1.  Dentro de la regla, haga clic una vez para crear a una guía. (Un solo clic, crea un nuevo guía; hacer doble clic en inicia la [cuadro de diálogo de configuración de guía](../windows/guide-settings-dialog-box.md) en el que puede especificar la configuración de la guía.)  
-  
-### <a name="to-set-a-guide"></a>Para establecer una guía  
-  
-1.  En el cuadro de diálogo, haga clic en la guía y arrástrelo a una nueva posición. (También puede hacer clic en la flecha de la regla para arrastrar a la guía asociada.)  
-  
-     Las coordenadas de la guía se muestran en la barra de estado en la parte inferior de la ventana y en la regla. Mueva el puntero sobre la flecha de la regla para mostrar la posición exacta de la guía.  
-  
-### <a name="to-delete-a-guide"></a>Para eliminar una guía  
-  
-1.  Arrastre a la guía fuera del cuadro de diálogo.  
-  
- \- o -  
-  
--   Arrastre la flecha correspondiente fuera de la regla.  
-  
-#### <a name="to-move-margins"></a>Para mover los márgenes  
-  
-1.  Arrastre el margen hasta la nueva posición.  
-  
-     Para que desaparezca un margen, mueva el margen a una posición cero. Para devolver el margen, coloque el puntero sobre el margen de la posición cero y mover el margen en su posición.  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-### <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Estados del Editor de cuadro de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
 
+Si va a mover controles, agregar controles o reorganizar un diseño actual, las guías pueden ayudarle a alinear los controles con precisión dentro de un cuadro de diálogo. Las guías aparecen en azul las líneas de puntos en el cuadro de diálogo que aparece en el editor y flechas correspondientes en las reglas (en la parte superior y en el lado izquierdo de la **diálogo** editor).
+
+Cuando se crea un cuadro de diálogo, se proporcionan cuatro márgenes. Los márgenes son guías modificadas, que aparecen como líneas de puntos azules.
+
+### <a name="to-create-a-guide"></a>Para crear una guía
+
+1. Dentro de la regla, haga clic una vez para crear a una guía. (Un solo clic, crea un nuevo guía; hacer doble clic en los lanzamientos de la [cuadro de diálogo de configuración de guía](../windows/guide-settings-dialog-box.md) en el que puede especificar la configuración de la guía.)
+
+### <a name="to-set-a-guide"></a>Para establecer una guía
+
+1. En el cuadro de diálogo, haga clic en la guía y arrástrelo a una nueva posición. (También puede hacer clic en la flecha de la regla para arrastrar a la guía asociada.)
+
+   Las coordenadas de la guía se muestran en la barra de estado en la parte inferior de la ventana y en la regla. Mueva el puntero sobre la flecha de la regla para mostrar la posición exacta de la guía.
+
+### <a name="to-delete-a-guide"></a>Para eliminar una guía
+
+1. Arrastre a la guía fuera del cuadro de diálogo.
+
+\- o -
+
+- Arrastre la flecha correspondiente fuera de la regla.
+
+### <a name="to-move-margins"></a>Para mover los márgenes
+
+1. Arrastre el margen a la nueva posición.
+
+   Para que desaparezca un margen, mueva el margen a una posición cero. Para recuperar el margen, coloque el puntero sobre el margen de la posición cero y mueva el margen a posición.
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)

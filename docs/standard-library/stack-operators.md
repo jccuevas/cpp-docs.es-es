@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 5d3bafd2d3112a2f4155f55a554b6c9c2e351b1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a013b438bcdf9b84357da5cfbd908d114abe7c34
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103365"
 ---
 # <a name="ltstackgt-operators"></a>Operadores de &lt;stack&gt;
 
@@ -43,9 +44,11 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **pila**.
+*left*<br/>
+Objeto de tipo `stack`.
 
-`right` Un objeto de tipo **pila**.
+*right*<br/>
+Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -106,9 +109,11 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **pila**.
+*left*<br/>
+Objeto de tipo `stack`.
 
-`right` Un objeto de tipo **pila**.
+*right*<br/>
+Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -188,9 +193,11 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **pila**.
+*left*<br/>
+Objeto de tipo `stack`.
 
-`right` Un objeto de tipo **pila**.
+*right*<br/>
+Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -253,9 +260,11 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **pila**.
+*left*<br/>
+Objeto de tipo `stack`.
 
-`right` Un objeto de tipo **pila**.
+*right*<br/>
+Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -316,9 +325,11 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **pila**.
+*left*<br/>
+Objeto de tipo `stack`.
 
-`right` Un objeto de tipo **pila**.
+*right*<br/>
+Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -383,9 +394,11 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo **pila**.
+*left*<br/>
+Objeto de tipo `stack`.
 
-`right` Un objeto de tipo **pila**.
+*right*<br/>
+Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 

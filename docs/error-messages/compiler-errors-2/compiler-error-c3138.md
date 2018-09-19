@@ -1,5 +1,5 @@
 ---
-title: C3138 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3138 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eca582ea52aa32eb2c6a25276b468454b530031
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66ee7cad3b1514d75fedc968f6bf51554695c79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046913"
 ---
-# <a name="compiler-error-c3138"></a>C3138 de Error del compilador
-'interfaz': una interfaz 'atributo' debe heredar de IDispatch o de una interfaz que hereda de IDispatch  
-  
- Una interfaz con el [dual](../../windows/dual.md) o [dispinterface](../../windows/dispinterface.md) no tiene atributos `IDispatch` como una interfaz base directa o indirecta.  
-  
- El ejemplo siguiente genera C3138:  
-  
-```  
-// C3138.cpp  
-#include <unknwn.h>  
-  
-[ object, uuid("77ac9240-6e9a-11d2-97de-0000f805d73b") ]  
-__interface IMyCustomInterface  
-{  
-   HRESULT mf1(void);  
-};  
-  
-[ dispinterface, uuid("3536f8a0-6e9a-11d2-97de-0000f805d73b") ]  
-__interface IMyDispInterface : IUnknown  
-{  
-   [id(1)] HRESULT mf2(void);  
-};  
-  
-[ object, dual, uuid("34e90a10-6e9a-11d2-97de-0000f805d73b") ]  
-__interface IMyDualInterface : IMyCustomInterface  // C3138 expected  
-{  
-   HRESULT mf3(void);  
-};  
+# <a name="compiler-error-c3138"></a>Error del compilador C3138
+
+'interface': una interfaz 'attribute' debe heredar de IDispatch o de una interfaz que hereda de IDispatch
+
+Una interfaz con el [dual](../../windows/dual.md) o [dispinterface](../../windows/dispinterface.md) no tiene atributos `IDispatch` como interfaz base directa o indirecta.
+
+El ejemplo siguiente genera C3138:
+
+```
+// C3138.cpp
+#include <unknwn.h>
+
+[ object, uuid("77ac9240-6e9a-11d2-97de-0000f805d73b") ]
+__interface IMyCustomInterface
+{
+   HRESULT mf1(void);
+};
+
+[ dispinterface, uuid("3536f8a0-6e9a-11d2-97de-0000f805d73b") ]
+__interface IMyDispInterface : IUnknown
+{
+   [id(1)] HRESULT mf2(void);
+};
+
+[ object, dual, uuid("34e90a10-6e9a-11d2-97de-0000f805d73b") ]
+__interface IMyDualInterface : IMyCustomInterface  // C3138 expected
+{
+   HRESULT mf3(void);
+};
 ```

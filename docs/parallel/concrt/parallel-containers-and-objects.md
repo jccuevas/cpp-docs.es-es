@@ -1,5 +1,5 @@
 ---
-title: Contenedores y objetos paralelos | Documentos de Microsoft
+title: Contenedores y objetos paralelos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 168705c5d7497a0bcbede505760d49cdb63a3762
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692294"
 ---
 # <a name="parallel-containers-and-objects"></a>Contenedores y objetos paralelos
-Parallel Patterns Library (PPL) incluye varios contenedores y objetos que proporcionan acceso seguro para subprocesos a sus elementos.  
+La biblioteca de patrones paralelos (PPL) incluye varios contenedores y objetos que proporcionan acceso seguro para subprocesos a sus elementos.  
   
- A *contenedor simultáneo* proporciona un acceso seguro para simultaneidad a las operaciones más importantes. La funcionalidad de estos contenedores se parece a los que se proporcionan con la biblioteca estándar de C++. Por ejemplo, el [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) es similar a la [std:: vector](../../standard-library/vector-class.md) (clase), salvo que la `concurrent_vector` clase le permite anexar elementos en paralelo. Utilizar contenedores simultáneos si tienes código paralelo que requiere acceso de lectura y escritura al mismo contenedor.  
+ Un *contenedor simultáneo* proporciona acceso seguro para simultaneidad a las operaciones más importantes. La funcionalidad de estos contenedores se parece a las proporcionadas por la biblioteca estándar de C++. Por ejemplo, el [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) es similar a la [std:: vector](../../standard-library/vector-class.md) clase salvo que el `concurrent_vector` clase le permite anexar elementos en paralelo. Utilice contenedores simultáneos cuando haya código paralelo que requiere acceso de lectura y escritura en el mismo contenedor.  
   
- A *objeto simultáneo* se comparte simultáneamente entre los componentes. Un proceso que calcula el estado de un objeto simultáneo en paralelo genera el mismo resultado que otro proceso que calcula el mismo estado en serie. El [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase es un ejemplo de un tipo de objeto simultáneo. La `combinable` clase le permite realizar cálculos en paralelo y, a continuación, combinar estos cálculos en un resultado final. Utilice objetos simultáneos si usaría un mecanismo de sincronización, por ejemplo, una exclusión mutua, para sincronizar el acceso a una variable compartida o un recurso.  
+ Un *objeto simultáneo* comparten al mismo tiempo los componentes. Un proceso que calcula el estado de un objeto simultáneo en paralelo, produce el mismo resultado que otro proceso que calcula el mismo estado en serie. El [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase es un ejemplo de un tipo de objeto simultáneo. La `combinable` clase le permite realizar cálculos en paralelo y, a continuación, combine estos cálculos en un resultado final. Utilizar objetos simultáneos que se utilizaría en caso contrario, un mecanismo de sincronización, por ejemplo, una exclusión mutua, para sincronizar el acceso a una variable compartida o un recurso.  
   
 ##  <a name="top"></a> Secciones  
  En este tema se describe los siguientes contenedores y objetos paralelos en detalle.  
@@ -66,44 +67,44 @@ Parallel Patterns Library (PPL) incluye varios contenedores y objetos que propor
   
 -   [combinable (clase)](#combinable)  
   
-    -   [Métodos y características](#combinable-features)  
+    -   [Los métodos y las características](#combinable-features)  
   
     -   [Ejemplos](#combinable-examples)  
   
-##  <a name="vector"></a> Clase concurrent_vector  
- El [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) clase es una clase de contenedor de secuencia que, al igual que el [std:: vector](../../standard-library/vector-class.md) clase, le permite obtener acceso aleatorio a sus elementos. La `concurrent_vector` clase permite anexar seguro para simultaneidad y elemento de acceso a las operaciones. Anexar las operaciones no invalidan existentes punteros o iteradores. Las operaciones de acceso y recorrido de iterador también son seguras para simultaneidad.  
+##  <a name="vector"></a> concurrent_vector (clase)  
+ El [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) es una clase de contenedor de secuencia que, al igual que el [std:: vector](../../standard-library/vector-class.md) class, le permite acceder de forma aleatoria a sus elementos. La `concurrent_vector` clase permite anexar segura para simultaneidad y el elemento de acceso a las operaciones. Anexar las operaciones no invalidan existentes punteros o iteradores. Las operaciones de acceso y recorrido de iterador también son seguras para simultaneidad.  
   
 ###  <a name="vector-differences"></a> Diferencias entre concurrent_vector y vector  
- El `concurrent_vector` se asemeja mucho la clase la `vector` clase. La complejidad de anexado, acceso a los elementos y las operaciones de acceso de iterador en un `concurrent_vector` objeto son los mismos que para un `vector` objeto. Los siguientes puntos muestran dónde `concurrent_vector` difiere de `vector`:  
+ El `concurrent_vector` se parezca la clase el `vector` clase. La complejidad de anexión, acceso a elementos y operaciones de acceso de iterador en un `concurrent_vector` objeto son los mismos que para un `vector` objeto. Los siguientes puntos muestran dónde `concurrent_vector` difiere `vector`:  
   
 -   Anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador en un `concurrent_vector` objeto son seguras para simultaneidad.  
   
--   Puede agregar elementos al final de una `concurrent_vector` objeto. El `concurrent_vector` clase no proporciona el `insert` método.  
+-   Puede agregar elementos al final de un `concurrent_vector` objeto. El `concurrent_vector` clase no proporciona el `insert` método.  
   
--   A `concurrent_vector` objeto no use [la semántica de transferencia](../../cpp/rvalue-reference-declarator-amp-amp.md) cuando anexa a él.  
+-   Un `concurrent_vector` no usa el objeto [semántica de transferencia](../../cpp/rvalue-reference-declarator-amp-amp.md) cuando se anexa a él.  
   
 
--   El `concurrent_vector` clase no proporciona el `erase` o `pop_back` métodos. Al igual que con `vector`, use la [borrar](reference/concurrent-vector-class.md#clear) método para quitar todos los elementos de un `concurrent_vector` objeto.  
+-   El `concurrent_vector` clase no proporciona la `erase` o `pop_back` métodos. Igual que con `vector`, utilice el [borrar](reference/concurrent-vector-class.md#clear) método para quitar todos los elementos de un `concurrent_vector` objeto.  
   
--   La `concurrent_vector` clase no almacena sus elementos forma contigua en la memoria. Por lo tanto, no puede usar el `concurrent_vector` clase en todas las formas en que puede usar una matriz. Por ejemplo, para una variable denominada `v` de tipo `concurrent_vector`, la expresión `&v[0]+2` produce un comportamiento indefinido.  
+-   El `concurrent_vector` no almacena sus elementos forma contigua en la memoria. Por lo tanto, no puede usar el `concurrent_vector` clase en todas las formas en que puede usar una matriz. Por ejemplo, para una variable denominada `v` typu `concurrent_vector`, la expresión `&v[0]+2` produce un comportamiento indefinido.  
   
 -   El `concurrent_vector` clase define la [grow_by](reference/concurrent-vector-class.md#grow_by) y [grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least) métodos. Estos métodos son similares a los [cambiar el tamaño de](reference/concurrent-vector-class.md#resize) método, salvo que son seguras para simultaneidad.  
   
--   Un `concurrent_vector` objeto no reubica sus elementos cuando se anexa a él o cambiar su tamaño. Esto permite punteros existentes y los iteradores que será válido durante las operaciones simultáneas.  
+-   Un `concurrent_vector` objeto no reubica sus elementos cuando se anexa a él o cambiar su tamaño. Esto permite punteros existentes e iteradores sigan siendo válidos durante las operaciones simultáneas.  
   
--   El tiempo de ejecución no define una versión especializada de `concurrent_vector` de tipo `bool`.  
+-   El tiempo de ejecución no define una versión especializada de `concurrent_vector` tipo `bool`.  
   
 ###  <a name="vector-safety"></a> Operaciones seguras para simultaneidad  
- Todos los métodos que anexan a o aumente el tamaño de un `concurrent_vector` objeto o tener acceso a un elemento en un `concurrent_vector` de objetos, que son seguras para simultaneidad. La excepción a esta regla es la `resize` método.  
+ Todos los métodos que anexar o aumentan el tamaño de un `concurrent_vector` de objeto, o tener acceso a un elemento en un `concurrent_vector` de objetos, que son seguras para simultaneidad. La excepción a esta regla es la `resize` método.  
   
- La siguiente tabla muestra los comunes `concurrent_vector` métodos y operadores que son seguras para simultaneidad.  
+ En la tabla siguiente se muestra el común `concurrent_vector` métodos y operadores que son seguras para simultaneidad.  
   
 ||||  
 |-|-|-|  
 
-|[en](reference/concurrent-vector-class.md#at)|[final](reference/concurrent-vector-class.md#end)|[(operador)&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|  
-|[comenzar](reference/concurrent-vector-class.md#begin)|[frontal](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|  
-|[nuevo](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|  
+|[en](reference/concurrent-vector-class.md#at)|[final](reference/concurrent-vector-class.md#end)|[operador&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|  
+|[empezar a](reference/concurrent-vector-class.md#begin)|[front](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|  
+|[Atrás](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|  
 |[capacidad](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|  
 |[vacía](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[tamaño](reference/concurrent-vector-class.md#size)|  
 
@@ -117,48 +118,48 @@ Parallel Patterns Library (PPL) incluye varios contenedores y objetos que propor
 |[Borrar](reference/concurrent-vector-class.md#clear)|[cambiar el tamaño](reference/concurrent-vector-class.md#resize)|  
 |[operador =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|  
   
- Las operaciones que modifican el valor de los elementos existentes no son seguras para simultaneidad. Usar un objeto de sincronización, como un [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) objeto sincronizar simultáneas de lectura y las operaciones de escritura al mismo elemento de datos. Para obtener más información acerca de los objetos de sincronización, vea [estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md).  
+ Las operaciones que modifican el valor de los elementos existentes no son seguras para simultaneidad. Usar un objeto de sincronización, como un [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) objeto para sincronizar simultáneas de lectura y las operaciones de escritura al mismo elemento de datos. Para obtener más información acerca de los objetos de sincronización, consulte [estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md).  
   
- Al convertir código existente que utiliza `vector` usar `concurrent_vector`, las operaciones simultáneas pueden hacer que el comportamiento de la aplicación para cambiar. Por ejemplo, considere el siguiente programa que realiza dos tareas simultáneamente en un `concurrent_vector` objeto. La primera tarea anexa elementos adicionales a un `concurrent_vector` objeto. La segunda tarea calcula la suma de todos los elementos en el mismo objeto.  
+ Cuando convierta código existente que usa `vector` usar `concurrent_vector`, operaciones simultáneas pueden hacer que el comportamiento de la aplicación para cambiar. Por ejemplo, considere el siguiente programa que realiza dos tareas simultáneamente en un `concurrent_vector` objeto. La primera tarea anexa elementos adicionales a un `concurrent_vector` objeto. La segunda tarea calcula la suma de todos los elementos en el mismo objeto.  
   
  [!code-cpp[concrt-vector-safety#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_1.cpp)]  
   
 
- Aunque la `end` método es seguro para simultaneidad, una llamada simultánea activa a la [push_back](reference/concurrent-vector-class.md#push_back) método hace que el valor devuelto por `end` a cambiar. El número de elementos que recorre el iterador no es indeterminado. Por lo tanto, este programa puede generar un resultado diferente cada vez que se ejecuta.  
+ Aunque el `end` método es seguro para simultaneidad, una llamada simultánea activa a la [push_back](reference/concurrent-vector-class.md#push_back) método hace que el valor devuelto por `end` a cambiar. El número de elementos que atraviesa el iterador es indeterminado. Por lo tanto, este programa puede producir un resultado diferente cada vez que se ejecuta.  
   
 ###  <a name="vector-exceptions"></a> Seguridad de las excepciones  
- Si una operación de crecimiento o asignación produce una excepción, el estado de la `concurrent_vector` objeto deja de ser válido. El comportamiento de un `concurrent_vector` objeto que se encuentra en un estado no válido no está definido, a menos que se indique lo contrario. Sin embargo, el destructor siempre libera la memoria que asigna el objeto, incluso si el objeto está en un estado no válido.  
+ Si una operación de crecimiento o asignación produce una excepción, el estado de la `concurrent_vector` objeto deja de ser válido. El comportamiento de un `concurrent_vector` no está definido el objeto que se encuentra en un estado no válido a menos que se indique lo contrario. Sin embargo, el destructor siempre libera la memoria que asigna el objeto, incluso si el objeto está en un estado no válido.  
   
- El tipo de datos de los elementos de vector, `T`, debe cumplir los requisitos siguientes. En caso contrario, el comportamiento de la `concurrent_vector` clase está definida.  
+ El tipo de datos de los elementos del vector, `T`, debe cumplir los requisitos siguientes. En caso contrario, el comportamiento de la `concurrent_vector` clase es indefinida.  
   
--   No debe iniciar el destructor.  
+-   El destructor no debe producir.  
   
--   Si se produce el constructor predeterminado o copiar, el destructor no debe declararse mediante el `virtual` palabra clave y deben funcionar correctamente con memoria inicializa a cero.  
+-   Si se produce el constructor predeterminado o de copia, el destructor no debe declararse mediante el `virtual` palabra clave y deben trabajar correctamente con memoria inicializa a cero.  
   
  [[Arriba](#top)]  
   
-##  <a name="queue"></a> Clase concurrent_queue  
- El [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) (clase), igual que el [std:: Queue](../../standard-library/queue-class.md) clase, le permite obtener acceso a sus elementos anteriores y posteriores. La `concurrent_queue` clase habilita seguro para simultaneidad enqueue y dequeue operaciones. La `concurrent_queue` clase también proporciona compatibilidad de iterador que no es seguro para simultaneidad.  
+##  <a name="queue"></a> concurrent_queue (clase)  
+ El [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) clase, al igual que el [std:: Queue](../../standard-library/queue-class.md) class, le permite obtener acceso a sus elementos anteriores y posteriores. La `concurrent_queue` clase segura para simultaneidad de permite poner en cola y las operaciones de eliminación de cola. La `concurrent_queue` clase también proporciona compatibilidad de los iteradores que no es segura para simultaneidad.  
   
 ###  <a name="queue-differences"></a> Diferencias entre concurrent_queue y cola  
- El `concurrent_queue` se asemeja mucho la clase la `queue` clase. Los siguientes puntos muestran dónde `concurrent_queue` difiere de `queue`:  
+ El `concurrent_queue` se parezca la clase el `queue` clase. Los siguientes puntos muestran dónde `concurrent_queue` difiere `queue`:  
   
 -   Enqueue y dequeue operaciones en un `concurrent_queue` objeto son seguras para simultaneidad.  
   
--   La `concurrent_queue` clase proporciona compatibilidad de iterador que no es seguro para simultaneidad.  
+-   La `concurrent_queue` clase proporciona compatibilidad de los iteradores que no es segura para simultaneidad.  
   
 
--   El `concurrent_queue` clase no proporciona el `front` o `pop` métodos. El `concurrent_queue` clase reemplaza estos métodos mediante la definición de la [try_pop](reference/concurrent-queue-class.md#try_pop) método.  
+-   El `concurrent_queue` clase no proporciona la `front` o `pop` métodos. El `concurrent_queue` clase reemplaza estos métodos definiendo el [try_pop](reference/concurrent-queue-class.md#try_pop) método.  
   
 -   El `concurrent_queue` clase no proporciona el `back` método. Por lo tanto, no puede hacer referencia al final de la cola.  
   
--   El `concurrent_queue` clase proporciona el [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) en lugar del método la `size` método. El `unsafe_size` método no es seguro para simultaneidad.  
+-   El `concurrent_queue` clase proporciona el [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) método en lugar de la `size` método. El `unsafe_size` método no es seguro para simultaneidad.  
 
   
 ###  <a name="queue-safety"></a> Operaciones seguras para simultaneidad  
  Todos los métodos que ponen en cola a o quitar de la cola de un `concurrent_queue` objeto son seguras para simultaneidad.  
   
- La siguiente tabla muestra los comunes `concurrent_queue` métodos y operadores que son seguras para simultaneidad.  
+ En la tabla siguiente se muestra el común `concurrent_queue` métodos y operadores que son seguras para simultaneidad.  
   
 |||  
 |-|-|  
@@ -167,7 +168,7 @@ Parallel Patterns Library (PPL) incluye varios contenedores y objetos que propor
 
 
   
- Aunque la `empty` método es seguro para simultaneidad, una operación simultánea puede causar que la cola crezca o se reduzca antes de la `empty` devuelve del método.  
+ Aunque el `empty` método es seguro para simultaneidad, una operación simultánea puede hacer que aumente o disminuya antes de la cola de la `empty` devuelve del método.  
   
  La tabla siguiente muestran los métodos y operadores que no son seguras para simultaneidad comunes.  
   
@@ -181,40 +182,40 @@ Parallel Patterns Library (PPL) incluye varios contenedores y objetos que propor
 ###  <a name="queue-iterators"></a> Compatibilidad de los iteradores  
  El `concurrent_queue` proporciona iteradores que no son seguras para simultaneidad. Se recomienda usar estos iteradores únicamente para la depuración.  
   
- Un `concurrent_queue` iterador recorre los elementos de la dirección de avance. La siguiente tabla muestra a los operadores que cada iterador admite.  
+ Un `concurrent_queue` iterador atraviesa los elementos en la dirección de avance. En la tabla siguiente se muestra a los operadores que admite cada iterador.  
   
 |Operador|Descripción|  
 |--------------|-----------------|  
-|[operator++](http://msdn.microsoft.com/en-us/4cfdd07e-927a-42f8-aaa0-d6881687f413)|Avanza al siguiente elemento en la cola. Este operador se sobrecarga para proporcionar semántica de incremento previo y de incremento posterior.|  
-|[operator*](http://msdn.microsoft.com/en-us/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|Recupera una referencia al elemento actual.|  
-|[operator->](http://msdn.microsoft.com/en-us/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|Recupera un puntero al elemento actual.|  
+|`operator++`|Avanza al siguiente elemento de la cola. Este operador se sobrecarga para proporcionar la semántica de incremento previo y posterior al incremento.|  
+|`operator*`|Recupera una referencia al elemento actual.|  
+|`operator->`|Recupera un puntero al elemento actual.|  
   
  [[Arriba](#top)]  
   
 ##  <a name="unordered_map"></a> concurrent_unordered_map (clase)  
- El [HYPERLINK "file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default \\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622 "Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) clase es un clase de contenedor asociativo que, al igual que el [std:: unordered_map](../../standard-library/unordered-map-class.md) clase, controla una secuencia de longitud variable de elementos de tipo [std:: Pair\<clave const, Ty >](../../standard-library/pair-structure.md). Considere una asignación no ordenada como un diccionario que puede agregar un par de clave y valor a o buscar un valor por clave. Esta clase es útil cuando tiene varios subprocesos o tareas que deben tener acceso a un contenedor compartido, insertar en él o actualizarlo al mismo tiempo.  
+ El [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) es una clase de contenedor asociativo que, al igual que el [std:: unordered_map](../../standard-library/unordered-map-class.md) class, que controla una secuencia de longitud variable de elementos de tipo [std:: Pair\<const Key, Ty >](../../standard-library/pair-structure.md). Piense en una asignación no ordenada como un diccionario que puede agregar un par de clave y valor a o buscar un valor por clave. Esta clase es útil cuando tiene varios subprocesos o tareas que deben tener acceso a un contenedor compartido, inserte en ella o actualizarlo al mismo tiempo.  
   
- En el ejemplo siguiente se muestra la estructura básica para el uso de `concurrent_unordered_map`. Este ejemplo inserta teclas de caracteres en el intervalo ['a', ' i']. Dado que el orden de las operaciones es indeterminado, el valor final de cada clave también es indeterminado. Sin embargo, es seguro realizar las inserciones en paralelo.  
+ El ejemplo siguiente muestra la estructura básica para el uso de `concurrent_unordered_map`. En este ejemplo inserta las teclas de carácter en el intervalo ['a', ' i']. Dado que el orden de operaciones es indeterminado, el valor final de cada clave también es indeterminado. Sin embargo, es seguro realizar las inserciones en paralelo.  
   
  [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]  
   
- Para obtener un ejemplo que usa `concurrent_unordered_map` para realizar una asignación y reducir la operación en paralelo, vea [Cómo: realizar la asignación y reducir las operaciones en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).  
+ Para obtener un ejemplo que usa `concurrent_unordered_map` para realizar una asignación y reducir las operaciones en paralelo, vea [Cómo: realizar Map y reducir las operaciones en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).  
   
 ###  <a name="map-differences"></a> Unordered_map y diferencias entre concurrent_unordered_map)  
- El `concurrent_unordered_map` se asemeja mucho la clase la `unordered_map` clase. Los siguientes puntos muestran dónde `concurrent_unordered_map` difiere de `unordered_map`:  
+ El `concurrent_unordered_map` se parezca la clase el `unordered_map` clase. Los siguientes puntos muestran dónde `concurrent_unordered_map` difiere `unordered_map`:  
   
--   El `erase`, `bucket`, `bucket_count`, y `bucket_size` se denominan métodos `unsafe_erase`, `unsafe_bucket`, `unsafe_bucket_count`, y `unsafe_bucket_size`, respectivamente. El `unsafe_` convención de nomenclatura indica que estos métodos no son seguras para simultaneidad. Para obtener más información acerca de la seguridad de simultaneidad, vea [operaciones seguras para simultaneidad](#map-safety).  
+-   El `erase`, `bucket`, `bucket_count`, y `bucket_size` se denominan métodos `unsafe_erase`, `unsafe_bucket`, `unsafe_bucket_count`, y `unsafe_bucket_size`, respectivamente. El `unsafe_` convención de nomenclatura indica que estos métodos no son seguras para simultaneidad. Para obtener más información acerca de la seguridad de simultaneidad, consulte [operaciones seguras para simultaneidad](#map-safety).  
   
--   Las operaciones de inserción no invalidan existentes punteros o iteradores ni cambian el orden de los elementos que ya existen en el mapa. Insertar y recorrer las operaciones pueden realizarse de forma simultánea.  
+-   Las operaciones de inserción no invalidan existentes punteros o iteradores, ni cambian el orden de los elementos que ya existen en el mapa. Insertar y recorrer las operaciones pueden realizarse al mismo tiempo.  
   
 -   `concurrent_unordered_map` admite reenviar sólo la iteración.  
   
--   Inserción no invalidan ni actualizar los iteradores que se devuelven por `equal_range`. Inserción puede anexar elementos iguales hasta el final del intervalo. El iterador begin apunta a un elemento igual.  
+-   Inserción no invalidan ni actualizar los iteradores devueltos por `equal_range`. Inserción puede anexar elementos iguales al final del intervalo. El iterador begin apunta a un elemento igual.  
   
- Para ayudar a evitar un interbloqueo, ningún método de `concurrent_unordered_map` mantiene un bloqueo cuando lo llama el asignador de memoria, las funciones hash u otro código definido por el usuario. Además, debe asegurarse de que la función hash siempre se evalúa como claves iguales en el mismo valor. Las funciones hash mejor distribuyen uniformemente las claves en el espacio de código hash.  
+ Para ayudar a evitar un interbloqueo, ningún método de `concurrent_unordered_map` mantiene un bloqueo cuando lo llama el asignador de memoria, las funciones hash u otro código definido por el usuario. Además, debe asegurarse de que la función hash siempre se evalúa como claves iguales en el mismo valor. Las funciones hash mejor distribuyen claves uniformemente en el espacio de código hash.  
   
 ###  <a name="map-safety"></a> Operaciones seguras para simultaneidad  
- La `concurrent_unordered_map` clase permite que las operaciones de inserción y acceso de elemento de seguro para simultaneidad. Las operaciones de inserción no invalidan existentes punteros o iteradores. Las operaciones de acceso y recorrido de iterador también son seguras para simultaneidad. La siguiente tabla muestra utilizados habitualmente `concurrent_unordered_map` métodos y operadores que son seguras para simultaneidad.  
+ La `concurrent_unordered_map` clase permite las operaciones de inserción y el acceso a elementos seguras para simultaneidad. Las operaciones de inserción no invalidan existentes punteros o iteradores. Las operaciones de acceso y recorrido de iterador también son seguras para simultaneidad. En la tabla siguiente se muestra la frecuente `concurrent_unordered_map` métodos y operadores que son seguras para simultaneidad.  
   
 |||||  
 |-|-|-|-|  
@@ -223,9 +224,9 @@ Parallel Patterns Library (PPL) incluye varios contenedores y objetos que propor
 |`cbegin`|`end`|`hash_function`|[operator&#91;&#93;](reference/concurrent-unordered-map-class.md#operator_at)|  
 |`cend`|`equal_range`|[insert](reference/concurrent-unordered-map-class.md#insert)|`size`|  
   
- Aunque el `count` método se puede llamar de forma segura desde subprocesos en ejecución al mismo tiempo, distintos subprocesos pueden recibir diferentes resultados si simultáneamente se inserta un nuevo valor en el contenedor.  
+ Aunque el `count` método se puede llamar de forma segura de subprocesos en ejecución al mismo tiempo, distintos subprocesos pueden recibir resultados diferentes si simultáneamente se inserta un nuevo valor en el contenedor.  
   
- La tabla siguiente muestran los métodos utilizados con frecuencia y operadores que no son seguras para simultaneidad.  
+ En la tabla siguiente se muestra los métodos utilizados con frecuencia y operadores que no son seguras para simultaneidad.  
   
 ||||  
 |-|-|-|  
@@ -234,65 +235,65 @@ Parallel Patterns Library (PPL) incluye varios contenedores y objetos que propor
 
 
   
- Además de estos métodos, cualquier método que comienza con `unsafe_` también no es seguro para simultaneidad.  
+ Además de estos métodos, cualquier método que comienza con `unsafe_` también no es segura para simultaneidad.  
   
  [[Arriba](#top)]  
   
 ##  <a name="unordered_multimap"></a> concurrent_unordered_multimap (clase)  
- El [concurrency::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) se asemeja mucho la clase la `concurrent_unordered_map` clase excepto en que permite varios valores asignar a la misma clave. También se distingue de `concurrent_unordered_map` de las maneras siguientes:  
+ El [concurrency::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) se parezca la clase el `concurrent_unordered_map` excepto en que permite varios valores asignar a la misma clave de clase. También difiere de `concurrent_unordered_map` de las maneras siguientes:  
   
--   El [concurrent_unordered_multimap:: Insert](reference/concurrent-unordered-multimap-class.md#insert) método devuelve un iterador en lugar de `std::pair<iterator, bool>`.  
+-   El [concurrent_unordered_multimap::insert](reference/concurrent-unordered-multimap-class.md#insert) método devuelve un iterador en lugar de `std::pair<iterator, bool>`.  
 
   
--   El `concurrent_unordered_multimap` no se proporciona la clase `operator[]` ni `at` método.  
+-   El `concurrent_unordered_multimap` no proporciona la clase `operator[]` ni `at` método.  
   
- En el ejemplo siguiente se muestra la estructura básica para el uso de `concurrent_unordered_multimap`. Este ejemplo inserta teclas de caracteres en el intervalo ['a', ' i']. `concurrent_unordered_multimap` permite tener varios valores de una clave.  
+ El ejemplo siguiente muestra la estructura básica para el uso de `concurrent_unordered_multimap`. En este ejemplo inserta las teclas de carácter en el intervalo ['a', ' i']. `concurrent_unordered_multimap` permite que una clave a tener varios valores.  
   
  [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]  
   
  [[Arriba](#top)]  
   
 ##  <a name="unordered_set"></a> concurrent_unordered_set (clase)  
- El [concurrency::concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) se asemeja mucho la clase la `concurrent_unordered_map` clase salvo en que administra los valores en lugar de pares clave / valor. El `concurrent_unordered_set` no se proporciona la clase `operator[]` ni `at` método.  
+ El [concurrency::concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) se parezca la clase el `concurrent_unordered_map` clase salvo en que administra los valores en lugar de pares de clave y valor. El `concurrent_unordered_set` no proporciona la clase `operator[]` ni `at` método.  
   
- En el ejemplo siguiente se muestra la estructura básica para el uso de `concurrent_unordered_set`. Este ejemplo inserta los valores de caracteres en el intervalo ['a', ' i']. Es seguro realizar las inserciones en paralelo.  
+ El ejemplo siguiente muestra la estructura básica para el uso de `concurrent_unordered_set`. En este ejemplo inserta los valores de caracteres en el intervalo ['a', ' i']. Es seguro realizar las inserciones en paralelo.  
   
  [!code-cpp[concrt-unordered-set#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_4.cpp)]  
   
  [[Arriba](#top)]  
   
 ##  <a name="unordered_multiset"></a> concurrent_unordered_multiset (clase)  
- El [concurrency::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) se asemeja mucho la clase la `concurrent_unordered_set` clase salvo que se permite si hay valores duplicados. También se distingue de `concurrent_unordered_set` de las maneras siguientes:  
+ El [concurrency::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) se parezca la clase el `concurrent_unordered_set` clase excepto en que permite valores duplicados. También difiere de `concurrent_unordered_set` de las maneras siguientes:  
   
 
--   El [concurrent_unordered_multiset:: Insert](reference/concurrent-unordered-multiset-class.md#insert) método devuelve un iterador en lugar de `std::pair<iterator, bool>`.  
+-   El [concurrent_unordered_multiset::insert](reference/concurrent-unordered-multiset-class.md#insert) método devuelve un iterador en lugar de `std::pair<iterator, bool>`.  
 
   
--   El `concurrent_unordered_multiset` no se proporciona la clase `operator[]` ni `at` método.  
+-   El `concurrent_unordered_multiset` no proporciona la clase `operator[]` ni `at` método.  
   
- En el ejemplo siguiente se muestra la estructura básica para el uso de `concurrent_unordered_multiset`. Este ejemplo inserta los valores de caracteres en el intervalo ['a', ' i']. `concurrent_unordered_multiset` permite que un valor aparezca varias veces.  
+ El ejemplo siguiente muestra la estructura básica para el uso de `concurrent_unordered_multiset`. En este ejemplo inserta los valores de caracteres en el intervalo ['a', ' i']. `concurrent_unordered_multiset` permite un valor que se produzcan varias veces.  
   
  [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]  
   
  [[Arriba](#top)]  
   
 ##  <a name="combinable"></a> combinable (clase)  
- El [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase proporciona almacenamiento local de subprocesos reutilizable que permite realizar cálculos específicos y, a continuación, combinar estos cálculos en un resultado final. Puede pensar en un objeto `combinable` como una variable de reducción.  
+ El [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase proporciona almacenamiento local de subprocesos reutilizable que permite realizar cálculos específicos y, a continuación, fusionar mediante combinación estos cálculos en un resultado final. Puede pensar en un objeto `combinable` como una variable de reducción.  
   
- La `combinable` clase es útil si tiene un recurso que se comparte entre varios subprocesos o tareas. La `combinable` clase le ayuda a eliminar el estado compartido al proporcionar acceso a los recursos compartidos de un modo sin bloqueo. Por lo tanto, esta clase proporciona una alternativa al uso de un mecanismo de sincronización, por ejemplo, una exclusión mutua, para sincronizar el acceso a los datos compartidos desde varios subprocesos.  
+ La `combinable` clase es útil si tiene un recurso que se comparte entre varios subprocesos o tareas. La `combinable` clase ayuda a eliminar el estado compartido, ya que proporciona acceso a los recursos compartidos de forma libre de bloqueo. Por lo tanto, esta clase proporciona una alternativa al uso de un mecanismo de sincronización, por ejemplo, una exclusión mutua, para sincronizar el acceso a los datos compartidos desde varios subprocesos.  
   
-###  <a name="combinable-features"></a> Métodos y características  
- La tabla siguiente muestran algunos de los métodos importantes de la `combinable` clase. Para obtener más información acerca de todos los `combinable` métodos de la clase, vea [combinable (clase)](../../parallel/concrt/reference/combinable-class.md).  
+###  <a name="combinable-features"></a> Los métodos y las características  
+ En la tabla siguiente se muestra algunos de los métodos importantes de la `combinable` clase. Para obtener más información acerca de todos los `combinable` métodos de la clase, vea [combinable (clase)](../../parallel/concrt/reference/combinable-class.md).  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Local](reference/combinable-class.md#local)|Recupera una referencia a la variable local que está asociada con el contexto del subproceso actual.|  
-|[clear](reference/combinable-class.md#clear)|Quita todas las variables locales de subproceso de la `combinable` objeto.|  
-|[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Utiliza la función combine proporcionada para generar un valor final del conjunto de todos los cálculos locales de subproceso.|  
+|[local](reference/combinable-class.md#local)|Recupera una referencia a la variable local que está asociada con el contexto del subproceso actual.|  
+|[clear](reference/combinable-class.md#clear)|Quita todas las variables locales del subproceso de la `combinable` objeto.|  
+|[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Usa la función proporcionada se combinan para generar un valor final del conjunto de todos los cálculos locales del subproceso.|  
   
- La `combinable` clase es una clase de plantilla que se parametriza en el resultado combinado final. Si se llama al constructor predeterminado, la `T` tipo de parámetro de plantilla debe tener un constructor predeterminado y un constructor de copias. Si el `T` tipo de parámetro de plantilla no tiene un constructor predeterminado, llame a la versión sobrecargada del constructor que toma una función de inicialización como su parámetro.  
+ El `combinable` es una clase de plantilla que se parametriza en el resultado combinado final. Si se llama al constructor predeterminado, el `T` tipo de parámetro de plantilla debe tener un constructor predeterminado y un constructor de copias. Si el `T` tipo de parámetro de plantilla no tiene un constructor predeterminado, llame a la versión sobrecargada del constructor que toma una función de inicialización como su parámetro.  
   
- Puede almacenar datos adicionales en un `combinable` objeto después de llamar a la [combinar](reference/combinable-class.md#combine) o [combine_each](reference/combinable-class.md#combine_each) métodos. También puede llamar a la `combine` y `combine_each` métodos varias veces. Si ningún valor local en un `combinable` los cambios, un objeto del `combine` y `combine_each` métodos generan el mismo resultado cada vez que se les llama.  
+ Puede almacenar datos adicionales en un `combinable` objeto después de llamar a la [combinar](reference/combinable-class.md#combine) o [combine_each](reference/combinable-class.md#combine_each) métodos. También puede llamar a la `combine` y `combine_each` métodos varias veces. Si ningún valor local en un `combinable` objeto los cambios, el `combine` y `combine_each` métodos generan el mismo resultado cada vez que se les llama.  
   
 ###  <a name="combinable-examples"></a> Ejemplos  
  Para obtener ejemplos sobre cómo usar el `combinable` de clases, vea los temas siguientes:  
@@ -305,13 +306,13 @@ Parallel Patterns Library (PPL) incluye varios contenedores y objetos que propor
   
 ## <a name="related-topics"></a>Temas relacionados  
  [Procedimiento para usar contenedores paralelos para aumentar la eficacia](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)  
- Muestra cómo se usan contenedores paralelos para almacenar de forma eficaz y obtener acceso a datos en paralelo.  
+ Se muestra cómo usar contenedores paralelos para almacenar de forma eficaz y tener acceso a datos en paralelo.  
   
  [Procedimiento para usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
- Muestra cómo utilizar la `combinable` clase para eliminar el estado compartido y mejorar el rendimiento.  
+ Se muestra cómo usar el `combinable` clase para eliminar el estado compartido y mejorar el rendimiento.  
   
  [Procedimiento para usar la clase combinable para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
- Muestra cómo utilizar un `combine` función para combinar conjuntos de datos locales de subproceso.  
+ Se muestra cómo usar un `combine` función para combinar conjuntos de datos locales de subproceso.  
   
  [Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
  Describe la biblioteca PPL, que proporciona un modelo de programación imperativo que favorece la escalabilidad y facilidad de uso para desarrollar aplicaciones simultáneas.  

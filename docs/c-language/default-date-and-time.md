@@ -15,16 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d66059ddabac7edb2001f154173e6367355815
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61f512d82ee33e0b900d61ff4a90c18336f88a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020665"
 ---
 # <a name="default-date-and-time"></a>Fecha y hora predeterminadas
-**ANSI 3.8.8** Las definiciones para _DATE\_ y _TIME\_ cuando, respectivamente, la fecha y hora de la traducción no están disponibles  
-  
- Cuando el sistema operativo no proporciona la fecha y hora de traducción, los valores predeterminados para _DATE\_ y _TIME\_ son `May 03 1957` y `17:00:00"`.  
-  
-## <a name="see-also"></a>Vea también  
- [Preprocesar directivas](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.8** Las definiciones para `__DATE__` y `__TIME__` cuando, respectivamente, la fecha y hora de la traducción no están disponibles
+
+Cuando el sistema operativo no proporciona la fecha y hora de traducción, los valores predeterminados para `__DATE__` y `__TIME__` son `May 03 1957` y `17:00:00`.
+
+## <a name="see-also"></a>Vea también
+
+[Preprocesar directivas](../c-language/preprocessing-directives.md)

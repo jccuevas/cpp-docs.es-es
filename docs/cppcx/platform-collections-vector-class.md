@@ -1,5 +1,5 @@
 ---
-title: Clase Platform::Collections::vector | Documentos de Microsoft
+title: Clase Platform::Collections::vector | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -25,15 +25,16 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103937"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector (Clase)
 
@@ -48,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Tipo de los elementos contenidos en el objeto Vector.
 
-*E*  
+*E*<br/>
 Especifica un predicado binario para probar la igualdad con valores de tipo *T*. El valor predeterminado es `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Comentarios
@@ -70,7 +71,7 @@ Los tipos permitidos son:
 
 El **Vector** clase es la implementación concreta de C++ de la [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interfaz.
 
-Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro, C3986 se produce el error de compilador. Puede corregir el error cambiando el parámetro o devolver el tipo de valor a [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
+Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro, el error del compilador C3986 se genera. Puede corregir el error cambiando el parámetro o devolver el tipo de valor a [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Miembros
 
@@ -84,18 +85,18 @@ Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro
 
 |Name|Descripción|
 |----------|-----------------|
-|[Vector:: Append](#append)|Inserta el elemento especificado a continuación del último elemento en el objeto Vector actual.|
-|[Vector:: Clear](#clear)|Elimina todos los elementos del Vector actual.|
-|[Vector:: First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Vector.|
+|[Append](#append)|Inserta el elemento especificado a continuación del último elemento en el objeto Vector actual.|
+|[Clear](#clear)|Elimina todos los elementos del Vector actual.|
+|[Vector](#first)|Devuelve un iterador que especifica el primer elemento del objeto Vector.|
 |[Vector:: GetAt](#getat)|Recupera el elemento del objeto Vector actual identificado por el índice especificado.|
-|[Vector:: getmany](#getmany)|Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado.|
+|[Getmany](#getmany)|Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado.|
 |[Vector:: GetView](#getview)|Devuelve una vista de solo lectura de una clase Vector; es decir, [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
-|[Vector:: IndexOf](#indexof)|Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.|
-|[Vector:: InsertAt](#insertat)|Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.|
-|[Vector:: ReplaceAll](#replaceall)|Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.|
-|[Vector:: RemoveAt](#removeat)|Elimina el elemento identificado por el índice especificado del objeto Vector actual.|
-|[Vector:: removeatend](#removeatend)|Elimina el elemento al final del objeto Vector actual.|
-|[Vector:: SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
+|[IndexOf](#indexof)|Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.|
+|[InsertAt](#insertat)|Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.|
+|[ReplaceAll](#replaceall)|Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.|
+|[RemoveAt](#removeat)|Elimina el elemento identificado por el índice especificado del objeto Vector actual.|
+|[Removeatend](#removeatend)|Elimina el elemento al final del objeto Vector actual.|
+|[SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
 |[Vector:: Size](#size)|Devuelve el número de elementos del objeto Vector actual.|
 
 ### <a name="events"></a>Eventos
@@ -103,7 +104,7 @@ Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro
 |||
 |-|-|
 |nombre|Descripción|
-|evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Se produce cuando cambia el objeto Vector.|
+|evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produce cuando cambia el objeto Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -115,7 +116,7 @@ Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro
 
 **Espacio de nombres:** Platform::Collections
 
-## <a name="append"></a>  Vector:: Append (método)
+## <a name="append"></a>  Append (método)
 
 Inserta el elemento especificado a continuación del último elemento en el objeto Vector actual.
 
@@ -127,10 +128,10 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 El elemento que se va a insertar en el objeto Vector. El tipo de *elemento* está definida por el *T* typename.
 
-## <a name="clear"></a>  Vector:: Clear (método)
+## <a name="clear"></a>  Clear (método)
 
 Elimina todos los elementos del Vector actual.
 
@@ -140,7 +141,7 @@ Elimina todos los elementos del Vector actual.
 virtual void Clear();
 ```
 
-## <a name="first"></a>  Vector:: First (método)
+## <a name="first"></a>  Vector (método)
 
 Devuelve un iterador que apunta al primer elemento del objeto Vector.
 
@@ -158,9 +159,9 @@ Un iterador que apunta al primer elemento del objeto Vector.
 
 Una manera cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con el **automática** palabra clave de deducción de tipos. Por ejemplo: `auto x = myVector->First();`. El iterador conoce la longitud de la colección.
 
-Si necesita un par de iteradores para pasar a una función STL, utilice las funciones libres [Collections:: begin](../cppcx/begin-function.md) y [Windows](../cppcx/end-function.md)
+Cuando se necesita un par de iteradores para pasar a una función STL, utilice las funciones libres [Collections:: begin](../cppcx/begin-function.md) y [Windows](../cppcx/end-function.md)
 
-## <a name="getat"></a>  Vector:: GetAt (método)
+## <a name="getat"></a>  GetAt (método)
 
 Recupera el elemento del objeto Vector actual identificado por el índice especificado.
 
@@ -172,14 +173,14 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El elemento especificado por la *índice* parámetro. El tipo de elemento se define mediante la *T* typename.
+El elemento especificado por el *índice* parámetro. El tipo de elemento se define mediante el *T* typename.
 
-## <a name="getmany"></a>  Vector:: getmany (método)
+## <a name="getmany"></a>  Getmany (método)
 
 Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado, y los copia en la matriz asignada por el llamador.
 
@@ -193,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parámetros
 
-*startIndex*  
+*startIndex*<br/>
 Índice basado en cero del principio de los elementos que se van a recuperar.
 
-*dest*  
+*dest*<br/>
 Una matriz asignada por el llamador de elementos que comienzan con el elemento especificado por *startIndex* y termina con el último elemento del vector.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -205,9 +206,9 @@ Número de elementos recuperados.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función no se ha diseñado para el uso en el código de cliente. Se usa internamente en el [to_vector (función)](../cppcx/to-vector-function.md) para habilitar la conversión eficaz de instancias Platform instancias std:: vector.
+Esta función no se ha diseñado para el uso en el código de cliente. Se utiliza internamente en el [to_vector (función)](../cppcx/to-vector-function.md) para habilitar la conversión eficaz de instancias Platform a instancias std:: vector.
 
-## <a name="getview"></a>  Método vector:: GetView
+## <a name="getview"></a>  GetView (método)
 
 Devuelve una vista de solo lectura de un objeto Vector; es decir, una interfaz IVectorView.
 
@@ -221,7 +222,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Un objeto IVectorView.
 
-## <a name="indexof"></a>  Vector:: IndexOf (método)
+## <a name="indexof"></a>  IndexOf (método)
 
 Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.
 
@@ -233,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*  
+*valor*<br/>
 El elemento que se va a buscar.
 
-*index*  
+*index*<br/>
 Índice de base cero del elemento si parámetro *valor* se encuentra; en caso contrario, 0.
 
 El *índice* parámetro es 0 si el elemento es el primer elemento del Vector o no se encontró el elemento. Si el valor devuelto es `true`, se encontró el elemento y es el primer elemento; de lo contrario, no se encuentra el elemento.
@@ -249,7 +250,7 @@ El *índice* parámetro es 0 si el elemento es el primer elemento del Vector o n
 
 IndexOf utiliza std::find_if para buscar el elemento. Por tanto, los tipos de elementos personalizados deben sobrecargar los operadores == y != para habilitar las comparaciones de igualdad que requiere find_if.
 
-##  <a name="insertat"></a>  Vector:: InsertAt (método)
+##  <a name="insertat"></a>  InsertAt (método)
 
 Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.
 
@@ -261,13 +262,13 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*Elemento*  
-Un elemento a insertar en el objeto Vector detrás del elemento especificado por *índice*. El tipo de *elemento* está definida por el *T* typename.
+*Elemento*<br/>
+Un elemento que se va a insertar en el objeto Vector detrás del elemento especificado por *índice*. El tipo de *elemento* está definida por el *T* typename.
 
-## <a name="removeat"></a>  Vector:: RemoveAt (método)
+## <a name="removeat"></a>  RemoveAt (método)
 
 Elimina el elemento identificado por el índice especificado del objeto Vector actual.
 
@@ -279,10 +280,10 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-## <a name="removeatend"></a>  Vector:: removeatend (método)
+## <a name="removeatend"></a>  Removeatend (método)
 
 Elimina el elemento al final del objeto Vector actual.
 
@@ -292,7 +293,7 @@ Elimina el elemento al final del objeto Vector actual.
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>  Vector:: ReplaceAll (método)
+## <a name="replaceall"></a>  ReplaceAll (método)
 
 Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.
 
@@ -304,10 +305,10 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Parámetros
 
-*arr*  
+*arr*<br/>
 Una matriz de objetos cuyo tipo está definido por el *T* typename.
 
-## <a name="setat"></a>  Vector:: SetAt (método)
+## <a name="setat"></a>  SetAt (método)
 
 Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.
 
@@ -319,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*Elemento*  
+*Elemento*<br/>
 El valor que se va a asignar al elemento especificado. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="size"></a>  Vector:: Size (método)
@@ -364,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Parámetros
 
-*a*  
-A [std:: Array](../standard-library/array-class-stl.md) que se utilizará para inicializar el objeto Vector.
+*a*<br/>
+Un [std:: Array](../standard-library/array-class-stl.md) que se utilizará para inicializar el objeto Vector.
 
-*arr*  
-A [Platform:: Array](../cppcx/platform-array-class.md) que se utilizará para inicializar el objeto Vector.
+*arr*<br/>
+Un [Platform:: Array](../cppcx/platform-array-class.md) que se utilizará para inicializar el objeto Vector.
 
-*InIt*  
+*InIt*<br/>
 El tipo de una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
-*IL*  
-A [std:: initializer_list](../standard-library/initializer-list-class.md) de objetos de tipo *T* que se utilizará para inicializar el objeto Vector.
+*IL*<br/>
+Un [std:: initializer_list](../standard-library/initializer-list-class.md) de objetos de tipo *T* que se utilizará para inicializar el objeto Vector.
 
-*N*  
+*N*<br/>
 El número de elementos en una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
-*size*  
+*size*<br/>
 El número de elementos del objeto Vector.
 
-*valor*  
+*valor*<br/>
 Un valor que se utiliza para inicializar cada elemento en el objeto Vector actual.
 
-*v*  
-Un [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a una [std:: vector](../standard-library/vector-class.md) que se usa para inicializar el objeto Vector actual.
+*v*<br/>
+Un [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: vector](../standard-library/vector-class.md) que se utiliza para inicializar el objeto Vector actual.
 
-*ptr*  
+*ptr*<br/>
 Puntero a un objeto `std::vector` que se usa para inicializar el objeto Vector actual.
 
-*first*  
-El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *primer* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+*first*<br/>
+El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *primera* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*último*  
+*Último*<br/>
 El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *última* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Namespace de plataforma](platform-namespace-c-cx.md)  
-[Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Plataforma Namespace](platform-namespace-c-cx.md)<br/>
+[Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

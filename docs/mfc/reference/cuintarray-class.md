@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121629"
 ---
 # <a name="cuintarray-class"></a>Clase CUIntArray
 Admite matrices de enteros sin signo.  
@@ -68,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CUIntArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o un valor devuelto, sustituir un **UINT**.  
+ Las funciones miembro de `CUIntArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero expresado como un parámetro de función o el valor devuelto, sustituir un tipo UINT.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -93,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda la memoria no usada por encima del límite superior actual.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Devuelve el valor en un índice dado.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtiene el número de elementos de esta matriz.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite el acceso a los elementos de la matriz. Puede ser **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite el acceso a los elementos de la matriz. Puede ser NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtiene el número de elementos de esta matriz.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Devuelve el índice válido de mayor tamaño.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserta un elemento (o todos los elementos de otra matriz) en un índice especificado.|  
@@ -111,7 +112,7 @@ class CUIntArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un entero sin signo, o **UINT**, difiere de palabras y palabras dobles de que el tamaño físico de un **UINT** puede cambiar dependiendo del entorno operativo de destino. A **UINT** tiene el mismo tamaño que una palabra doble.  
+ Un entero sin signo o UINT, difiere de palabras y palabras dobles en que puede cambiar el tamaño físico de un tipo UINT dependiendo del entorno operativo de destino. Un tipo UINT es el mismo tamaño que una palabra doble.  
   
  `CUIntArray` incorpora la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro para admitir el acceso a tipos en tiempo de ejecución y el volcado en un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto. Si se necesita un volcado de elementos individuales de enteros sin signo, debe establecer la profundidad del contexto de volcado en 1 o mayor. No se puede serializar matrices de enteros sin signo.  
   

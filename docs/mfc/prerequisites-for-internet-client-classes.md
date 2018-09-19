@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354042"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Requisitos previos para las clases de cliente Internet
 Algunas acciones realizadas por un cliente de Internet (leer un archivo, por ejemplo) tienen acciones como requisito previo (en este caso, establecer una conexión a Internet). Las tablas siguientes enumeran los requisitos previos para algunas acciones de cliente.  

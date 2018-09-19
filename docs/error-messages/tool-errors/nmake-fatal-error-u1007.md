@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1007 | Documentos de Microsoft
+title: Error grave de NMAKE U1007 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988438b952aa1a06be3ec0da1d7337793c704133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1c74cdfe4113cf1fafd242993df27081eb1d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112309"
 ---
 # <a name="nmake-fatal-error-u1007"></a>Error grave de NMAKE U1007
-no se permite en nombre de un signo de comillas dobles  
-  
- El nombre de destino especificado o el nombre de archivo contiene un signo de comillas dobles (**"**).  
-  
- Puede encerrar el nombre de archivo entre comillas dobles, pero no pueden estar contenidas dentro de él.
+
+no se admiten en nombre de comillas dobles
+
+El nombre de destino especificado o nombre de archivo contiene una comilla doble (**"**).
+
+Las comillas dobles puede encerrar un nombre de archivo, pero no pueden estar dentro de él.

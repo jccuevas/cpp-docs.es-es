@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0045 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0045 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac52b16c2c8551282b79ef6a7fda40e24acc6bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9913bc77dfc3fbc95bd03fd32c954c4d304d27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023207"
 ---
 # <a name="expression-evaluator-error-cxx0045"></a>Error del evaluador de expresiones CXX0045
-no es una función  
-  
- Se proporcionó una lista de argumentos para un símbolo en el programa que no es el nombre de una función.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-queue( alpha, beta )  
-```  
-  
- Cuando `queue` no es una función.  
-  
- Este error es idéntico a CAN0045.
+
+no es una función
+
+Se proporcionó una lista de argumentos para un símbolo en el programa que no es el nombre de una función.
+
+## <a name="example"></a>Ejemplo
+
+```
+queue( alpha, beta )
+```
+
+Cuando `queue` no es una función.
+
+Este error es idéntico a CAN0045.

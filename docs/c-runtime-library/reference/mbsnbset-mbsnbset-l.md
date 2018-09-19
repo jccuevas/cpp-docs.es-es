@@ -42,15 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316580b0c5f1f46ffa9f4a49ef759b347032fc09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17cbcb0313ac0a3e14b45d851ee6f4e98d5ec993
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206415"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
-Establece el primer argumento **n** bytes de una cadena de caracteres multibyte en un carácter especificado. Hay disponibles versiones más seguras de estas funciones; vea [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
+Establece los primeros **n** bytes de una cadena de caracteres multibyte en un carácter especificado. Hay disponibles versiones más seguras de estas funciones; vea [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
 > Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -91,15 +92,15 @@ Configuración regional que se va a usar.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnbset** y **_mbsnbset_l** funciones establecen, como máximo, los primeros *recuento* bytes de *str* a *c*. Si *recuento* es mayor que la longitud de *str*, la longitud de *str* se utiliza en lugar de *recuento*. Si *c* es un carácter multibyte y no se puede establecer totalmente en el último byte especificado por *recuento*, el último byte se completa con un carácter en blanco. **_mbsnbset** y **_mbsnbset_l** , no se establecerá una terminación null al final de *str*.
+El **_mbsnbset** y **_mbsnbset_l** funciones establecen, como máximo, los primeros *recuento* bytes de *str* a *c*. Si *recuento* es mayor que la longitud de *str*, la longitud de *str* se utiliza en lugar de *recuento*. Si *c* es un carácter multibyte y no se puede establecer totalmente en el último byte especificado por *recuento*, el último byte se completa con un carácter en blanco. **_mbsnbset** y **_mbsnbset_l** no colocan un carácter de terminación nulo al final de *str*.
 
-**_mbsnbset** y **_mbsnbset_l** es similar a **_mbsnset**, salvo que establece *recuento* bytes en lugar de *recuento* caracteres de *c*.
+**_mbsnbset** y **_mbsnbset_l** es similar a **_mbsnset**, salvo que establecen *recuento* bytes en lugar de *recuento* caracteres de *c*.
 
-Si *str* es **NULL** o *recuento* es cero, esta función genera una excepción de parámetro no válido, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**. Además, si *c* no es un carácter multibyte válido, **errno** está establecido en **EINVAL** y un espacio se utiliza en su lugar.
+Si *str* es **NULL** o *recuento* es cero, esta función genera una excepción de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**. Además, si *c* no es un carácter multibyte válido, **errno** está establecido en **EINVAL** y se usa un espacio en su lugar.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. El **_mbsnbset** versión de esta función usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la **_mbsnbset_l** versión es idéntica, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. El **_mbsnbset** versión de esta función usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la **_mbsnbset_l** versión es idéntica, salvo que use el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-**Nota de seguridad** Esta API crea la posible amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+**Nota de seguridad** Esta API crea la posible amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

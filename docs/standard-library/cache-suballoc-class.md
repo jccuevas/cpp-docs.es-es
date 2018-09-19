@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954328"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc (Clase)
 
@@ -41,13 +42,13 @@ class cache_suballoc
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Sz`|El número de elementos de la matriz que se van a asignar.|
+|*sz*|El número de elementos de la matriz que se van a asignar.|
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla cache_suballoc almacena bloques de memoria desasignados en una lista libre con longitud ilimitada, mediante `freelist<sizeof(Type), max_unbounded>`, y subasigna bloques de memoria de un fragmento mayor asignado con `operator new` cuando la lista libre está vacía.
+La clase de plantilla cache_suballoc almacena bloques de memoria desasignados en una lista libre con longitud ilimitada, mediante `freelist<sizeof(Type), max_unbounded>`y subasigna bloques de memoria de un fragmento mayor asignado con **operador new** cuando la lista libre está vacío.
 
-Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que `operator new` y `operator delete` requieren. Nunca se liberarán los fragmentos asignados.
+Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que **new (operador)** y **operador delete** requieren. Nunca se liberarán los fragmentos asignados.
 
 ### <a name="constructors"></a>Constructores
 
@@ -80,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`count`|El número de elementos de la matriz que se van a asignar.|
+|*count*|El número de elementos de la matriz que se van a asignar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -110,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|
+|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 

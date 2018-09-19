@@ -1,5 +1,5 @@
 ---
-title: SchedulerPolicy (clase) | Documentos de Microsoft
+title: SchedulerPolicy (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d7cf95898afa5e669d52b8bf18ad0cfc8733cb37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076273"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy (Clase)
 La clase `SchedulerPolicy` contiene un conjunto de pares clave-valor, uno para cada elemento de directiva, que controla el comportamiento de una instancia del programador.  
@@ -42,7 +43,7 @@ class SchedulerPolicy;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[SchedulerPolicy](#ctor)|Sobrecargado. Construye una nueva directiva del programador y lo rellena con valores de [claves de directiva](concurrency-namespace-enums.md) admitidas por programadores del Runtime de simultaneidad y el Administrador de recursos.|  
+|[SchedulerPolicy](#ctor)|Sobrecargado. Construye una nueva directiva del programador y lo rellena con los valores de [claves de directiva](concurrency-namespace-enums.md) admitidas por programadores del Runtime de simultaneidad y el Administrador de recursos.|  
 |[~ SchedulerPolicy (destructor)](#dtor)|Destruye una directiva de programador.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -60,7 +61,7 @@ class SchedulerPolicy;
 |[operator=](#operator_eq)|Asigna la directiva de programador a partir de otra directiva de programador.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de las directivas que puede controlarse mediante la `SchedulerPolicy` de clases, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
+ Para obtener más información acerca de las directivas que pueden controlarse mediante el `SchedulerPolicy` de clases, vea [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `SchedulerPolicy`  
@@ -79,14 +80,14 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `key`  
- Para recuperar un valor para la clave de directiva.  
+*key*<br/>
+Para recuperar un valor para la clave de directiva.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si la clave especificada por el `key` se admite el parámetro, el valor de directiva para la clave se convierte en un `unsigned int`.  
+ Si la clave especificada por el `key` es compatible con el parámetro, el valor de directiva para la clave se convierte en un `unsigned int`.  
   
 ### <a name="remarks"></a>Comentarios  
- El método producirá [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para una clave de directiva no válida.  
+ El método generará [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para una clave de directiva no válida.  
   
 ##  <a name="operator_eq"></a> operator= 
 
@@ -97,8 +98,8 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_RhsPolicy`  
- La directiva para asignar a esta directiva.  
+*_RhsPolicy*<br/>
+La directiva para asignar a esta directiva.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a la directiva del programador.  
@@ -108,7 +109,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
   
 ##  <a name="ctor"></a> SchedulerPolicy 
 
- Construye una nueva directiva del programador y lo rellena con valores de [claves de directiva](concurrency-namespace-enums.md) admitidas por programadores del Runtime de simultaneidad y el Administrador de recursos.  
+ Construye una nueva directiva del programador y lo rellena con los valores de [claves de directiva](concurrency-namespace-enums.md) admitidas por programadores del Runtime de simultaneidad y el Administrador de recursos.  
   
 ```
 SchedulerPolicy();
@@ -122,11 +123,11 @@ SchedulerPolicy(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_PolicyKeyCount`  
- El número de pares clave-valor que sigue al parámetro `_PolicyKeyCount`.  
+*_PolicyKeyCount*<br/>
+El número de pares clave-valor que sigue al parámetro `_PolicyKeyCount`.  
   
- `_SrcPolicy`  
- La directiva de origen que se va a copiar.  
+*_SrcPolicy*<br/>
+La directiva de origen que se va a copiar.  
   
 ### <a name="remarks"></a>Comentarios  
  El primer constructor crea una nueva directiva de programador donde todas las directivas se inicializarán en sus valores predeterminado.  
@@ -154,14 +155,14 @@ void SetConcurrencyLimits(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_MinConcurrency`  
- El valor de la `MinConcurrency` clave de la directiva.  
+*_MinConcurrency*<br/>
+El valor de la `MinConcurrency` clave de la directiva.  
   
- `_MaxConcurrency`  
- El valor de la `MaxConcurrency` clave de la directiva.  
+*_MaxConcurrency*<br/>
+El valor de la `MaxConcurrency` clave de la directiva.  
   
 ### <a name="remarks"></a>Comentarios  
- El método producirá [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) si el valor especificado para la `MinConcurrency` directiva es mayor que el especificado para el `MaxConcurrency` directiva.  
+ El método generará [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) si el valor especificado para el `MinConcurrency` directiva es mayor que el especificado para el `MaxConcurrency` directiva.  
   
  El método puede producir también [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) para otros valores no válidos.  
   
@@ -176,21 +177,21 @@ unsigned int SetPolicyValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `key`  
- Para establecer un valor para la clave de directiva.  
+*key*<br/>
+Para establecer un valor para la clave de directiva.  
   
- `value`  
- El valor que se establecerá la clave de directiva.  
+*valor*<br/>
+Valor que se establecerá la clave de directiva.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si la clave especificada por el `key` se admite el parámetro, el valor de directiva anterior de la clave se convierte en un `unsigned int`.  
+ Si la clave especificada por el `key` es compatible con el parámetro, el valor de directiva anterior de la clave se convierte en un `unsigned int`.  
   
 ### <a name="remarks"></a>Comentarios  
- El método producirá [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para una clave de directiva no válida o cualquier clave de directiva cuyo valor no se puede establecer mediante el `SetPolicyValue` método.  
+ El método generará [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para una clave de directiva no válida o cualquier clave de directiva cuyo valor no se puede establecer mediante el `SetPolicyValue` método.  
   
- El método producirá [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) para un valor que no es compatible con la clave especificada por el `key` parámetro.  
+ El método generará [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) para un valor que no es compatible con la clave especificada por el `key` parámetro.  
   
- Tenga en cuenta que este método no se permite establecer el `MinConcurrency` o `MaxConcurrency` las directivas. Para establecer estos valores, utilice la [SetConcurrencyLimits](#setconcurrencylimits) método.  
+ Tenga en cuenta que este método no se permite establecer el `MinConcurrency` o `MaxConcurrency` directivas. Para establecer estos valores, use el [SetConcurrencyLimits](#setconcurrencylimits) método.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   

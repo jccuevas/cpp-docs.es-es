@@ -1,5 +1,5 @@
 ---
-title: swap (función) (auto_handle) | Documentos de Microsoft
+title: swap (función) (auto_handle) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c616a391db07a9c6116c96c1b0242714a0ad958b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66416bf19a154a5ea1f4a52728f97bbfbd3477f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103241"
 ---
 # <a name="swap-function-autohandle"></a>swap (Función) (auto_handle)
-Intercambia los objetos entre uno `auto_handle` y otro.  
+Intercambia los objetos entre una `auto_handle` y otro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_left`  
- Una clase `auto_handle`.  
+*a la _izquierda*<br/>
+Una clase `auto_handle`.  
   
- `_right`  
- Otra `auto_handle`.  
+*a la _derecha*<br/>
+Otro `auto_handle`.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -77,5 +78,5 @@ s1 = 'string two', s2 = 'string one'
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Vea también  
- [auto_handle](../dotnet/auto-handle.md)   
+ [auto_handle)](../dotnet/auto-handle.md)   
  [auto_handle::swap](../dotnet/auto-handle-swap.md)

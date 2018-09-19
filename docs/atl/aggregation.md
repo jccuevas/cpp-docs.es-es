@@ -1,5 +1,5 @@
 ---
-title: Agregación | Documentos de Microsoft
+title: Agregación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760a595274ba7a1901138cc0cceceddf97122725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce2fbe4a2dd566541a637459510ec8422b318c47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070923"
 ---
 # <a name="aggregation"></a>Agregación
-Hay ocasiones al implementador de un objeto desea aprovechar las ventajas de los servicios ofrecidos por otro objeto creada previamente. Además, puede desear que este segundo objeto aparezca como una parte natural de la primera. COM logra ambos de estos objetivos a través de contención y la agregación.  
-  
- Agregación significa que el objeto contenedor (externo) crea el objeto de (interno) independiente como parte de su proceso de creación y externo expone las interfaces del objeto interno. Un objeto permite a sí mismos ser o no agregables. Si es así, debe seguir ciertas reglas de agregación para funcionar correctamente.  
-  
- Principalmente, todos los **IUnknown** llamadas al método en el objeto contenido deben delegar en el objeto contenedor.  
-  
-## <a name="see-also"></a>Vea también  
- [Introducción a COM](../atl/introduction-to-com.md)   
- [Reutilización de objetos](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+
+Hay veces cuando desea que el implementador de un objeto para aprovechar las ventajas de los servicios ofrecidos por otro objeto creado previamente. Además, desea este segundo objeto aparezca como una parte natural de la primera. COM logra ambos objetivos mediante la contención y la agregación.
+
+Agregación significa que el objeto contenedor (externo) crea el objeto de (interno) independiente como parte de su proceso de creación y externo expone las interfaces del objeto interno. Un objeto permite que se pueden agregar o no. Si es así, debe seguir ciertas reglas de agregación para funcionar correctamente.
+
+Principalmente, todos `IUnknown` deben delegar llamadas al método en el objeto contenido en el objeto contenedor.
+
+## <a name="see-also"></a>Vea también
+
+[Introducción a COM](../atl/introduction-to-com.md)<br/>
+[Reutilizar objetos](/windows/desktop/com/reusing-objects)
 

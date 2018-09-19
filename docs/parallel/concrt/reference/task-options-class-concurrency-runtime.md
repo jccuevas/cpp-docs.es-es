@@ -1,5 +1,5 @@
 ---
-title: task_options (clase (Runtime de simultaneidad)) | Documentos de Microsoft
+title: task_options (clase (Runtime de simultaneidad)) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b01d9d5308590bead126cd623b7da0468f0df60f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65a12af3bf99075b2a2a77e0dc2c17d28e80849e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028264"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options (Clase) (Runtime de simultaneidad)
 Representa las opciones permitidas para crear una tarea  
@@ -41,13 +42,13 @@ class task_options;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[task_options:: get_cancellation_token (método) (Runtime de simultaneidad)](#get_cancellation_token)|Devuelve el token de cancelación|  
-|[task_options:: get_continuation_context (método) (Runtime de simultaneidad)](#get_continuation_context)|Devuelve el contexto de continuación|  
-|[task_options:: get_scheduler (método) (Runtime de simultaneidad)](#get_scheduler)|Devuelve el programador|  
-|[task_options:: has_cancellation_token (método) (Runtime de simultaneidad)](#has_cancellation_token)|Indica si el usuario especificó un token de cancelación|  
-|[task_options:: has_scheduler (método) (Runtime de simultaneidad)](#has_scheduler)|Indica si el usuario especificó un programador n|  
-|[task_options:: set_cancellation_token (método) (Runtime de simultaneidad)](#set_cancellation_token)|Establece el token determinado en las opciones|  
-|[task_options:: set_continuation_context (método) (Runtime de simultaneidad)](#set_continuation_context)|Establece el contexto de continuación determinado en las opciones|  
+|[task_options::get_cancellation_token (método) (Runtime de simultaneidad)](#get_cancellation_token)|Devuelve el token de cancelación|  
+|[task_options::get_continuation_context (método) (Runtime de simultaneidad)](#get_continuation_context)|Devuelve el contexto de continuación|  
+|[task_options::get_scheduler (método) (Runtime de simultaneidad)](#get_scheduler)|Devuelve el programador|  
+|[task_options::has_cancellation_token (método) (Runtime de simultaneidad)](#has_cancellation_token)|Indica si el usuario especificó un token de cancelación|  
+|[task_options::has_scheduler (método) (Runtime de simultaneidad)](#has_scheduler)|Indica si el usuario especificó un programador n|  
+|[task_options::set_cancellation_token (método) (Runtime de simultaneidad)](#set_cancellation_token)|Establece el token determinado en las opciones|  
+|[task_options::set_continuation_context (método) (Runtime de simultaneidad)](#set_continuation_context)|Establece el contexto de continuación determinado en las opciones|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `task_options`  
@@ -57,7 +58,7 @@ class task_options;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="get_cancellation_token"></a>  task_options:: get_cancellation_token (método) (Runtime de simultaneidad)  
+##  <a name="get_cancellation_token"></a>  task_options::get_cancellation_token (método) (Runtime de simultaneidad)  
  Devuelve el token de cancelación  
   
 ```
@@ -66,7 +67,7 @@ cancellation_token get_cancellation_token() const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="get_continuation_context"></a>  task_options:: get_continuation_context (método) (Runtime de simultaneidad)  
+##  <a name="get_continuation_context"></a>  task_options::get_continuation_context (método) (Runtime de simultaneidad)  
  Devuelve el contexto de continuación  
   
 ```
@@ -75,7 +76,7 @@ task_continuation_context get_continuation_context() const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="get_scheduler"></a>  task_options:: get_scheduler (método) (Runtime de simultaneidad)  
+##  <a name="get_scheduler"></a>  task_options::get_scheduler (método) (Runtime de simultaneidad)  
  Devuelve el programador  
   
 ```
@@ -84,7 +85,7 @@ scheduler_ptr get_scheduler() const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="has_cancellation_token"></a>  task_options:: has_cancellation_token (método) (Runtime de simultaneidad)  
+##  <a name="has_cancellation_token"></a>  task_options::has_cancellation_token (método) (Runtime de simultaneidad)  
  Indica si el usuario especificó un token de cancelación  
   
 ```
@@ -93,7 +94,7 @@ bool has_cancellation_token() const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="has_scheduler"></a>  task_options:: has_scheduler (método) (Runtime de simultaneidad)  
+##  <a name="has_scheduler"></a>  task_options::has_scheduler (método) (Runtime de simultaneidad)  
  Indica si el usuario especificó un programador n  
   
 ```
@@ -102,7 +103,7 @@ bool has_scheduler() const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="set_cancellation_token"></a>  task_options:: set_cancellation_token (método) (Runtime de simultaneidad)  
+##  <a name="set_cancellation_token"></a>  task_options::set_cancellation_token (método) (Runtime de simultaneidad)  
  Establece el token determinado en las opciones  
   
 ```
@@ -112,7 +113,7 @@ void set_cancellation_token(cancellation_token _Token);
 ### <a name="parameters"></a>Parámetros  
  `_Token`  
   
-##  <a name="set_continuation_context"></a>  task_options:: set_continuation_context (método) (Runtime de simultaneidad)  
+##  <a name="set_continuation_context"></a>  task_options::set_continuation_context (método) (Runtime de simultaneidad)  
  Establece el contexto de continuación determinado en las opciones  
   
 ```
@@ -154,9 +155,13 @@ task_options(
   
 ### <a name="parameters"></a>Parámetros  
  `_SchedType`  
+
  `_Token`  
+
  `_ContinuationContext`  
+
  `_Scheduler`  
+
  `_TaskOptions`  
   
 ## <a name="see-also"></a>Vea también  

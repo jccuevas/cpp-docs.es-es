@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352068"
 ---
 # <a name="frame-windows"></a>Ventanas de marco
 Cuando una aplicación se ejecuta en Windows, el usuario interactúa con documentos que se muestran en ventanas de marco. Una ventana de marco de documento tiene dos componentes principales: el marco y el contenido que lo rodea. Una ventana de marco de documento puede ser un [interfaz de único documento](../mfc/sdi-and-mdi.md) ventana de marco (SDI) o un [interfaz de múltiples documentos](../mfc/sdi-and-mdi.md) ventana secundaria (MDI). Windows administra la mayor parte de la interacción del usuario con la ventana de marco: mover y cambiar el tamaño de la ventana, cerrarla y minimizar y maximizar se. Administrar el contenido dentro del marco.  

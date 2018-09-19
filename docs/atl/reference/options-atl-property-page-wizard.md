@@ -1,5 +1,5 @@
 ---
-title: Opciones, Asistente para páginas de propiedades ATL | Documentos de Microsoft
+title: Opciones, Asistente para páginas de propiedades ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e7edfb2cb4040238985c6cd78e8f1e5756f4d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f3855cf9c760ef8e6bb761f4a0bac042f8c539
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081772"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opciones, Asistente para páginas de propiedades ATL
-Utilice esta página del Asistente para definir el nivel de agregación y de modelo de subprocesamiento de página de propiedades que se va a crear.  
-  
- **Modelo de subprocesos**  
- Especifica el modelo de subprocesos utilizado por la página de propiedades.  
-  
- Vea [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.  
-  
-|Opción|Descripción|  
-|------------|-----------------|  
-|`Single`|La página de propiedades solo se ejecuta en el subproceso COM principal.|  
-|**Apartamento**|La página de propiedades puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.|  
-  
- **Agregación**  
- Agrega compatibilidad con la agregación para la página de propiedades que se va a crear. Vea [agregación](../../atl/aggregation.md) para obtener más información.  
-  
-|Opción|Descripción|  
-|------------|-----------------|  
-|**Sí**|Crear una página de propiedades que se puede agregar.|  
-|**No**|Crear una página de propiedades que no se puede agregar.|  
-|**Solo**|Crear una página de propiedades que solo se puede crear instancias mediante agregación.|  
-  
-## <a name="see-also"></a>Vea también  
- [Asistente para páginas de propiedades ATL](../../atl/reference/atl-property-page-wizard.md)   
- [Cadenas, Asistente para páginas de propiedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)
+
+Utilice esta página del Asistente para definir el nivel de agregación y de modelo de subprocesamiento de página de propiedades que se va a crear.
+
+- **Modelo de subprocesos**
+
+   Especifica el modelo de subprocesos utilizado por la página de propiedades.
+
+   Consulte [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.
+
+   |Opción|Descripción|
+   |------------|-----------------|
+   |**Single**|La página de propiedades solo se ejecuta en el subproceso COM principal.|
+   |**Apartamento**|La página de propiedades puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.|
+
+- **Agregación**
+
+   Agrega compatibilidad con la agregación para la página de propiedades que se va a crear. Consulte [agregación](../../atl/aggregation.md) para obtener más información.
+
+   |Opción|Descripción|
+   |------------|-----------------|
+   |**Sí**|Crear una página de propiedades que se puede agregar.|
+   |**No**|Crear una página de propiedades que no se puede agregar.|
+   |**Solo**|Crear una página de propiedades que solo se puede crear instancias mediante agregación.|
+
+## <a name="see-also"></a>Vea también
+
+[Asistente para páginas de propiedades ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
+[Cadenas, Asistente para páginas de propiedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)
 

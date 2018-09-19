@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: recreateexception (método) | Documentos de Microsoft'
+title: Recreateexception (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,18 +11,20 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: fa73d1ab-86e4-4d26-a7d9-81938c1c7e77
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0472d74be21048aeaf25ca92dbb5c1e98ca0ca90
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28434f6c8c35f2cd4cfc15953f761d28037626e6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109724"
 ---
 # <a name="platformrecreateexception-method"></a>Platform::ReCreateException (Método)
-Este método es para uso interno únicamente y no se ha diseñado para el código del usuario. Utilice el método Exception:: CreateException en su lugar.
+
+Este método es para uso interno únicamente y no se ha diseñado para el código del usuario. Use el método Exception:: CreateException en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,9 +33,9 @@ static Exception^ ReCreateException(int hr)
 ```
 
 ### <a name="parameters"></a>Parámetros
-`hr`
+
+*recursos humanos*
 
 ### <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
 Devuelve un nuevo Platform::Exception^, según el HRESULT especificado.
-

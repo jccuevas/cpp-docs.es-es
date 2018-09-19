@@ -1,7 +1,8 @@
 ---
 title: Configuración de un proyecto de CMake de Linux en Visual Studio | Microsoft Docs
+description: Cómo configurar un proyecto CMake de Linux en Visual Studio
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,35 +15,36 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a49d9364b7b39dfddd982519416c9a12b7adf9e6
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708011"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configuración de un proyecto de CMake de Linux
-  
-**Visual Studio 2017 versión 15.4** Cuando se instala la carga de trabajo de C++ de Linux, se activa de forma predeterminada la compatibilidad de CMake con Linux. Ya puede trabajar en la base de código existente que utiliza CMake sin tener que convertirla en un proyecto de Visual Studio. Si la base de código es multiplataforma, puede tener como destino Windows y Linux desde dentro de Visual Studio. 
+
+**Visual Studio 2017, versión 15.4 y posteriores**<br/>
+Al instalar la carga de trabajo C++ de Linux para Visual Studio, se activa de forma predeterminada la compatibilidad de CMake con Linux. Ya puede trabajar en la base de código existente que utiliza CMake sin tener que convertirla en un proyecto de Visual Studio. Si la base de código es multiplataforma, puede tener como destino Windows y Linux desde dentro de Visual Studio.
 
 En este tema se da por supuesto que tiene conocimientos básicos de la compatibilidad de CMake en Visual Studio. Para obtener más información, consulte [Herramientas de CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md). Para obtener más información sobre el propio CMake, vea [Build, Test and Package Your Software With CMake](https://cmake.org/) (Compilar, probar y empaquetar con CMake).
 
-> [!NOTE] 
-> La compatibilidad de CMake en Visual Studio requiere la compatibilidad de modo de servidor que se introdujo en CMake 3.8. Si el administrador de paquetes proporciona una versión anterior de CMake, puede compilar CMake 3.8 a partir del origen.
-
-
+> [!NOTE]  
+> La compatibilidad de CMake en Visual Studio requiere la compatibilidad de modo de servidor que se introdujo en CMake 3.8. Para obtener una variante de CMake proporcionada por Microsoft compatible con el panel [Vista de destinos de CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) en Visual Studio, descargue los últimos binarios precompilados en [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). Si el administrador de paquetes proporciona una versión anterior a CMake 3.8, puede [compilar CMake a partir del origen](#build-a-supported-cmake-release-from-source) o si prefiere usar la versión estándar de CMake, puede descargarla de la [página de descarga de CMake](https://cmake.org/download/) oficial. 
 
 ## <a name="open-a-folder"></a>Abrir una carpeta
-Para empezar, elija **Archivo | Abrir | Carpeta** en el menú principal, o bien escriba `devenv.exe <foldername>` en la línea de comandos. La carpeta que abra debe contener un archivo CMakeLists.txt, junto con el código fuente.
+
+Para empezar, elija **Archivo** > **Abrir** > **Carpeta** en el menú principal, o bien escriba `devenv.exe <foldername>` en la línea de comandos. La carpeta que abra debe contener un archivo CMakeLists.txt, junto con el código fuente.
 En el ejemplo siguiente se muestra un archivo CMakeLists.txt simple y un archivo .cpp:
 
 ```cpp
-// Hello.cpp
+// hello.cpp
 
-#include <iostream>;
- 
+#include <iostream>
+
 int main(int argc, char* argv[])
 {
-    std::cout << "Hello" << std::endl;
+    std::cout << "Hello from Linux CMake" << std::endl;
 }
 ```
 
@@ -54,20 +56,26 @@ add_executable(hello-cmake hello.cpp)
 ```
 
 ## <a name="choose-a-linux-target"></a>Elija un destino de Linux
-En cuanto se abre la carpeta, Visual Studio analiza el archivo CMakeLists.txt y especifica un destino de Windows de x86-Debug. Para establecer Linux como destino, cambie la configuración del proyecto a Linux-Debug o Linux-Release.
 
-De forma predeterminada, Visual Studio elige el primer sistema remoto de la lista (en **Herramientas | Opciones | Multiplataforma | Administrador de conexiones**). Si no se encuentra ninguna conexión remota, se le pedirá que cree una.
+En cuanto se abre la carpeta, Visual Studio analiza el archivo CMakeLists.txt y especifica un destino de Windows de **x86-Debug**. Para establecer Linux como destino, cambie la configuración del proyecto a **Linux-Debug** o **Linux-Release**.
 
-Después de especificar un destino de Linux, el origen se copia en su máquina Linux. A continuación, CMake se ejecuta en la máquina Linux para generar la caché de CMake del proyecto.  
+De forma predeterminada, Visual Studio elige el primer sistema remoto de la lista **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones**. Si no se encuentra ninguna conexión remota, se le pedirá que cree una.
 
-![Generar la caché de CMake en Linux](media/cmake-linux-1.png "Generar la caché de CMake en Linux")  
+Después de especificar un destino de Linux, el origen se copia en su máquina Linux. A continuación, CMake se ejecuta en la máquina Linux para generar la caché de CMake del proyecto.
 
-**Visual Studio 2017 15.7 y versiones posteriores:** para proporcionar compatibilidad con IntelliSense para los encabezados remotos, Visual Studio los copia de manera automática en un directorio en el equipo Windows local. Para obtener más información, vea [IntelliSense para los encabezados remotos](configure-a-linux-project.md#remote_intellisense).
+![Generar la caché de CMake en Linux](media/cmake-linux-1.png "Generar la caché de CMake en Linux")
 
-## <a name="debug-the-project"></a>Depurar el proyecto  
-Para depurar el código en el sistema remoto, establezca un punto de interrupción, seleccione el destino CMake como el elemento de inicio en el menú de barra de herramientas situado junto a la configuración del proyecto y haga clic en ejecutar (o presione F5).
+**Visual Studio 2017, versión 15.7 y posteriores:**<br/>
+Para proporcionar compatibilidad con IntelliSense para los encabezados remotos, Visual Studio los copia de manera automática en un directorio en el equipo Windows local. Para obtener más información, vea [IntelliSense para los encabezados remotos](configure-a-linux-project.md#remote_intellisense).
 
-## <a name="configure-cmake-settings-for-linux"></a>Configurar CMake para Linux
+## <a name="debug-the-project"></a>Depurar el proyecto
+
+Para depurar el código en el sistema remoto, establezca un punto de interrupción, seleccione el destino CMake como el elemento de inicio en el menú de barra de herramientas situado junto a la configuración del proyecto y haga elija **&#x23f5; Iniciar** en la barra de herramientas o presione F5.
+
+Para personalizar los argumentos de la línea de comandos del programa, haga clic con el botón derecho en el archivo ejecutable en el **Explorador de soluciones** y seleccione **Configuración de depuración e inicio**. Esto abre o crea un archivo de configuración launch.vs.json que contiene información sobre el programa. Para especificar argumentos adicionales, agréguelos en la matriz de JSON `args`. Para más información, consulte el artículo sobre los [proyectos Abrir carpeta en Visual C++](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects).
+
+## <a name="configure-cmake-settings-for-linux"></a>Configuración de CMake para Linux
+
 Para cambiar la configuración predeterminada de CMake, elija **CMake | Cambiar configuración de CMake | CMakeLists.txt** en el menú principal, o haga clic con el botón derecho en CMakeSettings.txt en el **Explorador de soluciones** y elija **Cambiar configuración de CMake**. A continuación, Visual Studio crea un archivo en la carpeta denominado `CMakeSettings.json` que se rellena con las configuraciones predeterminadas que se muestran en el elemento de menú de configuración de proyecto. En el ejemplo siguiente se muestra la configuración predeterminada para Linux-Debug basada en el ejemplo de código anterior:
 
 ```json
@@ -79,10 +87,16 @@ Para cambiar la configuración predeterminada de CMake, elija **CMake | Cambiar 
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -90,9 +104,22 @@ Para cambiar la configuración predeterminada de CMake, elija **CMake | Cambiar 
 }
 ```
 
-El valor `name` puede ser el que quiera. El valor `remoteMachineName` especifica cuál será el sistema remoto de destino, si hay más de uno. IntelliSense está habilitado en este campo para que pueda seleccionar el sistema adecuado. El campo `remoteCMakeListsRoot` especifica donde se copiarán los orígenes del proyecto en el sistema remoto. El campo `remoteBuildRoot` es donde se generará la salida de la compilación en el sistema remoto. Esa salida también se copia en el sistema local en la ubicación especificada por `buildRoot`.
+El valor `name` puede ser el que quiera. El valor `remoteMachineName` especifica cuál será el sistema remoto de destino, si hay más de uno. IntelliSense está habilitado en este campo para que pueda seleccionar el sistema adecuado. El campo `remoteCMakeListsRoot` especifica donde se copiarán los orígenes del proyecto en el sistema remoto. El campo `remoteBuildRoot` es donde se generará la salida de la compilación en el sistema remoto. Esa salida también se copia en el sistema local en la ubicación especificada por `buildRoot`. Los campos `remoteInstallRoot` y `installRoot` son similares a `remoteBuildRoot` y `buildRoot`, excepto que se aplican al realizar una instalación de cmake. La entrada `remoteCopySources` controla si se copian los orígenes locales en la máquina remota. Puede establecerlo en false si tiene una gran cantidad de archivos y ya está sincronizando los orígenes. El valor `remoteCopyOutputVerbosity` controla el nivel de detalle del paso de copia en caso de que necesite diagnosticar errores. La entrada `remoteCopySourcesConcurrentCopies` controla el número de procesos que se generan para realizar la copia. El valor `remoteCopySourcesMethod` puede ser rsync o sftp. El campo `remoteCopySourcesExclusionList` permite controlar lo que debe copiarse en la máquina remota. El valor `rsyncCommandArgs` permite controlar el método rsync para copiar. El campo `remoteCopyBuildOutput` controla si se copia la salida de compilación remota en la carpeta de compilación local.
 
-## <a name="building-a-supported-cmake-release-from-source"></a>Compilación de una versión compatible de CMake a partir del origen
+También hay algunos valores de configuración opcionales que puede usar para tener más control:
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+Estas opciones permiten ejecutar comandos en el cuadro de diálogo remoto antes y después de compilar, y antes de la generación de CMake. Puede ser cualquier comando válido en el cuadro de diálogo remoto. El resultado se canaliza de nuevo a Visual Studio.
+
+## <a name="build-a-supported-cmake-release-from-source"></a>Compilación de una versión compatible de CMake a partir del origen
+
 La versión mínima de CMake necesaria en su máquina Linux es la 3.8. También debe admitir el modo servidor. Para comprobar esta condición, ejecute este comando:
 
 ```cmd
@@ -105,9 +132,11 @@ Para comprobar que el modo de servidor está habilitado, ejecute:
 cmake -E capabilities
 ```
 
-En la salida, busque "serverMode":true. Tenga en cuenta que aunque compile CMake a partir del origen tal y como se describe a continuación, debe comprobar las capacidades cuando haya finalizado. El sistema Linux puede tener limitaciones que impidan la habilitación del modo servidor.
+En la salida, busque **"serverMode":true**. Tenga en cuenta que aunque compile CMake a partir del origen tal y como se describe a continuación, debe comprobar las capacidades cuando haya finalizado. El sistema Linux puede tener limitaciones que impidan la habilitación del modo servidor.
 
-Para empezar a compilar desde el origen en el shell de su sistema Linux, asegúrese de que el administrador de paquetes está actualizado y que git y cmake están disponibles. En primer lugar, clone los orígenes de CMake de nuestro repositorio que usamos para la compatibilidad con CMake de Visual Studio:
+Para empezar a compilar CMake desde el origen en el shell de su sistema Linux, asegúrese de que el administrador de paquetes está actualizado y que git y cmake están disponibles.
+
+En primer lugar, clone los orígenes de CMake del [repositorio de Microsoft CMake](https://github.com/Microsoft/CMake) donde mantenemos una bifurcación para la compatibilidad con CMake de Visual Studio:
 
 ```cmd
 sudo apt-get update
@@ -116,7 +145,7 @@ git clone https://github.com/Microsoft/CMake.git
 cd CMake
 ```
 
-A continuación, ejecute los siguientes comandos:
+A continuación, para compilar e instalan la versión actual de CMake en /usr/local/bin, ejecute estos comandos:
 
 ```cmd
 mkdir out
@@ -126,7 +155,7 @@ make
 sudo make install
 ```
 
-Los comandos anteriores compilan e instalan la versión actual de CMake en /usr/local/bin. Ejecute este comando para comprobar que la versión es >=3.8 y que el modo servidor está habilitado:
+Después, ejecute este comando para comprobar que la versión es >=3.8 y que el modo servidor está habilitado:
 
 ```cmd
 /usr/local/bin/cmake –version
@@ -134,5 +163,6 @@ cmake -E capabilities
 ```
 
 ## <a name="see-also"></a>Vea también
+
 [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)  
-[Herramientas de CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md)
+[Herramientas de CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md)  

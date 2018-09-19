@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Get (método) | Documentos de Microsoft'
+title: Método Handlet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1f4432b112daf6a0f00a4568302a75b6b40f3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e987be9ae368917a70e8dcbb5796bb12228da81b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592360"
 ---
 # <a name="handletget-method"></a>HandleT::Get (Método)
-Obtiene el valor del identificador subyacente.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-typename HandleTraits::Type Get() const;  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un identificador.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+
+Obtiene el valor del identificador subyacente.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+typename HandleTraits::Type Get() const;
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Un identificador.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

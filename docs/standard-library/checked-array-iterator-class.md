@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ac7686706aad871b95f8b94d2bb11b459a64e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7c8f9e29cc71cd12c04d4135e4f02d273ab4725
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319037"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator (Clase)
 
@@ -94,10 +95,10 @@ int main() {
       cout << " " << b[i];
    cout << " )" << endl;
 }
-\* Output:
+/* Output:
 ( 0 1 2 3 4 )
 ( 0 1 2 3 4 )
-*\
+*/
 ```
 
 ## <a name="example"></a>Ejemplo
@@ -143,9 +144,9 @@ int main()
 
     return 0;
 }
-\* Output:
- 0 1 2 3 4 5 6 7 8 9
-*\
+/* Output:
+0 1 2 3 4 5 6 7 8 9
+*/
 ```
 
 ### <a name="constructors"></a>Constructores
@@ -232,9 +233,9 @@ int main() {
    cout << "The iterator underlying rpos is bpos & it points to: "
         << *bpos << "." << endl;
 }
-\* Output:
+/* Output:
 The iterator underlying rpos is bpos & it points to: 1.
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator"></a>  checked_array_iterator::checked_array_iterator
@@ -252,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` Un puntero a la matriz.
+*ptr*<br/>
+Un puntero a la matriz.
 
-`size` El tamaño de la matriz.
+*size*<br/>
+Se refiere al tamaño de la matriz.
 
-`index` (Opcional) Un elemento de la matriz, para inicializar el iterador.  De manera predeterminada, el iterador se inicializa en el primer elemento de la matriz.
+*index*<br/>
+(Opcional) Un elemento de la matriz para inicializar el iterador.  De manera predeterminada, el iterador se inicializa en el primer elemento de la matriz.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -291,11 +295,11 @@ int main() {
    checked_array_iterator<int*> checked_output_iterator2(b,5,3);
    cout << *checked_output_iterator2 << endl;
 }
-\* Output:
+/* Output:
 0 1 2 3 4
 0 1 2 3 4
 3
-*\
+*/
 ```
 
 ## <a name="difference_type"></a>  checked_array_iterator::difference_type
@@ -324,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El `checked_array_iterator` en el que se va a comprobar la igualdad.
+*right*<br/>
+El `checked_array_iterator` con el que se va a comprobar la igualdad.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -363,10 +368,10 @@ int main() {
    else
       cout << "checked_array_iterators are not equal" << endl;
 }
-\* Output:
+/* Output:
 checked_array_iterators are equal
 checked_array_iterators are not equal
-*\
+*/
 ```
 
 ## <a name="op_neq"></a>  checked_array_iterator::operator!=
@@ -379,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El `checked_array_iterator` en el que se comprueba la desigualdad.
+*right*<br/>
+El `checked_array_iterator` con el que se va a comprobar la desigualdad.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -418,10 +424,10 @@ int main() {
    else
       cout << "checked_array_iterators are equal" << endl;
 }
-\* Output:
+/* Output:
 checked_array_iterators are equal
 checked_array_iterators are not equal
-*\
+*/
 ```
 
 ## <a name="op_lt"></a>  checked_array_iterator::operator&lt;
@@ -434,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El `checked_array_iterator` en el que se comprueba la desigualdad.
+*right*<br/>
+El `checked_array_iterator` con el que se va a comprobar la desigualdad.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -473,10 +480,10 @@ int main() {
    else
       cout << "checked_output_iterator2 is not less than checked_output_iterator" << endl;
 }
-\* Output:
+/* Output:
 checked_output_iterator2 is not less than checked_output_iterator
 checked_output_iterator2 is less than checked_output_iterator
-*\
+*/
 ```
 
 ## <a name="op_gt"></a>  checked_array_iterator::operator&gt;
@@ -489,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El `checked_array_iterator` para comparar.
+*right*<br/>
+El `checked_array_iterator` con el que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -507,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El `checked_array_iterator` para comparar.
+*right*<br/>
+El `checked_array_iterator` con el que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -525,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El `checked_array_iterator` para comparar.
+*right*<br/>
+El `checked_array_iterator` con el que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -564,10 +574,10 @@ int main() {
    else
       cout << "checked_output_iterator2 is less than checked_output_iterator" << endl;
 }
-\* Output:
+/* Output:
 checked_output_iterator2 is greater than or equal to checked_output_iterator
 checked_output_iterator2 is less than checked_output_iterator
-*\
+*/
 ```
 
 ## <a name="op_star"></a>  checked_array_iterator::operator*
@@ -620,7 +630,7 @@ int main() {
    cout << "b[0] = " << *p << endl;
    cout << "c[0].first = " << p_c->first << endl;
 }
-\* Output:
+/* Output:
 0
 1
 2
@@ -628,7 +638,7 @@ int main() {
 4
 b[0] = 0
 c[0].first = 10
-*\
+*/
 ```
 
 ## <a name="op_arrow"></a>  checked_array_iterator::operator-&gt;
@@ -690,11 +700,11 @@ int main() {
    checked_output_iterator++;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 3
 77
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
@@ -738,11 +748,11 @@ int main() {
    checked_output_iterator--;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 3
 6
-*\
+*/
 ```
 
 ## <a name="op_add_eq"></a>  checked_array_iterator::operator+=
@@ -755,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El desplazamiento que se incrementa el iterador.
+*_Off*<br/>
+El desplazamiento en el que se incrementa el iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -786,10 +797,10 @@ int main() {
    checked_output_iterator += 3;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 199
-*\
+*/
 ```
 
 ## <a name="op_add"></a>  checked_array_iterator::operator+
@@ -802,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El desplazamiento que se va a agregar a la `checked_array_iterator`.
+*_Off*<br/>
+El desplazamiento que se va a agregar a `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -833,10 +845,10 @@ int main() {
    checked_output_iterator = checked_output_iterator + 3;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 199
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
@@ -849,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El desplazamiento que se incrementa el iterador.
+*_Off*<br/>
+El desplazamiento en el que se incrementa el iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -881,10 +894,10 @@ int main() {
    checked_output_iterator -= 2;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 199
 3
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
@@ -899,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El desplazamiento se descuenta bien de la `checked_array_iterator`.
+*_Off*<br/>
+El desplazamiento que se restará del `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -921,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El desplazamiento desde el `checked_array_iterator` dirección.
+*_Off*<br/>
+El desplazamiento desde la dirección del `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -955,9 +970,9 @@ int main() {
 
    cout << refrpos + 1 << endl;
 }
-\* Output:
+/* Output:
 3
-*\
+*/
 ```
 
 ## <a name="pointer"></a>  checked_array_iterator::pointer

@@ -1,7 +1,7 @@
 ---
-title: ALINEAR (MASM) | Documentos de Microsoft
+title: ALINEAR (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66a9e29b99786cd83d8994ed2da77ac2f3e48ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 52d539cba3f6e00b76b36c1793f383d0615263c3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691672"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
-Alinea a la siguiente variable o instrucción en un byte que es un múltiplo de `number`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-ALIGN [[  
-number  
-]]  
-  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Se alinea a la variable o la instrucción en un byte que es un múltiplo del siguiente *número*.
+
+## <a name="syntax"></a>Sintaxis
+
+> Alinear [[*número*]]
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

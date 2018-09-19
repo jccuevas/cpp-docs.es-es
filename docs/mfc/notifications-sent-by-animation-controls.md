@@ -1,5 +1,5 @@
 ---
-title: Notificaciones enviadas por los controles de animación | Documentos de Microsoft
+title: Notificaciones enviadas por los controles de animación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1696389ce3dc40c5d02ec660ebaeb6bf3e6c3ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7aff43577a4b1aa55fc0725ba4753228e334000
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199666"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Notificaciones enviadas por los controles de animación
-Un control de animación ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) envía dos tipos diferentes de mensajes de notificación. Las notificaciones se envían en forma de [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensajes.  
+Un control de animación ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) envía dos tipos diferentes de los mensajes de notificación. Las notificaciones se envían en forma de [WM_COMMAND](/windows/desktop/menurc/wm-command) mensajes.  
   
- El [mensaje ACN_START](http://msdn.microsoft.com/library/windows/desktop/bb761891) mensaje se envía cuando el control de animación ha empezado a reproducir un clip. El [mensaje ACN_STOP](http://msdn.microsoft.com/library/windows/desktop/bb761893) mensaje se envía cuando el control de animación ha terminado o ha dejado de reproducir un clip.  
+ El [mensaje ACN_START](/windows/desktop/Controls/acn-start) mensaje se envía cuando el control de animación ha empezado a reproducirse un clip. El [mensaje ACN_STOP](/windows/desktop/Controls/acn-stop) mensaje se envía cuando el control de animación ha terminado o se detuvo la reproducción un clip.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CAnimateCtrl](../mfc/using-canimatectrl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Punteros de función | Documentos de Microsoft
+title: Punteros de función | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57c61dc8599ece5020e854b045f9634c1d732a6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96bca27f56122f677eb790e4fbc9140a27b01668
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703474"
 ---
 # <a name="function-pointers"></a>Punteros a funciones
-Punteros de función son simplemente punteros a la etiqueta de la función respectiva. No hay ninguna tabla de requisitos de contenido (TOC) para los punteros de función.  
-  
-## <a name="see-also"></a>Vea también  
- [Convención de llamada](../build/calling-convention.md)
+
+Punteros de función son simplemente punteros a la etiqueta de la función respectiva. No hay ninguna tabla de requisitos de contenido (TDC) para punteros de función.
+
+## <a name="see-also"></a>Vea también
+
+[Convención de llamada](../build/calling-convention.md)

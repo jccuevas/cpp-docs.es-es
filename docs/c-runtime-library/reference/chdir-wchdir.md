@@ -42,11 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064638"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -65,24 +66,24 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parámetros
 
-*DirName*<br/>
+*nombre_directorio*<br/>
 Ruta de acceso del nuevo directorio de trabajo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Estas funciones devuelven un valor de 0 si se ejecutan correctamente. Un valor devuelto de -1 indica un error. Si no se encontró la ruta de acceso especificada, **errno** está establecido en **ENOENT**. Si *dirname* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve -1.
+Estas funciones devuelven un valor de 0 si se ejecutan correctamente. Un valor devuelto de -1 indica un error. Si no se encontró la ruta de acceso especificada, **errno** está establecido en **ENOENT**. Si *dirname* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve -1.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_chdir** función cambia el directorio de trabajo actual en el directorio especificado por *dirname*. El *dirname* parámetro debe hacer referencia a un directorio existente. Esta función puede cambiar el directorio de trabajo actual de cualquier unidad. Si se especifica otra letra de unidad en *dirname*, también se cambia la letra de unidad de forma predeterminada. Por ejemplo, si A es la letra de unidad predeterminada y \BIN es el directorio de trabajo actual, la siguiente llamada cambia el directorio de trabajo actual a la unidad C y establece C como nueva unidad predeterminada:
+El **_chdir** función cambia el directorio de trabajo actual en el directorio especificado por *dirname*. El *dirname* parámetro debe hacer referencia a un directorio existente. Esta función puede cambiar el directorio de trabajo actual de cualquier unidad. Si se especifica otra letra de unidad en *dirname*, también se cambia la letra de unidad predeterminada. Por ejemplo, si A es la letra de unidad predeterminada y \BIN es el directorio de trabajo actual, la siguiente llamada cambia el directorio de trabajo actual a la unidad C y establece C como nueva unidad predeterminada:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Si se usa el carácter de barra diagonal inversa opcional (**&#92;**) en rutas de acceso, es necesario poner dos barras diagonales inversas (**&#92;&#92;**) en una cadena de C literal para representar una única barra diagonal inversa ( **&#92;**).
+Cuando se usa el carácter de barra diagonal inversa opcional (**&#92;**) en rutas de acceso, es necesario poner dos barras diagonales inversas (**&#92;&#92;**) en una cadena de C para representar una sola barra diagonal inversa literal ( **&#92;**).
 
-**_wchdir** es una versión con caracteres anchos de **_chdir**; el *dirname* argumento pasado a **_wchdir** es una cadena de caracteres anchos. **_wchdir** y **_chdir** se comportan exactamente igual.
+**_wchdir** es una versión con caracteres anchos de **_chdir**; el *dirname* argumento **_wchdir** es una cadena de caracteres anchos. **_wchdir** y **_chdir** se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mapping"></a>Asignación de rutina de texto genérico:
 
@@ -136,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

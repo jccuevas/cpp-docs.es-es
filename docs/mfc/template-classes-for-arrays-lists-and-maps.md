@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380258"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Clases de plantillas para matrices, listas y mapas
 Estas clases de colección son plantillas cuyos parámetros determinan los tipos de los objetos almacenados en los agregados. El `CArray`, `CMap`, y `CList` clases utilizan funciones auxiliares globales que normalmente deben personalizarse. Para obtener más información acerca de estas funciones auxiliares, vea [aplicaciones auxiliares de clase de colección](../mfc/reference/collection-class-helpers.md). Las clases de puntero con tipo son contenedores para otras clases de la biblioteca de clases. Mediante el uso de estos contenedores, dé de alta del compilador-comprobación de tipos para ayudarle a evitar errores. Para obtener más información sobre el uso de estas clases, consulte [colecciones](../mfc/collections.md).  

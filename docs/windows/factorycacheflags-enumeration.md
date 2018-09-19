@@ -1,5 +1,5 @@
 ---
-title: FactoryCacheFlags (enumeración) | Documentos de Microsoft
+title: FactoryCacheFlags (enumeración) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,34 +15,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ba3d9b75ff72399e1b9a027c937c24bba4a6c37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 900ab21b72434c430ef65e7d6745731bbfd42002
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593380"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags (Enumeración)
-Determina si los objetos de generador se almacenan en caché.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-enum FactoryCacheFlags;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- De forma predeterminada, el generador de directiva de caché se especifica como el [ModuleType](../windows/moduletype-enumeration.md) parámetro de plantilla cuando se crea un [módulo](../windows/module-class.md) objeto. Para invalidar esta directiva, especifique un `FactoryCacheFlags` valor cuando se crea un objeto de fábrica.  
-  
-|||  
-|-|-|  
-|`FactoryCacheDefault`|Directiva de caché de la `Module` se utiliza el objeto.|  
-|`FactoryCacheEnabled`|Habilita el almacenamiento en caché de fábrica con independencia de la `ModuleType` parámetro de plantilla que se utiliza para crear un `Module` objeto.|  
-|`FactoryCacheDisabled`|Deshabilita el almacenamiento en caché de fábrica con independencia de la `ModuleType` parámetro de plantilla que se utiliza para crear un `Module` objeto.|  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+Determina si los objetos de fábrica se almacenan en caché.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+enum FactoryCacheFlags;
+```
+
+## <a name="remarks"></a>Comentarios
+
+De forma predeterminada, el generador de directiva de caché se especifica como el [ModuleType](../windows/moduletype-enumeration.md) parámetro de plantilla al crear un [módulo](../windows/module-class.md) objeto. Para reemplazar esta directiva, especifique un **FactoryCacheFlags** valor cuando se crea un objeto de fábrica.
+
+|||
+|-|-|
+|`FactoryCacheDefault`|La directiva de caché de la `Module` se usa el objeto.|
+|`FactoryCacheEnabled`|Permite el almacenamiento en caché de fábrica con independencia de la `ModuleType` parámetro de plantilla que se usa para crear un `Module` objeto.|
+|`FactoryCacheDisabled`|Deshabilita la caché del generador con independencia de la `ModuleType` parámetro de plantilla que se usa para crear un `Module` objeto.|
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

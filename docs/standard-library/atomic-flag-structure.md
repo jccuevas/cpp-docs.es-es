@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06959bd5a22c65077f447f0f0e776025cbe5ced5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f763181424bafc4b8b3af41c135753dbe2f2577b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110323"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag (Estructura)
 
-Describe un objeto que establece y borra una marca `bool` de forma atómica. Las operaciones sobre marcas atómicas nunca tienen bloqueos.
+Describe un objeto que se establece de forma atómica y borra un **bool** marca. Las operaciones sobre marcas atómicas nunca tienen bloqueos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,8 +39,8 @@ struct atomic_flag;
 
 |Name|Descripción|
 |----------|-----------------|
-|[clear](#clear)|Establece la marca almacenada en `false`.|
-|[test_and_set](#test_and_set)|Establece la marca almacenada en `true` y devuelve el valor inicial de la marca.|
+|[clear](#clear)|Establece la marca almacenada en **false**.|
+|[test_and_set](#test_and_set)|Establece la marca almacenada en **true** y devuelve el valor de marca inicial.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -47,13 +48,13 @@ Se pueden pasar objetos `atomic_flag` a las funciones no miembro [atomic_flag_cl
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<atómica >
+**Encabezado:** \<atomic >
 
 **Espacio de nombres:** std
 
-## <a name="clear"></a>  atomic_flag:: Clear
+## <a name="clear"></a>  atomic_flag::Clear
 
-Establece la marca `bool` almacenada en `*this` en `false`, dentro de las restricciones [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
+Establece el **bool** marca que se almacena en `*this` a **false**, dentro de lo especificado [memory_order](../standard-library/atomic-enums.md#memory_order_enum) restricciones.
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -62,11 +63,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="test_and_set"></a>  atomic_flag:: test_and_set
+## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
-Establece la marca `bool` almacenada en `*this` en `true`, dentro de las restricciones [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
+Establece el **bool** marca que se almacena en `*this` a **true**, dentro de lo especificado [memory_order](../standard-library/atomic-enums.md#memory_order_enum) restricciones.
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -75,7 +77,8 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Parámetros
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Orden*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor devuelto
 

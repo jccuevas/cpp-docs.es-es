@@ -1,7 +1,7 @@
 ---
-title: Error grave de NMAKE U1059 | Documentos de Microsoft
+title: Error grave de NMAKE U1059 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb038befdb7c587c6fe2a734003abba585c3e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b54919398c757bfe05f747ff57341f31decfc61
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200795"
 ---
 # <a name="nmake-fatal-error-u1059"></a>Error grave de NMAKE U1059
-error de sintaxis: '}' falta en dependientes  
-  
- Se especificó incorrectamente una ruta de acceso de búsqueda para un dependiente. Existe un espacio en la ruta de acceso o la llave de cierre (**}**) se ha omitido.  
-  
- La sintaxis para una especificación de directorio para un dependiente es  
-  
- **{**   
- ***directorios* } dependientes**  
-  
- donde `directories` especifica una o varias rutas, separados por un punto y coma (**;**). No se permiten espacios.  
-  
- Si parte o la totalidad de una ruta de acceso de búsqueda se sustituye por una macro, asegúrese de que no existan espacios en la expansión de macro.
+
+> error de sintaxis: '}' no se encuentra en dependiente
+
+Se especificó incorrectamente una ruta de acceso de búsqueda para un dependiente. Existe un espacio en la ruta de acceso o la llave de cierre (**}**) se ha omitido.
+
+La sintaxis de una especificación de directorio para un dependiente es
+
+> **{** *directorios* **} dependientes**
+
+donde *directorios* especifica uno o más rutas de acceso, separadas por punto y coma (**;**). No se permiten espacios.
+
+Si la totalidad o parte de una ruta de búsqueda se sustituye por una macro, asegúrese de que no existen espacios en blanco en la expansión de macro.

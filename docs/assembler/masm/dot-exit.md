@@ -1,7 +1,7 @@
 ---
-title: . SALIDA | Documentos de Microsoft
+title: . EXIT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eade5df90a385c790587ee8d292703939d6f4d3a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02c60bfcb80a70779a54c8f3b194fdcf68408d17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693315"
 ---
 # <a name="exit"></a>.EXIT
-Genera código de terminación.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-.EXIT [[expression]]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Devuelve opcional *expresión* Shell.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Genera código de terminación.
+
+## <a name="syntax"></a>Sintaxis
+
+> . SALIDA [[expresión]]
+
+## <a name="remarks"></a>Comentarios
+
+Devuelve opcional *expresión* al shell.
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

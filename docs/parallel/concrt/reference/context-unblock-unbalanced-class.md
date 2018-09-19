@@ -1,5 +1,5 @@
 ---
-title: context_unblock_unbalanced (clase) | Documentos de Microsoft
+title: context_unblock_unbalanced (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037481"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced (Clase)
 Esta clase describe una excepción que se produce cuando se llama a los métodos `Block` y `Unblock` de un objeto `Context` que no están emparejados correctamente.  
@@ -42,7 +43,7 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|Sobrecargado. Construye un objeto `context_unblock_unbalanced`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Llamadas a la `Block` y `Unblock` métodos de un `Context` objeto siempre se debe emparejar correctamente. El Runtime de simultaneidad permite que las operaciones que se produzca en cualquier orden. Por ejemplo, una llamada a `Block` puede ir seguida de una llamada a `Unblock`, o viceversa. Esta excepción se produce si, por ejemplo, dos llamadas a la `Unblock` método se realizaron en una fila, en un `Context` objetos que no se ha bloqueado.  
+ Las llamadas a la `Block` y `Unblock` métodos de un `Context` objeto siempre se debe emparejar correctamente. El Runtime de simultaneidad permite las operaciones que ocurra en cualquier orden. Por ejemplo, una llamada a `Block` puede ir seguida de una llamada a `Unblock`, o viceversa. Esta excepción se produce si, por ejemplo, dos llamadas a la `Unblock` método se realizaron en una fila, en un `Context` objeto que no se ha bloqueado.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -66,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

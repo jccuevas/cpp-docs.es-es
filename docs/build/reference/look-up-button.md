@@ -1,5 +1,5 @@
 ---
-title: Botón Buscar | Documentos de Microsoft
+title: Buscar (botón) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74a8ab3259560cbc99a509f3b7cf6075aacc7036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7dc18065499773d0646bde2bc63cb5c8e1d6076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717956"
 ---
 # <a name="look-up-button"></a>Buscar (botón)
-Haga clic en **buscar** para recuperar el mensaje de error que se corresponde con el valor de sistema o el módulo especificado. Pueden escribir valores en formato decimal o hexadecimal (incluidos los valores decimales negativos). Módulos que aparecen en la **módulos adicionales para búsqueda de errores** cuadro de diálogo también se buscan.  
-  
-## <a name="see-also"></a>Vea también  
- [Valor (Control de edición)](../../build/reference/value-edit-control.md)
+
+Haga clic en **buscar** para recuperar el mensaje de error que se corresponde con el valor del sistema o módulo especificado. Pueden escribir valores en formato decimal o hexadecimal (incluidos los valores decimales negativos). Módulos que aparecen en la **módulos adicionales para búsqueda de errores** cuadro de diálogo también se buscan.
+
+## <a name="see-also"></a>Vea también
+
+[Valor (Control de edición)](../../build/reference/value-edit-control.md)

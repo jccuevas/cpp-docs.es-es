@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3701 | Documentos de Microsoft
+title: Error del compilador C3701 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efcf451729ef9ffd869d9fecdc122615e4b40e54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c3a5d3af9448afe918cc2028655fbf85be81cef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051287"
 ---
 # <a name="compiler-error-c3701"></a>Error del compilador C3701
-'función': event_source no tiene eventos  
-  
- Se intentó utilizar [event_source](../../windows/event-source.md) en una clase que no tenga ningún método de evento. Para corregir este error, agregue uno o varios eventos a la clase.  
-  
- El ejemplo siguiente genera C3701:  
-  
-```  
-// C3701.cpp  
-[ event_source(native) ]  
-class CEventSrc {  
-public:  
-   // uncomment the following line to resolve this C3701  
-   // __event void fireEvent(int i);  
-};   // C3701  
-  
-int main() {  
-}  
+
+'function': event_source no tiene ningún evento
+
+Se intentó utilizar [event_source](../../windows/event-source.md) en una clase que no tiene ningún método de evento. Para corregir este error, agregue uno o varios eventos a la clase.
+
+El ejemplo siguiente genera C3701:
+
+```
+// C3701.cpp
+[ event_source(native) ]
+class CEventSrc {
+public:
+   // uncomment the following line to resolve this C3701
+   // __event void fireEvent(int i);
+};   // C3701
+
+int main() {
+}
 ```

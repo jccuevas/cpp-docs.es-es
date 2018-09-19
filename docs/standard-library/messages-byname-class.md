@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eab07f19f9d5025eba1ffe82c7e23066683b6267
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e03cb627e7e9db40d56a69112977d87141626696
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100449"
 ---
 # <a name="messagesbyname-class"></a>messages_byname (Clase)
 
@@ -48,13 +49,15 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-`_Locname` Una configuración regional con nombre.
+*_Locname*<br/>
+Una configuración regional con nombre.
 
-`_Refs` Un recuento de referencia inicial.
+*_Refs*<br/>
+Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
-Su comportamiento viene determinado por la configuración regional con nombre `_Locname`. Cada constructor inicializa su objeto base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
+Su comportamiento viene determinado por la configuración regional con nombre *_Locname*. Cada constructor inicializa su objeto base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 

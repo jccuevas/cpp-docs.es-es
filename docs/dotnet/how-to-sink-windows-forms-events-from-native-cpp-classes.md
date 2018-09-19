@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130430"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Cómo: Recibir eventos de Windows Forms de clases nativas de C++
 Puede habilitar clases de C++ nativas recibir devoluciones de llamada desde eventos administrados que se generan a partir de controles de formularios Windows Forms u otros formularios con el formato de mapa de macros de MFC. Recibir eventos en vistas y cuadros de diálogo es similar a utilizar la misma tarea para los controles.  

@@ -1,5 +1,5 @@
 ---
-title: -DLL (compilar un archivo DLL) | Documentos de Microsoft
+title: -DLL (compilar un archivo DLL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,48 +20,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1767ac9ef063ace2ee9d567dd9038519afababf8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec5beed66de3834759f35a5021d0155eab0a066e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716838"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Compilar un archivo DLL)
-```  
-/DLL  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- La opción /DLL genera un archivo DLL como el archivo de salida principal. Normalmente, un archivo DLL contiene exportaciones que pueden ser utilizadas por otro programa. Existen tres métodos para especificar exportaciones, aparecen en el orden recomendado de uso:  
-  
-1.  [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) en el código fuente  
-  
-2.  Un [exportaciones](../../build/reference/exports.md) instrucción en un archivo .def  
-  
-3.  Un [/exportación](../../build/reference/export-exports-a-function.md) especificación en un comando de LINK  
-  
- Un programa puede usar más de un método.  
-  
- Otra manera de generar un archivo DLL es con el **biblioteca** instrucción de definición de módulo. Las opciones /BASE y /DLL juntas equivalen a la **biblioteca** instrucción.  
-  
- No se especifica esta opción en el entorno de desarrollo; Esta opción es para su uso solo en la línea de comandos. Esta opción se establece cuando se crea un proyecto DLL con un Asistente para aplicaciones.  
-  
- Tenga en cuenta que si crea la biblioteca de importación en un paso preliminar, antes de crear el archivo .dll, debe pasar el mismo conjunto de archivos de objeto al crear el archivo .dll, tal y como se haya pasado al crear la biblioteca de importación.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Haga clic en el **propiedades de configuración** carpeta.  
-  
-3.  Haga clic en el **General** página de propiedades.  
-  
-4.  Modificar el **tipo de configuración** propiedad.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
-  
--   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+```
+/DLL
+```
+
+## <a name="remarks"></a>Comentarios
+
+La opción /DLL genera un archivo DLL como el archivo de salida principal. Normalmente, un archivo DLL contiene exportaciones que se pueden usar otro programa. Hay tres métodos para especificar exportaciones, aparece en el orden recomendado de uso:
+
+1. [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) en el código fuente
+
+1. Un [exportaciones](../../build/reference/exports.md) instrucción en un archivo .def
+
+1. Un [/EXPORT](../../build/reference/export-exports-a-function.md) especificación en un comando LINK
+
+Un programa puede usar más de un método.
+
+Es otra manera de generar un archivo DLL con la **biblioteca** instrucción de definición de módulo. Las opciones /BASE y /DLL juntos son equivalentes a la **biblioteca** instrucción.
+
+No se especifica esta opción en el entorno de desarrollo; Esta opción es para su uso solo en la línea de comandos. Esta opción se establece cuando se crea un proyecto DLL con un Asistente para aplicaciones.
+
+Tenga en cuenta que si crea la biblioteca de importación en un paso preliminar, antes de crear el archivo .dll, debe pasar el mismo conjunto de archivos de objeto al compilar el archivo .dll, que se pasa al compilar la biblioteca de importación.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+
+1. Haga clic en el **propiedades de configuración** carpeta.
+
+1. Haga clic en el **General** página de propiedades.
+
+1. Modificar el **configuración tipo** propiedad.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
+
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.
+
+## <a name="see-also"></a>Vea también
+
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opciones del vinculador](../../build/reference/linker-options.md)

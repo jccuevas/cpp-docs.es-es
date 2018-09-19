@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695647"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Procedimientos recomendados del Runtime de simultaneidad
 En esta sección se describen los procedimientos recomendados que pueden ayudarle a usar el runtime de simultaneidad con eficacia. Estas recomendaciones se aplican a la [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), el [biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)y el [programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  

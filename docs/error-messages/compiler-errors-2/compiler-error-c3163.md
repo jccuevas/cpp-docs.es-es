@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3163 | Documentos de Microsoft
+title: Error del compilador C3163 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7be8fbba29cf82070d6fd96c76f810bda961489
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e712a70bdd443d9a6c640853b958f29dac78dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061973"
 ---
 # <a name="compiler-error-c3163"></a>Error del compilador C3163
-'construcción': atributos incoherentes con la declaración anterior.  
-  
- Los atributos que se aplican a una definición de entrar en conflicto con los atributos que se aplican a una declaración.  
-  
- Una manera de resolver el error C3163 es eliminar atributos en la declaración adelantada. Deben ser menor que los atributos en la definición de los atributos en una declaración adelantada o, a lo sumo, igual a estos.  
-  
- Una posible causa del error error C3163 implica el lenguaje de anotación de código fuente de Microsoft (SAL). Las macros SAL no se expandan a menos que se compila el proyecto mediante el **/ analyze** marca. Un programa que se compila correctamente sin / analyze podría producir el error C3163 si intenta volver a compilar con la / analyze (opción). Para obtener más información acerca de SAL, consulte [anotaciones SAL](../../c-runtime-library/sal-annotations.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error C3163.  
-  
-```  
-// C3163.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[CLSCompliant(true)] void f();  
-[CLSCompliant(false)] void f() {}   // C3163  
-// try the following line instead  
-// [CLSCompliant(true)] void f() {}  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Anotaciones SAL](../../c-runtime-library/sal-annotations.md)
+
+'construcción': atributos incoherentes con la declaración anterior
+
+Los atributos que se aplican a una definición de entrar en conflicto con los atributos que se aplican a una declaración.
+
+Una manera de resolver C3163 es eliminar atributos en la declaración adelantada. Ningún atributo en una declaración adelantada debe ser menor que los atributos en la definición o, a lo sumo, igual a ellos.
+
+Una posible causa del error C3163 implica el lenguaje de anotación de código de origen de Microsoft (SAL). Las macros SAL no expandirán a menos que compile el proyecto mediante el uso de la **/ analyze** marca. Un programa que se compila correctamente sin / analyze podría producir C3163 si se intenta volver a compilar con la / opción de análisis. Para obtener más información acerca de SAL, consulte [anotaciones SAL](../../c-runtime-library/sal-annotations.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3163.
+
+```
+// C3163.cpp
+// compile with: /clr /c
+using namespace System;
+
+[CLSCompliant(true)] void f();
+[CLSCompliant(false)] void f() {}   // C3163
+// try the following line instead
+// [CLSCompliant(true)] void f() {}
+```
+
+## <a name="see-also"></a>Vea también
+
+[Anotaciones SAL](../../c-runtime-library/sal-annotations.md)

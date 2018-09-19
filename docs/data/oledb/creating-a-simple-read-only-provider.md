@@ -1,5 +1,5 @@
 ---
-title: Crear un proveedor sencillo de sólo lectura | Documentos de Microsoft
+title: Crear un proveedor sencillo de sólo lectura | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2662a071f443967b921c4a8db27713bc7c3e8bb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f951fba45b23b7e4dde92fc11f2faabb53bd43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101571"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Crear un proveedor sencillo de sólo lectura
-Una vez haya creado un proveedor de OLE DB mediante el Asistente para proyectos ATL y el Asistente para proveedores OLE DB ATL, puede agregar otra funcionalidad que desee admitir. Empezar a diseñar el proveedor mediante el examen de los tipos de datos que se va a enviar al consumidor y bajo qué condiciones. Es especialmente importante determinar si necesita admitir comandos, transacciones y otros objetos opcionales. Un buen diseño por adelantado acelerará la implementación y pruebas.  
+
+Cuando haya creado un proveedor OLE DB mediante el Asistente para proyectos ATL y el Asistente para proveedores OLE DB ATL, puede agregar otras funcionalidades que desea admitir. Empezar a diseñar su proveedor examinando el tipo de datos que se va a enviar al consumidor y bajo qué condiciones. Es especialmente importante determinar si necesita admitir los comandos, transacciones y otros objetos opcionales. Un buen diseño por adelantado acelerará la implementación y pruebas.  
   
- En el ejemplo se presenta en dos partes:  
+En el ejemplo se presenta en dos partes:  
   
--   La primera parte se muestra cómo [crear un proveedor sencillo de sólo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md) que lee un par de cadenas.  
+- La primera parte se muestra cómo [crear un proveedor sencillo de sólo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md) que lee un par de cadenas.  
   
--   La segunda parte se muestra cómo [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md) agregando el `IRowsetLocate` interfaz.  
+- La segunda parte muestra cómo [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md) agregando el `IRowsetLocate` interfaz.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

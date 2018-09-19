@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4228 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4228 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 023bf60930a53b6bd881680caebb78c151406df4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dab568ef6622bfa10f0e10566ec92dfaee71d22c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047959"
 ---
 # <a name="compiler-warning-level-1-c4228"></a>Advertencia del compilador (nivel 1) C4228
-ha utilizado una extensión no estándar: se omiten los calificadores después de coma en la lista de declaradores  
-  
- Uso de calificadores como **const** o `volatile` después de una coma al declarar variables es una extensión de Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// C4228.cpp  
-// compile with: /W1  
-int j, const i = 0;  // C4228  
-int k;  
-int const m = 0;  // ok  
-int main()  
-{  
-}  
+
+ha utilizado una extensión no estándar: se omiten los calificadores después de coma en la lista de declaradores
+
+Uso de calificadores como **const** o `volatile` después de una coma al declarar variables es una extensión de Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="example"></a>Ejemplo
+
+```
+// C4228.cpp
+// compile with: /W1
+int j, const i = 0;  // C4228
+int k;
+int const m = 0;  // ok
+int main()
+{
+}
 ```

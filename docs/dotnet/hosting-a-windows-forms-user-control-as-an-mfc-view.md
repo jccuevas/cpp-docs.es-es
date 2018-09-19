@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137632"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hospedar un control de usuario de Windows Forms como vista de MFC
 MFC utiliza la clase CWinFormsView para hospedar un control de usuario de formularios Windows Forms en una vista MFC. Vistas de formularios Windows Forms de MFC son controles ActiveX. El control de usuario se hospeda como elemento secundario de la vista nativa y ocupa toda el área cliente de la vista nativa.  

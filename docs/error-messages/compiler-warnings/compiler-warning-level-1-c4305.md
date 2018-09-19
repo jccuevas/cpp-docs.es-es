@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4305 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4305 | Microsoft Docs
 ms.custom: ''
 ms.date: 1/17/2018
 ms.technology:
@@ -15,23 +15,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88ae0fb38b7e6af14525906e90486a68ce22ee56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086829"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Advertencia del compilador (nivel 1) C4305
 
-> '*contexto*': truncamiento de '*type1*'to'*type2*'  
+> '*contexto*': truncamiento de '*type1*'para'*type2*'
 
 ## <a name="remarks"></a>Comentarios
 
-Esta advertencia se emite cuando un valor se convierte en un tipo más pequeño en una inicialización o como un argumento de constructor, lo que causará una pérdida de información.
+Esta advertencia se emite cuando un valor se convierte en un tipo más pequeño en una inicialización o como un argumento de constructor, lo que produce una pérdida de información.
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra dos formas, es posible que vea esta advertencia:
+Este ejemplo muestra dos maneras puede aparecer esta advertencia:
 
 ```cpp
 // C4305.cpp
@@ -50,4 +51,4 @@ int main()
 }
 ```
 
-Para corregir este problema, inicialice mediante un valor del tipo correcto o use una conversión explícita al tipo correcto. Por ejemplo, use un **float** literal como 2.71828f en lugar de un **doble** (el tipo predeterminado para los literales de punto flotante) para inicializar una **float** variable, o para pasar a un constructor que toma un **float** argumento.
+Para corregir este problema, inicializar con un valor del tipo correcto, o usar una conversión explícita al tipo correcto. Por ejemplo, use un **float** literal como 2.71828f en lugar de un **doble** (el tipo de valor predeterminado para los literales de punto flotante) para inicializar un **float** variable, o pasar a un constructor que toma un **float** argumento.

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694945"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Mediante la cláusula de programación
 Una región paralela tiene al menos una barrera, en su extremo y puede incluir otras barreras adicionales dentro de él. En cada barrera, los demás miembros del equipo deben esperar el último subproceso a que llegue. Para minimizar este tiempo de espera, se debe distribuir trabajo compartidas para que todos los subprocesos llegan a la barrera en aproximadamente al mismo tiempo. Si algunos de los que comparten el trabajo se encuentra en **para** construye, la `schedule` cláusula se puede usar para este propósito.  

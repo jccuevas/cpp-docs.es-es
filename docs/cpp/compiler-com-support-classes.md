@@ -1,5 +1,5 @@
 ---
-title: Clases de compatibilidad con COM del compilador | Documentos de Microsoft
+title: Las clases de compatibilidad con COM del compilador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3403a09700ba6f84792cc570d9fb093026241d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070831"
 ---
 # <a name="compiler-com-support-classes"></a>Clases de compatibilidad con COM del compilador
-**Específicos de Microsoft**  
-  
- Las clases estándar se utilizan para proporcionar compatibilidad con algunos de los tipos COM. Las clases se definen en \<comdef.h > y los archivos de encabezado generados a partir de la biblioteca de tipos.  
-  
-|Clase|Propósito|  
-|-----------|-------------|  
-|[_bstr_t](../cpp/bstr-t-class.md)|Encapsula el tipo `BSTR` para proporcionar operadores y métodos útiles.|  
-|[_com_error](../cpp/com-error-class.md)|Define el objeto de error iniciado por [_com_raise_error](../cpp/com-raise-error.md) en la mayoría de los errores.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula punteros de interfaz COM y automatiza las llamadas necesarias a `AddRef`, **versión**, y `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Ajusta la **VARIANT** tipo para proporcionar operadores y métodos útiles.|  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con COM del compilador](../cpp/compiler-com-support.md)   
- [Funciones globales COM del compilador](../cpp/compiler-com-global-functions.md)   
- [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)
+
+**Específicos de Microsoft**
+
+Las clases estándar se utilizan para proporcionar compatibilidad con algunos de los tipos COM. Las clases se definen en \<comdef.h > y los archivos de encabezado generados a partir de la biblioteca de tipos.
+
+|Clase|Propósito|
+|-----------|-------------|
+|[_bstr_t](../cpp/bstr-t-class.md)|Encapsula el tipo `BSTR` para proporcionar operadores y métodos útiles.|
+|[_com_error](../cpp/com-error-class.md)|Define el objeto de error iniciado por [_com_raise_error](../cpp/com-raise-error.md) en la mayoría de los errores.|
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula punteros de interfaz COM y automatiza las llamadas necesarias a `AddRef`, `Release`, y `QueryInterface`.|
+|[_variant_t](../cpp/variant-t-class.md)|Encapsula el tipo `VARIANT` para proporcionar operadores y métodos útiles.|
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con COM del compilador](../cpp/compiler-com-support.md)<br/>
+[Funciones globales COM del compilador](../cpp/compiler-com-global-functions.md)<br/>
+[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)

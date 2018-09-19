@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1113 | Documentos de Microsoft
+title: Error irrecuperable C1113 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343dbc41743c825b7fb3624019817ec7c5f163fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efcf76c02eaeafb89c48b9dc82d9269377e520ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076325"
 ---
 # <a name="fatal-error-c1113"></a>Error irrecuperable C1113
-\#Error en 'archivo'  
-  
- Sólo un archivo en el formato de lenguaje intermedio de Microsoft (MSIL) puede pasarse a una [#using](../../preprocessor/hash-using-directive-cpp.md) directiva. El [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opción del compilador permite crear un archivo de salida MSIL. Otros [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] lenguajes también generan archivos MSIL.
+
+\#Error de #using en 'archivo'
+
+Solo un archivo con el formato de lenguaje intermedio de Microsoft (MSIL) se puede pasar a un [#using](../../preprocessor/hash-using-directive-cpp.md) directiva. El [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opción del compilador le permite crear un archivo de salida MSIL. Otros lenguajes de Visual Studio también generan archivos MSIL.

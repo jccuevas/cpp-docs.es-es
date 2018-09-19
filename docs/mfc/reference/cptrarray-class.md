@@ -1,5 +1,5 @@
 ---
-title: Clase CPtrArray | Documentos de Microsoft
+title: CPtrArray (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,13 +52,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8749e54cc42a6ae98748e8a5906cf5a5009d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851296"
 ---
-# <a name="cptrarray-class"></a>Clase CPtrArray
+# <a name="cptrarray-class"></a>CPtrArray (clase)
 Admite matrices de punteros void.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -68,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CPtrArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un puntero `CObject` como un parámetro o un valor devuelto de función, utilice un puntero a `void`.  
+ Las funciones miembro de `CPtrArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o el valor devuelto, utilice un puntero a **void**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -111,16 +112,16 @@ class CPtrArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CPtrArray` incorpora la macro `IMPLEMENT_DYNAMIC` para admitir el acceso a tipos en tiempo de ejecución y el volcado en un objeto `CDumpContext`. Si se necesita un volcado de elementos de la matriz de punteros individuales, debe establecer la profundidad del contexto de volcado en 1 o mayor.  
+ `CPtrArray` incorpora la macro IMPLEMENT_DYNAMIC para admitir el acceso a los tipos de tiempo de ejecución y el volcado en un `CDumpContext` objeto. Si necesita un volcado de elementos de la matriz de punteros individuales, debe establecer la profundidad del contexto de volcado en 1 o mayor.  
   
 > [!NOTE]
 >  Antes de usar una matriz, use `SetSize` para establecer su tamaño y asignarle memoria. Si no usa `SetSize`, al agregar elementos a la matriz, esta se reasigna y se copia con frecuencia. La reasignación y copia frecuentes son ineficaces y pueden fragmentar la memoria.  
   
  No se puede serializar matrices de puntero.  
   
- Cuando se elimina una matriz de puntero, o cuando se quitan sus elementos, se quitan sólo los punteros, no las entidades que hacen referencia.  
+ Cuando se elimina una matriz de puntero, o cuando se quitan sus elementos, se quitan solo los punteros, no las entidades que hacen referencia.  
   
- Para obtener más información sobre el uso de `CPtrArray`, vea el artículo [colecciones](../../mfc/collections.md).  
+ Para obtener más información sobre el uso de `CPtrArray`, consulte el artículo [colecciones](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  

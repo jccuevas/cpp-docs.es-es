@@ -1,5 +1,5 @@
 ---
-title: Estructura de mensaje-1 | Documentos de Microsoft
+title: MSG (Structure1) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338817"
 ---
-# <a name="msg-structure1"></a>Estructura de mensaje-1
+# <a name="msg-structure1"></a>MSG (Structure1)
 El `MSG` estructura contiene información del mensaje de cola de mensajes de un subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,19 +43,19 @@ typedef struct tagMSG {     // msg
  *HWND*  
  Identifica la ventana cuyo procedimiento de ventana recibe el mensaje.  
   
- `message`  
+ *message*  
  Especifica el número de mensaje.  
   
- `wParam`  
- Especifica información adicional sobre el mensaje. El significado exacto depende del valor de la **mensaje** miembro.  
+ *wParam*  
+ Especifica información adicional sobre el mensaje. El significado exacto depende del valor de la `message` miembro.  
   
- `lParam`  
- Especifica información adicional sobre el mensaje. El significado exacto depende del valor de la **mensaje** miembro.  
+ *lParam*  
+ Especifica información adicional sobre el mensaje. El significado exacto depende del valor de la `message` miembro.  
   
- `time`  
+ *time*  
  Especifica la hora a la que se expuso el mensaje.  
   
- `pt`  
+ *PT*  
  Especifica la posición del cursor, en coordenadas de pantalla, cuando se expuso el mensaje.  
   
 ## <a name="requirements"></a>Requisitos  

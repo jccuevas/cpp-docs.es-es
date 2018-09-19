@@ -46,11 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209461"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -111,15 +112,15 @@ Exponente de entero.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **scalbn** funciones devuelven el valor de *x* * **FLT_RADIX**<sup>exp</sup> cuando se realice correctamente. Si se produce desbordamiento (según cuál sea el signo de *x*), **scalbn** devuelve **HUGE_VAL**; el **errno** valor se establece en **ERANGE** .
+El **scalbn** funciones devuelven el valor de *x* \* **FLT_RADIX**<sup>exp</sup> cuando se realiza correctamente. En caso de desbordamiento (según cuál sea el signo de *x*), **scalbn** devuelve **HUGE_VAL**; el **errno** valor se establece en **ERANGE** .
 
-Para obtener más información acerca de **errno** y error posibles valores devueltos, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información acerca de **errno** y los posibles valores devueltos erróneos, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
 **FLT_RADIX** se define en \<float.h > como la base de punto flotante nativa; en los sistemas binarios, tiene un valor de 2, y **scalbn** es equivalente a [ldexp](ldexp.md).
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **scalbn** y **scalbln** que toman y devuelven **float** o **largo** **doble** tipos. En un programa C, **scalbn** siempre tiene un **doble** y **int** y devuelve un **doble**, y **scalbln**siempre tiene un **doble** y un **largo** y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **scalbn** y **scalbln** que toman y devuelven **float** o **largo** **doble** tipos. En un programa C, **scalbn** siempre toma un **doble** y un **int** y devuelve un **doble**, y **scalbln**siempre toma un **doble** y un **largo** y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

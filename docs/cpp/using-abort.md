@@ -1,5 +1,5 @@
 ---
-title: Usar abort | Documentos de Microsoft
+title: Usar abort | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7231339ba4884445d7ad6b0161c6cff793c6db8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3edc24b2b8dc869022039d4aaaea73af06eac16b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092549"
 ---
 # <a name="using-abort"></a>Usar abort
-Llamar a la [anular](../c-runtime-library/reference/abort.md) función provoca la finalización inmediata. Omite el proceso de destrucción normal de los objetos estáticos globales inicializados. También omite cualquier procesamiento especial especificado mediante la función `atexit`.  
-  
-## <a name="see-also"></a>Vea también  
- [Consideraciones de finalización adicionales](../cpp/additional-termination-considerations.md)
+
+Una llamada a la [anular](../c-runtime-library/reference/abort.md) función provoca la finalización inmediata. Omite el proceso de destrucción normal de los objetos estáticos globales inicializados. También omite cualquier procesamiento especial especificado mediante la función `atexit`.
+
+## <a name="see-also"></a>Vea también
+
+[Consideraciones de finalización adicionales](../cpp/additional-termination-considerations.md)

@@ -1,5 +1,5 @@
 ---
-title: Constructor Asyncbase | Documentos de Microsoft
+title: Constructor Asyncbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf794e3cbd9b566dafcdd1d5928ab9598bb1f08b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0f0a866a64592de9f85cbc8a47530b742918ca6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607547"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>AsyncBase::AsyncBase (Constructor)
-Inicializa una instancia de la clase AsyncBase.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-AsyncBase();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Inicializa una instancia de la **AsyncBase** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+AsyncBase();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

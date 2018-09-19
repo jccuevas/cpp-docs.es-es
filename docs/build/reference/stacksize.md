@@ -1,5 +1,5 @@
 ---
-title: STACKSIZE | Documentos de Microsoft
+title: STACKSIZE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2093762b3c6f21d319c53a85da5ec5b430a1fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d9b61febedde1a2647df6312a8588b08c6bdad7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705567"
 ---
 # <a name="stacksize"></a>STACKSIZE
-Establece el tamaño de la pila en bytes.  
-  
-```  
-STACKSIZE reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Un modo equivalente a establecer la pila es con la [asignaciones de la pila](../../build/reference/stack-stack-allocations.md) (/ de la pila) opción. Consulte la documentación de esa opción para obtener más información sobre la *reservar* y `commit` argumentos.  
-  
- Esta opción no tiene ningún efecto en las DLL.  
-  
-## <a name="see-also"></a>Vea también  
- [Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)
+
+Establece el tamaño de la pila en bytes.
+
+```
+STACKSIZE reserve[,commit]
+```
+
+## <a name="remarks"></a>Comentarios
+
+Una manera equivalente a establecer la pila es con la [asignaciones de la pila](../../build/reference/stack-stack-allocations.md) (/stack) opción. Consulte la documentación de esa opción para obtener más información sobre la *reservar* y `commit` argumentos.
+
+Esta opción no tiene ningún efecto en los archivos DLL.
+
+## <a name="see-also"></a>Vea también
+
+[Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)

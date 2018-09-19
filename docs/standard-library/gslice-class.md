@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ec465e9a829164201d61d3e60c678371cc8c3d3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108534"
 ---
 # <a name="gslice-class"></a>gslice (Clase)
 
@@ -38,9 +39,9 @@ La clase almacena los parámetros que caracterizan a un objeto de tipo [gslice_a
 
 - Un índice de inicio.
 
-- Un vector de longitud de la clase **valarray<size_t>**.
+- Un vector de longitud de la clase `valarray<size_t>`.
 
-- Un vector de intervalo de la clase **valarray<size_t>**.
+- Un vector de intervalo de clase `valarray<size_t>`.
 
 Los dos vectores deben tener la misma longitud.
 
@@ -83,19 +84,22 @@ gslice(
 
 ### <a name="parameters"></a>Parámetros
 
-`_StartIndex` El índice de la valarray del primer elemento en el subconjunto.
+*_StartIndex*<br/>
+El índice de valarray del primer elemento del subconjunto.
 
-`_LenArray` Una matriz que especifica el número de elementos en cada sector.
+*_LenArray*<br/>
+Una matriz que especifica el número de elementos de cada segmento.
 
-`_IncArray` Una matriz que especifica el intervalo en cada sector.
+*_IncArray*<br/>
+Una matriz que especifica el intervalo de cada segmento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El constructor predeterminado almacena cero para el índice de inicio y vectores de longitud cero para los vectores de longitud e intervalo. El segundo constructor almacena `_StartIndex` para el índice de inicio, `_LenArray` para la matriz de longitud y `_IncArray` para la matriz de intervalo.
+El constructor predeterminado almacena cero para el índice de inicio y vectores de longitud cero para los vectores de longitud e intervalo. El segundo constructor almacena *_StartIndex* para el índice de inicio, *_LenArray* para la matriz de longitud y *_IncArray* para la matriz de intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
-**gslice** define un subconjunto de una valarray que consta de varios segmentos de la valarray que empiezan en el mismo elemento especificado. La capacidad de usar matrices para definir varios segmentos es la única diferencia entre `gslice` y [slice::slice](../standard-library/slice-class.md#slice). El primer segmento tiene un primer elemento con un índice de `_StartIndex`, un número de elementos especificado por el primer elemento de `_LenArray` y un intervalo especificado por el primer elemento de `_IncArray`. El siguiente conjunto de segmentos ortogonales tiene primeros elementos proporcionados por el primer segmento. El segundo elemento de `_LenArray` especifica el número de elementos. El intervalo viene determinado por el segundo elemento de `_IncArray`. Una tercera dimensión de segmentos podría tomar los elementos de la matriz bidimensional como los elementos de inicio y continuar de forma análoga
+**gslice** define un subconjunto de una valarray que consta de varios segmentos de la valarray que empiezan en el mismo elemento especificado. La capacidad de usar matrices para definir varios segmentos es la única diferencia entre `gslice` y [slice::slice](../standard-library/slice-class.md#slice). El primer segmento tiene un primer elemento con un índice de *_StartIndex*, un número de elementos especificado por el primer elemento de *_LenArray*y un intervalo especificado por el primer elemento de *_IncArray* . El siguiente conjunto de segmentos ortogonales tiene primeros elementos proporcionados por el primer segmento. El segundo elemento de *_LenArray* especifica el número de elementos. El intervalo viene determinado por el segundo elemento de *_IncArray*. Una tercera dimensión de segmentos podría tomar los elementos de la matriz bidimensional como los elementos de inicio y continuar de forma análoga
 
 ### <a name="example"></a>Ejemplo
 
@@ -213,13 +217,13 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The size of the valarray is: 20.
 
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The size of vaResult is:
- vaGSlice.size ( ) = ( 4 4 ).
+vaGSlice.size ( ) = ( 4 4 ).
 ```
 
 ## <a name="start"></a>  gslice::start
@@ -279,9 +283,9 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
@@ -346,11 +350,11 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The strides of vaResult are:
- vaGSlice.stride ( ) = ( 7 4 ).
+vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
 ## <a name="see-also"></a>Vea también

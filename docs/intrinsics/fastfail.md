@@ -1,5 +1,5 @@
 ---
-title: __fastfail | Documentos de Microsoft
+title: __fastfail | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e04f2898caf1f62a9499096ffab09fce8da86ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700185"
 ---
 # <a name="fastfail"></a>__fastfail
 **Específicos de Microsoft**  
@@ -30,21 +31,21 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `code`  
- Una constante simbólica `FAST_FAIL_<description>` de winnt.h o wdm.h que indica el motivo de la terminación del proceso.  
+*Código*<br/>
+[in] Un `FAST_FAIL_<description>` constante simbólica de winnt.h o wdm.h que indica el motivo de la terminación del proceso.  
   
 ## <a name="return-value"></a>Valor devuelto  
  No se devuelve el intrínseco `__fastfail`.  
   
 ## <a name="remarks"></a>Comentarios  
- El `__fastfail` intrínseco proporciona un mecanismo para una *rápido por error* solicitud: un método para un proceso posiblemente dañado con terminación inmediata del proceso de solicitud. El recurso de control de excepciones normales no puede controlar los errores críticos que pueden haber dañado el estado del programa y que se acumulan sin posibilidad de recuperación. Use `__fastfail` para terminar el proceso con una sobrecarga mínima.  
+ El `__fastfail` intrínseco proporciona un mecanismo para un *rápida por error* solicitud, una manera de terminación inmediata del proceso de solicitud para un proceso posiblemente dañado. El recurso de control de excepciones normales no puede controlar los errores críticos que pueden haber dañado el estado del programa y que se acumulan sin posibilidad de recuperación. Use `__fastfail` para terminar el proceso con una sobrecarga mínima.  
   
  Internamente, `__fastfail` se implementa mediante el uso de varios mecanismos específicos de la arquitectura:  
   
 |Arquitectura|Instrucción|Ubicación del argumento de código|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|x64|int 0x29|rcx|  
 |ARM|Código de operación 0xDEFB|r0|  
   
  Una solicitud de error rápido es independiente y normalmente solo requiere dos instrucciones para ejecutarse. Una vez que se ha ejecutado una solicitud de error rápido, el kernel toma las medidas oportunas. En el código en modo de usuario no hay ninguna dependencia de memoria, aparte del puntero de la instrucción cuando se provoca un evento de error rápido. Esto maximiza la fiabilidad, incluso si hay daños graves en la memoria.  
@@ -61,7 +62,7 @@ void __fastfail(unsigned int code);
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__fastfail`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ARM|  
+|`__fastfail`|x86, x 64, ARM|  
   
  **Archivo de encabezado** \<intrin.h >  
   

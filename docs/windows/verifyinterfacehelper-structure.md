@@ -1,5 +1,5 @@
 ---
-title: VerifyInterfaceHelper (estructura) | Documentos de Microsoft
+title: VerifyInterfaceHelper (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,54 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c8ac728c70b160b64b66ddc697c54e4c488320db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607880"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (estructura)
-Admite la infraestructura de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución y no está diseñada para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template <  
-   bool isWinRTInterface,  
-   typename I  
->  
-struct VerifyInterfaceHelper;  
-  
-template <  
-   typename I  
->  
-struct VerifyInterfaceHelper<false, I>;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `I`  
- Una interfaz para comprobar.  
-  
- `isWinRTInterface`  
-  
-## <a name="remarks"></a>Comentarios  
- Comprueba que la interfaz especificada por el parámetro de plantilla cumple determinados requisitos.  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[VerifyInterfaceHelper::Verify (método)](../windows/verifyinterfacehelper-verify-method.md)||  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `VerifyInterfaceHelper`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template <
+   bool isWinRTInterface,
+   typename I
+>
+struct VerifyInterfaceHelper;
+
+template <
+   typename I
+>
+struct VerifyInterfaceHelper<false, I>;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*I*  
+Para comprobar una interfaz.
+
+*isWinRTInterface*
+
+## <a name="remarks"></a>Comentarios
+
+Comprueba que la interfaz especificada por el parámetro de plantilla cumple determinados requisitos.
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[VerifyInterfaceHelper::Verify (método)](../windows/verifyinterfacehelper-verify-method.md)||
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`VerifyInterfaceHelper`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

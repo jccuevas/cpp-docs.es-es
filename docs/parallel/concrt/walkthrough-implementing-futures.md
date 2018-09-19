@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690122"
 ---
 # <a name="walkthrough-implementing-futures"></a>Tutorial: Implementar futuros
 En este tema se muestra cómo implementar futuros en la aplicación. En el tema se muestra cómo combinar la funcionalidad existente en el Runtime de simultaneidad para conseguir algo que hace más.  

@@ -1,5 +1,5 @@
 ---
-title: Las funciones de controlador de mensaje | Documentos de Microsoft
+title: Las funciones de controlador de mensaje | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,23 +23,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437ae282efd4b21f294e26890f16130b7a89a55f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93e3534f839417b6f601f4e8bc345342cc77ac1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040978"
 ---
-# <a name="message-handler-functions"></a>Funciones controladoras de mensajes
-ATL proporciona tres tipos de funciones de controlador de mensajes:  
-  
-|Tipo de controlador de mensajes|Macro de mensaje correspondiente|  
-|-----------------------------|---------------------------------|  
-|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
-|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
-|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|  
-  
-## <a name="see-also"></a>Vea también  
- [Implementar una ventana](../atl/implementing-a-window.md)   
- [Mapas de mensajes](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+# <a name="message-handler-functions"></a>Funciones del controlador de mensajes
+
+ATL proporciona tres tipos de funciones del controlador de mensajes:
+
+|Tipo de controlador de mensajes|Macro de mensaje correspondiente|
+|-----------------------------|---------------------------------|
+|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|
+|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|
+|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|
+
+## <a name="see-also"></a>Vea también
+
+[Implementar una ventana](../atl/implementing-a-window.md)<br/>
+[Mapas de mensajes](../atl/message-maps-atl.md)<br/>
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

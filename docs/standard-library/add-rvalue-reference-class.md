@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e4936772c82bb482e468a37f2f7b327c9a728f0c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720127"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference (clase)
 
@@ -38,11 +39,12 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-Para modificar el tipo de T.
+*T*<br/>
+Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase `add_rvalue_reference` tiene un miembro denominado `type` que es un alias del tipo de una referencia a un valor R al parámetro de plantilla `T`. La semántica de contracción de referencias implica que, en los tipos `T` que no son de objeto ni de función, `T&&` sea `T`. Por ejemplo, cuando `T` es un tipo de referencia de valor l, `add_rvalue_reference<T>::type` es el tipo de referencia de valor l, no una referencia rvalue.
+El `add_rvalue_reference` clase tiene un miembro denominado `type`, que es un alias para el tipo de referencia rvalue para el parámetro de plantilla *T*. La semántica de contracción de referencias implica que, para los tipos que no sean de objeto y que no son de función *T*, `T&&` es un *T*. Por ejemplo, cuando *T* es un tipo de referencia lvalue, `add_rvalue_reference<T>::type` es el tipo de referencia de valor l, no una referencia rvalue.
 
 Para mayor comodidad, \<type_traits > define una plantilla de aplicación auxiliar, `add_rvalue_reference_t`, ese alias el `type` miembro de `add_rvalue_reference`.
 
@@ -79,7 +81,9 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>Requisitos
 
-Encabezado: <type_traits> Espacio de nombres: std
+Encabezado: \<type_traits >
+
+Namespace: std
 
 ## <a name="see-also"></a>Vea también
 

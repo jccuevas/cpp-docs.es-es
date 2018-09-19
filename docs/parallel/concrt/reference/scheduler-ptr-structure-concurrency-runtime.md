@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr (estructura) | Documentos de Microsoft
+title: scheduler_ptr (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd15238408f90f268a5fea96635136077c795779
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059113"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr (estructura)
-Representa un puntero a un programador. Esta clase existe para permitir la especificación de una duración compartida mediante shared_ptr o simplemente permitir una referencia sin formato mediante un puntero sin formato.  
+Representa un puntero a un programador. Esta clase existe para permitir la especificación de una duración compartida mediante shared_ptr o simplemente una referencia sin formato mediante un puntero sin formato.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +63,7 @@ struct scheduler_ptr;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="get"></a>  scheduler_ptr:: Get (método)  
+##  <a name="get"></a>  scheduler_ptr::Get (método)  
  Devuelve el puntero sin formato al programador  
   
 ```
@@ -90,14 +91,17 @@ operador de scheduler_interface () -> () const;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-scheduler_ptr (de) explícita (programador std:: shared_ptr < scheduler_interface () >);
+scheduler_ptr (de) explícita (scheduler std:: shared_ptr < scheduler_interface () >);
 
-scheduler_ptr (de) explícita (_In_opt_ scheduler_interface () * pScheduler);
+scheduler_ptr (de) explícita (_In_opt_ pScheduler scheduler_interface () *);
 ```  
   
 ### Parameters  
- `scheduler`  
- `pScheduler`  
+*scheduler*<br/>
+The scheduler to convert.
+
+*pScheduler*<br/>
+The scheduler pointer to convert.
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)

@@ -40,11 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 368f32de049aa7bed83a9bb80e650ef212d07778
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052171"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -70,9 +71,9 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **acosh** funciones devuelven el coseno hiperbólico inverso (arco coseno hiperbólico) de *x*. Estas funciones son válidas en el dominio *x* ≥ 1. Si *x* es menor que 1, **errno** está establecido en **EDOM** y el resultado es un valor NaN reservado. Si *x* es un NaN reservado, indefinido o infinito, se devuelve el mismo valor.
+El **acosh** funciones devuelven el coseno hiperbólico inverso (arco coseno hiperbólico) de *x*. Estas funciones son válidas en el dominio *x* ≥ 1. Si *x* es menor que 1, `errno` está establecido en `EDOM` y el resultado es un valor NaN. Si *x* es un NaN reservado, indefinido o infinito, se devuelve el mismo valor.
 
-|Entrada|Excepción SEH|**_matherr** (excepción)|
+|Entrada|Excepción SEH|Excepción de`_matherr` |
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|ninguna|ninguna|
 |*x* < 1|ninguna|ninguna|
@@ -124,4 +125,4 @@ acosh( 1.324609 ) = 0.785398
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
 [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)

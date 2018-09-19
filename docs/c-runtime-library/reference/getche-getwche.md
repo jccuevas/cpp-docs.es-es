@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - getwche
@@ -38,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afca6d897f1cc8b1cd724b03ca57e3096829b9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bfd791eb0ac022cfd13de74ca902ef45565ac16
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572190"
 ---
 # <a name="getche-getwche"></a>_getche, _getwche
 

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2213 | Documentos de Microsoft
+title: Error del compilador C2213 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f51f734c8d795729b035d3b550e3cfdceea902a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55bf3cb315ff2b65f4c65ff1091cd530cd810fd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096072"
 ---
 # <a name="compiler-error-c2213"></a>Error del compilador C2213
-'modifier': argumento no válido para __based  
-  
- La modificación del argumento `__based` no es válido.  
-  
- El ejemplo siguiente genera C2213:  
-  
-```  
-// C2213.cpp  
-// compile with: /c  
-int i;  
-int *j;  
-char __based(i) *p;   // C2213  
-char __based(j) *p2;   // OK  
+
+'modifier': argumento para __based no válido
+
+La modificación del argumento `__based` no es válido.
+
+El ejemplo siguiente genera C2213:
+
+```
+// C2213.cpp
+// compile with: /c
+int i;
+int *j;
+char __based(i) *p;   // C2213
+char __based(j) *p2;   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: Nuevo proyecto del código existente - archivos de código fuente (Visual C++) | Documentos de Microsoft
+title: 'Nuevo proyecto a partir de código existente: archivos de código fuente (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,51 +14,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 3647ad3211043a5356649cb5f350ec07009f2279
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707842"
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Especifique la ubicación del proyecto y los archivos de código fuente, Asistente para crear nuevo proyecto de archivos de código fuente existentes.
-Utilice esta página del Asistente para crear nuevo proyecto de archivos de código existentes para especificar:  
+Use esta página del Asistente para crear nuevo proyecto de archivos de código fuente existentes para especificar:  
   
--   La ruta del directorio del nuevo proyecto  
+-   La ruta de acceso del directorio del proyecto nuevo.  
   
--   Los directorios donde buscar archivos de código fuente existentes  
+-   Los directorios donde buscar los archivos de código fuente existentes.  
   
--   Los tipos de archivos que el asistente importará al nuevo proyecto  
+-   Los tipos de archivos que el asistente importará al proyecto nuevo.  
   
 ## <a name="task-list"></a>Lista de tareas  
- [Cómo: Crear un proyecto de C++ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+[Cómo: Crear un proyecto de C++ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Ubicación del archivo de proyecto**  
- Especifica la ruta del directorio del nuevo proyecto. Esta ubicación es donde deposite el Asistente para todos los archivos (y subdirectorios) del nuevo proyecto.  
+- **Ubicación del archivo de proyecto**
+
+   Especifica la ruta del directorio del proyecto nuevo. Esta ubicación es donde el asistente depositará todos los archivos (y subdirectorios) del proyecto nuevo.  
   
- **Examinar**  
- Muestra el **ubicación del archivo de proyecto** cuadro de diálogo, que le ayuda a especificar el directorio que contendrá el nuevo proyecto. Este control permite navegar hasta la carpeta deseada.  
+- **Examinar**
+
+   Muestra el cuadro de diálogo **Ubicación del archivo de proyecto**, que ayuda a especificar el directorio que contendrá el proyecto nuevo. Este control permite navegar hasta la carpeta deseada.  
   
- **Nombre del proyecto**  
- Especifica el nombre del nuevo proyecto. Archivos de proyecto, que tienen extensiones de archivo como .vcxproj adoptarán este nombre. Archivos de código existentes mantendrá su nombre original.  
+- **Nombre del proyecto**
+
+   Especifica el nombre del proyecto nuevo. Los archivos de proyecto, que tienen extensiones de archivo como .vcxproj, adoptarán este nombre. Los archivos de código existentes mantendrán su nombre original.  
   
- **Agregar archivos al proyecto de estas carpetas**  
- Cuando se activa, Establece el Asistente para copiar archivos de código existentes desde sus directorios originales (que se especifican en el cuadro de lista situado bajo este control) en el nuevo proyecto.  
+- **Agregar archivos al proyecto desde estas carpetas**
+
+   Cuando se activa, establece el asistente para copiar los archivos de código existentes desde sus directorios originales (que se especifican en el cuadro de lista situado debajo de este control) en el proyecto nuevo.  
   
- **Agregar subcarpetas**  
- Especifica copiar archivos de código de todos los subdirectorios del directorio de la lista **carpeta** columna al nuevo proyecto.  
+- **Agregar subcarpetas**
+
+   Especifica que los archivos de código de todos los subdirectorios de la columna **Carpeta** indicada del directorio se copien en el proyecto nuevo.  
   
- **Carpeta**  
- Indica la ruta de acceso al directorio que contiene los archivos de código existentes que se copia en el nuevo proyecto. Esta columna muestra todos los directorios que el asistente buscará archivos de código existentes.  
+- **Carpeta**
+
+   Indica la ruta de acceso al directorio que contiene los archivos de código existentes que se van a copiar en el proyecto nuevo. En esta columna se muestran todos los directorios donde el asistente buscará los archivos de código existentes.  
   
- **Add**  
- Muestra el **agregar archivos al proyecto desde esta carpeta** cuadro de diálogo que le ayuda a especificar directorios que el asistente buscará archivos de código existentes.  
+- **Add**
+
+   Muestra el cuadro de diálogo **Agregar archivos al proyecto desde esta carpeta**, que ayuda a especificar los directorios donde el asistente buscará los archivos de código existentes.  
   
- **Remove**  
- Elimina la ruta del directorio que está seleccionada en la izquierda del cuadro de lista de este control.  
+- **Remove**
+
+   Elimina la ruta de acceso del directorio que está seleccionado en el cuadro de lista situado a la izquierda de este control.  
   
- **Tipos de archivo para agregar al proyecto**  
- Especifica los tipos de archivos que el asistente agregará al nuevo proyecto basado en las extensiones de archivo especificado. Extensiones de archivo están precedidas por el carácter comodín de asterisco y en la lista de extensiones de archivo se delimitan por un punto y coma.  
+- **Tipos de archivo para agregar al proyecto**
+
+   Especifica los tipos de archivos que el asistente agregará al proyecto nuevo en función de las extensiones de archivo especificadas. Las extensiones de archivo están precedidas por el carácter comodín de asterisco, y en la lista de extensiones de archivo se delimitan mediante un punto y coma.  
   
- **Mostrar todos los archivos en el Explorador de soluciones**  
- Especifica que todos los archivos en el nuevo proyecto sea visible y se muestran en la ventana Explorador de soluciones. Esta opción está habilitada de forma predeterminada.
+- **Mostrar todos los archivos en el Explorador de soluciones**
+
+   Especifica que todos los archivos del proyecto nuevo sean visibles y se muestren en la ventana Explorador de soluciones. Esta opción está habilitada de forma predeterminada.

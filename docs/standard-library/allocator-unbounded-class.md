@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0108b8d02c275cb4e498cd3e9df00b87b7cae28f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 321737f62d0e2506ef6582f80bed7f398ad5977b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959916"
 ---
 # <a name="allocatorunbounded-class"></a>allocator_unbounded (Clase)
 
-Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_unbounded](../standard-library/max-unbounded-class.md).
+Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo *tipo* mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_unbounded](../standard-library/max-unbounded-class.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,11 +39,11 @@ class allocator_unbounded;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Type`|Tipo de elementos que asigna el asignador.|
+|*Type*|Tipo de elementos que asigna el asignador.|
 
 ## <a name="remarks"></a>Comentarios
 
-La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) pasa esta clase como el parámetro `name` de la instrucción siguiente: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_unbounded), SYNC_DEFAULT, allocator_unbounded);`
+El [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro pasa esta clase como el *nombre* parámetro en la siguiente instrucción: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_unbounded), SYNC_DEFAULT, allocator_unbounded);`
 
 ## <a name="requirements"></a>Requisitos
 

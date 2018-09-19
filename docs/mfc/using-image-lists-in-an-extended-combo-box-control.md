@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383350"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Usar listas de imágenes en un control de cuadro combinado extendido
 La característica principal de los controles de cuadro combinado extendido es la capacidad para asociar imágenes de una lista de imágenes con elementos individuales de un control de cuadro combinado. Cada elemento es capaz de mostrar tres imágenes distintas: una para su estado seleccionado, uno para su estado no y una tercera para una imagen de superposición.  

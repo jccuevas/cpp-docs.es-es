@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2588 | Documentos de Microsoft
+title: Error del compilador C2588 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67eb6362ff55e09b05349d10fcdc2377d8ff2996
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d656dbde06d6052fd10611675f2cff8818cdb6e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108578"
 ---
 # <a name="compiler-error-c2588"></a>Error del compilador C2588
-':: ~ identificador ': destructor global no válido  
-  
- El destructor se define para algo distinto de una clase, estructura o unión. Esto no está permitido.  
-  
- Este error puede deberse a una clase que falta, una estructura o un nombre de unión en el lado izquierdo de la resolución de ámbito (`::`) operador.  
-  
- El ejemplo siguiente genera C2588:  
-  
-```  
-// C2588.cpp  
-~F();   // C2588  
+
+':: ~ identificador ': destructor global no válido
+
+El destructor está definido para algo distinto de una clase, estructura o unión. Esto no está permitido.
+
+Este error puede deberse a una falta de clase, estructura o nombre de unión en el lado izquierdo de la resolución de ámbito (`::`) operador.
+
+El ejemplo siguiente genera C2588:
+
+```
+// C2588.cpp
+~F();   // C2588
 ```

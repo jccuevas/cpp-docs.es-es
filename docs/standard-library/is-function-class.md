@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f470f07c59860118b682784dca6c83587ee87b04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f668a1439f1694263405932c290cc5b54543ac84
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101033"
 ---
 # <a name="isfunction-class"></a>is_function (Clase)
 
@@ -36,11 +37,12 @@ struct is_function;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `Ty` es un tipo de función; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de función, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

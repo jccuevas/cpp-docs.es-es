@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3697 | Documentos de Microsoft
+title: Error del compilador C3697 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4689365859ec121c716e5fb060d2985647bba30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cb5755cc737c0cc5524cb6abd980b70d08b6cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050663"
 ---
 # <a name="compiler-error-c3697"></a>Error del compilador C3697
-'calificador': no se puede utilizar este calificador en ' ^'  
-  
- El identificador de seguimiento (^) se aplicó a un calificador para el que no se diseñó.  
-  
- El ejemplo siguiente genera C3697:  
-  
-```  
-// C3697.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   String ^__restrict s;   // C3697  
-   String ^ s2;   // OK  
-}  
+
+'calificador': no se puede utilizar este calificador en ' ^'
+
+El identificador de seguimiento (^) se aplicó a un calificador para el que no se diseñó.
+
+El ejemplo siguiente genera C3697:
+
+```
+// C3697.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   String ^__restrict s;   // C3697
+   String ^ s2;   // OK
+}
 ```

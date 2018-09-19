@@ -1,5 +1,5 @@
 ---
-title: Estructura de _ATL_COM_MODULE70 | Documentos de Microsoft
+title: _ATL_COM_MODULE70 (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019389"
 ---
-# <a name="atlcommodule70-structure"></a>Estructura de _ATL_COM_MODULE70
-Utilizado por el código relacionado con COM de ATL.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+# <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 (estructura)
+
+Utilizado por el código relacionado con COM de ATL.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
@@ -38,34 +40,34 @@ struct _ATL_COM_MODULE70 {
     _ATL_OBJMAP_ENTRY** m_ppAutoObjMapLast;
     CRITICAL_SECTION m_csObjMap;
 };
-```  
-  
-## <a name="members"></a>Miembros  
- `cbSize`  
- El tamaño de la estructura que se utiliza para controlar las versiones.  
-  
- `m_hInstTypeLib`  
- La instancia de identificador a la biblioteca de tipos para este módulo.  
-  
- **m_ppAutoObjMapFirst**  
- Dirección del elemento de matriz que indica el principio de las entradas de asignación de objeto para este módulo.  
-  
- **m_ppAutoObjMapLast**  
- Dirección del elemento de matriz que indica el final de las entradas de asignación de objeto para este módulo.  
-  
- `m_csObjMap`  
- Sección crítica para serializar el acceso a las entradas de asignación de objeto. Utilizada internamente por ATL.  
-  
-## <a name="remarks"></a>Comentarios  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) se define como una definición de tipo de `_ATL_COM_MODULE70`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlbase.h  
-  
-## <a name="see-also"></a>Vea también  
- [Clases y structs](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Miembros
 
+`cbSize`<br/>
+El tamaño de la estructura que se utiliza para el control de versiones.
 
+`m_hInstTypeLib`<br/>
+La instancia de identificador a la biblioteca de tipos para este módulo.
 
+`m_ppAutoObjMapFirst`<br/>
+Dirección del elemento de matriz que indica el principio de las entradas de asignación de objeto para este módulo.
+
+`m_ppAutoObjMapLast`<br/>
+Dirección del elemento de matriz que indica el final de las entradas de asignación de objeto para este módulo.
+
+`m_csObjMap`<br/>
+Sección crítica para serializar el acceso a las entradas de asignación de objeto. Lo utiliza internamente ATL.
+
+## <a name="remarks"></a>Comentarios
+
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) se define como un typedef de _ATL_COM_MODULE70.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlbase.h
+
+## <a name="see-also"></a>Vea también
+
+[Clases y structs](../../atl/reference/atl-classes.md)
 

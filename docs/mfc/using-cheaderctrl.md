@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382455"
 ---
 # <a name="using-cheaderctrl"></a>Usar CHeaderCtrl
 Usar un control de encabezado, representado por la clase [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), para mostrar encabezados de columna para obtener una lista de columna. Por ejemplo, un control de encabezado sería útil para la implementación de controles de columna en una hoja de cálculo.  

@@ -1,5 +1,5 @@
 ---
-title: NOMBRE (C/C ++) | Documentos de Microsoft
+title: NOMBRE (C O C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94b82a65cf68d9802d7bf9620e4128ab6b35071
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc37a96e50c6cd5bae2cc60661db04f3b92d162b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715759"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
-Especifica un nombre para el archivo de salida principal.  
-  
-```  
-NAME [application][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Un modo equivalente a especificar un nombre de archivo de salida es con la [/OUT](../../build/reference/out-output-file-name.md) opción del vinculador y forma equivalente a establecer la dirección base es con la [/BASE](../../build/reference/base-base-address.md) opción del vinculador. Si se especifican ambos, / OUT invalida **nombre**.  
-  
- Si compila un archivo DLL, NAME sólo afectará el nombre de DLL.  
-  
-## <a name="see-also"></a>Vea también  
- [Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)
+
+Especifica un nombre para el archivo de salida principal.
+
+```
+NAME [application][BASE=address]
+```
+
+## <a name="remarks"></a>Comentarios
+
+Es una manera equivalente para especificar un nombre de archivo de salida con el [/OUT](../../build/reference/out-output-file-name.md) opción del vinculador y una manera equivalente a establecer la dirección base es con la [/base](../../build/reference/base-base-address.md) opción del vinculador. Si se especifican ambos, / OUT invalida **nombre**.
+
+Si compila un archivo DLL, nombre sólo afectará el nombre del archivo DLL.
+
+## <a name="see-also"></a>Vea también
+
+[Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)

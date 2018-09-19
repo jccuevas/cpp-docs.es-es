@@ -1,5 +1,5 @@
 ---
-title: Atributos personalizados (C++) | Documentos de Microsoft
+title: Los atributos personalizados (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5ca62b63cd09f2c5041efbbf36b01cc3b44f77c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2bbcd8fb0e1b04ec35520f154724b095762233b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608006"
 ---
 # <a name="custom-attributes-c"></a>Atributos personalizados (C++)
-Un atributo personalizado es una técnica fuertemente tipada que permite al usuario extender los metadatos. Este tema se trata con el uso de atributos: especificación de parámetros y destinos.  
-  
- Para obtener información acerca de cómo definir nuevos atributos personalizados, vea,  
-  
--   [Atributos definidos por el usuario](../windows/user-defined-attributes-cpp-component-extensions.md)  
-  
--   [atributo](../windows/attribute.md) (en desuso sintaxis).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributo](../windows/attribute.md)   
- [Atributos personalizados (C++)](../windows/custom-attributes-cpp.md)
+
+Un atributo personalizado es una técnica fuertemente tipada que permite al usuario extender los metadatos. Este tema se trata con el uso de atributos: especificación de parámetros y los destinos.
+
+Para obtener información acerca de cómo definir nuevos atributos personalizados, vea,
+
+- [Atributos definidos por el usuario](../windows/user-defined-attributes-cpp-component-extensions.md)
+
+- [atributo](../windows/attribute.md) (sintaxis desusada).
+
+## <a name="see-also"></a>Vea también
+
+[attribute](../windows/attribute.md)  
+[Atributos personalizados (C++)](../windows/custom-attributes-cpp.md)

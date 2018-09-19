@@ -16,24 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d46b0f9744f192d677d7b2df27b67e734de1b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c5469e4f7be3c164cc63fa30f5069009846be48
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705028"
 ---
 # <a name="compiler-error-c2812"></a>Error del compilador C2812
-\#no se admite la importación con/CLR: pure y/CLR: safe  
-  
- Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
-  
- [#import (directiva)](../../preprocessor/hash-import-directive-cpp.md) no es compatible con **/CLR: pure** y **/CLR: safe** porque `#import` requiere el uso de bibliotecas de compatibilidad de compilador nativo.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C2812.  
-  
-```  
-// C2812.cpp  
-// compile with: /clr:pure /c  
-#import "importlib.tlb"   // C2812  
+
+> \#no se admite la importación con/CLR: pure y/CLR: safe
+
+## <a name="remarks"></a>Comentarios
+
+El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+
+[#import (directiva)](../../preprocessor/hash-import-directive-cpp.md) no es compatible con **/CLR: pure** y **/CLR: safe** porque `#import` requiere el uso de bibliotecas de compatibilidad de compilador nativo.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C2812.
+
+```cpp
+// C2812.cpp
+// compile with: /clr:pure /c
+#import "importlib.tlb"   // C2812
 ```

@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1064 | Documentos de Microsoft
+title: Error grave de NMAKE U1064 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5573943fc2c274d48768933a634b2c052361a8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4240bf2c553957e73d5ead0bdd03ea129450645b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093004"
 ---
 # <a name="nmake-fatal-error-u1064"></a>Error grave de NMAKE U1064
-Archivo MAKE no se encuentra y se especificó ningún destino  
-  
- La línea de comandos NMAKE no ha especificado un archivo MAKE o un destino y el directorio actual no contiene un archivo denominado MAKE.  
-  
- NMAKE requiere un archivo MAKE o un destino de línea de comandos (o ambos). Para poner a disposición de NMAKE un archivo MAKE, especifique la opción/f o bien coloque un archivo denominado MAKE en el directorio actual. NMAKE puede crear un destino de línea de comandos mediante una regla de inferencia si no se proporciona un archivo MAKE.
+
+Archivo MAKE no se encuentra y se especificó ningún destino
+
+La línea de comandos NMAKE no especificó un archivo MAKE o un destino y el directorio actual no contiene un archivo denominado archivo MAKE.
+
+NMAKE requiere un archivo MAKE o un destino de línea de comandos (o ambos). Para que esté disponible un archivo MAKE NMAKE, especifique la opción /F o coloque un archivo denominado MAKE en el directorio actual. NMAKE puede crear un destino de línea de comandos mediante una regla de inferencia si no se proporciona un archivo MAKE.

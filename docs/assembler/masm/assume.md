@@ -1,7 +1,7 @@
 ---
-title: SUPONGA | Documentos de Microsoft
+title: SUPONGA | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8898895d2e107e522fe88dc954146d64e6f62b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693813"
 ---
 # <a name="assume"></a>ASSUME
-Habilita la comprobación de valores de registro de errores.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-ASSUME segregister:name [[, segregister:name]]...  
-ASSUME dataregister:type [[, dataregister:type]]...  
-ASSUME register:ERROR [[, register:ERROR]]...  
-ASSUME [[register:]] NOTHING [[, register:NOTHING]]...  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Después de un `ASSUME` se coloca en efecto, el ensamblador inspecciona los cambios a los valores de los registros determinados. **ERROR** genera un error si se usa el registro. **NADA** quita registra la comprobación de errores. Puede combinar diferentes tipos de supuestos en una sola instrucción.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Habilita la comprobación de errores para los valores de registro.
+
+## <a name="syntax"></a>Sintaxis
+
+> Supongamos que *segregister*:*nombre* [[, *segregister*:*nombre*]]...<br/>
+> Supongamos que *dataregister*:*tipo* [[, *dataregister*:*tipo*]]...<br/>
+> Supongamos que *registrar*: ERROR [[, *registrar*: ERROR]]...<br/>
+> Supongamos que [[*registrar*:]] nada [[, *registrar*: nada]]...
+
+
+## <a name="remarks"></a>Comentarios
+
+Después de un `ASSUME` se entra en vigor, el ensamblador inspecciona cambios en los valores de los registros determinados. **ERROR** genera un error si se usa el registro. **No hay nada** quita registrar la comprobación de errores. Puede combinar diferentes tipos de supuestos en una sola instrucción.
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

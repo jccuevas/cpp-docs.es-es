@@ -21,19 +21,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53e8020bbb7649d78232025ef9c63c1dc868fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29976d0535d29fce926d7a12b920234548c8a98d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017294"
 ---
 # <a name="windows-platforms-crt"></a>Plataformas Windows (CRT)
 
-Las bibliotecas de tiempo de ejecución de C para Visual Studio admiten las versiones actuales de Windows y Windows Server, [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)], así como Windows Vista y, opcionalmente [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) para 86 bits, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) para 64 bits y [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) tanto para 86 como 64 bits. Todos estos sistemas operativos admiten la API para escritorio de Windows (Win32) y ofrecen compatibilidad con Unicode. Además, cualquier aplicación Win32 puede usar un juego de caracteres multibyte (MBCS).
+Las bibliotecas en tiempo de ejecución de C para Visual Studio admiten las versiones actuales de Windows y Windows Server, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 así como Windows Vista y, opcionalmente, Windows XP Service Pack 3 (SP3) para x86, Windows XP Service Pack 2 (SP2) para x64 y Windows Server 2003 Service Pack 2 (SP2) tanto para x86 como x64. Todos estos sistemas operativos admiten la API para escritorio de Windows (Win32) y ofrecen compatibilidad con Unicode. Además, cualquier aplicación Win32 puede usar un juego de caracteres multibyte (MBCS).
 
 > [!NOTE]
-> La instalación predeterminada de la carga de trabajo de **desarrollo para el escritorio con C++** en Visual Studio 2017 no incluye compatibilidad con el desarrollo para [!INCLUDE[winxp](../build/includes/winxp_md.md)] y [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Deberá instalar el componente opcional **Compatibilidad de Windows XP con C++** para habilitar un conjunto de herramientas de la plataforma Windows XP.
+> La instalación predeterminada de la carga de trabajo de **Desarrollo para el escritorio con C++** en Visual Studio 2017 no incluye compatibilidad con el desarrollo para Windows XP y Windows Server 2003. Deberá instalar el componente opcional **Compatibilidad de Windows XP con C++** para habilitar un conjunto de herramientas de la plataforma Windows XP.
 
 ## <a name="see-also"></a>Vea también
 
-[Compatibilidad](../c-runtime-library/compatibility.md)  
+[Compatibilidad](../c-runtime-library/compatibility.md)

@@ -1,5 +1,5 @@
 ---
-title: incluir (C++) | Documentos de Microsoft
+title: incluir (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,60 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 232dfb803e9327b857d26a4294786c2742a1143c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215973"
 ---
 # <a name="include-c"></a>include (C++)
-Especifica uno o más archivos de encabezado que se incluirá en el archivo .idl generado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      [ include(  
-   header_file  
-) ];  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *HEADER_FILE*  
- El nombre de un archivo que desee incluido en el archivo .idl generado.  
-  
-## <a name="remarks"></a>Comentarios  
- El **incluyen** C++ atributo da lugar a un `#include` instrucción que se coloca debajo del `import "docobj.idl"` instrucción en el archivo .idl generado.  
-  
- El **incluyen** atributo C++ tiene la misma funcionalidad que la [incluyen](http://msdn.microsoft.com/library/windows/desktop/aa367052) atributo MIDL.  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente muestra un ejemplo de cómo usar **incluir**. En este ejemplo, el archivo include.h contiene solo un # instrucción include.  
-  
-```  
-// cpp_attr_ref_include.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[include(cpp_attr_ref_include.h)];  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|En cualquier lugar|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos independientes](../windows/stand-alone-attributes.md)   
- [Importación](../windows/import.md)   
- [importidl](../windows/importidl.md)   
- [includelib](../windows/includelib-cpp.md)   
- [importlib](../windows/importlib.md)   
+
+Especifica uno o varios archivos de encabezado que se incluirán en el archivo .idl generado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ include(
+   header_file
+) ];
+```
+
+### <a name="parameters"></a>Parámetros
+
+*HEADER_FILE*  
+El nombre de un archivo que desee incluido en el archivo .idl generado.
+
+## <a name="remarks"></a>Comentarios
+
+El **incluyen** hace que el atributo de C++ un `#include` instrucción colocarse debajo el `import "docobj.idl"` instrucción en el archivo .idl generado.
+
+El **incluyen** atributo de C++ tiene la misma funcionalidad que el [incluyen](/windows/desktop/Midl/include) atributo MIDL.
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente muestra un ejemplo de cómo usar **incluyen**. En este ejemplo, el archivo include.h contiene solo un `#include` instrucción.
+
+```cpp
+// cpp_attr_ref_include.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[include(cpp_attr_ref_include.h)];
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|En cualquier lugar|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos independientes](../windows/stand-alone-attributes.md)  
+[import](../windows/import.md)  
+[importidl](../windows/importidl.md)  
+[includelib](../windows/includelib-cpp.md)  
+[importlib](../windows/importlib.md)  

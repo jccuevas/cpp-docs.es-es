@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Makereference (método) | Documentos de Microsoft'
+title: Makereference (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,45 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610166"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference (Método)
-Crea un objeto HStringReference de un parámetro de cadena especificada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[ sizeDest]);  
-  
-    template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[sizeDest],   
-              unsigned int len);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `sizeDest`  
- Un parámetro de plantilla que especifica el tamaño del búfer de HStringReference de destino.  
-  
- `str`  
- Una referencia a una cadena de caracteres anchos.  
-  
- `len`  
- La longitud máxima de la `str` búfer de parámetro para utilizar en esta operación. Si el `len` parámetro no se especifica, toda la matriz `str` se usa el parámetro.  
-  
-## <a name="return-value"></a>Valor devuelto  
- HStringReference objeto cuyo valor es el mismo que el especificado `str` parámetro.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HString (clase)](../windows/hstring-class.md)
+
+Crea un `HStringReference` objeto a partir de un parámetro de cadena especificado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*sizeDest*  
+Un parámetro de plantilla que especifica el tamaño del destino `HStringReference` búfer.
+
+*str*  
+Una referencia a una cadena de caracteres anchos.
+
+*Len*  
+La longitud máxima de la *str* búfer de parámetro para utilizar en esta operación. Si el *len* parámetro no se especifica, toda la *str* se usa el parámetro.
+
+## <a name="return-value"></a>Valor devuelto
+
+Un `HStringReference` objeto cuyo valor es igual que el especificado *str* parámetro.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HString (clase)](../windows/hstring-class.md)

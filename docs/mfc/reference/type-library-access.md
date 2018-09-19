@@ -1,5 +1,5 @@
 ---
-title: Tipo de acceso a la biblioteca | Documentos de Microsoft
+title: Tipo de acceso a la biblioteca | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afba5d2c2d0cd0b84e12cbd13cedba473b535587
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885902"
 ---
 # <a name="type-library-access"></a>Acceso a la biblioteca de tipos
-Bibliotecas de tipos exponen las interfaces de un control OLE para otras aplicaciones compatibles con OLE. Cada control OLE debe tener una biblioteca de tipos si una o más interfaces que se van a exponer.  
+Bibliotecas de tipos exponen las interfaces de un control OLE para otras aplicaciones compatibles con OLE. Cada control OLE debe tener una biblioteca de tipos si una o más interfaces deben exponerse.  
   
  Las macros siguientes permiten un control OLE proporcionar acceso a su propia biblioteca de tipos:  
   
@@ -65,14 +66,14 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
  *tlid*  
  El número de Id. de la biblioteca de tipos.  
   
- `wVerMajor`  
+ *wVerMajor*  
  El número de versión principal de biblioteca de tipos.  
   
- `wVerMinor`  
+ *wVerMinor*  
  El número de versión secundaria de biblioteca de tipos.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta macro debe aparecer en el archivo de implementación para cualquier clase de control que utiliza la `DECLARE_OLETYPELIB` macro.  
+ Esta macro debe aparecer en el archivo de implementación para cualquier clase de control que utiliza el declare_oletypelib (macro).  
 
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  

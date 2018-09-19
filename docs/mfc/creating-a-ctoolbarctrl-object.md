@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341699"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Crear un objeto CToolBarCtrl
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objetos contienen varias estructuras de datos internas: una lista de mapas de bits de imagen de botón, una lista de cadenas de etiqueta de botón y una lista de `TBBUTTON` estructuras: que asociar una imagen o de cadena con la posición, el estilo, el estado, y Identificador de comando del botón. Cada uno de los elementos de estas estructuras de datos se conoce por un índice de base cero. Para poder usar un `CToolBarCtrl` de objeto, debe configurar estas estructuras de datos. Para obtener una lista de las estructuras de datos, vea [controles de barra de herramientas](controls-mfc.md) en el SDK de Windows. La lista de cadenas sólo puede utilizarse para las etiquetas de botón; no se puede recuperar las cadenas de la barra de herramientas.  

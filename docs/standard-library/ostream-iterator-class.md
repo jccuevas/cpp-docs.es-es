@@ -22,15 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3f18f3d312adb00370d6dc51203542c259914ec
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314253"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator (Clase)
 
-La clase de plantilla ostream_iterator describe un objeto iterador de salida que escribe elementos sucesivos en el flujo de salida con la extracción **operator <<**.
+La clase de plantilla ostream_iterator describe un objeto de iterador de salida que escribe elementos sucesivos en el flujo de salida con la extracción `operator <<`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,11 +42,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo de* el tipo de objeto que se va a insertar en el flujo de salida.
+*Type*<br/>
+Tipo de objeto que se va a insertar en el flujo de salida.
 
-`CharType` El tipo que representa el tipo de carácter para el `ostream_iterator`. Este argumento es opcional y el valor predeterminado es `char`.
+*CharType*<br/>
+Tipo que representa el tipo de caracteres para `ostream_iterator`. Este argumento es opcional y el valor predeterminado es **char**.
 
-`Traits` El tipo que representa el tipo de carácter para el `ostream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
+*Rasgos*<br/>
+Tipo que representa el tipo de caracteres para `ostream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 La clase ostream_iterator debe satisfacer los requisitos de un iterador de salida. Los algoritmos se pueden escribir directamente en el flujo de salida mediante `ostream_iterator`.
 
@@ -67,9 +71,9 @@ La clase ostream_iterator debe satisfacer los requisitos de un iterador de salid
 
 |Operador|Descripción|
 |-|-|
-|[operator*](#op_star)|Desreferencia el operador usado para implementar la expresión de iterador de salida * `i` = `x`.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operador de incremento no funcional que devuelve un objeto `ostream_iterator` al mismo objeto que señalaba antes de que se llamara a la operación.|
-|[operator=](#op_eq)|Operador de asignación que se usa para implementar la expresión de iterador de salida * `i` = `x` para escribir en un flujo de salida.|
+|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión de iterador de salida \* `i`  =  `x` para escribir en un flujo de salida.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -87,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **CharType**.
+El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -113,17 +117,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 The integers written to the output stream
 by intOut are:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_star"></a> ostream_iterator::operator*
@@ -162,17 +166,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a> ostream_iterator::operator++
@@ -212,22 +216,22 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_eq"></a> ostream_iterator::operator=
 
-Operador de asignación que se usa para implementar la expresión output_iterator * `i` = `x` para escribir en un flujo de salida.
+Operador de asignación usado para implementar la expresión output_iterator \* `i`  =  `x` para escribir en un flujo de salida.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -235,15 +239,16 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El valor del objeto del tipo `Type` va a insertar en el flujo de salida.
+*Val*<br/>
+El valor del objeto de tipo `Type` que se va a insertar en el flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El operador inserta `val` en el flujo de salida asociado al objeto, seguido del delimitador especificado en [ostream_iterator constructor](#ostream_iterator) (si existe) y, después, devuelve una referencia a `ostream_iterator`.
+El operador inserta *val* en la secuencia de salida asociada al objeto, seguido del delimitador especificado en el [ostream_iterator constructor](#ostream_iterator) (si existe) y, a continuación, devuelve una referencia a la `ostream_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
-Los requisitos para un iterador de salida que `ostream_iterator` debe satisfacer solo requieren que la expresión * `ii` = `t` sea válida y no indique nada sobre operator u operator= on por cuenta propia. Este operador miembro devuelve `*this`.
+Los requisitos para un iterador de salida que el `ostream_iterator` debe satisfacer solo requieren que la expresión \* `ii`  =  `t` sea válido y no indique nada sobre el operador o el operador = por sí solos. Este operador miembro devuelve `*this`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -265,17 +270,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="ostream_iterator"></a> ostream_iterator::ostream_iterator
@@ -293,15 +298,17 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ostr` El flujo de salida de tipo [ostream_iterator:: ostream_type](#ostream_type) a se recorre en iteración.
+*_Ostr*<br/>
+El flujo de salida de tipo [ostream_iterator::ostream_type](#ostream_type) que se va a repetir.
 
-`_Delimiter` El delimitador que se inserta en el flujo de salida entre los valores.
+*_Delimiter*<br/>
+El delimitador que se inserta en el flujo de salida entre valores.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor inicializa el puntero del flujo de salida con `&_Ostr`. El puntero de la cadena de delimitador designa una cadena vacía.
 
-El segundo constructor inicializa el puntero del flujo de salida con `&_Ostr` y el puntero de la cadena de delimitador con `_Delimiter`.
+El segundo constructor inicializa el puntero del flujo de salida con `&_Ostr` y el puntero de cadena de delimitador con *_Delimiter*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -318,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -342,12 +349,12 @@ int main( )
           ostream_iterator<int> ( cout, " : " ) );
    cout << endl;
 }
-\* Output:
+/* Output:
 10
 20
 Elements output without delimiter: 123456
 Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
-*\
+*/
 ```
 
 ## <a name="ostream_type"></a> ostream_iterator::ostream_type
@@ -376,7 +383,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Traits**.
+El tipo es un sinónimo del parámetro de plantilla `Traits`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -403,17 +410,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
-\* Output:
+/* Output:
 The integers written to output stream
 by intOut are:
 1
 10
 100
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Vea también

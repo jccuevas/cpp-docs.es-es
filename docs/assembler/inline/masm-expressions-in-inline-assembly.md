@@ -1,7 +1,7 @@
 ---
-title: Expresiones MASM de ensamblado en línea | Documentos de Microsoft
+title: Expresiones MASM de ensamblado insertado | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,17 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b7ddea4746d8cee01015b649b876944d10de24
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 66af5d3fc996e6b0f36e5a863279d266e29beec9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685144"
 ---
 # <a name="masm-expressions-in-inline-assembly"></a>Expresiones MASM de ensamblado insertado
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- El código de ensamblado alineado puede usar cualquier expresión de MASM, que es cualquier combinación de operandos y operadores que se evalúe como un valor o dirección únicos.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Uso del lenguaje de ensamblado en bloques __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Específicos de Microsoft**
+
+El código de ensamblado alineado puede usar cualquier expresión de MASM, que es cualquier combinación de operandos y operadores que se evalúe como un valor o dirección únicos.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Uso del lenguaje de ensamblado en bloques __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

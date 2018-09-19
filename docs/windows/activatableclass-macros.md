@@ -1,5 +1,5 @@
 ---
-title: ActivatableClass (Macros) | Documentos de Microsoft
+title: ActivatableClass (Macros) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aeb68deddd1cdfa9e1e869a08bfb0a1f3bb8d6ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606992"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass (Macros)
 
-Rellena una caché interna que contiene una fábrica que puede crear una instancia de la clase especificada.
+Rellena una memoria caché interna que contiene una fábrica que puede crear una instancia de la clase especificada.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -53,17 +54,17 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>Parámetros
 
 *nombre de clase*  
-Nombre de la clase para crear.  
+Nombre de la clase para crear.
 
-*Generador*  
-Generador que va a crear una instancia de la clase especificada.
+*Factory*  
+Generador que se va a crear una instancia de la clase especificada.
 
-*ServerName*  
-Nombre que especifica un subconjunto de los generadores de en el módulo.
+*Nombre de servidor*  
+Un nombre que especifica un subconjunto de fábricas del módulo.
 
 ## <a name="remarks"></a>Comentarios
 
-No utilice estas macros con COM clásico a menos que utilice el `#undef` directiva para asegurarse de que el **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** se quita la definición de macro.
+No utilice estas macros con COM clásico a menos que use el `#undef` directiva para asegurarse de que el `__WRL_WINRT_STRICT__` se quita la definición de macro.
 
 ## <a name="requirements"></a>Requisitos
 

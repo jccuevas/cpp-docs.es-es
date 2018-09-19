@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2533 | Documentos de Microsoft
+title: Error del compilador C2533 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06733dc8ee52462ab7fcac4255ee8fa697a9bac4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 528b78e71713725907a9f0e2bd06cec1a8c62e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045411"
 ---
 # <a name="compiler-error-c2533"></a>Error del compilador C2533
-'identificador': los constructores no permiten un tipo de valor devuelto  
-  
- Un constructor no puede tener un tipo de valor devuelto (ni siquiera un tipo de valor devuelto `void`).  
-  
- Una causa común de este error es la ausencia de un punto y coma entre el final de una definición de clase y la primera implementación de constructor. El compilador ve la clase como una definición del tipo de valor devuelto para la función de constructor y genera C2533.  
-  
- El ejemplo siguiente genera el error C2533 y muestra cómo corregirlo:  
-  
-```  
-// C2533.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X();     
-};  
-  
-int X::X() {}   // C2533 - constructor return type not allowed  
-X::X() {}   // OK - fix by using no return type  
+
+'identificador': los constructores no permiten un tipo de valor devuelto
+
+Un constructor no puede tener un tipo de valor devuelto (ni siquiera un tipo de valor devuelto `void`).
+
+Una causa común de este error es la ausencia de un punto y coma entre el final de una definición de clase y la primera implementación de constructor. El compilador ve la clase como una definición del tipo de valor devuelto para la función de constructor y genera C2533.
+
+El ejemplo siguiente genera el error C2533 y muestra cómo corregirlo:
+
+```
+// C2533.cpp
+// compile with: /c
+class X {
+public:
+   X();
+};
+
+int X::X() {}   // C2533 - constructor return type not allowed
+X::X() {}   // OK - fix by using no return type
 ```

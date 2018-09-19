@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2390 | Documentos de Microsoft
+title: Error del compilador C2390 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a32a9ca77ba43e5f2866baed91b99103224dbc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5de5a9af8f8aa04219f0a7d61162336745fd4bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098220"
 ---
 # <a name="compiler-error-c2390"></a>Error del compilador C2390
-'identificador': clase de almacenamiento incorrecta 'especificador'  
-  
- La clase de almacenamiento no es válida para el identificador de ámbito global. La clase de almacenamiento predeterminada se utiliza en lugar de la clase no válida.  
-  
- Soluciones posibles:  
-  
--   Si el identificador es una función, declárelo con `extern` almacenamiento.  
-  
--   Si el identificador es un parámetro formal o una variable local, declárelo con almacenamiento automático.  
-  
--   Si el identificador es una variable global, declárelo con ninguna clase de almacenamiento (almacenamiento automático).  
-  
-## <a name="example"></a>Ejemplo  
-  
--   El ejemplo siguiente genera C2390:  
-  
-```  
-// C2390.cpp  
-register int i;   // C2390  
-  
-int main() {  
-   register int j;   // OK  
-}  
+
+'identifier': clase de almacenamiento incorrecta 'especificador'
+
+La clase de almacenamiento no es válida para el identificador de ámbito global. La clase de almacenamiento predeterminada se utiliza en lugar de la clase no válida.
+
+Soluciones posibles:
+
+- Si el identificador es una función, declárelo con `extern` almacenamiento.
+
+- Si el identificador es un parámetro formal o una variable local, declárelo con almacenamiento automático.
+
+- Si el identificador es una variable global, declárelo con ninguna clase de almacenamiento (almacenamiento automático).
+
+## <a name="example"></a>Ejemplo
+
+- El ejemplo siguiente genera C2390:
+
+```
+// C2390.cpp
+register int i;   // C2390
+
+int main() {
+   register int j;   // OK
+}
 ```

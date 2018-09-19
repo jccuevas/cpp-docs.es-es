@@ -15,15 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105320"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Agrega datos de perfil de uno o más archivos .pgc al archivo .pgd.
+Agrega datos de perfil de uno o más archivos .pgc para el archivo .pgd.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,30 +32,31 @@ Agrega datos de perfil de uno o más archivos .pgc al archivo .pgd.
 
 ### <a name="parameters"></a>Parámetros
 
-*Opciones*<br/>
-Pueden especificar las opciones siguientes para **pgomgr**:
+*options*<br/>
+Las siguientes opciones pueden especificarse para **pgomgr**:
 
-- **¿/ help** o **/?** Disponibilidad de las visualizaciones **pgomgr** opciones.
+- **¿/ Ayuda** o **/?** Muestra disponible **pgomgr** opciones.
 
-- **/ Borrar** hace que el archivo .pgd se va a borrar toda la información de perfil. No se puede especificar un .pgc archivo cuando **/borrar** se especifica.
+- **/ clear** hace que el archivo .pgd se haya borrado toda información de perfil. No se puede especificar un .pgc archivo cuando **/clear** se especifica.
 
 - **/ detail** muestra estadísticas detalladas, incluida la información de cobertura de gráfico de flujo.
 
 - **/ summary** muestra las estadísticas por función.
 
-- **/ único** cuando se usa con **/summary**, nombres de función para mostrar representativos de causas. El valor predeterminado, cuando **/ único** no se utiliza, es para que se muestren los nombres de función no representativo.
+- **/ único** cuando se usa con **/summary**, causas representativos para mostrar los nombres de función. El valor predeterminado, cuando **/ único** no se utiliza, es para que los nombres de función no representativos para mostrarse.
 
-- **/ merge**[**: *** n*] hace que los datos en el archivo .pgc o archivos que se agregarán al archivo .pgd. El parámetro opcional, *n*, permite especificar que los datos se deben agregar *n* veces. Por ejemplo, si un escenario normalmente sería done seis veces reflejar la frecuencia con se realiza por los clientes, puede hacerlo una vez en una serie de pruebas y agregarlo al archivo .pgd seis veces con **pgomgr/Merge: 6**.
+- **/ merge**\[**:**<em>n</em>] hace que los datos en el archivo .pgc o archivos que se agregarán al archivo PGD. El parámetro opcional, *n*, le permite especificar que los datos se deben agregar *n* veces. Por ejemplo, si un escenario sería normalmente seis veces listo reflejar la frecuencia con se realiza por los clientes, puede hacerlo una vez en una serie de pruebas y agregarlo al archivo .pgd seis veces con **pgomgr/Merge: 6**.
 
 *pgcfiles*<br/>
-Uno o más archivos .pgc cuyos datos de perfil que desea combinar en el archivo. pgd. Puede especificar un solo archivo .pgc o varios archivos .pgc. Si no especifica ningún archivo .pgc, **pgomgr** combina todos los archivos .pgc cuyos nombres de archivo son los mismos que el archivo. pgd.
+Uno o más archivos .pgc cuyos datos de perfil que desea combinar en el archivo PGD. Puede especificar un archivo .pgc único o varios archivos .pgc. Si no especifica ningún archivo .pgc, **pgomgr** combina todos los archivos .pgc cuyos nombres son los mismos que el archivo PGD.
 
-*pgdFile* el archivo .pgd en el que se mezclan los datos desde el archivo .pgc o los archivos.
+*pgdFile*<br/>
+El archivo .pgd en el que va a combinar datos desde el archivo .pgc o archivos.
 
 ## <a name="remarks"></a>Comentarios
 
 > [!NOTE]
-> Puede iniciar esta herramienta solo desde un símbolo del sistema de Visual Studio developer. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
+> Puede iniciar esta herramienta solo desde un símbolo del sistema de Visual Studio para desarrolladores. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
 
 ## <a name="example"></a>Ejemplo
 
@@ -66,7 +68,7 @@ Este comando de ejemplo agrega datos de perfil de myapp1.pgc al archivo .pgd tre
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-En este ejemplo, se agregan datos de perfil de todos los archivos myapp # .pgc al archivo myapp.pgd.
+En este ejemplo, los datos de perfil de todos los archivos myapp # .pgc se agregan al archivo myapp.pgd.
 
 `pgomgr -merge myapp1.pgd`
 

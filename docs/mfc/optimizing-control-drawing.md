@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351299"
 ---
 # <a name="optimizing-control-drawing"></a>Optimizar el dibujo de controles
 Cuando un control se indica a dibujarse a sí mismo en un contexto de dispositivo proporcionado por el contenedor, lo normalmente selecciona objetos GDI (por ejemplo, lápices, pinceles y fuentes) en el contexto de dispositivo, realiza sus operaciones de dibujo y restaura los objetos GDI anteriores. Si el contenedor tiene varios controles que se van a dibujar en el mismo contexto de dispositivo, y cada control selecciona los objetos GDI que necesita, tiempo puede guardarse si los controles no restaurar individualmente los objetos previamente seleccionados. Después de han dibujado todos los controles, el contenedor puede restaurar automáticamente los objetos originales.  

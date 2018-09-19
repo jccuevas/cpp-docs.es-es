@@ -1,5 +1,5 @@
 ---
-title: __readpmc | Documentos de Microsoft
+title: __readpmc | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0a5a172a7b0f8a309f1d8fd0762e098dc5d416a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720036"
 ---
 # <a name="readpmc"></a>__readpmc
 **Específicos de Microsoft**  
@@ -38,8 +39,8 @@ unsigned __int64 __readpmc(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `counter`  
- El contador de rendimiento para leer.  
+*Contador*<br/>
+[in] El contador de rendimiento para leer.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El valor del contador de rendimiento especificado.  
@@ -48,12 +49,12 @@ unsigned __int64 __readpmc(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función intrínseca está disponible en modo de kernel solo, y la rutina solo está disponible como función intrínseca.  
+ Esta función intrínseca está disponible en modo de kernel solo, y la rutina solo está disponible como intrínseco.  
   
 **FIN de Específicos de Microsoft**  
   

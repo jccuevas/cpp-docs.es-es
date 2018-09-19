@@ -1,5 +1,5 @@
 ---
-title: FileHandleTraits (estructura) | Documentos de Microsoft
+title: FileHandleTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b84eaca73111e4b76390bddf55d85305c08c0c22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be5e26fb433450c18ed0d079153698c283960ac9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596246"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits (estructura)
-Define las características de un identificador de archivo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-struct FileHandleTraits : HANDLETraits;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `HANDLETraits`  
-  
- `FileHandleTraits`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** handletraits  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Wrappers::HandleTraits (espacio de nombres)](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Define las características de un identificador de archivo.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+struct FileHandleTraits : HANDLETraits;
+```
+
+## <a name="members"></a>Miembros
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`HANDLETraits`
+
+`FileHandleTraits`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** handletraits
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Wrappers::HandleTraits (espacio de nombres)](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

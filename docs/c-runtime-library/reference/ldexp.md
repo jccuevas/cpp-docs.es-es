@@ -1,5 +1,5 @@
 ---
-title: ldexp, ldexpf, ldexpl | Documentos de Microsoft
+title: ldexp, ldexpf, ldexpl | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,11 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208420"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -89,13 +90,13 @@ Exponente de entero.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **ldexp** funciones devuelven el valor de *x* * 2<sup>*exp* </sup> si se realiza correctamente. Si se produce desbordamiento y según cuál sea el signo de *x*, **ldexp** devuelve **HUGE_VAL**; el **errno** valor se establece en **ERANGE** .
+El **ldexp** funciones devuelven el valor de *x* \* 2<sup>*exp* </sup> si se realiza correctamente. En caso de desbordamiento y según cuál sea el signo de *x*, **ldexp** devuelve **HUGE_VAL**; el **errno** valor se establece en **ERANGE** .
 
-Para obtener más información acerca de **errno** y error posibles valores devueltos, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información acerca de **errno** y los posibles valores devueltos erróneos, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **ldexp** que toman **float** o **largo** **doble** tipos. En un programa C, **ldexp** siempre tiene un **doble** y **int** y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ldexp** que toman **float** o **largo** **doble** tipos. En un programa C, **ldexp** siempre toma un **doble** y un **int** y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

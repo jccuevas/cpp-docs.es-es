@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b1d6e93aa929d95032c04a58b5b419ca312f8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a785c7868f3a1f3262283cf131bbd3cc3ae88e4c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102161"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname (Clase)
 
@@ -52,15 +53,17 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-`_Locname` Una configuración regional con nombre.
+*_Locname*<br/>
+Una configuración regional con nombre.
 
-`_Refs` Un recuento de referencia inicial.
+*_Refs*<br/>
+Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
 Las facetas byname se crean de forma automática cuando se crea una configuración regional con nombre.
 
-Su comportamiento viene determinado por la configuración regional con nombre `_Locname`. Cada constructor inicializa su objeto base con [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte. StateType>( `_Refs`).
+Su comportamiento viene determinado por la configuración regional con nombre *_Locname*. Cada constructor inicializa su objeto base con [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte. StateType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 

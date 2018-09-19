@@ -1,5 +1,5 @@
 ---
-title: 'Methodreleasenotifier:: Invoke (método) | Documentos de Microsoft'
+title: 'Methodreleasenotifier:: Invoke (método) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcfb3be07ff9d57b6837b956f821260f12a0f4af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d41c864f4198b0db34253c5dc300f8f9728f4d21
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607442"
 ---
 # <a name="modulemethodreleasenotifierinvoke-method"></a>Module::MethodReleaseNotifier::Invoke (Método)
-Llama al controlador de eventos asociado con el objeto de methodreleasenotifier actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void Invoke();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Module::MethodReleaseNotifier (clase)](../windows/module-methodreleasenotifier-class.md)
+
+Llama al controlador de eventos asociado con el actual **methodreleasenotifier** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void Invoke();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Module::MethodReleaseNotifier (clase)](../windows/module-methodreleasenotifier-class.md)

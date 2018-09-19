@@ -16,14 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e76adb397c9131bbaa7c2c40124de31348c56a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c074ddd193765029a2925e1a98c4ab1787f9a82a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082682"
 ---
 # <a name="execution-character-set"></a>Juego de caracteres de ejecución
-Este contenido suele hacer referencia al "juego de caracteres de ejecución". El juego de caracteres de ejecución no es necesariamente el mismo que el juego de caracteres de origen utilizado para escribir programas de C. El juego de caracteres de ejecución incluye todos los caracteres del juego de caracteres de origen así como el carácter null, el carácter de nueva línea, retroceso, tabulación horizontal, tabulación vertical, retorno de carro y las secuencias de escape. Los juegos de caracteres de origen y de ejecución pueden diferir en otras implementaciones.  
-  
-## <a name="see-also"></a>Vea también  
- [Constantes de caracteres de C](../c-language/c-character-constants.md)
+
+Este contenido suele hacer referencia al "juego de caracteres de ejecución". El juego de caracteres de ejecución no es necesariamente el mismo que el juego de caracteres de origen utilizado para escribir programas de C. El juego de caracteres de ejecución incluye todos los caracteres del juego de caracteres de origen así como el carácter null, el carácter de nueva línea, retroceso, tabulación horizontal, tabulación vertical, retorno de carro y las secuencias de escape. Los juegos de caracteres de origen y de ejecución pueden diferir en otras implementaciones.
+
+## <a name="see-also"></a>Vea también
+
+[Constantes de caracteres de C](../c-language/c-character-constants.md)

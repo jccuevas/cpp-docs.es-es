@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: operator = (operador) | Documentos de Microsoft'
+title: 'Mutex:: operator = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578693"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= (Operador)
-Asigna (se desplaza) la exclusión mutua especificada del objeto para el objeto actual de la exclusión mutua.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-Mutex& operator=(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `h`  
- Una referencia a valor r a un objeto de exclusión mutua.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Una referencia al objeto de exclusión mutua actual.  
-  
-## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el **mover semántica** sección de [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers
- 
- ## <a name="see-also"></a>Vea también
- [Mutex (clase)](../windows/mutex-class1.md)
+
+Asigna (mueve) especificado **Mutex** el objeto actual **Mutex** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+Mutex& operator=(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*  
+Una referencia rvalue para un **Mutex** objeto.
+
+## <a name="return-value"></a>Valor devuelto
+
+Una referencia a la actual **Mutex** objeto.
+
+## <a name="remarks"></a>Comentarios
+
+Para obtener más información, consulte el **mover semántica** sección de [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+[Mutex (clase)](../windows/mutex-class1.md)

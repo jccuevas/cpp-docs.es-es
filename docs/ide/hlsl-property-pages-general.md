@@ -1,5 +1,5 @@
 ---
-title: 'Páginas de propiedades HLSL: General | Documentos de Microsoft'
+title: 'Páginas de propiedades HLSL: General | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,49 +21,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 77cc9a44076999633fd17b049cbcfad75f65eb7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340143"
 ---
 # <a name="hlsl-property-pages-general"></a>Páginas de propiedades HLSL: General
-Para configurar las siguientes propiedades del compilador HLSL (fxc.exe), use su **General** página de propiedades. Para obtener información sobre cómo obtener acceso a la **General** página de propiedades en la carpeta HLSL, consulte [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+Para configurar las propiedades siguientes del compilador HLSL (fxc.exe), use su página de propiedades **General**. Para obtener información sobre cómo acceder a la página de propiedades **General** en la carpeta HLSL, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Otros directorios de inclusión**  
- Agrega uno o varios directorios a la ruta de acceso de inclusión. Use punto y coma para separar los directorios.  
+ **Directorios de inclusión adicionales**  
+ Agrega uno o más directorios a la ruta de acceso de inclusión. Use punto y coma para separar los directorios.  
   
- Esta propiedad se corresponde con el **/I [ruta]** argumento de línea de comandos.  
+ Esta propiedad se corresponde con el argumento de la línea de comandos **/I[ruta_de_acceso]**.  
   
- **Nombre de punto de entrada**  
- Especifica el punto de entrada para el sombreador. De forma predeterminada, el valor es **principal**.  
+ **Nombre del punto de entrada**  
+ Especifica el punto de entrada para el sombreador. De forma predeterminada, el valor es **main**.  
   
- Esta propiedad se corresponde con el **/E [name]** argumento de línea de comandos.  
+ Esta propiedad se corresponde con el argumento de la línea de comandos **/E[nombre]**.  
   
  **Deshabilitar optimizaciones**  
- **Sí (/ DP)** para deshabilitar las optimizaciones; de lo contrario, **No**. De forma predeterminada, el valor es **Sí (/ DP)** para **depurar** configuraciones y **No** para **versión** configuraciones.  
+ **Sí (/Od)** para deshabilitar las optimizaciones; de lo contrario, **No**. De forma predeterminada, el valor es **Sí (/Od)** para las configuraciones **Debug** y **No** para las configuraciones **Release**.  
   
- El **/Od** argumento de línea de comandos para el compilador HLSL se aplica implícitamente la **/Gfp** argumento de línea de comandos, pero la salida no puede ser idéntico al resultado de aplicar pasando ambos el **/Od**  y **/Gfp** argumentos de línea de comandos explícitamente.  
+ El argumento de la línea de comandos **/Od** para el compilador HLSL aplica implícitamente el argumento de la línea de comandos **/Gfp**, pero la salida no puede ser idéntico a la que se genera al pasar los dos argumentos de la línea de comandos **/Od** y **/Gfp** de forma explícita.  
   
- **Habilitar información de depuración**  
- **Sí (/Zi)** para habilitar la información de depuración; en caso contrario, **No**. De forma predeterminada, el valor es **Sí (/Zi)** para **depurar** configuraciones y **No** para **versión** configuraciones.  
+ **Habilitar la información de depuración**  
+ **Sí (/Zi)** para habilitar la información de depuración; en caso contrario, **No**. De forma predeterminada, el valor es **Sí (/Zi)** para las configuraciones **Debug** y **No** para las configuraciones **Release**.  
   
- **Tipo de sombreado**  
- Especifica el tipo de sombreado. Diferentes tipos de sombreadores implementan diferentes partes de la canalización de gráficos. Ciertos tipos de sombreadores solo están disponibles en los modelos de sombreador más recientes (que se especifican mediante el **modelo de sombreador** propiedad): por ejemplo, sombreadores se introdujeron en el modelo de sombreador 5 de proceso.  
+ **Tipo de sombreador**  
+ Especifica el tipo de sombreador. Cada tipo de sombreador implementa partes diferentes de la canalización de gráficos. Algunos tipos de sombreadores solo están disponibles en los modelos de sombreador más recientes (que se especifican mediante la propiedad **Modelo de sombreador**); por ejemplo, los sombreadores de cálculo se introdujeron en el modelo de sombreador 5.  
   
- Esta propiedad se corresponde con el **[tipo]** parte de la **/T [tipo] _ [modelo]** argumento de línea de comandos para el compilador HLSL. El **modelos de sombreador** propiedad especifica la **[modelo]** parte del argumento.  
+ Esta propiedad se corresponde con la parte **[tipo]** del argumento de la línea de comandos **/T [tipo]_[modelo]** para el compilador HLSL. La propiedad **Modelos de sombreador** especifica la parte **[modelo]** del argumento.  
   
- **Modelo de sombreado**  
- Especifica el modelo de sombreador. Modelos de sombreador diferentes tienen capacidades distintas. En general, más recientes de los modelos de sombreador ofrecen capacidades ampliadas pero requieren más moderno hardware gráfico para ejecutar el código del sombreador. Ciertos tipos de sombreadores (que se especifican mediante el **sombreador de tipo** propiedad) solo están disponibles en los modelos de sombreador más recientes, por ejemplo, proceso sombreadores se introdujeron en el modelo de sombreador 5.  
+ **Modelo de sombreador**  
+ Especifica el modelo de sombreador. Cada modelo de sombreador tiene funciones distintas. Por lo general, los modelos de sombreador más recientes ofrecen funciones ampliadas pero requieren hardware gráfico más moderno para ejecutar el código del sombreador. Algunos tipos de sombreadores (que se especifican mediante la propiedad **Modelo de sombreador**) solo están disponibles en los modelos de sombreador más recientes; por ejemplo, los sombreadores de cálculo se introdujeron en el modelo de sombreador 5.  
   
- Esta propiedad se corresponde con el **[modelo]** parte de la **/T [tipo] _ [modelo]** argumento de línea de comandos para el compilador HLSL. El **tipo de sombreador** propiedad especifica la **[tipo]** parte del argumento.  
+ Esta propiedad se corresponde con la parte **[modelo]** del argumento de la línea de comandos **/T [tipo]_[modelo]** para el compilador HLSL. La propiedad **Tipo de sombreador** especifica la parte **[tipo]** del argumento.  
   
  **Definiciones de preprocesador**  
- Agrega una o varias definiciones de símbolo de preprocesador para aplicar al archivo de código fuente HLSL. Use punto y coma para separar las definiciones de símbolos.  
+ Agrega una o varias definiciones de símbolo de preprocesador para aplicar al archivo de código fuente HLSL. Use punto y coma para separar las definiciones de símbolo.  
   
- Esta propiedad se corresponde con el **/D [definiciones]** argumento de línea de comandos para el compilador HLSL.  
+ Esta propiedad se corresponde con el argumento de la línea de comandos **/D [definiciones]** para el compilador HLSL.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades HLSL](../ide/hlsl-property-pages.md)   
- [Páginas de propiedades HLSL: avanzadas](../ide/hlsl-property-pages-advanced.md)   
+ [Páginas de propiedades HLSL: Avanzadas](../ide/hlsl-property-pages-advanced.md)   
  [Páginas de propiedades HLSL: Archivos de salida](../ide/hlsl-property-pages-output-files.md)

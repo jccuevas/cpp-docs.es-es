@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348552"
 ---
 # <a name="ole-background-containers-and-servers"></a>Nociones de OLE: Contenedores y servidores
 Una aplicación de contenedor es una aplicación que puede incorporar elementos incrustados o vinculados en sus propios documentos. Los documentos administrados por una aplicación de contenedor deben ser capaz de almacenar y mostrar los componentes de documentos OLE, así como los datos creados por la propia aplicación. Una aplicación de contenedor también debe permitir a los usuarios insertar nuevos elementos o editar elementos existentes mediante la activación de aplicaciones de servidor cuando sea necesario. Los requisitos de la interfaz de usuario de una aplicación de contenedor se enumeran en el artículo [contenedores: problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md).  

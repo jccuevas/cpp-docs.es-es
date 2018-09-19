@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d27d141b4ec475f3df6e4bf56dba80850767beb0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106774"
 ---
 # <a name="isfundamental-class"></a>is_fundamental (Clase)
 
@@ -36,11 +37,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia de tipo flotante contienen true si el tipo `Ty` es un tipo básico, es decir, `void`, un tipo entero, un tipo de punto flotante o un `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo fundamental, es decir, **void**, un tipo entero, un flotante, tipo de punto o un `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCWindowsManagerDialog | Documentos de Microsoft
+title: CMFCWindowsManagerDialog (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71c85d3061da7cf4c87abef9549542900e962f64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707010"
 ---
-# <a name="cmfcwindowsmanagerdialog-class"></a>Clase CMFCWindowsManagerDialog
-La `CMFCWindowsManagerDialog` objeto permite al usuario administrar ventanas secundarias MDI en una aplicación MDI.  
+# <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog (clase)
+La `CMFCWindowsManagerDialog` objeto permite que un usuario administrar ventanas secundarias MDI en una aplicación MDI.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -75,11 +76,11 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pMDIFrame`  
- Un puntero a la ventana primaria o propietaria.  
+*pMDIFrame*<br/>
+[in] Un puntero a la ventana principal o propietaria.  
   
- [in] `bHelpButton`  
- Un parámetro booleano que especifica si el marco de trabajo muestra un **ayuda** botón.  
+*bHelpButton*<br/>
+[in] Un parámetro booleano que especifica si el marco de trabajo muestra un **ayuda** botón.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información acerca de los administradores visuales, consulte [Administrador de visualización](../../mfc/visualization-manager.md).  

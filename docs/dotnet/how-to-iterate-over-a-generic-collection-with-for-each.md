@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128032"
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Cómo: Iterar por una colección genérica con for each
 El [genéricos](../windows/generics-cpp-component-extensions.md) característica de Visual C++ permite crear colecciones genéricas.  

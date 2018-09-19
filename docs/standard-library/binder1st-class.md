@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f000ea8458925f8ea3faa4896943e045de127d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 876aa74de2a7cadd780198146b7902c1fcdeb2e6
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314149"
 ---
 # <a name="binder1st-class"></a>binder1st (Clase)
 
@@ -52,21 +53,24 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-`Func` El objeto de función binaria se convierta en un objeto de función unaria.
+*Func*<br/>
+El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
-`left` El valor al que el primer argumento del objeto de función binaria es enlazar.
+*left*<br/>
+El valor al que se enlazará el primer argumento del objeto de función binaria.
 
-`right` El valor del argumento que el objeto binario adaptado se compara con el valor fijo del segundo argumento.
+*right*<br/>
+El valor del argumento que el objeto binario adaptado compara con el valor fijo del segundo argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria con el valor `left.`
+El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria con el valor *izquierdo*.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función binaria `Func` en **op** y una copia de `left` en **value**. Define su función miembro `operator()` para que devuelva **op**( **value**, `right`).
+La clase de plantilla almacena una copia de un objeto de función binaria *Func* en `op`y una copia de *izquierdo* en `value`. Define su función miembro `operator()` para que devuelva **op**( **value**, `right`).
 
-Si `Func` es un objeto de tipo **Operation** y `c` es una constante, [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) es equivalente al constructor de clase `binder1st` `binder1st`\< **Operation**> ( `Func`, `c` ) y más conveniente.
+Si *Func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) es equivalente a la `binder1st` constructor de clase `binder1st` \< **Operación**> ( `Func`, `c` ) y más conveniente.
 
 ## <a name="example"></a>Ejemplo
 
@@ -111,11 +115,11 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

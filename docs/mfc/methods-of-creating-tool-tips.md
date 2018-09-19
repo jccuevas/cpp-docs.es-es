@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349537"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Métodos de creación de información sobre herramientas
 MFC proporciona tres clases para crear y administrar la herramienta de control de sugerencia: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) y [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Las funciones de miembro de sugerencia de herramienta en estas clases ajustan la API del control común de Windows. Clase `CToolBarCtrl` y clase `CToolTipCtrl` se derivan de la clase `CWnd`.  

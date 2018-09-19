@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381256"
 ---
 # <a name="spin-button-member-functions"></a>Funciones miembro del botón de número
 Hay varias funciones miembro disponibles para el control de número ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Use estas funciones para cambiar los siguientes atributos del botón de número.  

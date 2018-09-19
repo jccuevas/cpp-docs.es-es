@@ -1,5 +1,5 @@
 ---
-title: Event (clase) | Documentos de Microsoft
+title: Event (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7f4156720d7d02b0c96ab36101d88c941dbfbfdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071543"
 ---
 # <a name="event-class"></a>event (Clase)
 Un evento de reinicio manual que es explícitamente consciente del runtime de simultaneidad.  
@@ -51,7 +52,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|Restablece el evento a un estado no señalado.|  
 |[set](#set)|Señala el evento.|  
-|[espera](#wait)|Espera a que se señale el evento.|  
+|[Espere](#wait)|Espera a que se señale el evento.|  
 |[wait_for_multiple](#wait_for_multiple)|Espera a que se señalen varios eventos.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
@@ -119,7 +120,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a> espera 
+##  <a name="wait"></a> Espere 
 
  Espera a que se señale el evento.  
   
@@ -128,14 +129,14 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Timeout`  
- Indica el número de milisegundos antes de que se agote el tiempo de espera. El valor `COOPERATIVE_TIMEOUT_INFINITE` significa que no hay tiempo de espera.  
+*_Tiempo de espera*<br/>
+Indica el número de milisegundos antes de que se agote el tiempo de espera. El valor `COOPERATIVE_TIMEOUT_INFINITE` significa que no hay tiempo de espera.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si se satisfizo la espera, se devuelve el valor `0`; de lo contrario, se devuelve el valor `COOPERATIVE_WAIT_TIMEOUT` para indicar que el tiempo de la espera se agota sin haber señalado el evento.  
   
 > [!IMPORTANT]
->  En una aplicación de plataforma Universal de Windows (UWP), no llame a `wait` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.  
+>  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait` en el subproceso ASTA porque esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.  
   
 ##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
@@ -150,17 +151,17 @@ static size_t __cdecl wait_for_multiple(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_PPEvents`  
- Matriz de eventos en la que se va a esperar. El número de eventos dentro de la matriz viene indicado por el parámetro `count`.  
+*_PPEvents*<br/>
+Matriz de eventos en la que se va a esperar. El número de eventos dentro de la matriz viene indicado por el parámetro `count`.  
   
- `count`  
- El número de eventos dentro de la matriz proporcionado por el parámetro `_PPEvents`.  
+*count*<br/>
+El número de eventos dentro de la matriz proporcionado por el parámetro `_PPEvents`.  
   
- `_FWaitAll`  
- Si está establecido en el valor `true`, el parámetro especifica que todos los eventos de la matriz proporcionada en el parámetro `_PPEvents` deben señalarse para satisfacer la espera. Si está establecido en el valor `false`, especifica que cualquier evento de la matriz proporcionada en el parámetro `_PPEvents` que se ha señalado satisfará la espera.  
+*_FWaitAll*<br/>
+Si está establecido en el valor `true`, el parámetro especifica que todos los eventos de la matriz proporcionada en el parámetro `_PPEvents` deben señalarse para satisfacer la espera. Si está establecido en el valor `false`, especifica que cualquier evento de la matriz proporcionada en el parámetro `_PPEvents` que se ha señalado satisfará la espera.  
   
- `_Timeout`  
- Indica el número de milisegundos antes de que se agote el tiempo de espera. El valor `COOPERATIVE_TIMEOUT_INFINITE` significa que no hay tiempo de espera.  
+*_Tiempo de espera*<br/>
+Indica el número de milisegundos antes de que se agote el tiempo de espera. El valor `COOPERATIVE_TIMEOUT_INFINITE` significa que no hay tiempo de espera.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si se satisfizo la espera, el índice de la matriz proporcionada en el parámetro `_PPEvents` que satisfizo la condición de espera; de lo contrario, el valor `COOPERATIVE_WAIT_TIMEOUT` para indicar que el tiempo de la espera se agota sin satisfacer la condición.  
@@ -169,7 +170,7 @@ static size_t __cdecl wait_for_multiple(
  Si el parámetro `_FWaitAll` está establecido en el valor `true` para indicar que todos los eventos se deben señalar para satisfacer la espera, el índice que devuelve la función no tiene ninguna importancia especial aparte del hecho de que no es el valor `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  En una aplicación de plataforma Universal de Windows (UWP), no llame a `wait_for_multiple` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.  
+>  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait_for_multiple` en el subproceso ASTA porque esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

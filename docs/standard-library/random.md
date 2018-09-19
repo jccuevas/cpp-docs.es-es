@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956510"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -58,7 +59,7 @@ Estas son algunas sugerencias que tener en cuenta al usar \<aleatorio >:
 
 - El emparejamiento más útil en la mayoría de los casos es la del motor `mt19937` con `uniform_int_distribution`, tal y como se muestra en el [código de ejemplo](#code) que aparece más adelante en este artículo.
 
-Hay muchas opciones para elegir en la \<aleatorio > encabezado y si alguno de ellos es preferible a la función en tiempo de ejecución de C no actualizada `rand()`. Para obtener información acerca de cuál es el problema con `rand()` y cómo \<aleatorio > aborda, vea [este vídeo](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Hay muchas opciones para elegir en la \<aleatorio > encabezado y cualquiera de ellos es preferible a la función en tiempo de ejecución C obsoleta `rand()`. Para obtener información acerca de cuál es el problema con `rand()` y cómo \<aleatorio > aborda estas desventajas, consulte [este vídeo](http://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Ejemplos
 
@@ -293,15 +294,15 @@ Los adaptadores de motor son plantillas que adaptan otros motores (base). Por lo
 
 ###  <a name="distributions"></a> Distribuciones de números aleatorios
 
-Las siguientes secciones enumeran las distribuciones que se proporcionan en el \<aleatorio > encabezado. Las distribuciones son un mecanismo de procesamiento posterior que suelen usar una salida de URNG como entrada y distribuir esa salida mediante una función de densidad de probabilidad estadística definida. Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
+Las secciones siguientes enumeran las distribuciones que se proporcionan en el \<aleatorio > encabezado. Las distribuciones son un mecanismo de procesamiento posterior que suelen usar una salida de URNG como entrada y distribuir esa salida mediante una función de densidad de probabilidad estadística definida. Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
 
 #### <a name="uniform-distributions"></a>Distribuciones uniformes
 
 |||
 |-|-|
 |[uniform_int_distribution (Clase)](../standard-library/uniform-int-distribution-class.md)|Genera una distribución uniforme de valores enteros por un rango en el intervalo cerrado \[a, b] (inclusivo-inclusivo).|
-|[uniform_real_distribution (Clase)](../standard-library/uniform-real-distribution-class.md)|Genera una distribución uniforme de valores reales (punto flotante) por un rango en el intervalo semiabierto [a, b) \(inclusivo-exclusivo).|
-|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Genera una distribución uniforme de valores reales (punto flotante) de una determinada precisión a lo largo de [0, 1] \(inclusivo-exclusivo).|
+|[uniform_real_distribution (Clase)](../standard-library/uniform-real-distribution-class.md)|Genera una distribución uniforme de valores reales (punto flotante) por un rango en el intervalo semiabierto [a, b) (inclusivo-exclusivo).|
+|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Genera una distribución uniforme de valores reales (punto flotante) de una determinada precisión a lo largo de [0, 1] (inclusivo-exclusivo).|
 
 [[Distribuciones de números aleatorios](#distributions)]
 
@@ -309,7 +310,7 @@ Las siguientes secciones enumeran las distribuciones que se proporcionan en el \
 
 |||
 |-|-|
-|[bernoulli_distribution (Clase)](../standard-library/bernoulli-distribution-class.md)|Genera una distribución de Bernoulli de valores `bool`.|
+|[bernoulli_distribution (Clase)](../standard-library/bernoulli-distribution-class.md)|Genera una distribución de Bernoulli de **bool** valores.|
 |[binomial_distribution (Clase)](../standard-library/binomial-distribution-class.md)|Genera una distribución binomial de valores enteros.|
 |[geometric_distribution (Clase)](../standard-library/geometric-distribution-class.md)|Genera una distribución geométrica de valores enteros.|
 |[negative_binomial_distribution (Clase)](../standard-library/negative-binomial-distribution-class.md)|Genera una distribución binomial negativa de valores enteros.|
@@ -322,7 +323,7 @@ Las siguientes secciones enumeran las distribuciones que se proporcionan en el \
 |-|-|
 |[cauchy_distribution (Clase)](../standard-library/cauchy-distribution-class.md)|Genera una distribución de Cauchy de valores reales (punto flotante).|
 |[chi_squared_distribution (Clase)](../standard-library/chi-squared-distribution-class.md)|Genera una distribución chi-cuadrado de valores reales (punto flotante).|
-|[fisher_f_distribution (Clase)](../standard-library/fisher-f-distribution-class.md)|Genera una distribución F (también conocida como distribución de F de Snedecor o la distribución de Fisher-Snedecor) de valores reales (punto flotante).|
+|[fisher_f_distribution (Clase)](../standard-library/fisher-f-distribution-class.md)|Genera una distribución F (también conocida como distribución F de Snedecor o la distribución de Fisher-Snedecor) de valores reales (punto flotante).|
 |[lognormal_distribution (Clase)](../standard-library/lognormal-distribution-class.md)|Genera una distribución log-normal de valores reales (punto flotante).|
 |[normal_distribution (Clase)](../standard-library/normal-distribution-class.md)|Genera una distribución normal (Gaussiana) de valores reales (punto flotante).|
 |[student_t_distribution (Clase)](../standard-library/student-t-distribution-class.md)|Genera una distribución *t* de Student de valores reales (punto flotante).|
@@ -353,7 +354,7 @@ Las siguientes secciones enumeran las distribuciones que se proporcionan en el \
 
 ### <a name="utility-functions"></a>Funciones de utilidad
 
-Esta sección enumeran las funciones de utilidad generales que se proporcionan en el \<aleatorio > encabezado.
+Esta sección enumeran las funciones de utilidad generales proporcionadas en el \<aleatorio > encabezado.
 
 |||
 |-|-|
@@ -374,11 +375,11 @@ En esta sección se enumera los operadores proporcionados en el \<aleatorio > en
 
 Consulte las secciones siguientes para obtener información sobre cada una de estas categorías de clase de plantilla definidas en \<aleatorio >. Estas dos categorías de clase de plantilla toman un tipo como argumento y usan nombres compartidos de parámetros de plantilla para describir las propiedades del tipo que son posibles como tipo de argumento real, como se indica a continuación:
 
-- `IntType` indica `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` o `unsigned long long`.
+- `IntType` indica un **corto**, **int**, **largo**, **long long**, **entero corto sin signo**,  **int sin signo**, **unsigned long**, o **long long sin signo**.
 
-- `UIntType` indica `unsigned short`, `unsigned int`, `unsigned long` o `unsigned long long`.
+- `UIntType` indica **entero corto sin signo**, **int sin signo**, **unsigned long**, o **long long sin signo**.
 
-- `RealType` indica `float`, `double` o `long double`.
+- `RealType` indica un **float**, **doble**, o **long double**.
 
 ### <a name="engines"></a>Motores
 

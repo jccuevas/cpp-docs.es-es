@@ -1,5 +1,5 @@
 ---
-title: 'SRWLock:: ~ SRWLock (destructor) | Documentos de Microsoft'
+title: 'SRWLock:: ~ SRWLOCK (destructor) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ed3bd38024d279d8f478a6ff4525122e66c47f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da5599aedcab352b73ef3df8285ea36cc88327ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594757"
 ---
 # <a name="srwlocksrwlock-destructor"></a>SRWLock::~SRWLock (Destructor)
-Desinicializa una instancia de la clase SRWLock.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-~SRWLock();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SRWLock (clase)](../windows/srwlock-class.md)
+
+Desinicializa una instancia de la **SRWLock** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+~SRWLock();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SRWLock (clase)](../windows/srwlock-class.md)

@@ -1,7 +1,7 @@
 ---
-title: Saltar a etiquetas en ensamblado alineado | Documentos de Microsoft
+title: Saltar a etiquetas en ensamblado alineado | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,75 +19,78 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a96bd532b5b4f03cb2040dd3157a6224ccf5029
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e697df32218c3e2bcdeb03cde44b7b5d854cb7b0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693629"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Salto a etiquetas en un ensamblado alineado
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Como una etiqueta normal de C o C++, una etiqueta en un bloque `__asm` tiene su ámbito en toda la función en la que se define (no solo en el bloque). Las instrucciones de ensamblado y las instrucciones `goto` pueden saltar a las etiquetas dentro o fuera del bloque `__asm`.  
-  
- Las etiquetas definidas en los bloques `__asm` no distinguen entre mayúsculas y minúsculas; las instrucciones `goto` e instrucciones de ensamblado pueden hacer referencia a esas etiquetas sin tener en cuenta el uso de mayúsculas y minúsculas. Las etiquetas de C y C++ distinguen entre mayúsculas y minúsculas cuando se utilizan en las instrucciones `goto`. Las instrucciones de ensamblado pueden saltar a una etiqueta de C o C++ sin tener en cuenta el uso de mayúsculas y minúsculas.  
-  
- El código siguiente muestra todas las permutaciones:  
-  
-```  
-void func( void )  
-{  
-   goto C_Dest;  /* Legal: correct case   */  
-   goto c_dest;  /* Error: incorrect case */  
-  
-   goto A_Dest;  /* Legal: correct case   */  
-   goto a_dest;  /* Legal: incorrect case */  
-  
-   __asm  
-   {  
-      jmp C_Dest ; Legal: correct case  
-      jmp c_dest ; Legal: incorrect case  
-  
-      jmp A_Dest ; Legal: correct case  
-      jmp a_dest ; Legal: incorrect case  
-  
-      a_dest:    ; __asm label  
-   }  
-  
-   C_Dest:       /* C label */   
-   return;  
-}  
-int main()  
-{  
-}  
-```  
-  
- No utilice nombres de función de biblioteca de C como etiquetas en los bloques `__asm`. Por ejemplo, podría verse tentado a utilizar `exit` como etiqueta, como sigue:  
-  
-```  
-; BAD TECHNIQUE: using library function name as label  
-jne exit  
-   .  
-   .  
-   .  
-exit:  
-   ; More __asm code follows  
-```  
-  
- Dado que **salir** es el nombre de una función de biblioteca de C, este código podría producir un salto a la **salir** función en lugar de a la ubicación deseada.  
-  
- Como sucede en los programas MASM, el símbolo de dólar (`$`) sirve de contador para la ubicación actual. Es una etiqueta para la instrucción que se ensambla actualmente. En los bloques `__asm`, su uso principal es crear saltos condicionales largos:  
-  
-```  
-jne $+5 ; next instruction is 5 bytes long  
-jmp farlabel  
-; $+5  
-   .  
-   .  
-   .  
-farlabel:  
-```  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Ensamblador insertado](../../assembler/inline/inline-assembler.md)
+
+**Específicos de Microsoft**
+
+Como una etiqueta normal de C o C++, una etiqueta en un bloque `__asm` tiene su ámbito en toda la función en la que se define (no solo en el bloque). Las instrucciones de ensamblado y las instrucciones `goto` pueden saltar a las etiquetas dentro o fuera del bloque `__asm`.
+
+Las etiquetas definidas en los bloques `__asm` no distinguen entre mayúsculas y minúsculas; las instrucciones `goto` e instrucciones de ensamblado pueden hacer referencia a esas etiquetas sin tener en cuenta el uso de mayúsculas y minúsculas. Las etiquetas de C y C++ distinguen entre mayúsculas y minúsculas cuando se utilizan en las instrucciones `goto`. Las instrucciones de ensamblado pueden saltar a una etiqueta de C o C++ sin tener en cuenta el uso de mayúsculas y minúsculas.
+
+El código siguiente muestra todas las permutaciones:
+
+```cpp
+void func( void )
+{
+   goto C_Dest;  /* Legal: correct case   */
+   goto c_dest;  /* Error: incorrect case */
+
+   goto A_Dest;  /* Legal: correct case   */
+   goto a_dest;  /* Legal: incorrect case */
+
+   __asm
+   {
+      jmp C_Dest ; Legal: correct case
+      jmp c_dest ; Legal: incorrect case
+
+      jmp A_Dest ; Legal: correct case
+      jmp a_dest ; Legal: incorrect case
+
+      a_dest:    ; __asm label
+   }
+
+   C_Dest:       /* C label */
+   return;
+}
+int main()
+{
+}
+```
+
+No utilice nombres de función de biblioteca de C como etiquetas en los bloques `__asm`. Por ejemplo, podría verse tentado a utilizar `exit` como etiqueta, como sigue:
+
+```cpp
+; BAD TECHNIQUE: using library function name as label
+   jne exit
+   .
+   .
+   .
+exit:
+   ; More __asm code follows
+```
+
+Dado que **salir** es el nombre de una función de biblioteca de C, este código podría producir un salto a la **salir** función en lugar de a la ubicación deseada.
+
+Como sucede en los programas MASM, el símbolo de dólar (`$`) sirve de contador para la ubicación actual. Es una etiqueta para la instrucción que se ensambla actualmente. En los bloques `__asm`, su uso principal es crear saltos condicionales largos:
+
+```cpp
+   jne $+5 ; next instruction is 5 bytes long
+   jmp farlabel ; $+5
+   .
+   .
+   .
+farlabel:
+```
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

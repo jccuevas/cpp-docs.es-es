@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106443"
 ---
 # <a name="basiciostream-class"></a>basic_iostream (Clase)
 
@@ -84,15 +85,17 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parámetros
 
-`strbuf` Existente `basic_streambuf` objeto.
+*strbuf*<br/>
+Objeto `basic_streambuf` existente.
 
-`right` Existente `basic_iostream` objeto que se usa para crear un nuevo `basic_iostream`.
+*right*<br/>
+Objeto `basic_iostream` existente que se usa para construir un nuevo `basic_iostream`.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor inicializa los objetos base por medio de `basic_istream(strbuf)` y `basic_ostream(strbuf)`.
 
-El segundo constructor inicializa los objetos base mediante una llamada a `move(right)`.
+El segundo constructor inicializa los objetos base llamando `move(right)`.
 
 ## <a name="op_eq"></a>  basic_iostream::operator=
 
@@ -104,11 +107,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un `rvalue` hacen referencia a un `basic_iostream` objeto que se va a asignar desde.
+*right*<br/>
+Referencia `rvalue` a un objeto `basic_iostream` desde el que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
 
-El operador de miembro llama `swap(right)`.
+El operador miembro llama a `swap(right)`.
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -120,11 +124,12 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La `basic_iostream` objeto que se va a intercambiar.
+*right*<br/>
+Objeto `basic_iostream` que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 
-Las llamadas a funciones miembro `swap(right)`.
+La función miembro llama a `swap(right)`.
 
 ## <a name="see-also"></a>Vea también
 

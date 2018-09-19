@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4263 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4263 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883b36e524f3631811cf503ebc695e3c4ad53da2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf93a010ac10b8b55bd22b9ab2db12d77a02c13a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079640"
 ---
 # <a name="compiler-warning-level-4-c4263"></a>Advertencia del compilador (nivel 4) C4263
-'función': función miembro no reemplaza ninguna función miembro virtual de clase base  
-  
- Una definición de función de clase tiene el mismo nombre que una función virtual de una clase base, pero no puede ser el mismo número o tipo de argumentos. Esto oculta de manera eficaz la función virtual en la clase base.  
-  
- De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
-  
- El ejemplo siguiente genera C4263:  
-  
-```  
-// C4263.cpp  
-// compile with: /W4  
-#pragma warning(default:4263)  
-#pragma warning(default:4264)  
-class B {  
-public:  
-   virtual void func();  
-};  
-  
-class D : public B {  
-   void func(int);   // C4263  
-};  
-  
-int main() {  
-}  
+
+'function': función miembro no invalida ninguna función miembro virtual de clase base
+
+Una definición de función de la clase tiene el mismo nombre que una función virtual en una clase base, pero no puede ser el mismo número o tipo de argumentos. Esto oculta de manera eficaz la función virtual en la clase base.
+
+De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
+
+El ejemplo siguiente genera C4263:
+
+```
+// C4263.cpp
+// compile with: /W4
+#pragma warning(default:4263)
+#pragma warning(default:4264)
+class B {
+public:
+   virtual void func();
+};
+
+class D : public B {
+   void func(int);   // C4263
+};
+
+int main() {
+}
 ```

@@ -1,7 +1,7 @@
 ---
-title: . CÓDIGO | Documentos de Microsoft
+title: . CÓDIGO | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59e376fc9c10ab8891b02e4da334341ae0534b73
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ff2d66cfc79e84c8c4c7cf92e117c9ac8c84a555
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682492"
 ---
 # <a name="code"></a>.CODE
-Cuando se utiliza con [. MODELO](../../assembler/masm/dot-model.md), indica el inicio de un segmento de código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-.CODE [[name]]  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
-  
-|Parámetro|Descripción|  
-|---------------|-----------------|  
-|`name`|Parámetro opcional que especifica el nombre del segmento de código. El nombre predeterminado es _TEXT para pequeña y pequeño, compacto y plana [modelos](../../assembler/masm/dot-model.md). El nombre predeterminado es *modulename*_TEXT para otros modelos.|  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)   
- [.DATA](../../assembler/masm/dot-data.md)
+
+Cuando se usa con [. MODELO](../../assembler/masm/dot-model.md), indica el inicio de un segmento de código.
+
+## <a name="syntax"></a>Sintaxis
+
+> . CÓDIGO [[nombre]]
+
+#### <a name="parameters"></a>Parámetros
+
+|Parámetro|Descripción|
+|---------------|-----------------|
+|`name`|Parámetro opcional que especifica el nombre del segmento de código. El nombre predeterminado es _TEXT pequeña, pequeña, compacto y plana [modelos](../../assembler/masm/dot-model.md). El nombre predeterminado es *modulename*_TEXT para otros modelos.|
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[.DATA](../../assembler/masm/dot-data.md)<br/>

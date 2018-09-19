@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965247"
 ---
 # <a name="c-standard-library-containers"></a>Contenedores de la biblioteca estándar de C++
 
@@ -176,7 +177,7 @@ Todos los contenedores sobrecargan el operador == para comparar dos contenedores
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparar contenedores diferentes (C++14)
 
-En C++14 y versiones posteriores, se pueden comparar contenedores y tipos de elementos diferentes mediante una de las sobrecargas de funciones de **std::equal**, **std::mismatch** o **std::is_permutation** que toman dos intervalos completos. Estas sobrecargas le permiten comparar contenedores de distintas longitudes. Estas sobrecargas son mucho menos susceptibles a errores del usuario y están optimizadas para devolver false en tiempo constante cuando se comparan contenedores de longitudes diferentes. Por tanto, se recomienda usar estas sobrecargas a menos que (1) tenga un motivo muy claro para no hacerlo o (2) use un contenedor [std::list](../standard-library/list-class.md), que no se beneficia de las optimizaciones de doble intervalo.
+En C ++ 14 y versiones posteriores, puede comparar contenedores y tipos de elementos diferentes mediante uno de los `std::equal`, `std::mismatch`, o `std::is_permutation` sobrecargas que toman dos intervalos completos de funciones. Estas sobrecargas le permiten comparar contenedores de distintas longitudes. Estas sobrecargas son mucho menos susceptibles a errores del usuario y están optimizadas para devolver false en tiempo constante cuando se comparan contenedores de longitudes diferentes. Por tanto, se recomienda usar estas sobrecargas a menos que (1) tenga un motivo muy claro para no hacerlo o (2) use un contenedor [std::list](../standard-library/list-class.md), que no se beneficia de las optimizaciones de doble intervalo.
 
 ## <a name="see-also"></a>Vea también
 

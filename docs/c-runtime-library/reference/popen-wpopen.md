@@ -43,11 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a48e4112dc513923b3a933457a874409121fb1e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087726"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -60,12 +61,12 @@ Crea una canalización y ejecuta un comando.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -87,18 +88,17 @@ Para obtener información sobre estos y otros códigos de error, vea [_doserrno,
 
 El **_popen** función crea una canalización y ejecuta de forma asincrónica una copia generada del procesador de comandos con la cadena especificada de *comando*. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
 
-**"r"** el proceso de llamada puede leer la salida estándar del comando generado mediante la secuencia devuelta.
-
-**"w"** el proceso de llamada puede escribir en la entrada estándar del comando generado mediante la secuencia devuelta.
-
-**"b"** abierto en modo binario.
-
-**"t"** abierto en modo de texto.
+|Modo de acceso|Descripción|
+|-|-|
+|**"r"**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
+|**"w"**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
+|**"b"**|Abrir en modo binario.|
+|**"t"**|Abrir en modo de texto.|
 
 > [!NOTE]
-> Si usa un programa de Windows, la **_popen** función devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](http://msdn.microsoft.com/library/windows/desktop/ms682499) del SDK de Windows.
+> Si se usa en un programa de Windows, el **_popen** función devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el SDK de Windows.
 
-**_wpopen** es una versión con caracteres anchos de **_popen**; el *ruta de acceso* argumento pasado a **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan exactamente igual.
+**_wpopen** es una versión con caracteres anchos de **_popen**; el *ruta* argumento **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -168,12 +168,12 @@ int main( void )
 En este resultado se supone que solo hay un archivo en el directorio actual con la extensión de nombre de archivo .c.
 
 ```Output
- Volume in drive C is CDRIVE
- Volume Serial Number is 0E17-1702
+Volume in drive C is CDRIVE
+Volume Serial Number is 0E17-1702
 
 Directory of D:\proj\console\test1
 
- 07/17/98  07:26p                   780 popen.c
+07/17/98  07:26p                   780 popen.c
                1 File(s)            780 bytes
                              86,597,632 bytes free
 

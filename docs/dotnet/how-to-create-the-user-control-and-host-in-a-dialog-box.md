@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136358"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Cómo: Crear el control de usuario y el host en un cuadro de diálogo
 Los pasos descritos en este artículo se supone que va a crear un objeto basado en el cuadro de diálogo ([CDialog (clase)](../mfc/reference/cdialog-class.md)) proyecto Microsoft Foundation Classes (MFC), pero también puede agregar compatibilidad para un control de formularios Windows Forms a un cuadro de diálogo MFC existente.  

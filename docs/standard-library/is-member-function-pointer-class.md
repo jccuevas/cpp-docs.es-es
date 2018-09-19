@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8f72191a84661749db87958a2c08807c00d446
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07957ded8b8b53ef06f684ad7b9901ed7071490d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106670"
 ---
 # <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer (Clase)
 
@@ -36,11 +37,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty*<br/>
+Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es un puntero a una función miembro o un puntero `cv-qualified` a una función miembro; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un puntero a función miembro o un `cv-qualified` puntero a función de miembro; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343972"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Componentes de cuadro de diálogo en el marco
 En el marco de trabajo MFC, un cuadro de diálogo tiene dos componentes:  

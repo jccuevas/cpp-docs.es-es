@@ -29,29 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bde7a170eb499a9b179a909bfb95e75f8fc89518
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090469"
 ---
 # <a name="cifmod"></a>_CIfmod
-Calcula el resto del punto flotante de los dos valores superiores de la pila.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void __cdecl _CIfmod();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Esta versión de la función `fmod` tiene una convención de llamada especializada que el compilador entiende. Acelera la ejecución porque evita que se generen copias y ayuda con la asignación de registros.  
-  
- El valor resultante se inserta en la parte superior de la pila.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataforma:** x86  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
+
+Calcula el resto del punto flotante de los dos valores superiores de la pila.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void __cdecl _CIfmod();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Esta versión de la función `fmod` tiene una convención de llamada especializada que el compilador entiende. Acelera la ejecución porque evita que se generen copias y ayuda con la asignación de registros.
+
+El valor resultante se inserta en la parte superior de la pila.
+
+## <a name="requirements"></a>Requisitos
+ **Plataforma:** x86
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)

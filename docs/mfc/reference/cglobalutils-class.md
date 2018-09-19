@@ -1,5 +1,5 @@
 ---
-title: Clase CGlobalUtils | Documentos de Microsoft
+title: CGlobalUtils (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,14 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d5e2c1938a975da956502f3b071c8c51c6ad48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c594e86c0e0bcb74fe624743c863c70a1c7f9e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707816"
 ---
-# <a name="cglobalutils-class"></a>Clase CGlobalUtils
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cglobalutils-class"></a>CGlobalUtils (clase)
+Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -103,8 +104,8 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `rect`  
- [in] `pRectDelta`  
+*Rect*<br/>
+[in, out] [in] *pRectDelta*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -122,12 +123,12 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `barContainerManager`  
- [in] `pWndTodock`  
- [in] `ptMouse`  
- [out] `rectResult`  
- [out] `bDrawTab`  
- [out] `ppTargetBar`  
+*barContainerManager*<br/>
+[in] [in] *pWndTodock*  
+*ptMouse*<br/>
+[in] [out] *rectResult*  
+*bDrawTab*<br/>
+[out] [out] *ppTargetBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -139,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -153,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -175,14 +176,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
- [in] `pBar`  
- [in] `nSensitivity`  
- [in] `pDockManager`  
- [in] `bOuterEdge`  
- [out] `dwAlignment`  
- [in] `dwEnabledDockBars`  
- [in] `lpRectBounds`  
+*punto*<br/>
+[in] [in] *pBar*  
+*nSensitivity*<br/>
+[in] [in] *pDockManager*  
+*bOuterEdge*<br/>
+[in] [out] *dwAlignment*  
+*dwEnabledDockBars*<br/>
+[in] [in] *lpRectBounds*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -198,8 +199,8 @@ BOOL CyFromString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `cy`  
- [in] `psz`  
+*CY*<br/>
+[out] [in] *psz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -215,8 +216,8 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `decimal`  
- [in] `psz`  
+*decimal*<br/>
+[out] [in] *psz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -232,8 +233,8 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `rect`  
- [in] `nDegrees`  
+*Rect*<br/>
+[in, out] [in] *nDegrees*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -248,9 +249,9 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `pDockManager`  
- [in] `bForce`  
- [in] `bForceInvisible`  
+*pDockManager*<br/>
+[in, out] [in] *bForce*  
+ [in] *bForceInvisible*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -262,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -276,7 +277,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dwAlign`  
+ [in] *dwAlign*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -296,12 +297,12 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `barContainerManager`  
- [in] `pt`  
- [out] `ppTargetControlBar`  
- [out] `dwAlignment`  
- [out] `bTabArea`  
- [out] `bCaption`  
+*barContainerManager*<br/>
+[in] [in] *pt*  
+*ppTargetControlBar*<br/>
+[out] [out] *dwAlignment*  
+*bTabArea*<br/>
+[out] [out] *bCaption*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -315,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -332,9 +333,9 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lstControlBars`  
- [in] `pNewParent`  
- [in] `bCheckVisibility`  
+*lstControlBars*<br/>
+[in] [in] *pNewParent*  
+ [in] *bCheckVisibility*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -348,8 +349,8 @@ BOOL StringFromCy(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `str`  
- [in] `cy`  
+*str*<br/>
+[out] [in] *cy*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -365,8 +366,8 @@ BOOL StringFromDecimal(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `str`  
- [in] `decimal`  
+*str*<br/>
+[out] [in] *decimal*  
   
 ### <a name="return-value"></a>Valor devuelto  
   

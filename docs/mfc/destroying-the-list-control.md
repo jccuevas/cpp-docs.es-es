@@ -1,5 +1,5 @@
 ---
-title: Destruir el Control de lista | Documentos de Microsoft
+title: Destruir el Control de lista | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb26671ba775cfa7daf98d39c7eccc9fd4111bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215047"
 ---
 # <a name="destroying-the-list-control"></a>Destruir el control de lista
-Si incrusta el [CListCtrl](../mfc/reference/clistctrl-class.md) objeto como un miembro de datos de una clase de vista o cuadro de diálogo, se destruye cuando se destruye su propietario. Si utiliza un [CListView](../mfc/reference/clistview-class.md), el marco de trabajo destruye el control cuando destruye la vista.  
+Si incrusta la [CListCtrl](../mfc/reference/clistctrl-class.md) objeto como un miembro de datos de una clase de vista o cuadro de diálogo, se destruye cuando se destruye su propietario. Si usa un [CListView](../mfc/reference/clistview-class.md), el marco de trabajo destruye el control cuando se destruye la vista.  
   
- Si organiza para algunos de los datos de lista que se almacenará en la aplicación en lugar de con el control de lista, debe desasignarlos. Para obtener más información, consulte [elementos de devolución de llamada y la máscara de devolución de llamada](http://msdn.microsoft.com/library/windows/desktop/bb774736) en el SDK de Windows.  
+ Si organizas para algunos de los datos de lista que se almacenará en la aplicación en lugar del control de lista, deberá desasignarlos. Para obtener más información, consulte [elementos de devolución de llamada y máscara de devolución de llamada](/windows/desktop/Controls/using-list-view-controls) en el SDK de Windows.  
   
- Además, es responsable de cancelar la asignación de las listas de imágenes creado y asociado con el objeto de control de lista.  
+ Además, usted es responsable de desasignar las listas de imágenes creado y asociado al objeto de control de lista.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CListCtrl](../mfc/using-clistctrl.md)   

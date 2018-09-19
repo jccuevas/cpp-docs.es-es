@@ -22,29 +22,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e0f195bebd43ced767f05a7c6073a6d6e9db61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dd7b3fab51c382413c507831572afedd824c3f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018345"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-#include <process.h>  
-  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_cwait` se puede usar en cualquier proceso para esperar a cualquier otro proceso (si se conoce el identificador de proceso). El argumento de acción puede ser cualquiera de los siguientes valores:  
-  
-|Constante|Significado|  
-|--------------|-------------|  
-|`_WAIT_CHILD`|El proceso que realiza la llamada espera hasta que finaliza el proceso nuevo especificado.|  
-|`_WAIT_GRANDCHILD`|El proceso que realiza la llamada espera hasta que el nuevo proceso especificado y todos los procesos creados por ese proceso nuevo finalizan.|  
-  
-## <a name="see-also"></a>Vea también  
- [_cwait](../c-runtime-library/reference/cwait.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxis
+
+```
+
+#include <process.h>
+
+```
+
+## <a name="remarks"></a>Comentarios
+
+La función `_cwait` se puede usar en cualquier proceso para esperar a cualquier otro proceso (si se conoce el identificador de proceso). El argumento de acción puede ser cualquiera de los siguientes valores:
+
+|Constante|Significado|
+|--------------|-------------|
+|`_WAIT_CHILD`|El proceso que realiza la llamada espera hasta que finaliza el proceso nuevo especificado.|
+|`_WAIT_GRANDCHILD`|El proceso que realiza la llamada espera hasta que el nuevo proceso especificado y todos los procesos creados por ese proceso nuevo finalizan.|
+
+## <a name="see-also"></a>Vea también
+
+[_cwait](../c-runtime-library/reference/cwait.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

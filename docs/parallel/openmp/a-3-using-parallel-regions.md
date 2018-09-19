@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689901"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3 Usar regiones paralelas
 El `parallel` directiva ([sección 2.3](../../parallel/openmp/2-3-parallel-construct.md) en página 8) puede utilizarse en programas paralelos más generales. En el ejemplo siguiente, cada subproceso de la región paralela decide qué parte de la matriz global `x` para trabajar en ella, en función del número de subprocesos:  

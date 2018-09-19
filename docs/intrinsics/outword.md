@@ -1,5 +1,5 @@
 ---
-title: __outword | Documentos de Microsoft
+title: __outword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f0e827b16b9743cb6bc7fe6906b4c74c3006864
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712593"
 ---
 # <a name="outword"></a>__outword
 **Específicos de Microsoft**  
@@ -38,17 +39,17 @@ void __outword(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `Port`  
- El puerto para enviar los datos.  
+*Puerto*<br/>
+[in] El puerto para enviar los datos.  
   
- [in] `Data`  
- Los datos que se enviarán.  
+*Data*<br/>
+[in] Los datos se envíen.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__outword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outword`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

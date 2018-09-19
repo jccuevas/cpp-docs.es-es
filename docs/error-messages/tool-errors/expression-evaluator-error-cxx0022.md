@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0022 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082357"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>Error del evaluador de expresiones CXX0022
-llamada de función antes de _main  
-  
- El evaluador de expresiones de C no puede evaluar una función antes de que el depurador ha entrado en la función **_main**. El programa no se inicializó correctamente hasta que **_main** se ha llamado.  
-  
- Este error es idéntico a CAN0022.
+
+llamada de función antes de _main
+
+El evaluador de expresiones de C no puede evaluar una función antes de que el depurador haya entrado en la función **_main**. No se ha inicializado correctamente el programa hasta **_main** se ha llamado.
+
+Este error es idéntico a CAN0022.

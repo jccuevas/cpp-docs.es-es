@@ -1,5 +1,5 @@
 ---
-title: Clase CDWordArray | Documentos de Microsoft
+title: CDWordArray (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,13 +52,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b06364aeb75ef57d02946a6799e80cf44c21c733
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335710"
 ---
-# <a name="cdwordarray-class"></a>Clase CDWordArray
+# <a name="cdwordarray-class"></a>CDWordArray (clase)
 Admite matrices de palabras dobles de 32 bits.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -68,7 +69,7 @@ class CDWordArray : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CDWordArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o un valor devuelto, sustituir un `DWORD`.  
+ Las funciones miembro de `CDWordArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o valor devuelto, sustituya un `DWORD`.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -93,7 +94,7 @@ class CDWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda la memoria no usada por encima del límite superior actual.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Devuelve el valor en un índice dado.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtiene el número de elementos de esta matriz.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite el acceso a los elementos de la matriz. Puede ser **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite el acceso a los elementos de la matriz. Puede ser NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtiene el número de elementos de esta matriz.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Devuelve el índice válido de mayor tamaño.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserta un elemento (o todos los elementos de otra matriz) en un índice especificado.|  
@@ -118,7 +119,7 @@ class CDWordArray : public CObject
   
  Si necesita depurar la salida de los elementos individuales de la matriz, se debe establecer la profundidad de la `CDumpContext` objeto a 1 o mayor.  
   
- Para obtener más información sobre el uso de `CDWordArray`, vea el artículo [colecciones](../../mfc/collections.md).  
+ Para obtener más información sobre el uso de `CDWordArray`, consulte el artículo [colecciones](../../mfc/collections.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcoll.h  

@@ -1,5 +1,5 @@
 ---
-title: Clase CD2DSizeU | Documentos de Microsoft
+title: Clase CD2DSizeU | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335846"
 ---
 # <a name="cd2dsizeu-class"></a>Clase CD2DSizeU
 Un contenedor para D2D1_SIZE_U.  
@@ -47,13 +48,13 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|Devuelve un `boolean` valor que indica si una expresión no contiene datos válidos ( `null`).|  
+|[CD2DSizeU::IsNull](#isnull)|Devuelve un **booleano** valor que indica si una expresión no contiene datos válidos (NULL).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CD2DSizeU::operator CSize](#operator_csize)|Convierte `CD2DSizeU` a `CSize` objeto.|  
+|[CSize CD2DSizeU::operator](#operator_csize)|Convierte `CD2DSizeU` a `CSize` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `D2D1_SIZE_U`  
@@ -64,7 +65,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
  **Encabezado:** afxrendertarget.h  
   
 ##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
- Construye un objeto CD2DSizeU del objeto CSize.  
+ Construye un objeto CD2DSizeU CSize objeto.  
   
 ```  
 CD2DSizeU(const CSize& size);  
@@ -78,13 +79,13 @@ CD2DSizeU(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `size`  
- tamaño de fuente  
+ *size*  
+ tamaño de origen  
   
- `cx`  
+ *CX*  
  ancho de origen  
   
- `cy`  
+ *CY*  
  alto de origen  
   
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull  
@@ -95,9 +96,9 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- TRUE si el ancho y alto están vacías; en caso contrario, FALSE.  
+ TRUE si el ancho y alto están vacíos; en caso contrario, FALSE.  
   
-##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
+##  <a name="operator_csize"></a>  CSize CD2DSizeU::operator  
  Convierte CD2DSizeU CSize objeto.  
   
 ```  
@@ -105,7 +106,7 @@ operator CSize();
 ```   
   
 ### <a name="return-value"></a>Valor devuelto  
- Valor actual del tamaño de D2D.  
+ Valor actual de tamaño D2D.  
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)

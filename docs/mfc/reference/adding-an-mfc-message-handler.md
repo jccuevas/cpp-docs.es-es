@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353734"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Agregar un controlador de mensajes MFC
 También puede [utilice la ventana Propiedades para agregar un controlador de mensajes](../../mfc/reference/mapping-messages-to-functions.md) (una función miembro que controla los mensajes de Windows) a una clase y asignar mensajes de Windows al controlador de mensajes. También puede agregar [un controlador de eventos para cualquier control de cuadro de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).  

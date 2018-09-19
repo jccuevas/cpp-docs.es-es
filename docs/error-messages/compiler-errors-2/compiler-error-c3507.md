@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3507 | Documentos de Microsoft
+title: Error del compilador C3507 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008267fddbd1d83574081d7b257e6627b32a1f58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8375f96c0a35e01a2a93866157c0156cf22a4993
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105171"
 ---
 # <a name="compiler-error-c3507"></a>Error del compilador C3507
-un ProgID puede tener no más de 39 caracteres 'id'; ni contener ningún signo de puntuación aparte de '.'; ni empezar por un dígito  
-  
- El [progid](../../windows/progid.md) atributo tiene restricciones en los valores que pueden llevar a cabo.  
-  
- El ejemplo siguiente genera C3507:  
-  
-```  
-// C3507.cpp  
-[module(name="x")];  
-[  
-coclass,  
-progid("0123456789012345678901234567890123456789"),  
-uuid("00000000-0000-0000-0000-000000000001") // C3507 expected  
-]  
-struct CMyStruct {  
-};  
-int main() {  
-}  
+
+un ProgID puede tener no más de 39 caracteres 'id'; no puede tener cualquier puntuación a excepción de '.'; ni comenzar por un dígito
+
+El [progid](../../windows/progid.md) atributo tiene restricciones en los valores que puede tomar.
+
+El ejemplo siguiente genera C3507:
+
+```
+// C3507.cpp
+[module(name="x")];
+[
+coclass,
+progid("0123456789012345678901234567890123456789"),
+uuid("00000000-0000-0000-0000-000000000001") // C3507 expected
+]
+struct CMyStruct {
+};
+int main() {
+}
 ```

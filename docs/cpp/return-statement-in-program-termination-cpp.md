@@ -1,5 +1,5 @@
 ---
-title: return (instrucción) en el programa de finalización (C++) | Documentos de Microsoft
+title: return (instrucción) finalización del programa (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfcf65258767178c0f74f63ca6e938e1d940e3be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061141"
 ---
 # <a name="return-statement-in-program-termination-c"></a>return (Instrucción de finalización del programa) (C++)
-Emitir un `return` instrucción desde **principal** es funcionalmente equivalente a llamar a la **salir** función. Considere el ejemplo siguiente:  
-  
-```  
-// return_statement.cpp  
-#include <stdlib.h>  
-int main()  
-{  
-    exit( 3 );  
-    return 3;  
-}  
-```  
-  
- El **salir** y `return` las instrucciones en el ejemplo anterior son funcionalmente idénticas. Sin embargo, C++ requiere que las funciones que tienen tipos de valor devuelto distintos de `void` devuelvan un valor. El `return` instrucción permite devolver un valor de **principal**.  
-  
-## <a name="see-also"></a>Vea también  
- [Finalización del programa](../cpp/program-termination.md)
+
+Emitir un **devolver** instrucción desde `main` es funcionalmente equivalente a llamar a la `exit` función. Considere el ejemplo siguiente:
+
+```cpp
+// return_statement.cpp
+#include <stdlib.h>
+int main()
+{
+    exit( 3 );
+    return 3;
+}
+```
+
+El `exit` y **devolver** instrucciones en el ejemplo anterior son funcionalmente idénticas. Sin embargo, C++ requiere que las funciones que tienen devuelven tipos diferentes de **void** devuelven un valor. El **devolver** instrucción permite devolver un valor de `main`.
+
+## <a name="see-also"></a>Vea también
+
+[Finalización del programa](../cpp/program-termination.md)

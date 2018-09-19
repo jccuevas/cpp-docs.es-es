@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: IsValid (método) | Documentos de Microsoft'
+title: Método Handlet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42aca81b3c2a0ad3db652bf9f77c648e503098e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef93be9a6994cf0e093380941810bc735961ee1c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593281"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid (Método)
-Indica si el objeto de HandleT actual representa un identificador.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- `true` Si el HandleT representa un identificador; en caso contrario, `false`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+
+Indica si el actual **HandleT** objeto representa un identificador.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+**True** si el **HandleT** representa un identificador; en caso contrario, **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

@@ -1,7 +1,7 @@
 ---
-title: operador THIS | Documentos de Microsoft
+title: operador THIS | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,21 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37304563b1a986b81eec05778c420a002e75fa9f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ae20d8f2abc7740d1716155f626c6a69316ca3fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692578"
 ---
 # <a name="operator-this"></a>Operador THIS
-Devuelve un operando de especificado `type` cuyos valores de desplazamiento y segmento son iguales que el valor de contador de ubicación actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-THIS type  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores](../../assembler/masm/operators-reference.md)
+
+Devuelve un operando de especificado `type` cuyos valores de offset y segmento son iguales al valor del contador de ubicación actual.
+
+## <a name="syntax"></a>Sintaxis
+
+> Este tipo
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3531 | Documentos de Microsoft
+title: Error del compilador C3531 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69fcacacafba752f77aacd55d5cd57b2c42b5ba9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 375eb419e3f2f492df328a964eeb1bb77bc0d5dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106856"
 ---
 # <a name="compiler-error-c3531"></a>Error del compilador C3531
-'símbolo': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador  
-  
- La variable especificada no tiene una expresión de inicializador.  
-  
-### <a name="to-correct-this-error"></a>Para corregir este error  
-  
-1.  Especifique una expresión de inicializador, como una asignación simple que usa la sintaxis de signo igual, al declarar la variable.  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se genera el error C3531 porque las variables `x1`, `y1, y2, y3`, y `z2` no están inicializados.  
-  
-```  
-// C3531.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   auto x1;                  // C3531  
-   auto y1, y2, y3;          // C3531  
-   auto z1 = 1, z2, z3 = -1; // C3531  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Auto (palabra clave)](../../cpp/auto-keyword.md)
+
+'símbolo': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador
+
+La variable especificada no tiene una expresión de inicializador.
+
+### <a name="to-correct-this-error"></a>Para corregir este error
+
+1. Especifique una expresión de inicializador, como una asignación simple que usa la sintaxis de signo igual, al declarar la variable.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error C3531 porque las variables `x1`, `y1, y2, y3`, y `z2` no se ha inicializado.
+
+```
+// C3531.cpp
+// Compile with /Zc:auto
+int main()
+{
+   auto x1;                  // C3531
+   auto y1, y2, y3;          // C3531
+   auto z1 = 1, z2, z3 = -1; // C3531
+   return 0;
+}
+```
+
+## <a name="see-also"></a>Vea también
+
+[Auto (palabra clave)](../../cpp/auto-keyword.md)

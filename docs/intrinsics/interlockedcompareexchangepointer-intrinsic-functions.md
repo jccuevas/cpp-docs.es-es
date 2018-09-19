@@ -1,5 +1,5 @@
 ---
-title: Funciones intrínsecas _InterlockedCompareExchangePointer | Documentos de Microsoft
+title: Funciones intrínsecas _InterlockedCompareExchangePointer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8e7a31c5377d71eaad96fddc7d93215ed3abb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711079"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funciones intrínsecas _InterlockedCompareExchangePointer
 **Específicos de Microsoft**  
@@ -86,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in, out] `Destination`  
- Puntero a un puntero al valor de destino. El signo se omite.  
+*Destino*<br/>
+[in, out] Puntero a un puntero al valor de destino. El signo se omite.  
   
- [in] `Exchange`  
- Puntero de intercambio. El signo se omite.  
+*Exchange*<br/>
+[in] Puntero de Exchange. El signo se omite.  
   
- [in] `Comparand`  
- Puntero que se compara con el destino. El signo se omite.  
+*Elemento de comparación*<br/>
+[in] Puntero al que se compara con el destino. El signo se omite.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El valor devuelto es el valor inicial del destino.  
@@ -102,14 +103,14 @@ long _InterlockedCompareExchangePointer_rel (
   
 |Función intrínseca|Arquitectura|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<INTRIN.h >|  
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h >|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Comentarios  
  `_InterlockedCompareExchangePointer` realiza una comparación atómica de la dirección `Destination` con la dirección `Comparand`. Si la dirección `Destination` es igual a la dirección `Comparand`, la dirección `Exchange` se almacena en la dirección especificada por `Destination`. De lo contrario, no se realiza ninguna operación.  
   
- `_InterlockedCompareExchangePointer` proporciona compatibilidad intrínseca del compilador para Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) (función).  
+ `_InterlockedCompareExchangePointer` proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) función.  
   
  Para obtener un ejemplo de cómo usar `_InterlockedCompareExchangePointer`, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
@@ -124,5 +125,5 @@ long _InterlockedCompareExchangePointer_rel (
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Palabras clave](../cpp/keywords-cpp.md)

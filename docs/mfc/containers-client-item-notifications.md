@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928229"
 ---
 # <a name="containers-client-item-notifications"></a>Contenedores: Notificaciones de elementos de cliente
 En este artículo se describe las funciones reemplazables que llama el marco MFC cuando las aplicaciones de servidor modifican elementos de documento de la aplicación cliente.  
@@ -31,11 +32,11 @@ En este artículo se describe las funciones reemplazables que llama el marco MFC
   
 |notificación|Significado|  
 |------------------|-------------|  
-|`OLE_CHANGED`|Ha cambiado la apariencia del elemento OLE.|  
-|`OLE_SAVED`|Se ha guardado el elemento OLE.|  
-|`OLE_CLOSED`|Se ha cerrado el elemento OLE.|  
+|**OLE_CHANGED**|Ha cambiado la apariencia del elemento OLE.|  
+|**OLE_SAVED**|Se ha guardado el elemento OLE.|  
+|**OLE_CLOSED**|Se ha cerrado el elemento OLE.|  
 |**OLE_RENAMED**|Se ha cambiado el documento del servidor que contiene el elemento OLE.|  
-|`OLE_CHANGED_STATE`|El elemento OLE ha cambiado de un estado a otro.|  
+|**OLE_CHANGED_STATE**|El elemento OLE ha cambiado de un estado a otro.|  
 |**OLE_CHANGED_ASPECT**|Aspecto de dibujo del elemento OLE se cambió por el marco de trabajo.|  
   
  Estos valores son de la **OLE_NOTIFICATION** enumeración, que se define en el archivo AFXOLE. H.  
@@ -44,9 +45,9 @@ En este artículo se describe las funciones reemplazables que llama el marco MFC
   
 |Cuando el primer argumento es|Segundo argumento|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` o `OLE_CLOSED`|No se utiliza.|  
-|`OLE_CHANGED`|Especifica el aspecto del elemento OLE que ha cambiado.|  
-|`OLE_CHANGED_STATE`|Describe el estado que se especifiquen (`emptyState`, **loadedState**, `openState`, `activeState`, o `activeUIState`).|  
+|**OLE_SAVED** o **OLE_CLOSED**|No se utiliza.|  
+|**OLE_CHANGED**|Especifica el aspecto del elemento OLE que ha cambiado.|  
+|**OLE_CHANGED_STATE**|Describe el estado que se especifiquen (*emptyState*, *loadedState*, *openState*, *activeState*, o  *activeUIState*).|  
   
  Para obtener más información acerca de los Estados que puede suponer un elemento de cliente, consulte [contenedores: estados de elementos de cliente](../mfc/containers-client-item-states.md).  
   

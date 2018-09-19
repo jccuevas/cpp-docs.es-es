@@ -1,7 +1,7 @@
 ---
-title: COMENTARIO (MASM) | Documentos de Microsoft
+title: COMENTARIO (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 417a6da629f030a65c54bffafb08144f182fd58a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c4530f938973053d40e1dbdaaefc0829a48329c1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677061"
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
-Trata todos *texto* entre o en la misma línea que los delimitadores como un comentario.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      COMMENT delimiter [[text]]   
-[[text]]   
-[[text]] delimiter [[text]]  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+Trata todos *texto* entre o en la misma línea que los delimitadores, como un comentario.
+
+## <a name="syntax"></a>Sintaxis
+
+> Delimitador de comentario [[texto]]<br/>
+> [[texto]]<br/>
+> delimitador de [[texto]] [[texto]]
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

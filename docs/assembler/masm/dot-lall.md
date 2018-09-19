@@ -1,7 +1,7 @@
 ---
-title: . LALL | Documentos de Microsoft
+title: . LALL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1ce0e7f2cc5fd7be8c2a7a400a582e3f819c51
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a74d911aebcc7f337c94ab0647cea2abe7076df5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687201"
 ---
 # <a name="lall"></a>.LALL
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-.LALL  
-  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Vea [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de directivas](../../assembler/masm/directives-reference.md)
+
+## <a name="syntax"></a>Sintaxis
+
+> .LALL
+
+## <a name="remarks"></a>Comentarios
+
+Consulte [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3049 | Documentos de Microsoft
+title: Error del compilador C3049 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc4300c73eea1b9bc14c535fe9cde960c51212d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ba6878c893aeaaaa1f0851fc94a6fd13bbf104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081252"
 ---
 # <a name="compiler-error-c3049"></a>Error del compilador C3049
-'arg': argumento no válido en la cláusula 'default' de OpenMP  
-  
- Se pasó un valor incorrecto a una cláusula [default](../../parallel/openmp/reference/default-openmp.md) .  
-  
- El ejemplo siguiente genera la advertencia C3049:  
-  
-```  
-// C3049.cpp  
-// compile with: /openmp /c  
-int main() {  
-   int n1 = 1;  
-  
-   #pragma omp parallel default(private)   // C3049   
-   // try the following line instead  
-   // #pragma omp parallel default(shared)  
-   {  
-      ++n1;  
-   }  
-}  
+
+'arg': argumento no válido en la cláusula 'default' de OpenMP
+
+Se pasó un valor incorrecto a una cláusula [default](../../parallel/openmp/reference/default-openmp.md) .
+
+El ejemplo siguiente genera la advertencia C3049:
+
+```
+// C3049.cpp
+// compile with: /openmp /c
+int main() {
+   int n1 = 1;
+
+   #pragma omp parallel default(private)   // C3049
+   // try the following line instead
+   // #pragma omp parallel default(shared)
+   {
+      ++n1;
+   }
+}
 ```

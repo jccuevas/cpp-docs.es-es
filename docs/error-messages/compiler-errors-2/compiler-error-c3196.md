@@ -1,5 +1,5 @@
 ---
-title: C3196 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3196 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf2ccd44828993c0241a0b609da55c8eea6ca18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256c76bf66906ef43afdc3574b819bd7cf5df1cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045916"
 ---
-# <a name="compiler-error-c3196"></a>C3196 de Error del compilador
-'keyword': utilizado más de una vez  
-  
- Una palabra clave se usó más de una vez.  
-  
- El ejemplo siguiente genera C3196:  
-  
-```  
-// C3196.cpp  
-// compile with: /clr  
-ref struct R abstract abstract {};   // C3196  
-ref struct S abstract {};   // OK  
+# <a name="compiler-error-c3196"></a>Error del compilador C3196
+
+'keyword': puede usar más de una vez
+
+Una palabra clave se usó más de una vez.
+
+El ejemplo siguiente genera C3196:
+
+```
+// C3196.cpp
+// compile with: /clr
+ref struct R abstract abstract {};   // C3196
+ref struct S abstract {};   // OK
 ```

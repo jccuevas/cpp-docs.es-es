@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963698"
 ---
 # <a name="ltsystemerrorgt-operators"></a>Operadores de &lt;system_error&gt;
 
@@ -37,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`left`|El objeto cuya igualdad se va a comprobar.|
-|`right`|El objeto que se va a probar para comprobar la igualdad.|
+|*left*|El objeto cuya igualdad se va a comprobar.|
+|*right*|El objeto cuya igualdad se va a comprobar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -64,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`left`|El objeto cuya desigualdad se va a comprobar.|
-|`right`|El objeto cuya desigualdad se va a comprobar.|
+|*left*|El objeto cuya desigualdad se va a comprobar.|
+|*right*|El objeto cuya desigualdad se va a comprobar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el objeto pasado en `left` no es igual que el objeto pasado en `right`. De lo contrario, es **false**.
+**True** si el objeto pasado en *izquierdo* no es igual que el objeto pasado en *derecho*; de lo contrario **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -107,12 +108,12 @@ inline bool operator<(
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`left`|Objeto que se va a comparar.|
-|`right`|Objeto que se va a comparar.|
+|*left*|Objeto que se va a comparar.|
+|*right*|Objeto que se va a comparar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el objeto pasado en `left` es menor que el objeto pasado en `right`. De lo contrario, es **false**.
+**True** si el objeto pasado en *izquierdo* es menor que el objeto pasado en *derecho*; En caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;resumen&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;summary&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,13 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082253"
 ---
-# <a name="ltsummarygt-visual-c"></a>&lt;resumen&gt; (Visual C++)
+# <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 La etiqueta \<summary> debe usarse para describir un tipo o un miembro de tipo. Use [\<remarks>](../ide/remarks-visual-cpp.md) para agregar información adicional a una descripción de tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,11 +35,11 @@ La etiqueta \<summary> debe usarse para describir un tipo o un miembro de tipo. 
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `description`  
- Resumen del objeto.  
+*description*<br/>
+Resumen del objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- El texto de la \<resumen > etiqueta es la única fuente de información sobre el tipo en IntelliSense y también se muestra en el [Examinador de objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) y en el informe Web de comentario de código.  
+ El texto de la etiqueta \<summary> es la única fuente de información sobre el tipo en IntelliSense y también se muestra en la ventana [Examinador de objetos](/visualstudio/ide/viewing-the-structure-of-code) y el informe web de comentario de código.  
   
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   

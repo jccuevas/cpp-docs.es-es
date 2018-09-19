@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: forScope (Forzar ajuste en el ámbito del bucle for) | Documentos de Microsoft'
+title: '/ Zc: forScope (Forzar ajuste en el ámbito del bucle for) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723598"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Forzar ajuste en el ámbito del bucle For)
 
@@ -39,7 +40,7 @@ Se usa para implementar el comportamiento estándar de C++ de los bucles [for](.
 
 El comportamiento estándar consiste en dejar que el inicializador de un bucle **for** salga del ámbito después del bucle **for** . En **/Zc:forScope-** y [/Ze](../../build/reference/za-ze-disable-language-extensions.md), el inicializador del bucle **for** permanece dentro del ámbito hasta que finaliza el ámbito local.
 
-El **/Zc: forScope** opción está activada de forma predeterminada. **/ Zc: forScope** no se ve afectado cuando el [/ permisivo-](permissive-standards-conformance.md) se especifica la opción.
+El **/Zc: forScope** opción está activada de forma predeterminada. **/ Zc: forScope** no se ve afectado cuando el [/ permissive-](permissive-standards-conformance.md) se especifica la opción.
 
 La opción **/Zc:forScope-** está en desuso y se quitará en una próxima versión. El uso de **/Zc:forScope-** genera la advertencia de elemento en desuso D9035.
 
@@ -48,7 +49,7 @@ El siguiente código se compila en **/Ze** , pero no en **/Za**:
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -70,9 +71,9 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **C/C++** > **lenguaje** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **lenguaje** página de propiedades.
 
 1. Modifique la propiedad **Forzar ajuste en el ámbito del bucle For** .
 

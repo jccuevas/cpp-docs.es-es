@@ -69,11 +69,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db6c1711931e7ac017e9d55a64e317e4e4520335
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53096465b346403d62638e6e24a1609759a78d73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206588"
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -131,14 +132,14 @@ Devuelve un puntero a la cadena modificada.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strset** función establece todos los caracteres (excepto el carácter nulo de terminación) de *str* a *c*, convertido a **char**. **_wcsset** y **_mbsset_l** son versiones de caracteres multibyte y anchos de **_strset**, y los tipos de datos de los argumentos y valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
+El **_strset** todos los caracteres (excepto el carácter nulo final) de la función establece *str* a *c*, convertido a **char**. **_wcsset** y **_mbsset_l** son versiones de caracteres anchos y caracteres multibyte de **_strset**, y los tipos de datos de los argumentos y valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
 
-**_mbsset** valida sus parámetros. Si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsset** devuelve **NULL** y establece **errno** a **EINVAL**. **_strset** y **_wcsset** no validan sus parámetros.
+**_mbsset** valida sus parámetros. Si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsset** devuelve **NULL** y establece **errno** a **EINVAL**. **_strset** y **_wcsset** no validan sus parámetros.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usan la configuración regional actual y las que tienen la **_l** sufijo en su lugar, use el parámetro de configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usan la configuración regional actual y las que tienen el **_l** sufijo en su lugar, use el parámetro de configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

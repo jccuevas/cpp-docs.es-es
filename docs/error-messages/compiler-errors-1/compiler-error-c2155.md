@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2155 | Documentos de Microsoft
+title: Error del compilador C2155 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02d3194dcaad982e5e9d4ce758352f7221a389dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8622de0beb968a4db9d133e698137bca3e04f14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083202"
 ---
 # <a name="compiler-error-c2155"></a>Error del compilador C2155
-'?': operando, se esperaba izquierdo aritméticos no válido o tipo de puntero  
-  
- Una expresión en el lado izquierdo de `?` no se pueden comparar a cero. Debe usar una expresión aritmética o de puntero que se puede comparar con cero.
+
+'?': operando, se esperaba izquierdo aritmética no válido o tipo de puntero
+
+Una expresión en el lado izquierdo de `?` no se pueden comparar en cero. Debe usar una expresión aritmética o de puntero que se puede comparar en cero.

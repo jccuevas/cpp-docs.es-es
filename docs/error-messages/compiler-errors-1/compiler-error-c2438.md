@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2438 | Documentos de Microsoft
+title: Error del compilador C2438 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf42740c137953007cab2c5301bff122b553e5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f5153e3ff6626f3ea1b1155f14bc9ef96441e7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066081"
 ---
 # <a name="compiler-error-c2438"></a>Error del compilador C2438
-'identificador': no se puede inicializar datos de clase estática mediante un constructor  
-  
- Un constructor se utiliza para inicializar a un miembro estático de una clase. Los miembros estáticos deben inicializarse en una definición fuera de la declaración de clase.  
-  
- El ejemplo siguiente genera C2438:  
-  
-```  
-// C2438.cpp  
-struct X {  
-   X(int i) : j(i) {}   // C2438  
-   static int j;  
-};  
-  
-int X::j;  
-  
-int main() {  
-   X::j = 1;  
-}  
+
+'identifier': no se puede inicializar los datos de clase estáticos mediante un constructor
+
+Un constructor se utiliza para inicializar a un miembro estático de una clase. Los miembros estáticos se deben inicializar en una definición fuera de la declaración de clase.
+
+El ejemplo siguiente genera C2438:
+
+```
+// C2438.cpp
+struct X {
+   X(int i) : j(i) {}   // C2438
+   static int j;
+};
+
+int X::j;
+
+int main() {
+   X::j = 1;
+}
 ```

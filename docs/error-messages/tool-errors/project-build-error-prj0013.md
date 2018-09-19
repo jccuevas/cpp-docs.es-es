@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0013 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0013 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d055043d5c7e7b030557ab03ceb7181c664ce01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7a151ca34d680a517c405e5cb6f91c18d35bedd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102650"
 ---
 # <a name="project-build-error-prj0013"></a>Error PRJ0013 al compilar el proyecto
-Debido a que los recursos del sistema son muy escasos, no se puede crear una canalización necesaria para iniciar la compilación.  
-  
- Este error indica que los recursos del sistema son escasos. Para resolver este error, disminuya el uso que realizan otros procesos o aplicaciones de los recursos del sistema.  
-  
- Este error también puede producirse si el nivel de seguridad no es suficiente para crear canalizaciones (consulte [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).
+
+Debido a que los recursos del sistema son muy escasos, no se puede crear una canalización necesaria para iniciar la compilación.
+
+Este error indica que los recursos del sistema son escasos. Para resolver este error, disminuya el uso que realizan otros procesos o aplicaciones de los recursos del sistema.
+
+Este error puede producirse también si el nivel de seguridad es suficiente para crear canalizaciones (consulte [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).

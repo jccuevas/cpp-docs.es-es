@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1057 | Documentos de Microsoft
+title: Error irrecuperable C1057 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3e00b79757d87b54efd8be2492b473a54c73d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2fde010917e9e22c523b86ad816929e8526b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092691"
 ---
 # <a name="fatal-error-c1057"></a>Error irrecuperable C1057
-final de archivo inesperado en la expansión de macros  
-  
- El compilador ha alcanzado el final del archivo de origen al recopilar los argumentos de llamada de macro, probablemente debido a falta de algún paréntesis en la llamada de macro.
+
+final de archivo inesperado en la expansión de macros
+
+El compilador ha alcanzado el final del archivo de origen durante la recopilación de los argumentos de llamada de macro, probablemente debido a falta de un paréntesis derecho en la llamada de macro.

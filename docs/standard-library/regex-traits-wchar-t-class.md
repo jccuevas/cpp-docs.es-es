@@ -1,7 +1,7 @@
 ---
 title: regex_traits&lt;wchar_t&gt; (Clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff84c0d8b3da721c5d5830be798e2ff03947a16a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691645"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; (Clase)
 
-Especialización de regex_traits para wchar_t.
+Especialización de `regex_traits` para **wchar_t**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,7 +36,7 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>Comentarios
 
-La clase es una especialización explícita de la clase de plantilla [regex_traits](../standard-library/regex-traits-class.md) para los elementos del tipo `wchar_t` (de modo que pueda aprovechar las funciones de biblioteca que manipulan objetos de este tipo).
+La clase es una especialización explícita de la clase de plantilla [regex_traits](../standard-library/regex-traits-class.md) elementos del tipo **wchar_t** (de modo que pueda aprovechar las funciones de biblioteca que manipulan objetos de este tipo).
 
 ## <a name="requirements"></a>Requisitos
 

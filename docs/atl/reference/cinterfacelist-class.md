@@ -1,5 +1,5 @@
 ---
-title: Clase CInterfaceList | Documentos de Microsoft
+title: CInterfaceList (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,68 +18,78 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc523b1eccc88678cda48a0c7e429ea0fc09f9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032437"
 ---
-# <a name="cinterfacelist-class"></a>Clase CInterfaceList
-Esta clase proporciona métodos útiles al construir una lista de punteros de interfaz COM.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+# <a name="cinterfacelist-class"></a>CInterfaceList (clase)
+
+Esta clase proporciona métodos útiles al construir una lista de punteros de interfaz COM.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `I`  
- Una interfaz COM que especifican el tipo de puntero que se almacenará.  
-  
- `piid`  
- Un puntero a lo IID de `I`.  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|El constructor de la lista de interfaces.|  
-  
-## <a name="remarks"></a>Comentarios  
- Esta clase proporciona métodos derivadas para crear una lista de punteros de interfaz COM y un constructor. Use [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) cuando se requiere una matriz.  
-  
- Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- [CAtlList](../../atl/reference/catllist-class.md)  
-  
- `CInterfaceList`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atlcoll.h  
-  
-##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList  
- El constructor de la lista de interfaces.  
-  
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*I*<br/>
+Una interfaz COM que especifica el tipo de puntero que se almacenará.
+
+*piid*<br/>
+Un puntero para el IID de *me*.
+
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|El constructor de la lista de interfaces.|
+
+## <a name="remarks"></a>Comentarios
+
+Esta clase proporciona un constructor y los métodos derivados para crear una lista de punteros de interfaz COM. Use [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) cuando se requiere una matriz.
+
+Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+[CAtlList](../../atl/reference/catllist-class.md)
+
+`CInterfaceList`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** atlcoll.h
+
+##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList
+
+El constructor de la lista de interfaces.
+
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
- `nBlockSize`  
- El tamaño del bloque, su valor predeterminado es 10.  
-  
-### <a name="remarks"></a>Comentarios  
- El tamaño de bloque es una medida de la cantidad de memoria asignada cuando se requiere un nuevo elemento. Bloques más grandes, reducen las llamadas a rutinas de asignación de memoria, pero usan más recursos.  
-  
-## <a name="see-also"></a>Vea también  
- [Clase CAtlList](../../atl/reference/catllist-class.md)   
- [Clase CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
- [Clase CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Información general de clases](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*nBlockSize*<br/>
+El tamaño del bloque, su valor predeterminado es 10.
+
+### <a name="remarks"></a>Comentarios
+
+El tamaño de bloque es una medida de la cantidad de memoria asignada cuando se requiere un nuevo elemento. Mayor tamaño de bloque reduce las llamadas a rutinas de asignación de memoria, pero usa más recursos.
+
+## <a name="see-also"></a>Vea también
+
+[CAtlList (clase)](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr (clase)](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits (clase)](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)

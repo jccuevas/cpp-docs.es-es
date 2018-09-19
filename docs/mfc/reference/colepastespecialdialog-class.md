@@ -1,5 +1,5 @@
 ---
-title: Clase de la clase COlePasteSpecialDialog | Documentos de Microsoft
+title: COlePasteSpecialDialog (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,13 +38,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c3dff52e3607125493c956d46e1bd38c399565e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213344"
 ---
-# <a name="colepastespecialdialog-class"></a>Clase de la clase COlePasteSpecialDialog
+# <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog (clase)
 Se utiliza en el cuadro de diálogo Pegado especial de OLE.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -66,27 +67,27 @@ class COlePasteSpecialDialog : public COleDialog
 |Name|Descripción|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Formatos personalizados se agrega a la lista de formatos que puede pegar la aplicación.|  
-|[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Agrega una nueva entrada a la lista de los formatos de Portapapeles admitidos.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Agrega **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`y, opcionalmente, `CF_LINKSOURCE` a la lista de formatos puede pegar la aplicación.|  
-|[COlePasteSpecialDialog::CreateItem](#createitem)|Crea el elemento en el documento contenedor usando el formato especificado.|  
+|[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Agrega una nueva entrada a la lista de formatos de Portapapeles admitidos.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Agrega CF_METAFILEPICT CF_BITMAP, CF_DIB, y, opcionalmente, CF_LINKSOURCE a la lista de formatos que la aplicación puede pegar.|  
+|[COlePasteSpecialDialog::CreateItem](#createitem)|Crea el elemento en el documento contenedor utilizando el formato especificado.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Muestra el cuadro de diálogo OLE Pegado especial.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Indica si se debe dibujar elementos como un icono o no.|  
-|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Obtiene un identificador para el metarchivo asociado con el formulario del icono de este elemento.|  
-|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Obtiene el índice de opciones de pegado disponibles que se ha elegido por el usuario.|  
+|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Obtiene un identificador del metarchivo asociado al formulario icónico de este elemento.|  
+|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Obtiene el índice de las opciones de pegar disponibles que se ha elegido por el usuario.|  
 |[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Obtiene el tipo de selección elegido.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[COlePasteSpecialDialog::m_ps](#m_ps)|Una estructura de tipo **OLEUIPASTESPECIAL** que controla la función del cuadro de diálogo.|  
+|[COlePasteSpecialDialog::m_ps](#m_ps)|Una estructura de tipo OLEUIPASTESPECIAL que controla la función del cuadro de diálogo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Crear un objeto de clase `COlePasteSpecialDialog` cuando desee llamar a este cuadro de diálogo. Después de un `COlePasteSpecialDialog` se ha construido el objeto, puede usar el [AddFormat](#addformat) y [AddStandardFormats](#addstandardformats) funciones miembro para agregar formatos del Portapapeles en el cuadro de diálogo. También puede usar el [m_ps](#m_ps) estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El `m_ps` estructura es de tipo **OLEUIPASTESPECIAL**.  
+ Crear un objeto de clase `COlePasteSpecialDialog` cuando desee llamar a este cuadro de diálogo. Después de un `COlePasteSpecialDialog` se ha construido el objeto, puede usar el [AddFormat](#addformat) y [AddStandardFormats](#addstandardformats) funciones miembro para agregar los formatos del Portapapeles en el cuadro de diálogo. También puede usar el [m_ps](#m_ps) estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El `m_ps` estructura es de tipo OLEUIPASTESPECIAL.  
   
- Para obtener más información, consulte el [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) estructura en el SDK de Windows.  
   
- Para obtener más información sobre los cuadros de diálogo de OLE específico, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Para obtener más información sobre los cuadros de diálogo OLE específicos, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -107,7 +108,7 @@ class COlePasteSpecialDialog : public COleDialog
  **Encabezado:** afxodlgs.h  
   
 ##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
- Llame a esta función para agregar nuevos formatos a la lista de formatos que puede admitir la aplicación en una operación de pegado especial.  
+ Llame a esta función para agregar nuevos formatos a la lista de formatos de que la aplicación puede admitir en una operación de pegado especial.  
   
 ```  
 void AddFormat(
@@ -129,53 +130,53 @@ void AddFormat(
  *FMT*  
  Referencia al tipo de datos para agregar.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Cadena que describe el formato para el usuario.  
   
  *lpszResult*  
  Cadena que describe el resultado si se elige este formato en el cuadro de diálogo.  
   
- `flags`  
- Los diferentes vincular e incrustar opciones disponibles para este formato. Esta marca es una combinación bit a bit de uno o varios de los diferentes valores en el **OLEUIPASTEFLAG** tipo enumerado.  
+ *flags*  
+ Los diferentes vincular e incrustar las opciones disponibles para este formato. Este indicador es una combinación bit a bit de uno o varios de los diferentes valores en el OLEUIPASTEFLAG tipo enumeran.  
   
- `cf`  
- El formato de Portapapeles para agregar.  
+ *CF*  
+ Para agregar el formato del Portapapeles.  
   
  *TYMED*  
- Los tipos de medios disponibles en este formato. Ésta es una combinación bit a bit de uno o varios de los valores de la **TYMED** tipo enumerado.  
+ Los tipos de medios disponibles en este formato. Se trata de una combinación bit a bit de uno o varios de los valores en el TYMED tipo enumeran.  
   
- `nFormatID`  
- El identificador de la cadena que identifica este formato. El formato de esta cadena es dos cadenas independientes separadas por un carácter '\n'. La primera cadena es el mismo que se pasará en el *lpstrFormat* parámetro y el segundo es el mismo que el *lpstrResult* parámetro.  
+ *nFormatID*  
+ El identificador de la cadena que identifica este formato. El formato de esta cadena es de dos cadenas independientes separadas por un carácter '\n'. La primera cadena es el mismo que se pasaría el *lpstrFormat* parámetro y el segundo es el mismo que el *lpstrResult* parámetro.  
   
  *bEnableIcon*  
  Marca que determina si la casilla de verificación Mostrar como icono está habilitada cuando se elige este formato en el cuadro de lista.  
   
- *Parpadeo*  
+ *Intermitencia*  
  Marca que determina si el botón de radio Pegar vínculo está habilitado cuando se elige este formato en el cuadro de lista.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede llamar a esta función para agregar cualquiera de los formatos estándar como **CF_TEXT** o **CF_TIFF** o formatos personalizados que su aplicación se ha registrado con el sistema. Para obtener más información acerca de pegar los objetos de datos en la aplicación, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Esta función se puede llamar para agregar tanto estándares como CF_TEXT o CF_TIFF o formatos formatos personalizados que la aplicación se ha registrado con el sistema. Para obtener más información acerca de pegar objetos de datos en la aplicación, consulte el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Para obtener más información, consulte el [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) tipo de enumeración y el [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) tipo de enumeración y el [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructura en el SDK de Windows.  
   
- Para obtener más información, consulte el [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) enumerado tipo en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) enumera el tipo en el SDK de Windows.  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
- Agrega una nueva entrada a la lista de los formatos de Portapapeles admitidos.  
+ Agrega una nueva entrada a la lista de formatos de Portapapeles admitidos.  
   
 ```  
 OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cf`  
- El formato de Portapapeles para agregar.  
+ *CF*  
+ Para agregar el formato del Portapapeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) estructura que contiene la información de la nueva entrada de vínculo.  
+ Un [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) estructura que contiene la información de la nueva entrada de vínculo.  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
- Llame a esta función para agregar los siguientes formatos de Portapapeles a la lista de formatos que puede admitir la aplicación en una operación de pegado especial:  
+ Llame a esta función para agregar los siguientes formatos de Portapapeles a la lista de formatos de que la aplicación puede admitir en una operación de pegado especial:  
   
 ```  
 void AddStandardFormats(BOOL bEnableLink = TRUE);
@@ -183,19 +184,19 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  *bEnableLink*  
- Marca que determina si se debe agregar `CF_LINKSOURCE` a la lista de formatos puede pegar la aplicación.  
+ Puede pegar la marca que determina si se debe agregar CF_LINKSOURCE a la lista de formatos de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
   
-- **CF_BITMAP**  
+- CF_BITMAP  
   
-- **CF_DIB**  
+- CF_DIB  
   
-- `CF_METAFILEPICT`  
+- CF_METAFILEPICT  
   
 - **"Objeto incrustado"**  
   
--   (opcional) **"Vincular origen"**  
+-   (opcionalmente) **"Vincular el origen"**  
   
  Estos formatos se utilizan para admitir incrustar y vincular.  
   
@@ -210,27 +211,27 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwFlags`  
+ *dwFlags*  
  Indicador de creación, contiene cualquier número de los siguientes indicadores combinados mediante el operador OR bit a bit:  
   
-- `PSF_SELECTPASTE` Especifica que el botón de opción de pegar se comprobará inicialmente cuando se llama el cuadro de diálogo. No se puede usar en combinación con `PSF_SELECTPASTELINK`. Este es el valor predeterminado.  
+- PSF_SELECTPASTE especifica que el botón de radio pegar estará había activada inicialmente cuando se llama el cuadro de diálogo. No se puede usar en combinación con PSF_SELECTPASTELINK. Este es el valor predeterminado.  
   
-- `PSF_SELECTPASTELINK` Especifica que el vínculo de pegar el botón de radio estará activada inicialmente cuando se llama el cuadro de diálogo. No se puede usar en combinación con `PSF_SELECTPASTE`.  
+- PSF_SELECTPASTELINK especifica que el botón de radio Pegar vínculo estará había activada inicialmente cuando se llama el cuadro de diálogo. No se puede usar en combinación con PSF_SELECTPASTE.  
   
-- `PSF_CHECKDISPLAYASICON` Especifica que la casilla de verificación Mostrar como icono se comprobará inicialmente cuando se llama el cuadro de diálogo.  
+- PSF_CHECKDISPLAYASICON especifica que la casilla de verificación Mostrar como icono estará había activada inicialmente cuando se llama el cuadro de diálogo.  
   
-- `PSF_SHOWHELP` Especifica que el botón de ayuda se mostrará cuando se llama el cuadro de diálogo.  
+- PSF_SHOWHELP especifica que el botón de ayuda se mostrará cuando se llama el cuadro de diálogo.  
   
- `pDataObject`  
- Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) para pegarlo. Si este valor es **NULL**, obtiene la `COleDataObject` desde el Portapapeles.  
+ *pDataObject*  
+ Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) para pegar. Si este valor es NULL, obtiene el `COleDataObject` desde el Portapapeles.  
   
- `pParentWnd`  
- Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del cuadro de diálogo se establece en la ventana de la aplicación principal.  
+ *pParentWnd*  
+ Señala al objeto de ventana principal o propietaria (de tipo `CWnd`) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del cuadro de diálogo se establece en la ventana principal de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función solo se crea un `COlePasteSpecialDialog` objeto. Para mostrar el cuadro de diálogo, llame a la [DoModal](#domodal) función.  
+ Esta función solo construye un `COlePasteSpecialDialog` objeto. Para mostrar el cuadro de diálogo, llame a la [DoModal](#domodal) función.  
   
- Para obtener más información, consulte el [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) enumerado tipo en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) enumera el tipo en el SDK de Windows.  
   
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  Crea el nuevo elemento que se ha elegido en el cuadro de diálogo Pegado especial.  
@@ -241,13 +242,13 @@ BOOL CreateItem(COleClientItem* pNewItem);
   
 ### <a name="parameters"></a>Parámetros  
  *pNewItem*  
- Apunta a un `COleClientItem` instancia. No puede ser **NULL**.  
+ Apunta a un `COleClientItem` instancia. No puede ser nulo.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el elemento se creó correctamente; en caso contrario es 0.  
+ Distinto de cero si el elemento se creó correctamente; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función solo debe llamarse una vez [DoModal](#domodal) devuelve **IDOK**.  
+ Esta función solo debe llamarse después [DoModal](#domodal) devuelve IDOK.  
   
 ##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal  
  Muestra el cuadro de diálogo OLE Pegado especial.  
@@ -259,19 +260,19 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Valor devuelto  
  Estado de finalización para el cuadro de diálogo. Uno de los siguientes valores:  
   
-- **IDOK** si el cuadro de diálogo se muestra correctamente.  
+- IDOK si el cuadro de diálogo se mostró correctamente.  
   
-- **IDCANCEL** si el usuario canceló el cuadro de diálogo.  
+- IDCANCEL si el usuario canceló el cuadro de diálogo.  
   
-- **IDABORT** si se produjo un error. Si **IDABORT** es devuelto, llame a la `COleDialog::GetLastError` función de miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) función en el SDK de Windows.  
+- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIPasteSpecial](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala) función en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
- Si desea inicializar los distintos controles de cuadro de diálogo estableciendo los miembros de la [m_ps](#m_ps) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.  
+ Si desea inicializar los distintos controles de cuadro de diálogo mediante el establecimiento de los miembros de la [m_ps](#m_ps) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.  
   
- Si `DoModal` devuelve **IDOK**, se puede llamar a otra funciones miembro para recuperar la configuración o la entrada de información por el usuario en el cuadro de diálogo.  
+ Si `DoModal` devuelve IDOK, se puede llamar a otra funciones miembro para recuperar la configuración o la entrada de información por el usuario en el cuadro de diálogo.  
   
 ##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect  
- Determina si el usuario decidió mostrar el elemento seleccionado como un icono.  
+ Determina si el usuario optó por mostrar el elemento seleccionado como un icono.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
@@ -280,14 +281,14 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Valor devuelto  
  El método necesario para representar el objeto.  
   
-- `DVASPECT_CONTENT` Devuelve si la casilla de verificación Mostrar como icono no se comprueba al descarta el cuadro de diálogo.  
+- DVASPECT_CONTENT devuelto si la casilla de verificación Mostrar como icono no se comprueban cuando se descartó el cuadro de diálogo.  
   
-- `DVASPECT_ICON` Devuelve si se activa la casilla de verificación Mostrar como icono al descarta el cuadro de diálogo.  
+- DVASPECT_ICON devuelto si se ha activado la casilla de verificación Mostrar como icono al descarta el cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
- Solo llame a esta función después de [DoModal](#domodal) devuelve **IDOK**.  
+ Solo llame a esta función después de [DoModal](#domodal) devuelve IDOK.  
   
- Para obtener más información sobre los aspectos de dibujo, consulte el [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura en el SDK de Windows.  
+ Para obtener más información sobre los aspectos de dibujo, consulte el [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructura en el SDK de Windows.  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  Obtiene el metarchivo asociado al elemento seleccionado por el usuario.  
@@ -297,7 +298,7 @@ HGLOBAL GetIconicMetafile() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El identificador del metarchivo que contiene el icono aspecto del elemento seleccionado, si se ha seleccionado la casilla de verificación Mostrar como icono al descarta el cuadro de diálogo seleccionando **Aceptar**; en caso contrario **NULL**.  
+ El identificador del metarchivo que contiene el aspecto del icono del elemento seleccionado, si se ha seleccionado la casilla de verificación Mostrar como icono al descarta el cuadro de diálogo eligiendo **Aceptar**; de lo contrario, NULL.  
   
 ##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex  
  Obtiene el valor de índice asociado a la entrada del usuario seleccionado.  
@@ -307,10 +308,10 @@ int GetPasteIndex() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El índice en la matriz de **OLEUIPASTEENTRY** estructuras que se ha seleccionado por el usuario. El formato que se corresponde con el índice seleccionado debe usarse al realizar la operación de pegado.  
+ El índice de la matriz de `OLEUIPASTEENTRY` estructuras que se ha seleccionado por el usuario. El formato que se corresponde con el índice seleccionado debe usarse al realizar la operación de pegado.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) estructura en el SDK de Windows.  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Determina el tipo de selección realizado al usuario.  
@@ -323,7 +324,7 @@ UINT GetSelectionType() const;
  Devuelve el tipo de selección realizada.  
   
 ### <a name="remarks"></a>Comentarios  
- Se especifican los valores de tipo de valor devuelto por la **selección** tipo de enumeración declarado en el `COlePasteSpecialDialog` clase.  
+ Se especifican los valores de tipo de valor devuelto por la `Selection` tipo de enumeración declarado en el `COlePasteSpecialDialog` clase.  
   
 ```  
 enum Selection {
@@ -336,16 +337,16 @@ enum Selection {
   
  Siga desccriptions breves de estos valores:  
   
-- **COlePasteSpecialDialog::pasteLink** se activa el botón de radio de pegar el vínculo y al formato elegido tenía un formato estándar de OLE.  
+- `COlePasteSpecialDialog::pasteLink` Se activa el botón de radio de pegar vínculos y al formato elegido fue un formato OLE estándar.  
   
-- **COlePasteSpecialDialog::pasteNormal** se comprobó el botón de opción de pegar el y al formato elegido tenía un formato estándar de OLE.  
+- `COlePasteSpecialDialog::pasteNormal` Se activa el botón de radio de pegar y al formato elegido fue un formato OLE estándar.  
   
-- **COlePasteSpecialDialog::pasteOther** el formato seleccionado no es un formato estándar de OLE.  
+- `COlePasteSpecialDialog::pasteOther` El formato seleccionado no es un formato OLE estándar.  
   
-- **COlePasteSpecialDialog::pasteStatic** el formato elegido no era un metarchivo.  
+- `COlePasteSpecialDialog::pasteStatic` El formato elegido no es un metarchivo.  
   
 ##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps  
- Estructura de tipo **OLEUIPASTESPECIAL** utilizado para controlar el comportamiento del cuadro de diálogo Pegado especial.  
+ Estructura del tipo OLEUIPASTESPECIAL usado para controlar el comportamiento del cuadro de diálogo Pegado especial.  
   
 ```  
 OLEUIPASTESPECIAL m_ps;  
@@ -354,10 +355,10 @@ OLEUIPASTESPECIAL m_ps;
 ### <a name="remarks"></a>Comentarios  
  Los miembros de esta estructura se pueden modificar directamente o a través de funciones miembro.  
   
- Para obtener más información, consulte el [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) estructura en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)   
- [Clase COleDialog](../../mfc/reference/coledialog-class.md)   
+ [COleDialog (clase)](../../mfc/reference/coledialog-class.md)   
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [COleDialog (clase)](../../mfc/reference/coledialog-class.md)

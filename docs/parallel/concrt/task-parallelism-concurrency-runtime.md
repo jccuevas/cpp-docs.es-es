@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695329"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Paralelismo de tareas (Runtime de simultaneidad)
 En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza un trabajo específico y normalmente se ejecuta en paralelo con otras tareas. Una tarea se puede descomponer en tareas adicionales más específicas que se organizan en una *grupo de tareas*.  

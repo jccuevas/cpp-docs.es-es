@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963477"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -33,7 +34,7 @@ Este encabezado utiliza el runtime de simultaneidad (ConcRT) para que pueda util
 ```
 
 > [!NOTE]
-> En el código compilado mediante **/CLR**, este encabezado está bloqueado.
+> En el código que se compila con **/CLR**, este encabezado está bloqueado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -58,9 +59,9 @@ Las clases `condition_variable_any` y `condition_variable` tienen tres métodos 
 
 - `wait_for` espera durante un `time interval` especificado.
 
-Cada uno de estos métodos tiene dos versiones sobrecargadas. Uno solo espera y se puede reactivar en falso. El otro toma un argumento de plantilla adicional que define un predicado. El método no vuelve hasta que el predicado sea `true`.
+Cada uno de estos métodos tiene dos versiones sobrecargadas. Uno solo espera y se puede reactivar en falso. El otro toma un argumento de plantilla adicional que define un predicado. El método no vuelve hasta que el predicado es **true**.
 
-Cada clase tiene también dos métodos que se usan para notificar a una variable de condición que su condición es `true`.
+Cada clase tiene también dos métodos que se usan para notificar a una variable de condición que su condición es **true**.
 
 - `notify_one` reactiva uno de los subprocesos que está esperando la variable de condición.
 

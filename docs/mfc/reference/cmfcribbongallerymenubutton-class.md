@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonGalleryMenuButton | Documentos de Microsoft
+title: CMFCRibbonGalleryMenuButton (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751700"
 ---
-# <a name="cmfcribbongallerymenubutton-class"></a>Clase CMFCRibbonGalleryMenuButton
+# <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton (clase)
 Implementa un botón de menú de la cinta que contiene galerías de la cinta.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
    
 ## <a name="syntax"></a>Sintaxis  
   
@@ -107,12 +108,12 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
- Construye e inicializa un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) objeto.  
+ Crea e inicializa un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) objeto.  
   
 ```  
 CMFCRibbonGalleryMenuButton(
@@ -131,29 +132,29 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `uiID`  
- El identificador de comando del botón. Este es el valor enviado la **WM_COMMAND** mensaje cuando el usuario hace clic en este botón.  
+ *uiID*  
+ El identificador de comando del botón. Este es el valor que se envía en el mensaje WM_COMMAND cuando el usuario hace clic en este botón.  
   
- `iImage`  
- El índice de la imagen para mostrar con el botón de menú de la galería. Las imágenes se almacenan en la `imagesPalette` parámetro.  
+ *iImage*  
+ El índice de la imagen para mostrar con el botón de menú de la galería. Las imágenes se almacenan en el *imagesPalette* parámetro.  
   
- `lpszText`  
- El texto para mostrar en el botón de menú.  
+ *lpszText*  
+ El texto que se muestra en el botón de menú.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Contiene la lista de imágenes que se muestran en la galería.  
   
- `uiImagesPaletteResID`  
- El identificador de recurso de la lista de imágenes para las imágenes para mostrar en la galería.  
+ *uiImagesPaletteResID*  
+ El identificador de recurso de la lista de imágenes para las imágenes que se muestra en la galería.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Especifica el ancho en píxeles de la imagen que se muestra en la galería.  
   
 ### <a name="remarks"></a>Comentarios  
- El botón de menú de la galería se muestra como un menú emergente con una flecha. Cuando el usuario hace clic en este botón, se abre una galería de imágenes.  
+ El botón de menú de la galería se muestra como un menú emergente que tiene una flecha. Cuando el usuario hace clic en este botón, se abre una galería de imágenes.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el constructor de la `CMFCRibbonGalleryMenuButton` clase. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo usar el constructor de la `CMFCRibbonGalleryMenuButton` clase. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   
@@ -204,5 +205,5 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
+ [CMFCToolBarMenuButton (clase)](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
  [CMFCRibbonGallery (clase)](../../mfc/reference/cmfcribbongallery-class.md)

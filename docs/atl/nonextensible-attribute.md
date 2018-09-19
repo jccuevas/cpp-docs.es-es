@@ -1,5 +1,5 @@
 ---
-title: nonextensible (atributo) | Documentos de Microsoft
+title: nonextensible (atributo) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b4b79701862ca07e704aca098419479923ef1a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73edae463051aca3ecafac53ae6200df103b8d90
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762146"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible (atributo)
-Si no se extiende una interfaz dual en tiempo de ejecución (es decir, si no se ofrecen métodos ni propiedades a través de **IDispatch:: Invoke** que no están disponibles a través de la vtable), debe aplicar la **nonextensible** atributo a la definición de interfaz. Este atributo proporciona información para idiomas de cliente (por ejemplo, Visual Basic) que puede usarse para habilitar la comprobación de código completo en tiempo de compilación. Si no se proporciona este atributo, podrían quedar ocultos errores en el código de cliente hasta el tiempo de ejecución.  
-  
- Para obtener más información sobre la **nonextensible** atributo y un ejemplo, vea [nonextensible](../windows/nonextensible.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Interfaces duales y ATL](../atl/dual-interfaces-and-atl.md)
+
+Si no se extiende una interfaz dual en tiempo de ejecución (es decir, si no se ofrecen métodos ni propiedades a través de `IDispatch::Invoke` que no están disponibles a través de la tabla vtable), debe aplicar el **nonextensible** atributo a la interfaz definición. Este atributo proporciona información para los idiomas de cliente (como Visual Basic) que se puede usar para habilitar la comprobación de código completo en tiempo de compilación. Si no se proporciona este atributo, los errores pueden permanecer ocultos en el código de cliente hasta el tiempo de ejecución.
+
+Para obtener más información sobre la **nonextensible** atributo y un ejemplo, vea [nonextensible](../windows/nonextensible.md).
+
+## <a name="see-also"></a>Vea también
+
+[Interfaces duales y ATL](../atl/dual-interfaces-and-atl.md)
 

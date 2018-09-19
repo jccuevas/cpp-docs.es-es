@@ -1,5 +1,5 @@
 ---
-title: progress_reporter (clase) | Documentos de Microsoft
+title: progress_reporter (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016772"
 ---
 # <a name="progressreporter-class"></a>progress_reporter (Clase)
 La clase del informador de progreso que permite informar de notificaciones de progreso de un tipo específico. Cada objeto progress_reporter se vincula a una acción u operación asincrónica determinada.  
@@ -36,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_ProgressType`  
- El tipo de carga de cada notificación de progreso que se notifican a través del informador de progreso.  
+*_ProgressType*<br/>
+El tipo de carga de cada notificación de progreso que se notifican a través del informador de progreso.  
   
 ## <a name="members"></a>Miembros  
   
@@ -79,8 +80,8 @@ void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `val`  
- La carga de informes a través de una notificación de progreso.  
+*Val*<br/>
+La carga de informes a través de una notificación de progreso.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Invocar secuencias de comandos (ATL) | Documentos de Microsoft
+title: Invocar Scripts (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d11b86b2b7cf17ef90ab701b06c6f31b272691
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 83baa272206bb8250e76f4e53d75b0e8a8106242
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762302"
 ---
-# <a name="invoking-scripts"></a>Invocar secuencias de comandos
-[Usar parámetros reemplazables (el preprocesador del registrador)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) se tratan los mapas de reemplazo y una referencia al método **AddReplacement**. El registrador tiene otros ocho métodos específicos para secuencias de comandos y todos se describen en la tabla siguiente.  
-  
-|Método|Descripción de la sintaxis /|  
-|------------|-------------------------|  
-|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Registra el script que contiene en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. `nID` y `szType` contienen el identificador y el tipo del recurso respectivamente.|  
-|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Anula el registro de la secuencia de comandos incluido en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. `nID` y `szType` contienen el identificador y el tipo del recurso respectivamente.|  
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***NID* **, LPCOLESTR** `szType` **);** <br /><br /> Registra el script que contiene en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. *NID* y `szType` contienen el identificador de cadena y el tipo, el recurso respectivamente.|  
-|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***NID* **, LPCOLESTR** `szType` **);** <br /><br /> Anula el registro de la secuencia de comandos incluido en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. *NID* y `szType` contienen el identificador de cadena y el tipo, el recurso respectivamente.|  
-|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);** <br /><br /> Registra el script en un archivo. *nombre de archivo* es una ruta de acceso UNC a un archivo que contiene un script de recursos (o es).|  
-|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);** <br /><br /> Anula el registro de la secuencia de comandos en un archivo. *nombre de archivo* es una ruta de acceso UNC a un archivo que contiene un script de recursos (o es).|  
-|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***datos***);** <br /><br /> Registra el script en una cadena. *datos* contiene la secuencia de comandos.|  
-|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***datos***);** <br /><br /> Anula el registro de la secuencia de comandos en una cadena. *datos* contiene la secuencia de comandos.|  
-  
- **ResourceRegisterSz** y **ResourceUnregisterSz**, son similares a **ResourceRegister** y **ResourceUnregister**, pero le permiten especificar una cadena identificador.  
-  
- Los métodos **FileRegister** y **FileUnregister** son útiles si no desea que la secuencia de comandos en un recurso o si desea que la secuencia de comandos en su propio archivo. Los métodos **StringRegister** y **StringUnregister** permiten almacenar el archivo que se almacena en una cadena asignada dinámicamente.  
-  
-## <a name="see-also"></a>Vea también  
- [Crear scripts del registrador](../atl/creating-registrar-scripts.md)
+# <a name="invoking-scripts"></a>Invocar Scripts
+
+[Usar parámetros reemplazables (el preprocesador del registrador)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) se tratan los mapas de reemplazo y una referencia al método **AddReplacement**. El registrador tiene otros ocho métodos específicos para secuencias de comandos, y todos se describen en la tabla siguiente.
+
+|Método|Descripción de la sintaxis /|
+|------------|-------------------------|
+|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Registra el script contenido en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. *nID* y *szType* contienen el identificador del recurso y el tipo, respectivamente.|
+|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Anula el registro de la secuencia de comandos contenida en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. *nID* y *szType* contienen el identificador del recurso y el tipo, respectivamente.|
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***NID* **, LPCOLESTR** `szType` **);**<br /><br /> Registra el script contenido en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. *NID* y *szType* contienen el identificador de cadena y el tipo, el recurso respectivamente.|
+|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***NID* **, LPCOLESTR** `szType` **);**<br /><br /> Anula el registro de la secuencia de comandos contenida en un recurso del módulo. *resFileName* indica la ruta de acceso UNC en el mismo módulo. *NID* y *szType* contienen el identificador de cadena y el tipo, el recurso respectivamente.|
+|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);**<br /><br /> Registra el script en un archivo. *nombre de archivo* es una ruta de acceso UNC a un archivo que contiene un script de recursos (o es).|
+|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);**<br /><br /> Anula el registro de la secuencia de comandos en un archivo. *nombre de archivo* es una ruta de acceso UNC a un archivo que contiene un script de recursos (o es).|
+|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***datos***);**<br /><br /> Registra el script en una cadena. *datos* contiene la secuencia de comandos.|
+|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***datos***);**<br /><br /> Anula el registro de la secuencia de comandos en una cadena. *datos* contiene la secuencia de comandos.|
+
+**ResourceRegisterSz** y **ResourceUnregisterSz**, son similares a **ResourceRegister** y **ResourceUnregister**, pero le permiten especificar una cadena identificador.
+
+Los métodos **FileRegister** y **FileUnregister** son útiles si no desea que la secuencia de comandos en un recurso o si desea que la secuencia de comandos en su propio archivo. Los métodos **StringRegister** y **StringUnregister** permiten almacenar el archivo que se almacenará en una cadena asignada dinámicamente.
+
+## <a name="see-also"></a>Vea también
+
+[Crear scripts del registrador](../atl/creating-registrar-scripts.md)
 

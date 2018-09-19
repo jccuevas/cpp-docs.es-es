@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33bbd9406f6a9f35e02d5e02aa5a2d6419d1cdae
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313752"
 ---
 # <a name="binarynegate-class"></a>binary_negate (Clase)
 
@@ -43,11 +44,14 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`Func` La función binaria que se va a negar.
+*Func*<br/>
+La función binaria que se va a negar.
 
-`left` El operando izquierdo de la función binaria que se va a negar.
+*left*<br/>
+El operando izquierdo de la función binaria que se va a negar.
 
-`right` El operando derecho de la función binaria que se va a negar.
+*right*<br/>
+El operando derecho de la función binaria que se va a negar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -115,11 +119,11 @@ int main( )
       cout << *Iter1 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 Original vector v1 = ( 6262 6262 2233879413 2621500314 580942933 3715465425 3739828298 )
 Sorted vector v1 = ( 6262 6262 580942933 2233879413 2621500314 3715465425 3739828298 )
 Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 6262 6262 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

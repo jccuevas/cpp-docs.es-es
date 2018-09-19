@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0052 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0052 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f4b6fb0db87a77f433775fedea9880f3f24bd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ba8fb898930ef830857773a89cd80e4c43c59c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028160"
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>Error del evaluador de expresiones CXX0052
-función miembro no está presente  
-  
- Una función miembro que se especificó como un punto de interrupción, pero no se pudo encontrar. Establecer un punto de interrupción en una función que ha sido insertada puede producir este error.  
-  
- Vuelva a compilar el archivo con la inclusión forzada (/ Ob0) para establecer un punto de interrupción en esta función.  
-  
- Una expresión que se llamó a una función que no se ha definido.  
-  
- Este error es idéntico a CAN0052.
+
+función miembro no está presente
+
+Una función miembro se especificó como un punto de interrupción, pero no se encontró. Establecer un punto de interrupción en una función que ha insertado puede producir este error.
+
+Volver a compilar el archivo con inclusión forzada (/ Ob0) para establecer un punto de interrupción en esta función.
+
+Una expresión que se llamó a una función que no se definió.
+
+Este error es idéntico a CAN0052.

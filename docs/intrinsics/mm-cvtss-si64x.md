@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665c52fc0dd0645e25d3014cc28f9fdfba344e2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cba221f0944f840f9cdf76da86ec7ce37f37ca8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713784"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Específicos de Microsoft**  
   
- Genera el [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] versión extendida de la convertir escalar único precisión número de punto flotante a entero de 64 bits (`cvtss2si`) instrucción.  
+ Genera el x64 extendidos versión de la convertir valor escalar único precisión número de punto flotante a entero de 64 bits (`cvtss2si`) instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +38,22 @@ __int64 _mm_cvtss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [in] `value`  
- Un `__m128` estructura que contiene los valores de punto flotante.  
+*valor*<br/>
+[in] Un `__m128` estructura que contiene los valores de punto flotante.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un entero de 64 bits, el resultado de la conversión del primer valor de punto flotante en un entero.  
+ Un entero de 64 bits, el resultado de la conversión del primer valor de punto flotante a entero.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvtss_si64x`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El primer elemento del valor de la estructura se convierte en un entero y se devuelve. Los bits de control de redondeo de MXCSR se usan para determinar el comportamiento de redondeo. El modo de redondeo predeterminado es redondeo al más cercano, redondear al número par si la parte decimal es 0,5. Dado que el `__m128` estructura representa un registro de registros de XMM, esta función intrínseca toma un valor desde el registro de registros de XMM y lo escribe en la memoria del sistema.  
+ El primer elemento del valor de la estructura se convierte en un entero y devuelve. Los bits de control de redondeo de MXCSR se usan para determinar el comportamiento de redondeo. El valor predeterminado el modo de redondeo es redondear al más cercano, redondear al número par si la parte decimal es 0,5. Dado que el `__m128` estructura representa un registro XMM, esta función intrínseca toma un valor desde el registro XMM y lo escribe en la memoria del sistema.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

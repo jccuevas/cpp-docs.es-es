@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135895"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Cómo: Extender la biblioteca de serialización
 En este tema se explica cómo extender la biblioteca de cálculo de referencias para proporcionar más conversiones entre tipos de datos. Los usuarios pueden extender la biblioteca de cálculo de referencias para las conversiones de datos no admitidas actualmente por la biblioteca.  

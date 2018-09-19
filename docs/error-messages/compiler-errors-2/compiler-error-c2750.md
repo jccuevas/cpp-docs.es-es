@@ -1,5 +1,5 @@
 ---
-title: C2750 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2750 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06731b0b386b200b74697592137aac10a48a8e82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3f40894c4879c9b3598429c02bb0811db658bb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069521"
 ---
-# <a name="compiler-error-c2750"></a>C2750 de Error del compilador
-'type': no se puede utilizar 'new' en el tipo de referencia; Utilice 'gcnew' en su lugar  
-  
- Para crear una instancia de un tipo CLR, lo que hace que la instancia se coloque en el montón de recolección, debe usar [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md).  
-  
- El ejemplo siguiente genera C2750:  
-  
-```  
-// C2750.cpp  
-// compile with: /clr  
-ref struct Y1 {};  
-  
-int main() {  
-   Y1 ^ x = new Y1;   // C2750  
-  
-   // try the following line instead  
-   Y1 ^ x2 = gcnew Y1;  
-}  
+# <a name="compiler-error-c2750"></a>Error del compilador C2750
+
+'type': no se puede utilizar 'new' en el tipo de referencia; Utilice 'gcnew' en su lugar
+
+Para crear una instancia de un tipo CLR, lo que hace que la instancia que se colocará en el montón de recolección, debe usar [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md).
+
+El ejemplo siguiente genera C2750:
+
+```
+// C2750.cpp
+// compile with: /clr
+ref struct Y1 {};
+
+int main() {
+   Y1 ^ x = new Y1;   // C2750
+
+   // try the following line instead
+   Y1 ^ x2 = gcnew Y1;
+}
 ```

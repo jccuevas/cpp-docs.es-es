@@ -1,5 +1,5 @@
 ---
-title: Línea de comandos DUMPBIN | Documentos de Microsoft
+title: Línea de comandos DUMPBIN | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc807a8f67ddaae894a0e0cba55475b804a0abce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9028cebd7c75bb37bbfa958186ebb2e5d206094
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724790"
 ---
 # <a name="dumpbin-command-line"></a>Línea de comandos de DUMPBIN
-Para ejecutar DUMPBIN, use la sintaxis siguiente:  
-  
-```  
-DUMPBIN [options] files...  
-```  
-  
- Especifique uno o varios archivos binarios, junto con las opciones necesarias para controlar la información. DUMPBIN muestra la información a la salida estándar. Puede redirigir a un archivo o utilice la opción /OUT para especificar un nombre de archivo para la salida.  
-  
- Cuando ejecute DUMPBIN en un archivo sin especificar una opción, DUMPBIN muestra la/Summary salida.  
-  
- Si escribe el comando `dumpbin` sin ninguna entrada de línea de comandos, DUMPBIN mostrará una instrucción de uso que se resume sus opciones.  
-  
-## <a name="see-also"></a>Vea también  
- [Herramientas de compilación de C/c ++](../../build/reference/c-cpp-build-tools.md)   
- [Referencia de DUMPBIN](../../build/reference/dumpbin-reference.md)
+
+Para ejecutar DUMPBIN, use la sintaxis siguiente:
+
+```
+DUMPBIN [options] files...
+```
+
+Especifique uno o varios archivos binarios, junto con las opciones necesarias para controlar la información. DUMPBIN muestra la información en la salida estándar. Puede redirigirlo a un archivo o use la opción /OUT para especificar un nombre de archivo para la salida.
+
+Cuando ejecute DUMPBIN en un archivo sin especificar una opción, DUMPBIN muestra la/Summary salida.
+
+Cuando escriba el comando `dumpbin` sin ninguna entrada de línea de comandos, DUMPBIN muestra un extracto de uso que resume sus opciones.
+
+## <a name="see-also"></a>Vea también
+
+[Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Referencia de DUMPBIN](../../build/reference/dumpbin-reference.md)

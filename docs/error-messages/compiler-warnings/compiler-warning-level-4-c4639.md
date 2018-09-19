@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4639 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4639 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad4b3159eb83c6dd050bba41032a461716f556a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0ab2e08878e2172337ef373ebcbc8a37359b85f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117678"
 ---
 # <a name="compiler-warning-level-4-c4639"></a>Advertencia del compilador (nivel 4) C4639
-Error MSXML, no se procesarán comentarios de documento XML. reason  
-  
- Esta advertencia puede producirse por una serie de motivos.  
-  
- Para resolver esta advertencia:  
-  
--   Vuelva a compilar.  
-  
--   Vuelva a instalar MSXML reinstalando common language runtime.  
-  
--   Edite o quite el comentario de documentación que está produciendo la advertencia y vuelva a compilar.  
-  
- Cuando se emite C4639, todo el procesamiento de comentario XML más está deshabilitado y no se genera el archivo .xdc.
+
+Error MSXML, documento XML no se procesarán los comentarios. reason
+
+Esta advertencia puede producirse por varias razones.
+
+Para resolver esta advertencia:
+
+- Vuelva a compilar.
+
+- Vuelva a instalar MSXML reinstalando common language runtime.
+
+- Edite o quite el comentario de documentación que está causando la advertencia y vuelva a compilar.
+
+Cuando se emite C4639, todo el procesamiento de comentario XML adicional está deshabilitado y no se genera el archivo .xdc.

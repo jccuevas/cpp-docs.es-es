@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2468cd05efdf732fbf955b8532a61d24fa6c0ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaa4972a12729a5697db3574fcf89b0fb2b252ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068460"
 ---
 # <a name="run-time-error-checking"></a>Comprobar errores en tiempo de ejecución
 
 La biblioteca de tiempo de ejecución de C contiene las funciones que admiten las comprobaciones de errores en tiempo de ejecución. La comprobación de errores en tiempo de ejecución permite compilar el programa de manera que se notifiquen determinados tipos de errores en tiempo de ejecución. El usuario especifica cómo se notifican los errores y qué tipos de errores se notifican. Para más información, vea [Cómo: Utilizar comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
- Utilice las siguientes funciones para personalizar la forma en que el programa realiza la comprobación de errores en tiempo de ejecución.
+Utilice las siguientes funciones para personalizar la forma en que el programa realiza la comprobación de errores en tiempo de ejecución.
 
 ## <a name="run-time-error-checking-functions"></a>Funciones de comprobación de errores en tiempo de ejecución
 
@@ -41,6 +42,6 @@ La biblioteca de tiempo de ejecución de C contiene las funciones que admiten la
 ## <a name="see-also"></a>Vea también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [/RTC (Comprobaciones de errores en tiempo de ejecución)](../build/reference/rtc-run-time-error-checks.md)<br/>
- [runtime_checks](../preprocessor/runtime-checks.md)<br/>
- [Rutinas de depuración](../c-runtime-library/debug-routines.md)<br/>
+[/RTC (Comprobaciones de errores en tiempo de ejecución)](../build/reference/rtc-run-time-error-checks.md)<br/>
+[runtime_checks](../preprocessor/runtime-checks.md)<br/>
+[Rutinas de depuración](../c-runtime-library/debug-routines.md)<br/>

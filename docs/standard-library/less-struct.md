@@ -17,13 +17,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac4528c976e99a77ceec8bc170323846a0e3a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 231b3f0267f50f68452d4ba0b6cb2f186a07e3e5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100942"
 ---
-# <a name="less-struct"></a>less (Struct)
+# <a name="less-struct"></a>less (struct)
 
 Predicado binario que realiza la operación menor que (`operator<`) sobre sus argumentos.
 
@@ -48,11 +49,13 @@ struct less<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator<` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator<` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la menor-que la operación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda*<br/>
+Operando izquierdo de la operación menor que. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la menor-que la operación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha*<br/>
+Operando derecho de la operación menor que. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -60,7 +63,7 @@ Resultado de `Left < Right`. La plantilla especializada realiza el reenvío dire
 
 ## <a name="remarks"></a>Comentarios
 
-El predicado binario `less`< `Type`> proporciona una ordenación débil estricta de un conjunto de valores de elementos de tipo `Type` en clases de equivalencia, si y solo si este tipo satisface los requisitos matemáticos estándar para que se pueda ordenar de esa forma. Las especializaciones para cualquier tipo de puntero producen una ordenación total de los elementos, en la que todos los elementos de valores distintos están ordenados unos con respecto a otros.
+El predicado binario `less` <  `Type`> proporciona una ordenación débil estricta de un conjunto de valores de elemento de tipo *tipo* en clases de equivalencia, si y solo si este tipo satisface el estándar de matemático requisitos para lo que se ordenan. Las especializaciones para cualquier tipo de puntero producen una ordenación total de los elementos, en la que todos los elementos de valores distintos están ordenados unos con respecto a otros.
 
 ## <a name="example"></a>Ejemplo
 
@@ -104,7 +107,7 @@ cout << Iter1->m_i << " ";
    for ( Iter1 = v1.begin() ; Iter1 != v1.end() ; Iter1++ )
 cout << Iter1->m_i << " ";
    cout << ")" << endl;
- }
+}
 ```
 
 ## <a name="output"></a>Salida

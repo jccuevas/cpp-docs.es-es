@@ -1,5 +1,5 @@
 ---
-title: Capturar datos | Documentos de Microsoft
+title: Captura de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab03da7c303552a715c6766af7829e74025866ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067082"
 ---
 # <a name="fetching-data"></a>Obtener datos
-Después de abrir el origen de datos, sesión y objetos de conjunto de filas, puede capturar datos. Según el tipo de descriptor de acceso que usa, tendrá que enlazar las columnas.  
+
+Después de abrir el origen de datos, sesión y los objetos de conjunto de filas, puede capturar datos. Según el tipo de descriptor de acceso que usa, es posible que deba enlazar las columnas.  
   
 ### <a name="to-fetch-data"></a>Para capturar los datos  
   
-1.  Abra el conjunto de filas con la correspondiente **abiertos** comando.  
+1. Abra el conjunto de filas mediante el correspondiente **abierto** comando.  
   
-2.  Si utilizas `CManualAccessor`, enlazar las columnas de salida si aún no lo ha hecho. Para enlazar las columnas, llame a `GetColumnInfo`y, a continuación, cree un descriptor de acceso con los enlaces, tal como se muestra en el ejemplo siguiente:  
+1. Si usas `CManualAccessor`, enlazar las columnas de salida si aún no lo ha hecho. Para enlazar las columnas, llame a `GetColumnInfo`y, a continuación, cree un descriptor de acceso con los enlaces, tal como se muestra en el ejemplo siguiente:  
   
-    ```  
+    ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
     // Get the column information  
     ULONG ulColumns       = 0;  
@@ -48,9 +50,9 @@ Después de abrir el origen de datos, sesión y objetos de conjunto de filas, pu
     rs.Bind();  
     ```  
   
-3.  Escribir un `while` bucle para recuperar los datos. En el bucle, llame a `MoveNext` para avanzar el cursor y probar el valor devuelto con S_OK, como se muestra en el ejemplo siguiente:  
+1. Escribir un `while` bucle para recuperar los datos. En el bucle, llame a `MoveNext` para avanzar el cursor y probar el valor devuelto de S_OK, como se muestra en el ejemplo siguiente:  
   
-    ```  
+    ```cpp  
     while (rs.MoveNext() == S_OK)  
     {  
         // Add code to fetch data here  
@@ -58,11 +60,11 @@ Después de abrir el origen de datos, sesión y objetos de conjunto de filas, pu
     }  
     ```  
   
-4.  En el `while` bucle, puede capturar los datos según el tipo de descriptor de acceso.  
+1. Dentro de la `while` bucle, se pueden recuperar los datos según el tipo de descriptor de acceso.  
   
-    -   Si usas el [CAccessor](../../data/oledb/caccessor-class.md) (clase), debe tener un registro de usuario que contiene miembros de datos. Puede tener acceso a los datos mediante los miembros de datos, como se muestra en el ejemplo siguiente:  
+    -   Si usas el [CAccessor](../../data/oledb/caccessor-class.md) (clase), debe tener un registro de usuario que contiene los miembros de datos. Puede tener acceso a los datos de uso de esos miembros de datos, como se muestra en el ejemplo siguiente:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members directly. In this case, m_nFooID  
@@ -72,9 +74,9 @@ Después de abrir el origen de datos, sesión y objetos de conjunto de filas, pu
         }  
         ```  
   
-    -   Si usas el `CDynamicAccessor` o `CDynamicParameterAccessor` (clase), se pueden recuperar datos mediante el uso de las funciones de acceso `GetValue` y `GetColumn`, tal y como se muestra en el ejemplo siguiente. Si desea determinar el tipo de datos que usa, use `GetType`.  
+    -   Si usas el `CDynamicAccessor` o `CDynamicParameterAccessor` (clase), se pueden recuperar datos mediante el uso de las funciones de acceso `GetValue` y `GetColumn`, como se muestra en el ejemplo siguiente. Si desea determinar el tipo de datos que está usando, use `GetType`.  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the dynamic accessor functions to retrieve your data.  
@@ -87,9 +89,9 @@ Después de abrir el origen de datos, sesión y objetos de conjunto de filas, pu
         }  
         ```  
   
-    -   Si usa `CManualAccessor`, debe especificar sus propios miembros de datos, enlazarlos personalmente y tener acceso a ellos directamente, como se muestra en el ejemplo siguiente:  
+    -   Si usa `CManualAccessor`, debe especificar sus propios miembros de datos, enlazar usted mismo y tener acceso a ellos directamente, como se muestra en el ejemplo siguiente:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members you specified in the calls to  
@@ -100,4 +102,5 @@ Después de abrir el origen de datos, sesión y objetos de conjunto de filas, pu
         ```  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

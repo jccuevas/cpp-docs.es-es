@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2204 | Documentos de Microsoft
+title: Error del compilador C2204 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8341d755f8830037ed8ec7b26f2905929ab4e8b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4fbb5199e626e98120661a47cbf13858b2d6a7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029005"
 ---
 # <a name="compiler-error-c2204"></a>Error del compilador C2204
-'type': se ha encontrado la definición de tipo entre paréntesis  
-  
- El tipo está definido como un operando o en el ámbito del prototipo.
+
+'type': se ha encontrado la definición de tipo entre paréntesis
+
+El tipo está definido como un operando o en el ámbito del prototipo.

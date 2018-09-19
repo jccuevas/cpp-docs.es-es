@@ -1,5 +1,5 @@
 ---
-title: Invalidar un descriptor de acceso dinámico | Documentos de Microsoft
+title: Invalidar un descriptor de acceso dinámico | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035544"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Invalidar un descriptor de acceso dinámico
-Cuando se usa un descriptor de acceso dinámico como `CDynamicAccessor`, el comando **abiertos** método crea un descriptor de acceso de forma automática, en función de la información de columna del conjunto de filas abierto. Puede reemplazar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.  
+
+Cuando se usa un descriptor de acceso dinámico, como `CDynamicAccessor`, el comando `Open` método crea un descriptor de acceso automáticamente, según la información de columna del conjunto de filas abierto. Puede reemplazar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.  
   
- Para reemplazar el descriptor de acceso dinámico, pase **false** como el último parámetro para el `CCommand::Open` método. Esto evita que **abiertos** pueda crear un descriptor de acceso automáticamente. A continuación, puede llamar a `GetColumnInfo` y llame a `AddBindEntry` para cada columna que desea enlazar. El código siguiente muestra cómo hacerlo:  
+Para reemplazar el descriptor de acceso dinámico, pase **false** como el último parámetro para el `CCommand::Open` método. Esto evita que `Open` pueda crear automáticamente un descriptor de acceso. A continuación, puede llamar a `GetColumnInfo` y llamar a `AddBindEntry` para cada columna que desea enlazar. El código siguiente muestra cómo hacerlo:  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   
@@ -79,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar descriptores de acceso](../../data/oledb/using-accessors.md)
+
+[Usar descriptores de acceso](../../data/oledb/using-accessors.md)

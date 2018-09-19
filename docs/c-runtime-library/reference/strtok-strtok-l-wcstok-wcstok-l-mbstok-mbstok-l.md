@@ -55,11 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210878"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -103,16 +104,16 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero al siguiente token que se encuentra en *strToken*. Devuelven **NULL** cuando no se encuentren más tokens. Cada llamada modifica *strToken* sustituyendo un carácter nulo para el primer delimitador que aparece después del token devuelto.
+Devuelve un puntero al siguiente token se encuentra en *strToken*. Devuelven **NULL** cuando se encuentren no hay más tokens. Cada llamada modifica *strToken* sustituyendo un carácter null para el primer delimitador que se produce después del token devuelto.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strtok** función busca el siguiente token en *strToken*. El juego de caracteres en *strDelimit* especifica los delimitadores posibles del token que se encuentren en *strToken* en la llamada actual. **wcstok** y **_mbstok** son versiones de caracteres multibyte y anchos de **strtok**. Los argumentos y el valor devuelto de **wcstok** son caracteres anchos cadenas; los de **_mbstok** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+El **strtok** función busca el siguiente token en *strToken*. El juego de caracteres en *strDelimit* especifica los delimitadores posibles del token que se encuentren en *strToken* en la llamada actual. **wcstok** y **_mbstok** son versiones de caracteres anchos y caracteres multibyte de **strtok**. Los argumentos y el valor devuelto de **wcstok** son caracteres anchos cadenas; los de **_mbstok** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 > [!IMPORTANT]
-> Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-En la primera llamada a **strtok**, la función omite los delimitadores iniciales y devuelve un puntero al primer token de *strToken*, finaliza el token con un carácter nulo. Más tokens se pueden extraer el resto de *strToken* mediante una serie de llamadas a **strtok**. Cada llamada a **strtok** modifica *strToken* insertando un carácter nulo después de la **token** devuelto por la llamada. Para leer el token siguiente de *strToken*, llame a **strtok** con un **NULL** valor para el *strToken* argumento. El **NULL** *strToken* argumento causas **strtok** para buscar el siguiente token en modificados *strToken*. El *strDelimit* argumento acepta cualquier valor de una llamada a la siguiente para que el juego de delimitadores puede variar.
+En la primera llamada a **strtok**, la función omite los delimitadores iniciales y devuelve un puntero al primer token de *strToken*, finaliza el token con un carácter nulo. Más tokens se pueden extraer el resto de *strToken* mediante una serie de llamadas a **strtok**. Cada llamada a **strtok** modifica *strToken* insertando un carácter nulo después la **token** devuelto por la llamada. Para leer el token siguiente de *strToken*, llame a **strtok** con un **NULL** valor para el *strToken* argumento. El **NULL** *strToken* argumento causas **strtok** para buscar el siguiente token en modificado *strToken*. El *strDelimit* argumento puede tomar cualquier valor de una llamada a la siguiente para que el conjunto de delimitadores puede variar.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689561"
 ---
 # <a name="261-master-construct"></a>2.6.1 master (Construcción)
 El **maestro** directiva identifica una construcción que especifica un bloque estructurado que se ejecuta en el subproceso principal del equipo. La sintaxis de la **maestro** directiva es como sigue:  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;paramref&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: a63caea7186114244927b9ede4c63ed97871d6e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111269"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
-El \<paramref > etiqueta ofrece una manera de indicar que una palabra es un parámetro. El archivo .xml se puede procesar para dar formato a este parámetro de algún modo diferente.  
+La etiqueta \<paramref> ofrece una manera de indicar que una palabra es un parámetro. El archivo .xml se puede procesar para dar formato a este parámetro de una forma exclusiva.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,8 +35,8 @@ El \<paramref > etiqueta ofrece una manera de indicar que una palabra es un par�
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `name`  
- Nombre del parámetro al que se hace referencia.  Ponga el nombre entre comillas simples o dobles.  El compilador emite una advertencia si no encuentra `name`.  
+*name*<br/>
+Nombre del parámetro al que se hace referencia.  Ponga el nombre entre comillas simples o dobles.  El compilador emite una advertencia si no encuentra `name`.  
   
 ## <a name="remarks"></a>Comentarios  
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  

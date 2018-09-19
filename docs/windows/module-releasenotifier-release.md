@@ -1,5 +1,5 @@
 ---
-title: Module::ReleaseNotifier::Release | Documentos de Microsoft
+title: Module::ReleaseNotifier::Release | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfc64a64a0fc08d417117e46bc7537a4e2ebf4ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f8ac0383e2aeed2f042da7d4968e6b19a36d68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600178"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-Elimina el objeto de releasenotifier actual si el objeto se construyó con un parámetro de `true`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-void Release() throw();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Module::ReleaseNotifier (clase)](../windows/module-releasenotifier-class.md)
+
+Elimina la actual **releasenotifier** objeto si el objeto se construyó con un parámetro de **true**.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void Release() throw();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Module::ReleaseNotifier (clase)](../windows/module-releasenotifier-class.md)

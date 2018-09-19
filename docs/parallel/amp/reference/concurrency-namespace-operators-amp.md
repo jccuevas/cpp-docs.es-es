@@ -1,5 +1,5 @@
 ---
-title: Operadores de espacio de nombres de simultaneidad (AMP) | Documentos de Microsoft
+title: Operadores de espacio de nombres de simultaneidad (AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d6e8d2a198105e9cd63581dd8ed8445b681da2e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026938"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores de espacio de nombres de simultaneidad (AMP)
 ||||  
@@ -37,14 +38,14 @@ bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de los argumentos de la tupla.  
+*_Rank*<br/>
+El rango de los argumentos de tupla.  
   
- `_Lhs`  
- Una de las tuplas para comparar.  
+*_Lhs*<br/>
+Una de las tuplas para comparar.  
   
- `_Rhs`  
- Una de las tuplas para comparar.  
+*_Rhs*<br/>
+Una de las tuplas para comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si las tuplas son iguales; en caso contrario, `false`.  
@@ -63,14 +64,14 @@ bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de los argumentos de la tupla.  
+*_Rank*<br/>
+El rango de los argumentos de tupla.  
   
- `_Lhs`  
- Una de las tuplas para comparar.  
+*_Lhs*<br/>
+Una de las tuplas para comparar.  
   
- `_Rhs`  
- Una de las tuplas para comparar.  
+*_Rhs*<br/>
+Una de las tuplas para comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si las tuplas no son iguales; en caso contrario, `false`.  
@@ -108,17 +109,17 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de los argumentos de la tupla.  
+*_Rank*<br/>
+El rango de los argumentos de tupla.  
   
- `_Lhs`  
- Uno de los argumentos que se van a agregar.  
+*_Lhs*<br/>
+Uno de los argumentos que se van a agregar.  
   
- `_Rhs`  
- Uno de los argumentos que se van a agregar.  
+*_Rhs*<br/>
+Uno de los argumentos que se van a agregar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La suma de todos los de los argumentos especificados.  
+ La suma de los argumentos especificados.  
   
 ##  <a name="operator-"></a>  operator-   
 
@@ -153,17 +154,17 @@ _Tuple_type<_Rank>   operator-(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de los argumentos de la tupla.  
+*_Rank*<br/>
+El rango de los argumentos de tupla.  
   
- `_Lhs`  
- Argumento que se va a restar.  
+*_Lhs*<br/>
+El argumento que se restará.  
   
- `_Rhs`  
- El argumento que se resta.  
+*_Rhs*<br/>
+El argumento a restar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La diferencia de todos los entre los argumentos especificados.  
+ La diferencia entre los argumentos especificados de todos.  
   
 ##  <a name="operator_star"></a>  operator*   
 
@@ -189,17 +190,17 @@ _Tuple_type<_Rank>   operator*(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de los argumentos de la tupla.  
+*_Rank*<br/>
+El rango de los argumentos de tupla.  
   
- `_Lhs`  
- Una de las tuplas para multiplicar.  
+*_Lhs*<br/>
+Una de las tuplas que se va a multiplicar.  
   
- `_Rhs`  
- Una de las tuplas para multiplicar.  
+*_Rhs*<br/>
+Una de las tuplas que se va a multiplicar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El producto de todos los de los argumentos especificados.  
+ El producto por componente de los argumentos especificados.  
   
 
 ##  <a name="operator_div"></a>  operator/   
@@ -225,17 +226,17 @@ _Tuple_type<_Rank>   operator/(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de los argumentos de la tupla.  
+*_Rank*<br/>
+El rango de los argumentos de tupla.  
   
- `_Lhs`  
- La tupla que se va a dividir.  
+*_Lhs*<br/>
+La tupla que se va a dividir.  
   
- `_Rhs`  
- La tupla dividir por.  
+*_Rhs*<br/>
+Dividir por la tupla.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El cociente de todos los de los argumentos especificados.  
+ El cociente de todos de los argumentos especificados.  
   
 ##  <a name="operator_mod"></a>  operator%   
 
@@ -261,14 +262,14 @@ _Tuple_type<_Rank>   operator%(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de los argumentos de la tupla.  
+*_Rank*<br/>
+El rango de los argumentos de tupla.  
   
- `_Lhs`  
- La tupla desde el que el módulo se calcula.  
+*_Lhs*<br/>
+Tupla desde la que el módulo se calcula.  
   
- `_Rhs`  
- La tupla al módulo por.  
+*_Rhs*<br/>
+La tupla que módulo por.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El resultado del primer módulo de argumento especificado el segundo argumento especificado.  

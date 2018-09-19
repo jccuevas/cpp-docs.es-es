@@ -30,17 +30,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1049965d7edd880027eaff264fffe56fc1cdb1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8734f2dbca04287652a6a59f633f8c872f2b00a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040991"
 ---
 # <a name="inp-inpw"></a>inp, inpw
-Estas funciones POSIX están obsoletas. En su lugar, use la función [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) que es conforme a ISO C++.  
-  
+
+Estas funciones POSIX están obsoletas. En su lugar, use la función [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) que es conforme a ISO C++.
+
 > [!IMPORTANT]
->  Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT.  
-  
+>  Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT.
+
 > [!IMPORTANT]
 >  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

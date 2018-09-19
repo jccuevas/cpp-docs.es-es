@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381483"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>TN060: Los nuevos controles comunes de Windows
 60 de nota técnica, que describen los nuevos controles comunes de Windows y cómo usarlas, se ha incorporado a [controles](../mfc/controls-mfc.md).  

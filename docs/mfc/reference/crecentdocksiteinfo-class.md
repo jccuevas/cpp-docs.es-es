@@ -1,5 +1,5 @@
 ---
-title: Clase CRecentDockSiteInfo | Documentos de Microsoft
+title: CRecentDockSiteInfo (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,13 +40,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae0a967fc8be50ec6b777cf5513543e0e2aecde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702616"
 ---
-# <a name="crecentdocksiteinfo-class"></a>Clase CRecentDockSiteInfo
+# <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo (clase)
 El `CRecentDockSiteInfo` clase es una clase auxiliar que almacena la información de estado reciente para el [clase CPane](../../mfc/reference/cpane-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -111,7 +112,7 @@ CRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -134,7 +135,7 @@ int GetRecentDockedPercent(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForSlider`  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -148,7 +149,7 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForSlider`  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -162,7 +163,7 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForSlider`  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -176,7 +177,7 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForSlider`  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -190,7 +191,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForSlider`  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -213,7 +214,7 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForSlider`  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -227,7 +228,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -243,9 +244,9 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CList<HWND`  
- [in] `lstOrg`  
- [in] `bForSlider`  
+*CList < HWND*<br/>
+[in] [in] *lstOrg*  
+ [in] *bForSlider*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -259,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bForSlider`  
- [in] `srcInfo`  
+*bForSlider*<br/>
+[in] [in] *srcInfo*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -274,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRecentContainer`  
- [in] `pTabbedBar`  
+*pRecentContainer*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Comentarios  
   
