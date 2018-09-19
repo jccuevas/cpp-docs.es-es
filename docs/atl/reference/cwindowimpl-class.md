@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084567"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl (clase)
 
@@ -45,19 +45,19 @@ Proporciona métodos para crear una ventana o subclases de una ventana.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Nueva clase derivada de `CWindowImpl`.
 
-*TBase*  
+*TBase*<br/>
 Clase base de la clase. De forma predeterminada, la clase base es [CWindow](../../atl/reference/cwindow-class.md).
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Un [clase traits](../../atl/understanding-window-traits.md) que define los estilos de la ventana. De manera predeterminada, es `CControlWinTraits`.
 
 ## <a name="members"></a>Miembros
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] El identificador de la ventana principal o propietaria.
 
-*Rect*  
+*Rect*<br/>
 [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Especifica el nombre de la ventana. El valor predeterminado es NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] El estilo de la ventana. Este valor se combina con el estilo proporcionado por la clase de rasgos para la ventana. El valor predeterminado proporciona los rasgos de control de clase completa sobre el estilo. Para obtener una lista de valores posibles, vea [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] El estilo extendido de ventana. Este valor se combina con el estilo proporcionado por la clase de rasgos para la ventana. El valor predeterminado proporciona los rasgos de control de clase completa sobre el estilo. Para obtener una lista de valores posibles, vea [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Para una ventana secundaria, el identificador de ventana. Para una ventana de nivel superior, un identificador de menú de la ventana. El valor predeterminado es **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Un puntero a datos de creación de la ventana. Para obtener una descripción completa, vea la descripción para el parámetro final a [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>Parámetros
 
-*uMsg*  
+*uMsg*<br/>
 [in] El mensaje enviado a la ventana.
 
-*wParam*  
+*wParam*<br/>
 [in] Información adicional específica del mensaje.
 
-*lParam*  
+*lParam*<br/>
 [in] Información adicional específica del mensaje.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] Identificador de la ventana que se va a destruir.
 
 ### <a name="remarks"></a>Comentarios
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] El identificador de la ventana que se va a crear subclase.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] El identificador de la ventana.
 
-*uMsg*  
+*uMsg*<br/>
 [in] El mensaje enviado a la ventana.
 
-*wParam*  
+*wParam*<br/>
 [in] Información adicional específica del mensaje.
 
-*lParam*  
+*lParam*<br/>
 [in] Información adicional específica del mensaje.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -387,6 +387,6 @@ Puede invalidar `WindowProc` para proporcionar un mecanismo diferente para el tr
 
 ## <a name="see-also"></a>Vea también
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[CComControl (clase)](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[CComControl (clase)](../../atl/reference/ccomcontrol-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

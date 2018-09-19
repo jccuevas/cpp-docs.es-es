@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076351"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig (interfaz)
 
@@ -71,7 +71,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parámetros
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Dirección de la variable que, si se ejecuta correctamente, recibe el número de subprocesos en el grupo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -92,7 +92,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parámetros
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Dirección de la variable que, si se ejecuta correctamente, recibe el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -113,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parámetros
 
-*nNumThreads*  
+*nNumThreads*<br/>
 El número solicitado de subprocesos en el grupo.
 
 Si *nNumThreads* es negativo, su valor absoluto se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.
@@ -138,7 +138,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -151,5 +151,5 @@ Consulte [IThreadPoolConfig::GetSize](#getsize).
 
 ## <a name="see-also"></a>Vea también
 
-[Clases](../../atl/reference/atl-classes.md)   
+[Clases](../../atl/reference/atl-classes.md)<br/>
 [CThreadPool (clase)](../../atl/reference/cthreadpool-class.md)

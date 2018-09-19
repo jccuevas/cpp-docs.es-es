@@ -29,44 +29,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9897be9bbcae0a03ef67996bda6f3ffbe894b8f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054082"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Simplificar el acceso a datos con atributos de base de datos
+
 En este tema se muestra el uso de atributos de la base de datos para simplificar las operaciones de base de datos.  
   
- Es la forma básica para tener acceso a información desde una base de datos crear una clase de comando (o tabla) y una clase de registro de usuario para una tabla determinada en la base de datos. Los atributos de base de datos simplifican algunas de las declaraciones de plantilla que previamente tenía que hacer.  
+Es la forma básica para tener acceso a información desde una base de datos crear una clase de comando (o tabla) y una clase de registro de usuario para una tabla determinada en la base de datos. Los atributos de base de datos simplifican algunas de las declaraciones de plantilla que previamente tenía que hacer.  
   
- Para demostrar el uso de atributos de la base de datos, las secciones siguientes muestran dos tabla equivalente y las declaraciones de clase de registro de usuario: el primero usa los atributos y la segunda usa plantillas OLE DB. Este código de declaración se suele colocar en un archivo de encabezado denominado para el objeto de tabla o un comando, por ejemplo, Authors.h.  
+Para demostrar el uso de atributos de la base de datos, las secciones siguientes muestran dos tabla equivalente y las declaraciones de clase de registro de usuario: el primero usa los atributos y la segunda usa plantillas OLE DB. Este código de declaración se suele colocar en un archivo de encabezado denominado para el objeto de tabla o un comando, por ejemplo, Authors.h.  
   
- Comparando los dos archivos, puede ver cómo mucho más sencillo es utilizar los atributos. Entre las diferencias son:  
+Comparando los dos archivos, puede ver cómo mucho más sencillo es utilizar los atributos. Entre las diferencias son:  
   
--   Uso de atributos, solo tiene que declarar una clase: `CAuthors`, mientras que con las plantillas de tener que declarar dos: `CAuthorsNoAttrAccessor` y `CAuthorsNoAttr`.  
+- Uso de atributos, solo tiene que declarar una clase: `CAuthors`, mientras que con las plantillas de tener que declarar dos: `CAuthorsNoAttrAccessor` y `CAuthorsNoAttr`.  
   
--   El `db_source` llamada en la versión con atributos es equivalente a la `OpenDataSource()` llamar a en la declaración de plantilla.  
+- El `db_source` llamada en la versión con atributos es equivalente a la `OpenDataSource()` llamar a en la declaración de plantilla.  
   
--   El `db_table` llamada en la versión con atributos es equivalente a la siguiente declaración de plantilla:  
+- El `db_table` llamada en la versión con atributos es equivalente a la siguiente declaración de plantilla:  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   El `db_column` llamadas de la versión con atributos son equivalentes a la asignación de columna (consulte `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) en la declaración de plantilla.  
+- El `db_column` llamadas de la versión con atributos son equivalentes a la asignación de columna (consulte `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) en la declaración de plantilla.  
   
- Los atributos insertan una declaración de clase de registro de usuario para usted. La clase de registro de usuario equivale a `CAuthorsNoAttrAccessor` en la declaración de plantilla. Si la clase de tabla es `CAuthors`, la clase de registro de usuario insertado se denomina `CAuthorsAccessor`, y solo se puede ver su declaración en el código insertado. Para obtener más información, vea "Clases de registro de usuario con atributos" en [registros de usuario](../../data/oledb/user-records.md).  
+Los atributos insertan una declaración de clase de registro de usuario para usted. La clase de registro de usuario equivale a `CAuthorsNoAttrAccessor` en la declaración de plantilla. Si la clase de tabla es `CAuthors`, la clase de registro de usuario insertado se denomina `CAuthorsAccessor`, y solo se puede ver su declaración en el código insertado. Para obtener más información, vea "Clases de registro de usuario con atributos" en [registros de usuario](../../data/oledb/user-records.md).  
   
- Tenga en cuenta que en los atributos y el código de plantilla, debe establecer las propiedades del conjunto de filas mediante `CDBPropSet::AddProperty`.  
+Tenga en cuenta que en los atributos y el código de plantilla, debe establecer las propiedades del conjunto de filas mediante `CDBPropSet::AddProperty`.  
   
- Para obtener información acerca de los atributos tratados en este tema, consulte [atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md).  
+Para obtener información acerca de los atributos tratados en este tema, consulte [atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Tabla y la declaración del descriptor de acceso mediante atributos  
- El código siguiente llama `db_source` y `db_table` en la clase de tabla. `db_source` Especifica el origen de datos y la conexión que se usará. `db_table` Inserta el código de plantilla apropiado para declarar una clase de tabla. `db_column` Especifica el mapa de columnas e insertar la declaración del descriptor de acceso. Puede usar atributos de consumidor OLE DB en cualquier proyecto que admita ATL.  
+
+El código siguiente llama `db_source` y `db_table` en la clase de tabla. `db_source` Especifica el origen de datos y la conexión que se usará. `db_table` Inserta el código de plantilla apropiado para declarar una clase de tabla. `db_column` Especifica el mapa de columnas e insertar la declaración del descriptor de acceso. Puede usar atributos de consumidor OLE DB en cualquier proyecto que admita ATL.  
   
- Aquí es la declaración de tabla y el descriptor de acceso mediante atributos:  
+Aquí es la declaración de tabla y el descriptor de acceso mediante atributos:  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -102,7 +104,8 @@ public:
 ```  
   
 ## <a name="table-and-accessor-declaration-using-templates"></a>Tabla y la declaración del descriptor de acceso mediante plantillas  
- Aquí es la declaración de tabla y el descriptor de acceso mediante plantillas.  
+
+Aquí es la declaración de tabla y el descriptor de acceso mediante plantillas.  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -207,4 +210,5 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)   
+
+[Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)   

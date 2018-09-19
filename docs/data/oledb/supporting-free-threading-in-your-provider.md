@@ -16,19 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17750a61675f9b208be69b86ec7b044b6b19f1bb
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: bf12ffedca5140193564dc6a9a49203ced6d870a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087999"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Admitir el subprocesamiento libre en un proveedor
+
 Todas las clases de proveedor OLE DB son seguras para subprocesos y las entradas del registro se establecen en consecuencia. Es una buena idea para admitir el subprocesamiento libre para ayudar a proporcionar un alto nivel de rendimiento en situaciones multiusuario. Para ayudar a mantener su proveedor de seguros para subprocesos, debe comprobar que el código está bloqueado correctamente. Cada vez que escribe o almacena datos, debe bloquear el acceso con secciones críticas.  
   
- Cada objeto de plantilla de proveedor OLE DB tiene su propia sección crítica. Para facilitar el bloqueo, cada clase nueva que cree debe ser una clase de plantilla que toma la clase primaria nombre como argumento.  
+Cada objeto de plantilla de proveedor OLE DB tiene su propia sección crítica. Para facilitar el bloqueo, cada clase nueva que cree debe ser una clase de plantilla que toma la clase primaria nombre como argumento.  
   
- El ejemplo siguiente muestra cómo bloquear el código:  
+El ejemplo siguiente muestra cómo bloquear el código:  
   
 ```cpp  
 template <class T>  
@@ -47,9 +48,10 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Para obtener más información acerca de cómo proteger las secciones críticas con `Lock` y `Unlock`, consulte [Multithreading: uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+Para obtener más información acerca de cómo proteger las secciones críticas con `Lock` y `Unlock`, consulte [Multithreading: uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- También debe comprobar que los métodos de invalidación (como `Execute`) son seguros para subprocesos.  
+También debe comprobar que los métodos de invalidación (como `Execute`) son seguros para subprocesos.  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

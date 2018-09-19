@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2124 | Documentos de Microsoft
+title: Error del compilador C2124 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79936fc45e2dbf7fc7af4bfe64cf3fc92512122b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7810565a8f7bfdac49f2c53815b9063e2e034df7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062328"
 ---
 # <a name="compiler-error-c2124"></a>Error del compilador C2124
-división (normal o módulo) por cero  
-  
- Una expresión constante incluye un denominador cero. Para resolver el error, no divida por cero.  
-  
- El ejemplo siguiente genera la advertencia C2124:  
-  
-```  
-// C2124.cpp  
-int main() {  
-  int i = 1 / 0;   // C2124  do not divide by zero  
-  int i2 = 12 / 2;   // OK  
-}  
+
+división (normal o módulo) por cero
+
+Una expresión constante incluye un denominador cero. Para resolver el error, no divida por cero.
+
+El ejemplo siguiente genera la advertencia C2124:
+
+```
+// C2124.cpp
+int main() {
+  int i = 1 / 0;   // C2124  do not divide by zero
+  int i2 = 12 / 2;   // OK
+}
 ```

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d5548089f66a26f633e5692f1fe2199a8109904
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6d38b53d875db5f0ab5a3d096a57494791c027da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764591"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113089"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Vinculación a CRT en un proyecto ATL
 
@@ -47,6 +47,6 @@ Con la opción del vinculador/OPT: NOWIN98 puede reducir aún más control ATL p
 
 ## <a name="see-also"></a>Vea también
 
-[Programar con ATL y código de tiempo de ejecución de C](../atl/programming-with-atl-and-c-run-time-code.md)   
+[Programar con ATL y código en tiempo de ejecución de C](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Archivos DLL y comportamiento de la biblioteca en tiempo de ejecución de Visual C++](../build/run-time-library-behavior.md)
 

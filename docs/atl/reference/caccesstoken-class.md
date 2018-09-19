@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e680bf4c84087db90c794c772f58691a5b2932d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136327"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken (clase)
 
@@ -160,7 +160,7 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*que hToken*  
+*que hToken*<br/>
 Un identificador para el token de acceso.
 
 ### <a name="remarks"></a>Comentarios
@@ -191,10 +191,10 @@ bool CheckTokenMembership(
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 Hacer referencia a un [CSid (clase)](../../atl/reference/csid-class.md) objeto.
 
-*pbIsMember*  
+*pbIsMember*<br/>
 Puntero a una variable que recibe los resultados de la comprobación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -222,10 +222,10 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*pImp*  
+*pImp*<br/>
 Puntero a la nueva `CAccessToken` objeto.
 
-*Sil*  
+*Sil*<br/>
 Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token de nuevo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -249,13 +249,13 @@ bool CreatePrimaryToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*pPri*  
+*pPri*<br/>
 Puntero a la nueva `CAccessToken` objeto.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Especifica los derechos de acceso solicitado para el nuevo token. El valor predeterminado, MAXIMUM_ALLOWED, solicita todos los derechos de acceso que son válidos para el llamador. Consulte [derechos de acceso y las máscaras de acceso](/windows/desktop/SecAuthZ/access-rights-and-access-masks) para obtener más sobre derechos de acceso.
 
-*pTokenAttributes*  
+*pTokenAttributes*<br/>
 Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo token y determina si los procesos secundarios pueden heredar el token. Si *pTokenAttributes* es NULL, el token Obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -286,34 +286,34 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>Parámetros
 
-*pApplicationName*  
+*pApplicationName*<br/>
 Puntero a una cadena terminada en null que especifica el módulo se ejecuten. Este parámetro no puede ser NULL.
 
-*pCommandLine*  
+*pCommandLine*<br/>
 Puntero a una cadena terminada en null que especifica la línea de comandos para ejecutar.
 
-*pProcessInformation*  
+*pProcessInformation*<br/>
 Puntero a un [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) estructura que recibe información de identificación sobre el proceso de nuevo.
 
-*pStartupInfo*  
+*pStartupInfo*<br/>
 Puntero a un [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) estructura que especifica cómo debe aparecer la ventana principal del nuevo proceso.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 Especifica marcas adicionales que controlan la clase de prioridad y la creación del proceso. Vea la función de Win32 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) para obtener una lista de marcas.
 
-*bLoadProfile*  
+*bLoadProfile*<br/>
 Si es TRUE, se carga el perfil del usuario con [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
-*pProcessAttributes*  
+*pProcessAttributes*<br/>
 Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo proceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pProcessAttributes* es NULL, el proceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
 
-*pThreadAttributes*  
+*pThreadAttributes*<br/>
 Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo subproceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pThreadAttributes* es NULL, el subproceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
 
-*bInherit*  
+*bInherit*<br/>
 Indica si el nuevo proceso hereda controla el proceso de llamada. Si es TRUE, cada identificador abierto heredable en el proceso de llamada se hereda el nuevo proceso. Identificadores heredados tienen los mismos privilegios de acceso y el valor que los identificadores originales.
 
-*pCurrentDirectory*  
+*pCurrentDirectory*<br/>
 Puntero a una cadena terminada en null que especifica la unidad actual y el directorio para el nuevo proceso. La cadena debe ser una ruta de acceso completa que incluye una letra de unidad. Si este parámetro es NULL, el nuevo proceso tendrá la misma unidad actual y el directorio que el proceso que realiza la llamada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -340,16 +340,16 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*pRestrictedToken*  
+*pRestrictedToken*<br/>
 La nueva restricción `CAccessToken` objeto.
 
-*SidsToDisable*  
+*SidsToDisable*<br/>
 Un `CTokenGroups` objeto que especifica el SID de sólo denegación.
 
-*SidsToRestrict*  
+*SidsToRestrict*<br/>
 Un `CTokenGroups` objeto que especifica el SID restringidos.
 
-*PrivilegesToDelete*  
+*PrivilegesToDelete*<br/>
 Un `CTokenPrivileges` objeto que especifica los privilegios que se va a eliminar en el token restringido. El valor predeterminado crea un objeto vacío.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -391,10 +391,10 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>Parámetros
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Puntero a una cadena que contiene el privilegio para deshabilitar en el `CAccessToken` objeto.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Puntero a un `CTokenPrivileges` objeto que contiene el estado anterior de los privilegios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -413,10 +413,10 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>Parámetros
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Puntero a una matriz de cadenas que contiene los privilegios para deshabilitar en el `CAccessToken` objeto.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Puntero a un `CTokenPrivileges` objeto que contiene el estado anterior de los privilegios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -435,10 +435,10 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>Parámetros
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Puntero a una cadena que contiene el privilegio para habilitar en el `CAccessToken` objeto.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Puntero a un `CTokenPrivileges` objeto que contiene el estado anterior de los privilegios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -457,10 +457,10 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>Parámetros
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Puntero a una matriz de cadenas que contiene los privilegios para habilitar en el `CAccessToken` objeto.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Puntero a un `CTokenPrivileges` objeto que contiene el estado anterior de los privilegios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -477,7 +477,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pDacl*  
+*pDacl*<br/>
 Puntero a la [CDacl (clase)](../../atl/reference/cdacl-class.md) objeto que recibirá la `CAccessToken` del objeto predeterminado DACL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -494,7 +494,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Establece una máscara de acceso que especifica los tipos de acceso solicitados para el token de acceso. Estos tipos de acceso solicitados se comparan con una DACL del token para determinar los accesos que se conceden o se deniegan.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -511,7 +511,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pGroups*  
+*pGroups*<br/>
 Puntero a la [CTokenGroups (clase)](../../atl/reference/ctokengroups-class.md) objeto que recibirá la información del grupo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -541,7 +541,7 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>Parámetros
 
-*pImpersonationLevel*  
+*pImpersonationLevel*<br/>
 Puntero a un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo de enumeración que recibirá la información de nivel de suplantación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -558,7 +558,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pluid*  
+*pluid*<br/>
 Puntero a un [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) que recibirá el identificador de sesión de inicio de sesión.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -579,7 +579,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pSid*  
+*pSid*<br/>
 Puntero a un [CSid (clase)](../../atl/reference/csid-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -600,7 +600,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pSid*  
+*pSid*<br/>
 Puntero a un [CSid (clase)](../../atl/reference/csid-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -621,7 +621,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pSid*  
+*pSid*<br/>
 Puntero a un [CSid (clase)](../../atl/reference/csid-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -642,7 +642,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pPrivileges*  
+*pPrivileges*<br/>
 Puntero a un [CTokenPrivileges (clase)](../../atl/reference/ctokenprivileges-class.md) objeto que recibirá los privilegios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -659,10 +659,10 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Establece una máscara de acceso que especifica los tipos de acceso solicitados para el token de acceso. Estos tipos de acceso solicitados se comparan con una DACL del token para determinar los accesos que se conceden o se deniegan.
 
-*hProcess*  
+*hProcess*<br/>
 Identificador del proceso cuyo token de acceso se abre. Si se usa el valor predeterminado es null, se usa el proceso actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -695,7 +695,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pSource*  
+*pSource*<br/>
 Puntero a un [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -712,7 +712,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pStatistics*  
+*pStatistics*<br/>
 Puntero a un [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -729,7 +729,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pdwSessionId*  
+*pdwSessionId*<br/>
 El identificador de sesión de servicios de Terminal Server.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -749,13 +749,13 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Establece una máscara de acceso que especifica los tipos de acceso solicitados para el token de acceso. Estos tipos de acceso solicitados se comparan con una DACL del token para determinar los accesos que se conceden o se deniegan.
 
-*hThread*  
+*hThread*<br/>
 Identificador del subproceso cuyo token de acceso se abre.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso el `GetThreadToken` método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
 Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.
@@ -774,7 +774,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pluid*  
+*pluid*<br/>
 Puntero a un [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) que recibirá el identificador de Token.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -791,7 +791,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*PEscriba*  
+*PEscriba*<br/>
 Dirección de la [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) variable que, si se ejecuta correctamente, recibe el tipo del token.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -812,7 +812,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pSid*  
+*pSid*<br/>
 Puntero a un [CSid (clase)](../../atl/reference/csid-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -841,7 +841,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*hThread*  
+*hThread*<br/>
 Identificador del subproceso para asignar el token de suplantación a. Este identificador debe haberse abierto con derechos de acceso TOKEN_IMPERSONATE. Si *hThread* es NULL, el método hace que el subproceso dejar de usar un token de suplantación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -914,19 +914,19 @@ bool LogonUser(
 
 ### <a name="parameters"></a>Parámetros
 
-*pszUserName*  
+*pszUserName*<br/>
 Puntero a una cadena terminada en null que especifica el nombre de usuario. Este es el nombre de la cuenta de usuario para iniciar sesión en.
 
-*pszDomain*  
+*pszDomain*<br/>
 Puntero a una cadena terminada en null que especifica el nombre de dominio o servidor cuya base de datos de cuenta contiene la *pszUserName* cuenta.
 
-*pszPassword*  
+*pszPassword*<br/>
 Puntero a una cadena terminada en null que especifica la contraseña de texto no cifrado para la cuenta de usuario especificada por *pszUserName*.
 
-*dwLogonType*  
+*dwLogonType*<br/>
 Especifica el tipo de operación de inicio de sesión va a realizar. Consulte [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) para obtener más detalles.
 
-*dwLogonProvider*  
+*dwLogonProvider*<br/>
 Especifica el proveedor de inicio de sesión. Consulte [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -950,13 +950,13 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Establece una máscara de acceso que especifica los tipos de acceso solicitados para el token de acceso. Estos tipos de acceso solicitados se comparan con una DACL del token para determinar los accesos que se conceden o se deniegan.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Si es TRUE, el subproceso actual suplantará al cliente COM que realiza la llamada si esta llamada se completa correctamente. Si es FALSE, se abrirá el token de acceso, pero el subproceso no tendrá un token de suplantación cuando se complete esta llamada.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
 Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.
@@ -983,16 +983,16 @@ bool OpenNamedPipeClientToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*hPipe*  
+*hPipe*<br/>
 Identificador de una canalización con nombre.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Establece una máscara de acceso que especifica los tipos de acceso solicitados para el token de acceso. Estos tipos de acceso solicitados se comparan con una DACL del token para determinar los accesos que se conceden o se deniegan.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Si es TRUE, el subproceso actual suplantará al cliente que realiza la llamada de la canalización si esta llamada se completa correctamente. Si es FALSE, se abrirá el token de acceso, pero el subproceso no tendrá un token de suplantación cuando se complete esta llamada.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
 Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.
@@ -1019,16 +1019,16 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*BindingHandle*  
+*BindingHandle*<br/>
 Identificador de enlace en el servidor que representa un enlace a un cliente.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Establece una máscara de acceso que especifica los tipos de acceso solicitados para el token de acceso. Estos tipos de acceso solicitados se comparan con una DACL del token para determinar los accesos que se conceden o se deniegan.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Si es TRUE, el subproceso actual suplantará al cliente que realiza la llamada de RPC si esta llamada se completa correctamente. Si es FALSE, se abrirá el token de acceso, pero el subproceso no tendrá un token de suplantación cuando se complete esta llamada.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
 Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.
@@ -1055,18 +1055,18 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>Parámetros
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Establece una máscara de acceso que especifica los tipos de acceso solicitados para el token de acceso. Estos tipos de acceso solicitados se comparan con una DACL del token para determinar los accesos que se conceden o se deniegan.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Si es TRUE, el subproceso se dejarán en el nivel de suplantación solicitado cuando este método finalice. Si es FALSE, el subproceso se restablecerá a su nivel de suplantación original.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Indica si la comprobación de acceso es que debe realizarse en el contexto de seguridad de la llamada del subproceso del [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) método o en el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
 Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
-*Sil*  
+*Sil*<br/>
 Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1091,10 +1091,10 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>Parámetros
 
-*RequiredPrivileges*  
+*RequiredPrivileges*<br/>
 Puntero a un [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set) estructura.
 
-*pbResult*  
+*pbResult*<br/>
 Puntero a un valor que el método establece para indicar si se habilitan any o all del privilegio especificado en el `CAccessToken` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1115,7 +1115,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*hThread*  
+*hThread*<br/>
 Identificador del subproceso para revertir de suplantación. Si *hThread* es NULL, se supone que el subproceso actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1136,7 +1136,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*rDacl*  
+*rDacl*<br/>
 El nuevo valor predeterminado [CDacl (clase)](../../atl/reference/cdacl-class.md) información.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1157,7 +1157,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 El [CSid (clase)](../../atl/reference/csid-class.md) que contiene la información del propietario del objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1178,7 +1178,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 El [CSid (clase)](../../atl/reference/csid-class.md) objeto que contiene la información del grupo principal.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1191,6 +1191,6 @@ El grupo principal es el grupo predeterminado para nuevos objetos que se crearon
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo ATLSecurity](../../visual-cpp-samples.md)   
-[Tokens de acceso](/windows/desktop/SecAuthZ/access-tokens)   
+[Ejemplo ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Tokens de acceso](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

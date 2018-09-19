@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0050 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0050 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d5510c0db76cc688c850538d9bd5f75c653151
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34b5bde82eff004628073f1ec6d8b372bd02afc0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095451"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>Error del evaluador de expresiones CXX0050
-parte izquierda de:: debe ser la clase/estructura/unión  
-  
- El símbolo en el lado izquierdo del operador de resolución de ámbito (`::`) no era una clase, estructura o unión.  
-  
- Este error es idéntico a CAN0050.
+
+lado izquierdo de:: debe ser la clase/struct/union
+
+El símbolo en el lado izquierdo del operador de resolución de ámbito (`::`) no era una clase, estructura o unión.
+
+Este error es idéntico a CAN0050.

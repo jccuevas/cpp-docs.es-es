@@ -20,14 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25fca5e7e51789aceef8fb92cf48cc238a8e26fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e1e64d5f41950492c3c7076160e6d134f7eb62cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196002"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099657"
 ---
 # <a name="data-source-object-interfaces"></a>Interfaces del objeto de origen de datos
+
 En la tabla siguiente se muestra las interfaces obligatorias y opcionales definidas por OLE DB para un objeto de origen de datos.  
   
 |Interfaz|¿Obligatorio?|¿Implementado por plantillas OLE DB?|  
@@ -42,7 +43,8 @@ En la tabla siguiente se muestra las interfaces obligatorias y opcionales defini
 |[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Optional|No|  
 |`ISupportErrorInfo`|Optional|No|  
   
- Los datos del origen de objeto implementa la `IDBProperties`, `IDBInitialize`, y `IDBCreateSession` interfaces mediante herencia. Puede ofrecer funcionalidad adicional heredando o no de una de estas clases de implementación. Si desea admitir la `IDBDataSourceAdmin` interfaz, debe heredar de la `IDBDataSourceAdminImpl` clase.  
+Los datos del origen de objeto implementa la `IDBProperties`, `IDBInitialize`, y `IDBCreateSession` interfaces mediante herencia. Puede ofrecer funcionalidad adicional heredando o no de una de estas clases de implementación. Si desea admitir la `IDBDataSourceAdmin` interfaz, debe heredar de la `IDBDataSourceAdminImpl` clase.  
   
 ## <a name="see-also"></a>Vea también  
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

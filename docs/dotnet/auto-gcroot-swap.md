@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::swap | Documentos de Microsoft
+title: auto_gcroot::swap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78ab5f8385f404a6db2c9919c39c17d1442b49a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 785480c10aff65d02280a9338e79e76cd430a57b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098087"
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
 Intercambia los objetos con otro `auto_gcroot`.  
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_right`  
- El `auto_gcroot` con la que se va a intercambiar objetos.  
+*a la _derecha*<br/>
+El `auto_gcroot` con el que se va a intercambiar objetos.  
   
 ## <a name="example"></a>Ejemplo  
   

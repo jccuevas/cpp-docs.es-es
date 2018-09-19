@@ -1,5 +1,5 @@
 ---
-title: C3180 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3180 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e08b46dda1d9d350ca955ecd0f05cac4f484cea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e200a75164c0d7fdb0c6804d084630cc6e6007e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048375"
 ---
-# <a name="compiler-error-c3180"></a>C3180 de Error del compilador
-'type name': nombre supera el límite de metadatos de 'límite' caracteres  
-  
- El compilador truncó el nombre de un tipo administrado en los metadatos. El truncamiento hará que el tipo inutilizable con la `#using` directiva (o su equivalente en otro lenguaje).  
-  
- El límite de nombre de tipo incluye los requisitos de espacio de nombres.
+# <a name="compiler-error-c3180"></a>Error del compilador C3180
+
+'type name': nombre supera el límite de metadatos de los caracteres "limit"
+
+El compilador truncó el nombre de un tipo administrado en los metadatos. El truncamiento hará que puede usar con el tipo de la `#using` directiva (o su equivalente en otro lenguaje).
+
+El límite de nombre de tipo incluye cualquier calificador de espacio de nombres.

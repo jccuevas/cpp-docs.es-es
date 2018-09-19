@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076663"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal (clase)
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir de cualquier otra interfaz que desea admitir en el objeto.
 
 ## <a name="members"></a>Miembros
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*  
+*IID*<br/>
 [in] El GUID de la interfaz que se solicita.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntero al puntero de interfaz identificado por el iid, o NULL si no se encuentra la interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -174,7 +174,7 @@ De forma predeterminada, `Release` llamadas `_Module::Unlock`, donde `_Module` e
 
 ## <a name="see-also"></a>Vea también
 
-[CComObjectStack (clase)](../../atl/reference/ccomobjectstack-class.md)   
-[CComAggObject (clase)](../../atl/reference/ccomaggobject-class.md)   
-[CComObject (clase)](../../atl/reference/ccomobject-class.md)   
+[CComObjectStack (clase)](../../atl/reference/ccomobjectstack-class.md)<br/>
+[CComAggObject (clase)](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject (clase)](../../atl/reference/ccomobject-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

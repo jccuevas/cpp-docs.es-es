@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4458 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4458 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815433004756e4726ee4e562cbd0e424a35d377a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 873aa94db899ae6620e2bbb1f24277c6e7c841c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094551"
 ---
 # <a name="compiler-warning-level-4-c4458"></a>Compilador advertencia (nivel 4) C4458
-  
+
 > declaración de '*identificador*' oculta el miembro de clase
-  
-La declaración de *identificador* en el ámbito local oculta la declaración de idéntico nombre *identificador* en el ámbito de clase. Esta advertencia le permite saber que las referencias a *identificador* en este ámbito resolver en la versión declarada localmente, no la clase miembro versión, que puede ser o no su intención. Para corregir este problema, se recomienda que proporcionar nombres de variables locales que no entren en conflicto con nombres de miembro de clase.  
-    
+
+La declaración de *identificador* en el ámbito local oculta la declaración de idéntico nombre *identificador* en el ámbito de clase. Esta advertencia le permite saber que las referencias a *identificador* en este ámbito, resolver la versión declarada localmente, no la clase miembro versión, que puede ser o no su intención. Para corregir este problema, se recomienda que proporcionar nombres de variables locales que no entren en conflicto con los nombres de miembro de clase.
+
 ## <a name="example"></a>Ejemplo
-  
-El ejemplo siguiente genera C4458 porque el parámetro `x` y la variable local `y` en `member_fn` tienen los mismos nombres que los miembros de datos en la clase. Para corregir este problema, use nombres diferentes para los parámetros y variables locales.  
-  
-```cpp  
+
+El ejemplo siguiente genera C4458 porque el parámetro `x` y la variable local `y` en `member_fn` tengan los mismos nombres que los miembros de datos en la clase. Para corregir este problema, use nombres diferentes para los parámetros y variables locales.
+
+```cpp
 // C4458_hide.cpp
 // compile with: cl /W4 /c C4458_hide.cpp
 
@@ -42,10 +42,10 @@ struct S {
     float y;
     void member_fn(long x) {   // C4458
         double y;  // C4458
-        y = x;  
+        y = x;
         // To fix this issue, change the parameter name x
-        // and local name y to something that does not 
+        // and local name y to something that does not
         // conflict with the data member names.
     }
 } s;
-```  
+```

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2324 | Documentos de Microsoft
+title: Error del compilador C2324 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121ca44ed988bf297599b9b3ca021f4d2c83ee2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a92b3e97c7484a7aa0126659783ef821730fe4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222259"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089286"
 ---
 # <a name="compiler-error-c2324"></a>Error del compilador C2324
-'identificador': no se esperaba a la derecha de 'nombre'  
-  
- Se llama a un destructor con un identificador incorrecto.  
-  
- El ejemplo siguiente genera C2324:  
-  
-```  
-// C2324.cpp  
-class A {};  
-typedef A* pA_t;  
-int i;  
-  
-int main() {  
-   pA_t * ppa = new pA_t;  
-   ppa->~i;   // C2324  
-   ppa->~pA_t();   // OK  
-}  
+
+'identifier': no se esperaba a la derecha de 'nombre'
+
+Se llama un destructor con un identificador incorrecto.
+
+El ejemplo siguiente genera C2324:
+
+```
+// C2324.cpp
+class A {};
+typedef A* pA_t;
+int i;
+
+int main() {
+   pA_t * ppa = new pA_t;
+   ppa->~i;   // C2324
+   ppa->~pA_t();   // OK
+}
 ```

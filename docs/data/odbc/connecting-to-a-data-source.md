@@ -1,5 +1,5 @@
 ---
-title: Conectarse a un origen de datos | Documentos de Microsoft
+title: Conectarse a un origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,27 +21,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b6a33f1e2421c56f89184d26185903b4ec7859e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4be8214ad036d67a02ce4b9c5935d3deb92252c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061102"
 ---
 # <a name="connecting-to-a-data-source"></a>Conectarse a un origen de datos
+
 Un origen de datos ODBC es un conjunto de datos, la información necesaria para tener acceso a esos datos y la ubicación del origen de datos, que se puede describir mediante un nombre de origen de datos específico. Desde el punto de vista de su programa, el origen de datos incluye los datos, el DBMS, la red (si existe) y ODBC.  
   
- Para obtener acceso a datos proporcionados por un origen de datos, el programa en primer lugar debe establecer una conexión al origen de datos. Todo acceso a datos se administra a través de esa conexión.  
+Para obtener acceso a datos proporcionados por un origen de datos, el programa en primer lugar debe establecer una conexión al origen de datos. Acceso a todos los datos se administra a través de esa conexión.  
   
- Las conexiones de origen de datos están encapsuladas por clase [CDatabase](../../mfc/reference/cdatabase-class.md). Cuando un `CDatabase` objeto está conectado a un origen de datos, puede:  
+Las conexiones de origen de datos están encapsuladas por clase [CDatabase](../../mfc/reference/cdatabase-class.md). Cuando un `CDatabase` objeto está conectado a un origen de datos, puede:  
   
--   Construir [conjuntos de registros](../../mfc/reference/crecordset-class.md), que seleccionar los registros de las tablas o las consultas.  
+- Construir [conjuntos de registros](../../mfc/reference/crecordset-class.md), que seleccione los registros de tablas o consultas.  
   
--   Administrar [transacciones](../../data/odbc/transaction-odbc.md), las actualizaciones por lotes por lo que todo se confirmen en el origen de datos a la vez (o se revierte la transacción completa para que el origen de datos permanezca sin cambios), si el origen de datos admite el nivel requerido de transacciones.  
+- Administrar [transacciones](../../data/odbc/transaction-odbc.md), procesamiento por lotes actualizaciones de modo que todos se confirma en el origen de datos al mismo tiempo (o se revierte la transacción completa para que el origen de datos permanezca sin cambios): si el origen de datos admite el nivel requerido de transacciones.  
   
--   Ejecutar directamente [SQL](../../data/odbc/sql.md) instrucciones.  
+- Ejecutar directamente [SQL](../../data/odbc/sql.md) instrucciones.  
   
- Cuando termine de trabajar con una conexión de origen de datos, cierre la `CDatabase` objeto y destruirlo o reutilizarlo para una nueva conexión. Para obtener más información acerca de las conexiones de origen de datos, vea [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md).  
+Cuando termine de trabajar con una conexión de origen de datos, se cierra el `CDatabase` objeto y lo destruirá o volver a usarlo para una conexión nueva. Para obtener más información acerca de las conexiones de origen de datos, vea [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [ODBC y MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC y MFC](../../data/odbc/odbc-and-mfc.md)

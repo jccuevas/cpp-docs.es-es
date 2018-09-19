@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4668 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4668 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a6349e867382a327f53676583f5daad7df80dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c960eb2cc79298977c8d7c91808b0a5492d05758
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294341"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074015"
 ---
 # <a name="compiler-warning-level-4-c4668"></a>Advertencia del compilador (nivel 4) C4668
-'símbolo' no está definido como macro de preprocesador y se reemplaza por '0' para 'directivas'  
-  
- Se utilizó un símbolo que no se ha definido con una directiva de preprocesador. El símbolo se evaluará como false. Para definir un símbolo, puede usar el [#define (directiva)](../../preprocessor/hash-define-directive-c-cpp.md) o [/D](../../build/reference/d-preprocessor-definitions.md) opción del compilador.  
-  
- De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4668:  
-  
-```  
-// C4668.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-  
-#pragma warning (default : 4668)   // turn warning on  
-  
-int main()   
-{  
-    #if q   // C4668, q is not defined  
-        printf_s("defined");  
-    #else  
-        printf_s("undefined");  
-    #endif  
-}  
+
+'símbolo' no está definido como macro de preprocesador y se reemplaza por '0' para 'directivas'
+
+Se usó un símbolo que no se ha definido con una directiva de preprocesador. El símbolo se evaluará como false. Para definir un símbolo, puede usar el [#define (directiva)](../../preprocessor/hash-define-directive-c-cpp.md) o [/D](../../build/reference/d-preprocessor-definitions.md) opción del compilador.
+
+De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4668:
+
+```
+// C4668.cpp
+// compile with: /W4
+#include <stdio.h>
+
+#pragma warning (default : 4668)   // turn warning on
+
+int main()
+{
+    #if q   // C4668, q is not defined
+        printf_s("defined");
+    #else
+        printf_s("undefined");
+    #endif
+}
 ```

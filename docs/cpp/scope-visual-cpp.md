@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080446"
 ---
 # <a name="scope-c"></a>Ámbito (C++)
 
 Cuando se declara un elemento del programa como una clase, función o variable, su nombre sólo se "ver" y utilizan en ciertas partes del programa. Se llama el contexto en el que está visible un nombre de su *ámbito*. Por ejemplo, si declara una variable `x` dentro de una función, `x` sólo es visible dentro del cuerpo de la función. Tiene *ámbito local*. Puede tener otras variables con el mismo nombre en el programa; siempre que se encuentran en distintos ámbitos, no infringen una regla de definición y se produce ningún error.
 
-Para las variables automáticas de no estático, ámbito también determina cuándo se crean y destruyen en memoria de programa. 
+Para las variables automáticas de no estático, ámbito también determina cuándo se crean y destruyen en memoria de programa.
 
 Existen seis tipos de ámbito:
 
@@ -51,9 +51,9 @@ Existen seis tipos de ámbito:
 
 Puede ocultar un nombre declarándolo en un bloque delimitado. En la ilustración siguiente, `i` se declara dentro del bloque interno, ocultando de esta manera la variable asociada a `i` en el ámbito del bloque externo.
 
- ![Bloque&#45;ocultación de nombres de ámbito](../cpp/media/vc38sf1.png "vc38SF1") ámbito de bloque y ocultación de nombre
+![Bloque&#45;ocultación de nombres de ámbito](../cpp/media/vc38sf1.png "vc38SF1") ámbito de bloque y ocultación de nombre
 
- El resultado del programa que se muestra en la figura es:
+El resultado del programa que se muestra en la figura es:
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Ocultar nombres de clase
 
- Puede ocultar nombres de clase declarando una función, un objeto o una variable, o un enumerador en el mismo ámbito. Sin embargo, el nombre de clase siguen estando accesibles cuando va precedido por la palabra clave **clase**.
+Puede ocultar nombres de clase declarando una función, un objeto o una variable, o un enumerador en el mismo ámbito. Sin embargo, el nombre de clase siguen estando accesibles cuando va precedido por la palabra clave **clase**.
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,13 +103,13 @@ int main()
 > [!NOTE]
 > Cualquier lugar del nombre de clase (`Account`) se le llama para, debe usarse la palabra clave class para diferenciarla de la cuenta de variable con ámbito global. Esta regla no se aplica cuando el nombre de clase aparece a la izquierda del operador de resolución de ámbito (::). Los nombres del lado izquierdo del operador de resolución de ámbito siempre se consideran nombres de clase.
 
- En el ejemplo siguiente se muestra cómo declarar un puntero a un objeto de tipo `Account` utilizando el **clase** palabra clave:
+En el ejemplo siguiente se muestra cómo declarar un puntero a un objeto de tipo `Account` utilizando el **clase** palabra clave:
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- El `Account` en el inicializador (entre paréntesis) en la instrucción anterior tiene ámbito global; es de tipo **doble**.
+El `Account` en el inicializador (entre paréntesis) en la instrucción anterior tiene ámbito global; es de tipo **doble**.
 
 > [!NOTE]
 > La reutilización de los nombres de identificador, tal y como se muestra en este ejemplo, se considera mal estilo de programación.
@@ -118,7 +118,7 @@ Para obtener información acerca de la declaración e inicialización de objetos
 
 ## <a name="hiding-names-with-global-scope"></a>Ocultar nombres con ámbito global
 
- Puede ocultar nombres con ámbito global declarando explícitamente el mismo nombre en el ámbito de bloque. Sin embargo, los nombres de ámbito global se pueden acceder mediante el operador de resolución de ámbito (`::`).
+Puede ocultar nombres con ámbito global declarando explícitamente el mismo nombre en el ámbito de bloque. Sin embargo, los nombres de ámbito global se pueden acceder mediante el operador de resolución de ámbito (`::`).
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>Vea también
- [Conceptos básicos](../cpp/basic-concepts-cpp.md)
+
+[Conceptos básicos](../cpp/basic-concepts-cpp.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0302727bba0155fe59ffa223f5e4e91ef3c122de
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a98c7bb473e36e53e8cbe0f90f9dd94f655392d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073231"
 ---
 # <a name="introduction-to-com"></a>Introducción a COM
 
@@ -41,6 +41,6 @@ Estos conceptos son fundamentales para COM:
 
 ## <a name="see-also"></a>Vea también
 
-[Introducción a COM y ATL](../atl/introduction-to-com-and-atl.md)   
+[Introducción a COM y ATL](../atl/introduction-to-com-and-atl.md)<br/>
 [El modelo de objetos componentes](/windows/desktop/com/the-component-object-model)
 

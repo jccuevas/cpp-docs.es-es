@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51d47764ea4515fcbc2cb3b7aa37fd341cd130e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3d919a810ed93e40218476369ef9981da59b89bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114623"
 ---
 # <a name="spectre"></a>Spectre
 
@@ -33,7 +33,7 @@ Indica al compilador que no se va a insertar instrucciones de barrera de ejecuci
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (spectre(nomitigation))**  
+> **__declspec (spectre(nomitigation))**
 
 ## <a name="remarks"></a>Comentarios
 
@@ -66,6 +66,7 @@ int main() {
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
- [__declspec](../cpp/declspec.md)  
- [Palabras clave](../cpp/keywords-cpp.md)  
- [/Qspectre](../build/reference/qspectre.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[/Qspectre](../build/reference/qspectre.md)

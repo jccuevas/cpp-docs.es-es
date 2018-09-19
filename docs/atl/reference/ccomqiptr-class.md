@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d4437d06a7308505c2338f37deea1126fcb0605
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e4c35ab13d5cf2448135b1e07405a1e31a5eec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116677"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr (clase)
 
@@ -32,16 +32,16 @@ Una clase de puntero inteligente para administrar los punteros de interfaz COM.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T, const IID* piid= &__uuidof(T)>  
+template<class T, const IID* piid= &__uuidof(T)>
 class CComQIPtr: public CComPtr<T>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Una interfaz COM que especifica el tipo de puntero que se almacenará.
 
-*piid*  
+*piid*<br/>
 Un puntero para el IID de *T*.
 
 ## <a name="members"></a>Miembros
@@ -87,13 +87,13 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LP*  
+*LP*<br/>
 Se usa para inicializar el puntero de interfaz.
 
-*T*  
+*T*<br/>
 Una interfaz COM.
 
-*piid*  
+*piid*<br/>
 Un puntero para el IID de *T*.
 
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =
@@ -108,13 +108,13 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LP*  
+*LP*<br/>
 Se usa para inicializar el puntero de interfaz.
 
-*T*  
+*T*<br/>
 Una interfaz COM.
 
-*piid*  
+*piid*<br/>
 Un puntero para el IID de *T*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -123,8 +123,8 @@ Devuelve un puntero a la actualización `CComQIPtr` objeto.
 
 ## <a name="see-also"></a>Vea también
 
-[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
-[CComQIPtr::CComQIPtr](#ccomqiptr)   
-[CComPtrBase (clase)](../../atl/reference/ccomptrbase-class.md)   
-[Información general de clases](../../atl/atl-class-overview.md)   
+[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
+[CComPtrBase (clase)](../../atl/reference/ccomptrbase-class.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
 [CComQIPtrElementTraits (clase)](../../atl/reference/ccomqiptrelementtraits-class.md)

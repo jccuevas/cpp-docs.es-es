@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3456 | Documentos de Microsoft
+title: Error del compilador C3456 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a01c5bcb431f790d04526b6e8d20e9632eb7b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b0b98f62613bfec653375516e8e4157f239acd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256501"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075038"
 ---
 # <a name="compiler-error-c3456"></a>Error del compilador C3456
-no se permite [source_annotation_attribute] en la declaración de clase administrada o WinRT  
-  
- Se usa source_annotation_attribute para definir atributos personalizados que se deben utilizar en el análisis de código.  
-  
- Estos atributos personalizados solo resultan útiles si un complemento pertinente los comprende.
+
+no se permite [source_annotation_attribute] en la declaración de clase administrada o WinRT
+
+Se usa source_annotation_attribute para definir atributos personalizados que se deben utilizar en el análisis de código.
+
+Estos atributos personalizados solo resultan útiles si un complemento pertinente los comprende.

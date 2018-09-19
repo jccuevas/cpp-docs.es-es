@@ -1,5 +1,5 @@
 ---
-title: OMP_NUM_THREADS | Documentos de Microsoft
+title: OMP_NUM_THREADS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25369f18f542198638e324110ba14d10b8ddc69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091171"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
 Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) o [num_threads](../../../parallel/openmp/reference/num-threads.md).  
@@ -32,16 +32,15 @@ Establece el número máximo de subprocesos en la región paralela, a menos que 
 set OMP_NUM_THREADS[=num]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- donde,  
+### <a name="parameters"></a>Parámetros
   
- `num`  
- El número máximo de subprocesos que desee en la región paralela, hasta 64 en la implementación de Visual C++.  
+*num*<br/>
+El número máximo de subprocesos que desee en la región paralela, hasta 64 en la implementación de Visual C++.  
   
 ## <a name="remarks"></a>Comentarios  
  El **OMP_NUM_THREADS** variable de entorno puede reemplazarse por la [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) función o por [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
- El valor predeterminado de `num` en Visual C++, implementación de la norma de OpenMP es el número de procesadores virtuales, incluido el hyperthreading CPU.  
+ El valor predeterminado de `num` en Visual C++ implementación del estándar OpenMP es el número de procesadores virtuales, incluidas las CPU de hyperthreading.  
   
  Para obtener más información, consulte [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   

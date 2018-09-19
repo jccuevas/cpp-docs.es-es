@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2498 | Documentos de Microsoft
+title: Error del compilador C2498 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50596e4e5ca47a0f1bdf3f5ab25405139b66447
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fbd946158157f76b2fc9bfe6cbd3ea9086d09ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196615"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115156"
 ---
 # <a name="compiler-error-c2498"></a>Error del compilador C2498
-'función': 'novtable' solo puede aplicarse a definiciones o declaraciones de clase  
-  
- Este error puede deberse al uso `__declspec(novtable)` con una función.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C2498:  
-  
-```  
-// C2498.cpp  
-// compile with: /c  
-void __declspec(novtable) f() {}   // C2498  
-class __declspec(novtable) A {};   // OK  
+
+'function': 'novtable' solo se puede aplicar a definiciones o declaraciones de clase
+
+Este error puede deberse al uso `__declspec(novtable)` con una función.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C2498:
+
+```
+// C2498.cpp
+// compile with: /c
+void __declspec(novtable) f() {}   // C2498
+class __declspec(novtable) A {};   // OK
 ```

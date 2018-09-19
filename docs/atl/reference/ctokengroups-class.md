@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87109793625435945c45b2643ccd674946acff49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103248"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups (clase)
 
@@ -92,19 +92,19 @@ Para obtener una introducción al modelo de control de acceso en Windows, consul
 Agrega un `CSid` o existentes `TOKEN_GROUPS` estructura a la `CTokenGroups` objeto.
 
 ```
-void Add(const CSid& rSid, DWORD dwAttributes) throw(... );  
+void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 Un [CSid](../../atl/reference/csid-class.md) objeto.
 
-*dwAttributes*  
+*dwAttributes*<br/>
 Los atributos que se va a asociar con el `CSid` objeto.
 
-*rTokenGroups*  
+*rTokenGroups*<br/>
 Un [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) estructura.
 
 ### <a name="remarks"></a>Comentarios
@@ -117,13 +117,13 @@ El constructor.
 
 ```
 CTokenGroups() throw();
-CTokenGroups(const CTokenGroups& rhs) throw(... );  
+CTokenGroups(const CTokenGroups& rhs) throw(... );
 CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*  
+*RHS*<br/>
 El `CTokenGroups` objeto o [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) estructura con la que se va a construir el `CTokenGroups` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -152,7 +152,7 @@ bool Delete(const CSid& rSid) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 El [CSid](../../atl/reference/csid-class.md) objeto para el que se deben quitar el identificador de seguridad (SID) y atributos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -215,10 +215,10 @@ void GetSidsAndAttributes(
 
 ### <a name="parameters"></a>Parámetros
 
-*pSids*  
+*pSids*<br/>
 Puntero a una matriz de [CSid](../../atl/reference/csid-class.md) objetos.
 
-*pAttributes*  
+*pAttributes*<br/>
 Puntero a una matriz de valores DWORD. Si este parámetro se omite o NULL, no se recuperan los atributos.
 
 ### <a name="remarks"></a>Comentarios
@@ -237,10 +237,10 @@ bool LookupSid(
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 El [CSid](../../atl/reference/csid-class.md) objeto.
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 Puntero a un valor DWORD que aceptará el `CSid` atributo del objeto. Si se omite o es NULL, el atributo no se recuperarán.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -256,13 +256,13 @@ Establecer *pdwAttributes* a NULL proporciona una manera de confirmar la existen
 Operador de asignación.
 
 ```
-CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);  
+CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);
 CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*  
+*RHS*<br/>
 El `CTokenGroups` objeto o [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) estructura para asignar a la `CTokenGroups` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -273,7 +273,7 @@ Devuelve el texto actualizado `CTokenGroups` objeto.
 
 Convierte un valor a un puntero a la `TOKEN_GROUPS` estructura.
 
-```  
+```
 operator const TOKEN_GROUPS *() const throw(...);
 ```
 
@@ -283,7 +283,7 @@ Convierte un valor a un puntero a la [TOKEN_GROUPS](/windows/desktop/api/winnt/n
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de seguridad](../../visual-cpp-samples.md)   
-[CSid (clase)](../../atl/reference/csid-class.md)   
-[Información general de clases](../../atl/atl-class-overview.md)   
+[Ejemplo de seguridad](../../visual-cpp-samples.md)<br/>
+[CSid (clase)](../../atl/reference/csid-class.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

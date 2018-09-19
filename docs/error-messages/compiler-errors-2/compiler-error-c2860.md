@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2860 | Documentos de Microsoft
+title: Error del compilador C2860 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ced30a3d737cc8fbd8599489600674da423dbfc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51a73a9997dda717f2c4977d75d99da72d58ae7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091158"
 ---
 # <a name="compiler-error-c2860"></a>Error del compilador C2860
-'void' no puede ser un tipo de argumento, excepto '(void)'  
-  
- Tipo `void` no se puede usar como tipo de argumento en otros argumentos.  
-  
- El ejemplo siguiente genera C2860:  
-  
-```  
-// C2860.cpp  
-// compile with: /c  
-void profunc1(void, int i);   // C2860  
-void func10(void);   // OK  
+
+'void' no puede ser un tipo de argumento, excepto '(void)'
+
+Tipo `void` no se puede usar como tipo de argumento con otros argumentos.
+
+El ejemplo siguiente genera C2860:
+
+```
+// C2860.cpp
+// compile with: /c
+void profunc1(void, int i);   // C2860
+void func10(void);   // OK
 ```

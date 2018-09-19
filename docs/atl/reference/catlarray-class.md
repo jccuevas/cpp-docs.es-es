@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097801"
 ---
 # <a name="catlarray-class"></a>CAtlArray (clase)
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Parámetros
 
-*E*  
+*E*<br/>
 Tipo de datos que se va a almacenar en la matriz.
 
-*ETraits*  
+*ETraits*<br/>
 El código utilizado para copiar o mover elementos.
 
 ## <a name="members"></a>Miembros
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*  
+*Elemento*<br/>
 El elemento que se agregarán a la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parámetros
 
-*aSrc*  
+*aSrc*<br/>
 La matriz para anexar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parámetros
 
-*aSrc*  
+*aSrc*<br/>
 El origen de los elementos que se va a copiar en una matriz.
 
 ### <a name="remarks"></a>Comentarios
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*iElement*  
+*iElement*<br/>
 El valor de índice del elemento de matriz para devolver.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Parámetros
 
-*iStart*  
+*iStart*<br/>
 Índice en el que la matriz se va a insertar.
 
-*paNew*  
+*paNew*<br/>
 La matriz que se va a insertar.
 
 ### <a name="remarks"></a>Comentarios
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-*iElement*  
+*iElement*<br/>
 El índice donde el elemento o elementos son va a insertar.
 
-*Elemento*  
+*Elemento*<br/>
 El valor del elemento o elementos que se van a insertarse.
 
-*nCount*  
+*nCount*<br/>
 El número de elementos que se va a agregar.
 
 ### <a name="remarks"></a>Comentarios
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*iElement*  
+*iElement*<br/>
 El valor de índice del elemento de matriz para devolver.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-*iElement*  
+*iElement*<br/>
 El índice del primer elemento para quitar.
 
-*nCount*  
+*nCount*<br/>
 Número de elementos que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*iElement*  
+*iElement*<br/>
 El índice que apunta al elemento de matriz para establecer.
 
-*Elemento*  
+*Elemento*<br/>
 El nuevo valor del elemento especificado.
 
 ### <a name="remarks"></a>Comentarios
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Parámetros
 
-*nNewSize*  
+*nNewSize*<br/>
 El tamaño necesario de la matriz.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Un valor que se utiliza para determinar cómo grande como para hacer que el búfer. El valor -1 hace que un valor calculado internamente para usarse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*iElement*  
+*iElement*<br/>
 El índice que apunta al elemento de matriz para establecer.
 
-*Elemento*  
+*Elemento*<br/>
 El nuevo valor del elemento especificado.
 
 ### <a name="remarks"></a>Comentarios
@@ -559,9 +559,9 @@ Reemplaza el valor del elemento señalado por el índice. Si *iElement* es mayor
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo MMXSwarm](../../visual-cpp-samples.md)   
-[Ejemplo DynamicConsumer](../../visual-cpp-samples.md)   
-[Ejemplo UpdatePV](../../visual-cpp-samples.md)   
-[Ejemplo de marquesina](../../visual-cpp-samples.md)   
-[CArray (clase)](../../mfc/reference/carray-class.md)   
+[Ejemplo MMXSwarm](../../visual-cpp-samples.md)<br/>
+[Ejemplo DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Ejemplo UpdatePV](../../visual-cpp-samples.md)<br/>
+[Ejemplo de marquesina](../../visual-cpp-samples.md)<br/>
+[CArray (clase)](../../mfc/reference/carray-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

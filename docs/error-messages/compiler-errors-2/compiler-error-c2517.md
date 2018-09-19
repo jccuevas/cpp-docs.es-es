@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2517 | Documentos de Microsoft
+title: Error del compilador C2517 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ae07d3585b3d2f281e8dd639b8361cea873bfb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4209f0ababf6262af3f273b9e76e2bb2dfaa68fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110918"
 ---
 # <a name="compiler-error-c2517"></a>Error del compilador C2517
-'identificador': derecha de '::' no está definido  
-  
- El identificador de la derecha del operador de resolución de ámbito (`::`) debe ser un miembro definido de la clase, estructura o unión situada a la izquierda. Si no se denomina ninguna clase, estructura o unión, debe declararse el identificador de la derecha con ámbito global.
+
+'identifier': derecho de '::' no está definido
+
+El identificador de la derecha del operador de resolución de ámbito (`::`) debe ser un miembro definido de la clase, estructura o unión situada a la izquierda. Si no es el nombre de ninguna clase, estructura o unión, el identificador de la derecha debe declararse con ámbito global.

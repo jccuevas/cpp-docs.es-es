@@ -1,5 +1,5 @@
 ---
-title: Información adicional sobre las clases ODBC de MFC | Documentos de Microsoft
+title: Información adicional sobre las clases ODBC de MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,52 +15,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e0a5a99146ae178d06e2ec097ab85c0f1c54eb9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8b935dd39d6ae3d0f59804b7145e845b807792e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093810"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Información adicional sobre las clases ODBC de MFC
-Los siguientes temas explican con detalle los conceptos y técnicas presentadas en este tema:  
+
+Aún más los siguientes temas explican los conceptos y técnicas presentadas en este tema:  
   
--   [Compatibilidad con bases de datos, Asistente para aplicaciones MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+- [Compatibilidad con bases de datos, Asistente para aplicaciones MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
--   [Adición de un consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
+- [Adición de un consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
   
--   [Origen de datos (ODBC)](../../data/odbc/data-source-odbc.md)  
+- [Origen de datos (ODBC)](../../data/odbc/data-source-odbc.md)  
   
--   [Conjunto de registros dinámicos](../../data/odbc/dynaset.md)  
+- [Conjunto de registros dinámicos](../../data/odbc/dynaset.md)  
   
--   [Excepciones: Excepciones de base de datos](../../mfc/exceptions-database-exceptions.md)  
+- [Excepciones: Excepciones de base de datos](../../mfc/exceptions-database-exceptions.md)  
   
--   [MFC: Usar clases de base de datos con documentos y vistas](../../data/mfc-using-database-classes-with-documents-and-views.md)  
+- [MFC: Usar clases de base de datos con documentos y vistas](../../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [MFC: Usar clases de base de datos sin documentos ni vistas](../../data/mfc-using-database-classes-without-documents-and-views.md)  
+- [MFC: Usar clases de base de datos sin documentos ni vistas](../../data/mfc-using-database-classes-without-documents-and-views.md)  
   
--   [ODBC](../../data/odbc/odbc-basics.md)  
+- [ODBC](../../data/odbc/odbc-basics.md)  
   
--   [Administrador de ODBC](../../data/odbc/odbc-administrator.md)  
+- [Administrador de ODBC](../../data/odbc/odbc-administrator.md)  
   
--   [Intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
+- [Intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)  
+- [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)  
   
--   [Vistas de registros](../../data/record-views-mfc-data-access.md)  
+- [Vistas de registros](../../data/record-views-mfc-data-access.md)  
   
--   [Serialización: Serialización frente a Base de datos de entrada/salida](../../mfc/serialization-serialization-vs-database-input-output.md)  
+- [Serialización: Serialización frente a Base de datos de entrada/salida](../../mfc/serialization-serialization-vs-database-input-output.md)  
   
--   [Instantánea](../../data/odbc/snapshot.md)  
+- [Instantánea](../../data/odbc/snapshot.md)  
   
--   [SQL](../../data/odbc/sql.md)  
+- [SQL](../../data/odbc/sql.md)  
   
--   [Transacción (ODBC)](../../data/odbc/transaction-odbc.md)  
+- [Transacción (ODBC)](../../data/odbc/transaction-odbc.md)  
   
- Es un buen lugar para empezar a leer con [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md).  
+Es un buen lugar para empezar a leer con [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- En el *referencia de MFC*, consulte [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), y [CDBException](../../mfc/reference/cdbexception-class.md).  
+En el *referencia de MFC*, consulte [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), y [CDBException](../../mfc/reference/cdbexception-class.md).  
   
 ## <a name="see-also"></a>Vea también  
- [ODBC y MFC](../../data/odbc/odbc-and-mfc.md)   
- [Acceso a los datos de programación (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+
+[ODBC y MFC](../../data/odbc/odbc-and-mfc.md)<br/>
+[Acceso a los datos de programación (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

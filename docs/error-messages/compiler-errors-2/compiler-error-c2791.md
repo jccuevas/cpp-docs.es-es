@@ -1,5 +1,5 @@
 ---
-title: C2791 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2791 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a3d399ed6c7f25b849335328550526ecf7a816
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 853e9b8a7741b31a57af172427656be8a78a99f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236501"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098152"
 ---
-# <a name="compiler-error-c2791"></a>C2791 de Error del compilador
-uso no válido de 'super': 'clase' no tiene clases base  
-  
- La palabra clave [super](../../cpp/super.md) se usó en el contexto de una función miembro de una clase que no tiene las clases base.  
-  
- El ejemplo siguiente genera C2791:  
-  
-```  
-// C2791.cpp  
-struct D {  
-   void mf() {  
-      __super::mf();   // C2791  
-   }  
-};  
+# <a name="compiler-error-c2791"></a>Error del compilador C2791
+
+uso no válido de 'super': 'class' no tiene clases base
+
+La palabra clave [super](../../cpp/super.md) se usó en el contexto de una función miembro de una clase que no tiene clases base.
+
+El ejemplo siguiente genera C2791:
+
+```
+// C2791.cpp
+struct D {
+   void mf() {
+      __super::mf();   // C2791
+   }
+};
 ```

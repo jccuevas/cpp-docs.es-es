@@ -1,5 +1,5 @@
 ---
-title: Advertencia de línea de comandos D9025 | Documentos de Microsoft
+title: Advertencia de la línea de comandos D9025 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3875a2cbd065fd5ad887267bcc80748fa9845d0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063702"
 ---
 # <a name="command-line-warning-d9025"></a>Advertencia de la línea de comandos D9025
-reemplazar 'opción1' con 'opción2'  
-  
- El *opción1* se especificó la opción pero, a continuación, se reemplazó por *opción2*. El *opción2* se usó la opción.  
-  
- Si dos opciones especifican directivas contradictorias o incompatibles, se usa la directiva especificadas o implícitas en la opción situado más a la derecha en la línea de comandos.  
-  
- Si aparece esta advertencia al compilar desde el entorno de desarrollo y no está seguro de dónde proceden las opciones incompatibles, considere lo siguiente:  
-  
--   Una opción puede especificarse en el código o en la configuración del proyecto. Si observa el compilador [páginas de propiedades de línea de comandos](../../ide/command-line-property-pages.md) y si ve las opciones incompatibles en el **todas las opciones de** , a continuación, se establecen las opciones de páginas de propiedades del proyecto, en caso contrario, las opciones de campo se establecen en el código fuente.  
-  
-     Si se establecen las opciones de páginas de propiedades del proyecto, busque en la página de propiedades preprocesador del compilador (con el nodo del proyecto seleccionado en el Explorador de soluciones).  Si no ve la opción definida allí, revise la configuración de la página de propiedades preprocesador para cada archivo de código fuente (en el Explorador de soluciones) para asegurarse de que no se agrega no existe.  
-  
-     Si las opciones se establecen en el código se puede establecer en el código o en los encabezados de windows.  Puede intentar crear un archivo preprocesado ([/P](../../build/reference/p-preprocess-to-a-file.md)) y búsqueda del símbolo.
+
+reemplazando 'opción1' con 'opción2'
+
+El *opción1* se especificó la opción pero, a continuación, se reemplazó por *opción2*. El *opción2* usó la opción.
+
+Si dos opciones especifican directivas contradictorias o incompatibles, se usa la directiva especificadas o implícitas en la opción situado más a la derecha en la línea de comandos.
+
+Si aparece esta advertencia al compilar desde el entorno de desarrollo y no está seguro de dónde proceden las opciones en conflicto, tenga en cuenta lo siguiente:
+
+- Una opción puede especificarse en el código o en la configuración del proyecto. Si observa el compilador [páginas de propiedades de línea de comandos](../../ide/command-line-property-pages.md) y si ve las opciones en conflicto en el **todas las opciones** , a continuación, se establecen las opciones de páginas de propiedades del proyecto, en caso contrario, las opciones de campo se establecen en el código fuente.
+
+     Si las opciones se establecen en páginas de propiedades del proyecto, busque en la página de propiedades preprocesador del compilador (con el nodo del proyecto seleccionado en el Explorador de soluciones).  Si no ve la opción definida allí, revise la configuración de la página de propiedades preprocesador para cada archivo de código fuente (en el Explorador de soluciones) para asegurarse de que no se agrega no existe.
+
+     Si las opciones se establecen en el código se podría establecer en el código o en los encabezados de windows.  Puede intentar crear un archivo preprocesado ([/P](../../build/reference/p-preprocess-to-a-file.md)) y buscar el símbolo.

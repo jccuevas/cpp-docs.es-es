@@ -17,28 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 444f56c1a999f09a79d725173c9f0f19399ab363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118367"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
-**Específicos de Microsoft**  
-  
- Las llamadas del **versión** función miembro de `IUnknown` en el puntero de interfaz encapsulado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void Release( );  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Las llamadas `IUnknown::Release` en el puntero de interfaz encapsulado y generar un `E_POINTER` error si este puntero de interfaz es NULL.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)
+
+**Específicos de Microsoft**
+
+Las llamadas del **versión** función miembro de `IUnknown` en el puntero de interfaz encapsulado.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void Release( );
+```
+
+## <a name="remarks"></a>Comentarios
+
+Las llamadas `IUnknown::Release` en el puntero de interfaz encapsulado y generar un `E_POINTER` error si este puntero de interfaz es NULL.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

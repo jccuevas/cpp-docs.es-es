@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3846 | Documentos de Microsoft
+title: Error del compilador C3846 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d5650d1743ba379ce065d4051bfed807a1df71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f8b44661534dca1beb39c0407f882d41f1f503c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055135"
 ---
 # <a name="compiler-error-c3846"></a>Error del compilador C3846
-'símbolo': no se puede importar un símbolo desde 'ensamblado2': como 'símbolo' ya se ha importado desde otro ensamblado 'ensamblado1'  
-  
- No se pudo importar un símbolo desde un ensamblado de referencia porque ya se había importado desde un ensamblado de referencia.  
-  
+
+'símbolo': no se puede importar un símbolo desde 'assembly2': como "symbol" ya se ha importado desde otro ensamblado 'assembly1'
+
+No se pudo importar un símbolo desde un ensamblado de referencia porque ya se había importado desde un ensamblado de referencia.
+
 ## <a name="example"></a>Ejemplo
-El ejemplo siguiente genera C3846:  
-  
-```  
-// C3846a.cpp  
-// compile with: /LD /clr  
-public ref struct G  
-{  
-};  
-```  
-  
- Y, a continuación, compile esto:  
-  
-```  
-// C3846b.cpp  
-// compile with: /clr  
-#using "c3846a.dll"  
-#using "c3846a.obj"   // C3846  
-  
-int main()  
-{  
-}  
-```  
+
+El ejemplo siguiente genera C3846:
+
+```
+// C3846a.cpp
+// compile with: /LD /clr
+public ref struct G
+{
+};
+```
+
+Y, a continuación, compile esto:
+
+```
+// C3846b.cpp
+// compile with: /clr
+#using "c3846a.dll"
+#using "c3846a.obj"   // C3846
+
+int main()
+{
+}
+```

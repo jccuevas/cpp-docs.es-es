@@ -1,5 +1,5 @@
 ---
-title: task_completion_event (clase) | Documentos de Microsoft
+title: task_completion_event (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089000"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event (Clase)
 La clase `task_completion_event` permite retrasar la ejecución de una tarea hasta que se satisfaga una condición, o iniciar una tarea en respuesta a un evento externo.  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_ResultType`  
- El tipo de resultado de esta clase `task_completion_event`.  
-  
- `T`  
+*_ResultType*<br/>
+El tipo de resultado de esta clase `task_completion_event`.  
+
   
 ## <a name="members"></a>Miembros  
   
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Result`  
- El resultado para establecer este evento con.  
+*_Result*<br/>
+Para establecer este evento con el resultado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El método devuelve `true` si tuvo éxito y establecer el evento. Devuelve `false` si el evento se ha establecido.  
+ El método devuelve `true` si tuvo éxito y establecer el evento. Devuelve `false` si ya está establecido el evento.  
   
 ### <a name="remarks"></a>Comentarios  
- En presencia de varios o de llamadas simultáneas a `set`, solo la primera llamada se realizará correctamente y su resultado (si existe) se almacenará en el evento de finalización de tarea. Los conjuntos restantes se omiten y el método devolverá false. Cuando se establece un evento de finalización de tarea, todas las tareas se crean desde que eventos finalizará inmediatamente y sus continuaciones, si los hay, se programará. Tareas de objetos de finalización que tienen un `_ResultType` distinto de `void` pasará el valor de sus continuaciones.  
+ En presencia de varias llamadas simultáneas a o `set`, solo la primera llamada se realizará correctamente y su resultado (si existe) se almacenará en el evento de finalización de tarea. Los conjuntos restantes se omiten y el método devolverá false. Al establecer un evento de finalización de tarea, todas las tareas creadas desde que se completarán inmediatamente los eventos y sus continuaciones, si existe, se programará. Tareas de los objetos de finalización que tienen un `_ResultType` distinto `void` pasará el valor a sus continuaciones.  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+Tipo de la excepción.
+
+*_Except*<br/>
+La excepción que se va a establecer.
+
+*_ExceptionPtr*<br/>
+Puntero a la excepción para establecer.
   
 ### <a name="return-value"></a>Valor devuelto  
   

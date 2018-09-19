@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2308 | Documentos de Microsoft
+title: Error del compilador C2308 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4523fd23f0900172e80cf71fd748a9f939deb044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24c01565f03bafa1b0bf1c20c4fb967cde3fc5b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091977"
 ---
 # <a name="compiler-error-c2308"></a>Error del compilador C2308
-concatenación de cadenas que no coincidentes  
-  
- Se especificaron ambas cadenas de caracteres anchos y no anchos para la concatenación. No se puede concatenar una cadena de caracteres anchos no y la cadena de caracteres anchos.
+
+concatenación de cadenas no coincidentes
+
+Ambas cadenas de caracteres anchos y no todo el se especificaron para la concatenación. No se pueden concatenar una cadena de caracteres no anchos y una cadena de caracteres anchos.

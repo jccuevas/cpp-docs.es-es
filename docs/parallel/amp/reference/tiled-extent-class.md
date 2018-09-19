@@ -1,5 +1,5 @@
 ---
-title: tiled_extent (clase) | Documentos de Microsoft
+title: tiled_extent (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114558"
 ---
 # <a name="tiledextent-class"></a>tiled_extent (Clase)
-A `tiled_extent` objeto es un `extent` objeto de uno a tres dimensiones que divide el espacio de la extensión en uno, dos o iconos tridimensionales.  
+Un `tiled_extent` objeto es un `extent` objeto de uno a tres dimensiones que divide el espacio de la extensión en una, dos o iconos tridimensionales.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Dim0`  
- La longitud de la dimensión más significativa.  
+*_Dim0*<br/>
+La longitud de la dimensión más significativa.  
   
- `_Dim1`  
- La longitud de la dimensión importante siguiente a la mayoría.  
+*_Dim1*<br/>
+La longitud de la dimensión significativa más próxima.  
   
- `_Dim2`  
- La longitud de la dimensión menos significativa.  
+*_Dim2*<br/>
+La longitud de la dimensión menos significativa.  
   
 ## <a name="members"></a>Miembros  
   
@@ -71,22 +71,22 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[tiled_extent Constructor](#ctor)|Inicializa una nueva instancia de la clase `tiled_extent`.|  
+|[tiled_extent (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `tiled_extent`.|  
 
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[get_tile_extent](#get_tile_extent)|Devuelve un `extent` objeto que capture los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
-|[pad](#pad)|Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas seguridad para ser divisible por las dimensiones del mosaico.|  
-|[truncate](#truncate)|Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.|  
+|[get_tile_extent](#get_tile_extent)|Devuelve un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
+|[pad](#pad)|Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas para ser divisible por las dimensiones del mosaico.|  
+|[truncate](#truncate)|Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas a la baja para ser equitativamente divisibles por las dimensiones del icono.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia el contenido del elemento especificado `tiled_index` objeto en éste.|  
+|[operator=](#operator_eq)|Copia el contenido del elemento especificado `tiled_index` objeto en este.|  
 
   
 ### <a name="public-constants"></a>Constantes públicas  
@@ -94,7 +94,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |nombre|Descripción|  
 |----------|-----------------|  
 |[tile_dim0 (constante)](#tile_dim0)|Almacena la longitud de la dimensión más significativa.|  
-|[tile_dim1 (constante)](#tile_dim1)|Almacena la longitud de la dimensión importante siguiente a la mayoría.|  
+|[tile_dim1 (constante)](#tile_dim1)|Almacena la longitud de la dimensión significativa más próxima.|  
 |[tile_dim2 (constante)](#tile_dim2)|Almacena la longitud de la dimensión menos significativa.|  
 
   
@@ -102,7 +102,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[tile_extent](#tile_extent)|Obtiene un `extent` objeto que capture los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
+|[tile_extent](#tile_extent)|Obtiene un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `extent`  
@@ -114,7 +114,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Espacio de nombres:** Concurrency  
 
-## <a name="ctor"> </a>  tiled_extent Constructor  
+## <a name="ctor"> </a>  tiled_extent (Constructor)  
 Inicializa una nueva instancia de la clase `tiled_extent`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -130,14 +130,14 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Other`  
- El `extent` o `tiled_extent` objeto que se va a copiar.  
+*_Otro*<br/>
+El `extent` o `tiled_extent` objeto que se va a copiar.  
   
 
   
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent   
-Devuelve un `extent` objeto que capture los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.  
+Devuelve un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -150,7 +150,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
   
 
 ## <a name="pad"> </a>  panel   
-Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas seguridad para ser divisible por las dimensiones del mosaico.  
+Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas para ser divisible por las dimensiones del mosaico.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -161,7 +161,7 @@ tiled_extent pad() const;
 ### <a name="return-value"></a>Valor devuelto  
  El nuevo `tiled_extent` objeto por valor. 
 ## <a name="truncate"> </a>  truncar   
-Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.  
+Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas a la baja para ser equitativamente divisibles por las dimensiones del icono.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -170,10 +170,10 @@ tiled_extent truncate() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.  
+ Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas a la baja para ser equitativamente divisibles por las dimensiones del icono.  
 
 ## <a name="operator_eq"> </a>  operator=   
-Copia el contenido del elemento especificado `tiled_index` objeto en éste.  
+Copia el contenido del elemento especificado `tiled_index` objeto en este.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -183,8 +183,8 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Other`  
- La `tiled_index` objeto que lo copien.  
+*_Otro*<br/>
+La `tiled_index` objeto que se va a copiar desde.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `tiled_index` instancia.  
@@ -199,7 +199,7 @@ static const int tile_dim0 = _Dim0;
 ```  
   
 ## <a name="tile_dim1"> </a>  tile_dim1   
-Almacena la longitud de la dimensión importante siguiente a la mayoría.  
+Almacena la longitud de la dimensión significativa más próxima.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -215,7 +215,7 @@ Almacena la longitud de la dimensión menos significativa.
 static const int tile_dim2 = _Dim2;  
 ```  
 ## <a name="tile_extent"> </a>  tile_extent   
-  Obtiene un `extent` objeto que capture los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.  
+  Obtiene un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.  
   
 ### <a name="syntax"></a>Sintaxis  
   

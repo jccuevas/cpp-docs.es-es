@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056786"
 ---
 # <a name="program-and-linkage-c"></a>Programa y vinculación (C++)
 
@@ -45,11 +45,11 @@ Sin embargo, en algunos casos puede ser necesario declarar una variable global o
 
 ## <a name="linkage-vs-scope"></a>Vinculación frente a ámbito
 
-El concepto de *vinculación* hace referencia a la visibilidad de símbolos globales (por ejemplo, variables, los nombres de tipo y los nombres de función) dentro del programa como un todo a través de unidades de traducción. El concepto de *ámbito* hace referencia a los símbolos que se declaran dentro de un bloque, como un espacio de nombres, clase o el cuerpo de función. Estos símbolos solo son visibles dentro del ámbito en el que se definen; el concepto de vinculación no se aplica a ellos. 
+El concepto de *vinculación* hace referencia a la visibilidad de símbolos globales (por ejemplo, variables, los nombres de tipo y los nombres de función) dentro del programa como un todo a través de unidades de traducción. El concepto de *ámbito* hace referencia a los símbolos que se declaran dentro de un bloque, como un espacio de nombres, clase o el cuerpo de función. Estos símbolos solo son visibles dentro del ámbito en el que se definen; el concepto de vinculación no se aplica a ellos.
 
 ## <a name="external-vs-internal-linkage"></a>Externa frente a la vinculación interna
 
-Un *función gratis* es una función que se define en global o ámbito de espacio de nombres. Variables globales que no son constantes y funciones libres de forma predeterminada tienen *vinculación externa*; son visibles desde cualquier unidad de traducción en el programa. Por lo tanto, ningún otro objeto global (variable, definición de clase, etc.) puede tener ese nombre. Un símbolo con *vinculación interna* o *sin vinculación* solo es visible en la unidad de traducción en el que se declara. Cuando un nombre tiene vinculación interna, el mismo nombre puede existir en otra unidad de traducción. Las variables declaradas con las definiciones de clase o los cuerpos de funciones no tienen ninguna vinculación. 
+Un *función gratis* es una función que se define en global o ámbito de espacio de nombres. Variables globales que no son constantes y funciones libres de forma predeterminada tienen *vinculación externa*; son visibles desde cualquier unidad de traducción en el programa. Por lo tanto, ningún otro objeto global (variable, definición de clase, etc.) puede tener ese nombre. Un símbolo con *vinculación interna* o *sin vinculación* solo es visible en la unidad de traducción en el que se declara. Cuando un nombre tiene vinculación interna, el mismo nombre puede existir en otra unidad de traducción. Las variables declaradas con las definiciones de clase o los cuerpos de funciones no tienen ninguna vinculación.
 
 Puede forzar un nombre global para tienen vinculación interna declarando explícitamente como **estático**. Esto limita su visibilidad a la misma unidad de traducción en el que se declara. Tenga en cuenta que en este contexto, **estático** significa algo distinto a cuando se aplica a las variables locales.
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 Consulte [extern](extern-cpp.md) para obtener más información.
 
 ## <a name="see-also"></a>Vea también
- [Conceptos básicos](../cpp/basic-concepts-cpp.md)
+
+[Conceptos básicos](../cpp/basic-concepts-cpp.md)

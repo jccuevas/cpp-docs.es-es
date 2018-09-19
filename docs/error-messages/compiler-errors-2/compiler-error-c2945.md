@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2945 | Documentos de Microsoft
+title: Error del compilador C2945 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5695ac6184d7f31eadf0f5ed1bbd2260a0f4ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 992064c75493b15dd4e1b382f2789131dd4f05db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075374"
 ---
 # <a name="compiler-error-c2945"></a>Error del compilador C2945
-la creación de instancias explícita no hace referencia a una especialización de clase de plantilla  
-  
- No se pueden crear explícitamente instancias de algo que no esté basado en modelo.
+
+la creación de instancias explícita no hace referencia a una especialización de clase de plantilla
+
+No se pueden crear explícitamente instancias de algo que no esté basado en modelo.

@@ -15,16 +15,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708011"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configuración de un proyecto de CMake de Linux
 
-**Visual Studio 2017, versión 15.4 y posteriores**  
+**Visual Studio 2017, versión 15.4 y posteriores**<br/>
 Al instalar la carga de trabajo C++ de Linux para Visual Studio, se activa de forma predeterminada la compatibilidad de CMake con Linux. Ya puede trabajar en la base de código existente que utiliza CMake sin tener que convertirla en un proyecto de Visual Studio. Si la base de código es multiplataforma, puede tener como destino Windows y Linux desde dentro de Visual Studio.
 
 En este tema se da por supuesto que tiene conocimientos básicos de la compatibilidad de CMake en Visual Studio. Para obtener más información, consulte [Herramientas de CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md). Para obtener más información sobre el propio CMake, vea [Build, Test and Package Your Software With CMake](https://cmake.org/) (Compilar, probar y empaquetar con CMake).
@@ -65,7 +65,7 @@ Después de especificar un destino de Linux, el origen se copia en su máquina L
 
 ![Generar la caché de CMake en Linux](media/cmake-linux-1.png "Generar la caché de CMake en Linux")
 
-**Visual Studio 2017, versión 15.7 y posteriores:**  
+**Visual Studio 2017, versión 15.7 y posteriores:**<br/>
 Para proporcionar compatibilidad con IntelliSense para los encabezados remotos, Visual Studio los copia de manera automática en un directorio en el equipo Windows local. Para obtener más información, vea [IntelliSense para los encabezados remotos](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Depurar el proyecto

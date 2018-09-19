@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082538"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl (clase)
 
@@ -43,22 +43,22 @@ Esta clase proporciona la implementación de una interfaz de enumerador COM dond
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 Una interfaz de enumerador COM. Consulte [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obtener un ejemplo.
 
-*piid*  
+*piid*<br/>
 Un puntero al identificador de interfaz de la interfaz de enumerador.
 
-*T*  
+*T*<br/>
 El tipo de elemento que expone la interfaz de enumerador.
 
-*Copiar*  
+*Copiar*<br/>
 Un homogéneos [Copiar directiva clase](../../atl/atl-copy-policy-classes.md).
 
 ## <a name="members"></a>Miembros
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parámetros
 
-*begin*  
+*begin*<br/>
 Un puntero al primer elemento de la matriz que contiene los elementos que hay que enumerar.
 
-*end*  
+*end*<br/>
 Un puntero a la ubicación situada más allá del último elemento de la matriz que contiene los elementos que hay que enumerar.
 
-*pUnk*  
+*pUnk*<br/>
 [in] El `IUnknown` puntero de un objeto que se debe mantener activo durante la vigencia del enumerador. Pasar valor NULL si no existe el objeto existe.
 
-*flags*  
+*flags*<br/>
 Marcas que especifican si el enumerador debe tomar posesión de la matriz o realizar una copia de ella. Los valores posibles se describen a continuación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -167,13 +167,13 @@ Si pasar punteros a los elementos de una matriz que se mantienen en otro objeto 
 
 El *marcas* parámetro le permite especificar cómo el enumerador debe tratar los elementos de matriz que se pasa a él. *marcas* puede tomar uno de los valores de la `CComEnumFlags` enumeración se muestra a continuación:
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` significa que la duración de la matriz no está controlada por el enumerador. En este caso, será la matriz estática o el objeto identificado por *pUnk* será responsable de liberar la matriz cuando ya no es necesario.
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parámetros
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] La interfaz de enumerador en un objeto recién creado clona el enumerador actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>Parámetros
 
-*celt*  
+*celt*<br/>
 [in] El número de elementos solicitados.
 
-*rgelt*  
+*rgelt*<br/>
 [out] La matriz que se va a rellenar con los elementos.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] El número de elementos realmente devueltos en *rgelt*. Esto puede ser menor que *celt* si hay menos de *celt* elementos permanecen en la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parámetros
 
-*celt*  
+*celt*<br/>
 [in] El número de elementos que se van a omitir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -304,6 +304,6 @@ Devuelve E_INVALIDARG si *celt* es cero, devuelve S_FALSE si es menor que *celt*
 
 ## <a name="see-also"></a>Vea también
 
-[IEnumOnSTLImpl (clase)](../../atl/reference/ienumonstlimpl-class.md)   
-[CComEnum (clase)](../../atl/reference/ccomenum-class.md)   
+[IEnumOnSTLImpl (clase)](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[CComEnum (clase)](../../atl/reference/ccomenum-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063117"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase (clase)
 
@@ -40,16 +40,16 @@ Esta clase constituye la base de varias clases de puntero inteligente de montón
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo de objeto que se almacenará en el montón.
 
-*Asignador*  
+*Asignador*<br/>
 La clase de asignación de memoria que utilice. De forma predeterminada, las rutinas de CRT se usan para asignar y liberar memoria.
 
 ## <a name="members"></a>Miembros
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBytes*  
+*nBytes*<br/>
 El número de bytes de memoria para asignar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*pData*  
+*pData*<br/>
 La `CHeapPtrBase` objeto tomará posesión de este puntero.
 
 ### <a name="remarks"></a>Comentarios
@@ -216,7 +216,7 @@ Utilice este operador para llamar a un método en una clase que apunta el `CHeap
 
 El operador de conversión.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBytes*  
+*nBytes*<br/>
 La nueva cantidad de memoria para asignar, en bytes.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -243,6 +243,6 @@ Devuelve true si la memoria está correctamente asignada, false en caso contrari
 
 ## <a name="see-also"></a>Vea también
 
-[CHeapPtr (clase)](../../atl/reference/cheapptr-class.md)   
-[CComHeapPtr (clase)](../../atl/reference/ccomheapptr-class.md)   
+[CHeapPtr (clase)](../../atl/reference/cheapptr-class.md)<br/>
+[CComHeapPtr (clase)](../../atl/reference/ccomheapptr-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f1be2c862775c76bbaad36f84c871eff5a38d5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1f7306e11bd1cc23e4de17e67f0941d2b3ee8473
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759627"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055303"
 ---
 # <a name="catlservicemoduletrun-function"></a>Función CAtlServiceModuleT:: Run
 
@@ -37,9 +37,9 @@ Una vez que se especifica la seguridad, el objeto está registrado con COM para 
 
 ## <a name="see-also"></a>Vea también
 
-[servicios](../atl/atl-services.md)   
-[CSecurityDesc (clase)](../atl/reference/csecuritydesc-class.md)   
-[CSid (clase)](../atl/reference/csid-class.md)   
-[CDacl (clase)](../atl/reference/cdacl-class.md)   
+[Servicios](../atl/atl-services.md)<br/>
+[CSecurityDesc (clase)](../atl/reference/csecuritydesc-class.md)<br/>
+[CSid (clase)](../atl/reference/csid-class.md)<br/>
+[CDacl (clase)](../atl/reference/cdacl-class.md)<br/>
 [CAtlServiceModuleT:: Run](../atl/reference/catlservicemodulet-class.md#run)
 

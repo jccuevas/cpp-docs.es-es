@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67849da9eebf9f150c4363e05a6f3fdcb943c0d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a13ec85cc393b1d7bff39f26866e48525e46d336
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756394"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071034"
 ---
 # <a name="atl-window-classes"></a>Clases de ventana ATL
 
@@ -35,29 +35,29 @@ En esta sección se describe las clases de ventana ATL y se explica cómo usarlo
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Introducción a las clases de ventana ATL](../atl/introduction-to-atl-window-classes.md)  
+[Introducción a las clases de ventana ATL](../atl/introduction-to-atl-window-classes.md)<br/>
 Brevemente cada clase de ventana ATL se describe y proporciona vínculos al material de referencia sobre ellos.
 
-[Uso de una ventana](../atl/using-a-window.md)  
+[Uso de una ventana](../atl/using-a-window.md)<br/>
 Describe cómo utilizar `CWindow` para manipular una ventana.
 
-[Implementar una ventana](../atl/implementing-a-window.md)  
+[Implementar una ventana](../atl/implementing-a-window.md)<br/>
 Se describen los controladores de mensajes, mapas de mensajes y usar `CWindowImpl`. Incluye detalles sobre superclases y subclases.
 
-[Implementar un cuadro de diálogo](../atl/implementing-a-dialog-box.md)  
+[Implementar un cuadro de diálogo](../atl/implementing-a-dialog-box.md)<br/>
 Describe los dos métodos para agregar una clase de cuadro de diálogo y se muestra un ejemplo de código.
 
-[Usar ventanas contenidas](../atl/using-contained-windows.md)  
+[Usar ventanas contenidas](../atl/using-contained-windows.md)<br/>
 Describe las ventanas contenidas en ATL, que son ventanas que delegan sus mensajes en un objeto contenedor en lugar de controlarlos en su propia clase.
 
-[Descripción de rasgos de las ventanas](../atl/understanding-window-traits.md)  
+[Descripción de rasgos de las ventanas](../atl/understanding-window-traits.md)<br/>
 Describe las clases de rasgos de ventana en ATL. Estas clases proporcionan un método sencillo para estandarizar los estilos utilizados para la creación de un objeto de ventana.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
 
-[Clases de compatibilidad de Windows](../atl/windows-support-classes.md)  
+[Clases de compatibilidad de Windows](../atl/windows-support-classes.md)<br/>
 Enumera las clases ATL adicionales que admiten windows y mapas de mensajes en ATL.
 

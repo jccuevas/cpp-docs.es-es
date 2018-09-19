@@ -1,5 +1,5 @@
 ---
-title: C2794 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2794 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cee2ce072f3dfe106434443ba28047cf7b58284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c81e8dcfde2a24c4a827406c3e499c12e891b2f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068018"
 ---
-# <a name="compiler-error-c2794"></a>C2794 de Error del compilador
-'función': no es miembro de ninguna clase base directa o indirecta de 'class'  
-  
- Se intentó utilizar [super](../../cpp/super.md) para llamar a una función miembro inexistente.  
-  
- El ejemplo siguiente genera C2794  
-  
-```  
-// C2794.cpp  
-struct B {  
-   void mf();  
-};  
-  
-struct D : B {  
-   void mf() {  
-      __super::f();  // C2794  
-   }  
-};  
+# <a name="compiler-error-c2794"></a>Error del compilador C2794
+
+'function': no es un miembro de ninguna clase base directa o indirecta de 'class'
+
+Intentó utilizar [super](../../cpp/super.md) para llamar a una función miembro que no existe.
+
+El ejemplo siguiente genera C2794
+
+```
+// C2794.cpp
+struct B {
+   void mf();
+};
+
+struct D : B {
+   void mf() {
+      __super::f();  // C2794
+   }
+};
 ```

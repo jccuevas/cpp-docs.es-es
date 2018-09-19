@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable del compilador de recursos RC1022 | Documentos de Microsoft
+title: Error irrecuperable del compilador de recursos RC1022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c81a6afc3316c163e9d1451af51f57f208b6a209
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4186b531fce1b608122df676139b9c676ce2df27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070454"
 ---
 # <a name="resource-compiler-fatal-error-rc1022"></a>Error irrecuperable del compilador de recursos RC1022
-se esperaba '#endif'  
-  
- Un `#if`, **#ifdef**, o **#ifndef** directiva no finalizó con un `#endif` directiva.  
-  
- Asegúrese de que hay un `#if`, **#ifdef**, o **#ifndef** instrucción en vigor antes de esta instrucción.
+
+se esperaba '#endif'
+
+Un `#if`, **#ifdef**, o **#ifndef** directiva no se terminó con un `#endif` directiva.
+
+Asegúrese de que hay un `#if`, **#ifdef**, o **#ifndef** en vigor antes de esta instrucción.

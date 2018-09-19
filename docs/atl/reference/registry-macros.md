@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058502"
 ---
 # <a name="registry-macros"></a>Macros de registro
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parámetros
 
-*LIBID*  
+*LIBID*<br/>
 El GUID de la biblioteca de tipos.
 
 ### <a name="remarks"></a>Comentarios
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Parámetros
 
-*class*  
+*class*<br/>
 [in] Se incluye por compatibilidad con versiones anteriores.
 
-*pid*  
+*pid*<br/>
 [in] LPCTSTR que es un identificador de programa específico de la versión.
 
-*vpid*  
+*vpid*<br/>
 [in] LPCTSTR que es un identificador de programa independiente de la versión.
 
-*NID*  
+*NID*<br/>
 [in] Un tipo UINT que es un índice de la cadena de recurso en el registro que se usará como la descripción del programa.
 
-*flags*  
+*flags*<br/>
 [in] DWORD que contiene el modelo de subprocesos del programa en el registro. Debe ser uno de los siguientes valores: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
 
 ### <a name="remarks"></a>Comentarios
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parámetros
 
-*RESID*  
+*RESID*<br/>
 El identificador de recurso del archivo .rgs que contiene información sobre la *appid*.
 
-*AppID*  
+*AppID*<br/>
 Un GUID.
 
 ### <a name="remarks"></a>Comentarios
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*  
+*x*<br/>
 [in] Identificador del recurso de cadena.
 
 ### <a name="remarks"></a>Comentarios
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*  
+*x*<br/>
 [in] Identificador generado por el Asistente del recurso.
 
 ### <a name="remarks"></a>Comentarios

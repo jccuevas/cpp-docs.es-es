@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4405 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4405 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9971113cc34efc5aa29e4066094517530b186839
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fce005153b9343b25e7de49b3e95a002381d0619
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061583"
 ---
 # <a name="compiler-warning-level-1-c4405"></a>Advertencia del compilador (nivel 1) C4405
-'identificador': identificador es una palabra reservada  
-  
- Una palabra reservada para el ensamblado insertado se utiliza como un nombre de variable. Esto puede provocar resultados imprevisibles. Para corregir esta advertencia, evite dar a las variables con palabras reservadas para el código ensamblador en línea. El ejemplo siguiente genera C4405:  
-  
-```  
-// C4405.cpp  
-// compile with: /W1  
-// processor: x86  
-void func1() {  
-   int mov = 0, i = 0;  
-   _asm {  
-      mov mov, 0;   // C4405  
-      // instead, try ..  
-      // mov i, 0;  
-   }  
-}  
-  
-int main() {  
-}  
+
+'identifier': identificador es una palabra reservada
+
+Una palabra reservada para el ensamblado insertado se utiliza como nombre de variable. Esto puede producir resultados imprevisibles. Para corregir esta advertencia, evite dar a las variables con palabras reservadas para el ensamblado alineado. El ejemplo siguiente genera C4405:
+
+```
+// C4405.cpp
+// compile with: /W1
+// processor: x86
+void func1() {
+   int mov = 0, i = 0;
+   _asm {
+      mov mov, 0;   // C4405
+      // instead, try ..
+      // mov i, 0;
+   }
+}
+
+int main() {
+}
 ```

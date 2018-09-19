@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1277 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1277 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec8f00793fcda748c60d9d8ea775611e3d025cd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c48bd23b3f84ab301404987c77d964f51823e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082544"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Error de las herramientas del vinculador LNK1277
-registro de objeto no encontrado en pgd (nombre de archivo)  
-  
- Cuando se usa [PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), la ruta de acceso de uno de los archivos .lib, def o .obj entrados era diferente de la ruta de acceso en el que se encontraron durante/LTCG: PGINSTRUMENT. Esto podría deberse a un cambio en la variable de entorno LIB después de/LTCG: PGINSTRUMENT. La ruta de acceso completa a los archivos de entrada se almacena en el archivo. pgd.  
-  
- / LTCG: PGOPTIMIZE requiere que las entradas sean idénticas a la fase/LTCG: PGINSTRUMENT.  
-  
- Para resolver esta advertencia, realice una de las siguientes acciones:  
-  
--   Ejecute/LTCG: PGINSTRUMENT, vuelva a realizar todas las ejecuciones de prueba y/LTCG: PGOPTIMIZE.  
-  
--   Cambie la variable de entorno LIB al que tenía cuando se ejecutó/LTCG: PGINSTRUMENT.  
-  
- No se recomienda evitar LNK1277 utilizando/LTCG: PGUPDATE.
+
+registro de objeto no encontrado en pgd (filename)
+
+Cuando se usa [PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), la ruta de acceso de uno de los archivos .lib, def o .obj entrados era diferente de la ruta de acceso en el que se encontraron durante/LTCG: PGINSTRUMENT. Esto podría deberse a un cambio en la variable de entorno LIB después/LTCG: PGINSTRUMENT. La ruta de acceso completa a los archivos de entrada se almacena en el archivo PGD.
+
+/ LTCG: PGOPTIMIZE requiere que las entradas sea idéntica a la fase/LTCG: PGINSTRUMENT.
+
+Para resolver esta advertencia, realice una de las siguientes acciones:
+
+- Ejecute/LTCG: PGINSTRUMENT, rehacer todas las ejecuciones de prueba y/LTCG: PGOPTIMIZE.
+
+- Por lo que era cuando ejecutó/LTCG: PGINSTRUMENT, cambie la variable de entorno LIB.
+
+No se recomienda evitar LNK1277 utilizando/LTCG: PGUPDATE.

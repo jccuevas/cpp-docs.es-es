@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1209 | Documentos de Microsoft
+title: Error irrecuperable C1209 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce9ebf0281981264c3abeb1485cdffb89410e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e518cacdeb8db133ff6378e6569ee868312b8333
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081499"
 ---
 # <a name="fatal-error-c1209"></a>Error irrecuperable C1209
-Ensamblados de confianza no admitidos por la versión del runtime instalada  
-  
- C1208 aparece cuando tiene un compilador para la versión actual, pero un Common Language Runtime de una versión anterior.  
-  
- Algunas funciones del compilador no funcionan en una versión anterior del tiempo de ejecución.  
-  
- Para resolver el error C1209, instale el Common Language Runtime que se incluye con el compilador que está usando.  
-  
- Para obtener más información, consulte [ensamblados Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
+
+Ensamblados de confianza no admitidos por la versión del runtime instalada
+
+C1208 aparece cuando tiene un compilador para la versión actual, pero un Common Language Runtime de una versión anterior.
+
+Algunas funciones del compilador no funcionan en una versión anterior del tiempo de ejecución.
+
+Para resolver el error C1209, instale el Common Language Runtime que se incluye con el compilador que está usando.
+
+Para obtener más información, consulte [ensamblados Friend (C++)](../../dotnet/friend-assemblies-cpp.md).

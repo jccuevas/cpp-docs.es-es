@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068525"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
@@ -38,10 +38,10 @@ class AgileEventSource
 
 ## <a name="parameters"></a>Parámetros
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 La interfaz a un delegado que representa un controlador de eventos.
 
-*TEventSourceOptions*  
+*TEventSourceOptions*<br/>
 Un [InvokeModeOptions](invokemodeoptions-structure.md) cuyo campo invokeMode está establecido en una estructura `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Comentarios
@@ -51,6 +51,7 @@ La mayoría de los componentes en tiempo de ejecución de Windows son ágiles co
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
 `EventSource`
+
 `AgileEventSource`
 
 ## <a name="requirements"></a>Requisitos

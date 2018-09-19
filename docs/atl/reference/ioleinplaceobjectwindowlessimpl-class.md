@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd6c2ddfaef8c298696ea33537ea7bfd754330f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 112700fffc3b4104599f68f80f00e8d3239788f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089572"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl (clase)
 
@@ -53,7 +53,7 @@ class IOleInPlaceObjectWindowlessImpl
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `IOleInPlaceObjectWindowlessImpl`.
 
 ## <a name="members"></a>Miembros
@@ -197,5 +197,5 @@ Consulte [IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl
 
 ## <a name="see-also"></a>Vea también
 
-[CComControl (clase)](../../atl/reference/ccomcontrol-class.md)   
+[CComControl (clase)](../../atl/reference/ccomcontrol-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

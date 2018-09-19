@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4511 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4511 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602b92d52860429a70b2339f35093ab85934fc89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8432b4aff0c4ac3526f99ba4faaf669e7c69ee72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102598"
 ---
 # <a name="compiler-warning-level-3-c4511"></a>Advertencia del compilador (nivel 3) C4511
-'clase': no se pudo generar un constructor de copia  
-  
- El compilador no pudo generar un constructor de copias predeterminado para una clase; una clase base puede tener un constructor de copias privado.
+
+'class': no se pudo generar el constructor de copias
+
+El compilador no pudo generar un constructor de copias predeterminado para una clase; una clase base puede tener un constructor de copias privado.

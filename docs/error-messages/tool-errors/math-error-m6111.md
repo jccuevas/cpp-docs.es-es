@@ -1,5 +1,5 @@
 ---
-title: Error matemático M6111 | Documentos de Microsoft
+title: Error matemático M6111 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318001"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074830"
 ---
 # <a name="math-error-m6111"></a>Error matemático M6111
-subdesbordamiento de la pila  
-  
- Una operación de punto flotante generó un subdesbordamiento de la pila en el coprocesador 8087/287/387 o en el emulador.  
-  
- Este error suele causarlo una llamada a un `long double` función que no devuelve un valor. Por ejemplo, el siguiente genera este error cuando se compila y se ejecuta:  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- El programa termina con el código de salida 139.
+
+subdesbordamiento de la pila
+
+Una operación de punto flotante dieron lugar a un subdesbordamiento de la pila en el coprocesador 8087/287/387 o en el emulador.
+
+Este error se debe a menudo mediante una llamada a un `long double` función que no devuelve un valor. Por ejemplo, lo siguiente genera este error cuando compile y ejecute:
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+El programa termina con el código de salida 139.

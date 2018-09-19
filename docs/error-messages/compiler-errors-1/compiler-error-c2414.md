@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2414 | Documentos de Microsoft
+title: Error del compilador C2414 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22710e0056a7dea65130a65a3ccb9c5310f1c39f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 642cb00605ed13146288edf5d39cb5d0c14c6e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089923"
 ---
 # <a name="compiler-error-c2414"></a>Error del compilador C2414
-número de operandos no válido  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  El código de operación no admite el número de operandos utilizado. Revise el manual de referencia del lenguaje de ensamblado para determinar el número correcto de operandos.  
-  
-2.  Un procesador más reciente admite la instrucción con un número diferente de operandos. Ajustar la [/arch (arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md) opción para usar el procesador más reciente.
+
+número de operandos no válido
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. El código de operación no admite el número de operandos utilizado. Revise el manual de referencia del lenguaje de ensamblado para determinar el número correcto de operandos.
+
+1. Un procesador más reciente admite la instrucción con un número diferente de operandos. Ajustar el [/arch (arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md) opción para usar el procesador más reciente.

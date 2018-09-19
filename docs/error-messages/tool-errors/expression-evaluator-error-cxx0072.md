@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0072 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0072 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e28fe0f27834b1ec18236ab8734b24601baef72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae9ef1017068fb2c515949110905a65e822d93a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074466"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>Error del evaluador de expresiones CXX0072
-Error: falta información de tipo o desconocido  
-  
- El archivo .pch no obtener vinculado en o el código tiene una referencia a un tipo que se encuentra en un módulo que no se compila con/Zi.  
-  
- Este error es idéntico a CAN0067.
+
+Error: falta la información de tipo o desconocido
+
+El archivo .pch vinculan no en o el código tiene una referencia a un tipo que se encuentra en un módulo no compilado con/Zi.
+
+Este error es idéntico a CAN0067.

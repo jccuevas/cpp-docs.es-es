@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a37083335c42d8042167e737b68ccad517fa00
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070307"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap (clase)
 
@@ -47,19 +47,19 @@ Esta clase proporciona compatibilidad para una matriz de asignación simple.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>
 class CSimpleMap
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*TKey*  
+*TKey*<br/>
 El tipo de elemento de clave.
 
-*TVal*  
+*TVal*<br/>
 El tipo de elemento de valor.
 
-*TEqual*  
+*TEqual*<br/>
 Un objeto de rasgo, definiendo la prueba de igualdad para los elementos de tipo `T`.
 
 ## <a name="members"></a>Miembros
@@ -124,10 +124,10 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Clave.
 
-*Val*  
+*Val*<br/>
 El valor asociado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -188,7 +188,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Clave que se va a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -205,7 +205,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*  
+*Val*<br/>
 El valor para el que se va a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -222,7 +222,7 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 El índice de la clave para devolver.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -255,7 +255,7 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 Índice del valor que se devuelve.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -276,7 +276,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Clave.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -293,7 +293,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Clave.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -322,7 +322,7 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 El índice de la clave y el valor asociado a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -339,7 +339,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*  
+*Val*<br/>
 Valor.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -356,10 +356,10 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Clave.
 
-*Val*  
+*Val*<br/>
 El nuevo valor para asignar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -379,13 +379,13 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 El índice, que hacen referencia a la clave y valor para cambiar de emparejamiento.
 
-*key*  
+*key*<br/>
 La nueva clave.
 
-*Val*  
+*Val*<br/>
 Nuevo valor.
 
 ### <a name="return-value"></a>Valor devuelto

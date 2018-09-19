@@ -15,58 +15,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5975e47585f3b5a995d8eb839c21d419756edd42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0d960a766c14b1e05dab461087669c0d44627d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090087"
 ---
 # <a name="string-literal-concatenation"></a>Concatenación de literales de cadena
-Para formar literales de cadena que ocupen más de una línea, puede concatenar las dos cadenas. Para ello, inserte una barra diagonal inversa y presione la tecla ENTRAR. La barra diagonal inversa hace que el compilador omita el siguiente carácter de nueva línea. Por ejemplo, el literal de cadena  
-  
-```  
-"Long strings can be bro\  
-ken into two or more pieces."  
-```  
-  
- es idéntico a la cadena  
-  
-```  
-"Long strings can be broken into two or more pieces."  
-```  
-  
- Puede usar la concatenación de cadenas en cualquier lugar en el que antes utilizaba una barra diagonal inversa seguida de un carácter de nueva línea para escribir cadenas de más de una línea.  
-  
- Para forzar una nueva línea dentro de un literal de cadena, escriba la secuencia de escape de nueva línea (**\n**) en el punto de la cadena donde desee que se corte la línea, de la manera siguiente:  
-  
-```  
-"Enter a number between 1 and 100\nOr press Return"  
-```  
-  
- Como las cadenas pueden empezar en cualquier columna del código fuente y las cadenas largas pueden continuar en cualquier columna de una línea siguiente, puede colocar las cadenas para mejorar la legibilidad del código fuente. En cualquier caso, la representación en pantalla cuando se muestra no se ve afectada. Por ejemplo:  
-  
-```  
-printf_s ( "This is the first half of the string, "  
-           "this is the second half ") ;  
-```  
-  
- Siempre y cuando cada parte de la cadena esté incluida entre comillas dobles, las partes se concatenan y se muestran como una sola cadena. Esta concatenación se produce de acuerdo con la secuencia de eventos durante la compilación especificada por las [fases de conversión](../preprocessor/phases-of-translation.md).  
-  
-```  
-"This is the first half of the string, this is the second half"  
-```  
-  
- Un puntero de cadena, inicializado como dos literales de cadena distintos separados solo por un espacio en blanco, se almacenan como una sola cadena (los punteros se explican en [Declaraciones de puntero](../c-language/pointer-declarations.md)). Cuando la referencia es correcta, como en el ejemplo siguiente, el resultado es idéntico al del ejemplo anterior:  
-  
-```  
-char *string = "This is the first half of the string, "  
-               "this is the second half";  
-  
-printf_s( "%s" , string ) ;  
-```  
-  
- En la fase de traducción 6, las secuencias de caracteres multibyte especificadas por cualquier secuencia de literales de cadena adyacentes o literales de cadena ancha adyacentes se concatenan en una sola secuencia de caracteres multibyte. Por tanto, no diseñe programas para permitir la modificación de literales de cadena durante la ejecución. El estándar ANSI C especifica que el resultado de modificar una cadena es indefinido.  
-  
-## <a name="see-also"></a>Vea también  
- [Literales de cadena de C](../c-language/c-string-literals.md)
+
+Para formar literales de cadena que ocupen más de una línea, puede concatenar las dos cadenas. Para ello, inserte una barra diagonal inversa y presione la tecla ENTRAR. La barra diagonal inversa hace que el compilador omita el siguiente carácter de nueva línea. Por ejemplo, el literal de cadena
+
+```
+"Long strings can be bro\
+ken into two or more pieces."
+```
+
+es idéntico a la cadena
+
+```
+"Long strings can be broken into two or more pieces."
+```
+
+Puede usar la concatenación de cadenas en cualquier lugar en el que antes utilizaba una barra diagonal inversa seguida de un carácter de nueva línea para escribir cadenas de más de una línea.
+
+Para forzar una nueva línea dentro de un literal de cadena, escriba la secuencia de escape de nueva línea (**\n**) en el punto de la cadena donde desee que se corte la línea, de la manera siguiente:
+
+```
+"Enter a number between 1 and 100\nOr press Return"
+```
+
+Como las cadenas pueden empezar en cualquier columna del código fuente y las cadenas largas pueden continuar en cualquier columna de una línea siguiente, puede colocar las cadenas para mejorar la legibilidad del código fuente. En cualquier caso, la representación en pantalla cuando se muestra no se ve afectada. Por ejemplo:
+
+```
+printf_s ( "This is the first half of the string, "
+           "this is the second half ") ;
+```
+
+Siempre y cuando cada parte de la cadena esté incluida entre comillas dobles, las partes se concatenan y se muestran como una sola cadena. Esta concatenación se produce de acuerdo con la secuencia de eventos durante la compilación especificada por las [fases de conversión](../preprocessor/phases-of-translation.md).
+
+```
+"This is the first half of the string, this is the second half"
+```
+
+Un puntero de cadena, inicializado como dos literales de cadena distintos separados solo por un espacio en blanco, se almacenan como una sola cadena (los punteros se explican en [Declaraciones de puntero](../c-language/pointer-declarations.md)). Cuando la referencia es correcta, como en el ejemplo siguiente, el resultado es idéntico al del ejemplo anterior:
+
+```
+char *string = "This is the first half of the string, "
+               "this is the second half";
+
+printf_s( "%s" , string ) ;
+```
+
+En la fase de traducción 6, las secuencias de caracteres multibyte especificadas por cualquier secuencia de literales de cadena adyacentes o literales de cadena ancha adyacentes se concatenan en una sola secuencia de caracteres multibyte. Por tanto, no diseñe programas para permitir la modificación de literales de cadena durante la ejecución. El estándar ANSI C especifica que el resultado de modificar una cadena es indefinido.
+
+## <a name="see-also"></a>Vea también
+
+[Literales de cadena de C](../c-language/c-string-literals.md)

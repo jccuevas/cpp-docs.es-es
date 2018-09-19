@@ -1,5 +1,5 @@
 ---
-title: R6027 de Error de tiempo de ejecución de C | Documentos de Microsoft
+title: C Runtime Error R6027 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc38d664a6c9e2e2be0c360709ed6b39b1014b05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3694c367c090d0dcc2fb5e4ac72c8f00593fed27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084814"
 ---
-# <a name="c-runtime-error-r6027"></a>R6027 de Error de tiempo de ejecución de C
-No hay espacio suficiente para la inicialización de lowio  
-  
+# <a name="c-runtime-error-r6027"></a>C Runtime Error R6027
+
+No hay espacio suficiente para la inicialización de lowio
+
 > [!NOTE]
->  Si aparece este mensaje de error mientras se ejecuta una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero normalmente está provocada por una condición de muy poca memoria. También puede deberse a un error en la aplicación, por daños en las bibliotecas de Visual C++ que utiliza o por un controlador.  
->   
->  Puede intentar seguir estos pasos para corregir este error:  
->   
->  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.  
-> -   Use la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para reparar o reinstalar el programa.  
-> -   Si la aplicación estaba funcionando antes de una instalación reciente de otra aplicación o controlador, utilice la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para quitar el nueva aplicación o el controlador e inténtelo de nuevo la aplicación.  
-> -   Use la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para reparar o reinstalar todas las copias de Microsoft Visual C++ Redistributable.  
-> -   Comprobar **Windows Update** en el **el Panel de Control** las actualizaciones de software.  
-> -   Busque una versión actualizada de la aplicación. Si el problema continúa, póngase en contacto con el proveedor de la aplicación.  
-  
- **Información para programadores**  
-  
- Este error se produce cuando no hay suficiente memoria libre disponible para inicializar la compatibilidad de E/S de bajo nivel en el tiempo de ejecución de C. Este error suele producirse al iniciar la aplicación. Compruebe que la aplicación y los controladores y los archivos DLL que carga no esté dañado el montón en el inicio.
+>  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero normalmente está causado por una condición muy poca memoria. También puede deberse a un error en la aplicación, por daños en las bibliotecas de Visual C++ que utiliza o un controlador.
+>
+>  Puede intentar seguir estos pasos para corregir este error:
+>
+>  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
+> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> -   Si la aplicación funcionaba correctamente antes de una instalación reciente de otra aplicación o controlador, utilice la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para quitar el nueva aplicación o el controlador e inténtelo de nuevo la aplicación.
+> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar todas las copias de Microsoft Visual C++ Redistributable.
+> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+
+**Información para programadores**
+
+Este error se produce cuando no hay suficiente memoria libre disponible para inicializar la compatibilidad de E/S de bajo nivel en el tiempo de ejecución de C. Este error suele producirse al iniciar la aplicación. Compruebe que la aplicación y los controladores y los archivos DLL que carga no dañar el montón durante el inicio.

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 71c0fb14574aedb74d756e72a93cd0dc626ba086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057384"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData (estructura)
 
@@ -42,13 +42,13 @@ Esta estructura contiene datos de la instancia de clase en código basado en ven
 
 ## <a name="members"></a>Miembros
 
-`m_pThis`  
+`m_pThis`<br/>
 El **esto** puntero usado para obtener acceso a la instancia de clase en los procedimientos de ventana.
 
-`m_dwThreadID`  
+`m_dwThreadID`<br/>
 El identificador de subproceso de la instancia actual de la clase.
 
-`m_pNext`  
+`m_pNext`<br/>
 Puntero a la siguiente `_AtlCreateWndData` objeto.
 
 ## <a name="requirements"></a>Requisitos

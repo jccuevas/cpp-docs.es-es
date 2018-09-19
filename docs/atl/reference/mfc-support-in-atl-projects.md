@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6a3c5bae4d973ba74155ab018ebea69b0e2b93
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f3853bbe90757563f6c7dc2c9003ed7c5f2a98dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065444"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Compatibilidad con MFC en proyectos ATL
 
@@ -29,40 +29,40 @@ Si selecciona **compatibilidad con MFC** en el Asistente para proyectos ATL, el 
 
 Esta opción está disponible para proyectos DLL ATL sin atributos solo.
 
-```  
-class CProjNameApp : public CWinApp  
-{  
+```
+class CProjNameApp : public CWinApp
+{
 public:  
 
 // Overrides  
     virtual BOOL InitInstance();
 virtual int ExitInstance();
-DECLARE_MESSAGE_MAP() 
+DECLARE_MESSAGE_MAP()
 };  
 
-BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)  
+BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)
 END_MESSAGE_MAP()  
 
 CProjNameApp theApp;  
 
-BOOL CProjNameApp::InitInstance()  
+BOOL CProjNameApp::InitInstance()
 {  
     return CWinApp::InitInstance();
 
 }  
 
-int CProjNameApp::ExitInstance()  
+int CProjNameApp::ExitInstance()
 {  
     return CWinApp::ExitInstance();
 
-}  
+}
 ```
 
 Puede ver la clase de objeto de aplicación y su `InitInstance` y `ExitInstance` funciones en la vista de clases.
 
 ## <a name="see-also"></a>Vea también
 
-[Agregar una clase](../../ide/adding-a-class-visual-cpp.md)   
-[Crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)   
+[Agregar una clase](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md)
 

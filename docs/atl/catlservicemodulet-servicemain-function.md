@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf3455bb5e1f6dca08e01540af92536b2597a4fc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae357caad88e128fe9f3742887781d0096efe2c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762000"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058593"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>Función CAtlServiceModuleT:: ServiceMain
 
@@ -39,6 +39,6 @@ Ahora, `CAtlServiceModuleT::Run` se llama para realizar el trabajo principal del
 
 ## <a name="see-also"></a>Vea también
 
-[servicios](../atl/atl-services.md)   
+[Servicios](../atl/atl-services.md)<br/>
 [CAtlServiceModuleT:: ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
 

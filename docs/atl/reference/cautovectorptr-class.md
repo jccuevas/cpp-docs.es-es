@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054485"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr (clase)
 
@@ -40,13 +40,13 @@ Esta clase representa un objeto de puntero inteligente con nuevo vector y elimin
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-`T`  
+*T*<br/>
 El tipo de puntero.
 
 ## <a name="members"></a>Miembros
@@ -82,7 +82,7 @@ El tipo de puntero.
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase proporciona métodos para crear y administrar un puntero inteligente, que le ayudarán a proteger frente a pérdidas de memoria por los recursos se liberan automáticamente cuando se encuentra fuera del ámbito. `CAutoVectorPtr` es similar a `CAutoPtr`, la única diferencia es que `CAutoVectorPtr` usa [nuevo vector&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) y [vector delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) para asignar y liberar memoria en lugar de C++ **nueva** y **eliminar** operadores. Consulte [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) si las clases de colección de `CAutoVectorPtr` son necesarios.  
+Esta clase proporciona métodos para crear y administrar un puntero inteligente, que le ayudarán a proteger frente a pérdidas de memoria por los recursos se liberan automáticamente cuando se encuentra fuera del ámbito. `CAutoVectorPtr` es similar a `CAutoPtr`, la única diferencia es que `CAutoVectorPtr` usa [nuevo vector&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) y [vector delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) para asignar y liberar memoria en lugar de C++ **nueva** y **eliminar** operadores. Consulte [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) si las clases de colección de `CAutoVectorPtr` son necesarios.
 
 Consulte [CAutoPtr](../../atl/reference/cautoptr-class.md) para obtener un ejemplo del uso de una clase de puntero inteligente.
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nElements*  
+*nElements*<br/>
 Número de elementos de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*  
+*p*<br/>
 La `CAutoVectorPtr` objeto tomará posesión de este puntero.
 
 ### <a name="remarks"></a>Comentarios
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*  
+*p*<br/>
 Un puntero existente.
 
 ### <a name="remarks"></a>Comentarios
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*  
+*p*<br/>
 Un puntero.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -226,7 +226,7 @@ El operador de asignación se separa la `CAutoVectorPtr` objeto desde el puntero
 
 El operador de conversión.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ Devuelve un puntero al tipo de datos de objeto definido en la plantilla de clase
 
 ## <a name="see-also"></a>Vea también
 
-[CAutoPtr (clase)](../../atl/reference/cautoptr-class.md)   
+[CAutoPtr (clase)](../../atl/reference/cautoptr-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

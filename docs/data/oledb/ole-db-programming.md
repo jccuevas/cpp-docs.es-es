@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073679"
 ---
 # <a name="ole-db-programming"></a>Programación de OLE DB
+
 OLE DB de Microsoft es una tecnología heredada; es la API de acceso de datos necesarios para los servidores vinculados de SQL para las aplicaciones nuevas. Todas las demás aplicaciones nuevas deben utilizar ODBC. El proveedor OLE DB actual para SQL Server es SQLNCLI11. ARCHIVO DLL. El proveedor aún se envía a SQL Server 2016. Esta documentación está dirigida a los desarrolladores que son mantener las aplicaciones existentes que ya usan OLE DB.
   
- Las plantillas OLE DB son plantillas de C++ que facilitan el uso de la tecnología de base de datos de OLE DB de alto rendimiento, al proporcionar clases que implementan muchas interfaces OLE DB comúnmente usadas. Esta biblioteca de plantillas se divide en plantillas de consumidor y de proveedor.  
+Las plantillas OLE DB son plantillas de C++ que facilitan el uso de la tecnología de base de datos de OLE DB de alto rendimiento, al proporcionar clases que implementan muchas interfaces OLE DB comúnmente usadas. Esta biblioteca de plantillas se divide en plantillas de consumidor y de proveedor.  
   
- Visual C++ también admite el asistente para la creación de aplicaciones de inicio de OLE DB.  
+Visual C++ también admite el asistente para la creación de aplicaciones de inicio de OLE DB.  
   
- Además, puede usar atributos para implementar las plantillas de consumidor de OLE DB.  
+Además, puede usar atributos para implementar las plantillas de consumidor de OLE DB.  
   
 |Para obtener información adicional acerca de|Vea|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ OLE DB de Microsoft es una tecnología heredada; es la API de acceso de datos ne
 |Temas conceptuales de ODBC|[Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>Vea también  
- [Acceso a datos](../data-access-in-cpp.md)
+
+[Acceso a datos](../data-access-in-cpp.md)

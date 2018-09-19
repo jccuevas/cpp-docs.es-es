@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2936 | Documentos de Microsoft
+title: Error del compilador C2936 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d3cfd6e9142e5c10906eaa94d5a1466b0d0bd19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 839d2f3dd005e4bd8bd697c74e5940a0331c1acc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054251"
 ---
 # <a name="compiler-error-c2936"></a>Error del compilador C2936
-'clase': el id. de clase de plantilla se ha vuelto a definir como variable de datos global  
-  
- No se puede usar una clase genérica o de plantilla como variable de datos local.  
-  
- Este error puede generarse si las llaves no tienen su pareja correspondiente.  
-  
- El ejemplo siguiente genera la advertencia C2936:  
-  
-```  
-// C2936.cpp  
-// compile with: /c  
-template<class T> struct TC { };   
-int TC<int>;   // C2936  
-  
-// OK  
-struct TC2 { };   
-int TC2;  
-```  
-  
- También se puede producir el error C2936 al usar genéricos:  
-  
-```  
-// C2936b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-ref struct GC {};  
-int GC<int>;   // C2936  
-  
-// OK  
-ref struct GC2 {};  
-int GC2;  
+
+'clase': el id. de clase de plantilla se ha vuelto a definir como variable de datos global
+
+No se puede usar una clase genérica o de plantilla como variable de datos local.
+
+Este error puede generarse si las llaves no tienen su pareja correspondiente.
+
+El ejemplo siguiente genera la advertencia C2936:
+
+```
+// C2936.cpp
+// compile with: /c
+template<class T> struct TC { };
+int TC<int>;   // C2936
+
+// OK
+struct TC2 { };
+int TC2;
+```
+
+También se puede producir el error C2936 al usar genéricos:
+
+```
+// C2936b.cpp
+// compile with: /clr /c
+generic<class T>
+ref struct GC {};
+int GC<int>;   // C2936
+
+// OK
+ref struct GC2 {};
+int GC2;
 ```

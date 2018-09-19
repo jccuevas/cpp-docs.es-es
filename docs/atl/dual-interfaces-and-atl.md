@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f59e43bbc1d5f11d1582bad577cc0d8eb971d121
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108591"
 ---
 # <a name="dual-interfaces-and-atl"></a>Interfaces duales y ATL
 
@@ -29,21 +29,21 @@ Una interfaz dual permite que sus métodos tener acceso como métodos de interfa
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Implementar una interfaz dual](../atl/implementing-a-dual-interface.md)  
+[Implementar una interfaz dual](../atl/implementing-a-dual-interface.md)<br/>
 Describe las clases y los asistentes implicadas en implementar una interfaz dual.
 
-[Varias interfaces duales](../atl/multiple-dual-interfaces.md)  
+[Varias interfaces duales](../atl/multiple-dual-interfaces.md)<br/>
 Describe cómo exponer varias interfaces duales en un único objeto.
 
-[El nonextensible (atributo)](../atl/nonextensible-attribute.md)  
+[El nonextensible (atributo)](../atl/nonextensible-attribute.md)<br/>
 Explica cuándo usar la **nonextensible** atributo en la definición de interfaz.
 
-[Eventos e interfaces duales](../atl/dual-interfaces-and-events.md)  
+[Eventos e interfaces duales](../atl/dual-interfaces-and-events.md)<br/>
 Describe las razones de diseño para no realizar un evento de interfaz de una interfaz dual.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
 
 ## <a name="see-also"></a>Vea también

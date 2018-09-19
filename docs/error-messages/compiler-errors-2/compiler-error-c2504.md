@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2504 | Documentos de Microsoft
+title: Error del compilador C2504 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bac0f8f28955af172590535568289182c3489d6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb11774f65454799761913babb428dc6a471743
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054134"
 ---
 # <a name="compiler-error-c2504"></a>Error del compilador C2504
-'clase': clase base sin definir  
-  
- La clase base se declara, pero nunca se ha definido.  Causas posibles:  
-  
-1.  Falta el archivo de inclusión.  
-  
-2.  La clase base externa no se declara con [extern](../../cpp/using-extern-to-specify-linkage.md).  
-  
- El ejemplo siguiente genera C2504:  
-  
-```  
-// C2504.cpp  
-// compile with: /c  
-class A;  
-class B : public A {};   // C2504  
-```  
-  
- VALE  
-  
-```  
-class C{};  
-class D : public C {};  
+
+'class': clase base sin definir
+
+La clase base se declara pero nunca se ha definido.  Causas posibles:
+
+1. Falta el archivo de inclusión.
+
+1. La clase base externa no se declara con [extern](../../cpp/using-extern-to-specify-linkage.md).
+
+El ejemplo siguiente genera C2504:
+
+```
+// C2504.cpp
+// compile with: /c
+class A;
+class B : public A {};   // C2504
+```
+
+DE ACUERDO
+
+```
+class C{};
+class D : public C {};
 ```

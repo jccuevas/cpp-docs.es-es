@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1190 | Documentos de Microsoft
+title: Error irrecuperable C1190 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 831eb782b074ed8ba0eb36d1abef7857321f2483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96e1ab464199466a5df13362f40ac9143be49a68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084957"
 ---
 # <a name="fatal-error-c1190"></a>Error irrecuperable C1190
-un código de destino administrado requiere una opción '/clr'  
-  
- Está usando construcciones CLR, pero no especificó **/clr**.  
-  
- Para obtener más información, consulta [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- El ejemplo siguiente genera la advertencia C1190:  
-  
-```  
-// C1190.cpp  
-// compile with: /c  
-__gc class A {};   // C1190  
-ref class A {};  
+
+un código de destino administrado requiere una opción '/clr'
+
+Está usando construcciones CLR, pero no especificó **/clr**.
+
+Para obtener más información, consulta [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+El ejemplo siguiente genera la advertencia C1190:
+
+```
+// C1190.cpp
+// compile with: /c
+__gc class A {};   // C1190
+ref class A {};
 ```

@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324040"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715473"
 ---
 # <a name="general-property-page-file"></a>Página de propiedades General (Archivo)
 
 Al seleccionar un archivo en el **Explorador de soluciones**, la página de propiedades **General** bajo el nodo **Propiedades de configuración** contiene las propiedades siguientes:
 
-**Excluir de la compilación**  
-Especifica si el archivo debe estar en la compilación para la configuración actual.
+- **Excluir de la compilación**
 
-Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+   Especifica si el archivo debe estar en la compilación para la configuración actual.
 
-**Herramienta**  
-La herramienta que se va a usar para compilar este archivo. Vea [Especificar las herramientas de compilación personalizadas](../ide/specifying-custom-build-tools.md) para obtener más información.
+   Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+- **Herramienta**
+
+   La herramienta que se va a usar para compilar este archivo. Vea [Especificar las herramientas de compilación personalizadas](../ide/specifying-custom-build-tools.md) para obtener más información.
+
+   Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
 Para obtener información sobre cómo acceder a la página de propiedades **General** bajo el nodo **Propiedades de configuración**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
 

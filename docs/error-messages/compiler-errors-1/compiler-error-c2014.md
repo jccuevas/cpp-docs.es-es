@@ -1,5 +1,5 @@
 ---
-title: C2014 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839fececb10897c799473ae328afb9f422b4c390
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9167d71e717490b89c1861abe9a9da9e0ab6a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064859"
 ---
-# <a name="compiler-error-c2014"></a>C2014 de Error del compilador
-comando de preprocesador debe empezar con un primer espacio  
-  
- La `#` inicio de sesión de una directiva de preprocesador debe ser el primer carácter en una línea que no sea un espacio en blanco.  
-  
- El ejemplo siguiente genera C2014:  
-  
-```  
-// C2014.cpp  
-int k; #include <stdio.h>   // C2014  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2014b.cpp  
-// compile with: /c  
-int k;   
-#include <stdio.h>  
+# <a name="compiler-error-c2014"></a>Error del compilador C2014
+
+comando de preprocesador debe empezar con un primer espacio
+
+El `#` inicio de sesión de una directiva de preprocesador debe ser el primer carácter en una línea que no sea espacio en blanco.
+
+El ejemplo siguiente genera C2014:
+
+```
+// C2014.cpp
+int k; #include <stdio.h>   // C2014
+```
+
+Posible resolución:
+
+```
+// C2014b.cpp
+// compile with: /c
+int k;
+#include <stdio.h>
 ```

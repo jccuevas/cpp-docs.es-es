@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7fae3dafe056598dea5026d0639ce257af3cee87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066783"
 ---
 # <a name="issuing-a-parameterized-query"></a>Realizar consultas parametrizadas
+
 En el ejemplo siguiente, se emite una consulta parametrizada simple que recupera los registros con un campo de edad (que es mayor que 30) de una tabla en una base de datos de Microsoft Access. Para admitir el parámetro, el registro de usuario debe tener una asignación adicional. El código siguiente, en un proyecto ATL, usa el `CCommand` clase en lugar de la `CTable` clase usada en el ejemplo anterior, [recorrer un conjunto de filas Simple](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```cpp  
@@ -51,7 +52,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- El registro de usuario, `CArtists`, tiene este aspecto:  
+El registro de usuario, `CArtists`, tiene este aspecto:  
   
 ```cpp  
 class CArtists  
@@ -78,4 +79,5 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc56d4e0f9c31a9b37fb5044a284a229a6ed669
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eadb1edc174d07fbc6e9ef1bfb24b436bd76033d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758497"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056156"
 ---
 # <a name="atl-utilities-reference"></a>Referencia de utilidades de ATL
 
@@ -68,5 +68,5 @@ ATL proporciona código para manipular las rutas de acceso y direcciones URL en 
 
 ## <a name="see-also"></a>Vea también
 
-[Conceptos](../atl/active-template-library-atl-concepts.md)   
+[Conceptos](../atl/active-template-library-atl-concepts.md)<br/>
 [Componentes de escritorio COM de ATL](../atl/atl-com-desktop-components.md)

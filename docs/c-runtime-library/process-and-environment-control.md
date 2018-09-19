@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200968"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085763"
 ---
 # <a name="process-and-environment-control"></a>Control de proceso y de entorno
 
@@ -77,11 +77,11 @@ Utilice las rutinas del control de proceso para iniciar, detener, y administrar 
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Crear y ejecutar un proceso nuevo con la variable **PATH**, el entorno especificado y la matriz de argumentos|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Ejecutar comando del sistema operativo|
 
- En el sistema operativo Windows, el proceso generado es equivalente al proceso que genera. Cualquier proceso puede usar **_cwait** para esperar a cualquier otro proceso cuyo identificador de proceso se conoce.
+En el sistema operativo Windows, el proceso generado es equivalente al proceso que genera. Cualquier proceso puede usar **_cwait** para esperar a cualquier otro proceso cuyo identificador de proceso se conoce.
 
- La diferencia entre las familias de **_exec** y **_spawn** es que una función **_spawn** puede devolver el control del nuevo proceso al proceso de llamada. En una función **_spawn**, tanto el proceso de llamada como el nuevo proceso están presentes en la memoria, a menos que se especifique **_P_OVERLAY**. En una función **_exec**, el nuevo proceso se superpone al proceso de llamada, por lo que el control no puede volver al proceso de llamada a menos que se produzca un error en el intento de iniciar la ejecución del nuevo proceso.
+La diferencia entre las familias de **_exec** y **_spawn** es que una función **_spawn** puede devolver el control del nuevo proceso al proceso de llamada. En una función **_spawn**, tanto el proceso de llamada como el nuevo proceso están presentes en la memoria, a menos que se especifique **_P_OVERLAY**. En una función **_exec**, el nuevo proceso se superpone al proceso de llamada, por lo que el control no puede volver al proceso de llamada a menos que se produzca un error en el intento de iniciar la ejecución del nuevo proceso.
 
- Las diferencias entre las funciones de la familia de **_exec**, así como entre las de la familia de **_spawn**, guardan relación con el método usado para buscar el archivo que se ejecutará como el nuevo proceso, la forma en que los argumentos se pasan al nuevo proceso y el método de establecer el entorno, tal y como se muestra en la tabla siguiente. Utilice una función que pase una lista de argumentos cuando el número de argumentos sea constante o se conozca en tiempo de compilación. Utilice una función que pase un puntero a una matriz que contiene los argumentos cuando el número de argumentos deba determinarse en tiempo de ejecución. La información de la tabla siguiente también se aplica a sus homólogos de caracteres anchos de las funciones **_spawn** y **_exec**.
+Las diferencias entre las funciones de la familia de **_exec**, así como entre las de la familia de **_spawn**, guardan relación con el método usado para buscar el archivo que se ejecutará como el nuevo proceso, la forma en que los argumentos se pasan al nuevo proceso y el método de establecer el entorno, tal y como se muestra en la tabla siguiente. Utilice una función que pase una lista de argumentos cuando el número de argumentos sea constante o se conozca en tiempo de compilación. Utilice una función que pase un puntero a una matriz que contiene los argumentos cuando el número de argumentos deba determinarse en tiempo de ejecución. La información de la tabla siguiente también se aplica a sus homólogos de caracteres anchos de las funciones **_spawn** y **_exec**.
 
 ### <a name="spawn-and-exec-function-families"></a>Familias de _spawn y _exec (Función)
 

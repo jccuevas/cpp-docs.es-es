@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079341"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl (clase)
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Identificador de la ventana host proporcionada por el Shell de vista previa avanzada.
 
-*República Popular China*  
+*República Popular China*<br/>
 Especifica el tamaño inicial y la posición de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parámetros
 
-*HDC*  
+*HDC*<br/>
 Identificador de un contexto de dispositivo para dibujar.
 
 ### <a name="remarks"></a>Comentarios
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Parámetros
 
-*nMsg*  
+*nMsg*<br/>
 Se establece en WM_PAINT.
 
-*wParam*  
+*wParam*<br/>
 Este parámetro no se utiliza.
 
-*lParam*  
+*lParam*<br/>
 Este parámetro no se utiliza.
 
-*bHandled*  
+*bHandled*<br/>
 Cuando esta función devuelve, contiene TRUE.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Identificador de la nueva ventana primaria.
 
 ### <a name="remarks"></a>Comentarios
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parámetros
 
-*clrBack*  
+*clrBack*<br/>
 Color de fondo de la ventana Vista previa.
 
-*clrText*  
+*clrText*<br/>
 Color del texto de la ventana Vista previa.
 
-*PLF*  
+*PLF*<br/>
 Fuente utilizada para mostrar texto en la ventana Vista previa.
 
 ### <a name="remarks"></a>Comentarios
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parámetros
 
-*República Popular China*  
+*República Popular China*<br/>
 Especifica el nuevo tamaño y posición del control de vista previa.
 
-*bRedraw*  
+*bRedraw*<br/>
 Especifica si se debe dibujar el control.
 
 ### <a name="remarks"></a>Comentarios

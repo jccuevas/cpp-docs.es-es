@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e44475d7d9eee547e0e9d47c8d49c439d91bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1990de6165e50397f11d84cb0486c1d5d5d67fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089237"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList (clase)
 
@@ -35,7 +35,7 @@ Esta clase proporciona métodos útiles al construir una lista de punteros del m
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<typename E, class Allocator = ATL::CCRTAllocator>  
+template<typename E, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrList 
    : public CAtlList<ATL::CHeapPtr<E, Allocator>,
                      CHeapPtrElementTraits<E, Allocator>>
@@ -43,10 +43,10 @@ class CHeapPtrList
 
 #### <a name="parameters"></a>Parámetros
 
-*E*  
+*E*<br/>
 El tipo de objeto que se almacenará en la clase de colección.
 
-*Asignador*  
+*Asignador*<br/>
 La clase de asignación de memoria que utilice. El valor predeterminado es [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Miembros
@@ -81,7 +81,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 El tamaño de bloque.
 
 ### <a name="remarks"></a>Comentarios
@@ -90,7 +90,7 @@ El tamaño de bloque es una medida de la cantidad de memoria asignada cuando se 
 
 ## <a name="see-also"></a>Vea también
 
-[CAtlList (clase)](../../atl/reference/catllist-class.md)   
-[CHeapPtr (clase)](../../atl/reference/cheapptr-class.md)   
-[CHeapPtrElementTraits (clase)](../../atl/reference/cheapptrelementtraits-class.md)   
+[CAtlList (clase)](../../atl/reference/catllist-class.md)<br/>
+[CHeapPtr (clase)](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrElementTraits (clase)](../../atl/reference/cheapptrelementtraits-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

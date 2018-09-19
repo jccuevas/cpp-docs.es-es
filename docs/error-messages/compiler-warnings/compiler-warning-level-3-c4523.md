@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4523 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4523 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4dc1e95b60b36b42d8617611a15aff966386c33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06a76aaf4878b9238da6d34de66ef40a260a5a5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118536"
 ---
 # <a name="compiler-warning-level-3-c4523"></a>Advertencia del compilador (nivel 3) C4523
-'class': han especificado varios destructores  
-  
- La clase tiene varios destructores.
+
+'class': han especificado varios destructores
+
+La clase tiene varios destructores.

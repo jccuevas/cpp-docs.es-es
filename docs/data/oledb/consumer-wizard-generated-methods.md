@@ -25,27 +25,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9c8a3605a94e0feffa1072d1c7cd92a8bdfecb66
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056032"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos generados por el Asistente para consumidores
+
 El Asistente para consumidores OLE DB ATL y MFC Application Wizard generan determinadas funciones de los cuales debe tener en cuenta. Tenga en cuenta que algunos métodos se implementan de forma diferente en proyectos con atributos, por lo que hay algunas advertencias; cada caso se trata más adelante. Para obtener información acerca de cómo ver código insertado, vea [Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll` se abre el origen de datos, conjuntos de filas y activa los marcadores si están disponibles.  
+- `OpenAll` se abre el origen de datos, conjuntos de filas y activa los marcadores si están disponibles.  
   
--   `CloseAll` abrir todos los conjuntos de filas se cierra y libera todas las ejecuciones de comandos.  
+- `CloseAll` abrir todos los conjuntos de filas se cierra y libera todas las ejecuciones de comandos.  
   
--   `OpenRowset` se llama desde OpenAll para abrir el conjunto de filas o los conjuntos de filas del consumidor.  
+- `OpenRowset` se llama desde OpenAll para abrir el conjunto de filas o los conjuntos de filas del consumidor.  
   
--   `GetRowsetProperties` Recupera un puntero a la propiedad del conjunto de filas con las propiedades que se pueden establecer.  
+- `GetRowsetProperties` Recupera un puntero a la propiedad del conjunto de filas con las propiedades que se pueden establecer.  
   
--   `OpenDataSource` Abre el origen de datos mediante la cadena de inicialización especificada en el **propiedades de vínculo de datos** cuadro de diálogo.  
+- `OpenDataSource` Abre el origen de datos mediante la cadena de inicialización especificada en el **propiedades de vínculo de datos** cuadro de diálogo.  
   
--   `CloseDataSource` cierra el origen de datos de una manera adecuada.  
+- `CloseDataSource` cierra el origen de datos de una manera adecuada.  
   
 ## <a name="openall-and-closeall"></a>OpenAll y CloseAll  
   
@@ -55,7 +56,7 @@ HRESULT OpenAll();
 void CloseAll();  
 ```  
   
- El ejemplo siguiente muestra cómo se puede llamar a `OpenAll` y `CloseAll` cuando se ejecuta el mismo comando varias veces. Comparar el código de ejemplo [CCommand:: Close](../../data/oledb/ccommand-close.md), que muestra una variación que llama a `Close` y `ReleaseCommand` en lugar de `CloseAll`.  
+El ejemplo siguiente muestra cómo se puede llamar a `OpenAll` y `CloseAll` cuando se ejecuta el mismo comando varias veces. Comparar el código de ejemplo [CCommand:: Close](../../data/oledb/ccommand-close.md), que muestra una variación que llama a `Close` y `ReleaseCommand` en lugar de `CloseAll`.  
   
 ```cpp  
 int main(int argc, char* argv[])  
@@ -89,7 +90,8 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Tenga en cuenta que si define un `HasBookmark` método, el `OpenAll` código establece la propiedad DBPROP_IRowsetLocate; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
+
+Tenga en cuenta que si define un `HasBookmark` método, el `OpenAll` código establece la propiedad DBPROP_IRowsetLocate; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -100,7 +102,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- `OpenAll` llama a este método para abrir el conjunto de filas en el consumidor. Normalmente, no es necesario llamar a `OpenRowset` a menos que desee trabajar con varios orígenes de datos/sesiones/conjuntos de filas. `OpenRowset` se declara en el archivo de encabezado de clase de comando o una tabla:  
+`OpenAll` llama a este método para abrir el conjunto de filas en el consumidor. Normalmente, no es necesario llamar a `OpenRowset` a menos que desee trabajar con varios orígenes de datos/sesiones/conjuntos de filas. `OpenRowset` se declara en el archivo de encabezado de clase de comando o una tabla:  
   
 ```  
 // OLE DB Template version:  
@@ -115,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- Los atributos implementan este método de manera diferente. Esta versión toma un objeto de sesión y una cadena de comando cuyo valor predeterminado es la cadena de comando especificada en db_command, aunque puede pasar otro diferente. Tenga en cuenta que si define un `HasBookmark` método, el `OpenRowset` código establece la propiedad DBPROP_IRowsetLocate; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
+Los atributos implementan este método de manera diferente. Esta versión toma un objeto de sesión y una cadena de comando cuyo valor predeterminado es la cadena de comando especificada en db_command, aunque puede pasar otro diferente. Tenga en cuenta que si define un `HasBookmark` método, el `OpenRowset` código establece la propiedad DBPROP_IRowsetLocate; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
   
 ```cpp  
 // Attribute-injected version:  
@@ -140,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Este método recupera un puntero al conjunto de propiedades del conjunto de filas; Puede usar este puntero para establecer propiedades como DBPROP_IRowsetChange. `GetRowsetProperties` se usa en la clase de registro de usuario como se indica a continuación. Puede modificar este código para establecer las propiedades del conjunto de filas adicionales:  
+Este método recupera un puntero al conjunto de propiedades del conjunto de filas; Puede usar este puntero para establecer propiedades como DBPROP_IRowsetChange. `GetRowsetProperties` se usa en la clase de registro de usuario como se indica a continuación. Puede modificar este código para establecer las propiedades del conjunto de filas adicionales:  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -153,7 +155,8 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- No debe definir un global `GetRowsetProperties` método porque podrían entrar en conflicto con el definido por el asistente. Tenga en cuenta que esto es un método generado por el asistente que obtendrá con proyectos de plantillas y atributos. los atributos no insertan este código.  
+
+No debe definir un global `GetRowsetProperties` método porque podrían entrar en conflicto con el definido por el asistente. Tenga en cuenta que esto es un método generado por el asistente que obtendrá con proyectos de plantillas y atributos. los atributos no insertan este código.  
   
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource y CloseDataSource  
   
@@ -164,7 +167,9 @@ void CloseDataSource();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El asistente define los métodos `OpenDataSource` y `CloseDataSource`; `OpenDataSource` llamadas [CDataSource:: OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
+
+El asistente define los métodos `OpenDataSource` y `CloseDataSource`; `OpenDataSource` llamadas [CDataSource:: OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

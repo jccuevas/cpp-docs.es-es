@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059490"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler (Clase)
 Representa una abstracción para el programador actual asociado al contexto de la llamada.  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Policy`  
- La directiva del programador que describe el comportamiento del programador recién creado.  
+*_Policy*<br/>
+La directiva del programador que describe el comportamiento del programador recién creado.  
   
 ### <a name="remarks"></a>Comentarios  
  Los datos adjuntos del programador al contexto de llamada implícitamente colocan un recuento de referencias en el programador.  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Placement`  
- Una referencia a una ubicación donde las tareas dentro del grupo de programación se se decanta hacia el ejecutando en.  
+*_Este*<br/>
+Una referencia a una ubicación donde las tareas dentro del grupo de programación se se decanta hacia el ejecutando en.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al grupo de programación recién creado. Esto `ScheduleGroup` objeto tiene un recuento de referencia inicial que se coloca en él.  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Placement`  
- Una referencia a la ubicación para consultar al programador actual.  
+*_Este*<br/>
+Una referencia a la ubicación para consultar al programador actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una indicación de si la ubicación especificada por el `_Placement` argumento está disponible en el programador actual.  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_ShutdownEvent`  
- Identificador de un objeto de evento de Windows que se señalará el tiempo de ejecución cuando se cierra y se destruye el programador asociado al contexto actual.  
+*_ShutdownEvent*<br/>
+Identificador de un objeto de evento de Windows que se señalará el tiempo de ejecución cuando se cierra y se destruye el programador asociado al contexto actual.  
   
 ### <a name="remarks"></a>Comentarios  
  Si no hay ningún programador adjuntado al contexto de la llamada, llamar a este método dará como resultado un [scheduler_not_attached](scheduler-not-attached-class.md) excepción producida.  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Proc`  
- Un puntero a la función que se ejecutan para realizar el cuerpo de la tarea ligera.  
+*_Proc*<br/>
+Un puntero a la función que se ejecutan para realizar el cuerpo de la tarea ligera.  
   
- `_Data`  
- Un puntero void para los datos que se pasa como parámetro al cuerpo de la tarea.  
+*_Datos*<br/>
+Un puntero void para los datos que se pasa como parámetro al cuerpo de la tarea.  
   
- `_Placement`  
- Una referencia a una ubicación donde la tarea ligera se se decanta hacia el ejecutando en.  
+*_Este*<br/>
+Una referencia a una ubicación donde la tarea ligera se se decanta hacia el ejecutando en.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método hará que se cree el programador predeterminado del proceso y se adjunte al contexto de la llamada si no hay ningún programador asociado actualmente con el contexto de la llamada.  

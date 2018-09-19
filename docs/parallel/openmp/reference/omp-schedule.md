@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d873d29d5ac6de1073c1ba3f3065dd015cde1f5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115052"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 Modifica el comportamiento de la [programación](../../../parallel/openmp/reference/schedule.md) cláusula cuando `schedule(runtime)` se especifica en un `for` o `parallel for` directiva.  
@@ -37,8 +37,8 @@ set OMP_SCHEDULE[=type[,size]]
 *size*<br/>
 (Opcional) Especifica el tamaño de las iteraciones. `size` Debe ser un entero positivo. El valor predeterminado es 1, excepto cuando `type` es estático. No es válido cuando `type` es `runtime`.  
   
- `type`  
- El tipo de programación:  
+*type*<br/>
+El tipo de programación:  
   
 -   `dynamic`  
   

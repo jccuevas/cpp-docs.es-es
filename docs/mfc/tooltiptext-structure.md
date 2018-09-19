@@ -17,33 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f65b94294b3b3d55f9839dffa99a18be61c5639
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097164"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT (Estructura)
 Escribir su [controlador de notificación de información sobre herramienta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), deberá usar el **TOOLTIPTEXT** estructura. Los miembros de la **TOOLTIPTEXT** estructura son:  
   
- `typedef struct {`  
-  
- `NMHDR     hdr;        // required for all WM_NOTIFY messages`  
-  
- `LPTSTR    lpszText;   // see below`  
-  
- `TCHAR     szText[80]; // buffer for tool tip text`  
-  
- `HINSTANCE hinst;      // see below`  
-  
- `UINT      uflags;     // flag indicating how to interpret the`  
-  
- `// idFrom member of the NMHDR structure`  
-  
- `// that is included in the structure`  
-  
- `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
+```cpp
+typedef struct {
+    NMHDR     hdr;        // required for all WM_NOTIFY messages
+    LPTSTR    lpszText;   // see below
+    TCHAR     szText[80]; // buffer for tool tip text
+    HINSTANCE hinst;      // see below
+    UINT      uflags;     // flag indicating how to interpret the
+                          // idFrom member of the NMHDR structure
+                          // that is included in the structure
+} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
+```
   
  *HDR*  
  Identifica la herramienta que necesita el texto. El único miembro de esta estructura que necesita es el identificador de comando. del control Será el identificador de comando del control en el *idFrom* miembro de la **NMHDR** estructura, obtiene acceso con la sintaxis `hdr.idFrom`. Consulte [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) para obtener una explicación de los miembros de la **NMHDR** estructura.  
@@ -57,7 +51,7 @@ Escribir su [controlador de notificación de información sobre herramienta](../
  *hinst*  
  Identificador de la instancia que contiene una cadena que se usará como el texto de sugerencia. Si *lpszText* es la dirección del texto de sugerencia de herramienta, este miembro es NULL.  
   
- Cuando controle el `TTN_NEEDTEXT` notificación de mensaje, especifique la cadena que se mostrará en una de las maneras siguientes:  
+Cuando controle el `TTN_NEEDTEXT` notificación de mensaje, especifique la cadena que se mostrará en una de las maneras siguientes:  
   
 -   Copie el texto en el búfer especificado por el *szText* miembro.  
   

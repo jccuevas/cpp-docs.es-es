@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0016 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0016 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cace3caf930c2b51bb1306b02bb7126373ddfe74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e03b0567b77b1ef3f64e5cf98cbe11dab502e1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297494"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075431"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>Error del evaluador de expresiones CXX0016
-constante demasiado grande  
-  
- El evaluador de expresiones de C no puede aceptar una constante de entero sin signo mayor que 4.294.967.295 (0FFFFFFFF hexadecimal) o una constante de punto flotante cuya magnitud sea mayor que aproximadamente 1.8E + 308.  
-  
- Este error es idéntico a CAN0016.
+
+constante demasiado grande
+
+El evaluador de expresiones de C no puede aceptar una constante de entero sin signo mayor que 4.294.967.295 (0FFFFFFFF hexadecimal) o una constante de punto flotante cuya magnitud sea mayor que aproximadamente 1.8E + 308.
+
+Este error es idéntico a CAN0016.

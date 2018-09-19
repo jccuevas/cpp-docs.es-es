@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48cea73ede2a7c5ec529f4fc44f917494560ced
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9288eda15b0bac3d3694ee56a2f427aefb60e032
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086439"
 ---
 # <a name="reference-counting"></a>Recuento de referencias
 
@@ -44,6 +44,6 @@ Recuento de referencias también se puede implementar para que se cuentan todas 
 
 ## <a name="see-also"></a>Vea también
 
-[Introducción a COM](../atl/introduction-to-com.md)   
+[Introducción a COM](../atl/introduction-to-com.md)<br/>
 [Administrar la duración de objeto a través de un recuento de referencias](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

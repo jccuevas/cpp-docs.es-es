@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036363"
 ---
 # <a name="file-handling"></a>Control de archivos
 
@@ -86,7 +86,7 @@ Estas rutinas proporcionan una forma de cambiar la representación del archivo, 
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Devolver el identificador de archivo del sistema operativo asociado al descriptor de archivo del tiempo de ejecución de C existente|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Asociar el descriptor de archivo del tiempo de ejecución de C al identificador de archivo del sistema operativo existente|
 
- Las siguientes funciones de Win32 también abren archivos y canalizaciones:
+Las siguientes funciones de Win32 también abren archivos y canalizaciones:
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116248"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialización uniforme y constructores de delegación
+
 En C++ moderno, puede usar *la inicialización de llave* para cualquier tipo, sin el signo igual. Además, se puede utilizar la delegación de constructores para simplificar el código cuando hay varios constructores que realizan un trabajo similar.
 
 ## <a name="brace-initialization"></a>Inicialización de llave
+
 La inicialización de llave se puede utilizar para cualquier clase, struct o unión. Si un tipo tiene un constructor predeterminado, ya esté declarado de forma implícita o de forma explícita, puede utilizar la inicialización de llave predeterminada (con las llaves vacías). Por ejemplo, la siguiente clase puede inicializarse mediante la inicialización de llave predeterminada y la no predeterminada:
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>Constructores initializer_list
+
 El [initializer_list (clase)](../standard-library/initializer-list-class.md) representa una lista de objetos de un tipo especificado que se puede usar en un constructor y en otros contextos. Puede construir initializer_list mediante la inicialización de llave:
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>Constructores que delegan
+
 Muchas clases tienen varios constructores que realizan acciones similares, por ejemplo, validan parámetros:
 
 ```cpp

@@ -1,5 +1,5 @@
 ---
-title: omp_set_nested () | Documentos de Microsoft
+title: omp_set_nested () | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6539167b936efdc4c9f407cd951c9c582b0a138
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fc3506c35dca469febafe21509064abc1726d633
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692186"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116904"
 ---
 # <a name="ompsetnested"></a>omp_set_nested
 Habilita el paralelismo anidado.  
@@ -34,18 +34,17 @@ void omp_set_nested(
 );  
 ```  
   
+### <a name="parameters"></a>Parámetros
+  
+*Val*<br/>
+Si es distinto de cero, habilita el paralelismo anidado. Si es cero, deshabilita el paralelismo anidado.  
+  
 ## <a name="remarks"></a>Comentarios  
- donde,  
+ OMP anidado paralelismo puede activarse con `omp_set_nested`, o estableciendo la [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) variable de entorno.  
   
- `val`  
- Si es distinto de cero, habilita el paralelismo anidado. Si es cero, deshabilita paralelismo anidado.  
+ La configuración de `omp_set_nested` reemplazará la configuración de la `OMP_NESTED` variable de entorno.  
   
-## <a name="remarks"></a>Comentarios  
- OMP anidado pueden activar paralelismo con `omp_set_nested`, o estableciendo la [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) variable de entorno.  
-  
- La configuración de `omp_set_nested` sobrescribirá la configuración de la `OMP_NESTED` variable de entorno.  
-  
- Cuando se habilita, la variable de entorno puede interrumpir un programa operativo en caso contrario, porque el número de subprocesos aumenta exponencialmente cuando se anidan regiones en paralelo.  Por ejemplo, una función que recorre 6 veces con el número de subprocesos OMP establecido en 4 requiere 4096 (4 a la potencia de 6) subprocesos por lo general, el rendimiento de la aplicación se verá afectado si el número de subprocesos supera el número de procesadores. Una excepción a esto sería que e/s enlaza las aplicaciones.  
+ Cuando se habilita, la variable de entorno puede interrumpir un programa operativo en caso contrario, ya que aumenta exponencialmente el número de subprocesos cuando se anidan regiones en paralelo.  Por ejemplo, una función que recorre 6 veces con el número de subprocesos OMP establecido en 4 requiere 4096 (4 a la potencia de 6) de subprocesos en general, se degradará el rendimiento de la aplicación si el número de subprocesos supera el número de procesadores. Una excepción a esto sería que aplicaciones enlazadas con E/S.  
   
  Use [omp_get_nested ()](../../../parallel/openmp/reference/omp-get-nested.md) para mostrar la configuración actual de `omp_set_nested`.  
   

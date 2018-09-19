@@ -14,23 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68a70a0fb6d202d1ba8c7f13c5a16e4318ca5ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 559e7e2ab80e904677f77d64ad378c2b88fd2c66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097593"
 ---
 # <a name="integers"></a>Enteros
--   [Intervalo de valores enteros](../c-language/range-of-integer-values.md)  
-  
--   [Disminución de enteros](../c-language/demotion-of-integers.md)  
-  
--   [Operaciones bit a bit con signo](../c-language/signed-bitwise-operations.md)  
-  
--   [Restos](../c-language/remainders.md)  
-  
--   [Desplazamientos a la derecha](../c-language/right-shifts.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Comportamiento definido por la implementación](../c-language/implementation-defined-behavior.md)
+
+- [Intervalo de valores enteros](../c-language/range-of-integer-values.md)
+
+- [Disminución de enteros](../c-language/demotion-of-integers.md)
+
+- [Operaciones bit a bit con signo](../c-language/signed-bitwise-operations.md)
+
+- [Restos](../c-language/remainders.md)
+
+- [Desplazamientos a la derecha](../c-language/right-shifts.md)
+
+## <a name="see-also"></a>Vea también
+
+[Comportamiento definido por la implementación](../c-language/implementation-defined-behavior.md)

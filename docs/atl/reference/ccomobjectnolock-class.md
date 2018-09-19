@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af4f2ce063c817ee4bf0c9f8ee4fea3beffb075
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 76b8b3b329f3282a53eacb4fe27d6cfa79e08b7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078964"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock (clase)
 
@@ -35,13 +35,13 @@ Esta clase implementa `IUnknown` para un objeto no agregado, pero no no incremen
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class Base>  
+template<class Base>
 class CComObjectNoLock : public Base
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir de cualquier otra interfaz que desea admitir en el objeto.
 
 ## <a name="members"></a>Miembros
@@ -99,7 +99,7 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="parameters"></a>Parámetros
 
-<em>void\*</em>  
+<em>void\*</em><br/>
 [in] No se utiliza este parámetro sin nombre. Existe para lograr una simetría con otros `CComXXXObjectXXX` constructores.
 
 ##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock
@@ -124,10 +124,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*  
+*IID*<br/>
 [in] El identificador de la interfaz que se solicita.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntero al puntero de interfaz identificado por *iid*. Si el objeto no admite esta interfaz, *ppvObject* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto

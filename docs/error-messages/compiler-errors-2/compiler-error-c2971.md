@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2971 | Documentos de Microsoft
+title: Error del compilador C2971 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd46be67a2ce8e7f3a8ab1319c7a16a465797474
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a311e6cd25ab275b7aa38325e45d26fd733d8b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107544"
 ---
 # <a name="compiler-error-c2971"></a>Error del compilador C2971
-'clase': parámetro de plantilla 'param': 'arg': no se puede usar una variable local como argumento sin tipo  
-  
- No se puede usar el nombre o la dirección de una variable local como argumento de plantilla.  
-  
- El ejemplo siguiente genera C2971:  
-  
-```  
-// C2971.cpp  
-template <int *pi>   
-class Y {};  
-  
-int global_var = 0;  
-  
-int main() {  
-   int local_var = 0;  
-   Y<&local_var> aY;   // C2971  
-   // try the following line instead  
-   // Y<&global_var> aY;  
-}  
+
+'class': parámetro de plantilla 'param': 'arg': no se puede usar una variable local como un argumento sin tipo
+
+No se puede usar el nombre o dirección de una variable local como un argumento de plantilla.
+
+El ejemplo siguiente genera C2971:
+
+```
+// C2971.cpp
+template <int *pi>
+class Y {};
+
+int global_var = 0;
+
+int main() {
+   int local_var = 0;
+   Y<&local_var> aY;   // C2971
+   // try the following line instead
+   // Y<&global_var> aY;
+}
 ```

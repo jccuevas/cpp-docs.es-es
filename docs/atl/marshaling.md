@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f9e8e080837ed109a786c2123ab90624d994cd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69f1b7e131b614aa4714f0c2be19fab79982031c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108630"
 ---
 # <a name="marshaling"></a>El cálculo de referencias
 
@@ -32,6 +32,6 @@ La técnica de COM de la serialización permite que las interfaces expuestas por
 
 ## <a name="see-also"></a>Vea también
 
-[Introducción a COM](../atl/introduction-to-com.md)   
+[Introducción a COM](../atl/introduction-to-com.md)<br/>
 [Detalles del cálculo de referencias](/windows/desktop/com/marshaling-details)
 

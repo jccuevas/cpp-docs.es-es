@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 2) C4099 | Documentos de Microsoft
+title: Compilador advertencia (nivel 2) C4099 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afecb3fb2420d27bedf16c81894f224a1119a67b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d7ffee02e8e5414a0e06cc4ba0da77a50c75f53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33309473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110177"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Compilador advertencia (nivel 2) C4099
-'identificador': nombre de tipo visto anteriormente usando 'tipodeobjeto1' ahora se ve usando 'objecttype2'  
-  
- Un objeto declarado como una estructura se define como una clase o un objeto declarado como una clase se define como una estructura. El compilador utiliza el tipo especificado en la definición.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error C4099.  
-  
-```  
-// C4099.cpp  
-// compile with: /W2 /c  
-struct A;  
-class A {};   // C4099, use different identifer or use same object type  
+
+'identifier': nombre de tipo visto anteriormente usando 'tipodeobjeto1' ahora se ve usando 'objecttype2'
+
+Un objeto declarado como una estructura se define como una clase o un objeto declarado como una clase se define como una estructura. El compilador usa el tipo especificado en la definición.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error C4099.
+
+```
+// C4099.cpp
+// compile with: /W2 /c
+struct A;
+class A {};   // C4099, use different identifer or use same object type
 ```

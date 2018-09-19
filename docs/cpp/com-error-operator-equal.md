@@ -18,31 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdc97982b9e8292dec1e8b5c2c49489f6803dea6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c2fe53c7040bc248d63bd3d14f90f915bdcd689a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061037"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
-**Específicos de Microsoft**  
-  
- Asigna un objeto `_com_error` existente a otro.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-_com_error& operator = (  
-   const _com_error& that   
-) throw ( );  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *que*  
- Un objeto `_com_error`.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_com_error (Clase)](../cpp/com-error-class.md)
+
+**Específicos de Microsoft**
+
+Asigna un objeto `_com_error` existente a otro.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+_com_error& operator = (
+   const _com_error& that
+) throw ( );
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*que*<br/>
+Un objeto `_com_error`.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_com_error (Clase)](../cpp/com-error-class.md)

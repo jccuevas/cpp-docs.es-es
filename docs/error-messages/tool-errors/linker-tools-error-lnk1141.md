@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1141 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1141 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee194889f6b25842be49edf4dbc7ff4edf9ff1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c1046f240a701883058a4eede9670645dd12bcc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113635"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Error de las herramientas del vinculador LNK1141
-Error durante la compilación del archivo de exportación  
-  
- [VÍNCULO](../../build/reference/linker-command-line-syntax.md) no se pudo crear el archivo de exportación (.exp).  
-  
- Las causas de este error incluyen problemas del sistema, como errores de sintaxis y memoria insuficiente en opciones o instrucciones de definición de módulo.  
-  
- Este error está precedido por otro error que proporciona información adicional.  
-  
-## <a name="see-also"></a>Vea también  
- [Archivos .Exp como entrada del vinculador](../../build/reference/dot-exp-files-as-linker-input.md)
+
+Error al compilar el archivo de exportaciones
+
+[VÍNCULO](../../build/reference/linker-command-line-syntax.md) no se pudo crear el archivo de exportación (.exp).
+
+Causas de este error incluyen problemas del sistema, como errores de sintaxis y la memoria insuficientes en las opciones o instrucciones de definición de módulo.
+
+Este error está precedido por otro error que proporciona información adicional.
+
+## <a name="see-also"></a>Vea también
+
+[Archivos .Exp como entrada del vinculador](../../build/reference/dot-exp-files-as-linker-input.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095864"
 ---
 # <a name="atl-com-property-pages"></a>Páginas de propiedades COM de ATL
 
@@ -38,18 +38,18 @@ Para obtener más información, consulte [hojas de propiedades y páginas de pro
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Especificar páginas de propiedades](../atl/specifying-property-pages.md)  
+[Especificar páginas de propiedades](../atl/specifying-property-pages.md)<br/>
 Se enumeran los pasos para especificar las páginas de propiedades para un control y se muestra una clase de ejemplo.
 
-[Implementar páginas de propiedades](../atl/implementing-property-pages.md)  
+[Implementar páginas de propiedades](../atl/implementing-property-pages.md)<br/>
 Se enumeran los pasos para implementar páginas de propiedades, incluidos los métodos de invalidación. Le guía a través de un ejemplo completo basado en el programa de ejemplo ATLPages.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Ejemplo ATLPages](../visual-cpp-samples.md)  
+[Ejemplo ATLPages](../visual-cpp-samples.md)<br/>
 El extracto del ejemplo ATLPages, que implementa una página de propiedad mediante `IPropertyPageImpl`.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
 
 ## <a name="see-also"></a>Vea también

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: db047c2b16eb67f086bc26976783e829189d4266
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095110"
 ---
 # <a name="is-isw-routines"></a>is, isw (Rutinas)
 
@@ -61,75 +61,75 @@ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la
 
 En la configuración regional "C", las condiciones de prueba de las rutinas **is** son las siguientes:
 
-`isalnum`  
+`isalnum`<br/>
 Alfanumérico (A - Z, a - z o 0 - 9).
 
-`isalpha`  
+`isalpha`<br/>
 Alfabético (A - Z o a - z).
 
-`__isascii`  
+`__isascii`<br/>
 Carácter ASCII (0x00 - 0x7F).
 
-`isblank`  
+`isblank`<br/>
 Tabulación horizontal o carácter de espacio (0x09 o 0x20).
 
-`iscntrl`  
+`iscntrl`<br/>
 Carácter de control (0x00 - 0x1F o 0x7F).
 
-`__iscsym`  
+`__iscsym`<br/>
 Letra, carácter de subrayado o dígito.
 
-`__iscsymf`  
+`__iscsymf`<br/>
 Letra o carácter de subrayado.
 
-`isdigit`  
+`isdigit`<br/>
 Dígito decimal (0 - 9).
 
-`isgraph`  
+`isgraph`<br/>
 Un carácter imprimible excepto el espacio ( ).
 
-`islower`  
+`islower`<br/>
 Minúscula (a - z).
 
-`isprint`  
+`isprint`<br/>
 Carácter imprimible incluido el espacio (0x20 - 0x7E).
 
-`ispunct`  
+`ispunct`<br/>
 Carácter de puntuación.
 
-`isspace`  
+`isspace`<br/>
 Carácter de espacio en blanco (0x09 - 0x0D o 0x20).
 
-`isupper`  
+`isupper`<br/>
 Mayúscula (A - Z).
 
-`isxdigit`  
+`isxdigit`<br/>
 Dígito hexadecimal (A - F, a - f o 0 - 9).
 
 En el caso de las rutinas **isw**, el resultado de prueba de la condición especificada es independiente de la configuración regional. Las condiciones de prueba de las funciones **isw** son las siguientes:
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` o `iswdigit`.
 
-`iswalpha`  
+`iswalpha`<br/>
 Cualquier carácter ancho que pertenezca a un conjunto que se define en la implementación para el que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct` ni `iswspace` sea distinto de cero. `iswalpha` devuelve un valor distinto de cero solo para caracteres anchos para los que `iswupper` o `iswlower` sea distinto de cero.
 
-`iswascii`  
+`iswascii`<br/>
 Representación de carácter ancho de caracteres ASCII (0x0000 - 0x007F).
 
-`iswblank`  
+`iswblank`<br/>
 Carácter ancho correspondiente al carácter de espacio estándar o que pertenece a un conjunto de caracteres anchos que se define en la implementación para los que `iswalnum` es FALSE. Los caracteres en blanco estándar son el espacio (L' ') y la tabulación horizontal (L'\t').
 
-`iswcntrl`  
+`iswcntrl`<br/>
 Carácter ancho de control.
 
-`__iswcsym`  
+`__iswcsym`<br/>
 Cualquier carácter ancho para el que `isalnum` sea True, o el carácter '_'.
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 Cualquier carácter ancho para el que `iswalpha` sea True, o el carácter '_'.
 
-`iswctype`  
+`iswctype`<br/>
 El carácter tiene la propiedad especificada por el argumento `desc`. Por cada valor válido del argumento `desc` de `iswctype`, hay una rutina equivalente de clasificación de carácter ancho, como se muestra en la tabla siguiente:
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Equivalencia de iswctype(c, desc) con otras rutinas de prueba de isw
@@ -150,28 +150,28 @@ El carácter tiene la propiedad especificada por el argumento `desc`. Por cada v
 |**_UPPER**|**iswupper(** `c` **)**|
 |**_HEX**|**iswxdigit(** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 Carácter ancho correspondiente a un carácter de dígito decimal.
 
-`iswgraph`  
+`iswgraph`<br/>
 Carácter ancho imprimible excepto el carácter ancho de espacio (L' ').
 
-`iswlower`  
+`iswlower`<br/>
 Minúscula, o una de un conjunto de caracteres anchos que se define en la implementación para los que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct` ni `iswspace` es distinto de cero. `iswlower` devuelve un valor distinto de cero solo para los caracteres anchos que corresponden a minúsculas.
 
-`iswprint`  
+`iswprint`<br/>
 Carácter ancho imprimible incluido el carácter ancho de espacio (L' ').
 
-`iswpunct`  
+`iswpunct`<br/>
 Carácter ancho imprimible que no es ni el carácter ancho de espacio (L' ') ni un carácter ancho para el que `iswalnum` sea distinto de cero.
 
-`iswspace`  
+`iswspace`<br/>
 Carácter ancho correspondiente al carácter de espacio en blanco estándar o que pertenece a un conjunto de caracteres anchos que se define en la implementación para los que `iswalnum` es FALSE. Los caracteres de espacio en blanco estándar son: espacio (L' '), avance de página (L'\f'), nueva línea (L'\n'), retorno de carro (L'\r'), tabulación horizontal (L'\t') y tabulación vertical (L'\v').
 
-`iswupper`  
+`iswupper`<br/>
 Carácter ancho que es una mayúscula o que pertenece a un conjunto de caracteres anchos definido en la implementación para los que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct`, ni `iswspace` sea distinto de cero. `iswupper` devuelve un valor distinto de cero solo para los caracteres anchos que corresponden a mayúsculas.
 
-`iswxdigit`  
+`iswxdigit`<br/>
 Carácter ancho que corresponde a un carácter de dígito hexadecimal.
 
 ## <a name="example"></a>Ejemplo
@@ -181,16 +181,16 @@ Carácter ancho que corresponde a un carácter de dígito hexadecimal.
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,9 +208,9 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
 ## <a name="output"></a>Salida
 
@@ -347,8 +347,8 @@ int main( void )
 
 ## <a name="see-also"></a>Vea también
 
-[Clasificación de caracteres](../c-runtime-library/character-classification.md)   
-[Configuración regional](../c-runtime-library/locale.md)   
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[Interpretación de secuencias de caracteres de varios bytes](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[Clasificación de caracteres](../c-runtime-library/character-classification.md)<br/>
+[Configuración regional](../c-runtime-library/locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[Interpretación de secuencias de caracteres de varios bytes](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to (funciones)](../c-runtime-library/to-functions.md)

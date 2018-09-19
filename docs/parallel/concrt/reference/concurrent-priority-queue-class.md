@@ -1,5 +1,5 @@
 ---
-title: concurrent_priority_queue (clase) | Documentos de Microsoft
+title: concurrent_priority_queue (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d52598f5ef987ce05eb664c6d3ef24ab86e002d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096159"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue (Clase)
 La clase `concurrent_priority_queue` es un contenedor que permite que varios subprocesos inserten y extraigan elementos de forma simultánea. Los elementos se extraen en orden de prioridad donde la prioridad viene determinada por un functor proporcionado como un argumento de plantilla.  
@@ -46,14 +46,14 @@ template <typename T,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos de los elementos que se almacenará en la cola de prioridad.  
+*T*<br/>
+El tipo de datos de los elementos que se almacenará en la cola de prioridad.  
   
- `_Compare`  
- El tipo de objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en la cola de prioridad. Este argumento es opcional y el predicado binario `less<T>` es el valor predeterminado.  
+*_Comparación*<br/>
+El tipo de objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en la cola de prioridad. Este argumento es opcional y el predicado binario `less<T>` es el valor predeterminado.  
   
- `_Ax`  
- El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para la cola de prioridad simultáneas. Este argumento es opcional y el valor predeterminado es `allocator<T>`.  
+*_Ax*<br/>
+El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para la cola de prioridad simultáneas. Este argumento es opcional y el valor predeterminado es `allocator<T>`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -62,28 +62,28 @@ template <typename T,
 |Name|Descripción|  
 |----------|-----------------|  
 |`allocator_type`|Tipo que representa la clase de asignador de la cola de prioridad simultáneas.|  
-|`const_reference`|Un tipo que representa una variable const hacen referencia a un elemento del tipo almacenados en una cola de prioridad simultáneas.|  
-|`reference`|Tipo que representa una referencia a un elemento del tipo almacenados en una cola de prioridad simultáneas.|  
-|`size_type`|Tipo que cuenta el número de elementos de una cola de prioridad simultáneas.|  
-|`value_type`|Tipo que representa el tipo de datos almacenados en una cola de prioridad simultáneas.|  
+|`const_reference`|Tipo que representa una referencia constante a un elemento del tipo almacenado en una cola de prioridad simultáneas.|  
+|`reference`|Tipo que representa una referencia a un elemento del tipo almacenado en una cola de prioridad simultáneas.|  
+|`size_type`|Un tipo que cuenta el número de elementos de una cola de prioridad simultáneas.|  
+|`value_type`|Tipo que representa el tipo de datos almacenado en una cola de prioridad simultáneas.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[concurrent_priority_queue](#ctor)|Sobrecargado. Crea una cola de prioridad simultáneas.|  
+|[concurrent_priority_queue](#ctor)|Sobrecargado. Construye una cola de prioridad simultáneas.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[clear](#clear)|Borra todos los elementos de la prioridad simultánea. Este método no es seguro para la simultaneidad.|  
+|[clear](#clear)|Borra todos los elementos en la prioridad simultánea. Este método no es seguro para la simultaneidad.|  
 |[empty](#empty)|Comprueba si la cola de prioridad simultáneas está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|  
-|[get_allocator](#get_allocator)|Devuelve una copia del asignador usada para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
+|[get_allocator](#get_allocator)|Devuelve una copia del asignador usado para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
 |[push](#push)|Sobrecargado. Agrega un elemento a la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
 |[size](#size)|Devuelve el número de elementos en la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
 |[swap](#swap)|Intercambia el contenido de dos colas de prioridad simultáneas. Este método no es seguro para la simultaneidad.|  
-|[try_pop](#try_pop)|Quita y devuelve el elemento de prioridad más alto de la cola si la cola no está vacía. Este método es seguro para simultaneidad.|  
+|[try_pop](#try_pop)|Quita y devuelve el elemento de prioridad más alto de la cola si la cola no está vacío. Este método es seguro para simultaneidad.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -92,7 +92,7 @@ template <typename T,
 |[operator=](#operator_eq)|Sobrecargado. Asigna el contenido de otro objeto `concurrent_priority_queue` a este. Este método no es seguro para la simultaneidad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener información detallada sobre la `concurrent_priority_queue` de clases, consulte [contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Para obtener información detallada sobre la `concurrent_priority_queue` de clases, vea [contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `concurrent_priority_queue`  
@@ -104,7 +104,7 @@ template <typename T,
   
 ##  <a name="clear"></a> Borrar 
 
- Borra todos los elementos de la prioridad simultánea. Este método no es seguro para la simultaneidad.  
+ Borra todos los elementos en la prioridad simultánea. Este método no es seguro para la simultaneidad.  
   
 ```
 void clear();
@@ -115,7 +115,7 @@ void clear();
   
 ##  <a name="ctor"></a> concurrent_priority_queue) 
 
- Crea una cola de prioridad simultáneas.  
+ Construye una cola de prioridad simultáneas.  
   
 ```
 explicit concurrent_priority_queue(
@@ -146,38 +146,38 @@ concurrent_priority_queue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_InputIterator`  
- El tipo de iterador de entrada.  
+*_InputIterator*<br/>
+El tipo de iterador de entrada.  
   
- `_Al`  
- La clase de asignador que se usa con este objeto.  
+*_Al*<br/>
+La clase de asignador que se usa con este objeto.  
   
- `_Init_capacity`  
- Capacidad inicial del objeto `concurrent_priority_queue`.  
+*_Init_capacity*<br/>
+Capacidad inicial del objeto `concurrent_priority_queue`.  
   
- `_Begin`  
- Posición del primer elemento en el intervalo de elementos que se va a copiar.  
+*_Empezar la*<br/>
+Posición del primer elemento en el intervalo de elementos que se va a copiar.  
   
- `_End`  
- Posición del primer elemento más allá del intervalo de elementos que se va a copiar.  
+*_Finalizar*<br/>
+Posición del primer elemento más allá del intervalo de elementos que se va a copiar.  
   
- `_Src`  
- El objeto de origen `concurrent_priority_queue` del que copiar o mover elementos.  
+*_Src*<br/>
+El objeto de origen `concurrent_priority_queue` del que copiar o mover elementos.  
   
 ### <a name="remarks"></a>Comentarios  
  Todos los constructores almacenan un objeto de asignador `_Al` e inicializar la cola de prioridad.  
   
- El primer constructor especifica una cola de prioridad inicial vacía y, opcionalmente, especifica un asignador.  
+ El primer constructor especifica una cola de prioridad inicial vacío y, opcionalmente, especifica un asignador.  
   
  El segundo constructor especifica una cola de prioridad con una capacidad inicial `_Init_capacity` y, opcionalmente, especifica un asignador.  
   
- El tercer constructor especifica los valores proporcionados por el intervalo de iterador [ `_Begin`, `_End`) y, opcionalmente, especifica un asignador.  
+ El tercer constructor especifica los valores proporcionados por el rango de iterador [ `_Begin`, `_End`) y, opcionalmente, especifica un asignador.  
   
  Los constructores cuarto y quinto especifican una copia de la cola de prioridad `_Src`.  
   
  Los constructores sexto y séptimo especifican un movimiento de la cola de prioridad `_Src`.  
   
-##  <a name="empty"></a> vacía 
+##  <a name="empty"></a> vacío 
 
  Comprueba si la cola de prioridad simultáneas está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.  
   
@@ -190,14 +190,14 @@ bool empty() const;
   
 ##  <a name="get_allocator"></a> get_allocator 
 
- Devuelve una copia del asignador usada para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.  
+ Devuelve una copia del asignador usado para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.  
   
 ```
 allocator_type get_allocator() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una copia del asignador usada para construir la `concurrent_priority_queue` objeto.  
+ Una copia de asignador usado para construir el `concurrent_priority_queue` objeto.  
   
 ##  <a name="operator_eq"></a> operator= 
 
@@ -210,13 +210,13 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Src`  
- Objeto `concurrent_priority_queue` de origen.  
+*_Src*<br/>
+Objeto `concurrent_priority_queue` de origen.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `concurrent_priority_queue` objeto.  
   
-##  <a name="push"></a> Inserción 
+##  <a name="push"></a> inserción 
 
  Agrega un elemento a la cola de prioridad simultáneas. Este método es seguro para simultaneidad.  
   
@@ -227,8 +227,8 @@ void push(value_type&& _Elem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Elem`  
- Elemento que se va a agregarse a la cola de prioridad simultáneas.  
+*_Elem*<br/>
+El elemento que se agregarán a la cola de prioridad simultáneas.  
   
 ##  <a name="size"></a> Tamaño 
 
@@ -239,12 +239,12 @@ size_type size() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de elementos en esta `concurrent_priority_queue` objeto.  
+ El número de elementos en este `concurrent_priority_queue` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El tamaño devuelto está garantizado para incluir todos los elementos agregados mediante llamadas a la función `push`. Sin embargo, no pueden reflejar los resultados de las operaciones simultáneas pendientes.  
+ Se garantiza que el tamaño devuelto para incluir todos los elementos agregados mediante llamadas a la función `push`. Sin embargo, no pueden reflejar los resultados de las operaciones simultáneas pendientes.  
   
-##  <a name="swap"></a> Intercambiar 
+##  <a name="swap"></a> intercambio 
 
  Intercambia el contenido de dos colas de prioridad simultáneas. Este método no es seguro para la simultaneidad.  
   
@@ -253,20 +253,20 @@ void swap(concurrent_priority_queue& _Queue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Queue`  
- La `concurrent_priority_queue` objeto que se va a intercambiar el contenido.  
+*_Fronty*<br/>
+La `concurrent_priority_queue` objeto que se va a intercambiar el contenido.  
   
 ##  <a name="try_pop"></a> try_pop 
 
- Quita y devuelve el elemento de prioridad más alto de la cola si la cola no está vacía. Este método es seguro para simultaneidad.  
+ Quita y devuelve el elemento de prioridad más alto de la cola si la cola no está vacío. Este método es seguro para simultaneidad.  
   
 ```
 bool try_pop(reference _Elem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Elem`  
- Una referencia a una variable que se rellenará con el elemento de prioridad más alto, si la cola no está vacía.  
+*_Elem*<br/>
+Una referencia a una variable que se rellenará con el elemento de prioridad más alta, si la cola no está vacío.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si se extrae un valor, `false` en caso contrario.  

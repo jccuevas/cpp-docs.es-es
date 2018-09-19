@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3634 | Documentos de Microsoft
+title: Error del compilador C3634 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc7b30f01923ec4757ad1254f6646bc374d3f1da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3a8ef6c2b1f57e09a62e8f08efc2a4cc1f6e2e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110580"
 ---
 # <a name="compiler-error-c3634"></a>Error del compilador C3634
-'función': no se puede definir un método abstracto de un administrado o WinRTclass  
-  
- Un método abstracto se puede declarar en una clase WinRT o administrada, pero no definirse.  
-  
-## <a name="example"></a>Ejemplo  
-El ejemplo siguiente genera el error C3634.  
-  
-```  
-// C3634.cpp  
-// compile with: /clr  
-ref class C {  
-   virtual void f() = 0;  
-};  
-  
-void C::f() {   // C3634 - don't define managed class' pure virtual method  
-}  
-```  
+
+'function': no se puede definir un método abstracto de tipo administrado o WinRTclass
+
+Un método abstracto se puede declarar en una clase WinRT o administrada, pero no definirse.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error C3634.
+
+```
+// C3634.cpp
+// compile with: /clr
+ref class C {
+   virtual void f() = 0;
+};
+
+void C::f() {   // C3634 - don't define managed class' pure virtual method
+}
+```

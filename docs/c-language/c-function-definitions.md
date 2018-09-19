@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055239"
 ---
 # <a name="c-function-definitions"></a>Definiciones de funciones de C
+
 Una definición de función especifica el nombre de la función, los tipos y el número de parámetros que espera recibir, y su tipo de valor devuelto. Una definición de función también incluye un cuerpo de la función con las declaraciones de las variables locales y las instrucciones que determinan lo que hace la función.
 
 ## <a name="syntax"></a>Sintaxis
@@ -103,4 +104,5 @@ El elemento *compound-statement* es el cuerpo de la función que contiene las de
 En las secciones [Atributos de función](../c-language/function-attributes.md), [Clase de almacenamiento](../c-language/storage-class.md), [Tipo de valor devuelto](../c-language/return-type.md), [Parámetros](../c-language/parameters.md) y [Cuerpo de la función](../c-language/function-body.md) se describen los componentes de la definición de función en detalle.
 
 ## <a name="see-also"></a>Vea también
+
 [Funciones](../c-language/functions-c.md)

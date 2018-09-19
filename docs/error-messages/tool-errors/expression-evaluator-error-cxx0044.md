@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0044 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0044 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7499c970396ce907a79fa5a666dd7dc1ab1e8c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34adab6500683d8b78a4ce9c990eaf04c143e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064716"
 ---
 # <a name="expression-evaluator-error-cxx0044"></a>Error del evaluador de expresiones CXX0044
-el uso del puntero _based requiere: > (operador)  
-  
- Un puntero basado en `void` no se puede usar directamente. Se debe formar un puntero completo mediante el **: >** operador.  
-  
- Este error es idéntico a CAN0044.
+
+uso del puntero _based requiere: > (operador)
+
+Un puntero basado en `void` no se puede usar directamente. Deben formar un puntero completo mediante la **: >** operador.
+
+Este error es idéntico a CAN0044.

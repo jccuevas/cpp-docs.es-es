@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571627"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072087"
 ---
 # <a name="crestrictions-class"></a>CRestrictions (Clase)
+
 Una clase genérica que le permite especificar restricciones para los conjuntos de filas de esquema.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -43,17 +44,19 @@ class CRestrictions :
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *T*  
- La clase utilizada para el descriptor de acceso.  
+
+*T*<br/>
+La clase utilizada para el descriptor de acceso.  
   
- *nRestrictions*  
- El número de columnas de restricción para el conjunto de filas de esquema.  
+*nRestrictions*<br/>
+El número de columnas de restricción para el conjunto de filas de esquema.  
   
- *pguid*  
- Un puntero al GUID para el esquema.  
+*pguid*<br/>
+Un puntero al GUID para el esquema.  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldbsch.h 
+
+**Encabezado:** atldbsch.h 
   
 ## <a name="members"></a>Miembros  
   
@@ -64,6 +67,7 @@ class CRestrictions :
 |[Abrir](#open)|Devuelve un resultado que se establece de acuerdo con las restricciones proporcionadas por el usuario.|   
 
 ## <a name="open"></a> CRestrictions:: Open
+
 Devuelve un resultado que se establece de acuerdo con las restricciones proporcionadas por el usuario.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -81,24 +85,28 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Sesión*  
- [in] Especifica un objeto de sesión existente utilizado para conectarse al origen de datos.  
+
+*Sesión*<br/>
+[in] Especifica un objeto de sesión existente utilizado para conectarse al origen de datos.  
   
- *lpszParam*  
- [in] Especifica las restricciones en el conjunto de filas de esquema.  
+*lpszParam*<br/>
+[in] Especifica las restricciones en el conjunto de filas de esquema.  
   
- *bBind*  
- [in] Especifica si se debe enlazar automáticamente el mapa de columnas. El valor predeterminado es **true**, lo que hace que el mapa de columnas que se enlazará automáticamente. Establecer *bBind* a **false** impide que el enlace automático de la asignación de columna para que pueda enlazar manualmente. (Enlace manual es de especial interés para los usuarios OLAP).  
+*bBind*<br/>
+[in] Especifica si se debe enlazar automáticamente el mapa de columnas. El valor predeterminado es **true**, lo que hace que el mapa de columnas que se enlazará automáticamente. Establecer *bBind* a **false** impide que el enlace automático de la asignación de columna para que pueda enlazar manualmente. (Enlace manual es de especial interés para los usuarios OLAP).  
   
 ### <a name="return-value"></a>Valor devuelto  
- Uno de los valores HRESULT estándar.  
+
+Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede especificar un máximo de siete restricciones en un conjunto de filas de esquema.  
+
+Puede especificar un máximo de siete restricciones en un conjunto de filas de esquema.  
   
- Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) para obtener información sobre las restricciones definidas en cada conjunto de filas de esquema.  
+Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) para obtener información sobre las restricciones definidas en cada conjunto de filas de esquema.  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)    
- [Clases de conjunto de filas de esquema y clases typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Clases de conjunto de filas de esquema y clases typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

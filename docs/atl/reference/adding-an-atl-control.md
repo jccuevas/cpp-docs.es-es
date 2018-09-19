@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584a40e6fb2f733f675945e57cf6d06f330e19be
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 47bbd73efc13eb28ed177c39366ae58cd9c91adc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063195"
 ---
 # <a name="adding-an-atl-control"></a>Agregar un Control ATL
 
@@ -46,6 +46,6 @@ Además, puede reducir el tamaño del control y quitar las interfaces que no se 
 
 ## <a name="see-also"></a>Vea también
 
-[Agregar funcionalidad al Control compuesto](../../atl/adding-functionality-to-the-composite-control.md)   
+[Agregar funciones al control compuesto](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
 

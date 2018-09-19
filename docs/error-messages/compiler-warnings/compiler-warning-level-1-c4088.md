@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4088 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4088 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baa48d199771f9c4f4a36eb4d86afae0cf4371a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ec3c11b5aa8ce0d3e97140ceb2584682c9e6cc7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087063"
 ---
 # <a name="compiler-warning-level-1-c4088"></a>Compilador advertencia (nivel 1) C4088
-'función': no coincide el puntero en el parámetro real 'número', parámetro formal 'número'  
-  
- Los parámetros formales y reales correspondientes tienen un nivel diferente de direccionamiento indirecto. El parámetro real se pasa sin cambios. La función llamada interpreta su valor como un puntero.
+
+'function': no coincide el puntero en el parámetro real 'número', parámetro formal 'número'
+
+Los parámetros formales y reales correspondientes tienen distintos niveles de direccionamiento indirecto. El parámetro real se pasa sin cambios. La función llamada interpreta su valor como un puntero.

@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4925 | Documentos de Microsoft
+title: Del compilador (nivel 1) de la advertencia C4925 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 157b09aff38212e9257eb3557770dae57d04bf58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62c661b4fffee6c6da17d72724d61b7df39a3268
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109449"
 ---
 # <a name="compiler-warning-level-1-c4925"></a>Advertencia del compilador (nivel 1) C4925
-'method': no se puede llamar al método dispinterface desde el script  
-  
- Lenguajes de scripting no pueden crear un parámetro VT_BYREF 'in', solo puede crear parámetros VT_BYREF 'out'.  
-  
- Otra manera de resolver esta advertencia es no convertir el parámetro (en la definición e implementación) en un tipo de puntero.  
-  
- El ejemplo siguiente genera la advertencia C4925:  
-  
-```  
-// C4925.cpp  
-// compile with: /LD /W1  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-[ module(name="Test")];  
-  
-[ dispinterface, uuid("00000000-0000-0000-0000-000000000001") ]  
-__interface IDisp {  
-   [id(9)] void f([in] int*);  
-};  
-  
-[ coclass, uuid("00000000-0000-0000-0000-000000000002")  ]  
-struct CDisp : IDisp {   // C4925  
-   void f(int*) {}  
-};  
+
+'method': no se puede llamar al método dispinterface desde el script
+
+Lenguajes de scripting no pueden crear un parámetro VT_BYREF 'in', solo puede crear parámetros VT_BYREF 'out'.
+
+Otra manera de resolver esta advertencia es no convertir el parámetro (en la definición e implementación) en un tipo de puntero.
+
+El ejemplo siguiente genera la advertencia C4925:
+
+```
+// C4925.cpp
+// compile with: /LD /W1
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+[ module(name="Test")];
+
+[ dispinterface, uuid("00000000-0000-0000-0000-000000000001") ]
+__interface IDisp {
+   [id(9)] void f([in] int*);
+};
+
+[ coclass, uuid("00000000-0000-0000-0000-000000000002")  ]
+struct CDisp : IDisp {   // C4925
+   void f(int*) {}
+};
 ```

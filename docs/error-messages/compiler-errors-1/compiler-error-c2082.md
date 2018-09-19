@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2082 | Documentos de Microsoft
+title: Error del compilador C2082 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbaa7f59b8853dd1b1ad0f2e839b00086db8eac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6939bf628072fc1c5c4e72c0012e4a190d43864
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082409"
 ---
 # <a name="compiler-error-c2082"></a>Error del compilador C2082
-Nueva definición del parámetro formal 'identifier'  
-  
- Un parámetro formal para una función volvió a declararse dentro del cuerpo de función. Para resolver el error, quite la redefinición.  
-  
- El ejemplo siguiente genera la advertencia C2082:  
-  
-```  
-// C2082.cpp  
-void func(int i) {  
-   int i;   // C2082  
-   int ii;   // OK  
-}  
+
+Nueva definición del parámetro formal 'identifier'
+
+Un parámetro formal para una función volvió a declararse dentro del cuerpo de función. Para resolver el error, quite la redefinición.
+
+El ejemplo siguiente genera la advertencia C2082:
+
+```
+// C2082.cpp
+void func(int i) {
+   int i;   // C2082
+   int ii;   // OK
+}
 ```

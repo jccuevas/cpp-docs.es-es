@@ -17,45 +17,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acc3dc7631602e8accd9574bf707798dae5ba0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22392a4f02fb81a7c141aaa0e7966a05988dfece
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076676"
 ---
 # <a name="integer-types"></a>Tipos enteros
-A cada constante entera se le asigna un tipo basado en su valor y en la manera en que se expresa. Puede forzar cualquier constante entera al tipo **long** anexando la letra **l** o **L** al final de la constante; puede forzarla para que sea del tipo `unsigned` anexando **u** o **U** al valor. La letra **l** minúscula se puede confundir con el dígito 1 y debe evitarse. Algunas formas de constantes enteras **long** son las siguientes:  
-  
-```  
-/* Long decimal constants */  
-10L  
-79L  
-  
-/* Long octal constants */  
-012L  
-0115L  
-  
-/* Long hexadecimal constants */  
-0xaL or 0xAL  
-0X4fL or 0x4FL  
-  
-/* Unsigned long decimal constant */  
-776745UL  
-778866LU  
-```  
-  
- El tipo que se asigna a una constante depende del valor que representa la constante. El valor de una constante debe estar en el intervalo de valores representables para su tipo. El tipo de una constante determina qué conversiones se realizan cuando se usa la constante en una expresión o cuando se aplica el signo menos (**-**). En esta lista se resumen las reglas de conversión para constantes de tipo entero.  
-  
--   El tipo para una constante decimal sin sufijo es `int`, **long int** o **unsigned long int**. El primero de estos tres tipos en los que se puede representar el valor de la constante es el tipo asignado a la constante.  
-  
--   El tipo asignado a las constantes octales y hexadecimales sin sufijos es `int`, `unsigned int`, **long int** o **unsigned long int**, dependiendo del tamaño de la constante.  
-  
--   El tipo asignado a las constantes con sufijo **u** o **U** es **unsigned int** o **unsigned long int**, dependiendo de su tamaño.  
-  
--   El tipo asignado a las constantes con sufijo **l** o **L** es **long int** o **unsigned long int**, dependiendo de su tamaño.  
-  
--   El tipo asignado a las constantes con sufijo **u** o **U** y un sufijo **l** o **L** es **unsigned long int**.  
-  
-## <a name="see-also"></a>Vea también  
- [Constantes de tipo entero de C](../c-language/c-integer-constants.md)
+
+A cada constante entera se le asigna un tipo basado en su valor y en la manera en que se expresa. Puede forzar cualquier constante entera al tipo **long** anexando la letra **l** o **L** al final de la constante; puede forzarla para que sea del tipo `unsigned` anexando **u** o **U** al valor. La letra **l** minúscula se puede confundir con el dígito 1 y debe evitarse. Algunas formas de constantes enteras **long** son las siguientes:
+
+```
+/* Long decimal constants */
+10L
+79L
+
+/* Long octal constants */
+012L
+0115L
+
+/* Long hexadecimal constants */
+0xaL or 0xAL
+0X4fL or 0x4FL
+
+/* Unsigned long decimal constant */
+776745UL
+778866LU
+```
+
+El tipo que se asigna a una constante depende del valor que representa la constante. El valor de una constante debe estar en el intervalo de valores representables para su tipo. El tipo de una constante determina qué conversiones se realizan cuando se usa la constante en una expresión o cuando se aplica el signo menos (**-**). En esta lista se resumen las reglas de conversión para constantes de tipo entero.
+
+- El tipo para una constante decimal sin sufijo es `int`, **long int** o **unsigned long int**. El primero de estos tres tipos en los que se puede representar el valor de la constante es el tipo asignado a la constante.
+
+- El tipo asignado a las constantes octales y hexadecimales sin sufijos es `int`, `unsigned int`, **long int** o **unsigned long int**, dependiendo del tamaño de la constante.
+
+- El tipo asignado a las constantes con sufijo **u** o **U** es **unsigned int** o **unsigned long int**, dependiendo de su tamaño.
+
+- El tipo asignado a las constantes con sufijo **l** o **L** es **long int** o **unsigned long int**, dependiendo de su tamaño.
+
+- El tipo asignado a las constantes con sufijo **u** o **U** y un sufijo **l** o **L** es **unsigned long int**.
+
+## <a name="see-also"></a>Vea también
+
+[Constantes de tipo entero de C](../c-language/c-integer-constants.md)

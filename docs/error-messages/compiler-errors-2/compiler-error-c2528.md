@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2528 | Documentos de Microsoft
+title: Error del compilador C2528 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 347330600e9b912d50522532f0c64e789e385520
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c588457743c601e31c24fd0a53de652477fbf05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072607"
 ---
 # <a name="compiler-error-c2528"></a>Error del compilador C2528
-'name': puntero a referencia no es válido  
-  
- No se puede declarar un puntero a una referencia. Desreferenciación de la variable antes de declarar un puntero a ella.  
-  
- El ejemplo siguiente genera C2528:  
-  
-```  
-// C2528.cpp  
-int i;  
-int &ir = i;  
-int & (*irptr) = ir;    // C2528  
+
+'name': puntero a referencia no es válido
+
+No se puede declarar un puntero a una referencia. Desreferenciar la variable antes de declarar un puntero a ella.
+
+El ejemplo siguiente genera C2528:
+
+```
+// C2528.cpp
+int i;
+int &ir = i;
+int & (*irptr) = ir;    // C2528
 ```

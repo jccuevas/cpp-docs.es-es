@@ -1,5 +1,5 @@
 ---
-title: C2655 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2655 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77869c646e0804b5f3d942ea3acc97b0810196a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 456fd31e6d618774bff13c9800d6a44ffd3deb73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078691"
 ---
-# <a name="compiler-error-c2655"></a>C2655 de Error del compilador
-'identificador': definición o nueva declaración no válida en el ámbito actual  
-  
- Un identificador se puede volver a declarar sólo en el ámbito global.  
-  
- El ejemplo siguiente genera C2655:  
-  
-```  
-// C2655.cpp  
-class A {};  
-class B {  
-public:  
-   static int i;  
-};  
-  
-int B::i;  // OK  
-  
-int main() {  
-   A B::i;  // C2655  
-}  
+# <a name="compiler-error-c2655"></a>Error del compilador C2655
+
+'identifier': definición o nueva declaración no válida en el ámbito actual
+
+Un identificador se puede volver a declarar en el ámbito global.
+
+El ejemplo siguiente genera C2655:
+
+```
+// C2655.cpp
+class A {};
+class B {
+public:
+   static int i;
+};
+
+int B::i;  // OK
+
+int main() {
+   A B::i;  // C2655
+}
 ```

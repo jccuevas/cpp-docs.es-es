@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055122"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializar tipos de agregado
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 En este ejemplo, se declara `nlist` como una matriz de 2 por 3 estructuras, cada una de las cuales tiene tres miembros. La fila 1 de la inicialización asigna valores a la primera fila de `nlist`, de la manera siguiente:
 
-1.  La primera llave de apertura de la fila 1 indica al compilador que está comenzando la inicialización del primer miembro agregado de `nlist` (es decir, `nlist[0]`).
+1. La primera llave de apertura de la fila 1 indica al compilador que está comenzando la inicialización del primer miembro agregado de `nlist` (es decir, `nlist[0]`).
 
-2.  La segunda llave de apertura indica que está comenzando la inicialización del primer miembro agregado de `nlist[0]` (es decir, la estructura de `nlist[0][0]`).
+1. La segunda llave de apertura indica que está comenzando la inicialización del primer miembro agregado de `nlist[0]` (es decir, la estructura de `nlist[0][0]`).
 
-3.  La primera llave de cierre finaliza la inicialización de la estructura `nlist[0][0]`; la llave de apertura siguiente comienza la inicialización de `nlist[0][1]`.
+1. La primera llave de cierre finaliza la inicialización de la estructura `nlist[0][0]`; la llave de apertura siguiente comienza la inicialización de `nlist[0][1]`.
 
-4.  El proceso continúa hasta el final de la línea, donde la llave de cierre de la derecha finaliza la inicialización de `nlist[0]`.
+1. El proceso continúa hasta el final de la línea, donde la llave de cierre de la derecha finaliza la inicialización de `nlist[0]`.
 
 La fila 2 asigna valores a la segunda fila de `nlist` de una manera similar. Observe que se requieren conjuntos externos de llaves que delimiten los inicializadores de las filas 1 y 2. La construcción siguiente, que omite las llaves externas, provocaría un error:
 

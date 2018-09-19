@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097619"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass (clase)
 
@@ -36,16 +36,16 @@ Esta clase proporciona métodos para crear instancias de una clase y obtener sus
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `CComCoClass`.
 
-*pTypeInfo*  
+*pTypeInfo*<br/>
 Un puntero al CLSID del objeto.
 
 ## <a name="members"></a>Miembros
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Q*  
+*Q*<br/>
 La interfaz COM que debe devolverse a través de *pp*.
 
-*punkOuter*  
+*punkOuter*<br/>
 [in] El desconocido externo o desconocido de control del agregado.
 
-*perfil de puerto*  
+*perfil de puerto*<br/>
 [out] La dirección de una variable de puntero que recibe el puntero de interfaz solicitada si se crea correctamente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszDesc*  
-[in] La cadena que describe el error. La versión Unicode de `Error` especifica que *lpszDesc* es de tipo LPCOLESTR; la versión ANSI especifica un tipo de LPCSTR.  
-*IID*  
+*lpszDesc*<br/>
+[in] La cadena que describe el error. La versión Unicode de `Error` especifica que *lpszDesc* es de tipo LPCOLESTR; la versión ANSI especifica un tipo de LPCSTR.
+
+*IID*<br/>
 [in] IID de la interfaz que define el error o GUID_NULL (el valor predeterminado) si el error se ha definido por el sistema operativo.
 
-*hRes*  
+*hRes*<br/>
 [in] El valor HRESULT que desee devolver al llamador. El valor predeterminado es 0. Para obtener más detalles sobre *hRes*, vea la sección Comentarios.
 
-*nID*  
+*nID*<br/>
 [in] El identificador de recursos donde se almacena la cadena de descripción del error. Este valor debe estar comprendido entre 0 x 0200 y 0xFFFF, ambos inclusive. En las compilaciones de depuración, un **ASSERT** se producirá si *nID* no indiza una cadena válida. En versiones de lanzamiento, la cadena de descripción del error se establecerá en "Error desconocido".
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] El identificador de contexto de ayuda para el error.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] La ruta de acceso y el nombre del archivo de ayuda que describe el error.
 
-*hInst*  
+*hInst*<br/>
 [in] El identificador del recurso. De forma predeterminada, este parámetro es `_AtlModule::GetResourceInstance`, donde `_AtlModule` es la instancia global de [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Valor devuelto

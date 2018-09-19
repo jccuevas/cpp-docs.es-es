@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0ab24a55cddc13b743a28a022475b0c0b84e77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6703b774c60799234d49e359cf6faca69b85b955
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052132"
 ---
 # <a name="directory-control"></a>Control de directorio
 
@@ -46,5 +46,5 @@ Estas rutinas tienen acceso a información sobre la estructura de directorios, l
 ## <a name="see-also"></a>Vea también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Control de archivos](../c-runtime-library/file-handling.md)<br/>
- [Llamadas del sistema](../c-runtime-library/system-calls.md)<br/>
+[Control de archivos](../c-runtime-library/file-handling.md)<br/>
+[Llamadas del sistema](../c-runtime-library/system-calls.md)<br/>

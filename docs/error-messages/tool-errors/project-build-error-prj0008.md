@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0008 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0008 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4011a27b7e6707f9c9b4e3ed386306b00f2792cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7c24634a845423de590228af01cb9f4779e37ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062792"
 ---
 # <a name="project-build-error-prj0008"></a>Error PRJ0008 al compilar el proyecto
-No se pudo eliminar el archivo 'archivo'.  
-  
- **Asegúrese de que el archivo no está abierto en otro proceso y no está protegida contra escritura.**  
-  
- Al volver a generar o al limpiar, Visual C++ elimina todos los archivos conocidos de intermedios y de salida de la compilación, así como los archivos que cumplen las especificaciones de comodines en el **extensiones para eliminar al limpiar** propiedad en la [General Página de propiedades de configuración de configuración](../../ide/general-property-page-project.md).  
-  
- Verá este error si no se puede eliminar un archivo de Visual C++. Para resolver el error, asigne al archivo y su directorio de escritura para el usuario que se va a generar.
+
+No se pudo eliminar el archivo 'archivo'.
+
+**Asegúrese de que el archivo no está abierto por otro proceso y no está protegido contra escritura.**
+
+Durante una regeneración o limpiar, Visual C++ elimina todos los archivos conocidos de intermedios y de salida de la compilación, así como los archivos que cumplan las especificaciones del comodín en el **extensiones para eliminar al limpiar** propiedad en el [General Página de propiedades de opciones de configuración](../../ide/general-property-page-project.md).
+
+Verá este error si no puede eliminar un archivo de Visual C++. Para resolver el error, asegúrese del archivo y su directorio de escritura para el usuario que se va a generar.

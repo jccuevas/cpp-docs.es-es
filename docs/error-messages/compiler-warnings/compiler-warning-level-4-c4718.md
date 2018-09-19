@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4718 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4718 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92ab7a32babd181f282c799568e3a9dea436c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8736902f4c3a1cfac7313806fde65d1b253716b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054238"
 ---
 # <a name="compiler-warning-level-4-c4718"></a>Advertencia del compilador (nivel 4) C4718
-'llamada a función': la llamada recursiva no tiene efectos secundarios; se eliminará  
-  
- Una función contiene una llamada recursiva, pero no tiene efectos secundarios. Se está eliminando una llamada a esta función. La precisión del programa no se ve afectada, pero sí el comportamiento. Dado que si se deja la llamada entrante podría producirse una excepción de desbordamiento de pila en tiempo de ejecución, la eliminación de la llamada evita esa posibilidad.
+
+'llamada a función': la llamada recursiva no tiene efectos secundarios; se eliminará
+
+Una función contiene una llamada recursiva, pero no tiene efectos secundarios. Se está eliminando una llamada a esta función. La precisión del programa no se ve afectada, pero sí el comportamiento. Dado que si se deja la llamada entrante podría producirse una excepción de desbordamiento de pila en tiempo de ejecución, la eliminación de la llamada evita esa posibilidad.

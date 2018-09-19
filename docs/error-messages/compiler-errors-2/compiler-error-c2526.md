@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2526 | Documentos de Microsoft
+title: Error del compilador C2526 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 735222893b69763b2934a93abbb965852d2f6d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 152baa8b4fcd3f28e38b94c69b04a87f45040ccc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198240"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094980"
 ---
 # <a name="compiler-error-c2526"></a>Error del compilador C2526
-'identificador1': función de vinculación de C no puede devolver la clase de C++ 'identificador2'  
-  
- Una función definida con vinculación de C no puede devolver un tipo definido por el usuario.
+
+'identificador1': función de vinculación de C no puede devolver la clase de C++ 'identificador2'
+
+Una función definida con vinculación C no puede devolver un tipo definido por el usuario.

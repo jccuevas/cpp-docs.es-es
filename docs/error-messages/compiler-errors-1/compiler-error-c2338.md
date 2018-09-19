@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2338 | Documentos de Microsoft
+title: Error del compilador C2338 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156074f20517c1d2e2f4fdb4ac5c54d6cf014276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77bc98afdad36e0505abb58ee06ec1c7e7654ae5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071580"
 ---
-# <a name="compiler-error-c2338"></a>Error del compilador C2338  
-  
-> *Mensaje de error*  
-  
-Este error puede deberse a un `static_assert` error durante la compilación. El mensaje proporcionado por el `static_assert` parámetros.   
-  
-Este mensaje de error también puede generarse por proveedores externos al compilador. En la mayoría de los casos, estos errores notificados por un proveedor de atributos de archivo DLL, por ejemplo, ATLPROV. Algunas formas comunes de este mensaje se incluyen:
+# <a name="compiler-error-c2338"></a>Error del compilador C2338
 
-> '*atributo*' proveedor de atributos Atl: error ATL*número* *mensaje*  
-  
+> *mensaje de error*
+
+Este error puede deberse a un `static_assert` error durante la compilación. El mensaje proporcionado por el `static_assert` parámetros.
+
+Este mensaje de error también puede generarse mediante proveedores externos al compilador. En la mayoría de los casos, estos errores notificados por un proveedor de atributos de archivo DLL, como ATLPROV. Algunas formas habituales de este mensaje se incluyen:
+
+> '*atributo*' proveedor de atributos Atl: error ATL*número* *mensaje*
+
 > Uso incorrecto del atributo '*atributo*'
-  
-> '*uso*': un formato incorrecto para el atributo 'uso'  
-  
-Estos errores suelen ser irrecuperables y pueden ir seguidos de un error grave del compilador.  
-  
-Para corregir estos problemas, corrija el uso de atributos. Por ejemplo, en algunos casos, los parámetros de atributo deben declararse antes de que se puedan utilizar. Si no se proporciona un número de error ATL, consulte la documentación para dicho error para obtener información más detallada.  
+
+> '*uso*': formato incorrecto para el atributo 'usage'
+
+Estos errores suelen ser irrecuperables y pueden ir seguidos de un error irrecuperable del compilador.
+
+Para corregir estos problemas, corrija el uso de atributos. Por ejemplo, en algunos casos, los parámetros de atributo deben declararse antes de que se pueden usar. Si se proporciona un número de error ATL, consulte la documentación de dicho error para obtener información más específica.

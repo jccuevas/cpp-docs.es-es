@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4211 | Documentos de Microsoft
+title: Del compilador (nivel 4) de la advertencia C4211 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8112927940e5e2f17a4e74e2855a035bc7d5e5cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2c92ef68768f4a9f8ac606716d5ae53c4aa72e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292352"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048219"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>Advertencia del compilador (nivel 4) C4211
-ha utilizado una extensión no estándar: extern como estática se volvió a definir  
-  
- Con las extensiones de Microsoft (/Ze), puede volver a definir un `extern` identificador como **estático**.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// C4211.c  
-// compile with: /W4  
-extern int i;  
-static int i;   // C4211  
-  
-int main()  
-{  
-}  
-```  
-  
- Dichas redefiniciones no son válidas en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="see-also"></a>Vea también  
+
+extensión no estándar utilizada: redefinido extern como estática
+
+Con las extensiones de Microsoft (/Ze) de forma predeterminada, se puede redefinir un `extern` identificador como **estático**.
+
+## <a name="example"></a>Ejemplo
+
+```
+// C4211.c
+// compile with: /W4
+extern int i;
+static int i;   // C4211
+
+int main()
+{
+}
+```
+
+Dichas redefiniciones no son válidas en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="see-also"></a>Vea también
 
 

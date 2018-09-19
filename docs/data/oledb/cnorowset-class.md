@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074843"
 ---
 # <a name="cnorowset-class"></a>CNoRowset (Clase)
+
 Se puede usar como un argumento de plantilla (`TRowset`) para [CCommand](../../data/oledb/ccommand-class.md) o [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Sintaxis
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *TAccessor*  
- Una clase de descriptor de acceso. De manera predeterminada, es `CAccessorBase`.  
+
+*TAccessor*<br/>
+Una clase de descriptor de acceso. De manera predeterminada, es `CAccessorBase`.  
   
 ## <a name="remarks"></a>Comentarios  
- Use `CNoRowset` como argumento de plantilla si el comando no devuelve un conjunto de filas.  
+
+Use `CNoRowset` como argumento de plantilla si el comando no devuelve un conjunto de filas.  
   
- `CNoRowset` implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponde a otros métodos de clase de descriptor de acceso:  
+`CNoRowset` implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponde a otros métodos de clase de descriptor de acceso:  
   
--   `BindFinished` : Indica cuando el enlace está completando (devuelve `S_OK`).  
+- `BindFinished` : Indica cuando el enlace está completando (devuelve `S_OK`).  
   
--   `Close` -Libera las filas y la interfaz IRowset actual.  
+- `Close` -Libera las filas y la interfaz IRowset actual.  
   
--   `GetIID` -Recupera el identificador de interfaz de un punto de conexión.  
+- `GetIID` -Recupera el identificador de interfaz de un punto de conexión.  
   
--   `GetInterface` -Recupera una interfaz.  
+- `GetInterface` -Recupera una interfaz.  
   
--   `GetInterfacePtr` -Recupera un puntero de interfaz encapsulado.  
+- `GetInterfacePtr` -Recupera un puntero de interfaz encapsulado.  
   
--   `SetAccessor` -Establece un puntero al descriptor de acceso.  
+- `SetAccessor` -Establece un puntero al descriptor de acceso.  
   
--   `SetupOptionalRowsetInterfaces` -Configura interfaces opcionales para el conjunto de filas.  
+- `SetupOptionalRowsetInterfaces` -Configura interfaces opcionales para el conjunto de filas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldbcli.h  
+
+**Encabezado:** atldbcli.h  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

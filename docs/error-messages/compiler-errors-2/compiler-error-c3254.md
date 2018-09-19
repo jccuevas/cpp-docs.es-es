@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3254 | Documentos de Microsoft
+title: Error del compilador C3254 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e58976b1562e6cca9aa343401b5d2c3f856de1a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9e42071c55ef3c7a4fc950b1b25656cf68d4024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081187"
 ---
 # <a name="compiler-error-c3254"></a>Error del compilador C3254
-'reemplazo explícito': clase contiene el reemplazo explícito 'reemplazo' pero no se deriva de una interfaz que contiene la declaración de función  
-  
- Cuando se [reemplazar explícitamente](../../cpp/explicit-overrides-cpp.md) un método, la clase que contiene el reemplazo debe derivarse, directa o indirectamente, del tipo que contiene la función se va a reemplazar.  
-  
- El ejemplo siguiente genera C3254:  
-  
-```  
-// C3254.cpp  
-__interface I  
-{  
-   void f();  
-};  
-  
-__interface I1 : I  
-{  
-};  
-  
-struct A /* : I1 */  
-{  
-   void I1::f()  
-   {   // C3254, uncomment : I1 to resolve this C3254  
-   }  
-};  
-  
-int main()  
-{  
-}  
+
+'invalidación explícita': clase contiene la invalidación explícita 'override' pero no se deriva de una interfaz que contiene la declaración de función
+
+Cuando se [reemplazar explícitamente](../../cpp/explicit-overrides-cpp.md) un método, la clase que contiene el reemplazo debe derivar, directa o indirectamente, del tipo que contiene la función que va a reemplazar.
+
+El ejemplo siguiente genera C3254:
+
+```
+// C3254.cpp
+__interface I
+{
+   void f();
+};
+
+__interface I1 : I
+{
+};
+
+struct A /* : I1 */
+{
+   void I1::f()
+   {   // C3254, uncomment : I1 to resolve this C3254
+   }
+};
+
+int main()
+{
+}
 ```

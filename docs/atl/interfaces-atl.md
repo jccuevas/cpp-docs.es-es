@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f77981bd922f73c99102c444a7c95f7240adbc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef93476e669b923d642f79f480c602229d6a4322
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071164"
 ---
 # <a name="interfaces-atl"></a>Interfaces (ATL)
 
@@ -35,6 +35,6 @@ Además, cada interfaz tiene una única identificador (IID) de interfaz. Esta si
 
 ## <a name="see-also"></a>Vea también
 
-[Introducción a COM](../atl/introduction-to-com.md)   
+[Introducción a COM](../atl/introduction-to-com.md)<br/>
 [Interfaces y objetos COM.](/windows/desktop/com/com-objects-and-interfaces)
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f878633e29fe2ea7bcb065f9851a907d81f6d20f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: af20b6d406b0e2119df04d5348c554b3405e8597
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103378"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -47,4 +47,5 @@ En el caso de funciones de clase no estáticas, si la función se define fuera d
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
- [Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)
+
+[Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)

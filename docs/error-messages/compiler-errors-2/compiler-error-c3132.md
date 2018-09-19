@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ffa46ef8e7f56d4be7ca88d2553623910cbcd43f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091652"
 ---
 # <a name="compiler-error-c3132"></a>Error del compilador C3132
-'parámetro de función': las matrices de parámetros solo se pueden aplicar a un argumento formal de tipo 'matriz unidimensional administrada'  
-  
- El [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) se aplicó el atributo a un parámetro que no era una matriz unidimensional.  
-  
- El ejemplo siguiente genera C3132:  
-  
-```  
-// C3132.cpp  
-// compile with: /clr /c  
-using namespace System;  
-void f( [ParamArray] Int32[,] );   // C3132  
-void g( [ParamArray] Int32[] );   // C3132  
-  
-void h( [ParamArray] array<Char ^> ^ MyArray );   // OK  
-  
+
+'parámetro de función': las matrices de parámetros solo se pueden aplicar a un argumento formal de tipo 'matriz unidimensional administrada'
+
+El [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) se aplicó el atributo a un parámetro que no era una matriz unidimensional.
+
+El ejemplo siguiente genera C3132:
+
+```
+// C3132.cpp
+// compile with: /clr /c
+using namespace System;
+void f( [ParamArray] Int32[,] );   // C3132
+void g( [ParamArray] Int32[] );   // C3132
+
+void h( [ParamArray] array<Char ^> ^ MyArray );   // OK
+
 ```

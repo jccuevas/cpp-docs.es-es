@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4821 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4821 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b9aec771c6183149adee95c0860113e075c670
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 859a83aedc6f5c6f5bcbc3ad948939dc5cb763b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281770"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086783"
 ---
-# <a name="compiler-warning-level-1-c4821"></a>Advertencia del compilador (nivel 1) C4821  
-  
-> No se puede determinar el tipo de codificación Unicode, guarde el archivo con firma (l. MAT)  
-  
-El compilador no pudo determinar el tipo de codificación para un archivo. Para resolver esta advertencia, guarde el archivo con un marcador de orden de bytes. Vea [administrar archivos con codificación](/sql/ssms/solution/manage-files-with-encoding) para obtener más información.  
+# <a name="compiler-warning-level-1-c4821"></a>Advertencia del compilador (nivel 1) C4821
+
+> No se puede determinar el tipo de codificación Unicode guarde el archivo con signatura (BOM)
+
+El compilador no pudo determinar el tipo de codificación para un archivo. Para resolver esta advertencia, guarde el archivo con un marcador de orden de bytes. Consulte [administrar archivos con codificación](/sql/ssms/solution/manage-files-with-encoding) para obtener más información.

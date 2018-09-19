@@ -1,5 +1,5 @@
 ---
-title: CXX0069 de Error del evaluador de expresiones | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0069 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cf468ebd2d8d40f306a2fa80a0331d7667d0d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a3efb6432f536ecb929c8ff8670d31030b569b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112738"
 ---
 # <a name="expression-evaluator-error-cxx0069"></a>Error del evaluador de expresiones CXX0069
-variable de marco de pila es necesario  
-  
- El evaluador de expresiones no puede evaluar la variable porque no se produce en un marco de pila. Esto puede deberse a las variables declaradas como parte de una función inline.
+
+variable necesita el marco de pila
+
+El evaluador de expresiones no puede evaluar la variable porque no se produce en un marco de pila. Esto puede deberse a las variables declaradas como parte de una función insertada.

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2170 | Documentos de Microsoft
+title: Error del compilador C2170 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad0d19dff10d04d155d8071ffb349664f6b3104e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b75d4c54bc6ec24cb182f3b6fb37ff4b8cd1ddfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055733"
 ---
 # <a name="compiler-error-c2170"></a>Error del compilador C2170
-'identificador': no se ha declarado como una función, no puede ser intrínseco  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Pragma `intrinsic` se utiliza para un elemento que no es una función.  
-  
-2.  Pragma `intrinsic` se utiliza para una función sin forma intrínseca.
+
+'identifier': no se declara como una función, no puede ser intrínseco
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. Pragma `intrinsic` se utiliza para un elemento que no sea una función.
+
+1. Pragma `intrinsic` se usa para una función sin forma intrínseca.

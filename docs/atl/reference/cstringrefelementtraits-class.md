@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223d781e879f2d1c3a35fce00e788a42247299eb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8369afbbf423f85df0e38f7f2979b3b7e48f8591
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067927"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits (clase)
 
@@ -34,13 +34,13 @@ Esta clase proporciona funciones estáticas relacionados con las cadenas almacen
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <typename T>  
+template <typename T>
 class CStringRefElementTraits : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo de datos que se almacenará en la colección.
 
 ## <a name="members"></a>Miembros
@@ -79,10 +79,10 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*element1*  
+*element1*<br/>
 El primer elemento de cadena.
 
-*elemento Elemento2*  
+*elemento Elemento2*<br/>
 La segunda cadena de elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -99,10 +99,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*str1*  
+*str1*<br/>
 El primer elemento de cadena.
 
-*str2*  
+*str2*<br/>
 La segunda cadena de elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -119,7 +119,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*str*  
+*str*<br/>
 El elemento de cadena.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -128,5 +128,5 @@ Devuelve un valor de hash, calculado con contenido de la cadena.
 
 ## <a name="see-also"></a>Vea también
 
-[CElementTraitsBase (clase)](../../atl/reference/celementtraitsbase-class.md)   
+[CElementTraitsBase (clase)](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

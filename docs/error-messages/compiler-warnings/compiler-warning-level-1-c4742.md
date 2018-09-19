@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4742 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4742 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c5c891699e89b177f9a3c070a95f496e2c77ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 622a1b1cd62024da58191ce1312c391dd39e0d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088597"
 ---
 # <a name="compiler-warning-level-1-c4742"></a>Advertencia del compilador (nivel 1) C4742
-'var' tiene una alineación diferente en 'archivo1' y 'archivo2': número y número  
-  
- Una variable externa que se haga referencia o definida en dos archivos tiene diferente alineación en dichos archivos. Esta advertencia se genera cuando el compilador encuentra que `__alignof` para la variable en *file1* difiere de `__alignof` para la variable en *archivo2*. Esto puede deberse mediante tipos incompatibles al declarar variables en archivos diferentes, o mediante el uso de no coincidencia de `#pragma pack` en archivos diferentes.  
-  
- Para resolver esta advertencia, utilice la misma definición de tipo o use nombres diferentes para las variables.  
-  
- Para obtener más información, consulte [pack](../../preprocessor/pack.md) y [operador __alignof](../../cpp/alignof-operator.md).  
-  
-## <a name="example"></a>Ejemplo  
- Este es el primer archivo que define el tipo.  
-  
-```  
-// C4742a.c  
-// compile with: /c  
-struct X {  
-   char x, y, z, w;  
-} global;  
-```  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4742.  
-  
-```  
-// C4742b.c  
-// compile with: C4742a.c /W1 /GL  
-// C4742 expected  
-extern struct X {  
-   int a;  
-} global;  
-  
-int main() {  
-   global.a = 0;  
-}  
+
+'var' tiene una alineación diferente en 'archivo1' y 'archivo2': número y número
+
+Una variable externa que se hace referencia o definida en dos archivos tiene una alineación diferente en esos archivos. Esta advertencia se genera cuando el compilador encuentra que `__alignof` para la variable en *file1* difiere `__alignof` para la variable en *file2*. Esto puede deberse mediante el uso de tipos no compatibles cuando se declara la variable en distintos archivos, o mediante el uso de no coincidentes `#pragma pack` en distintos archivos.
+
+Para resolver esta advertencia, utilice la misma definición de tipo o use nombres diferentes para las variables.
+
+Para obtener más información, consulte [pack](../../preprocessor/pack.md) y [operador __alignof](../../cpp/alignof-operator.md).
+
+## <a name="example"></a>Ejemplo
+
+Este es el primer archivo que define el tipo.
+
+```
+// C4742a.c
+// compile with: /c
+struct X {
+   char x, y, z, w;
+} global;
+```
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4742.
+
+```
+// C4742b.c
+// compile with: C4742a.c /W1 /GL
+// C4742 expected
+extern struct X {
+   int a;
+} global;
+
+int main() {
+   global.a = 0;
+}
 ```

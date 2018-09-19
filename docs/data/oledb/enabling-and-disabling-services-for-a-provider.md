@@ -16,14 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079393"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Habilitar y deshabilitar servicios para un proveedor
+
 Servicios OLE DB individuales pueden ser habilitados o deshabilitados de forma predeterminada para todas las aplicaciones que tienen acceso a un único proveedor. Esto se realiza mediante la adición de una entrada de registro OLEDB_SERVICES bajo el CLSID del proveedor, con un `DWORD` valor que especifica los servicios para habilitar o deshabilitar, como se muestra en la tabla siguiente.  
   
 |Servicios predeterminados habilitados|Valor de palabra clave|  
@@ -36,4 +37,5 @@ Servicios OLE DB individuales pueden ser habilitados o deshabilitados de forma p
 |Ninguna agregación, todos los servicios deshabilitados|\<Falta la clave >|  
   
 ## <a name="see-also"></a>Vea también  
- [Habilitar y deshabilitar servicios OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+
+[Habilitar y deshabilitar servicios OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

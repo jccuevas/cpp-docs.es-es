@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3805 | Documentos de Microsoft
+title: Error del compilador C3805 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa7a2d388e950b7825c8dba78df565bc4a798a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b83f75cca9b292c454fc40ad5487cf80ee9ceaef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265057"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106342"
 ---
 # <a name="compiler-error-c3805"></a>Error del compilador C3805
-'token': token inesperado, se esperaba '}' o un identificador  
-  
- Al definir una propiedad, se encontró un token no válido. Quitar el token no válido.
+
+'token': token inesperado, se esperaba '}' o un identificador
+
+Al definir una propiedad, se encontró un token no válido. Quite el token no válido.

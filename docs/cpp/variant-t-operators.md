@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6652f46eb33cf40a5503f522dd7a99a16edaf9d2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 022cfc9d65d505b1e25733af8c5ade6d3c215f78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088103"
 ---
 # <a name="variantt-operators"></a>_variant_t (Operadores)
-Para obtener información sobre la **_variant_t** operadores, vea [clase _variant_t](../cpp/variant-t-class.md).  
-  
-## <a name="see-also"></a>Vea también  
- [_variant_t (Clase)](../cpp/variant-t-class.md)
+
+Para obtener información sobre la **_variant_t** operadores, vea [clase _variant_t](../cpp/variant-t-class.md).
+
+## <a name="see-also"></a>Vea también
+
+[_variant_t (Clase)](../cpp/variant-t-class.md)

@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117483"
 ---
 # <a name="cenumerator-class"></a>CEnumerator (Clase)
+
 Usa un objeto de enumerador OLE DB que expone el [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y enumeradores.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -51,7 +52,8 @@ class CEnumerator :
 ```  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldbcli.h
+
+**Encabezado:** atldbcli.h
   
 ## <a name="members"></a>Miembros  
   
@@ -64,9 +66,11 @@ class CEnumerator :
 |[Abrir](#open)|Se abre el enumerador.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede recuperar el `ISourcesRowset` datos indirectamente de esta clase.  
+
+Puede recuperar el `ISourcesRowset` datos indirectamente de esta clase.  
 
 ## <a name="find"></a> CEnumerator:: Find
+
 Busca un nombre especificado entre los proveedores disponibles.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -76,16 +80,20 @@ bool Find(TCHAR* szSearchName) throw();
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *szSearchName*  
- [in] El nombre que se buscará.  
+
+*szSearchName*<br/>
+[in] El nombre que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
- **True** si se encontró el nombre. En caso contrario, **false**.  
+
+**True** si se encontró el nombre. En caso contrario, **false**.  
   
 ### <a name="remarks"></a>Comentarios  
- Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaz.  
+
+Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaz.  
   
 ## <a name="getmoniker"></a> CEnumerator:: GetMoniker
+
 Analiza el nombre para mostrar para extraer el componente de la cadena que se puede convertir en un moniker.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -98,16 +106,19 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ppMoniker*  
- [out] Analiza el moniker del nombre para mostrar ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) de la fila actual.  
+
+*ppMoniker*<br/>
+[out] Analiza el moniker del nombre para mostrar ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) de la fila actual.  
   
- *lpszDisplayName*  
- [in] El nombre para mostrar para analizar.  
+*lpszDisplayName*<br/>
+[in] El nombre para mostrar para analizar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un HRESULT estándar.  
+
+Un HRESULT estándar.  
 
 ## <a name="open"></a> CEnumerator:: Open
+
 Enlaza el moniker del enumerador, si uno se especifica, recupera el conjunto de filas del enumerador mediante una llamada a [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -121,19 +132,22 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *pMoniker*  
- [in] Un puntero a un moniker para un enumerador.  
+
+*pMoniker*<br/>
+[in] Un puntero a un moniker para un enumerador.  
   
- *pTypeInfo*  
- [in] Un puntero a la `CLSID` del enumerador.  
+*pTypeInfo*<br/>
+[in] Un puntero a la `CLSID` del enumerador.  
   
- *enumerator*  
- [in] Una referencia a un enumerador.  
+*enumerator*<br/>
+[in] Una referencia a un enumerador.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un HRESULT estándar.  
+
+Un HRESULT estándar.  
   
 ## <a name="see-also"></a>Vea también  
- [DBViewer](../../visual-cpp-samples.md)   
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

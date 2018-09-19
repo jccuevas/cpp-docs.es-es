@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767170"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118458"
 ---
 # <a name="worker-archetype"></a>Worker (Arquetipo)
 
@@ -68,7 +68,7 @@ Estos parámetros de plantilla esperar que la clase que se ajuste a este Arqueti
 
 Se llama para procesar un elemento de trabajo.
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>Parámetros
 
-*Solicitud*  
+*Solicitud*<br/>
 El elemento de trabajo que se va a procesar. El elemento de trabajo es el mismo tipo que `RequestType`.
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Un parámetro personalizado que entiende por la clase de trabajo. También pasa a `WorkerArchetype::Initialize` y `Terminate`.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 Un puntero a la [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) estructura usada para crear la cola en qué trabajo se pusieron en cola los elementos.
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-Se llama para inicializar el objeto de trabajo para las solicitudes se pasan a `WorkerArchetype::Execute`.  
+Se llama para inicializar el objeto de trabajo para las solicitudes se pasan a `WorkerArchetype::Execute`.
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*pvParam*  
+*pvParam*<br/>
 Un parámetro personalizado que entiende por la clase de trabajo. También pasa a `WorkerArchetype::Terminate` y `WorkerArchetype::Execute`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -106,8 +106,8 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Una definición de tipo para el tipo de elemento de trabajo que puede ser procesado por la clase de trabajo.
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -118,17 +118,17 @@ Este tipo debe usarse como el primer parámetro de `WorkerArchetype::Execute` y 
 
 Se llama para anular la inicialización del objeto de trabajo después de que se han pasado todas las solicitudes al `WorkerArchetype::Execute`).
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*pvParam*  
+*pvParam*<br/>
 Un parámetro personalizado que entiende por la clase de trabajo. También pasa a `WorkerArchetype::Initialize` y `WorkerArchetype::Execute`.
 
 ## <a name="see-also"></a>Vea también
 
-[Conceptos](../../atl/active-template-library-atl-concepts.md)   
+[Conceptos](../../atl/active-template-library-atl-concepts.md)<br/>
 [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)
 

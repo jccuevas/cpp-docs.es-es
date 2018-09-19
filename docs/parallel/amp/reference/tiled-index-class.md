@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069422"
 ---
 # <a name="tiledindex-class"></a>tiled_index (Clase)
 Proporciona un índice en una [tiled_extent](tiled-extent-class.md) objeto. Esta clase tiene propiedades para tener acceso a elementos relacionados con el origen local del mosaico y con el origen global. Para obtener más información sobre los espacios de mosaico, vea [usando iconos](../../../parallel/amp/using-tiles.md).  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_Dim0`  
- La longitud de la dimensión más significativa.  
+*_Dim0*<br/>
+La longitud de la dimensión más significativa.  
   
- `_Dim1`  
- La longitud de la dimensión significativa más próxima.  
+*_Dim1*<br/>
+La longitud de la dimensión significativa más próxima.  
   
- `_Dim2`  
- La longitud de la dimensión menos significativa.  
+*_Dim2*<br/>
+La longitud de la dimensión menos significativa.  
   
 ## <a name="members"></a>Miembros  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_Global`  
- Global [índice](index-class.md) de construido `tiled_index`.  
+*_Global*<br/>
+Global [índice](index-class.md) de construido `tiled_index`.  
   
- `_Local`  
- Local [índice](index-class.md) de construido `tiled_index`  
+*_Local*<br/>
+Local [índice](index-class.md) de construido `tiled_index`  
   
- `_Tile`  
- El icono de [índice](index-class.md) de construido `tiled_index`  
+*_Tile*<br/>
+El icono de [índice](index-class.md) de construido `tiled_index`  
   
- `_Tile_origin`  
- El origen del mosaico [índice](index-class.md) de construido `tiled_index`  
+*_Tile_origin*<br/>
+El origen del mosaico [índice](index-class.md) de construido `tiled_index`  
   
- `_Barrier`  
- El [tile_barrier](tile-barrier-class.md) objeto de construido `tiled_index`.  
+*_Barrier*<br/>
+El [tile_barrier](tile-barrier-class.md) objeto de construido `tiled_index`.  
   
- `_Other`  
- El `tile_index` objeto va a copiar a construido `tiled_index`.  
+*_Otro*<br/>
+El `tile_index` objeto va a copiar a construido `tiled_index`.  
   
 ## <a name="overloads"></a>Overloads  
   

@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63c3134dee6c316519dfcc34cff30b591b56460
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3edc24b2b8dc869022039d4aaaea73af06eac16b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092549"
 ---
 # <a name="using-abort"></a>Usar abort
-Una llamada a la [anular](../c-runtime-library/reference/abort.md) función provoca la finalización inmediata. Omite el proceso de destrucción normal de los objetos estáticos globales inicializados. También omite cualquier procesamiento especial especificado mediante la función `atexit`.  
-  
-## <a name="see-also"></a>Vea también  
- [Consideraciones de finalización adicionales](../cpp/additional-termination-considerations.md)
+
+Una llamada a la [anular](../c-runtime-library/reference/abort.md) función provoca la finalización inmediata. Omite el proceso de destrucción normal de los objetos estáticos globales inicializados. También omite cualquier procesamiento especial especificado mediante la función `atexit`.
+
+## <a name="see-also"></a>Vea también
+
+[Consideraciones de finalización adicionales](../cpp/additional-termination-considerations.md)

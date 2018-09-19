@@ -30,18 +30,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d34557d11cf572f167ecc3f334b7432cb772f29d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fffd02cf0916b9f0bb8a21ae2a599fe1ed51f5a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057956"
 ---
 # <a name="outp-outpw"></a>outp, outpw
-Estas funciones POSIX están obsoletas. En su lugar, use la función [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md) que es conforme a ISO C++.  
-  
+
+Estas funciones POSIX están obsoletas. En su lugar, use la función [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md) que es conforme a ISO C++.
+
 > [!IMPORTANT]
->  Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT.  
-  
+>  Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT.
+
 > [!IMPORTANT]
 >  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

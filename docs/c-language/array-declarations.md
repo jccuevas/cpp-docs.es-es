@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091918"
 ---
 # <a name="array-declarations"></a>Declaraciones de matrices
 
@@ -48,9 +48,9 @@ Una "declaración de matriz” designa la matriz y especifica el tipo de sus ele
 
 Como *constant-expression* es opcional, la sintaxis tiene dos formas:
 
--   La primera forma define una variable de matriz. El argumento *constant-expression* incluido entre corchetes especifica el número de elementos de la matriz. El elemento *constant-expression*, si existe, debe tener el tipo entero y un valor mayor que cero. Cada elemento tiene el tipo especificado por *type-specifier*, que puede ser de cualquier tipo excepto `void`. Un elemento de matriz no puede ser un tipo de función.
+- La primera forma define una variable de matriz. El argumento *constant-expression* incluido entre corchetes especifica el número de elementos de la matriz. El elemento *constant-expression*, si existe, debe tener el tipo entero y un valor mayor que cero. Cada elemento tiene el tipo especificado por *type-specifier*, que puede ser de cualquier tipo excepto `void`. Un elemento de matriz no puede ser un tipo de función.
 
--   La segunda forma declara una variable que se ha definido en otra parte. Omite el argumento *constant-expression* incluido entre corchetes, pero no los corchetes. Solo puede usar esta variante si previamente ha inicializado la matriz, la ha declarado como parámetro o la ha declarado como una referencia a una matriz definida explícitamente en otra parte del programa.
+- La segunda forma declara una variable que se ha definido en otra parte. Omite el argumento *constant-expression* incluido entre corchetes, pero no los corchetes. Solo puede usar esta variante si previamente ha inicializado la matriz, la ha declarado como parámetro o la ha declarado como una referencia a una matriz definida explícitamente en otra parte del programa.
 
 En ambas formas, *direct-declarator* designa la variable y puede modificar el tipo de la variable. Los corchetes (**[ ]**) incluidos detrás de *direct-declarator* modifican el declarador de un tipo de matriz.
 
@@ -75,6 +75,7 @@ Las tres columnas de la primera fila se almacenan primero, seguidas de las tres 
 Para hacer referencia a un elemento individual de una matriz, utilice una expresión de subíndice, como se describe en [Operadores de postfijo](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Ejemplos
+
 En estos ejemplos se muestran declaraciones de matriz:
 
 ```C

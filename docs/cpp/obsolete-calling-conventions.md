@@ -22,20 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: eec6f8370103ed0256471c009d6e97cc693a1cd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071346"
 ---
 # <a name="obsolete-calling-conventions"></a>Convenciones de llamada obsoletas
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- El **__pascal**, **__fortran**, y **__syscall** ya no se admiten las convenciones de llamada. Puede emular su funcionalidad mediante una de las convenciones de llamada admitidas y las opciones del vinculador adecuadas.  
-  
- \<Windows.h > ahora es compatible con la macro WINAPI, que se traduce en la convención de llamada adecuada para el destino. Usar WINAPI donde antes utilizaba PASCAL o **__far \__pascal**.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)
+
+## <a name="microsoft-specific"></a>Específicos de Microsoft
+
+El **__pascal**, **__fortran**, y **__syscall** ya no se admiten las convenciones de llamada. Puede emular su funcionalidad mediante una de las convenciones de llamada admitidas y las opciones del vinculador adecuadas.
+
+\<Windows.h > ahora es compatible con la macro WINAPI, que se traduce en la convención de llamada adecuada para el destino. Usar WINAPI donde antes utilizaba PASCAL o **__far \__pascal**.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)

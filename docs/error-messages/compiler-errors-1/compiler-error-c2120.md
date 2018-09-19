@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2120 | Documentos de Microsoft
+title: Error del compilador C2120 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f977f3a0ffda275a0819f01f8c99f12236babd5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4f4247d8e752e71b86829ea61756f2f04d26762
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106004"
 ---
 # <a name="compiler-error-c2120"></a>Error del compilador C2120
-'void' no es válido con todos los tipos  
-  
- El `void` tipo se utiliza en una declaración con otro tipo.  
-  
- El ejemplo siguiente genera C2120:  
-  
-```  
-// C2120.cpp  
-int main() {  
-   void int i;   // C2120  
-   int j;   // OK  
-}  
+
+'void' no es válido con todos los tipos
+
+El `void` tipo se utiliza en una declaración con otro tipo.
+
+El ejemplo siguiente genera C2120:
+
+```
+// C2120.cpp
+int main() {
+   void int i;   // C2120
+   int j;   // OK
+}
 ```

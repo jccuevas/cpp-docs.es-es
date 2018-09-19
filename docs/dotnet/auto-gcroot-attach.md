@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::Attach | Documentos de Microsoft
+title: auto_gcroot::Attach | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 242c83ce7a22d56d3c584b50ec93c941b45213ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ddd11cf6c9fbc1b0a032a609f1315e581290c01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106497"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074986"
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
 Adjuntar `auto_gcroot` a un objeto.  
@@ -46,14 +46,14 @@ auto_gcroot<_element_type> & attach(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_right`  
- El objeto que se va a adjuntar, o un `auto_gcroot` que contiene el objeto que se va a adjuntar.  
+*a la _derecha*<br/>
+Objeto que se va a adjuntar, o un `auto_gcroot` que contiene el objeto que se va a asociar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Objeto `auto_gcroot` actual.  
   
 ## <a name="remarks"></a>Comentarios  
- Si `_right` es un `auto_gcroot`, libera la propiedad de su objeto antes de que el objeto está asociado al actual `auto_gcroot`.  
+ Si `_right` es un `auto_gcroot`, libera la propiedad de su objeto antes de que el objeto está asociado a la actual `auto_gcroot`.  
   
 ## <a name="example"></a>Ejemplo  
   

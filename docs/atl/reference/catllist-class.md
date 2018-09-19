@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a24a98e7780a98726df29452a9878c8abf3d81
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 596fe8bb4a656eb5ebdc7bef855b5e6db8ab6196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090807"
 ---
 # <a name="catllist-class"></a>CAtlList (clase)
 
@@ -61,16 +61,16 @@ Esta clase proporciona métodos para crear y administrar un objeto de lista.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<typename E, class ETraits = CElementTraits<E>>  
+template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*E*  
+*E*<br/>
 El tipo de elemento.
 
-*ETraits*  
+*ETraits*<br/>
 El código utilizado para copiar o mover elementos. Consulte [CElementTraits (clase)](../../atl/reference/celementtraits-class.md) para obtener más detalles.
 
 ## <a name="members"></a>Miembros
@@ -144,7 +144,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*  
+*Elemento*<br/>
 El nuevo elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -169,7 +169,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parámetros
 
-*plNew*  
+*plNew*<br/>
 La lista que se va a agregar.
 
 ### <a name="remarks"></a>Comentarios
@@ -191,7 +191,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*  
+*Elemento*<br/>
 Elemento que se va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -216,7 +216,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parámetros
 
-*plNew*  
+*plNew*<br/>
 La lista que se va a agregar.
 
 ### <a name="remarks"></a>Comentarios
@@ -253,7 +253,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 El tamaño de bloque.
 
 ### <a name="remarks"></a>Comentarios
@@ -288,10 +288,10 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*  
+*Elemento*<br/>
 El elemento que se encuentra en la lista.
 
-*posStartAfter*  
+*posStartAfter*<br/>
 La posición inicial de la búsqueda. Si se especifica ningún valor, la búsqueda comienza con el elemento de encabezado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -316,7 +316,7 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*iElement*  
+*iElement*<br/>
 Índice de base cero del elemento de lista requerida.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -344,7 +344,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de posición que se especifica un elemento determinado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -435,7 +435,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 Un valor de posición, devuelto por una llamada anterior a `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), u otros `CAtlList` método.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -463,7 +463,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 Un valor de posición, devuelto por una llamada anterior a `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), u otros `CAtlList` método.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -543,10 +543,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de posición después del cual se insertará el nuevo elemento.
 
-*Elemento*  
+*Elemento*<br/>
 El elemento que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -571,10 +571,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El nuevo elemento se insertará en la lista antes de este valor de posición.
 
-*Elemento*  
+*Elemento*<br/>
 El elemento que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -615,7 +615,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de la posición del elemento que se va a mover.
 
 ### <a name="remarks"></a>Comentarios
@@ -636,7 +636,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de la posición del elemento que se va a mover.
 
 ### <a name="remarks"></a>Comentarios
@@ -673,7 +673,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de la posición del elemento que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -768,10 +768,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*  
+*punto de venta*<br/>
 El valor de la posición correspondiente al elemento que se va a cambiar.
 
-*Elemento*  
+*Elemento*<br/>
 El nuevo valor del elemento.
 
 ### <a name="remarks"></a>Comentarios
@@ -792,10 +792,10 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*POS1*  
+*POS1*<br/>
 El primer valor de posición.
 
-*POS2*  
+*POS2*<br/>
 El segundo valor de posición.
 
 ### <a name="remarks"></a>Comentarios
@@ -808,5 +808,5 @@ Intercambia los elementos en las dos posiciones especificadas. En las compilacio
 
 ## <a name="see-also"></a>Vea también
 
-[CList (clase)](../../mfc/reference/clist-class.md)   
+[CList (clase)](../../mfc/reference/clist-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

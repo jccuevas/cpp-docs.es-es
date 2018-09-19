@@ -31,29 +31,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafe81dc684300cb7fdf65137c2f7e45010285b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090495"
 ---
 # <a name="storage-of-basic-types"></a>Almacenamiento de tipos básicos
-En la tabla siguiente se resume el almacenamiento asociado a cada tipo básico.  
-  
-### <a name="sizes-of-fundamental-types"></a>Tamaños de los tipos fundamentales  
-  
-|Tipo|Almacenamiento|  
-|----------|-------------|  
-|`char`, `unsigned char`, **signed char**|1 byte|  
-|**short**, **unsigned short**|2 bytes|  
-|`int`, `unsigned int`|4 bytes|  
-|**long**, `unsigned long`|4 bytes|  
-|**float**|4 bytes|  
-|**double**|8 bytes|  
-|`long double`|8 bytes|  
-  
- Los tipos de datos de C entran en categorías generales. Los "tipos enteros" incluyen `char`, `int`, **short**, **long**, **signed**, `unsigned` y `enum`. Los "tipos de punto flotante" incluyen **float**, **double** y `long double`. Los “tipos aritméticos” incluyen todos los tipos de punto flotante y enteros.  
-  
-## <a name="see-also"></a>Vea también  
- [Declaraciones y tipos](../c-language/declarations-and-types.md)
+
+En la tabla siguiente se resume el almacenamiento asociado a cada tipo básico.
+
+### <a name="sizes-of-fundamental-types"></a>Tamaños de los tipos fundamentales
+
+|Tipo|Almacenamiento|
+|----------|-------------|
+|`char`, `unsigned char`, **signed char**|1 byte|
+|**short**, **unsigned short**|2 bytes|
+|`int`, `unsigned int`|4 bytes|
+|**long**, `unsigned long`|4 bytes|
+|**float**|4 bytes|
+|**double**|8 bytes|
+|`long double`|8 bytes|
+
+Los tipos de datos de C entran en categorías generales. Los "tipos enteros" incluyen `char`, `int`, **short**, **long**, **signed**, `unsigned` y `enum`. Los "tipos de punto flotante" incluyen **float**, **double** y `long double`. Los “tipos aritméticos” incluyen todos los tipos de punto flotante y enteros.
+
+## <a name="see-also"></a>Vea también
+
+[Declaraciones y tipos](../c-language/declarations-and-types.md)

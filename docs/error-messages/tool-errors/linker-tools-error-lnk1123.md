@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f0b2c7f89e7ad7d0142cb6830c4d4c3361b014c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075846"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Error de las herramientas del vinculador LNK1123
 
@@ -47,6 +47,6 @@ Los archivos de entrada deben tener el formato de archivo de objeto común (COFF
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos .obj como entrada del vinculador](../../build/reference/dot-obj-files-as-linker-input.md)  
-[Referencia de EDITBIN](../../build/reference/editbin-reference.md)  
-[Referencia de DUMPBIN](../../build/reference/dumpbin-reference.md)  
+[Archivos .obj como entrada del vinculador](../../build/reference/dot-obj-files-as-linker-input.md)<br/>
+[Referencia de EDITBIN](../../build/reference/editbin-reference.md)<br/>
+[Referencia de DUMPBIN](../../build/reference/dumpbin-reference.md)

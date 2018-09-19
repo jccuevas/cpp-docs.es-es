@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066459593be4970fde141333a6f22f0846f8bbc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc14f5831904e2fea9bfa7ef7607f2085d1f0e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061271"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>Usar tipos de datos de TCHAR.H con _MBCS
 
@@ -35,7 +35,7 @@ Tal y como se indica en la tabla de asignaciones de rutina de texto genérico (v
 
 - Una rutina específica de MBCS. En este caso, se espera que los argumentos de cadena sean del tipo __char&#42; sin signo__. Por ejemplo, **_tcsrev** se asigna a **_mbsrev**, que espera y devuelve una cadena de tipo __char&#42; sin signo__. Una vez más, si usa el tipo de datos de texto genérico **_TCHAR** para los tipos de cadena, hay un posible conflicto de tipos porque **_TCHAR** se asigna al tipo **char**.
 
- A continuación se presentan tres soluciones para evitar este conflicto de tipos, así como las advertencias del compilador de C o errores del compilador de C++ que se generarían:
+A continuación se presentan tres soluciones para evitar este conflicto de tipos, así como las advertencias del compilador de C o errores del compilador de C++ que se generarían:
 
 - Usa el comportamiento predeterminado. TCHAR.H proporciona prototipos de rutinas de texto genérico para rutinas en las bibliotecas en tiempo de ejecución, como en el ejemplo siguiente.
 

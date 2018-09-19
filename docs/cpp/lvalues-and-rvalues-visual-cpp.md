@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 45558f9546b996d824d8cf9e8782b7323dcb91fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114506"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues y Rvalues (Visual C++)
 
 Cada expresión de C++ tiene un tipo y pertenece a un *categoría valor*. Las categorías de valor son la base para las reglas que los compiladores deben seguir al crear, copiar y mover objetos temporales durante la evaluación de expresión.
 
- El estándar C ++ 17 define las categorías de valor de expresión como sigue:
+El estándar C ++ 17 define las categorías de valor de expresión como sigue:
 
 - Un *glvalue* es una expresión cuya evaluación determina la identidad de un objeto, el campo de bits o la función.
 - Un *prvalue* es una expresión cuya evaluación Inicializa un objeto o un campo de bits, o calcula el valor del operando de un operador, como especificado por el contexto donde aparece.
@@ -36,40 +36,40 @@ Cada expresión de C++ tiene un tipo y pertenece a un *categoría valor*. Las ca
 
 El siguiente diagrama muestra las relaciones entre las categorías:
 
- ![Categorías de valor de expresión de C++](media/value_categories.png "categorías de valor de expresión de C++")
+![Categorías de valor de expresión de C++](media/value_categories.png "categorías de valor de expresión de C++")
 
- Un valor l tiene una dirección que puede tener acceso su programa. Los nombres de variable, incluidos algunos ejemplos de expresiones de valor l **const** llamadas que devuelven una referencia lvalue, campos de bits, uniones y los miembros de clase de función de las variables, los elementos de matriz.
+Un valor l tiene una dirección que puede tener acceso su programa. Los nombres de variable, incluidos algunos ejemplos de expresiones de valor l **const** llamadas que devuelven una referencia lvalue, campos de bits, uniones y los miembros de clase de función de las variables, los elementos de matriz.
 
- Una expresión de prvalue no tiene ninguna dirección que sea accesible para el programa. Ejemplos de expresiones prvalue incluyen literales, llamadas a funciones que devuelven un tipo sin referencia y los objetos temporales que se crean durante la evaluación de expresión, pero accesible únicamente por el compilador.
+Una expresión de prvalue no tiene ninguna dirección que sea accesible para el programa. Ejemplos de expresiones prvalue incluyen literales, llamadas a funciones que devuelven un tipo sin referencia y los objetos temporales que se crean durante la evaluación de expresión, pero accesible únicamente por el compilador.
 
- Una expresión xvalue tiene una dirección que ya no es accesible por el programa, pero se puede usar para inicializar una referencia rvalue, que proporciona acceso a la expresión. Algunos ejemplos son llamadas a funciones que devuelven una referencia rvalue y el subíndice de matriz, miembro y puntero a expresiones de miembro donde la matriz u objeto es una referencia rvalue.
+Una expresión xvalue tiene una dirección que ya no es accesible por el programa, pero se puede usar para inicializar una referencia rvalue, que proporciona acceso a la expresión. Algunos ejemplos son llamadas a funciones que devuelven una referencia rvalue y el subíndice de matriz, miembro y puntero a expresiones de miembro donde la matriz u objeto es una referencia rvalue.
 
 ## <a name="example"></a>Ejemplo
 
- En el ejemplo siguiente se muestran varios usos correctos e incorrectos de valores L y valores R:
+En el ejemplo siguiente se muestran varios usos correctos e incorrectos de valores L y valores R:
 
 ```cpp
 // lvalues_and_rvalues2.cpp
 int main()
 {
- int i, j, *p;
+int i, j, *p;
 
- // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
- i = 7;
+// Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+i = 7;
 
- // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
- 7 = i; // C2106
- j * 4 = 7; // C2106
+// Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+7 = i; // C2106
+j * 4 = 7; // C2106
 
- // Correct usage: the dereferenced pointer is an lvalue.
- *p = i;
+// Correct usage: the dereferenced pointer is an lvalue.
+*p = i;
 
- const int ci = 7;
- // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
- ci = 9; // C3892
+const int ci = 7;
+// Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+ci = 9; // C3892
 
- // Correct usage: the conditional operator returns an lvalue.
- ((i < 3) ? i : j) = 7;
+// Correct usage: the conditional operator returns an lvalue.
+((i < 3) ? i : j) = 7;
 }
 ```
 
@@ -79,6 +79,7 @@ int main()
 Los términos *lvalue* y *rvalue* a menudo se usan cuando se hace referencia a las referencias de objeto. Para obtener más información acerca de las referencias, vea [declarador de referencia Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) y [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vea también
- [Conceptos básicos](../cpp/basic-concepts-cpp.md)  
- [Declarador de referencia a un valor L: &](../cpp/lvalue-reference-declarator-amp.md)  
- [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md)
+
+[Conceptos básicos](../cpp/basic-concepts-cpp.md)<br/>
+[Declarador de referencia a un valor L: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
+[Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

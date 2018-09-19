@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4d46582266234b4208a768fc7b2045af824349
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18e0750a2c0b8747da432efd9fc465b83e01a490
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018280"
 ---
 # <a name="console-and-port-io"></a>E/S de consola y de puerto
 
@@ -55,4 +55,4 @@ Estas rutinas leen y escriben en la consola o en el puerto especificado. Las rut
 ## <a name="see-also"></a>Vea también
 
 [Entrada y salida](../c-runtime-library/input-and-output.md)<br/>
- [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

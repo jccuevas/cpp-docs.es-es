@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4490 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4490 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baf6c10d50b9b6dd7a41df195dd0b1e39683c98c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d6bda2aaf729c2d4b8fb29dcbeaff428ed79d78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090872"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>Advertencia del compilador (nivel 1) C4490
-'override': uso incorrecto del especificador de reemplazo; 'function' no coincide con un método de clase ref base  
-  
- Un especificador de reemplazo se usó incorrectamente. Por ejemplo, no se reemplaza una función de la interfaz, implementada.  
-  
- Para obtener más información, consulte [especificadores de reemplazo](../../windows/override-specifiers-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4490.  
-  
-```  
-// C4490.cpp  
-// compile with: /clr /c /W1  
-  
-interface struct IFace {  
-   void Test();  
-};  
-  
-ref struct Class1 : public IFace {  
-   virtual void Test() override {}   // C4490  
-   // try the following line instead  
-   // virtual void Test() {}  
-};  
+
+'override': uso incorrecto del especificador de invalidación; 'function' no coincide con un método de clase ref base
+
+Un especificador de invalidación se usó incorrectamente. Por ejemplo, no reemplaza una función de la interfaz, implementarla.
+
+Para obtener más información, consulte [especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4490.
+
+```
+// C4490.cpp
+// compile with: /clr /c /W1
+
+interface struct IFace {
+   void Test();
+};
+
+ref struct Class1 : public IFace {
+   virtual void Test() override {}   // C4490
+   // try the following line instead
+   // virtual void Test() {}
+};
 ```

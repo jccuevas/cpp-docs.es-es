@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3626 | Documentos de Microsoft
+title: Error del compilador C3626 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede2ec42b3afc581126d2591cba072817dcc8748
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6fb7c03c7c957999ca75e3946e4f78d290b78a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094707"
 ---
 # <a name="compiler-error-c3626"></a>Error del compilador C3626
-'keyword': palabra clave '__event' solo puede usarse en interfaces COM, funciones miembro y miembros de datos que sean punteros a delegados  
-  
- Una palabra clave se usó incorrectamente.  
-  
- El ejemplo siguiente genera C3626:  
-  
-```  
-// C3626.cpp  
-// compile with: /c  
-struct A {  
-   __event int i;   // C3626  
-// try the following line instead  
-// __event int i();  
-};  
+
+'keyword': palabra clave '__event' sólo puede usarse en las interfaces COM, funciones miembro y miembros de datos que sean punteros a delegados
+
+Una palabra clave se usó incorrectamente.
+
+El ejemplo siguiente genera C3626:
+
+```
+// C3626.cpp
+// compile with: /c
+struct A {
+   __event int i;   // C3626
+// try the following line instead
+// __event int i();
+};
 ```

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b93a93b545d03875167ccd641fa3e0867c371a8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069435"
 ---
 # <a name="specifying-property-pages"></a>Especificar páginas de propiedades
 
@@ -49,6 +49,6 @@ La siguiente clase de un calendario de control usa el `ISpecifyPropertyPages` in
 
 ## <a name="see-also"></a>Vea también
 
-[Páginas de propiedades](../atl/atl-com-property-pages.md)   
+[Páginas de propiedades](../atl/atl-com-property-pages.md)<br/>
 [Ejemplo ATLPages](../visual-cpp-samples.md)
 

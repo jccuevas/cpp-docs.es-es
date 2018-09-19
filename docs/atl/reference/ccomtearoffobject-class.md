@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089585"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject (clase)
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 Deriva de la clase desplazable, `CComTearOffObjectBase` y las interfaces desea que el objeto desplazable para admitir.
 
 ATL implementa sus interfaces divisibles en dos fases: la `CComTearOffObjectBase` métodos controlan el recuento de referencias y `QueryInterface`, mientras que `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*  
+*PV*<br/>
 [in] Puntero que se convertirá en un puntero a un `CComObject<Owner>` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parámetros
 
-*Propietario*  
+*Propietario*<br/>
 [in] La clase para el que está implementando un desplazable.
 
 ### <a name="remarks"></a>Comentarios
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*  
+*IID*<br/>
 [in] IID de la interfaz que se solicita.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntero al puntero de interfaz identificado por *iid*, o NULL si no se encuentra la interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -209,5 +209,5 @@ En versiones no depuradas, siempre devuelve cero. En las compilaciones de depura
 
 ## <a name="see-also"></a>Vea también
 
-[CComCachedTearOffObject (clase)](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[CComCachedTearOffObject (clase)](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

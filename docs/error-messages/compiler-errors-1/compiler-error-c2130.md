@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2130 | Documentos de Microsoft
+title: Error del compilador C2130 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4484d183def04f764ae75faaa503449e7bdf9984
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 954930522651fcee6c29bf019f366e056fe681ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071535"
 ---
 # <a name="compiler-error-c2130"></a>Error del compilador C2130
-\#línea esperaba una cadena que contiene el nombre de archivo que se encontró 'token'  
-  
- El token de nombre de archivo opcional que se encuentra después de [#line](../../preprocessor/hash-line-directive-c-cpp.md) `linenumber` debe ser una cadena.  
-  
- El ejemplo siguiente genera la advertencia C2130:  
-  
-```  
-// C2130.cpp  
-int main() {  
-   #line 1000 test   // C2130  
-   #line 1000 "test"   // OK  
-}  
+
+\#línea esperaba una cadena que contiene el nombre de archivo, que pero se encontró 'token'
+
+El token de nombre de archivo opcional que se encuentra después de [#line](../../preprocessor/hash-line-directive-c-cpp.md) `linenumber` debe ser una cadena.
+
+El ejemplo siguiente genera la advertencia C2130:
+
+```
+// C2130.cpp
+int main() {
+   #line 1000 test   // C2130
+   #line 1000 "test"   // OK
+}
 ```

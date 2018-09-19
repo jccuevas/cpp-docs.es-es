@@ -1,5 +1,5 @@
 ---
-title: invalid_operation (clase) | Documentos de Microsoft
+title: invalid_operation (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa6d1152bb1f9a9c5671d1f7f0cdf0e426c02575
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c189649447b318a651957c82b8cfab8cd11fb60a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054836"
 ---
 # <a name="invalidoperation-class"></a>invalid_operation (Clase)
 Esta clase describe una excepción producida cuando se realiza una operación no válida que no está descrita con más precisión por otro tipo de excepción producida por el runtime de simultaneidad.  
@@ -66,8 +66,8 @@ invalid_operation() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)

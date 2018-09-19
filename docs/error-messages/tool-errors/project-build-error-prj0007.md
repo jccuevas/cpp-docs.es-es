@@ -1,5 +1,5 @@
 ---
-title: Error PRJ0007 al compilar del proyecto | Documentos de Microsoft
+title: Error PRJ0007 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 288c86797d481719a594b061d6942923fe2230ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d944f444eb424339b4c214de1bb160e0545a3e35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317770"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068096"
 ---
 # <a name="project-build-error-prj0007"></a>Error PRJ0007 al compilar el proyecto
-No se pudo crear el directorio de resultados 'directorio'.  
-  
- Visual C++ no se pudo crear un directorio de salida. Esto puede deberse a lo siguiente:  
-  
--   El directorio en los que el directorio de salida era crear es de solo lectura.  
-  
--   Equipo está fuera del espacio en disco.  
-  
--   Especifica una ruta de acceso de directorio no válido.  
-  
--   Permisos de usuario no son suficientes para crear el directorio.
+
+No se pudo crear el directorio de resultados 'directorio'.
+
+Visual C++ no se pudo crear un directorio de salida. Esto puede deberse a lo siguiente:
+
+- El directorio en el que era crear el directorio de salida es de solo lectura.
+
+- Equipo no tiene suficiente espacio en disco.
+
+- Especifica una ruta de acceso de directorio no válido.
+
+- Los permisos de usuario no son suficientes para crear el directorio.

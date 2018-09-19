@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392e9dc2997dc7f4f0f36b1d7d38cd8ecdc691bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac285921500107b85c30eba4d2f1940c93721d0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113063"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO (estructura)
 
@@ -43,16 +43,16 @@ struct _ATL_FUNC_INFO {
 
 ## <a name="members"></a>Miembros
 
-`cc`  
+`cc`<br/>
 Convención de llamada. Cuando se usa esta estructura con la [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (clase), este miembro debe ser CC_STDCALL. `CC_CDECL` es la única opción admitida en Windows CE para el `CALLCONV` campo de la `_ATL_FUNC_INFO` estructura. No se admite cualquier otro valor, por tanto, su comportamiento sin definir.
 
-`vtReturn`  
+`vtReturn`<br/>
 El tipo de variante de la función devuelve el valor.
 
-`nParams`  
+`nParams`<br/>
 El número de parámetros de función.
 
-`pVarTypes`  
+`pVarTypes`<br/>
 Una matriz de tipos de variante de los parámetros de función.
 
 ## <a name="remarks"></a>Comentarios
@@ -75,7 +75,7 @@ Encabezado: atlcom.h
 
 ## <a name="see-also"></a>Vea también
 
-[Clases y structs](../../atl/reference/atl-classes.md)  
-[IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)   
+[Clases y structs](../../atl/reference/atl-classes.md)<br/>
+[IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 

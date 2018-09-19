@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2373 | Documentos de Microsoft
+title: Error del compilador C2373 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af66418c98bd70dbf9e9c9cf378fed21dc4352ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e9b667b733b99a7ae9e1b297ad2557fb55784be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110372"
 ---
 # <a name="compiler-error-c2373"></a>Error del compilador C2373
-'identifier': nueva definición; modificadores de tipo distintos  
-  
- El identificador ya está definido con un modificador de tipo diferente.  
-  
- El ejemplo siguiente genera la advertencia C2373:  
-  
-```  
-// C2373.h  
-void __clrcall func( void );  
-const int i = 20;  
-```  
-  
- Y después:  
-  
-```  
-// C2373.cpp  
-// compile with: /c  
-#include "C2373.h"  
-extern void __cdecl func( void );   // C2373  
-extern void __clrcall func( void );   // OK  
-  
-extern int i;   // C2373  
-extern const int i;   // OK  
+
+'identifier': nueva definición; modificadores de tipo distintos
+
+El identificador ya está definido con un modificador de tipo diferente.
+
+El ejemplo siguiente genera la advertencia C2373:
+
+```
+// C2373.h
+void __clrcall func( void );
+const int i = 20;
+```
+
+Y después:
+
+```
+// C2373.cpp
+// compile with: /c
+#include "C2373.h"
+extern void __cdecl func( void );   // C2373
+extern void __clrcall func( void );   // OK
+
+extern int i;   // C2373
+extern const int i;   // OK
 ```

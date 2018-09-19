@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2224 | Documentos de Microsoft
+title: Error del compilador C2224 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0830018d514f5a58bdc1f2989ae0f3106483dcce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4420e0e2f89c50bbc7d0748779efcc0eccf117d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098165"
 ---
 # <a name="compiler-error-c2224"></a>Error del compilador C2224
-izquierda de '. identifier' debe tener el tipo struct/union  
-  
- El operando situado a la izquierda del punto (.) no es una clase, estructura o unión.  
-  
- Este error puede deberse a que es una variable sin definir un operando izquierdo (por lo tanto, escriba `int`).
+
+izquierda de '. identifier' debe tener el tipo struct/union
+
+El operando situado a la izquierda del punto (.) no es una clase, estructura o unión.
+
+Este error puede deberse a un operando izquierdo que sea una variable no definida (por lo tanto, escriba `int`).

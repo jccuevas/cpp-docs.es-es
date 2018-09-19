@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054511"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray (clase)
 
@@ -40,16 +40,16 @@ Esta clase proporciona métodos para administrar una matriz simple.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo de datos que se va a almacenar en la matriz.
 
-*TEqual*  
+*TEqual*<br/>
 Un objeto de rasgo, definiendo la prueba de igualdad para los elementos de tipo *T*.
 
 ## <a name="members"></a>Miembros
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Parámetros
 
-*t*  
+*t*<br/>
 Elemento que se va a agregar a la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -123,13 +123,13 @@ Devuelve TRUE si el elemento se agrega correctamente a la matriz, FALSE en caso 
 El constructor para el objeto de matriz.
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*src*  
+*src*<br/>
 Objeto `CSimpleArray` existente.
 
 ### <a name="remarks"></a>Comentarios
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*t*  
+*t*<br/>
 El elemento que se va a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 El índice del elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>Parámetros
 
-*src*  
+*src*<br/>
 Para copiar la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Parámetros
 
-*t*  
+*t*<br/>
 Elemento que se va a quitar de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 Índice que apunta al elemento que se va a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 Índice del elemento que se va a cambiar.
 
-*t*  
+*t*<br/>
 El valor que se va a asignar al elemento especificado.
 
 ### <a name="return-value"></a>Valor devuelto

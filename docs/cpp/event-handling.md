@@ -16,31 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91fded4380875515da81b87c5ffd74665df01b21
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 666fb58168dd0be4ddb011de7c2ee0fc4f4e77e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066574"
 ---
 # <a name="event-handling"></a>Control de eventos
-Control de eventos es compatible principalmente para las clases COM (las clases de C++ que implementan objetos COM, normalmente mediante clases ATL o [coclase](../windows/coclass.md) atributo).  Para obtener más información, consulte [control de eventos en COM](../cpp/event-handling-in-com.md).  
-  
- El control de eventos también se admite para las clases de C++ nativo (clases de C++ que no implementan objetos COM); sin embargo, esa compatibilidad está en desuso y se quitará en futuras versiones.  Para obtener más información, consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.md).  
-  
- El control de eventos admite el uso de único subproceso y multiproceso y protege los datos de acceso multiproceso simultáneo. También permite que se deriven subclases de clases del origen de eventos o del receptor y que se admita el suministro y la recepción de eventos extendidos en la clase derivada.  
-  
- Visual C++ incluye atributos y palabras clave para declarar eventos y controladores de eventos. Los atributos y las palabras clave de eventos se pueden utilizar en programas de CLR y en programas de C++ nativo.  
-  
-|Tema|Descripción|  
-|-----------|-----------------|  
-|[event_source](../windows/event-source.md)|Crea un origen de eventos.|  
-|[event_receiver](../windows/event-receiver.md)|Crea un receptor de eventos (receptor).|  
-|[__event](../cpp/event.md)|Declara un evento.|  
-|[__raise](../cpp/raise.md)|Resalta el sitio de llamada de un evento.|  
-|[__hook](../cpp/hook.md)|Asocia un método de control a un evento.|  
-|[__unhook](../cpp/unhook.md)|Disocia un método de control de un evento.|  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)   
- [Palabras clave](../cpp/keywords-cpp.md)   
+
+Control de eventos es compatible principalmente para las clases COM (las clases de C++ que implementan objetos COM, normalmente mediante clases ATL o [coclase](../windows/coclass.md) atributo).  Para obtener más información, consulte [control de eventos en COM](../cpp/event-handling-in-com.md).
+
+El control de eventos también se admite para las clases de C++ nativo (clases de C++ que no implementan objetos COM); sin embargo, esa compatibilidad está en desuso y se quitará en futuras versiones.  Para obtener más información, consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.md).
+
+El control de eventos admite el uso de único subproceso y multiproceso y protege los datos de acceso multiproceso simultáneo. También permite que se deriven subclases de clases del origen de eventos o del receptor y que se admita el suministro y la recepción de eventos extendidos en la clase derivada.
+
+Visual C++ incluye atributos y palabras clave para declarar eventos y controladores de eventos. Los atributos y las palabras clave de eventos se pueden utilizar en programas de CLR y en programas de C++ nativo.
+
+|Tema|Descripción|
+|-----------|-----------------|
+|[event_source](../windows/event-source.md)|Crea un origen de eventos.|
+|[event_receiver](../windows/event-receiver.md)|Crea un receptor de eventos (receptor).|
+|[__event](../cpp/event.md)|Declara un evento.|
+|[__raise](../cpp/raise.md)|Resalta el sitio de llamada de un evento.|
+|[__hook](../cpp/hook.md)|Asocia un método de control a un evento.|
+|[__unhook](../cpp/unhook.md)|Disocia un método de control de un evento.|
+
+## <a name="see-also"></a>Vea también
+
+[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
+[Palabras clave](../cpp/keywords-cpp.md)

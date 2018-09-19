@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1081 | Documentos de Microsoft
+title: Error irrecuperable C1081 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5ea18ff3f2714d9621d4372cf541be2f9b225a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b34f2f19a0bb8770ea9292fef120c415c0fb255a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060539"
 ---
 # <a name="fatal-error-c1081"></a>Error irrecuperable C1081
-'símbolo': nombre de archivo demasiado largo  
-  
- La longitud de una ruta de acceso de archivo supera los `_MAX_PATH` (fijado por STDLIB.h en 260 caracteres). Acorte el nombre del archivo.  
-  
- Si se llama a CL.exe con un nombre de archivo corto, el compilador puede necesitar generar una ruta de acceso completa. Por ejemplo, `cl -c myfile.cpp` puede hacer que el compilador genere:  
-  
-```  
-D:\<very-long-directory-path>\myfile.cpp  
+
+'símbolo': nombre de archivo demasiado largo
+
+Supera la longitud de una ruta de acceso de archivo `_MAX_PATH` (definida en STDLIB.h como de 260 caracteres). Acorte el nombre del archivo.
+
+Si se llama a CL.exe con un nombre de archivo corto, el compilador puede necesitar generar una ruta de acceso completa. Por ejemplo, `cl -c myfile.cpp` puede hacer que el compilador generar:
+
+```
+D:\<very-long-directory-path>\myfile.cpp
 ```

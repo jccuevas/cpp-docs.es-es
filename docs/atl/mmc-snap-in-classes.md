@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995693a73fde41a3f5e31d81224b96d12edb2c46
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 85d32a4550c2a7b3522456defc53b9741ea2eb25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024234"
 ---
 # <a name="mmc-snap-in-classes"></a>Clases de complemento de MMC
 
@@ -33,6 +33,6 @@ Las clases siguientes proporcionan compatibilidad para desarrollar componentes d
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../atl/atl-class-overview.md)   
+[Información general de clases](../atl/atl-class-overview.md)<br/>
 [Macros de objeto de complemento](../atl/reference/snap-in-object-macros.md)
 

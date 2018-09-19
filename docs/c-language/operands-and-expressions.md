@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 804039142e63af838ddd7e8a899d616657596f66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08b92dcf1e51a58255254f36df5c140ea36343f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023376"
 ---
 # <a name="operands-and-expressions"></a>Operandos y expresiones
-Un "operando" es una entidad en la que actúa un operador. Una "expresión" es una secuencia de operadores y operandos que realiza cualquier combinación de estas acciones:  
-  
--   Calcula un valor  
-  
--   Designa un objeto o una función  
-  
--   Genera efectos secundarios  
-  
- Los operandos de C incluyen constantes, identificadores, cadenas, llamada de función, expresiones subíndice, expresiones de selección de miembro, y expresiones complejas que se forman combinando operandos con operadores o incluyendo operandos entre paréntesis. La sintaxis de estos operandos se proporciona en [Expresiones primarias](../c-language/c-primary-expressions.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Expresiones y asignaciones](../c-language/expressions-and-assignments.md)
+
+Un "operando" es una entidad en la que actúa un operador. Una "expresión" es una secuencia de operadores y operandos que realiza cualquier combinación de estas acciones:
+
+- Calcula un valor
+
+- Designa un objeto o una función
+
+- Genera efectos secundarios
+
+Los operandos de C incluyen constantes, identificadores, cadenas, llamada de función, expresiones subíndice, expresiones de selección de miembro, y expresiones complejas que se forman combinando operandos con operadores o incluyendo operandos entre paréntesis. La sintaxis de estos operandos se proporciona en [Expresiones primarias](../c-language/c-primary-expressions.md).
+
+## <a name="see-also"></a>Vea también
+
+[Expresiones y asignaciones](../c-language/expressions-and-assignments.md)
