@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076299"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ Use `__declspec(align(#))` para controlar con precisión la alineación de datos
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (align (** *#* **))** *declarador*  
+> **__declspec (align (** *#* **))** *declarador*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -251,6 +251,7 @@ El desplazamiento de un objeto se basa en el desplazamiento del objeto anterior 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
-[__declspec](../cpp/declspec.md)  
-[Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)  
-[Información general sobre las convenciones de llamada x64](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Información general sobre las convenciones de llamada x64](../build/overview-of-x64-calling-conventions.md)

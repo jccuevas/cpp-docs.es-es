@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bb07807934dcc5c665f0058ef869f62f0b2d3ea
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 554fddbb778a19555fc7342f08eaac2e5642d815
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019450"
 ---
 # <a name="active-template-library-atl-concepts"></a>Conceptos de Active Template Library (ATL)
 
@@ -29,86 +29,86 @@ Si lo hace mucho de la programación de ATL, desea obtener más información ace
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)  
+[Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)<br/>
 Le guía a través de la creación de un control y enseña los fundamentos de ATL en el proceso.
 
-[Introducción a COM y ATL](../atl/introduction-to-com-and-atl.md)  
+[Introducción a COM y ATL](../atl/introduction-to-com-and-atl.md)<br/>
 Presenta los conceptos principales detrás el modelo de objetos componentes (COM). Este artículo explica también brevemente qué es ATL y cuándo se debe utilizar.
 
-[Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)  
+[Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)<br/>
 Describe la relación entre diversas clases ATL y cómo se implementan esas clases.
 
-[Interfaces duales y ATL](../atl/dual-interfaces-and-atl.md)  
+[Interfaces duales y ATL](../atl/dual-interfaces-and-atl.md)<br/>
 Describe las interfaces duales desde una perspectiva ATL.
 
-[Colecciones y enumeradores de ATL](../atl/atl-collections-and-enumerators.md)  
+[Colecciones y enumeradores de ATL](../atl/atl-collections-and-enumerators.md)<br/>
 Describe la creación e implementación de colecciones y enumeradores de ATL.
 
-[Fundamentos de controles compuestos](../atl/atl-composite-control-fundamentals.md)  
+[Fundamentos de controles compuestos](../atl/atl-composite-control-fundamentals.md)<br/>
 Proporciona instrucciones paso a paso para crear un control compuesto. Un control compuesto es un tipo de control ActiveX que puede contener otros controles ActiveX o controles de Windows.
 
-[Preguntas más frecuentes sobre contención de controles ATL](../atl/atl-control-containment-faq.md)  
+[Preguntas más frecuentes sobre contención de controles ATL](../atl/atl-control-containment-faq.md)<br/>
 Se tratan las preguntas fundamentales relacionadas con el hospedaje de controles con ATL.
 
-[Páginas de propiedades COM de ATL](../atl/atl-com-property-pages.md)  
+[Páginas de propiedades COM de ATL](../atl/atl-com-property-pages.md)<br/>
 Muestra cómo especificar e implementar páginas de propiedades COM.
 
-[Compatibilidad de ATL con controles DHTML](../atl/atl-support-for-dhtml-controls.md)  
+[Compatibilidad de ATL con controles DHTML](../atl/atl-support-for-dhtml-controls.md)<br/>
 Proporciona instrucciones paso a paso para crear un control DHTML.
 
-[Puntos de conexión en ATL](../atl/atl-connection-points.md)  
+[Puntos de conexión en ATL](../atl/atl-connection-points.md)<br/>
 Explica qué son los puntos de conexión y cómo los implementa ATL.
 
-[Control de eventos en ATL](../atl/event-handling-and-atl.md)  
+[Control de eventos en ATL](../atl/event-handling-and-atl.md)<br/>
 Se describen los pasos que debe realizar para controlar eventos COM por medio de ATL [IDispEventImpl](../atl/reference/idispeventimpl-class.md) y [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) clases.
 
-[ATL y el contador de referencias de subprocesamiento libre](../atl/atl-and-the-free-threaded-marshaler.md)  
+[ATL y el contador de referencias de subprocesamiento libre](../atl/atl-and-the-free-threaded-marshaler.md)<br/>
 Proporciona detalles sobre la opción de ATL Simple objeto del asistente que permite que la clase agregar el contador de referencias de subproceso libre (FTM).
 
-[Especificar el modelo de subprocesamiento del proyecto](../atl/specifying-the-threading-model-for-a-project-atl.md)  
+[Especificar el modelo de subprocesamiento del proyecto](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
 Describe las macros disponibles controlar el rendimiento de tiempo de ejecución relacionados con los subprocesos en el proyecto.
 
-[Clases de módulo de ATL](../atl/atl-module-classes.md)  
+[Clases de módulo de ATL](../atl/atl-module-classes.md)<br/>
 Describe las nuevas clases de módulo de ATL 7.0. Clases de módulo implementan la funcionalidad básica requerida por ATL.
 
-[Servicios ATL](../atl/atl-services.md)  
+[Servicios ATL](../atl/atl-services.md)<br/>
 Se trata de la serie de eventos que se producen cuando se implementa un servicio. También se habla de algunos de los conceptos relacionados con el desarrollo de un servicio.
 
-[Clases de ventana ATL](../atl/atl-window-classes.md)  
+[Clases de ventana ATL](../atl/atl-window-classes.md)<br/>
 Describe cómo crear, superclase y subclases de ventanas en ATL. Las clases de ventana ATL no son clases COM.
 
-[Clases de colección de ATL](../atl/atl-collection-classes.md)  
+[Clases de colección de ATL](../atl/atl-collection-classes.md)<br/>
 Describe cómo usar matrices y mapas en ATL.
 
-[El componente de registro ATL (registrador)](../atl/atl-registry-component-registrar.md)  
+[El componente de registro ATL (registrador)](../atl/atl-registry-component-registrar.md)<br/>
 Describe ATL scripting sintaxis y parámetros reemplazables. También se explica cómo configurar un vínculo estático al registrador.
 
-[Programar con ATL y código en tiempo de ejecución de C](../atl/programming-with-atl-and-c-run-time-code.md)  
+[Programar con ATL y código en tiempo de ejecución de C](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 Describe las ventajas de la vinculación estática o dinámicamente a la biblioteca de tiempo de ejecución de C (CRT).
 
-[Programar con CComBSTR](../atl/programming-with-ccombstr-atl.md)  
+[Programar con CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 Describe varias situaciones que requieren precaución al programar con `CComBSTR`.
 
-[Referencia de codificación](../atl/atl-encoding-reference.md)  
+[Referencia de codificación](../atl/atl-encoding-reference.md)<br/>
 Proporciona funciones y macros que admita la codificación en una variedad de estándares de Internet comunes como uuencode, hexadecimal y UTF8 en atlenc.h.
 
-[Referencia de utilidades](../atl/atl-utilities-reference.md)  
+[Referencia de utilidades](../atl/atl-utilities-reference.md)<br/>
 Proporciona código para manipular las rutas de acceso y direcciones URL en forma de [CPathT](../atl/reference/cpatht-class.md) y [CUrl](../atl/reference/curl-class.md). Un grupo de subprocesos, [CThreadPool](../atl/reference/cthreadpool-class.md), se puede usar en sus propias aplicaciones. Este código puede encontrarse en atlutil.h y atlpath.h en.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Ejemplos de ATL](../visual-cpp-samples.md)  
+[Ejemplos de ATL](../visual-cpp-samples.md)<br/>
 Proporciona descripciones y vínculos a los programas de ejemplo ATL.
 
-[Creación de un proyecto ATL](../atl/reference/creating-an-atl-project.md)  
+[Creación de un proyecto ATL](../atl/reference/creating-an-atl-project.md)<br/>
 Contiene información sobre el Asistente para proyectos ATL.
 
-[Asistente para controles ATL](../atl/reference/atl-control-wizard.md)  
+[Asistente para controles ATL](../atl/reference/atl-control-wizard.md)<br/>
 Describe cómo agregar clases.
 
-[Programación con atributos](../windows/attributed-programming-concepts.md)  
+[Programación con atributos](../windows/attributed-programming-concepts.md)<br/>
 Proporciona información general sobre el uso de atributos para simplificar la programación COM y en una lista de vínculos a temas más detallados.
 
-[Información general de clases ATL](../atl/atl-class-overview.md)  
+[Información general de clases ATL](../atl/atl-class-overview.md)<br/>
 Proporciona información de referencia y vínculos a las clases ATL.
 

@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021569"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl (Clase)
+
 Proporciona una implementación de la [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *T*  
- El objeto de sesión derivada de `IDBCreateCommandImpl`.  
+
+*T*<br/>
+El objeto de sesión derivada de `IDBCreateCommandImpl`.  
   
- *CommandClass*  
- La clase de comando.  
+*CommandClass*<br/>
+La clase de comando.  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldb.h  
+
+**Encabezado:** atldb.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |[CreateCommand](#createcommand)|Crea un nuevo comando.|  
   
 ## <a name="remarks"></a>Comentarios  
- Una interfaz opcional para el objeto de sesión para obtener un nuevo comando.  
+
+Una interfaz opcional para el objeto de sesión para obtener un nuevo comando.  
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl:: CreateCommand
+
 Crea un nuevo comando y devuelve la interfaz solicitada.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -74,14 +79,16 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
- Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IDBCreateCommand::CreateCommand`:  
+Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IDBCreateCommand::CreateCommand`:  
   
 |Parámetros de plantilla OLE DB|*Referencia del programador de OLE DB* parámetros|  
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

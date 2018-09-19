@@ -18,38 +18,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e8df26063a8d854f643b78fa127d1c17ef43589
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: aa56a62fa898f7ebe6c171af6f7246106b8e5ac7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038751"
 ---
 # <a name="testing-the-read-only-provider"></a>Probar el proveedor de sólo lectura
+
 Para probar un proveedor, se necesita un consumidor. Resulta útil si el consumidor puede contrastar con el proveedor. Las plantillas de consumidor OLE DB son un contenedor fino alrededor de OLE DB y coinciden con los objetos COM del proveedor. Dado que el origen se incluye con las plantillas de consumidor, es fácil de depurar un proveedor con ellos. Las plantillas de consumidor también son una manera muy pequeña y rápida para desarrollar aplicaciones de consumidor.  
   
- El ejemplo de este tema crea una aplicación de MFC Application Wizard predeterminada para un consumidor de prueba. La aplicación de prueba es un cuadro de diálogo sencillo con código de plantilla de consumidor OLE DB agregado.  
+El ejemplo de este tema crea una aplicación de MFC Application Wizard predeterminada para un consumidor de prueba. La aplicación de prueba es un cuadro de diálogo sencillo con código de plantilla de consumidor OLE DB agregado.  
   
 ### <a name="to-create-the-test-application"></a>Para crear la aplicación de prueba  
   
-1.  En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.  
+1. En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.  
   
-2.  En el panel Tipos de proyecto, seleccione la carpeta **Proyectos de Visual C++**. En el panel Plantillas, seleccione **aplicación MFC**.  
+1. En el panel Tipos de proyecto, seleccione la carpeta **Proyectos de Visual C++**. En el panel Plantillas, seleccione **aplicación MFC**.  
   
-3.  Escriba el nombre del proyecto, **TestProv**y, a continuación, haga clic en **Aceptar**.  
+1. Escriba el nombre del proyecto, **TestProv**y, a continuación, haga clic en **Aceptar**.  
   
      Aparece el Asistente para aplicaciones MFC.  
   
-4.  En el **tipo de aplicación** página, seleccione **en función del cuadro de diálogo**.  
+1. En el **tipo de aplicación** página, seleccione **en función del cuadro de diálogo**.  
   
-5.  En el **características avanzadas** página, seleccione **automatización**y, a continuación, haga clic en **finalizar**.  
+1. En el **características avanzadas** página, seleccione **automatización**y, a continuación, haga clic en **finalizar**.  
   
 > [!NOTE]
 >  La aplicación no requiere compatibilidad de automatización si agrega **CoInitialize** en **CTestProvApp:: InitInstance**.  
   
- Puede ver y editar el cuadro de diálogo TestProv (IDD_TESTPROV_DIALOG), selecciónelo en la vista de recursos. Coloque dos cuadros de lista, uno para cada cadena en el conjunto de filas, en el cuadro de diálogo. Desactivar la propiedad de ordenación para los cuadros de lista, presione ALT + ENTRAR cuando se selecciona un cuadro de lista, haga clic en el **estilos** pestaña y borrar el **ordenación** casilla de verificación. Además, coloque un **ejecutar** botón en el cuadro de diálogo para buscar el archivo. El cuadro de diálogo TestProv terminado debe tener dos cuadros de lista con la etiqueta "String 1" y "String 2", respectivamente; También tiene **Aceptar**, **cancelar**, y **ejecutar** botones.  
+Puede ver y editar el cuadro de diálogo TestProv (IDD_TESTPROV_DIALOG), selecciónelo en la vista de recursos. Coloque dos cuadros de lista, uno para cada cadena en el conjunto de filas, en el cuadro de diálogo. Desactivar la propiedad de ordenación para los cuadros de lista, presione ALT + ENTRAR cuando se selecciona un cuadro de lista, haga clic en el **estilos** pestaña y borrar el **ordenación** casilla de verificación. Además, coloque un **ejecutar** botón en el cuadro de diálogo para buscar el archivo. El cuadro de diálogo TestProv terminado debe tener dos cuadros de lista con la etiqueta "String 1" y "String 2", respectivamente; También tiene **Aceptar**, **cancelar**, y **ejecutar** botones.  
   
- Abra el archivo de encabezado para la clase de cuadro de diálogo (en este caso, TestProvDlg.h). Agregue el código siguiente al archivo de encabezado (fuera de cualquier declaración de clase):  
+Abra el archivo de encabezado para la clase de cuadro de diálogo (en este caso, TestProvDlg.h). Agregue el código siguiente al archivo de encabezado (fuera de cualquier declaración de clase):  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -70,9 +71,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- El código representa un registro de usuario que define qué columnas estarán en el conjunto de filas. Cuando el cliente llama a `IAccessor::CreateAccessor`, utiliza estas entradas para especificar las columnas que se va a enlazar. Las plantillas de consumidor OLE DB también le permiten enlazar columnas dinámicamente. Las macros COLUMN_ENTRY son la versión de cliente de las macros PROVIDER_COLUMN_ENTRY. Las dos macros COLUMN_ENTRY especifican el ordinal, tipo, longitud y miembro de datos para las dos cadenas.  
+El código representa un registro de usuario que define qué columnas estarán en el conjunto de filas. Cuando el cliente llama a `IAccessor::CreateAccessor`, utiliza estas entradas para especificar las columnas que se va a enlazar. Las plantillas de consumidor OLE DB también le permiten enlazar columnas dinámicamente. Las macros COLUMN_ENTRY son la versión de cliente de las macros PROVIDER_COLUMN_ENTRY. Las dos macros COLUMN_ENTRY especifican el ordinal, tipo, longitud y miembro de datos para las dos cadenas.  
   
- Agregar una función de controlador para el **ejecutar** botón presionando CTRL y haga doble clic en el **ejecutar** botón. Coloque el código siguiente en la función:  
+Agregar una función de controlador para el **ejecutar** botón presionando CTRL y haga doble clic en el **ejecutar** botón. Coloque el código siguiente en la función:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -101,7 +102,7 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- El `CCommand`, `CDataSource`, y `CSession` clases todos pertenecen a las plantillas de consumidor OLE DB. Cada clase emula un objeto COM en el proveedor. El `CCommand` objeto toma la `CProvider` (clase), declarado en el archivo de encabezado, como un parámetro de plantilla. El `CProvider` parámetro representa los enlaces que utilizan para tener acceso a los datos del proveedor. Este es el `Open` código para el origen de datos, la sesión y el comando:  
+El `CCommand`, `CDataSource`, y `CSession` clases todos pertenecen a las plantillas de consumidor OLE DB. Cada clase emula un objeto COM en el proveedor. El `CCommand` objeto toma la `CProvider` (clase), declarado en el archivo de encabezado, como un parámetro de plantilla. El `CProvider` parámetro representa los enlaces que utilizan para tener acceso a los datos del proveedor. Este es el `Open` código para el origen de datos, la sesión y el comando:  
   
 ```cpp  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
@@ -114,13 +115,13 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- Las líneas para abrir cada una de las clases crean cada objeto COM en el proveedor. Para buscar el proveedor, utilice el ProgID del proveedor. Puede obtener el ProgID del registro del sistema o mediante una búsqueda en el archivo MyProvider.rgs (abra el directorio y la búsqueda de la clave de Id. de programa del proveedor).  
+Las líneas para abrir cada una de las clases crean cada objeto COM en el proveedor. Para buscar el proveedor, utilice el ProgID del proveedor. Puede obtener el ProgID del registro del sistema o mediante una búsqueda en el archivo MyProvider.rgs (abra el directorio y la búsqueda de la clave de Id. de programa del proveedor).  
   
- El archivo MyData.txt se incluye en el ejemplo MyProv. Para crear un archivo de su elección, use un editor y escriba un número par de cadenas, presionando ENTRAR entre cada cadena. Cambie el nombre de ruta de acceso si mueve el archivo.  
+El archivo MyData.txt se incluye en el ejemplo MyProv. Para crear un archivo de su elección, use un editor y escriba un número par de cadenas, presionando ENTRAR entre cada cadena. Cambie el nombre de ruta de acceso si mueve el archivo.  
   
- Pase la cadena "c:\\\samples\\\myprov\\\MyData.txt" en el `table.Open` línea. Si va a la `Open` llamada, verá que esta cadena se pasa a la `SetCommandText` método del proveedor. Tenga en cuenta que el `ICommandText::Execute` método utiliza esa cadena.  
+Pase la cadena "c:\\\samples\\\myprov\\\MyData.txt" en el `table.Open` línea. Si va a la `Open` llamada, verá que esta cadena se pasa a la `SetCommandText` método del proveedor. Tenga en cuenta que el `ICommandText::Execute` método utiliza esa cadena.  
   
- Para capturar los datos, llame a `MoveNext` en la tabla. `MoveNext` las llamadas del `IRowset::GetNextRows`, `GetRowCount`, y `GetData` funciones. Cuando no hay más filas (es decir, es mayor que la posición actual en el conjunto de filas `GetRowCount`), el bucle finaliza:  
+Para capturar los datos, llame a `MoveNext` en la tabla. `MoveNext` las llamadas del `IRowset::GetNextRows`, `GetRowCount`, y `GetData` funciones. Cuando no hay más filas (es decir, es mayor que la posición actual en el conjunto de filas `GetRowCount`), el bucle finaliza:  
   
 ```cpp  
 while (table.MoveNext() == S_OK)  
@@ -130,9 +131,10 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- Tenga en cuenta que cuando no hay más filas, los proveedores devolverán DB_S_ENDOFROWSET. El valor DB_S_ENDOFROWSET no es un error. Siempre debe comprobar con S_OK para cancelar un bucle de recopilación de datos y no utilizar la macro SUCCEEDED.  
+Tenga en cuenta que cuando no hay más filas, los proveedores devolverán DB_S_ENDOFROWSET. El valor DB_S_ENDOFROWSET no es un error. Siempre debe comprobar con S_OK para cancelar un bucle de recopilación de datos y no utilizar la macro SUCCEEDED.  
   
- Ahora podrá compilar y probar el programa.  
+Ahora podrá compilar y probar el programa.  
   
 ## <a name="see-also"></a>Vea también  
- [Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+
+[Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a66946ced067e720a7e907bf39ffdd10327bc5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 27c1d945cf9e801ec1fe2346232aebcad559982a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019913"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl (clase)
 
@@ -35,14 +35,14 @@ Esta clase implementa un contenedor de punto de conexión para administrar una c
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IConnectionPointContainerImpl 
    : public IConnectionPointContainer
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `IConnectionPointContainerImpl`.
 
 ## <a name="members"></a>Miembros
@@ -100,5 +100,5 @@ Consulte [IConnectionPointContainer:: FindConnectionPoint](/windows/desktop/api/
 
 ## <a name="see-also"></a>Vea también
 
-[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)   
+[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

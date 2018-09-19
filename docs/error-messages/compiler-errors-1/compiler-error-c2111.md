@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2111 | Documentos de Microsoft
+title: Error del compilador C2111 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be4ec3f1637a7397c349323a162a3439f85dcd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1fcfac1e268ae3e8c6a16af31a1e7f06c073a5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023428"
 ---
 # <a name="compiler-error-c2111"></a>Error del compilador C2111
-'+': la suma de punteros requiere un operando de tipo integral  
-  
- Se ha intentado agregar un valor no integral a un puntero con el operador más ( `+` ).  
-  
- El ejemplo siguiente genera la advertencia C2111:  
-  
-```  
-// C2111.cpp  
-int main() {  
-   int *a = 0, *pa = 0, b = 0;  
-   double d = 0.00;  
-  
-   a = pa + d;   // C2111  
-   a = pa + b;   // OK  
-}  
+
+'+': la suma de punteros requiere un operando de tipo integral
+
+Se ha intentado agregar un valor no integral a un puntero con el operador más ( `+` ).
+
+El ejemplo siguiente genera la advertencia C2111:
+
+```
+// C2111.cpp
+int main() {
+   int *a = 0, *pa = 0, b = 0;
+   double d = 0.00;
+
+   a = pa + d;   // C2111
+   a = pa + b;   // OK
+}
 ```

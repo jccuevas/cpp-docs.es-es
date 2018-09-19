@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1143 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1143 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ae5ac4abbdabc68813a7f1d8f25cac138961e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea0aa3daada09f5e1daae7f50caeb214db1aaadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020594"
 ---
 # <a name="linker-tools-error-lnk1143"></a>Error de las herramientas del vinculador LNK1143
-archivo no válido o dañado: ningún símbolo para el número de la sección COMDAT  
-  
- Este error puede generarse si el archivo de objeto está dañado.  
-  
- Vuelva a generar el archivo.
+
+archivo no válido o dañado: no hay símbolo para el número de la sección COMDAT
+
+Este error puede deberse a si el archivo de objeto está dañado.
+
+Vuelva a generar el archivo.

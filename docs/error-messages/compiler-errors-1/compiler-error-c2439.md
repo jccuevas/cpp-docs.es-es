@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2439 | Documentos de Microsoft
+title: Error del compilador C2439 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33bfe8ebf00850a54020b2a3f21159daf28b7224
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419bf7be45a1383135d0231cd059837e1fe62729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058419"
 ---
 # <a name="compiler-error-c2439"></a>Error del compilador C2439
-'identificador': no se pudo inicializar el miembro  
-  
- No se puede inicializar una clase, estructura o miembro de unión.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Intentando inicializar una estructura o clase base indirecta.  
-  
-2.  Intentando inicializar a un miembro heredado de una clase o estructura. El constructor de la clase o estructura debe inicializar un miembro heredado.
+
+'identifier': no se pudo inicializar el miembro
+
+No se puede inicializar una clase, estructura o miembro de unión.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. Intentando inicializar una estructura o clase base indirecta.
+
+1. Intentando inicializar a un miembro heredado de una clase o estructura. El constructor de la clase o estructura se debe inicializar un miembro heredado.

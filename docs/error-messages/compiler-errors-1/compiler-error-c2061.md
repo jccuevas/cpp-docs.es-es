@@ -1,5 +1,5 @@
 ---
-title: C2061 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2061 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4d4b018dbab16e8e376a3331a85d0f1b1004f5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896fdb21c57e0f558b87ec23e2be309cf49f8095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057969"
 ---
-# <a name="compiler-error-c2061"></a>C2061 de Error del compilador
-error de sintaxis: identificador 'identificador'  
-  
- El compilador encontró un identificador donde no se esperaba. Asegúrese de que `identifier` se declara antes de utilizarla.  
-  
- Un inicializador puede aparecer entre paréntesis. Para evitar este problema, escriba el declarador entre paréntesis o conviértalo en un `typedef`.  
-  
- Este error también se produce cuando el compilador detecta una expresión como un argumento de plantilla de clase; usar [typename](../../cpp/typename.md) para indicar al compilador es un tipo.  
-  
- El ejemplo siguiente genera C2061:  
-  
-```  
-// C2061.cpp  
-// compile with: /c  
-template < A a >   // C2061  
-// try the following line instead  
-// template < typename b >  
-class c{};  
-```  
-  
- C2061 puede aparecer si se pasa un nombre de instancia para [typeid](../../windows/typeid-cpp-component-extensions.md):  
-  
-```  
-// C2061b.cpp  
-// compile with: /clr  
-ref struct G {  
-   int i;  
-};  
-  
-int main() {  
-   G ^ pG = gcnew G;  
-   System::Type ^ pType = typeid<pG>;   // C2061  
-   System::Type ^ pType2 = typeid<G>;   // OK  
-}  
+# <a name="compiler-error-c2061"></a>Error del compilador C2061
+
+error de sintaxis: identificador 'identificador'
+
+El compilador encontró un identificador que no se esperaba. Asegúrese de que `identifier` se declara antes de usarlo.
+
+Un inicializador puede aparecer entre paréntesis. Para evitar este problema, escriba el declarador entre paréntesis o conviértalo en un `typedef`.
+
+Este error también podría producirse cuando el compilador detecta una expresión como un argumento de plantilla de clase; usar [typename](../../cpp/typename.md) para indicar al compilador es un tipo.
+
+El ejemplo siguiente genera C2061:
+
+```
+// C2061.cpp
+// compile with: /c
+template < A a >   // C2061
+// try the following line instead
+// template < typename b >
+class c{};
+```
+
+C2061 puede producirse si se pasa un nombre de instancia a [typeid](../../windows/typeid-cpp-component-extensions.md):
+
+```
+// C2061b.cpp
+// compile with: /clr
+ref struct G {
+   int i;
+};
+
+int main() {
+   G ^ pG = gcnew G;
+   System::Type ^ pType = typeid<pG>;   // C2061
+   System::Type ^ pType2 = typeid<G>;   // OK
+}
 ```

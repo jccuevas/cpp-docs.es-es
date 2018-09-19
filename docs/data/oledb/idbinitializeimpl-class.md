@@ -50,14 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072425"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl (Clase)
+
 Proporciona una implementación para el [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -68,11 +69,13 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *T*  
- La clase derivada de `IDBInitializeImpl`.  
+
+*T*<br/>
+La clase derivada de `IDBInitializeImpl`.  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldb.h  
+
+**Encabezado:** atldb.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -97,9 +100,11 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Un puntero a la implementación de la información de las propiedades de la base de datos.|  
   
 ## <a name="remarks"></a>Comentarios  
- Una interfaz obligatoria en los objetos de origen de datos y una interfaz opcional sobre los enumeradores.  
+
+Una interfaz obligatoria en los objetos de origen de datos y una interfaz opcional sobre los enumeradores.  
 
 ## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+
 El constructor.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -109,9 +114,11 @@ IDBInitializeImpl();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Inicializa a todos los miembros de datos. 
+
+Inicializa a todos los miembros de datos. 
   
 ## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+
 Inicializa el objeto de origen de datos mediante la preparación de su compatibilidad con la propiedad.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -121,9 +128,11 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) en el *referencia del programador OLE DB*. 
+
+Consulte [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) en el *referencia del programador OLE DB*. 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: UnInitialize
+
 Coloca los datos del origen de objeto en un estado no inicializado al liberar los recursos internos, como la compatibilidad con la propiedad.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -133,9 +142,11 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) en el *referencia del programador OLE DB*.
+
+Consulte [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) en el *referencia del programador OLE DB*.
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+
 Indicadores del origen de datos.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -145,7 +156,8 @@ DWORD m_dwStatus;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Estas marcas especifican o indican el estado de varios atributos para el objeto de origen de datos. Contiene uno o varios de los siguientes **enum** valores:  
+
+Estas marcas especifican o indican el estado de varios atributos para el objeto de origen de datos. Contiene uno o varios de los siguientes **enum** valores:  
   
 ```cpp  
 enum DATASOURCE_FLAGS {  
@@ -162,6 +174,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_INITIALIZED`|Establecer si se ha inicializado el origen de datos.|  
 
 ## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+
 Un puntero al objeto de implementación para la información de las propiedades de la base de datos.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -171,5 +184,6 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
