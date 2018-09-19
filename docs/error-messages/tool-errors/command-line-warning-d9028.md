@@ -1,5 +1,5 @@
 ---
-title: Advertencia de línea de comandos D9028 | Documentos de Microsoft
+title: Advertencia de la línea de comandos D9028 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244f3c4a5cf5b34e75ad9d94a167648abdba38a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044137"
 ---
 # <a name="command-line-warning-d9028"></a>Advertencia de la línea de comandos D9028
-Error de la recompilación mínima, revertir a la compilación normal  
-  
- El archivo .idb del proyecto está dañado. Elimine el archivo y vuelva a generar.  
-  
- Para obtener más información sobre regeneraciones mínimas y el archivo .idb, vea la [opción del compilador /Gm](../../build/reference/gm-enable-minimal-rebuild.md).
+
+Error de recompilación mínimo, revirtiendo a la compilación normal
+
+El archivo .idb del proyecto está dañado. Elimine el archivo y volver a generar.
+
+Para obtener más información sobre regeneraciones mínimas y el archivo .idb, vea la [opción del compilador /Gm](../../build/reference/gm-enable-minimal-rebuild.md).

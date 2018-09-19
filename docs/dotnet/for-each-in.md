@@ -1,5 +1,5 @@
 ---
-title: para cada uno, en | Documentos de Microsoft
+title: para cada uno, en | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040703"
 ---
 # <a name="for-each-in"></a>for each, in
-Procesa una iteración a través de una matriz o colección. Esta palabra clave no estándar está disponible en C++/CLI y proyectos nativos de C++. Sin embargo, no se recomienda su uso. Considere el uso de un estándar [basados en intervalos de instrucción (C++)](../cpp/range-based-for-statement-cpp.md) en su lugar.  
+Procesa una iteración a través de una matriz o colección. Esta palabra clave no estándar está disponible en C++/CLI y proyectos nativos de C++. Sin embargo, no se recomienda su uso. Considere el uso de un estándar [basada en intervalo para la instrucción (C++)](../cpp/range-based-for-statement-cpp.md) en su lugar.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
  **Sintaxis**  
@@ -43,17 +43,17 @@ Procesa una iteración a través de una matriz o colección. Esta palabra clave 
   
  **Parámetros**  
   
- `type`  
- Tipo de `identifier`.  
+*type*<br/>
+Tipo de `identifier`.  
   
- `identifier`  
- Variable de iteración que representa el elemento de la colección.  Cuando `identifier` es un [operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md), puede modificar el elemento.  
+*identifier*<br/>
+Variable de iteración que representa el elemento de la colección.  Cuando `identifier` es un [operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md), puede modificar el elemento.  
   
- `expression`  
- Colección o expresión de matriz. El elemento de la colección debe ser de un tipo que el compilador pueda convertir en el tipo `identifier`.  
+*Expresión*<br/>
+Colección o expresión de matriz. El elemento de la colección debe ser de un tipo que el compilador pueda convertir en el tipo `identifier`.  
   
- `statements`  
- Instrucción o instrucciones que se van a ejecutar.  
+*Instrucciones*<br/>
+Instrucción o instrucciones que se van a ejecutar.  
   
  **Comentarios**  
   
@@ -118,7 +118,7 @@ Testing
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
- La sintaxis CLR es el mismo que el **todos los Runtimes** sintaxis, excepto como se indica a continuación.  
+ La sintaxis CLR es el mismo que el **todos los Runtimes** sintaxis, excepto por lo siguiente.  
   
  *Expresión*  
  Expresión o colección de matriz administrada. El elemento de la colección debe ser de tipo que el compilador puede convertir desde <xref:System.Object> a la *identificador* tipo.  

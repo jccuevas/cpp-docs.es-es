@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033958"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr (clase)
 
@@ -38,13 +38,13 @@ Esta clase proporciona métodos para trabajar con punteros de interfaz y la tabl
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-`T`  
+*T*<br/>
 El tipo del puntero de interfaz que se almacenará en el GIT.
 
 ## <a name="members"></a>Miembros
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*  
+*p*<br/>
 El puntero de interfaz que se agregarán a la de GIT.
 
-*dwCookie*  
+*dwCookie*<br/>
 La cookie utilizada para identificar el puntero de interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*perfil de puerto*  
+*perfil de puerto*<br/>
 El puntero que va a recibir la interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -262,7 +262,7 @@ Asigna un nuevo valor a un `CComGITPtr` objeto, o desde un objeto existente de u
 
 Devuelve la cookie asociada con el `CComGITPtr` objeto.
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ Quita la interfaz de la GIT.
 
 ## <a name="see-also"></a>Vea también
 
-[Contador de referencias de subproceso libre](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[Acceso a las Interfaces entre apartamentos](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[Cuándo usar la tabla de interfaz Global](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[Contador de referencias de subproceso libre](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Acceso a las Interfaces entre apartamentos](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[Cuándo usar la tabla de interfaz Global](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

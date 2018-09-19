@@ -15,19 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 843c2d79af8acaff835e8500f1f1d67870c4b63e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339911"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023597"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Crear un consumidor sin utilizar un asistente
+
 En el siguiente ejemplo se da por supuesto que está agregando compatibilidad con los consumidores OLE DB a un proyecto ATL existente. Si desea agregar compatibilidad de consumidor OLE DB a una aplicación MFC, debe ejecutar al Asistente para aplicaciones MFC, que crea todo el soporte necesario e invoca las rutinas MFC necesarias para ejecutar la aplicación.  
   
- Para agregar compatibilidad de consumidor OLE DB sin usar al Asistente para consumidores OLE DB ATL:  
+Para agregar compatibilidad de consumidor OLE DB sin usar al Asistente para consumidores OLE DB ATL:  
   
--   En el archivo Stdafx.h, agregue lo siguiente `#include` instrucciones:  
+- En el archivo Stdafx.h, agregue lo siguiente `#include` instrucciones:  
   
     ```cpp  
     #include <atlbase.h>  
@@ -35,14 +36,14 @@ En el siguiente ejemplo se da por supuesto que está agregando compatibilidad co
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- Mediante programación, un consumidor normalmente realiza la siguiente secuencia de operaciones:  
+Mediante programación, un consumidor normalmente realiza la siguiente secuencia de operaciones:  
   
--   Cree una clase de registro de usuario que enlaza las columnas a las variables locales. En este ejemplo, `CMyTableNameAccessor` es la clase de registro de usuario (consulte [registros de usuario](../../data/oledb/user-records.md)). Esta clase contiene el mapa de columnas y la asignación de parámetro. Declarar a un miembro de datos en la clase de registro de usuario para cada campo que especifique en el mapa de columnas; para cada uno de estos miembros de datos, también declarar un miembro de datos de estado y un miembro de datos de longitud. Para obtener más información, consulte [miembros de datos de estado de campo en los descriptores de acceso](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+- Cree una clase de registro de usuario que enlaza las columnas a las variables locales. En este ejemplo, `CMyTableNameAccessor` es la clase de registro de usuario (consulte [registros de usuario](../../data/oledb/user-records.md)). Esta clase contiene el mapa de columnas y la asignación de parámetro. Declarar a un miembro de datos en la clase de registro de usuario para cada campo que especifique en el mapa de columnas; para cada uno de estos miembros de datos, también declarar un miembro de datos de estado y un miembro de datos de longitud. Para obtener más información, consulte [miembros de datos de estado de campo en los descriptores de acceso](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
     >  Si escribe su propio consumidor, las variables de datos deben preceder a las variables de estado y longitud.  
   
--   Crear una instancia de un origen de datos y una sesión. Decidir qué tipo de descriptor de acceso y el conjunto de filas a usar y, a continuación, crear una instancia de un conjunto de filas utilizando [CCommand](../../data/oledb/ccommand-class.md) o [CTable](../../data/oledb/ctable-class.md):  
+- Crear una instancia de un origen de datos y una sesión. Decidir qué tipo de descriptor de acceso y el conjunto de filas a usar y, a continuación, crear una instancia de un conjunto de filas utilizando [CCommand](../../data/oledb/ccommand-class.md) o [CTable](../../data/oledb/ctable-class.md):  
   
     ```cpp  
     CDataSource ds;  
@@ -50,15 +51,15 @@ En el siguiente ejemplo se da por supuesto que está agregando compatibilidad co
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
--   Llamar a `CoInitialize` inicializar COM. Esto se denomina normalmente en el código principal. Por ejemplo:  
+- Llamar a `CoInitialize` inicializar COM. Esto se denomina normalmente en el código principal. Por ejemplo:  
   
     ```cpp  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
--   Llame a [CDataSource:: Open](../../data/oledb/cdatasource-open.md) o uno de sus variaciones.  
+- Llame a [CDataSource:: Open](../../data/oledb/cdatasource-open.md) o uno de sus variaciones.  
   
--   Abra una conexión al origen de datos, abra la sesión y abra e inicializar el conjunto de filas (y si un comando, también ejecutar):  
+- Abra una conexión al origen de datos, abra la sesión y abra e inicializar el conjunto de filas (y si un comando, también ejecutar):  
   
     ```cpp  
     hr = ds.Open();  
@@ -66,11 +67,11 @@ En el siguiente ejemplo se da por supuesto que está agregando compatibilidad co
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   Si lo desea, conjunto de filas propiedades mediante `CDBPropSet::AddProperty` y pasarlos como parámetro a `rs.Open`. Para obtener un ejemplo de cómo hacerlo, vea GetRowsetProperties en [generadas métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Si lo desea, conjunto de filas propiedades mediante `CDBPropSet::AddProperty` y pasarlos como parámetro a `rs.Open`. Para obtener un ejemplo de cómo hacerlo, vea GetRowsetProperties en [generadas métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
   
--   Ahora puede usar el conjunto de filas para recuperar o manipular los datos.  
+- Ahora puede usar el conjunto de filas para recuperar o manipular los datos.  
   
--   Cuando se realiza la aplicación, cierre la conexión, la sesión y el conjunto de filas:  
+- Cuando se realiza la aplicación, cierre la conexión, la sesión y el conjunto de filas:  
   
     ```cpp  
     rs.Close();  
@@ -80,11 +81,12 @@ En el siguiente ejemplo se da por supuesto que está agregando compatibilidad co
   
      Si usa un comando, puede llamar a `ReleaseCommand` después `Close`. El código de ejemplo [CCommand:: Close](../../data/oledb/ccommand-close.md) muestra cómo llamar a `Close` y `ReleaseCommand`.  
   
--   Llame a `CoUnInitialize` para anular la inicialización de COM. Esto se denomina normalmente en el código principal.  
+- Llame a `CoUnInitialize` para anular la inicialización de COM. Esto se denomina normalmente en el código principal.  
   
     ```  
     CoUninitialize();  
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+
+[Crear un consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce384c2478359b3496aa2d816a30e9a240c998
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036143"
 ---
 # <a name="cdacl-class"></a>CDacl (clase)
 
@@ -108,19 +108,19 @@ bool AddAllowedAce(
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 Un [CSid](../../atl/reference/csid-class.md) objeto.
 
-*AccessMask*  
+*AccessMask*<br/>
 Especifica la máscara de derechos de acceso para poder ser admitidos para el elemento especificado `CSid` objeto.
 
-*AceFlags*  
+*AceFlags*<br/>
 Un conjunto de marcas de bits que controlan la herencia de la ACE.
 
-*pObjectType*  
+*pObjectType*<br/>
 Tipo del objeto.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 El tipo de objeto heredado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -153,19 +153,19 @@ bool AddDeniedAce(
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 Un objeto `CSid`.
 
-*AccessMask*  
+*AccessMask*<br/>
 Especifica la máscara de derechos de acceso será denegado para el elemento especificado `CSid` objeto.
 
-*AceFlags*  
+*AceFlags*<br/>
 Un conjunto de marcas de bits que controlan la herencia de la ACE. El valor predeterminado es 0 en el primer formulario del método.
 
-*pObjectType*  
+*pObjectType*<br/>
 Tipo del objeto.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 El tipo de objeto heredado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -183,13 +183,13 @@ Consulte [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) para obte
 El constructor.
 
 ```
-CDacl (const ACL& rhs) throw(...);  
+CDacl (const ACL& rhs) throw(...);
 CDacl () throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*  
+*RHS*<br/>
 Existente `ACL` estructura (lista de control de acceso).
 
 ### <a name="remarks"></a>Comentarios
@@ -230,7 +230,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*  
+*RHS*<br/>
 La ACL (lista de control de acceso) para asignar al objeto existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -251,7 +251,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 Índice de la entrada ACE para quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -272,9 +272,9 @@ Quita cada `ACE` estructura (entrada de control de acceso) (si existe) en el `CD
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de seguridad](../../visual-cpp-samples.md)   
-[CAcl (clase)](../../atl/reference/cacl-class.md)   
-[ACL](/windows/desktop/SecAuthZ/access-control-lists)   
-[ACE](/windows/desktop/SecAuthZ/access-control-entries)   
-[Información general de clases](../../atl/atl-class-overview.md)   
+[Ejemplo de seguridad](../../visual-cpp-samples.md)<br/>
+[CAcl (clase)](../../atl/reference/cacl-class.md)<br/>
+[ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[ACE](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

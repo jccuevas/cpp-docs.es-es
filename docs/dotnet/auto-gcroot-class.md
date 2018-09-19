@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot (clase) | Documentos de Microsoft
+title: auto_gcroot (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b6afad3450aff2a9243b3e4a480a374fbcd14fc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da63d58136d61bbea75daa90ac01cee5b44ac86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039106"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot (Clase)
-Administración automática de recursos (como [auto_ptr (clase)](../standard-library/auto-ptr-class.md)) que puede utilizarse para incrustar un identificador virtual en un tipo nativo.  
+Administración automática de recursos (como [auto_ptr (clase)](../standard-library/auto-ptr-class.md)) que se puede usar para insertar un identificador virtual en un tipo nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,8 +37,8 @@ class auto_gcroot;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_element_type`  
- El tipo administrado para incrustar.  
+*_element_type*<br/>
+El tipo administrado que se va a incrustar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Archivo de encabezado** \<msclr\auto_gcroot.h >  

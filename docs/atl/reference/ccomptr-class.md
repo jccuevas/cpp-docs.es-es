@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030929"
 ---
 # <a name="ccomptr-class"></a>CComPtr (clase)
 
@@ -32,13 +32,13 @@ Una clase de puntero inteligente para administrar los punteros de interfaz COM.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Una interfaz COM que especifica el tipo de puntero que se almacenará.
 
 ## <a name="members"></a>Miembros
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parámetros
 
-*LP*  
+*LP*<br/>
 Se usa para inicializar el puntero de interfaz.
 
-*T*  
+*T*<br/>
 Una interfaz COM.
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ Esta operación AddRefs el nuevo objeto y versiones el objeto existente, si exis
 
 ## <a name="see-also"></a>Vea también
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

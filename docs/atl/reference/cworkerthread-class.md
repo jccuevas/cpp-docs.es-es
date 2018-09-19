@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040237"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread (clase)
 
@@ -42,13 +42,13 @@ Esta clase crea un subproceso de trabajo o usa uno existente, espera en uno o va
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 La clase que proporciona la función de creación de subproceso, como [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) o [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Miembros
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>Parámetros
 
-*hObject*  
+*hObject*<br/>
 El identificador de un objeto que puede esperar.
 
-*pClient*  
+*pClient*<br/>
 El puntero a la [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfaz en el objeto que se llama cuando se señala el controlador.
 
-*dwParam*  
+*dwParam*<br/>
 El parámetro que se pasarán al [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) cuando el identificador se señala.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>Parámetros
 
-*dwInterval*  
+*dwInterval*<br/>
 Especifica el período del temporizador en milisegundos.
 
-*pClient*  
+*pClient*<br/>
 El puntero a la [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfaz en el objeto que se llama cuando se señala el controlador.
 
-*dwParam*  
+*dwParam*<br/>
 El parámetro que se pasarán al [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) cuando el identificador se señala.
 
-*phTimer*  
+*phTimer*<br/>
 [out] Dirección de la variable de identificador que, si se ejecuta correctamente, recibe el identificador para el temporizador recién creado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*subprocesos de POSIX*  
+*subprocesos de POSIX*<br/>
 Un subproceso de trabajo existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*hObject*  
+*hObject*<br/>
 Para quitar el identificador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dwWait*  
+*dwWait*<br/>
 Tiempo en milisegundos para esperar el subproceso de trabajo para que se cierre. ATL_WORKER_THREAD_WAIT el valor predeterminado es 10 segundos. Si es necesario, puede definir su propio valor para este símbolo antes de incluir atlutil.h.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -285,7 +285,7 @@ Tenga en cuenta que al llamar a `Shutdown` en un objeto que se inicializa con un
 
 ## <a name="see-also"></a>Vea también
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[Clases](../../atl/reference/atl-classes.md)   
-[Multithreading: Crear subprocesos de trabajo](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[Clases](../../atl/reference/atl-classes.md)<br/>
+[Multithreading: Crear subprocesos de trabajo](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient (interfaz)](../../atl/reference/iworkerthreadclient-interface.md)

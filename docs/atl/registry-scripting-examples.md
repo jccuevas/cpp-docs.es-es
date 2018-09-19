@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022116"
 ---
 # <a name="registry-scripting-examples"></a>Ejemplos de secuencias de registro
 
@@ -32,17 +32,17 @@ Los ejemplos de secuencias de comandos en este tema muestran cómo agregar una c
 
 El árbol de análisis siguiente muestra un sencillo script que se agrega una clave única al registro del sistema. En concreto, el script agrega la clave, `MyVeryOwnKey`a `HKEY_CURRENT_USER`. También asigna el valor de cadena predeterminado de `HowGoesIt` a la nueva clave:
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 Este script se puede ampliar fácilmente para definir varias subclaves como sigue:
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Ahora, el script agrega una subclave, `HasASubkey`a `MyVeryOwnKey`. Para esta subclave, agrega tanto el `PrettyCool` subclave (su valor predeterminado es `DWORD` valor de 55) y el `ANameValue` valor con nombre (con un valor de cadena de `WithANamedValue`).
@@ -61,8 +61,8 @@ Ahora, el script agrega una subclave, `HasASubkey`a `MyVeryOwnKey`. Para esta su
 
 La secuencia de comandos siguiente registra el propio servidor COM de registrador.
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 En tiempo de ejecución, este árbol de análisis agrega el `ATL.Registrar` clave a `HKEY_CLASSES_ROOT`. En esta nueva clave, a continuación, la TI:
@@ -106,15 +106,15 @@ Ahora, el árbol de análisis agrega dos nuevas subclaves a `{44EC053A-400F-11D0
 
 Para especificar más de un árbol de análisis en una secuencia de comandos, basta con colocar un árbol al final de otro. Por ejemplo, el siguiente script agrega la clave, `MyVeryOwnKey`, los árboles de análisis para ambos `HKEY_CLASSES_ROOT` y `HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

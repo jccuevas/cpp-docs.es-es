@@ -1,5 +1,5 @@
 ---
-title: Puntos de entrada de la interfaz COM | Documentos de Microsoft
+title: Puntos de entrada de interfaz COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 699c6e3dbe5ecd95c947c13374a2e7964307ff79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040016"
 ---
 # <a name="com-interface-entry-points"></a>Puntos de entrada de la interfaz COM
-Para las funciones miembro de una interfaz COM, utilice la [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro para mantener el estado global adecuado al llamar a métodos de una interfaz exportada.  
+Para las funciones miembro de una interfaz COM, utilice el [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro para mantener el estado global adecuado al llamar a métodos de una interfaz exportada.  
   
- Normalmente, las funciones miembro de las interfaces se implementan mediante `CCmdTarget`-objetos derivados ya utilizan esta macro para proporcionar automáticamente la inicialización de la `pThis` puntero. Por ejemplo:  
+ Normalmente, las funciones miembro de las interfaces se implementan por `CCmdTarget`-objetos derivados ya usan esta macro para proporcionar automáticamente la inicialización de la `pThis` puntero. Por ejemplo:  
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
@@ -37,13 +37,13 @@ Para las funciones miembro de una interfaz COM, utilice la [METHOD_PROLOGUE](com
   
  El `METHOD_PROLOGUE` macro se define como:  
   
- `#define METHOD_PROLOGUE(theClass, localClass) \`  
-  
- `theClass* pThis = \`  
-  
- `((theClass*)((BYTE*)this - offsetof(theClass, m_x##localClass))); \`  
-  
- `AFX_MANAGE_STATE(pThis->m_pModuleState) \`  
+```cpp
+#define METHOD_PROLOGUE(theClass, localClass) \
+    theClass* pThis = \
+    ((theClass*)((BYTE*)this - offsetof(theClass, m_x##localClass))); \
+    AFX_MANAGE_STATE(pThis->m_pModuleState) \
+
+```
   
  La parte de la macro relacionada con la administración del estado global es:  
   

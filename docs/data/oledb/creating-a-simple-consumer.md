@@ -15,51 +15,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9f7c5a51765e2ce29df503aeefa9f850b71b1d4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 091a529bdd8eb80158fc093fd450e496bc4f18c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339859"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052353"
 ---
 # <a name="creating-a-simple-consumer"></a>Crear un consumidor sencillo
+
 Use el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL para generar un consumidor de plantillas OLE DB.  
   
 ### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Para crear una aplicación de consola para un consumidor OLE DB  
   
-1.  En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.  
+1. En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.  
   
      Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-2.  En el panel tipos de proyecto, haga clic en el **proyectos de Visual C++** carpeta y, a continuación, haga clic en el **proyecto Win32** icono en el panel Plantillas. En el **nombre** , escriba el nombre del proyecto, por ejemplo, **MyCons**.  
+1. En el panel tipos de proyecto, haga clic en el **proyectos de Visual C++** carpeta y, a continuación, haga clic en el **proyecto Win32** icono en el panel Plantillas. En el **nombre** , escriba el nombre del proyecto, por ejemplo, **MyCons**.  
   
-3.  Haga clic en **Aceptar**.  
+1. Haga clic en **Aceptar**.  
   
      Aparece el Asistente para proyectos Win32.  
   
-4.  En el **configuración de la aplicación** página, seleccione **aplicación de consola**y, a continuación, seleccione **agregar compatibilidad con ATL**.  
+1. En el **configuración de la aplicación** página, seleccione **aplicación de consola**y, a continuación, seleccione **agregar compatibilidad con ATL**.  
   
-5.  Haga clic en **finalizar** para cerrar el asistente y generar el proyecto.  
+1. Haga clic en **finalizar** para cerrar el asistente y generar el proyecto.  
   
- A continuación, use el Asistente para consumidores OLE DB ATL para agregar un objeto de consumidor OLE DB.  
+A continuación, use el Asistente para consumidores OLE DB ATL para agregar un objeto de consumidor OLE DB.  
   
 #### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Para crear un consumidor con el Asistente para consumidores OLE DB ATL  
   
-1.  En la vista de clases, haga clic en el `MyCons` proyecto.  
+1. En la vista de clases, haga clic en el `MyCons` proyecto.  
   
-2.  En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.  
+1. En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.  
   
      El **Agregar clase** aparece el cuadro de diálogo.  
   
-3.  En el panel de categorías, haga clic en **Visual C++**, haga clic en el **consumidores OLE DB ATL** en el panel de plantillas y, a continuación, haga clic en icono **abierto**.  
+1. En el panel de categorías, haga clic en **Visual C++**, haga clic en el **consumidores OLE DB ATL** en el panel de plantillas y, a continuación, haga clic en icono **abierto**.  
   
      Aparece el Asistente para consumidores OLE DB ATL.  
   
-4.  Haga clic en el **origen de datos** botón.  
+1. Haga clic en el **origen de datos** botón.  
   
      El **propiedades de vínculo de datos** aparece el cuadro de diálogo.  
   
-5.  En el **propiedades de vínculo de datos** diálogo cuadro, realice lo siguiente:  
+1. En el **propiedades de vínculo de datos** diálogo cuadro, realice lo siguiente:  
   
     -   En el **proveedor** ficha, especifique un proveedor OLE DB.  
   
@@ -78,11 +79,11 @@ Use el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL 
   
      El **seleccionar un objeto de base de datos** aparece el cuadro de diálogo.  
   
-6.  Utilice el control de árbol para seleccionar una tabla, vista o procedimiento almacenado. Con el fin de este procedimiento, seleccione la tabla Products de la base de datos Northwind.  
+1. Utilice el control de árbol para seleccionar una tabla, vista o procedimiento almacenado. Con el fin de este procedimiento, seleccione la tabla Products de la base de datos Northwind.  
   
-7.  Haga clic en **Aceptar**. Esto le devuelve al Asistente para consumidores OLE DB ATL.  
+1. Haga clic en **Aceptar**. Esto le devuelve al Asistente para consumidores OLE DB ATL.  
   
-8.  El asistente rellena los nombres de `Class` y **archivo .h** según el nombre de la tabla, vista o procedimiento almacenado que seleccionó. Puede modificar estos nombres si lo desea.  
+1. El asistente rellena los nombres de `Class` y **archivo .h** según el nombre de la tabla, vista o procedimiento almacenado que seleccionó. Puede modificar estos nombres si lo desea.  
   
 9. Desactive el **atributos** casilla de verificación para que el asistente crea el código de consumidor con [clases de plantilla OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) en lugar del predeterminado [atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
@@ -96,7 +97,7 @@ Use el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL 
   
 12. Haga clic en **finalizar** para crear el consumidor.  
   
- El asistente genera una clase de comando y una clase de registro de usuario, como se muestra en [clases generadas](../../data/oledb/consumer-wizard-generated-classes.md). La clase de comando tendrá el nombre que escribió en el `Class` cuadro en el Asistente (en este caso, `CProducts`), y la clase de registro de usuario tendrá un nombre con el formato "*ClassName*descriptor de acceso" (en este caso, `CProductsAccessor`).  
+El asistente genera una clase de comando y una clase de registro de usuario, como se muestra en [clases generadas](../../data/oledb/consumer-wizard-generated-classes.md). La clase de comando tendrá el nombre que escribió en el `Class` cuadro en el Asistente (en este caso, `CProducts`), y la clase de registro de usuario tendrá un nombre con el formato "*ClassName*descriptor de acceso" (en este caso, `CProductsAccessor`).  
   
 > [!NOTE]
 >  El asistente coloca la línea siguiente en Products.h:  
@@ -109,4 +110,5 @@ Use el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL 
 >  Esta línea evita que la aplicación de consumidor de compilar y le recuerda que compruebe la cadena de conexión para las contraseñas codificadas de forma rígida. Después de comprobar la cadena de conexión, puede quitar esta línea de código.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

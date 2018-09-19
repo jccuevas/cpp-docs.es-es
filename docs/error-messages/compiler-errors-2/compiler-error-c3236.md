@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3236 | Documentos de Microsoft
+title: Error del compilador C3236 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bdcbab59744fcaac88836656639a0fa777aefb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ad012c067a5698eefa3f8a91e85252aef93d3e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044397"
 ---
 # <a name="compiler-error-c3236"></a>Error del compilador C3236
-no se permite la creación de instancias explícita de un elemento genérico  
-  
- El compilador no permite la creación de instancias explícita de clases genéricas.  
-  
- El ejemplo siguiente genera la advertencia C3236:  
-  
-```  
-// C3236.cpp  
-// compile with: /clr  
-generic<class T>  
-public ref class X {};  
-  
-generic ref class X<int>;   // C3236  
-```  
-  
- En el ejemplo siguiente se muestra una posible resolución:  
-  
-```  
-// C3236b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-public ref class X {};  
+
+no se permite la creación de instancias explícita de un elemento genérico
+
+El compilador no permite la creación de instancias explícita de clases genéricas.
+
+El ejemplo siguiente genera la advertencia C3236:
+
+```
+// C3236.cpp
+// compile with: /clr
+generic<class T>
+public ref class X {};
+
+generic ref class X<int>;   // C3236
+```
+
+En el ejemplo siguiente se muestra una posible resolución:
+
+```
+// C3236b.cpp
+// compile with: /clr /c
+generic<class T>
+public ref class X {};
 ```

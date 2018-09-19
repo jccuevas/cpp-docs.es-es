@@ -1,5 +1,5 @@
 ---
-title: C2079 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2079 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,67 +16,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b29200be08c10dcfaeb178941309c6f3aec6ff9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddea9a8651a62f7cbb857e1d53962142471c2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032190"
 ---
-# <a name="compiler-error-c2079"></a>C2079 de Error del compilador
-'identificador' utiliza clase/estructura/unión sin definir 'name'  
-  
- El identificador especificado es una clase no definida, una estructura o unión.  
-  
- Este error puede deberse a inicializar una unión anónima.  
-  
- El ejemplo siguiente genera C2079:  
-  
-```  
-// C2079.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-int main() {  
-   std::ifstream g;   // C2079  
-}  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2079b.cpp  
-// compile with: /EHsc  
-#include <fstream>  
-int main( ) {  
-   std::ifstream g;  
-}  
-```  
-  
- C2079 también puede producirse si intenta declarar un objeto en la pila de un tipo cuya declaración adelantada sólo está en ámbito.  
-  
-```  
-// C2079c.cpp  
-class A;  
-  
-class B {  
-   A a;   // C2079  
-};  
-  
-class A {};  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2079d.cpp  
-// compile with: /c  
-class A;  
-class C {};  
-  
-class B {  
-   A * a;  
-   C c;  
-};  
-  
-class A {};  
+# <a name="compiler-error-c2079"></a>Error del compilador C2079
+
+'identificador' utiliza la clase/struct/union sin definir 'name'
+
+El identificador especificado es una clase no definida, estructura o unión.
+
+Este error puede deberse al inicializar una unión anónima.
+
+El ejemplo siguiente genera C2079:
+
+```
+// C2079.cpp
+// compile with: /EHsc
+#include <iostream>
+int main() {
+   std::ifstream g;   // C2079
+}
+```
+
+Posible resolución:
+
+```
+// C2079b.cpp
+// compile with: /EHsc
+#include <fstream>
+int main( ) {
+   std::ifstream g;
+}
+```
+
+C2079 también puede producirse si intenta declarar un objeto en la pila de un tipo cuya declaración adelantada está solo en el ámbito.
+
+```
+// C2079c.cpp
+class A;
+
+class B {
+   A a;   // C2079
+};
+
+class A {};
+```
+
+Posible resolución:
+
+```
+// C2079d.cpp
+// compile with: /c
+class A;
+class C {};
+
+class B {
+   A * a;
+   C c;
+};
+
+class A {};
 ```

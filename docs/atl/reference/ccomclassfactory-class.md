@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf6f830441482e17bd45c331f4281cb49312337
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051014"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory (clase)
 
@@ -79,13 +79,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Si el objeto se crea como parte de un agregado y, a continuación, *pUnkOuter* debe ser el desconocido externo. En caso contrario, *pUnkOuter* debe ser NULL.
 
-*riid*  
+*riid*<br/>
 [in] IID de la interfaz solicitada. Si *pUnkOuter* es distinto de NULL, *riid* debe ser `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Un puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *ppvObj* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -102,7 +102,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parámetros
 
-*manada*  
+*manada*<br/>
 [in] Si es TRUE, se incrementa el recuento de bloqueos; en caso contrario, el recuento de bloqueos es reducido.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -117,6 +117,6 @@ Una llamada a `LockServer` permite que un cliente retener un generador de clases
 
 ## <a name="see-also"></a>Vea también
 
-[CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

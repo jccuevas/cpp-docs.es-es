@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2431 | Documentos de Microsoft
+title: Error del compilador C2431 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a3f94163e02b953a4739b56a04f92f2499d27f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 944bead5439abf686fd18e436664e3c1cf7bccb5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049963"
 ---
 # <a name="compiler-error-c2431"></a>Error del compilador C2431
-registro de índice no válido en 'identificador'  
-  
- El registro ESP es escalar o se usa como índice y el registro de base. SIB codificación para el procesador no admite cualquiera de x86.  
-  
- El ejemplo siguiente genera C2431:  
-  
-```  
-// C2431.cpp  
-// processor: x86  
-int main() {  
-   _asm mov ax, [ESI + 2*ESP]   // C2431  
-   _asm mov ax, [esp + esp]   // C2431  
-}  
+
+registro de índice no válido en 'identifier'
+
+El registro ESP es escalar o utilizar como índice y de registro de base. La codificación para el procesador no admite ninguno de x86 e.
+
+El ejemplo siguiente genera C2431:
+
+```
+// C2431.cpp
+// processor: x86
+int main() {
+   _asm mov ax, [ESI + 2*ESP]   // C2431
+   _asm mov ax, [esp + esp]   // C2431
+}
 ```

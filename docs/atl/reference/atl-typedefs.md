@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 513fe618d32e3a3dcfadcf98134a927ddf629b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 866cedba73be1c7858415359dfd94cec9a55dccc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045255"
 ---
 # <a name="atl-typedefs"></a>Typedefs ATL
 
@@ -67,15 +67,15 @@ Active Template Library incluye las siguientes definiciones de tipo.
 
 Se define como una definición de tipo según _ATL_BASE_MODULE70.
 
-```   
-typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;   
+```
+typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ```
 
 ### <a name="remarks"></a>Comentarios
 
 Se utiliza en todos los proyectos ATL. En función de [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).
 
-La estructura _ATL_BASE_MODULE se derivan de las clases que forman parte de las clases de módulo ATL 7.0.  Para obtener más información sobre las clases de módulo de ATL, consulte [clases de módulos de COM](../../atl/com-modules-classes.md).  
+La estructura _ATL_BASE_MODULE se derivan de las clases que forman parte de las clases de módulo ATL 7.0.  Para obtener más información sobre las clases de módulo de ATL, consulte [clases de módulos de COM](../../atl/com-modules-classes.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,13 +85,13 @@ La estructura _ATL_BASE_MODULE se derivan de las clases que forman parte de las 
 
 Se define como una definición de tipo según _ATL_COM_MODULE70.
 
-```   
-typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;   
+```
+typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ```
 
 ### <a name="remarks"></a>Comentarios
 
-Usar los proyectos ATL que usan características COM. En función de [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).  
+Usar los proyectos ATL que usan características COM. En función de [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -101,9 +101,10 @@ Usar los proyectos ATL que usan características COM. En función de [_ATL_COM_M
 
 Se define como una definición de tipo según _ATL_MODULE70.
 
-```   
-typedef ATL::_ATL_MODULE70 _ATL_MODULE;   
-```  
+```
+typedef ATL::_ATL_MODULE70 _ATL_MODULE;
+```
+
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:**
@@ -116,13 +117,13 @@ En función de [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).
 
 Se define como una definición de tipo según _ATL_WIN_MODULE70.
 
-```   
-typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE; 
+```
+typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ```
 
 ### <a name="remarks"></a>Comentarios
 
-Usa los proyectos ATL que usan características de la ventana. En función de [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).  
+Usa los proyectos ATL que usan características de la ventana. En función de [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -132,9 +133,9 @@ Usa los proyectos ATL que usan características de la ventana. En función de [_
 
 El tipo utilizado por [CUrl](curl-class.md) para especificar un número de puerto.
 
-```  
+```
 typedef WORD ATL_URL_PORT;
-```  
+```
 
 ## <a name="requirements"></a>Requisitos
 
@@ -144,9 +145,10 @@ typedef WORD ATL_URL_PORT;
 
 Esta clase administra los punteros de interfaz COM.
 
-```   
-typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;   
-```  
+```
+typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
+```
+
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlbase.h
@@ -155,16 +157,16 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 
 Llama a métodos del modelo, independientemente del modelo de subprocesamiento que se va a usar el subproceso adecuado.
 
-```   
-#if defined(_ATL_SINGLE_THREADED)  
-typedef CComSingleThreadModel CComGlobalsThreadModel;  
-#elif defined(_ATL_APARTMENT_THREADED)  
-typedef CComMultiThreadModel CComGlobalsThreadModel;  
-#elif defined(_ATL_FREE_THREADED)  
-typedef CComMultiThreadModel CComGlobalsThreadModel;  
-#else  
-#pragma message ("No global threading model defined")  
-#endif   
+```
+#if defined(_ATL_SINGLE_THREADED)
+typedef CComSingleThreadModel CComGlobalsThreadModel;
+#elif defined(_ATL_APARTMENT_THREADED)
+typedef CComMultiThreadModel CComGlobalsThreadModel;
+#elif defined(_ATL_FREE_THREADED)
+typedef CComMultiThreadModel CComGlobalsThreadModel;
+#else
+#pragma message ("No global threading model defined")
+#endif
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -185,7 +187,7 @@ Además `CComGlobalsThreadModel`, ATL proporciona el **typedef** nombre [CComObj
 
 S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
-Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que está disponible globalmente para el programa, o si desea proteger los recursos de módulo en varios subprocesos.  
+Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que está disponible globalmente para el programa, o si desea proteger los recursos de módulo en varios subprocesos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -195,16 +197,16 @@ Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGloba
 
 Llama a métodos del modelo, independientemente del modelo de subprocesamiento que se va a usar el subproceso adecuado.
 
-```   
-#if defined(_ATL_SINGLE_THREADED)  
-typedef CComSingleThreadModel CComObjectThreadModel;  
-#elif defined(_ATL_APARTMENT_THREADED)  
-typedef CComSingleThreadModel CComObjectThreadModel;  
-#elif defined(_ATL_FREE_THREADED)  
-typedef CComMultiThreadModel CComObjectThreadModel;  
-#else  
-#pragma message ("No global threading model defined")  
-#endif   
+```
+#if defined(_ATL_SINGLE_THREADED)
+typedef CComSingleThreadModel CComObjectThreadModel;
+#elif defined(_ATL_APARTMENT_THREADED)
+typedef CComSingleThreadModel CComObjectThreadModel;
+#elif defined(_ATL_FREE_THREADED)
+typedef CComMultiThreadModel CComObjectThreadModel;
+#else
+#pragma message ("No global threading model defined")
+#endif
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -225,7 +227,7 @@ Además `CComObjectThreadModel`, ATL proporciona el **typedef** nombre [CComGlob
 
 S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
-Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que sea globalmente disponible para el programa, o cuando desea proteger los recursos de módulo en varios subprocesos.  
+Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que sea globalmente disponible para el programa, o cuando desea proteger los recursos de módulo en varios subprocesos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -235,9 +237,9 @@ Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGloba
 
 Esta clase es una especialización de `CContainedWindowT`.
 
-```   
-typedef CContainedWindowT<CWindow> CContainedWindow;   
-```  
+```
+typedef CContainedWindowT<CWindow> CContainedWindow;
+```
 
 ## <a name="requirements"></a>Requisitos
 
@@ -251,9 +253,9 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CString`.
 
-```   
-typedef CPathT<CString> CPath;   
-```  
+```
+typedef CPathT<CString> CPath;
+```
 
 ## <a name="requirements"></a>Requisitos
 
@@ -263,8 +265,8 @@ typedef CPathT<CString> CPath;
 
 Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CStringA`.
 
-```   
-typedef CPathT<CStringA> CPathA;   
+```
+typedef CPathT<CStringA> CPathA;
 ```
 
 ## <a name="requirements"></a>Requisitos
@@ -275,9 +277,9 @@ typedef CPathT<CStringA> CPathA;
 
 Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CStringW`.
 
-```   
-typedef ATL::CPathT<CStringW> CPathW;   
-```  
+```
+typedef ATL::CPathT<CStringW> CPathW;
+```
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlpath.h
@@ -286,13 +288,13 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 Representa una matriz para almacenar tipos simples.
 
-```   
-#define CSimpleValArray CSimpleArray   
-```  
+```
+#define CSimpleValArray CSimpleArray
+```
 
 ### <a name="remarks"></a>Comentarios
 
-`CSimpleValArray` se proporciona para crear y administrar matrices que contienen tipos de datos simples. Es una sencilla #define de [CSimpleArray](../../atl/reference/csimplearray-class.md).  
+`CSimpleValArray` se proporciona para crear y administrar matrices que contienen tipos de datos simples. Es una sencilla #define de [CSimpleArray](../../atl/reference/csimplearray-class.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -302,9 +304,9 @@ Representa una matriz para almacenar tipos simples.
 
 Un puntero a una constante [CUrl](../../atl/reference/curl-class.md) objeto.
 
-```   
-typedef const CUrl* LPCURL;   
-```  
+```
+typedef const CUrl* LPCURL;
+```
 
 ## <a name="requirements"></a>Requisitos
 
@@ -316,12 +318,12 @@ La clase de rasgos de subproceso de forma predeterminada.
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-      #if defined(_MT)  
-   typedef CRTThreadTraits DefaultThreadTraits;  
-#else  
-   typedef Win32ThreadTraits DefaultThreadTraits;  
-#endif  
+```
+#if defined(_MT)
+   typedef CRTThreadTraits DefaultThreadTraits;
+#else
+   typedef Win32ThreadTraits DefaultThreadTraits;
+#endif
 ```
 
 ## <a name="remarks"></a>Comentarios
@@ -336,9 +338,9 @@ Si el proyecto actual usa CRT multiproceso, DefaultThreadTraits se define como C
 
 Un puntero a un [CUrl](../../atl/reference/curl-class.md) objeto.
 
-```   
-typedef CUrl* LPURL;   
-```  
+```
+typedef CUrl* LPURL;
+```
 
 ## <a name="requirements"></a>Requisitos
 
@@ -346,8 +348,8 @@ typedef CUrl* LPURL;
 
 ## <a name="see-also"></a>Vea también
 
-[Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)   
-[Funciones](../../atl/reference/atl-functions.md)   
-[Variables globales](../../atl/reference/atl-global-variables.md)   
-[Clases y structs](../../atl/reference/atl-classes.md)   
-[Macros](../../atl/reference/atl-macros.md)   
+[Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)<br/>
+[Funciones](../../atl/reference/atl-functions.md)<br/>
+[Variables globales](../../atl/reference/atl-global-variables.md)<br/>
+[Clases y structs](../../atl/reference/atl-classes.md)<br/>
+[Macros](../../atl/reference/atl-macros.md)

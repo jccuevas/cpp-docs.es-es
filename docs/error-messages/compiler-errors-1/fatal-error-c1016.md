@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1016 | Documentos de Microsoft
+title: Error irrecuperable C1016 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a07f1fc36293b483772087b3325c7e0d0529e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72da7f9413724fe83352e888eff8b5e577fb0eda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052262"
 ---
 # <a name="fatal-error-c1016"></a>Error irrecuperable C1016
-\#ifdef esperaba que un identificador, #ifndef esperaba un identificador  
-  
- La directiva de compilación condicional ([#ifdef](../../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md) o `#ifndef`) no tiene ningún identificador que evaluar. Para resolver el error, especifique un identificador.  
-  
- El ejemplo siguiente genera la advertencia C1016:  
-  
-```  
-// C1016.cpp  
-#ifdef   // C1016  
-#define FC1016  
-#endif  
-  
-int main() {}  
-```  
-  
- Posible resolución:  
-  
-```  
-// C1016b.cpp  
-#ifdef X  
-#define FC1016  
-#endif  
-  
-int main() {}  
+
+\#ifdef esperaba que un identificador, #ifndef esperaba un identificador
+
+La directiva de compilación condicional ([#ifdef](../../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md) o `#ifndef`) no tiene ningún identificador que evaluar. Para resolver el error, especifique un identificador.
+
+El ejemplo siguiente genera la advertencia C1016:
+
+```
+// C1016.cpp
+#ifdef   // C1016
+#define FC1016
+#endif
+
+int main() {}
+```
+
+Posible resolución:
+
+```
+// C1016b.cpp
+#ifdef X
+#define FC1016
+#endif
+
+int main() {}
 ```

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039093"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>Parámetros
 
-*uMsg*  
+*uMsg*<br/>
 Especifica el mensaje.
 
-*wParam*  
+*wParam*<br/>
 Información adicional específica del mensaje.
 
-*lParam*  
+*lParam*<br/>
 Información adicional específica del mensaje.
 
-*bHandled*  
+*bHandled*<br/>
 Los conjuntos de mapa de mensajes *bHandled* en TRUE antes de `MessageHandler` se llama. Si `MessageHandler` no controla totalmente el mensaje, se debe establecer *bHandled* en FALSE para indicar que el mensaje requiere un procesamiento posterior.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -61,6 +61,6 @@ Para obtener un ejemplo del uso de este controlador de mensajes en un mapa de me
 
 ## <a name="see-also"></a>Vea también
 
-[Implementar una ventana](../atl/implementing-a-window.md)   
-[Mapas de mensajes](../atl/message-maps-atl.md)   
+[Implementar una ventana](../atl/implementing-a-window.md)<br/>
+[Mapas de mensajes](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050104"
 ---
 # <a name="colecontrol-class"></a>COleControl (clase)
 Una clase base eficaz para desarrollar controles OLE.
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 De forma predeterminada, `GetControlFlags` devuelve `fastBeginPaint | clipPaintDC`.
 
-`fastBeginPaint` Si se establece, función usa un dibujo begin adaptados para controles OLE en lugar de la [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (establecido de forma predeterminada).
-
-`clipPaintDC` Si no está establecido, deshabilita la llamada a `IntersectClipRect` realizadas por `COleControl` y logra una ventaja de velocidad. Si usas la activación sin ventana, la marca no tiene ningún efecto.
-
-`pointerInactive` Si establece, proporciona interacción con el mouse mientras el control está inactivo habilitando `COleControl`de implementación de la `IPointerInactive` interfaz, que está deshabilitada de forma predeterminada.
-
-`noFlickerActivate` Si establece, elimina las operaciones de dibujo adicionales y el parpadeo visual. Se utiliza cuando el control dibuja de forma idéntica en los Estados inactivos y activos. Si usas la activación sin ventana, la marca no tiene ningún efecto.
-
-`windowlessActivate` Si establece, indica que el control utiliza la activación sin ventana.
-
-`canOptimizeDraw` Si establece, indica que el control realizará dibujos optimizados, si lo admite el contenedor.
+|||
+|-|-|
+|`fastBeginPaint`|Si se establece, función usa un dibujo begin adaptados para controles OLE en lugar de la [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (establecido de forma predeterminada).|
+|`clipPaintDC`|Si no está establecido, deshabilita la llamada a `IntersectClipRect` realizadas por `COleControl` y logra una ventaja de velocidad. Si usas la activación sin ventana, la marca no tiene ningún efecto.|
+|`pointerInactive`|Si establece, proporciona interacción con el mouse mientras el control está inactivo habilitando `COleControl`de implementación de la `IPointerInactive` interfaz, que está deshabilitada de forma predeterminada.|
+|`noFlickerActivate`|Si establece, elimina las operaciones de dibujo adicionales y el parpadeo visual. Se utiliza cuando el control dibuja de forma idéntica en los Estados inactivos y activos. Si usas la activación sin ventana, la marca no tiene ningún efecto.|
+|`windowlessActivate`|Si establece, indica que el control utiliza la activación sin ventana.|
+|`canOptimizeDraw`|Si establece, indica que el control realizará dibujos optimizados, si lo admite el contenedor.|
 
 Para obtener más información acerca de `GetControlFlags` y otras optimizaciones de los controles OLE, vea [controles ActiveX: optimización](../../mfc/mfc-activex-controls-optimization.md).
 

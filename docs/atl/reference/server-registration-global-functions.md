@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30778524f692e19ffad205dc693dd5afd294c25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023311"
 ---
 # <a name="server-registration-global-functions"></a>Funciones globales de registro de servidor
 
@@ -57,13 +57,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>Parámetros
 
-*pComModule*  
+*pComModule*<br/>
 Puntero al módulo COM.
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE si la biblioteca de tipos es que se registrarán.
 
-*pTypeInfo*  
+*pTypeInfo*<br/>
 Señala el CLSID del objeto que se registrarán. Si es NULL, se registrarán todos los objetos en el mapa de objetos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -89,13 +89,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>Parámetros
 
-*pComModule*  
+*pComModule*<br/>
 Puntero al módulo COM.
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE si la biblioteca de tipos es que se registrarán.
 
-*pTypeInfo*  
+*pTypeInfo*<br/>
 Señala el CLSID del objeto que se va a anular. Si NULL se anula todos los objetos en el mapa de objetos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -121,13 +121,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>Parámetros
 
-*pComModule*  
+*pComModule*<br/>
 Puntero al módulo COM.
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Especifica el contexto en el que se ejecutará el objeto de clase. Los valores posibles son CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Consulte [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) para obtener más detalles.
 
-*dwFlags*  
+*dwFlags*<br/>
 Determina los tipos de conexión para el objeto de clase. Los valores posibles son REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE o REGCLS_MULTI_SEPARATE. Consulte [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -148,7 +148,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>Parámetros
 
-*pComModule*  
+*pComModule*<br/>
 Puntero al módulo COM.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -173,16 +173,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>Parámetros
 
-*pComModule*  
+*pComModule*<br/>
 Puntero al módulo COM.
 
-*rclsid*  
+*rclsid*<br/>
 El CLSID del objeto que se va a crear.
 
-*riid*  
+*riid*<br/>
 IID de la interfaz solicitada.
 
-*PPV*  
+*PPV*<br/>
 Un puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *ppv* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -1,5 +1,5 @@
 ---
-title: Compilador C4013 de advertencia (nivel 3) | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4013 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d5c15f10afeaba377fc37af244bd49568e3667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b491406111c7c5ba994bc0af6128b7f0578d52b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046503"
 ---
-# <a name="compiler-warning-level-3-c4013"></a>Compilador C4013 de advertencia (nivel 3)
-'función' sin definir; Suponiendo que int devuelto es extern  
-  
- El compilador encontró una llamada a una función sin definir.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Ortografía incorrecta de nombre de función  
-  
-2.  Funciones externas sin un prototipo `extern`
+# <a name="compiler-warning-level-3-c4013"></a>Compilador advertencia (nivel 3) C4013
+
+'función' sin definir; se supone que extern devuelve int
+
+El compilador encontró una llamada a una función no definida.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. Ortografía incorrecta del nombre de función
+
+1. Funciones externas sin un prototipo `extern`

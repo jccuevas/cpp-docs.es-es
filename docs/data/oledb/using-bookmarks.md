@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e6570e82c7cd50c03530b085ee9497fbc974fd58
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8643b8150f08191fa041107fa4a88e3cbcf2964a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042265"
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
+
 Antes de abrir el conjunto de filas, se debe indicar al proveedor que desea utilizar marcadores. Para ello, establezca el `DBPROP_BOOKMARKS` propiedad **true** en conjunto de sus propiedades. El proveedor recupera los marcadores como columna cero, lo que debe usar la macro especial BOOKMARK_ENTRY y `CBookmark` clase si está utilizando un descriptor de acceso estático. `CBookmark` es una clase de plantilla donde el argumento es la longitud en bytes del búfer del marcador. La longitud del búfer necesario para un marcador depende del proveedor. Si usa el proveedor OLE DB de ODBC, como se muestra en el ejemplo siguiente, el búfer debe ser de 4 bytes.  
   
 ```cpp  
@@ -48,7 +49,7 @@ CTable<CAccessor<CProducts>> product;
 product.Open(session, "Products", &propset);  
 ```  
   
- Si usa `CDynamicAccessor`, el búfer se asigna dinámicamente en tiempo de ejecución. En este caso, puede usar una versión especializada de `CBookmark` para el que no se especifica una longitud de búfer. Use la función `GetBookmark` para recuperar el marcador del registro actual, como se muestra en este ejemplo de código:  
+Si usa `CDynamicAccessor`, el búfer se asigna dinámicamente en tiempo de ejecución. En este caso, puede usar una versión especializada de `CBookmark` para el que no se especifica una longitud de búfer. Use la función `GetBookmark` para recuperar el marcador del registro actual, como se muestra en este ejemplo de código:  
   
 ```cpp  
 CTable<CDynamicAccessor> product;  
@@ -65,7 +66,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);  
 ```  
   
- Para obtener información sobre la compatibilidad con marcadores en proveedores, vea [proveedor de compatibilidad con los marcadores](../../data/oledb/provider-support-for-bookmarks.md).  
+Para obtener información sobre la compatibilidad con marcadores en proveedores, vea [proveedor de compatibilidad con los marcadores](../../data/oledb/provider-support-for-bookmarks.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Usar descriptores de acceso](../../data/oledb/using-accessors.md)
+
+[Usar descriptores de acceso](../../data/oledb/using-accessors.md)

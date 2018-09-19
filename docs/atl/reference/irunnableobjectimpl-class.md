@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3526425bac6591b9330e0915d717ba5b47ee7b3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ad1efa3badf310a78b69d3abba5b9874e01daf7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020971"
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl (clase)
 
@@ -43,13 +43,13 @@ Esta clase implementa `IUnknown` y proporciona una implementación predeterminad
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T>  
+template<class T>
 class IRunnableObjectImpl
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `IRunnableObjectImpl`.
 
 ## <a name="members"></a>Miembros
@@ -162,5 +162,5 @@ Consulte [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-ob
 
 ## <a name="see-also"></a>Vea también
 
-[CComControl (clase)](../../atl/reference/ccomcontrol-class.md)   
+[CComControl (clase)](../../atl/reference/ccomcontrol-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

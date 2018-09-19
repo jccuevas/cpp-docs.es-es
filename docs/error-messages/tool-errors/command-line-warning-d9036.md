@@ -1,5 +1,5 @@
 ---
-title: Advertencia de línea de comandos D9036 | Documentos de Microsoft
+title: Advertencia de la línea de comandos D9036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c382f971c12b9ffb54c6e98c8b1f4609d7aadad4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c8f3030e1ee59b92b32d340e89e909f9da4fd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296021"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039769"
 ---
 # <a name="command-line-warning-d9036"></a>Advertencia de la línea de comandos D9036
-'opción_2' en lugar de 'opción_1'  
-  
- Advertencia D9036 es una continuación de [advertencia de línea de comandos D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).
+
+'opción_2' en lugar de 'opción_1'
+
+Advertencia D9036 es una continuación de [advertencia de la línea de comandos D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).

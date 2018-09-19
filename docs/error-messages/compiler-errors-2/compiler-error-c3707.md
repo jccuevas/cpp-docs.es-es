@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3707 | Documentos de Microsoft
+title: Error del compilador C3707 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7268f584d9f269b4f2f15b837379ec12ab0185d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d18d4a82d06018cdba6147ba6756b1718648847a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052793"
 ---
 # <a name="compiler-error-c3707"></a>Error del compilador C3707
-'función': el método dispinterface debe tener un dispid  
-  
- Si utiliza un `dispinterface` método, se le debe asignar un `dispid`. Para corregir este error, asigne un `dispid` a la `dispinterface` método, por ejemplo, quitando el comentario de la `id` atributo en el método en el ejemplo siguiente. Para obtener más información, vea los atributos [dispinterface](../../windows/dispinterface.md) y [identificador](../../windows/id.md).  
-  
- El ejemplo siguiente genera C3707:  
-  
-```  
-// C3707.cpp  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-  
-[module(name="xx")];  
-[dispinterface]  
-__interface IEvents : IDispatch  
-{  
-   HRESULT event1([in] int i);   // C3707  
-   // try the following line instead  
-   // [id(1)] HRESULT event1([in] int i);  
-};  
-  
-int main() {  
-}  
+
+'function': el método dispinterface debe tener un dispid
+
+Si usa un `dispinterface` método, se le debe asignar un `dispid`. Para corregir este error, asigne un `dispid` a la `dispinterface` método, por ejemplo, al quitar el comentario del `id` atributo en el método en el ejemplo siguiente. Para obtener más información, vea los atributos [dispinterface](../../windows/dispinterface.md) y [id](../../windows/id.md).
+
+El ejemplo siguiente genera C3707:
+
+```
+// C3707.cpp
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+
+[module(name="xx")];
+[dispinterface]
+__interface IEvents : IDispatch
+{
+   HRESULT event1([in] int i);   // C3707
+   // try the following line instead
+   // [id(1)] HRESULT event1([in] int i);
+};
+
+int main() {
+}
 ```

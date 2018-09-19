@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027861"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy (Estructura)
 Una abstracción para un subproceso de ejecución. Dependiendo de la clave de directiva `SchedulerType` del programador que se crea, el Administrador de recursos concederá al usuario un proxy del subproceso que está respaldado por un subproceso de Win32 normal o por un subproceso programable de modo de usuario (UMS). Los subprocesos UMS se admiten en sistemas operativos de 64 bits con Windows 7 o una versión posterior.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `switchState`  
- Indica el estado del proxy del subproceso que está ejecutando el modificador. El parámetro es del tipo `SwitchingProxyState`.  
+*switchState*<br/>
+Indica el estado del proxy del subproceso que está ejecutando el modificador. El parámetro es del tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Comentarios  
  Use `SwitchOut` si necesita desasociar un contexto de la raíz de procesador virtual en la que se ejecuta, por cualquier razón. En función del valor pasado en el parámetro `switchState`, y de si se está ejecutando o no en una raíz de procesador virtual, la llamada volverá inmediatamente o bloqueará el proxy del subproceso asociado al contexto. Es un error llamar a `SwitchOut` con el parámetro establecido en `Idle`. Si lo hace, provocará un [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pContext`  
- El contexto de ejecución para cambiar de forma cooperativa a.  
+*pContext*<br/>
+El contexto de ejecución para cambiar de forma cooperativa a.  
   
- `switchState`  
- Indica el estado del proxy del subproceso que está ejecutando el modificador. El parámetro es del tipo `SwitchingProxyState`.  
+*switchState*<br/>
+Indica el estado del proxy del subproceso que está ejecutando el modificador. El parámetro es del tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Comentarios  
  Use este método para cambiar de un contexto de ejecución a otro, desde el [IExecutionContext:: Dispatch](iexecutioncontext-structure.md#dispatch) método del primer contexto de ejecución. El método asocia el contexto de ejecución `pContext` con un proxy del subproceso si aún no está asociado a uno. La propiedad de proxy del subproceso actual viene determinada por el valor especificado para el `switchState` argumento.  

@@ -1,5 +1,5 @@
 ---
-title: C3175 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3175 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199895ecba509b291d3853f0adabb2b68eee1e49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b4ba372dd542bfb2c38435b6084b55d95b1bdf2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043279"
 ---
-# <a name="compiler-error-c3175"></a>C3175 de Error del compilador
-'función1': no se puede llamar a un método de un tipo administrado desde la función no administrada 'función2'  
-  
- Funciones no administradas no pueden llamar a funciones miembro de clases administradas.  
-  
- El ejemplo siguiente genera C3175:  
-  
-```  
-// C3175_2.cpp  
-// compile with: /clr  
-  
-ref struct A {  
-   static void func() {  
-   }  
-};  
-  
-#pragma unmanaged   // remove this line to resolve  
-  
-void func2() {  
-   A::func();   // C3175  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   A ^a = gcnew A;  
-   func2();  
-}  
-```  
+# <a name="compiler-error-c3175"></a>Error del compilador C3175
+
+'function1': no se puede llamar a un método de un tipo administrado desde la función no administrada 'function2'
+
+Funciones no administradas no pueden llamar a funciones miembro de clases administradas.
+
+El ejemplo siguiente genera C3175:
+
+```
+// C3175_2.cpp
+// compile with: /clr
+
+ref struct A {
+   static void func() {
+   }
+};
+
+#pragma unmanaged   // remove this line to resolve
+
+void func2() {
+   A::func();   // C3175
+}
+
+#pragma managed
+
+int main() {
+   A ^a = gcnew A;
+   func2();
+}
+```

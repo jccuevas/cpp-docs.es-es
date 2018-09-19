@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033984"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr (clase)
 
@@ -37,16 +37,16 @@ Una clase de puntero inteligente para administrar los punteros de montón.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo de objeto que se almacenará en el montón.
 
-*Asignador*  
+*Asignador*<br/>
 La clase de asignación de memoria que utilice.
 
 ## <a name="members"></a>Miembros
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nElements*  
+*nElements*<br/>
 El número de elementos que se usan para calcular la cantidad de memoria para asignar. El valor predeterminado es 1.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*  
+*p*<br/>
 Un puntero de montón existente o `CHeapPtr`.
 
 ### <a name="remarks"></a>Comentarios
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parámetros
 
-*p*  
+*p*<br/>
 Objeto `CHeapPtr` existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nElements*  
+*nElements*<br/>
 El nuevo número de elementos que se usan para calcular la cantidad de memoria para asignar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -177,6 +177,6 @@ Devuelve true si la memoria se correctamente asignada, false en caso de error.
 
 ## <a name="see-also"></a>Vea también
 
-[CHeapPtrBase (clase)](../../atl/reference/cheapptrbase-class.md)   
-[CCRTAllocator (clase)](../../atl/reference/ccrtallocator-class.md)   
+[CHeapPtrBase (clase)](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTAllocator (clase)](../../atl/reference/ccrtallocator-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

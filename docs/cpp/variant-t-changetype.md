@@ -19,38 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f3790f4cb357ed830ba2c61b3c2906356dc64da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5a2883cba0d04bbed38ec44e8d00fdab0d4d5695
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021049"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
-**Específicos de Microsoft**  
-  
- Cambia el tipo de la `_variant_t` objeto del `VARTYPE`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void ChangeType(  
-   VARTYPE vartype,  
-   const _variant_t* pSrc = NULL   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *VarType*  
- El `VARTYPE` para este `_variant_t` objeto.  
-  
- *pSrc*  
- Un puntero al objeto `_variant_t` que se va a convertir. Si este valor es NULL, la conversión se realiza en su lugar.  
-  
-## <a name="remarks"></a>Comentarios  
- Esta función miembro convierte un `_variant_t` objeto indicado `VARTYPE`. Si *pSrc* es NULL, la conversión se realiza en su lugar, en caso contrario `_variant_t` se copia el objeto de *pSrc* y, a continuación, puede convertir.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_variant_t (Clase)](../cpp/variant-t-class.md)
+
+**Específicos de Microsoft**
+
+Cambia el tipo de la `_variant_t` objeto del `VARTYPE`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void ChangeType(
+   VARTYPE vartype,
+   const _variant_t* pSrc = NULL
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*VarType*<br/>
+El `VARTYPE` para este `_variant_t` objeto.
+
+*pSrc*<br/>
+Un puntero al objeto `_variant_t` que se va a convertir. Si este valor es NULL, la conversión se realiza en su lugar.
+
+## <a name="remarks"></a>Comentarios
+
+Esta función miembro convierte un `_variant_t` objeto indicado `VARTYPE`. Si *pSrc* es NULL, la conversión se realiza en su lugar, en caso contrario `_variant_t` se copia el objeto de *pSrc* y, a continuación, puede convertir.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_variant_t (Clase)](../cpp/variant-t-class.md)

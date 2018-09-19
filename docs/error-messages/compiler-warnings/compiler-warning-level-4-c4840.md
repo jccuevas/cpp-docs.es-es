@@ -13,17 +13,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baf70ac7fd4d07958478d2eef455c7dc395e221
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: c43ce60d319c427877b77a043df7c30bd00edc9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025885"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>Del compilador (nivel 4) de la advertencia C4840
 
 > uso no portable de la clase*tipo*' como argumento a una función variádica
-  
+
 ## <a name="remarks"></a>Comentarios
 
 Clases o structs que se pasan a una función variádica debe poder copiar trivialmente. Al pasar objetos de este tipo, el compilador simplemente realiza una copia bit a bit y no llama al constructor ni al destructor.

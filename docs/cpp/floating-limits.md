@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2ea52c91391800b25ab9a71d977300dd1705fb51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604299"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025534"
 ---
 # <a name="floating-limits"></a>Límites flotantes
 
 **Específicos de Microsoft**
 
-En la tabla siguiente se hace una lista de los límites de los valores de las constantes de punto flotante. Estos límites también se definen en el archivo de encabezado estándar \<float.h >.  
+En la tabla siguiente se hace una lista de los límites de los valores de las constantes de punto flotante. Estos límites también se definen en el archivo de encabezado estándar \<float.h >.
 
 ## <a name="limits-on-floating-point-constants"></a>Límites en constantes de punto flotante
 
@@ -57,4 +57,4 @@ En la tabla siguiente se hace una lista de los límites de los valores de las co
 
 ## <a name="see-also"></a>Vea también
 
-[Límites de enteros](../cpp/integer-limits.md)  
+[Límites de enteros](../cpp/integer-limits.md)

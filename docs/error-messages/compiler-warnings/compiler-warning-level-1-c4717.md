@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4717 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4717 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa953d8d41003ff53e721671845c1ddee26da640
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9bb7c37cd4a9da8844f30463c6e2d73fcc04609
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022427"
 ---
 # <a name="compiler-warning-level-1-c4717"></a>Advertencia del compilador (nivel 1) C4717
-'función': recursiva en todas las rutas de control, función hará que el desbordamiento de pila en tiempo de ejecución  
-  
- Cada ruta de acceso a través de una función contiene una llamada a la función. Puesto que no hay ninguna manera de salir de la función sin antes de llamar a sí mismo de forma recursiva, la función nunca se cerrará.  
-  
- El ejemplo siguiente genera C4717:  
-  
-```  
-// C4717.cpp  
-// compile with: /W1 /c  
-// C4717 expected  
-int func(int x) {  
-   if (x > 1)  
-      return func(x - 1); // recursive call  
-   else {  
-      int y = func(0) + 1; // recursive call  
-      return y;  
-   }  
-}  
-  
-int main(){  
-   func(1);  
-}  
+
+'function': recursiva en todas las rutas de control, función provocará el desbordamiento de pila en tiempo de ejecución
+
+Cada ruta de acceso a través de una función contiene una llamada a la función. Dado que no hay ninguna manera de salir de la función sin llamar primero a sí mismo de forma recursiva, la función nunca se cerrará.
+
+El ejemplo siguiente genera C4717:
+
+```
+// C4717.cpp
+// compile with: /W1 /c
+// C4717 expected
+int func(int x) {
+   if (x > 1)
+      return func(x - 1); // recursive call
+   else {
+      int y = func(0) + 1; // recursive call
+      return y;
+   }
+}
+
+int main(){
+   func(1);
+}
 ```

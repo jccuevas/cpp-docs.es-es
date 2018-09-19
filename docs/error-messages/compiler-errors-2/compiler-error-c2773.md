@@ -1,5 +1,5 @@
 ---
-title: C2773 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2773 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad1a4a3b34bd8c4d4ed81c1327073e650f5079
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 861fe9b53352548c919e54c36a603eaeb4d23b39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023441"
 ---
-# <a name="compiler-error-c2773"></a>C2773 de Error del compilador
-\#importar y #using disponible solo en el compilador de C++  
-  
- El compilador de C no reconoce la `#import` directiva de preprocesador. Compile el código fuente como C++. Use [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) si es necesario.
+# <a name="compiler-error-c2773"></a>Error del compilador C2773
+
+\#importar y #using disponible solo en el compilador de C++
+
+El compilador de C no reconoce la `#import` directiva de preprocesador. Compile el código fuente como C++. Use [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) si es necesario.

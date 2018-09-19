@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3418 | Documentos de Microsoft
+title: Error del compilador C3418 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92147a636ff1b087134dd7c2d3fdbdb1398d5135
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26fa67da6f24e578319660c17cb48d7d715be408
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033282"
 ---
 # <a name="compiler-error-c3418"></a>Error del compilador C3418
-el especificador de acceso 'especificador' no se admite  
-  
-Un especificador de acceso CLR se especificó incorrectamente.  Para obtener más información, consulte visibilidad de tipos y la visibilidad de miembros en [Cómo: definir y utilizar clases y Structs (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
-  
-## <a name="example"></a>Ejemplo  
-El ejemplo siguiente genera la advertencia C3418.  
-  
-```cpp  
-// C3418.cpp  
-// compile with: /clr /c  
-ref struct m {  
-internal public:   // C3418  
-   void test(){}  
-};  
-  
-ref struct n {  
-internal:   // OK  
-   void test(){}  
-};  
+
+el especificador de acceso 'especificador' no se admite
+
+Un especificador de acceso CLR se especificó incorrectamente.  Para obtener más información, vea la visibilidad de tipos y la visibilidad de miembros en [Cómo: definir y utilizar clases y Structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C3418.
+
+```cpp
+// C3418.cpp
+// compile with: /clr /c
+ref struct m {
+internal public:   // C3418
+   void test(){}
+};
+
+ref struct n {
+internal:   // OK
+   void test(){}
+};
 ```

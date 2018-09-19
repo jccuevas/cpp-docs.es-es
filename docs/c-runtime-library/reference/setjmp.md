@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 0bd7d57d0678744243356a0565e10cbe4065f8d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032547"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -53,7 +53,7 @@ int setjmp(
 
 ### <a name="parameters"></a>Parámetros
 
-*env*  
+*env*<br/>
 Variable donde se almacena el entorno.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -74,7 +74,7 @@ En el código de C++ de Microsoft en Windows, **longjmp** usa la misma semántic
 
 **FIN de Específicos de Microsoft**
 
-> [!NOTE]  
+> [!NOTE]
 > En el código C++ portátil, no puede suponer `setjmp` y `longjmp` admiten la semántica de objeto de C++. En concreto, un `setjmp` / `longjmp` llamada par tiene un comportamiento indefinido si se reemplaza el `setjmp` y `longjmp` por **catch** y **throw** invocaría los destructores no triviales para los objetos automáticos. En programas de C++, se recomienda que usar el mecanismo de control de excepciones de C++.
 
 Para obtener más información, vea [Usar setjmp/longjmp](../../cpp/using-setjmp-longjmp.md).
@@ -93,5 +93,5 @@ Vea el ejemplo de [_pfreset](fpreset.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)  
-[longjmp](longjmp.md)  
+[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[longjmp](longjmp.md)

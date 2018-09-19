@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5a7e97f631bfa3666da00887dce2c8ba865028
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bf676dfdc197d756a8a8e46b9a68ce4de2136284
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026171"
 ---
 # <a name="atl-event-handling-summary"></a>Resumen de control de eventos ATL
 
@@ -57,6 +57,6 @@ Hay tres maneras principales de aconsejar y desaconsejar un origen de eventos me
 
 ## <a name="see-also"></a>Vea también
 
-[Control de eventos](../atl/event-handling-and-atl.md)   
+[Control de eventos](../atl/event-handling-and-atl.md)<br/>
 [Admitir IDispEventImpl](../atl/supporting-idispeventimpl.md)
 

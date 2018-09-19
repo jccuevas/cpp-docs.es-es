@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046763"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList (clase)
 
@@ -35,14 +35,14 @@ Esta clase proporciona métodos útiles al construir una lista de punteros intel
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*E*  
+*E*<br/>
 El tipo de puntero.
 
 ## <a name="members"></a>Miembros
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 El tamaño del bloque, su valor predeterminado es 10.
 
 ### <a name="remarks"></a>Comentarios
@@ -88,6 +88,6 @@ El tamaño de bloque es una medida de la cantidad de memoria asignada cuando se 
 
 ## <a name="see-also"></a>Vea también
 
-[CAtlList (clase)](../../atl/reference/catllist-class.md)   
-[CAutoPtrElementTraits (clase)](../../atl/reference/cautoptrelementtraits-class.md)   
+[CAtlList (clase)](../../atl/reference/catllist-class.md)<br/>
+[CAutoPtrElementTraits (clase)](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2386 | Documentos de Microsoft
+title: Error del compilador C2386 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5bcbcb3502dba1497500a9bdd5b46345b729a26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c799ec18eb062bbefcc91a8b1ef8364d9b2cdc03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043682"
 ---
 # <a name="compiler-error-c2386"></a>Error del compilador C2386
-'symbol': ya existe un símbolo con este nombre en el ámbito actual  
-  
- Se intentó crear un alias de espacio de nombres, pero el nombre elegido ya existe.  
-  
- El ejemplo siguiente genera la advertencia C2386:  
-  
-```  
-// C2386.cpp  
-namespace A {  
-   int k;  
-}  
-  
-int i;  
-namespace i = A;   // C2386, i already exists  
+
+'symbol': ya existe un símbolo con este nombre en el ámbito actual
+
+Se intentó crear un alias de espacio de nombres, pero el nombre elegido ya existe.
+
+El ejemplo siguiente genera la advertencia C2386:
+
+```
+// C2386.cpp
+namespace A {
+   int k;
+}
+
+int i;
+namespace i = A;   // C2386, i already exists
 ```

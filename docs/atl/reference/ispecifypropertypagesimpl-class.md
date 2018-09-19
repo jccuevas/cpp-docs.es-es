@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d231f493fd2b2f2c492eec224a0ae041f175f53d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eb4611c52f65595eb84248507dfb3a85d1ab26fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035973"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl (clase)
 
@@ -37,14 +37,14 @@ Esta clase implementa `IUnknown` y proporciona una implementación predeterminad
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE ISpecifyPropertyPagesImpl 
    : public ISpecifyPropertyPages
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `ISpecifyPropertyPagesImpl`.
 
 ## <a name="members"></a>Miembros
@@ -90,6 +90,6 @@ Consulte [ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-i
 
 ## <a name="see-also"></a>Vea también
 
-[IPropertyPageImpl (clase)](../../atl/reference/ipropertypageimpl-class.md)   
-[IPerPropertyBrowsingImpl (clase)](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+[IPropertyPageImpl (clase)](../../atl/reference/ipropertypageimpl-class.md)<br/>
+[IPerPropertyBrowsingImpl (clase)](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

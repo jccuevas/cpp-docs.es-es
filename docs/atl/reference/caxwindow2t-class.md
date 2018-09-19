@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45add5f2133191bc046d72e797a7f8374976d63
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cfb82cfa21d5cc69e66d7980c4878e1659a7a79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036233"
 ---
 # <a name="caxwindow2t-class"></a>Clase CAxWindow2T
 
@@ -46,7 +46,7 @@ template <class TBase = CWindow>
 
 #### <a name="parameters"></a>Parámetros
 
-*TBase*  
+*TBase*<br/>
 La clase de la cual `CAxWindowT` se deriva.
 
 ## <a name="members"></a>Miembros
@@ -107,7 +107,7 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 Identificador de una ventana existente.
 
 ##  <a name="create"></a>  CAxWindow2T::Create
@@ -157,7 +157,7 @@ HRESULT CreateControlLic(
 
 ### <a name="parameters"></a>Parámetros
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 La clave de licencia para el control; Es NULL si la creación de un control sin licencia.
 
 ### <a name="remarks"></a>Comentarios
@@ -194,7 +194,7 @@ HRESULT CreateControlLicEx(
 
 ### <a name="parameters"></a>Parámetros
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 La clave de licencia para el control; Es NULL si la creación de un control sin licencia.
 
 ### <a name="remarks"></a>Comentarios
@@ -227,10 +227,10 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 Identificador de una ventana existente.
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../../atl/atl-class-overview.md)   
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Preguntas más frecuentes sobre la contención de controles](../../atl/atl-control-containment-faq.md)

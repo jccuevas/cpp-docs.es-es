@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1037 | Documentos de Microsoft
+title: Error irrecuperable C1037 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12c6720219a638d15b1b7bf684531dfe4d752d49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8091eb7316531c6bdda9bf714ec7a195b5406182
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047686"
 ---
 # <a name="fatal-error-c1037"></a>Error irrecuperable C1037
-no se puede abrir el archivo objeto nombreArchivo  
-  
- El archivo objeto especificado por [/Fo](../../build/reference/fo-object-file-name.md) no se puede abrir.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Nombre de archivo no válido.  
-  
-2.  Memoria insuficiente para abrir el archivo.  
-  
-3.  Otro proceso está usando el archivo.  
-  
-4.  Un archivo de solo lectura tiene el mismo nombre.  
-  
+
+no se puede abrir el archivo objeto nombreArchivo
+
+El archivo objeto especificado por [/Fo](../../build/reference/fo-object-file-name.md) no se puede abrir.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. Nombre de archivo no válido.
+
+1. Memoria insuficiente para abrir el archivo.
+
+1. Otro proceso está usando el archivo.
+
+1. Un archivo de solo lectura tiene el mismo nombre.
+

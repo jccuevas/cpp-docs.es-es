@@ -1,5 +1,5 @@
 ---
-title: Compilador Error C2071 | Documentos de Microsoft
+title: Error del compilador C2071 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faee56023d14e9b010d1c691af654ffcbc31dc78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 757110c88d3279964ab0c26f753e4d3b1f2889d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025871"
 ---
-# <a name="compiler-error-c2071"></a>Error C2071 de Error del compilador
-'identificador': clase de almacenamiento no válida  
-  
- `identifier` se ha declarado con un válido [clase de almacenamiento](../../c-language/c-storage-classes.md). Este error puede producirse cuando se especifica más de una clase de almacenamiento para un identificador, o cuando la definición no es compatible con la declaración de clase de almacenamiento.  
-  
- Para corregir este problema, comprender la clase de almacenamiento previsto del identificador, por ejemplo, `static` o `extern`y corrija la declaración debe coincidir.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error C2071.  
-  
-```  
-// C2071.cpp  
-// compile with: /c  
-struct C {  
-   extern int i;   // C2071  
-};  
-struct D {  
-   int i;   // OK, no extern on an automatic  
-};  
-```  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error C2071.  
-  
-```  
-// C2071_b.cpp  
-// compile with: /c  
-typedef int x(int i) { return i; }   // C2071  
-typedef int (x)(int);   // OK, no local definition in typedef  
+# <a name="compiler-error-c2071"></a>Error del compilador C2071
+
+'identificador': clase de almacenamiento no válida
+
+`identifier` se ha declarado con un no válido [clase de almacenamiento](../../c-language/c-storage-classes.md). Este error puede producirse cuando se especifica más de una clase de almacenamiento para un identificador, o cuando la definición no es compatible con la declaración de clase de almacenamiento.
+
+Para corregir este problema, averigüe la clase de almacenamiento previsto del identificador, por ejemplo, `static` o `extern`y corrija la declaración para hacer coincidir.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error C2071.
+
+```
+// C2071.cpp
+// compile with: /c
+struct C {
+   extern int i;   // C2071
+};
+struct D {
+   int i;   // OK, no extern on an automatic
+};
+```
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error C2071.
+
+```
+// C2071_b.cpp
+// compile with: /c
+typedef int x(int i) { return i; }   // C2071
+typedef int (x)(int);   // OK, no local definition in typedef
 ```

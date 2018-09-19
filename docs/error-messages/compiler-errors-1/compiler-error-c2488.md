@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2488 | Documentos de Microsoft
+title: Error del compilador C2488 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cb64ea76ae38901b2db14ec4b68bba9db69f39c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1bf2710acdc2a738b36ca9426ce55da9f6d769
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044346"
 ---
 # <a name="compiler-error-c2488"></a>Error del compilador C2488
-'identificador': 'naked' sólo se puede aplicar a las definiciones de función no miembro  
-  
- El [naked](../../cpp/naked-cpp.md) atributo se aplicó a una declaración de función.  
-  
- El ejemplo siguiente genera C2488:  
-  
-```  
-// C2488.cpp  
-// compile with: /c  
-// processor: x86  
-__declspec( naked ) void func();   // C2488  declaration, not definition  
-__declspec( naked ) void i;   // C2488  i is not a function  
-  
-__declspec( naked ) void func() {}   // OK  
+
+'identifier': 'naked' solo se puede aplicar a definiciones de función no miembro
+
+El [naked](../../cpp/naked-cpp.md) atributo se aplicó a una declaración de función.
+
+El ejemplo siguiente genera C2488:
+
+```
+// C2488.cpp
+// compile with: /c
+// processor: x86
+__declspec( naked ) void func();   // C2488  declaration, not definition
+__declspec( naked ) void i;   // C2488  i is not a function
+
+__declspec( naked ) void func() {}   // OK
 ```

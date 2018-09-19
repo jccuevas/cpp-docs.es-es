@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6fddd90eaa6259cd2552dddbeafb405d90580ac
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d2bb81c430483f4dc2e96defba1d6ade0a0be9fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030006"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map (Clase)
 La clase `concurrent_unordered_map` es un contenedor seguro para simultaneidad que controla una secuencia de variación de longitud de elementos del tipo `std::pair<const K, _Element_type>`. La secuencia se representa de una manera que habilita la anexión segura para simultaneidad, el acceso a elementos, el acceso a iterador y las operaciones de recorrido de iterador.  
@@ -56,20 +56,20 @@ template <typename K,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `K`  
- El tipo de clave.  
+*K*<br/>
+El tipo de clave.  
   
- `_Element_type`  
- El tipo asignado.  
+*_Element_type*<br/>
+El tipo asignado.  
   
- `_Hasher`  
- El tipo de objeto de la función hash. Este argumento es opcional y el valor predeterminado es `std::hash<K>`.  
+*_Hasher*<br/>
+El tipo de objeto de la función hash. Este argumento es opcional y el valor predeterminado es `std::hash<K>`.  
   
- `key_equality`  
- El tipo de objeto de función de comparación de igualdad. Este argumento es opcional y el valor predeterminado es `std::equal_to<K>`.  
+*key_equality*<br/>
+El tipo de objeto de función de comparación de igualdad. Este argumento es opcional y el valor predeterminado es `std::equal_to<K>`.  
   
- `_Allocator_type`  
- El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para el mapa no ordenado simultáneo. Este argumento es opcional y el valor predeterminado es `std::allocator<std::pair<K`, `_Element_type>>`.  
+*_Allocator_type*<br/>
+El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para el mapa no ordenado simultáneo. Este argumento es opcional y el valor predeterminado es `std::allocator<std::pair<K`, `_Element_type>>`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -144,8 +144,8 @@ const mapped_type& at(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `KVal`  
- Valor de clave que se va a buscar.  
+*KVal*<br/>
+Valor de clave que se va a buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia al valor de datos del elemento encontrado.  
@@ -230,29 +230,29 @@ concurrent_unordered_map(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Iterator`  
- El tipo de iterador de entrada.  
+*_Iterator*<br/>
+El tipo de iterador de entrada.  
   
- `_Number_of_buckets`  
- El número inicial de depósitos para esta asignación no ordenada.  
+*_Number_of_buckets*<br/>
+El número inicial de depósitos para esta asignación no ordenada.  
   
- `_Hasher`  
- La función hash para esta asignación no ordenada.  
+*_Hasher*<br/>
+La función hash para esta asignación no ordenada.  
   
- `key_equality`  
- La función de comparación de igualdad para esta asignación no ordenada.  
+*key_equality*<br/>
+La función de comparación de igualdad para esta asignación no ordenada.  
   
- `_Allocator`  
- El asignador para esta asignación no ordenada.  
+*_Allocator*<br/>
+El asignador para esta asignación no ordenada.  
   
- `_Begin`  
- Posición del primer elemento en el intervalo de elementos que se va a copiar.  
+*_Empezar la*<br/>
+Posición del primer elemento en el intervalo de elementos que se va a copiar.  
   
- `_End`  
- Posición del primer elemento más allá del intervalo de elementos que se va a copiar.  
+*_Finalizar*<br/>
+Posición del primer elemento más allá del intervalo de elementos que se va a copiar.  
   
- `_Umap`  
- El objeto de origen `concurrent_unordered_map` del que copiar o mover elementos.  
+*_Umap*<br/>
+El objeto de origen `concurrent_unordered_map` del que copiar o mover elementos.  
   
 ### <a name="remarks"></a>Comentarios  
  Todos los constructores almacenan un objeto de asignador `_Allocator` e inicializar el objeto unorderedmap.  
@@ -276,8 +276,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `KVal`  
- Clave que se va a buscar.  
+*KVal*<br/>
+Clave que se va a buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El número de veces el número de veces que la clave aparece en el contenedor.  
@@ -324,8 +324,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `KVal`  
- El valor de clave que se buscará.  
+*KVal*<br/>
+El valor de clave que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un [par](../../../standard-library/pair-structure.md) donde el primer elemento es un iterador al principio y el segundo elemento es un iterador al final del intervalo.  
@@ -344,8 +344,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `KVal`  
- El valor de clave que se buscará.  
+*KVal*<br/>
+El valor de clave que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador que apunta a la ubicación del primer elemento que coincide con la clave proporcionada, o el iterador `end()` si no existe ese elemento.  
@@ -403,23 +403,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Iterator`  
- El tipo de iterador que se utiliza para la inserción.  
+*_Iterator*<br/>
+El tipo de iterador que se utiliza para la inserción.  
   
- `V`  
- El tipo del valor insertado en el mapa.  
+*V*<br/>
+El tipo del valor insertado en el mapa.  
   
- `value`  
- El valor que se va a insertar.  
+*valor*<br/>
+El valor que se va a insertar.  
   
- `_Where`  
- La ubicación inicial para buscar un punto de inserción.  
+*_WHERE*<br/>
+La ubicación inicial para buscar un punto de inserción.  
   
- `first`  
- El principio del intervalo que se va a insertar.  
+*first*<br/>
+El principio del intervalo que se va a insertar.  
   
- `last`  
- Final del intervalo que se va a insertar.  
+*Último*<br/>
+Final del intervalo que se va a insertar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un par que contiene un iterador y un valor booleano. Vea la sección Comentarios para obtener más detalles.  
@@ -496,8 +496,8 @@ mapped_type& operator[](key_type&& kval);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `KVal`  
- El valor de clave para  
+*KVal*<br/>
+El valor de clave para  
   
  Buscar o insertar.  
   
@@ -522,8 +522,8 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Umap`  
- Objeto `concurrent_unordered_map` de origen.  
+*_Umap*<br/>
+Objeto `concurrent_unordered_map` de origen.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `concurrent_unordered_map` objeto.  
@@ -540,8 +540,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Buckets`  
- El número deseado de cubos.  
+*_Buckets*<br/>
+El número deseado de cubos.  
   
 ### <a name="remarks"></a>Comentarios  
  La función miembro modifica el número de depósitos para que sea al menos `_Buckets` y vuelve a generar la tabla hash según sea necesario. El número de depósitos debe ser una potencia de 2. Si no es una potencia de 2, se redondea a la siguiente mayor potencia de 2.  
@@ -571,8 +571,8 @@ void swap(concurrent_unordered_map& _Umap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Umap`  
- La `concurrent_unordered_map` objeto que se va a intercambiar.  
+*_Umap*<br/>
+La `concurrent_unordered_map` objeto que se va a intercambiar.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
@@ -585,8 +585,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Bucket`  
- El índice de depósito.  
+*_Bucket*<br/>
+El índice de depósito.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador que señala al principio del depósito.  
@@ -600,8 +600,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `KVal`  
- La clave de elemento que se va a buscar.  
+*KVal*<br/>
+La clave de elemento que se va a buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice de depósito para la clave en este contenedor.  
@@ -626,8 +626,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Bucket`  
- El depósito que se buscará.  
+*_Bucket*<br/>
+El depósito que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El número actual de depósitos en este contenedor.  
@@ -641,8 +641,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Bucket`  
- El índice de depósito.  
+*_Bucket*<br/>
+El índice de depósito.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador que señala al principio del depósito.  
@@ -656,8 +656,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Bucket`  
- El índice de depósito.  
+*_Bucket*<br/>
+El índice de depósito.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador que señala al principio del depósito.  
@@ -673,8 +673,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Bucket`  
- El índice de depósito.  
+*_Bucket*<br/>
+El índice de depósito.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Iterador que apunta al final del depósito.  
@@ -696,17 +696,17 @@ size_type unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Where`  
- La posición del iterador en la que borrar.  
+*_WHERE*<br/>
+La posición del iterador en la que borrar.  
   
- `_Begin`  
- La posición del primer elemento del intervalo de elementos que va a borrar.  
+*_Empezar la*<br/>
+La posición del primer elemento del intervalo de elementos que va a borrar.  
   
- `_End`  
- La posición del primer elemento más allá del intervalo de elementos que va a borrar.  
+*_Finalizar*<br/>
+La posición del primer elemento más allá del intervalo de elementos que va a borrar.  
   
- `KVal`  
- Valor de clave que se va a borrar.  
+*KVal*<br/>
+Valor de clave que se va a borrar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Las dos primeras funciones miembro devuelven un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o `concurrent_unordered_map::end`() si no existe ese elemento. La tercera función miembro devuelve el número de elementos que se quitan.  

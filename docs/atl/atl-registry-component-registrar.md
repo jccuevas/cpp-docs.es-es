@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d3f8f52e237fe364f73057c81eb17c8fd3def18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041043"
 ---
 # <a name="atl-registry-component-registrar"></a>Componente de registro de ATL (Registrador)
 
@@ -36,14 +36,14 @@ El registrador de ATL proporciona un acceso mejorado al registro del sistema a t
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Crear scripts del registrador](../atl/creating-registrar-scripts.md)  
+[Crear scripts del registrador](../atl/creating-registrar-scripts.md)<br/>
 Una guía para crear secuencias de comandos de registrador. Incluye temas sobre la sintaxis BNF, árboles de análisis, ejemplos, usar parámetros reemplazables e invocar los scripts de scripting del registro.
 
-[Configurar un vínculo estático al código del registrador (solo C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+[Configurar un vínculo estático al código del registrador (solo C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
 Se enumeran los pasos para establecer la vinculación estática con el registrador.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
 

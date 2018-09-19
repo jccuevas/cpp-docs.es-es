@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1205 | Documentos de Microsoft
+title: Error irrecuperable C1205 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb1e32843c7c8c47589d4b75fd2613a1d73f135
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e70be77c224b8c1c6039a908d38e8e482ab36259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035570"
 ---
 # <a name="fatal-error-c1205"></a>Error irrecuperable C1205
-La versión del runtime instalada no admite elementos genéricos  
-  
- La versión de Common Language Runtime que el compilador está usando no es una versión del runtime compatible con el compilador actual.  Por ejemplo, la característica de genéricos requiere un tiempo de ejecución que coincida con el compilador.  
-  
- Es posible que la especificación de ruta de acceso deba modificarse.
+
+La versión del runtime instalada no admite elementos genéricos
+
+La versión de Common Language Runtime que el compilador está usando no es una versión del runtime compatible con el compilador actual.  Por ejemplo, la característica de genéricos requiere un tiempo de ejecución que coincida con el compilador.
+
+Es posible que la especificación de ruta de acceso deba modificarse.

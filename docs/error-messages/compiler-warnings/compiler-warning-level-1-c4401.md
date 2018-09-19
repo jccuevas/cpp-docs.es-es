@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4401 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4401 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b8a7a2bced261bbff09422c3dfa6454061f636
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f9f7bfcf826b9bda4232a8f4068d8be45dc3ab5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043552"
 ---
 # <a name="compiler-warning-level-1-c4401"></a>Advertencia del compilador (nivel 1) C4401
-'campo de bits': miembro es el campo de bits  
-  
- Código ensamblador en línea intenta obtener acceso a un miembro de campo de bits. Código ensamblador en línea no puede tener acceso a miembros de un campo de bits, por lo que se utiliza el último límite de empaquetado antes del miembro de campo de bits.  
-  
- Para evitar esta advertencia, convierta el campo de bits al tipo apropiado antes de crear la referencia en el código de ensamblado alineado. El ejemplo siguiente genera C4401:  
-  
-```  
-// C4401.cpp  
-// compile with: /W1  
-// processor: x86  
-typedef struct bitfield {  
-   signed bit : 1;  
-} mybitfield;  
-  
-int main() {  
-   mybitfield bf;  
-   bf.bit = 0;  
-   __asm {  
-      mov bf.bit,0;   // C4401  
-   }  
-  
-   /* use the following __asm block to resolve the warning  
-   int i = (int)bf.bit;  
-   __asm {  
-      mov i,0;  
-   }  
-   */  
-}  
+
+'campo de bits': miembro es el campo de bits
+
+Código de ensamblado alineado intenta tener acceso a un miembro de campo de bits. Ensamblado alineado no puede acceder a los miembros del campo de bits, por lo que se utiliza el último límite de empaquetado antes del miembro de campo de bits.
+
+Para evitar esta advertencia, convierta el campo de bits a un tipo adecuado antes de crear la referencia en el código de ensamblado alineado. El ejemplo siguiente genera C4401:
+
+```
+// C4401.cpp
+// compile with: /W1
+// processor: x86
+typedef struct bitfield {
+   signed bit : 1;
+} mybitfield;
+
+int main() {
+   mybitfield bf;
+   bf.bit = 0;
+   __asm {
+      mov bf.bit,0;   // C4401
+   }
+
+   /* use the following __asm block to resolve the warning
+   int i = (int)bf.bit;
+   __asm {
+      mov i,0;
+   }
+   */
+}
 ```

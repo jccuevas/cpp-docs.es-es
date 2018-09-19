@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053718"
 ---
 # <a name="service-map-macros"></a>Macros de mapa de servicio
 
@@ -49,7 +49,7 @@ BEGIN_SERVICE_MAP(theClass)
 
 ### <a name="parameters"></a>Parámetros
 
-*theClass*  
+*theClass*<br/>
 [in] Especifica la clase que contiene el mapa de servicio.
 
 ### <a name="remarks"></a>Comentarios
@@ -86,7 +86,7 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>Parámetros
 
-*SID*  
+*SID*<br/>
 El identificador del servicio.
 
 ### <a name="example"></a>Ejemplo
@@ -103,7 +103,7 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*  
+*pUnk*<br/>
 Un puntero a la **IUnknown** interfaz a la que a cadena.
 
 ### <a name="example"></a>Ejemplo

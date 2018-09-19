@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2444 | Documentos de Microsoft
+title: Error del compilador C2444 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80af78ffbf0d51a9ae8e7f4090aa5c6aa0d9045f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 061abaef158e309246528374b375b20fa75978f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041118"
 ---
 # <a name="compiler-error-c2444"></a>Error del compilador C2444
-'identificador': se usó el prototipo ANSI; se encontró 'tipo', pero se esperaba '{' o ';'  
-  
- El prototipo de función está seguido de un tipo.  
-  
- Este error puede producirse porque falta un punto y coma o una llave.
+
+'identificador': se usó el prototipo ANSI; se encontró 'tipo', pero se esperaba '{' o ';'
+
+El prototipo de función está seguido de un tipo.
+
+Este error puede producirse porque falta un punto y coma o una llave.

@@ -1,5 +1,5 @@
 ---
-title: swap (función) (auto_gcroot) | Documentos de Microsoft
+title: swap (función) (auto_gcroot) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 308f909e2a863f2d08feb6ff688cddf61b0347b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c653130079870c885e5bb758a0ae2d953cca5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052184"
 ---
 # <a name="swap-function-autogcroot"></a>swap (Función) (auto_gcroot)
-Intercambia los objetos entre uno `auto_gcroot` y otro.  
+Intercambia los objetos entre una `auto_gcroot` y otro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_left`  
- Una clase `auto_gcroot`.  
+*a la _izquierda*<br/>
+Una clase `auto_gcroot`.  
   
- `_right`  
- Otra `auto_gcroot`.  
+*a la _derecha*<br/>
+Otro `auto_gcroot`.  
   
 ## <a name="example"></a>Ejemplo  
   

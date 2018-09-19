@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032437"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList (clase)
 
@@ -32,7 +32,7 @@ Esta clase proporciona métodos útiles al construir una lista de punteros de in
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Parámetros
 
-*I*  
+*I*<br/>
 Una interfaz COM que especifica el tipo de puntero que se almacenará.
 
-*piid*  
+*piid*<br/>
 Un puntero para el IID de *me*.
 
 ## <a name="members"></a>Miembros
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 El tamaño del bloque, su valor predeterminado es 10.
 
 ### <a name="remarks"></a>Comentarios
@@ -89,7 +89,7 @@ El tamaño de bloque es una medida de la cantidad de memoria asignada cuando se 
 
 ## <a name="see-also"></a>Vea también
 
-[CAtlList (clase)](../../atl/reference/catllist-class.md)   
-[CComQIPtr (clase)](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits (clase)](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlList (clase)](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr (clase)](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits (clase)](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

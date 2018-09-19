@@ -1,5 +1,5 @@
 ---
-title: Advertencia PRJ0018 al compilar del proyecto | Documentos de Microsoft
+title: Advertencia PRJ0018 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914f05b6e2bb3dfb8932b306fb7c84b9a31466c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e232ed90af6002a58356827421b2d49e68ba14a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033217"
 ---
 # <a name="project-build-warning-prj0018"></a>Advertencia PRJ0018 al compilar el proyecto
-No se encontraron las siguientes variables de entorno:  
-  
- Una variable de entorno no está definida. Este error enumera las variables de entorno que no están definidas.  
-  
- Vea [Macros para los comandos de generación personalizada](../../ide/common-macros-for-build-commands-and-properties.md) para obtener información sobre las macros del proceso de compilación.
+
+No se encontraron las siguientes variables de entorno:
+
+Una variable de entorno no está definida. Este error enumera las variables de entorno que no se han definido.
+
+Consulte [Macros para los comandos de generación personalizada](../../ide/common-macros-for-build-commands-and-properties.md) para obtener información sobre las macros en el proceso de compilación.

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3246 | Documentos de Microsoft
+title: Error del compilador C3246 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7feedafc4c965912bcb8ee022601e52d0c0f3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a588067fa21e0aeee54516bcec28cdf3648ac9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253257"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047816"
 ---
 # <a name="compiler-error-c3246"></a>Error del compilador C3246
-'class': no se puede heredar de 'type', ya que se ha declarado como 'sealed'  
-  
-Una clase marcada como [sealed](../../windows/sealed-cpp-component-extensions.md) no puede ser la clase base de otras clases.  
-  
-El ejemplo siguiente genera la advertencia C3246:  
-  
-```  
-// C3246_2.cpp  
-// compile with: /clr /LD  
-ref class X sealed {};  
-  
-ref class Y : public X {}; // C3246  
-```  
+
+'class': no se puede heredar de 'type', ya que se ha declarado como 'sealed'
+
+Una clase marcada como [sealed](../../windows/sealed-cpp-component-extensions.md) no puede ser la clase base de otras clases.
+
+El ejemplo siguiente genera la advertencia C3246:
+
+```
+// C3246_2.cpp
+// compile with: /clr /LD
+ref class X sealed {};
+
+ref class Y : public X {}; // C3246
+```

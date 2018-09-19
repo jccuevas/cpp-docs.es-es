@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3219 | Documentos de Microsoft
+title: Error del compilador C3219 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16341412ae5028753b2a542b45da4ea2b549c29e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f60a17d257505752f9d2c791365f537fa02ffc2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022600"
 ---
 # <a name="compiler-error-c3219"></a>Error del compilador C3219
-'param': el parámetro genérico no puede ser restringido por varios elementos sin interfaz: 'clase'  
-  
- No es válido restringir un parámetro genérico mediante dos o más clases administradas.  
-  
- El ejemplo siguiente genera la advertencia C3219:  
-  
-```  
-// C3219.cpp  
-// compile with: /clr  
-ref class A {};  
-ref class B {};  
-  
-generic <class T>  
-where T : A, B  
-ref class E {};   // C3219  
-```  
-  
- En el ejemplo siguiente se muestra una posible resolución:  
-  
-```  
-// C3219b.cpp  
-// compile with: /clr /c  
-ref class A {};  
-  
-interface struct C {};  
-  
-generic <class T>  
-where T : A  
-ref class E {};  
+
+'param': el parámetro genérico no puede ser restringido por varios elementos sin interfaz: 'clase'
+
+No es válido restringir un parámetro genérico mediante dos o más clases administradas.
+
+El ejemplo siguiente genera la advertencia C3219:
+
+```
+// C3219.cpp
+// compile with: /clr
+ref class A {};
+ref class B {};
+
+generic <class T>
+where T : A, B
+ref class E {};   // C3219
+```
+
+En el ejemplo siguiente se muestra una posible resolución:
+
+```
+// C3219b.cpp
+// compile with: /clr /c
+ref class A {};
+
+interface struct C {};
+
+generic <class T>
+where T : A
+ref class E {};
 ```

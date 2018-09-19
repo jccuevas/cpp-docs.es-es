@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1095 | Documentos de Microsoft
+title: Error grave de NMAKE U1095 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13c819d18149e61bca71f6a4cb10ea851a2d485d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964ec1d029e56a5d9d78659ad919c71a4e44506d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317250"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039886"
 ---
 # <a name="nmake-fatal-error-u1095"></a>Error grave de NMAKE U1095
-línea de comandos expandida 'commandline' es demasiado largo  
-  
- Después de la expansión de macro, la línea de comandos especificada supera el límite de longitud de líneas de comandos para el sistema operativo.  
-  
- MS-DOS permite hasta 128 caracteres en una línea de comandos.  
-  
- Si el comando es para un programa que puede aceptar la entrada de línea de comandos desde un archivo, cambie el comando y proporcione la entrada desde un archivo de disco o un archivo en línea. Por ejemplo, LINK y LIB aceptan la entrada desde un archivo de respuesta.
+
+línea de comandos expandida 'líneaDeComandos' es demasiado largo
+
+Después de la expansión de macro, la línea de comandos especificada supera el límite de longitud de las líneas de comandos para el sistema operativo.
+
+MS-DOS permite hasta 128 caracteres en una línea de comandos.
+
+Si el comando es para un programa que puede aceptar la entrada de línea de comandos desde un archivo, cambie el comando y proporcione la entrada desde un archivo en disco o un archivo en línea. Por ejemplo, vínculo y LIB aceptan la entrada desde un archivo de respuesta.

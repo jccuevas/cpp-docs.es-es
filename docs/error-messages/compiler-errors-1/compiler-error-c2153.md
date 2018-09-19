@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2153 | Documentos de Microsoft
+title: Error del compilador C2153 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d288434cce1e1584a61040145b07d26defd9dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbb3283ff4d27b6c939434ac3df8f8c1febf0eb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051430"
 ---
 # <a name="compiler-error-c2153"></a>Error del compilador C2153
-las constantes hexadecimales deben tener al menos un dígito hexadecimal  
-  
- Las constantes hexadecimales 0 x, 0 X y \x no son válidos. Debe seguir al menos un dígito hexadecimal x o X.  
-  
- El ejemplo siguiente genera C2153:  
-  
-```  
-// C2153.cpp  
-int main() {  
-   int a= 0x;    // C2153  
-   int b= 0xA;   // OK  
-}  
+
+las constantes hexadecimales deben tener al menos un dígito hexadecimal
+
+Las constantes hexadecimales 0 x, 0 X y \x no son válidos. Debe seguir al menos un dígito hexadecimal x o X.
+
+El ejemplo siguiente genera C2153:
+
+```
+// C2153.cpp
+int main() {
+   int a= 0x;    // C2153
+   int b= 0xA;   // OK
+}
 ```

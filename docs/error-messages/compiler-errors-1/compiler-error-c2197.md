@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2197 | Documentos de Microsoft
+title: Error del compilador C2197 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf90d53aaba9550cecd93603344e0af5ec3c2ab0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb8e13e21cbba3b6cbf6a4bd84a835270d7fee2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036824"
 ---
 # <a name="compiler-error-c2197"></a>Error del compilador C2197
-'function': hay demasiados argumentos para la llamada  
-  
- El compilador detectó demasiados parámetros para realizar una llamada a la función o detectó una declaración de función incorrecta.  
-  
- El ejemplo siguiente genera la advertencia C2197:  
-  
-```  
-// C2197.c  
-// compile with: /Za /c  
-void func( int );  
-int main() {  
-   func( 1, 2 );   // C2197 two actual parameters  
-   func( 2 );   // OK  
-}  
+
+'function': hay demasiados argumentos para la llamada
+
+El compilador detectó demasiados parámetros para realizar una llamada a la función o detectó una declaración de función incorrecta.
+
+El ejemplo siguiente genera la advertencia C2197:
+
+```
+// C2197.c
+// compile with: /Za /c
+void func( int );
+int main() {
+   func( 1, 2 );   // C2197 two actual parameters
+   func( 2 );   // OK
+}
 ```

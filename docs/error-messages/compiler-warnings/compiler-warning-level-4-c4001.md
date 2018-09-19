@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4001 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4001 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc728fa5c66fb4b42c8fe4a785f36048ffbaed4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c325656b9e61ee324a3b9f171413f1020440f9ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025417"
 ---
 # <a name="compiler-warning-level-4-c4001"></a>Compilador advertencia (nivel 4) C4001
-se usó una extensión no estándar 'comentario de una única línea'  
 
-> [!NOTE] 
-> Esta advertencia se ha eliminado en Visual Studio 2017 versión 15,5 ya son estándar de C99 comentarios de una línea.
-  
- Los comentarios de línea son estándar en C++ y estándar de C a partir de C99. Compatibilidad estricta con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), archivos de C que contienen comentarios de una línea, generan C4001 debido al uso de una extensión no estándar. Puesto que los comentarios de línea son estándar en C++, archivos de C que contienen comentarios de una línea no generan C4001 al compilar con extensiones de Microsoft (/Ze).  
-  
-## <a name="example"></a>Ejemplo  
- Para deshabilitar la advertencia, quite la marca de comentario [warning(disable:4001) #pragma](../../preprocessor/warning.md).  
-  
-```  
-// C4001.cpp  
-// compile with: /W4 /Za /TC  
-// #pragma warning(disable:4001)  
-int main()  
-{  
-   // single-line comment in main  
-   // C4001  
-}  
+se utilizó una extensión no estándar 'comentario de una única línea'
+
+> [!NOTE]
+> Esta advertencia se quita en Visual Studio 2017 versión 15.5 porque los comentarios de línea son estándar en C99.
+
+Comentarios de una línea están en C++ estándar y en C a partir de C99.
+Compatibilidad estricta con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), archivos de C que contienen comentarios multilínea, generan C4001 debido al uso de una extensión no estándar. Puesto que los comentarios de línea son estándar en C++, archivos de C que contienen comentarios de una línea no producen C4001 al compilar con las extensiones de Microsoft (/Ze).
+
+## <a name="example"></a>Ejemplo
+
+Para deshabilitar la advertencia, quite la marca de comentario [warning(disable:4001) #pragma](../../preprocessor/warning.md).
+
+```
+// C4001.cpp
+// compile with: /W4 /Za /TC
+// #pragma warning(disable:4001)
+int main()
+{
+   // single-line comment in main
+   // C4001
+}
 ```

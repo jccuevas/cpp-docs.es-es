@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1013 | Documentos de Microsoft
+title: Error irrecuperable C1013 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b5dae643ec20e9d7d8a8dcdf41d9debe7e6b7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050526"
 ---
 # <a name="fatal-error-c1013"></a>Error irrecuperable C1013
-límite del compilador : hay demasiados paréntesis abiertos  
-  
- Una expresión contiene demasiados niveles de paréntesis en una única expresión. Simplifique la expresión o divídala en varias instrucciones.  
-  
- Antes de Visual C++ 6.0 Service Pack 3, el límite de paréntesis anidados en una única expresión era 59. Actualmente, el límite de paréntesis anidados es 256.
+
+límite del compilador : hay demasiados paréntesis abiertos
+
+Una expresión contiene demasiados niveles de paréntesis en una única expresión. Simplifique la expresión o divídala en varias instrucciones.
+
+Antes de Visual C++ 6.0 Service Pack 3, el límite de paréntesis anidados en una única expresión era 59. Actualmente, el límite de paréntesis anidados es 256.

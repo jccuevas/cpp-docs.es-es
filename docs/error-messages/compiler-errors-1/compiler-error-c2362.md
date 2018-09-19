@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2362 | Documentos de Microsoft
+title: Error del compilador C2362 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b0b77930acba6ecf2d0f3c6748ba52e9b28e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f78b850f95614255fed372570742a0f88a9e30e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035986"
 ---
 # <a name="compiler-error-c2362"></a>Error del compilador C2362
-inicialización de 'identificador' se omite en 'goto label'  
-  
- Cuando se compila con [/Za](../../build/reference/za-ze-disable-language-extensions.md), saltar a la etiqueta impide que el identificador se está inicializando.  
-  
- No se puede saltar más allá de una declaración con un inicializador a menos que la declaración está incluida en un bloque que no se especifica ninguno, o ya se ha inicializado la variable.  
-  
- El ejemplo siguiente genera la advertencia C2326:  
-  
-```  
-// C2362.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   int i = 1;      // C2362, initialization skipped  
-label1:;  
-}  
-```  
-  
- Posible resolución:  
-  
-```  
-// C2362b.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   {  
-      int j = 1;   // OK, this block is never entered  
-   }  
-label1:;  
-}  
+
+inicialización de 'identificador' se omite en 'goto label'
+
+Cuando se compila con [/Za](../../build/reference/za-ze-disable-language-extensions.md), saltar a la etiqueta impide que el identificador que se está inicializando.
+
+No se puede saltar una declaración con un inicializador a menos que la declaración está incluida en un bloque que no se ha especificado o ya se inicializó la variable.
+
+El ejemplo siguiente genera la advertencia C2326:
+
+```
+// C2362.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   int i = 1;      // C2362, initialization skipped
+label1:;
+}
+```
+
+Posible resolución:
+
+```
+// C2362b.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   {
+      int j = 1;   // OK, this block is never entered
+   }
+label1:;
+}
 ```

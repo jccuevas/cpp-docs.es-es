@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2545 | Documentos de Microsoft
+title: Error del compilador C2545 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7dfadefc8ec0c9bb7a5fbd516a561833340767
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94dd8220922b1db9d4cb361487948cd5e3b4e51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029044"
 ---
 # <a name="compiler-error-c2545"></a>Error del compilador C2545
-'operador': no se puede encontrar el operador sobrecargado  
-  
- El operador no puede utilizarse con los operandos proporcionados. Debe proporcionar un operador sobrecargado con los operandos requeridos.  
-  
- Este error puede generarse si operandos tienen un tipo incorrecto.  
-  
- Este error puede corregirse si se define un operador de conversión o un constructor que toma un parámetro único.
+
+'operador': no se puede encontrar el operador sobrecargado
+
+El operador no se puede usar con los operandos proporcionados. Debe proporcionar un operador sobrecargado con los operandos requeridos.
+
+Este error puede deberse a operandos tienen un tipo incorrecto.
+
+Este error puede corregirse si se define un operador de conversión o un constructor que toma un parámetro único.

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043422"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregación y Macros de clase de fábrica
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*  
+*x*<br/>
 [in] El nombre de la clase que está definiendo como agregables.
 
 ### <a name="remarks"></a>Comentarios
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*  
+*CF*<br/>
 [in] El nombre de la clase que implementa el objeto de generador de clases.
 
 ### <a name="remarks"></a>Comentarios
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parámetros
 
-*LIC*  
+*LIC*<br/>
 [in] Una clase que implementa `VerifyLicenseKey`, `GetLicenseKey`, y `IsLicenseValid`.
 
 ### <a name="remarks"></a>Comentarios
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parámetros
 
-*licencia*  
+*licencia*<br/>
 Una clase que implementa las funciones estáticas siguientes:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Parámetros
 
-*obj*  
+*obj*<br/>
 [in] El nombre de su objeto de clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase.
 
 `CComClassFactorySingleton` se deriva de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) y usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir un objeto único. Cada llamada a la `CreateInstance` método simplemente consulta este objeto para un puntero de interfaz.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*  
+*x*<br/>
 [in] El nombre del objeto de clase se define como no agregable.
 
 ### <a name="remarks"></a>Comentarios
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*  
+*x*<br/>
 [in] El nombre del objeto de clase se definen como sólo agregables.
 
 ### <a name="remarks"></a>Comentarios
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*  
+*x*<br/>
 [in] El nombre del objeto de clase se define como no agregable o agregables.
 
 ### <a name="remarks"></a>Comentarios
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Parámetros
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] Las marcas VIEWSTATUS. Consulte [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) para obtener una lista de marcas.
 
 ### <a name="example"></a>Ejemplo

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 56e93bf1485cefed9a44e0e6260358650ab8b296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032593"
 ---
 # <a name="bitmap-structure"></a>BITMAP (Estructura)
 El **mapa de bits** estructura define el alto, ancho, formato de color y los valores de bit de un mapa de bits lógico **.**  
@@ -67,19 +67,15 @@ typedef struct tagBITMAP {  /* bm */
   
  Exámenes se organizan como se indica a continuación para un mapa de bits monocromático de alto *n*:  
   
- `Scan 0`  
-  
- `Scan 1`  
-  
- `.`  
-  
- `.`  
-  
- `.`  
-  
- `Scan n-2`  
-  
- `Scan n-1`  
+```
+Scan 0
+Scan 1
+.
+.
+.
+Scan n-2
+Scan n-1
+```
   
  Los píxeles de un dispositivo monocromático son blanco o negro. Si el bit correspondiente en el mapa de bits es 1, se activa el píxel (blanco). Si el bit correspondiente en el mapa de bits es 0, se desactiva el píxel (negro).  
   

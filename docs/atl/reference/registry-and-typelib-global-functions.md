@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028342"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funciones globales Registry y TypeLib
 
@@ -72,8 +72,8 @@ Utilice esta función para determinar si la aplicación redirige el acceso de re
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);  
+```
+ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -101,22 +101,22 @@ Crea la clave del registro especificada.
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*hKey*  
+*hKey*<br/>
 Identificador de una clave del registro abierta.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 El nombre de una clave que esta función se abre o se crea.
 
-*phkResult*  
+*phkResult*<br/>
 Un puntero a una variable que recibe un identificador de la clave creado o abierto.
 
-*pTM*  
+*pTM*<br/>
 Puntero a un `CAtlTransactionManager` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -133,19 +133,19 @@ Elimina la clave del registro especificada.
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*hKey*  
+*hKey*<br/>
 Identificador de una clave del registro abierta.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 El nombre de la clave que se va a eliminar.
 
-*pTM*  
+*pTM*<br/>
 Puntero a un `CAtlTransactionManager` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -162,19 +162,19 @@ Una aplicación auxiliar para registrar un controlador de vista previa.
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);  
+```
+BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Especifica el CLSID del controlador.
 
-*lpszShortTypeName*  
+*lpszShortTypeName*<br/>
 Especifica el ProgID del controlador.
 
-*lpszFilterExt*  
+*lpszFilterExt*<br/>
 Especifica la extensión de archivo registrado con este controlador.
 
 ### <a name="requirements"></a>Requisitos
@@ -191,10 +191,10 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 El identificador de la instancia de módulo.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Cadena con el formato "\\\N", donde N es el índice del recurso de biblioteca de tipo entero. Puede ser NULL si no se requiere ningún índice.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -203,7 +203,8 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función auxiliar utilizan [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) y [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).  
+Esta función auxiliar utilizan [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) y [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlbase.h
@@ -214,22 +215,22 @@ Abre la clave del registro especificada.
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*hKey*  
+*hKey*<br/>
 Identificador de una clave del registro abierta.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 El nombre de una clave que esta función se abre o se crea.
 
-*phkResult*  
+*phkResult*<br/>
 Un puntero a una variable que recibe un identificador de la clave creada.
 
-*pTM*  
+*pTM*<br/>
 Puntero a un `CAtlTransactionManager` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -246,28 +247,28 @@ Abre la clave del registro especificada.
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*hKey*  
+*hKey*<br/>
 Identificador de una clave del registro abierta.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 El nombre de una clave que esta función se abre o se crea.
 
-*ulOptions*  
+*ulOptions*<br/>
 Este parámetro está reservado y debe ser cero.
 
-*samDesired*  
+*samDesired*<br/>
 Una máscara que especifica los derechos de acceso deseado a la clave.
 
-*phkResult*  
+*phkResult*<br/>
 Un puntero a una variable que recibe un identificador de la clave abierta.
 
-*pTM*  
+*pTM*<br/>
 Puntero a un `CAtlTransactionManager` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -284,13 +285,13 @@ Una aplicación auxiliar para anular el registro de un controlador de vista prev
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);  
+```
+BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Especifica el CLSID del controlador para anular su registro.
 
 ### <a name="requirements"></a>Requisitos
@@ -303,13 +304,13 @@ Establece si la aplicación redirige el acceso de registro a la **HKEY_CURRENT_U
 
 ### <a name="syntax"></a>Sintaxis
 
-```  
-ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);  
+```
+ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*  
+*bHabilitar el*<br/>
 [in] TRUE indica que la información del registro se dirige a la **HKCU** nodo; FALSE indica que la aplicación escribe información del registro en el nodo de forma predeterminada. El nodo de valor predeterminado es **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -321,6 +322,7 @@ S_OK si el método se realiza correctamente, en caso contrario, el error HRESULT
 Redirección del registro no está habilitada de forma predeterminada. Si habilita esta opción, se redirige el acceso al registro a **HKEY_CURRENT_USER\Software\Classes**.
 
 El redireccionamiento no es global. Solo los marcos de trabajo MFC y ATL se ven afectados por esta redirección del registro.  
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlbase.h  
@@ -339,10 +341,10 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>Parámetros
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 El identificador de la instancia de módulo.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Cadena con el formato "\\\N", donde N es el índice del recurso de biblioteca de tipo entero. Puede ser NULL si no se requiere ningún índice.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -352,6 +354,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 ### <a name="remarks"></a>Comentarios
 
 Esta función auxiliar utilizan [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) y [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlbase.h
@@ -372,16 +375,16 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>Parámetros
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Identificador del módulo asociado con la biblioteca de tipos.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Cadena con el formato "\\\N", donde N es el índice del recurso de biblioteca de tipo entero. Puede ser NULL si no se requiere ningún índice.
 
-*pbstrPath*  
+*pbstrPath*<br/>
 La devolución es correcta, contiene la ruta de acceso completa del módulo asociado con la biblioteca de tipos.
 
-*ppTypeLib*  
+*ppTypeLib*<br/>
 La devolución es correcta, contiene un puntero a un puntero a la biblioteca de tipos cargados.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -415,13 +418,13 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Parámetros
 
-*pT*  
+*pT*<br/>
 Un puntero al objeto actual.
 
-*rdxOp*  
+*rdxOp*<br/>
 Un valor de enumeración que indica qué operación debe realizar la función. Consulte la tabla en la sección Comentarios para los valores permitidos.
 
-*pItem*  
+*pItem*<br/>
 Puntero a los datos que se leen o escriben en el registro. Los datos también pueden representar una clave que se va a eliminar del registro. El valor predeterminado es NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -446,5 +449,5 @@ Los posibles valores enum que indican que debe realizar la operación de la func
 
 ## <a name="see-also"></a>Vea también
 
-[Funciones](atl-functions.md)   
+[Funciones](atl-functions.md)<br/>
 [Macros de intercambio de datos de Registro](registry-data-exchange-macros.md)

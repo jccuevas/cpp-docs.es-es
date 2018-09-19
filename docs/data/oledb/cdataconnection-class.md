@@ -76,14 +76,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 64e7973c1a818b51173fd4f44458266c10053710
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b3786a131015ac71a5b96afa3acd8d4bb4a8008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338264"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029980"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection (Clase)
+
 Administra la conexión con el origen de datos.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -93,7 +94,8 @@ class CDataConnection
 ```  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldbcli.h 
+
+**Encabezado:** atldbcli.h 
 
 ## <a name="members"></a>Miembros  
   
@@ -118,16 +120,18 @@ class CDataConnection
 |[operador CSession *](#op_csession_star)|Devuelve un puntero para el objeto contenido `CSession` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CDataConnection` es una clase útil para crear clientes porque encapsula los objetos necesarios (origen de datos y sesión) y parte del trabajo que debe hacer cuando se conecta a un origen de datos  
+
+`CDataConnection` es una clase útil para crear clientes porque encapsula los objetos necesarios (origen de datos y sesión) y parte del trabajo que debe hacer cuando se conecta a un origen de datos  
   
- Sin `CDataConnection`, tendrá que crear un `CDataSource` de objeto, llame a su [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) método, a continuación, cree una instancia de un [CSession](../../data/oledb/csession-class.md) de objeto, llame a su [ Abra](../../data/oledb/csession-open.md) método, a continuación, cree un [CCommand](../../data/oledb/ccommand-class.md) objeto y llamar a su `Open`* métodos.  
+Sin `CDataConnection`, tendrá que crear un `CDataSource` de objeto, llame a su [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) método, a continuación, cree una instancia de un [CSession](../../data/oledb/csession-class.md) de objeto, llame a su [ Abra](../../data/oledb/csession-open.md) método, a continuación, cree un [CCommand](../../data/oledb/ccommand-class.md) objeto y llamar a su `Open`* métodos.  
   
- Con `CDataConnection`, basta con crear un objeto de conexión, le pasa una cadena de inicialización y luego usar esa conexión para abrir los comandos. Si planea usar la conexión a la base de datos varias veces, resulta una buena idea mantener abierta, la conexión y `CDataConnection` proporciona una manera cómoda de hacer eso.  
+Con `CDataConnection`, basta con crear un objeto de conexión, le pasa una cadena de inicialización y luego usar esa conexión para abrir los comandos. Si planea usar la conexión a la base de datos varias veces, resulta una buena idea mantener abierta, la conexión y `CDataConnection` proporciona una manera cómoda de hacer eso.  
   
 > [!NOTE]
 >  Si va a crear una aplicación de base de datos que necesita para administrar varias sesiones, deberá usar [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).  
 
 ## <a name="#cdataconnection"></a> CDataConnection:: CDataConnection
+
 Crea una instancia e inicializa un `CDataConnection` objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -138,15 +142,18 @@ CDataConnection(const CDataConnection &ds);
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *DS*  
- [in] Una referencia a una conexión de datos existente.  
+
+*DS*<br/>
+[in] Una referencia a una conexión de datos existente.  
   
 ### <a name="remarks"></a>Comentarios  
- El primer reemplazo crea un nuevo `CDataConnection` objeto con la configuración predeterminada.  
+
+El primer reemplazo crea un nuevo `CDataConnection` objeto con la configuración predeterminada.  
   
- El segundo reemplazo crea un nuevo `CDataConnection` objeto con la configuración equivalente al objeto de conexión de datos que especifique. 
+El segundo reemplazo crea un nuevo `CDataConnection` objeto con la configuración equivalente al objeto de conexión de datos que especifique. 
 
 ## <a name="#copy"></a> CDataConnection:: Copy
+
 Crea una copia de una conexión de datos existente.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -156,10 +163,12 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *DS*  
- [in] Una referencia a una conexión de datos existente para copiar. 
+
+*DS*<br/>
+[in] Una referencia a una conexión de datos existente para copiar. 
 
 ## <a name="#open"></a> CDataConnection:: Open
+
 Abre una conexión a un origen de datos mediante una cadena de inicialización.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -169,13 +178,16 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *szInitString*  
- [in] La cadena de inicialización del origen de datos.  
+
+*szInitString*<br/>
+[in] La cadena de inicialización del origen de datos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un HRESULT estándar.  
+
+Un HRESULT estándar.  
 
 ## <a name="#opennewsession"></a> CDataConnection:: Opennewsession
+
 Se abre una nueva sesión con el origen de datos del objeto de conexión actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -185,16 +197,20 @@ HRESULT OpenNewSession(CSession & session) throw();
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Sesión*  
- [entrada/salida] Una referencia al objeto de sesión nuevo.  
+
+*Sesión*<br/>
+[entrada/salida] Una referencia al objeto de sesión nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
- La nueva sesión usa el objeto de origen de datos independiente del objeto de conexión actual como su elemento primario y puede tener acceso a todos la misma información que el origen de datos.  
+
+La nueva sesión usa el objeto de origen de datos independiente del objeto de conexión actual como su elemento primario y puede tener acceso a todos la misma información que el origen de datos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un HRESULT estándar.  
+
+Un HRESULT estándar.  
 
 ## <a name="op_bool"></a> CDataConnection:: operator BOOL
+
 Determina si la sesión actual está abierta o no.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -204,9 +220,11 @@ operator BOOL() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve **BOOL** valor (typedef MFC). **TRUE** significa que la sesión actual está abierta; **FALSE** significa que se cierra la sesión actual. 
+
+Devuelve **BOOL** valor (typedef MFC). **TRUE** significa que la sesión actual está abierta; **FALSE** significa que se cierra la sesión actual. 
 
 ## <a name="op_bool_ole"></a> CDataConnection:: operator bool (OLE DB)
+
 Determina si la sesión actual está abierta o no.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -216,9 +234,11 @@ operator bool() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve un **bool** valor (tipo de datos de C++). **True** significa que la sesión actual está abierta; **false** significa que se cierra la sesión actual.  
+
+Devuelve un **bool** valor (tipo de datos de C++). **True** significa que la sesión actual está abierta; **false** significa que se cierra la sesión actual.  
 
 ## <a name="op_cdata_amp"></a> CDataConnection:: operator CDataSource&amp;
+
 Devuelve una referencia a la `CDataSource` objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -228,16 +248,19 @@ operator const CDataSource&() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este operador devuelve una referencia a la `CDataSource` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CDataSource` referencia se espera.  
+
+Este operador devuelve una referencia a la `CDataSource` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CDataSource` referencia se espera.  
   
 ### <a name="example"></a>Ejemplo  
- Si tiene una función (como `func` a continuación) que toma un `CDataSource` referencia, puede usar `CDataSource&` para pasar un `CDataConnection` objeto en su lugar.  
+
+Si tiene una función (como `func` a continuación) que toma un `CDataSource` referencia, puede usar `CDataSource&` para pasar un `CDataConnection` objeto en su lugar.  
   
- [!code-cpp[NVC_OLEDB_Consumer#3](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#3](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_1.cpp)]  
   
- [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)] 
+[!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)] 
 
 ## <a name="op_cdata_star"></a> CDataConnection:: operator CDataSource *
+
 Devuelve un puntero para el objeto contenido `CDataSource` objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -247,11 +270,13 @@ operator const CDataSource*() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este operador devuelve un puntero para el objeto contenido `CDataSource` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CDataSource` puntero se espera.  
+
+Este operador devuelve un puntero para el objeto contenido `CDataSource` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CDataSource` puntero se espera.  
   
- Consulte [operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) para obtener un ejemplo de uso.  
+Consulte [operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) para obtener un ejemplo de uso.  
 
 ## <a name="op_csession_amp"></a> CDataConnection:: operator CSession&amp;
+
 Devuelve una referencia a la `CSession` objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -261,16 +286,19 @@ operator const CSession&();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este operador devuelve una referencia a la `CSession` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CSession` referencia se espera.  
+
+Este operador devuelve una referencia a la `CSession` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CSession` referencia se espera.  
   
 ### <a name="example"></a>Ejemplo  
- Si tiene una función (como `func` a continuación) que toma un `CSession` referencia, puede usar `CSession&` para pasar un `CDataConnection` objeto en su lugar.  
+
+Si tiene una función (como `func` a continuación) que toma un `CSession` referencia, puede usar `CSession&` para pasar un `CDataConnection` objeto en su lugar.  
   
- [!code-cpp[NVC_OLEDB_Consumer#5](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#5](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_1.cpp)]  
   
- [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]  
 
 ## <a name="op_csession_star"></a> CDataConnection:: operator CSession *
+
 Devuelve un puntero para el objeto contenido `CSession` objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -280,11 +308,14 @@ operator const CSession*() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este operador devuelve un puntero para el objeto contenido `CSession` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CSession` puntero se espera.  
+
+Este operador devuelve un puntero para el objeto contenido `CSession` objeto, lo que permite pasar un `CDataConnection` objeto donde un `CSession` puntero se espera.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [operador CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md) para obtener un ejemplo de uso.  
+
+Consulte [operador CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md) para obtener un ejemplo de uso.  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

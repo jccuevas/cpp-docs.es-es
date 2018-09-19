@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759834"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045086"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase (clase)
 
@@ -89,13 +89,13 @@ Para obtener más información, consulte [asignación de archivos](/windows/desk
 El constructor.
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*orig.*  
+*orig.*<br/>
 El objeto de asignación del archivo original a copiar para crear el nuevo objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*orig.*  
+*orig.*<br/>
 El objeto de asignación de archivos original para copiarlos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Parámetros
 
-*hFile*  
+*hFile*<br/>
 Handle para el archivo desde el que se va a crear un objeto de asignación. *hFile* debe ser válido y no puede establecerse en INVALID_HANDLE_VALUE.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 El tamaño de asignación. Si es 0, el tamaño máximo del archivo de asignación objeto es igual al tamaño actual del archivo identificado por *hFile.*
 
-*nOffset*  
+*nOffset*<br/>
 El desplazamiento de archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 La protección que desea para la vista del archivo cuando se asigna el archivo. Consulte *flProtect* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>Parámetros
 
-*nMappingSize*  
+*nMappingSize*<br/>
 El tamaño de asignación. Si es 0, el tamaño máximo del archivo de asignación objeto es igual al tamaño actual del objeto de asignación del archivo identificado por *szName*.
 
-*szName*  
+*szName*<br/>
 El nombre del objeto de asignación.
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 Apunta a un valor booleano que se establece en TRUE si el objeto de asignación ya existía.
 
-*LPSA*  
+*LPSA*<br/>
 El puntero a un `SECURITY_ATTRIBUTES` estructura que determina si el identificador devuelto se puede heredar mediante procesos secundarios. Consulte *lpAttributes* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 La protección que desea para la vista del archivo, cuando se asigna el archivo. Consulte *flProtect* en `CreateFileMapping` en el SDK de Windows.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>Parámetros
 
-*szName*  
+*szName*<br/>
 El nombre del objeto de asignación. Si hay un identificador abierto a un objeto de asignación de archivos con este nombre y el descriptor de seguridad en el objeto de asignación no entra en conflicto con el *dwViewDesiredAccess* la operación de apertura de parámetro, se realiza correctamente.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 El tamaño de asignación. Si es 0, el tamaño máximo del archivo de asignación objeto es igual al tamaño actual del objeto de asignación del archivo identificado por *szName*.
 
-*nOffset*  
+*nOffset*<br/>
 El desplazamiento de archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Parámetros
 
-*orig.*  
+*orig.*<br/>
 El objeto de asignación de archivos actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -328,5 +328,5 @@ Consulte [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa
 
 ## <a name="see-also"></a>Vea también
 
-[CAtlFileMapping (clase)](../../atl/reference/catlfilemapping-class.md)   
+[CAtlFileMapping (clase)](../../atl/reference/catlfilemapping-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

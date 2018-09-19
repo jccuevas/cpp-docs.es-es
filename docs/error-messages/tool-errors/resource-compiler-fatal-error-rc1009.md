@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable del compilador de recursos RC1009 | Documentos de Microsoft
+title: Error irrecuperable del compilador de recursos RC1009 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f90b127ccee7579304e3963d4edb6ff56ecd95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ceed87c62863f9a5150feebf90f67118656d858
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034114"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>Error irrecuperable del compilador de recursos RC1009
-límite del compilador: las macros están demasiado anidadas 'macro'  
-  
- El archivo supera el límite del compilador de recursos anidamiento de macros. Revise el archivo de origen especificada para reducir la profundidad del anidamiento de las macros.
+
+límite del compilador: las macros están demasiado anidadas 'macro'
+
+El archivo supera el límite del compilador de recursos de anidamiento de macros. Revise el archivo de origen especificado para disminuir la profundidad de anidamiento de las macros.

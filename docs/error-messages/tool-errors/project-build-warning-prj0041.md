@@ -1,5 +1,5 @@
 ---
-title: Advertencia PRJ0041 al compilar del proyecto | Documentos de Microsoft
+title: Advertencia PRJ0041 al compilar del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e845967b0a7116d6edade98b571de5bc1bcd9a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7677c5718783065f64e52f98f7ddbed76e905d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318066"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038144"
 ---
 # <a name="project-build-warning-prj0041"></a>Advertencia PRJ0041 al compilar el proyecto
-No se puede encontrar que falta la dependencia 'dependencia' archivo 'archivo'. El proyecto aún puede generarse, pero puede seguir apareciendo obsoletos hasta que se encuentra este archivo.  
-  
- Un archivo (archivo de recursos o.idl/.odl, por ejemplo, contiene una instrucción include que el sistema del proyecto no se pudo resolver.  
-  
- Dado que el sistema del proyecto no procesa las instrucciones de preprocesador (por ejemplo, #if), la instrucción infractor no sea realmente parte de la compilación.  
-  
- Para resolver esta advertencia, elimine todo el código necesario en los archivos .rc o agregue archivos de marcador de posición del nombre adecuado.
+
+No se puede encontrar que falta la dependencia 'dependencia' archivo 'archivo'. El proyecto aún puede compilarse, pero puede que continúe pareciendo obsoleto hasta que se encuentra este archivo.
+
+Un archivo (archivo de recursos o.idl/.odl, por ejemplo, contiene una instrucción include que el sistema del proyecto no se pudo resolver.
+
+Dado que el sistema del proyecto no procesa las instrucciones de preprocesador (#if, por ejemplo), la instrucción infractor no puede ser realmente parte de la compilación.
+
+Para resolver esta advertencia, elimine todo el código en archivos .rc innecesario o agregar archivos de marcador de posición del nombre adecuado.

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2252 | Documentos de Microsoft
+title: Error del compilador C2252 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54e99fb1e4d3fb168b6b48a8cb6b1d0707281da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31fb5b48f322fbce71f1b830a01e428930937958
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041381"
 ---
 # <a name="compiler-error-c2252"></a>Error del compilador C2252
-no se puede crear explícitamente instancias de plantilla en el ámbito actual  
-  
- El compilador detectó un problema con una instancia explícita de una plantilla.  Por ejemplo, no puede crear instancias explícitamente de una plantilla en una función.  
-  
- El ejemplo siguiente genera C2252:  
-  
-```  
-// C2252.cpp  
-class A {  
-public:  
-   template <class T>  
-   int getit(int i , T * it ) {  
-      return i;  
-   }  
-   template int A::getit<double>(int i, double * it);   // C2252  
-   // try the following line instead  
-   // template <> int A::getit<double>(int i, double * it);  
-  
-};  
-  
-int main() {  
-   // cannot explicitly instantiate in function  
-   template int A::getit<long>(int i, long * it);   // C2252  
-}  
+
+no se puede crear explícitamente instancias de plantilla en el ámbito actual
+
+El compilador detectó un problema con una instancia explícita de una plantilla.  Por ejemplo, no puede crear instancias explícitamente de una plantilla en una función.
+
+El ejemplo siguiente genera C2252:
+
+```
+// C2252.cpp
+class A {
+public:
+   template <class T>
+   int getit(int i , T * it ) {
+      return i;
+   }
+   template int A::getit<double>(int i, double * it);   // C2252
+   // try the following line instead
+   // template <> int A::getit<double>(int i, double * it);
+
+};
+
+int main() {
+   // cannot explicitly instantiate in function
+   template int A::getit<long>(int i, long * it);   // C2252
+}
 ```

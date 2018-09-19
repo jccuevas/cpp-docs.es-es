@@ -39,34 +39,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97595b29c2d79cd6209479e39987208cafe6f0f8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0804e2a3e9d2f1fc37fae1eb72599f481e6b8c7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021010"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t (Operadores relacionales)
-**Específicos de Microsoft**  
-  
- Compara dos objetos `_bstr_t`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-bool operator!( ) const throw( );   
-bool operator==(const _bstr_t& str) const throw( );  
-bool operator!=(const _bstr_t& str) const throw( );  
-bool operator<(const _bstr_t& str) const throw( );  
-bool operator>(const _bstr_t& str) const throw( );  
-bool operator<=(const _bstr_t& str) const throw( );  
-bool operator>=(const _bstr_t& str) const throw( );  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven TRUE si las comparaciones se sostienen en caso contrario, devuelve FALSE.  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [_bstr_t (Clase)](../cpp/bstr-t-class.md)
+
+**Específicos de Microsoft**
+
+Compara dos objetos `_bstr_t`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+bool operator!( ) const throw( ); 
+bool operator==(const _bstr_t& str) const throw( );
+bool operator!=(const _bstr_t& str) const throw( );
+bool operator<(const _bstr_t& str) const throw( );
+bool operator>(const _bstr_t& str) const throw( );
+bool operator<=(const _bstr_t& str) const throw( );
+bool operator>=(const _bstr_t& str) const throw( );
+```
+
+## <a name="remarks"></a>Comentarios
+
+Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven TRUE si las comparaciones se sostienen en caso contrario, devuelve FALSE.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[_bstr_t (Clase)](../cpp/bstr-t-class.md)

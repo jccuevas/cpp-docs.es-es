@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2829 | Documentos de Microsoft
+title: Error del compilador C2829 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091e8ad9238b0f4281b3afc900663ca487d4eada
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04798056b25d09ad78f5da0e85b47345db5608dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034998"
 ---
 # <a name="compiler-error-c2829"></a>Error del compilador C2829
-'operador' no puede tener una lista de parámetros variable  
-  
- Sólo dos operadores pueden tomar listas de parámetros de variable:  
-  
--   Llamada de función `()`  
-  
--   `new`
+
+'operator operator' no puede tener una lista de parámetros variable
+
+Sólo dos operadores pueden tomar las listas de parámetros de variable:
+
+- Llamada de función `()`
+
+- `new`

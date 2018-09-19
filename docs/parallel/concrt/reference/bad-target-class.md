@@ -1,5 +1,5 @@
 ---
-title: bad_target (clase) | Documentos de Microsoft
+title: bad_target (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027640"
 ---
 # <a name="badtarget-class"></a>bad_target (Clase)
 Esta clase describe una excepción que se produce cuando un bloque de mensajería recibe un puntero a un destino que no es válido para la operación que se realiza.  
@@ -43,7 +43,7 @@ class bad_target : public std::exception;
 |[bad_target](#ctor)|Sobrecargado. Construye un objeto `bad_target`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta excepción se produce normalmente por razones como un destino si se intenta consumir un mensaje que se reserva para un destino diferente o liberando una reserva que no contienen.  
+ Esta excepción se produce normalmente por razones como un destino al intentar utilizar un mensaje que se reserva para un destino diferente o liberando una reserva que no contiene.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -66,8 +66,8 @@ bad_target() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
