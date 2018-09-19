@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684829"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401808"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
 
@@ -50,43 +50,43 @@ La biblioteca de plantillas C++ de Windows en tiempo de ejecución y C++ / c++ /
 
 Estos son algunos recursos que pueden ayudarle a trabajar inmediatamente con la biblioteca de plantillas C++ de Windows en tiempo de ejecución.
 
-[La biblioteca de Windows en tiempo de ejecución (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[La biblioteca de Windows en tiempo de ejecución (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 En este vídeo de Channel 9, obtenga más información sobre cómo la biblioteca de plantillas C++ de Windows en tiempo de ejecución ayuda a que escribir aplicaciones de plataforma Universal de Windows (UWP) y cómo crear y consumir los componentes de Windows en tiempo de ejecución.
 
-[Cómo: activar y usar un componente de tiempo de ejecución de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[Cómo: activar y usar un componente de tiempo de ejecución de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para inicializar el tiempo de ejecución de Windows y activar y usar un componente de Windows en tiempo de ejecución.
 
-[Cómo: completar operaciones asincrónicas](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[Cómo: completar operaciones asincrónicas](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.
 
-[Cómo: controlar eventos](../windows/how-to-handle-events-using-wrl.md)  
+[Cómo: controlar eventos](../windows/how-to-handle-events-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para suscribirse y controlar los eventos de un objeto en tiempo de ejecución de Windows.
 
-[Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Obtenga información sobre cómo crear una aplicación UWP que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-[Cómo: crear un componente COM clásico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[Cómo: crear un componente COM clásico](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente COM básico y una forma básica de cómo registrar y utilizar el componente COM de una aplicación de escritorio.
 
-[Procedimiento para crear instancias de componentes WRL directamente](../windows/how-to-instantiate-wrl-components-directly.md)  
+[Procedimiento para crear instancias de componentes WRL directamente](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 Aprenda a usar el [Microsoft::WRL::Make](../windows/make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funciones para crear instancias de un componente desde el módulo que lo define.
 
-[Procedimiento para usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[Procedimiento para usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Muestra cómo utilizar componentes personalizados de Windows en tiempo de ejecución desde la WRL mediante la creación de un archivo IDL a partir de los metadatos .winmd.
 
-[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Se muestra cómo usar el [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) y [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto con las tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.
 
-[Ejemplo de Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Ejemplo de Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Usa el `HttpRequest` clase que se define en [Tutorial: conectar usando tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) en el contexto de una aplicación UWP completa.
 
-[Creación de un componente DLL en tiempo de ejecución de Windows con el ejemplo de C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[Creación de un componente DLL en tiempo de ejecución de Windows con el ejemplo de C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente DLL en proceso y utilizarlo desde C++ / c++ / CX, JavaScript y C#.
 
-[Ejemplo de juego marble maze con DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[Ejemplo de juego marble maze con DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para administrar la duración de los componentes de COM como DirectX y Media Foundation en el contexto de un completo juego en 3D.
 
-[Cómo enviar notificaciones de ejemplo de aplicaciones de escritorio](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[Cómo enviar notificaciones de ejemplo de aplicaciones de escritorio](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para trabajar con notificaciones del sistema de una aplicación de escritorio.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de plantillas C++ de Windows en tiempo de ejecución y ATL
