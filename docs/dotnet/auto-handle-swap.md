@@ -1,5 +1,5 @@
 ---
-title: auto_handle::swap | Documentos de Microsoft
+title: auto_handle::swap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 87a0a59197a7ebe22c5419e992f681787cd3ea7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 059f56485dee9668105c7e44fdee6fb910844810
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018033"
 ---
 # <a name="autohandleswap"></a>auto_handle::swap
 Intercambia los objetos con otro `auto_handle`.  
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_right`  
- El `auto_handle` con la que se va a intercambiar objetos.  
+*a la _derecha*<br/>
+El `auto_handle` con el que se va a intercambiar objetos.  
   
 ## <a name="example"></a>Ejemplo  
   

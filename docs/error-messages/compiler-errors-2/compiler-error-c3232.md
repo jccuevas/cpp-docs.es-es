@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3232 | Documentos de Microsoft
+title: Error del compilador C3232 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a770613c2cd851d48d7424166a90ed8183e5e536
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e7b3e8c306b8e883fd3edb0b2781b297842bb0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018371"
 ---
 # <a name="compiler-error-c3232"></a>Error del compilador C3232
-'parámetro': un parámetro de tipo genérico no se puede usar en un nombre completo  
-  
- Se usó incorrectamente un parámetro de tipo genérico.  
-  
- El ejemplo siguiente genera la advertencia C3232:  
-  
-```  
-// C3232.cpp  
-// compile with: /clr  
-generic <class T>  
-ref class C {  
-   typename T::TYPE t;   // C3232  
-};  
+
+'parámetro': un parámetro de tipo genérico no se puede usar en un nombre completo
+
+Se usó incorrectamente un parámetro de tipo genérico.
+
+El ejemplo siguiente genera la advertencia C3232:
+
+```
+// C3232.cpp
+// compile with: /clr
+generic <class T>
+ref class C {
+   typename T::TYPE t;   // C3232
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4265 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4265 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c859e69095b1a7e6b756b0bcc7ca8e74ba8826
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0df54714038ab0fb6020e34aa35d677af5e899b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016135"
 ---
 # <a name="compiler-warning-level-3-c4265"></a>Advertencia del compilador (nivel 3) C4265
-'clase': clase tiene funciones virtuales, pero el destructor no es virtual  
-  
- Cuando una clase tiene funciones virtuales pero un destructor no virtual, objetos del tipo podrían no se destruyen correctamente cuando se destruye la clase a través de un puntero de clase base.  
-  
- De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
-  
- El ejemplo siguiente genera C4265:  
-  
-```  
-// C4265.cpp  
-// compile with: /W3 /c  
-#pragma warning(default : 4265)  
-class B  
-{  
-public:  
-   virtual void vmf();  
-  
-   ~B();  
-   // try the following line instead  
-   // virtual ~B();  
-};   // C4265  
-  
-int main()  
-{  
-   B b;  
-}  
+
+'class': clase tiene funciones virtuales, pero el destructor no es virtual
+
+Cuando una clase tiene funciones virtuales, pero un destructor no virtual, objetos del tipo podrían no se destruyen correctamente cuando se destruye la clase a través de un puntero de clase base.
+
+De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
+
+El ejemplo siguiente genera C4265:
+
+```
+// C4265.cpp
+// compile with: /W3 /c
+#pragma warning(default : 4265)
+class B
+{
+public:
+   virtual void vmf();
+
+   ~B();
+   // try the following line instead
+   // virtual ~B();
+};   // C4265
+
+int main()
+{
+   B b;
+}
 ```
