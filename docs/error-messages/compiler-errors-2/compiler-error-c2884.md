@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2884 | Documentos de Microsoft
+title: Error del compilador C2884 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bacfc53f8b1f14a9b7409a43db39fd943739e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d9266162d4608e39982cce1e94751e427bc5e47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054719"
 ---
 # <a name="compiler-error-c2884"></a>Error del compilador C2884
-'name': introducidos por la declaración using entra en conflicto con la función local 'function'  
-  
- Se intentó definir una función de más de una vez. La primera definición es una definición local. La segunda procede de un espacio de nombres con un `using` declaración.  
-  
- El ejemplo siguiente genera C2884:  
-  
-```  
-// C2884.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-void f() {  
-   void z(int);  
-   using A::z;   // C2884 z is already defined  
-}  
+
+'name': introducido por la declaración using entra en conflicto con la función local 'function'
+
+Ha intentado definir una función varias veces. La primera definición es una definición local. El segundo es de un espacio de nombres con un `using` declaración.
+
+El ejemplo siguiente genera C2884:
+
+```
+// C2884.cpp
+namespace A {
+   void z(int);
+}
+
+void f() {
+   void z(int);
+   using A::z;   // C2884 z is already defined
+}
 ```

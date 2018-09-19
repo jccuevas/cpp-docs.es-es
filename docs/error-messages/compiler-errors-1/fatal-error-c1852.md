@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1852 | Documentos de Microsoft
+title: Error irrecuperable C1852 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11160eea5e978a0c1ef67255d4e96b48fe2d101
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0adfa7eed25f1902300fa2378b8ffc19eb8dfafd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023805"
 ---
 # <a name="fatal-error-c1852"></a>Error irrecuperable C1852
-'filename' no es un archivo de encabezado precompilado válido  
-  
- El archivo no es un encabezado precompilado.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Archivo no válido especificado con **/Yu** o **#pragma hdrstop**.  
-  
-2.  El compilador supone una extensión de archivo .pch si no se especifica lo contrario.
+
+'filename' no es un archivo de encabezado precompilado válido
+
+El archivo no es un encabezado precompilado.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. Archivo no válido especificado con **/Yu** o **#pragma hdrstop**.
+
+1. El compilador supone una extensión de archivo .pch si no se especifica lo contrario.

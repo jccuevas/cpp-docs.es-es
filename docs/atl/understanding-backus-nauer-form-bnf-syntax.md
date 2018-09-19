@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9acb054c7d991e2d9e98df3ce9bba8c7093f281a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e615068580bcc9078959cc6cdd7831d05b5a4acd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020880"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Comprender la sintaxis de Backus Nauer Form (BNF)
 
@@ -54,56 +54,56 @@ Estos son algunos ejemplos de sintaxis que le ayudarán a comprender cómo funci
 
 ### <a name="syntax-example-1"></a>Ejemplo de sintaxis 1
 
-```  
-<registry expression> ::= <Add Key>  
+```
+<registry expression> ::= <Add Key>
 ```
 
 Especifica que `registry expression` es equivalente a `Add Key`.
 
 ### <a name="syntax-example-2"></a>Ejemplo de sintaxis 2
 
-```  
-<registry expression> ::= <Add Key> | <Delete Key>  
+```
+<registry expression> ::= <Add Key> | <Delete Key>
 ```
 
 Especifica que `registry expression` es equivalente al tipo `Add Key` o `Delete Key`.
 
 ### <a name="syntax-example-3"></a>Ejemplo de sintaxis 3
 
-```  
-<Key Name> ::= '<AlphaNumeric>+'  
+```
+<Key Name> ::= '<AlphaNumeric>+'
 ```
 
 Especifica que `Key Name` equivale a uno o varios `AlphaNumerics`.
 
 ### <a name="syntax-example-4"></a>Sintaxis de ejemplo 4
 
-```  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
+```
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>
 ```
 
 Especifica que `Add Key` es equivalente a `Key Name`y que los literales de cadena, `ForceRemove`, `NoRemove`, y `val`, son opcionales.
 
 ### <a name="syntax-example-5"></a>Ejemplo de sintaxis de 5
 
-```  
-<AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
+```
+<AlphaNumeric> ::= any character not NULL, that is, ASCII 0
 ```
 
 Especifica que `AlphaNumeric` es equivalente a cualquier carácter que no es NULL.
 
 ### <a name="syntax-example-6"></a>Sintaxis de ejemplo 6
 
-```  
-val 'testmulti' = m 'String 1\0String 2\0'  
+```
+val 'testmulti' = m 'String 1\0String 2\0'
 ```
 
 Especifica que el nombre de clave `testmulti` está formado por un valor multistring `String 1` y `String 2`.
 
 ### <a name="syntax-example-7"></a>Ejemplo de sintaxis 7
 
-```  
-val 'testhex' = d '&H55'  
+```
+val 'testhex' = d '&H55'
 ```
 
 Especifica que el nombre de clave `testhex` se establece un valor DWORD a 55 hexadecimal (85 decimal). Tenga en cuenta que este formato se ajusta a la **& H** notación que se encuentra en la especificación de Visual Basic.

@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1078 | Documentos de Microsoft
+title: Error grave de NMAKE U1078 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316652"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019379"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Error grave de NMAKE U1078
-desbordamiento constante en 'expresión'  
-  
- La expresión dada contiene una constante que supera el intervalo de-2.147.483.648 a 2.147.483.647. La constante aparecía en una de las siguientes situaciones:  
-  
--   Una expresión especificada con una directiva de preprocesamiento  
-  
--   Un nivel de error especificado con el guión (**-**) modificador de comando
+
+desbordamiento constante en 'expresión'
+
+La expresión dada contiene una constante que supera el intervalo de-2.147.483.648 a 2.147.483.647. La constante aparecía en una de las situaciones siguientes:
+
+- Una expresión especificada con una directiva de preprocesamiento
+
+- Un nivel de error especificado con el guión (**-**) modificador de comandos

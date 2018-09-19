@@ -1,5 +1,5 @@
 ---
-title: writeonly_texture_view (clase) | Documentos de Microsoft
+title: writeonly_texture_view (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047764"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view (Clase)
-Proporciona acceso de writeonly a una textura.  
+Proporciona acceso de solo escritura a una textura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,11 +45,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `value_type`  
- El tipo de los elementos de la textura.  
+*value_type*<br/>
+El tipo de los elementos de la textura.  
   
- `_Rank`  
- El rango de la textura.  
+*_Rank*<br/>
+El rango de la textura.  
   
 ## <a name="members"></a>Miembros  
   
@@ -64,7 +64,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[writeonly_texture_view está Constructor](#ctor)|Inicializa una nueva instancia de la clase `writeonly_texture_view`.|  
+|[writeonly_texture_view (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `writeonly_texture_view`.|  
 |[~ writeonly_texture_view (destructor)](#ctor)|Destruye el objeto `writeonly_texture_view`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -77,7 +77,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` objeto a este.|  
+|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` objeto a ésta.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -95,7 +95,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a> ~ writeonly_texture_view está 
+##  <a name="dtor"></a> ~ writeonly_texture_view 
 
  Destruye el objeto `writeonly_texture_view`.  
   
@@ -105,7 +105,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a> operator= 
 
- Copia especificado `writeonly_texture_view` objeto a este.  
+ Copia especificado `writeonly_texture_view` objeto a ésta.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -113,13 +113,13 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Other`  
- `writeonly_texture_view` objeto que se va a copiar de.  
+*_Otro*<br/>
+`writeonly_texture_view` objeto que se va a copiar desde.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `writeonly_texture_view` objeto.  
   
-##  <a name="rank"></a> Rango 
+##  <a name="rank"></a> rango 
 
  Obtiene el rango de la `writeonly_texture_view` objeto.  
   
@@ -138,13 +138,13 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Index`  
- El índice del elemento.  
+*_Index*<br/>
+El índice del elemento.  
   
- `value`  
- Nuevo valor del elemento.  
+*valor*<br/>
+Nuevo valor del elemento.  
   
-##  <a name="ctor"></a> writeonly_texture_view está 
+##  <a name="ctor"></a> writeonly_texture_view 
 
  Inicializa una nueva instancia de la clase `writeonly_texture_view`.  
   
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rank`  
- El rango de la textura.  
+*_Rank*<br/>
+El rango de la textura.  
   
- `value_type`  
- El tipo de los elementos de la textura.  
+*value_type*<br/>
+El tipo de los elementos de la textura.  
   
- `_Src`  
- La textura que se utiliza para crear la `writeonly_texture_view`.  
+*_Src*<br/>
+La textura que se usa para crear el `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

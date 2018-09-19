@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753063"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024509"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl (clase)
 
@@ -44,16 +44,16 @@ Esta clase implementa un cuadro de diálogo (modal o no modal) que hospeda los c
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `CAxDialogImpl`.
 
-*TBase*  
+*TBase*<br/>
 La clase de ventana base para `CDialogImplBaseT`.
 
 ## <a name="members"></a>Miembros
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parámetros
 
-*bAdvise*  
+*bAdvise*<br/>
 Se establece en true si todas las entradas de receptor recibir información; son entradas de False si todos los receptores que se deben notificar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] El identificador de la ventana propietaria.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
 
-*RECT &AMP;*  
+*RECT &AMP;*<br/>
 Este parámetro no se utiliza. Este parámetro se pasa `CComControl`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -180,16 +180,16 @@ Llame a este método para crear un cuadro de diálogo modal.
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) función de Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>Parámetros
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] El valor que va a devolver [DoModal](#domodal).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>Parámetros
 
-*pMsg*  
+*pMsg*<br/>
 Puntero a un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estructura que contiene el mensaje se va a comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>Vea también
 
-[CDialogImpl (clase)](../../atl/reference/cdialogimpl-class.md)   
+[CDialogImpl (clase)](../../atl/reference/cdialogimpl-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

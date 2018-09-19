@@ -1,5 +1,5 @@
 ---
-title: missing_wait (clase) | Documentos de Microsoft
+title: missing_wait (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5ebd607dc207975e7d38e3217c275d3d5d18bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2a44cbdb5abeed7d5dbd7be7dfaba37ba1d0145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686352"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024962"
 ---
 # <a name="missingwait-class"></a>missing_wait (Clase)
 Esta clase describe una excepción que se produce cuando todavía existen tareas programadas para un objeto `task_group` o `structured_task_group` en el momento que el destructor de objeto se ejecuta. Nunca se producirá esta excepción si el destructor se alcanza debido al desenredo de pila como el resultado de una excepción.  
@@ -43,7 +43,7 @@ class missing_wait : public std::exception;
 |[missing_wait)](#ctor)|Sobrecargado. Construye un objeto `missing_wait`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Ausencia de flujo de excepción, usted es responsable de llamar a la `wait` o `run_and_wait` método de un `task_group` o `structured_task_group` objeto antes de permitir que ese objeto se destruya. El runtime produce esta excepción como una indicación de que se olvidó de llamar el `wait` o `run_and_wait` método.  
+ Ausencia de flujo de excepciones, usted es responsable de una llamada a la `wait` o `run_and_wait` método de un `task_group` o `structured_task_group` objeto antes de permitir que ese objeto se destruya. El runtime produce esta excepción como una indicación de que se olvidó de llamar el `wait` o `run_and_wait` método.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -66,12 +66,12 @@ missing_wait() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [task_group (clase)](task-group-class.md)   
- [espera](task-group-class.md)   
+ [Espere](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group (clase)](structured-task-group-class.md)

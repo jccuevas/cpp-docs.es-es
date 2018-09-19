@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105359"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052847"
 ---
 # <a name="cadapt-class"></a>CAdapt (clase)
 
@@ -36,13 +36,13 @@ Esta plantilla se utiliza para ajustar las clases que vuelven a definir el opera
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T>  
+template <class T>
 class CAdapt
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo adaptado.
 
 ## <a name="members"></a>Miembros
@@ -97,10 +97,10 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parámetros
 
-*rSrc*  
+*rSrc*<br/>
 Una variable del tipo que se adapta para copiarse en el objeto de adaptador recién construido.
 
-*rSrCA*  
+*rSrCA*<br/>
 Un objeto de adaptador cuyos datos contenidos deben copiar (o mover) en el objeto de adaptador recién construido.
 
 ##  <a name="m_t"></a>  CAdapt::m_T
@@ -119,7 +119,7 @@ Esto **pública** miembro de datos se puede acceder de forma directa o indirecta
 
 Devuelve un **const** hacen referencia a la [m_T](#m_t) miembro, lo que el objeto de adaptador se traten como si fuese un objeto de tipo *T*.
 
-```  
+```
 operator const T&() const;
 ```
 
@@ -131,7 +131,7 @@ Un **const** hacen referencia a `m_T`.
 
 Devuelve una referencia a la [m_T](#m_t) miembro, lo que el objeto de adaptador se traten como si fuese un objeto de tipo *T*.
 
-```  
+```
 operator T&();
 ```
 
@@ -149,7 +149,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*rSrc*  
+*rSrc*<br/>
 Una referencia al objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -168,10 +168,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parámetros
 
-*rSrc*  
+*rSrc*<br/>
 Una referencia a un objeto de tipo adaptado a copiarse.
 
-*rSrCA*  
+*rSrCA*<br/>
 Una referencia a un objeto que se va a mover.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -188,7 +188,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*rSrc*  
+*rSrc*<br/>
 Una referencia al objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto

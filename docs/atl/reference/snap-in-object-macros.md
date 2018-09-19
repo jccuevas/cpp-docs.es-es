@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65995f24e58b0bdce4a15adc72de0b60ded644dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050559"
 ---
 # <a name="snap-in-object-macros"></a>Macros de objeto de complemento
 
@@ -57,7 +57,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>Parámetros
 
-*classname*  
+*classname*<br/>
 [in] El nombre de la clase de datos de extensión de complemento.
 
 ### <a name="remarks"></a>Comentarios
@@ -78,7 +78,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>Parámetros
 
-*_Clase*  
+*_Clase*<br/>
 [in] Especifica la clase de objeto de complemento.
 
 ### <a name="example"></a>Ejemplo
@@ -111,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>Parámetros
 
-*_Clase*  
+*_Clase*<br/>
 [in] Especifica la clase de objeto de complemento.
 
 ### <a name="example"></a>Ejemplo
@@ -128,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>Parámetros
 
-*dataClass*  
+*dataClass*<br/>
 [in] La clase de datos de la extensión del complemento.
 
 ### <a name="remarks"></a>Comentarios
@@ -149,7 +149,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>Parámetros
 
-*dataClass*  
+*dataClass*<br/>
 [in] La clase de datos de la extensión del complemento.
 
 ### <a name="remarks"></a>Comentarios
@@ -170,7 +170,7 @@ SNAPINMENUID( id )
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 [in] Identifica el menú contextual del complemento de objeto.
 
 ##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY
@@ -183,7 +183,7 @@ SNAPINTOOLBARID_ENTRY( id )
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 [in] Identifica el control de barra de herramientas.
 
 ### <a name="remarks"></a>Comentarios

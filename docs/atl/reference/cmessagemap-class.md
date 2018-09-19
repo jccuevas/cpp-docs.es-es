@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763232"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024403"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap (clase)
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] El identificador de la ventana que recibe el mensaje.
 
-*uMsg*  
+*uMsg*<br/>
 [in] El mensaje enviado a la ventana.
 
-*wParam*  
+*wParam*<br/>
 [in] Información adicional específica del mensaje.
 
-*lParam*  
+*lParam*<br/>
 [in] Información adicional específica del mensaje.
 
-*lResult*  
+*lResult*<br/>
 [out] El resultado del procesamiento del mensaje.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] El identificador del mapa de mensajes que procesará el mensaje. El mapa de mensajes de forma predeterminada, se declara con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), identificado por 0. Un mapa de mensajes alternativo, declarado con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), se identifica mediante `msgMapID`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -108,7 +108,7 @@ Lo llama el procedimiento de ventana de un [CContainedWindow](../../atl/referenc
 
 ## <a name="see-also"></a>Vea también
 
-[CDynamicChain (clase)](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CDynamicChain (clase)](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)
