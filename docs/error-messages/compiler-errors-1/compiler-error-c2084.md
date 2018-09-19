@@ -1,5 +1,5 @@
 ---
-title: C2084 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2084 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce1510dd6e78b8774d3cc433f583c16cdbb8d06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09ce703b6908257e37c2b7ff1b2714f1426f941f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33173882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052119"
 ---
-# <a name="compiler-error-c2084"></a>C2084 de Error del compilador
-función '*función*' ya tiene un cuerpo  
-  
- La función ya se ha definido.  
-  
- En las versiones de Visual C++ antes de Visual Studio 2002,  
-  
--   El compilador aceptaba varias especializaciones de plantilla que se resuelven en el mismo tipo real, aunque las definiciones adicionales nunca estaría disponibles. Ahora, el compilador detecta estas definiciones múltiples.  
-  
--   `__int32` y `int` se trataban como tipos distintos. El compilador trata ahora `__int32` como sinónimo de `int`. Esto significa que el compilador detecta varias definiciones si una función está sobrecargada en ambos `__int32` y `int` y produce un error.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C2084:  
-  
-```cpp  
-// C2084.cpp  
-void Func(int);  
-void Func(int) {}   // define function  
-void Func(int) {}   // C2084 second definition  
-```  
-  
-Para corregir este error, quite la definición de duplicados:  
-  
-```  
-// C2084b.cpp  
-// compile with: /c  
-void Func(int);  
-void Func(int) {}  
+# <a name="compiler-error-c2084"></a>Error del compilador C2084
+
+función '*función*' ya tiene un cuerpo
+
+La función ya se ha definido.
+
+En las versiones de Visual C++ antes de Visual Studio 2002,
+
+- El compilador aceptaban varias especializaciones de plantilla que se resuelven en el mismo tipo real, aunque las definiciones adicionales nunca estarían disponibles. Ahora, el compilador detecta estas definiciones múltiples.
+
+- `__int32` y `int` se tratan como tipos distintos. El compilador trata ahora `__int32` como sinónimo de `int`. Esto significa que el compilador detecta varias definiciones si una función está sobrecargada en ambos `__int32` y `int` y produce un error.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C2084:
+
+```cpp
+// C2084.cpp
+void Func(int);
+void Func(int) {}   // define function
+void Func(int) {}   // C2084 second definition
+```
+
+Para corregir este error, quite la definición duplicada:
+
+```
+// C2084b.cpp
+// compile with: /c
+void Func(int);
+void Func(int) {}
 ```

@@ -1,5 +1,5 @@
 ---
-title: unorm_3 (clase) | Documentos de Microsoft
+title: unorm_3 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b93fbce07aa50e9b0a9f01ec762690ce21b78c02
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7e10653eb4eb6ebb57215baceb1e3b67d7e1f8cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042525"
 ---
 # <a name="unorm3-class"></a>unorm_3 (Clase)
 Representa un vector corto de tres números normales sin signo.  
@@ -278,20 +278,20 @@ explicit inline unorm_3(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_V0`  
- El valor para inicializar el elemento 0.  
+*_V0*<br/>
+El valor para inicializar el elemento 0.  
   
- `_V1`  
- El valor para inicializar el elemento 1.  
+*_V1*<br/>
+El valor para inicializar el elemento 1.  
   
- `_V2`  
- El valor para inicializar el elemento 2.  
+*_V2*<br/>
+El valor para inicializar el elemento 2.  
   
- `_V`  
- El valor de inicialización.  
+*_V*<br/>
+El valor de inicialización.  
   
- `_Other`  
- El objeto utilizado para inicializar.  
+*_Otro*<br/>
+El objeto usado para inicializar.  
   
 ##  <a name="unorm_3__size"></a> Tamaño 
 

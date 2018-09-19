@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020621"
 ---
 # <a name="subscript-operator-"></a>Operador de subíndice]
 
@@ -64,7 +64,7 @@ Una expresión de subíndice también puede tener varios subíndices, como se in
 
 *expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice más a la izquierda, *expression1* **[** *expression2* **]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (<strong>\*</strong>) se aplica después de evaluar la última expresión subíndice, a menos que el valor del puntero final trata de un tipo de matriz.
+Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, *expression1* **[** *expression2* **]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (<strong>\*</strong>) se aplica después de evaluar la última expresión subíndice, a menos que el valor del puntero final trata de un tipo de matriz.
 
 Las expresiones con varios subíndices hacen referencia a elementos de matrices multidimensionales. Una matriz multidimensional es una matriz cuyos elementos son matrices. Por ejemplo, el primer elemento de una matriz tridimensional es una matriz con dos dimensiones. En el ejemplo siguiente se declara y se inicializa una matriz bidimensional de caracteres simple:
 
@@ -120,6 +120,6 @@ El operador de subíndice es conmutativo. Por lo tanto, las expresiones *matriz*
 
 [Expresiones postfijas](../cpp/postfix-expressions.md)<br/>
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Matrices](../cpp/arrays-cpp.md)
-[matrices unidimensionales](../c-language/one-dimensional-arrays.md)<br/>
+[Matrices](../cpp/arrays-cpp.md)<br/>
+[Matrices unidimensionales](../c-language/one-dimensional-arrays.md)<br/>
 [Matrices multidimensionales](../c-language/multidimensional-arrays-c.md)<br/>

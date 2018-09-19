@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2316 | Documentos de Microsoft
+title: Error del compilador C2316 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,58 +16,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895db6535299a077bc32b6485a360ae450e6c87e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2868d3a81fcbc94d8b20adcdc775363eb0a8eaeb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033022"
 ---
 # <a name="compiler-error-c2316"></a>Error del compilador C2316
 
-> '*excepción*': no se puede detectar porque es inaccesible al destructor o al constructor de copias  
-  
-Se detectó una excepción por valor o por referencia, pero no se ha podido obtener acceso al constructor de copias o al operador de asignación.  
-  
-Este código se aceptaba en versiones de Visual C++ antes de Visual Studio 2003, pero ahora produce un error.  
-  
-Los cambios de conformidad en Visual Studio 2015 realizan este error se aplica a las instrucciones catch incorrecta de excepciones de MFC derivadas de `CException`. Dado que `CException` tiene un constructor de copias privado heredados, la clase y sus derivados son no se puede copiar y no se pueden pasar por valor, lo que también significa que no se puede detectar por valor. Instrucciones que detecta las excepciones de MFC valor que previamente se llevó a las excepciones no detectadas en tiempo de ejecución de captura, pero ahora el compilador identifica correctamente esta situación y los informes de error advertencia C2316. Para corregir este problema, se recomienda que usar las macros MFC TRY/CATCH en lugar de escriben sus propios controladores de excepciones, pero si no es adecuado para el código, detectar excepciones de MFC por referencia en su lugar.   
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C2316:  
-  
-```  
-// C2316.cpp  
-// compile with: /EHsc  
-#include <stdio.h>  
-  
-extern "C" int printf_s(const char*, ...);  
-  
-struct B   
-{  
-public:  
-    B() {}  
-    // Delete the following line to resolve.  
-private:  
-    // copy constructor  
-    B(const B&)   
-    {  
-    }  
-};  
-  
-void f(const B&)   
-{  
-}  
-  
-int main()   
-{  
-    try   
-    {  
-        B aB;  
-        f(aB);  
-    }  
-    catch (B b) {   // C2316  
-        printf_s("Caught an exception!\n");     
-    }  
-}  
+> '*excepción*': no se puede detectar porque el destructor o constructor de copia es inaccesible
+
+Se detectó una excepción por valor o por referencia, pero no se ha podido obtener acceso al constructor de copias o al operador de asignación.
+
+Este código se aceptaba en versiones de Visual C++ antes de Visual Studio 2003, pero ahora produce un error.
+
+Cambios de conformidad en Visual Studio 2015 realizan a este error se aplican a instrucciones catch incorrecta de excepciones de MFC derivadas de `CException`. Dado que `CException` tiene un constructor de copias privado heredado, la clase y sus derivados se no se puede copiar y no se puede pasar por valor, lo que también significa que no se puede detectar por valor. Detectar las instrucciones que detectan excepciones de MFC mediante el valor que previamente se llevó a las excepciones no detectadas en tiempo de ejecución, pero ahora el compilador identifica correctamente esta situación y el error C2316 de informes. Para corregir este problema, se recomienda que usar las macros TRY/CATCH de MFC en lugar de escriben sus propios controladores de excepciones, pero si eso no resulta adecuado para el código, detectar las excepciones de MFC por referencia en su lugar.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C2316:
+
+```
+// C2316.cpp
+// compile with: /EHsc
+#include <stdio.h>
+
+extern "C" int printf_s(const char*, ...);
+
+struct B
+{
+public:
+    B() {}
+    // Delete the following line to resolve.
+private:
+    // copy constructor
+    B(const B&)
+    {
+    }
+};
+
+void f(const B&)
+{
+}
+
+int main()
+{
+    try
+    {
+        B aB;
+        f(aB);
+    }
+    catch (B b) {   // C2316
+        printf_s("Caught an exception!\n");
+    }
+}
 ```

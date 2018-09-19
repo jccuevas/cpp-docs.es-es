@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022180"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl (clase)
 
@@ -37,14 +37,14 @@ Esta clase proporciona una implementación predeterminada de la [interfaz ISuppo
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<const IID* piid>  
+template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*piid*  
+*piid*<br/>
 Un puntero para el IID de interfaz que admite [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Miembros
@@ -95,7 +95,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parámetros
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Dirección de la variable que, si se ejecuta correctamente, recibe el número de subprocesos en el grupo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -116,7 +116,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parámetros
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Dirección de la variable que, si se ejecuta correctamente, recibe el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -137,7 +137,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parámetros
 
-*nNumThreads*  
+*nNumThreads*<br/>
 El número solicitado de subprocesos en el grupo.
 
 Si *nNumThreads* es negativo, su valor absoluto se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.
@@ -162,7 +162,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.
 
 ### <a name="return-value"></a>Valor devuelto

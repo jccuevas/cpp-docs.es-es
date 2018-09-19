@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019476"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752820"
 
 ## <a name="syntax"></a>Sintaxis
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>Parámetros
 
-*wNotifyCode*  
+*wNotifyCode*<br/>
 El código de notificación.
 
-*wID*  
+*wID*<br/>
 El identificador del elemento de menú, control o acelerador.
 
-*hWndCtl*  
+*hWndCtl*<br/>
 Identificador de un control de ventana.
 
-*bHandled*  
+*bHandled*<br/>
 Los conjuntos de mapa de mensajes *bHandled* en TRUE antes de `CommandHandler` se llama. Si `CommandHandler` no controla totalmente el mensaje, se debe establecer *bHandled* en FALSE para indicar que el mensaje requiere un procesamiento posterior.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -61,7 +61,7 @@ Para obtener un ejemplo del uso de este controlador de mensajes en un mapa de me
 
 ## <a name="see-also"></a>Vea también
 
-[Implementar una ventana](../atl/implementing-a-window.md)   
-[Mapas de mensajes](../atl/message-maps-atl.md)   
+[Implementar una ventana](../atl/implementing-a-window.md)<br/>
+[Mapas de mensajes](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

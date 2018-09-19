@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046256"
 ---
 # <a name="example-implementing-a-property-page"></a>Ejemplo: Implementar una página de propiedades
 
@@ -153,25 +153,25 @@ Implemente el método tal como se muestra a continuación:
 Una vez que ha creado el proyecto, puede probar la página de propiedades y el objeto auxiliar mediante una macro sencilla que puede crear y ejecutar en el entorno de desarrollo de Visual Studio. Esta macro creará una aplicación auxiliar de objeto y, después, llame a su `ShowPage` método utilizando el ProgID de la **DocProperties** página de propiedades y el `IUnknown` puntero del documento activo actualmente en el editor de Visual Studio. El código que necesita para esta macro se muestra a continuación:
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 Al ejecutar esta macro, se mostrará la página de propiedades que muestra el nombre de archivo y el estado de solo lectura del documento de texto actualmente activo. El estado de solo lectura del documento sólo refleja la capacidad para escribir en el documento en el entorno de desarrollo; Esto no afecta el atributo de sólo lectura del archivo en disco.
 
 ## <a name="see-also"></a>Vea también
 
-[Páginas de propiedades](../atl/atl-com-property-pages.md)   
+[Páginas de propiedades](../atl/atl-com-property-pages.md)<br/>
 [Ejemplo ATLPages](../visual-cpp-samples.md)

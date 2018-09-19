@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4366 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4366 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12410a567cb55d6dea74b8e5e595009e56b1071f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb24c65605857124edf608bec88f1399d9df607d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047049"
 ---
 # <a name="compiler-warning-level-4-c4366"></a>Advertencia del compilador (nivel 4) C4366
-El resultado del operador 'operador' unario puede desalineado  
-  
- Si un miembro de estructura alguna vez podría ser desalineado debido al empaquetado, el compilador generará una advertencia cuando que la dirección del miembro se asigna a un puntero alineado. De forma predeterminada, todos los punteros están alineados.  
-  
- Para resolver C4366, cambiar la alineación de la estructura o declare el puntero con el [__unaligned](../../cpp/unaligned.md) palabra clave.  
-  
- Para obtener más información, vea __unaligned y [pack](../../preprocessor/pack.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C4366.  
-  
-```  
-// C4366.cpp  
-// compile with: /W4 /c  
-// processor: IPF x64  
-#pragma pack(1)  
-struct X {  
-   short s1;  
-   int s2;  
-};  
-  
-int main() {  
-   X x;  
-   short * ps1 = &x.s1;   // OK  
-   int * ps2 = &x.s2;   // C4366  
-}  
+
+El resultado del operador 'operador' unario se puede desalinear
+
+Si un miembro de estructura podría ser nunca sin alinear debido al empaquetado, el compilador le avisará cuando que se asigna la dirección del miembro a un puntero alineado. De forma predeterminada, todos los punteros están alineados.
+
+Para resolver C4366, cambiar la alineación de la estructura o declare el puntero con el [__unaligned](../../cpp/unaligned.md) palabra clave.
+
+Para obtener más información, vea __unaligned y [pack](../../preprocessor/pack.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4366.
+
+```
+// C4366.cpp
+// compile with: /W4 /c
+// processor: IPF x64
+#pragma pack(1)
+struct X {
+   short s1;
+   int s2;
+};
+
+int main() {
+   X x;
+   short * ps1 = &x.s1;   // OK
+   int * ps2 = &x.s2;   // C4366
+}
 ```

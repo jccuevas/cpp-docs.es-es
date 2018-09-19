@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 063464fe58417cfce58160ccba12fbcd514c7320
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: fa493a886509a85cc45c14f003ff07886c435280
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036038"
 ---
 # <a name="name-decoration"></a>Decoración de nombres
 
 La decoración de nombres normalmente hace referencia a las convenciones de nomenclatura de C++, pero también se puede aplicar a varios casos de C. De forma predeterminada, C++ usa el nombre de la función, los parámetros y el tipo de valor devuelto para crear un nombre del vinculador para la función. Considere la siguiente función:
 
 ```
-void CALLTYPE test(void)  
+void CALLTYPE test(void)
 ```
 
 En la tabla siguiente se muestra el nombre del vinculador para varias convenciones de llamada.

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2156 | Documentos de Microsoft
+title: Error del compilador C2156 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 288757f93e0cf7c478fae739f106482b5ba8a016
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37e0810fa31e66b62553825892b53374b22e4263
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167312"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038647"
 ---
 # <a name="compiler-error-c2156"></a>Error del compilador C2156
-pragma debe estar fuera de la función  
-  
- Un pragma que debe especificarse a nivel global (fuera de un cuerpo de función) está dentro de una función.  
-  
- El ejemplo siguiente genera la advertencia C2156:  
-  
-```  
-// C2156.cpp  
-#pragma optimize( "l", on )   // OK  
-int main() {  
-   #pragma optimize( "l", on )   // C2156  
-}  
+
+pragma debe estar fuera de la función
+
+Un pragma que debe especificarse a nivel global (fuera de un cuerpo de función) está dentro de una función.
+
+El ejemplo siguiente genera la advertencia C2156:
+
+```
+// C2156.cpp
+#pragma optimize( "l", on )   // OK
+int main() {
+   #pragma optimize( "l", on )   // C2156
+}
 ```

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71dc40a7c2d4fe460f546dbfe4f55d00aff59667
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa5f96b8937168126509025735d20fab7b35c2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019204"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits (clase)
 
@@ -33,13 +33,13 @@ Esta clase proporciona métodos de forma predeterminada y las funciones de una c
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <typename T>  
+template <typename T>
 class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo de datos que se almacenará en el objeto de clase de colección.
 
 ## <a name="members"></a>Miembros
@@ -91,5 +91,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Vea también
 
-[CDefaultElementTraits (clase)](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits (clase)](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

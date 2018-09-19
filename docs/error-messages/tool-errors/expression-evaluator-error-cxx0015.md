@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0015 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0015 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050821"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Error del evaluador de expresiones CXX0015
-expresión demasiado compleja (desbordamiento de pila)  
-  
- La expresión que ha especificado era demasiado complejo o anidada un nivel demasiado profundo para la cantidad de almacenamiento disponible para el evaluador de expresiones de C.  
-  
- Desbordamiento se produce normalmente debido a demasiados cálculos pendientes.  
-  
- Reorganice la expresión para que se puede evaluar cada componente de la expresión que se encuentre, en lugar de tener que esperar a otras partes de la expresión que se va a calcular.  
-  
- Divida la expresión en varios comandos.  
-  
- Este error es idéntico a CAN0015.
+
+expresión demasiado compleja (desbordamiento de pila)
+
+La expresión especificado era demasiado compleja o demasiado anidada para almacenamiento disponible para el evaluador de expresiones de C.
+
+Desbordamiento suele producirse debido a demasiados cálculos pendientes.
+
+Reorganice la expresión para que pueda evaluarse cada componente de la expresión que se encuentre, en lugar de tener que esperar a otras partes de la expresión que se va a calcular.
+
+Divida la expresión en varios comandos.
+
+Este error es idéntico a CAN0015.

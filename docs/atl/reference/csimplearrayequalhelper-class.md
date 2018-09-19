@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b23ba46ee4a8e25c15b4d9e51b87c444da67f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2613a885dd5399c3655ecb853f3977be71928526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021062"
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper (clase)
 
@@ -32,13 +32,13 @@ Esta clase es una aplicación auxiliar para el [CSimpleArray](../../atl/referenc
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T>  
+template <class T>
 class CSimpleArrayEqualHelper
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-`T`  
+*T*<br/>
 Una clase derivada.
 
 ## <a name="members"></a>Miembros
@@ -69,10 +69,10 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>Parámetros
 
-*T1*  
+*T1*<br/>
 Un objeto de tipo T.
 
-*T2*  
+*T2*<br/>
 Un objeto de tipo T.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -81,6 +81,6 @@ Devuelve true si los elementos si no son iguales, es false.
 
 ## <a name="see-also"></a>Vea también
 
-[CSimpleArray (clase)](../../atl/reference/csimplearray-class.md)   
-[CSimpleArrayEqualHelperFalse (clase)](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+[CSimpleArray (clase)](../../atl/reference/csimplearray-class.md)<br/>
+[CSimpleArrayEqualHelperFalse (clase)](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

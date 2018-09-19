@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 848f940c9aa974c838a4600235ab97d099bcbd06
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d7add0ccd001579c15a3621afc87354a0626c454
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024520"
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
+
 Las clases de proveedor utilizan herencia múltiple. El código siguiente muestra la cadena de herencia para el objeto de origen de datos:  
   
 ```cpp
@@ -42,12 +43,13 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Todos los componentes COM que se derivan de `CComObjectRootEx` y `CComCoClass`. `CComObjectRootEx` proporciona toda la implementación para el `IUnknown` interfaz. Puede controlar cualquier modelo de subprocesos. `CComCoClass` controla cualquier compatibilidad error requerida. Si desea enviar información de error más completa al cliente, puede usar algunas de la API de errores en `CComCoClass`.  
+Todos los componentes COM que se derivan de `CComObjectRootEx` y `CComCoClass`. `CComObjectRootEx` proporciona toda la implementación para el `IUnknown` interfaz. Puede controlar cualquier modelo de subprocesos. `CComCoClass` controla cualquier compatibilidad error requerida. Si desea enviar información de error más completa al cliente, puede usar algunas de la API de errores en `CComCoClass`.  
   
- También hereda el objeto de origen de datos de varias clases 'Impl'. Cada clase proporciona la implementación de una interfaz. Los datos del origen de objeto implementa la `IPersist`, `IDBProperties`, `IDBInitialize`, y `IDBCreateSession` interfaces. OLE DB requiere cada interfaz para implementar el objeto de origen de datos. Puede elegir admitir o no una funcionalidad concreta heredando o no heredar de una de estas clases 'Impl'. Si desea admitir la `IDBDataSourceAdmin` interfaz, heredan de la `IDBDataSourceAdminImpl` clase para obtener la funcionalidad necesaria.  
+También hereda el objeto de origen de datos de varias clases 'Impl'. Cada clase proporciona la implementación de una interfaz. Los datos del origen de objeto implementa la `IPersist`, `IDBProperties`, `IDBInitialize`, y `IDBCreateSession` interfaces. OLE DB requiere cada interfaz para implementar el objeto de origen de datos. Puede elegir admitir o no una funcionalidad concreta heredando o no heredar de una de estas clases 'Impl'. Si desea admitir la `IDBDataSourceAdmin` interfaz, heredan de la `IDBDataSourceAdminImpl` clase para obtener la funcionalidad necesaria.  
   
 ## <a name="com-map"></a>Mapa COM  
- Cada vez que el cliente llama a `QueryInterface` para una interfaz en el origen de datos, pasa por el siguiente mapa COM:  
+
+Cada vez que el cliente llama a `QueryInterface` para una interfaz en el origen de datos, pasa por el siguiente mapa COM:  
   
 ```  
 BEGIN_COM_MAP(CMyProviderSource)  
@@ -59,10 +61,11 @@ BEGIN_COM_MAP(CMyProviderSource)
 END_COM_MAP()  
 ```  
   
- Las macros COM_INTERFACE_ENTRY pertenecen a ATL e indican a la implementación de `QueryInterface` en `CComObjectRootEx` para devolver las interfaces adecuadas.  
+Las macros COM_INTERFACE_ENTRY pertenecen a ATL e indican a la implementación de `QueryInterface` en `CComObjectRootEx` para devolver las interfaces adecuadas.  
   
 ## <a name="property-map"></a>Asignación de propiedad  
- El mapa de propiedades especifica todas las propiedades designadas por el proveedor:  
+
+El mapa de propiedades especifica todas las propiedades designadas por el proveedor:  
   
 ```  
 BEGIN_PROPSET_MAP(CMyProviderSource)  
@@ -132,9 +135,9 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
 END_PROPSET_MAP()  
 ```  
   
- Se agrupan las propiedades de OLE DB. El objeto de origen de datos tiene dos grupos de propiedades: uno para el DBPROPSET_DATASOURCEINFO conjunto y otro para el DBPROPSET_DBINIT establecido. El conjunto DBPROPSET_DATASOURCEINFO corresponde a las propiedades del proveedor y su origen de datos. El conjunto DBPROPSET_DBINIT corresponde a las propiedades utilizadas en la inicialización. Las plantillas de proveedor OLE DB controlan estos conjuntos con las macros PROPERTY_SET. Las macros de crean un bloque que contiene una matriz de propiedades. Cada vez que el cliente llama a la `IDBProperties` interfaz, el proveedor utiliza la asignación de propiedad.  
+Se agrupan las propiedades de OLE DB. El objeto de origen de datos tiene dos grupos de propiedades: uno para el DBPROPSET_DATASOURCEINFO conjunto y otro para el DBPROPSET_DBINIT establecido. El conjunto DBPROPSET_DATASOURCEINFO corresponde a las propiedades del proveedor y su origen de datos. El conjunto DBPROPSET_DBINIT corresponde a las propiedades utilizadas en la inicialización. Las plantillas de proveedor OLE DB controlan estos conjuntos con las macros PROPERTY_SET. Las macros de crean un bloque que contiene una matriz de propiedades. Cada vez que el cliente llama a la `IDBProperties` interfaz, el proveedor utiliza la asignación de propiedad.  
   
- No es necesario implementar todas las propiedades en la especificación. Sin embargo, debe admitir las propiedades necesarias; vea la especificación de conformidad de nivel 0 para obtener más información. Si no desea admitir una propiedad, puede quitarlo del mapa. Si desea admitir una propiedad, agregarla a la asignación mediante el uso de una macro PROPERTY_INFO_ENTRY. La macro corresponde a la `UPROPINFO` estructura tal como se muestra en el código siguiente:  
+No es necesario implementar todas las propiedades en la especificación. Sin embargo, debe admitir las propiedades necesarias; vea la especificación de conformidad de nivel 0 para obtener más información. Si no desea admitir una propiedad, puede quitarlo del mapa. Si desea admitir una propiedad, agregarla a la asignación mediante el uso de una macro PROPERTY_INFO_ENTRY. La macro corresponde a la `UPROPINFO` estructura tal como se muestra en el código siguiente:  
   
 ```cpp  
 struct UPROPINFO  
@@ -152,16 +155,17 @@ struct UPROPINFO
 };  
 ```  
   
- Cada elemento de la estructura representa información para controlar la propiedad. Contiene un `DBPROPID` para determinar el GUID y el identificador de la propiedad. También contiene entradas para determinar el tipo y el valor de la propiedad.  
+Cada elemento de la estructura representa información para controlar la propiedad. Contiene un `DBPROPID` para determinar el GUID y el identificador de la propiedad. También contiene entradas para determinar el tipo y el valor de la propiedad.  
   
- Si desea cambiar el valor predeterminado de una propiedad (tenga en cuenta que un consumidor puede cambiar el valor de una propiedad de escritura en cualquier momento), puede utilizar la macro PROPERTY_INFO_ENTRY_VALUE o PROPERTY_INFO_ENTRY_EX. Estas macros le permiten especificar un valor para una propiedad correspondiente. La macro PROPERTY_INFO_ENTRY_VALUE es una notación abreviada que permite cambiar el valor. La macro PROPERTY_INFO_ENTRY_VALUE llama a la macro PROPERTY_INFO_ENTRY_EX. Esta macro permite agregar o cambiar todos los atributos en el `UPROPINFO` estructura.  
+Si desea cambiar el valor predeterminado de una propiedad (tenga en cuenta que un consumidor puede cambiar el valor de una propiedad de escritura en cualquier momento), puede utilizar la macro PROPERTY_INFO_ENTRY_VALUE o PROPERTY_INFO_ENTRY_EX. Estas macros le permiten especificar un valor para una propiedad correspondiente. La macro PROPERTY_INFO_ENTRY_VALUE es una notación abreviada que permite cambiar el valor. La macro PROPERTY_INFO_ENTRY_VALUE llama a la macro PROPERTY_INFO_ENTRY_EX. Esta macro permite agregar o cambiar todos los atributos en el `UPROPINFO` estructura.  
   
- Si desea definir su propio conjunto de propiedades, puede agregar uno mediante la realización de una combinación BEGIN_PROPSET_MAP/END_PROPSET_MAP adicional. Debe definir un GUID para el conjunto de propiedades y, a continuación, definir sus propias propiedades. Si tiene propiedades específicas del proveedor, agregue una nueva propiedad establecida en lugar de usar uno existente. Esto evita problemas en versiones posteriores de OLE DB.  
+Si desea definir su propio conjunto de propiedades, puede agregar uno mediante la realización de una combinación BEGIN_PROPSET_MAP/END_PROPSET_MAP adicional. Debe definir un GUID para el conjunto de propiedades y, a continuación, definir sus propias propiedades. Si tiene propiedades específicas del proveedor, agregue una nueva propiedad establecida en lugar de usar uno existente. Esto evita problemas en versiones posteriores de OLE DB.  
   
 ## <a name="user-defined-property-sets"></a>Conjuntos de propiedades definido por el usuario  
- Visual C++ admite conjuntos de propiedades definido por el usuario. No es necesario invalidar `GetProperties` o `GetPropertyInfo`. En su lugar, las plantillas de detectan cualquier conjunto de propiedades definido por el usuario y agregarlo al objeto adecuado.  
+
+Visual C++ admite conjuntos de propiedades definido por el usuario. No es necesario invalidar `GetProperties` o `GetPropertyInfo`. En su lugar, las plantillas de detectan cualquier conjunto de propiedades definido por el usuario y agregarlo al objeto adecuado.  
   
- Si tiene un conjunto de propiedades definido por el usuario que debe estar disponible en tiempo de inicialización (es decir, antes de que el consumidor llama a `IDBInitialize::Initialize`), puede especificarlo mediante el indicador UPROPSET_USERINIT junto con la macro BEGIN_PROPERTY_SET_EX. El conjunto de propiedades debe estar en el objeto de origen de datos para que funcione (tal y como requiere la especificación OLE DB). Por ejemplo:  
+Si tiene un conjunto de propiedades definido por el usuario que debe estar disponible en tiempo de inicialización (es decir, antes de que el consumidor llama a `IDBInitialize::Initialize`), puede especificarlo mediante el indicador UPROPSET_USERINIT junto con la macro BEGIN_PROPERTY_SET_EX. El conjunto de propiedades debe estar en el objeto de origen de datos para que funcione (tal y como requiere la especificación OLE DB). Por ejemplo:  
   
 ```cpp  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
@@ -170,4 +174,5 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)
+
+[Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)

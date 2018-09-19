@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2831 | Documentos de Microsoft
+title: Error del compilador C2831 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73cd133d5dc355dc11c0128aea0ddb44dccafe80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a534fd379e8ec250f185370d7388171dc9ef3508
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047595"
 ---
 # <a name="compiler-error-c2831"></a>Error del compilador C2831
-'operador' no puede tener parámetros predeterminados  
-  
- Solo tres operadores pueden tener parámetros predeterminados:  
-  
--   [new](../../cpp/new-operator-cpp.md)  
-  
--   Asignación =  
-  
--   Paréntesis de apertura ()  
-  
- El ejemplo siguiente genera C2831:  
-  
-```  
-// C2831.cpp  
-// compile with: /c  
-#define BINOP <=  
-class A {  
-public:  
-   int i;  
-   int operator BINOP(int x = 1) {   // C2831  
-   // try the following line instead  
-   // int operator BINOP(int x) {  
-      return i+x;  
-   }  
-};  
+
+'operator operator' no puede tener parámetros predeterminados
+
+Solo tres operadores pueden tener parámetros predeterminados:
+
+- [new](../../cpp/new-operator-cpp.md)
+
+- Asignación =
+
+- Paréntesis de apertura ()
+
+El ejemplo siguiente genera C2831:
+
+```
+// C2831.cpp
+// compile with: /c
+#define BINOP <=
+class A {
+public:
+   int i;
+   int operator BINOP(int x = 1) {   // C2831
+   // try the following line instead
+   // int operator BINOP(int x) {
+      return i+x;
+   }
+};
 ```

@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcac41ca04fbba6eeef74c9170f0eb8ef4f534fe
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 7f3ab6709dd73c9f7df7f948806703092a090f0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402002"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040406"
 ---
 # <a name="comptrt-member-functions"></a>_com_ptr_t (Funciones miembro)
-Para obtener información sobre la **_com_ptr_t** funciones miembro, vea [clase _com_ptr_t](../cpp/com-ptr-t-class.md).  
-  
-## <a name="see-also"></a>Vea también  
- [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)
+
+Para obtener información sobre la **_com_ptr_t** funciones miembro, vea [clase _com_ptr_t](../cpp/com-ptr-t-class.md).
+
+## <a name="see-also"></a>Vea también
+
+[_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

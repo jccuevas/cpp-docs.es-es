@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3769 | Documentos de Microsoft
+title: Error del compilador C3769 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5258c3dadd7ede384520b76e95c1b8e691882f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da57a883bcf66535a531e98e23b5927d37cadccd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042237"
 ---
 # <a name="compiler-error-c3769"></a>Error del compilador C3769
-'type': una clase anidada no puede tener el mismo nombre que la clase envolvente inmediato  
-  
- Una clase anidada no puede tener el mismo nombre que la clase envolvente inmediato.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3769.  
-  
-```  
-// C3769.cpp  
-// compile with: /c  
-class x {  
-   class x {};   // C3769  
-   class y {  
-      class x{};   // OK  
-   };  
-};  
+
+'type': una clase anidada no puede tener el mismo nombre que la clase inmediatamente envolvente
+
+Una clase anidada no puede tener el mismo nombre que la clase inmediatamente envolvente.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3769.
+
+```
+// C3769.cpp
+// compile with: /c
+class x {
+   class x {};   // C3769
+   class y {
+      class x{};   // OK
+   };
+};
 ```

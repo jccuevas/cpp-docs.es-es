@@ -41,14 +41,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024650"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset (Clase)
+
 Encapsula un conjunto de filas y sus descriptores de acceso asociados en una sola clase.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -60,14 +61,16 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *TAccessor*  
- Una clase de descriptor de acceso.  
+
+*TAccessor*<br/>
+Una clase de descriptor de acceso.  
   
- *TRowset*  
- Una clase de conjunto de filas.  
+*TRowset*<br/>
+Una clase de conjunto de filas.  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldbcli.h  
+
+**Encabezado:** atldbcli.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -75,16 +78,18 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Enlazar](#bind)|Crea los enlaces (se usa cuando `bBind` se especifica como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|  
+|[Bind](#bind)|Crea los enlaces (se usa cuando `bBind` se especifica como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](#caccessorrowset)|Constructor.|  
 |[Cerrar](#close)|Cierra el conjunto de filas y los descriptores de acceso.|  
 |[FreeRecordMemory](#freerecordmemory)|Libera las columnas en el registro actual que necesitan ser liberados.|  
 |[GetColumnInfo](#getcolumninfo)|Implementa [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Comentarios  
- Clase `TAccessor` administra el descriptor de acceso. Clase *TRowset* administra el conjunto de filas.  
+
+Clase `TAccessor` administra el descriptor de acceso. Clase *TRowset* administra el conjunto de filas.  
 
 ## <a name="bind"></a> CAccessorRowset:: Bind
+
 Crea los enlaces si especifica `bBind` como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md).  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -94,9 +99,11 @@ HRESULT Bind();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un HRESULT estándar.  
+
+Un HRESULT estándar.  
 
 ## <a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
+
 Inicializa el objeto `CAccessorRowset`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -106,6 +113,7 @@ CAccessorRowset();
 ```  
 
 ## <a name="close"></a> CAccessorRowset:: Close
+
 Libera los descriptores de acceso activos y el conjunto de filas.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -115,9 +123,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Libera la memoria asociada.  
+
+Libera la memoria asociada.  
 
 ## <a name="freerecordmemory"></a> CAccessorRowset:: Freerecordmemory
+
 Libera las columnas en el registro actual que necesitan ser liberados.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -127,6 +137,7 @@ void FreeRecordMemory();
 ```  
 
 ## <a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
+
 Obtiene información de columna del conjunto de filas abierto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -141,16 +152,20 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un HRESULT estándar.  
+
+Un HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- El usuario debe liberar el búfer de cadena y la información de la columna devuelta. Use la segunda versión de este método cuando se usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) y necesita reemplazar los enlaces.  
+
+El usuario debe liberar el búfer de cadena y la información de la columna devuelta. Use la segunda versión de este método cuando se usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) y necesita reemplazar los enlaces.  
   
- Para obtener más información, consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador de OLE DB*.  
+Para obtener más información, consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador de OLE DB*.  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: combinable (clase) | Documentos de Microsoft
+title: combinable (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5e8864b5c10b87813d89c55de806ceed24998754
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044579"
 ---
 # <a name="combinable-class"></a>Clase combinable
 El objeto `combinable<T>` está diseñado para proporcionar copias de subprocesos privados de datos, para realizar subcálculos de subprocesos locales sin bloqueos durante algoritmos paralelos. Al final de la operación paralela, los subcálculos de subprocesos privados pueden combinarse en un resultado final. Esta clase se puede utilizar en lugar de una variable compartida y puede dar lugar a una mejora en el rendimiento que, de lo contrario, daría lugar a mucha contención en esa variable compartida.  
@@ -40,8 +40,8 @@ class combinable;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos del resultado combinado final. El tipo debe tener un constructor de copias y un constructor predeterminado.  
+*T*<br/>
+El tipo de datos del resultado combinado final. El tipo debe tener un constructor de copias y un constructor predeterminado.  
   
 ## <a name="members"></a>Miembros  
   
@@ -57,9 +57,9 @@ class combinable;
 |Name|Descripción|  
 |----------|-----------------|  
 |[clear](#clear)|Borra los resultados intermedios de cálculo de un uso anterior.|  
-|[combine](#combine)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación.|  
-|[combine_each](#combine_each)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación una vez por cada cálculo secundario local de subprocesos. El resultado final se acumula por el objeto de función.|  
-|[Local](#local)|Sobrecargado. Devuelve una referencia para el cálculo de subcarpetas de subprocesos privados.|  
+|[combine](#combine)|Calcula un valor final del conjunto de subcálculos de subprocesos locales llamando al functor de combinación.|  
+|[combine_each](#combine_each)|Calcula un valor final del conjunto de subcálculos de subprocesos locales llamando al functor de combinación una vez por cada cálculo secundario local de subproceso. El resultado final se acumula por el objeto de función.|  
+|[local](#local)|Sobrecargado. Devuelve una referencia al cálculo secundario subprocesos privados.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -100,17 +100,17 @@ combinable(const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Function`  
- El tipo del objeto functor de inicialización.  
+*_Function*<br/>
+El tipo del objeto functor de inicialización.  
   
- `_FnInitialize`  
- Una función que se llamará para inicializar cada nuevo valor de subprocesos privados del tipo `T`. Debe admitir un operador de llamada de función con la firma `T ()`.  
+*_FnInitialize*<br/>
+Una función que se llamará para inicializar cada nuevo valor de subprocesos privados del tipo `T`. Debe admitir un operador de llamada de función con la firma `T ()`.  
   
- `_Copy`  
- Existente `combinable` objeto que se copiará en éste.  
+*_Copiar*<br/>
+Existente `combinable` objeto que se copiará en ésta.  
   
 ### <a name="remarks"></a>Comentarios  
- El primer constructor inicializa nuevos elementos con el constructor predeterminado para el tipo de `T`.  
+ El primer constructor inicializa nuevos elementos con el constructor predeterminado para el tipo `T`.  
   
  El segundo constructor inicializa nuevos elementos mediante el functor de inicialización proporcionado como el `_FnInitialize` parámetro.  
   
@@ -126,7 +126,7 @@ combinable(const combinable& _Copy);
   
 ##  <a name="combine"></a> combinar 
 
- Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación.  
+ Calcula un valor final del conjunto de subcálculos de subprocesos locales llamando al functor de combinación.  
   
 ```
 template<typename _Function>
@@ -134,18 +134,18 @@ T combine(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Function`  
- El tipo de objeto de función que se invocará para combinar dos subprocesos locales sin bloqueos.  
+*_Function*<br/>
+El tipo de objeto de función que se invocará para combinar dos subcálculos de subprocesos locales.  
   
- `_FnCombine`  
- El functor que se usa para combinar los cálculos de subcarpetas. Su firma es `T (T, T)` o `T (const T&, const T&)`, y debe ser asociativa y conmutativa.  
+*_FnCombine*<br/>
+El functor que se usa para combinar los cálculos secundarios. Su firma es `T (T, T)` o `T (const T&, const T&)`, y debe ser asociativa y conmutativa.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El resultado final de combinar todos los subcálculos de subprocesos privados.  
   
 ##  <a name="combine_each"></a> combine_each 
 
- Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación una vez por cada cálculo secundario local de subprocesos. El resultado final se acumula por el objeto de función.  
+ Calcula un valor final del conjunto de subcálculos de subprocesos locales llamando al functor de combinación una vez por cada cálculo secundario local de subproceso. El resultado final se acumula por el objeto de función.  
   
 ```
 template<typename _Function>
@@ -153,15 +153,15 @@ void combine_each(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Function`  
- El tipo de objeto de función que se invocará para combinar un cálculo de subproceso local de subproceso único.  
+*_Function*<br/>
+El tipo de objeto de función que se invocará para combinar un cálculo de subdirectorio local de subproceso único.  
   
- `_FnCombine`  
- El functor que se usa para combinar un cálculo secundario. Su firma es `void (T)` o `void (const T&)`y debe ser asociativa y conmutativa.  
+*_FnCombine*<br/>
+El functor que se usa para combinar un cálculo secundario. Su firma es `void (T)` o `void (const T&)`y debe ser asociativa y conmutativa.  
   
-##  <a name="local"></a> Local 
+##  <a name="local"></a> local 
 
- Devuelve una referencia para el cálculo de subcarpetas de subprocesos privados.  
+ Devuelve una referencia al cálculo secundario subprocesos privados.  
   
 ```
 T& local();
@@ -170,11 +170,11 @@ T& local(bool& _Exists);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Exists`  
- Una referencia a un valor booleano. El valor booleano al que hace referencia este argumento se establecerá en `true` si el cálculo secundario ya existía en este subproceso y establece en `false` si se trata el primer cálculo secundario en este subproceso.  
+*_Exists*<br/>
+Una referencia a un valor booleano. El valor booleano al que hace referencia este argumento se establecerá en `true` si el cálculo secundario ya existe en este subproceso y establece en `false` si éste era el primer cálculo secundario en este subproceso.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia para el cálculo de subcarpetas de subprocesos privados.  
+ Una referencia al cálculo secundario subprocesos privados.  
   
 ##  <a name="operator_eq"></a> operator= 
 
@@ -185,8 +185,8 @@ combinable& operator= (const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Copy`  
- Existente `combinable` objeto que se copiará en éste.  
+*_Copiar*<br/>
+Existente `combinable` objeto que se copiará en ésta.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `combinable` objeto.  

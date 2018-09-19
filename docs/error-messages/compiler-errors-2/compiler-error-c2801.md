@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2801 | Documentos de Microsoft
+title: Error del compilador C2801 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68b3f575fcb8b909f58ac2ffbcaca26580279da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d57ee5bf5f5152ef55852c9f9b829bc4a1d17d41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040640"
 ---
 # <a name="compiler-error-c2801"></a>Error del compilador C2801
-'operador' debe ser un miembro no estático  
-  
- Sólo como miembros no estáticos se pueden sobrecargar los operadores siguientes:  
-  
--   Asignación `=`  
-  
--   Acceso a miembros de clase `->`  
-  
--   Subíndices `[]`  
-  
--   Llamada de función `()`  
-  
- Posibles causas de C2801:  
-  
--   Operador sobrecargado no es una clase, estructura o miembro de unión.  
-  
--   El operador sobrecargado se declara `static`.  
-  
--   El ejemplo siguiente genera C2801:  
-  
-```  
-// C2801.cpp  
-// compile with: /c  
-operator[]();   // C2801 not a member  
-class A {  
-   static operator->();   // C2801 static  
-   operator()();   // OK  
-};  
+
+'operator operator' debe ser un miembro no estático
+
+Únicamente como miembros no estáticos se pueden sobrecargar los operadores siguientes:
+
+- Asignación `=`
+
+- Acceso a miembros de clase `->`
+
+- Subíndices `[]`
+
+- Llamada de función `()`
+
+Posibles causas de C2801:
+
+- Operador sobrecargado no es una clase, estructura o miembro de unión.
+
+- Operador sobrecargado se declara `static`.
+
+- El ejemplo siguiente genera C2801:
+
+```
+// C2801.cpp
+// compile with: /c
+operator[]();   // C2801 not a member
+class A {
+   static operator->();   // C2801 static
+   operator()();   // OK
+};
 ```

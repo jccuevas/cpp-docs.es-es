@@ -1,5 +1,5 @@
 ---
-title: Error de línea de comandos D8036 | Documentos de Microsoft
+title: Error de la línea de comandos D8036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041850"
 ---
 # <a name="command-line-error-d8036"></a>Error de la línea de comandos D8036
-'/ option' no se permite con varios archivos de origen  
-  
- Estas opciones del compilador no se puede usar con varios archivos de origen:  
-  
--   Lista de archivos de ensamblado de nombre (/ Fa)  
-  
--   Cambiar el nombre de archivo de objeto (/ Fo)  
-  
--   Crear información de explorador de código fuente sin variables locales (/ Fr)  
-  
--   Crear información de explorador de código fuente que incluya variables locales (/ FR)
+
+'/ option' no se permite con varios archivos de origen
+
+Estas opciones del compilador no pueden utilizarse con varios archivos de origen:
+
+- Lista de archivos de ensamblado de nombre (/ Fa)
+
+- Cambiar el nombre de archivo objeto (/ Fo)
+
+- Crear información de explorador de código fuente sin variables locales (/ Fr)
+
+- Crear información de explorador de código fuente que incluye las variables locales (/ FR)

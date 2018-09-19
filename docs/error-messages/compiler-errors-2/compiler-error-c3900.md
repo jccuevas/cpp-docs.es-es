@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3900 | Documentos de Microsoft
+title: Error del compilador C3900 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc940d174edc337422818bc233c1ef9952b66276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfbec5086cd034b56795f47504c029e975aa36b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039678"
 ---
 # <a name="compiler-error-c3900"></a>Error del compilador C3900
-'member': no se permite en el ámbito actual  
-  
- Bloques de propiedades pueden contener declaraciones de función y definiciones de funciones insertadas solo. No hay miembros que no son de se permiten en bloques de propiedades. Se permiten sin definiciones de tipos, operadores ni funciones friend. Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).  
-  
- Las definiciones de eventos sólo pueden contener las funciones y métodos de acceso.  
-  
- El ejemplo siguiente genera C3900:  
-  
-```  
-// C3900.cpp  
-// compile with: /clr  
-ref class X {  
-   property int P {  
-      void set(int);   // OK  
-      int i;   // C3900 variable declaration  
-   };  
-};  
-```  
-  
- El ejemplo siguiente genera C3900:  
-  
-```  
-// C3900b.cpp  
-// compile with: /clr  
-using namespace System;  
-delegate void H();  
-ref class X {  
-   event H^ E {  
-      int m;   // C3900  
-  
-      // OK  
-      void Test() {}  
-  
-      void add( H^ h ) {}  
-      void remove( H^ h ) {}  
-      void raise( ) {}  
-   }  
-};  
+
+'member': no se permite en el ámbito actual
+
+Bloques de propiedad pueden contener declaraciones de función y definiciones de funciones insertadas solo. Ningún miembro que no sean funciones se permite en los bloques de propiedades. No se permiten funciones de definiciones de tipos, operadores o friend. Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+
+Las definiciones de eventos sólo pueden contener funciones y métodos de acceso.
+
+El ejemplo siguiente genera C3900:
+
+```
+// C3900.cpp
+// compile with: /clr
+ref class X {
+   property int P {
+      void set(int);   // OK
+      int i;   // C3900 variable declaration
+   };
+};
+```
+
+El ejemplo siguiente genera C3900:
+
+```
+// C3900b.cpp
+// compile with: /clr
+using namespace System;
+delegate void H();
+ref class X {
+   event H^ E {
+      int m;   // C3900
+
+      // OK
+      void Test() {}
+
+      void add( H^ h ) {}
+      void remove( H^ h ) {}
+      void raise( ) {}
+   }
+};
 ```

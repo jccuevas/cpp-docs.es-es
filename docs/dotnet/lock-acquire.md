@@ -1,5 +1,5 @@
 ---
-title: Lock::acquire | Documentos de Microsoft
+title: Lock::acquire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c0b89b635ec0f0487027d5a90e43c57c39cde34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042018"
 ---
 # <a name="lockacquire"></a>lock::acquire
-Adquiere un bloqueo en un objeto, opcionalmente esperando a adquirir el bloqueo indefinidamente, durante un período determinado de tiempo, o no en absoluto.  
+Adquiere un bloqueo en un objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período determinado de tiempo o no en absoluto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,19 +44,19 @@ void acquire(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_timeout`  
- Valor de tiempo de espera en milisegundos o como un <xref:System.TimeSpan>.  
+*_tiempo de espera*<br/>
+Valor de tiempo de espera en milisegundos, o como un <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Excepciones  
- Produce <xref:System.ApplicationException> si no se producen de adquisición de bloqueo antes de tiempo de espera.  
+ Produce <xref:System.ApplicationException> si la adquisición de bloqueo no se produce antes de tiempo de espera.  
   
 ## <a name="remarks"></a>Comentarios  
  Si no se proporciona un valor de tiempo de espera, el tiempo de espera predeterminado es <xref:System.Threading.Timeout.Infinite>.  
   
- Si ya se ha adquirido un bloqueo, esta función no hace nada.  
+ Si ya ha adquirido un bloqueo, esta función no hace nada.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo seguirán existan y espera hasta salir hasta que todos los subprocesos de trabajo ha completado sus tareas.  
+ En este ejemplo se usa una sola instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo siguen existan, y espera hasta salir hasta que todos los subprocesos de trabajo haya completado sus tareas.  
   
 ```  
 // msl_lock_acquire.cpp  

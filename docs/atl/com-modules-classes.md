@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4774e2235b51c1de831a609f84b46502fecb07e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb3b7077d363f629b76e6e637f5b9df470745dbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043227"
 ---
 # <a name="com-modules-classes"></a>Clases de módulos de COM
 
@@ -51,6 +51,6 @@ Las clases siguientes proporcionan compatibilidad para un módulo COM:
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../atl/atl-class-overview.md)   
+[Información general de clases](../atl/atl-class-overview.md)<br/>
 [Clases de módulo](../atl/atl-module-classes.md)
 

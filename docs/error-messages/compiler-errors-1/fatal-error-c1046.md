@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1046 | Documentos de Microsoft
+title: Error irrecuperable C1046 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c609d5f846fa6f339eac98b725919560df068f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 449b181167ef493c149e9e34cb2f1a681148411d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035479"
 ---
 # <a name="fatal-error-c1046"></a>Error irrecuperable C1046
-límite del compilador: estructura están demasiado anidados  
-  
- La estructura, unión o clase supera el límite de anidamiento, que es de 15 niveles. Vuelva a escribir la definición para reducir el nivel de anidamiento. Dividir la estructura, unión o clase en dos o más partes mediante `typedef` para definir una o varias de las estructuras anidadas.
+
+límite del compilador: estructura están demasiado anidados
+
+La estructura, unión o clase supera el límite de anidamiento, que es de 15 niveles. Vuelva a escribir la definición para reducir el nivel de anidamiento. Dividir la estructura, unión o clase en dos o más partes mediante `typedef` para definir una o varias de las estructuras anidadas.

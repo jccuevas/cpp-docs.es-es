@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043942"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (clase)
 Proporciona la funcionalidad del control de pestaña común de Windows.  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Comentarios  
  Cuando se envía el mensaje, el `mask` miembro especifica qué atributos se devolverán. Si el `mask` miembro especifica el valor de TCIF_TEXT el `pszText` miembro debe contener la dirección del búfer que recibe el texto del elemento y el `cchTextMax` miembro debe especificar el tamaño del búfer.  
   
- `mask`  
- Valor que especifica qué `TCITEM` estructurar los miembros para recuperar o establecer. Este miembro puede ser cero o una combinación de los siguientes valores:  
+- `mask`
+
+   Valor que especifica qué `TCITEM` estructurar los miembros para recuperar o establecer. Este miembro puede ser cero o una combinación de los siguientes valores:  
   
-- TCIF_TEXT el `pszText` miembro es válido.  
+   - TCIF_TEXT el `pszText` miembro es válido.  
   
-- TCIF_IMAGE el `iImage` miembro es válido.  
+   - TCIF_IMAGE el `iImage` miembro es válido.  
   
-- TCIF_PARAM el `lParam` miembro es válido.  
+   - TCIF_PARAM el `lParam` miembro es válido.  
   
-- TCIF_RTLREADING el texto de `pszText` se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
+   - TCIF_RTLREADING el texto de `pszText` se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
   
-- TCIF_STATE el `dwState` miembro es válido.  
+   - TCIF_STATE el `dwState` miembro es válido.  
   
- `pszText`  
- Puntero a una cadena terminada en null que contiene el texto de ficha si la estructura contiene información sobre una pestaña. Si está recibiendo información de la estructura, este miembro especifica la dirección del búfer que recibe el texto de ficha.  
+- `pszText`  
+
+   Puntero a una cadena terminada en null que contiene el texto de ficha si la estructura contiene información sobre una pestaña. Si está recibiendo información de la estructura, este miembro especifica la dirección del búfer que recibe el texto de ficha.  
   
- `cchTextMax`  
- Tamaño del búfer señalado por `pszText`. Este miembro se omite si la estructura no está recibiendo información.  
+- `cchTextMax`  
+
+   Tamaño del búfer señalado por `pszText`. Este miembro se omite si la estructura no está recibiendo información.  
   
- `iImage`  
+- `iImage`  
  Índice en el control de pestaña lista de imágenes, o - 1 si no hay ninguna imagen de la pestaña.  
   
- lParam  
- Datos definido por la aplicación asociados a la pestaña. Si hay más de cuatro bytes de datos definido por la aplicación por tabulación, una aplicación debe definir una estructura y, en lugar de usar el `TCITEM` estructura. El primer miembro de la estructura definida por la aplicación debe ser un [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)estructura. El `TCITEMHEADER` estructura es idéntica a la `TCITEM` estructura, pero sin la `lParam` miembro. La diferencia entre el tamaño de la estructura y el tamaño de la `TCITEMHEADER` estructura es igual al número de bytes adicionales por ficha.  
+- `lParam`  
+
+   Datos definido por la aplicación asociados a la pestaña. Si hay más de cuatro bytes de datos definido por la aplicación por tabulación, una aplicación debe definir una estructura y, en lugar de usar el `TCITEM` estructura. El primer miembro de la estructura definida por la aplicación debe ser un [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)estructura. El `TCITEMHEADER` estructura es idéntica a la `TCITEM` estructura, pero sin la `lParam` miembro. La diferencia entre el tamaño de la estructura y el tamaño de la `TCITEMHEADER` estructura es igual al número de bytes adicionales por ficha.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

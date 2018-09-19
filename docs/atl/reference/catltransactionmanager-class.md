@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1217fe9c7bbb43b578a7f7236c69531f04464a44
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042448"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager (clase)
 
@@ -124,10 +124,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>Parámetros
 
-*bFallback*  
+*bFallback*<br/>
 TRUE indica que la reserva de soporte técnico. Si se produce un error en la transacción de función, la clase llama automáticamente a la función "sin transacciones". FALSE indica que no hay llamadas de "reserva".
 
-*bAutoCreateTransaction*  
+*bAutoCreateTransaction*<br/>
 TRUE indica que el controlador de transacciones se crea automáticamente en el constructor. FALSE indica que no lo es.
 
 ### <a name="remarks"></a>Comentarios
@@ -197,25 +197,25 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpFileName*  
+*lpFileName*<br/>
 El nombre de un objeto que se creó o se abran.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 El acceso al objeto, que se puede resumir como lectura, escritura, ambos o ninguno (cero). Los valores utilizados con más frecuencia son GENERIC_READ, GENERIC_WRITE o ambos: GENERIC_READ &#124; GENERIC_WRITE.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 El modo de uso compartido de un objeto que puede ser de lectura, escritura, ambos, eliminar, todos ellos, o ninguno: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Un puntero a una estructura SECURITY_ATTRIBUTES que contiene un descriptor de seguridad opcional y también determina si el identificador devuelto se puede heredar mediante procesos secundarios. El parámetro puede ser NULL.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 Acción que se realizará en los archivos que existen y no existen. Este parámetro debe ser uno de los valores siguientes, que no se pueden combinar: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING o TRUNCATE_EXISTING.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 Los atributos de archivo y marcas. Este parámetro puede incluir cualquier combinación de los atributos de archivo disponibles (FILE_ATTRIBUTE_ *). Todos los demás atributos de archivo invalidan FILE_ATTRIBUTE_NORMAL. Este parámetro puede contener también combinaciones de indicadores (FILE_FLAG_\*) para el control de comportamiento de almacenamiento en búfer, tener acceso a los modos y otras marcas de propósito especial. Estos valores se combinan con cualquier FILE_ATTRIBUTE_\* valores.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Un identificador válido en un archivo de plantilla con el derecho de acceso GENERIC_READ. El archivo de plantilla proporciona los atributos de archivo y los atributos extendidos para el archivo que se va a crear. Este parámetro puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -236,7 +236,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parámetros
 
-*lpFileName*  
+*lpFileName*<br/>
 Nombre del archivo que se va a eliminar.
 
 ### <a name="remarks"></a>Comentarios
@@ -255,10 +255,10 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpFileName*  
+*lpFileName*<br/>
 El directorio o ruta de acceso y el nombre de archivo que se buscará. Este parámetro puede incluir caracteres comodín, como un asterisco (*) o una (signo de interrogación).
 
-*pNextInfo*  
+*pNextInfo*<br/>
 Un puntero a la estructura WIN32_FIND_DATA que recibe información acerca de un archivo se encuentra o subdirectorio.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -279,7 +279,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parámetros
 
-*lpFileName*  
+*lpFileName*<br/>
 El nombre del archivo o directorio.
 
 ### <a name="remarks"></a>Comentarios
@@ -299,13 +299,13 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpFileName*  
+*lpFileName*<br/>
 El nombre del archivo o directorio.
 
-*fInfoLevelId*  
+*fInfoLevelId*<br/>
 El nivel de información de atributo para recuperar.
 
-*lpFileInformation*  
+*lpFileInformation*<br/>
 Un puntero a un búfer que recibe la información del atributo. El tipo de información de atributo que se almacena en este búfer se determina por el valor de *fInfoLevelId*. Si el *fInfoLevelId* parámetro es GetFileExInfoStandard, a continuación, este parámetro señala a una estructura WIN32_FILE_ATTRIBUTE_DATA.
 
 ### <a name="remarks"></a>Comentarios
@@ -370,10 +370,10 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>Parámetros
 
-*lpOldFileName*  
+*lpOldFileName*<br/>
 El nombre actual del archivo existente o directorio en el equipo local.
 
-*lpNewFileName*  
+*lpNewFileName*<br/>
 El nuevo nombre del archivo o directorio. Este nombre no debe existir. Puede ser un nuevo archivo en una unidad o el sistema de archivos diferente. Debe ser un nuevo directorio en la misma unidad.
 
 ### <a name="remarks"></a>Comentarios
@@ -399,31 +399,31 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Parámetros
 
-*hKey*  
+*hKey*<br/>
 Identificador de una clave del registro abierta.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 El nombre de una subclave que esta función se abre o se crea.
 
-*dwReservado*  
+*dwReservado*<br/>
 Este parámetro está reservado y debe ser cero.
 
-*lpClass*  
+*lpClass*<br/>
 La clase definido por el usuario de esta clave. Puede omitir este parámetro. Este parámetro puede ser NULL.
 
-*dwOptions*  
+*dwOptions*<br/>
 Este parámetro puede ser uno de los siguientes valores: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE o REG_OPTION_VOLATILE.
 
-*samDesired*  
+*samDesired*<br/>
 Una máscara que especifica los derechos de acceso para la clave.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Puntero a una estructura SECURITY_ATTRIBUTES que determina si el identificador devuelto se puede heredar mediante procesos secundarios. Si *lpSecurityAttributes* es NULL, no se puede heredar el identificador.
 
-*phkResult*  
+*phkResult*<br/>
 Un puntero a una variable que recibe un identificador de la clave creado o abierto. Si la clave no es una de las claves del registro predefinida, llame a la `RegCloseKey` funcionando después de que haya terminado de utilizar el identificador.
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 Un puntero a una variable que recibe uno de los siguientes valores de la disposición: REG_CREATED_NEW_KEY o REG_OPENED_EXISTING_KEY.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -472,19 +472,19 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Parámetros
 
-*hKey*  
+*hKey*<br/>
 Identificador de una clave del registro abierta.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 El nombre de la subclave del registro que se va a abrir.
 
-*ulOptions*  
+*ulOptions*<br/>
 Este parámetro está reservado y debe ser cero.
 
-*samDesired*  
+*samDesired*<br/>
 Una máscara que especifica los derechos de acceso para la clave.
 
-*phkResult*  
+*phkResult*<br/>
 Un puntero a una variable que recibe un identificador de la clave creado o abierto. Si la clave no es una de las claves del registro predefinida, llame a la `RegCloseKey` funcionando después de que haya terminado de utilizar el identificador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -521,10 +521,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>Parámetros
 
-*lpFileName*  
+*lpFileName*<br/>
 El nombre del archivo o directorio.
 
-*dwAttributes*  
+*dwAttributes*<br/>
 Los atributos de archivo para establecer para el archivo. Para obtener más información, consulte [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda).
 
 ### <a name="remarks"></a>Comentarios

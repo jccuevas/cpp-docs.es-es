@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036181"
 ---
 # <a name="ccomcontrol-class"></a>CComControl (clase)
 
@@ -46,17 +46,17 @@ Esta clase proporciona métodos para crear y administrar los controles ATL.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase de implementación del control.
 
-*WinBase*  
+*WinBase*<br/>
 La clase base que implementa las funciones de ventana. El valor predeterminado es [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Miembros
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*  
+*IID*<br/>
 [in] El GUID de la interfaz que se solicita.
 
-*PPV*  
+*PPV*<br/>
 [out] Un puntero al puntero de interfaz identificado por *iid*, o NULL si no se encuentra la interfaz.
 
 ### <a name="remarks"></a>Comentarios
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identificador de la ventana principal o propietaria. Debe proporcionar un identificador de ventana válido. La ventana de control se limita al área de su ventana primaria.
 
-*rcPos*  
+*rcPos*<br/>
 [in] El tamaño inicial y la posición de la ventana para crearse.
 
 ### <a name="remarks"></a>Comentarios
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>Parámetros
 
-*dispID*  
+*dispID*<br/>
 [in] Identificador de la propiedad que ha cambiado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>Parámetros
 
-*dispID*  
+*dispID*<br/>
 [in] Identificador de la propiedad que se va a cambiar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -203,7 +203,7 @@ Uno de los valores HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Si la clase del control se deriva de [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), llama este método [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar a todos conectados `IPropertyNotifySink` interfaces que el especificado propiedad de control que se va a cambiar. Si la clase del control no se deriva de `IPropertyNotifySink`, este método devuelve S_OK.  
+Si la clase del control se deriva de [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), llama este método [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar a todos conectados `IPropertyNotifySink` interfaces que el especificado propiedad de control que se va a cambiar. Si la clase del control no se deriva de `IPropertyNotifySink`, este método devuelve S_OK.
 
 Este método es seguro llamar a incluso si el control no admite puntos de conexión.
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszText*  
+*lpszText*<br/>
 El texto que se mostrará en el cuadro de mensaje.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 El título del cuadro de diálogo. Si es NULL (valor predeterminado), el título que se usa "Error".
 
-*nLas*  
+*nLas*<br/>
 Especifica el contenido y el comportamiento del cuadro de diálogo. Consulte la [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) entrada en la documentación del SDK de Windows para obtener una lista de los cuadros de mensajes distintos disponibles. El valor predeterminado proporciona un sencillo **Aceptar** botón.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -243,7 +243,7 @@ Devuelve el valor entero que especifica uno de los valores de elemento de menú 
 
 ## <a name="see-also"></a>Vea también
 
-[CWindowImpl (clase)](../../atl/reference/cwindowimpl-class.md)   
-[Información general de clases](../../atl/atl-class-overview.md)   
-[CComControlBase (clase)](../../atl/reference/ccomcontrolbase-class.md)   
+[CWindowImpl (clase)](../../atl/reference/cwindowimpl-class.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
+[CComControlBase (clase)](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [CComCompositeControl (clase)](../../atl/reference/ccomcompositecontrol-class.md)

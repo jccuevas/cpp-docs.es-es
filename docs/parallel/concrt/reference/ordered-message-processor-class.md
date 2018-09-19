@@ -1,5 +1,5 @@
 ---
-title: ordered_message_processor (clase) | Documentos de Microsoft
+title: ordered_message_processor (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dfb6c1a64d3a4e9df24f3966ec89db1dfbe10c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa27c46db5d23c78d9f433b41f27161f0bc41736
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688770"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028576"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor (Clase)
 Un `ordered_message_processor` es un `message_processor` que permite a los bloques de mensaje procesar los mensajes en el orden que se recibieron.  
@@ -42,8 +42,8 @@ class ordered_message_processor : public message_processor<T>;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de carga de los mensajes administrados por el procesador.  
+*T*<br/>
+El tipo de carga de mensajes controlados por el procesador.  
   
 ## <a name="members"></a>Miembros  
   
@@ -65,16 +65,16 @@ class ordered_message_processor : public message_processor<T>;
 |Name|Descripción|  
 |----------|-----------------|  
 |[async_send](#async_send)|Pone en cola los mensajes de forma asincrónica y se inicia una tarea de procesamiento, si esto no se ha hecho ya. (Invalida [message_processor:: async_send](message-processor-class.md#async_send).)|  
-|[inicializar](#initialize)|Inicializa el `ordered_message_processor` objeto con el grupo de función, el programador y la programación de devolución de llamada adecuada.|  
+|[inicializar](#initialize)|Inicializa el `ordered_message_processor` objeto con el grupo de programación, el programador y la función de devolución de llamada apropiados.|  
 |[initialize_batched_processing](#initialize_batched_processing)|Inicializar el procesamiento de mensajes por lotes|  
 |[sync_send](#sync_send)|Sincrónicamente pone en cola los mensajes e inicia una tarea de procesamiento, si esto no se ha hecho ya. (Invalida [message_processor:: sync_send](message-processor-class.md#sync_send).)|  
-|[espera](#wait)|Una espera de vuelta específica del procesador usada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo para finalizar antes de destruir el bloque. (Invalida [message_processor:: wait](message-processor-class.md#wait).)|  
+|[Espere](#wait)|Una espera de vuelta específica del procesador usada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo para finalizar antes de destruir el bloque. (Invalida [message_processor:: wait](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|La función de procesamiento que se llama de forma asincrónica. Quita de la cola mensajes y empieza a procesarlos. (Invalida [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|  
+|[process_incoming_message](#process_incoming_message)|La función de procesamiento que se llama de forma asincrónica. Quita los mensajes de la cola y empieza a procesarlos. (Invalida [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [message_processor)](message-processor-class.md)  
@@ -95,12 +95,12 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Msg`  
- Un puntero a un mensaje.  
+*_Msg*<br/>
+Un puntero a un mensaje.  
   
 ##  <a name="initialize"></a> inicializar 
 
- Inicializa el `ordered_message_processor` objeto con el grupo de función, el programador y la programación de devolución de llamada adecuada.  
+ Inicializa el `ordered_message_processor` objeto con el grupo de programación, el programador y la función de devolución de llamada apropiados.  
   
 ```
 void initialize(
@@ -110,14 +110,14 @@ void initialize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_PScheduler`  
- Un puntero al programador que se usa para programar las tareas ligeras.  
+*_PScheduler*<br/>
+Un puntero al programador que se usará para programar las tareas ligeras.  
   
- `_PScheduleGroup`  
- Un puntero al grupo de programación que se usará para programar las tareas ligeras.  
+*_PScheduleGroup*<br/>
+Un puntero al grupo de programación que se usará para programar las tareas ligeras.  
   
- `_Handler`  
- El functor del controlador que se invoca durante la devolución de llamada.  
+*_Handler*<br/>
+El functor de controlador que se invoca durante la devolución de llamada.  
   
 ##  <a name="initialize_batched_processing"></a> initialize_batched_processing 
 
@@ -130,11 +130,11 @@ virtual void initialize_batched_processing(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Processor`  
- El functor de procesador que se invoca durante la devolución de llamada.  
+*_Processor*<br/>
+El functor de procesador que se invoca durante la devolución de llamada.  
   
- `_Propagator`  
- El functor propagador invocado durante la devolución de llamada.  
+*_Propagator*<br/>
+El functor propagador invocado durante la devolución de llamada.  
   
 ##  <a name="ctor"></a> ordered_message_processor) 
 
@@ -145,7 +145,7 @@ ordered_message_processor();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esto `ordered_message_processor` no programará controladores asincrónicos o sincrónicos hasta que el `initialize` función se invoca.  
+ Esto `ordered_message_processor` no programará controladores sincrónicos o asincrónicos hasta el `initialize` se llama a la función.  
   
 ##  <a name="dtor"></a> ~ ordered_message_processor 
 
@@ -160,7 +160,7 @@ virtual ~ordered_message_processor();
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- La función de procesamiento que se llama de forma asincrónica. Quita de la cola mensajes y empieza a procesarlos.  
+ La función de procesamiento que se llama de forma asincrónica. Quita los mensajes de la cola y empieza a procesarlos.  
   
 ```
 virtual void process_incoming_message();
@@ -175,10 +175,10 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Msg`  
- Un puntero a un mensaje.  
+*_Msg*<br/>
+Un puntero a un mensaje.  
   
-##  <a name="wait"></a> espera 
+##  <a name="wait"></a> Espere 
 
  Una espera de vuelta específica del procesador usada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo para finalizar antes de destruir el bloque.  
   

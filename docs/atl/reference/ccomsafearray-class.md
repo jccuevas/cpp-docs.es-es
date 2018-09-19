@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030149"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray (clase)
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Tipo de datos que se va a almacenar en la matriz.
 
 ## <a name="members"></a>Miembros
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*psaSrc*  
+*psaSrc*<br/>
 Un puntero a un `SAFEARRAY` objeto.
 
-*ulCount*  
+*ulCount*<br/>
 El número de objetos que se va a agregar a la matriz.
 
-*pT*  
+*pT*<br/>
 Un puntero a uno o más objetos que se agregarán a la matriz.
 
-*t*  
+*t*<br/>
 Una referencia al objeto que se agregarán a la matriz.
 
-*bCopy*  
+*bCopy*<br/>
 Indica si se debe crear una copia de los datos. El valor predeterminado es TRUE.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parámetros
 
-*psaSrc*  
+*psaSrc*<br/>
 Un puntero a la `SAFEARRAY` estructura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Enlazado*  
+*Enlazado*<br/>
 Un estructura `SAFEARRAYBOUND`.
 
-*ulCount*  
+*ulCount*<br/>
 Número de elementos de la matriz.
 
-*lLBound*  
+*lLBound*<br/>
 El valor de límite inferior; es decir, el índice del primer elemento de la matriz.
 
-*pBound*  
+*pBound*<br/>
 Un puntero a un `SAFEARRAYBOUND` estructura.
 
-*uDims*  
+*uDims*<br/>
 El número de dimensiones de la matriz.
 
-*saSrc*  
+*saSrc*<br/>
 Una referencia a un `SAFEARRAY` estructura o `CComSafeArray` objeto. En cualquier caso el constructor usa esta referencia para realizar una copia de la matriz, por lo que no se hace referencia a la matriz después de la construcción.
 
-*psaSrc*  
+*psaSrc*<br/>
 Un puntero a un `SAFEARRAY` estructura. El constructor usa esta dirección para realizar una copia de la matriz, por lo que no se hace referencia a la matriz después de la construcción.
 
 ### <a name="remarks"></a>Comentarios
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parámetros
 
-*ppArray*  
+*ppArray*<br/>
 Puntero a la `SAFEARRAY` para copiar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parámetros
 
-*ppArray*  
+*ppArray*<br/>
 Un puntero a una ubicación en la que se va a crear el nuevo `SAFEARRAY`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*pBound*  
+*pBound*<br/>
 Un puntero a un `SAFEARRAYBOUND` objeto.
 
-*uDims*  
+*uDims*<br/>
 El número de dimensiones de la matriz.
 
-*ulCount*  
+*ulCount*<br/>
 Número de elementos de la matriz.
 
-*lLBound*  
+*lLBound*<br/>
 El valor de límite inferior; es decir, el índice del primer elemento de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*lIndex*  
+*lIndex*<br/>
 El número de índice del valor de la matriz para devolver.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*uDim*  
+*uDim*<br/>
 La dimensión de matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*uDim*  
+*uDim*<br/>
 La dimensión de matriz para que se va a obtener el límite inferior. Si se omite, el valor predeterminado es 0.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*uDim*  
+*uDim*<br/>
 La dimensión de matriz para que se va a obtener el límite superior. Si se omite, el valor predeterminado es 0.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>Parámetros
 
-*alIndex*  
+*alIndex*<br/>
 Puntero a un vector de índices para cada dimensión de la matriz. La dimensión más a la izquierda (más significativa) es `alIndex[0]`.
 
-*t*  
+*t*<br/>
 Devuelve una referencia a los datos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>Parámetros
 
-*alIndex*  
+*alIndex*<br/>
 Puntero a un vector de índices para cada dimensión de la matriz. La dimensión (menos significativa) más a la derecha es `alIndex`[0].
 
-*T*  
+*T*<br/>
 Especifica el valor del nuevo elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*lIndex, nIndex*  
+*lIndex, nIndex*<br/>
 El número de índice del elemento necesario en la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parámetros
 
-*saSrc*  
+*saSrc*<br/>
 Referencia a un objeto `CComSafeArray`.
 
-*psaSrc*  
+*psaSrc*<br/>
 Un puntero a un `SAFEARRAY` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*pBound*  
+*pBound*<br/>
 Un puntero a un `SAFEARRAYBOUND` estructura que contiene información sobre el número de elementos y el límite inferior de la matriz.
 
-*ulCount*  
+*ulCount*<br/>
 El número solicitado de objetos de la matriz cuyo tamaño ha cambiado.
 
-*lLBound*  
+*lLBound*<br/>
 El límite inferior.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*lIndex*  
+*lIndex*<br/>
 El número de índice del elemento de matriz para establecer.
 
-*t*  
+*t*<br/>
 El nuevo valor del elemento especificado.
 
-*bCopy*  
+*bCopy*<br/>
 Indica si se debe crear una copia de los datos. El valor predeterminado es TRUE.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -672,7 +672,7 @@ El *bCopy* marca se tiene en cuenta cuando se agregan elementos de tipo BSTR o V
 
 ## <a name="see-also"></a>Vea también
 
-[Tipo de datos SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[CComSafeArray:: Create](#create)   
-[CComSafeArray:: Destroy](#destroy)   
+[Tipo de datos SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C2055 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2055 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f16d9c3948c0211da69142f1b9c7c1a6a32d8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6c63d79325417fbd9b1f451fb4a51f13957b4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019347"
 ---
-# <a name="compiler-error-c2055"></a>C2055 de Error del compilador
-se esperaba la lista de parámetros formales, no una lista de tipo  
-  
- Una definición de función contiene una lista de tipo de parámetro en lugar de una lista de parámetros formales. ANSI C requiere que los parámetros formales asignarle un nombre a menos que sean void o un botón de puntos suspensivos (`...`).  
-  
- El ejemplo siguiente genera C2055:  
-  
-```  
-// C2055.c  
-// compile with: /c  
-void func(int, char) {}  // C2055  
-void func (int i, char c) {}   // OK  
+# <a name="compiler-error-c2055"></a>Error del compilador C2055
+
+lista de parámetros formales, no una lista de tipos de espera
+
+Una definición de función contiene una lista de tipos de parámetro en lugar de una lista de parámetros formales. ANSI C requiere que los parámetros formales para llamarse a menos que sean void o un botón de puntos suspensivos (`...`).
+
+El ejemplo siguiente genera C2055:
+
+```
+// C2055.c
+// compile with: /c
+void func(int, char) {}  // C2055
+void func (int i, char c) {}   // OK
 ```

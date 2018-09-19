@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3923 | Documentos de Microsoft
+title: Error del compilador C3923 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d93ff388ae4ba1a97f9a194df1ca1006e05eb51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b00edbb824e7815e93b961b792513a88cf96f4be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031345"
 ---
 # <a name="compiler-error-c3923"></a>Error del compilador C3923
-'member': Las definiciones de clase, struct o unión locales no se permiten en una función miembro de una clase WinRT o administrada  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente genera el error C3923.  
-  
-```  
-// C3923.cpp  
-// compile with: /clr /c  
-ref struct x {  
-   void Test() {  
-      struct a {};   // C3923  
-      class b {};   // C3923  
-      union c {};   // C3923  
-   }  
-};  
+
+'member': Las definiciones de clase, struct o unión locales no se permiten en una función miembro de una clase WinRT o administrada
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente genera el error C3923.
+
+```
+// C3923.cpp
+// compile with: /clr /c
+ref struct x {
+   void Test() {
+      struct a {};   // C3923
+      class b {};   // C3923
+      union c {};   // C3923
+   }
+};
 ```

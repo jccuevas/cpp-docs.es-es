@@ -1,5 +1,5 @@
 ---
-title: Error matemático M6102 | Documentos de Microsoft
+title: Error matemático M6102 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc1d1064e6ed18870d60e3a421ceec0c54ca855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae8ee21b8cb8f2a5bffe471019e65d32c8872af3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037507"
 ---
 # <a name="math-error-m6102"></a>Error matemático M6102
-desnormalizado  
-  
- Una operación genera un número de punto flotante muy pequeño, que no sea válido debido a pérdida de significado. Desnormalizado excepciones de punto flotante se suelen enmascarar, hace que se deben interceptar y realizan operaciones con ellos.  
-  
- El programa termina con el código de salida 130.
+
+desnormalizado
+
+Una operación genera un número de punto flotante muy pequeño, que no es válido debido a pérdida de significado. Desnormalizado excepciones de punto flotante se suelen enmascarar, provocando que se deben interceptar y opera.
+
+El programa termina con el código de salida 130.

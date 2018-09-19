@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4295 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4295 | Microsoft Docs
 ms.custom: ''
 ms.date: 1/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a669bc359121b13b1d636009cad81dc332304
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36c6ac4d8c3e2899b744d1c456ae3079ec031698
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053588"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Advertencia del compilador (nivel 4) C4295
-  
-> '*matriz*': matriz es demasiado pequeña para incluir un carácter nulo de terminación  
-  
-Se inicializó una matriz, pero el último carácter de la matriz no es null; obtener acceso a la matriz como una cadena puede producir resultados inesperados.  
-  
-## <a name="example"></a>Ejemplo  
-  
-El ejemplo siguiente genera C4295. Para corregir este problema, podría declarar el tamaño de la matriz más grande para contener un carácter nulo final de la cadena de inicializador o podría utilizar una lista de inicializadores de matriz para hacer la intención clear que se trata de una matriz de `char`, no una cadena terminada en null.  
-  
-```C  
+
+> '*matriz*': matriz es demasiado pequeña para incluir un carácter nulo de terminación
+
+Se puede inicializar una matriz, pero el último carácter de la matriz no es null; obtener acceso a la matriz como una cadena puede producir resultados inesperados.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C4295. Para corregir este problema, podría declarar el tamaño de la matriz más grande para contener un carácter nulo final de la cadena de inicializador o podría usar una lista de inicializadores de matriz para realizar la intención clear que se trata de una matriz de `char`, no una cadena terminada en null.
+
+```C
 // C4295.c
 // compile with: /W4
 

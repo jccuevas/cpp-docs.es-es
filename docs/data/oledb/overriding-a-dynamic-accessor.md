@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035544"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Invalidar un descriptor de acceso dinámico
+
 Cuando se usa un descriptor de acceso dinámico, como `CDynamicAccessor`, el comando `Open` método crea un descriptor de acceso automáticamente, según la información de columna del conjunto de filas abierto. Puede reemplazar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.  
   
- Para reemplazar el descriptor de acceso dinámico, pase **false** como el último parámetro para el `CCommand::Open` método. Esto evita que `Open` pueda crear automáticamente un descriptor de acceso. A continuación, puede llamar a `GetColumnInfo` y llamar a `AddBindEntry` para cada columna que desea enlazar. El código siguiente muestra cómo hacerlo:  
+Para reemplazar el descriptor de acceso dinámico, pase **false** como el último parámetro para el `CCommand::Open` método. Esto evita que `Open` pueda crear automáticamente un descriptor de acceso. A continuación, puede llamar a `GetColumnInfo` y llamar a `AddBindEntry` para cada columna que desea enlazar. El código siguiente muestra cómo hacerlo:  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar descriptores de acceso](../../data/oledb/using-accessors.md)
+
+[Usar descriptores de acceso](../../data/oledb/using-accessors.md)

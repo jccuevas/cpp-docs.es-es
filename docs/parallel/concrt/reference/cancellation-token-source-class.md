@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_source (clase) | Documentos de Microsoft
+title: cancellation_token_source (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053653"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source (Clase)
 La clase `cancellation_token_source` representa la capacidad para cancelar una operación que se puede cancelar.  
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Src`  
+*_Src*<br/>
+Objeto que se va a copiar o mover.  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Iter`  
- `_Src`  
- Token cuya cancelación provocará la cancelación del origen del token devuelto. Observe que el origen del token devuelto también se puede cancelar independientemente del origen incluido en este parámetro.  
+*_Iter*<br/>
+Tipo de iterador.
+
+*_Src*<br/>
+Token cuya cancelación provocará la cancelación del origen del token devuelto. Observe que el origen del token devuelto también se puede cancelar independientemente del origen incluido en este parámetro.  
   
- `_Begin`  
- El iterador de biblioteca estándar de C++ correspondiente al inicio del intervalo de tokens para escuchar para determinar su cancelación.  
+*_Empezar la*<br/>
+El iterador de biblioteca estándar de C++ correspondiente al inicio del intervalo de tokens para escuchar para determinar su cancelación.  
   
- `_End`  
- El iterador de biblioteca estándar de C++ correspondiente con el final del intervalo de tokens para escuchar para determinar su cancelación.  
+*_Finalizar*<br/>
+El iterador de biblioteca estándar de C++ correspondiente con el final del intervalo de tokens para escuchar para determinar su cancelación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `cancellation_token_source` que se cancela cuando se cancela el token proporcionado por el parámetro `_Src`.  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Src`  
+*_Src*<br/>
+Operando.
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Src`  
-  
+*_Src*<br/>
+Operando.
+
 ### <a name="return-value"></a>Valor devuelto  
   
 ##  <a name="operator_eq_eq"></a> operador == 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Src`  
+*_Src*<br/>
+Operando.
   
 ### <a name="return-value"></a>Valor devuelto  
   

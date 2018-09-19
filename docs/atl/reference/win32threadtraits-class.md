@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: baab04880c19cac1e0c291f2b4d8a274dea1c21b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044943"
 ---
 # <a name="win32threadtraits-class"></a>Clase Win32ThreadTraits
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Parámetros
 
-*LPSA*  
+*LPSA*<br/>
 Los atributos de seguridad para el nuevo subproceso.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 El tamaño de pila para el nuevo subproceso.
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 El procedimiento de subproceso del subproceso nuevo.
 
-*pvParam*  
+*pvParam*<br/>
 El parámetro que se pasa al procedimiento de subproceso.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 La creación de indicadores (0 o CREATE_SUSPENDED).
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out] Dirección de la variable DWORD que, si se ejecuta correctamente, recibe el identificador de subproceso del subproceso recién creado.
 
 ### <a name="return-value"></a>Valor devuelto

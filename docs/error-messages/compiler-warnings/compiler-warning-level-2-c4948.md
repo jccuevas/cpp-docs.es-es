@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 2) C4948 | Documentos de Microsoft
+title: Compilador advertencia (nivel 2) C4948 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422f06e6e9ac749b16524f45e61cb6bbbd672cb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51b42677fbabde58afb3cb989e9b0d73e34f92a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050832"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>Advertencia del compilador (nivel 2) C4948
-tipo de valor devuelto de 'accessor' no coincide con el tipo último parámetro del método establecedor correspondiente  
-  
-El compilador encontró una discrepancia entre el tipo de datos es que se va a obtener y establece una propiedad indizada.  
-  
-Solo es accesible mediante la opción del compilador obsoleta C4948 **/CLR: oldSyntax**.  
+
+tipo de valor devuelto de 'accessor' no coincide con el tipo último parámetro de un establecedor correspondiente
+
+El compilador encontró una discrepancia entre el tipo de datos es que se va a obtener y establece para una propiedad indizada.
+
+Solo es accesible a través de la opción del compilador obsoleto C4948 **/CLR: oldSyntax**.

@@ -63,14 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041472"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl (Clase)
+
 Proporciona la implementación de la [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
@@ -81,14 +82,16 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *T*  
- La clase derivada de `ICommandImpl`.  
+
+*T*<br/>
+La clase derivada de `ICommandImpl`.  
   
- *CommandBase*  
- Una interfaz de comandos. De manera predeterminada, es `ICommand`.  
+*CommandBase*<br/>
+Una interfaz de comandos. De manera predeterminada, es `ICommand`.  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldb.h  
+
+**Encabezado:** atldb.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -99,7 +102,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[Cancelar](#cancel)|Cancela la ejecución del comando actual.|  
 |[CancelExecution](#cancelexecution)|Cancela la ejecución del comando actual.|  
 |[CreateRowset](#createrowset)|Crea un objeto de conjunto de filas.|  
-|[Ejecutar](#execute)|Ejecuta el comando.|  
+|[Execute](#execute)|Ejecuta el comando.|  
 |[GetDBSession](#getdbsession)|Devuelve un puntero de interfaz a la sesión que creó el comando.|  
 |[ICommandImpl](#icommandimpl)|El constructor.|  
   
@@ -112,9 +115,11 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[m_bIsExecuting](#bisexecuting)|Indica si el comando se está ejecutando actualmente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Una interfaz obligatoria en el objeto de comando.  
+
+Una interfaz obligatoria en el objeto de comando.  
   
 ## <a name="cancel"></a> ICommandImpl:: Cancel
+
 Cancela la ejecución del comando actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -124,9 +129,11 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) en el *referencia del programador OLE DB*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl:: Cancelexecution
+
 Cancela la ejecución del comando actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -136,6 +143,7 @@ HRESULT CancelExecution();
 ```  
 
 ## <a name="createrowset"></a> ICommandImpl:: CreateRowset
+
 Lo llama [Execute](../../data/oledb/icommandimpl-execute.md) para crear un conjunto de filas único.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -151,36 +159,40 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *RowsetClass*  
- Un miembro de clase de plantilla que representa la clase de conjunto de filas del usuario. Normalmente, generado por el asistente.  
+
+*RowsetClass*<br/>
+Un miembro de clase de plantilla que representa la clase de conjunto de filas del usuario. Normalmente, generado por el asistente.  
   
- *pUnkOuter*  
- [in] Un puntero al control `IUnknown` si se está creando el conjunto de filas como parte de un agregado de la interfaz; en caso contrario, es null.  
+*pUnkOuter*<br/>
+[in] Un puntero al control `IUnknown` si se está creando el conjunto de filas como parte de un agregado de la interfaz; en caso contrario, es null.  
   
- *riid*  
- [in] Corresponde a *riid* en `ICommand::Execute`.  
+*riid*<br/>
+[in] Corresponde a *riid* en `ICommand::Execute`.  
   
- *pParams*  
- [entrada/salida] Corresponde a *pParams* en `ICommand::Execute`.  
+*pParams*<br/>
+[entrada/salida] Corresponde a *pParams* en `ICommand::Execute`.  
   
- *pcRowsAffected*  
- Corresponde a *pcRowsAffected* en `ICommand::Execute`.  
+*pcRowsAffected*<br/>
+Corresponde a *pcRowsAffected* en `ICommand::Execute`.  
   
- *ppRowset*  
- [entrada/salida] Corresponde a *ppRowset* en `ICommand::Execute`.  
+*ppRowset*<br/>
+[entrada/salida] Corresponde a *ppRowset* en `ICommand::Execute`.  
   
- *pRowsetObj*  
- [out] Un puntero a un objeto de conjunto de filas. Normalmente no se usa este parámetro, pero puede usarse si tiene que realizar más trabajo en el conjunto de filas antes de pasarlo a un objeto COM. La duración de *pRowsetObj* está limitado por *ppRowset*.  
+*pRowsetObj*<br/>
+[out] Un puntero a un objeto de conjunto de filas. Normalmente no se usa este parámetro, pero puede usarse si tiene que realizar más trabajo en el conjunto de filas antes de pasarlo a un objeto COM. La duración de *pRowsetObj* está limitado por *ppRowset*.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor HRESULT estándar. Consulte `ICommand::Execute` para obtener una lista de los valores típicos.  
+
+Un valor HRESULT estándar. Consulte `ICommand::Execute` para obtener una lista de los valores típicos.  
   
 ### <a name="remarks"></a>Comentarios  
- Para crear más de un conjunto de filas, o para proporcionar sus propias condiciones para la creación de conjuntos de filas diferentes, realizar llamadas diferentes a `CreateRowset` desde `Execute`.  
+
+Para crear más de un conjunto de filas, o para proporcionar sus propias condiciones para la creación de conjuntos de filas diferentes, realizar llamadas diferentes a `CreateRowset` desde `Execute`.  
   
- Consulte [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) en el *referencia del programador OLE DB.*  
+Consulte [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) en el *referencia del programador OLE DB.*  
 
 ## <a name="execute"></a> ICommandImpl:: Execute
+
 Ejecuta el comando.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -194,14 +206,17 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
- Solicita la interfaz de salida será una interfaz adquirida desde el objeto de conjunto de filas que crea esta función.  
+
+Solicita la interfaz de salida será una interfaz adquirida desde el objeto de conjunto de filas que crea esta función.  
   
- `Execute` las llamadas [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Invalidar la implementación predeterminada para crear más de un conjunto de filas o para proporcionar sus propias condiciones para la creación de conjuntos de filas diferentes.  
+`Execute` las llamadas [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Invalidar la implementación predeterminada para crear más de un conjunto de filas o para proporcionar sus propias condiciones para la creación de conjuntos de filas diferentes.  
 
 ## <a name="getdbsession"></a> ICommandImpl:: Getdbsession
+
 Devuelve un puntero de interfaz a la sesión que creó el comando.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -212,12 +227,15 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+
+Consulte [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
- Es útil para recuperar las propiedades de la sesión.  
+
+Es útil para recuperar las propiedades de la sesión.  
 
 ## <a name="icommandimpl"></a> ICommandImpl:: ICommandImpl
+
 El constructor.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -227,6 +245,7 @@ ICommandImpl();
 ```  
 
 ## <a name="bcancel"></a> ICommandImpl:: M_bcancel
+
 Indica si se ha cancelado el comando.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -236,9 +255,11 @@ unsigned m_bCancel:1;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Puede recuperar esta variable en el `Execute` método de la clase de comando y cancelar según corresponda. 
+
+Puede recuperar esta variable en el `Execute` método de la clase de comando y cancelar según corresponda. 
 
 ## <a name="bcancelwhenexecuting"></a> ICommandImpl:: M_bcancelwhenexecuting
+
 Indica si se puede cancelar el comando cuando se ejecuta.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -248,9 +269,11 @@ unsigned m_bCancelWhenExecuting:1;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El valor predeterminado es **true** (se puede cancelar).  
+
+El valor predeterminado es **true** (se puede cancelar).  
 
 ## <a name="bisexecuting"></a> ICommandImpl:: M_bisexecuting
+
 Indica si el comando se está ejecutando actualmente.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -260,8 +283,10 @@ unsigned m_bIsExecuting:1;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El `Execute` método de la clase de comando puede establecer esta variable en **true**. 
+
+El `Execute` método de la clase de comando puede establecer esta variable en **true**. 
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

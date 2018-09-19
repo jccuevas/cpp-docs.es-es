@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755806"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040484"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT (clase)
 
@@ -49,16 +49,16 @@ Esta clase implementa una ventana dentro de otro objeto.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*TBase*  
+*TBase*<br/>
 La clase base de la nueva clase. La clase base predeterminada es `CWindow`.
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Una clase de rasgos que define los estilos de la ventana. De manera predeterminada, es `CControlWinTraits`.
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] El nombre de una clase de ventana existente en el que se basará la ventana contenida.
 
-*pObject*  
+*pObject*<br/>
 [in] Un puntero al objeto contenedor que declara el mapa de mensajes. Clase de este objeto debe derivarse de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifica el mapa de mensajes que procesará los mensajes de la ventana independiente. El valor predeterminado, 0, especifica el mapa de mensajes predeterminado declarado con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Para usar un mapa de mensajes alternativo declarado con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), pasar `msgMapID`.
 
 ### <a name="remarks"></a>Comentarios
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] El nombre de una clase de ventana existente en el que se basará la ventana contenida.
 
-*pObject*  
+*pObject*<br/>
 [in] Un puntero al objeto contenedor que declara el mapa de mensajes. Clase de este objeto debe derivarse de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifica el mapa de mensajes que procesará los mensajes de la ventana independiente. El valor predeterminado, 0, especifica el mapa de mensajes predeterminado declarado con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Para usar un mapa de mensajes alternativo declarado con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), pasar `msgMapID`.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] El identificador de la ventana principal o propietaria.
 
-*Rect*  
+*Rect*<br/>
 [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Especifica el nombre de la ventana. El valor predeterminado es NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] El estilo de la ventana. El valor predeterminado es WS_CHILD &#124; WS_VISIBLE. Para obtener una lista de valores posibles, vea [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] El estilo extendido de ventana. El valor predeterminado es 0, lo que significa que ningún estilo extendido. Para obtener una lista de valores posibles, vea [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Para una ventana secundaria, el identificador de ventana. Para una ventana de nivel superior, un identificador de menú de la ventana. El valor predeterminado es **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Un puntero a datos de creación de la ventana. Para obtener una descripción completa, vea la descripción para el parámetro final a [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parámetros
 
-*uMsg*  
+*uMsg*<br/>
 [in] El mensaje enviado a la ventana.
 
-*wParam*  
+*wParam*<br/>
 [in] Información adicional específica del mensaje.
 
-*lParam*  
+*lParam*<br/>
 [in] Información adicional específica del mensaje.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] El identificador de la ventana que se va a crear subclase.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identificador de asignación de mensaje. Para usar el mapa de mensajes predeterminado declarado con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), pasar cero. Para usar un mapa de mensajes alternativo declarado con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), pasar `msgMapID`.
 
 ### <a name="remarks"></a>Comentarios
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bForce*  
+*bForce*<br/>
 [in] Establézcalo en True para forzar el procedimiento de ventana original restaurarse incluso si el procedimiento de ventana para este `CContainedWindowT` objeto no está activo actualmente. Si *bForce* se establece en FALSE y el procedimiento de ventana para este `CContainedWindowT` objeto no está activo actualmente, no se restaurará el procedimiento de ventana original.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parámetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] El identificador de la ventana.
 
-*uMsg*  
+*uMsg*<br/>
 [in] El mensaje enviado a la ventana.
 
-*wParam*  
+*wParam*<br/>
 [in] Información adicional específica del mensaje.
 
-*lParam*  
+*lParam*<br/>
 [in] Información adicional específica del mensaje.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -472,9 +472,9 @@ El resultado del procesamiento del mensaje.
 
 ## <a name="see-also"></a>Vea también
 
-[CWindow (clase)](../../atl/reference/cwindow-class.md)   
-[CWindowImpl (clase)](../../atl/reference/cwindowimpl-class.md)   
-[CMessageMap (clase)](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CWindow (clase)](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl (clase)](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap (clase)](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

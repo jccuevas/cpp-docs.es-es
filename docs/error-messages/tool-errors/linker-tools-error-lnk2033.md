@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK2033 Error | Documentos de Microsoft
+title: Error de las LNK2033 las herramientas del vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d03e8d2e0502d6e3664bff05c75fffb4f4ebd5da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c547b4d35e2e7fe057cdd67f0dad47f58d000c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040002"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Error de las herramientas del vinculador LNK2033
-símbolo (token) de typeref sin resolver para 'type'  
-  
- Un tipo no tiene una definición en metadatos MSIL.  
-  
- Error LNK2033 puede producirse cuando se compila con **/CLR: safe** y donde hay solo una declaración adelantada para un tipo en un módulo MSIL, donde se hace referencia al tipo en el módulo MSIL.  
-  
- El tipo debe definirse en **/CLR: safe**.  
-  
- Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error LNK2033.  
-  
-```  
-// LNK2033.cpp  
-// compile with: /clr:safe  
-// LNK2033 expected  
-ref class A;  
-ref class B {};  
-  
-int main() {  
-   A ^ aa = nullptr;  
-   B ^ bb = nullptr;   // OK  
-};  
+
+símbolo (token) de typeref sin resolver de 'type'
+
+Un tipo no tiene una definición en metadatos MSIL.
+
+Error LNK2033 puede producirse cuando se compila con **/CLR: safe** y donde hay solo una declaración adelantada para un tipo en un módulo MSIL, donde se hace referencia al tipo en el módulo MSIL.
+
+El tipo debe definirse en **/CLR: safe**.
+
+Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error LNK2033.
+
+```
+// LNK2033.cpp
+// compile with: /clr:safe
+// LNK2033 expected
+ref class A;
+ref class B {};
+
+int main() {
+   A ^ aa = nullptr;
+   B ^ bb = nullptr;   // OK
+};
 ```

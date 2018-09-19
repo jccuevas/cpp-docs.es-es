@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019389"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 (estructura)
 
@@ -44,19 +44,19 @@ struct _ATL_COM_MODULE70 {
 
 ## <a name="members"></a>Miembros
 
-`cbSize`  
+`cbSize`<br/>
 El tamaño de la estructura que se utiliza para el control de versiones.
 
-`m_hInstTypeLib`  
+`m_hInstTypeLib`<br/>
 La instancia de identificador a la biblioteca de tipos para este módulo.
 
-`m_ppAutoObjMapFirst`  
+`m_ppAutoObjMapFirst`<br/>
 Dirección del elemento de matriz que indica el principio de las entradas de asignación de objeto para este módulo.
 
-`m_ppAutoObjMapLast`  
+`m_ppAutoObjMapLast`<br/>
 Dirección del elemento de matriz que indica el final de las entradas de asignación de objeto para este módulo.
 
-`m_csObjMap`  
+`m_csObjMap`<br/>
 Sección crítica para serializar el acceso a las entradas de asignación de objeto. Lo utiliza internamente ATL.
 
 ## <a name="remarks"></a>Comentarios

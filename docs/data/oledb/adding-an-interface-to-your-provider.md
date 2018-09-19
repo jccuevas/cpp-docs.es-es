@@ -1,5 +1,5 @@
 ---
-title: Agregar una interfaz a un proveedor | Documentos de Microsoft
+title: Agregar una interfaz a un proveedor | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f50459550c91f07c12f6f18b3fbbaa5622ab7408
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032398"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Agregar una interfaz a un proveedor
-Determinar qué objeto que desea agregar la interfaz a (normalmente datos origen, conjunto de filas, comando o sesión objetos creados por el Asistente para proveedores OLE DB). Es posible que el objeto que se debe agregar a la interfaz es que el proveedor no admite actualmente. En ese caso, ejecute el Asistente para proveedores OLE DB ATL para crear el objeto. Haga clic en el proyecto en la vista de clases, haga clic en **Agregar clase** desde el **agregar** menú y, a continuación, haga clic en **proveedor OLE DB ATL**. Puede colocar el código de interfaz en un directorio independiente y, a continuación, copie los archivos en el proyecto de proveedor.  
+
+Determinar qué objeto que desea agregar la interfaz a (normalmente datos origen, conjunto de filas, comando o sesión de los objetos creados por el Asistente para proveedores OLE DB). Es posible que el objeto que deba agregar a la interfaz es que el proveedor no admite actualmente. En ese caso, ejecute el Asistente para proveedores OLE DB ATL para crear el objeto. Haga clic en el proyecto en la vista de clases, haga clic en **Agregar clase** desde el **agregar** menú y, a continuación, haga clic en **proveedor OLE DB ATL**. Es posible que desee colocar el código de interfaz en un directorio independiente y, a continuación, copie los archivos en el proyecto de proveedor.  
   
- Si ha creado una nueva clase para admitir la interfaz, hacer que el objeto heredar de esa clase. Por ejemplo, puede agregar la clase **IRowsetIndexImpl** a un objeto de conjunto de filas:  
+Si ha creado una nueva clase para admitir la interfaz, que el objeto que se hereden de esa clase. Por ejemplo, podría agregar la clase **IRowsetIndexImpl** a un objeto de conjunto de filas:  
   
 ```cpp  
 template <class Creator>  
@@ -34,7 +35,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- Agregar a la interfaz **COM_MAP** en el objeto mediante la macro COM_INTERFACE_ENTRY. Si no existe ninguna asignación, cree uno. Por ejemplo:  
+Agregar a la interfaz **COM_MAP** en el objeto mediante la macro COM_INTERFACE_ENTRY. Si no hay ninguna asignación, cree uno. Por ejemplo:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -42,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Para el objeto de conjunto de filas, encadene el mapa de su elemento primario del objeto para que el objeto puede delegar a la clase primaria. En este ejemplo, agregue la macro COM_INTERFACE_ENTRY_CHAIN al mapa:  
+Para el objeto de conjunto de filas, la asignación de su elemento primario de la cadena de objetos para que el objeto puede delegar a la clase primaria. En este ejemplo, agregue la macro COM_INTERFACE_ENTRY_CHAIN al mapa:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -52,4 +53,5 @@ END_COM_MAP()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

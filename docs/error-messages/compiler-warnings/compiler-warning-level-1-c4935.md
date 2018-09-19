@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4935 | Documentos de Microsoft
+title: Del compilador (nivel 1) de la advertencia C4935 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a43b791dea84bbda8cdebdcbb603a52fb190e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db481531dc13433ac0ca4ef6ceca6ab284a859b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027607"
 ---
 # <a name="compiler-warning-level-1-c4935"></a>Advertencia del compilador (nivel 1) C4935
-especificador de acceso de ensamblado modificado desde 'access'  
-  
-Se modificó la visibilidad del ensamblado de un tipo. El compilador usa el último especificador que encuentra. Por ejemplo, la visibilidad del ensamblado de una declaración adelantada puede ser diferente de la visibilidad del ensamblado de la definición de clase.  
-  
-Error C4935 solo es accesible mediante la opción del compilador obsoleta **/CLR: oldSyntax**.  
+
+especificador de acceso de ensamblado modificado desde 'access'
+
+Se modificó la visibilidad del ensamblado de un tipo. El compilador usa el último especificador que encuentra. Por ejemplo, la visibilidad del ensamblado de una declaración adelantada puede ser diferente de la visibilidad del ensamblado de la definición de clase.
+
+Error C4935 solo es accesible mediante la opción del compilador obsoleto **/CLR: oldSyntax**.

@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4564 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4564 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0cf68eb75d420a0d23c04687d4f9492910b53f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea8d392251c8168490d7841ad590731b5a08e7f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031839"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Advertencia del compilador (nivel 4) C4564
-el método 'método' de clase 'class' define de forma predeterminada no admitido ' parámetro '  
-  
- El compilador detectó un método con uno o varios parámetros con valores predeterminados. Se pasará por alto los valores predeterminados para los parámetros cuando se invoca el método; especificar explícitamente los valores para esos parámetros. Si no especifica valores para esos parámetros explícitamente, el compilador de C++ generará un error.  
-  
- Dado el siguiente archivo .dll creado con Visual Basic, que permite parámetros predeterminados en argumentos de método:  
-  
-```  
-' C4564.vb  
-' compile with: vbc /t:library C4564.vb  
-Public class TestClass  
-   Public Sub MyMethod (a as Integer, _  
-                        Optional c as Integer=1)  
-   End Sub  
-End class  
-```  
-  
- El siguiente ejemplo de C++ que utiliza la DLL creada con Visual Basic, y  
-  
-```  
-// C4564.cpp  
-// compile with: /clr /W4 /WX  
-#using <C4564.dll>  
-  
-int main() {  
-   TestClass ^ myx = gcnew TestClass();   // C4564  
-   myx->MyMethod(9);  
-   // try the following line instead, to avoid an error  
-   // myx->MyMethod(9, 1);  
-}  
+
+el método 'método' de la clase 'class' define el parámetro predeterminado no admitido 'parámetro'
+
+El compilador detectó un método con uno o varios parámetros con valores predeterminados. Se omitirán los valores predeterminados para los parámetros cuando se invoca el método; especificar explícitamente los valores para esos parámetros. Si no especifica valores para esos parámetros explícitamente, el compilador de C++ generará un error.
+
+Dado el siguiente archivo .dll creado con Visual Basic, que permite que los parámetros predeterminados en argumentos de método:
+
+```
+' C4564.vb
+' compile with: vbc /t:library C4564.vb
+Public class TestClass
+   Public Sub MyMethod (a as Integer, _
+                        Optional c as Integer=1)
+   End Sub
+End class
+```
+
+Y el siguiente ejemplo de C++ que utiliza la DLL creada con Visual Basic,
+
+```
+// C4564.cpp
+// compile with: /clr /W4 /WX
+#using <C4564.dll>
+
+int main() {
+   TestClass ^ myx = gcnew TestClass();   // C4564
+   myx->MyMethod(9);
+   // try the following line instead, to avoid an error
+   // myx->MyMethod(9, 1);
+}
 ```

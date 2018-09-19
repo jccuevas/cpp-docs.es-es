@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eba14e7b8a251fdc1287fc413e2c4ebcd7ae77
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040861"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr (clase)
 
@@ -106,25 +106,25 @@ int FindAddr(
 
 ### <a name="parameters"></a>Parámetros
 
-*szHost*  
+*szHost*<br/>
 El nombre de host o dirección IP con puntos.
 
-*szPortOrServiceName*  
+*szPortOrServiceName*<br/>
 El número de puerto o nombre de servicio del host.
 
-*nPortNo*  
+*nPortNo*<br/>
 El número de puerto.
 
-*flags*  
+*flags*<br/>
 0 o combinación de AI_PASSIVE, AI_CANONNAME o AI_NUMERICHOST.
 
-*addr_family*  
+*addr_family*<br/>
 (Por ejemplo, PF_INET) de la familia de direcciones.
 
-*sock_type*  
+*sock_type*<br/>
 Tipo de socket (por ejemplo, SOCK_STREAM).
 
-*ai_proto*  
+*ai_proto*<br/>
 Protocolo (por ejemplo, IPPROTO_IP o IPPROTO_IPV6).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -149,16 +149,16 @@ int FindINET4Addr(
 
 ### <a name="parameters"></a>Parámetros
 
-*szHost*  
+*szHost*<br/>
 El nombre de host o dirección IP con puntos.
 
-*nPortNo*  
+*nPortNo*<br/>
 El número de puerto.
 
-*flags*  
+*flags*<br/>
 0 o combinación de AI_PASSIVE, AI_CANONNAME o AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Tipo de socket (por ejemplo, SOCK_STREAM).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -183,16 +183,16 @@ int FindINET6Addr(
 
 ### <a name="parameters"></a>Parámetros
 
-*szHost*  
+*szHost*<br/>
 El nombre de host o dirección IP con puntos.
 
-*nPortNo*  
+*nPortNo*<br/>
 El número de puerto.
 
-*flags*  
+*flags*<br/>
 0 o combinación de AI_PASSIVE, AI_CANONNAME o AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Tipo de socket (por ejemplo, SOCK_STREAM).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -213,7 +213,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 Una referencia a un elemento específico de la [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) lista.
 
 ### <a name="return-value"></a>Valor devuelto

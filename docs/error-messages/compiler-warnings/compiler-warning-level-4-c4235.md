@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4235 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4235 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc63640bc58caefa281b9207b9796ffdf387a7a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e709017e51101efe53a8697bb145014f200871
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031826"
 ---
 # <a name="compiler-warning-level-4-c4235"></a>Advertencia del compilador (nivel 4) C4235
-se ha utilizado una extensión no estándar : la palabra clave 'palabra clave' no se admite en esta arquitectura  
-  
- El compilador aún no admite la palabra clave utilizada.  
-  
- Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, utilice [#pragma warning](../../preprocessor/warning.md). Por ejemplo, para convertir C4235 en una advertencia de nivel 2, utilice la siguiente línea de código  
-  
-```  
-#pragma warning(2:4235)  
-```  
-  
- en el archivo de código fuente.
+
+se ha utilizado una extensión no estándar : la palabra clave 'palabra clave' no se admite en esta arquitectura
+
+El compilador aún no admite la palabra clave utilizada.
+
+Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, use [advertencia #pragma](../../preprocessor/warning.md). Por ejemplo, para convertir C4235 en una advertencia de nivel 2, utilice la siguiente línea de código
+
+```
+#pragma warning(2:4235)
+```
+
+en el archivo de código fuente.

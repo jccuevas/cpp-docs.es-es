@@ -1,5 +1,5 @@
 ---
-title: Atomic | Documentos de Microsoft
+title: Atomic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037494"
 ---
 # <a name="atomic"></a>atómico
 Especifica que una ubicación de memoria que se actualizarán de forma atómica.  
@@ -34,8 +34,8 @@ Especifica que una ubicación de memoria que se actualizarán de forma atómica.
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `expression`  
- La instrucción que contiene el valor de l cuya ubicación de memoria que desea protegerse de varias escrituras. Para obtener más información acerca de los formularios de expresión legal, vea la especificación de OpenMP.  
+*Expresión*<br/>
+La instrucción que contiene el valor de l cuya ubicación de memoria que desea proteger contra varias escrituras. Para obtener más información acerca de los formularios de expresión legal, consulte la especificación OpenMP.  
   
 ## <a name="remarks"></a>Comentarios  
  El `atomic` directiva es compatible con ningún cláusulas de OpenMP.  

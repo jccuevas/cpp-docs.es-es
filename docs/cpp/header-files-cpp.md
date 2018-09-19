@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028537"
 ---
 # <a name="header-files-c"></a>Archivos de encabezado (C++)
 
-Antes de que se pueden usar, se deben declarar los nombres de elementos de programa como variables, funciones, clases y así sucesivamente. Por ejemplo, no se puede escribir simplemente `x = 42` sin declararla primero 'x'. 
+Antes de que se pueden usar, se deben declarar los nombres de elementos de programa como variables, funciones, clases y así sucesivamente. Por ejemplo, no se puede escribir simplemente `x = 42` sin declararla primero 'x'.
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- La declaración indica al compilador si es un **int**, un **doble**, un **función**, un **clase** o alguna otra cosa.  Además, cada nombre se debe declarar (directa o indirectamente) en cada archivo .cpp en el que se utiliza. Cuando se compila un programa, cada archivo .cpp se compila por separado en una unidad de compilación. El compilador no tiene conocimiento de qué nombres se declaran en otras unidades de compilación. Esto significa que si define una clase o función o variable global, debe proporcionar una declaración de eso en cada archivo .cpp adicionales que lo utiliza. Cada declaración de eso debe ser idéntico en todos los archivos. Una incoherencia leve provocará errores, o un comportamiento imprevisto, cuando el vinculador intenta combinar todas las unidades de compilación en un único programa.
+La declaración indica al compilador si es un **int**, un **doble**, un **función**, un **clase** o alguna otra cosa.  Además, cada nombre se debe declarar (directa o indirectamente) en cada archivo .cpp en el que se utiliza. Cuando se compila un programa, cada archivo .cpp se compila por separado en una unidad de compilación. El compilador no tiene conocimiento de qué nombres se declaran en otras unidades de compilación. Esto significa que si define una clase o función o variable global, debe proporcionar una declaración de eso en cada archivo .cpp adicionales que lo utiliza. Cada declaración de eso debe ser idéntico en todos los archivos. Una incoherencia leve provocará errores, o un comportamiento imprevisto, cuando el vinculador intenta combinar todas las unidades de compilación en un único programa.
 
-Para minimizar la posibilidad de errores, C++ adoptó la convención de usar *archivos de encabezado* para contener las declaraciones. Realice las declaraciones en un archivo de encabezado y luego usar el #include (directiva) en cada archivo .cpp o de otro archivo de encabezado requiere la declaración. El #include directivas inserciones una copia del archivo de encabezado directamente en el archivo .cpp antes de la compilación. 
+Para minimizar la posibilidad de errores, C++ adoptó la convención de usar *archivos de encabezado* para contener las declaraciones. Realice las declaraciones en un archivo de encabezado y luego usar el #include (directiva) en cada archivo .cpp o de otro archivo de encabezado requiere la declaración. El #include directivas inserciones una copia del archivo de encabezado directamente en el archivo .cpp antes de la compilación.
 
 ## <a name="example"></a>Ejemplo
 
@@ -91,7 +91,7 @@ Después de que el compilador finalice la compilación de cada archivo .cpp en l
 
 ## <a name="include-guards"></a>Restricciones de inclusión
 
-Normalmente, los archivos de encabezado tienen un *#include guard* o un `#pragma once` directiva para asegurarse de que no se insertan varias veces en un archivo .cpp único. 
+Normalmente, los archivos de encabezado tienen un *#include guard* o un `#pragma once` directiva para asegurarse de que no se insertan varias veces en un archivo .cpp único.
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 Dado que un archivo de encabezado podría incluirse potencialmente por varios archivos, no puede contener definiciones que podrían generar varias definiciones del mismo nombre. Los siguientes no se permiten o se consideran muy mala práctica:
 
 - definiciones de tipo integrado en el ámbito global o de espacio de nombres
-- definiciones de funciones no insertadas 
+- definiciones de funciones no insertadas
 - definiciones de variable no constante
 - definiciones de agregado
 - espacios de nombres sin nombre
 - Directivas using
 
-El uso de la **mediante** directiva no necesariamente se producirá un error, pero puede provocar un problema ya que aporta el espacio de nombres en el ámbito de cada archivo .cpp que directa o indirectamente incluya ese encabezado. 
+El uso de la **mediante** directiva no necesariamente se producirá un error, pero puede provocar un problema ya que aporta el espacio de nombres en el ámbito de cada archivo .cpp que directa o indirectamente incluya ese encabezado.
 
 ## <a name="sample-header-file"></a>Archivo de encabezado de ejemplo
 
 El ejemplo siguiente muestra los distintos tipos de declaraciones y definiciones que se permiten en un archivo de encabezado:
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

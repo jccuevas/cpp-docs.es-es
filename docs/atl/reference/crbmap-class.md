@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4ce858949aafe1a448fc51b8ecd5591270184
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0ffdb791355aa40a33d80104af540b856cdf601
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019489"
 ---
 # <a name="crbmap-class"></a>CRBMap (clase)
 
@@ -38,22 +38,22 @@ Esta clase representa una estructura de asignación, mediante un árbol binario 
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*K*  
+*K*<br/>
 El tipo de elemento de clave.
 
-*V*  
+*V*<br/>
 El tipo de elemento de valor.
 
-*KTraits*  
+*KTraits*<br/>
 El código utilizado para copiar o mover los elementos clave. Consulte [CElementTraits (clase)](../../atl/reference/celementtraits-class.md) para obtener más detalles.
 
-*VTraits*  
+*VTraits*<br/>
 El código utilizado para copiar o mover elementos de valor.
 
 ## <a name="members"></a>Miembros
@@ -107,7 +107,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 El tamaño de bloque.
 
 ### <a name="remarks"></a>Comentarios
@@ -146,10 +146,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 Especifica la clave que identifica el elemento que se va a buscar.
 
-*valor*  
+*valor*<br/>
 Variable que recibe el valor buscado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -174,7 +174,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 La clave correspondiente a la par de elementos que desea quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -201,10 +201,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 El valor de clave para agregar a la `CRBMap` objeto.
 
-*valor*  
+*valor*<br/>
 Valor que se agrega a la `CRBMap` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -223,7 +223,7 @@ Consulte la documentación de la clase base [CRBTree](../../atl/reference/crbtre
 
 ## <a name="see-also"></a>Vea también
 
-[CRBTree (clase)](../../atl/reference/crbtree-class.md)   
-[CAtlMap (clase)](../../atl/reference/catlmap-class.md)   
-[CRBMultiMap (clase)](../../atl/reference/crbmultimap-class.md)   
+[CRBTree (clase)](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap (clase)](../../atl/reference/catlmap-class.md)<br/>
+[CRBMultiMap (clase)](../../atl/reference/crbmultimap-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)
