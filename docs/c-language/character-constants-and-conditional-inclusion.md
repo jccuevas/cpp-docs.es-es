@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef20e1649b2592c29482dd0204c1daf6ffcb01d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2700d7ffa59a14e96f175e4e81933924a4bf5912
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034286"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Constantes de caracteres e inclusión condicional
-**ANSI 3.8.1** Si el valor de una constante de caracteres de un solo carácter en una expresión constante que controla la inclusión condicional coincide con el valor de la misma constante de caracteres en el juego de caracteres de la ejecución. Si esta constante de caracteres puede tener un valor negativo  
-  
- El juego de caracteres utilizado en las instrucciones de preprocesador es el mismo que el juego de caracteres de la ejecución. El preprocesador reconoce los valores de caracteres negativos.  
-  
-## <a name="see-also"></a>Vea también  
- [Preprocesar directivas](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.1** Si el valor de una constante de caracteres de un solo carácter en una expresión constante que controla la inclusión condicional coincide con el valor de la misma constante de caracteres en el juego de caracteres de la ejecución. Si esta constante de caracteres puede tener un valor negativo
+
+El juego de caracteres utilizado en las instrucciones de preprocesador es el mismo que el juego de caracteres de la ejecución. El preprocesador reconoce los valores de caracteres negativos.
+
+## <a name="see-also"></a>Vea también
+
+[Preprocesar directivas](../c-language/preprocessing-directives.md)

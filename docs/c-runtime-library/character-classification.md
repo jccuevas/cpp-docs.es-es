@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101350"
 ---
 # <a name="character-classification"></a>Clasificación de caracteres
 
 Cada una de estas rutinas prueba un carácter de un solo byte, un carácter ancho o un carácter multibyte especificado para ver si cumple una condición. Por definición, los caracteres ASCII entre 0 y 127 son un subconjunto de todos los juegos de caracteres multibyte. Por ejemplo, el katakana japonés contiene caracteres ASCII y no ASCII.
 
- El valor de la categoría **LC_CTYPE** de la configuración regional afecta a las condiciones de prueba; vea [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa.
+El valor de la categoría **LC_CTYPE** de la configuración regional afecta a las condiciones de prueba; vea [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa.
 
- Estas rutinas se suelen ejecutar más rápidamente que las pruebas que se escriban y deben usarse preferentemente. Por ejemplo, el código siguiente es más lento en ejecutarse que una llamada a `isalpha(c)`:
+Estas rutinas se suelen ejecutar más rápidamente que las pruebas que se escriban y deben usarse preferentemente. Por ejemplo, el código siguiente es más lento en ejecutarse que una llamada a `isalpha(c)`:
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

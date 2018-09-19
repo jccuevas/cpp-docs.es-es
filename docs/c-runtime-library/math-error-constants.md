@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb491e8073acf2af525814b595ce79365df0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389044"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063338"
 ---
 # <a name="math-error-constants"></a>Constantes de error matemático
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Las rutinas matemáticas de la biblioteca en tiempo de ejecución pueden generar constantes de error matemático.  
-  
- Estos errores, que se describen como sigue, corresponden a los tipos de excepción definidos en MATH.H y los devuelve la función `_matherr` cuando se produce un error matemático.  
-  
-|Constante|Significado|  
-|--------------|-------------|  
-|`_DOMAIN`|El argumento de la función está fuera del dominio de la función.|  
-|`_OVERFLOW`|El resultado es demasiado grande para representarlo en el tipo de valor devuelto de la función.|  
-|`_PLOSS`|Se ha producido una pérdida parcial de significación.|  
-|`_SING`|Singularidad del argumento: el argumento de la función tiene un valor no válido. (Por ejemplo, el valor 0 se pasa a la función que requiere un valor distinto de cero).|  
-|`_TLOSS`|Se ha producido una pérdida total de significación.|  
-|`_UNDERFLOW`|El resultado es demasiado pequeño para representarlo.|  
-  
-## <a name="see-also"></a>Vea también  
- [_matherr](../c-runtime-library/reference/matherr.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxis
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>Comentarios
+
+Las rutinas matemáticas de la biblioteca en tiempo de ejecución pueden generar constantes de error matemático.
+
+Estos errores, que se describen como sigue, corresponden a los tipos de excepción definidos en MATH.H y los devuelve la función `_matherr` cuando se produce un error matemático.
+
+|Constante|Significado|
+|--------------|-------------|
+|`_DOMAIN`|El argumento de la función está fuera del dominio de la función.|
+|`_OVERFLOW`|El resultado es demasiado grande para representarlo en el tipo de valor devuelto de la función.|
+|`_PLOSS`|Se ha producido una pérdida parcial de significación.|
+|`_SING`|Singularidad del argumento: el argumento de la función tiene un valor no válido. (Por ejemplo, el valor 0 se pasa a la función que requiere un valor distinto de cero).|
+|`_TLOSS`|Se ha producido una pérdida total de significación.|
+|`_UNDERFLOW`|El resultado es demasiado pequeño para representarlo.|
+
+## <a name="see-also"></a>Vea también
+
+[_matherr](../c-runtime-library/reference/matherr.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

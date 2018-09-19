@@ -149,12 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55690bc06ae838ad44e1d0d6f0527974b7859b94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0ef742989b4af7a3698f6047098110ee58e29bf4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035674"
 ---
 # <a name="data-type-constants"></a>Constantes de tipo de datos
 
@@ -171,7 +171,7 @@ Estas constantes proporcionan los rangos de los tipos de datos enteros. Para usa
 > [!NOTE]
 > La opción del compilador [/J](../build/reference/j-default-char-type-is-unsigned.md) cambia el tipo **char** predeterminado a **unsigned**.
 
-|Constante|Valor|Description|
+|Constante|Valor|Descripción|
 |--------------|-----------|-------------|
 |**CHAR_BIT**|8|Número de bits en un tipo **char**|
 |**SCHAR_MIN**|(-128)|Valor mínimo de **signed char**|
@@ -218,7 +218,7 @@ Las siguientes constantes proporcionan el intervalo y otras características de 
 #include <float.h>
 ```
 
-|Constante|Valor|Description|
+|Constante|Valor|Descripción|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|Número de dígitos decimales de precisión de redondeo|
 |**DBL_DIG**|15|Número de dígitos decimales de precisión|
@@ -262,4 +262,4 @@ Las siguientes constantes proporcionan el intervalo y otras características de 
 
 ## <a name="see-also"></a>Vea también
 
-[Constantes globales](../c-runtime-library/global-constants.md)  
+[Constantes globales](../c-runtime-library/global-constants.md)

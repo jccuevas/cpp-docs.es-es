@@ -16,41 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71fa5ae717963d8ab2afc0b290bb42a3de72c0b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6ac5fb523e1b1340d031cd5256995568b9b9e2a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034130"
 ---
 # <a name="switch-statement-c"></a>switch (Instrucción) (C)
-Las instrucciones `switch` y **case** ayudan a controlar las operaciones condicionales y de bifurcación complejas. La instrucción `switch` transfiere el control a una instrucción dentro del cuerpo.  
-  
+
+Las instrucciones `switch` y **case** ayudan a controlar las operaciones condicionales y de bifurcación complejas. La instrucción `switch` transfiere el control a una instrucción dentro del cuerpo.
+
 ## <a name="syntax"></a>Sintaxis
 
 *selection-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (** *expression* **)** *statement*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;**switch (** *expression* **)** *statement*
+
 *labeled-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*  
-  
-El control pasa a la instrucción cuya *constant-expression* **case** coincida con el valor de **switch (** *expression* **)**. La instrucción `switch` puede incluir cualquier número de instancias de **case**, pero dos constantes case no pueden tener el mismo valor dentro de la misma instrucción `switch`. La ejecución del cuerpo de instrucción comienza en la instrucción seleccionada y continúa hasta el final del cuerpo o hasta que una instrucción **break** transfiere el control fuera del cuerpo.  
-  
-El uso de la instrucción `switch` suele tener una apariencia similar a lo siguiente:  
+&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
-**switch** ( *expression* )  
-**{**  
-&nbsp;&nbsp;&nbsp;&nbsp;*declarations*  
-&nbsp;&nbsp;&nbsp;&nbsp;/\* . . . \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;**case** *constant-expression* **:**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* instrucciones ejecutadas si la expresión es igual al \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* valor de esta constant-expression \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**break;**  
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* instrucciones ejecutadas si la expresión no es igual a \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* cualquier constant-expression case \*/  
-**}**
+El control pasa a la instrucción cuya *constant-expression* **case** coincida con el valor de **switch (** *expression* **)**. La instrucción `switch` puede incluir cualquier número de instancias de **case**, pero dos constantes case no pueden tener el mismo valor dentro de la misma instrucción `switch`. La ejecución del cuerpo de instrucción comienza en la instrucción seleccionada y continúa hasta el final del cuerpo o hasta que una instrucción **break** transfiere el control fuera del cuerpo.
+
+El uso de la instrucción `switch` suele tener una apariencia similar a lo siguiente:
+
+```C
+switch ( expression )
+{
+    // declarations
+    // . . .
+    case constant_expression:
+        // statements executed if the expression equals the
+        // value of this constant_expression
+        break;
+    default:
+        // statements executed if expression does not equal
+        // any case constant_expression
+}
+```
 
 Puede usar la instrucción **break** para finalizar el procesamiento de una expresión case concreta dentro de la instrucción `switch` y para bifurcar al final de la instrucción `switch`. Sin **break**, el programa continúa a la siguiente expresión case y ejecuta las instrucciones hasta un **break** o hasta que se alcance el final de la instrucción. En algunas situaciones, esta continuación puede ser deseable.
 
@@ -94,29 +97,29 @@ switch( i )
 }
 ```
 
-En este ejemplo, una instrucción **break** sigue a cada instrucción del cuerpo de `switch`. La instrucción **break** fuerza una salida del cuerpo de instrucción tras ejecutar una instrucción. Si `i` es igual a -1, solo se incrementa `n`. La instrucción **break** que sigue a la instrucción `n++;` hace que el control de la ejecución salga del cuerpo de instrucción y omita las instrucciones restantes. De igual forma, si `i` es igual a 0, solo se incrementa `z`; si `i` es igual a 1, solo se incrementa `p`. La instrucción **break** final no es estrictamente necesaria, puesto que el control sale del cuerpo al final de la instrucción compuesta, pero se incluye por coherencia.  
-  
-Una sola instrucción puede contener varias etiquetas **case**, como se muestra en el ejemplo siguiente:  
-  
+En este ejemplo, una instrucción **break** sigue a cada instrucción del cuerpo de `switch`. La instrucción **break** fuerza una salida del cuerpo de instrucción tras ejecutar una instrucción. Si `i` es igual a -1, solo se incrementa `n`. La instrucción **break** que sigue a la instrucción `n++;` hace que el control de la ejecución salga del cuerpo de instrucción y omita las instrucciones restantes. De igual forma, si `i` es igual a 0, solo se incrementa `z`; si `i` es igual a 1, solo se incrementa `p`. La instrucción **break** final no es estrictamente necesaria, puesto que el control sale del cuerpo al final de la instrucción compuesta, pero se incluye por coherencia.
+
+Una sola instrucción puede contener varias etiquetas **case**, como se muestra en el ejemplo siguiente:
+
 ```C
-case 'a' :  
-case 'b' :  
-case 'c' :  
-case 'd' :  
-case 'e' :  
-case 'f' :  hexcvt(c);  
-```  
-  
-En este ejemplo, si *constant-expression* es cualquier letra entre `'a'` y `'f'`, se llama a la función `hexcvt`.  
-  
-**Específicos de Microsoft**  
-  
-Microsoft C no limita el número de valores case en una instrucción `switch`. El número solo está limitado por la memoria disponible. ANSI C requiere que al menos 257 etiquetas case se permitan en una instrucción `switch`.  
-  
-El valor predeterminado para Microsoft C es que las extensiones de Microsoft estén habilitadas. Utilice la opción de compilador /Za para deshabilitar estas extensiones.  
-  
-**FIN de Específicos de Microsoft**  
-  
+case 'a' :
+case 'b' :
+case 'c' :
+case 'd' :
+case 'e' :
+case 'f' :  hexcvt(c);
+```
+
+En este ejemplo, si *constant-expression* es cualquier letra entre `'a'` y `'f'`, se llama a la función `hexcvt`.
+
+**Específicos de Microsoft**
+
+Microsoft C no limita el número de valores case en una instrucción `switch`. El número solo está limitado por la memoria disponible. ANSI C requiere que al menos 257 etiquetas case se permitan en una instrucción `switch`.
+
+El valor predeterminado para Microsoft C es que las extensiones de Microsoft estén habilitadas. Utilice la opción de compilador /Za para deshabilitar estas extensiones.
+
+**FIN de Específicos de Microsoft**
+
 ## <a name="see-also"></a>Vea también
 
 [switch (Instrucción) (C++)](../cpp/switch-statement-cpp.md)

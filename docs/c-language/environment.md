@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c39696c921825dfe199c270b3cbe52f407e2da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d099be8201d061f104c729239f988a751c50168a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038261"
 ---
 # <a name="environment"></a>Entorno
--   [Argumentos para main](../c-language/arguments-to-main.md)  
-  
--   [Dispositivos interactivos](../c-language/interactive-devices.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Comportamiento definido por la implementación](../c-language/implementation-defined-behavior.md)
+
+- [Argumentos para main](../c-language/arguments-to-main.md)
+
+- [Dispositivos interactivos](../c-language/interactive-devices.md)
+
+## <a name="see-also"></a>Vea también
+
+[Comportamiento definido por la implementación](../c-language/implementation-defined-behavior.md)

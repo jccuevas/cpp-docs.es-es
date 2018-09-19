@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dac300f08a9b02ce6e9f4aec66618350b46af952
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692205"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699652"
 ---
 # <a name="web-references-property-page"></a>Página de propiedades Referencias Web
 En la página de propiedades **Referencias Web** se especifica cómo se generará la clase de proxy del servicio Web XML. Si agrega una referencia web al proyecto, se generará una clase de proxy del servicio Web XML.  
   
  La página de propiedades **Referencias Web** contiene las propiedades siguientes:  
   
- **Archivo de salida**  
- El nombre del archivo que contiene la clase de proxy del servicio Web XML.  
+- **Archivo de salida**
+
+   El nombre del archivo que contiene la clase de proxy del servicio Web XML.  
   
- **Suprimir la pancarta de inicio**  
- No se muestra la pancarta para la Herramienta lenguaje de descripción de servicios Web (Wsdl.exe).  
+- **Suprimir la pancarta de inicio**
+
+   No se muestra la pancarta para la Herramienta lenguaje de descripción de servicios Web (Wsdl.exe).  
   
- **Espacio de nombres**  
- Especifica el nombre del proxy web generado.  
+- **Espacio de nombres**
+
+   Especifica el nombre del proxy web generado.  
   
- **Referencias adicionales**  
- Especifica los archivos DLL adicionales a los que hace referencia el archivo DLL de proxy.  
+- **Referencias adicionales**
+
+   Especifica los archivos DLL adicionales a los que hace referencia el archivo DLL de proxy.  
   
- Para obtener información sobre cómo acceder a la página de propiedades **Referencia Web**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
+Para obtener información sobre cómo acceder a la página de propiedades **Referencia Web**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)

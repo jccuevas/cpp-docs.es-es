@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116921ea46418db5c8eff3327de73a40aa42533c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7077e1b40701f8586ce8322ac9922517ac77b22b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018293"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operadores de incremento y decremento prefijos
-A los operadores unarios (`++` y **--**) se les denomina operadores de incremento o decremento de "prefijo" cuando los operadores de incremento o decremento aparecen delante del operando. El incremento y decremento de postfijo tiene una prioridad mayor que el incremento y decremento de prefijo. El tipo del operando debe ser entero, flotante o de puntero y debe ser una expresión de valor L modificable (una expresión sin el atributo **const**). El resultado es un valor L.  
-  
- Cuando el operador aparece delante de su operando, el operando se incrementa o se reduce y su nuevo valor es el resultado de la expresión.  
-  
- Un operando de tipo entero o flotante aumenta o disminuye en el valor entero 1. El tipo del resultado es el mismo que el tipo del operando. Un operando de tipo de puntero aumenta o disminuye en el tamaño del objeto al que apunta. Un puntero incrementado apunta al siguiente objeto; un puntero disminuido apunta al objeto anterior.  
-  
-## <a name="example"></a>Ejemplo  
- En este ejemplo se muestra el operador unario de decremento de prefijo:  
-  
-```  
-if( line[--i] != '\n' )  
-    return;  
-```  
-  
- En este ejemplo, la variable `i` se reduce antes de utilizarse como subíndice de `line`.  
-  
-## <a name="see-also"></a>Vea también  
- [Operadores unarios de C](../c-language/c-unary-operators.md)
+
+A los operadores unarios (`++` y **--**) se les denomina operadores de incremento o decremento de "prefijo" cuando los operadores de incremento o decremento aparecen delante del operando. El incremento y decremento de postfijo tiene una prioridad mayor que el incremento y decremento de prefijo. El tipo del operando debe ser entero, flotante o de puntero y debe ser una expresión de valor L modificable (una expresión sin el atributo **const**). El resultado es un valor L.
+
+Cuando el operador aparece delante de su operando, el operando se incrementa o se reduce y su nuevo valor es el resultado de la expresión.
+
+Un operando de tipo entero o flotante aumenta o disminuye en el valor entero 1. El tipo del resultado es el mismo que el tipo del operando. Un operando de tipo de puntero aumenta o disminuye en el tamaño del objeto al que apunta. Un puntero incrementado apunta al siguiente objeto; un puntero disminuido apunta al objeto anterior.
+
+## <a name="example"></a>Ejemplo
+
+En este ejemplo se muestra el operador unario de decremento de prefijo:
+
+```
+if( line[--i] != '\n' )
+    return;
+```
+
+En este ejemplo, la variable `i` se reduce antes de utilizarse como subíndice de `line`.
+
+## <a name="see-also"></a>Vea también
+
+[Operadores unarios de C](../c-language/c-unary-operators.md)

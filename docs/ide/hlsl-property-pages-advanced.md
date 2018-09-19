@@ -15,22 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725515"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Páginas de propiedades HLSL: Avanzadas
 Para configurar las propiedades siguientes del compilador HLSL (fxc.exe), use su página de propiedades **Avanzadas**. Para obtener información sobre cómo acceder a la página de propiedades **Avanzadas** en la carpeta HLSL, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
-## <a name="uielement-list"></a>Lista de UIElement  
- **Suprimir la pancarta de inicio**  
- **Sí (/nologo)** para suprimir la presentación de la pancarta de inicio y del mensaje informativo; en caso contrario, **No**. De forma predeterminada, el valor es **Sí (/nologo)**.  
+## <a name="uielement-list"></a>Lista de UIElement
+
+- **Suprimir la pancarta de inicio**
+
+   **Sí (/nologo)** para suprimir la presentación de la pancarta de inicio y del mensaje informativo; en caso contrario, **No**. De forma predeterminada, el valor es **Sí (/nologo)**.  
   
- **Tratar advertencias como errores**  
- **Sí (/WX)** para tratar todas las advertencias del compilador como errores; en caso contrario, **No**.  
+- **Tratar advertencias como errores**
+
+   **Sí (/WX)** para tratar todas las advertencias del compilador como errores; en caso contrario, **No**.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades HLSL](../ide/hlsl-property-pages.md)   
