@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 653be2fb1847403436bccb86807da382ef09cc25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018215"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo (clase)
 Define el aspecto de los marcadores de acoplamiento inteligente.  
@@ -205,15 +205,13 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ### <a name="remarks"></a>Comentarios  
  Rellene esta matriz con los identificadores de los mapas de bits que representa los marcadores de acoplamiento inteligentes de recursos. AFX_SD_MARKERS_NUM está actualmente definido como 5. Rellene la matriz como sigue:  
   
- `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
-  
- `params.m_uiMarkerBmpResID[1] = IDB_MARKER_RIGHT;`  
-  
- `params.m_uiMarkerBmpResID[2] = IDB_MARKER_TOP;`  
-  
- `params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;`  
-  
- `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
+```cpp
+params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;
+params.m_uiMarkerBmpResID[1] = IDB_MARKER_RIGHT;
+params.m_uiMarkerBmpResID[2] = IDB_MARKER_TOP;
+params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;
+params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;
+```
   
 ##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  Define los identificadores de los mapas de bits que se usan para resaltado marcadores personalizados de acoplamiento inteligentes de recursos.  
@@ -225,15 +223,13 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ### <a name="remarks"></a>Comentarios  
  Rellene esta matriz con los identificadores de recursos de los mapas de bits que representa los marcadores de acoplamiento inteligentes resaltados. AFX_SD_MARKERS_NUM está actualmente definido como 5. Rellene la matriz como sigue:  
   
- `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[1] = IDB_MARKER_RIGHT_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[2] = IDB_MARKER_TOP_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
+```cpp
+params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;
+params.m_uiMarkerLightBmpResID[1] = IDB_MARKER_RIGHT_LIGHT;
+params.m_uiMarkerLightBmpResID[2] = IDB_MARKER_TOP_LIGHT;
+params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;
+params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;
+```
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1071 | Documentos de Microsoft
+title: Error grave de NMAKE U1071 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63b354bfbdd3dbdfc7704effcbe6c0495cede27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bec5ed46b054002d1ae95e5e3f0b9b1c8ee4984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016161"
 ---
 # <a name="nmake-fatal-error-u1071"></a>Error grave de NMAKE U1071
-ciclo en árbol de dependencia para el destino 'nombrededestino'  
-  
- Existe una dependencia circular en el árbol de dependencia para el destino especificado. El destino dado depende de uno de los elementos dependientes del destino dado. Las dependencias circulares no son válidas.
+
+ciclo en árbol de dependencia para destino 'nombrededestino'
+
+Existe una dependencia circular en el árbol de dependencias para el destino especificado. El destino dado depende de uno de los elementos dependientes del destino dado. Las dependencias circulares no son válidas.
