@@ -1,5 +1,5 @@
 ---
-title: completion_future (clase) | Documentos de Microsoft
+title: completion_future (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 835c3a0473ffc68a2b1e32780fc2eb376f0ceee6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118154"
 ---
 # <a name="completionfuture-class"></a>completion_future (Clase)
 Representa un futuro que corresponde a una operación asincrónica de C++ AMP.  
@@ -45,7 +45,7 @@ class completion_future;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[completion_future Constructor](#ctor)|Inicializa una nueva instancia de la clase `completion_future`.|  
+|[completion_future (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `completion_future`.|  
 |[~ completion_future (destructor)](#dtor)|Destruye el objeto `completion_future`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -53,19 +53,19 @@ class completion_future;
 |Name|Descripción|  
 |----------|-----------------|  
 |[get](#get)|Espera hasta que se complete la operación asincrónica asociada.|  
-|[then](#then)|Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecuta cuando finaliza la ejecución de la operación asincrónica asociada.|  
-|[to_task](#to_task)|Devuelve un `task` objeto corresponde a la operación asincrónica asociada.|  
+|[then](#then)|Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecutará cuando la operación asincrónica asociada finaliza la ejecución.|  
+|[to_task](#to_task)|Devuelve un `task` objeto correspondiente a la operación asincrónica asociada.|  
 |[valid](#valid)|Obtiene un valor booleano que indica si el objeto está asociado a una operación asincrónica.|  
-|[espera](#wait)|Se bloquea hasta que se complete la operación asincrónica asociada.|  
-|[wait_for](#wait_for)|Se bloquea hasta que se complete la operación asincrónica asociada o el tiempo especificado por `_Rel_time` ha transcurrido.|  
-|[wait_until](#wait_until)|Se bloquea hasta que se complete la operación asincrónica asociada o hasta que la hora actual supera el valor especificado por `_Abs_time`.|  
+|[Espere](#wait)|Se bloquea hasta que se complete la operación asincrónica asociada.|  
+|[wait_for](#wait_for)|Se bloquea hasta que se complete la operación asíncrona asociada o la hora especificada por `_Rel_time` ha transcurrido.|  
+|[wait_until](#wait_until)|Bloquea hasta que se complete la operación asíncrona asociada o hasta que la hora actual supera el valor especificado por `_Abs_time`.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[operador std::shared_future\<void >](#operator_shared_future)|Convierte implícitamente el `completion_future` el objeto a un `std::shared_future` objeto.|  
-|[operator=](#operator_eq)|Copia el contenido del elemento especificado `completion_future` objeto en éste.|  
+|[operador std::shared_future\<void >](#operator_shared_future)|Convierte implícitamente el `completion_future` objeto a un `std::shared_future` objeto.|  
+|[operator=](#operator_eq)|Copia el contenido del elemento especificado `completion_future` objeto en este.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `completion_future`  
@@ -76,7 +76,7 @@ class completion_future;
  **Espacio de nombres:** simultaneidad  
 
 
-## <a name="ctor"></a> completion_future 
+## <a name="ctor"></a> completion_future) 
 
 Inicializa una nueva instancia de la clase `completion_future`.  
   
@@ -93,14 +93,14 @@ completion_future(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Other`  
- La `completion_future` objeto para copiar o mover.  
+*_Otro*<br/>
+La `completion_future` objeto se va a copiar o mover.  
   
 ### <a name="overloads-list"></a>Lista de sobrecargas  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|`completion_future();`|Inicializa una nueva instancia de la `completion_future` (clase)|  
+|`completion_future();`|Inicializa una nueva instancia de la `completion_future` clase|  
 |`completion_future(const completion_future& _Other);`|Inicializa una nueva instancia de la `completion_future` clase copiando un constructor.|  
 |`completion_future(completion_future&& _Other);`|Inicializa una nueva instancia de la `completion_future` clase moviendo un constructor.|  
   
@@ -116,7 +116,7 @@ void get() const;
   
 ## <a name="operator_shared_future"></a> operador std::shared_future<void> 
 
-Convierte implícitamente el `completion_future` el objeto a un `std::shared_future` objeto.  
+Convierte implícitamente el `completion_future` objeto a un `std::shared_future` objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -129,7 +129,7 @@ operator std::shared_future<void>() const;
   
 ## <a name="operator_eq"></a> operator= 
 
-Copia el contenido del elemento especificado `completion_future` objeto en éste.  
+Copia el contenido del elemento especificado `completion_future` objeto en este.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -139,8 +139,8 @@ completion_future&  operator= (completion_future&& _Other );
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Other`  
- El objeto que lo copien.  
+*_Otro*<br/>
+Para copiar desde el objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `completion_future` objeto.  
@@ -149,12 +149,12 @@ completion_future&  operator= (completion_future&& _Other );
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|`completion_future& operator=(const completion_future& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este caso, mediante una copia en profundidad.|  
-|`completion_future& operator=(completion_future&& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este caso, mediante una asignación de movimiento.|  
+|`completion_future& operator=(const completion_future& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este, utilizando una copia en profundidad.|  
+|`completion_future& operator=(completion_future&& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este, utilizando una asignación de movimiento.|  
   
-## <a name="then"></a> a continuación 
+## <a name="then"></a> A continuación 
 
-Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecuta cuando finaliza la ejecución de la operación asincrónica asociada.  
+Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecutará cuando la operación asincrónica asociada finaliza la ejecución.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -164,15 +164,15 @@ void then(const _Functor & _Func ) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Functor`  
- El functor de devolución de llamada.  
+*_Functor*<br/>
+El functor de devolución de llamada.  
   
- `_Func`  
- El objeto de función de devolución de llamada.  
+*_Func*<br/>
+El objeto de función de devolución de llamada.  
   
 ## <a name="to_task"></a> to_task 
 
-Devuelve un `task` objeto corresponde a la operación asincrónica asociada.  
+Devuelve un `task` objeto correspondiente a la operación asincrónica asociada.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -181,7 +181,7 @@ concurrency::task<void> to_task() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un `task` objeto corresponde a la operación asincrónica asociada.  
+ Un `task` objeto correspondiente a la operación asincrónica asociada.  
   
 ## <a name="valid"></a> válido 
 
@@ -196,7 +196,7 @@ bool valid() const;
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si el objeto está asociado a una operación asincrónica; en caso contrario, `false`.  
   
-## <a name="wait"></a> espera 
+## <a name="wait"></a> Espere 
 
 Se bloquea hasta que se complete la operación asincrónica asociada.  
   
@@ -208,7 +208,7 @@ void wait() const;
   
 ## <a name="wait_for"></a> wait_for 
 
-Se bloquea hasta que se complete la operación asincrónica asociada o la hora especificada por `_Rel_time` ha transcurrido.  
+Se bloquea hasta que se complete la operación asíncrona asociada o la hora especificada por `_Rel_time` ha transcurrido.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -222,27 +222,27 @@ std::future_status::future_status wait_for(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Rep`  
- Un tipo aritmético que representa el número de pasos.  
+*_Rep*<br/>
+Un tipo aritmético que representa el número de pasos.  
   
- `_Period`  
- Std::ratio que representa el número de segundos que deben transcurrir por TIC.  
+*_Period*<br/>
+Un std:: Ratio que representa el número de segundos que transcurren por paso.  
   
- `_Rel_time`  
- La cantidad máxima de tiempo de espera para que se complete la operación.  
+*_Rel_time*<br/>
+La cantidad máxima de tiempo de espera para que se complete la operación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve:  
   
 -   `std::future_status::deferred` Si no se está ejecutando la operación asincrónica asociada.  
   
--   `std::future_status::ready` Si finaliza la operación asincrónica asociada.  
+-   `std::future_status::ready` Si ha finalizado la operación asincrónica asociada.  
   
--   `std::future_status::timeout` Si el especificado ha transcurrido el período de tiempo.  
+-   `std::future_status::timeout` Si el texto especificado que ha transcurrido el período de tiempo.  
   
 ## <a name="wait_until"></a> wait_until 
 
-Se bloquea hasta que se complete la operación asincrónica asociada o hasta que la hora actual supera el valor especificado por `_Abs_time`.  
+Bloquea hasta que se complete la operación asíncrona asociada o hasta que la hora actual supera el valor especificado por `_Abs_time`.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -256,21 +256,21 @@ std::future_status::future_status wait_until(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Clock`  
- El reloj en el que se mide en este momento.  
+*_Clock*<br/>
+El reloj en el que se mide en este momento.  
   
- `_Duration`  
- El intervalo de tiempo desde el inicio del `_Clock`del tiempo, tras el cual la función agotará el tiempo.  
+*_Duration*<br/>
+El intervalo de tiempo desde el inicio de `_Clock`de época, tras el cual la función agotará el tiempo.  
   
- `_Abs_time`  
- El punto en el tiempo después del cual la función agotará el tiempo de espera.  
+*_Abs_time*<br/>
+El punto en el tiempo después del cual la función agotará el tiempo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve:  
   
 1.  `std::future_status::deferred` Si no se está ejecutando la operación asincrónica asociada.  
   
-2.  `std::future_status::ready` Si finaliza la operación asincrónica asociada.  
+2.  `std::future_status::ready` Si ha finalizado la operación asincrónica asociada.  
   
 3.  `std::future_status::timeout` Si el período de tiempo especificado haya transcurrido.  
   
