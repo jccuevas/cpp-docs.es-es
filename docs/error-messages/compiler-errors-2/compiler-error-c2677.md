@@ -1,5 +1,5 @@
 ---
-title: C2677 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2677 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671be6d7e6acf252b774c4cd379fbc15267e4d94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cd7e4b3b454d8611c52bbe88041677434492c0f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030786"
 ---
-# <a name="compiler-error-c2677"></a>C2677 de Error del compilador
-'operador' binario: ningún operador global encontró que adopte el tipo 'type' (o no hay ninguna conversión aceptable)  
-  
- Para usar este operador, debe sobrecargarlo para el tipo especificado o definir una conversión a un tipo para el que esté definido el operador.  
-  
- El ejemplo siguiente genera C2677:  
-  
-```  
-// C2677.cpp  
-class C {  
-public:  
-   C(){}  
-} c;  
-  
-class D {  
-public:  
-   D(){}  
-   operator int(){return 0;}  
-} d;  
-  
-int main() {  
-   int i = 1 >> c;   // C2677  
-   int j = 1 >> d;   // OK operator int() defined  
-}  
+# <a name="compiler-error-c2677"></a>Error del compilador C2677
+
+'operator' binario: encontró un ningún operador global que adopte el tipo 'type' (o no hay ninguna conversión aceptable)
+
+Para usar este operador, debe sobrecargarlo para el tipo especificado o definir una conversión a un tipo para el que esté definido el operador.
+
+El ejemplo siguiente genera C2677:
+
+```
+// C2677.cpp
+class C {
+public:
+   C(){}
+} c;
+
+class D {
+public:
+   D(){}
+   operator int(){return 0;}
+} d;
+
+int main() {
+   int i = 1 >> c;   // C2677
+   int j = 1 >> d;   // OK operator int() defined
+}
 ```

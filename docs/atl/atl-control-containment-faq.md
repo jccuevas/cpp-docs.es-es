@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed30097e54460b66ee9bf76293217b8fcc7656a3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052925"
 ---
 # <a name="atl-control-containment-faq"></a>Preguntas más frecuentes sobre contención de controles ATL
 
@@ -117,10 +117,10 @@ A continuación, se muestra un resumen:
 
 ## <a name="see-also"></a>Vea también
 
-[Preguntas más frecuentes sobre la contención de controles](../atl/atl-control-containment-faq.md)   
-[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
-[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
-[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
-[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
-[Clase CAxWindow2T](../atl/reference/caxwindow2t-class.md)   
+[Preguntas más frecuentes sobre la contención de controles](../atl/atl-control-containment-faq.md)<br/>
+[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)<br/>
+[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)<br/>
+[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)<br/>
+[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)<br/>
+[CAxWindow2T (clase)](../atl/reference/caxwindow2t-class.md)<br/>
 [IAxWinHostWindowLic (interfaz)](../atl/reference/iaxwinhostwindowlic-interface.md)

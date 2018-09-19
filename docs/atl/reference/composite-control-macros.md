@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136301"
 ---
 # <a name="composite-control-macros"></a>Macros de Control compuesto
 
@@ -34,7 +34,7 @@ Estas macros definen los mapas de receptor de eventos y entradas.
 |[BEGIN_SINK_MAP](#begin_sink_map)|Marca el principio de la asignación de receptor de eventos para el control compuesto.|
 |[END_SINK_MAP](#end_sink_map)|Marca el final de la asignación de receptor de eventos para el control compuesto.|
 |[SINK_ENTRY](#sink_entry)|Entrada en el mapa de receptores de eventos.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Entrada en el mapa de receptores de eventos con un parámetro adicional.| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|Entrada en el mapa de receptores de eventos con un parámetro adicional.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Similar a SINK_ENTRY_EX, salvo que toma un puntero a iid.|
 |[MACRO SINK_ENTRY_INFO](#sink_entry_info)|Entrada a la asignación de receptor de eventos con información de tipo proporcionado manualmente para su uso con [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Es similar a la macro SINK_ENTRY_INFO salvo que toma un puntero a iid.|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parámetros
 
-*_Clase*  
+*_Clase*<br/>
 [in] Especifica el control.
 
 ### <a name="example"></a>Ejemplo
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 [in] Identifica el control.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Identifica el evento especificado.
 
-*fn*  
+*fn*<br/>
 [in] Nombre de la función de controlador de eventos. Esta función debe usar el `_stdcall` convención de llamada y tiene la firma de estilo de interfaz dispinterface adecuado.
 
 ### <a name="example"></a>Ejemplo
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 [in] Identifica el control.
 
-*IID*  
+*IID*<br/>
 [in] Identifica la interfaz de envío.  
 
-*piid*  
+*piid*<br/>
 [in] Puntero a la interfaz de envío.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Identifica el evento especificado.
 
-*fn*  
+*fn*<br/>
 [in] Nombre de la función de controlador de eventos. Esta función debe usar el `_stdcall` convención de llamada y tiene la firma de estilo de interfaz dispinterface adecuado.
 
 ### <a name="example"></a>Ejemplo
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*  
+*identificador*<br/>
 [in] Entero sin signo que identifica el origen del evento. Este valor debe coincidir con el *nID* parámetro de plantilla utilizado en el que se relaciona [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) clase base.
 
-*IID*  
+*IID*<br/>
 [in] IID que identifica la interfaz de envío.  
 
-*piid*  
+*piid*<br/>
 [in] Puntero a IID que identifica la interfaz de envío.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Identificador de envío que identifica el evento especificado.
 
-*fn*  
+*fn*<br/>
 [in] Nombre de la función de controlador de eventos. Esta función debe usar el `_stdcall` convención de llamada y tiene la firma de estilo de interfaz dispinterface adecuado.
 
-*Info*  
+*Info*<br/>
 [in] Escriba la información de la función de controlador de eventos. Esta información de tipo se proporciona en forma de un puntero a un `_ATL_FUNC_INFO` estructura. CC_CDECL es la única opción admitida en Windows CE para el campo CALLCONV del `_ATL_FUNC_INFO` estructura. No se admite cualquier otro valor, por tanto, su comportamiento sin definir.
 
 ### <a name="remarks"></a>Comentarios
@@ -176,5 +176,5 @@ Los parámetros de cuatro primeros macro son las mismas que para el [SINK_ENTRY_
 
 ## <a name="see-also"></a>Vea también
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [Funciones globales de control compuesto](../../atl/reference/composite-control-global-functions.md)

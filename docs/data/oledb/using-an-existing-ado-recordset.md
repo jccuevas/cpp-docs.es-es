@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065353"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilizar un conjunto de registros ADO existente
+
 Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), utilice ADO para abrir un conjunto de registros (correspondiente a un conjunto de filas en las plantillas de consumidor OLE DB). Cuando haya un conjunto de registros, haga lo siguiente para conectarse a un conjunto de filas de OLE DB:  
   
-1.  Llame a `QueryInterface` para el `IRowset` y `IAccessor` punteros.  
+1. Llame a `QueryInterface` para el `IRowset` y `IAccessor` punteros.  
   
     ```cpp  
     IRowset* lpRowset = NULL;  
@@ -39,7 +40,7 @@ Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), ut
     > [!NOTE]
     >  *lpUnk* apunta a la `IUnknown` objeto del conjunto de registros ADO.  
   
-2.  Asociar el descriptor de acceso y el conjunto de filas a sus clases de plantillas de consumidor OLE DB apropiados.  
+1. Asociar el descriptor de acceso y el conjunto de filas a sus clases de plantillas de consumidor OLE DB apropiados.  
   
     ```cpp  
     CRowset rs;  
@@ -51,4 +52,5 @@ Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), ut
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar descriptores de acceso](../../data/oledb/using-accessors.md)
+
+[Usar descriptores de acceso](../../data/oledb/using-accessors.md)

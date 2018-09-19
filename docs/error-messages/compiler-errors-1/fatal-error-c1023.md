@@ -1,5 +1,5 @@
 ---
-title: Error irrecuperable C1023 | Documentos de Microsoft
+title: Error irrecuperable C1023 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd9d6b2f0a84d43b14b1187fa4ca5698114983e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58a78a735b553a0a607f2b3433598117efac9191
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115247"
 ---
 # <a name="fatal-error-c1023"></a>Error irrecuperable C1023
-'file': error inesperado con pch; recompile pch  
-  
- El error C1023 podría estar causado por uno de varios problemas; la solución a esto es una recompilación del archivo de encabezado precompilado.  
-  
- El error C1023 puede generarse si intenta usar un archivo de encabezado precompilado en un equipo distinto del que se creó.
+
+'file': error inesperado con pch; recompile pch
+
+El error C1023 podría estar causado por uno de varios problemas; la solución a esto es una recompilación del archivo de encabezado precompilado.
+
+El error C1023 puede generarse si intenta usar un archivo de encabezado precompilado en un equipo distinto del que se creó.

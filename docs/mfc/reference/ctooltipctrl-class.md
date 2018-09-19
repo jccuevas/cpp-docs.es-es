@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 148bb42b7dc6b650bb85860b0bcce3b70c61318e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726757"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099919"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Encapsula la funcionalidad de un "control de información sobre herramientas", una pequeña ventana emergente que muestra una única línea de texto que describe el propósito de una herramienta de una aplicación.  
@@ -573,24 +573,25 @@ BOOL HitTest(
   
  El `TTHITTESTINFO` estructura se define como sigue:  
   
- `typedef struct _TT_HITTESTINFO { // tthti`  
+```cpp
+typedef struct _TT_HITTESTINFO { // tthti
+    HWND hwnd;   // handle of tool or window with tool
+    POINT pt;    // client coordinates of point to test
+    TOOLINFO ti; // receives information about the tool
+} TTHITTESTINFO, FAR * LPHITTESTINFO;
+```
   
- `HWND hwnd;   // handle of tool or window with tool`  
+- `hwnd`  
+
+   Especifica el identificador de la herramienta.  
   
- `POINT pt;    // client coordinates of point to test`  
+- `pt`  
+
+   Especifica las coordenadas de un punto, si el punto está en la herramienta rectángulo delimitador.  
   
- `TOOLINFO ti; // receives information about the tool`  
-  
- `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
-  
- `hwnd`  
- Especifica el identificador de la herramienta.  
-  
- `pt`  
- Especifica las coordenadas de un punto, si el punto está en la herramienta rectángulo delimitador.  
-  
- `ti`  
- Información acerca de la herramienta. Para obtener más información sobre la `TOOLINFO` estructura, vea [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
+- `ti`  
+
+   Información acerca de la herramienta. Para obtener más información sobre la `TOOLINFO` estructura, vea [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
  Quita una ventana de sugerencia de la herramienta muestra la vista.  

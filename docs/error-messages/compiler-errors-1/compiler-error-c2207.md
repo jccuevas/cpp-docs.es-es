@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2207 | Documentos de Microsoft
+title: Error del compilador C2207 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d62494aca47f0ad52c9abbe8e3b897c58c327d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab9d89d66efed3cfa687d17b8a9efd406bf1bec7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082643"
 ---
 # <a name="compiler-error-c2207"></a>Error del compilador C2207
-'member': Un miembro de una plantilla de clase no puede adquirir un tipo de función  
-  
- El `member` de la clase de plantilla se analizó anteriormente como miembro de datos no estático. No se puede redefinir como función miembro.
+
+'member': Un miembro de una plantilla de clase no puede adquirir un tipo de función
+
+El `member` de la clase de plantilla se analizó anteriormente como miembro de datos no estático. No se puede redefinir como función miembro.

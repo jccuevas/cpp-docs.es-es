@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4057 | Documentos de Microsoft
+title: Compilador advertencia (nivel 4) C4057 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3217ccb0a96fbe02e152ff82dedeb7e8e54b89ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10ce6b67fd24b4b8db01177af0225deab9dba4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088012"
 ---
 # <a name="compiler-warning-level-4-c4057"></a>Advertencia del compilador (nivel 4) C4057
-'operador': direccionamiento indirecto de 'identificador1' a tipos base ligeramente distintos de 'identificador2'.  
-  
- Dos expresiones de puntero hacen referencia a diferentes tipos base. Las expresiones se usan sin conversión.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Combinación de tipos con signo y sin signo.  
-  
-2.  Combinación de tipos **short** y **long** .
+
+'operador': direccionamiento indirecto de 'identificador1' a tipos base ligeramente distintos de 'identificador2'.
+
+Dos expresiones de puntero hacen referencia a diferentes tipos base. Las expresiones se usan sin conversión.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
+
+1. Combinación de tipos con signo y sin signo.
+
+1. Combinación de tipos **short** y **long** .

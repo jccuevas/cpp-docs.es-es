@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0024 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0024 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a07297ddabf269b003a1f14d967d1187fea96d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2816be7bb1d33757d9722d605d461ac6fb34fadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118201"
 ---
 # <a name="expression-evaluator-error-cxx0024"></a>Error del evaluador de expresiones CXX0024
-la operación necesita un valor l  
-  
- Se especificó una expresión que no se evalúa como un valor l para una operación que requiere un valor l.  
-  
- L-value (denominado así porque aparece en el lado izquierdo de una instrucción de asignación) es una expresión que hace referencia a una ubicación de memoria.  
-  
- Por ejemplo, `buffer[count]` es un valor l válido porque señala a una ubicación de memoria específica. La comparación lógica `zed != 0` no es un valor l válido porque se evalúa como TRUE o FALSE, no como una dirección de memoria.  
-  
- Este error es idéntico a CAN0024.
+
+la operación necesita valor l
+
+Se especificó una expresión que no se evalúa como un valor l para una operación que requiere un valor l.
+
+Un valor l (denominado así porque aparece en el lado izquierdo de una instrucción de asignación) es una expresión que hace referencia a una ubicación de memoria.
+
+Por ejemplo, `buffer[count]` es un valor l válido porque señala a una ubicación de memoria específica. La comparación lógica `zed != 0` no es un valor l válido porque se evalúa como TRUE o FALSE, no a una dirección de memoria.
+
+Este error es idéntico a CAN0024.

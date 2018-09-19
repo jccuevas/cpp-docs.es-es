@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3414 | Documentos de Microsoft
+title: Error del compilador C3414 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a358bd757a8ffeb445be160a1f06dc5ca13a789
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c07033489538011889ef939599b30b88664c08ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135771"
 ---
 # <a name="compiler-error-c3414"></a>Error del compilador C3414
-'member': no se puede definir la función miembro importada  
-  
- Se ha definido un miembro en el código también se define en un ensamblado de referencia.  
-  
- El ejemplo siguiente genera C3414:  
-  
-```  
-// C3414a2.cpp  
-// compile with: /clr /LD  
-public ref class MyClass {  
-public:  
-   void Test(){}  
-};  
-```  
-  
- y luego:  
-  
-```  
-// C3414b2.cpp  
-// compile with: /clr  
-#using <C3414a2.dll>  
-  
-void MyClass::Test() {    // C3414  
-}  
-  
-System::Object::Object() {    // C3414  
-}  
-```  
+
+'member': no se puede definir la función miembro importada
+
+Se ha definido un miembro en el código que también se define en un ensamblado de referencia.
+
+El ejemplo siguiente genera C3414:
+
+```
+// C3414a2.cpp
+// compile with: /clr /LD
+public ref class MyClass {
+public:
+   void Test(){}
+};
+```
+
+y luego:
+
+```
+// C3414b2.cpp
+// compile with: /clr
+#using <C3414a2.dll>
+
+void MyClass::Test() {    // C3414
+}
+
+System::Object::Object() {    // C3414
+}
+```

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f42d90fa2fb04c75f6c45db8d099d4a1a9a74c2a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d408ab5d0575984fb597cec28f01484d9b878ebf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108396"
 ---
 # <a name="csacl-class"></a>CSacl (clase)
 
@@ -110,25 +110,25 @@ bool AddAuditAce(
 
 ### <a name="parameters"></a>Parámetros
 
-*rSid*  
+*rSid*<br/>
 El [CSid](../../atl/reference/csid-class.md) objeto.
 
-*AccessMask*  
+*AccessMask*<br/>
 Especifica la máscara de derechos de acceso que se auditarán para el elemento especificado `CSid` objeto.
 
-*bSuccess*  
+*bSuccess*<br/>
 Especifica si los intentos de acceso permitidos se van a auditar. Establezca esta marca en True para habilitar la auditoría; en caso contrario, establézcalo en false.
 
-*bFailure*  
+*bFailure*<br/>
 Especifica si los intentos de acceso denegado se van a auditar. Establezca esta marca en True para habilitar la auditoría; en caso contrario, establézcalo en false.
 
-*AceFlags*  
+*AceFlags*<br/>
 Un conjunto de marcas de bits que controlan la herencia de la ACE.
 
-*pObjectType*  
+*pObjectType*<br/>
 Tipo del objeto.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 El tipo de objeto heredado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -152,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*  
+*RHS*<br/>
 Existente `ACL` estructura (lista de control de acceso).
 
 ### <a name="remarks"></a>Comentarios
@@ -193,7 +193,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*  
+*RHS*<br/>
 El `ACL` (lista de control de acceso) para asignar al objeto existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -210,7 +210,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nIndex*  
+*nIndex*<br/>
 Índice de la entrada ACE para quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -231,8 +231,8 @@ Quita cada `ACE` estructura (si existe) en el `CSacl` objeto.
 
 ## <a name="see-also"></a>Vea también
 
-[CAcl (clase)](../../atl/reference/cacl-class.md)   
-[ACL](/windows/desktop/SecAuthZ/access-control-lists)   
-[ACE](/windows/desktop/SecAuthZ/access-control-entries)   
-[Información general de clases](../../atl/atl-class-overview.md)   
+[CAcl (clase)](../../atl/reference/cacl-class.md)<br/>
+[ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[ACE](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

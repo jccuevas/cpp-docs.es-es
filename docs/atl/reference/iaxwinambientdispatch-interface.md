@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bb644e43a5dd5085c53d0428f892cccd424fc1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf8747275325332f6a2d0072e2c0ba2a66ae276
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057618"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch (interfaz)
 
@@ -130,7 +130,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -151,7 +151,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -172,7 +172,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -193,7 +193,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>Parámetros
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -214,7 +214,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -235,7 +235,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parámetros
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -256,7 +256,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Parámetros
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -277,7 +277,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Parámetros
 
-*pFont*  
+*pFont*<br/>
 [out] La dirección de un `IFontDisp` puntero de interfaz que se utiliza para recibir el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -298,7 +298,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>Parámetros
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -319,7 +319,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>Parámetros
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -342,7 +342,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -363,7 +363,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -380,7 +380,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -401,7 +401,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -422,7 +422,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Parámetros
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out] La dirección de una variable que recibirá el valor actual de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -443,7 +443,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>Parámetros
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -464,7 +464,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>Parámetros
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -485,7 +485,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>Parámetros
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -506,7 +506,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Parámetros
 
-*clrBackground*  
+*clrBackground*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -527,7 +527,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>Parámetros
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -548,7 +548,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -569,7 +569,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -590,7 +590,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parámetros
 
-*pFont*  
+*pFont*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -611,7 +611,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Parámetros
 
-*clrForeground*  
+*clrForeground*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -632,7 +632,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Parámetros
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -653,7 +653,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -674,7 +674,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parámetros
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -691,7 +691,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Parámetros
 
-*bUserMode*  
+*bUserMode*<br/>
 [in] El nuevo valor de esta propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -704,8 +704,8 @@ La implementación del objeto host ATL utiliza VARIANT_TRUE como el valor predet
 
 ## <a name="see-also"></a>Vea también
 
-[IAxWinAmbientDispatchEx (interfaz)](../../atl/reference/iaxwinambientdispatchex-interface.md)   
-[IAxWinHostWindow (interfaz)](../../atl/reference/iaxwinhostwindow-interface.md)   
-[CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[IAxWinAmbientDispatchEx (interfaz)](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
+[IAxWinHostWindow (interfaz)](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
+[CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

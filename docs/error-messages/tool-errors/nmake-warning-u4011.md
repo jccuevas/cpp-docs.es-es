@@ -1,5 +1,5 @@
 ---
-title: Advertencia de NMAKE U4011 | Documentos de Microsoft
+title: Advertencia de NMAKE U4011 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af9c0f90c507eebe212a9c3cbfb2f2d21cded43d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1038ee86f76789451565ab6799795c851c95a95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320800"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118341"
 ---
 # <a name="nmake-warning-u4011"></a>Advertencia de NMAKE U4011
-'target': no todos los dependientes disponibles; no se ha creado el destino  
-  
- Una dependencia de destino determinado, no existe o no está actualizada, y un comando para actualizar el dependiente devolvió un código de salida distinto de cero. La opción /K indicó a NMAKE para continuar el procesamiento relacionado con partes de la compilación y emitir un código de salida 1 cuando finaliza la sesión NMAKE.  
-  
- Esta advertencia es precedida de la advertencia [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) para cada dependiente que no se pudo crear o actualizar.
+
+'target': no todos los dependientes disponibles; destino no generado
+
+Una dependencia de destino determinado, no existe o no está actualizada, y un comando para actualizar el dependiente devolvió un código de salida distinto de cero. La opción /K indicó a NMAKE para continuar el procesamiento relacionado con las partes de la compilación y para emitir un código de salida 1 cuando finaliza la sesión de NMAKE.
+
+Esta advertencia está precedida por la advertencia [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) para cada dependiente que no se pudo crear o actualizar.

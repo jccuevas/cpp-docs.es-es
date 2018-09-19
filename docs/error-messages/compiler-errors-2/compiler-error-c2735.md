@@ -1,5 +1,5 @@
 ---
-title: C2735 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2735 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab970aa4e46ed0206f311e100f7ee777907aff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 732b75c8988f879af230e0513a751b8cd9c4ae67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093133"
 ---
-# <a name="compiler-error-c2735"></a>C2735 de Error del compilador
-' palabra clave ' no está permitida en el especificador de tipo de parámetros formales  
-  
- La palabra clave no es válida en este contexto.  
-  
- El ejemplo siguiente genera C2735:  
-  
-```  
-// C2735.cpp  
-void f(inline int){}   // C2735  
+# <a name="compiler-error-c2735"></a>Error del compilador C2735
+
+palabra clave 'palabra clave' no se permite en el especificador de tipo de parámetros formales
+
+La palabra clave no es válida en este contexto.
+
+El ejemplo siguiente genera C2735:
+
+```
+// C2735.cpp
+void f(inline int){}   // C2735
 ```

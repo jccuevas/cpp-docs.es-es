@@ -1,5 +1,5 @@
 ---
-title: invalid_multiple_scheduling (clase) | Documentos de Microsoft
+title: invalid_multiple_scheduling (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cc4e3b2a23dd5c617b70a7a4b992323a0e963f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067355"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling (Clase)
 Esta clase describe una excepción que se produce cuando un objeto `task_handle` se programa varias veces mediante el método `run` de un objeto `task_group` o `structured_task_group` sin una llamada que se interponga a los métodos `wait` o `run_and_wait`.  
@@ -63,14 +63,14 @@ invalid_multiple_scheduling() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [task_handle (clase)](task-handle-class.md)   
  [task_group (clase)](task-group-class.md)   
- [Ejecutar](task-group-class.md)   
- [espera](task-group-class.md)   
+ [ejecutar](task-group-class.md)   
+ [Espere](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group (clase)](structured-task-group-class.md)

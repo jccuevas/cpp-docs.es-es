@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752921"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111328"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -34,7 +34,7 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl-modifier-seq***)** 
 
 *extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier*<sub>participar</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier*:<br/>
@@ -58,7 +58,7 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Spectre(nomitigation)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**subproceso**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**
 
 El espacio en blanco separa la secuencia de modificador de la declaración. En secciones posteriores aparecen ejemplos.
@@ -105,5 +105,6 @@ __declspec( thread ) int tls_i = 1;
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
- [Palabras clave](../cpp/keywords-cpp.md)  
- [Atributos extendidos de clase de almacenamiento de C](../c-language/c-extended-storage-class-attributes.md)  
+
+[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[Atributos extendidos de clase de almacenamiento de C](../c-language/c-extended-storage-class-attributes.md)

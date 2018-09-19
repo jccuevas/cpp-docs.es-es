@@ -1,5 +1,5 @@
 ---
-title: C2731 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2731 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f925a781501b2dfd3ed2297319d49cc27854a78a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85062af79a7de750ca0e347da00f6209e8293074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028771"
 ---
-# <a name="compiler-error-c2731"></a>C2731 de Error del compilador
-'identificador': no se pueden sobrecargar (función)  
-  
- Las funciones `main`, `WinMain`, `DllMain`, y `LibMain` no se pueden sobrecargar.  
-  
- El ejemplo siguiente genera C2731:  
-  
-```  
-// C2731.cpp  
-extern "C" void WinMain(int, char *, char *);  
-void WinMain(int, short, char *, char*);   // C2731  
+# <a name="compiler-error-c2731"></a>Error del compilador C2731
+
+'identifier': no se puede sobrecargar la función
+
+Las funciones `main`, `WinMain`, `DllMain`, y `LibMain` no se puede sobrecargar.
+
+El ejemplo siguiente genera C2731:
+
+```
+// C2731.cpp
+extern "C" void WinMain(int, char *, char *);
+void WinMain(int, short, char *, char*);   // C2731
 ```

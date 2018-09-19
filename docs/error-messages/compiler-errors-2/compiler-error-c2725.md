@@ -1,5 +1,5 @@
 ---
-title: Error de compilador Error C2725 | Documentos de Microsoft
+title: Error del compilador C2725 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a32f2a3255aa0d23f3164d01c0168365ad55c660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 969ddd9343073dff3732204eb4b17375bb5ab9cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056045"
 ---
-# <a name="compiler-error-c2725"></a>Error C2725 de Error del compilador
-'exception': no se puede producir o detectar un objeto administrado o WinRT por valor o referencia  
-  
- El tipo de una excepción administrada o WinRT no era correcto.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error C2725 y muestra cómo corregirlo:  
-  
-```  
-// C2725.cpp  
-// compile with: /clr  
-ref class R {  
-public:  
-   int i;  
-};  
-  
-int main() {  
-   R % r1 = *gcnew R;  
-   throw r1;   // C2725  
-  
-   R ^ r2 = gcnew R;  
-   throw r2;   // OK     
-}  
-```  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error C2725 y muestra cómo corregirlo:  
-  
-```  
-// C2725b.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   try {}  
-   catch( System::Exception%) {}   // C2725  
-   // try the following line instead  
-   // catch( System::Exception ^e) {}  
-}  
-```  
+# <a name="compiler-error-c2725"></a>Error del compilador C2725
+
+'exception': no se puede producir o detectar un objeto administrado o WinRT por valor o referencia
+
+El tipo de una excepción administrada o WinRT no era correcto.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error C2725 y muestra cómo corregirlo:
+
+```
+// C2725.cpp
+// compile with: /clr
+ref class R {
+public:
+   int i;
+};
+
+int main() {
+   R % r1 = *gcnew R;
+   throw r1;   // C2725
+
+   R ^ r2 = gcnew R;
+   throw r2;   // OK
+}
+```
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera el error C2725 y muestra cómo corregirlo:
+
+```
+// C2725b.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   try {}
+   catch( System::Exception%) {}   // C2725
+   // try the following line instead
+   // catch( System::Exception ^e) {}
+}
+```

@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2163 | Documentos de Microsoft
+title: Error del compilador C2163 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cbb110cf226a0a36a121ac9aa1901782357b04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 974488a2f587c2fde02dd74baf64a98a7590e9b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066577"
 ---
 # <a name="compiler-error-c2163"></a>Error del compilador C2163
-'función': no disponible como función intrínseca  
-  
- Un `intrinsic` o `function` pragma muestra una función no está disponible de forma intrínseca. Por ejemplo, ciertas funciones intrínsecas no están disponibles cuando se compila un programa que utiliza programación/CLR.
+
+'function': no está disponible como función intrínseca
+
+Un `intrinsic` o `function` pragma muestra una función no está disponible de forma intrínseca. Por ejemplo, ciertas funciones intrínsecas no están disponibles al compilar un programa que utiliza programación/CLR.

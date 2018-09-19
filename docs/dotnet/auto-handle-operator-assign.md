@@ -1,5 +1,5 @@
 ---
-title: auto_handle::operator = | Documentos de Microsoft
+title: auto_handle::operator = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: db6091772529896f12952163c0838949b8518054
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f41eff9659fd85b21b46560be4c1141152f748f1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103625"
 ---
 # <a name="autohandleoperator"></a>auto_handle::operator=
 Operador de asignación.  
@@ -43,11 +43,11 @@ auto_handle<_element_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `_right`  
- El `auto_handle` que se asignará a la actual `auto_handle`.  
+*a la _derecha*<br/>
+El `auto_handle` que se asignará a la actual `auto_handle`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Actual `auto_handle`, ahora propietario `_right`.  
+ Actual `auto_handle`ahora propietario `_right`.  
   
 ## <a name="example"></a>Ejemplo  
   

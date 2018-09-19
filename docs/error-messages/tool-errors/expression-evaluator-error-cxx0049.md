@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0049 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0049 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097082"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>Error del evaluador de expresiones CXX0049
-OMF obsoleto - volver a vincular programa  
-  
- El programa utiliza una antigua OMF (Object Module Format).  
-  
- Volver a vincular el programa usando la versión actual del vinculador.  
-  
- Este error es idéntico a CAN0049.
+
+OMF obsoleto - volver a vincular programa
+
+El programa utiliza una antigua OMF (formato de módulo de objeto).
+
+Volver a vincular el programa con la versión actual del vinculador.
+
+Este error es idéntico a CAN0049.

@@ -1,5 +1,5 @@
 ---
-title: Error del evaluador de expresiones CXX0012 | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0012 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7043eaf6654670935301c1f49ba88aed5745a96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024811c13fb27cb2da88bdddc9965d8a124e341a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135911"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>Error del evaluador de expresiones CXX0012
-Falta la llave de apertura  
-  
- La expresión contiene una llave de cierre no está equilibrada. Vuelva a escribir la expresión con llaves coincidentes.  
-  
- Este error es idéntico a CAN0012.
+
+Falta la llave de apertura
+
+La expresión contiene una llave no. Vuelva a escribir la expresión con llaves coincidentes.
+
+Este error es idéntico a CAN0012.

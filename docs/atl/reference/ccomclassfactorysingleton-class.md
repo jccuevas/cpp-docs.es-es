@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6b812ddd4dbd3c81d9018be926d9103bca3ec796
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f26a9d603238c83aa4243092e88719d1de4fda1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755978"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093082"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton (clase)
 
@@ -34,13 +34,13 @@ Esta clase se deriva de [CComClassFactory](../../atl/reference/ccomclassfactory-
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T>  
+template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase.
 
 `CComClassFactorySingleton` se deriva de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) y usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir un objeto único. Cada llamada a la `CreateInstance` método simplemente consulta este objeto para un puntero de interfaz.
@@ -91,13 +91,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Si el objeto se crea como parte de un agregado y, a continuación, *pUnkOuter* debe ser el desconocido externo. En caso contrario, *pUnkOuter* debe ser NULL.
 
-*riid*  
+*riid*<br/>
 [in] IID de la interfaz solicitada. Si *pUnkOuter* es distinto de NULL, *riid* debe ser `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Un puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *ppvObj* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -120,9 +120,9 @@ Tenga en cuenta que el formulario actual de `m_spObj` presenta un cambio importa
 
 ## <a name="see-also"></a>Vea también
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[CComClassFactory2 (clase)](../../atl/reference/ccomclassfactory2-class.md)   
-[CComClassFactoryAutoThread (clase)](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[CComClassFactory2 (clase)](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[CComClassFactoryAutoThread (clase)](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

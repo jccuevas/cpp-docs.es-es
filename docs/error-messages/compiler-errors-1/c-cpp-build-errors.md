@@ -1,5 +1,5 @@
 ---
-title: Errores de compilación de C/c ++ | Documentos de Microsoft
+title: Errores de compilación de C/c ++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -310,12 +310,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a6eb5fe80c25912c76e3446efb1ee00413fff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14529f9246572299fc6629ec13ff4eab837bb5fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095851"
 ---
 # <a name="cc-build-errors"></a>Errores de compilación de C/C++
 
@@ -325,5 +325,5 @@ Los artículos de esta sección de la documentación explican diagnóstico mensa
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de compilación de C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Referencia de compilación de C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
 [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

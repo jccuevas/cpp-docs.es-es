@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071372"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows
 
@@ -42,24 +42,25 @@ De forma predeterminada en [Windows 8.1, winmdidl.exe y midlrt.exe se encuentran
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 Impide que se muestre en la consola el mensaje de copyright y el número de versión de winmdidl.
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 No usado.
 
-`/time`  
+**/ hora**<br/>
 Muestra el tiempo de ejecución total en el resultado de la consola.
 
-/outdir:\<dir > especifica un directorio de salida. Si la ruta de acceso contiene espacios en blanco, utilice comillas. El directorio de salida predeterminado es  *\<unidad >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
+**/outdir:**<em>dir</em><br/>
+Especifica un directorio de salida. Si la ruta de acceso contiene espacios en blanco, utilice comillas. El directorio de salida predeterminado es  *\<unidad >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
 
-`/banner:<file>`  
+**/ banner:**<em>archivo</em><br/>
 Especifica un archivo que contiene el texto personalizado que se va a anteponer al mensaje de copyright predeterminado y al número de versión de winmdidl en la parte superior del archivo .idl generado. Si la ruta de acceso contiene espacios en blanco, utilice comillas.
 
-`/utf8`  
+**/utf8**<br/>
 Hace que el archivo tenga formato UTF-8.
 
-`Winmdfile`  
+*Winmdfile*<br/>
 Nombre del archivo .winmd que se va a analizar. Si la ruta de acceso contiene espacios en blanco, utilice comillas.
 
 ## <a name="midlrt-command-line-arguments"></a>Argumentos de la línea de comandos de Midlrt

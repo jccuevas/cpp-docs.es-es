@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3553 | Documentos de Microsoft
+title: Error del compilador C3553 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a4ed8c2776015f9d9c6aedbe7a9da93f404f680
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c91697b8fa4f04c040d92f8af3aa004bbde7a773
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118629"
 ---
 # <a name="compiler-error-c3553"></a>Error del compilador C3553
-decltype espera una expresión, no un tipo  
-  
- La palabra clave `decltype()` requiere una expresión como argumento, no el nombre de un tipo. Por ejemplo, la última instrucción del siguiente fragmento de código genera el error C3553.  
-  
- `int x = 0;`  
-  
- `decltype(x+1);`  
-  
- `decltype(int); // C3553`
+
+> decltype espera una expresión, no un tipo
+
+La palabra clave `decltype()` requiere una expresión como argumento, no el nombre de un tipo. Por ejemplo, la última instrucción del siguiente fragmento de código genera el error C3553.
+
+```cpp
+int x = 0;
+decltype(x+1);
+decltype(int); // C3553
+```

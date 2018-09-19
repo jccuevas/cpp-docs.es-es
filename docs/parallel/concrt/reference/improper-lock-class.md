@@ -1,5 +1,5 @@
 ---
-title: improper_lock (clase) | Documentos de Microsoft
+title: improper_lock (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106199"
 ---
 # <a name="improperlock-class"></a>improper_lock (Clase)
 Esta clase describe una excepción que se produce cuando se realiza un bloqueo de forma incorrecta.  
@@ -43,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock)](#ctor)|Sobrecargado. Construye un objeto `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Normalmente, esta excepción se produce cuando se realiza un intento de adquirir un bloqueo no reentrante de forma recursiva en el mismo contexto.  
+ Normalmente, esta excepción se produce cuando se intenta adquirir un bloqueo no reentrante de forma recursiva en el mismo contexto.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -66,8 +66,8 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Message`  
- Mensaje descriptivo del error.  
+*_Cuerpo*<br/>
+Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   

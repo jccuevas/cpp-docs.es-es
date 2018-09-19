@@ -1,5 +1,5 @@
 ---
-title: Advertencia de compilador advertencia (nivel 2) C4250 | Documentos de Microsoft
+title: Compilador advertencia (nivel 2) C4250 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,112 +16,115 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0a49f42dec57677149ab5c36cfc1ab99822cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5797782691385111f0be22854643315f4e596fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031446"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Advertencia del compilador (nivel 2) C4250
-'clase1': hereda 'clase2:: miembro' mediante dominación  
-  
- Dos o más miembros tienen el mismo nombre. El `class2` es heredado, porque es una clase base para las demás clases que contiene este miembro.  
-  
- Para suprimir la advertencia C4250, utilice el [advertencia](../../preprocessor/warning.md) pragma.  
-  
- Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre en una clase derivada domina un nombre en una clase base. Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de funciones heredadas dentro del rombo: la instancia vbc::Func() mediante la clase débil y la dominante:: func() a través de la clase dominante. Una llamada incompleta de func() a través de un objeto de clase de rombo siempre llama a la instancia dominate:: func.  Si la clase débil fuera a introducir una instancia de func(), ninguna definición dominaría y la llamada se marcaría como ambigua.  
-  
-```  
-// C4250.cpp  
-// compile with: /c /W2  
-#include <stdio.h>  
-struct vbc {  
-   virtual void func() { printf("vbc::func\n"); }  
-};  
-  
-struct weak : public virtual vbc {};  
-  
-struct dominant : public virtual vbc {  
-   void func() { printf("dominant::func\n"); }  
-};  
-  
-struct diamond : public weak, public dominant {};  
-  
-int main() {  
-   diamond d;  
-   d.func();   // C4250  
-}  
-```  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C4250.  
-  
-```  
-// C4250_b.cpp  
-// compile with: /W2 /EHsc  
-#include <iostream>  
-using namespace std;  
-class A {  
-public:  
-   virtual operator int () {  
-      return 2;  
-   }  
-};  
-  
-class B : virtual public A {  
-public:  
-   virtual operator int () {  
-      return 3;  
-   }  
-};  
-  
-class C : virtual public A {};  
-  
-class E : public B, public C {};   // C4250  
-  
-int main() {  
-   E eObject;  
-   cout << eObject.operator int() << endl;  
-}  
-```  
-  
-## <a name="example"></a>Ejemplo  
- Este ejemplo muestra una situación más compleja. El ejemplo siguiente genera la advertencia C4250.  
-  
-```  
-// C4250_c.cpp  
-// compile with: /W2 /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-class V {  
-public:  
-   virtual int f() {  
-      return 1024;  
-   }  
-};  
-  
-class B : virtual public V {  
-public:  
-   int b() {  
-      return f(); // B::b() calls V::f()  
-   }  
-};  
-  
-class M : virtual public V {  
-public:  
-   int f() {  
-      return 7;  
-   }  
-};  
-  
-// because of dominance, f() is M::f() inside D,  
-// changing the meaning of B::b's f() call inside a D  
-class D : public B, public M {};   // C4250  
-  
-int main() {  
-   D d;  
-   cout << "value is: " << d.b();   // invokes M::f()  
-}  
+
+'class1': hereda 'clase2:: miembro' mediante dominación
+
+Dos o más miembros tienen el mismo nombre. En `class2` es heredado, porque es una clase base para las otras clases que contiene este miembro.
+
+Para suprimir C4250, utilice el [advertencia](../../preprocessor/warning.md) pragma.
+
+Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre en una clase derivada domina un nombre en una clase base. Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de funciones heredadas dentro del rombo: la instancia vbc::Func() a través de la clase débil y el dominante:: func() a través de la clase dominante. Una llamada incompleta de func() a través de un objeto de clase de rombo siempre llama a la instancia dominate:: func.  Si la clase débil fuera a introducir una instancia de func(), ni podría dominar la definición y la llamada se marcaría como ambigua.
+
+```
+// C4250.cpp
+// compile with: /c /W2
+#include <stdio.h>
+struct vbc {
+   virtual void func() { printf("vbc::func\n"); }
+};
+
+struct weak : public virtual vbc {};
+
+struct dominant : public virtual vbc {
+   void func() { printf("dominant::func\n"); }
+};
+
+struct diamond : public weak, public dominant {};
+
+int main() {
+   diamond d;
+   d.func();   // C4250
+}
+```
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C4250.
+
+```
+// C4250_b.cpp
+// compile with: /W2 /EHsc
+#include <iostream>
+using namespace std;
+class A {
+public:
+   virtual operator int () {
+      return 2;
+   }
+};
+
+class B : virtual public A {
+public:
+   virtual operator int () {
+      return 3;
+   }
+};
+
+class C : virtual public A {};
+
+class E : public B, public C {};   // C4250
+
+int main() {
+   E eObject;
+   cout << eObject.operator int() << endl;
+}
+```
+
+## <a name="example"></a>Ejemplo
+
+En este ejemplo se muestra una situación más compleja. El ejemplo siguiente genera la advertencia C4250.
+
+```
+// C4250_c.cpp
+// compile with: /W2 /EHsc
+#include <iostream>
+using namespace std;
+
+class V {
+public:
+   virtual int f() {
+      return 1024;
+   }
+};
+
+class B : virtual public V {
+public:
+   int b() {
+      return f(); // B::b() calls V::f()
+   }
+};
+
+class M : virtual public V {
+public:
+   int f() {
+      return 7;
+   }
+};
+
+// because of dominance, f() is M::f() inside D,
+// changing the meaning of B::b's f() call inside a D
+class D : public B, public M {};   // C4250
+
+int main() {
+   D d;
+   cout << "value is: " << d.b();   // invokes M::f()
+}
 ```

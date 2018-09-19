@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039069"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook (clase)
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Parámetros
 
-*szMachineName*  
+*szMachineName*<br/>
 El nombre de la máquina a la que se debe enviar la salida de depuración. El valor predeterminado es el equipo local.
 
-*szPipeName*  
+*szPipeName*<br/>
 El nombre de la canalización con nombre a la que se debe enviar la salida de depuración.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 El tiempo en milisegundos que esperará la canalización con nombre esté disponible a que esta clase.
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Parámetros
 
-*reportType*  
+*reportType*<br/>
 El tipo de informe (_CRT_WARN, _CRT_ERROR o _CRT_ASSERT).
 
-*message*  
+*message*<br/>
 La cadena de mensaje.
 
-*returnValue*  
+*returnValue*<br/>
 El valor que debe devolver [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Parámetros
 
-*szMachineName*  
+*szMachineName*<br/>
 El nombre de la máquina a la que se debe enviar la salida de depuración.
 
-*szPipeName*  
+*szPipeName*<br/>
 El nombre de la canalización con nombre a la que se debe enviar la salida de depuración.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwTimeout*  
+*dwTimeout*<br/>
 El tiempo en milisegundos que esperará la canalización con nombre esté disponible a que esta clase.
 
 ## <a name="see-also"></a>Vea también

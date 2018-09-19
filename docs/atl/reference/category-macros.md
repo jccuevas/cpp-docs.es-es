@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078704"
 ---
 # <a name="category-macros"></a>Macros de categoría
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>Parámetros
 
-*theClass*  
+*theClass*<br/>
 [in] El nombre de la clase que contiene la asignación de categoría.
 
 ### <a name="remarks"></a>Comentarios
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>Parámetros
 
-*catID*  
+*catID*<br/>
 [in] CATID constante o variable que contiene el identificador único global (GUID) para la categoría de implementada. La dirección de *catID* serán tomadas y se agregarán al mapa. Consulte la tabla siguiente para una selección de categorías de cotizaciones.
 
 ### <a name="remarks"></a>Comentarios
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>Parámetros
 
-*catID*  
+*catID*<br/>
 [in] CATID constante o variable que contiene el identificador único global (GUID) para la categoría necesaria. La dirección de *catID* serán tomadas y se agregarán al mapa. Consulte la tabla siguiente para una selección de categorías de cotizaciones.
 
 ### <a name="remarks"></a>Comentarios

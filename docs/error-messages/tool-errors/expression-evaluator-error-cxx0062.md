@@ -1,5 +1,5 @@
 ---
-title: CXX0062 de Error del evaluador de expresiones | Documentos de Microsoft
+title: Error del evaluador de expresiones CXX0062 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b812a269b5acc383cbdd185e06ecb92f1c63d2a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 509d33be45f26f7dbf2de85969b90e253e0d5228
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019163"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>Error del evaluador de expresiones CXX0062
-llamadas de constructor no compatibles  
-  
- Una expresión realiza una llamada a un constructor. Expresiones no se pueden realizar llamadas explícitas a los constructores o realizar conversiones que requieren una llamada a un constructor.  
-  
- Este error es idéntico a CAN0062.
+
+llamadas de constructor no compatibles
+
+Una expresión realiza una llamada a un constructor. Las expresiones no se pueden realizar llamadas explícitas a los constructores o realizar conversiones que requieren una llamada a un constructor.
+
+Este error es idéntico a CAN0062.

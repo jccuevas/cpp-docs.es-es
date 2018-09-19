@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1041141e9f31e59ab7a1884e976828972c0abd91
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96bf02a00459324b14dd26709b24088a03aec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109305"
 ---
 # <a name="urect-class"></a>_U_RECT (clase)
 
@@ -74,16 +74,16 @@ LPRECT m_lpRect;
 La dirección del argumento de referencia se almacena en el miembro de datos única de la clase, [m_lpRect](#_u_rect__m_lprect).
 
 ```
-_U_RECT(RECT& rc);  
+_U_RECT(RECT& rc);
 _U_RECT(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*rc*  
+*rc*<br/>
 Un `RECT` referencia.
 
-*lpRect*  
+*lpRect*<br/>
 Un `RECT` puntero.
 
 ### <a name="remarks"></a>Comentarios

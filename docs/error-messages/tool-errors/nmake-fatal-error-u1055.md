@@ -1,5 +1,5 @@
 ---
-title: Error grave de NMAKE U1055 | Documentos de Microsoft
+title: Error grave de NMAKE U1055 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017942"
 ---
 # <a name="nmake-fatal-error-u1055"></a>Error grave de NMAKE U1055
-espacio de entorno  
-  
- El sistema operativo se ha quedado sin espacio para variables de entorno.  
-  
- Aumente el espacio de entorno o establecer variables de entorno menos.
+
+espacio de entorno insuficiente
+
+El sistema operativo se quedó sin espacio para variables de entorno.
+
+Aumente el espacio de entorno o establecer variables de entorno menos.

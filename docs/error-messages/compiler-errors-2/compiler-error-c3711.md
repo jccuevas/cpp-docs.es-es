@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C3711 | Documentos de Microsoft
+title: Error del compilador C3711 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682748a9db6ab4c74ed4b71b8548aba54fc1649b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95b788e9ecb2aa8bd1bcf5865cf9ded0c925bf49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116748"
 ---
 # <a name="compiler-error-c3711"></a>Error del compilador C3711
-'método': un método de origen de eventos no administrado debe devolver void o un tipo integral  
-  
- Define un método en el origen de eventos que no devuelve void o un tipo entero. Para corregir este error, asegúrese del evento y el controlador de eventos tiene un tipo de valor devuelto de `void` o un tipo entero como `int` o `long`.  
-  
- El ejemplo siguiente genera C3711:  
-  
-```  
-// C3711.cpp  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event float event1();   // C3711  
-   // try the following line instead  
-   // __event int event1();  
-   // also change the handler, below  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   float handler1() {         // change float to int  
-      return 0.0;             // change 0.0 to 0  
-   }  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-};  
-  
-int main() {  
-}  
+
+'method': un método de origen de eventos no administrado debe devolver void o un tipo integral
+
+Define un método en el origen de eventos que no devuelve void o un tipo entero. Para corregir este error, asegúrese del evento y el controlador de eventos tiene un tipo de valor devuelto de `void` o un tipo entero como `int` o `long`.
+
+El ejemplo siguiente genera C3711:
+
+```
+// C3711.cpp
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+
+[event_source(native)]
+class CEventSrc {
+public:
+   __event float event1();   // C3711
+   // try the following line instead
+   // __event int event1();
+   // also change the handler, below
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   float handler1() {         // change float to int
+      return 0.0;             // change 0.0 to 0
+   }
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+};
+
+int main() {
+}
 ```

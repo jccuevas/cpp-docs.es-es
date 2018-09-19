@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087960"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog (clase)
 
@@ -35,7 +35,7 @@ Esta clase implementa un cuadro de diálogo modal básica.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 El identificador de recurso del recurso de plantilla de cuadro de diálogo.
 
-*t_bCenter*  
+*t_bCenter*<br/>
 Es TRUE si el objeto de cuadro de diálogo se centra en la ventana propietaria; en caso contrario, FALSE.
 
 ## <a name="members"></a>Miembros
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parámetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Un identificador para el elemento primario del cuadro de diálogo. Si se proporciona ningún valor, el elemento primario se establece en la ventana activa actual.
 
 ### <a name="return-value"></a>Valor devuelto

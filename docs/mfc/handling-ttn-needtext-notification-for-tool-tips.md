@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114584"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Controlar la notificación TTN_NEEDTEXT para la información sobre herramientas
 Como parte de [habilitar información sobre herramientas](../mfc/enabling-tool-tips.md), controla la **TTN_NEEDTEXT** mensaje agregando la siguiente entrada al mapa de mensajes de la ventana propietaria:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- La función miembro se llama cuando es necesario el texto para este botón.  
+*memberFxn*<br/>
+La función miembro se llama cuando es necesario el texto para este botón.  
   
  Tenga en cuenta que el identificador de una información sobre herramientas es siempre 0.  
   
@@ -41,14 +41,14 @@ Como parte de [habilitar información sobre herramientas](../mfc/enabling-tool-t
   
  donde los parámetros en cursiva son:  
   
- `id`  
- Identificador del control que envía la notificación. No usado. El identificador del control se toma de la **NMHDR** estructura.  
+*identificador*<br/>
+Identificador del control que envía la notificación. No usado. El identificador del control se toma de la **NMHDR** estructura.  
   
- `pNMHDR`  
- Un puntero a la [estructura NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) estructura. Esta estructura también se explica con más detalle en [TOOLTIPTEXT (estructura)](../mfc/tooltiptext-structure.md).  
+*pNMHDR*<br/>
+Un puntero a la [estructura NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) estructura. Esta estructura también se explica con más detalle en [TOOLTIPTEXT (estructura)](../mfc/tooltiptext-structure.md).  
   
- `pResult`  
- Un puntero al código de resultado se puede establecer antes de volver. **TTN_NEEDTEXT** controladores pueden omitir el *pResult* parámetro.  
+*pResult*<br/>
+Un puntero al código de resultado se puede establecer antes de volver. **TTN_NEEDTEXT** controladores pueden omitir el *pResult* parámetro.  
   
  Como ejemplo de un controlador de vista de formulario de notificación:  
   

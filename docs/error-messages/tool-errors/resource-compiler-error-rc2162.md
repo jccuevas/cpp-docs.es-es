@@ -1,5 +1,5 @@
 ---
-title: Error del compilador de recursos RC2162 | Documentos de Microsoft
+title: Error del compilador de recursos RC2162 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19e41f50b1c42a0a19837f7a5b2dda089b7f5d3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5f555c739e64a36395e997eea89d2ed3d552616
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070345"
 ---
 # <a name="resource-compiler-error-rc2162"></a>Error del compilador de recursos RC2162
-parámetro formal de macro esperado  
-  
- El símbolo (token) que sigue a un operador de generación de cadenas (**#**) no es un nombre de parámetro formal.
+
+parámetro formal de macro esperado
+
+El token que sigue a un operador de generación de cadenas (**#**) no es un nombre de parámetro formal.

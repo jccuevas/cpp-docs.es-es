@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad1a7e3d55b8ded5722c41a0af0d5d7bd9a25b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ee52c8cd0c6259f9ad5d0aae23eb03188417057c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085321"
 ---
 # <a name="string-and-text-classes"></a>Clases de texto y cadena
 
@@ -44,6 +44,6 @@ Estas clases proporcionan compatibilidad para las cadenas y las conversiones de 
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../atl/atl-class-overview.md)   
+[Información general de clases](../atl/atl-class-overview.md)<br/>
 [Macros de conversión de cadena MFC y ATL](reference/string-conversion-macros.md)
 

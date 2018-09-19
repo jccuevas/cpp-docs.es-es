@@ -31,14 +31,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 16ced0ce1d6c5531b7210231315f001cda4c0bc4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 58e9d70079dce96153076b03acc1aeca87c50433
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136212"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor (Clase)
+
 Permite obtener acceso a orígenes de datos como datos de cadena cuando no tiene conocimiento del esquema del almacén de datos (estructura subyacente).  
   
 ## <a name="syntax"></a>Sintaxis
@@ -48,7 +49,8 @@ class CXMLAccessor : public CDynamicStringAccessorW
 ```  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: atldbcli.h  
+
+**Encabezado**: atldbcli.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -60,16 +62,19 @@ class CXMLAccessor : public CDynamicStringAccessorW
 |[GetXMLRowData](#getxmlrowdata)|Recupera el contenido completo de una tabla por filas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Sin embargo, `CXMLAccessor` difiere `CDynamicStringAccessorW` en que lo convierte todos los datos que se obtiene acceso desde el almacén de datos como datos (etiquetados) en formato XML. Esto es especialmente útil para la salida a las páginas Web basadas en XML. Los nombres de etiqueta XML coincidirá con nombres de columna del almacén de datos lo más fielmente posible.  
+
+Sin embargo, `CXMLAccessor` difiere `CDynamicStringAccessorW` en que lo convierte todos los datos que se obtiene acceso desde el almacén de datos como datos (etiquetados) en formato XML. Esto es especialmente útil para la salida a las páginas Web basadas en XML. Los nombres de etiqueta XML coincidirá con nombres de columna del almacén de datos lo más fielmente posible.  
   
- Use `CDynamicAccessor` métodos para obtener información de columna. Utilice esta información de columna para crear un descriptor de acceso de forma dinámica en tiempo de ejecución.  
+Use `CDynamicAccessor` métodos para obtener información de columna. Utilice esta información de columna para crear un descriptor de acceso de forma dinámica en tiempo de ejecución.  
   
- La información de columna se almacena en un búfer creado y administrado por esta clase. Obtener información de columna mediante [GetXMLColumnData](#getxmlcolumndata) u obtener datos de columna por filas mediante [GetXMLRowData](#getxmlrowdata).  
+La información de columna se almacena en un búfer creado y administrado por esta clase. Obtener información de columna mediante [GetXMLColumnData](#getxmlcolumndata) u obtener datos de columna por filas mediante [GetXMLRowData](#getxmlrowdata).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+
+[!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
 
 ## <a name="getxmlcolumndata"></a> CXMLAccessor:: GetXMLColumnData
+
 Recupera la información de tipo de columna de una tabla como datos de cadena en formato XML, por columna.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -79,22 +84,26 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *strOutput*  
- [out] Una referencia a un búfer de cadena que contiene la información de tipo de columna va a recuperar. Formato de la cadena con los nombres de etiqueta XML que coinciden con los nombres de columna del almacén de datos.  
+
+*strOutput*<br/>
+[out] Una referencia a un búfer de cadena que contiene la información de tipo de columna va a recuperar. Formato de la cadena con los nombres de etiqueta XML que coinciden con los nombres de columna del almacén de datos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Uno de los valores HRESULT estándar.  
+
+Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- A continuación muestra cómo se da formato a la información de tipo de columna en XML. `type` Especifica el tipo de datos de la columna. Tenga en cuenta que los tipos de datos se basan en tipos de datos OLE DB, no los de la base de datos que se obtiene acceso.  
+
+A continuación muestra cómo se da formato a la información de tipo de columna en XML. `type` Especifica el tipo de datos de la columna. Tenga en cuenta que los tipos de datos se basan en tipos de datos OLE DB, no los de la base de datos que se obtiene acceso.  
   
- `<columninfo>`  
+`<columninfo>`  
   
- `<column type = I2/> ColumnName`  
+`<column type = I2/> ColumnName`  
   
- `</columninfo>` 
+`</columninfo>` 
 
 ## <a name="getxmlrowdata"></a> CXMLAccessor:: GetXMLRowData
+
 Recupera todo el contenido de una tabla como datos de cadena en formato XML, por fila.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -105,31 +114,35 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *strOutput*  
- [out] Una referencia a un búfer que contiene los datos de la tabla va a recuperar. Formato de los datos como datos de cadena con los nombres de etiqueta XML que coinciden con los nombres de columna del almacén de datos.  
+
+*strOutput*<br/>
+[out] Una referencia a un búfer que contiene los datos de la tabla va a recuperar. Formato de los datos como datos de cadena con los nombres de etiqueta XML que coinciden con los nombres de columna del almacén de datos.  
   
- *bAppend*  
- [in] Valor booleano que especifica si se deben anexar una cadena al final de los datos de salida.  
+*bAppend*<br/>
+[in] Valor booleano que especifica si se deben anexar una cadena al final de los datos de salida.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Uno de los valores HRESULT estándar.  
+
+Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- A continuación muestra cómo se da formato a la fila de datos en XML. `DATA` a continuación representa la fila de datos. Utilice move métodos para desplazarse a la fila deseada.  
+
+A continuación muestra cómo se da formato a la fila de datos en XML. `DATA` a continuación representa la fila de datos. Utilice move métodos para desplazarse a la fila deseada.  
   
- `<row>`  
+`<row>`  
   
- `<column name>DATA</column name>`  
+`<column name>DATA</column name>`  
   
- `</row>`   
+`</row>`   
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor (clase)](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor (clase)](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicParameterAccessor (clase)](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CDynamicStringAccessor (clase)](../../data/oledb/cdynamicstringaccessor-class.md)   
- [CDynamicStringAccessorA (clase)](../../data/oledb/cdynamicstringaccessora-class.md)   
- [CDynamicStringAccessorW (clase)](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [CManualAccessor (Clase)](../../data/oledb/cmanualaccessor-class.md)
+
+[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor (Clase)](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicStringAccessor (Clase)](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[CDynamicStringAccessorA (Clase)](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[CDynamicStringAccessorW (Clase)](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[CManualAccessor (Clase)](../../data/oledb/cmanualaccessor-class.md)

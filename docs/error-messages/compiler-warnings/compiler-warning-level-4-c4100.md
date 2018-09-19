@@ -1,5 +1,5 @@
 ---
-title: Compilador (nivel 4) de la advertencia C4100 | Documentos de Microsoft
+title: Del compilador (nivel 4) de la advertencia C4100 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3cf831590af2e1f2f7cd13d93c9d13ba217e11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ad1b8bab287f4c16b00781e90351bbb204aa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099474"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Advertencia del compilador (nivel 4) C4100
-'identificador': parámetro formal sin referencia  
-  
- No se hace referencia el parámetro formal en el cuerpo de la función. Se omite el parámetro sin referencia.  
-  
- También se puede emitir C4100 cuando el código llama a un destructor en una sin ninguna referencia parámetro de tipo primitivo.  Se trata de una limitación del compilador de Visual C++.  
-  
- El ejemplo siguiente genera C4100:  
-  
-```  
-// C4100.cpp  
-// compile with: /W4  
-void func(int i) {   // C4100, delete the unreferenced parameter to  
-                     //resolve the warning  
-   // i;   // or, add a reference like this  
-}  
-  
-int main()  
-{  
-   func(1);  
-}  
+
+'identifier': parámetro formal sin referencia
+
+No se hace referencia el parámetro formal en el cuerpo de la función. Se omite el parámetro no referenciado.
+
+También puede emitirse C4100 cuando el código llama a un destructor en un parámetro de tipo primitivo no.  Esta es una limitación del compilador de Visual C++.
+
+El ejemplo siguiente genera el error C4100:
+
+```
+// C4100.cpp
+// compile with: /W4
+void func(int i) {   // C4100, delete the unreferenced parameter to
+                     //resolve the warning
+   // i;   // or, add a reference like this
+}
+
+int main()
+{
+   func(1);
+}
 ```

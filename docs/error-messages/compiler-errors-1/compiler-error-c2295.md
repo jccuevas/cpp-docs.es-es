@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2295 | Documentos de Microsoft
+title: Error del compilador C2295 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c4c112c56257b12ca56dddc63dc61f9c5ee9e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 689d5fa4a405503cd21d086e5c23f5d26aa8cdfb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135896"
 ---
 # <a name="compiler-error-c2295"></a>Error del compilador C2295
-'carácter' de escape: no es válido en la definición de macro  
-  
- Una definición de macro no puede contener una secuencia de escape con el carácter especificado.
+
+'carácter' de escape: no es válido en la definición de macro
+
+Una definición de macro no puede contener una secuencia de escape con el carácter especificado.

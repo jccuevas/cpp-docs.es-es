@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107477"
 ---
-# <a name="storage-classes-c"></a>Clases de almacenamiento (C++)  
-  
-Un *clase de almacenamiento* en el contexto de C++, las declaraciones de variable es un especificador de tipo que rige la ubicación de memoria, la vinculación y la duración de objetos. Un objeto determinado puede tener solo una clase de almacenamiento. Las variables definidas dentro de un bloque tienen almacenamiento automático a menos que especifique lo contrario mediante el **extern**, **estático**, o `thread_local` especificadores. Las variables y objetos automáticos no tienen ninguna vinculación; no son visibles para código fuera del bloque.  
-  
-**Notas**  
-  
-1.  El [mutable](../cpp/mutable-data-members-cpp.md) palabra clave puede considerarse un especificador de clase de almacenamiento. Sin embargo, solo está disponible en la lista de miembros de una definición de clase.  
-  
-2.  **Visual C++ 2010 y versiones posteriores:** el **automática** palabra clave ya no es un especificador de clase de almacenamiento de C++ y el **registrar** palabra clave está desusada. **Visual Studio 2017 versión 15.7 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **registrar** palabra clave se quitará el lenguaje C++.
+# <a name="storage-classes-c"></a>Clases de almacenamiento (C++)
+
+Un *clase de almacenamiento* en el contexto de C++, las declaraciones de variable es un especificador de tipo que rige la ubicación de memoria, la vinculación y la duración de objetos. Un objeto determinado puede tener solo una clase de almacenamiento. Las variables definidas dentro de un bloque tienen almacenamiento automático a menos que especifique lo contrario mediante el **extern**, **estático**, o `thread_local` especificadores. Las variables y objetos automáticos no tienen ninguna vinculación; no son visibles para código fuera del bloque.
+
+**Notas**
+
+1. El [mutable](../cpp/mutable-data-members-cpp.md) palabra clave puede considerarse un especificador de clase de almacenamiento. Sin embargo, solo está disponible en la lista de miembros de una definición de clase.
+
+1. **Visual C++ 2010 y versiones posteriores:** el **automática** palabra clave ya no es un especificador de clase de almacenamiento de C++ y el **registrar** palabra clave está desusada. **Visual Studio 2017 versión 15.7 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **registrar** palabra clave se quitará el lenguaje C++.
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ El código siguiente muestra dos **extern** declaraciones, `DefinedElsewhere` (q
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ Cosas a tener en cuenta sobre el `thread_local` especificador:
 
 -  Puede aplicar `thread_local` solo a las declaraciones de datos y las definiciones; `thread_local` no puede usarse en definiciones o declaraciones de función.
 
--  Solo puede especificar `thread_local` en elementos de datos con duración de almacenamiento estática. Esto incluye los objetos de datos globales (tanto **estático** y **extern**), objetos estáticos locales y miembros de datos estáticos de clases. Cualquier variable local declarada `thread_local` es implícitamente estático si no se proporciona ninguna otra clase de almacenamiento; es decir, en el ámbito de bloque `thread_local` es equivalente a `thread_local static`. 
+-  Solo puede especificar `thread_local` en elementos de datos con duración de almacenamiento estática. Esto incluye los objetos de datos globales (tanto **estático** y **extern**), objetos estáticos locales y miembros de datos estáticos de clases. Cualquier variable local declarada `thread_local` es implícitamente estático si no se proporciona ninguna otra clase de almacenamiento; es decir, en el ámbito de bloque `thread_local` es equivalente a `thread_local static`.
 
 -  Debe especificar `thread_local` para la declaración y la definición de un objeto local de subproceso, ya sea que la declaración y la definición se realicen en el mismo archivo o en archivos distintos.
 
@@ -232,7 +232,7 @@ En Windows, `thread_local` es funcionalmente equivalente a [__declspec (Thread)]
 
 ##  <a name="register"></a>  registrar
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **registrar** palabra clave ya no es una clase de almacenamiento compatibles. La palabra clave se mantiene en el estándar para un uso futuro. 
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **registrar** palabra clave ya no es una clase de almacenamiento compatibles. La palabra clave se mantiene en el estándar para un uso futuro.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Hay varios puntos a tener en cuenta sobre el programa:
 - Por último, las variables locales estáticas como `I3` conservan sus valores mientras dura el programa, pero se destruyen cuando el programa finaliza.
 
 ## <a name="see-also"></a>Vea también
- [Declaraciones y definiciones](../cpp/declarations-and-definitions-cpp.md)
+
+[Declaraciones y definiciones](../cpp/declarations-and-definitions-cpp.md)

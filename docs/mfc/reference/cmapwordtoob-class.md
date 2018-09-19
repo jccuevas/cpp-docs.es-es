@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f9554f0ba8daf5a96f0fa2daa32e0e20469bf7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7b3487b29122b4a5109a6c0de51cd0e459380aa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117379"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb (clase)
 Admite mapas de punteros `CObject` con clave de palabras de 16 bits.  
@@ -63,9 +63,7 @@ class CMapWordToOb : public CObject
 ## <a name="members"></a>Miembros  
  Las funciones miembro de `CMapWordToOb` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un `CString` o un **const** puntero a **char** como un parámetro de función o valor devuelto, use WORD.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const;'  
   
  por ejemplo, se traduce en  
   

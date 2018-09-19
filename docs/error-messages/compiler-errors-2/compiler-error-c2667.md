@@ -1,5 +1,5 @@
 ---
-title: C2667 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2667 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5458bc5dc9500ea7850833b073d40d66bfc6e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6d14cf04ae399b10cbaa393d9e9fcc7133f274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095253"
 ---
-# <a name="compiler-error-c2667"></a>C2667 de Error del compilador
-'función': ninguna de las sobrecargas número tiene una conversión mejor  
-  
- Una llamada de función sobrecargada es ambigua y no se puede resolver.  
-  
- La conversión requerida para que coincida con los parámetros reales de la llamada de función a una de las funciones sobrecargadas debe ser estrictamente mejor que las conversiones requeridas por todas las demás funciones sobrecargadas.  
-  
- Vea el artículo de Knowledge Base Q240869 para obtener más información sobre la ordenación parcial de plantillas de función.
+# <a name="compiler-error-c2667"></a>Error del compilador C2667
+
+'function': ninguna de las sobrecargas número tiene una conversión mejor
+
+Una llamada de función sobrecargada es ambigua y no se puede resolver.
+
+La conversión necesaria para coincidir con los parámetros reales de la llamada de función a una de las funciones sobrecargadas debe ser estrictamente mejor que las conversiones necesarias todas las funciones sobrecargadas.
+
+Consulte el artículo de Knowledge Base Q240869 para obtener más información sobre la ordenación parcial de plantillas de función.

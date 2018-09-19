@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535048"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118913"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass (Clase)
 
@@ -69,7 +69,8 @@ La lista de interfaces que el objeto implementa más allá de `IUnknown`, `IInsp
 
 ## <a name="members"></a>Miembros
 
-`RuntimeClassInitialize` Una función que inicializa el objeto si el `MakeAndInitialize` función de plantilla se usa para construir el objeto. Devuelve S_OK si el objeto se inicializó correctamente, o un código de error COM si no se pudo inicializar. El código de error COM se propaga como el valor devuelto de `MakeAndInitialize`. Tenga en cuenta que el `RuntimeClassInitialize` no se llama al método si el `Make` función de plantilla se usa para construir el objeto.
+`RuntimeClassInitialize`<br/>
+Una función que inicializa el objeto si el `MakeAndInitialize` función de plantilla se usa para construir el objeto. Devuelve S_OK si el objeto se inicializó correctamente, o un código de error COM si no se pudo inicializar. El código de error COM se propaga como el valor devuelto de `MakeAndInitialize`. Tenga en cuenta que el `RuntimeClassInitialize` no se llama al método si el `Make` función de plantilla se usa para construir el objeto.
 
 ### <a name="public-constructors"></a>Constructores públicos
 

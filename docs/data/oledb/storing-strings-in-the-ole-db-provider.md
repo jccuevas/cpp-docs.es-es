@@ -1,5 +1,5 @@
 ---
-title: Almacenar cadenas en el proveedor OLE DB | Documentos de Microsoft
+title: Almacenar cadenas en el proveedor OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5ba289e7e53ba1bcaca550ba84c2d871d215306
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84ee07f236ac7ec79149b1cb36f358598f9c6c12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112699"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Almacenar cadenas en el proveedor OLE DB
-En MyProviderRS.h, el Asistente para proveedores OLE DB ATL crea un registro de usuario predeterminado denominado `CWindowsFile`. Para controlar las dos cadenas, modifique `CWindowsFile` o agregue su propio registro de usuario tal como se muestra en el código siguiente:  
+
+MyProviderRS.h, el Asistente para proveedores OLE DB ATL crea un registro de usuario predeterminado denominado `CWindowsFile`. Para controlar las dos cadenas, modifique `CWindowsFile` o agregue su propio registro de usuario, como se muestra en el código siguiente:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,11 +51,12 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Los miembros de datos `szCommand` y `szText` representan las dos cadenas, con `szCommand2` y `szText2` proporcionan columnas adicionales si es necesario. El miembro de datos `dwBookmark` no es necesario para este proveedor sencillo de sólo lectura, pero se utiliza más adelante para agregar una `IRowsetLocate` interfaz; vea [mejorar lectura solo un proveedor sencillo](../../data/oledb/enhancing-the-simple-read-only-provider.md). El `==` operador compara instancias (la implementación de este operador es opcional).  
+Los miembros de datos `szCommand` y `szText` representan las dos cadenas, con `szCommand2` y `szText2` proporcionan columnas adicionales si es necesario. El miembro de datos `dwBookmark` no es necesaria para este proveedor sencillo de sólo lectura, pero se utiliza posteriormente para agregar una `IRowsetLocate` interfaz; vea [mejorar lectura solo un proveedor sencillo](../../data/oledb/enhancing-the-simple-read-only-provider.md). El `==` operador compara instancias (implementación de este operador es opcional).  
   
- Cuando esto sucede, el proveedor debería estar listo para compilarse y ejecutarse. Para probar el proveedor, se necesita un consumidor con funcionalidad de coincidencia. [Implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md) muestra cómo crear un consumidor de prueba de este tipo. Ejecute el consumidor de prueba con el proveedor. Compruebe que el consumidor de prueba recupera las cadenas apropiadas del proveedor al hacer clic en el **ejecutar** botón en el **consumidor de prueba** cuadro de diálogo.  
+Cuando esto sucede, el proveedor debería estar listo para compilar y ejecutar. Para probar el proveedor, se necesita un consumidor con funcionalidad de coincidencia. [Implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md) se muestra cómo crear un consumidor de prueba de este tipo. Ejecute el consumidor de prueba con el proveedor. Compruebe que el consumidor de prueba recupera las cadenas apropiadas del proveedor al hacer clic en el **ejecutar** situado en la **probar consumidor** cuadro de diálogo.  
   
- Cuando haya probado con éxito el proveedor, puede ampliar su funcionalidad mediante la implementación de interfaces adicionales. Se muestra un ejemplo en [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+Cuando haya probado correctamente el proveedor, es posible que desee ampliar su funcionalidad mediante la implementación de interfaces adicionales. Se muestra un ejemplo en [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Implementar un proveedor sencillo de solo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementar un proveedor sencillo de solo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md)

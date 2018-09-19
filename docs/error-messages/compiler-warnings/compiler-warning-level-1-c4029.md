@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4029 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4029 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe03ca53056a48d2c6104d86dd70c8c4ae31a2c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e14664a40057ff76bf69863f7b0b08bb0e63d5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105180"
 ---
 # <a name="compiler-warning-level-1-c4029"></a>Compilador advertencia (nivel 1) C4029
-lista de parámetros formales declarados distinta de la definición  
-  
- Tipos de parámetro formal en la declaración de función no coinciden con los de la definición de función. El compilador usa la lista de parámetros de la definición.
+
+declara difiere de la definición de la lista de parámetros formales
+
+Tipos de parámetro formal en la declaración de función no coinciden con los de la definición de función. El compilador usa la lista de parámetros de la definición.

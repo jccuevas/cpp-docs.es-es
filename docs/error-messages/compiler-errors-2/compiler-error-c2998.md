@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2998 | Documentos de Microsoft
+title: Error del compilador C2998 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19c37ef7ce1a1257f25c76bdf31efbdc25ae6ae3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 181db50f9b2598379d1b9d56720551f1b18cbf18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118432"
 ---
 # <a name="compiler-error-c2998"></a>Error del compilador C2998
-'identifier': no puede ser una definición de plantilla  
-  
- El compilador no pudo procesar la sintaxis usada en la definición de plantilla.  
-  
- El ejemplo siguiente genera la advertencia C2998:  
-  
-```  
-// C2998.cpp  
-// compile with: /c  
-template <class T> int x = 1018; // C2998  
+
+'identifier': no puede ser una definición de plantilla
+
+El compilador no pudo procesar la sintaxis usada en la definición de plantilla.
+
+El ejemplo siguiente genera la advertencia C2998:
+
+```
+// C2998.cpp
+// compile with: /c
+template <class T> int x = 1018; // C2998
 ```

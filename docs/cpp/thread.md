@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 80ea212f8c888680edf50e269c89e62988a0ee36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104392"
 ---
 # <a name="thread"></a>subproceso
 
@@ -34,7 +34,7 @@ El **subproceso** modificador de clase de almacenamiento extendidos se usa para 
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (thread)** *declarador*  
+> **__declspec (thread)** *declarador*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -96,6 +96,7 @@ Además, debe seguir estas instrucciones al declarar variables y objetos locales
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
- [__declspec](../cpp/declspec.md)  
- [Palabras clave](../cpp/keywords-cpp.md)  
- [Almacenamiento local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[Almacenamiento local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md)

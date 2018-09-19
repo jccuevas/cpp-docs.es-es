@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7e3731132e1b9ed9381a7b97347406b620df70
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 13ddd14ad530fa2b7ce2892ce8838b27e307381f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759670"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135781"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP (clase)
 
@@ -36,17 +36,17 @@ Esta clase expone [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipro
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template<class T, class CDV = CComDynamicUnkArray>  
+template<class T, class CDV = CComDynamicUnkArray>
 class IPropertyNotifySinkCP 
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 La clase derivada de `IPropertyNotifySinkCP`.
 
-*VCDTOX*  
+*VCDTOX*<br/>
 Una clase que administra las conexiones entre un punto de conexión y sus receptores. El valor predeterminado es [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), lo que permite conexiones ilimitadas. También puede usar [CComUnkArray](../../atl/reference/ccomunkarray-class.md), que especifica un número fijo de conexiones.
 
 ## <a name="remarks"></a>Comentarios
@@ -65,6 +65,6 @@ Para obtener más información sobre el uso de puntos de conexión en ATL, vea e
 
 ## <a name="see-also"></a>Vea también
 
-[IConnectionPointImpl (clase)](../../atl/reference/iconnectionpointimpl-class.md)   
-[IConnectionPointContainerImpl (clase)](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
+[IConnectionPointImpl (clase)](../../atl/reference/iconnectionpointimpl-class.md)<br/>
+[IConnectionPointContainerImpl (clase)](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

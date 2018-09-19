@@ -1,5 +1,5 @@
 ---
-title: Error del compilador C2301 | Documentos de Microsoft
+title: Error del compilador C2301 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c64405b9fc908f7e0aa9132921dd0b461c162f79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec21bde5a6b66487d4990b1cbe5aeba2035586a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110944"
 ---
 # <a name="compiler-error-c2301"></a>Error del compilador C2301
-el operando a la izquierda de '->~identifier' debe apuntar a una clase/estructura/unión  
-  
- La expresión a la izquierda del operador `->` no se evalúa como un puntero a una clase, estructura o unión.
+
+el operando a la izquierda de '->~identifier' debe apuntar a una clase/estructura/unión
+
+La expresión a la izquierda del operador `->` no se evalúa como un puntero a una clase, estructura o unión.

@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136340"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (clase)
 El `CMFCRibbonBaseElement` clase es la clase base para todos los elementos que se pueden agregar a un [barra de cinta](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  De forma predeterminada, este método no hace nada. Invalide este método en una clase derivada para dibujar la imagen para el elemento de la cinta de opciones.  
   
  En la tabla siguiente se enumera los valores posibles para el *tipo* parámetro:  
-  
- `RibbonImageLarge`  
- Gran tamaño de imagen 32 x 32 píxeles.  
-  
- `RibbonImageSmall`  
- Tamaño de la pequeña imagen 16 x 16 píxeles.  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | Gran tamaño de imagen 32 x 32 píxeles.  |
+| `RibbonImageSmall`  | Tamaño de la pequeña imagen 16 x 16 píxeles.  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Devuelve el puntero especificado apunta al objeto actual.  
