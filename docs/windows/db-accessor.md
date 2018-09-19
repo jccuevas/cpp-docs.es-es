@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efca93e2e9b52ce646ef07465682815978550414
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c20647d96a66cf4b50e6f0b031cc04353553e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607782"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410655"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -39,10 +39,10 @@ Grupos `db_column` atributos que participan en `IAccessor`-enlace basado en.
 
 #### <a name="parameters"></a>Parámetros
 
-*num*  
+*num*<br/>
 Especifica el número de descriptor de acceso (un índice entero basado en cero). Debe especificar números de descriptor de acceso en aumentar orden, utilizando enteros o valores definen.
 
-*auto*  
+*auto*<br/>
 Un valor booleano que especifica si el descriptor de acceso se recuperan automáticamente (TRUE) o no (FALSE) recuperado.
 
 ## <a name="remarks"></a>Comentarios
