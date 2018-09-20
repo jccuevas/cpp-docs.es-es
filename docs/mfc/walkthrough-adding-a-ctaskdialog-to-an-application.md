@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar una clase CTaskDialog a una aplicación | Documentos de Microsoft'
+title: 'Tutorial: Agregar una clase CTaskDialog a una aplicación | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122959"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420489"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Tutorial: Agregar una clase CTaskDialog a una aplicación
 
@@ -53,7 +53,7 @@ En el procedimiento siguiente se muestra el uso más básico de la clase `CTaskD
 
 3. Agregue `#include "afxtaskdialog.h"` después de la lista de incluye.
 
-4. Busque el método `CMyProjectApp::InitInstance`. Inserte las siguientes líneas de código antes de la instrucción `return TRUE;` . Este código crea las cadenas que se usan en el cuadro de mensaje de Windows o en la clase `CTaskDialog`.  
+4. Busque el método `CMyProjectApp::InitInstance`. Inserte las siguientes líneas de código antes de la instrucción `return TRUE;` . Este código crea las cadenas que se usan en el cuadro de mensaje de Windows o en la clase `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -201,6 +201,6 @@ En estos ejemplos no se muestran todas las opciones disponibles para una clase `
 
 ## <a name="see-also"></a>Vea también
 
-[Cuadros de diálogo](../mfc/dialog-boxes.md)  
-[CTaskDialog (clase)](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
+[CTaskDialog (clase)](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

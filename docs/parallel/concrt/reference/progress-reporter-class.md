@@ -19,69 +19,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8dfb224fb0c0f641e4b7ef8809268fa4fad58890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438800"
 ---
 # <a name="progressreporter-class"></a>progress_reporter (Clase)
-La clase del informador de progreso que permite informar de notificaciones de progreso de un tipo específico. Cada objeto progress_reporter se vincula a una acción u operación asincrónica determinada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+La clase del informador de progreso que permite informar de notificaciones de progreso de un tipo específico. Cada objeto progress_reporter se vincula a una acción u operación asincrónica determinada.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 template<typename _ProgressType>
 class progress_reporter;
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+```
+
+#### <a name="parameters"></a>Parámetros
+
 *_ProgressType*<br/>
-El tipo de carga de cada notificación de progreso que se notifican a través del informador de progreso.  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[progress_reporter](#ctor)||  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Informe](#report)|Envía un informe de progreso a la operación o acción asincrónica a la que está enlazado este informador de progreso.|  
-  
-## <a name="remarks"></a>Comentarios  
- Este tipo solo está disponible para las aplicaciones de Windows en tiempo de ejecución.  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `progress_reporter`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** ppltasks.h  
-  
- **Espacio de nombres:** simultaneidad  
-  
-##  <a name="ctor"></a> progress_reporter) 
+El tipo de carga de cada notificación de progreso que se notifican a través del informador de progreso.
+
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[progress_reporter](#ctor)||
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Informe](#report)|Envía un informe de progreso a la operación o acción asincrónica a la que está enlazado este informador de progreso.|
+
+## <a name="remarks"></a>Comentarios
+
+Este tipo solo está disponible para las aplicaciones de Windows en tiempo de ejecución.
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`progress_reporter`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** ppltasks.h
+
+**Espacio de nombres:** simultaneidad
+
+##  <a name="ctor"></a> progress_reporter)
 
 ```
 progress_reporter();
-```  
-  
-##  <a name="report"></a> Informe 
+```
 
- Envía un informe de progreso a la operación o acción asincrónica a la que está enlazado este informador de progreso.  
-  
+##  <a name="report"></a> Informe
+
+Envía un informe de progreso a la operación o acción asincrónica a la que está enlazado este informador de progreso.
+
 ```
 void report(const _ProgressType& val) const;
-```  
-  
-### <a name="parameters"></a>Parámetros  
+```
+
+### <a name="parameters"></a>Parámetros
+
 *Val*<br/>
-La carga de informes a través de una notificación de progreso.  
-  
-## <a name="see-also"></a>Vea también  
- [concurrency (espacio de nombres)](concurrency-namespace.md)
+La carga de informes a través de una notificación de progreso.
+
+## <a name="see-also"></a>Vea también
+
+[concurrency (espacio de nombres)](concurrency-namespace.md)
