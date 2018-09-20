@@ -57,34 +57,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c9931ae6bb83cb6801ac1bcc89359d9d7f468f2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 34d9a0fad325c95b9de43e28269b00ad7ced4b95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706048"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416713"
 ---
 # <a name="handling-customization-notifications"></a>Control de notificaciones de personalización
-Un control común de barra de herramientas de Windows tiene características de personalización integradas, incluyendo un cuadro de diálogo de personalización definido por el sistema que permite insertar, eliminar o reorganizar botones de la barra de herramientas. La aplicación determina si las características de personalización están disponibles y controla la medida en que el usuario puede personalizar la barra de herramientas.  
-  
- Puede realizar estas características de personalización disponibles en el usuario proporcionando la barra de herramientas del **CCS_ADJUSTABLE** estilo. Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) .  
-  
- El control de barra de herramientas envía mensajes de notificación a la ventana primaria en cada paso del proceso de personalización. Si el usuario mantiene presionada la tecla MAYÚS y comienza a arrastrar un botón, la barra de herramientas controla automáticamente la operación de arrastre. La barra de herramientas envía el mensaje de notificación **TBN_QUERYDELETE** a la ventana primaria para determinar si se puede eliminar el botón. La operación de arrastre termina si la ventana primaria devuelve **FALSE**. De lo contrario, la barra de herramientas captura la entrada del mouse y espera a que el usuario suelte el botón del mouse.  
-  
- Cuando el usuario suelta el botón del mouse, el control de barra de herramientas determina la ubicación del cursor del mouse. Si el cursor está fuera de la barra de herramientas, el botón se elimina. Si el cursor está en otro botón de barra de herramientas, la barra de herramientas envía el mensaje de notificación **TBN_QUERYINSERT** a la ventana primaria para determinar si se puede insertar un botón a la izquierda del botón especificado. El botón se inserta si la ventana primaria devuelve **TRUE**; en caso contrario, no se inserta. La barra de herramientas envía el mensaje de notificación **TBN_TOOLBARCHANGE** para indicar el final de la operación de arrastre.  
-  
- Si el usuario comienza una operación de arrastre sin mantener presionada la tecla MAYÚS, el control de barra de herramientas envía el mensaje de notificación **TBN_BEGINDRAG** a la ventana propietaria. Una aplicación que implementa su propio código de arrastre de botón puede usar este mensaje como una señal para comenzar una operación de arrastre. La barra de herramientas envía el mensaje de notificación **TBN_ENDDRAG** para indicar el final de la operación de arrastre.  
-  
- Un control de barra de herramientas envía mensajes de notificación cuando el usuario personaliza una barra de herramientas mediante el cuadro de diálogo **Personalizar barra de herramientas** . La barra de herramientas envía el mensaje de notificación **TBN_BEGINADJUST** después de que el usuario haga doble clic en la barra de herramientas, pero antes de la creación del cuadro de diálogo. A continuación, la barra de herramientas comienza a enviar una serie de mensajes de notificación **TBN_QUERYINSERT** para determinar si la barra de herramientas permite la inserción de botones. Si la ventana primaria devuelve **TRUE**, la barra de herramientas deja de enviar mensajes de notificación **TBN_QUERYINSERT** . Si la ventana primaria no devuelve **TRUE** para ningún botón, la barra de herramientas destruye el cuadro de diálogo.  
-  
- A continuación, el control de barra de herramientas determina si se pueden eliminar botones de la barra de herramientas mediante el envío de un mensaje de notificación **TBN_QUERYDELETE** para cada botón de la barra de herramientas. La ventana primaria devuelve **TRUE** para indicar que un botón se puede eliminar; en caso contrario, devuelve **FALSE**. La barra de herramientas agrega todos los botones de barra de herramientas al cuadro de diálogo, pero atenúa aquellos que no se pueden eliminar.  
-  
- Cuando el control de barra de herramientas necesita información sobre un botón en el cuadro de diálogo Personalizar barra de herramientas, envía el mensaje de notificación **TBN_GETBUTTONINFO** y especifica el índice del botón del que necesita información y la dirección de una estructura **TBNOTIFY** . La ventana primaria debe rellenar la estructura con la información pertinente.  
-  
- El cuadro de diálogo **Personalizar barra de herramientas** incluye un botón Ayuda y un botón Restablecer. Cuando el usuario elige el botón Ayuda, el control de barra de herramientas envía el mensaje de notificación **TBN_CUSTHELP** . La ventana primaria debe responder mostrando información de ayuda. El cuadro de diálogo envía el mensaje de notificación **TBN_RESET** cuando el usuario selecciona el botón Restablecer. Este mensaje indica que la barra de herramientas está a punto de reinicializar el cuadro de diálogo.  
-  
- Estos mensajes son todos los mensaje **WM_NOTIFY** y pueden controlarse en la ventana propietaria mediante la adición de entradas de mapa de mensajes con el formato siguiente al mapa de mensajes de la ventana propietaria:  
-  
+
+Un control común de barra de herramientas de Windows tiene características de personalización integradas, incluyendo un cuadro de diálogo de personalización definido por el sistema que permite insertar, eliminar o reorganizar botones de la barra de herramientas. La aplicación determina si las características de personalización están disponibles y controla la medida en que el usuario puede personalizar la barra de herramientas.
+
+Puede realizar estas características de personalización disponibles en el usuario proporcionando la barra de herramientas del **CCS_ADJUSTABLE** estilo. Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) .
+
+El control de barra de herramientas envía mensajes de notificación a la ventana primaria en cada paso del proceso de personalización. Si el usuario mantiene presionada la tecla MAYÚS y comienza a arrastrar un botón, la barra de herramientas controla automáticamente la operación de arrastre. La barra de herramientas envía el mensaje de notificación **TBN_QUERYDELETE** a la ventana primaria para determinar si se puede eliminar el botón. La operación de arrastre termina si la ventana primaria devuelve **FALSE**. De lo contrario, la barra de herramientas captura la entrada del mouse y espera a que el usuario suelte el botón del mouse.
+
+Cuando el usuario suelta el botón del mouse, el control de barra de herramientas determina la ubicación del cursor del mouse. Si el cursor está fuera de la barra de herramientas, el botón se elimina. Si el cursor está en otro botón de barra de herramientas, la barra de herramientas envía el mensaje de notificación **TBN_QUERYINSERT** a la ventana primaria para determinar si se puede insertar un botón a la izquierda del botón especificado. El botón se inserta si la ventana primaria devuelve **TRUE**; en caso contrario, no se inserta. La barra de herramientas envía el mensaje de notificación **TBN_TOOLBARCHANGE** para indicar el final de la operación de arrastre.
+
+Si el usuario comienza una operación de arrastre sin mantener presionada la tecla MAYÚS, el control de barra de herramientas envía el mensaje de notificación **TBN_BEGINDRAG** a la ventana propietaria. Una aplicación que implementa su propio código de arrastre de botón puede usar este mensaje como una señal para comenzar una operación de arrastre. La barra de herramientas envía el mensaje de notificación **TBN_ENDDRAG** para indicar el final de la operación de arrastre.
+
+Un control de barra de herramientas envía mensajes de notificación cuando el usuario personaliza una barra de herramientas mediante el cuadro de diálogo **Personalizar barra de herramientas** . La barra de herramientas envía el mensaje de notificación **TBN_BEGINADJUST** después de que el usuario haga doble clic en la barra de herramientas, pero antes de la creación del cuadro de diálogo. A continuación, la barra de herramientas comienza a enviar una serie de mensajes de notificación **TBN_QUERYINSERT** para determinar si la barra de herramientas permite la inserción de botones. Si la ventana primaria devuelve **TRUE**, la barra de herramientas deja de enviar mensajes de notificación **TBN_QUERYINSERT** . Si la ventana primaria no devuelve **TRUE** para ningún botón, la barra de herramientas destruye el cuadro de diálogo.
+
+A continuación, el control de barra de herramientas determina si se pueden eliminar botones de la barra de herramientas mediante el envío de un mensaje de notificación **TBN_QUERYDELETE** para cada botón de la barra de herramientas. La ventana primaria devuelve **TRUE** para indicar que un botón se puede eliminar; en caso contrario, devuelve **FALSE**. La barra de herramientas agrega todos los botones de barra de herramientas al cuadro de diálogo, pero atenúa aquellos que no se pueden eliminar.
+
+Cuando el control de barra de herramientas necesita información sobre un botón en el cuadro de diálogo Personalizar barra de herramientas, envía el mensaje de notificación **TBN_GETBUTTONINFO** y especifica el índice del botón del que necesita información y la dirección de una estructura **TBNOTIFY** . La ventana primaria debe rellenar la estructura con la información pertinente.
+
+El cuadro de diálogo **Personalizar barra de herramientas** incluye un botón Ayuda y un botón Restablecer. Cuando el usuario elige el botón Ayuda, el control de barra de herramientas envía el mensaje de notificación **TBN_CUSTHELP** . La ventana primaria debe responder mostrando información de ayuda. El cuadro de diálogo envía el mensaje de notificación **TBN_RESET** cuando el usuario selecciona el botón Restablecer. Este mensaje indica que la barra de herramientas está a punto de reinicializar el cuadro de diálogo.
+
+Estos mensajes son todos los mensaje **WM_NOTIFY** y pueden controlarse en la ventana propietaria mediante la adición de entradas de mapa de mensajes con el formato siguiente al mapa de mensajes de la ventana propietaria:
+
 ```cpp
 ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 ```
@@ -99,20 +100,20 @@ ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 
 - **memberFxn**
 
-   Función miembro que se llamará cuando se reciba esta notificación.  
-  
-La función miembro se declararía con el prototipo siguiente:  
-  
+   Función miembro que se llamará cuando se reciba esta notificación.
+
+La función miembro se declararía con el prototipo siguiente:
+
 ```cpp
 afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );
 ```
 
- Si el controlador de mensajes de notificación devuelve un valor, debe colocarse en **LRESULT** que apunta *result*.  
-  
- Para cada mensaje, `pNotifyStruct` señala una estructura **NMHDR** o una estructura **TBNOTIFY** . Estas estructuras se describen a continuación:  
-  
- La estructura **NMHDR** contiene los siguientes miembros:  
-  
+Si el controlador de mensajes de notificación devuelve un valor, debe colocarse en **LRESULT** que apunta *result*.
+
+Para cada mensaje, `pNotifyStruct` señala una estructura **NMHDR** o una estructura **TBNOTIFY** . Estas estructuras se describen a continuación:
+
+La estructura **NMHDR** contiene los siguientes miembros:
+
 ```cpp
 typedef struct tagNMHDR {
     HWND hwndFrom;  // handle of control sending message
@@ -123,34 +124,34 @@ typedef struct tagNMHDR {
 
 - **hwndFrom**
 
-   Identificador de ventana del control que envía la notificación. Para convertir este identificador en un puntero `CWnd` , use [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).  
-  
+   Identificador de ventana del control que envía la notificación. Para convertir este identificador en un puntero `CWnd` , use [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).
+
 - **idFrom**
 
-   Identificador del control que envía la notificación.  
-  
+   Identificador del control que envía la notificación.
+
 - **code**
 
-   Código de notificación. Este miembro puede ser un valor específico para un tipo de control, como **TBN_BEGINADJUST** o **TTN_NEEDTEXT**, o bien ser uno de los valores de notificación comunes que se enumeran a continuación:  
-  
-   - **NM_CLICK** El usuario hizo clic con el botón izquierdo del mouse en el control.  
-  
-   - **NM_DBCLICK** El usuario hizo doble clic con el botón izquierdo del mouse en el control.  
-  
-   - **NM_KILLFOCUS** El control perdió el foco de entrada.  
-  
-   - **NM_OUTOFMEMORY** El control no pudo completar una operación porque no hay suficiente memoria disponible.  
-  
-   - **NM_RCLICK** El usuario hizo clic con el botón derecho del mouse en el control.  
-  
-   - **NM_RDBCLICK** El usuario hizo doble clic con el botón derecho del mouse en el control.  
-  
-   - **NM_RETURN** El control tiene el foco de entrada y el usuario presionó la tecla ENTRAR.  
-  
-   - **NM_SETFOCUS** El control recibió el foco de entrada.  
-  
-La estructura **TBNOTIFY** contiene los siguientes miembros:  
-  
+   Código de notificación. Este miembro puede ser un valor específico para un tipo de control, como **TBN_BEGINADJUST** o **TTN_NEEDTEXT**, o bien ser uno de los valores de notificación comunes que se enumeran a continuación:
+
+   - **NM_CLICK** El usuario hizo clic con el botón izquierdo del mouse en el control.
+
+   - **NM_DBCLICK** El usuario hizo doble clic con el botón izquierdo del mouse en el control.
+
+   - **NM_KILLFOCUS** El control perdió el foco de entrada.
+
+   - **NM_OUTOFMEMORY** El control no pudo completar una operación porque no hay suficiente memoria disponible.
+
+   - **NM_RCLICK** El usuario hizo clic con el botón derecho del mouse en el control.
+
+   - **NM_RDBCLICK** El usuario hizo doble clic con el botón derecho del mouse en el control.
+
+   - **NM_RETURN** El control tiene el foco de entrada y el usuario presionó la tecla ENTRAR.
+
+   - **NM_SETFOCUS** El control recibió el foco de entrada.
+
+La estructura **TBNOTIFY** contiene los siguientes miembros:
+
 ```cpp
 typedef struct {
     NMHDR hdr; // information common to all WM_NOTIFY messages
@@ -160,70 +161,71 @@ typedef struct {
     LPSTR lpszText;// address of button text
 } TBNOTIFY, FAR* LPTBNOTIFY;
 ```
-  
+
 - **hdr**
 
-   Información común para todos los mensajes **WM_NOTIFY** .  
-  
+   Información común para todos los mensajes **WM_NOTIFY** .
+
 - **iItem**
 
-   Índice del botón asociado a la notificación.  
-  
+   Índice del botón asociado a la notificación.
+
 - **tbButton**
 
-   **TBBUTTON** estructura que contiene información sobre el botón de barra de herramientas asociada con la notificación.  
-  
+   **TBBUTTON** estructura que contiene información sobre el botón de barra de herramientas asociada con la notificación.
+
 - **cchText**
 
-   Recuento de caracteres del texto del botón.  
-  
+   Recuento de caracteres del texto del botón.
+
 - **lpszText**
 
-   Puntero al texto del botón.  
-  
-Las notificaciones que la barra de herramientas envía son las siguientes:  
-  
+   Puntero al texto del botón.
+
+Las notificaciones que la barra de herramientas envía son las siguientes:
+
 - **TBN_BEGINADJUST**
 
-   Se envía cuando el usuario comienza a personalizar un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre la notificación. El controlador no tiene que devolver ningún valor específico.  
-  
+   Se envía cuando el usuario comienza a personalizar un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre la notificación. El controlador no tiene que devolver ningún valor específico.
+
 - **TBN_BEGINDRAG**
 
-   Se envía cuando el usuario comienza a arrastrar un botón en un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se está arrastrando. El controlador no tiene que devolver ningún valor específico.  
-  
+   Se envía cuando el usuario comienza a arrastrar un botón en un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se está arrastrando. El controlador no tiene que devolver ningún valor específico.
+
 - **TBN_CUSTHELP**
 
-   Se envía cuando el usuario elige el botón Ayuda en el cuadro de diálogo Personalizar barra de herramientas. No de devuelve ningún valor. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.  
-  
+   Se envía cuando el usuario elige el botón Ayuda en el cuadro de diálogo Personalizar barra de herramientas. No de devuelve ningún valor. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+
 - **TBN_ENDADJUST**
 
-   Se envía cuando el usuario deja de personalizar un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.  
-  
+   Se envía cuando el usuario deja de personalizar un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+
 - **TBN_ENDDRAG**
 
-   Se envía cuando el usuario deja de arrastrar un botón en un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se está arrastrando. El controlador no tiene que devolver ningún valor específico.  
-  
+   Se envía cuando el usuario deja de arrastrar un botón en un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se está arrastrando. El controlador no tiene que devolver ningún valor específico.
+
 - **TBN_GETBUTTONINFO**
 
-   Se envía cuando el usuario está personalizando un control de barra de herramientas. La barra de herramientas usa este mensaje de notificación para recuperar la información necesaria para el cuadro de diálogo Personalizar barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** especifica el índice basado en cero de un botón. Los miembros **pszText** y **cchText** especifican la dirección y la longitud, en caracteres, del texto del botón actual. Una aplicación debería rellenar la estructura con información acerca del botón. Devuelva **TRUE** si la información del botón se copió en la estructura o **FALSE** en caso contrario.  
-  
+   Se envía cuando el usuario está personalizando un control de barra de herramientas. La barra de herramientas usa este mensaje de notificación para recuperar la información necesaria para el cuadro de diálogo Personalizar barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** especifica el índice basado en cero de un botón. Los miembros **pszText** y **cchText** especifican la dirección y la longitud, en caracteres, del texto del botón actual. Una aplicación debería rellenar la estructura con información acerca del botón. Devuelva **TRUE** si la información del botón se copió en la estructura o **FALSE** en caso contrario.
+
 - **TBN_QUERYDELETE**
 
-   Se envía mientras el usuario está personalizando una barra de herramientas para determinar si se puede eliminar un botón de un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a eliminar. Devuelva **TRUE** para permitir que el botón se elimine o **FALSE** para impedir su eliminación.  
-  
+   Se envía mientras el usuario está personalizando una barra de herramientas para determinar si se puede eliminar un botón de un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a eliminar. Devuelva **TRUE** para permitir que el botón se elimine o **FALSE** para impedir su eliminación.
+
 - **TBN_QUERYINSERT**
 
-   Se envía mientras el usuario está personalizando un control de barra de herramientas para determinar si se puede insertar un botón a la izquierda del botón especificado. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a insertar. Devuelva **TRUE** para permitir que un botón se inserte delante del botón especificado o **FALSE** para impedir que el botón se inserte.  
-  
+   Se envía mientras el usuario está personalizando un control de barra de herramientas para determinar si se puede insertar un botón a la izquierda del botón especificado. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a insertar. Devuelva **TRUE** para permitir que un botón se inserte delante del botón especificado o **FALSE** para impedir que el botón se inserte.
+
 - **TBN_RESET**
 
-   Se envía cuando el usuario restablece el contenido del cuadro de diálogo Personalizar barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.  
-  
+   Se envía cuando el usuario restablece el contenido del cuadro de diálogo Personalizar barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+
 - **TBN_TOOLBARCHANGE**
 
-   Se envía cuando el usuario personalice un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.  
-  
-## <a name="see-also"></a>Vea también  
- [Usar CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+   Se envía cuando el usuario personalice un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723234"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412111"
 ---
 # <a name="reference-concurrency-runtime"></a>Referencia (Runtime de simultaneidad)
+
 Esta sección contiene información de referencia para el Runtime de simultaneidad.
 
 > [!Note]
@@ -478,7 +479,8 @@ Esta sección contiene información de referencia para el Runtime de simultaneid
 
 ## <a name="in-this-section"></a>En esta sección
 
-[simultaneidad Namespace](concurrency-namespace.md) el espacio de nombres de simultaneidad proporciona clases y funciones que le proporcionan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../concurrency-runtime.md).
+[concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
+El espacio de nombres de simultaneidad proporciona clases y funciones que le proporcionan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../concurrency-runtime.md).
 
 [espacio de nombres std](std-namespace.md)
 

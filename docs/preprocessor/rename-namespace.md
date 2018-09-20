@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0876aed966db79b23d506bffd9247dd68d4a3935
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541058"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411864"
 ---
 # <a name="renamenamespace"></a>rename_namespace
 **Específicos de C++**  
@@ -48,5 +48,5 @@ Para quitar el espacio de nombres, use el [no_namespace](../preprocessor/no-name
   
 ## <a name="see-also"></a>Vea también  
  
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

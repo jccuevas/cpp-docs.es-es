@@ -1,5 +1,5 @@
 ---
-title: Clases de plantillas de documentos | Documentos de Microsoft
+title: Clases de plantillas de documentos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9958484633dd736426fc91321d0964abf0ad7e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87984bf06d8ca178d2a21ac8ff475f828690668e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406066"
 ---
 # <a name="document-template-classes"></a>Clases de plantillas de documentos
-Objetos de plantilla de documento coordinan la creación de documento, vista y objetos de ventana de marco cuando un documento nuevo o se crea la vista.  
-  
- [CDocTemplate](../mfc/reference/cdoctemplate-class.md)  
- La clase base para plantillas de documento. No se utiliza esta clase nunca directamente; en su lugar, use una de las otras clases de plantilla de documento derivadas de esta clase.  
-  
- [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)  
- Una plantilla para los documentos en la interfaz de múltiples documentos (MDI). Las aplicaciones MDI pueden tener varios documentos abiertos a la vez.  
-  
- [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)  
- Una plantilla para los documentos en la interfaz de único documento (SDI). SDI (aplicaciones) tienen sólo un documento abierto a la vez.  
-  
-## <a name="related-class"></a>Clase relacionada  
- [CCreateContext](../mfc/reference/ccreatecontext-structure.md)  
- Una estructura pasada por una plantilla de documento a las funciones de creación de la ventana para coordinar la creación de objetos de documento, vista y ventana de marco.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+Objetos de plantilla de documento coordinan la creación de documento, vista y los objetos de ventana de marco cuando un documento nuevo o se crea la vista.
+
+[CDocTemplate](../mfc/reference/cdoctemplate-class.md)<br/>
+La clase base para las plantillas de documento. No se utiliza esta clase nunca directamente; en su lugar, use una de las otras clases de plantilla de documento derivadas de esta clase.
+
+[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)<br/>
+Una plantilla para los documentos de la interfaz de múltiples documentos (MDI). Las aplicaciones MDI pueden tener varios documentos abiertos a la vez.
+
+[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)<br/>
+Una plantilla para los documentos de la interfaz de único documento (SDI). Las aplicaciones SDI tienen solo un documento abierto a la vez.
+
+## <a name="related-class"></a>Clase relacionada
+
+[CCreateContext](../mfc/reference/ccreatecontext-structure.md)<br/>
+Una estructura pasada por una plantilla de documento a las funciones de creación de ventanas para coordinar la creación de objetos de documento, vista y ventana de marco.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

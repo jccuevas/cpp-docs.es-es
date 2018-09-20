@@ -1,5 +1,5 @@
 ---
-title: Controladores de cuadro combinado | Documentos de Microsoft
+title: Controladores de cuadro combinado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -37,30 +37,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1dcd48bfadcc4ed5a4b64fd0dcdee334c1f1b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5751fbdd4bff0cf3d42231ad00bef0c3483ccfb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368086"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424266"
 ---
 # <a name="combo-box-handlers"></a>Controladores de cuadro combinado
-Las siguientes entradas de mapa corresponden a los prototipos de función.  
-  
-|Entrada de mapa|Prototipo de función|  
-|---------------|------------------------|  
-|ON_CBN_CLOSEUP ( \<Id. >, \<memberFxn >)|(de afx_msg void memberFxn)|  
-|ON_CBN_DBLCLK ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_DROPDOWN ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_EDITCHANGE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_EDITUPDATE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_ERRSPACE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_KILLFOCUS ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_SELCHANGE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_SELENDCANCEL ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_SELENDOK ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_CBN_SETFOCUS ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-  
-## <a name="see-also"></a>Vea también  
- [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
+
+Las entradas de asignación siguientes corresponden a los prototipos de función.
+
+|Entrada de asignación|Prototipo de función|
+|---------------|------------------------|
+|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|(de afx_msg memberFxn void)|
+|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+
+## <a name="see-also"></a>Vea también
+
+[Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
 

@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a32106dd9802643a827f8a3e97298f389d31d3b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721557"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430675"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Anular la definición de símbolos)
 
@@ -83,7 +83,7 @@ De forma predeterminada, el compilador define los siguientes símbolos específi
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/J (el carácter predeterminado es de tipo sin signo)](../../build/reference/j-default-char-type-is-unsigned.md)
-[/GR (habilitar información de tipo en tiempo de ejecución)](../../build/reference/gr-enable-run-time-type-information.md)
-[/EH (modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md) 
- [/MD, / MT, /LD (utilizar la biblioteca de tiempo de ejecución)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[/J (El tipo de carácter predeterminado no tiene signo)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
+[/GR (Habilitar la información de tipo en tiempo de ejecución)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
+[/EH (Modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (Usar la biblioteca en tiempo de ejecución)](../../build/reference/md-mt-ld-use-run-time-library.md)

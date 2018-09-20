@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d979dc9005921ce1a760b2e61c4519ef852b7f84
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8edfcdc6881ef3d140a80113047722a62e5bd517
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709441"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420262"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Force Fast Transcendentals)
 
@@ -56,6 +56,6 @@ Esta opción no es compatible con **/fp: strict**. Consulte [/fp (Especificar co
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

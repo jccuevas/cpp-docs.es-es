@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601217"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408952"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Invalidaciones explícitas (extensiones componentes de C++)
 
@@ -37,16 +37,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>Parámetros
 
-*declarador de función reemplazar*  
+*declarador de función reemplazar*<br/>
 La lista Tipo, el nombre y el argumento devuelta de la función de reemplazo.  Tenga en cuenta que la función de reemplazo no deben tener el mismo nombre que la función que se va a reemplazar.
 
-*type*  
+*type*<br/>
 El tipo base que contiene una función para invalidar.
 
-*function*  
+*function*<br/>
 Una lista delimitada por comas de uno o más nombres de función para invalidar.
 
-*definición de función reemplazar*  
+*definición de función reemplazar*<br/>
 Las instrucciones del cuerpo de función que definen la función de reemplazo.
 
 ### <a name="remarks"></a>Comentarios

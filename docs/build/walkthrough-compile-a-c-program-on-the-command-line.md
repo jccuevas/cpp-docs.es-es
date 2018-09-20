@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2da1b645e85542631ce3e656ccaebdfbccf01137
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397905"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C en la línea de comandos
 
@@ -169,7 +169,7 @@ El compilador de C de Visual C++ es por lo general es compatible con el estánda
 
 ## <a name="see-also"></a>Vea también
 
-[Tutorial: Crear un programa estándar de C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
-[referencia del lenguaje C](../c-language/c-language-reference.md)<br/>
+[Tutorial: Crear un programa de C++ estándar (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
+[Referencia del lenguaje C](../c-language/c-language-reference.md)<br/>
 [Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
 [Compatibilidad](../c-runtime-library/compatibility.md)

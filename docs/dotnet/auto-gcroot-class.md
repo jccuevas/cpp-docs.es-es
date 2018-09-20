@@ -19,34 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da63d58136d61bbea75daa90ac01cee5b44ac86d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48412a932ff3752b0613f7045cd88992332b7917
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039106"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423238"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot (Clase)
-Administración automática de recursos (como [auto_ptr (clase)](../standard-library/auto-ptr-class.md)) que se puede usar para insertar un identificador virtual en un tipo nativo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template<typename _element_type>  
-class auto_gcroot;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+
+Administración automática de recursos (como [auto_ptr (clase)](../standard-library/auto-ptr-class.md)) que se puede usar para insertar un identificador virtual en un tipo nativo.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename _element_type>
+class auto_gcroot;
+```
+
+#### <a name="parameters"></a>Parámetros
+
 *_element_type*<br/>
-El tipo administrado que se va a incrustar.  
-  
-## <a name="requirements"></a>Requisitos  
- **Archivo de encabezado** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>Vea también  
- [auto_gcroot)](../dotnet/auto-gcroot.md)   
- [auto_gcroot (miembros)](../dotnet/auto-gcroot-members.md)   
- [Cómo: declarar controladores en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md)   
- [auto_handle (Clase)](../dotnet/auto-handle-class.md)
+El tipo administrado que se va a incrustar.
+
+## <a name="requirements"></a>Requisitos
+
+**Archivo de encabezado** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>Vea también
+
+[auto_gcroot](../dotnet/auto-gcroot.md)<br/>
+[auto_gcroot (Miembros)](../dotnet/auto-gcroot-members.md)<br/>
+[Cómo: Declarar controladores en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md)<br/>
+[auto_handle (Clase)](../dotnet/auto-handle-class.md)

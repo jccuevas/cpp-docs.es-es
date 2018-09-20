@@ -1,5 +1,5 @@
 ---
-title: R. Ejemplos | Documentos de Microsoft
+title: R. Ejemplos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67c29bbded76f4ef44337e557b58b6bad828947
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3747b8a73c372ae3226b1f0c4f762da34dc40eab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695423"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446249"
 ---
 # <a name="a-examples"></a>R. Ejemplos
-Los siguientes son ejemplos de las estructuras definidas en este documento. Tenga en cuenta que una instrucción que sigue a una directiva está compuesta solo cuando sea necesario, y una instrucción compuesta no se aplica una sangría con respecto a una directiva anterior.
+
+Los siguientes son ejemplos de las estructuras definidas en este documento. Tenga en cuenta que una instrucción que sigue a una directiva está compuesta solo cuando sea necesario y se aplica sangría a una instrucción que no es compuesta con respecto a una directiva que le precede.

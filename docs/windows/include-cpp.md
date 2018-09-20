@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 232dfb803e9327b857d26a4294786c2742a1143c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 617747a9eda77d8dc2ba21006b649daead9546d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215973"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419326"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -38,7 +38,7 @@ Especifica uno o varios archivos de encabezado que se incluirán en el archivo .
 
 ### <a name="parameters"></a>Parámetros
 
-*HEADER_FILE*  
+*HEADER_FILE*<br/>
 El nombre de un archivo que desee incluido en el archivo .idl generado.
 
 ## <a name="remarks"></a>Comentarios
@@ -73,9 +73,9 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos independientes](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[includelib](../windows/includelib-cpp.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos independientes](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[includelib](../windows/includelib-cpp.md)<br/>
 [importlib](../windows/importlib.md)  

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fecfd06e26d9c49c3442e5b8011f6183a96cec0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e0594e5b9e2d092330664546cbd05ccfb0060c42
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314643"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428972"
 ---
 # <a name="accelerator-key-property-c"></a>Acelerador de la propiedad de clave (C++)
 
@@ -54,6 +54,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)  
-[Edición en una tabla de aceleradores](../windows/editing-in-an-accelerator-table.md)  
+[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)<br/>
+[Edición en una tabla de aceleradores](../windows/editing-in-an-accelerator-table.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

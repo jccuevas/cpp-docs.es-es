@@ -1,5 +1,5 @@
 ---
-title: Funciones miembro agregadas habitualmente | Documentos de Microsoft
+title: Las funciones miembro se agregan con frecuencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1be2fa68f0a7a9ea9e54d500240cc6b5f06048
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a07c034a15cd0b575dab4cb3b647e64e6ad16c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341253"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428574"
 ---
 # <a name="commonly-added-member-functions"></a>Funciones miembro que se agregan con frecuencia
-Si el cuadro de diálogo contiene botones de comando aparte de Aceptar o cancelar, tiene que escribir funciones miembro de controlador de mensajes en la clase de cuadro de diálogo para responder a los mensajes de notificación de controles que se generan. Para obtener un ejemplo, vea el [Scribble](../visual-cpp-samples.md) programa de ejemplo. También puede controlar mensajes de notificación de controles de otros controles en el cuadro de diálogo.  
-  
-## <a name="see-also"></a>Vea también  
- [Cuadros de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Funciones miembro que se reemplazan con frecuencia](../mfc/commonly-overridden-member-functions.md)
+
+Si el cuadro de diálogo contiene botones de comando aparte de Aceptar o cancelar, deberá escribir las funciones miembro de controlador de mensajes en la clase de cuadro de diálogo para responder a los mensajes de notificación de control que generan. Para obtener un ejemplo, vea el [Scribble](../visual-cpp-samples.md) programa de ejemplo. También puede controlar mensajes de notificación de control de otros controles en el cuadro de diálogo.
+
+## <a name="see-also"></a>Vea también
+
+[Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
+[Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Funciones miembro que se reemplazan con frecuencia](../mfc/commonly-overridden-member-functions.md)

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abaf92080710d4b69fc85684d523d2478bcd60d4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 464b86ba90d4c53adfcf5016cad38d0fbc9034f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317139"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413359"
 ---
 # <a name="adding-multiple-controls"></a>Agregar varios controles
 
@@ -40,6 +40,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
-[Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
+[Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Tipos de controles de cuadro de diálogo y tipos de variable](../ide/dialog-box-controls-and-variable-types.md)

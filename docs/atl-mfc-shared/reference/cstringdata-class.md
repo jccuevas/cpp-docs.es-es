@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b212c0a8af3fde7fb8630b2fcb513f5edad2ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: effc4166fa25cec03ea62a5dd35a5396d2d2a3f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419794"
 ---
 # <a name="cstringdata-class"></a>CStringData (clase)
 
@@ -261,6 +261,6 @@ Bloqueo y desbloqueo se utilizan cuando el programador debe asegurarse de que no
 
 ## <a name="see-also"></a>Vea también
 
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

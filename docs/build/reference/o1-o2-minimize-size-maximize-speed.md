@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24e57be50c2138cb9e772f6e6a2527300c9296ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702564"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446483"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Minimizar tamaño, maximizar velocidad)
 
@@ -69,7 +69,7 @@ El **/O1** y **/O2** opciones del compilador son una forma rápida para establec
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (Modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md)

@@ -15,35 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2c98ac16e9e5cb554d72a8880c5d4c45ff610d2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2343a6eedc46d0b87419bae3ebbb93c5b153cfb2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315709"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446665"
 ---
 # <a name="c-attributes-reference"></a>Referencia de atributos de C++
 
 Microsoft define un conjunto de atributos que simplifican la programación COM y el desarrollo de .NET Framework common language runtime. Al incluir atributos en los archivos de origen, el compilador funciona con archivos DLL para insertar código o modificar el código en los archivos objeto generados del proveedor.
 
 > [!NOTE] 
- > Si busca atributos estándares de C++, vea [atributos](../cpp/attributes.md).
+> Si busca atributos estándares de C++, vea [atributos](../cpp/attributes.md).
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Conceptos](../windows/attributed-programming-concepts.md)  
+[Conceptos](../windows/attributed-programming-concepts.md)<br/>
 Describe los distintos conceptos relacionados con los atributos.
 
-[Atributos por grupo](../windows/attributes-by-group.md)  
+[Atributos por grupo](../windows/attributes-by-group.md)<br/>
 Proporciona vínculos a temas de referencia, agrupados por función de atributos.
 
-[Atributos por uso](../windows/attributes-by-usage.md)  
+[Atributos por uso](../windows/attributes-by-usage.md)<br/>
 Proporciona vínculos a temas de referencia, agrupados por el uso de atributos.
 
-[Referencia alfabética de los atributos](../windows/attributes-alphabetical-reference.md)  
+[Referencia alfabética de los atributos](../windows/attributes-alphabetical-reference.md)<br/>
 Proporciona vínculos a todos los temas de referencia de atributo.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Programación con atributos](../windows/attributed-programming-concepts.md)  
+[Programación con atributos](../windows/attributed-programming-concepts.md)<br/>
 Proporciona información general conceptual de atributos.

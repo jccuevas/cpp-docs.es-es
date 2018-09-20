@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2aa0b6e3928affbd30e08030f41a0b0183e46d8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8a66a849dceb5ba28eb6630b513a121e219a3588
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200686"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432962"
 ---
 # <a name="maxis"></a>max_is
 
@@ -38,7 +38,7 @@ Designa el valor máximo para un índice de matriz válida.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*  
+*Expresión*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
@@ -64,10 +64,10 @@ Consulte [first_is](../windows/first-is.md) para obtener un ejemplo de cómo esp
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atributos de parámetro](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[last_is](../windows/last-is.md)  
-[length_is](../windows/length-is.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos de parámetro](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[last_is](../windows/last-is.md)<br/>
+[length_is](../windows/length-is.md)<br/>
 [size_is](../windows/size-is.md)  

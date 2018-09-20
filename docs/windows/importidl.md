@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bb6c1bd23eaf705f6ceb57e5fc4ea3354c0ddfc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9406cc95804e4eb9fd76f53201118f13f0e422a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571363"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410512"
 ---
 # <a name="importidl"></a>importidl
 
@@ -38,7 +38,7 @@ Inserta el archivo .idl especificado en el archivo .idl generado.
 
 ### <a name="parameters"></a>Parámetros
 
-*idl_file*  
+*idl_file*<br/>
 Identifica el nombre del archivo .idl que desea combinar con el archivo .idl que se generará para la aplicación.
 
 ## <a name="remarks"></a>Comentarios
@@ -71,9 +71,9 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de compilador](../windows/compiler-attributes.md)  
-[Atributos independientes](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importlib](../windows/importlib.md)  
-[include](../windows/include-cpp.md)  
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
+[Atributos independientes](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)  

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725041"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438579"
 ---
 # <a name="errlook-reference"></a>Referencia de ERRLOOK
 
@@ -30,14 +30,19 @@ Las teclas aceleradoras para copiar (CTRL+C), Cortar (CTRL+X) y pegar (CTRL+V) f
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Valor de Control Edit](../../build/reference/value-edit-control.md) describe el control de edición valor de ERRLOOK.
+[Valor (Control de edición)](../../build/reference/value-edit-control.md)<br/>
+Describe el control de edición Valor de ERRLOOK.
 
-[Control de edición de mensaje de error](../../build/reference/error-message-edit-control.md) describe el control de edición mensaje de Error de ERRLOOK.
+[Mensaje de error (Control de edición)](../../build/reference/error-message-edit-control.md)<br/>
+Describe el control de edición Mensaje de error de ERRLOOK.
 
-[Módulos (botón)](../../build/reference/modules-button.md) describe el botón módulos de ERRLOOK.
+[Módulos (Botón)](../../build/reference/modules-button.md)<br/>
+Describe el botón Módulos de ERRLOOK.
 
-[Botón Buscar](../../build/reference/look-up-button.md) describe el botón Buscar de ERRLOOK.
+[Buscar (Botón)](../../build/reference/look-up-button.md)<br/>
+Describe el botón Buscar de ERRLOOK.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Herramientas de compilación de C/C ++](../../build/reference/c-cpp-build-tools.md) proporciona vínculos a temas que describen el C o C++ compilación herramientas proporcionadas en Visual C++.
+[Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+Proporciona vínculos a temas que explican las herramientas de compilación de C/C++ que se suministran con Visual C++.

@@ -1,5 +1,5 @@
 ---
-title: 2.6 maestro y directivas de sincronización | Documentos de Microsoft
+title: 2.6 maestra y las directivas de sincronización | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3ce31abf56dac70a2a55ae09866d6de1bfedbbf
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 408f9340ac71b0e57996cdc0d1c3f87ed5dcfa79
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695436"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415244"
 ---
 # <a name="26-master-and-synchronization-directives"></a>2.6 Directivas maestras y de sincronización
-Las secciones siguientes se describen:  
-  
--   el **maestro** construir.  
-  
--   el **crítico** construir.  
-  
--   el **barrera** directiva.  
-  
--   el **atómica** construir.  
-  
--   el **vaciar** directiva.  
-  
--   el **ordenados** construir.
+
+Las secciones siguientes describen:
+
+- el **maestro** construir.
+
+- el **críticos** construir.
+
+- el **barrera** directiva.
+
+- el **atómica** construir.
+
+- el **vaciar** directiva.
+
+- el **ordenados** construir.
