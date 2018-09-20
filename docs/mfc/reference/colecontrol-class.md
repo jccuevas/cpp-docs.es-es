@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050104"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435537"
 ---
 # <a name="colecontrol-class"></a>COleControl (clase)
+
 Una clase base eficaz para desarrollar controles OLE.
 
 ## <a name="syntax"></a>Sintaxis
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 El estado de la lista puede ser uno de los siguientes valores:
 
-Estado de inicialización predeterminado READYSTATE_UNINITIALIZED
-
-Control READYSTATE_LOADING está cargando sus propiedades
-
-Se ha inicializado el Control READYSTATE_LOADED
-
-Control READYSTATE_INTERACTIVE tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos
-
-Control de READYSTATE_COMPLETE tiene todos sus datos
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Estado de inicialización predeterminado|
+|READYSTATE_LOADING|Control está cargando sus propiedades|
+|READYSTATE_LOADED|Se ha inicializado el control|
+|READYSTATE_INTERACTIVE|Control tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos|
+|READYSTATE_COMPLETE|Control tiene todos sus datos|
 
 Use [GetReadyState](#getreadystate) para determinar la preparación actual del control.
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 Una combinación de marcas de la enumeración POINTERINACTIVE. Indicadores posibles son:
 
-El objeto POINTERINACTIVE_ACTIVATEONENTRY debe ser activado cuando entra en el mouse durante una operación de movimiento del mouse en el contexto.
-
-Operación de mover POINTERINACTIVE_DEACTIVATEONLEAVE el objeto debe desactivarse cuando el mouse sale del objeto durante un mouse.
-
-POINTERINACTIVE_ACTIVATEONDRAG el objeto debe ser activado cuando se arrastra el mouse sobre él durante un arrastre en el contexto y la operación anular.
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|El objeto debe estar activado cuando entra en el mouse durante una operación de movimiento del mouse en contexto.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|El objeto debe desactivarse cuando el mouse sale del objeto durante una operación de movimiento del mouse.|
+|POINTERINACTIVE_ACTIVATEONDRAG|El objeto debe estar activado cuando se arrastra el mouse sobre él durante un arrastre en contexto y la operación anular.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 El estado de preparación del control, uno de los valores siguientes:
 
-Estado de inicialización predeterminado READYSTATE_UNINITIALIZED
-
-Control READYSTATE_LOADING está cargando sus propiedades
-
-Se ha inicializado el Control READYSTATE_LOADED
-
-Control READYSTATE_INTERACTIVE tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos
-
-Control de READYSTATE_COMPLETE tiene todos sus datos
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Estado de inicialización predeterminado|
+|READYSTATE_LOADING|Control está cargando sus propiedades|
+|READYSTATE_LOADED|Se ha inicializado el control|
+|READYSTATE_INTERACTIVE|Control tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos|
+|READYSTATE_COMPLETE|Control tiene todos sus datos|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 El estado de preparación para establecer el control, uno de los valores siguientes:
 
-Estado de inicialización predeterminado READYSTATE_UNINITIALIZED
-
-Control READYSTATE_LOADING está cargando sus propiedades
-
-Se ha inicializado el Control READYSTATE_LOADED
-
-Control READYSTATE_INTERACTIVE tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos
-
-Control de READYSTATE_COMPLETE tiene todos sus datos
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Estado de inicialización predeterminado|
+|READYSTATE_LOADING|Control está cargando sus propiedades|
+|READYSTATE_LOADED|Se ha inicializado el control|
+|READYSTATE_INTERACTIVE|Control tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos|
+|READYSTATE_COMPLETE|Control tiene todos sus datos|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 Uno de los valores de la enumeración VIEWSTATUS si se realiza correctamente; en caso contrario, es 0. Los valores posibles son cualquier combinación de las siguientes acciones:
 
-Objeto VIEWSTATUS_OPAQUE es completamente opaco. Si no se establece este bit, el objeto contiene las partes transparentes. Este bit se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.
-
-Objeto VIEWSTATUS_SOLIDBKGND tiene un fondo sólido (que consta de un color sólido, no de tramas de pincel). Este bit es significativo únicamente si VIEWSTATUS_OPAQUE está establecida y se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.
-
-Objeto VIEWSTATUS_DVASPECTOPAQUE admite DVASPECT_OPAQUE. IViewObjectEx todos los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.
-
-Objeto VIEWSTATUS_DVASPECTTRANSPARENT admite DVASPECT_TRANSPARENT. Todos los `IViewObjectEx` los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|Objeto es completamente opaco. Si no se establece este bit, el objeto contiene las partes transparentes. Este bit se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Objeto tiene un fondo sólido (que consta de un color sólido, no de tramas de pincel). Este bit es significativo únicamente si VIEWSTATUS_OPAQUE está establecida y se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|Objeto admite DVASPECT_OPAQUE. IViewObjectEx todos los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Objeto admite DVASPECT_TRANSPARENT. Todos los `IViewObjectEx` los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.|
 
 ### <a name="remarks"></a>Comentarios
 

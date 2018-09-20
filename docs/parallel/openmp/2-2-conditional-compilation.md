@@ -1,5 +1,5 @@
 ---
-title: 2.2 compilación condicional | Documentos de Microsoft
+title: 2.2 compilación condicional | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d8c7073548c015d9982b721387176a0ca658c2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 25b52ce624777efe85e27b8ce5e7941bc2f5dcba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685910"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440386"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Compilación condicional
-El _**OPENMP** nombre de la macro se define por las implementaciones compatibles con OpenMP como la constante decimal *AAAAMM*, que será el año y mes de la especificación aprobada. Esta macro no debe ser el sujeto de un **#define** o un **#undef** directiva de preprocesamiento.  
-  
-```  
-#ifdef _OPENMP  
-iam = omp_get_thread_num() + index;  
-#endif  
-```  
-  
- Si los proveedores definan extensiones de OpenMP, pueden especificar adicionales macros predefinidas.
+
+El _**OPENMP** nombre de macro se define mediante implementaciones compatibles con OpenMP como la constante decimal *AAAAMM*, que será el año y mes de la especificación aprobada. Esta macro no debe ser el sujeto de un **#define** o un **#undef** preprocesamiento de directiva.
+
+```
+#ifdef _OPENMP
+iam = omp_get_thread_num() + index;
+#endif
+```
+
+Si los proveedores de definan extensiones para OpenMP, pueden especificar adicionales macros predefinidas.

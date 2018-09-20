@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 708825ddda9becc51d9009d0d6a03a22c48f8007
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202939"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432482"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)
 
@@ -105,5 +105,5 @@ De forma similar, `CString` métodos se implementan mediante asignaciones de tip
 
 ## <a name="see-also"></a>Vea también
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Manipulación de cadenas](../c-runtime-library/string-manipulation-crt.md)  

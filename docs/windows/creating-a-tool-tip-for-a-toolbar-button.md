@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5fef71d3fa2ad76192a06603ed9e22d52eef71
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2d03b71f862e31a2bef25d89c0347c95da240642
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317828"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422680"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button-c"></a>Creación de una información sobre herramientas para un botón de barra de herramientas (C++)
 
@@ -59,5 +59,5 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor de barras de herramientas](../windows/toolbar-editor.md)

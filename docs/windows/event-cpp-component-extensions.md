@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724780"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442596"
 ---
 # <a name="event--c-component-extensions"></a>event (Extensiones de componentes de C++)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parámetros
 
-*Modificador*  
+*Modificador*<br/>
 Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son **estático** y **virtual**.
 
-*delegate*  
+*delegate*<br/>
 El [delegar](../windows/delegate-cpp-component-extensions.md), cuya firma debe coincidir con el controlador de eventos.
 
-*event_name*  
+*event_name*<br/>
 Nombre del evento.
 
-*RETURN_VALUE*  
+*RETURN_VALUE*<br/>
 El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser **void**.
 
-*Parámetros*  
+*Parámetros*<br/>
 (opcional) Parámetros para el `raise` método, que coincide con la firma de la *delegar* parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -71,10 +71,10 @@ Un evento es una asociación entre un delegado (delegate) y una función miembro
 
 Hay dos tipos de declaraciones de eventos:
 
-*miembro de datos de evento*  
+*miembro de datos de evento*<br/>
 El compilador crea automáticamente almacenamiento para el evento en el formulario de un miembro del tipo delegate y crea funciones miembro internas `add()`, `remove()`, y `raise()` . Un miembro de datos de evento debe declararse dentro de una clase. El tipo de valor devuelto del tipo de valor devuelto del delegado debe coincidir con el tipo de valor devuelto del controlador de eventos.
 
-*bloque de eventos*  
+*bloque de eventos*<br/>
 Un bloque de eventos le permite personalizar y declarar explícitamente el comportamiento de los métodos `add()`, `remove()`, y `raise()`.
 
 Puede usar **operadores +=** y **operador-=** para agregar y quitar un evento de controlador o llame a la `add()` y `remove()` métodos explícitamente.
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parámetros
 
-*Modificador*  
+*Modificador*<br/>
 Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son **estático** y **virtual**.
 
-*delegate*  
+*delegate*<br/>
 El [delegar](../windows/delegate-cpp-component-extensions.md), cuya firma debe coincidir con el controlador de eventos.
 
-*event_name*  
+*event_name*<br/>
 Nombre del evento.
 
-*RETURN_VALUE*  
+*RETURN_VALUE*<br/>
 El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser **void**.
 
-*Parámetros*  
+*Parámetros*<br/>
 (opcional) Parámetros para el `raise` método, que coincide con la firma de la *delegar* parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -137,10 +137,10 @@ El delegado (delegate) puede tener uno o varios métodos asociados que se llamar
 
 Hay dos tipos de declaraciones de eventos:
 
-*miembros de datos de evento*  
+*miembros de datos de evento*<br/>
 El compilador para eventos de miembro de datos crea el almacenamiento para el evento en forma de un miembro del tipo delegate.  Un miembro de datos de evento debe declararse dentro de una clase. Esto también se conoce como un evento trivial (vea el siguiente ejemplo de código).
 
-*bloques de eventos*  
+*bloques de eventos*<br/>
 Los bloques de eventos le permiten personalizar el comportamiento de los métodos add, remove y raise mediante su implementación. La firma de los métodos add, remove y raise debe coincidir con la firma del delegado (delegate).  Los eventos del bloque de eventos no son miembros de datos y cualquier uso como un miembro de datos generará un error del compilador.
 
 El tipo de valor devuelto del controlador de eventos debe coincidir con el del delegado.

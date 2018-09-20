@@ -1,5 +1,5 @@
 ---
-title: Un ejemplo de los comentarios | Documentos de Microsoft
+title: Un ejemplo de los comentarios | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6e0f0b69964ac8cadc3518e0540f4e51545fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 681c927a7e0e7960cb483e21ed2ff1e2e4b3c5f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340889"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442349"
 ---
 # <a name="an-example-of-the-comments"></a>Un ejemplo de los comentarios
-La siguiente lista parcial de la clase `CChildFrame` usa la mayoría de los comentarios estándares que utiliza MFC en sus clases para dividir los miembros de clase según la forma en que se utilizan:  
-  
- [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
-  
- Estos comentarios marcan habitualmente las secciones de la declaración de clase que contienen tipos similares de miembros de clase. Tenga en cuenta que se trata de convenciones MFC, no establezca las reglas.  
-  
-## <a name="see-also"></a>Vea también  
- [Usar los archivos de código fuente MFC](../mfc/using-the-mfc-source-files.md)   
- [Implementation (comentario)](../mfc/decrement-implementation-comment.md)   
- [Comentario de constructores](../mfc/decrement-constructors-comment.md)   
- [Comentario Attributes](../mfc/decrement-attributes-comment.md)   
- [Comentario Operations](../mfc/decrement-operations-comment.md)   
- [Comentarios reemplazables](../mfc/decrement-overridables-comment.md)
+
+La siguiente lista parcial de la clase `CChildFrame` utiliza la mayoría de los comentarios estándares que utiliza MFC en sus clases para dividir los miembros de clase según la forma en que se usan:
+
+[!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]
+
+Estos comentarios marcan habitualmente las secciones de la declaración de clase que contienen tipos similares de miembros de clase. Tenga en cuenta que estas son las convenciones MFC, no establezca las reglas.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de los archivos de código fuente de MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Implementation (comentario)](../mfc/decrement-implementation-comment.md)<br/>
+[Comentario de constructores](../mfc/decrement-constructors-comment.md)<br/>
+[Comentario Attributes](../mfc/decrement-attributes-comment.md)<br/>
+[Comentario Operations](../mfc/decrement-operations-comment.md)<br/>
+[Overridables (comentario)](../mfc/decrement-overridables-comment.md)
 

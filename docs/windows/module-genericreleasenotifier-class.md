@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da35e2c257fef72ea75e05768960098111727359
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 80b04600f1f464220b00749903f27826855f6000
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611630"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400268"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier (Clase)
 
@@ -37,7 +37,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo del miembro de datos que contiene la ubicación del controlador de eventos.
 
 ## <a name="members"></a>Miembros
@@ -73,4 +73,5 @@ El tipo del miembro de datos que contiene la ubicación del controlador de event
 **Espacio de nombres:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vea también
+
 [Module (clase)](../windows/module-class.md)

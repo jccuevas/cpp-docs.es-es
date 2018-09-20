@@ -1,5 +1,5 @@
 ---
-title: 'Servidores: Problemas de la interfaz de usuario | Documentos de Microsoft'
+title: 'Servidores: Problemas de la interfaz de usuario | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18382d305c8128a70e17651de913f38303286885
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539486ac1bce56fdc972943abcf8c7de72635f72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379676"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445560"
 ---
 # <a name="servers-user-interface-issues"></a>Servidores: Problemas de la interfaz de usuario
-Una aplicación de servidor tiene una serie de características que se debe agregar a la interfaz de usuario para proporcionar elementos OLE a aplicaciones de contenedor. Para obtener más información sobre los menús y recursos adicionales que deben agregarse a una aplicación de servidor, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Servidores](../mfc/servers.md)   
- [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)
+
+Una aplicación de servidor tiene una serie de características que se debe agregar a la interfaz de usuario para proporcionar elementos OLE a aplicaciones de contenedor. Para obtener más información sobre los menús y recursos adicionales que deben agregarse a una aplicación de servidor, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
+
+## <a name="see-also"></a>Vea también
+
+[Servidores](../mfc/servers.md)<br/>
+[Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1cb0a77c04a1bfea03f742686e1b28a6e2f04c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0c1704bf6ea5d8eaa2fc76db61fe0143c06b46ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687855"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429648"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ Especifica si se procesan todos los atributos IDL subsiguientes y se coloca en e
 
 ### <a name="parameters"></a>Parámetros
 
-*state*  
+*state*<br/>
 Uno de estos valores posibles: `true`, `false`, `forced`, `restricted`, `push`, o `pop`.
 
 - Si `true`, los atributos de la categoría IDL encontrado en un archivo de código fuente se colocan en el archivo .idl generado. Se trata de la configuración predeterminada de **emitidl**.
@@ -77,5 +77,5 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de compilador](../windows/compiler-attributes.md)  
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
 [Atributos independientes](../windows/stand-alone-attributes.md)  

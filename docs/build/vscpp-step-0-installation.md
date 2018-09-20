@@ -2,7 +2,7 @@
 title: Instalar compatibilidad con C++ en Visual Studio 2017 | Microsoft Docs
 description: Instalar la compatibilidad de Visual Studio para Visual C++
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702902"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441947"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar compatibilidad con C++ en Visual Studio
 
@@ -37,7 +37,7 @@ Para obtener más información sobre el espacio en disco y requisitos del sistem
 
 ## <a name="visual-studio-2015-installation"></a>Instalación de Visual Studio 2015
 
-Para instalar Visual Studio 2015, vaya a [Descargar versiones anteriores de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Ejecute el programa de instalación y elija **Instalación personalizada** y, a continuación, seleccione el componente de C++.
+Para instalar Visual Studio 2015, vaya a [Descargar versiones anteriores de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Ejecute el programa de instalación y elija **Instalación personalizada** y, a continuación, seleccione el componente de C++. Para agregar compatibilidad de C++ a una instalación existente de Visual Studio 2015, haga clic en el botón Inicio de Windows y el tipo **agregar o quitar programas**. Abra el programa desde la lista de resultados y, a continuación, busque la instalación de Visual Studio 2015 en la lista de programas instalados. Haga doble clic en él y luego elija **modificar** y seleccione los componentes de Visual C++ para instalar.
 
 En general, recomendamos encarecidamente que use Visual Studio 2017, incluso para compilar el código mediante el compilador de Visual Studio 2015. Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](../porting/use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
 

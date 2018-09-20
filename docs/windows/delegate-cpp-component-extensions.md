@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602939"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432417"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (Extensiones de componentes de C++)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 (opcional) La accesibilidad del delegado, que puede ser **pública** (valor predeterminado) o **privada**. El prototipo de función también se puede calificar con el **const** o **volátil** palabras clave.
 
-*tipo de valor devuelto*  
+*tipo de valor devuelto*<br/>
 El tipo de valor devuelto del prototipo de función.
 
-*identificador del tipo de delegado*  
+*identificador del tipo de delegado*<br/>
 El nombre del tipo de delegado declarado.
 
-*Parámetros*  
+*Parámetros*<br/>
 (Opcional) Los tipos y los identificadores del prototipo de función.
 
 ### <a name="remarks"></a>Comentarios
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 (opcional) La accesibilidad del delegado fuera del ensamblado puede ser público o privado.  El valor predeterminado es privado.  Dentro de una clase, un delegado puede tener cualquier tipo de accesibilidad.
 
-*function_declaration*  
+*function_declaration*<br/>
 La firma de la función que se puede enlazar al delegado. El tipo de valor devuelto de un delegado puede ser cualquier tipo administrado. Por motivos de interoperabilidad, se recomienda que el tipo de valor devuelto de un delegado de ser un tipo CLS.
 
 Para definir un delegado sin enlazar, el primer parámetro de *function_declaration* deben ser de tipo de la **esto** puntero para el objeto.

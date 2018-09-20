@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607825"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422407"
 ---
 # <a name="make-function"></a>Make (Función)
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Una clase especificada por el usuario que hereda de `WRL::RuntimeClass`.
 
-*TArg1*  
+*TArg1*<br/>
 Tipo de argumento 1 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg2*  
+*TArg2*<br/>
 Tipo de argumento 2 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg3*  
+*TArg3*<br/>
 Tipo de argumento 3 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg4*  
+*TArg4*<br/>
 Tipo de argumento 4 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg5*  
+*TArg5*<br/>
 Tipo de argumento 5 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg6*  
+*TArg6*<br/>
 Tipo de argumento 6 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg7*  
+*TArg7*<br/>
 Tipo de argumento 7 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg8*  
+*TArg8*<br/>
 Tipo de argumento 8 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg9*  
+*TArg9*<br/>
 Tipo de argumento 9 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg1*  
+*Arg1*<br/>
 Argumento 1 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg2*  
+*Arg2*<br/>
 Argumento 2 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg3*  
+*Arg3*<br/>
 Argumento 3 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg4*  
+*Arg4*<br/>
 Argumento 4 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg5*  
+*Arg5*<br/>
 Argumento 5 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg6*  
+*Arg6*<br/>
 Argumento 6 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg7*  
+*Arg7*<br/>
 Argumento 7 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg8*  
+*Arg8*<br/>
 Argumento 8 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg9*  
+*Arg9*<br/>
 Argumento 9 que se pasa a la clase en tiempo de ejecución especificado.
 
 ## <a name="return-value"></a>Valor devuelto

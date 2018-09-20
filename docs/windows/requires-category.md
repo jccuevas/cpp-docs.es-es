@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a1a7d656d307f6f0fcba446d3b58a625adfb8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e81b6f9dd40e84e0e6bb5af71a76b3ac9163e72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612774"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434393"
 ---
 # <a name="requirescategory"></a>requires_category
 
@@ -38,7 +38,7 @@ Especifica las categorías de los componentes necesarios de la clase de destino.
 
 ### <a name="parameters"></a>Parámetros
 
-*requires_category*  
+*requires_category*<br/>
 El identificador de la categoría necesaria.
 
 ## <a name="remarks"></a>Comentarios
@@ -80,5 +80,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos COM](../windows/com-attributes.md)  
+[Atributos COM](../windows/com-attributes.md)<br/>
 [implements_category](../windows/implements-category.md)  

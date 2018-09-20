@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6a05604cfa7ce3571d2bb7d5b421d0568ea84a0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4792464c07872d86c667fbc045610507a18c71c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690286"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441166"
 ---
 # <a name="creating-a-console-application"></a>Crear una aplicación de consola
 
@@ -43,6 +43,6 @@ La manera más fácil de crear una aplicación de consola Win32 es usar el **Asi
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de consola](/visualstudio/debugger/debugging-preparation-console-projects)  
-[Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)  
+[Proyectos de consola](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
+[Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propiedades](../ide/property-pages-visual-cpp.md)  

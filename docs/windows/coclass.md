@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5816c62749c889cdd926ff1551f4849fd039f1f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4f2c4e41b97f8ce8224d656c9ba525d807bfa270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42585269"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423889"
 ---
 # <a name="coclass"></a>coclase
 
@@ -153,8 +153,8 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos COM](../windows/com-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
-[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos COM](../windows/com-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [appobject](../windows/appobject.md)

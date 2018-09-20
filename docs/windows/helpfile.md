@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 424c6b642bba04a22ee4dedd59e38761260ac8eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66cd89c28ea01c3a75d0cb25aa6f96a234e379b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418208"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -38,7 +38,7 @@ Establece el nombre del archivo de ayuda para una biblioteca de tipos.
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*  
+*filename*<br/>
 El nombre del archivo que contiene los temas de ayuda.
 
 ## <a name="remarks"></a>Comentarios
@@ -64,10 +64,10 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de interfaz](../windows/interface-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
-[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpcontext](../windows/helpcontext.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de interfaz](../windows/interface-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
 [helpstring](../windows/helpstring.md)  

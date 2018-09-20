@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212817"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420509"
 ---
 # <a name="property--c-component-extensions"></a>property (Extensiones de componentes de C++)
 
@@ -33,15 +33,15 @@ Declara un *propiedad*, que es una función miembro que se comporta y se accede 
 
 Puede declarar uno de los siguientes tipos de propiedades.
 
-*propiedad simple*  
+*propiedad simple*<br/>
 De forma predeterminada, crea un *descriptor de acceso set* que asigna el valor de propiedad, un *descriptor de acceso get* que recupera el valor de propiedad y un miembro de datos privado generado por compilador que contiene el valor de propiedad.
 
-*bloque de propiedades*  
+*bloque de propiedades*<br/>
 Se utiliza para crear descriptores de acceso definidos por el usuario get y/o set. La propiedad es de lectura y escritura si los dos descriptores de acceso get y set están definidos, de solo lectura si el descriptor de acceso get está definido, y de solo escritura si solo está definido el descriptor de acceso set.
 
 Debe declarar explícitamente un miembro de datos que contenga el valor de propiedad.
 
-*propiedad indizada*  
+*propiedad indizada*<br/>
 Un bloque de propiedades que puede usar para obtener y establecer un valor de propiedad especificado por uno o más índices.
 
 Puede crear una propiedad indizada que tenga un nombre de propiedad definido por el usuario o un *predeterminada* nombre de propiedad. El nombre de una propiedad de índice predeterminado es el nombre de la clase en la que se define la propiedad. Para declarar una propiedad predeterminada, especifique la **predeterminada** palabra clave en lugar de un nombre de propiedad.
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parámetros
 
-*type*  
+*type*<br/>
 El tipo de datos del valor de propiedad y, por consiguiente, la propiedad en sí.
 
-*property_name*  
+*property_name*<br/>
 Nombre de la propiedad.
 
-*modificador de acceso*  
+*modificador de acceso*<br/>
 Un calificador de acceso. Calificadores válidos son **estático** y **virtual**.
 
 Get o descriptores de acceso set no deben coincidir con el **virtual** calificador, pero deben acordar el **estático** calificador.
 
-*modificador de herencia*  
+*modificador de herencia*<br/>
 Un calificador de herencia. Calificadores válidos son **abstracta** y **sealed**.
 
-*index_list*  
+*index_list*<br/>
 Una lista delimitada por comas de uno o más índices. Cada índice consta de un tipo de índice y un identificador opcional que puede utilizarse en el cuerpo del método de propiedad.
 
-*valor*  
+*valor*<br/>
 El valor que se va a asignar a la propiedad en una operación set, o que se va a recuperar en una operación get.
 
-*property_body*  
+*property_body*<br/>
 El cuerpo del método de propiedad del descriptor de acceso set o get. El *property_body* puede usar el *index_list* tener acceso al miembro de datos de propiedad subyacente, o como parámetros en el procesamiento definido por el usuario.
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parámetros
 
-*Modificador*  
+*Modificador*<br/>
 Un modificador que se puede utilizar en la declaración de propiedad o en un método de descriptor de acceso get/set. Los valores posibles son **estático** y **virtual**.
 
-*type*  
+*type*<br/>
 El tipo del valor representado por la propiedad.
 
-*property_name*  
+*property_name*<br/>
 Parámetros del método raise; debe coincidir con la firma del delegado.
 
-*index_list*  
+*index_list*<br/>
 Una lista delimitada por comas de uno o más índices especificados entre corchetes (el operador de subíndice, ([])). Para cada índice, especifique un tipo y, de forma opcional, un identificador que pueden utilizarse en el cuerpo del método de propiedad.
 
 ### <a name="remarks"></a>Comentarios

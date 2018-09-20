@@ -1,5 +1,5 @@
 ---
-title: Cómo busca el marco los mapas de mensajes | Documentos de Microsoft
+title: Cómo busca el marco los mapas de mensajes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc80573b110c3eacc790082b837a87815283f55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02d111cfdd4db1d3ce586d65ebbef84fd488fba6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345786"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436174"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Cómo busca el marco los mapas de mensajes
-El marco de trabajo busca en la tabla de mapa de mensajes para buscar coincidencias con los mensajes entrantes. Una vez que se escribe una entrada de mapa de mensajes para cada mensaje que desea que una clase para controlar y escribir los controladores correspondientes, el marco de trabajo llamará automáticamente a los controladores. Los siguientes temas explican la búsqueda de mapa de mensajes:  
-  
--   [Dónde buscar mapas de mensajes](../mfc/where-to-find-message-maps.md)  
-  
--   [Mapas de mensajes derivados](../mfc/derived-message-maps.md)  
-  
--   [Rangos de asignación de mensajes, identificadores de comando o identificadores de control a un controlador](../mfc/handlers-for-message-map-ranges.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Control y asignación de mensajes](../mfc/message-handling-and-mapping.md)
+
+El marco de trabajo busca coincidencias con los mensajes entrantes en la tabla de mapa de mensajes. Una vez que escribe una entrada de mapa de mensajes para cada mensaje que desea que una clase para controlar y escribir los controladores correspondientes, el marco llama automáticamente los controladores. Los siguientes temas explican la búsqueda de mapa de mensajes:
+
+- [Dónde buscar mapas de mensajes](../mfc/where-to-find-message-maps.md)
+
+- [Mapas de mensajes derivados](../mfc/derived-message-maps.md)
+
+- [Rangos de asignación de mensajes, los identificadores de comando o identificadores de control a un controlador](../mfc/handlers-for-message-map-ranges.md)
+
+## <a name="see-also"></a>Vea también
+
+[Control y asignación de mensajes](../mfc/message-handling-and-mapping.md)
 

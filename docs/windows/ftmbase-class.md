@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601462"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432810"
 ---
 # <a name="ftmbase-class"></a>FtmBase (clase)
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parámetros
 
-*GIT*  
+*GIT*<br/>
 Cuando se completa esta operación, un puntero a una tabla de interfaz global.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parámetros
 
-*dwReservado*  
+*dwReservado*<br/>
 Reservado para uso futuro; debe ser cero.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Parámetros
 
-*riid*  
+*riid*<br/>
 Referencia al identificador de la interfaz que se van a calcular.
 
-*PV*  
+*PV*<br/>
 Puntero de interfaz se van a calcular; puede ser NULL.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexto de destino donde se puede deserializar la interfaz especificada.
 
 Especifique uno o más valores de enumeración MSHCTX.
 
 Actualmente, la resolución de referencias puede producirse en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Reservado para uso futuro; debe ser NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Marca que indica si los datos se van a calcular están que se transmitan al proceso de cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar varios clientes. Especifique uno o más valores de enumeración MSHLFLAGS.
 
-*pSize*  
+*pSize*<br/>
 Cuando se completa esta operación, el puntero para el límite superior de la cantidad de datos se escriban en la secuencia de serialización.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Parámetros
 
-*riid*  
+*riid*<br/>
 Referencia al identificador de la interfaz que se van a calcular.
 
-*PV*  
+*PV*<br/>
 Puntero a la interfaz que se van a calcular; puede ser NULL si el llamador no tiene un puntero a la interfaz deseada.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexto de destino donde se puede deserializar la interfaz especificada.
 
 Especifique uno o más valores de enumeración MSHCTX.
 
 Resolución de referencias puede producirse en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Reservado para uso futuro; debe ser NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Cuando se completa esta operación, puntero al CLSID que se usará para crear un proxy en el proceso del cliente.
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>Parámetros
 
-*pStm*  
+*pStm*<br/>
 Puntero a la secuencia que se usará durante la serialización.
 
-*riid*  
+*riid*<br/>
 Referencia al identificador de la interfaz que se van a calcular. Esta interfaz debe derivarse de la `IUnknown` interfaz.
 
-*PV*  
+*PV*<br/>
 Puntero al puntero de interfaz que se van a calcular; puede ser NULL si el llamador no tiene un puntero a la interfaz deseada.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexto de destino donde se puede deserializar la interfaz especificada.
 
 Especifique uno o más valores de enumeración MSHCTX.
 
 Resolución de referencias puede ocurrir en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Reservado para uso futuro; debe ser cero.
 
-*mshlflags*  
+*mshlflags*<br/>
 Especifica si los datos se van a calcular están que se transmitan al proceso de cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar varios clientes.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>Parámetros
 
-*pStm*  
+*pStm*<br/>
 Puntero a una secuencia que contiene el paquete de datos que se va a destruir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>Parámetros
 
-*pStm*  
+*pStm*<br/>
 Puntero a la secuencia desde la que se puede deserializar el puntero de interfaz.
 
-*riid*  
+*riid*<br/>
 Referencia al identificador de la interfaz que puede deserializar.
 
-*PPV*  
+*PPV*<br/>
 Cuando finalice esta operación, la dirección de una variable de puntero que recibe el puntero de interfaz solicitado en *riid*. Si esta operación se realiza correctamente, **ppv* contiene el puntero de interfaz solicitada de la interfaz que puede deserializar.
 
 ### <a name="return-value"></a>Valor devuelto

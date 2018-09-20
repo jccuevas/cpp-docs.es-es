@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bb04b8be33f81931106574152d0ccb6ba535295
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600878"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427841"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock (Método)
 
@@ -43,10 +43,10 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parámetros
 
-*milisegundos*  
+*milisegundos*<br/>
 El intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, que espera indefinidamente.
 
-*h*  
+*h*<br/>
 El identificador de un **Mutex** objeto.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -58,4 +58,5 @@ El identificador de un **Mutex** objeto.
 **Namespace:** Wrappers
 
 ## <a name="see-also"></a>Vea también
+
 [Mutex (clase)](../windows/mutex-class1.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c395a79cc9e0399000278af1a19916c2c83bb10
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 337972b9659ae32e2ea40e12d6301cc1f0c9aba7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408003"
 ---
 # <a name="progid"></a>progid
 
@@ -38,7 +38,7 @@ Especifica el ProgID de un objeto COM.
 
 ### <a name="parameters"></a>Parámetros
 
-*name*  
+*name*<br/>
 El ProgID que representa el objeto.
 
 ProgID presentan una versión legible del identificador de clase (CLSID) usado para identificar los objetos COM y ActiveX.
@@ -74,7 +74,7 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
-[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Clave de Id. de programa](/windows/desktop/com/-progid--key)  

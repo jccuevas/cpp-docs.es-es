@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e93d8debbab26dc61b4c27de713b94d7bc6c417
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1b40f7b4fff1d6df6f5fb818e090ce687f12a7b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711963"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412792"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (Mejorar la depuración optimizada)
 
@@ -58,6 +58,6 @@ El **/Zo** conmutador está disponible a partir de Visual Studio 2013 Update 3 y
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)
-[/Z7, / Zi, /ZI (formato de información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md)
-[editar y continuar](/visualstudio/debugger/edit-and-continue)
+[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
+[/Z7, /Zi, /ZI (Formato de la información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md)<br/>
+[Editar y continuar](/visualstudio/debugger/edit-and-continue)

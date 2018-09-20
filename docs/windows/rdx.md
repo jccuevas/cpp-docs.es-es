@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566b21c911ba99d19fb16b564d0748cfcfd1eb71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719725"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435979"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,13 +40,13 @@ Crea una clave del registro o modifica una clave del registro existente.
 
 ### <a name="parameters"></a>Parámetros
 
-*key*  
+*key*<br/>
 El nombre de la clave que se crea o se abre.
 
-*VALUENAME*  
+*VALUENAME*<br/>
 (Opcional) Especifica el campo de valor debe establecerse. Si un campo de valor con este nombre no existe en la clave, se agrega.
 
-*regtype*  
+*regtype*<br/>
 El tipo de clave del registro que se va a agregar. Puede ser uno de los siguientes: `text`, `dword`, `binary`, o `CString`.
 
 ## <a name="remarks"></a>Comentarios
@@ -93,5 +93,5 @@ public:
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos COM](../windows/com-attributes.md)  
+[Atributos COM](../windows/com-attributes.md)<br/>
 [registration_script](../windows/registration-script.md)  

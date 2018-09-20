@@ -1,5 +1,5 @@
 ---
-title: barrera | Documentos de Microsoft
+title: barrera | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5b2cd9edf54e58c06e7d2a48529393cd3ced64
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c220106d62bf65505c9c5b48085a9ee3e67fe0cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415036"
 ---
 # <a name="barrier"></a>barrier
-Sincroniza todos los subprocesos en un equipo; todos los subprocesos se sitúe en la barrera, hasta que todos los subprocesos ejecutan la barrera.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-#pragma omp barrier  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El `barrier` directiva es compatible con ningún cláusulas de OpenMP.  
-  
- Para obtener más información, consulte [2.6.3 barrier (directiva)](../../../parallel/openmp/2-6-3-barrier-directive.md).  
-  
-## <a name="example"></a>Ejemplo  
- Para obtener un ejemplo de cómo usar `barrier`, consulte [principal](../../../parallel/openmp/reference/master.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Directivas](../../../parallel/openmp/reference/openmp-directives.md)
+
+Sincroniza todos los subprocesos en un equipo; todos los subprocesos se detendrá en la barrera, hasta que todos los subprocesos ejecuten la barrera.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+#pragma omp barrier
+```
+
+## <a name="remarks"></a>Comentarios
+
+El `barrier` directiva es compatible con ningún cláusulas de OpenMP.
+
+Para obtener más información, consulte [2.6.3 barrier (directiva)](../../../parallel/openmp/2-6-3-barrier-directive.md).
+
+## <a name="example"></a>Ejemplo
+
+Para obtener un ejemplo de cómo usar `barrier`, consulte [maestro](../../../parallel/openmp/reference/master.md).
+
+## <a name="see-also"></a>Vea también
+
+[Directivas](../../../parallel/openmp/reference/openmp-directives.md)

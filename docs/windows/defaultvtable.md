@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cec0e02a6a61638f8aed1b4015fea065cbfd343
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: baa73d252bd52f52d40c14bd8e0a411679c24b36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437630"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -38,7 +38,7 @@ Define una interfaz que la interfaz de vtable predeterminada para un objeto COM.
 
 ### <a name="parameters"></a>Parámetros
 
-*interface*  
+*interface*<br/>
 La interfaz designada que se desea tener la vtable predeterminado para el objeto COM.
 
 ## <a name="remarks"></a>Comentarios
@@ -90,5 +90,5 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
 [Atributos de clase](../windows/class-attributes.md)  

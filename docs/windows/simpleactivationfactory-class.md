@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 111015fdd8887ae779aeb8fecc8274cfcf7c6c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691476"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441283"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory (clase)
 
@@ -43,7 +43,7 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 Una clase base.
 
 ## <a name="remarks"></a>Comentarios
@@ -106,7 +106,7 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>Parámetros
 
-*ppvObject*  
+*ppvObject*<br/>
 Cuando finalice esta operación, puntero a una instancia del objeto especificado por el `Base` parámetro de plantilla de clase.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -129,7 +129,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>Parámetros
 
-*runtimeName*  
+*runtimeName*<br/>
 Cuando se completa esta operación, el nombre de clase en tiempo de ejecución.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -152,7 +152,7 @@ STDMETHOD(
 
 #### <a name="parameters"></a>Parámetros
 
-*trustLvl*  
+*trustLvl*<br/>
 Cuando se completa esta operación, el nivel de confianza del objeto de clase actual.
 
 ### <a name="return-value"></a>Valor devuelto
