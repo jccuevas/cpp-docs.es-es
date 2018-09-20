@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8589c43d49709842a745464d2727860ccd2c1e2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d557b7ee6e6a0ae627ec7cc9a6b40b5b9dbb872c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609682"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379572"
 ---
 # <a name="synclockt-class"></a>SyncLockT (clase)
 
@@ -39,7 +39,7 @@ class SyncLockT;
 
 ### <a name="parameters"></a>Parámetros
 
-*SyncTraits*  
+*SyncTraits*<br/>
 El tipo que puede tomar posesión de un recurso.
 
 ## <a name="remarks"></a>Comentarios
@@ -88,5 +88,5 @@ El **SyncLockT** clase se utiliza, por ejemplo, para ayudar a implementar el [SR
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Wrappers::Details (espacio de nombres)](../windows/microsoft-wrl-wrappers-details-namespace.md)  
+[Microsoft::WRL::Wrappers::Details (espacio de nombres)](../windows/microsoft-wrl-wrappers-details-namespace.md)<br/>
 [SRWLock (clase)](../windows/srwlock-class.md)

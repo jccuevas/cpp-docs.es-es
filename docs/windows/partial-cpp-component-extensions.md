@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92fd30b0b420080d33f9938bec4891ac80ac660d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 340323d2b540c74e600b76129edd360b73d0db23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597083"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372141"
 ---
 # <a name="partial--c-component-extensions"></a>partial (Extensiones de componentes de C++)
 
@@ -53,10 +53,10 @@ class-key identifier {
 
 ### <a name="parameters"></a>Parámetros
 
-*clave de clase*  
+*clave de clase*<br/>
 Una palabra clave que declara una clase o struct que es compatible con el tiempo de ejecución de Windows. Cualquier **clase ref**, **clase de valor**, **ref struct**, o **struct de valor**.
 
-*identifier*  
+*identifier*<br/>
 El nombre del tipo definido.
 
 ### <a name="remarks"></a>Comentarios

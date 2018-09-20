@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ab0219c8893ff7ad35e29f9dd8b18be18caf8eb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603683"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378129"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail (Método)
 
@@ -38,7 +38,7 @@ void AddTail(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*  
+*Elemento*<br/>
 Puntero al controlador de eventos para anexar.
 
 ## <a name="remarks"></a>Comentarios
@@ -55,5 +55,5 @@ El controlador de eventos especificado se anexa al final de la matriz interna de
 
 ## <a name="see-also"></a>Vea también
 
-[EventTargetArray (clase)](../windows/eventtargetarray-class.md)  
+[EventTargetArray (clase)](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

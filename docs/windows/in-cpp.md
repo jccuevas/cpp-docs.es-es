@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c447147802d91df0f280a82c61d919ee673970a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd6b79d84e4737cdbeb670bdd31b8cacf35cf8f1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222995"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373392"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -57,9 +57,9 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de parámetro](../windows/parameter-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
-[defaultvalue](../windows/defaultvalue.md)  
-[identificador](../windows/id.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de parámetro](../windows/parameter-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
+[defaultvalue](../windows/defaultvalue.md)<br/>
+[identificador](../windows/id.md)<br/>
 [out](../windows/out-cpp.md)  

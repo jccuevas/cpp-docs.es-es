@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3727fc70698d3202734db7bbe72773cbe49bffb9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6af52fab983f93964ba33cf59ca38783df66b5da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592918"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373586"
 ---
 # <a name="dual"></a>dual
 
@@ -89,9 +89,9 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos por uso](../windows/attributes-by-usage.md)  
-[Personalizado](../windows/custom-cpp.md)  
-[dispinterface](../windows/dispinterface.md)  
-[object](../windows/object-cpp.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos por uso](../windows/attributes-by-usage.md)<br/>
+[Personalizado](../windows/custom-cpp.md)<br/>
+[dispinterface](../windows/dispinterface.md)<br/>
+[object](../windows/object-cpp.md)<br/>
 [__interface](../cpp/interface.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f711a9d1f5fe92e5f35bf333fc0b3473fc0eebf4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c27a1957ff6198ea68893dd9bb92f4e60b70e4f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604411"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372345"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase:: operator IInspectable\* \* operador
 
@@ -50,5 +50,5 @@ En esta difusión está disponible solo si `__WRL_CLASSIC_COM__` está definido.
 
 ## <a name="see-also"></a>Vea también
 
-[ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)  
+[ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

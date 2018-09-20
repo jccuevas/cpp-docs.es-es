@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb47b64277aea568cf3cad8e2c4b6203e43f1b2f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5175d89925ddc09fdcd552aa57d2967071e750f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723261"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376972"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Tutorial: Crear y usar su propia biblioteca de vínculo dinámico (C++)
 
@@ -411,5 +411,5 @@ Al implementar la aplicación, también debe implementar los archivos DLL utiliz
 
 [Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 [Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Tutorial: Implementar el programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
-[llamar a funciones DLL desde aplicaciones de Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Tutorial: Implementar el programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+[Llamada a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc4679d9e6d3a4fdfc112d8a8b471ceb2646ecc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c5163ea5922141faf0c4b28deb147672938997a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583733"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375435"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid (Método)
 
@@ -39,10 +39,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Puntero a un campo que contiene un valor de índice de base cero.
 
-*IID*  
+*IID*<br/>
 Una matriz de identificadores de interfaz.
 
 ## <a name="remarks"></a>Comentarios
@@ -61,5 +61,5 @@ Para obtener más información acerca de `Base`, vea la sección de definiciones
 
 ## <a name="see-also"></a>Vea también
 
-[InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)  
+[InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

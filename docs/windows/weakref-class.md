@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386982"
 ---
 # <a name="weakref-class"></a>WeakRef (Clase)
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parámetros
 
-*U*  
+*U*<br/>
 Id. de interfaz.
 
-*ptr*  
+*ptr*<br/>
 Cuando finalice esta operación, un objeto que representa el parámetro *U*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +159,7 @@ Cuando finalice esta operación, un objeto que representa el parámetro *U*.
 
 Se genera un error si parámetro *U* es `IWeakReference`, o no se deriva `IInspectable`.
 
-La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
+La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización del asistente interno, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
 
 A partir del SDK de Windows 10, este método no establece la `WeakRef` instancia a `nullptr` si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la `WeakRef` para `nullptr`. En su lugar, compruebe *ptr* para `nullptr`.
 
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Parámetros
 
-*riid*  
+*riid*<br/>
 Id. de interfaz.
 
-*ptr*  
+*ptr*<br/>
 Cuando finalice esta operación, un objeto que representa el parámetro *riid*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -194,7 +194,7 @@ Cuando finalice esta operación, un objeto que representa el parámetro *riid*.
 
 Se genera un error si parámetro *riid* no se deriva `IInspectable`. Este error sustituye el valor devuelto.
 
-La primera plantilla es el formulario que debe usar en el código. La segunda plantilla (no se muestra aquí, pero se declara en el archivo de encabezado) es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como la palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
+La primera plantilla es el formulario que debe usar en el código. La segunda plantilla (no se muestra aquí, pero se declara en el archivo de encabezado) es una especialización del asistente interno, que admite características del lenguaje C++, como la palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
 
 A partir del SDK de Windows 10, este método no establece la `WeakRef` instancia a `nullptr` si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la `WeakRef` para `nullptr`. En su lugar, compruebe *ptr* para `nullptr`.
 
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*U*  
+*U*<br/>
 Puntero un `IInspectable` interfaz. Se genera un error si *U* no se deriva `IInspectable`.
 
-*riid*  
+*riid*<br/>
 Id. de interfaz. Se genera un error si *riid* no se deriva `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Un puntero indirecto doble a `IInspectable` o `IWeakReference`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*  
+*ptr*<br/>
 Un puntero, referencia o referencia de valor r a un objeto existente que inicializa actual `WeakRef` objeto.
 
 ### <a name="remarks"></a>Comentarios
