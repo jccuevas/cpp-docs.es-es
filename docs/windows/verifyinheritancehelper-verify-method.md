@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfcbb57694fc18944d199c1d4c74d8c74a335783
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8a337dcce390f8dc3b634018af602bc3e62e719b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599120"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396095"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify (Método)
 
@@ -48,5 +48,5 @@ Se genera un error si una interfaz no se derive de la otra.
 
 ## <a name="see-also"></a>Vea también
 
-[VerifyInheritanceHelper (estructura)](../windows/verifyinheritancehelper-structure.md)  
+[VerifyInheritanceHelper (estructura)](../windows/verifyinheritancehelper-structure.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

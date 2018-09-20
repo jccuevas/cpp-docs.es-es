@@ -1,5 +1,5 @@
 ---
-title: Crear un Control de cuadro combinado extendido | Documentos de Microsoft
+title: Creación de un Control de cuadro combinado extendido | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6a891aeadf2fa8366eec52a967e13776db6523
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1a4a27e7d233f1ee6f68dbcfa2a70d3d50e9984
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341217"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394678"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Crear un control de cuadro combinado extendido
-¿Cómo se crea el control de cuadro combinado extendido depende de si está usando el control en un cuadro de diálogo o crear en una ventana de nondialog.  
-  
-### <a name="to-use-ccomboboxex-directly-in-a-dialog-box"></a>Para utilizar CComboBoxEx directamente en un cuadro de diálogo  
-  
-1.  En el editor de cuadro de diálogo, agregue un control Extended Combo Box para el recurso de plantilla de cuadro de diálogo. Especifique el identificador del control.  
-  
-2.  Especifique cualquier estilo necesario utilizando el cuadro de diálogo de propiedades del control de cuadro combinado extendido.  
-  
-3.  Use la [Asistente para agregar variables miembro](../ide/adding-a-member-variable-visual-cpp.md) para agregar una variable miembro de tipo [CComboBoxEx](../mfc/reference/ccomboboxex-class.md) con la propiedad del Control. Este miembro puede utilizarse para llamar a `CComboBoxEx` funciones miembro.  
-  
-4.  Utilice la ventana Propiedades para asignar funciones controladoras en la clase de cuadro de diálogo para cualquier mensaje de notificación del control de cuadro combinado extendido que necesite controlar (vea [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).  
-  
-5.  En [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), defina cualquier estilo adicional para el `CComboBoxEx` objeto.  
-  
-### <a name="to-use-ccomboboxex-in-a-nondialog-window"></a>Para utilizar CComboBoxEx en una ventana de nondialog  
-  
-1.  Definir el control en la clase de vista o una ventana.  
-  
-2.  El control de llamada [crear](../mfc/reference/ctabctrl-class.md#create) función miembro, posiblemente en [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), posiblemente tan pronto como la ventana primaria [OnCreate](../mfc/reference/cwnd-class.md#oncreate) función de controlador. Establezca los estilos para el control.  
-  
-## <a name="see-also"></a>Vea también  
- [Usar CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Controles](../mfc/controls-mfc.md)
+
+¿Cómo se crea el control de cuadro combinado extendido depende de si está utilizando el control en un cuadro de diálogo o crearla en una ventana nondialog.
+
+### <a name="to-use-ccomboboxex-directly-in-a-dialog-box"></a>Usar CComboBoxEx directamente en un cuadro de diálogo
+
+1. En el editor de cuadro de diálogo, agregue un control Extended Combo Box al recurso de plantilla de cuadro de diálogo. Especifique su identificador de control.
+
+1. Especifique cualquier estilo necesario, mediante el cuadro de diálogo Propiedades del control de cuadro combinado extendido.
+
+1. Use la [Asistente para agregar variables miembro](../ide/adding-a-member-variable-visual-cpp.md) para agregar una variable miembro de tipo [CComboBoxEx](../mfc/reference/ccomboboxex-class.md) con la propiedad del Control. Este miembro puede utilizarse para llamar a `CComboBoxEx` funciones miembro.
+
+1. Utilice la ventana Propiedades para asignar funciones de controlador en la clase de cuadro de diálogo para cualquier mensaje de notificación de control de cuadro combinado extendido que necesite controlar (consulte [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).
+
+1. En [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), establecer los estilos adicionales para el `CComboBoxEx` objeto.
+
+### <a name="to-use-ccomboboxex-in-a-nondialog-window"></a>Usar CComboBoxEx en una ventana nondialog
+
+1. Defina el control en la clase de vista o la ventana.
+
+1. El control llama [crear](../mfc/reference/ctabctrl-class.md#create) función miembro, posiblemente en [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), posiblemente tan pronto como la ventana primaria [OnCreate](../mfc/reference/cwnd-class.md#oncreate) función de controlador. Establecer los estilos para el control.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

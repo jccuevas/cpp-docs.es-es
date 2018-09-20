@@ -1,5 +1,5 @@
 ---
-title: Identificadores de Control de edición | Documentos de Microsoft
+title: Identificadores de Control de edición | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,27 +31,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450cb2252cc7331b5a9d9f0f60c3d23b5d08bc22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4828eb2241346a0cee4a1d1a732426e28aeb61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374456"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395328"
 ---
 # <a name="edit-control-handlers"></a>Identificadores de controles de edición
-Las siguientes entradas del mapa se corresponden con el prototipo de función.  
-  
-|Entrada de mapa|Prototipo de función|  
-|---------------|------------------------|  
-|ON_EN_CHANGE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_EN_ERRSPACE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_EN_HSCROLL ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_EN_KILLFOCUS ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_EN_MAXTEXT ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_EN_SETFOCUS ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_EN_UPDATE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_EN_VSCROLL ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-  
-## <a name="see-also"></a>Vea también  
- [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
+
+Las siguientes entradas de mapa se corresponden con el prototipo de función.
+
+|Entrada de asignación|Prototipo de función|
+|---------------|------------------------|
+|Asigna ON_EN_CHANGE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_EN_ERRSPACE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_EN_HSCROLL ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_EN_KILLFOCUS ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_EN_MAXTEXT ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_EN_SETFOCUS ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_EN_UPDATE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_EN_VSCROLL ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+
+## <a name="see-also"></a>Vea también
+
+[Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
 

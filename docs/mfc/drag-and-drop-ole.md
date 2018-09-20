@@ -1,5 +1,5 @@
 ---
-title: Arrastrar y colocar (OLE) | Documentos de Microsoft
+title: Arrastrar y colocar (OLE) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc23c7695bf5afa22734c382ddc72e8418ff74c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 498644a159c6472ed197fcadd28ad0236d62ca0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344342"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389647"
 ---
 # <a name="drag-and-drop-ole"></a>Arrastrar y colocar (OLE)
-La característica de arrastrar y colocar de OLE es principalmente un acceso directo para copiar y pegar los datos. Al usar el Portapapeles para copiar o pegar los datos, una serie de pasos es necesaria. Seleccione los datos, haga clic en **cortar** o **copia** desde el **editar** menú, mover en el archivo de destino, la ventana o la aplicación, coloque el cursor en la ubicación deseada y haga clic en **Pegar** desde el **editar** menú.  
-  
- Funciones OLE de arrastrar y colocar es diferente del mecanismo de arrastrar y colocar del Administrador de archivos, que solo se puede controlar los nombres de archivo y está diseñado específicamente para pasar los nombres de archivo a las aplicaciones. Funciones OLE de arrastrar y colocar es mucho más general. Permite arrastrar y colocar los datos que también pudieron colocarse en el Portapapeles.  
-  
- Cuando usa funciones OLE de arrastrar y colocar, quitar dos pasos del proceso. Seleccionar los datos de la ventana de código fuente (el "origen de colocación"), arrástrelo hasta el destino deseado (el "destino de colocación") y se quita al soltar el botón del mouse. La operación elimina la necesidad de los menús y es más rápida que la secuencia de copiar y pegar. El único requisito es que el origen de colocación y el destino de colocación deben estar abiertas y al menos parcialmente visible en la pantalla.  
-  
- Usar funciones OLE de arrastrar y colocar, datos pueden transferirse desde una ubicación a otra dentro de un documento, entre distintos documentos o entre aplicaciones. Se puede implementar en un contenedor o una aplicación de servidor y cualquier aplicación puede ser un origen de colocación, un destino para colocar o ambos. Si una aplicación tiene implementada la compatibilidad necesaria origen de colocación y el destino de colocación, arrastrar y colocar está habilitado entre ventanas secundarias o dentro de una ventana. Esta característica puede hacer que la aplicación son mucho más fáciles de usar.  
-  
- Si solo desea utilizar las funciones de arrastrar y colocar de OLE, consulte [arrastrar y colocar: personalización](../mfc/drag-and-drop-customizing.md). Puede utilizar las técnicas explicadas en este artículo para que las aplicaciones de OLE no eliminar orígenes. El artículo [arrastrar y colocar: implementar un destino de Drop](../mfc/drag-and-drop-implementing-a-drop-target.md) describe cómo implementar la compatibilidad de destino de OLE y aplicaciones no compatibles con OLE. También le resultará útil examinar los ejemplos OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md).  
-  
- Si no ha leído el [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md) familia de artículos, puede que desee hacerlo ahora. Estos artículos explican los conceptos básicos de transferencia de datos y cómo implementarla en las aplicaciones.  
-  
- Para obtener más información acerca de arrastrar y colocar, vea:  
-  
--   [Arrastrar y colocar: Implementar un origen de colocación](../mfc/drag-and-drop-implementing-a-drop-source.md)  
-  
--   [Arrastrar y colocar: Implementar un destino de colocación](../mfc/drag-and-drop-implementing-a-drop-target.md)  
-  
--   [Arrastrar y colocar: Personalizar](../mfc/drag-and-drop-customizing.md)  
-  
-## <a name="see-also"></a>Vea también  
- [OLE](../mfc/ole-in-mfc.md)   
- [Objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+
+La característica de arrastrar y colocar de OLE es principalmente un acceso directo para copiar y pegar datos. Al usar el Portapapeles para copiar o pegar datos, una serie de pasos es necesaria. Seleccione los datos, haga clic en **cortar** o **copia** desde el **editar** menú, mover al archivo de destino, ventana o aplicación, coloque el cursor en la ubicación deseada y haga clic en **Pegar** desde el **editar** menú.
+
+OLE de arrastrar y colocar es diferente del mecanismo de arrastrar y colocar el Administrador de archivos, que solo se puede controlar los nombres de archivo y está diseñado específicamente para pasar los nombres de archivo a las aplicaciones. OLE de arrastrar y colocar es mucho más general. Permite arrastrar y colocar los datos que podrían colocarse también en el Portapapeles.
+
+Cuando se utiliza OLE de arrastrar y colocar, quitar dos pasos del proceso. Seleccionar los datos de la ventana de código fuente (el "origen de colocación"), arrástrelo hasta el destino deseado (el "destino de colocación") y colóquela al soltar el botón del mouse. La operación elimina la necesidad de los menús y es más rápida que la secuencia de copiar y pegar. El único requisito es que el origen de colocación y el destino de colocación deben estar abierto y al menos parcialmente visible en la pantalla.
+
+Usa OLE de arrastrar y colocar, datos pueden transferirse de una ubicación a otra dentro de un documento, entre distintos documentos o entre aplicaciones. Se puede implementar en un contenedor o una aplicación de servidor y cualquier aplicación puede ser un origen de colocación, un destino de colocación o ambos. Si una aplicación tiene soporte técnico de origen y destino de colocación implementan, arrastrar y colocar está habilitada entre ventanas secundarias, o dentro de una ventana. Esta característica, la aplicación puede quedar mucho más fácil de usar.
+
+Si solo desea usar las capacidades de arrastrar y colocar de OLE, consulte [arrastrar y colocar: personalización](../mfc/drag-and-drop-customizing.md). Puede usar las técnicas explicadas en este artículo para hacer que las aplicaciones que no son compatibles con OLE quitar orígenes. El artículo [arrastrar y colocar: implementar un destino de colocación](../mfc/drag-and-drop-implementing-a-drop-target.md) se describe cómo implementar la compatibilidad de destino de OLE y aplicaciones que no son compatibles con OLE. También será útil examinar los ejemplos OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md).
+
+Si no ha leído el [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md) serie de artículos, es posible que desee hacerlo ahora. Estos artículos explican los aspectos básicos de transferencia de datos y cómo implementarlo en sus aplicaciones.
+
+Para obtener más información acerca de arrastrar y colocar, vea:
+
+- [Arrastrar y colocar: Implementar un origen de colocación](../mfc/drag-and-drop-implementing-a-drop-source.md)
+
+- [Arrastrar y colocar: Implementar un destino de colocación](../mfc/drag-and-drop-implementing-a-drop-target.md)
+
+- [Arrastrar y colocar: Personalizar](../mfc/drag-and-drop-customizing.md)
+
+## <a name="see-also"></a>Vea también
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md)
 

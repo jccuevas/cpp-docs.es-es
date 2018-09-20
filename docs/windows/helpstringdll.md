@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1eecedca8988c95466a3f257fbc77768b7c67b3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219957"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392871"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -38,7 +38,7 @@ Especifica el nombre del archivo DLL a utilizar para realizar la búsqueda de ca
 
 ### <a name="parameters"></a>Parámetros
 
-*string*  
+*string*<br/>
 DLL que se va a utilizar para realizar la búsqueda de cadenas de documento.
 
 ## <a name="remarks"></a>Comentarios
@@ -75,7 +75,7 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de interfaz](../windows/interface-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de interfaz](../windows/interface-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
 [Atributos de método](../windows/method-attributes.md)  

@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9f81b423838d2daa9915dc5330d23e4ef69273bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395068"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
-**Específicos de Microsoft**  
-  
- Genera el `rep outsd` instrucción, que envía `Count` a partir de palabras dobles `Buffer` fuera del puerto de E/S especificado por `Port`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void __outdwordstring(   
-   unsigned short Port,   
-   unsigned long* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+
+**Específicos de Microsoft**
+
+Genera el `rep outsd` instrucción, que envía `Count` a partir de palabras dobles `Buffer` fuera del puerto de E/S especificado por `Port`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void __outdwordstring( 
+   unsigned short Port, 
+   unsigned long* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
 *Puerto*<br/>
-[in] El puerto para enviar los datos.  
-  
+[in] El puerto para enviar los datos.
+
 *búfer*<br/>
-[in] Un puntero a los datos se envíen el puerto especificado.  
-  
+[in] Un puntero a los datos se envíen el puerto especificado.
+
 *Recuento*<br/>
-[in] El número de palabras dobles para enviar.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función intrínseca|Arquitectura|  
-|---------------|------------------|  
-|`__outdwordstring`|x86, x64|  
-  
- **Archivo de encabezado** \<intrin.h >  
-  
-## <a name="remarks"></a>Comentarios  
- Esta rutina solo está disponible como función intrínseca.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[in] El número de palabras dobles para enviar.
+
+## <a name="requirements"></a>Requisitos
+
+|Función intrínseca|Arquitectura|
+|---------------|------------------|
+|`__outdwordstring`|x86, x64|
+
+**Archivo de encabezado** \<intrin.h >
+
+## <a name="remarks"></a>Comentarios
+
+Esta rutina solo está disponible como función intrínseca.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

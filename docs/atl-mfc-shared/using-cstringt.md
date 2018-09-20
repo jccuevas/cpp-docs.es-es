@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766196"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390739"
 ---
 # <a name="using-cstringt"></a>Uso de CStringT
 
@@ -27,10 +27,10 @@ Los temas de esta sección describen la programación con la clase de plantilla 
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Administración de memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+[Administración de memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)<br/>
 Describe la administración de memoria con `CStringT`, una clase de plantilla utilizada para manipular las cadenas de caracteres de longitud variable.
 
-[Exportar clases de cadena mediante CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+[Exportar clases de cadena mediante CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)<br/>
 Explica cómo exportar su propia clase de cadena desde un archivo DLL mediante la clase de plantilla de CStringT <>.
 
 ## <a name="reference"></a>Referencia

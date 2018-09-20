@@ -1,5 +1,5 @@
 ---
-title: Constantes de espacio de nombres de simultaneidad (AMP) | Documentos de Microsoft
+title: Constantes de espacio de nombres de simultaneidad (AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,31 +13,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc9aefd059be2932b6903f5c33ada05305d9ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7b36f9b34e67e3846c367d468d5a362826fea256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695855"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395679"
 ---
 # <a name="concurrency-namespace-constants-amp"></a>Constantes de espacio de nombres de simultaneidad (AMP)
-|||  
-|-|-|  
-|[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|  
-  
-##  <a name="hlsl_max_num_buffers"></a>  HLSL_MAX_NUM_BUFFERS (constante)  
- El número máximo de búferes permitido por DirectX.  
-  
-```  
-static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;  
-```  
-  
-##  <a name="modulename_max_length"></a>  MODULENAME_MAX_LENGTH (constante)  
- Almacena la longitud máxima del nombre del módulo. Este valor debe ser el mismo en el compilador y el tiempo de ejecución.  
-  
-```  
-static const UINT MODULENAME_MAX_LENGTH = 1024;  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
+
+|||
+|-|-|
+|[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|
+
+##  <a name="hlsl_max_num_buffers"></a>  HLSL_MAX_NUM_BUFFERS (constante)
+
+El número máximo de búferes permitido por DirectX.
+
+```
+static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;
+```
+
+##  <a name="modulename_max_length"></a>  MODULENAME_MAX_LENGTH (constante)
+
+Almacena la longitud máxima del nombre del módulo. Este valor debe ser el mismo en el compilador y el tiempo de ejecución.
+
+```
+static const UINT MODULENAME_MAX_LENGTH = 1024;
+```
+
+## <a name="see-also"></a>Vea también
+
+[Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

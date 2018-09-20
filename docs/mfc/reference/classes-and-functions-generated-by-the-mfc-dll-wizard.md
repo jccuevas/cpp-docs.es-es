@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76aa828727ccfcf93c7b9b0242e60b747c1873f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339584"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390856"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Clases y funciones generadas por el Asistente para archivos DLL de MFC
-El código que genera el Asistente para archivos DLL de MFC depende del tipo de archivo DLL que se va a crear y las opciones que ha seleccionado. El Asistente para archivos DLL de MFC genera el mismo código para ambos formatos de archivos DLL de MFC estándar.  
-  
-|Tipo de archivo DLL|Opción|Clases|Funciones|  
-|-----------------|------------|-------------|---------------|  
-|[Extensión](../../build/extension-dlls-overview.md)|Ninguna|Ninguna|`DllMain`|  
-|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Ninguna|Deriva de la clase de aplicación `CWinApp`|Ninguna|  
-|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|automatización|Deriva de la clase de aplicación `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
-|[Extensión](../../build/extension-dlls-overview.md)|Windows Sockets|Ninguna|`DllMain`|  
-|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Windows Sockets|Deriva de la clase de aplicación `CWinApp`|`InitInstance` contiene una llamada a `AfxSocketInit`|  
-  
-## <a name="see-also"></a>Vea también  
- [Asistente para archivos DLL de MFC](../../mfc/reference/mfc-dll-wizard.md)
+
+El código que genera el Asistente para archivos DLL de MFC depende del tipo de archivo DLL que se va a crear y las opciones que ha seleccionado. El Asistente para archivos DLL de MFC genera el mismo código para ambos formatos de archivos DLL de MFC estándar.
+
+|Tipo de archivo DLL|Opción|Clases|Funciones|
+|-----------------|------------|-------------|---------------|
+|[Extensión](../../build/extension-dlls-overview.md)|Ninguna|Ninguna|`DllMain`|
+|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Ninguna|Deriva de la clase de aplicación `CWinApp`|Ninguna|
+|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|automatización|Deriva de la clase de aplicación `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|
+|[Extensión](../../build/extension-dlls-overview.md)|Windows Sockets|Ninguna|`DllMain`|
+|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Windows Sockets|Deriva de la clase de aplicación `CWinApp`|`InitInstance` contiene una llamada a `AfxSocketInit`|
+
+## <a name="see-also"></a>Vea también
+
+[Asistente para archivos DLL de MFC](../../mfc/reference/mfc-dll-wizard.md)
 

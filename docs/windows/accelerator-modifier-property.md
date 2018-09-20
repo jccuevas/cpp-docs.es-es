@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 793e02b4ac083d6fe84ba2cc76ee340bcf2484e9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3c053af58842c75910b0214ae828c652daa33a81
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316060"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389296"
 ---
 # <a name="accelerator-modifier-property-c"></a>Propiedad modificador de acelerador (C++)
 
@@ -43,5 +43,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)  
+[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

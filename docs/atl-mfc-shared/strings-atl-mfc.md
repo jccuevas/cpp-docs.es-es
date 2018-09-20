@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752780"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387320"
 ---
 # <a name="strings-atlmfc"></a>Cadenas (ATL y MFC)
 
@@ -44,18 +44,18 @@ Casi todos los programas trabajan con datos de cadena. Visual C++ proporciona va
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Uso de CStringT](../atl-mfc-shared/using-cstringt.md)  
+[Uso de CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 Describe la programación mediante la clase de plantilla CStringT.
 
-[Uso de CString](../atl-mfc-shared/using-cstring.md)  
+[Uso de CString](../atl-mfc-shared/using-cstring.md)<br/>
 Describe el uso de CString, la implementación predeterminada de CStringT de programación.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Información general de CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[Información general de CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Proporciona información de referencia sobre el recurso compartido `CStringT` clase.
 
-[Conceptos de MFC](../mfc/mfc-concepts.md)  
+[Conceptos de MFC](../mfc/mfc-concepts.md)<br/>
 Proporciona temas conceptuales y basados en tareas para ayudarle a programar con la biblioteca MFC.
 
 ## <a name="see-also"></a>Vea también

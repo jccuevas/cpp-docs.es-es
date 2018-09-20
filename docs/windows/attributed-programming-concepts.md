@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317269"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394652"
 ---
 # <a name="attributed-programming-concepts"></a>Conceptos de programación con atributos
 
@@ -32,27 +32,27 @@ Aunque atributos eliminan parte del código detallado necesario para escribir ob
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Objetivo de los atributos](../windows/purpose-of-attributes.md)  
+[Objetivo de los atributos](../windows/purpose-of-attributes.md)<br/>
 Presenta una descripción general de la programación con atributos.
 
-[Mecanismos básicos de los atributos](../windows/basic-mechanics-of-attributes.md)  
+[Mecanismos básicos de los atributos](../windows/basic-mechanics-of-attributes.md)<br/>
 Describe cómo funcionan los atributos en el proyecto.
 
-[Compilación de programas con atributos](../windows/building-an-attributed-program.md)  
+[Compilación de programas con atributos](../windows/building-an-attributed-program.md)<br/>
 Proporciona información sobre el uso de las opciones del compilador de C++ en el proyecto.
 
-[Categorías de atributos](../windows/attribute-categories.md)  
+[Categorías de atributos](../windows/attribute-categories.md)<br/>
 Proporciona vínculos a las categorías de atributos que se utilizan en Visual C++.
 
-[Preguntas más frecuentes de programación de atributo](../windows/attribute-programming-faq.md)  
+[Preguntas más frecuentes de programación de atributo](../windows/attribute-programming-faq.md)<br/>
 Respuestas a preguntas frecuentes sobre la programación con atributos.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Referencia de atributos](../windows/cpp-attributes-reference.md)  
+[Referencia de atributos](../windows/cpp-attributes-reference.md)<br/>
 Proporciona vínculos a temas de referencia que describen los atributos individuales y su uso.
 
-[Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code)  
+[Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 Describe la depuración de programas con atributos.
 
 [__super](../cpp/super.md)y [__interface](../cpp/interface.md)  

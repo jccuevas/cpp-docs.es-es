@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82479dab780fce677eeee84c4ccde880fe19d2bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 43ba8086481ea2a8dde20d06b1dc143b297138f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314916"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378311"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Crear un icono u otra imagen (Editor de imágenes para iconos)
 
@@ -67,8 +67,8 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Iconos y cursores: recursos de imagen para dispositivos de presentación](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Conversión de mapas de bits en barras de herramientas](../windows/converting-bitmaps-to-toolbars.md)  
-[Creación de nuevas barras de herramientas](../windows/creating-new-toolbars.md)  
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Iconos y cursores: recursos de imagen para dispositivos de presentación](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Conversión de mapas de bits en barras de herramientas](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Creación de nuevas barras de herramientas](../windows/creating-new-toolbars.md)<br/>
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

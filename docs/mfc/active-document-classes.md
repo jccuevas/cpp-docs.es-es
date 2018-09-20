@@ -1,5 +1,5 @@
 ---
-title: Clases de documento activo | Documentos de Microsoft
+title: Clases de documento activo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0805e77e674a68d5fd81c8628407bcd77e164e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0cd4cce7f2e31e084224848f348dd4e5f408de67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325921"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385370"
 ---
 # <a name="active-document-classes"></a>Clases de documento activo
-Documentos activos se pueden mostrar en la ventana completa del cliente de un explorador Web, como Internet Explorer 5.5 o en un contenedor activo, como el cuaderno de Office de Microsoft, que es compatible con documentos activos.  
-  
- [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)  
- Las interfaces de documento activo, se asigna, inicializa y activa un objeto de documento activo.  
-  
- [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- Implementa verbos de servidor OLE específicamente para servidores de documentos activos.  
-  
- [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Implementa la contención del documento activo.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+Documentos activos se pueden mostrar en la ventana del cliente completo de un explorador Web, como Internet Explorer 5.5, o en un contenedor activo, como el cuaderno de Office de Microsoft, que es compatible con documentos activos.
+
+[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
+Asigna las interfaces de documento activo, inicializa y se activa un objeto de documento activo.
+
+[CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
+Verbos de servidor implementa OLE específicamente para servidores de documentos activos.
+
+[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
+Implementa la contención del documento activo.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80519b17fc5d9aee963ec3718cf82c7fe44d686b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b2fb77dc73686a6765d9102cd31fa1399ad21044
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396082"
 ---
 # <a name="menu-editor"></a>Editor de menús
 
@@ -73,8 +73,8 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)  
-[Editores de recursos](../windows/resource-editors.md)  
-[Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)  
-[Menús](../mfc/menus-mfc.md)  
+[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
+[Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)<br/>
+[Menús](../mfc/menus-mfc.md)<br/>
 [Menús](https://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)

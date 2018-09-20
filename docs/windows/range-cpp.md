@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201356"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384227"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ Especifica un intervalo de valores permitidos para los argumentos o los campos c
 
 ### <a name="parameters"></a>Parámetros
 
-*low*  
+*low*<br/>
 El valor bajo del intervalo.
 
-*high*  
+*high*<br/>
 El valor de rango alto.
 
 ## <a name="remarks"></a>Comentarios
@@ -80,7 +80,7 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
-[Atributos de parámetro](../windows/parameter-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
+[Atributos de parámetro](../windows/parameter-attributes.md)<br/>
 [Atributos de miembros de datos](../windows/data-member-attributes.md)  

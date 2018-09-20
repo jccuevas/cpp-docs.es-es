@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 907a249090ec58d6379cb58f3d63e15826c1f6ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 15db0be600d61992d48c2f1cf90d6543057b5090
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610365"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376077"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS (Método)
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT GetImplementedIIDS(
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo de la *implementa* parámetro.
 
-*Implementa*  
+*Implementa*<br/>
 Puntero al tipo especificado por el parámetro *T*.
 
-*iidCount*  
+*iidCount*<br/>
 El número máximo de identificadores de interfaz para recuperar.
 
-*IID*  
+*IID*<br/>
 Si esta operación completa correctamente, una matriz de la interfaz implementadas por el tipo de identificadores *T*.
 
 ## <a name="return-value"></a>Valor devuelto

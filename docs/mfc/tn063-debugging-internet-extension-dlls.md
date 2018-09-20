@@ -1,5 +1,5 @@
 ---
-title: 'TN063: Depurar archivos DLL de extensión de MFC de Internet | Documentos de Microsoft'
+title: 'TN063: Depurar archivos DLL de extensión MFC de Internet | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68bb9ad7a16d35f7a5529bd82bb4d6547eec2e0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb432bf77e9095473d25c3ffc686660567c034bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395380"
 ---
-# <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: Depurar archivos DLL de extensión de MFC de Internet
-Esta información está obsoleta y se ha quitado.  
-  
-## <a name="see-also"></a>Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+# <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: Depurar archivos DLL de extensión MFC de Internet
+
+Esta información está obsoleta y se ha quitado.
+
+## <a name="see-also"></a>Vea también
+
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
 

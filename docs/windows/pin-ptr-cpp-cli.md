@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591736"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392767"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ Un *puntero anclado* es un puntero interior que impide que el objeto que señala
 
 ### <a name="parameters"></a>Parámetros
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **Const** o **volátil** calificadores. De forma predeterminada, es un puntero anclado **volátil**. Es redundante, pero no un error declarar un puntero anclado **volátil**.
 
-*type*  
+*type*<br/>
 El tipo de *inicializador*.
 
-*var*  
+*var*<br/>
 El nombre de la **pin_ptr** variable.
 
-*initializer*  
+*initializer*<br/>
 Un miembro de un tipo de referencia, el elemento de una matriz administrada o cualquier otro objeto que se puede asignar a un puntero nativo.
 
 ### <a name="remarks"></a>Comentarios

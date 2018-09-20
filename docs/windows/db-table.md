@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa64b7b4785f8865a372a256ecc5c9d3f8738dcb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385864"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -41,16 +41,16 @@ Se abre una tabla de OLE DB.
 
 #### <a name="parameters"></a>Parámetros
 
-*db_table*  
+*db_table*<br/>
 Cadena que especifica el nombre de una tabla de base de datos (por ejemplo, "productos").
 
-*name*  
+*name*<br/>
 (Opcional) El nombre del identificador que se utiliza para trabajar con la tabla. Debe especificar este parámetro si desea devolver más de una fila de resultados. **db_table** genera una variable con los valores especificados *nombre* que puede utilizarse para recorrer el conjunto de filas o ejecutar varias consultas de acción.
 
-*source_name*  
+*source_name*<br/>
 (Opcional) El `CSession` variable o instancia de una clase que tiene el `db_source` atributo aplicado a él en el que se ejecuta el comando. Consulte [db_source](../windows/db-source.md).
 
-*HRESULT*  
+*HRESULT*<br/>
 (Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
 ## <a name="remarks"></a>Comentarios

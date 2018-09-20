@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aac6e0456bf8a63712c498114d403c05af5ccddb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 54b02ab188ddd122bd3751f73a3edb33d87266f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212213"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388217"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -38,7 +38,7 @@ Especifica el atributo de puntero predeterminado para todos los punteros, except
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*  
+*valor*<br/>
 Un valor que describe el tipo de puntero: **ptr**, **ref**, o **único**.
 
 ## <a name="remarks"></a>Comentarios
@@ -64,5 +64,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
 [Atributos de interfaz](../windows/interface-attributes.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2872f1639a11d537dd79b878a166a3afb5fd8667
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 65794dafe5e45cbd4c0e2a7eb49c34377009deee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719179"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392988"
 ---
 # <a name="safecast"></a>SafeCast
 
@@ -67,6 +67,6 @@ Para obtener más información acerca de los tipos de plantilla T y U, consulte 
 
 ## <a name="see-also"></a>Vea también
 
-[SafeInt (funciones)](../windows/safeint-functions.md)  
-[Biblioteca SafeInt](../windows/safeint-library.md)  
+[SafeInt (funciones)](../windows/safeint-functions.md)<br/>
+[Biblioteca SafeInt](../windows/safeint-library.md)<br/>
 [SafeInt (clase)](../windows/safeint-class.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18b1f059ce6825e132c6fff0a52029a005442f53
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598380"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382640"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: Crear un programa estándar de C++ (C++)
 
@@ -81,5 +81,5 @@ Para completar este tutorial, debe comprender los conceptos básicos del lenguaj
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)  
+[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
