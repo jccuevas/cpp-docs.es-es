@@ -14,31 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2f925abf0bcb672851cfbbb3f42d715f84338f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0751956db6e6433c0adcd4114527b3419234edfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695972"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433509"
 ---
 # <a name="adoptd3daccesslockt-structure"></a>adopt_d3d_access_lock_t (Estructura)
-Tipo de etiqueta para indicar el bloqueo de acceso de D3D debe ser adoptado en lugar de adquirir.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-struct adopt_d3d_access_lock_t;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `adopt_d3d_access_lock_t`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** amprt.h  
-  
- **Namespace:** concurrency::direct3d  
-  
-## <a name="see-also"></a>Vea también  
- [Concurrency::direct3d (espacio de nombres)](concurrency-direct3d-namespace.md)
+
+Tipo de etiqueta para indicar el bloqueo de acceso de D3D debe adoptar en lugar adquirido.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+struct adopt_d3d_access_lock_t;
+```
+
+## <a name="members"></a>Miembros
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`adopt_d3d_access_lock_t`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** amprt.h
+
+**Namespace:** Concurrency:: Direct3D
+
+## <a name="see-also"></a>Vea también
+
+[Concurrency::direct3d (espacio de nombres)](concurrency-direct3d-namespace.md)

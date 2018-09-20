@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691450"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446522"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (clase)
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 Una clase base.
 
 ## <a name="remarks"></a>Comentarios
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>Parámetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Debe ser `nullptr`; en caso contrario, el valor devuelto es CLASS_E_NOAGGREGATION.
 
 SimpleClassFactory no admite la agregación. Si se admite la agregación y el objeto se crea formaba parte de un agregado, *pUnkOuter* sería un puntero al control `IUnknown` interfaz del agregado.
 
-*riid*  
+*riid*<br/>
 Identificador del objeto para crear la interfaz.
 
-*ppvObject*  
+*ppvObject*<br/>
 Cuando finalice esta operación, puntero a una instancia del objeto especificado por el *riid* parámetro.
 
 ### <a name="return-value"></a>Valor devuelto

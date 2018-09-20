@@ -1,5 +1,5 @@
 ---
-title: Omitir el mecanismo de serialización | Documentos de Microsoft
+title: Omitir el mecanismo de serialización | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9252e08fe672f111dcf2b289b1b12891022a318d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 25fc281e35fc07151fa609d07be540430a6a1da6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931093"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399822"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Omitir el mecanismo de serialización
-Como ha visto, el marco de trabajo proporciona una manera predeterminada para leer y escribir datos en y desde archivos. La serialización a través de un objeto de almacenamiento se adapte a las necesidades de una gran cantidad de aplicaciones. Este tipo de aplicación lee un archivo completamente en la memoria, permite al usuario actualizar el archivo y, a continuación, escribe la versión actualizada en el disco de nuevo.  
-  
- Sin embargo, algunas aplicaciones operan sobre datos de forma muy diferente, y para estas aplicaciones no es adecuada la serialización a través de un archivo. Algunos ejemplos son programas de base de datos, los programas que sólo modifican partes de archivos de gran tamaño, los programas que escriben archivos de sólo texto y programas que comparten los archivos de datos.  
-  
- En estos casos, puede reemplazar el [Serialize](../mfc/reference/cobject-class.md#serialize) función de forma diferente para mediar acciones de archivo a través de un [CFile](../mfc/reference/cfile-class.md) objeto en lugar de un [CArchive](../mfc/reference/carchive-class.md) objeto.  
-  
- Puede usar el `Open`, `Read`, `Write`, `Close`, y `Seek` funciones miembro de clase `CFile` para abrir un archivo, mueva el puntero de archivo (Buscar) a un momento concreto en el archivo, leer un registro (un número especificado de bytes ) en ese momento, permiten al usuario actualizar el registro, a continuación, buscar de nuevo en el mismo punto y reescribir el registro en el archivo. El marco de trabajo abrirá el archivo automáticamente y puede usar el `GetFile` función miembro de clase `CArchive` para obtener un puntero a la `CFile` objeto. Para su uso más sofisticado y flexible, puede invalidar la [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) y [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) funciones miembro de clase `CWinApp`. Para obtener más información, vea la clase [CFile](../mfc/reference/cfile-class.md) en el *referencia de MFC*.  
-  
- En este escenario, su `Serialize` invalidación no hace nada, a menos que, por ejemplo, desea tener leer y escribir un encabezado de archivo para mantener actualizados cuando se cierra el documento.  
-  
-## <a name="see-also"></a>Vea también  
- [Uso de documentos](../mfc/using-documents.md)
+
+Tal como hemos visto, el marco proporciona una manera predeterminada para leer y escribir datos en y desde archivos. La serialización a través de un objeto de almacenamiento se adapte a las necesidades de una gran cantidad de aplicaciones. Este tipo de aplicación lee un archivo completamente en memoria, permite al usuario que actualice el archivo y, a continuación, escribe la versión actualizada en el disco nuevo.
+
+Sin embargo, algunas aplicaciones funcionan en datos de forma muy diferente, y para estas aplicaciones no es adecuada la serialización a través de un archivo. Algunos ejemplos son programas de base de datos, los programas que edición solo partes de archivos grandes, los programas que escriben archivos de sólo texto y programas que comparten los archivos de datos.
+
+En estos casos, puede invalidar el [Serialize](../mfc/reference/cobject-class.md#serialize) función de forma diferente para mediar en las acciones de archivo a través de un [CFile](../mfc/reference/cfile-class.md) objeto en lugar de un [CArchive](../mfc/reference/carchive-class.md) objeto.
+
+Puede usar el `Open`, `Read`, `Write`, `Close`, y `Seek` funciones miembro de clase `CFile` para abrir un archivo, mueva el puntero de archivo (búsqueda) a un momento específico en el archivo, leer un registro (un número especificado de bytes ) en ese momento, dejar que el usuario actualice el registro, a continuación, buscar en el mismo punto nuevo y reescribir el registro en el archivo. El marco de trabajo abrirá el archivo por usted, y puede usar el `GetFile` función miembro de clase `CArchive` para obtener un puntero a la `CFile` objeto. Para su uso incluso más sofisticado y flexible, puede invalidar el [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) y [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) funciones miembro de clase `CWinApp`. Para obtener más información, vea la clase [CFile](../mfc/reference/cfile-class.md) en el *referencia de MFC*.
+
+En este escenario, su `Serialize` invalidación no hace nada, a menos que, por ejemplo, desea tener leer y escribir un encabezado de archivo para mantenerse al día cuando se cierra el documento.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de documentos](../mfc/using-documents.md)
 

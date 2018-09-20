@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c12357acf3369192248784fc6593c9b5b91b863
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316788"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438644"
 ---
 # <a name="how-to-create-a-resource"></a>Cómo: Crear un recurso
 
@@ -68,6 +68,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
-[Editores de recursos](../windows/resource-editors.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
 [Agregar recurso (cuadro de diálogo)](../windows/add-resource-dialog-box.md)

@@ -18,85 +18,93 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3c6cebf6af24de860c583398c16c87824ede0075
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853626"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401282"
 ---
 # <a name="coledialog-class"></a>COleDialog (clase)
-Proporciona funcionalidad común a los cuadros de diálogo para OLE.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class COleDialog : public CCommonDialog  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[COleDialog::GetLastError](#getlasterror)|Obtiene el código de error devuelto por el cuadro de diálogo.|  
-  
-## <a name="remarks"></a>Comentarios  
- La biblioteca Microsoft Foundation Class proporciona varias clases derivadas de `COleDialog`:  
-  
-- [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
-  
-- [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
-  
-- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)  
-  
-- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)  
-  
-- [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)  
-  
-- [COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)  
-  
-- [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)  
-  
-- [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)  
-  
-- [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
-  
- Para obtener más información acerca de los cuadros de diálogo específicos de OLE, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
-  
- `COleDialog`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxodlgs.h  
-  
-##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- Llame a la `GetLastError` función miembro para obtener información de error adicional cuando `DoModal` devuelve IDABORT.  
-  
-```  
-UINT GetLastError() const;  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
- Los códigos de error devueltos por `GetLastError` dependen en el cuadro de diálogo específico.  
-  
-### <a name="remarks"></a>Comentarios  
- Consulte la `DoModal` función miembro en las clases derivadas para obtener información acerca de los mensajes de error específico.  
-  
-## <a name="see-also"></a>Vea también  
- [CCommonDialog (clase)](../../mfc/reference/ccommondialog-class.md)   
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
+
+Proporciona funcionalidad común a los cuadros de diálogo para OLE.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+class COleDialog : public CCommonDialog
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[COleDialog::GetLastError](#getlasterror)|Obtiene el código de error devuelto por el cuadro de diálogo.|
+
+## <a name="remarks"></a>Comentarios
+
+La biblioteca Microsoft Foundation Class proporciona varias clases derivadas de `COleDialog`:
+
+- [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
+
+- [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)
+
+- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)
+
+- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
+
+- [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)
+
+- [COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)
+
+- [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)
+
+- [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)
+
+- [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
+
+Para obtener más información acerca de los cuadros de diálogo específicos de OLE, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+
+`COleDialog`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** afxodlgs.h
+
+##  <a name="getlasterror"></a>  COleDialog::GetLastError
+
+Llame a la `GetLastError` función miembro para obtener información de error adicional cuando `DoModal` devuelve IDABORT.
+
+```
+UINT GetLastError() const;
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Los códigos de error devueltos por `GetLastError` dependen en el cuadro de diálogo específico.
+
+### <a name="remarks"></a>Comentarios
+
+Consulte la `DoModal` función miembro en las clases derivadas para obtener información acerca de los mensajes de error específico.
+
+## <a name="see-also"></a>Vea también
+
+[CCommonDialog (clase)](../../mfc/reference/ccommondialog-class.md)<br/>
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
 
 
 

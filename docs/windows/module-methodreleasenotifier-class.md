@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cee634ab62e699b4de6af54a57b0fe3d6b5e9a40
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e223ce02fa8a50ac39298d1f45f1f531dbf1f97
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606613"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411331"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier (Clase)
 
@@ -37,7 +37,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo del objeto cuya función miembro es el controlador de eventos.
 
 ## <a name="members"></a>Miembros
@@ -74,4 +74,5 @@ El tipo del objeto cuya función miembro es el controlador de eventos.
 **Espacio de nombres:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vea también
+
 [Module (clase)](../windows/module-class.md)

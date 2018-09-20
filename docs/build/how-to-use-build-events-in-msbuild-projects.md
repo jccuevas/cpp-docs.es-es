@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc75cc0e58f86e8de87e3fb29c8ea02e624a73a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700705"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444338"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Cómo: Usar eventos de compilación en proyectos de MSBuild
 
@@ -82,5 +82,5 @@ En el siguiente ejemplo se puede agregar dentro del elemento de proyecto del arc
 
 ## <a name="see-also"></a>Vea también
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
-[Tutorial: usar MSBuild para crear un proyecto de Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
+[Tutorial: Usar MSBuild para crear un proyecto de Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

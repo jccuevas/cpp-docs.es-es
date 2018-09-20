@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad982ee72e93a2779e4f3334984a325514248565
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02dd1b2cbe4d1da2364d884a0326cdc394bc16af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315111"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444884"
 ---
 # <a name="attributes-by-group"></a>Atributos por grupo
+
 Los atributos de C++ se organizan en los siguientes grupos funcionales.
   
 |Atributo|Descripción|
@@ -32,10 +33,11 @@ Los atributos de C++ se organizan en los siguientes grupos funcionales.
 |[Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)|Inyectar código, según la [plantillas de consumidor OLE DB](../data/oledb/ole-db-consumer-templates-reference.md): para crear un trabajo OLE DB consumidor que realiza tareas como abrir tablas, ejecutar comandos y obtener acceso a datos.|
 |[Atributos de compilador](../windows/compiler-attributes.md)|Proporcionado por el compilador de Visual C++.|
   
- Para obtener información sobre cómo definir atributos personalizados para la aplicación de .NET Framework, vea [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obtener información sobre cómo definir atributos personalizados para la aplicación de .NET Framework, vea [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).
   
 ## <a name="see-also"></a>Vea también
- [Referencia de atributos de C++](../windows/cpp-attributes-reference.md)  
- [Conceptos](../windows/attributed-programming-concepts.md)  
- [Atributos por uso](../windows/attributes-by-usage.md)  
- [Referencia alfabética de los atributos](../windows/attributes-alphabetical-reference.md)
+
+[Referencia de atributos de C++](../windows/cpp-attributes-reference.md)<br/>
+[Conceptos](../windows/attributed-programming-concepts.md)<br/>
+[Atributos por uso](../windows/attributes-by-usage.md)<br/>
+[Referencia alfabética de los atributos](../windows/attributes-alphabetical-reference.md)

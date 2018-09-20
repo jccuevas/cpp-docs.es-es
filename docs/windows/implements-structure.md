@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535358"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434731"
 ---
 # <a name="implements-structure"></a>Implements (estructura)
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Parámetros
 
-*I0*  
+*I0*<br/>
 El identificador de interfaz de cero. (Obligatorio)
 
-*I1*  
+*I1*<br/>
 El primer identificador de interfaz. (Opcional)
 
-*I2*  
+*I2*<br/>
 El segundo identificador de interfaz. (Opcional)
 
-*I3*  
+*I3*<br/>
 El tercer identificador de interfaz. (Opcional)
 
-*I4*  
+*I4*<br/>
 El cuarto identificador de interfaz. (Opcional)
 
-*I5*  
+*I5*<br/>
 El quinto identificador de interfaz. (Opcional)
 
-*I6*  
+*I6*<br/>
 El sexto ID de interfaz. (Opcional)
 
-*I7*  
+*I7*<br/>
 El séptimo ID de interfaz. (Opcional)
 
-*I8*  
+*I8*<br/>
 El identificador de identificador de octava interfaz. (Opcional)
 
-*I9*  
+*I9*<br/>
 El noveno ID de interfaz. (Opcional)
 
-*flags*  
+*flags*<br/>
 Marcas de configuración para la clase. Uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeraciones que se especifican en un [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) estructura.
 
 ## <a name="remarks"></a>Comentarios
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*riid*  
+*riid*<br/>
 Una referencia a un identificador de interfaz.
 
-*PPV*  
+*PPV*<br/>
 Si es correcto, un puntero a la interfaz especificada por *riid*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Índice de base cero que indica el elemento de matriz inicial para esta operación. Cuando se complete esta operación, *índice* se incrementa en 1.
 
-*IID*  
+*IID*<br/>
 Una matriz de tipo IID.
 
 ### <a name="remarks"></a>Comentarios

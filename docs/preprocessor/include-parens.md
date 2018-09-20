@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebadd9e453e8a34e92acee363d0dd6b6ff765910
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 83f6bf58138a1e36e1c36131a448b456eb691c27
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540272"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407587"
 ---
 # <a name="include"></a>include()
 **Específicos de C++**  
@@ -49,5 +49,5 @@ Las bibliotecas de tipos pueden incluir definiciones de elementos definidos en e
   
 ## <a name="see-also"></a>Vea también  
  
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

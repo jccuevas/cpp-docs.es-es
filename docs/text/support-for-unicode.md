@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b4f83d4d991b55ec7151db22a9b21424914bd04
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4ed04c30eb71086f57cc9a782c320c06a301485
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590200"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405039"
 ---
 # <a name="support-for-unicode"></a>Compatibilidad con Unicode
 
@@ -67,5 +67,6 @@ Clase `CString` usa `_TCHAR` como base y proporciona constructores y operadores 
 - [Obtenga información sobre asignaciones de texto genérico para portabilidad de ancho de byte](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>Vea también
- [Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)  
- [Compatibilidad con el uso de wmain](../text/support-for-using-wmain.md)  
+
+[Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)<br/>
+[Compatibilidad con el uso de wmain](../text/support-for-using-wmain.md)

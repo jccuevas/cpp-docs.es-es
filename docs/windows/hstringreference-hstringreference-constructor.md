@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6123f87abb9922a9736ac56f64d28e78887a0fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403590"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference (Constructor)
 
@@ -41,16 +41,16 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*sizeDest*  
+*sizeDest*<br/>
 Un parámetro de plantilla que especifica el tamaño del destino **HStringReference** búfer.
 
-*str*  
+*str*<br/>
 Una referencia a una cadena de caracteres anchos.
 
-*Len*  
+*Len*<br/>
 La longitud máxima de la *str* búfer de parámetro para utilizar en esta operación. Si el *len* parámetro no se especifica, toda la *str* se usa el parámetro. Si *len* es mayor que *sizeDest*, *len* está establecido en *sizeDest*-1.
 
-*other*  
+*other*<br/>
 Otro **HStringReference** objeto.
 
 ## <a name="remarks"></a>Comentarios
