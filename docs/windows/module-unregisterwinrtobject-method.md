@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88cafb7796ba0dfd1e37902821872e860ddc4baf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 39bb86206aec72d918df482ee1d01214b4fbb03b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381756"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject (Método)
 
@@ -39,7 +39,7 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Parámetros
 
-*Cookie*  
+*Cookie*<br/>
 Un puntero a un valor que identifica el objeto de clase cuyo registro se va a revocar.
 
 ## <a name="requirements"></a>Requisitos
@@ -49,4 +49,5 @@ Un puntero a un valor que identifica el objeto de clase cuyo registro se va a re
 **Espacio de nombres:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vea también
+
 [Module (clase)](../windows/module-class.md)
