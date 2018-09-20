@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3f4cacd380a86138095b0f8b3bf67f860d45cda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390544"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -38,7 +38,7 @@ En una clase, especifica las interfaces de origen del objeto COM para puntos de 
 
 ### <a name="parameters"></a>Parámetros
 
-*interfaces*  
+*interfaces*<br/>
 Una o más interfaces que especifique cuando se aplica el origen de atributo a una clase. Este parámetro no se utiliza cuando el origen se aplica a una propiedad o método.
 
 ## <a name="remarks"></a>Comentarios
@@ -96,7 +96,7 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

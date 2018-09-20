@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 07b129e2810b7b1310eb8988ca60fbd6e5dcad5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318023"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391935"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributos del consumidor OLE DB
 Los atributos de consumidor OLE DB inyectar código, según la [plantillas de consumidor OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), para crear un trabajo OLE DB consumidor que realiza tareas como abrir tablas, ejecutar comandos y obtener acceso a datos.
@@ -40,4 +40,5 @@ Los atributos de consumidor OLE DB inyectar código, según la [plantillas de co
 |[db_table](../windows/db-table.md)|Se abre una tabla de OLE DB.|
   
 ## <a name="see-also"></a>Vea también
- [Atributos por grupo](../windows/attributes-by-group.md)
+
+[Atributos por grupo](../windows/attributes-by-group.md)

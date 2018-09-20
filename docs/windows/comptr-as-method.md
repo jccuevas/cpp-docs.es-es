@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffb84fd072f4ddd3dc76445c720debef5c364642
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 33f81412ef9580768269663aa23afe06ad4d62f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590440"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374688"
 ---
 # <a name="comptras-method"></a>ComPtr::As (Método)
 
@@ -44,15 +44,15 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parámetros
 
-*U*  
+*U*<br/>
 La interfaz para ser representado por el parámetro *p*.
 
-*p*  
+*p*<br/>
 Un **ComPtr** objeto que representa la interfaz especificada por el parámetro *U*. Parámetro *p* no debe hacer referencia a la actual **ComPtr** objeto.
 
 ## <a name="remarks"></a>Comentarios
 
-La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
+La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización del asistente interno, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
 
 ## <a name="return-value"></a>Valor devuelto
 

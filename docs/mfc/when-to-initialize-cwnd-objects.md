@@ -1,5 +1,5 @@
 ---
-title: Cuándo inicializar objetos CWnd | Documentos de Microsoft
+title: Cuándo se debe inicializar objetos CWnd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee10a4632809a224028bfa482f80ed9e8a9334a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6445190ab3da6ed84dbdd83cd0acab0ba98691f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382878"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388438"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Cuándo inicializar los objetos CWnd
-No se puede crear sus propios secundarios ventanas o llamar a las funciones de API de Windows en el constructor de un `CWnd`-objeto derivado. Esto es porque el `HWND` para el `CWnd` objeto aún no se ha creado. Inicialización de más específico de Windows, como agregar ventanas secundarias, debe realizarse dentro de un [OnCreate](../mfc/reference/cwnd-class.md#oncreate) el controlador de mensajes.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
-  
--   [Crear ventanas de marco de documento](../mfc/creating-document-frame-windows.md)  
-  
--   [Creación de documento/vista](../mfc/document-view-creation.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Uso de ventanas de marco](../mfc/using-frame-windows.md)
+
+No se puede crear sus propios secundarios windows o llamar a las funciones de API de Windows en el constructor de un `CWnd`-objeto derivado. Esto es porque el `HWND` para el `CWnd` objeto aún no se ha creado. Inicialización de Windows más específico, como agregar ventanas secundarias, debe realizarse dentro de un [OnCreate](../mfc/reference/cwnd-class.md#oncreate) controlador de mensajes.
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+
+- [Crear ventanas de marco de documento](../mfc/creating-document-frame-windows.md)
+
+- [Crear documentos y vistas](../mfc/document-view-creation.md)
+
+## <a name="see-also"></a>Vea también
+
+[Uso de ventanas de marco](../mfc/using-frame-windows.md)
 

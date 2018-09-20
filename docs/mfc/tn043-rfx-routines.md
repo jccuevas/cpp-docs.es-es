@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1266097f9d548630459a3fb45ed75edb811deea
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a35fc217b6600fd701dcc1750c327ffc7f241e8e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317347"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376660"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rutinas RFX
 
@@ -170,5 +170,5 @@ Es importante llamar a `IsFieldType` al principio de la función RFX y devolver 
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

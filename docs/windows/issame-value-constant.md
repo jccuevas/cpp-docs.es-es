@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 299ee0f1c2a892a3219c2337e01d629eadec8a82
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f1f67769f7bab517c6a5010788c3627529f14db2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42580999"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373527"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value (Constante)
 
@@ -58,5 +58,5 @@ Indica si un tipo es igual a otro.
 
 ## <a name="see-also"></a>Vea también
 
-[IsSame (estructura)](../windows/issame-structure.md)  
+[IsSame (estructura)](../windows/issame-structure.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

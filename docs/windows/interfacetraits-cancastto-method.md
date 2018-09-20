@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 705b495e3f6d626a742fd1a63989c8cc658446a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610425"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379674"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo (Método)
 
@@ -41,13 +41,13 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*  
+*ptr*<br/>
 El nombre de un puntero a un tipo.
 
-*riid*  
+*riid*<br/>
 El identificador de interfaz de `Base`.
 
-*PPV*  
+*PPV*<br/>
 Si esta operación se realiza correctamente, *ppv* apunta a la interfaz especificada por `Base`. En caso contrario, *ppv* está establecido en **nullptr**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -68,5 +68,5 @@ Para obtener más información acerca de `Base`, consulte el **Typedefs pública
 
 ## <a name="see-also"></a>Vea también
 
-[InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)  
+[InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

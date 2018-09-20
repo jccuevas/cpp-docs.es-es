@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218790"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381834"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: Mensajes ON_NOTIFY y WM_NOTIFY
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 donde los parámetros son:
 
-*wNotifyCode*  
- El código para el mensaje de notificación se administran como LVN_KEYDOWN.
+*wNotifyCode*<br/>
+El código para el mensaje de notificación se administran como LVN_KEYDOWN.
 
-*identificador*  
- El identificador de elemento secundario del control para el que se envía la notificación.
+*identificador*<br/>
+El identificador de elemento secundario del control para el que se envía la notificación.
 
-*memberFxn*  
- La función miembro que se llamará cuando se envía esta notificación.
+*memberFxn*<br/>
+La función miembro que se llamará cuando se envía esta notificación.
 
 La función miembro debe declararse con el prototipo siguiente:
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 donde los parámetros son:
 
-*pNotifyStruct*  
- Un puntero a la estructura de notificación, como se describe en la sección anterior.
+*pNotifyStruct*<br/>
+Un puntero a la estructura de notificación, como se describe en la sección anterior.
 
-*Resultado*  
- Un puntero para el código de resultado establecerá antes de volver.
+*Resultado*<br/>
+Un puntero para el código de resultado establecerá antes de volver.
 
 ## <a name="example"></a>Ejemplo
 
@@ -141,7 +141,7 @@ En el ejemplo anterior, la función proporcionada por ClassWizard es:
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 donde los parámetros son:
 
-*wNotifyCode*  
- El código para el mensaje de notificación se administran como LVN_KEYDOWN.
+*wNotifyCode*<br/>
+El código para el mensaje de notificación se administran como LVN_KEYDOWN.
 
-*identificador*  
- El primer identificador en el intervalo de identificadores contiguo.
+*identificador*<br/>
+El primer identificador en el intervalo de identificadores contiguo.
 
-*idLast*  
- Identificador de la última en el intervalo de identificadores contiguo.
+*idLast*<br/>
+Identificador de la última en el intervalo de identificadores contiguo.
 
-*memberFxn*  
- La función miembro que se llamará cuando se envía esta notificación.
+*memberFxn*<br/>
+La función miembro que se llamará cuando se envía esta notificación.
 
 La función miembro debe declararse con el prototipo siguiente:
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 donde los parámetros son:
 
-*identificador*  
- El identificador de elemento secundario del control que envía la notificación.
+*identificador*<br/>
+El identificador de elemento secundario del control que envía la notificación.
 
-*pNotifyStruct*  
- Un puntero a la estructura de notificación, como se describió anteriormente.
+*pNotifyStruct*<br/>
+Un puntero a la estructura de notificación, como se describió anteriormente.
 
-*Resultado*  
- Un puntero para el código de resultado establecerá antes de volver.
+*Resultado*<br/>
+Un puntero para el código de resultado establecerá antes de volver.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE
 
@@ -221,5 +221,5 @@ La función debe devolver **TRUE** si se ha controlado completamente el mensaje 
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

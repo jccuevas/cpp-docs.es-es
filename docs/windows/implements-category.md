@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b11100ff054b9edd18fc0ba335b26fa4c1076d7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7e329f179a2a9c61fc3be6d351dc8baa97c1d4c6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204289"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377171"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -38,7 +38,7 @@ Especifica las categorías de componente que implementa la clase de destino.
 
 ### <a name="parameters"></a>Parámetros
 
-*implements_category*  
+*implements_category*<br/>
 El identificador de la categoría implementada.
 
 ## <a name="remarks"></a>Comentarios
@@ -79,6 +79,6 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos COM](../windows/com-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
+[Atributos COM](../windows/com-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
 [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)  

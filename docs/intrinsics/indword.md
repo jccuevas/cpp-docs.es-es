@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 554cccba1d45cf172645c46e00fdb20c19ea42d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712535"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389608"
 ---
 # <a name="indword"></a>__indword
-**Específicos de Microsoft**  
-  
- Lee una palabra doble de los datos desde el puerto especificado mediante el `in` instrucción.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-unsigned long __indword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+
+**Específicos de Microsoft**
+
+Lee una palabra doble de los datos desde el puerto especificado mediante el `in` instrucción.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+unsigned long __indword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
 *Puerto*<br/>
-[in] Para leer desde el puerto.  
-  
-## <a name="return-value"></a>Valor devuelto  
- La palabra se lee desde el puerto.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función intrínseca|Arquitectura|  
-|---------------|------------------|  
-|`__indword`|x86, x64|  
-  
- **Archivo de encabezado** \<intrin.h >  
-  
-## <a name="remarks"></a>Comentarios  
- Esta rutina solo está disponible como función intrínseca.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[in] Para leer desde el puerto.
+
+## <a name="return-value"></a>Valor devuelto
+
+La palabra se lee desde el puerto.
+
+## <a name="requirements"></a>Requisitos
+
+|Función intrínseca|Arquitectura|
+|---------------|------------------|
+|`__indword`|x86, x64|
+
+**Archivo de encabezado** \<intrin.h >
+
+## <a name="remarks"></a>Comentarios
+
+Esta rutina solo está disponible como función intrínseca.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
