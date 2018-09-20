@@ -1,5 +1,5 @@
 ---
-title: Clases de soporte de depuración | Documentos de Microsoft
+title: Clases de compatibilidad de depuración | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,22 +22,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942302a07a55adf7d7a1a89ac2b518e3dcaefe2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d513eb8d51f5161e70b168bb541fe899b74f41c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342610"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419079"
 ---
 # <a name="debugging-support-classes"></a>Depurar las clases de depuración
-MFC proporciona las siguientes clases para ayudar a depurar problemas de asignación de memoria dinámica.  
-  
- [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Proporciona un destino para volcados.  
-  
- [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- Estructura que proporciona las instantáneas de uso de memoria. También se usa para comparar las instantáneas de memoria anteriores y posteriores.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+MFC proporciona las siguientes clases para ayudarle a depurar problemas de asignación de memoria dinámica.
+
+[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+Proporciona un destino para los volcados de diagnóstico.
+
+[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+Estructura que proporciona las instantáneas de uso de memoria. También se usa para comparar instantáneas de memoria anteriores y posteriores.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

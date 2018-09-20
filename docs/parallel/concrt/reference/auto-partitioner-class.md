@@ -1,5 +1,5 @@
 ---
-title: auto_partitioner (clase) | Documentos de Microsoft
+title: auto_partitioner (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05232aa954a9ded7d2ab3a26ae4e1524610c3d04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2bb62d76733e77c2528a80dfc4e9ef358878895
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705450"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425416"
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner (Clase)
-La clase `auto_partitioner` representa a los métodos predeterminados `parallel_for`, `parallel_for_each` y usa `parallel_transform` para dividir el intervalo sobre el que iteran. Este método de particiones emplea la apropiación del intervalo para el equilibrio de carga, así como la cancelación por iterar.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+La clase `auto_partitioner` representa a los métodos predeterminados `parallel_for`, `parallel_for_each` y usa `parallel_transform` para dividir el intervalo sobre el que iteran. Este método de particiones emplea la apropiación del intervalo para el equilibrio de carga, así como la cancelación por iterar.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class auto_partitioner;
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[auto_partitioner](#ctor)|Construye un objeto `auto_partitioner`.|  
-|[~ auto_partitioner (destructor)](#dtor)|Destruye un objeto `auto_partitioner`.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `auto_partitioner`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** ppl.h  
-  
- **Espacio de nombres:** simultaneidad  
-  
-##  <a name="dtor"></a> ~ auto_partitioner) 
+```
 
- Destruye un objeto `auto_partitioner`.  
-  
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[auto_partitioner](#ctor)|Construye un objeto `auto_partitioner`.|
+|[~ auto_partitioner (destructor)](#dtor)|Destruye un objeto `auto_partitioner`.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`auto_partitioner`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** ppl.h
+
+**Espacio de nombres:** simultaneidad
+
+##  <a name="dtor"></a> ~ auto_partitioner)
+
+Destruye un objeto `auto_partitioner`.
+
 ```
 ~auto_partitioner();
-```  
-  
-##  <a name="ctor"></a> auto_partitioner) 
+```
 
- Construye un objeto `auto_partitioner`.  
-  
+##  <a name="ctor"></a> auto_partitioner)
+
+Construye un objeto `auto_partitioner`.
+
 ```
 auto_partitioner();
-```  
-  
-## <a name="see-also"></a>Vea también  
- [concurrency (espacio de nombres)](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Vea también
+
+[concurrency (espacio de nombres)](concurrency-namespace.md)

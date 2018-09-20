@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7c4bacec9da22e8c8ba9fd6330637a1fb25893
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4b32557507cbe74fc1fde3963a1375318c7ef1e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714745"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448282"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Suprimir _ftol)
 
-Desusado. Suprime la llamada de la función auxiliar `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero.
+Desusado. Suprime la llamada de la función del asistente `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -75,6 +75,6 @@ El **/QIfist** opción está en desuso a partir de Visual Studio 2005. Se han re
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315553"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407769"
 ---
 # <a name="stand-alone-attributes"></a>Atributos independientes
 Un atributo independiente no funciona en una palabra clave de C++, pero es más parecido a una línea de código. Las instrucciones de atributo independiente requieren un punto y coma al final de la línea.
@@ -45,4 +45,5 @@ Un atributo independiente no funciona en una palabra clave de C++, pero es más 
 |[pragma](../windows/pragma.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo .idl generado.|
   
 ## <a name="see-also"></a>Vea también
- [Atributos por uso](../windows/attributes-by-usage.md)
+
+[Atributos por uso](../windows/attributes-by-usage.md)

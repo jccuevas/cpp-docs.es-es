@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0132cdfb291c7c8691a6b31f00de125cb08b702d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3bd3d0e44591ba56291a39187d373df980734a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764651"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417727"
 ---
 # <a name="atlmfc-concepts"></a>Conceptos de ATL/MFC
 
@@ -28,7 +28,7 @@ Esta sección proporciona temas conceptuales y basados en tareas para ayudarle a
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Describe cómo administrar datos de cadena en las aplicaciones.
 
 ## <a name="see-also"></a>Vea también

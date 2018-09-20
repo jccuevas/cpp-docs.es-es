@@ -107,2674 +107,2783 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0dcbab8f6ced483c54b7eb3efed68efacd60c858
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: a2bff83bd59cf4a0346c4d1b2bb6f5e39a1f47e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376227"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419677"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
-La clase de plantilla describe un objeto que controla una secuencia de elementos de longitud variable que tiene acceso bidireccional. Usar el contenedor `multimap` para administrar una secuencia de elementos como un árbol equilibrado (casi) ordenada de nodos, cada uno almacenar un elemento. Un elemento consta de una clave, para ordenar la secuencia y un valor asignado que va a lo largo de la carrera.  
-  
- En la descripción siguiente, `GValue` es igual que:  
-  
- `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
-  
- donde:  
-  
- `GKey` es el mismo que *clave* a menos que este último es un tipo de referencia, en cuyo caso es `Key^`  
-  
- `GMapped` es el mismo que *asignado* a menos que este último es un tipo de referencia, en cuyo caso es `Mapped^`  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename Key,  
-    typename Mapped>  
-    ref class multimap  
-        :   public  
-        System::ICloneable,  
-        System::Collections::IEnumerable,  
-        System::Collections::ICollection,  
-        System::Collections::Generic::IEnumerable<GValue>,  
-        System::Collections::Generic::ICollection<GValue>,  
-        System::Collections::Generic::IList<GValue>,  
-        Microsoft::VisualC::StlClr::ITree<Gkey, GValue>  
-    { ..... };  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *Key*  
- El tipo del componente clave de un elemento de la secuencia controlada.  
-  
- *Asignado*  
- El tipo del componente adicional de un elemento de la secuencia controlada.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<cliext/map >  
-  
- **Namespace:** cliext  
 
-## <a name="declarations"></a>Declaraciones  
-  
-|Definición de tipo|Descripción|  
-|---------------------|-----------------|  
-|[multimap::const_iterator (STL/CLR)](#const_iterator)|El tipo de un iterador constante para la secuencia controlada.|  
-|[multimap::const_reference (STL/CLR)](#const_reference)|El tipo de una referencia constante a un elemento.|  
-|[multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|El tipo de un iterador invertido constante para la secuencia controlada.|  
-|[multimap::difference_type (STL/CLR)](#difference_type)|El tipo de una distancia entre dos elementos (posiblemente con signo).|  
-|[multimap::generic_container (STL/CLR)](#generic_container)|El tipo de la interfaz genérica para el contenedor.|  
-|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|El tipo de iterador para la interfaz genérica para el contenedor.|  
-|[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|El tipo de un iterador inverso de la interfaz genérica para el contenedor.|  
-|[multimap::generic_value (STL/CLR)](#generic_value)|El tipo de un elemento de la interfaz genérica para el contenedor.|  
-|[multimap::iterator (STL/CLR)](#iterator)|El tipo de un iterador para la secuencia controlada.|  
-|[multimap::key_compare (STL/CLR)](#key_compare)|Delegado de ordenación para dos claves.|  
-|[multimap::key_type (STL/CLR)](#key_type)|El tipo de una clave de ordenación.|  
-|[multimap::mapped_type (STL/CLR)](#mapped_type)|El tipo del valor asignado asociado a cada clave.|  
-|[multimap::reference (STL/CLR)](#reference)|El tipo de una referencia a un elemento.|  
-|[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|El tipo de un iterador invertido para la secuencia controlada.|  
-|[multimap::size_type (STL/CLR)](#size_type)|El tipo de una distancia (no negativo) entre dos elementos.|  
-|[multimap::value_compare (STL/CLR)](#value_compare)|Delegado de ordenación para dos valores de elemento.|  
-|[multimap::value_type (STL/CLR)](#value_type)|El tipo de un elemento.|  
-  
-|Función miembro|Descripción|  
-|---------------------|-----------------|  
-|[multimap::begin (STL/CLR)](#begin)|Designa el principio de la secuencia controlada.|  
-|[multimap::clear (STL/CLR)](#clear)|Quita todos los elementos.|  
-|[multimap::count (STL/CLR)](#count)|Recuentos de elementos que coinciden con una clave especificada.|  
-|[multimap::empty (STL/CLR)](#empty)|Comprueba si no hay ningún elemento presente.|  
-|[multimap::end (STL/CLR)](#end)|Designa el final de la secuencia controlada.|  
-|[multimap::equal_range (STL/CLR)](#equal_range)|Busca el intervalo que coincide con una clave especificada.|  
-|[multimap::erase (STL/CLR)](#erase)|Quita los elementos de las posiciones especificadas.|  
-|[multimap::find (STL/CLR)](#find)|Busca un elemento que coincide con una clave especificada.|  
-|[multimap::insert (STL/CLR)](#insert)|Agrega elementos.|  
-|[multimap::key_comp (STL/CLR)](#key_comp)|Copia al delegado de ordenación de dos claves.|  
-|[multimap::lower_bound (STL/CLR)](#lower_bound)|Busca el principio del intervalo que coincide con una clave especificada.|  
-|[multimap::make_value (STL/CLR)](#make_value)|Construye un objeto de valor.|  
-|[multimap::multimap (STL/CLR)](#multimap)|Construye un objeto contenedor.|  
-|[multimap::rbegin (STL/CLR)](#rbegin)|Designa el principio de la secuencia controlada inversa.|  
-|[multimap::rend (STL/CLR)](#rend)|Designa el final de la secuencia controlada inversa.|  
-|[multimap::size (STL/CLR)](#size)|Cuenta el número de elementos.|  
-|[multimap::swap (STL/CLR)](#swap)|Intercambia el contenido de dos contenedores.|  
-|[multimap::to_array (STL/CLR)](#to_array)|Copia la secuencia controlada a una nueva matriz.|  
-|[multimap::upper_bound (STL/CLR)](#upper_bound)|Busca el final del intervalo que coincide con una clave especificada.|  
-|[multimap::value_comp (STL/CLR)](#value_comp)|Copia al delegado de ordenación de dos valores de elemento.|  
-  
-|Operador|Descripción|  
-|--------------|-----------------|  
-|[multimap::operator= (STL/CLR)](#op_as)|Reemplaza la secuencia controlada.|  
-|[operator!= (multimap) (STL/CLR)](#op_neq)|Determina si un `multimap` no es igual a otro objeto `multimap` objeto.|  
-|[operator< (multimap) (STL/CLR)](#op_lt)|Determina si un `multimap` objeto es menor que otro `multimap` objeto.|  
-|[operator<= (multimap) (STL/CLR)](#op_lteq)|Determina si un `multimap` objeto es menor o igual que otro `multimap` objeto.|  
-|[operator== (multimap) (STL/CLR)](#op_eq)|Determina si un `multimap` es igual a otro objeto `multimap` objeto.|  
-|[operator> (multimap) (STL/CLR)](#op_gt)|Determina si un `multimap` es mayor que otro objeto `multimap` objeto.|  
-|[operator>= (multimap) (STL/CLR)](#op_gteq)|Determina si un `multimap` objeto es mayor o igual que otro `multimap` objeto.|  
-  
-## <a name="interfaces"></a>Interfaces  
-  
-|Interfaz|Descripción|  
-|---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicar un objeto.|  
-|<xref:System.Collections.IEnumerable>|Secuencia a través de los elementos.|  
-|<xref:System.Collections.ICollection>|Mantener el grupo de elementos.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Secuencia a través de los elementos con tipo.|  
-|<xref:System.Collections.Generic.ICollection%601>|Mantener el grupo de elementos con tipo.|  
-|ITree\<clave, valor >|Mantener contenedor genérico.|  
-  
-## <a name="remarks"></a>Comentarios  
- El objeto asigna y libera almacenamiento para la secuencia que controla como nodos individuales. Inserta elementos en un árbol equilibrado (casi) que mantiene ordenada por la modificación de los vínculos entre los nodos nunca copiando el contenido de un nodo a otro. Esto significa que puede insertar y quitar elementos libremente sin perturbar elementos restantes.  
-  
- El objeto ordena la secuencia que controla llamando a un objeto delegado almacenado de tipo [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Puede especificar el objeto de delegado almacenado al construir el mapa múltiple; Si se especifica ningún objeto de delegado, el valor predeterminado es la comparación `operator<(key_type, key_type)`. Acceder a este objeto almacenado llamando a la función miembro [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
-  
- Este tipo de objeto de delegado debe imponer una ordenación débil estricta en claves de tipo [multimap:: KEY_TYPE (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). Esto significa que, en las dos claves `X` y `Y`:  
-  
- `key_comp()(X, Y)` Devuelve el valor booleano mismo resultado en cada llamada.  
-  
- Si `key_comp()(X, Y)` es true, a continuación, `key_comp()(Y, X)` debe ser false.  
-  
- Si `key_comp()(X, Y)` es true, a continuación, `X` se dice que se ordenan antes que `Y`.  
-  
- Si `!key_comp()(X, Y) && !key_comp()(Y, X)` es true, a continuación, `X` y `Y` se dice que tienen una ordenación equivalente.  
-  
- Para cualquier elemento `X` que precede a `Y` en la secuencia controlada, `key_comp()(Y, X)` es false. (Para el objeto de delegado de forma predeterminada, las claves nunca disminuyen en valor.) A diferencia de la clase de plantilla [mapa (STL/CLR)](../dotnet/map-stl-clr.md), un objeto de clase de plantilla `multimap` no requiere que las claves para todos los elementos sean únicas. (Dos o más teclas pueden tener una ordenación equivalente).  
-  
- Cada elemento contiene una clave independiente y un valor asignado. La secuencia se representa de forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con un número de operaciones proporcionales al logaritmo del número de elementos en la secuencia (tiempo logarítmico). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.  
-  
- Un mapa múltiple es compatible con los iteradores bidireccionales, lo que significa que puede ejecutar paso a paso para los elementos adyacentes que proporciona un iterador que designa un elemento de la secuencia controlada. Un nodo principal especial que se corresponde con el iterador devuelto por [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. Puede reducir este iterador para alcanzar el último elemento de la secuencia controlada, si está presente. Puede incrementar un iterador de mapa múltiple para alcanzar el nodo principal y, a continuación, comparará igual a `end()`. Pero no se puede desreferenciar el iterador devuelto por `end()`.  
-  
- Tenga en cuenta que no puede hacer referencia a un elemento de mapa múltiple directamente dado su posición numérica--que requiera un iterador de acceso aleatorio.  
-  
- Un iterador multimap almacena un identificador a su nodo asociado multimap, que a su vez almacena un identificador de su contenedor asociado. Puede usar iteradores sólo con sus objetos de contenedor asociado. Un iterador multimap sigue siendo válido siempre y cuando su nodo multimap asociado está asociado con algunos multimap. Además, un iterador válido es dereferenceable, puede usar para tener acceso o modificar el valor del elemento designa--siempre y cuando no es igual a `end()`.  
-  
- Borrar o quitar un elemento llama al destructor para su valor almacenado. Destruir el contenedor, borra todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase ref garantiza que ningún elemento durar más que el contenedor. Sin embargo, tenga en cuenta que un contenedor de controladores no *no* destruir sus elementos.  
-  
+La clase de plantilla describe un objeto que controla una secuencia de elementos de longitud variable que tiene acceso bidireccional. Usar el contenedor `multimap` para administrar una secuencia de elementos como un árbol equilibrado (casi) ordenada de nodos, cada uno almacenar un elemento. Un elemento consta de una clave, para ordenar la secuencia y un valor asignado que va a lo largo de la carrera.
+
+En la descripción siguiente, `GValue` es igual que:
+
+`Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
+
+donde:
+
+`GKey` es el mismo que *clave* a menos que este último es un tipo de referencia, en cuyo caso es `Key^`
+
+`GMapped` es el mismo que *asignado* a menos que este último es un tipo de referencia, en cuyo caso es `Mapped^`
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Key,
+    typename Mapped>
+    ref class multimap
+        :   public
+        System::ICloneable,
+        System::Collections::IEnumerable,
+        System::Collections::ICollection,
+        System::Collections::Generic::IEnumerable<GValue>,
+        System::Collections::Generic::ICollection<GValue>,
+        System::Collections::Generic::IList<GValue>,
+        Microsoft::VisualC::StlClr::ITree<Gkey, GValue>
+    { ..... };
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Key*<br/>
+El tipo del componente clave de un elemento de la secuencia controlada.
+
+*asignado*<br/>
+El tipo del componente adicional de un elemento de la secuencia controlada.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** \<cliext/map >
+
+**Namespace:** cliext
+
+## <a name="declarations"></a>Declaraciones
+
+|Definición de tipo|Descripción|
+|---------------------|-----------------|
+|[multimap::const_iterator (STL/CLR)](#const_iterator)|El tipo de un iterador constante para la secuencia controlada.|
+|[multimap::const_reference (STL/CLR)](#const_reference)|El tipo de una referencia constante a un elemento.|
+|[multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|El tipo de un iterador invertido constante para la secuencia controlada.|
+|[multimap::difference_type (STL/CLR)](#difference_type)|El tipo de una distancia entre dos elementos (posiblemente con signo).|
+|[multimap::generic_container (STL/CLR)](#generic_container)|El tipo de la interfaz genérica para el contenedor.|
+|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|El tipo de iterador para la interfaz genérica para el contenedor.|
+|[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|El tipo de un iterador inverso de la interfaz genérica para el contenedor.|
+|[multimap::generic_value (STL/CLR)](#generic_value)|El tipo de un elemento de la interfaz genérica para el contenedor.|
+|[multimap::iterator (STL/CLR)](#iterator)|El tipo de un iterador para la secuencia controlada.|
+|[multimap::key_compare (STL/CLR)](#key_compare)|Delegado de ordenación para dos claves.|
+|[multimap::key_type (STL/CLR)](#key_type)|El tipo de una clave de ordenación.|
+|[multimap::mapped_type (STL/CLR)](#mapped_type)|El tipo del valor asignado asociado a cada clave.|
+|[multimap::reference (STL/CLR)](#reference)|El tipo de una referencia a un elemento.|
+|[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|El tipo de un iterador invertido para la secuencia controlada.|
+|[multimap::size_type (STL/CLR)](#size_type)|El tipo de una distancia (no negativo) entre dos elementos.|
+|[multimap::value_compare (STL/CLR)](#value_compare)|Delegado de ordenación para dos valores de elemento.|
+|[multimap::value_type (STL/CLR)](#value_type)|El tipo de un elemento.|
+
+|Función miembro|Descripción|
+|---------------------|-----------------|
+|[multimap::begin (STL/CLR)](#begin)|Designa el principio de la secuencia controlada.|
+|[multimap::clear (STL/CLR)](#clear)|Quita todos los elementos.|
+|[multimap::count (STL/CLR)](#count)|Recuentos de elementos que coinciden con una clave especificada.|
+|[multimap::empty (STL/CLR)](#empty)|Comprueba si no hay ningún elemento presente.|
+|[multimap::end (STL/CLR)](#end)|Designa el final de la secuencia controlada.|
+|[multimap::equal_range (STL/CLR)](#equal_range)|Busca el intervalo que coincide con una clave especificada.|
+|[multimap::erase (STL/CLR)](#erase)|Quita los elementos de las posiciones especificadas.|
+|[multimap::find (STL/CLR)](#find)|Busca un elemento que coincide con una clave especificada.|
+|[multimap::insert (STL/CLR)](#insert)|Agrega elementos.|
+|[multimap::key_comp (STL/CLR)](#key_comp)|Copia al delegado de ordenación de dos claves.|
+|[multimap::lower_bound (STL/CLR)](#lower_bound)|Busca el principio del intervalo que coincide con una clave especificada.|
+|[multimap::make_value (STL/CLR)](#make_value)|Construye un objeto de valor.|
+|[multimap::multimap (STL/CLR)](#multimap)|Construye un objeto contenedor.|
+|[multimap::rbegin (STL/CLR)](#rbegin)|Designa el principio de la secuencia controlada inversa.|
+|[multimap::rend (STL/CLR)](#rend)|Designa el final de la secuencia controlada inversa.|
+|[multimap::size (STL/CLR)](#size)|Cuenta el número de elementos.|
+|[multimap::swap (STL/CLR)](#swap)|Intercambia el contenido de dos contenedores.|
+|[multimap::to_array (STL/CLR)](#to_array)|Copia la secuencia controlada a una nueva matriz.|
+|[multimap::upper_bound (STL/CLR)](#upper_bound)|Busca el final del intervalo que coincide con una clave especificada.|
+|[multimap::value_comp (STL/CLR)](#value_comp)|Copia al delegado de ordenación de dos valores de elemento.|
+
+|Operador|Descripción|
+|--------------|-----------------|
+|[multimap::operator= (STL/CLR)](#op_as)|Reemplaza la secuencia controlada.|
+|[operator!= (multimap) (STL/CLR)](#op_neq)|Determina si un `multimap` no es igual a otro objeto `multimap` objeto.|
+|[operator< (multimap) (STL/CLR)](#op_lt)|Determina si un `multimap` objeto es menor que otro `multimap` objeto.|
+|[operator<= (multimap) (STL/CLR)](#op_lteq)|Determina si un `multimap` objeto es menor o igual que otro `multimap` objeto.|
+|[operator== (multimap) (STL/CLR)](#op_eq)|Determina si un `multimap` es igual a otro objeto `multimap` objeto.|
+|[operator> (multimap) (STL/CLR)](#op_gt)|Determina si un `multimap` es mayor que otro objeto `multimap` objeto.|
+|[operator>= (multimap) (STL/CLR)](#op_gteq)|Determina si un `multimap` objeto es mayor o igual que otro `multimap` objeto.|
+
+## <a name="interfaces"></a>Interfaces
+
+|Interfaz|Descripción|
+|---------------|-----------------|
+|<xref:System.ICloneable>|Duplicar un objeto.|
+|<xref:System.Collections.IEnumerable>|Secuencia a través de los elementos.|
+|<xref:System.Collections.ICollection>|Mantener el grupo de elementos.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Secuencia a través de los elementos con tipo.|
+|<xref:System.Collections.Generic.ICollection%601>|Mantener el grupo de elementos con tipo.|
+|ITree\<clave, valor >|Mantener contenedor genérico.|
+
+## <a name="remarks"></a>Comentarios
+
+El objeto asigna y libera almacenamiento para la secuencia que controla como nodos individuales. Inserta elementos en un árbol equilibrado (casi) que mantiene ordenada por la modificación de los vínculos entre los nodos nunca copiando el contenido de un nodo a otro. Esto significa que puede insertar y quitar elementos libremente sin perturbar elementos restantes.
+
+El objeto ordena la secuencia que controla llamando a un objeto delegado almacenado de tipo [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Puede especificar el objeto de delegado almacenado al construir el mapa múltiple; Si se especifica ningún objeto de delegado, el valor predeterminado es la comparación `operator<(key_type, key_type)`. Acceder a este objeto almacenado llamando a la función miembro [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.
+
+Este tipo de objeto de delegado debe imponer una ordenación débil estricta en claves de tipo [multimap:: KEY_TYPE (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). Esto significa que, en las dos claves `X` y `Y`:
+
+`key_comp()(X, Y)` Devuelve el valor booleano mismo resultado en cada llamada.
+
+Si `key_comp()(X, Y)` es true, a continuación, `key_comp()(Y, X)` debe ser false.
+
+Si `key_comp()(X, Y)` es true, a continuación, `X` se dice que se ordenan antes que `Y`.
+
+Si `!key_comp()(X, Y) && !key_comp()(Y, X)` es true, a continuación, `X` y `Y` se dice que tienen una ordenación equivalente.
+
+Para cualquier elemento `X` que precede a `Y` en la secuencia controlada, `key_comp()(Y, X)` es false. (Para el objeto de delegado de forma predeterminada, las claves nunca disminuyen en valor.) A diferencia de la clase de plantilla [mapa (STL/CLR)](../dotnet/map-stl-clr.md), un objeto de clase de plantilla `multimap` no requiere que las claves para todos los elementos sean únicas. (Dos o más teclas pueden tener una ordenación equivalente).
+
+Cada elemento contiene una clave independiente y un valor asignado. La secuencia se representa de forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con un número de operaciones proporcionales al logaritmo del número de elementos en la secuencia (tiempo logarítmico). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.
+
+Un mapa múltiple es compatible con los iteradores bidireccionales, lo que significa que puede ejecutar paso a paso para los elementos adyacentes que proporciona un iterador que designa un elemento de la secuencia controlada. Un nodo principal especial que se corresponde con el iterador devuelto por [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. Puede reducir este iterador para alcanzar el último elemento de la secuencia controlada, si está presente. Puede incrementar un iterador de mapa múltiple para alcanzar el nodo principal y, a continuación, comparará igual a `end()`. Pero no se puede desreferenciar el iterador devuelto por `end()`.
+
+Tenga en cuenta que no puede hacer referencia a un elemento de mapa múltiple directamente dado su posición numérica--que requiera un iterador de acceso aleatorio.
+
+Un iterador multimap almacena un identificador a su nodo asociado multimap, que a su vez almacena un identificador de su contenedor asociado. Puede usar iteradores sólo con sus objetos de contenedor asociado. Un iterador multimap sigue siendo válido siempre y cuando su nodo multimap asociado está asociado con algunos multimap. Además, un iterador válido es dereferenceable, puede usar para tener acceso o modificar el valor del elemento designa--siempre y cuando no es igual a `end()`.
+
+Borrar o quitar un elemento llama al destructor para su valor almacenado. Destruir el contenedor, borra todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase ref garantiza que ningún elemento durar más que el contenedor. Sin embargo, tenga en cuenta que un contenedor de controladores no *no* destruir sus elementos.
+
 ## <a name="members"></a>Miembros
 
 ## <a name="begin"></a> multimap:: begin (STL/CLR)
-Designa el principio de la secuencia controlada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-iterator begin();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve un iterador bidireccional que designa el primer elemento de la secuencia controlada o justo después del final de una secuencia vacía. Se usa para obtener un iterador que designa el `current` principio de la secuencia controlada, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_begin.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// inspect first two items   
-    Mymultimap::iterator it = c1.begin();   
-    System::Console::WriteLine("*begin() = [{0} {1}]",   
-        it->first, it->second);   
-    ++it;   
-    System::Console::WriteLine("*++begin() = [{0} {1}]",   
-        it->first, it->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-*begin() = [a 1]  
-*++begin() = [b 2]  
-```  
+
+Designa el principio de la secuencia controlada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+iterator begin();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve un iterador bidireccional que designa el primer elemento de la secuencia controlada o justo después del final de una secuencia vacía. Se usa para obtener un iterador que designa el `current` principio de la secuencia controlada, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_begin.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // inspect first two items
+    Mymultimap::iterator it = c1.begin();
+    System::Console::WriteLine("*begin() = [{0} {1}]",
+        it->first, it->second);
+    ++it;
+    System::Console::WriteLine("*++begin() = [{0} {1}]",
+        it->first, it->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+*begin() = [a 1]
+*++begin() = [b 2]
+```
 
 ## <a name="clear"></a> multimap:: Clear (STL/CLR)
-Quita todos los elementos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-void clear();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro llama eficazmente a [multimap:: Erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())`. Usarlo para asegurarse de que está vacía la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_clear.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// clear the container and reinspect   
-    c1.clear();   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-  
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-  
-// display contents " [a 1] [b 2]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    c1.clear();   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-size() = 0  
- [a 1] [b 2]  
-size() = 0  
-```  
+
+Quita todos los elementos.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+void clear();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro llama eficazmente a [multimap:: Erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())`. Usarlo para asegurarse de que está vacía la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_clear.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // clear the container and reinspect
+    c1.clear();
+    System::Console::WriteLine("size() = {0}", c1.size());
+
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+
+    // display contents " [a 1] [b 2]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    c1.clear();
+    System::Console::WriteLine("size() = {0}", c1.size());
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+size() = 0
+[a 1] [b 2]
+size() = 0
+```
 
 ## <a name="const_iterator"></a> multimap:: const_iterator (STL/CLR)
-El tipo de un iterador constante para la secuencia controlada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef T2 const_iterator;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un objeto de tipo sin especificar `T2` que puede actuar como un iterador constante bidireccional para la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_const_iterator.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    Mymultimap::const_iterator cit = c1.begin();   
-    for (; cit != c1.end(); ++cit)   
-        System::Console::Write(" [{0} {1}]", cit->first, cit->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-```  
+
+El tipo de un iterador constante para la secuencia controlada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef T2 const_iterator;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un objeto de tipo sin especificar `T2` que puede actuar como un iterador constante bidireccional para la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_const_iterator.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    Mymultimap::const_iterator cit = c1.begin();
+    for (; cit != c1.end(); ++cit)
+        System::Console::Write("[{0} {1}] ", cit->first, cit->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="const_reference"></a> multimap:: const_reference (STL/CLR)
-El tipo de una referencia constante a un elemento.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef value_type% const_reference;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe una referencia constante a un elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_const_reference.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    Mymultimap::const_iterator cit = c1.begin();   
-    for (; cit != c1.end(); ++cit)   
-        {   // get a const reference to an element   
-        Mymultimap::const_reference cref = *cit;   
-        System::Console::Write(" [{0} {1}]", cref->first, cref->second);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-```  
+
+El tipo de una referencia constante a un elemento.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef value_type% const_reference;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe una referencia constante a un elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_const_reference.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    Mymultimap::const_iterator cit = c1.begin();
+    for (; cit != c1.end(); ++cit)
+        {   // get a const reference to an element
+        Mymultimap::const_reference cref = *cit;
+        System::Console::Write("[{0} {1}] ", cref->first, cref->second);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator (STL/CLR)
-El tipo de un iterador invertido constante para la secuencia controlada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef T4 const_reverse_iterator;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un objeto de tipo sin especificar `T4` que puede actuar como un iterador inverso constante de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_const_reverse_iterator.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]" reversed   
-    Mymultimap::const_reverse_iterator crit = c1.rbegin();   
-    for (; crit != c1.rend(); ++crit)   
-        System::Console::Write(" [{0} {1}]", crit->first, crit->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[c 3] [b 2] [a 1]  
-```  
+
+El tipo de un iterador invertido constante para la secuencia controlada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef T4 const_reverse_iterator;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un objeto de tipo sin especificar `T4` que puede actuar como un iterador inverso constante de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_const_reverse_iterator.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]" reversed
+    Mymultimap::const_reverse_iterator crit = c1.rbegin();
+    for (; crit != c1.rend(); ++crit)
+        System::Console::Write("[{0} {1}] ", crit->first, crit->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[c 3] [b 2] [a 1]
+```
 
 ## <a name="count"></a> multimap:: Count (STL/CLR)
-Busca el número de elementos que coinciden con una clave especificada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-size_type count(key_type key);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *key*  
- Valor de clave que se va a buscar.  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve el número de elementos de la secuencia controlada que tienen una ordenación equivalente con *clave*. Se usa para determinar el número de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_count.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("count(L'A') = {0}", c1.count(L'A'));   
-    System::Console::WriteLine("count(L'b') = {0}", c1.count(L'b'));   
-    System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-count(L'A') = 0  
-count(L'b') = 1  
-count(L'C') = 0  
-```  
+
+Busca el número de elementos que coinciden con una clave especificada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+size_type count(key_type key);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*key*<br/>
+Valor de clave que se va a buscar.
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve el número de elementos de la secuencia controlada que tienen una ordenación equivalente con *clave*. Se usa para determinar el número de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_count.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("count(L'A') = {0}", c1.count(L'A'));
+    System::Console::WriteLine("count(L'b') = {0}", c1.count(L'b'));
+    System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+count(L'A') = 0
+count(L'b') = 1
+count(L'C') = 0
+```
 
 ## <a name="difference_type"></a> multimap:: difference_type (STL/CLR)
-Los tipos de una distancia con signo entre dos elementos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef int difference_type;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un recuento de elemento posiblemente negativo.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_difference_type.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// compute positive difference   
-    Mymultimap::difference_type diff = 0;   
-    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)   
-        ++diff;   
-    System::Console::WriteLine("end()-begin() = {0}", diff);   
-  
-// compute negative difference   
-    diff = 0;   
-    for (Mymultimap::iterator it = c1.end(); it != c1.begin(); --it)   
-        --diff;   
-    System::Console::WriteLine("begin()-end() = {0}", diff);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-end()-begin() = 3  
-begin()-end() = -3  
-```  
+
+Los tipos de una distancia con signo entre dos elementos.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef int difference_type;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un recuento de elemento posiblemente negativo.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_difference_type.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // compute positive difference
+    Mymultimap::difference_type diff = 0;
+    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)
+        ++diff;
+    System::Console::WriteLine("end()-begin() = {0}", diff);
+
+    // compute negative difference
+    diff = 0;
+    for (Mymultimap::iterator it = c1.end(); it != c1.begin(); --it)
+        --diff;
+    System::Console::WriteLine("begin()-end() = {0}", diff);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+end()-begin() = 3
+begin()-end() = -3
+```
 
 ## <a name="empty"></a> multimap:: Empty (STL/CLR)
-Comprueba si no hay ningún elemento presente.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-bool empty();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve true para una secuencia controlada vacía. Equivale a [multimap:: Size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`. Usa para comprobar si el mapa múltiple está vacío.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_empty.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-    System::Console::WriteLine("empty() = {0}", c1.empty());   
-  
-// clear the container and reinspect   
-    c1.clear();   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-    System::Console::WriteLine("empty() = {0}", c1.empty());   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-size() = 3  
-empty() = False  
-size() = 0  
-empty() = True  
-```  
+
+Comprueba si no hay ningún elemento presente.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+bool empty();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve true para una secuencia controlada vacía. Equivale a [multimap:: Size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`. Usa para comprobar si el mapa múltiple está vacío.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_empty.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    System::Console::WriteLine("size() = {0}", c1.size());
+    System::Console::WriteLine("empty() = {0}", c1.empty());
+
+    // clear the container and reinspect
+    c1.clear();
+    System::Console::WriteLine("size() = {0}", c1.size());
+    System::Console::WriteLine("empty() = {0}", c1.empty());
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+size() = 3
+empty() = False
+size() = 0
+empty() = True
+```
 
 ## <a name="end"></a> multimap:: end (STL/CLR)
-Designa el final de la secuencia controlada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-iterator end();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve un iterador bidireccional que apunta justo después del final de la secuencia controlada. Se usa para obtener un iterador que designa el final de la secuencia controlada; su estado se no cambiar si cambia la longitud de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_end.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// inspect last two items   
-    Mymultimap::iterator it = c1.end();   
-    --it;   
-    --it;   
-    System::Console::WriteLine("*-- --end() = [{0} {1}]",   
-        it->first, it->second);   
-    ++it;   
-    System::Console::WriteLine("*--end() = [{0} {1}]",   
-        it->first, it->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-*-- --end() = [b 2]  
-*--end() = [c 3]  
-```  
+
+Designa el final de la secuencia controlada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+iterator end();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve un iterador bidireccional que apunta justo después del final de la secuencia controlada. Se usa para obtener un iterador que designa el final de la secuencia controlada; su estado se no cambiar si cambia la longitud de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_end.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // inspect last two items
+    Mymultimap::iterator it = c1.end();
+    --it;
+    --it;
+    System::Console::WriteLine("*-- --end() = [{0} {1}]",
+        it->first, it->second);
+    ++it;
+    System::Console::WriteLine("*--end() = [{0} {1}]",
+        it->first, it->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+*-- --end() = [b 2]
+*--end() = [c 3]
+```
 
 ## <a name="equal_range"></a> multimap:: equal_range (STL/CLR)
-Busca el intervalo que coincide con una clave especificada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-pair_iter_iter equal_range(key_type _Keyval);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *_Keyval*  
- Valor de clave que se va a buscar.  
-  
-### <a name="remarks"></a>Comentarios  
- El método devuelve un par de iteradores `-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`. Se usa para determinar el intervalo de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_equal_range.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-typedef Mymultimap::pair_iter_iter Pairii;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// display results of failed search   
-    Pairii pair1 = c1.equal_range(L'x');   
-    System::Console::WriteLine("equal_range(L'x') empty = {0}",   
-        pair1.first == pair1.second);   
-  
-// display results of successful search   
-    pair1 = c1.equal_range(L'b');   
-    for (; pair1.first != pair1.second; ++pair1.first)   
-        System::Console::Write(" [{0} {1}]",   
-            pair1.first->first, pair1.first->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-equal_range(L'x') empty = True  
- [b 2]  
-```  
+
+Busca el intervalo que coincide con una clave especificada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+pair_iter_iter equal_range(key_type _Keyval);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*_Keyval*<br/>
+Valor de clave que se va a buscar.
+
+### <a name="remarks"></a>Comentarios
+
+El método devuelve un par de iteradores `-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`. Se usa para determinar el intervalo de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_equal_range.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+typedef Mymultimap::pair_iter_iter Pairii;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // display results of failed search
+    Pairii pair1 = c1.equal_range(L'x');
+    System::Console::WriteLine("equal_range(L'x') empty = {0}",
+        pair1.first == pair1.second);
+
+    // display results of successful search
+    pair1 = c1.equal_range(L'b');
+    for (; pair1.first != pair1.second; ++pair1.first)
+        System::Console::Write("[{0} {1}] ",
+            pair1.first->first, pair1.first->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+equal_range(L'x') empty = True
+[b 2]
+```
 
 ## <a name="erase"></a> multimap:: Erase (STL/CLR)
-Quita los elementos de las posiciones especificadas.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-iterator erase(iterator where);  
-iterator erase(iterator first, iterator last);  
-bool erase(key_type key)  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *first*  
- Principio del intervalo que se va a borrar.  
-  
- *key*  
- Valor de clave para borrar.  
-  
- *Último*  
- Fin del intervalo que se va a borrar.  
-  
- *where*  
- Elemento que se va a borrar.  
-  
-### <a name="remarks"></a>Comentarios  
- La primera función miembro quita el elemento de la secuencia controlada señalada por *donde*y devuelve un iterador que designa el primer elemento que permanece más allá del elemento quitado, o [multimap:: end (STL / CLR)](../dotnet/multimap-end-stl-clr.md) `()` si no existe ese elemento. Usa para quitar un elemento único.  
-  
- La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [`first`, `last`) y devuelve un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o `end()` si ningún elemento existe... Usa para quitar cero o más elementos contiguos.  
-  
- La tercera función miembro quita cualquier elemento de la secuencia controlada cuyo criterio de ordenación es equivalente a *clave*y devuelve un recuento del número de elementos quitados. Usa para quitar y contar todos los elementos que coinciden con una clave especificada.  
-  
- Eliminación de cada elemento tarda tiempo proporcional al logaritmo del número de elementos de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_erase.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    cliext::multimap<wchar_t, int> c1;   
-    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'a', 1));   
-    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'b', 2));   
-    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (cliext::multimap<wchar_t, int>::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// erase an element and reinspect   
-    cliext::multimap<wchar_t, int>::iterator it =   
-        c1.erase(c1.begin());   
-    System::Console::WriteLine("erase(begin()) = [{0} {1}]",   
-        it->first, it->second);   
-  
-// add elements and display " b c d e"   
-    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'd', 4));   
-    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'e', 5));   
-    for each (cliext::multimap<wchar_t, int>::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// erase all but end   
-    it = c1.end();   
-    it = c1.erase(c1.begin(), --it);   
-    System::Console::WriteLine("erase(begin(), end()-1) = [{0} {1}]",   
-        it->first, it->second);   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-  
-// erase end   
-    System::Console::WriteLine("erase(L'x') = {0}", c1.erase(L'x'));   
-    System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-erase(begin()) = [b 2]  
- [b 2] [c 3] [d 4] [e 5]  
-erase(begin(), end()-1) = [e 5]  
-size() = 1  
-erase(L'x') = 0  
-erase(L'e') = 1  
-```  
+
+Quita los elementos de las posiciones especificadas.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+iterator erase(iterator where);
+iterator erase(iterator first, iterator last);
+bool erase(key_type key)
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*first*<br/>
+Principio del intervalo que se va a borrar.
+
+*key*<br/>
+Valor de clave para borrar.
+
+*Último*<br/>
+Fin del intervalo que se va a borrar.
+
+*where*<br/>
+Elemento que se va a borrar.
+
+### <a name="remarks"></a>Comentarios
+
+La primera función miembro quita el elemento de la secuencia controlada señalada por *donde*y devuelve un iterador que designa el primer elemento que permanece más allá del elemento quitado, o [multimap:: end (STL / CLR)](../dotnet/multimap-end-stl-clr.md) `()` si no existe ese elemento. Usa para quitar un elemento único.
+
+La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [`first`, `last`) y devuelve un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o `end()` si ningún elemento existe... Usa para quitar cero o más elementos contiguos.
+
+La tercera función miembro quita cualquier elemento de la secuencia controlada cuyo criterio de ordenación es equivalente a *clave*y devuelve un recuento del número de elementos quitados. Usa para quitar y contar todos los elementos que coinciden con una clave especificada.
+
+Eliminación de cada elemento tarda tiempo proporcional al logaritmo del número de elementos de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_erase.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    cliext::multimap<wchar_t, int> c1;
+    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'a', 1));
+    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'b', 2));
+    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (cliext::multimap<wchar_t, int>::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // erase an element and reinspect
+    cliext::multimap<wchar_t, int>::iterator it =
+        c1.erase(c1.begin());
+    System::Console::WriteLine("erase(begin()) = [{0} {1}]",
+        it->first, it->second);
+
+    // add elements and display " b c d e"
+    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'd', 4));
+    c1.insert(cliext::multimap<wchar_t, int>::make_value(L'e', 5));
+    for each (cliext::multimap<wchar_t, int>::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // erase all but end
+    it = c1.end();
+    it = c1.erase(c1.begin(), --it);
+    System::Console::WriteLine("erase(begin(), end()-1) = [{0} {1}]",
+        it->first, it->second);
+    System::Console::WriteLine("size() = {0}", c1.size());
+
+    // erase end
+    System::Console::WriteLine("erase(L'x') = {0}", c1.erase(L'x'));
+    System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+erase(begin()) = [b 2]
+[b 2] [c 3] [d 4] [e 5]
+erase(begin(), end()-1) = [e 5]
+size() = 1
+erase(L'x') = 0
+erase(L'e') = 1
+```
 
 ## <a name="find"></a> multimap:: Find (STL/CLR)
-Busca un elemento que coincide con una clave especificada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-iterator find(key_type key);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *key*  
- Valor de clave que se va a buscar.  
-  
-### <a name="remarks"></a>Comentarios  
- Si al menos un elemento de la secuencia controlada tiene una ordenación equivalente con *clave*, la función miembro devuelve un iterador que designa uno de esos elementos; de lo contrario, devuelve [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. Usa para buscar un elemento actualmente en la secuencia controlada que coincide con una clave especificada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_find.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("find {0} = {1}",   
-        L'A', c1.find(L'A') != c1.end());   
-  
-    Mymultimap::iterator it = c1.find(L'b');   
-    System::Console::WriteLine("find {0} = [{1} {2}]",   
-        L'b', it->first, it->second);   
-  
-    System::Console::WriteLine("find {0} = {1}",   
-        L'C', c1.find(L'C') != c1.end());   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-find A = False  
-find b = [b 2]  
-find C = False  
-```  
+
+Busca un elemento que coincide con una clave especificada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+iterator find(key_type key);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*key*<br/>
+Valor de clave que se va a buscar.
+
+### <a name="remarks"></a>Comentarios
+
+Si al menos un elemento de la secuencia controlada tiene una ordenación equivalente con *clave*, la función miembro devuelve un iterador que designa uno de esos elementos; de lo contrario, devuelve [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. Usa para buscar un elemento actualmente en la secuencia controlada que coincide con una clave especificada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_find.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("find {0} = {1}",
+        L'A', c1.find(L'A') != c1.end());
+
+    Mymultimap::iterator it = c1.find(L'b');
+    System::Console::WriteLine("find {0} = [{1} {2}]",
+        L'b', it->first, it->second);
+
+    System::Console::WriteLine("find {0} = {1}",
+        L'C', c1.find(L'C') != c1.end());
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+find A = False
+find b = [b 2]
+find C = False
+```
 
 ## <a name="generic_container"></a> multimap::generic_container (STL/CLR)
-El tipo de la interfaz genérica para el contenedor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef Microsoft::VisualC::StlClr::  
-    ITree<GKey, GValue>  
-    generic_container;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe la interfaz genérica para esta clase de contenedor de plantilla.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_generic_container.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct a generic container   
-    Mymultimap::generic_container^ gc1 = %c1;   
-    for each (Mymultimap::value_type elem in gc1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// modify generic and display original   
-    gc1->insert(Mymultimap::make_value(L'd', 4));   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// modify original and display generic   
-    c1.insert(Mymultimap::make_value(L'e', 5));   
-    for each (Mymultimap::value_type elem in gc1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-[a 1] [b 2] [c 3]  
-[a 1] [b 2] [c 3] [d 4]  
-[a 1] [b 2] [c 3] [d 4] [e 5]  
-```  
-  
+
+El tipo de la interfaz genérica para el contenedor.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef Microsoft::VisualC::StlClr::
+    ITree<GKey, GValue>
+    generic_container;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe la interfaz genérica para esta clase de contenedor de plantilla.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_generic_container.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct a generic container
+    Mymultimap::generic_container^ gc1 = %c1;
+    for each (Mymultimap::value_type elem in gc1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // modify generic and display original
+    gc1->insert(Mymultimap::make_value(L'd', 4));
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // modify original and display generic
+    c1.insert(Mymultimap::make_value(L'e', 5));
+    for each (Mymultimap::value_type elem in gc1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [c 3] [d 4]
+[a 1] [b 2] [c 3] [d 4] [e 5]
+```
+
 ## <a name="generic_iterator"></a> multimap::generic_iterator (STL/CLR)
-El tipo de iterador para su uso con la interfaz genérica para el contenedor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef Microsoft::VisualC::StlClr::Generic::  
-    ContainerBidirectionalIterator<generic_value>  
-    generic_iterator;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un iterador genérico que puede usarse con la interfaz genérica para esta clase de contenedor de plantilla.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_generic_iterator.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct a generic container   
-    Mymultimap::generic_container^ gc1 = %c1;   
-    for each (Mymultimap::value_type elem in gc1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// get an element and display it   
-    Mymultimap::generic_iterator gcit = gc1->begin();   
-    Mymultimap::generic_value gcval = *gcit;   
-    System::Console::Write(" [{0} {1}]", gcval->first, gcval->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-[a 1] [b 2] [c 3]  
-[a 1]  
-```  
+
+El tipo de iterador para su uso con la interfaz genérica para el contenedor.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef Microsoft::VisualC::StlClr::Generic::
+    ContainerBidirectionalIterator<generic_value>
+    generic_iterator;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un iterador genérico que puede usarse con la interfaz genérica para esta clase de contenedor de plantilla.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_generic_iterator.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct a generic container
+    Mymultimap::generic_container^ gc1 = %c1;
+    for each (Mymultimap::value_type elem in gc1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // get an element and display it
+    Mymultimap::generic_iterator gcit = gc1->begin();
+    Mymultimap::generic_value gcval = *gcit;
+    System::Console::Write("[{0} {1}] ", gcval->first, gcval->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [c 3]
+[a 1]
+```
 
 ## <a name="generic_reverse_iterator"></a> multimap::generic_reverse_iterator (STL/CLR)
-El tipo de un iterador inverso para su uso con la interfaz genérica para el contenedor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef Microsoft::VisualC::StlClr::Generic::  
-    ReverseRandomAccessIterator<generic_value>  
-    generic_reverse_iterator;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un iterador inverso genérico que puede usarse con la interfaz genérica para esta clase de contenedor de plantilla.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_generic_reverse_iterator.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct a generic container   
-    Mymultimap::generic_container^ gc1 = %c1;   
-    for each (Mymultimap::value_type elem in gc1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// get an element and display it   
-    Mymultimap::generic_reverse_iterator gcit = gc1->rbegin();   
-    Mymultimap::generic_value gcval = *gcit;   
-    System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-[a 1] [b 2] [c 3]  
-[c 3]  
-```  
+
+El tipo de un iterador inverso para su uso con la interfaz genérica para el contenedor.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef Microsoft::VisualC::StlClr::Generic::
+    ReverseRandomAccessIterator<generic_value>
+    generic_reverse_iterator;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un iterador inverso genérico que puede usarse con la interfaz genérica para esta clase de contenedor de plantilla.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_generic_reverse_iterator.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct a generic container
+    Mymultimap::generic_container^ gc1 = %c1;
+    for each (Mymultimap::value_type elem in gc1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // get an element and display it
+    Mymultimap::generic_reverse_iterator gcit = gc1->rbegin();
+    Mymultimap::generic_value gcval = *gcit;
+    System::Console::WriteLine("[{0} {1}] ", gcval->first, gcval->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [c 3]
+[c 3]
+```
 
 ## <a name="generic_value"></a> multimap::generic_value (STL/CLR)
-El tipo de un elemento para su uso con la interfaz genérica para el contenedor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef GValue generic_value;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un objeto de tipo `GValue` que describe el valor del elemento almacenados para su uso con la interfaz genérica para esta clase de contenedor de plantilla.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_generic_value.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct a generic container   
-    Mymultimap::generic_container^ gc1 = %c1;   
-    for each (Mymultimap::value_type elem in gc1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// get an element and display it   
-    Mymultimap::generic_iterator gcit = gc1->begin();   
-    Mymultimap::generic_value gcval = *gcit;   
-    System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-[a 1] [b 2] [c 3]  
-[a 1]  
-```  
+
+El tipo de un elemento para su uso con la interfaz genérica para el contenedor.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef GValue generic_value;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un objeto de tipo `GValue` que describe el valor del elemento almacenados para su uso con la interfaz genérica para esta clase de contenedor de plantilla.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_generic_value.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct a generic container
+    Mymultimap::generic_container^ gc1 = %c1;
+    for each (Mymultimap::value_type elem in gc1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // get an element and display it
+    Mymultimap::generic_iterator gcit = gc1->begin();
+    Mymultimap::generic_value gcval = *gcit;
+    System::Console::WriteLine("[{0} {1}] ", gcval->first, gcval->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [c 3]
+[a 1]
+```
 
 ## <a name="insert"></a> multimap:: Insert (STL/CLR)
-Agrega elementos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-iterator insert(value_type val);  
-iterator insert(iterator where, value_type val);  
-template<typename InIter>  
-    void insert(InIter first, InIter last);  
-void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *first*  
- Principio del intervalo que se va a insertar.  
-  
- *Último*  
- Fin del intervalo que se va a insertar.  
-  
- *right*  
- Enumeración que se va a insertar.  
-  
- *Val*  
- Valor de clave se va a insertar.  
-  
- *where*  
- Lugar en el contenedor que se va a insertar (sugerencia solo).  
-  
-### <a name="remarks"></a>Comentarios  
- Cada una de las funciones miembro inserta una secuencia especificada por los operandos restantes.  
-  
- La primera función miembro inserta un elemento con el valor *val*y devuelve un iterador que designa el elemento recién insertado. Usarlo para insertar un elemento único.  
-  
- La segunda función miembro inserta un elemento con el valor *val*con *donde* como una sugerencia (para mejorar el rendimiento) y devuelve un iterador que designa el elemento recién insertado. Usarlo para insertar un elemento único que podría ser adyacente a un elemento que conoce.  
-  
- La tercera función miembro inserta la secuencia [`first`, `last`). Usa para insertar cero o más de los elementos copiados desde la otra secuencia.  
-  
- La cuarta función miembro inserta la secuencia designada por el *derecho*. Usa para insertar una secuencia descrita por un enumerador.  
-  
- Inserción de cada elemento tarda tiempo proporcional al logaritmo del número de elementos de la secuencia controlada. Inserción puede producirse en tiempo constante amortizado, sin embargo, dada una sugerencia que designa un elemento adyacente al punto de inserción.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_insert.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// insert a single value, unique and duplicate   
-    Mymultimap::iterator it =   
-        c1.insert(Mymultimap::make_value(L'x', 24));   
-    System::Console::WriteLine("insert([L'x' 24]) = [{0} {1}]",   
-        it->first, it->second);   
-  
-    it = c1.insert(Mymultimap::make_value(L'b', 2));   
-    System::Console::WriteLine("insert([L'b' 2]) = [{0} {1}]",   
-        it->first, it->second);   
-  
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// insert a single value with hint   
-    it = c1.insert(c1.begin(), Mymultimap::make_value(L'y', 25));   
-    System::Console::WriteLine("insert(begin(), [L'y' 25]) = [{0} {1}]",   
-        it->first, it->second);   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// insert an iterator range   
-    Mymultimap c2;   
-    it = c1.end();   
-    c2.insert(c1.begin(), --it);   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// insert an enumeration   
-    Mymultimap c3;   
-    c3.insert(   // NOTE: cast is not needed   
-        (System::Collections::Generic::   
-            IEnumerable<Mymultimap::value_type>^)%c1);   
-    for each (Mymultimap::value_type elem in c3)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-insert([L'x' 24]) = [x 24]  
-insert([L'b' 2]) = [b 2]  
- [a 1] [b 2] [b 2] [c 3] [x 24]  
-insert(begin(), [L'y' 25]) = [y 25]  
- [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]  
- [a 1] [b 2] [b 2] [c 3] [x 24]  
- [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]  
-```  
+
+Agrega elementos.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+iterator insert(value_type val);
+iterator insert(iterator where, value_type val);
+template<typename InIter>
+    void insert(InIter first, InIter last);
+void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*first*<br/>
+Principio del intervalo que se va a insertar.
+
+*Último*<br/>
+Fin del intervalo que se va a insertar.
+
+*right*<br/>
+Enumeración que se va a insertar.
+
+*Val*<br/>
+Valor de clave se va a insertar.
+
+*where*<br/>
+Lugar en el contenedor que se va a insertar (sugerencia solo).
+
+### <a name="remarks"></a>Comentarios
+
+Cada una de las funciones miembro inserta una secuencia especificada por los operandos restantes.
+
+La primera función miembro inserta un elemento con el valor *val*y devuelve un iterador que designa el elemento recién insertado. Usarlo para insertar un elemento único.
+
+La segunda función miembro inserta un elemento con el valor *val*con *donde* como una sugerencia (para mejorar el rendimiento) y devuelve un iterador que designa el elemento recién insertado. Usarlo para insertar un elemento único que podría ser adyacente a un elemento que conoce.
+
+La tercera función miembro inserta la secuencia [`first`, `last`). Usa para insertar cero o más de los elementos copiados desde la otra secuencia.
+
+La cuarta función miembro inserta la secuencia designada por el *derecho*. Usa para insertar una secuencia descrita por un enumerador.
+
+Inserción de cada elemento tarda tiempo proporcional al logaritmo del número de elementos de la secuencia controlada. Inserción puede producirse en tiempo constante amortizado, sin embargo, dada una sugerencia que designa un elemento adyacente al punto de inserción.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_insert.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // insert a single value, unique and duplicate
+    Mymultimap::iterator it =
+        c1.insert(Mymultimap::make_value(L'x', 24));
+    System::Console::WriteLine("insert([L'x' 24]) = [{0} {1}]",
+        it->first, it->second);
+
+    it = c1.insert(Mymultimap::make_value(L'b', 2));
+    System::Console::WriteLine("insert([L'b' 2]) = [{0} {1}]",
+        it->first, it->second);
+
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // insert a single value with hint
+    it = c1.insert(c1.begin(), Mymultimap::make_value(L'y', 25));
+    System::Console::WriteLine("insert(begin(), [L'y' 25]) = [{0} {1}]",
+        it->first, it->second);
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // insert an iterator range
+    Mymultimap c2;
+    it = c1.end();
+    c2.insert(c1.begin(), --it);
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // insert an enumeration
+    Mymultimap c3;
+    c3.insert(   // NOTE: cast is not needed
+        (System::Collections::Generic::
+            IEnumerable<Mymultimap::value_type>^)%c1);
+    for each (Mymultimap::value_type elem in c3)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+insert([L'x' 24]) = [x 24]
+insert([L'b' 2]) = [b 2]
+[a 1] [b 2] [b 2] [c 3] [x 24]
+insert(begin(), [L'y' 25]) = [y 25]
+[a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
+[a 1] [b 2] [b 2] [c 3] [x 24]
+[a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
+```
 
 ## <a name="iterator"></a> multimap:: Iterator (STL/CLR)
-El tipo de un iterador para la secuencia controlada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef T1 iterator;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un objeto de tipo sin especificar `T1` que puede actuar como un iterador bidireccional para la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_iterator.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    Mymultimap::iterator it = c1.begin();   
-    for (; it != c1.end(); ++it)   
-        System::Console::Write(" [{0} {1}]", it->first, it->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-```  
+
+El tipo de un iterador para la secuencia controlada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef T1 iterator;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un objeto de tipo sin especificar `T1` que puede actuar como un iterador bidireccional para la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_iterator.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    Mymultimap::iterator it = c1.begin();
+    for (; it != c1.end(); ++it)
+        System::Console::Write("[{0} {1}] ", it->first, it->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="key_comp"></a> multimap:: key_comp (STL/CLR)
-Copia al delegado de ordenación de dos claves.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-key_compare^key_comp();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve al delegado de ordenación utilizado para ordenar la secuencia controlada. Usa para comparar dos claves.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_key_comp.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    Mymultimap::key_compare^ kcomp = c1.key_comp();   
-  
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
-        kcomp(L'a', L'a'));   
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
-        kcomp(L'a', L'b'));   
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
-        kcomp(L'b', L'a'));   
-    System::Console::WriteLine();   
-  
-// test a different ordering rule   
-    Mymultimap c2 = cliext::greater<wchar_t>();   
-    kcomp = c2.key_comp();   
-  
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
-        kcomp(L'a', L'a'));   
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
-        kcomp(L'a', L'b'));   
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
-        kcomp(L'b', L'a'));   
-    return (0);   
-    }  
-```  
-  
-```Output  
-compare(L'a', L'a') = False  
-compare(L'a', L'b') = True  
-compare(L'b', L'a') = False  
-  
-compare(L'a', L'a') = False  
-compare(L'a', L'b') = False  
-compare(L'b', L'a') = True  
-```  
+
+Copia al delegado de ordenación de dos claves.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+key_compare^key_comp();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve al delegado de ordenación utilizado para ordenar la secuencia controlada. Usa para comparar dos claves.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_key_comp.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    Mymultimap::key_compare^ kcomp = c1.key_comp();
+
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",
+        kcomp(L'a', L'a'));
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",
+        kcomp(L'a', L'b'));
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",
+        kcomp(L'b', L'a'));
+    System::Console::WriteLine();
+
+    // test a different ordering rule
+    Mymultimap c2 = cliext::greater<wchar_t>();
+    kcomp = c2.key_comp();
+
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",
+        kcomp(L'a', L'a'));
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",
+        kcomp(L'a', L'b'));
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",
+        kcomp(L'b', L'a'));
+    return (0);
+    }
+```
+
+```Output
+compare(L'a', L'a') = False
+compare(L'a', L'b') = True
+compare(L'b', L'a') = False
+
+compare(L'a', L'a') = False
+compare(L'a', L'b') = False
+compare(L'b', L'a') = True
+```
 
 ## <a name="key_compare"></a> multimap:: key_compare (STL/CLR)
-Delegado de ordenación para dos claves.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
-    key_compare;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo para el delegado que determina el orden de sus argumentos de la claves.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_key_compare.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    Mymultimap::key_compare^ kcomp = c1.key_comp();   
-  
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
-        kcomp(L'a', L'a'));   
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
-        kcomp(L'a', L'b'));   
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
-        kcomp(L'b', L'a'));   
-    System::Console::WriteLine();   
-  
-// test a different ordering rule   
-    Mymultimap c2 = cliext::greater<wchar_t>();   
-    kcomp = c2.key_comp();   
-  
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
-        kcomp(L'a', L'a'));   
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
-        kcomp(L'a', L'b'));   
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
-        kcomp(L'b', L'a'));   
-    return (0);   
-    }  
-```  
-  
-```Output  
-compare(L'a', L'a') = False  
-compare(L'a', L'b') = True  
-compare(L'b', L'a') = False  
-  
-compare(L'a', L'a') = False  
-compare(L'a', L'b') = False  
-compare(L'b', L'a') = True  
-```  
+
+Delegado de ordenación para dos claves.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
+    key_compare;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo es un sinónimo para el delegado que determina el orden de sus argumentos de la claves.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_key_compare.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    Mymultimap::key_compare^ kcomp = c1.key_comp();
+
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",
+        kcomp(L'a', L'a'));
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",
+        kcomp(L'a', L'b'));
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",
+        kcomp(L'b', L'a'));
+    System::Console::WriteLine();
+
+    // test a different ordering rule
+    Mymultimap c2 = cliext::greater<wchar_t>();
+    kcomp = c2.key_comp();
+
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",
+        kcomp(L'a', L'a'));
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",
+        kcomp(L'a', L'b'));
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",
+        kcomp(L'b', L'a'));
+    return (0);
+    }
+```
+
+```Output
+compare(L'a', L'a') = False
+compare(L'a', L'b') = True
+compare(L'b', L'a') = False
+
+compare(L'a', L'a') = False
+compare(L'a', L'b') = False
+compare(L'b', L'a') = True
+```
 
 ## <a name="key_type"></a> multimap:: KEY_TYPE (STL/CLR)
-El tipo de una clave de ordenación.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef Key key_type;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del parámetro de plantilla *clave*.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_key_type.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]" using key_type   
-    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)   
-        {   // store element in key_type object   
-        Mymultimap::key_type val = it->first;   
-  
-        System::Console::Write(" {0}", val);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-```  
-  
+
+El tipo de una clave de ordenación.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef Key key_type;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo es un sinónimo del parámetro de plantilla *clave*.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_key_type.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]" using key_type
+    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)
+        {   // store element in key_type object
+        Mymultimap::key_type val = it->first;
+
+        System::Console::Write("{0} ", val);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+```
+
 ## <a name="lower_bound"></a> multimap:: lower_bound (STL/CLR)
-Busca el principio del intervalo que coincide con una clave especificada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-iterator lower_bound(key_type key);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *key*  
- Valor de clave que se va a buscar.  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro determina el primer elemento `X` en la secuencia controlada que tiene una ordenación equivalente a *clave*. Si no existe ese elemento, devuelve [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa `X`. Usa para buscar el principio de una secuencia de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_lower_bound.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("lower_bound(L'x')==end() = {0}",   
-        c1.lower_bound(L'x') == c1.end());   
-  
-    Mymultimap::iterator it = c1.lower_bound(L'a');   
-    System::Console::WriteLine("*lower_bound(L'a') = [{0} {1}]",   
-        it->first, it->second);   
-    it = c1.lower_bound(L'b');   
-    System::Console::WriteLine("*lower_bound(L'b') = [{0} {1}]",   
-        it->first, it->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-lower_bound(L'x')==end() = True  
-*lower_bound(L'a') = [a 1]  
-*lower_bound(L'b') = [b 2]  
-```  
+
+Busca el principio del intervalo que coincide con una clave especificada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+iterator lower_bound(key_type key);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*key*<br/>
+Valor de clave que se va a buscar.
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro determina el primer elemento `X` en la secuencia controlada que tiene una ordenación equivalente a *clave*. Si no existe ese elemento, devuelve [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa `X`. Usa para buscar el principio de una secuencia de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_lower_bound.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("lower_bound(L'x')==end() = {0}",
+        c1.lower_bound(L'x') == c1.end());
+
+    Mymultimap::iterator it = c1.lower_bound(L'a');
+    System::Console::WriteLine("*lower_bound(L'a') = [{0} {1}]",
+        it->first, it->second);
+    it = c1.lower_bound(L'b');
+    System::Console::WriteLine("*lower_bound(L'b') = [{0} {1}]",
+        it->first, it->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+lower_bound(L'x')==end() = True
+*lower_bound(L'a') = [a 1]
+*lower_bound(L'b') = [b 2]
+```
 
 ## <a name="make_value"></a> multimap::make_value (STL/CLR)
-Construye un objeto de valor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-static value_type make_value(key_type key, mapped_type mapped);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *key*  
- Valor de clave para usar.  
-  
- *Asignado*  
- Valor asignado a buscar.  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve un `value_type` objeto cuya clave es *clave* y cuyo valor asignado es *asignado*. Usarlo para crear un objeto adecuado para su uso con otras funciones de miembro.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_make_value.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-```  
+
+Construye un objeto de valor.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+static value_type make_value(key_type key, mapped_type mapped);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*key*<br/>
+Valor de clave para usar.
+
+*asignado*<br/>
+Valor asignado a buscar.
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve un `value_type` objeto cuya clave es *clave* y cuyo valor asignado es *asignado*. Usarlo para crear un objeto adecuado para su uso con otras funciones de miembro.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_make_value.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="mapped_type"></a> multimap:: mapped_type (STL/CLR)
-El tipo de un valor asignado asociado a cada clave.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef Mapped mapped_type;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del parámetro de plantilla *asignado*.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_mapped_type.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]" using mapped_type   
-    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)   
-        {   // store element in mapped_type object   
-        Mymultimap::mapped_type val = it->second;   
-  
-        System::Console::Write(" {0}", val);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-1 2 3  
-```  
+
+El tipo de un valor asignado asociado a cada clave.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef Mapped mapped_type;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo es un sinónimo del parámetro de plantilla *asignado*.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_mapped_type.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]" using mapped_type
+    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)
+        {   // store element in mapped_type object
+        Mymultimap::mapped_type val = it->second;
+
+        System::Console::Write("{0} ", val);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+1 2 3
+```
 
 ## <a name="multimap"></a> multimap:: multimap (STL/CLR)
-Construye un objeto contenedor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-multimap();  
-explicit multimap(key_compare^ pred);  
-multimap(multimap<Key, Mapped>% right);  
-multimap(multimap<Key, Mapped>^ right);  
-template<typename InIter>  
-    multimapmultimap(InIter first, InIter last);  
-template<typename InIter>  
-    multimap(InIter first, InIter last,  
-        key_compare^ pred);  
-multimap(System::Collections::Generic::IEnumerable<GValue>^ right);  
-multimap(System::Collections::Generic::IEnumerable<GValue>^ right,  
-    key_compare^ pred);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *first*  
- Principio del intervalo que se va a insertar.  
-  
- *Último*  
- Fin del intervalo que se va a insertar.  
-  
- *Pred*  
- Orden de predicado de la secuencia controlada.  
-  
- *right*  
- Objeto o intervalo que se va a insertar.  
-  
-### <a name="remarks"></a>Comentarios  
- El constructor:  
-  
- `multimap();`  
-  
- Inicializa la secuencia controlada sin elementos, con el valor predeterminado ordenación predicado `key_compare()`. Se usa para especificar una secuencia controlada inicial vacía, con el predicado del orden de predeterminado.  
-  
- El constructor:  
-  
- `explicit multimap(key_compare^ pred);`  
-  
- Inicializa la secuencia controlada con ningún elemento con el predicado de ordenación *pred*. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado.  
-  
- El constructor:  
-  
- `multimap(multimap<Key, Mapped>% right);`  
-  
- Inicializa la secuencia controlada por la secuencia [`right.begin()`, `right.end()`), con el predicado del orden de predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto multimap *derecho*, con el predicado del orden de predeterminado.  
-  
- El constructor:  
-  
- `multimap(multimap<Key, Mapped>^ right);`  
-  
- Inicializa la secuencia controlada por la secuencia [`right->begin()`, `right->end()`), con el predicado del orden de predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto multimap *derecho*, con el predicado del orden de predeterminado.  
-  
- El constructor:  
-  
- `template<typename InIter> multimap(InIter first, InIter last);`  
-  
- Inicializa la secuencia controlada por la secuencia [`first`, `last`), con el predicado del orden de predeterminado. Usarlo para realizar una copia de otra secuencia de la secuencia controlada con el predicado del orden de predeterminado.  
-  
- El constructor:  
-  
- `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
-  
- Inicializa la secuencia controlada por la secuencia [`first`, `last`), con el predicado de ordenación *pred*. Usa para realizar una copia de otra secuencia, con el predicado de ordenación especificado de la secuencia controlada.  
-  
- El constructor:  
-  
- `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
-  
- Inicializa la secuencia controlada con la secuencia designada por el enumerador *derecho*, con el predicado del orden de predeterminado. Usa para realizar una copia de otra secuencia que se describe mediante un enumerador con el predicado del orden de predeterminado de la secuencia controlada.  
-  
- El constructor:  
-  
- `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
-  
- Inicializa la secuencia controlada con la secuencia designada por el enumerador *derecho*, con el predicado de ordenación *pred*. Usa para realizar una copia de otra secuencia descrita por un enumerador con el predicado de ordenación especificado de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_construct.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-// construct an empty container   
-    Mymultimap c1;   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-  
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct with an ordering rule   
-    Mymultimap c2 = cliext::greater_equal<wchar_t>();   
-    System::Console::WriteLine("size() = {0}", c2.size());   
-  
-    c2.insert(c1.begin(), c1.end());   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct with an iterator range   
-    Mymultimap c3(c1.begin(), c1.end());   
-    for each (Mymultimap::value_type elem in c3)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct with an iterator range and an ordering rule   
-    Mymultimap c4(c1.begin(), c1.end(),   
-        cliext::greater_equal<wchar_t>());   
-    for each (Mymultimap::value_type elem in c4)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct with an enumeration   
-    Mymultimap c5(   // NOTE: cast is not needed   
-        (System::Collections::Generic::IEnumerable<   
-            Mymultimap::value_type>^)%c3);   
-    for each (Mymultimap::value_type elem in c5)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct with an enumeration and an ordering rule   
-    Mymultimap c6(   // NOTE: cast is not needed   
-        (System::Collections::Generic::IEnumerable<   
-            Mymultimap::value_type>^)%c3,   
-                cliext::greater_equal<wchar_t>());   
-    for each (Mymultimap::value_type elem in c6)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct by copying another container   
-    Mymultimap c7(c4);   
-    for each (Mymultimap::value_type elem in c7)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct by copying a container handle   
-    Mymultimap c8(%c3);   
-    for each (Mymultimap::value_type elem in c8)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-size() = 0  
- [a 1] [b 2] [c 3]  
-size() = 0  
- [c 3] [b 2] [a 1]  
- [a 1] [b 2] [c 3]  
- [c 3] [b 2] [a 1]  
- [a 1] [b 2] [c 3]  
- [c 3] [b 2] [a 1]  
- [c 3] [b 2] [a 1]  
- [a 1] [b 2] [c 3]  
-```  
+
+Construye un objeto contenedor.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+multimap();
+explicit multimap(key_compare^ pred);
+multimap(multimap<Key, Mapped>% right);
+multimap(multimap<Key, Mapped>^ right);
+template<typename InIter>
+    multimapmultimap(InIter first, InIter last);
+template<typename InIter>
+    multimap(InIter first, InIter last,
+        key_compare^ pred);
+multimap(System::Collections::Generic::IEnumerable<GValue>^ right);
+multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
+    key_compare^ pred);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*first*<br/>
+Principio del intervalo que se va a insertar.
+
+*Último*<br/>
+Fin del intervalo que se va a insertar.
+
+*Pred*<br/>
+Orden de predicado de la secuencia controlada.
+
+*right*<br/>
+Objeto o intervalo que se va a insertar.
+
+### <a name="remarks"></a>Comentarios
+
+El constructor:
+
+`multimap();`
+
+Inicializa la secuencia controlada sin elementos, con el valor predeterminado ordenación predicado `key_compare()`. Se usa para especificar una secuencia controlada inicial vacía, con el predicado del orden de predeterminado.
+
+El constructor:
+
+`explicit multimap(key_compare^ pred);`
+
+Inicializa la secuencia controlada con ningún elemento con el predicado de ordenación *pred*. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado.
+
+El constructor:
+
+`multimap(multimap<Key, Mapped>% right);`
+
+Inicializa la secuencia controlada por la secuencia [`right.begin()`, `right.end()`), con el predicado del orden de predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto multimap *derecho*, con el predicado del orden de predeterminado.
+
+El constructor:
+
+`multimap(multimap<Key, Mapped>^ right);`
+
+Inicializa la secuencia controlada por la secuencia [`right->begin()`, `right->end()`), con el predicado del orden de predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto multimap *derecho*, con el predicado del orden de predeterminado.
+
+El constructor:
+
+`template<typename InIter> multimap(InIter first, InIter last);`
+
+Inicializa la secuencia controlada por la secuencia [`first`, `last`), con el predicado del orden de predeterminado. Usarlo para realizar una copia de otra secuencia de la secuencia controlada con el predicado del orden de predeterminado.
+
+El constructor:
+
+`template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`
+
+Inicializa la secuencia controlada por la secuencia [`first`, `last`), con el predicado de ordenación *pred*. Usa para realizar una copia de otra secuencia, con el predicado de ordenación especificado de la secuencia controlada.
+
+El constructor:
+
+`multimap(System::Collections::Generic::IEnumerable<Key>^ right);`
+
+Inicializa la secuencia controlada con la secuencia designada por el enumerador *derecho*, con el predicado del orden de predeterminado. Usa para realizar una copia de otra secuencia que se describe mediante un enumerador con el predicado del orden de predeterminado de la secuencia controlada.
+
+El constructor:
+
+`multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
+
+Inicializa la secuencia controlada con la secuencia designada por el enumerador *derecho*, con el predicado de ordenación *pred*. Usa para realizar una copia de otra secuencia descrita por un enumerador con el predicado de ordenación especificado de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_construct.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+// construct an empty container
+    Mymultimap c1;
+    System::Console::WriteLine("size() = {0}", c1.size());
+
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct with an ordering rule
+    Mymultimap c2 = cliext::greater_equal<wchar_t>();
+    System::Console::WriteLine("size() = {0}", c2.size());
+
+    c2.insert(c1.begin(), c1.end());
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct with an iterator range
+    Mymultimap c3(c1.begin(), c1.end());
+    for each (Mymultimap::value_type elem in c3)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct with an iterator range and an ordering rule
+    Mymultimap c4(c1.begin(), c1.end(),
+        cliext::greater_equal<wchar_t>());
+    for each (Mymultimap::value_type elem in c4)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct with an enumeration
+    Mymultimap c5(   // NOTE: cast is not needed
+        (System::Collections::Generic::IEnumerable<
+            Mymultimap::value_type>^)%c3);
+    for each (Mymultimap::value_type elem in c5)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct with an enumeration and an ordering rule
+    Mymultimap c6(   // NOTE: cast is not needed
+        (System::Collections::Generic::IEnumerable<
+            Mymultimap::value_type>^)%c3,
+                cliext::greater_equal<wchar_t>());
+    for each (Mymultimap::value_type elem in c6)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct by copying another container
+    Mymultimap c7(c4);
+    for each (Mymultimap::value_type elem in c7)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct by copying a container handle
+    Mymultimap c8(%c3);
+    for each (Mymultimap::value_type elem in c8)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+size() = 0
+[a 1] [b 2] [c 3]
+size() = 0
+[c 3] [b 2] [a 1]
+[a 1] [b 2] [c 3]
+[c 3] [b 2] [a 1]
+[a 1] [b 2] [c 3]
+[c 3] [b 2] [a 1]
+[c 3] [b 2] [a 1]
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="op_as"></a> multimap::operator = (STL/CLR)
-Reemplaza la secuencia controlada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *right*  
- Contenedor que se va a copiar.  
-  
-### <a name="remarks"></a>Comentarios  
- Las copias de operador miembro *derecho* al objeto, a continuación, devuelve `*this`. Se usa para reemplazar la secuencia controlada por una copia de la secuencia controlada en *derecho*.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_operator_as.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mymultimap c2;   
-    c2 = c1;   
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    } 
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-[a 1] [b 2] [c 3]  
-```  
+
+Reemplaza la secuencia controlada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*right*<br/>
+Contenedor que se va a copiar.
+
+### <a name="remarks"></a>Comentarios
+
+Las copias de operador miembro *derecho* al objeto, a continuación, devuelve `*this`. Se usa para reemplazar la secuencia controlada por una copia de la secuencia controlada en *derecho*.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_operator_as.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // assign to a new container
+    Mymultimap c2;
+    c2 = c1;
+// display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="rbegin"></a> multimap:: rbegin (STL/CLR)
-Designa el principio de la secuencia controlada inversa.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-reverse_iterator rbegin();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve un iterador inverso que designa el último elemento de la secuencia controlada o inmediatamente después del principio de una secuencia vacía. Por tanto, designa el `beginning` de la secuencia inversa. Se usa para obtener un iterador que designa el `current` principio de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_rbegin.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// inspect first two items in reversed sequence   
-    Mymultimap::reverse_iterator rit = c1.rbegin();   
-    System::Console::WriteLine("*rbegin() = [{0} {1}]",   
-        rit->first, rit->second);   
-    ++rit;   
-    System::Console::WriteLine("*++rbegin() = [{0} {1}]",   
-        rit->first, rit->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-*rbegin() = [c 3]  
-*++rbegin() = [b 2]  
-```  
+
+Designa el principio de la secuencia controlada inversa.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+reverse_iterator rbegin();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve un iterador inverso que designa el último elemento de la secuencia controlada o inmediatamente después del principio de una secuencia vacía. Por tanto, designa el `beginning` de la secuencia inversa. Se usa para obtener un iterador que designa el `current` principio de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_rbegin.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // inspect first two items in reversed sequence
+    Mymultimap::reverse_iterator rit = c1.rbegin();
+    System::Console::WriteLine("*rbegin() = [{0} {1}]",
+        rit->first, rit->second);
+    ++rit;
+    System::Console::WriteLine("*++rbegin() = [{0} {1}]",
+        rit->first, rit->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+*rbegin() = [c 3]
+*++rbegin() = [b 2]
+```
 
 ## <a name="reference"></a> multimap:: Reference (STL/CLR)
-El tipo de una referencia a un elemento.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef value_type% reference;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe una referencia a un elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_reference.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    Mymultimap::iterator it = c1.begin();   
-    for (; it != c1.end(); ++it)   
-        {   // get a reference to an element   
-        Mymultimap::reference ref = *it;   
-        System::Console::Write(" [{0} {1}]", ref->first, ref->second);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-```  
-  
+
+El tipo de una referencia a un elemento.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef value_type% reference;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe una referencia a un elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_reference.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    Mymultimap::iterator it = c1.begin();
+    for (; it != c1.end(); ++it)
+        {   // get a reference to an element
+        Mymultimap::reference ref = *it;
+        System::Console::Write("[{0} {1}] ", ref->first, ref->second);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+```
+
 ## <a name="rend"></a> multimap:: rend (STL/CLR)
-Designa el final de la secuencia controlada inversa.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-reverse_iterator rend();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve un iterador inverso que apunta inmediatamente después del principio de la secuencia controlada. Por tanto, designa el `end` de la secuencia inversa. Se usa para obtener un iterador que designa el `current` final de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_rend.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// inspect first two items in reversed sequence   
-    Mymultimap::reverse_iterator rit = c1.rend();   
-    --rit;   
-    --rit;   
-    System::Console::WriteLine("*-- --rend() = [{0} {1}]",   
-        rit->first, rit->second);   
-    ++rit;   
-    System::Console::WriteLine("*--rend() = [{0} {1}]",   
-        rit->first, rit->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-*-- --rend() = [b 2]  
-*--rend() = [a 1]  
-```  
+
+Designa el final de la secuencia controlada inversa.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+reverse_iterator rend();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve un iterador inverso que apunta inmediatamente después del principio de la secuencia controlada. Por tanto, designa el `end` de la secuencia inversa. Se usa para obtener un iterador que designa el `current` final de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_rend.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // inspect first two items in reversed sequence
+    Mymultimap::reverse_iterator rit = c1.rend();
+    --rit;
+    --rit;
+    System::Console::WriteLine("*-- --rend() = [{0} {1}]",
+        rit->first, rit->second);
+    ++rit;
+    System::Console::WriteLine("*--rend() = [{0} {1}]",
+        rit->first, rit->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+*-- --rend() = [b 2]
+*--rend() = [a 1]
+```
 
 ## <a name="reverse_iterator"></a> multimap:: reverse_iterator (STL/CLR)
-El tipo de un iterador invertido para la secuencia controlada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef T3 reverse_iterator;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un objeto de tipo sin especificar `T3` que puede actuar como un iterador inverso de la secuencia controlada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_reverse_iterator.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]" reversed   
-    Mymultimap::reverse_iterator rit = c1.rbegin();   
-    for (; rit != c1.rend(); ++rit)   
-        System::Console::Write(" [{0} {1}]", rit->first, rit->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[c 3] [b 2] [a 1]  
-```  
+
+El tipo de un iterador invertido para la secuencia controlada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef T3 reverse_iterator;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un objeto de tipo sin especificar `T3` que puede actuar como un iterador inverso de la secuencia controlada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_reverse_iterator.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]" reversed
+    Mymultimap::reverse_iterator rit = c1.rbegin();
+    for (; rit != c1.rend(); ++rit)
+        System::Console::Write("[{0} {1}] ", rit->first, rit->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[c 3] [b 2] [a 1]
+```
 
 ## <a name="size"></a> multimap:: Size (STL/CLR)
-Cuenta el número de elementos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-size_type size();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve la longitud de la secuencia controlada. Se usa para determinar el número de elementos actualmente en la secuencia controlada. Si lo único que interesa es si la secuencia tiene un tamaño distinto de cero, vea [multimap:: Empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_size.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// clear the container and reinspect   
-    c1.clear();   
-    System::Console::WriteLine("size() = {0} after clearing", c1.size());   
-  
-// add elements and clear again   
-    c1.insert(Mymultimap::make_value(L'd', 4));   
-    c1.insert(Mymultimap::make_value(L'e', 5));   
-    System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-size() = 0 after clearing  
-size() = 2 after adding 2  
-```  
+
+Cuenta el número de elementos.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+size_type size();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve la longitud de la secuencia controlada. Se usa para determinar el número de elementos actualmente en la secuencia controlada. Si lo único que interesa es si la secuencia tiene un tamaño distinto de cero, vea [multimap:: Empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_size.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // clear the container and reinspect
+    c1.clear();
+    System::Console::WriteLine("size() = {0} after clearing", c1.size());
+
+    // add elements and clear again
+    c1.insert(Mymultimap::make_value(L'd', 4));
+    c1.insert(Mymultimap::make_value(L'e', 5));
+    System::Console::WriteLine("size() = {0} after adding 2", c1.size());
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+size() = 0 after clearing
+size() = 2 after adding 2
+```
 
 ## <a name="size_type"></a> multimap:: size_type (STL/CLR)
-El tipo de una distancia con signo entre dos elementos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef int size_type;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo describe un recuento de elemento no negativo.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_size_type.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// compute positive difference   
-    Mymultimap::size_type diff = 0;   
-    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)   
-        ++diff;   
-    System::Console::WriteLine("end()-begin() = {0}", diff);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-end()-begin() = 3  
-```  
+
+El tipo de una distancia con signo entre dos elementos.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef int size_type;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo describe un recuento de elemento no negativo.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_size_type.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // compute positive difference
+    Mymultimap::size_type diff = 0;
+    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)
+        ++diff;
+    System::Console::WriteLine("end()-begin() = {0}", diff);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+end()-begin() = 3
+```
 
 ## <a name="swap"></a> multimap:: swap (STL/CLR)
-Intercambia el contenido de dos contenedores.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-void swap(multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *right*  
- Contenedor con el que se va a intercambiar el contenido.  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro intercambia las secuencias controladas entre `this` y *derecho*. Lo hace en tiempo constante y no inicia ninguna excepción. Úselo como una forma rápida para intercambiar el contenido de dos contenedores.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_swap.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// construct another container with repetition of values   
-    Mymultimap c2;   
-    c2.insert(Mymultimap::make_value(L'd', 4));   
-    c2.insert(Mymultimap::make_value(L'e', 5));   
-    c2.insert(Mymultimap::make_value(L'f', 6));   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// swap and redisplay   
-    c1.swap(c2);   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-[d 4] [e 5] [f 6]  
-[d 4] [e 5] [f 6]  
-[a 1] [b 2] [c 3]  
-```  
+
+Intercambia el contenido de dos contenedores.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+void swap(multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*right*<br/>
+Contenedor con el que se va a intercambiar el contenido.
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro intercambia las secuencias controladas entre `this` y *derecho*. Lo hace en tiempo constante y no inicia ninguna excepción. Úselo como una forma rápida para intercambiar el contenido de dos contenedores.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_swap.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // construct another container with repetition of values
+    Mymultimap c2;
+    c2.insert(Mymultimap::make_value(L'd', 4));
+    c2.insert(Mymultimap::make_value(L'e', 5));
+    c2.insert(Mymultimap::make_value(L'f', 6));
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // swap and redisplay
+    c1.swap(c2);
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[d 4] [e 5] [f 6]
+[d 4] [e 5] [f 6]
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="to_array"></a> multimap::to_array (STL/CLR)
-Copia la secuencia controlada a una nueva matriz.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-cli::array<value_type>^ to_array();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve una matriz que contiene la secuencia controlada. Se usa para obtener una copia de la secuencia controlada en forma de matriz.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_to_array.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// copy the container and modify it   
-    cli::array<Mymultimap::value_type>^ a1 = c1.to_array();   
-  
-    c1.insert(Mymultimap::make_value(L'd', 4));   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// display the earlier array copy   
-    for each (Mymultimap::value_type elem in a1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3] [d 4]  
-[a 1] [b 2] [c 3]  
-```  
+
+Copia la secuencia controlada a una nueva matriz.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+cli::array<value_type>^ to_array();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve una matriz que contiene la secuencia controlada. Se usa para obtener una copia de la secuencia controlada en forma de matriz.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_to_array.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // copy the container and modify it
+    cli::array<Mymultimap::value_type>^ a1 = c1.to_array();
+
+    c1.insert(Mymultimap::make_value(L'd', 4));
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // display the earlier array copy
+    for each (Mymultimap::value_type elem in a1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3] [d 4]
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="upper_bound"></a> multimap:: upper_bound (STL/CLR)
-Busca el final del intervalo que coincide con una clave especificada.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-iterator upper_bound(key_type key);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *key*  
- Valor de clave que se va a buscar.  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro determina el último elemento `X` en la secuencia controlada que tiene una ordenación equivalente a *clave*. Si no existe ese elemento, o si `X` es el último elemento de la secuencia controlada, se devuelve [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa el primer elemento más allá de `X`. Utiliza para localizar el final de una secuencia de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_upper_bound.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("upper_bound(L'x')==end() = {0}",   
-        c1.upper_bound(L'x') == c1.end());   
-  
-    Mymultimap::iterator it = c1.upper_bound(L'a');   
-    System::Console::WriteLine("*upper_bound(L'a') = [{0} {1}]",   
-        it->first, it->second);   
-    it = c1.upper_bound(L'b');   
-    System::Console::WriteLine("*upper_bound(L'b') = [{0} {1}]",   
-        it->first, it->second);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
-upper_bound(L'x')==end() = True  
-*upper_bound(L'a') = [b 2]  
-*upper_bound(L'b') = [c 3]  
-```  
+
+Busca el final del intervalo que coincide con una clave especificada.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+iterator upper_bound(key_type key);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*key*<br/>
+Valor de clave que se va a buscar.
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro determina el último elemento `X` en la secuencia controlada que tiene una ordenación equivalente a *clave*. Si no existe ese elemento, o si `X` es el último elemento de la secuencia controlada, se devuelve [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa el primer elemento más allá de `X`. Utiliza para localizar el final de una secuencia de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_upper_bound.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("upper_bound(L'x')==end() = {0}",
+        c1.upper_bound(L'x') == c1.end());
+
+    Mymultimap::iterator it = c1.upper_bound(L'a');
+    System::Console::WriteLine("*upper_bound(L'a') = [{0} {1}]",
+        it->first, it->second);
+    it = c1.upper_bound(L'b');
+    System::Console::WriteLine("*upper_bound(L'b') = [{0} {1}]",
+        it->first, it->second);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+upper_bound(L'x')==end() = True
+*upper_bound(L'a') = [b 2]
+*upper_bound(L'b') = [c 3]
+```
 
 ## <a name="value_comp"></a> multimap:: value_comp (STL/CLR)
-Copia al delegado de ordenación de dos valores de elemento.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-value_compare^ value_comp();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve al delegado de ordenación utilizado para ordenar la secuencia controlada. Usa para comparar dos valores de elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_value_comp.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::map<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    Mymultimap::value_compare^ kcomp = c1.value_comp();   
-  
-    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",   
-        kcomp(Mymultimap::make_value(L'a', 1),   
-            Mymultimap::make_value(L'a', 1)));   
-    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",   
-        kcomp(Mymultimap::make_value(L'a', 1),   
-            Mymultimap::make_value(L'b', 2)));   
-    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",   
-        kcomp(Mymultimap::make_value(L'b', 2),   
-            Mymultimap::make_value(L'a', 1)));   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-compare([L'a', 1], [L'a', 1]) = False  
-compare([L'a', 1], [L'b', 2]) = True  
-compare([L'b', 2], [L'a', 1]) = False  
-```  
+
+Copia al delegado de ordenación de dos valores de elemento.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+value_compare^ value_comp();
+```
+
+### <a name="remarks"></a>Comentarios
+
+La función miembro devuelve al delegado de ordenación utilizado para ordenar la secuencia controlada. Usa para comparar dos valores de elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_value_comp.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::map<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    Mymultimap::value_compare^ kcomp = c1.value_comp();
+
+    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",
+        kcomp(Mymultimap::make_value(L'a', 1),
+            Mymultimap::make_value(L'a', 1)));
+    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",
+        kcomp(Mymultimap::make_value(L'a', 1),
+            Mymultimap::make_value(L'b', 2)));
+    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",
+        kcomp(Mymultimap::make_value(L'b', 2),
+            Mymultimap::make_value(L'a', 1)));
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+compare([L'a', 1], [L'a', 1]) = False
+compare([L'a', 1], [L'b', 2]) = True
+compare([L'b', 2], [L'a', 1]) = False
+```
 
 ## <a name="value_compare"></a> multimap::value_compare (STL/CLR)
-Delegado de ordenación para dos valores de elemento.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
-    value_compare;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo para el delegado que determina el orden de sus argumentos de valor.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_value_compare.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::map<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    Mymultimap::value_compare^ kcomp = c1.value_comp();   
-  
-    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",   
-        kcomp(Mymultimap::make_value(L'a', 1),   
-            Mymultimap::make_value(L'a', 1)));   
-    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",   
-        kcomp(Mymultimap::make_value(L'a', 1),   
-            Mymultimap::make_value(L'b', 2)));   
-    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",   
-        kcomp(Mymultimap::make_value(L'b', 2),   
-            Mymultimap::make_value(L'a', 1)));   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-compare([L'a', 1], [L'a', 1]) = False  
-compare([L'a', 1], [L'b', 2]) = True  
-compare([L'b', 2], [L'a', 1]) = False  
-```  
-  
+
+Delegado de ordenación para dos valores de elemento.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
+    value_compare;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo es un sinónimo para el delegado que determina el orden de sus argumentos de valor.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_value_compare.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::map<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    Mymultimap::value_compare^ kcomp = c1.value_comp();
+
+    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",
+        kcomp(Mymultimap::make_value(L'a', 1),
+            Mymultimap::make_value(L'a', 1)));
+    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",
+        kcomp(Mymultimap::make_value(L'a', 1),
+            Mymultimap::make_value(L'b', 2)));
+    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",
+        kcomp(Mymultimap::make_value(L'b', 2),
+            Mymultimap::make_value(L'a', 1)));
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+compare([L'a', 1], [L'a', 1]) = False
+compare([L'a', 1], [L'b', 2]) = True
+compare([L'b', 2], [L'a', 1]) = False
+```
+
 ## <a name="value_type"></a> multimap:: value_type (STL/CLR)
-El tipo de un elemento.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typedef generic_value value_type;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo de `generic_value`.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_value_type.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]" using value_type   
-    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)   
-        {   // store element in value_type object   
-        Mymultimap::value_type val = *it;   
-        System::Console::Write(" [{0} {1}]", val->first, val->second);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-[a 1] [b 2] [c 3]  
-```  
+
+El tipo de un elemento.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+typedef generic_value value_type;
+```
+
+### <a name="remarks"></a>Comentarios
+
+El tipo es un sinónimo de `generic_value`.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_value_type.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]" using value_type
+    for (Mymultimap::iterator it = c1.begin(); it != c1.end(); ++it)
+        {   // store element in value_type object
+        Mymultimap::value_type val = *it;
+        System::Console::Write("[{0} {1}] ", val->first, val->second);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+```
 
 ## <a name="op_neq"></a> operador! = (multimap) (STL/CLR)
-Lista de comparación de desigualdad.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename Key,  
-    typename Mapped>  
-    bool operator!=(multimap<Key, Mapped>% left,  
-        multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *left*  
- Contenedor izquierdo que se va a comparar.  
-  
- *right*  
- Contenedor derecho que se va a comparar.  
-  
-### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `!(left == right)`. Usa para probar si *izquierdo* no está ordenado el mismo que *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_operator_ne.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mymultimap c2;   
-    c2.insert(Mymultimap::make_value(L'a', 1));   
-    c2.insert(Mymultimap::make_value(L'b', 2));   
-    c2.insert(Mymultimap::make_value(L'd', 4));   
-  
-// display contents " [a 1] [b 2] [d 4]"   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] != [a b c] is {0}",   
-        c1 != c1);   
-    System::Console::WriteLine("[a b c] != [a b d] is {0}",   
-        c1 != c2);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
- [a 1] [b 2] [d 4]  
-[a b c] != [a b c] is False  
-[a b c] != [a b d] is True  
-```  
+
+Lista de comparación de desigualdad.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Key,
+    typename Mapped>
+    bool operator!=(multimap<Key, Mapped>% left,
+        multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*left*<br/>
+Contenedor izquierdo que se va a comparar.
+
+*right*<br/>
+Contenedor derecho que se va a comparar.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve la función de operador `!(left == right)`. Usa para probar si *izquierdo* no está ordenado el mismo que *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_operator_ne.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // assign to a new container
+    Mymultimap c2;
+    c2.insert(Mymultimap::make_value(L'a', 1));
+    c2.insert(Mymultimap::make_value(L'b', 2));
+    c2.insert(Mymultimap::make_value(L'd', 4));
+
+    // display contents " [a 1] [b 2] [d 4]"
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] != [a b c] is {0}",
+        c1 != c1);
+    System::Console::WriteLine("[a b c] != [a b d] is {0}",
+        c1 != c2);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [d 4]
+[a b c] != [a b c] is False
+[a b c] != [a b d] is True
+```
 
 ## <a name="op_lt"></a> operador&lt; (multimap) (STL/CLR)
-Lista de menor de comparación.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename Key,  
-    typename Mapped>  
-    bool operator<(multimap<Key, Mapped>% left,  
-        multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *left*  
- Contenedor izquierdo que se va a comparar.  
-  
- *right*  
- Contenedor derecho que se va a comparar.  
-  
-### <a name="remarks"></a>Comentarios  
- El operador función devuelve true si, para la posición más baja `i` que `!(right[i] < left[i])` es también true que `left[i] < right[i]`. De lo contrario, devuelve `left->size() < right->size()` usarla para probar si *izquierdo* está ordenado antes *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_operator_lt.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mymultimap c2;   
-    c2.insert(Mymultimap::make_value(L'a', 1));   
-    c2.insert(Mymultimap::make_value(L'b', 2));   
-    c2.insert(Mymultimap::make_value(L'd', 4));   
-  
-// display contents " [a 1] [b 2] [d 4]"   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] < [a b c] is {0}",   
-        c1 < c1);   
-    System::Console::WriteLine("[a b c] < [a b d] is {0}",   
-        c1 < c2);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
- [a 1] [b 2] [d 4]  
-[a b c] < [a b c] is False  
-[a b c] < [a b d] is True  
-```  
+
+Lista de menor de comparación.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Key,
+    typename Mapped>
+    bool operator<(multimap<Key, Mapped>% left,
+        multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*left*<br/>
+Contenedor izquierdo que se va a comparar.
+
+*right*<br/>
+Contenedor derecho que se va a comparar.
+
+### <a name="remarks"></a>Comentarios
+
+El operador función devuelve true si, para la posición más baja `i` que `!(right[i] < left[i])` es también true que `left[i] < right[i]`. De lo contrario, devuelve `left->size() < right->size()` usarla para probar si *izquierdo* está ordenado antes *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_operator_lt.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // assign to a new container
+    Mymultimap c2;
+    c2.insert(Mymultimap::make_value(L'a', 1));
+    c2.insert(Mymultimap::make_value(L'b', 2));
+    c2.insert(Mymultimap::make_value(L'd', 4));
+
+    // display contents " [a 1] [b 2] [d 4]"
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] < [a b c] is {0}",
+        c1 < c1);
+    System::Console::WriteLine("[a b c] < [a b d] is {0}",
+        c1 < c2);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [d 4]
+[a b c] < [a b c] is False
+[a b c] < [a b d] is True
+```
 
 ## <a name="op_lteq"></a> operador&lt;= (multimap) (STL/CLR)
-Lista igual o comparación.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename Key,  
-    typename Mapped>  
-    bool operator<=(multimap<Key, Mapped>% left,  
-        multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *left*  
- Contenedor izquierdo que se va a comparar.  
-  
- *right*  
- Contenedor derecho que se va a comparar.  
-  
-### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `!(right < left)`. Se usa para probar si *izquierdo* no está ordenado después *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_operator_le.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mymultimap c2;   
-    c2.insert(Mymultimap::make_value(L'a', 1));   
-    c2.insert(Mymultimap::make_value(L'b', 2));   
-    c2.insert(Mymultimap::make_value(L'd', 4));   
-  
-// display contents " [a 1] [b 2] [d 4]"   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] <= [a b c] is {0}",   
-        c1 <= c1);   
-    System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
-        c2 <= c1);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
- [a 1] [b 2] [d 4]  
-[a b c] <= [a b c] is True  
-[a b d] <= [a b c] is False  
-```  
+
+Lista igual o comparación.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Key,
+    typename Mapped>
+    bool operator<=(multimap<Key, Mapped>% left,
+        multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*left*<br/>
+Contenedor izquierdo que se va a comparar.
+
+*right*<br/>
+Contenedor derecho que se va a comparar.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve la función de operador `!(right < left)`. Se usa para probar si *izquierdo* no está ordenado después *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_operator_le.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // assign to a new container
+    Mymultimap c2;
+    c2.insert(Mymultimap::make_value(L'a', 1));
+    c2.insert(Mymultimap::make_value(L'b', 2));
+    c2.insert(Mymultimap::make_value(L'd', 4));
+
+    // display contents " [a 1] [b 2] [d 4]"
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] <= [a b c] is {0}",
+        c1 <= c1);
+    System::Console::WriteLine("[a b d] <= [a b c] is {0}",
+        c2 <= c1);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [d 4]
+[a b c] <= [a b c] is True
+[a b d] <= [a b c] is False
+```
 
 ## <a name="op_eq"></a> operador == (multimap) (STL/CLR)
-Comparación de igualdad de lista.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename Key,  
-    typename Mapped>  
-    bool operator==(multimap<Key, Mapped>% left,  
-        multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *left*  
- Contenedor izquierdo que se va a comparar.  
-  
- *right*  
- Contenedor derecho que se va a comparar.  
-  
-### <a name="remarks"></a>Comentarios  
- Devuelve true solo si las secuencias se controlan mediante la función de operador *izquierdo* y *derecho* tienen la misma longitud y, para cada posición `i`, `left[i] ==` `right[i]`. Se usa para probar si *izquierdo* se ordenan igual *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_operator_eq.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mymultimap c2;   
-    c2.insert(Mymultimap::make_value(L'a', 1));   
-    c2.insert(Mymultimap::make_value(L'b', 2));   
-    c2.insert(Mymultimap::make_value(L'd', 4));   
-  
-// display contents " [a 1] [b 2] [d 4]"   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] == [a b c] is {0}",   
-        c1 == c1);   
-    System::Console::WriteLine("[a b c] == [a b d] is {0}",   
-        c1 == c2);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
- [a 1] [b 2] [d 4]  
-[a b c] == [a b c] is True  
-[a b c] == [a b d] is False  
-```  
+
+Comparación de igualdad de lista.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Key,
+    typename Mapped>
+    bool operator==(multimap<Key, Mapped>% left,
+        multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*left*<br/>
+Contenedor izquierdo que se va a comparar.
+
+*right*<br/>
+Contenedor derecho que se va a comparar.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve true solo si las secuencias se controlan mediante la función de operador *izquierdo* y *derecho* tienen la misma longitud y, para cada posición `i`, `left[i] ==` `right[i]`. Se usa para probar si *izquierdo* se ordenan igual *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_operator_eq.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // assign to a new container
+    Mymultimap c2;
+    c2.insert(Mymultimap::make_value(L'a', 1));
+    c2.insert(Mymultimap::make_value(L'b', 2));
+    c2.insert(Mymultimap::make_value(L'd', 4));
+
+    // display contents " [a 1] [b 2] [d 4]"
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] == [a b c] is {0}",
+        c1 == c1);
+    System::Console::WriteLine("[a b c] == [a b d] is {0}",
+        c1 == c2);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [d 4]
+[a b c] == [a b c] is True
+[a b c] == [a b d] is False
+```
 
 ## <a name="op_gt"></a> operador&gt; (multimap) (STL/CLR)
-Comparación mayor que la lista.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename Key,  
-    typename Mapped>  
-    bool operator>(multimap<Key, Mapped>% left,  
-        multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *left*  
- Contenedor izquierdo que se va a comparar.  
-  
- *right*  
- Contenedor derecho que se va a comparar.  
-  
-### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `right` `<` `left`. Usa para probar si *izquierdo* se ordena después *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_operator_gt.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mymultimap c2;   
-    c2.insert(Mymultimap::make_value(L'a', 1));   
-    c2.insert(Mymultimap::make_value(L'b', 2));   
-    c2.insert(Mymultimap::make_value(L'd', 4));   
-  
-// display contents " [a 1] [b 2] [d 4]"   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] > [a b c] is {0}",   
-        c1 > c1);   
-    System::Console::WriteLine("[a b d] > [a b c] is {0}",   
-        c2 > c1);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
- [a 1] [b 2] [d 4]  
-[a b c] > [a b c] is False  
-[a b d] > [a b c] is True  
-```  
+
+Comparación mayor que la lista.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Key,
+    typename Mapped>
+    bool operator>(multimap<Key, Mapped>% left,
+        multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*left*<br/>
+Contenedor izquierdo que se va a comparar.
+
+*right*<br/>
+Contenedor derecho que se va a comparar.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve la función de operador `right` `<` `left`. Usa para probar si *izquierdo* se ordena después *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_operator_gt.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // assign to a new container
+    Mymultimap c2;
+    c2.insert(Mymultimap::make_value(L'a', 1));
+    c2.insert(Mymultimap::make_value(L'b', 2));
+    c2.insert(Mymultimap::make_value(L'd', 4));
+
+    // display contents " [a 1] [b 2] [d 4]"
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] > [a b c] is {0}",
+        c1 > c1);
+    System::Console::WriteLine("[a b d] > [a b c] is {0}",
+        c2 > c1);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [d 4]
+[a b c] > [a b c] is False
+[a b d] > [a b c] is True
+```
 
 ## <a name="op_gteq"></a> operador&gt;= (multimap) (STL/CLR)
-Comparación igual o mayor de la lista.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename Key,  
-    typename Mapped>  
-    bool operator>=(multimap<Key, Mapped>% left,  
-        multimap<Key, Mapped>% right);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *left*  
- Contenedor izquierdo que se va a comparar.  
-  
- *right*  
- Contenedor derecho que se va a comparar.  
-  
-### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `!(left` `<` `right)`. Usa para probar si *izquierdo* no está ordenado antes *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.  
-  
-### <a name="example"></a>Ejemplo  
-  
-```cpp  
-// cliext_multimap_operator_ge.cpp   
-// compile with: /clr   
-#include <cliext/map>   
-  
-typedef cliext::multimap<wchar_t, int> Mymultimap;   
-int main()   
-    {   
-    Mymultimap c1;   
-    c1.insert(Mymultimap::make_value(L'a', 1));   
-    c1.insert(Mymultimap::make_value(L'b', 2));   
-    c1.insert(Mymultimap::make_value(L'c', 3));   
-  
-// display contents " [a 1] [b 2] [c 3]"   
-    for each (Mymultimap::value_type elem in c1)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mymultimap c2;   
-    c2.insert(Mymultimap::make_value(L'a', 1));   
-    c2.insert(Mymultimap::make_value(L'b', 2));   
-    c2.insert(Mymultimap::make_value(L'd', 4));   
-  
-// display contents " [a 1] [b 2] [d 4]"   
-    for each (Mymultimap::value_type elem in c2)   
-        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] >= [a b c] is {0}",   
-        c1 >= c1);   
-    System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
-        c1 >= c2);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- [a 1] [b 2] [c 3]  
- [a 1] [b 2] [d 4]  
-[a b c] >= [a b c] is True  
-[a b c] >= [a b d] is False  
-```  
+
+Comparación igual o mayor de la lista.
+
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename Key,
+    typename Mapped>
+    bool operator>=(multimap<Key, Mapped>% left,
+        multimap<Key, Mapped>% right);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*left*<br/>
+Contenedor izquierdo que se va a comparar.
+
+*right*<br/>
+Contenedor derecho que se va a comparar.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve la función de operador `!(left` `<` `right)`. Usa para probar si *izquierdo* no está ordenado antes *derecho* cuando los dos mapas múltiples son comparado elemento por elemento.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// cliext_multimap_operator_ge.cpp
+// compile with: /clr
+#include <cliext/map>
+
+typedef cliext::multimap<wchar_t, int> Mymultimap;
+int main()
+    {
+    Mymultimap c1;
+    c1.insert(Mymultimap::make_value(L'a', 1));
+    c1.insert(Mymultimap::make_value(L'b', 2));
+    c1.insert(Mymultimap::make_value(L'c', 3));
+
+    // display contents " [a 1] [b 2] [c 3]"
+    for each (Mymultimap::value_type elem in c1)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    // assign to a new container
+    Mymultimap c2;
+    c2.insert(Mymultimap::make_value(L'a', 1));
+    c2.insert(Mymultimap::make_value(L'b', 2));
+    c2.insert(Mymultimap::make_value(L'd', 4));
+
+    // display contents " [a 1] [b 2] [d 4]"
+    for each (Mymultimap::value_type elem in c2)
+        System::Console::Write("[{0} {1}] ", elem->first, elem->second);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] >= [a b c] is {0}",
+        c1 >= c1);
+    System::Console::WriteLine("[a b c] >= [a b d] is {0}",
+        c1 >= c2);
+    return (0);
+    }
+```
+
+```Output
+[a 1] [b 2] [c 3]
+[a 1] [b 2] [d 4]
+[a b c] >= [a b c] is True
+[a b c] >= [a b d] is False
+```

@@ -16,41 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adece31c6123a21931436809d4405f258f4341b1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f989c7bd6cc74a688e8694ed59899c59c50cb0d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540682"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430662"
 ---
 # <a name="readcr0"></a>__readcr0
-**Específicos de Microsoft**  
-  
- Lee el registro CR0 y devuelve su valor.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-unsigned long __readcr0(void);  /* X86 */  
-unsigned __int64 __readcr0(void);  /* X64 */  
-  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- El valor del registro CR0.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función intrínseca|Arquitectura|  
-|---------------|------------------|  
-|`__readcr0`|x86, x64|  
-  
- **Archivo de encabezado** \<intrin.h >  
-  
-## <a name="remarks"></a>Comentarios  
- Este intrínseco solo está disponible en modo kernel, y la rutina solo está disponible como intrínseco.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+
+**Específicos de Microsoft**
+
+Lee el registro CR0 y devuelve su valor.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+unsigned long __readcr0(void);  /* X86 */
+unsigned __int64 __readcr0(void);  /* X64 */
+
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+El valor del registro CR0.
+
+## <a name="requirements"></a>Requisitos
+
+|Función intrínseca|Arquitectura|
+|---------------|------------------|
+|`__readcr0`|x86, x64|
+
+**Archivo de encabezado** \<intrin.h >
+
+## <a name="remarks"></a>Comentarios
+
+Este intrínseco solo está disponible en modo kernel, y la rutina solo está disponible como intrínseco.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

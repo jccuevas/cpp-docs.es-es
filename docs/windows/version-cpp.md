@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 60a5ad42f83d9e9528fd5bdc4c8d3e62254a3677
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438742"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -39,7 +39,7 @@ Identifica una versión determinada entre varias versiones de una clase.
 
 ### <a name="parameters"></a>Parámetros
 
-*version*  
+*version*<br/>
 El número de versión de la `coclass`. Si no se especifica, se colocará en el archivo .idl 1.0.
 
 ## <a name="remarks"></a>Comentarios
@@ -65,5 +65,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de compilador](../windows/compiler-attributes.md)  
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
 [Atributos de clase](../windows/class-attributes.md)  

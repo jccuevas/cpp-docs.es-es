@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cba5aaaec3303d9cd3534ff86cb677219c9c81c7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 087ecf151b17c7c505b4b70d01913a44e113ad29
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586789"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428686"
 ---
 # <a name="asyncbase-class"></a>AsyncBase (clase)
 
@@ -47,13 +47,13 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 
 ### <a name="parameters"></a>Parámetros
 
-*TComplete*  
+*TComplete*<br/>
 Un controlador de eventos que se llama cuando finaliza una operación asincrónica.
 
-*TProgress*  
+*TProgress*<br/>
 Un controlador de eventos que se llama cuando una operación asincrónica notifica el progreso actual de la operación.
 
-*resultType*  
+*resultType*<br/>
 Uno de los [AsyncResultType](../windows/asyncresulttype-enumeration.md) valores de enumeración. De forma predeterminada, `SingleResult`.
 
 ## <a name="members"></a>Miembros

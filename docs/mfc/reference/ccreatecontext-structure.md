@@ -1,5 +1,5 @@
 ---
-title: Estructura de CCreateContext | Documentos de Microsoft
+title: CCreateContext (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,65 +16,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 320f84a8c423c16c4647108af0154fe7c07ce653
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352049"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447302"
 ---
-# <a name="ccreatecontext-structure"></a>Estructura de CCreateContext
-El marco de trabajo usa el `CCreateContext` estructura al crear las vistas que están asociadas a un documento y ventanas de marco.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-struct CCreateContext  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- `CCreateContext` es una estructura y no tiene una clase base.  
-  
- Cuando se crea una ventana, los valores de esta estructura proporcionan la información utilizada para conectar los componentes de un documento a la vista de sus datos. Solo tiene que usar `CCreateContext` si va a reemplazar partes del proceso de creación.  
-  
- Un `CCreateContext` estructura contiene punteros a la plantilla de documento, la ventana de marco, la vista y el documento. También contiene un puntero a un `CRuntimeClass` que identifica el tipo de vista para crear. La información de clase en tiempo de ejecución y el puntero del documento actual se utilizan para crear una nueva vista de forma dinámica. La siguiente tabla se sugiere cómo y cuándo cada `CCreateContext` podría utilizarse miembro:  
-  
-|Miembro|Tipo|¿Qué es|  
-|------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` de la nueva vista que se va a crear.|  
-|`m_pCurrentDoc`|`CDocument*`|El documento existente que se asociará con la nueva vista.|  
-|`m_pNewDocTemplate`|`CDocTemplate*`|La plantilla de documento asociada a la creación de una nueva ventana de marco MDI.|  
-|`m_pLastView`|`CView*`|La vista original en el que se modelan vistas adicionales, como se muestra en la creación de vistas de la ventana divisora o la creación de una segunda vista en un documento.|  
-|`m_pCurrentFrame`|`CFrameWnd*`|La ventana de marco en el que se modelan ventanas de marco adicionales, como se muestra en la creación de una segunda ventana de marco en un documento.|  
-  
- Cuando una plantilla de documento crea un documento y sus componentes asociados, valida la información almacenada en el `CCreateContext` estructura. Por ejemplo, no se debe crear una vista para un documento no existe.  
-  
+# <a name="ccreatecontext-structure"></a>CCreateContext (estructura)
+
+El marco de trabajo usa el `CCreateContext` estructura cuando crea las ventanas de marco y vistas que están asociadas con un documento.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+struct CCreateContext
+```
+
+## <a name="remarks"></a>Comentarios
+
+`CCreateContext` es una estructura y no tiene una clase base.
+
+Cuando se crea una ventana, los valores de esta estructura proporcionan la información que se usa para conectar los componentes de un documento a la vista de sus datos. Solo tiene que usar `CCreateContext` si va a reemplazar partes del proceso de creación.
+
+Un `CCreateContext` estructura contiene punteros a la plantilla de documento, la ventana de marco, la vista y el documento. También contiene un puntero a un `CRuntimeClass` que identifica el tipo de vista para crear. La información de clase en tiempo de ejecución y el puntero del documento actual se utilizan para crear una nueva vista de forma dinámica. La siguiente tabla se sugiere cómo y cuándo cada `CCreateContext` podría utilizarse el miembro:
+
+|Miembro|Tipo|¿Qué es|
+|------------|----------|--------------------|
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` de la nueva vista para crear.|
+|`m_pCurrentDoc`|`CDocument*`|El documento existente que se asociará con la nueva vista.|
+|`m_pNewDocTemplate`|`CDocTemplate*`|La plantilla de documento asociada con la creación de una nueva ventana de marco MDI.|
+|`m_pLastView`|`CView*`|La vista original en el que se modelan vistas adicionales, como se muestra en la creación de vistas de la ventana divisora o la creación de una segunda vista en un documento.|
+|`m_pCurrentFrame`|`CFrameWnd*`|La ventana de marco en el que se modelan ventanas de marco adicional, como se muestra en la creación de una segunda ventana de marco en un documento.|
+
+Cuando una plantilla de documento crea un documento y sus componentes asociados, valida la información almacenada en el `CCreateContext` estructura. Por ejemplo, no debe crearse una vista para un documento que no existe.
+
 > [!NOTE]
->  Todos los punteros de `CCreateContext` son opcionales y pueden ser `NULL` si ha especificado o desconocido.  
-  
- `CCreateContext` se utiliza por las funciones de miembro aparecen bajo "Vea también". Si tiene previsto reemplazarlos, consulte las descripciones de estas funciones para obtener información específica.  
-  
- Estas son algunas directrices generales:  
-  
--   Cuando se pasa como un argumento para la creación de ventana, como en `CWnd::Create`, `CFrameWnd::Create`, y `CFrameWnd::LoadFrame`, el contexto de crear especifica qué opciones que se debe conectar a la nueva ventana. Para la mayoría de las ventanas, la estructura completa es opcional y un `NULL` se puede pasar el puntero.  
-  
--   Para las funciones miembro reemplazables, como `CFrameWnd::OnCreateClient`, el `CCreateContext` argumento es opcional.  
-  
--   Para las funciones de miembro implicadas en la vista creación, debe proporcionar suficiente información para crear la vista. Por ejemplo, para la primera vista de una ventana divisora, debe proporcionar la información de la clase de vista y el documento actual.  
-  
- En general, si utiliza los valores predeterminados de framework, puede omitir `CCreateContext`. Si intentas modificaciones más avanzadas, el código de origen de la biblioteca Microsoft Foundation Class o los programas de ejemplo, como VIEWEX, le ayudará. Si ha olvidado un parámetro necesario, una aserción de framework le indicará lo que olvidó.  
-  
- Para obtener más información sobre `CCreateContext`, vea el ejemplo MFC [VIEWEX](../../visual-cpp-samples.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxext.h  
-  
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
- [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   
- [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   
- [CSplitterWnd:: Create](../../mfc/reference/csplitterwnd-class.md#create)   
- [CSplitterWnd:: CreateView](../../mfc/reference/csplitterwnd-class.md#createview)   
- [CWnd:: Create](../../mfc/reference/cwnd-class.md#create)
+>  Todos los punteros de `CCreateContext` son opcionales y pueden ser `NULL` si ha especificado o desconocido.
+
+`CCreateContext` se utiliza por las funciones miembro que aparece en "Vea también". Si va a invalidarlos, consulte las descripciones de estas funciones para obtener información específica.
+
+Estas son algunas directrices generales:
+
+- Cuando se pasa como un argumento para la creación de la ventana, como en `CWnd::Create`, `CFrameWnd::Create`, y `CFrameWnd::LoadFrame`, el contexto de creación especifica lo que la nueva ventana debe estar conectada a. Para la mayoría de las ventanas, la estructura completa es opcional y un `NULL` se puede pasar el puntero.
+
+- Para las funciones miembro reemplazables, tales como `CFrameWnd::OnCreateClient`, el `CCreateContext` argumento es opcional.
+
+- Para las funciones miembro implicadas en la vista creación, debe proporcionar suficiente información para crear la vista. Por ejemplo, para la primera vista en una ventana divisora, debe proporcionar la información de la clase de vista y el documento actual.
+
+En general, si usa los valores predeterminados de framework, puede omitir `CCreateContext`. Si intentas modificaciones más avanzadas, el código de origen de la biblioteca Microsoft Foundation Class o los programas de ejemplo, como VIEWEX, sirve de guía. Si olvida un parámetro necesario, una aserción de framework le indicará lo que olvidó.
+
+Para obtener más información sobre `CCreateContext`, vea el ejemplo de MFC [VIEWEX](../../visual-cpp-samples.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** afxext.h
+
+## <a name="see-also"></a>Vea también
+
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
+[CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)<br/>
+[CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)<br/>
+[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)<br/>
+[CSplitterWnd:: Create](../../mfc/reference/csplitterwnd-class.md#create)<br/>
+[CSplitterWnd:: CreateView](../../mfc/reference/csplitterwnd-class.md#createview)<br/>
+[CWnd:: Create](../../mfc/reference/cwnd-class.md#create)
 

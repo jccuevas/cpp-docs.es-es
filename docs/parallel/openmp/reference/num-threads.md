@@ -16,42 +16,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 27e39d7db36c121add3598387de52ecb878059b5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016291"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405273"
 ---
 # <a name="numthreads"></a>num_threads
-Establece el número de subprocesos en un equipo de subproceso.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-num_threads(num)  
-```  
-  
+
+Establece el número de subprocesos en un equipo de subproceso.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+num_threads(num)
+```
+
 ### <a name="parameters"></a>Parámetros
-  
+
 *num*<br/>
-El número de subprocesos  
-  
-## <a name="remarks"></a>Comentarios  
- El `num_threads` cláusula tiene la misma funcionalidad que el [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) función.  
-  
- `num_threads` se aplica a las siguientes directivas:  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Secciones](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Para obtener más información, consulte [2.3 parallel (construcción)](../../../parallel/openmp/2-3-parallel-construct.md).  
-  
-## <a name="example"></a>Ejemplo  
- Consulte [paralelo](../../../parallel/openmp/reference/parallel.md) para obtener un ejemplo del uso de `num_threads` cláusula.  
-  
-## <a name="see-also"></a>Vea también  
- [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)
+El número de subprocesos
+
+## <a name="remarks"></a>Comentarios
+
+El `num_threads` cláusula tiene la misma funcionalidad que el [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) función.
+
+`num_threads` se aplica a las siguientes directivas:
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Secciones](../../../parallel/openmp/reference/sections-openmp.md)
+
+Para obtener más información, consulte [2.3 parallel (construcción)](../../../parallel/openmp/2-3-parallel-construct.md).
+
+## <a name="example"></a>Ejemplo
+
+Consulte [paralelo](../../../parallel/openmp/reference/parallel.md) para obtener un ejemplo del uso de `num_threads` cláusula.
+
+## <a name="see-also"></a>Vea también
+
+[Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

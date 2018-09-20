@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a6ade991e3a2def588bdd3139cbea8089d3124
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe80a16f0085e37feaf7c80611fa303f1d3bf1ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758016"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425774"
 ---
 # <a name="date-type"></a>Tipo de fecha
 
@@ -76,6 +76,6 @@ Para obtener más información sobre problemas relacionados con la fecha y `COle
 
 ## <a name="see-also"></a>Vea también
 
-[Fecha y hora](../atl-mfc-shared/date-and-time.md)   
+[Fecha y hora](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime (clase)](../atl-mfc-shared/reference/coledatetime-class.md)
 

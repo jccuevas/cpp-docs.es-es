@@ -1,5 +1,5 @@
 ---
-title: OLE de arrastrar y colocar y datos de clases de transferencia | Documentos de Microsoft
+title: OLE arrastrar y colocar y transferencia de datos clases | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,28 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d55d6d171f490631afe17a605f50607fb55f070b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4b5d694d0081fbe2d852884c4a379e962c22f2a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347047"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444143"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Clases de arrastrar y colocar y de transferencia de datos OLE
-Estas clases se utilizan en las transferencias de datos OLE. Permite que los datos se transfieren entre las aplicaciones mediante el Portapapeles o mediante arrastrar y colocar.  
-  
- [COleDropSource](../mfc/reference/coledropsource-class.md)  
- Controla la operación de arrastrar y colocar de principio a fin. Esta clase determina cuando se inicia la operación de arrastre y cuando termina. También se muestra la información del cursor durante la operación de arrastrar y colocar.  
-  
- [COleDataSource](../mfc/reference/coledatasource-class.md)  
- Se utiliza cuando una aplicación proporciona datos para una transferencia de datos. `COleDataSource` podría interpretarse como un objeto de Portapapeles orientada a objetos.  
-  
- [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
- Representa el destino de una operación de arrastrar y colocar. Un `COleDropTarget` objeto corresponde a una ventana en la pantalla. Determina si se debe aceptar los datos coloquen en él e implementa la operación de eliminación real.  
-  
- [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Usar como el lado receptor `COleDataSource`. `COleDataObject` objetos proporcionan acceso a los datos almacenados por una `COleDataSource` objeto.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+Estas clases se utilizan en las transferencias de datos OLE. Permite a transferirse entre aplicaciones mediante el Portapapeles o mediante arrastrar y colocar los datos.
+
+[COleDropSource](../mfc/reference/coledropsource-class.md)<br/>
+Controla la operación de arrastrar y colocar de principio a fin. Esta clase determina cuando se inicia la operación de arrastrar y cuando termina. También se muestra la información del cursor durante la operación de arrastrar y colocar.
+
+[COleDataSource](../mfc/reference/coledatasource-class.md)<br/>
+Se usa cuando una aplicación proporciona datos para una transferencia de datos. `COleDataSource` podría verse como un objeto de Portapapeles orientada a objetos.
+
+[COleDropTarget](../mfc/reference/coledroptarget-class.md)<br/>
+Representa el destino de una operación de arrastrar y colocar. Un `COleDropTarget` objeto corresponde a una ventana en pantalla. Determina si se debe aceptar los datos colocan en él e implementa la operación de colocar real.
+
+[COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
+Usar como el lado receptor `COleDataSource`. `COleDataObject` objetos proporcionan acceso a los datos almacenados por una `COleDataSource` objeto.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

@@ -16,38 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7124e51b604a55d049be13d3bbcccc4e5810ca67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028199"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412839"
 ---
 # <a name="lastprivate"></a>lastprivate
-Especifica que versión envolvente del contexto de la variable se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-lastprivate(var)  
-```  
-  
+
+Especifica que versión envolvente del contexto de la variable se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).
+
+## <a name="syntax"></a>Sintaxis
+
+```
+lastprivate(var)
+```
+
 ### <a name="parameters"></a>Parámetros
-  
+
 *var*<br/>
-La variable que se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).  
-  
-## <a name="remarks"></a>Comentarios  
- `lastprivate` se aplica a las siguientes directivas:  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Secciones](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Para obtener más información, consulte [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
-  
-## <a name="example"></a>Ejemplo  
- Consulte [programación](../../../parallel/openmp/reference/schedule.md) para obtener un ejemplo del uso de `lastprivate` cláusula.  
-  
-## <a name="see-also"></a>Vea también  
- [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)
+La variable que se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).
+
+## <a name="remarks"></a>Comentarios
+
+`lastprivate` se aplica a las siguientes directivas:
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Secciones](../../../parallel/openmp/reference/sections-openmp.md)
+
+Para obtener más información, consulte [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).
+
+## <a name="example"></a>Ejemplo
+
+Consulte [programación](../../../parallel/openmp/reference/schedule.md) para obtener un ejemplo del uso de `lastprivate` cláusula.
+
+## <a name="see-also"></a>Vea también
+
+[Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

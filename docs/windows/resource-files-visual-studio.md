@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db3af430b0274f116eba4445158ddcf55ad1636
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5529d531d3ce2e8e34505d90f6d4ceede62cba47
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315670"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424292"
 ---
 # <a name="resource-files-c"></a>Archivos de recursos (C++)
 
@@ -94,6 +94,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)  
-[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
+[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
 [Menús y otros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

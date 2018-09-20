@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 403330097f1428ee0d7650f5931aef1621f61b11
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d460b006d2d17df308a62c0433621aac7008f4d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612606"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411422"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase (Función)
 Recupera un [ModuleBase](../windows/modulebase-class.md) puntero que permite aumentar y disminuir el recuento de referencias de un [RuntimeClass](../windows/runtimeclass-class.md) objeto.
@@ -32,17 +32,21 @@ inline Details::ModuleBase* GetModuleBase() throw()
 ```
   
 ## <a name="return-value"></a>Valor devuelto
- Un puntero a un `ModuleBase` objeto.
+
+Un puntero a un `ModuleBase` objeto.
   
 ## <a name="remarks"></a>Comentarios
- Esta función se usa internamente para incrementar y disminuir recuentos de referencias de objeto.
+
+Esta función se usa internamente para incrementar y disminuir recuentos de referencias de objeto.
   
- Puede usar esta función para controlar los recuentos de referencia mediante una llamada a [Modulebase](../windows/modulebase-incrementobjectcount-method.md) y [Modulebase](../windows/modulebase-decrementobjectcount-method.md).
+Puede usar esta función para controlar los recuentos de referencia mediante una llamada a [Modulebase](../windows/modulebase-incrementobjectcount-method.md) y [Modulebase](../windows/modulebase-decrementobjectcount-method.md).
   
 ## <a name="requirements"></a>Requisitos
- **Encabezado:** implements.h
+
+**Encabezado:** implements.h
   
- **Espacio de nombres:** Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
   
 ## <a name="see-also"></a>Vea también
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

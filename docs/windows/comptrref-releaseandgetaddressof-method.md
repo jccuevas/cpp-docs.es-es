@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03f709feddb1c0e9c82cf80a4bd5f24e531414d3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 48c9c748b80bb7900d57e1e0c0aff68d8e1f4ec1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424968"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf (Método)
 
@@ -50,5 +50,5 @@ Elimina la actual **ComPtrRef** de objetos y devuelve un puntero a una de punter
 
 ## <a name="see-also"></a>Vea también
 
-[ComPtrRef (clase)](../windows/comptrref-class.md)  
+[ComPtrRef (clase)](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
