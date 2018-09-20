@@ -17,37 +17,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 507f00b82a407b84d374d5f7b9fad8d29101a848
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4559549047c9161d27915df856fad4ea461ee633
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682103"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447250"
 ---
 # <a name="nop"></a>__nop
-**Específicos de Microsoft**  
-  
- Genera código máquina específico de plataforma que no realiza ninguna operación.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void __nop();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función intrínseca|Arquitectura|  
-|---------------|------------------|  
-|`__nop`|x86, x64|  
-  
- **Archivo de encabezado** \<intrin.h >  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="remarks"></a>Comentarios  
- El `__nop` función es equivalente a la `NOP` instrucción máquina. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sitio.  
-  
-## <a name="see-also"></a>Vea también  
- [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
- [__noop](../intrinsics/noop.md)
+
+**Específicos de Microsoft**
+
+Genera código máquina específico de plataforma que no realiza ninguna operación.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void __nop();
+```
+
+## <a name="requirements"></a>Requisitos
+
+|Función intrínseca|Arquitectura|
+|---------------|------------------|
+|`__nop`|x86, x64|
+
+**Archivo de encabezado** \<intrin.h >
+
+**FIN de Específicos de Microsoft**
+
+## <a name="remarks"></a>Comentarios
+
+El `__nop` función es equivalente a la `NOP` instrucción máquina. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sitio.
+
+## <a name="see-also"></a>Vea también
+
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[__noop](../intrinsics/noop.md)
