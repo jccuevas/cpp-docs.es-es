@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6140b6764efe530664a1904940f3a8426e6fee02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709910"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445866"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -43,7 +43,7 @@ Crea un comando OLE DB.
 
 ### <a name="parameters"></a>Parámetros
 
-*command*  
+*command*<br/>
 Cadena de comandos que contiene el texto de un comando OLE DB. Veamos un ejemplo sencillo:
 
 ```cpp
@@ -64,15 +64,15 @@ donde:
 
 - **\[** *BindType* **]** es una de las siguientes cadenas de mayúsculas y minúsculas:
 
-  -   **\[db_column]** enlaza cada una de las variables de miembro a una columna de un conjunto de filas.
+  - **\[db_column]** enlaza cada una de las variables de miembro a una columna de un conjunto de filas.
 
-  -   **\[BindTo]** (igual que  **\[db_column]**).
+  - **\[BindTo]** (igual que  **\[db_column]**).
 
-  -   **\[en]** enlaza variables de miembro como parámetros de entrada.
+  - **\[en]** enlaza variables de miembro como parámetros de entrada.
 
-  -   **\[out]** enlaza variables de miembro como parámetros de salida.
+  - **\[out]** enlaza variables de miembro como parámetros de salida.
 
-  -   **\[in, out]** enlaza variables de miembro como parámetros de entrada/salida.
+  - **\[in, out]** enlaza variables de miembro como parámetros de entrada/salida.
 
 - *szVarX*, *nVarX* se resuelve como una variable de miembro dentro del ámbito actual.
 
@@ -99,25 +99,25 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name*  
+*name*<br/>
 (Opcional) El nombre del identificador que se utiliza para trabajar con el conjunto de filas. Si especifica *name*, **db_command** genera una clase con el *name*(nombre) especificado, que se puede usar para recorrer el conjunto de filas o para ejecutar varias consultas de acción. Si no especifica *name*, no se podrá devolver al usuario más de una fila de resultados.
 
-*source_name*  
+*source_name*<br/>
 (Opcional) El `CSession` variable o instancia de una clase que tiene el `db_source` atributo aplicado a él en el que se ejecuta el comando. Consulte [db_source](../windows/db-source.md).
 
 **db_command** se asegura de que la variable usada para *source_name* sea válida, por lo que la variable especificada debe estar en el ámbito global o de función.
 
-*HRESULT*  
+*HRESULT*<br/>
 (Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
-*enlaces*  
+*enlaces*<br/>
 (Opcional) Le permite separar los parámetros de enlace del comando de OLE DB.
 
 Si especifica un valor para *enlaces*, **db_command** analizará el valor asociado y no analizará el \[ *bindtype*] parámetro. De este modo, puede usar la sintaxis del proveedor OLE DB. Para deshabilitar el análisis sin enlazar parámetros, especifique `Bindings=""`.
 
 Si no especifica un valor para *enlaces*, **db_command** analizará el bloque de parámetros de enlace, buscando "**(**', seguido de **\[** _bindtype_**]** entre corchetes, seguido de uno o más declarado previamente C++ variables de miembro, seguido por '**)**'. Todo el texto incluido entre los paréntesis se quitará del comando resultante y los parámetros se usarán para construir los enlaces de columnas y de parámetros para este comando.
 
-*bulk_fetch*  
+*bulk_fetch*<br/>
 (Opcional) Un valor entero que especifica el número de filas que se va a capturar.
 
 El valor predeterminado es 1, que especifica que se obtendrá una única fila (el conjunto de filas será del tipo [CRowset](../data/oledb/crowset-class.md)).
@@ -266,5 +266,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Atributos independientes](../windows/stand-alone-attributes.md)  

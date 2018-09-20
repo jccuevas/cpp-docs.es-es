@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c4b19cc2bf1ed60f02687b82a57745c328fc114
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c8ee38503698f6f4553ced630e996f58c76e08c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436564"
 ---
 # <a name="deleting-unassigned-symbols"></a>Eliminar símbolos sin asignar
 
@@ -39,7 +39,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Cambio de símbolos sin asignar](../windows/changing-unassigned-symbols.md)  
-[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)  
-[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)  
+[Cambio de símbolos sin asignar](../windows/changing-unassigned-symbols.md)<br/>
+[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)<br/>
+[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

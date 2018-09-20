@@ -1,5 +1,5 @@
 ---
-title: omp_get_wtick () | Documentos de Microsoft
+title: omp_get_wtick () | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 784b3d8c094be5845f3f4fca0f93eee21626798d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da173a48958364c6ae2436a75862dd8fcac57da8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691630"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403622"
 ---
 # <a name="ompgetwtick"></a>omp_get_wtick
-Devuelve el número de segundos entre ciclos de reloj de procesador.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double omp_get_wtick( );  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [3.3.2 omp_get_wtick (función)](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md).  
-  
-## <a name="example"></a>Ejemplo  
- Vea [omp_get_wtime ()](../../../parallel/openmp/reference/omp-get-wtime.md) para obtener un ejemplo del uso de `omp_get_wtick`.  
-  
-## <a name="see-also"></a>Vea también  
- [Funciones](../../../parallel/openmp/reference/openmp-functions.md)
+
+Devuelve el número de segundos entre ciclos de reloj de procesador.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+double omp_get_wtick( );
+```
+
+## <a name="remarks"></a>Comentarios
+
+Para obtener más información, consulte [3.3.2 omp_get_wtick (función)](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md).
+
+## <a name="example"></a>Ejemplo
+
+Consulte [omp_get_wtime ()](../../../parallel/openmp/reference/omp-get-wtime.md) para obtener un ejemplo del uso de `omp_get_wtick`.
+
+## <a name="see-also"></a>Vea también
+
+[Funciones](../../../parallel/openmp/reference/openmp-functions.md)

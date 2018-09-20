@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7b8de310f8abb3b417abbe96576d910513e25717
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202295"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398682"
 ---
 # <a name="restricted"></a>restricted
 
@@ -38,7 +38,7 @@ Especifica que un miembro de un módulo, interfaz o dispinterface no se puede ll
 
 ### <a name="parameters"></a>Parámetros
 
-*interfaces*  
+*interfaces*<br/>
 Una o más interfaces que no se llama de forma arbitraria en un objeto COM. Este parámetro solo es válido cuando se aplica a una clase.
 
 ## <a name="remarks"></a>Comentarios
@@ -87,6 +87,6 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de interfaz](../windows/interface-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de interfaz](../windows/interface-attributes.md)<br/>
 [Atributos de método](../windows/method-attributes.md)  

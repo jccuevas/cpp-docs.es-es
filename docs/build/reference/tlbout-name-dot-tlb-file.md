@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c44028f834d2b3200b970fdc613d0bf4d4efd29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7d9ab5157bb39b890c867c90e3b6a77cf189c9ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702863"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421276"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Dar nombre a un archivo .TLB)
 
@@ -68,6 +68,6 @@ Si no se especifica TLBOUT, el archivo .tlb obtendrá su nombre de [/IDLOUT](../
 
 [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (no procesar atributos en MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/MIDL (especificar las opciones de línea de comandos MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
-[compilar programas con atributos](../../windows/building-an-attributed-program.md)
+[/IGNOREIDL (No procesar atributos en MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Compilación de programas con atributos](../../windows/building-an-attributed-program.md)

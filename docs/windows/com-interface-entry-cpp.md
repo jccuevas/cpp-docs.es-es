@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c0b2c53bf06a748be522606f5904f307cc00df8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 555dcfe83ab114db48942a5be604ff344dafa8ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591361"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398727"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -38,7 +38,7 @@ Agrega una entrada de la interfaz en el mapa COM de la clase de destino.
 
 ### <a name="parameters"></a>Parámetros
 
-*COM_INTERFACE_ENTRY*  
+*COM_INTERFACE_ENTRY*<br/>
 Una cadena que contiene el texto real de la entrada. Para obtener una lista de valores posibles, vea [Macros COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Comentarios
@@ -130,6 +130,6 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos COM](../windows/com-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
+[Atributos COM](../windows/com-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  

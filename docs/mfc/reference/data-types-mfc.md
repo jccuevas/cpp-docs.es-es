@@ -34,24 +34,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 560db57282f42b28f274b0498073e512e0ec33d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199874"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434523"
 ---
 # <a name="data-types-mfc"></a>Tipos de datos (MFC)
-En este tema se enumera los tipos de datos más usados en la biblioteca Microsoft Foundation Class. La mayoría de los tipos de datos es los mismos que en el Kit de desarrollo de plataforma de Software (SDK), mientras que otras son exclusivas de MFC.  
-  
- Para obtener información sobre los tipos de datos utilizados en el SDK de Windows y MFC, vea [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).  
-  
- Tipos de datos únicos para la biblioteca Microsoft Foundation Class incluyen lo siguiente:  
-  
--   COLOCAR un valor que se usa para indicar la posición de un elemento en una colección: usa las clases de colección de MFC.  
-  
--   Puntero de 32 bits LPCRECT una constante (no modificable) `RECT` estructura.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../../mfc/class-library-overview.md)   
- [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
+
+En este tema se enumera los tipos de datos más usados en la biblioteca Microsoft Foundation Class. La mayoría de los tipos de datos es los mismos que en el Kit de desarrollo de plataforma de Software (SDK), mientras que otras son exclusivas de MFC.
+
+Para obtener información sobre los tipos de datos utilizados en el SDK de Windows y MFC, vea [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).
+
+Tipos de datos únicos para la biblioteca Microsoft Foundation Class incluyen lo siguiente:
+
+- COLOCAR un valor que se usa para indicar la posición de un elemento en una colección: usa las clases de colección de MFC.
+
+- Puntero de 32 bits LPCRECT una constante (no modificable) `RECT` estructura.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../../mfc/class-library-overview.md)<br/>
+[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)

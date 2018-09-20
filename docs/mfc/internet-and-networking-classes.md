@@ -1,5 +1,5 @@
 ---
-title: Clases de Internet y redes | Documentos de Microsoft
+title: Clases de Internet y redes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c890803573f1acb45f511676cccdcc027c43223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcce5cc8265140c8f939c17389aef1ffc82404ac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345096"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445573"
 ---
 # <a name="internet-and-networking-classes"></a>Clases de Internet y redes
-Estas clases permiten intercambiar información con otro equipo mediante un Socket de Windows o de Internet Win32 (WinInet). Hay también un conjunto de clases para la manipulación de Windows Sockets.  
-  
- Las siguientes categorías de clases admiten la conectividad.  
-  
--   [Clases de Windows Sockets](../mfc/windows-sockets-classes.md)  
-  
--   [Clases para Internet de Win32](../mfc/win32-internet-classes.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+Estas clases le permiten intercambiar información con otro equipo mediante un Socket de Windows o de Internet Win32 (WinInet). Hay también un conjunto de clases para manipular Windows Sockets.
+
+Las siguientes categorías de clases admiten la conectividad.
+
+- [Clases de Windows Sockets](../mfc/windows-sockets-classes.md)
+
+- [Clases para Internet de Win32](../mfc/win32-internet-classes.md)
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 
