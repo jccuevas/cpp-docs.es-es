@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715408"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406651"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ Enlaza una columna especificada a una variable en el conjunto de filas.
 
 #### <a name="parameters"></a>Parámetros
 
-*Ordinal*  
+*Ordinal*<br/>
 El número de columna ordinal (`DBCOLUMNINFO` ordinal) o nombre de columna (cadena ANSI o Unicode) correspondiente a un campo del conjunto de filas que se va a enlazar datos. Si utiliza números, puede omitir los ordinales consecutivos (por ejemplo: 1, 2, 3, 5). El nombre puede contener espacios, si lo admite el proveedor OLE DB que utiliza. Por ejemplo, puede usar cualquiera de los siguientes formatos:
 
 ```cpp
@@ -51,19 +51,19 @@ El número de columna ordinal (`DBCOLUMNINFO` ordinal) o nombre de columna (cade
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*DbType*  
+*DbType*<br/>
 (Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para la entrada de columna.
 
-*precision*  
+*precision*<br/>
 (Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Escala*  
+*Escala*<br/>
 (Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*.
 
-*length*  
+*length*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.
 
 ## <a name="remarks"></a>Comentarios
@@ -131,5 +131,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Atributos de clase](../windows/class-attributes.md)  

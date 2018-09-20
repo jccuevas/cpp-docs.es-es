@@ -18,44 +18,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ada416217be672da8f93c777b0b2a6e12684711
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 01a35d110c56bba6b89c5bf34dedec61bde90794
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703032"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403219"
 ---
 # <a name="invlpg"></a>__invlpg
-**Específicos de Microsoft**  
-  
- Genera el x86 `invlpg` instrucción, lo que invalida el búfer de traducción de direcciones (TLB) para la página asociada a la memoria que apunta `Address`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void __invlpg(  
-   void* Address  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+
+**Específicos de Microsoft**
+
+Genera el x86 `invlpg` instrucción, lo que invalida el búfer de traducción de direcciones (TLB) para la página asociada a la memoria que apunta `Address`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void __invlpg(
+   void* Address
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
 *Dirección*<br/>
-[in] Una dirección de 64 bits.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función intrínseca|Arquitectura|  
-|---------------|------------------|  
-|`__invlpg`|x86, x64|  
-  
- **Archivo de encabezado** \<intrin.h >  
-  
-## <a name="remarks"></a>Comentarios  
- La función intrínseca `__invlpg` emite una instrucción privilegiada y solo está disponible en modo kernel con un nivel de privilegios (CPL) de 0.  
-  
- Esta rutina solo está disponible como función intrínseca.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[in] Una dirección de 64 bits.
+
+## <a name="requirements"></a>Requisitos
+
+|Función intrínseca|Arquitectura|
+|---------------|------------------|
+|`__invlpg`|x86, x64|
+
+**Archivo de encabezado** \<intrin.h >
+
+## <a name="remarks"></a>Comentarios
+
+La función intrínseca `__invlpg` emite una instrucción privilegiada y solo está disponible en modo kernel con un nivel de privilegios (CPL) de 0.
+
+Esta rutina solo está disponible como función intrínseca.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

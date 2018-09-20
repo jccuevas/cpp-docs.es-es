@@ -1,5 +1,5 @@
 ---
-title: Separaciones de palabras en los controles Rich Edit | Documentos de Microsoft
+title: Separaciones de palabras en los controles Rich Edit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373a30ed4a327cff99cb3cfce873707314608b57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f012897d968d108cb366126fc38992ff1dd11d0a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382965"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424617"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Separaciones de palabras en los controles Rich Edit
-Un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) llama a una función denominada "procedimiento de salto de palabra" para buscar saltos entre palabras y para determinar dónde se pueden romper líneas. El control utiliza esta información cuando se realizan operaciones de ajuste de palabras y al procesar las combinaciones de teclas CTRL+FLECHA izquierda y CTRL+FLECHA derecha. Una aplicación puede enviar mensajes a un control rich edit para reemplazar el procedimiento de separadores de palabras de forma predeterminada, para recuperar información de separadores de palabras y para determinar en qué línea de un carácter dado se encuentra.  
-  
-## <a name="see-also"></a>Vea también  
- [Usar CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) llama a una función denominada "word salto procedimiento" para encontrar los separadores de palabras y para determinar dónde se pueden romper líneas. El control utiliza esta información al realizar operaciones de ajuste automático y al procesar las combinaciones de teclas CTRL+FLECHA izquierda y derecha. Una aplicación puede enviar mensajes a un control rich edit para reemplazar el procedimiento de separadores de palabras de forma predeterminada, para recuperar información de la separación de palabra y para determinar en qué línea de un carácter determinado se encuentra.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c295767070da04d0173e3299576338e700a1c6aa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c9b84cbcc970183222ed06752dc61b5672615868
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405390"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo (Método)
 
@@ -48,13 +48,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*U*  
+*U*<br/>
 Nombre de tipo.
 
-*ptr*  
+*ptr*<br/>
 Cuando se completa esta operación, un puntero a la interfaz solicitada.
 
-*riid*  
+*riid*<br/>
 Id. de interfaz.
 
 ## <a name="return-value"></a>Valor devuelto

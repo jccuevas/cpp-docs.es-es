@@ -1,5 +1,5 @@
 ---
-title: 'Nociones de OLE: Vincular e incrustar | Documentos de Microsoft'
+title: 'Nociones de OLE: Vincular e incrustar | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,25 +20,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5dc7a5770c98323187dbabcd8c2a7bb9eb652de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d4456e5210b2ec1e142c7ddeddd7b0e7fab9f31
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347284"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445911"
 ---
 # <a name="ole-background-linking-and-embedding"></a>Nociones de OLE: Vincular e incrustar
-Mediante el comando Pegar en una aplicación contenedora puede crear un componente incrustado, o elemento incrustado. Los datos de origen para un elemento incrustado se almacenan como parte del documento OLE que lo contiene. De este modo, un archivo de documento para un documento de procesador de textos puede contener texto y también puede contener los mapas de bits, gráficos, fórmulas o cualquier otro tipo de datos.  
-  
- OLE proporciona otra forma de incorporar datos de otra aplicación: crear un componente vinculado o elemento vinculado o un vínculo. Los pasos para crear un elemento vinculado son similares a las de creación de un elemento incrustado, salvo que use el comando Pegar vínculo en lugar del comando Pegar. A diferencia de un componente incrustado, un componente vinculado almacena una ruta de acceso a los datos originales, que suele ser en un archivo independiente.  
-  
- Por ejemplo, si está trabajando en una palabra documento del procesador y crear un elemento vinculado a algunas celdas de la hoja de cálculo, los datos para el elemento vinculado se almacenan en el documento de hoja de cálculo original. El documento de procesador de textos contiene sólo la información que se especifica que el elemento puede encontrarse, es decir, contiene un vínculo en el documento de hoja de cálculo original. Cuando hace doble clic en las celdas, se inicia la aplicación de hoja de cálculo y se carga el documento de hoja de cálculo original desde donde se almacenó.  
-  
- Todos los elementos OLE, si incrustados o vinculados, tienen un tipo asociado a él basándose en la aplicación que lo creó. Por ejemplo, un elemento de Microsoft Paintbrush es un tipo de elemento y un elemento de Microsoft Excel es otro tipo. Sin embargo, algunas aplicaciones, pueden crear más de un tipo de elemento. Por ejemplo, Microsoft Excel puede crear elementos de hoja de cálculo, los elementos del gráfico y los elementos de hoja de macros. Cada uno de estos elementos puede identificarse de forma exclusiva el sistema mediante un identificador de clase o **CLSID**.  
-  
-## <a name="see-also"></a>Vea también  
- [Nociones de OLE](../mfc/ole-background.md)   
- [Nociones de OLE: Contenedores y servidores](../mfc/ole-background-containers-and-servers.md)   
- [Contenedores: Elementos de cliente](../mfc/containers-client-items.md)   
- [Servidores: Elementos de servidor](../mfc/servers-server-items.md)
+
+Mediante el comando Pegar en una aplicación contenedora puede crear un componente incrustado, o elemento incrustado. Los datos de origen para un elemento incrustado se almacenan como parte del documento OLE que lo contiene. De este modo, un archivo de documento para un documento de procesador de textos puede contener texto y también puede contener los mapas de bits, gráficos, fórmulas o cualquier otro tipo de datos.
+
+OLE proporciona otra manera de incorporar datos desde otra aplicación: crear un componente vinculado o elemento vinculado o un vínculo. Los pasos para crear un elemento vinculado son similares a las de la creación de un elemento incrustado, salvo que use el comando Pegar vínculo en lugar del comando Pegar. A diferencia de un componente incrustado, un componente vinculado almacena una ruta de acceso a los datos originales, que suele ser un archivo independiente.
+
+Por ejemplo, si está trabajando en una palabra documento del procesador y crear un elemento vinculado a algunas celdas de la hoja de cálculo, los datos para el elemento vinculado se almacenan en el documento original de la hoja de cálculo. El documento de procesador de textos contiene sólo la información que especifica dónde puede se encuentra el elemento, es decir, contiene un vínculo al documento de hoja de cálculo original. Cuando hace doble clic en las celdas, se inicia la aplicación de hoja de cálculo y se carga el documento de hoja de cálculo original desde donde se almacena.
+
+Todos los elementos OLE, si incrustado o vinculado, tienen un tipo asociado con él en función de la aplicación que lo creó. Por ejemplo, un elemento de Microsoft Paintbrush es un tipo de elemento y un elemento de Microsoft Excel es otro tipo. Sin embargo, algunas aplicaciones, pueden crear más de un tipo de elemento. Por ejemplo, Microsoft Excel puede crear elementos de la hoja de cálculo, elementos de gráfico y los elementos de la hoja de macros. Cada uno de estos elementos se puede identificar por el sistema mediante un identificador de clase o **CLSID**.
+
+## <a name="see-also"></a>Vea también
+
+[Nociones de OLE](../mfc/ole-background.md)<br/>
+[Nociones de OLE: Contenedores y servidores](../mfc/ole-background-containers-and-servers.md)<br/>
+[Contenedores: Elementos de cliente](../mfc/containers-client-items.md)<br/>
+[Servidores: Elementos de servidor](../mfc/servers-server-items.md)
 

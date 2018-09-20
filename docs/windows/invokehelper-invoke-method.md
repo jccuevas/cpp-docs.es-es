@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1addd96456a33b30259182e4490df70335d0d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584326"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408367"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke (Método)
 
@@ -65,31 +65,31 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parámetros
 
-*Arg1*  
+*Arg1*<br/>
 Argumento 1.
 
-*Arg2*  
+*Arg2*<br/>
 Argumento 2.
 
-*Arg3*  
+*Arg3*<br/>
 Argumento 3.
 
-*Arg4*  
+*Arg4*<br/>
 Argumento de 4.
 
-*Arg5*  
+*Arg5*<br/>
 Argumento de 5.
 
-*Arg6*  
+*Arg6*<br/>
 Argumento 6.
 
-*Arg7*  
+*Arg7*<br/>
 Argumento de 7.
 
-*Arg8*  
+*Arg8*<br/>
 Argumento de 8.
 
-*Arg9*  
+*Arg9*<br/>
 Argumento de 9.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -108,5 +108,5 @@ Llama al controlador de eventos cuya firma contiene el número especificado de a
 
 ## <a name="see-also"></a>Vea también
 
-[InvokeHelper (estructura)](../windows/invokehelper-structure.md)  
+[InvokeHelper (estructura)](../windows/invokehelper-structure.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

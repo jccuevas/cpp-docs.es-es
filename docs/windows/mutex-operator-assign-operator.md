@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ea5aee6f248487097462028a763a98b4e814a17a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396797"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= (Operador)
 
@@ -38,7 +38,7 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>Parámetros
 
-*h*  
+*h*<br/>
 Una referencia rvalue para un **Mutex** objeto.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -56,4 +56,5 @@ Para obtener más información, consulte el **mover semántica** sección de [de
 **Namespace:** Wrappers
 
 ## <a name="see-also"></a>Vea también
+
 [Mutex (clase)](../windows/mutex-class1.md)

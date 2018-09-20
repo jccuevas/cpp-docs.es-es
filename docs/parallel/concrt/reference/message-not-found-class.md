@@ -18,57 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f28096fccae4f24b236631b3c27178bda7e22771
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e73a33817ef39d8998173dacc282e6ee9477944
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103989"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445615"
 ---
 # <a name="messagenotfound-class"></a>message_not_found (Clase)
-Esta clase describe una excepción que se produce cuando un bloque de mensajería no puede encontrar un mensaje solicitado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+Esta clase describe una excepción que se produce cuando un bloque de mensajería no puede encontrar un mensaje solicitado.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class message_not_found : public std::exception;
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[message_not_found](#ctor)|Sobrecargado. Construye un objeto `message_not_found`.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `exception`  
-  
- `message_not_found`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** concrt.h  
-  
- **Espacio de nombres:** simultaneidad  
-  
-##  <a name="ctor"></a> message_not_found) 
+```
 
- Construye un objeto `message_not_found`.  
-  
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[message_not_found](#ctor)|Sobrecargado. Construye un objeto `message_not_found`.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`exception`
+
+`message_not_found`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** concrt.h
+
+**Espacio de nombres:** simultaneidad
+
+##  <a name="ctor"></a> message_not_found)
+
+Construye un objeto `message_not_found`.
+
 ```
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
+```
+
+### <a name="parameters"></a>Parámetros
+
 *_Cuerpo*<br/>
-Mensaje descriptivo del error.  
-  
-## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)   
- [Bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md)
+Mensaje descriptivo del error.
 
+## <a name="see-also"></a>Vea también
 
+[concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
+[Bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN044: Compatibilidad de MFC con DBCS | Documentos de Microsoft'
+title: 'TN044: Compatibilidad de MFC con DBCS | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 280c008bf6d0f82149b382da2ca6e3d20cb28846
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 524e5dd86560afd660ebb2352b1c92111ddd72d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442011"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: Compatibilidad de MFC con DBCS
-Esta nota técnica describe la compatibilidad de MFC para "juegos de caracteres de doble byte" o DBCS. Esta información, así como obtener información acerca de MFC compatibilidad con UNICODE ahora está disponible en la *Class Library Reference*.  
-  
-## <a name="see-also"></a>Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+
+Esta nota técnica describe la compatibilidad de MFC para "juegos de caracteres de doble byte" o DBCS. Esta información, así como obtener información acerca de MFC la compatibilidad con UNICODE está ahora disponible en el *Class Library Reference*.
+
+## <a name="see-also"></a>Vea también
+
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
 

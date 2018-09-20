@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5e5d5ddb831c5d4025e729cb27dd3a9e11b3688
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 072c5b34d539e695f534dbafdf4afcd69a2272ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194758"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415686"
 ---
 # <a name="callas"></a>call_as
 
@@ -38,7 +38,7 @@ Permite un [local](../windows/local-cpp.md) función a la que se asignan a una f
 
 ### <a name="parameters"></a>Parámetros
 
-*function*  
+*function*<br/>
 La función local que desea que se llama cuando se invoca una función remota.
 
 ## <a name="remarks"></a>Comentarios
@@ -76,6 +76,6 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
 [local](../windows/local-cpp.md)  

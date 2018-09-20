@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7340d91d9d91171c073b5acebb282fbd1cff3bf1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5542dc1c4aeff873f14d8ab9498025c8852dfbd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702848"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409316"
 ---
 # <a name="writecr0"></a>__writecr0
-**Específicos de Microsoft**  
-  
- Escribe el valor `Data` para el registro CR0.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void writecr0(   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+
+**Específicos de Microsoft**
+
+Escribe el valor `Data` para el registro CR0.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void writecr0( 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
 *Data*<br/>
-[in] El valor para escribir en el registro CR0.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función intrínseca|Arquitectura|  
-|---------------|------------------|  
-|`__writecr0`|x86, x64|  
-  
- **Archivo de encabezado** \<intrin.h >  
-  
-## <a name="remarks"></a>Comentarios  
- Este intrínseco solo está disponible en modo kernel, y la rutina solo está disponible como intrínseco.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[in] El valor para escribir en el registro CR0.
+
+## <a name="requirements"></a>Requisitos
+
+|Función intrínseca|Arquitectura|
+|---------------|------------------|
+|`__writecr0`|x86, x64|
+
+**Archivo de encabezado** \<intrin.h >
+
+## <a name="remarks"></a>Comentarios
+
+Este intrínseco solo está disponible en modo kernel, y la rutina solo está disponible como intrínseco.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

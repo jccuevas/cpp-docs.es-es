@@ -1,5 +1,5 @@
 ---
-title: Asignar mensajes | Documentos de Microsoft
+title: Asignación de mensajes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f521145599a3d734a22dd3b2707ad4dd16df8e80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7324da5eaff15d240cabbaede2c2982021361257
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345991"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410986"
 ---
 # <a name="mapping-messages"></a>Asignar mensajes
-Cada clase de marco de trabajo que puede recibir mensajes o comandos tiene su propio "mapa de mensajes". El marco de trabajo usa mapas de mensajes para conectar los mensajes y comandos a sus funciones de controlador. Cualquier clase derivada de la clase `CCmdTarget` puede tener un mapa de mensajes. Otros artículos explican los mapas de mensajes en detalle y describen cómo utilizarlos.  
-  
- A pesar del nombre "mapa de mensajes," mapas de mensajes tratan tanto mensajes y comandos, las tres categorías de mensajes que aparecen en [categorías de mensaje](../mfc/message-categories.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md)
+
+Cada clase de marco de trabajo que puede recibir mensajes o comandos tiene su propio "mapa de mensajes". El marco de trabajo usa mapas de mensajes que se conectarán mensajes y comandos para las funciones de controlador. Cualquier clase derivada de la clase `CCmdTarget` puede tener un mapa de mensajes. Otros artículos explican los mapas de mensajes en detalle y describen cómo usarlos.
+
+A pesar del nombre "mapa de mensajes," mapas de mensajes tratan ambos mensajes y comandos, las tres categorías de mensajes que aparecen en [categorías de mensaje](../mfc/message-categories.md).
+
+## <a name="see-also"></a>Vea también
+
+[Mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md)
 

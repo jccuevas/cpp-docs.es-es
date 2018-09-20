@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222931"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404220"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (Extensiones de componentes de C++)
 
@@ -60,10 +60,10 @@ expression
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador de tipo*  
+*identificador de tipo*<br/>
 El tipo de conversión *expresión* a. Identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
-*Expresión*  
+*Expresión*<br/>
 Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
 ### <a name="remarks"></a>Comentarios
@@ -124,10 +124,10 @@ expression
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador de tipo*  
+*identificador de tipo*<br/>
 Identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
-*Expresión*  
+*Expresión*<br/>
 Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
 ### <a name="remarks"></a>Comentarios

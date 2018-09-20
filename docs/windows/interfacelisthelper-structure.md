@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87516cf45a39602bea462b8e94f17d3ef64ad0eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431624"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (estructura)
 
@@ -53,34 +53,34 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>Parámetros
 
-*T0*  
+*T0*<br/>
 Parámetro de plantilla 0, que es necesario.
 
-*T1*  
+*T1*<br/>
 Parámetro de plantilla 1, que no se especifica de forma predeterminada.
 
-*T2*  
+*T2*<br/>
 Parámetro de plantilla 2, que no se especifica de forma predeterminada. El tercer parámetro de plantilla.
 
-*T3*  
+*T3*<br/>
 Parámetro de plantilla 3, que no se especifica de forma predeterminada.
 
-*T4*  
+*T4*<br/>
 Parámetro de plantilla 4, que no se especifica de forma predeterminada.
 
-*T5*  
+*T5*<br/>
 Parámetro de plantilla 5, que no se especifica de forma predeterminada.
 
-*T6*  
+*T6*<br/>
 Parámetro de plantilla 6, que no se especifica de forma predeterminada.
 
-*T7*  
+*T7*<br/>
 Parámetro de plantilla 7, que no se especifica de forma predeterminada.
 
-*T8*  
+*T8*<br/>
 Parámetro de plantilla 8, que no se especifica de forma predeterminada.
 
-*T9*  
+*T9*<br/>
 Parámetro de plantilla 9, que no se especifica de forma predeterminada.
 
 ## <a name="remarks"></a>Comentarios

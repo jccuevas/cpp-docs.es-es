@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.4 compartidos | Documentos de Microsoft
+title: 2.7.2.4 compartido | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de0e32e16d889acb8f1339d783bc194b3508dda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9d1a545f1c505f9f578cad682399c8d69a882824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695699"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400151"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
-Esta cláusula comparte las variables que aparecen en la *lista de variables* entre todos los subprocesos en un equipo. Todos los subprocesos dentro de un equipo obtener acceso a la misma área de almacenamiento para **compartido** variables.  
-  
- La sintaxis de la **compartido** cláusula es como sigue:  
-  
-```  
-shared(variable-list)  
+
+Esta cláusula comparte las variables que aparecen en la *variable lista* entre todos los subprocesos en un equipo. Todos los subprocesos dentro de un equipo obtener acceso a la misma área de almacenamiento para **compartido** variables.
+
+La sintaxis de la **compartido** cláusula es como sigue:
+
+```
+shared(variable-list)
 ```

@@ -18,53 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3351700d9e7e7ea466b667e47b105a7229f3d8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: da18db2f2dde145c565b6309d9b27cdbcc0744cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46083007"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437669"
 ---
 # <a name="taskcanceled-class"></a>task_canceled (Clase)
-Esta clase describe una excepción producida por la capa de tareas de PPL para obligar a que se cancele la tarea actual. También se produce por la `get()` método [tarea](/visualstudio/extensibility/debugger/task-class-internal-members), para una tarea cancelada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+Esta clase describe una excepción producida por la capa de tareas de PPL para obligar a que se cancele la tarea actual. También se produce por la `get()` método [tarea](/visualstudio/extensibility/debugger/task-class-internal-members), para una tarea cancelada.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class task_canceled : public std::exception;
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[task_canceled](#ctor)|Sobrecargado. Construye un objeto `task_canceled`.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `exception`  
-  
- `task_canceled`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** concrt.h  
-  
- **Espacio de nombres:** simultaneidad  
-  
-##  <a name="ctor"></a> task_canceled) 
+```
 
- Construye un objeto `task_canceled`.  
-  
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[task_canceled](#ctor)|Sobrecargado. Construye un objeto `task_canceled`.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`exception`
+
+`task_canceled`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** concrt.h
+
+**Espacio de nombres:** simultaneidad
+
+##  <a name="ctor"></a> task_canceled)
+
+Construye un objeto `task_canceled`.
+
 ```
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
 
 task_canceled() throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
+```
+
+### <a name="parameters"></a>Parámetros
+
 *_Cuerpo*<br/>
-Mensaje descriptivo del error.  
-  
-## <a name="see-also"></a>Vea también  
- [concurrency (espacio de nombres)](concurrency-namespace.md)
+Mensaje descriptivo del error.
+
+## <a name="see-also"></a>Vea también
+
+[concurrency (espacio de nombres)](concurrency-namespace.md)

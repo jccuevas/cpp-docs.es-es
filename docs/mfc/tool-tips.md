@@ -1,5 +1,5 @@
 ---
-title: Información sobre herramientas | Documentos de Microsoft
+title: Información sobre herramientas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9eab52d09e9910cb4cce92d487c26fdb90d5647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f9169f0548bb58ffa063f3b3e947f16e877758e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380583"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439996"
 ---
 # <a name="tool-tips"></a>Información sobre herramientas
-Los procedimientos son diferentes para agregar información sobre herramientas para controles contenidos en ventanas derivadas de clase MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) y windows no se derivan de `CFrameWnd`.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
- Información sobre herramientas para los controles en una ventana que es:  
-  
--   [Información sobre herramientas de barra de herramientas (derivadas de CFrameWnd)](../mfc/toolbar-tool-tips.md)  
-  
--   [Información sobre herramientas en ventanas no derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)
+
+Los procedimientos son distintos para agregar información sobre herramientas a controles contenidos en ventanas derivadas de la clase MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) y windows no derivan `CFrameWnd`.
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+
+Información sobre herramientas para los controles en una ventana que es:
+
+- [Barra de herramientas, información sobre herramientas (derivadas de CFrameWnd)](../mfc/toolbar-tool-tips.md)
+
+- [Información sobre herramientas en Windows no derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+## <a name="see-also"></a>Vea también
+
+[Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)

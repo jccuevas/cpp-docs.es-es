@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51904ac06ae6c2db5586f8dc405f85145c5b1f30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec080e556b57afadbc3d958f4dba5ac6393108aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408913"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>¿Tengo que derivar las clases nuevas de CObject?
-No, no es necesario.  
-  
- Derivar una clase de [CObject](../mfc/reference/cobject-class.md) cuando necesite las funciones que ofrece, como la serialización o CObject dinámica. Muchas clases de datos deban serializarse a archivos, por lo que a menudo es una buena idea para derivar desde `CObject`. Para un ejemplo de una clase derivada de `CObject`, consulte el [ejemplo Scribble](../visual-cpp-samples.md).  
-  
-## <a name="see-also"></a>Vea también  
- [CObject (clase): Preguntas más frecuentes](../mfc/cobject-class-frequently-asked-questions.md)
+
+No, no es necesario.
+
+Derive una clase de [CObject](../mfc/reference/cobject-class.md) cuando necesite las funciones ofrece, como la serialización o CObject dinámico. Muchas clases de datos deban serializarse a archivos, por lo que a menudo es una buena idea de derivarlos de `CObject`. Para un ejemplo de una clase derivada de `CObject`, consulte el [ejemplo Scribble](../visual-cpp-samples.md).
+
+## <a name="see-also"></a>Vea también
+
+[CObject (clase): Preguntas más frecuentes](../mfc/cobject-class-frequently-asked-questions.md)

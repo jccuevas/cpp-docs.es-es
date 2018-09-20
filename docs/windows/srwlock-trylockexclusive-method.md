@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ec8275b1db692410677276e762f79ccf23548cc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d0deec4790d185a5c6b7a7bdcbd670b056fc6f03
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606236"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424110"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive (Método)
 
@@ -40,7 +40,7 @@ static SyncLockExclusive TryLockExclusive(
 
 ### <a name="parameters"></a>Parámetros
 
-*lock*  
+*lock*<br/>
 Puntero a un **SRWLock** objeto.
 
 ## <a name="return-value"></a>Valor devuelto

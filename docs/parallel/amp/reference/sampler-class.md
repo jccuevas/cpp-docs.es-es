@@ -1,5 +1,5 @@
 ---
-title: Sampler (clase) | Documentos de Microsoft
+title: Sampler (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -22,16 +22,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7261a28f5dea4a8de4af3c169f9b67537e5f3088
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ee5d50976b6d91bff6d84ec288560ff1348c73d9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121856"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424695"
 ---
 # <a name="sampler-class"></a>sampler (Clase)
 
-Los agregados de clase muestra información de configuración que se usará para el muestreo de textura de muestreo.
+La clase de muestra agrega información de configuración de muestreo que se usará para el muestreo de textura.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,15 +45,15 @@ class sampler;
 
 |Name|Descripción|
 |----------|-----------------|
-|[muestra de Constructor](#ctor)|Sobrecargado. Crea una instancia de muestra.|
+|[muestra de Constructor](#ctor)|Sobrecargado. Construye una instancia de muestra.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[get_address_mode](#get_address_mode)|Devuelve el `address_mode` que ha asociado al objeto de muestra.|
-|[get_border_color](#get_border_color)|Devuelve el color del borde que esté asociada con el objeto de muestra.|
-|[get_filter_mode](#get_filter_mode)|Devuelve el `filter_mode` que ha asociado al objeto de muestra.|
+|[get_address_mode](#get_address_mode)|Devuelve el `address_mode` que está asociada con el objeto de muestra.|
+|[get_border_color](#get_border_color)|Devuelve el color del borde que está asociado con el objeto de muestra.|
+|[get_filter_mode](#get_filter_mode)|Devuelve el `filter_mode` que está asociada con el objeto de muestra.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -89,14 +89,12 @@ sampler() restrict(cpu);    // [1] default constructor
 sampler(                    // [2] constructor
     filter_mode _Filter_mode) restrict(cpu);
 
-
 sampler(                    // [3] constructor
     address_mode _Address_mode,
     float_4 _Border_color = float_4(0.0f,
     0.0f,
     0.0f,
     0.0f)) restrict(cpu);
-
 
 sampler(                    // [4] constructor
     filter_mode _Filter_mode,
@@ -106,11 +104,9 @@ sampler(                    // [4] constructor
     0.0f,
     0.0f)) restrict(cpu);
 
-
 sampler(                    // [5] copy constructor
     const sampler& _Other) restrict(amp,
     cpu);
-
 
 sampler(                    // [6] move constructor
     sampler&& _Other) restrict(amp,
@@ -119,21 +115,19 @@ sampler(                    // [6] move constructor
 
 ### <a name="parameters"></a>Parámetros
 
-*_Filter_mode*  
- El modo de filtro que se usará en el muestreo.
+*_Filter_mode*<br/>
+El modo de filtro que se usará en el muestreo.
 
-*_Address_mode*  
- El modo de direccionamiento que se usará en el muestreo para todas las dimensiones.
+*_Address_mode*<br/>
+El modo de direccionamiento que se usará en el muestreo para todas las dimensiones.
 
-*_Border_color*  
- El color del borde que se utilizará si el modo de direccionamiento es address_border. El valor predeterminado es `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+*_Border_color*<br/>
+El color del borde que se utilizará si el modo de direccionamiento es address_border. El valor predeterminado es `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*_Other*  
-[5] Constructor de copias  
-El `sampler` objeto que se copiará en el nuevo `sampler` instancia.
+*_Otro*<br/>
+[5] Constructor de copia la `sampler` objeto que se va a copiar en el nuevo `sampler` instancia.
 
-[6] Constructor de movimiento  
-El `sampler` objeto al que desplazarse en el nuevo `sampler` instancia.
+[6] Constructor de movimiento el `sampler` mover en el nuevo objeto `sampler` instancia.
 
 ##  <a name="address_mode"></a> address_mode
 
@@ -169,7 +163,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El modo de direccionamiento que está configurado para la muestra.
+El modo de direccionamiento que se configura para el muestrario.
 
 ##  <a name="get_border_color"></a> get_border_color
 
@@ -181,7 +175,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valor devuelto
 
-Float_4 que contiene el color del borde.
+Un valor float_4 que contiene el color del borde.
 
 ##  <a name="get_filter_mode"></a> get_filter_mode
 
@@ -193,7 +187,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valor devuelto
 
-El modo de filtro que está configurado para la muestra.
+El modo de filtro que está configurado para el muestrario.
 
 ##  <a name="operator_eq"></a> operator=
 
@@ -203,18 +197,16 @@ Asigna el valor de otro objeto de muestra para una muestra existente.
 sampler& operator= (    // [1] copy assignment operator
     const sampler& _Other) restrict(amp, cpu);
 
-sampler& operator= (    // [2] move assignment operator 
+sampler& operator= (    // [2] move assignment operator
     sampler&& _Other) restrict(amp, cpu);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Other*  
-[1] operador de asignación de copia  
-El `sampler` objeto que se va a copiar en esta `sampler`.
+*_Otro*<br/>
+[1] operador de asignación el `sampler` objeto que se va a copiar en este `sampler`.
 
-[2] operador de asignación de movimiento de  
-El `sampler` objeto al que desplazarse en esta `sampler`.
+[2] operador de asignación de movimiento del `sampler` mover este objeto `sampler`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -222,4 +214,4 @@ Una referencia a esta instancia de muestra.
 
 ## <a name="see-also"></a>Vea también
 
-[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)  
+[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
