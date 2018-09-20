@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9017ffe6e254aa96700beff76cd3ea62f14bfb9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79c94b9b29687d8d6bf32381f4e19e2ed21bf971
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217488"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372282"
 ---
 # <a name="firstis"></a>first_is
 
@@ -38,7 +38,7 @@ Especifica el índice del primer elemento de matriz que se transmitan.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*  
+*Expresión*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
@@ -84,10 +84,10 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atributos de parámetro](../windows/parameter-attributes.md)  
-[last_is](../windows/last-is.md)  
-[max_is](../windows/max-is.md)  
-[length_is](../windows/length-is.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos de parámetro](../windows/parameter-attributes.md)<br/>
+[last_is](../windows/last-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
+[length_is](../windows/length-is.md)<br/>
 [size_is](../windows/size-is.md)  

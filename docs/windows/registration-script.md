@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 997b8bc01424b102551815f19ff9a487113e5f6b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e4aaef2cca5146291f7d3708a995a116768e0467
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382941"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -38,7 +38,7 @@ Ejecuta el script de registro personalizado especificado.
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia de comandos*  
+*secuencia de comandos*<br/>
 La ruta de acceso completa a un archivo de script (.rgs) de registro personalizado. Un valor de **ninguno**, tales como `script = "none"`, indica que la coclase no tiene ningún requisito de registro.
 
 ## <a name="remarks"></a>Comentarios
@@ -85,6 +85,6 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos COM](../windows/com-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
+[Atributos COM](../windows/com-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
 [rdx](../windows/rdx.md)  

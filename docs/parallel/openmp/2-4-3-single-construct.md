@@ -1,5 +1,5 @@
 ---
-title: 2.4.3 single construcción | Documentos de Microsoft
+title: 2.4.3 single construcción | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,38 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db3f9ca834fb3f35c95732698fd02e16f31b4225
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 81abf5324c215b9011ecbd774626a213c2eda653
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690587"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376505"
 ---
 # <a name="243-single-construct"></a>2.4.3 single (Construcción)
-El **único** directiva identifica una construcción que especifica que se ejecuta el bloque estructurado asociado con un solo subproceso en el equipo (no necesariamente el subproceso principal). La sintaxis de la **único** directiva es como sigue:  
-  
-```  
-#pragma omp single [clause[[,] clause] ...] new-linestructured-block  
-```  
-  
- La cláusula es uno de los siguientes:  
-  
- **private(** *variable-list* **)**  
-  
- **firstprivate(** *variable-list* **)**  
-  
- **copyprivate (** *lista de variables* **)**  
-  
- **nowait**  
-  
- Hay una barrera implícita después de la **único** construir a menos que un **nowait** se especifica la cláusula.  
-  
- Restricciones a la **único** directiva son los siguientes:  
-  
--   Solo una **nowait** cláusula puede aparecer en un **único** directiva.  
-  
--   El **copyprivate** cláusula no debe usarse con el **nowait** cláusula.  
-  
-## <a name="cross-references"></a>Referencias cruzadas:  
-  
--   **privada**, **firstprivate**, y **copyprivate** cláusulas, vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en página 25.
+
+El **único** directiva identifica una construcción que especifica que se ejecuta el bloque estructurado asociado sólo un subproceso en el equipo (no necesariamente el subproceso principal). La sintaxis de la **único** directiva es como sigue:
+
+```
+#pragma omp single [clause[[,] clause] ...] new-linestructured-block
+```
+
+La cláusula es uno de los siguientes:
+
+**private(** *variable-list* **)**
+
+**firstprivate(** *variable-list* **)**
+
+**copyprivate (** *lista de variables* **)**
+
+**nowait**
+
+Hay una barrera implícita después de la **único** construir a menos que un **nowait** se especifica la cláusula.
+
+Restricciones para el **único** directiva son los siguientes:
+
+- Una sola **nowait** cláusula puede aparecer en un **único** directiva.
+
+- El **copyprivate** cláusula no debe usarse con la **nowait** cláusula.
+
+## <a name="cross-references"></a>Referencias cruzadas:
+
+- **privada**, **firstprivate**, y **copyprivate** cláusulas, vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en la página 25.

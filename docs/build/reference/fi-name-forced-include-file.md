@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa06eaf8f16a80b849ce911468fc0001366b9e29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3f4517125121c0129da028437bc7ce367f9f96b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725470"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373927"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Dar nombre al archivo de inclusión obligatorio)
 
@@ -59,7 +59,7 @@ Esta opción tiene el mismo efecto que especificar el archivo con comillas doble
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

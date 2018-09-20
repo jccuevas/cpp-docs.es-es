@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e27be8eaddfc22474f15d7f9358050273252bf8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 460e2cdef4d0ba4252ceb8a4b7fe6defc25c183a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375379"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (clase)
 
@@ -35,7 +35,7 @@ template<
    typename T,
    bool hasWeakReferenceSupport =
          !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
- class MakeAllocator;
+class MakeAllocator;
 
 template<typename T>
 class MakeAllocator<T, false>;
@@ -46,10 +46,10 @@ class MakeAllocator<T, true>;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Nombre de tipo.
 
-*hasWeakReferenceSupport*  
+*hasWeakReferenceSupport*<br/>
 **True** asignar memoria para un objeto que admite referencias débiles; **false** asignar memoria para un objeto que no es compatible con las referencias débiles.
 
 ## <a name="remarks"></a>Comentarios

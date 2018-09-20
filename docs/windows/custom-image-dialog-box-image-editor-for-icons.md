@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704845"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384720"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Cuadro de diálogo imagen personalizada (C++) (Editor de imágenes para iconos)
 
@@ -41,8 +41,10 @@ Le permite crear una nueva imagen con un tamaño personalizado y el número de c
    Proporciona un espacio para elegir el número de colores para la imagen personalizada: 2, 16 o 256.
   
 ## <a name="requirements"></a>Requisitos
- Ninguna
+
+Ninguna
   
 ## <a name="see-also"></a>Vea también
- [Nuevo \<dispositivo > cuadro de diálogo tipo de imagen](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)  
- [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)
+
+[Nuevo \<dispositivo > cuadro de diálogo tipo de imagen](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

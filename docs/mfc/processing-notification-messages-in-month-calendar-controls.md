@@ -1,5 +1,5 @@
 ---
-title: Procesar mensajes de notificación en mes los controles de calendario | Documentos de Microsoft
+title: Procesar mensajes de notificación en el mes de los controles de calendario | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9906a738ed6c577f46d2919a5cdac80b877110
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5bbdb3728009cdee978bb08ef8df8817f1ef5e41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930994"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378181"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Procesar mensajes de notificación en los controles de calendario mensual
-Cuando los usuarios interactúan con el control de calendario mensual (seleccionando fechas y viendo un mes distinto), el control (`CMonthCalCtrl`) envía mensajes de notificación a su ventana primaria, normalmente un objeto de vista o cuadro de diálogo. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario selecciona un nuevo mes para ver, puede proporcionar un conjunto de fechas que se debe enfatizar.  
-  
- Use la ventana Propiedades para agregar controladores de notificación a la clase primaria para aquellos mensajes que desee implementar.  
-  
- En la lista siguiente describe las distintas notificaciones enviadas por el control de calendario mensual.  
-  
--   MCN_GETDAYSTATE solicita información sobre qué días deben mostrarse en negrita. Para obtener información sobre cómo controlar esta notificación, vea [establecer el estado de día de un Control de calendario mensual](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
-  
--   MCN_SELCHANGE Notifica a la primaria que ha cambiado la fecha seleccionada o el rango de la fecha.  
-  
--   MCN_SELECT notifica al registro primario que se ha realizado una selección de fecha explícita.  
-  
-## <a name="see-also"></a>Vea también  
- [Usar CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Cuando los usuarios interactúan con el control de calendario mensual (selección de fechas o ver un mes distinto), el control (`CMonthCalCtrl`) envía mensajes de notificación a su ventana primaria, normalmente un objeto de vista o cuadro de diálogo. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario selecciona un nuevo mes para ver, podría proporcionar un conjunto de fechas que se debe enfatizar.
+
+Use la ventana Propiedades para agregar controladores de notificación a la clase primaria para aquellos mensajes que desee implementar.
+
+En la lista siguiente describe las distintas notificaciones enviadas por el control de calendario mensual.
+
+- MCN_GETDAYSTATE solicita información acerca de los días que deben mostrarse en negrita. Para obtener información sobre cómo controlar esta notificación, consulte [establecer el estado de día de un Control de calendario mensual](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
+
+- MCN_SELCHANGE Notifica a la principal que ha cambiado la fecha seleccionada o un rango de la fecha.
+
+- MCN_SELECT notifica al elemento primario que se ha realizado una selección de fecha de forma explícita.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 
