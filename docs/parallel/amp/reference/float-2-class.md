@@ -38,161 +38,158 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4a36cef1681722874350510f86e9cf767d7d019a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019958"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390804"
 ---
 # <a name="float2-class"></a>float_2 (Clase)
-Representa un vector corto de dos números en coma flotante.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class float_2;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Constructor float_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|float_2::get_x||  
-|float_2:: get_xy||  
-|float_2:: get_Y||  
-|float_2::get_yx||  
-|float_2::ref_g||  
-|float_2::ref_r||  
-|float_2:: ref_x||  
-|float_2:: ref_y||  
-|float_2::set_x||  
-|float_2:: set_xy||  
-|float_2:: set_y||  
-|float_2::set_yx||  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|float_2::operator-||  
-|float_2::operator--||  
-|float_2::operator*=||  
-|float_2::operator/=||  
-|float_2::operator++||  
-|float_2::operator+=||  
-|float_2::operator=||  
-|float_2::operator-=||  
-  
-### <a name="public-constants"></a>Constantes públicas  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[cambio de tamaño constante](#float_2__size)||  
-  
-### <a name="public-data-members"></a>Miembros de datos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|float_2:: g||  
-|float_2:: GR||  
-|float_2:: r||  
-|float_2:: RG||  
-|float_2:: x||  
-|float_2:: XY||  
-|float_2:: y||  
-|float_2:: YX||  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `float_2`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="ctor"></a> float_2 
 
- El constructor predeterminado, inicializa todos los elementos con 0.  
-  
-```  
+Representa un vector corto de dos números en coma flotante.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+class float_2;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Constructor float_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|float_2::get_x||
+|float_2:: get_xy||
+|float_2:: get_Y||
+|float_2::get_yx||
+|float_2::ref_g||
+|float_2::ref_r||
+|float_2:: ref_x||
+|float_2:: ref_y||
+|float_2::set_x||
+|float_2:: set_xy||
+|float_2:: set_y||
+|float_2::set_yx||
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|float_2::operator-||
+|float_2::operator--||
+|float_2::operator*=||
+|float_2::operator/=||
+|float_2::operator++||
+|float_2::operator+=||
+|float_2::operator=||
+|float_2::operator-=||
+
+### <a name="public-constants"></a>Constantes públicas
+
+|nombre|Descripción|
+|----------|-----------------|
+|[cambio de tamaño constante](#float_2__size)||
+
+### <a name="public-data-members"></a>Miembros de datos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|float_2:: g||
+|float_2:: GR||
+|float_2:: r||
+|float_2:: RG||
+|float_2:: x||
+|float_2:: XY||
+|float_2:: y||
+|float_2:: YX||
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`float_2`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** amp_short_vectors.h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="ctor"></a> float_2
+
+El constructor predeterminado, inicializa todos los elementos con 0.
+
+```
 float_2() restrict(amp,
     cpu);
 
- 
 float_2(
-    float _V0,  
+    float _V0,
     float _V1) restrict(amp,
     cpu);
 
- 
 float_2(
     float _V) restrict(amp,
     cpu);
 
- 
 float_2(
     const float_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const uint_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const int_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const unorm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const norm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const double_2& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parámetros  
-*_V0*<br/>
-El valor para inicializar el elemento 0.  
-  
-*_V1*<br/>
-El valor para inicializar el elemento 1.  
-  
-*_V*<br/>
-El valor de inicialización.  
-  
-*_Otro*<br/>
-El objeto usado para inicializar.  
-  
-##  <a name="float_2__size"></a> Tamaño 
+```
 
-```  
-static const int size = 2;  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Parámetros
+
+*_V0*<br/>
+El valor para inicializar el elemento 0.
+
+*_V1*<br/>
+El valor para inicializar el elemento 1.
+
+*_V*<br/>
+El valor de inicialización.
+
+*_Otro*<br/>
+El objeto usado para inicializar.
+
+##  <a name="float_2__size"></a> Tamaño
+
+```
+static const int size = 2;
+```
+
+## <a name="see-also"></a>Vea también
+
+[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

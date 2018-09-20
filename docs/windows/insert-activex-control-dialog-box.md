@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16777dc2354787057e3cfe6afb329268272a16e2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9a157649f374dfd1fabbecd6ce60523f4208733b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396732"
 ---
 # <a name="insert-activex-control-dialog-box-c"></a>Insertar cuadro de diálogo de Control ActiveX (C++)
 
@@ -47,6 +47,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editor de cuadros de diálogo (pestaña, cuadro de herramientas)](../windows/dialog-editor-tab-toolbox.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Editor de cuadros de diálogo (pestaña, cuadro de herramientas)](../windows/dialog-editor-tab-toolbox.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)

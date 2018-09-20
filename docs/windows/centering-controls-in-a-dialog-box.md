@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21517d9a8151c853586b2fc4a0beb1821b114e9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3d1be489f345171142faa8f43387a0565899c016
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317009"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391298"
 ---
 # <a name="centering-controls-in-a-dialog-box-c"></a>Centrar controles en un cuadro de diálogo (C++)
 
@@ -44,6 +44,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

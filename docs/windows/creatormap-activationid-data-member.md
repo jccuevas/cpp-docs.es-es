@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eeaaedeb4c3806af888f36e62c8fa8e54c47eb46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5b50c57a80b2a9aca2681c3ade3c6d4fc3568e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595699"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385994"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId (Miembro de datos)
 
@@ -39,10 +39,10 @@ union {
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*  
+*CLSID*<br/>
 Id. de interfaz.
 
-*getRuntimeName*  
+*getRuntimeName*<br/>
 Una función que recupera el nombre de Windows en tiempo de ejecución de un objeto.
 
 ## <a name="remarks"></a>Comentarios
@@ -57,5 +57,5 @@ Representa un identificador de objeto que se identifica mediante un identificado
 
 ## <a name="see-also"></a>Vea también
 
-[CreatorMap (estructura)](../windows/creatormap-structure.md)  
+[CreatorMap (estructura)](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

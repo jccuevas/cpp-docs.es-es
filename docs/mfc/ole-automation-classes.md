@@ -1,5 +1,5 @@
 ---
-title: Clases de automatización OLE | Documentos de Microsoft
+title: Clases de automatización OLE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8316030ba65796d0e9811ca35384c8a4a2a3afa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea35e51296b2fc528657c4dd9f9b9b76b84aae83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342883"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391519"
 ---
 # <a name="ole-automation-classes"></a>Clases de Automation OLE
-Estas clases son compatibles con los clientes de automatización (aplicaciones que controlan otras aplicaciones). Se admiten servidores de automatización (aplicaciones que pueden controlarse mediante otras aplicaciones) a través de [mapas de envío](../mfc/reference/dispatch-maps.md).  
-  
- [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- Se usa para llamar a los servidores de automatización desde el cliente de automatización. Al agregar una clase, esta clase se utiliza para crear clases de seguridad de tipos de servidores de automatización que proporcionan una biblioteca de tipos.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Una excepción resultante de un error durante la automatización OLE. Excepciones de automatización son iniciadas por servidores de automatización y detecta los clientes de automatización.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+Estas clases admiten a los clientes de automatización (aplicaciones que controlan otras aplicaciones). Se admiten servidores de automatización (aplicaciones que pueden controlarse con otras aplicaciones) a través de [mapas de envío](../mfc/reference/dispatch-maps.md).
+
+[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
+Se usa para llamar a los servidores de automation desde el cliente de automatización. Al agregar una clase, esta clase se utiliza para crear clases de seguridad de tipos para los servidores de automatización que proporcionan una biblioteca de tipos.
+
+[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
+Una excepción resultante de un error durante la automatización OLE. Excepciones de automatización son iniciadas por servidores de automatización y detectadas por los clientes de automatización.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

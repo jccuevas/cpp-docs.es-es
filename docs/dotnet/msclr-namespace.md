@@ -1,5 +1,5 @@
 ---
-title: espacio de nombres msclr | Documentos de Microsoft
+title: espacio de nombres msclr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0ff10b12d9c77c1e17e278276d0ab7f334f2f9ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8177029bb114dfa0a2dc826d45ec948599902f55
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132913"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390830"
 ---
 # <a name="msclr-namespace"></a>msclr (Espacio de nombres)
-El `msclr` espacio de nombres contiene todas las clases de la biblioteca de compatibilidad de C++. Para obtener más información sobre esas clases, vea [biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md)
+
+El `msclr` espacio de nombres contiene todas las clases de C++ Support Library. Para obtener más información sobre esas clases, vea [C++ Support Library](../dotnet/cpp-support-library.md).
+
+## <a name="see-also"></a>Vea también
+
+[Biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md)

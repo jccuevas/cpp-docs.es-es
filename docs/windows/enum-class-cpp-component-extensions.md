@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711092"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377271"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (Extensiones de componentes de C++)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 La accesibilidad de la enumeración, que puede ser **pública** o **privada**.
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 Nombre de la enumeración.
 
-*underlying-type*  
+*underlying-type*<br/>
 (Opcional) Tipo de datos subyacente de la enumeración.
 
 (Opcional. Windows en tiempo de ejecución solo) el tipo subyacente de la enumeración, que puede ser **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, o `uint64`.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Lista de nombres de enumerador separados con comas.
 
 El valor de cada enumerador es una expresión constante definida implícitamente por el compilador o explícitamente mediante la notación, *enumerator*`=`*constant-expression*. De forma predeterminada, el valor del primer enumerador es cero si se define implícitamente. El valor de cada enumerador implícitamente definido subsiguiente es el valor del enumerador anterior + 1.
 
-*var*  
+*var*<br/>
 (Opcional) Nombre de una variable del tipo de enumeración.
 
 ### <a name="remarks"></a>Comentarios
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 Accesibilidad de la enumeración. Puede ser **pública** o **privada**.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Una lista delimitada por comas de los identificadores (enumeradores) en la enumeración.
 
-*name*  
+*name*<br/>
 Nombre de la enumeración. Las enumeraciones administradas anónimas no se permiten.
 
-*type*  
+*type*<br/>
 (Opcional) El tipo subyacente de la *identificadores*. Esto puede ser cualquier tipo escalar, como versiones con o sin signo de **int**, **corto**, o **largo**.  **BOOL** o **char** también se permite.
 
-*var*  
+*var*<br/>
 (Opcional) Nombre de una variable del tipo de enumeración.
 
 ### <a name="remarks"></a>Comentarios

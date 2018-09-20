@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 476df4fa9d2e31b25eb8791e521081eedd2642c6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b87de96f260bdd5bf0faaad6c590b0bd3d6f0dfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318582"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395016"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-c-image-editor-for-icons"></a>Abra &lt;dispositivo&gt; imagen, cuadro de diálogo (C++) (Editor de imágenes para iconos)
 
@@ -38,5 +38,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Imagen (menú)](../windows/image-menu-image-editor-for-icons.md)  
+[Imagen (menú)](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

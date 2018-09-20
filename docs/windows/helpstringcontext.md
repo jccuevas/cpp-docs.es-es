@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47afe841a2a8e4a1c41baf68dfd139a70b320c7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206607"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394470"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -38,7 +38,7 @@ Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.
 
 ### <a name="parameters"></a>Parámetros
 
-*contextID*  
+*contextID*<br/>
 Un identificador de contexto de Ayuda de 32 bits en el **ayuda** archivo.
 
 ## <a name="remarks"></a>Comentarios
@@ -79,8 +79,8 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Atributos de interfaz](../windows/interface-attributes.md)  
-[Atributos de clase](../windows/class-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Atributos de interfaz](../windows/interface-attributes.md)<br/>
+[Atributos de clase](../windows/class-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
 [módulo](../windows/module-cpp.md)  

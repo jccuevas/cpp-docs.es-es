@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6297b2d9313a8bc2c7a4f90632affa054c49c662
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 346cb4049f0833bdbc950b6806177321d107db28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595272"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380742"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel (Método)
 
@@ -44,5 +44,5 @@ virtual void OnCancel(
 
 ## <a name="see-also"></a>Vea también
 
-[AsyncBase (clase)](../windows/asyncbase-class.md)  
+[AsyncBase (clase)](../windows/asyncbase-class.md)<br/>
 [AsyncBase::Cancel (método)](../windows/asyncbase-cancel-method.md)

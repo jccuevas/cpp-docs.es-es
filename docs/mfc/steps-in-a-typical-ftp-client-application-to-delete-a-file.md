@@ -1,5 +1,5 @@
 ---
-title: Los pasos de una aplicación cliente FTP típica para eliminar un archivo | Documentos de Microsoft
+title: Los pasos de una aplicación cliente FTP típica para eliminar un archivo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220d1d38c6be33652a8613c60c4e4baa053a8296
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1d1db3418aa96fa779ac3341e12d90d66ba657c4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951925"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384538"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Pasos de una aplicación cliente FTP típica para eliminar un archivo
-La tabla siguiente muestran los pasos que puede realizar en una aplicación de cliente FTP típica que se elimina un archivo.  
-  
-|El objetivo|Acciones que realizar|Efectos|  
-|---------------|----------------------|-------------|  
-|Comenzar una sesión FTP.|Crear un [CInternetSession](../mfc/reference/cinternetsession-class.md) objeto.|Inicializa WinInet y se conecta al servidor.|  
-|Conectarse a un servidor FTP.|Use [CInternetSession:: GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection).|Devuelve un [CFtpConnection](../mfc/reference/cftpconnection-class.md) objeto.|  
-|Compruebe para asegurarse de que se encuentra en el directorio en el servidor FTP.|Use [CFtpConnection:: GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory) o [CFtpConnection:: GetCurrentDirectoryAsURL](../mfc/reference/cftpconnection-class.md#getcurrentdirectoryasurl).|Devuelve el nombre o la dirección URL del directorio que está conectado actualmente en el servidor, dependiendo de la función miembro seleccionado.|  
-|Cambiar a un nuevo directorio FTP en el servidor.|Use [CFtpConnection:: SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Cambia el directorio que está conectado actualmente en el servidor.|  
-|Buscar el primer archivo en el directorio FTP.|Use [CFtpFileFind:: FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Busca el primer archivo. Devuelve FALSE si no se encuentran archivos.|  
-|Buscar el siguiente archivo en el directorio FTP.|Use [CFtpFileFind:: FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Busca el siguiente archivo. Devuelve FALSE si no se encuentra el archivo.|  
-|Eliminar el archivo encontrado por `FindFile` o `FindNextFile`.|Use [CFtpConnection:: Remove](../mfc/reference/cftpconnection-class.md#remove), con el nombre de archivo devuelto por `FindFile` o `FindNextFile`.|Elimina el archivo en el servidor para leer o escribir.|  
-|Control de excepciones.|Use la [CInternetException](../mfc/reference/cinternetexception-class.md) clase.|Administra todos los tipos comunes de excepciones de Internet.|  
-|Finalizar la sesión FTP.|Deseche la [CInternetSession](../mfc/reference/cinternetsession-class.md) objeto.|Limpia automáticamente los identificadores de archivos abiertos y conexiones.|  
-  
-## <a name="see-also"></a>Vea también  
- [Extensiones de Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Requisitos previos para las clases de cliente de Internet](../mfc/prerequisites-for-internet-client-classes.md)   
- [Escritura de una aplicación cliente de Internet mediante clases WinInet de MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+
+La siguiente tabla muestra los pasos que puede realizar en una aplicación cliente FTP típica que se elimina un archivo.
+
+|El objetivo|Acciones que realizar|Efectos|
+|---------------|----------------------|-------------|
+|Comenzar una sesión FTP.|Crear un [CInternetSession](../mfc/reference/cinternetsession-class.md) objeto.|Inicializa WinInet y se conecta al servidor.|
+|Conectarse a un servidor FTP.|Use [CInternetSession:: GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection).|Devuelve un [CFtpConnection](../mfc/reference/cftpconnection-class.md) objeto.|
+|Compruebe que se encuentra en el directorio correcto en el servidor FTP.|Use [CFtpConnection:: GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory) o [CFtpConnection:: GetCurrentDirectoryAsURL](../mfc/reference/cftpconnection-class.md#getcurrentdirectoryasurl).|Devuelve el nombre o la dirección URL del directorio que está conectado actualmente en el servidor, dependiendo de la función miembro seleccionado.|
+|Cambiar a un nuevo directorio FTP en el servidor.|Use [CFtpConnection:: SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Cambia el directorio que está conectado actualmente en el servidor.|
+|Buscar el primer archivo en el directorio FTP.|Use [CFtpFileFind:: FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Busca el primer archivo. Devuelve FALSE si no se encuentran archivos.|
+|El siguiente archivo de búsqueda en el directorio FTP.|Use [CFtpFileFind:: FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Busca el archivo siguiente. Devuelve FALSE si no se encuentra el archivo.|
+|Eliminar el archivo encontrado por `FindFile` o `FindNextFile`.|Use [CFtpConnection:: Remove](../mfc/reference/cftpconnection-class.md#remove), con el nombre de archivo devuelta por `FindFile` o `FindNextFile`.|Elimina el archivo en el servidor de lectura o escritura.|
+|Control de excepciones.|Use la [CInternetException](../mfc/reference/cinternetexception-class.md) clase.|Controla todos los tipos de excepciones comunes de Internet.|
+|Finalizar la sesión FTP.|Desechar la [CInternetSession](../mfc/reference/cinternetsession-class.md) objeto.|Limpia automáticamente los identificadores de archivos abiertos y las conexiones.|
+
+## <a name="see-also"></a>Vea también
+
+[Extensiones de Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Requisitos previos para las clases de cliente Internet](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[Escritura de una aplicación cliente de Internet mediante clases WinInet de MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

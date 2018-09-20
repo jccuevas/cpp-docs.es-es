@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4dab1ce421582d865895fcec0d55685bdbf30db
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6b9b9666e9c20e955d8f3705ebd93e7c890d2bc0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391928"
 ---
 # <a name="resource-editors"></a>editores de recursos
 
@@ -57,7 +57,7 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)  
+[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
+[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>
 [Menús y otros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

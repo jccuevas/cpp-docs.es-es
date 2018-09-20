@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 677f28b1ca4a45a3033e1dc6a34bd024bec6e329
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0505fde4ea92c643a6038d64d10ec06cda9cb60d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211507"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392338"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -38,7 +38,7 @@ Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*  
+*Expresión*<br/>
 El tamaño de memoria asignada para un tamaño punteros.
 
 ## <a name="remarks"></a>Comentarios
@@ -64,10 +64,10 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](../windows/idl-attributes.md)  
-[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atributos de parámetro](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[last_is](../windows/last-is.md)  
-[max_is](../windows/max-is.md)  
+[Atributos IDL](../windows/idl-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos de parámetro](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[last_is](../windows/last-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
 [length_is](../windows/length-is.md)  

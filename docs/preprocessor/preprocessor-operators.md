@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540264"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384044"
 ---
 # <a name="preprocessor-operators"></a>Operadores de preprocesador
 Se utilizan cuatro operadores específicos del preprocesador en el contexto de la directiva `#define` (vea la lista siguiente para obtener un resumen de cada uno de ellos). En las próximas tres secciones se explican los operadores de generación de cadenas, generación de caracteres y pegado de token. Para obtener información sobre la `defined` operador, consulte [#if, #elif, #else y #endif directivas](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -34,6 +34,6 @@ Se utilizan cuatro operadores específicos del preprocesador en el contexto de l
   
 ## <a name="see-also"></a>Vea también  
  
-[Directivas de preprocesador](../preprocessor/preprocessor-directives.md)   
-[Macros predefinidas](../preprocessor/predefined-macros.md)   
+[Directivas de preprocesador](../preprocessor/preprocessor-directives.md)<br/>
+[Macros predefinidas](../preprocessor/predefined-macros.md)<br/>
 [Referencia del preprocesador de C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
