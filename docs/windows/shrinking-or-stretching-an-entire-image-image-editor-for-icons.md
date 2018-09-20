@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76966d5d39f9b4407268e5932dc3f633e0b36cd1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 789747ff05c044aa77b58b7f94988fd78202bedc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443532"
 ---
 # <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>Comprimir o ajustar una imagen completa (Editor de imágenes para iconos)
 
@@ -42,5 +42,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609549"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444702"
 ---
 # <a name="modulecreate-method"></a>Module::Create (Método)
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Tipo de módulo.
 
-*devolución de llamada*  
+*devolución de llamada*<br/>
 Se llama cuando se libera el último objeto de instancia del módulo.
 
-*object*  
+*object*<br/>
 El *objeto* y *método* parámetros se utilizan en combinación. Señala al último objeto de instancia cuando se libera el último objeto de instancia en el módulo.
 
-*Método*  
+*Método*<br/>
 El *objeto* y *método* parámetros se utilizan en combinación. Señala al método del último objeto de instancia cuando se libera el último objeto de instancia en el módulo.
 
 ## <a name="return-value"></a>Valor devuelto

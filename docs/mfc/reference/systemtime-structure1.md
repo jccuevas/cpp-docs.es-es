@@ -1,5 +1,5 @@
 ---
-title: SYSTEMTIME estructura-1 | Documentos de Microsoft
+title: SYSTEMTIME (Structure1) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,63 +16,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97a0042adaa223fc5898c057f191f7b750fa230f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79c7cec92550ad51b53242b44b3aee334be21f3f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372397"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397213"
 ---
-# <a name="systemtime-structure1"></a>SYSTEMTIME estructura-1
-El `SYSTEMTIME` estructura representa una fecha y hora con miembros individuales para el mes, día, año, día de la semana, hora, minuto, segundo y milisegundo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-typedef struct _SYSTEMTIME {  
-    WORD wYear;  
-    WORD wMonth;  
-    WORD wDayOfWeek;  
-    WORD wDay;  
-    WORD wHour;  
-    WORD wMinute;  
-    WORD wSecond;  
-    WORD wMilliseconds;  
-} SYSTEMTIME;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *wYear*  
- El año actual.  
-  
- *wMonth*  
- El mes en curso; Enero es 1.  
-  
- *wDayOfWeek*  
- El día actual de la semana; El domingo es 0, el lunes es 1 y así sucesivamente.  
-  
- *wDay*  
- El día actual del mes.  
-  
- *wHour*  
- La hora actual.  
-  
- *wMinute*  
- El minuto actual.  
-  
- *wSecond*  
- El segundo actual.  
-  
- *wMilliseconds*  
- El milisegundo actual.  
-  
-## <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** winbase.h  
-  
-## <a name="see-also"></a>Vea también  
- [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CTime:: CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
+# <a name="systemtime-structure1"></a>SYSTEMTIME (Structure1)
+
+El `SYSTEMTIME` estructura representa una fecha y hora mediante miembros individuales para el mes, día, año, día de la semana, hora, minuto, segundo y milisegundo.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+typedef struct _SYSTEMTIME {
+    WORD wYear;
+    WORD wMonth;
+    WORD wDayOfWeek;
+    WORD wDay;
+    WORD wHour;
+    WORD wMinute;
+    WORD wSecond;
+    WORD wMilliseconds;
+} SYSTEMTIME;
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*wYear*<br/>
+El año actual.
+
+*wMonth*<br/>
+El mes actual; Enero es 1.
+
+*wDayOfWeek*<br/>
+El día actual de la semana; El domingo es 0, el lunes es 1 y así sucesivamente.
+
+*wDay*<br/>
+El día actual del mes.
+
+*wHour*<br/>
+La hora actual.
+
+*wMinute*<br/>
+El minuto actual.
+
+*wSecond*<br/>
+El segundo actual.
+
+*wMilliseconds*<br/>
+El milisegundo actual.
+
+## <a name="example"></a>Ejemplo
+
+[!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** winbase.h
+
+## <a name="see-also"></a>Vea también
+
+[Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CTime:: CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
 

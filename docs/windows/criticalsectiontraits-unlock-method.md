@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 003bb9c845ef8124ade1262a25368d3d4cb34fa6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5babc5c14baae474409cd364af31b70549fcefe5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606436"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413021"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock (Método)
 
@@ -38,7 +38,7 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parámetros
 
-*CS*  
+*CS*<br/>
 Un puntero a un objeto de sección crítica.
 
 ## <a name="remarks"></a>Comentarios

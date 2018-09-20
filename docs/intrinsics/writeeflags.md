@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 875945c4116f99a0a7e8ef53666f432987ba0deb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704865"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424552"
 ---
 # <a name="writeeflags"></a>__writeeflags
-Escribe el valor especificado en el programa de estado y control (EFLAGS) se registran.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void __writeeflags(unsigned Value);  
-void __writeeflags(unsigned __int64 Value);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
-  
-|Parámetro|Descripción|  
-|---------------|-----------------|  
-|*Valor*|[in] El valor para escribir en el registro EFLAGS. El `Value` parámetro es de 32 bits para una plataforma de 32 bits y 64 bits para una plataforma de 64 bits.|  
-  
-## <a name="remarks"></a>Comentarios  
- Estas rutinas sólo están disponibles como intrínsecos.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función intrínseca|Arquitectura|  
-|---------------|------------------|  
-|`__writeeflags`|x86, x64|  
-  
- **Archivo de encabezado** \<intrin.h >  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
- [__readeflags](../intrinsics/readeflags.md)
+
+Escribe el valor especificado en el programa de estado y control (EFLAGS) se registran.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void __writeeflags(unsigned Value);
+void __writeeflags(unsigned __int64 Value);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+|Parámetro|Descripción|
+|---------------|-----------------|
+|*Valor*|[in] El valor para escribir en el registro EFLAGS. El `Value` parámetro es de 32 bits para una plataforma de 32 bits y 64 bits para una plataforma de 64 bits.|
+
+## <a name="remarks"></a>Comentarios
+
+Estas rutinas sólo están disponibles como intrínsecos.
+
+## <a name="requirements"></a>Requisitos
+
+|Función intrínseca|Arquitectura|
+|---------------|------------------|
+|`__writeeflags`|x86, x64|
+
+**Archivo de encabezado** \<intrin.h >
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[__readeflags](../intrinsics/readeflags.md)

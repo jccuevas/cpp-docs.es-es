@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc3605bfef5c96a8882872aafbe1a15dda3e4cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 03ea941e793f8c3a9f40e0495442deb71b2ffa93
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115975"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402725"
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
-Libera un bloqueo anidable.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void omp_unset_nest_lock(   
-   omp_nest_lock_t *lock   
-);  
-```  
-  
+
+Libera un bloqueo anidable.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void omp_unset_nest_lock( 
+   omp_nest_lock_t *lock 
+);
+```
+
 ### <a name="parameters"></a>Parámetros
-  
+
 *lock*<br/>
-Una variable de tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que se inicializó con [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md), que se poseen el subproceso y ejecuta en la función.  
-  
-## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [3.2.4 omp_unset_lock y omp_unset_nest_lock funciones](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).  
-  
-## <a name="example"></a>Ejemplo  
- Consulte [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) para obtener un ejemplo del uso de `omp_unset_nest_lock`.  
-  
-## <a name="see-also"></a>Vea también  
- [Funciones](../../../parallel/openmp/reference/openmp-functions.md)
+Una variable de tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que se inicializó con [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md), que se poseen el subproceso y ejecuta en la función.
+
+## <a name="remarks"></a>Comentarios
+
+Para obtener más información, consulte [3.2.4 omp_unset_lock y omp_unset_nest_lock funciones](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).
+
+## <a name="example"></a>Ejemplo
+
+Consulte [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) para obtener un ejemplo del uso de `omp_unset_nest_lock`.
+
+## <a name="see-also"></a>Vea también
+
+[Funciones](../../../parallel/openmp/reference/openmp-functions.md)

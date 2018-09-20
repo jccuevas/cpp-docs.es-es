@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2f1e907864e096acfb385d8c340ab40fb82346
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059230"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445144"
 ---
 # <a name="cstringt-class"></a>CStringT (clase)
 
@@ -1744,7 +1744,7 @@ El `CStringT& TrimRight()` versión no requiere ningún parámetro. Recorta cual
 
 ## <a name="see-also"></a>Vea también
 
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
-[Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)   
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
+[Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT (clase)](../../atl-mfc-shared/reference/csimplestringt-class.md)
 

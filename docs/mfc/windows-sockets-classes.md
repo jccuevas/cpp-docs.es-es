@@ -1,5 +1,5 @@
 ---
-title: Clases de Windows Sockets | Documentos de Microsoft
+title: Clases de Windows Sockets | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e370c8a5f9cb2fb42c3199dbc0d56b69d93dc35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 893fa525b04376cde0e96f280c95e6bfd1243946
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382133"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439983"
 ---
 # <a name="windows-sockets-classes"></a>Clases de Windows Sockets
-Windows Sockets proporciona una manera independiente del protocolo de red para la comunicación entre dos equipos. Estos sockets pueden ser sincrónicos (el programa espera hasta que se realiza la comunicación) o asincrónico (el programa continúa ejecutándose mientras la comunicación está sucediendo).  
-  
- [CAsyncSocket](../mfc/reference/casyncsocket-class.md)  
- Encapsula la API de Windows Sockets en un contenedor fino.  
-  
- [CSocket](../mfc/reference/csocket-class.md)  
- Deriva de mayor nivel de abstracción `CAsyncSocket`. Opera de forma sincrónica.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Proporciona un `CFile` interfaz para un Socket de Windows.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+Windows Sockets proporciona una manera independiente del protocolo de red para la comunicación entre dos equipos. Estos sockets pueden ser sincrónicos (el programa espera hasta que la comunicación se realiza) o asincrónica (el programa continúa ejecutándose mientras la comunicación está ocurriendo).
+
+[CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
+Encapsula la API de Windows Sockets en un contenedor fino.
+
+[CSocket](../mfc/reference/csocket-class.md)<br/>
+Deriva de mayor nivel de abstracción `CAsyncSocket`. Opera de forma sincrónica.
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+Proporciona un `CFile` interfaz a un Socket de Windows.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

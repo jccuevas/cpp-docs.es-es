@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439580"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicialización de ensamblados mixtos
 
 Los desarrolladores de Windows siempre deben ser precavido a la hora de bloqueo del cargador cuando se ejecuta código durante `DllMain`. Sin embargo, hay algunas consideraciones adicionales que entran en juego cuando se trabaja con C / c++ / clr ensamblados de modo mixto.
 
 Código de [DllMain](/windows/desktop/Dlls/dllmain) no debe tener acceso al CLR. Esto significa que `DllMain` no debe hacer llamadas a funciones administradas directa o indirectamente; no se debe declarar ni implementar código administrado en `DllMain`; y no se debe producir la recolección de elementos no usados ni la carga automática de bibliotecas dentro de `DllMain`.
-  
+
 ## <a name="causes-of-loader-lock"></a>Causas del bloqueo del cargador
 
 Con la introducción de la plataforma .NET, hay dos mecanismos diferentes para cargar un módulo de ejecución (EXE o DLL): uno para Windows, que se usa para módulos no administrados, y otro para Common Language Runtime (CLR) de .NET, que carga ensamblados .NET. El problema de carga de DLL mixtas se centra en el cargador del sistema operativo Microsoft Windows.
@@ -130,7 +130,7 @@ Dado que puede ser el mismo encabezado incluyen archivos de C++ con **/CLR** hab
 Para la comodidad de los usuarios que se encuentran ante un bloqueo del cargador, el vinculador elegirá la implementación nativa frente a la administrada cuando se le presenten ambas. Esto evita los problemas mencionados anteriormente. Hay dos excepciones a esta regla en esta versión debido a dos problemas sin resolver del compilador:
 
 - La llamada a una función insertada se realiza a través de un puntero de función estático global. Este escenario es especialmente importante, ya que las llamadas a funciones virtuales se realizan a través de punteros de función globales. Por ejemplo,
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ Para identificar la función MSIL específica a la que se llamó en un bloqueo d
    Para ello, abra el **propiedades** cuadrícula para el proyecto de inicio de la solución. Seleccione **propiedades de configuración** > **depuración**. Establecer el **el tipo de depurador** a **sólo nativo**.
 
 1. Inicie al depurador (F5).
-  
+
 1. Cuando el **/CLR** se genera el diagnóstico, elija **vuelva a intentar** y, a continuación, elija **interrumpir**.
-  
+
 1. Abra la ventana Pila de llamadas. (En la barra de menús, elija **depurar** > **Windows** > **pila de llamadas**.) Los infractores `DllMain` o inicializador estático se identifica con una flecha verde. Si no se identifica la función incorrecta, deben llevarse a cabo los pasos siguientes para encontrarla.
 
 1. Abra el **inmediato** ventana (en la barra de menús, elija **depurar** > **Windows** > **inmediato**.)
 
 1. Escriba .load sos.dll en el **inmediato** ventana para cargar el servicio de depuración de SOS.
-  
+
 1. Escriba! dumpstack en la **inmediato** ventana para obtener una lista completa de interno **/CLR** pila.
 
 1. Busque la primera instancia (cerca de la parte inferior de la pila) de _CorDllMain (si `DllMain` hace que el problema) o _VTableBootstrapThunkInitHelperStub o GetTargetForVTableEntry (si un inicializador estático causa el problema). La entrada de la pila justo debajo de esta llamada es la invocación de la función implementada por MSIL que intentó ejecutarse en el bloqueo del cargador.

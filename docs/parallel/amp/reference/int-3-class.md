@@ -82,205 +82,210 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69dd5e5080735c1b347b164887fdfab76aa9b178
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042590"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428401"
 ---
 # <a name="int3-class"></a>int_3 (Clase)
-Representa un vector corto de tres enteros.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class int_3;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Constructor int_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|int_3::get_x||  
-|int_3::get_xy||  
-|int_3::get_xyz||  
-|int_3::get_xz||  
-|int_3:: get_xzy||  
-|int_3:: get_Y||  
-|int_3::get_yx||  
-|int_3::get_yxz||  
-|int_3::get_yz||  
-|int_3::get_yzx||  
-|int_3::get_z||  
-|int_3::get_zx||  
-|int_3::get_zxy||  
-|int_3::get_zy||  
-|int_3::get_zyx||  
-|int_3:: ref_b||  
-|int_3::ref_g||  
-|int_3::ref_r||  
-|int_3:: ref_x||  
-|int_3:: ref_y||  
-|int_3::ref_z||  
-|int_3::set_x||  
-|int_3:: set_xy||  
-|int_3::set_xyz||  
-|int_3::set_xz||  
-|int_3:: set_xzy||  
-|int_3:: set_y||  
-|int_3::set_yx||  
-|int_3::set_yxz||  
-|int_3::set_yz||  
-|int_3::set_yzx||  
-|int_3::set_z||  
-|int_3::set_zx||  
-|int_3::set_zxy||  
-|int_3::set_zy||  
-|int_3::set_zyx||  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|int_3::operator-||  
-|int_3::operator--||  
-|int_3::operator%=||  
-|int_3::operator&=||  
-|int_3::operator*=||  
-|int_3::operator/=||  
-|int_3::operator^=||  
-|operador int_3::&#124;=||  
-|int_3::operator~||  
-|int_3::operator++||  
-|int_3::operator+=||  
-|int_3::operator<\<=||  
-|int_3::operator=||  
-|int_3::operator-=||  
-|int_3::operator>>=||  
-  
-### <a name="public-constants"></a>Constantes públicas  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[cambio de tamaño constante](#size)||  
-  
-### <a name="public-data-members"></a>Miembros de datos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|int_3:: b||  
-|int_3:: BG||  
-|int_3:: BGR||  
-|int_3::br||  
-|int_3::brg||  
-|int_3:: g||  
-|int_3:: GB||  
-|int_3::gbr||  
-|int_3:: GR||  
-|int_3:: GRB||  
-|int_3:: r||  
-|int_3:: RB||  
-|int_3::rbg||  
-|int_3::rg||  
-|int_3::rgb||  
-|int_3:: x||  
-|int_3:: XY||  
-|int_3:: XYZ||  
-|int_3::xz||  
-|int_3:: xzy||  
-|int_3:: y||  
-|int_3:: YX||  
-|int_3:: YXZ||  
-|int_3:: YZ||  
-|int_3:: yzx||  
-|int_3:: z||  
-|int_3::zx||  
-|int_3:: zxy||  
-|int_3:: ZY||  
-|int_3:: ZYX||  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `int_3`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency:: Graphics  
 
-## <a name="ctor"></a> int_3 
+Representa un vector corto de tres enteros.
 
-El constructor predeterminado, inicializa todos los elementos con 0.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int_3() restrict(amp,cpu);  
-int_3(  
-   int _V0,  
-   int _V1,  
-   int _V2  
-) restrict(amp,cpu);  
-int_3(  
-   int _V  
-) restrict(amp,cpu);  
-int_3(  
-   const int_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const uint_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const float_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const unorm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const norm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const double_3& _Other  
-) restrict(amp,cpu);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
+## <a name="syntax"></a>Sintaxis
+
+```
+class int_3;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Constructor int_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|int_3::get_x||
+|int_3::get_xy||
+|int_3::get_xyz||
+|int_3::get_xz||
+|int_3:: get_xzy||
+|int_3:: get_Y||
+|int_3::get_yx||
+|int_3::get_yxz||
+|int_3::get_yz||
+|int_3::get_yzx||
+|int_3::get_z||
+|int_3::get_zx||
+|int_3::get_zxy||
+|int_3::get_zy||
+|int_3::get_zyx||
+|int_3:: ref_b||
+|int_3::ref_g||
+|int_3::ref_r||
+|int_3:: ref_x||
+|int_3:: ref_y||
+|int_3::ref_z||
+|int_3::set_x||
+|int_3:: set_xy||
+|int_3::set_xyz||
+|int_3::set_xz||
+|int_3:: set_xzy||
+|int_3:: set_y||
+|int_3::set_yx||
+|int_3::set_yxz||
+|int_3::set_yz||
+|int_3::set_yzx||
+|int_3::set_z||
+|int_3::set_zx||
+|int_3::set_zxy||
+|int_3::set_zy||
+|int_3::set_zyx||
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|int_3::operator-||
+|int_3::operator--||
+|int_3::operator%=||
+|int_3::operator&=||
+|int_3::operator*=||
+|int_3::operator/=||
+|int_3::operator^=||
+|operador int_3::&#124;=||
+|int_3::operator~||
+|int_3::operator++||
+|int_3::operator+=||
+|int_3::operator<\<=||
+|int_3::operator=||
+|int_3::operator-=||
+|int_3::operator>>=||
+
+### <a name="public-constants"></a>Constantes públicas
+
+|nombre|Descripción|
+|----------|-----------------|
+|[cambio de tamaño constante](#size)||
+
+### <a name="public-data-members"></a>Miembros de datos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|int_3:: b||
+|int_3:: BG||
+|int_3:: BGR||
+|int_3::br||
+|int_3::brg||
+|int_3:: g||
+|int_3:: GB||
+|int_3::gbr||
+|int_3:: GR||
+|int_3:: GRB||
+|int_3:: r||
+|int_3:: RB||
+|int_3::rbg||
+|int_3::rg||
+|int_3::rgb||
+|int_3:: x||
+|int_3:: XY||
+|int_3:: XYZ||
+|int_3::xz||
+|int_3:: xzy||
+|int_3:: y||
+|int_3:: YX||
+|int_3:: YXZ||
+|int_3:: YZ||
+|int_3:: yzx||
+|int_3:: z||
+|int_3::zx||
+|int_3:: zxy||
+|int_3:: ZY||
+|int_3:: ZYX||
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`int_3`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** amp_short_vectors.h
+
+**Namespace:** Concurrency:: Graphics
+
+## <a name="ctor"></a> int_3
+
+El constructor predeterminado, inicializa todos los elementos con 0.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+int_3() restrict(amp,cpu);
+int_3(
+   int _V0,
+   int _V1,
+   int _V2
+) restrict(amp,cpu);
+int_3(
+   int _V
+) restrict(amp,cpu);
+int_3(
+   const int_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const uint_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const float_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const unorm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const norm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const double_3& _Other
+) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>Parámetros
+
 *_V0*<br/>
-El valor para inicializar el elemento 0.  
-  
-*_V1*<br/>
-El valor para inicializar el elemento 1.  
-  
-*_V2*<br/>
-El valor para inicializar el elemento 2.  
-  
-*_V*<br/>
-El valor de inicialización.  
-  
-*_Otro*<br/>
-El objeto usado para inicializar.  
-  
-## <a name="size"></a> Tamaño 
+El valor para inicializar el elemento 0.
 
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
+*_V1*<br/>
+El valor para inicializar el elemento 1.
+
+*_V2*<br/>
+El valor para inicializar el elemento 2.
+
+*_V*<br/>
+El valor de inicialización.
+
+*_Otro*<br/>
+El objeto usado para inicializar.
+
+## <a name="size"></a> Tamaño
+
+## <a name="syntax"></a>Sintaxis
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>Vea también
+
+[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

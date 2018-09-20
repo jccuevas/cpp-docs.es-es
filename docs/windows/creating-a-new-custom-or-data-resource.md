@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e2939c7f0a68401b4c1a8c43b5c6335a0acfcb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314591"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403949"
 ---
 # <a name="creating-a-new-custom-or-data-resource-c"></a>Crear un nuevo personalizado o el recurso de datos (C++)
 
@@ -40,9 +40,9 @@ Puede crear un nuevo recurso personalizado o de datos, coloque el recurso en un 
 
 3. En el **Rectivas de tiempo** , escriba un `#include` instrucción que proporciona el nombre del archivo que contiene el recurso personalizado. Por ejemplo:
 
-```cpp
+    ```cpp
     #include mydata.rc
- ```
+    ```
 
    Asegúrese de que la sintaxis y la ortografía de lo que escribe son correctas. El contenido del cuadro **Directivas de tiempo de compilación** se insertan en el archivo de script de recursos exactamente como lo escribió.
 

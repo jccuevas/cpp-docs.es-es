@@ -18,54 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd492f28f2aba76e9d6e6d3b381d4d0de4c30202
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 680aa7fc6a3b1216148bb74ce0f0d19eb06294e6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059211"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420834"
 ---
 # <a name="improperschedulerdetach-class"></a>improper_scheduler_detach (Clase)
-Esta clase describe una excepción que se produce cuando se llama al método `CurrentScheduler::Detach` en un contexto que no se ha adjuntado a ningún programador mediante el método `Attach` de un objeto `Scheduler`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+Esta clase describe una excepción que se produce cuando se llama al método `CurrentScheduler::Detach` en un contexto que no se ha adjuntado a ningún programador mediante el método `Attach` de un objeto `Scheduler`.
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 class improper_scheduler_detach : public std::exception;
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[improper_scheduler_detach](#ctor)|Sobrecargado. Construye un objeto `improper_scheduler_detach`.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `exception`  
-  
- `improper_scheduler_detach`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** concrt.h  
-  
- **Espacio de nombres:** simultaneidad  
-  
-##  <a name="ctor"></a> improper_scheduler_detach) 
+```
 
- Construye un objeto `improper_scheduler_detach`.  
-  
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[improper_scheduler_detach](#ctor)|Sobrecargado. Construye un objeto `improper_scheduler_detach`.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`exception`
+
+`improper_scheduler_detach`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** concrt.h
+
+**Espacio de nombres:** simultaneidad
+
+##  <a name="ctor"></a> improper_scheduler_detach)
+
+Construye un objeto `improper_scheduler_detach`.
+
 ```
 explicit _CRTIMP improper_scheduler_detach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_detach() throw();
-```  
-  
-### <a name="parameters"></a>Parámetros  
+```
+
+### <a name="parameters"></a>Parámetros
+
 *_Cuerpo*<br/>
-Mensaje descriptivo del error.  
-  
-## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)   
- [Scheduler (clase)](scheduler-class.md)
+Mensaje descriptivo del error.
+
+## <a name="see-also"></a>Vea también
+
+[concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
+[Scheduler (clase)](scheduler-class.md)

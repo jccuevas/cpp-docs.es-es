@@ -17,54 +17,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 797a229007be58ff3da3bb529c9e8f4a062c12b3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853087"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434315"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo (Estructura)
-El `CODBCFieldInfo` estructura contiene información sobre los campos de un origen de datos ODBC.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-struct CODBCFieldInfo  
-{  
-    CString m_strName;  
-    SWORD m_nSQLType;  
-    UDWORD m_nPrecision;  
-    SWORD m_nScale;  
-    SWORD m_nNullability;  
-};  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *m_strName*  
- Nombre del campo.  
-  
- *m_nSQLType*  
- El tipo de datos SQL del campo. Esto puede ser un tipo de datos SQL de ODBC o un tipo de datos SQL específicas del controlador. Para obtener una lista de tipos de datos ODBC SQL válidos, vea "Tipos de datos de SQL" en el SDK de Windows. Para obtener información acerca de los tipos de datos SQL específicas del controlador, consulte la documentación del controlador.  
-  
- *m_nPrecision*  
- La precisión máxima del campo. Para obtener más información, vea "Precisión, escala, longitud y tamaño de presentación" en el SDK de Windows.  
-  
- *m_nScale*  
- La escala del campo. Para obtener más información, vea "Precisión, escala, longitud y tamaño de presentación" en el SDK de Windows.  
-  
- *m_nNullability*  
- Si el campo acepta un valor Null. Esto puede ser uno de dos valores: SQL_NULLABLE si el campo acepta valores Null o SQL_NO_NULLS si el campo no acepta valores Null.  
-  
-## <a name="remarks"></a>Comentarios  
- Para recuperar esta información, llame al [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxdb.h  
-  
-## <a name="see-also"></a>Vea también  
- [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)   
- [CRecordset:: GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
+
+El `CODBCFieldInfo` estructura contiene información sobre los campos de un origen de datos ODBC.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+struct CODBCFieldInfo
+{
+    CString m_strName;
+    SWORD m_nSQLType;
+    UDWORD m_nPrecision;
+    SWORD m_nScale;
+    SWORD m_nNullability;
+};
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*m_strName*<br/>
+Nombre del campo.
+
+*m_nSQLType*<br/>
+El tipo de datos SQL del campo. Esto puede ser un tipo de datos SQL de ODBC o un tipo de datos SQL específicas del controlador. Para obtener una lista de tipos de datos ODBC SQL válidos, vea "Tipos de datos de SQL" en el SDK de Windows. Para obtener información acerca de los tipos de datos SQL específicas del controlador, consulte la documentación del controlador.
+
+*m_nPrecision*<br/>
+La precisión máxima del campo. Para obtener más información, vea "Precisión, escala, longitud y tamaño de presentación" en el SDK de Windows.
+
+*m_nScale*<br/>
+La escala del campo. Para obtener más información, vea "Precisión, escala, longitud y tamaño de presentación" en el SDK de Windows.
+
+*m_nNullability*<br/>
+Si el campo acepta un valor Null. Esto puede ser uno de dos valores: SQL_NULLABLE si el campo acepta valores Null o SQL_NO_NULLS si el campo no acepta valores Null.
+
+## <a name="remarks"></a>Comentarios
+
+Para recuperar esta información, llame al [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** afxdb.h
+
+## <a name="see-also"></a>Vea también
+
+[Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
+[CRecordset:: GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
 
 

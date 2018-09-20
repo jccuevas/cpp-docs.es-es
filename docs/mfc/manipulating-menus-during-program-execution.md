@@ -1,5 +1,5 @@
 ---
-title: Manipular menús durante la ejecución del programa | Documentos de Microsoft
+title: Manipular menús durante la ejecución del programa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 93257b89645692885aba728f2dffa698152122db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929765"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433717"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Manipular menús durante la ejecución de programas
-Utilice la clase `CMenu` para manipular los menús y elementos de menú sobre la marcha. `CMenu` Encapsula un identificador HMENU de Windows y proporciona funciones miembro para trabajar con menús.  
-  
- Consulte la información general para la clase [CMenu](../mfc/reference/cmenu-class.md) para obtener más información.  
-  
-## <a name="see-also"></a>Vea también  
- [Menús](../mfc/menus-mfc.md)
+
+Utilice la clase `CMenu` para manipular los menús y elementos de menú sobre la marcha. `CMenu` Encapsula un identificador HMENU de Windows y proporciona funciones miembro para trabajar con menús.
+
+Consulte la información general de la clase [CMenu](../mfc/reference/cmenu-class.md) para obtener más información.
+
+## <a name="see-also"></a>Vea también
+
+[Menús](../mfc/menus-mfc.md)
 

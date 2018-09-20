@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bfd96962cebd4b94e9b1b50ca588ada9af69779
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719113"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418390"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -44,10 +44,10 @@ La variable de miembro especificado se asocia con un parámetro de entrada o sal
 
 ### <a name="parameters"></a>Parámetros
 
-*Ordinal*  
+*Ordinal*<br/>
 El número de columna (ordinal DBCOLUMNINFO) correspondiente a un campo del conjunto de filas que se va a enlazar datos.
 
-*ParamType*  
+*ParamType*<br/>
 (Opcional) El tipo de conjunto para el parámetro. Los proveedores admiten solo tipos de E/S de parámetros que son compatibles con el origen de datos subyacente. El tipo es una combinación de uno o más valores DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT un parámetro de entrada.
@@ -56,19 +56,19 @@ El número de columna (ordinal DBCOLUMNINFO) correspondiente a un campo del conj
 
 - DBPARAMIO_NOTPARAM el descriptor de acceso no tiene parámetros. Establecer `eParamIO` en este valor en la fila de los descriptores de acceso recuerda al usuario que se omiten los parámetros.
 
-*DbType*  
+*DbType*<br/>
 (Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para la entrada de columna.
 
-*precision*  
+*precision*<br/>
 (Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Escala*  
+*Escala*<br/>
 (Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*.
 
-*length*  
+*length*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.
 
 ## <a name="remarks"></a>Comentarios

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612215"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441933"
 ---
 # <a name="key-wrl-apis-by-category"></a>API clave de WRL por categoría
 Las tablas siguientes muestran las principales clases, structs, funciones y macros de biblioteca de plantillas C++ de Windows en tiempo de ejecución. Se omiten las construcciones en clases y espacios de nombres de aplicación auxiliar. Estas listas aumentan la documentación de API, que está organizada por espacio de nombres.
@@ -76,4 +76,5 @@ Las tablas siguientes muestran las principales clases, structs, funciones y macr
 |[InspectableClass (macro)](../windows/inspectableclass-macro.md)|Establece el nivel de confianza y de nombre de clase en tiempo de ejecución.|
   
 ## <a name="see-also"></a>Vea también
- [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
