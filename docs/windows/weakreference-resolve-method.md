@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601161"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446340"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve (Método)
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parámetros
 
-*riid*  
+*riid*<br/>
 Id. de interfaz.
 
-*ppvObject*  
+*ppvObject*<br/>
 Cuando se completa esta operación, una copia de la referencia segura actual si el recuento de referencia segura es distinto de cero.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -65,5 +65,5 @@ Establece el puntero especificado en el valor de referencia segura actual si el 
 
 ## <a name="see-also"></a>Vea también
 
-[WeakReference (Class1)](../windows/weakreference-class1.md)  
+[WeakReference (Class1)](../windows/weakreference-class1.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

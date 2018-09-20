@@ -1,5 +1,5 @@
 ---
-title: Controladores del botón de usuario | Documentos de Microsoft
+title: Controladores del botón de usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,25 +27,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cf497e73987e2a7c8ef285a705bc6e7554f7ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5b7a93afaee003f093e479cbdf9c9e14731cef7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373864"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447321"
 ---
 # <a name="user-button-handlers"></a>Controladores del botón de usuario
-Las siguientes entradas de mapa corresponden a los prototipos de función.  
-  
-|Entrada de mapa|Prototipo de función|  
-|---------------|------------------------|  
-|ON_BN_CLICKED ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_BN_DISABLE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_BN_DOUBLECLICKED ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_BN_HILITE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_BN_PAINT ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-|ON_BN_UNHILITE ( \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-  
-## <a name="see-also"></a>Vea también  
- [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
+
+Las entradas de asignación siguientes corresponden a los prototipos de función.
+
+|Entrada de asignación|Prototipo de función|
+|---------------|------------------------|
+|ON_BN_CLICKED ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_BN_DISABLE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_BN_DOUBLECLICKED ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_BN_HILITE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_BN_PAINT ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+|ON_BN_UNHILITE ( \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+
+## <a name="see-also"></a>Vea también
+
+[Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
 
