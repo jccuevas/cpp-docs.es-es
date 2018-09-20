@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755026"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404779"
 ---
 # <a name="c2-rules"></a>C.2 Reglas
+
 La notación se describe en la sección 6.1 del estándar C. Este apéndice gramática muestra las extensiones para la gramática del lenguaje de base para las directivas de OpenMP C y C++.
 
 **/\* en C++ (ISO/IEC 14882: 1998) \*/**
 
 *instrucción seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instrucción de declaración seq*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*seq de instrucción de OpenMP*
@@ -33,7 +34,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 **/\* en C90 ISO/IEC 9899 (puede: en 1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instrucción de la lista de instrucciones*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*lista de instrucciones de directiva de openmp*
@@ -41,8 +42,8 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 **/\* en C99 (ISO/IEC 9899: 1999) \*/**
 
 *elemento de bloque*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declaración*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de OpenMP*
 
 **/\* instrucciones estándar \*/**
@@ -67,7 +68,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de vaciado*
 
 *bloque estructurado*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *construcción de paralelo*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*bloque estructurado de paralelo directiva*
@@ -100,7 +101,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 &nbsp;&nbsp;&nbsp;&nbsp;**programación (** *tipo de programación* **,** *expresión* **)**
 
 *tipo de programación*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Estático**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Dinámico**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**guiada por perfiles**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**En tiempo de ejecución**
@@ -194,7 +195,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 
 **/\* declaraciones estándares \*/**
 
-*declaración*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva threadprivate*
 
 *Directiva de threadprivate*:<br/>
@@ -217,7 +218,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 **/\* en C \*/**
 
 *lista de variables*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identificador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*lista de variables* **,** *identificador*
 
 **/\* en C++ \*/**

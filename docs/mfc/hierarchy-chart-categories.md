@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40b76075678fb91cc3c4dfde579d08ef0e6e538
-ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
+ms.openlocfilehash: 6d4aefbc64486b665b35e0771091ceb3a24642c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "33345002"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429661"
 ---
 # <a name="hierarchy-chart-categories"></a>Categorías de gráfico de jerarquías
-![Categorías de gráfico de jerarquías de MFC](../mfc/media/vc369r1.png "vc369r1")  
-  
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquías](../mfc/hierarchy-chart.md)   
- [Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md)
+
+![Categorías de gráfico de jerarquías de MFC](../mfc/media/vc369r1.png "vc369r1")
+
+## <a name="see-also"></a>Vea también
+
+[Gráfico de jerarquías](../mfc/hierarchy-chart.md)<br/>
+[Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md)
 

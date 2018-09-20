@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098178"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425633"
 ---
 # <a name="smart-pointers-modern-c"></a>Punteros inteligentes (C++ moderno)
 
@@ -27,7 +27,7 @@ En la programación de C++ moderno, incluye la biblioteca estándar de *intelige
 
 Punteros inteligentes se definen en el `std` espacio de nombres en el [ \<memoria >](../standard-library/memory.md) archivo de encabezado. Son cruciales para la [RAII](../cpp/objects-own-resources-raii.md) o *Resource Acquisition Is Initialization* expresión de programación. El objetivo principal de esta expresión es asegurarse de que la adquisición de recursos ocurre al mismo tiempo que se inicializa el objeto, de manera que todos los recursos del objeto se creen y se dispongan en una sola línea de código. En la práctica, el principio básico RAII consiste en proporcionar la propiedad de cualquier recurso asignado por montón (por ejemplo, memoria asignada dinámicamente o identificadores de objetos del sistema) a un objeto asignado a la pila cuyo destructor contiene código para eliminar o liberar el recurso, además de cualquier código asociado de limpieza.
 
-En la mayoría de los casos, cuando se inicializa un puntero o un identificador de recursos sin formato para apuntar a un recurso real, el puntero se pasa inmediatamente a un puntero inteligente. En el lenguaje C++ actual, los punteros sin formato se utilizan únicamente en pequeños bloques de código de ámbito limitado, bucles o funciones auxiliares donde el rendimiento es crucial y no hay ninguna posibilidad de confusión sobre la propiedad.
+En la mayoría de los casos, cuando se inicializa un puntero o un identificador de recursos sin formato para apuntar a un recurso real, el puntero se pasa inmediatamente a un puntero inteligente. En el lenguaje C++ actual, los punteros sin formato se utilizan únicamente en pequeños bloques de código de ámbito limitado, bucles o funciones del asistente donde el rendimiento es crucial y no hay ninguna posibilidad de confusión sobre la propiedad.
 
 En el ejemplo siguiente se compara una declaración de puntero sin formato con una declaración de puntero inteligente.
 
@@ -86,29 +86,39 @@ Utilice estos punteros inteligentes como primera opción para encapsular puntero
 
 Cuando trabaje con objetos COM, encapsule los punteros de interfaz en un tipo de puntero inteligente adecuado. Active Template Library (ATL) define varios punteros inteligentes para propósitos diferentes. También puede usar el tipo de puntero inteligente `_com_ptr_t`, que el compilador utiliza cuando crea clases contenedoras de archivos .tlb. Es la mejor opción si no desea incluir los archivos de encabezado ATL.
 
-[Clase CComPtr](../atl/reference/ccomptr-class.md) Utilícelo a menos que no se puede usar ATL. Realiza el recuento de referencias mediante los métodos `AddRef` y de `Release`. Para obtener más información, consulte [Cómo: crear y usar instancias de CComPtr y CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[CComPtr (clase)](../atl/reference/ccomptr-class.md)<br/>
+Utilice esta opción a menos que no puede usar ATL. Realiza el recuento de referencias mediante los métodos `AddRef` y de `Release`. Para obtener más información, consulte [Cómo: crear y usar instancias de CComPtr y CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Clase CComQIPtr](../atl/reference/ccomqiptr-class.md) Resembles `CComPtr` , pero también proporciona una sintaxis simplificada para llamar a `QueryInterface` en objetos COM. Para obtener más información, consulte [Cómo: crear y usar instancias de CComPtr y CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[CComQIPtr (clase)](../atl/reference/ccomqiptr-class.md)<br/>
+Se parece a `CComPtr`, pero también proporciona la sintaxis simplificada para llamar a `QueryInterface` en objetos COM. Para obtener más información, consulte [Cómo: crear y usar instancias de CComPtr y CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[CComHeapPtr (clase)](../atl/reference/ccomheapptr-class.md) puntero inteligente a objetos que utilizan `CoTaskMemFree` para liberar memoria.
+[CComHeapPtr (clase)](../atl/reference/ccomheapptr-class.md)<br/>
+Puntero inteligente a objetos que utilizan `CoTaskMemFree` para liberar memoria.
 
-[CComGITPtr (clase)](../atl/reference/ccomgitptr-class.md) puntero inteligente para las interfaces que se obtienen de la tabla de interfaz global (GIT).
+[CComGITPtr (clase)](../atl/reference/ccomgitptr-class.md)<br/>
+Puntero inteligente para las interfaces que se obtienen de la tabla de interfaz global (GIT).
 
-[clase _com_ptr_t](../cpp/com-ptr-t-class.md) Resembles `CComQIPtr` en funcionalidad, pero no depende de los encabezados ATL.
+[_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)<br/>
+Se parece a `CComQIPtr` en funcionalidad, pero no depende de los encabezados ATL.
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>Punteros inteligentes ATL para objetos POCO
 
 Además de punteros inteligentes para los objetos COM, ATL también define punteros inteligentes y colecciones de punteros inteligentes para objetos estándar de C++. En la programación clásica de Windows, estos tipos son alternativas útiles a las colecciones de la biblioteca estándar de C++, especialmente cuando no se requiere la portabilidad del código o cuando no desee mezclar los modelos de programación de la biblioteca estándar de C++ y ATL.
 
-[CAutoPtr (clase)](../atl/reference/cautoptr-class.md) puntero inteligente que exige una propiedad única al transferir la propiedad en la copia. Puede compararse con la clase `std::auto_ptr` desusada.
+[CAutoPtr (clase)](../atl/reference/cautoptr-class.md)<br/>
+Puntero inteligente que exige una propiedad única al transferir la propiedad en la copia. Puede compararse con la clase `std::auto_ptr` desusada.
 
-[CHeapPtr (clase)](../atl/reference/cheapptr-class.md) puntero inteligente para objetos que se asignan mediante el uso de la C [malloc](../c-runtime-library/reference/malloc.md) función.
+[CHeapPtr (clase)](../atl/reference/cheapptr-class.md)<br/>
+Puntero inteligente para objetos que se asignan mediante el uso de la C [malloc](../c-runtime-library/reference/malloc.md) función.
 
-[CAutoVectorPtr (clase)](../atl/reference/cautovectorptr-class.md) puntero inteligente para matrices que se asignan mediante el uso de `new[]`.
+[CAutoVectorPtr (clase)](../atl/reference/cautovectorptr-class.md)<br/>
+Puntero inteligente para matrices que se asignan mediante `new[]`.
 
-[CAutoPtrArray (clase)](../atl/reference/cautoptrarray-class.md) clase que encapsula una matriz de `CAutoPtr` elementos.
+[CAutoPtrArray (clase)](../atl/reference/cautoptrarray-class.md)<br/>
+Clase que encapsula una matriz de elementos `CAutoPtr`.
 
-[CAutoPtrList (clase)](../atl/reference/cautoptrlist-class.md) clase que encapsula los métodos para manipular una lista de `CAutoPtr` nodos.
+[CAutoPtrList (clase)](../atl/reference/cautoptrlist-class.md)<br/>
+Clase que encapsula los métodos para manipular una lista de nodos de `CAutoPtr`.
 
 ## <a name="see-also"></a>Vea también
 
