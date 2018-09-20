@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fc9352993491c10599b0b7937561104b91ba76c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 57347b88fe7d54813e06cde6d5f4b3414e79f116
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314838"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395815"
 ---
 # <a name="editing-in-an-accelerator-table-c"></a>Edición en una tabla de aceleradores (C++)
 
@@ -52,5 +52,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)  
+[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

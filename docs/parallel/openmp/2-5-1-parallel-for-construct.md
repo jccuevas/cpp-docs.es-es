@@ -1,5 +1,5 @@
 ---
-title: 2.5.1 parallel for (construcción) | Documentos de Microsoft
+title: 2.5.1 parallel for (construcción) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2732c4f8713466d282346ea240bd3c41886ce0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cfff3b0c17dd098b5d802af61a7ca1f81cb02845
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687158"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373966"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for (Construcción)
-El **for paralelos** directiva es un acceso directo para un **paralelo** una región que contiene solo una **para** directiva. La sintaxis de la **for paralelos** directiva es como sigue:  
-  
-```  
-#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop  
-```  
-  
- Esta directiva permite que todas las cláusulas de la **paralelo** directiva y la **para** directiva, excepto el `nowait` cláusula idéntico significado y las restricciones. La semántica es idéntica a la especificación explícita de un **paralelo** directiva seguido inmediatamente por un **para** directiva.  
-  
-## <a name="cross-references"></a>Referencias cruzadas:  
-  
--   **paralelo** directiva, consulte [sección 2.3](../../parallel/openmp/2-3-parallel-construct.md) en página 8.  
-  
--   **para** directiva, consulte [sección 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) en página 11.  
-  
--   Cláusulas de atributos de datos, vea [2.7.2 cláusulas de atributos de uso compartido de datos](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en página 25.
+
+El **paralelas para** directiva es un acceso directo para un **paralelo** región que contiene una sola **para** directiva. La sintaxis de la **paralelas para** directiva es como sigue:
+
+```
+#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop
+```
+
+Esta directiva permite que todas las cláusulas de la **paralelo** directiva y la **para** la directiva, excepto el `nowait` cláusula con significados idénticos y restricciones. La semántica es idéntica a la especificación explícita de un **paralelo** directiva seguido inmediatamente por un **para** directiva.
+
+## <a name="cross-references"></a>Referencias cruzadas:
+
+- **paralelo** la directiva, consulte [sección 2.3](../../parallel/openmp/2-3-parallel-construct.md) página 8.
+
+- **para** la directiva, consulte [sección 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) en página 11.
+
+- Cláusulas de atributos de datos, vea [2.7.2 cláusulas de atributos de uso compartido de datos](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en la página 25.

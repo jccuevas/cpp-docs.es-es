@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d775e9c42ceb8a564e2cc7992cb95ac9717a966d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 71dc4a3a1f2c08d3bac2fcf5c474768f438feccd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707686"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394991"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (habilitar comprobaciones de restricción)
 
@@ -47,6 +47,6 @@ La opción /GUARD:CF debe especificarse tanto en el compilador como en el vincul
 
 ## <a name="see-also"></a>Vea también
 
-[/Guard (habilitar el Control de flujo de protección)](../../build/reference/guard-enable-control-flow-guard.md)
-[opciones de configuración del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[/guard (Habilitar Protección de flujo de control)](../../build/reference/guard-enable-control-flow-guard.md)<br/>
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

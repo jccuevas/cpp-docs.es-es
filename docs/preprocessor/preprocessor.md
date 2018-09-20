@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b693d83872ca1c918c97e47f75c89f788748353c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375908"
 ---
 # <a name="preprocessor"></a>Preprocesador
 El preprocesador es un procesador de texto que manipula el texto de un archivo de código fuente como parte de la primera fase de traducción. El preprocesador no analiza el texto original, sino que lo divide en tokens con el fin de buscar llamadas a macros. Aunque el compilador invoca normalmente el preprocesador en el primer paso, también se puede invocar el preprocesador por separado para procesar el texto sin compilación.  
@@ -48,5 +48,5 @@ El término “variable” hace referencia a un objeto de datos de tipo C. El t�
   
 ## <a name="see-also"></a>Vea también  
  
-[Referencia del preprocesador de C/c ++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Referencia del preprocesador de C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Fases de traducción](../preprocessor/phases-of-translation.md)
