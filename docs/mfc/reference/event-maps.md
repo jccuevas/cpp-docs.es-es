@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106813"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446613"
 ---
 # <a name="event-maps"></a>Mapas de eventos
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Parámetros
 
-*theClass*  
+*theClass*<br/>
 Especifica el nombre de la clase control cuyo evento asignarlo.
 
-*baseClass*  
+*baseClass*<br/>
 Especifica el nombre de la clase base de *theClass*.
 
 ### <a name="remarks"></a>Comentarios
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Parámetros
 
-*pszName*  
+*pszName*<br/>
 Nombre del evento.
 
-*pfnFire*  
+*pfnFire*<br/>
 El nombre de la función de activación del evento.
 
-*vtsParams*  
+*vtsParams*<br/>
 Una lista separada por espacios de una o varias constantes que especifica la lista de parámetros de la función.
 
 ### <a name="remarks"></a>Comentarios
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Parámetros
 
-*pszName*  
+*pszName*<br/>
 Nombre del evento.
 
-*DISPID*  
+*DISPID*<br/>
 El identificador de envío utilizado por el control al activar el evento.
 
-*pfnFire*  
+*pfnFire*<br/>
 El nombre de la función de activación del evento.
 
-*vtsParams*  
+*vtsParams*<br/>
 Una lista de variables de parámetros se pasa al contenedor del control cuando se desencadena el evento.
 
 ### <a name="remarks"></a>Comentarios
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*iVerb*  
+*iVerb*<br/>
 El índice del verbo estándar para el verbo que se va a invalidar.
 
-*memberFxn*  
+*memberFxn*<br/>
 La función que llama el marco de trabajo cuando se invoca el verbo.
 
 ### <a name="remarks"></a>Comentarios
