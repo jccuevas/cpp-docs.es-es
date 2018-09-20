@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 071686e7ea4bf8a88beb340019b33d838e3aa806
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fe35d7bfa0f092a3575a564385e0d5ba52219c87
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603518"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402556"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase (Destructor)
 
@@ -46,5 +46,5 @@ Desinicializa la instancia actual de la **ModuleBase** clase.
 
 ## <a name="see-also"></a>Vea también
 
-[ModuleBase (clase)](../windows/modulebase-class.md)  
+[ModuleBase (clase)](../windows/modulebase-class.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0af28b391390f28be4e111b55c909dcae66ca2f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf7f31d416525c98999f4d8da6036862ae1ca270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408419"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -50,6 +50,6 @@ Esta opción se reemplaza por [/fp: excepto](../../build/reference/fp-specify-fl
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25642357e3dd9117ae2817307ed5fa3c4a0921d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215047"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424549"
 ---
 # <a name="destroying-the-list-control"></a>Destruir el control de lista
-Si incrusta la [CListCtrl](../mfc/reference/clistctrl-class.md) objeto como un miembro de datos de una clase de vista o cuadro de diálogo, se destruye cuando se destruye su propietario. Si usa un [CListView](../mfc/reference/clistview-class.md), el marco de trabajo destruye el control cuando se destruye la vista.  
-  
- Si organizas para algunos de los datos de lista que se almacenará en la aplicación en lugar del control de lista, deberá desasignarlos. Para obtener más información, consulte [elementos de devolución de llamada y máscara de devolución de llamada](/windows/desktop/Controls/using-list-view-controls) en el SDK de Windows.  
-  
- Además, usted es responsable de desasignar las listas de imágenes creado y asociado al objeto de control de lista.  
-  
-## <a name="see-also"></a>Vea también  
- [Usar CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Si incrusta la [CListCtrl](../mfc/reference/clistctrl-class.md) objeto como un miembro de datos de una clase de vista o cuadro de diálogo, se destruye cuando se destruye su propietario. Si usa un [CListView](../mfc/reference/clistview-class.md), el marco de trabajo destruye el control cuando se destruye la vista.
+
+Si organizas para algunos de los datos de lista que se almacenará en la aplicación en lugar del control de lista, deberá desasignarlos. Para obtener más información, consulte [elementos de devolución de llamada y máscara de devolución de llamada](/windows/desktop/Controls/using-list-view-controls) en el SDK de Windows.
+
+Además, usted es responsable de desasignar las listas de imágenes creado y asociado al objeto de control de lista.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

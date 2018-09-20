@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d30ac0d2e1d18b22c6130212503576f5fe343a8d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594074"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407553"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -45,7 +45,7 @@ Crea un receptor de eventos (receptor).
 
 ### <a name="parameters"></a>Parámetros
 
-*type*  
+*type*<br/>
 Enumeración de uno de los valores siguientes:
 
 - `native` para código de C o C++ administrado (valor predeterminado para las clases nativas).
@@ -58,7 +58,7 @@ Enumeración de uno de los valores siguientes:
     #include <atlcom.h>
     ```
 
-*layout_dependent*  
+*layout_dependent*<br/>
 Especificar *layout_dependent* solo si `type` = **com**. *layout_dependent* es un valor booleano:
 
 - **True** significa que la firma de los delegados en el receptor debe coincidir exactamente con aquellos a los que está enlazados en el evento origen de eventos. Los nombres de controlador de eventos receptor deben coincidir con los nombres especificados en la interfaz de origen de evento pertinente. Debe usar `coclass` cuando *layout_dependent* es **true**. Es ligeramente más eficaz especificar **true**.
@@ -91,9 +91,9 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de compilador](../windows/compiler-attributes.md)  
-[event_source](../windows/event-source.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [Atributos de clase](../windows/class-attributes.md)  

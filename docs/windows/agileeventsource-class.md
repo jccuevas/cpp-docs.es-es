@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068525"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405260"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
@@ -83,10 +83,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parámetros
 
-*delegateInterface*  
+*delegateInterface*<br/>
 La interfaz para un objeto delegado, que representa un controlador de eventos.
 
-*símbolo (token)*  
+*símbolo (token)*<br/>
 Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro para el `Remove()` método para descartar el controlador de eventos.
 
 ### <a name="return-value"></a>Valor devuelto

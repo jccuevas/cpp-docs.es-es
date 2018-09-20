@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 7c6797e9a75e9150718655ed7fcd72d7f343e591
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541282"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430207"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Esta directiva pragma proporciona una comprobación de seguridad mejorada.  
@@ -76,5 +76,5 @@ void ** ReverseArray(void **pData,
   
 ## <a name="see-also"></a>Vea también  
  
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/GS (Comprobación de seguridad del búfer)](../build/reference/gs-buffer-security-check.md)

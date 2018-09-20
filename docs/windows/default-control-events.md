@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315618"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405520"
 ---
 # <a name="default-control-events"></a>Eventos predeterminados de los controles
 
@@ -63,9 +63,9 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Definición de variables miembro para controles de cuadro de diálogo](../windows/defining-member-variables-for-dialog-controls.md)  
-[Tipos de mensajes asociados a objetos de la interfaz de usuario](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[Edición de un controlador de mensajes](../mfc/reference/editing-a-message-handler.md)  
-[Definición de un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[Declaración de una variable basada en una clase de control nueva](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
+[Definición de variables miembro para controles de cuadro de diálogo](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Tipos de mensajes asociados a objetos de la interfaz de usuario](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[Edición de un controlador de mensajes](../mfc/reference/editing-a-message-handler.md)<br/>
+[Definición de un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[Declaración de una variable basada en una clase de control nueva](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
 [Reemplazar una función Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)

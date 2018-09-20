@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d2dfcf61ced958519e7255bd241d3c0ea911824e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611869"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408926"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -45,7 +45,7 @@ Crea un origen de eventos.
 
 ### <a name="parameters"></a>Parámetros
 
-*type*  
+*type*<br/>
 Enumeración de uno de los valores siguientes:
 
 - `native` para código de C/C++ no administrado (valor predeterminado para las clases no administradas).
@@ -58,10 +58,10 @@ Enumeración de uno de los valores siguientes:
     #include <atlcom.h>
     ```
 
-*optimize*  
+*optimize*<br/>
 Cuando *tipo* es `native`, puede especificar `optimize=size`para indicar que hay 4 bytes de almacenamiento (mínimo) para todos los eventos en una clase o `optimize=speed` (predeterminado) para indicar que hay 4 * (número de eventos) bytes de almacenamiento.
 
-*Decore*  
+*Decore*<br/>
 Cuando *tipo* es `native`, puede especificar `decorate=false`para indicar que el nombre expandido en el archivo combinado (.mrg) no debe incluir el nombre de la clase envolvente. [/Fx](../build/reference/fx-merge-injected-code.md) permite generar archivos .mrg. `decorate=false`, que es el valor predeterminado, se crean nombres de tipo completo en el archivo combinado.
 
 ## <a name="remarks"></a>Comentarios
@@ -88,9 +88,9 @@ Para obtener más información, vea [Contextos de atributo](../windows/attribute
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de compilador](../windows/compiler-attributes.md)  
-[event_receiver](../windows/event-receiver.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [Atributos de clase](../windows/class-attributes.md)  

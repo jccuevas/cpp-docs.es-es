@@ -16,48 +16,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9a6e6a1397b9361df5372af09be8e61d997e62
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b63589edbe47aa09b8a6be92b5b7eb7e29077c96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337819"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402296"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO (Estructura)
-El `MINMAXINFO` estructura contiene información sobre el tamaño de una ventana maximizada y posición y su tamaño máximo y mínimo de seguimiento.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-typedef struct tagMINMAXINFO {  
-    POINT ptReserved;  
-    POINT ptMaxSize;  
-    POINT ptMaxPosition;  
-    POINT ptMinTrackSize;  
-    POINT ptMaxTrackSize;  
-} MINMAXINFO;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *ptReserved*  
- Reservado para uso interno.  
-  
- *ptMaxSize*  
- Especifica el ancho maximizado (point.x) y el alto maximizado (point.y) de la ventana.  
-  
- *ptMaxPosition*  
- Especifica la posición del lado izquierdo de la ventana maximizada (point.x) y la posición de la parte superior de la ventana maximizada (point.y).  
-  
- *ptMinTrackSize*  
- Especifica el ancho mínimo de seguimiento (point.x) y el mínimo alto (point.y) de la ventana de seguimiento.  
-  
- *ptMaxTrackSize*  
- Especifica el máximo ancho (point.x) de seguimiento y la máxima altura (point.y) de la ventana de seguimiento.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** winuser.h  
-  
-## <a name="see-also"></a>Vea también  
- [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)
+
+El `MINMAXINFO` estructura contiene información sobre el tamaño de una ventana maximizada y posición y su tamaño máximo y mínimo de seguimiento.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+typedef struct tagMINMAXINFO {
+    POINT ptReserved;
+    POINT ptMaxSize;
+    POINT ptMaxPosition;
+    POINT ptMinTrackSize;
+    POINT ptMaxTrackSize;
+} MINMAXINFO;
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*ptReserved*<br/>
+Reservado para uso interno.
+
+*ptMaxSize*<br/>
+Especifica el ancho maximizado (point.x) y el alto maximizado (point.y) de la ventana.
+
+*ptMaxPosition*<br/>
+Especifica la posición del lado izquierdo de la ventana maximizada (point.x) y la posición de la parte superior de la ventana maximizada (point.y).
+
+*ptMinTrackSize*<br/>
+Especifica el ancho mínimo de seguimiento (point.x) y el mínimo alto (point.y) de la ventana de seguimiento.
+
+*ptMaxTrackSize*<br/>
+Especifica el máximo ancho (point.x) de seguimiento y la máxima altura (point.y) de la ventana de seguimiento.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** winuser.h
+
+## <a name="see-also"></a>Vea también
+
+[Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CWnd::OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)
 

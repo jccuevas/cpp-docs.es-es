@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d570eaf3872f5d281d769e77298f9186d35e5a26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591144"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410434"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid (Método)
 
@@ -38,10 +38,10 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Índice de base cero que indica el elemento de matriz inicial para esta operación. Cuando se complete esta operación, *índice* se incrementa en 1.
 
-*IID*  
+*IID*<br/>
 Una matriz de tipo IID.
 
 ## <a name="remarks"></a>Comentarios
@@ -56,5 +56,5 @@ Inserta el Id. de interfaz especificado por el parámetro de plantilla actual de
 
 ## <a name="see-also"></a>Vea también
 
-[ImplementsHelper (estructura)](../windows/implementshelper-structure.md)  
+[ImplementsHelper (estructura)](../windows/implementshelper-structure.md)<br/>
 [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

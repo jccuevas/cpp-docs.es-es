@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e4976065d32a2f88550e5f89fc464da2dbc00e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316710"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430597"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Ventana Colores (Editor de imágenes para iconos)
 
@@ -50,8 +50,8 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Mostrar u ocultar la ventana colores](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
-[Crear zonas transparentes o inversas en las imágenes de dispositivo](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Cuadro de diálogo Selector de colores personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Mostrar u ocultar la ventana colores](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)<br/>
+[Crear zonas transparentes o inversas en las imágenes de dispositivo](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Cuadro de diálogo Selector de colores personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398864"
 ---
 # <a name="generic-functions-ccli"></a>Funciones genéricas (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parámetros
 
-*Atributos*  
+*Atributos*<br/>
 (Opcional) Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.
 
-*Modificadores*  
+*Modificadores*<br/>
 (Opcional) Un modificador de la función, como estático.  **virtual** no se permite porque los métodos virtuales no pueden ser genéricos.
 
-*tipo de valor devuelto*  
+*tipo de valor devuelto*<br/>
 Tipo devuelto por el método. Si el tipo de valor devuelto es void, no se requiere ningún valor devuelto.
 
-*identifier*  
+*identifier*<br/>
 Nombre de la función.
 
-*identificadores de parámetro de tipo*  
+*identificadores de parámetro de tipo*<br/>
 Lista separada por comas de identificadores.
 
-*parámetros formales*  
+*parámetros formales*<br/>
 (Opcional) Lista de parámetros.
 
-*tipo de parámetro restricciones cláusulas*  
+*tipo de parámetro restricciones cláusulas*<br/>
 Esto especifica restricciones de los tipos que se pueden usar como argumentos de tipo y adopta la forma especificada en [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*cuerpo de la función*  
+*cuerpo de la función*<br/>
 El cuerpo del método, que puede hacer referencia a los identificadores de parámetro de tipo.
 
 ### <a name="remarks"></a>Comentarios
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)  
+[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Genéricos](../windows/generics-cpp-component-extensions.md)
