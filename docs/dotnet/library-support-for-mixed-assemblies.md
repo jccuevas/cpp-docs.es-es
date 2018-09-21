@@ -1,7 +1,7 @@
 ---
-title: Compatibilidad con bibliotecas para ensamblados mixtos | Documentos de Microsoft
+title: Compatibilidad con bibliotecas para ensamblados mixtos | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,27 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4b584e0bacb1cb93cad33efdff807bb5fa9c8e2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704116"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494522"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Compatibilidad con bibliotecas para ensamblados mixtos
 
-Visual C++ admite el uso de la biblioteca estándar de C++, la biblioteca en tiempo de ejecución de C (CRT), ATL y MFC para aplicaciones compiladas con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Esto permite a las aplicaciones existentes que utilizan estas bibliotecas para utilizar características de .NET Framework también.
+Visual C++ admite el uso de la biblioteca estándar de C++, la biblioteca en tiempo de ejecución de C (CRT), ATL y MFC para aplicaciones compiladas con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md). Esto permite que las aplicaciones existentes que usan estas bibliotecas para usar características de .NET Framework también.
 
 > [!IMPORTANT]
-> El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+> El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
-Esta compatibilidad incluye las bibliotecas de importación y archivos DLL siguientes:
+Esta compatibilidad incluye las siguientes bibliotecas DLL y de importación:
 
-- Msvcmrt [d] .lib si se compila con **/CLR**. Vínculo de ensamblados mixtos a esta biblioteca de importación.
+- Msvcmrt [d] .lib si se compila con **/CLR**. Ensamblados mixtos vínculo a la biblioteca de importación.
 
 Esta compatibilidad proporciona que algunas ventajas relacionadas:
 
-- La biblioteca estándar de C++ y CRT están disponibles para código mixto. CRT y la biblioteca estándar de C++ proporcionadas no son comprobables; en última instancia, las llamadas todavía se enrutan a la misma biblioteca estándar de C++ y CRT usan desde el código nativo.
+- La biblioteca estándar de C++ y CRT están disponibles para código mixto. El CRT y la biblioteca estándar de C++ proporcionadas no son comprobables; en última instancia, las llamadas se seguirán enrutando a las mismas CRT y la biblioteca estándar de C++ cuando se utilice desde el código nativo.
 
 - Se corrige el control de excepciones unificado en imágenes mixtas.
 
@@ -50,9 +50,8 @@ Esta compatibilidad proporciona que algunas ventajas relacionadas:
 
 Además, esta compatibilidad presenta las siguientes limitaciones:
 
-- Solo el modelo del archivo DLL de CRT es compatible para el código compilado con **/CLR**. No hay bibliotecas CRT estáticas que admiten **/CLR** compilaciones.
+- Solo el modelo del archivo DLL de CRT es compatible para el código compilado con **/CLR**. No hay ninguna bibliotecas CRT estáticas que admiten **/CLR** compilaciones.
 
-Debe actualizar common language runtime (CLR) a la versión actual que no se garantiza que funcionan con versiones anteriores. No se ejecutará el código generado con estos cambios en la versión CLR 1.x.
 
 ## <a name="see-also"></a>Vea también
 
