@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00110a0e821077231c0f386a0656dc2214b0267d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034725"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 La etiqueta \<para> se usa dentro de otra etiqueta, como [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) o [\<returns>](../ide/returns-visual-cpp.md), y permite dar una estructura al texto.  
@@ -35,8 +35,8 @@ La etiqueta \<para> se usa dentro de otra etiqueta, como [\<summary>](../ide/sum
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `content`  
- El texto del párrafo.  
+*content*<br/>
+El texto del párrafo.  
   
 ## <a name="remarks"></a>Comentarios  
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  

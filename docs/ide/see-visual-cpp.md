@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d050625121314526dff687822b97d7b19475a5e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025870"
 ---
 # <a name="ltseegt-visual-c"></a>&lt;see&gt; (Visual C++)
 La etiqueta \<see> permite especificar un vínculo desde el texto. Use [\<seealso>](../ide/seealso-visual-cpp.md) para indicar el texto que quiere que aparezca en una sección Vea también.  
@@ -35,8 +35,8 @@ La etiqueta \<see> permite especificar un vínculo desde el texto. Use [\<seeals
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `member`  
- Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual.  Ponga el nombre entre comillas simples o dobles.  
+*member*<br/>
+Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual.  Ponga el nombre entre comillas simples o dobles.  
   
  El compilador comprueba si el elemento de código dado existe y resuelve `member` en el nombre de elemento en el resultado XML.  El compilador emite una advertencia si no encuentra `member`.  
   

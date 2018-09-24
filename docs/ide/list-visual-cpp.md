@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046412"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 El bloque \<listheader> se usa para definir la fila de encabezado de una tabla o de una lista de definiciones. Cuando se define una tabla, solo es necesario suministrar una entrada para un término en el encabezado.  
@@ -44,11 +44,11 @@ El bloque \<listheader> se usa para definir la fila de encabezado de una tabla o
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `term`  
- Término que se define en `description`.  
+*term*<br/>
+Término que se define en `description`.  
   
- `description`  
- Elemento de una lista numerada o con viñetas, o definición de un `term`.  
+*description*<br/>
+Elemento de una lista numerada o con viñetas, o definición de un `term`.  
   
 ## <a name="remarks"></a>Comentarios  
  Cada elemento de la lista se especifica con un bloque \<item>. Cuando se crea una lista de definiciones, se deberán especificar tanto `term` como `description`. En cambio, para una tabla, lista con viñetas o lista numerada, solo es necesario suministrar una entrada para `description`.  
@@ -59,7 +59,7 @@ El bloque \<listheader> se usa para definir la fila de encabezado de una tabla o
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // xml_list_tag.cpp  
 // compile with: /doc /LD  
 // post-build command: xdcmake xml_list_tag.dll  
