@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 03724e6f1ad0c85ad70e464786a7393b3f2f61e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094993"
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 La etiqueta \<exception> le permite especificar qué excepciones se pueden producir. Esta etiqueta se aplica a una definición de método.  
@@ -35,15 +35,15 @@ La etiqueta \<exception> le permite especificar qué excepciones se pueden produ
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `member`  
- Una referencia a una excepción que está disponible desde el entorno de compilación actual. Mediante reglas de búsqueda de nombres, el compilador comprueba si la excepción dada existe y traduce `member` al nombre de elemento canónico en la salida XML.  El compilador emite una advertencia si no encuentra `member`.  
+*member*<br/>
+Una referencia a una excepción que está disponible desde el entorno de compilación actual. Mediante reglas de búsqueda de nombres, el compilador comprueba si la excepción dada existe y traduce `member` al nombre de elemento canónico en la salida XML.  El compilador emite una advertencia si no encuentra `member`.  
   
  Ponga el nombre entre comillas simples o dobles.  
   
  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](../ide/see-visual-cpp.md).  
   
- `description`  
- Una descripción.  
+*description*<br/>
+Una descripción.  
   
 ## <a name="remarks"></a>Comentarios  
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
