@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: caf28f01778bea31bc84a57fa74fed3221673dec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039964"
 ---
 # <a name="xdcmake-reference"></a>XDCMake (Referencia)
 xdcmake.exe es un programa que compila los archivos .xdc en un archivo .xml. El compilador de Visual C++ crea un archivo .xdc para cada archivo de código fuente cuando el código fuente se compila con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) y cuando el archivo de código fuente contiene comentarios de documentación marcados con etiquetas XML.  
@@ -41,15 +41,14 @@ xdcmake.exe es un programa que compila los archivos .xdc en un archivo .xml. El 
  xdcmake `input_filename options`  
   
 ## <a name="parameters"></a>Parámetros  
- donde:  
   
- `input_filename`  
- El nombre de archivo de los archivos .xdc que se usan como entrada para xdcmake.exe. Especifique uno o más archivos .xdc, o bien use *.xdc para utilizar todos los archivos .xdc en el directorio actual.  
+*input_filename*<br/>
+El nombre de archivo de los archivos .xdc que se usan como entrada para xdcmake.exe. Especifique uno o más archivos .xdc, o bien use *.xdc para utilizar todos los archivos .xdc en el directorio actual.  
   
- `options`  
- Cero o más de las opciones siguientes:  
+*options*<br/>
+Cero o más de las opciones siguientes:  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |/?, /help|Muestra la ayuda de xdcmake.exe.|  
 |/assembly:*nombre_de_archivo*|Permite especificar el valor de la etiqueta \<assembly> en el archivo .xml.  De forma predeterminada, el valor de la etiqueta \<assembly> es el mismo que el nombre de archivo del archivo .xml.|  
