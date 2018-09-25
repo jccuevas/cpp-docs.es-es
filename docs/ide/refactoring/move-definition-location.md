@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327845"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430068"
 ---
 # <a name="move-definition-location"></a>Mover ubicación de definición
 **Qué:** permite mover una definición de función de manera inmediata al archivo de encabezado correspondiente.
 
-**Cuándo:** tiene una función que quiere mover a un archivo de encabezado.  
+**Cuándo:** tiene una función que quiere mover a un archivo de encabezado.
 
 **Por qué:** podría mover manualmente la función, pero esta característica la moverá de forma automática, y creará el archivo de encabezado si es necesario.
 

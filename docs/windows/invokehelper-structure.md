@@ -1,28 +1,34 @@
 ---
 title: InvokeHelper (estructura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::InvokeHelper
+- event/Microsoft::WRL::Details::InvokeHelper::callback_
+- event/Microsoft::WRL::Details::InvokeHelper::Invoke
+- event/Microsoft::WRL::Details::InvokeHelper::InvokeHelper
 dev_langs:
 - C++
 helpviewer_keywords:
-- InvokeHelper structure
+- Microsoft::WRL::Details::InvokeHelper structure
+- Microsoft::WRL::Details::callback_ data member
+- Microsoft::WRL::Details::Invoke method
+- Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ffef0c6a55116bf3a228d7d5da4bd698607d7fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6eccc9a7eacf9cdd3b98796f575d966b7b566864
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431039"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169542"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper (estructura)
 
@@ -96,7 +102,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 El tipo de la función de controlador de eventos.
 
 *argCount*<br/>
-El número de argumentos en una **InvokeHelper** especialización.
+El número de argumentos en una `InvokeHelper` especialización.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -106,27 +112,27 @@ Proporciona una implementación de la `Invoke()` método según el número espec
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
-|----------|-----------------|
-|`Traits`|Un sinónimo de la clase que define el tipo de cada argumento de controlador de eventos.|
+Name     | Descripción
+-------- | -----------------------------------------------------------------------------
+`Traits` | Un sinónimo de la clase que define el tipo de cada argumento de controlador de eventos.
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[InvokeHelper::InvokeHelper (constructor)](../windows/invokehelper-invokehelper-constructor.md)|Inicializa una nueva instancia de la **InvokeHelper** clase.|
+Name                                        | Descripción
+------------------------------------------- | -------------------------------------------------------
+[Invokehelper](#invokehelper) | Inicializa una nueva instancia de la clase `InvokeHelper`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[InvokeHelper::Invoke (método)](../windows/invokehelper-invoke-method.md)|Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.|
+Name                            | Descripción
+------------------------------- | -----------------------------------------------------------------------------------
+[Invokehelper](#invoke) | Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[InvokeHelper::callback_ (miembro de datos)](../windows/invokehelper-callback-data-member.md)|Representa el controlador de eventos al que llamar cuando se produce un evento.|
+Name                                 | Descripción
+------------------------------------ | ----------------------------------------------------------
+[Callback_](#callback) | Representa el controlador de eventos al que llamar cuando se produce un evento.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -138,6 +144,111 @@ Proporciona una implementación de la `Invoke()` método según el número espec
 
 **Namespace:** wrl
 
-## <a name="see-also"></a>Vea también
+## <a name="callback"></a>Callback_
 
-[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+TCallback callback_;
+```
+
+### <a name="remarks"></a>Comentarios
+
+Representa el controlador de eventos al que llamar cuando se produce un evento.
+
+El `TCallback` parámetro de plantilla especifica el tipo del controlador de eventos.
+
+## <a name="invoke"></a>Invokehelper
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Arg1*<br/>
+Argumento 1.
+
+*Arg2*<br/>
+Argumento 2.
+
+*Arg3*<br/>
+Argumento 3.
+
+*Arg4*<br/>
+Argumento de 4.
+
+*Arg5*<br/>
+Argumento de 5.
+
+*Arg6*<br/>
+Argumento 6.
+
+*Arg7*<br/>
+Argumento de 7.
+
+*Arg8*<br/>
+Argumento de 8.
+
+*Arg9*<br/>
+Argumento de 9.
+
+### <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.
+
+### <a name="remarks"></a>Comentarios
+
+Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.
+
+## <a name="invokehelper"></a>Invokehelper
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*devolución de llamada*<br/>
+Un controlador de eventos.
+
+### <a name="remarks"></a>Comentarios
+
+Inicializa una nueva instancia de la clase `InvokeHelper`.
+
+El `TCallback` parámetro de plantilla especifica el tipo del controlador de eventos.

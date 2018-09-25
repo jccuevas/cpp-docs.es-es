@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73a822e3cf6daa9d9d7c3ebdabbcd4671fc5c7e
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: a8230cf66fd3cc8cdce017c07f05f58b381ebd14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42578391"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400918"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
+
 Este es el primero de varios temas que presentan el procedimiento de actualización a Visual Studio 2017 de proyectos de Visual C++ que se crearon en versiones anteriores de Visual Studio. Estos temas muestran el proceso de actualización mediante ejemplos, empezando por un proyecto muy simple y pasando a proyectos un poco más complejos. En este tema mostramos todo el proceso de actualización de un proyecto específico, Scribble de MFC. Es una apropiada introducción básica al proceso de actualización de proyectos de C++.  
   
 Cada versión de Visual Studio presenta las posibles incompatibilidades que pueden complicar el paso del código de una versión anterior de Visual Studio a una más reciente. A veces los cambios necesarios se encuentran en su código, por lo que debe volver a compilar y actualizar el código, y a veces los cambios necesarios se encuentran en los archivos del proyecto. Cuando abre un proyecto que se creó con una versión anterior de Visual Studio, Visual Studio le pregunta automáticamente si desea actualizar un proyecto o solución a la versión más reciente. Por lo general, estas herramientas solo actualizan los archivos del proyecto, pero no modifican el código fuente.  
@@ -37,6 +38,7 @@ Por último, teníamos que decidir el método de actualización específico que 
 Tenga en cuenta que también puede ejecutar devenv en la línea de comandos mediante la opción `/Upgrade`, en lugar de usar el asistente para actualizar los proyectos. Vea [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Eso podría ayudar a automatizar el proceso de actualización para un gran número de proyectos.  
   
 ### <a name="step-1-converting-the-project-file"></a>Paso 1. Convertir el archivo del proyecto  
+
 Al abrir un archivo de proyecto antiguo en Visual Studio 2017, Visual Studio ofrece la opción de convertir el archivo del proyecto a la versión más reciente, lo cual aceptamos. Se mostró el siguiente cuadro de diálogo:  
   
 ![Revisar cambios de proyectos y soluciones](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")  
@@ -56,6 +58,7 @@ A continuación, Visual Studio mostró un informe de migración de todos los pro
 En este caso, todos los problemas eran advertencias y Visual Studio realizó los cambios pertinentes en el archivo del proyecto. La gran diferencia en lo que se refiere al proyecto es que la herramienta de compilación cambió de vcbuild a msbuild. Este cambio se introdujo por primera vez en Visual Studio 2010. Otros de los cambios incluyen una determinada reorganización de la secuencia de elementos en el propio archivo de proyecto. Ninguno de los problemas requirió atención adicional para este proyecto simple.  
   
 ### <a name="step-2-getting-it-to-build"></a>Paso 2. Hacer que compile  
+
 Antes de compilar, comprobamos el conjunto de herramientas de la plataforma para saber qué versión del compilador está utilizando el sistema del proyecto. En el diálogo de propiedades del proyecto, en **Propiedades de configuración**, en la categoría **General**, examine la propiedad **Conjunto de herramientas de la plataforma**. Contiene la versión de Visual Studio y el número de versión de las herramientas de la plataforma, que en este caso es v141 para la versión de Visual Studio 2017 de las herramientas. Al convertir un proyecto que se compiló originalmente con Visual C++ 2010, 2012, 2013 o 2015, el conjunto de herramientas no se actualiza automáticamente al conjunto de herramientas de Visual Studio 2017.   
   
 Para realizar el cambio a Unicode, abra las propiedades del proyecto y, en **Propiedades de configuración**, elija la sección **General** y busque la propiedad **Juego de caracteres**. Cambie el valor **Utilizar juego de caracteres multibyte** por **Utilizar juego de caracteres Unicode**. El efecto de este cambio es que ahora las macros _UNICODE y UNICODE están definidas y _MBCS no lo está. Puede comprobarlo en el cuadro de diálogo de propiedades en la categoría **C/C++**, en la propiedad **Línea de comandos**.  
@@ -72,18 +75,20 @@ Ahora compile la solución. En la ventana de salida, el compilador nos indica qu
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)  
 ```  
   
- Esto es una advertencia, no un error, y se genera habitualmente al actualizar un proyecto de Visual C++. Esta es la macro que define cuál es la versión más antigua de Windows sobre la que se ejecutará nuestra aplicación. Si omitimos la advertencia, aceptamos el valor predeterminado, _WIN32_WINNT_MAXVER, que significa la versión actual de Windows. Puede ver una tabla con los valores posibles en [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers) (Uso de los encabezados de Windows). Por ejemplo, podemos establecer que se ejecute en cualquier versión de Vista en adelante.  
+Esto es una advertencia, no un error, y se genera habitualmente al actualizar un proyecto de Visual C++. Esta es la macro que define cuál es la versión más antigua de Windows sobre la que se ejecutará nuestra aplicación. Si omitimos la advertencia, aceptamos el valor predeterminado, _WIN32_WINNT_MAXVER, que significa la versión actual de Windows. Puede ver una tabla con los valores posibles en [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers) (Uso de los encabezados de Windows). Por ejemplo, podemos establecer que se ejecute en cualquier versión de Vista en adelante.  
   
-```  
+```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA  
 ```  
   
 Si el código utiliza partes de la API de Windows que no están disponibles en la versión de Windows que especifica con esta macro, debería mostrarse como un error del compilador. En el caso del código de Scribble, no hay ningún error.  
   
 ### <a name="step-3-testing-and-debugging"></a>Paso 3. Pruebas y depuración  
+
 No hay ningún conjunto de pruebas, por lo que simplemente iniciamos la aplicación y probamos sus funciones manualmente mediante la interfaz de usuario. No se observó ningún problema.  
   
 ### <a name="step-4-improve-the-code"></a>Paso 4. Mejorar el código  
+
 Ahora que ha migrado a Visual Studio 2017, puede que quiera realizar algunos cambios para aprovechar las nuevas características de C++. La versión actual del Compilador de Microsoft Visual C++ presenta mayor compatibilidad con el estándar de C++ que las anteriores, así que si tiene previsto hacer cambios en el código para que sea más seguro y portátil con respecto a otros compiladores y sistemas operativos, debería pensar en efectuar algunas mejoras.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
@@ -92,5 +97,5 @@ Scribble era una aplicación de escritorio pequeña y simple de Windows, y no fu
   
 ## <a name="see-also"></a>Vea también  
  
-[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Ejemplo siguiente: COM Spy](../porting/porting-guide-com-spy.md)

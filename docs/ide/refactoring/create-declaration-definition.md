@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 383691a5c2da2af6e4a992ab8766cd99ffa3d781
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331288"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408393"
 ---
 # <a name="create-declaration--definition"></a>Crear declaración o definición
 **Qué:** Permite generar inmediatamente la declaración o definición de una función.
 
-**Cuándo:** Tiene una función que necesita una declaración, o viceversa.  
+**Cuándo:** Tiene una función que necesita una declaración, o viceversa.
 
 **Por qué:** Podría crear manualmente la definición o declaración, pero esto la creará de manera automática, creando el archivo de encabezado o código si es necesario.
 

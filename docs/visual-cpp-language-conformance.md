@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70fc4705b6e150978812563fcde9e0f4d6b3cea1
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 4a40738b5a360e521ff890ef53240609a9afde32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34246238"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388989"
 ---
 # <a name="visual-c-language-conformance"></a>Conformidad del lenguaje Visual C++
 
@@ -308,10 +308,10 @@ Los siguientes no se paralelizan en la actualidad:
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje C++](cpp/cpp-language-reference.md)  
-[Biblioteca estándar de C++](standard-library/cpp-standard-library-reference.md)  
-[Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md)  
-[Novedades de Visual C++ en Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)  
-[Novedades de Visual C++ de 2003 a 2015](porting/visual-cpp-change-history-2003-2015.md)  
-[Novedades de Visual C++ de 2003 a 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)  
+[Referencia del lenguaje C++](cpp/cpp-language-reference.md)<br/>
+[Biblioteca estándar de C++](standard-library/cpp-standard-library-reference.md)<br/>
+[Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
+[Novedades de Visual C++ en Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Novedades de Visual C++ de 2003 a 2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Novedades de Visual C++ de 2003 a 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Blog del equipo de Visual C++](https://blogs.msdn.microsoft.com/vcblog/)  

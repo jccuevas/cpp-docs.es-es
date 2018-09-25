@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa1a15f6542da165b615970591f384b875dd588b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725515"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444559"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Páginas de propiedades HLSL: Avanzadas
-Para configurar las propiedades siguientes del compilador HLSL (fxc.exe), use su página de propiedades **Avanzadas**. Para obtener información sobre cómo acceder a la página de propiedades **Avanzadas** en la carpeta HLSL, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
-  
+
+Para configurar las propiedades siguientes del compilador HLSL (fxc.exe), use su página de propiedades **Avanzadas**. Para obtener información sobre cómo acceder a la página de propiedades **Avanzadas** en la carpeta HLSL, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
+
 ## <a name="uielement-list"></a>Lista de UIElement
 
 - **Suprimir la pancarta de inicio**
 
-   **Sí (/nologo)** para suprimir la presentación de la pancarta de inicio y del mensaje informativo; en caso contrario, **No**. De forma predeterminada, el valor es **Sí (/nologo)**.  
-  
+   **Sí (/nologo)** para suprimir la presentación de la pancarta de inicio y del mensaje informativo; en caso contrario, **No**. De forma predeterminada, el valor es **Sí (/nologo)**.
+
 - **Tratar advertencias como errores**
 
-   **Sí (/WX)** para tratar todas las advertencias del compilador como errores; en caso contrario, **No**.  
-  
-## <a name="see-also"></a>Vea también  
- [Páginas de propiedades HLSL](../ide/hlsl-property-pages.md)   
- [Páginas de propiedades HLSL: General](../ide/hlsl-property-pages-general.md)   
- [Páginas de propiedades HLSL: Archivos de salida](../ide/hlsl-property-pages-output-files.md)
+   **Sí (/WX)** para tratar todas las advertencias del compilador como errores; en caso contrario, **No**.
+
+## <a name="see-also"></a>Vea también
+
+[Páginas de propiedades HLSL](../ide/hlsl-property-pages.md)<br>
+[Páginas de propiedades HLSL: General](../ide/hlsl-property-pages-general.md)<br>
+[Páginas de propiedades HLSL: Archivos de salida](../ide/hlsl-property-pages-output-files.md)
