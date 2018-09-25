@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce44cd7c8d6112859990feb4067e9160f284548b
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: f7cdbbe704e283177e4e3b4f0767db66e2e284e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "43894827"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446327"
 ---
 # <a name="xml-file-processing"></a>Procesamiento de archivos .Xml
 
@@ -82,9 +82,9 @@ El compilador cumple las siguientes reglas cuando genera las cadenas de identifi
 
 - Para tipos genéricos, el nombre del tipo irá seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico.  Por ejemplo,
 
-    ```  
+    ```xml
     <member name="T:MyClass`2">
-    ```  
+    ```
 
    Para un tipo que se define como `public class MyClass<T, U>`.
 
@@ -97,7 +97,7 @@ En los ejemplos siguientes se muestra cómo se generarían las cadenas de identi
 ```cpp
 // xml_id_strings.cpp
 // compile with: /clr /doc /LD
-///   
+///
 namespace N {
 // "N:N"
 
@@ -107,81 +107,81 @@ namespace N {
    // "T:N.X"
 
    protected:
-      ///   
+      ///
       !X(){}
       // "M:N.X.Finalize", destructor's representation in metadata
 
    public:
-      ///   
+      ///
       X() {}
       // "M:N.X.#ctor"
 
-      ///   
+      ///
       static X() {}
       // "M:N.X.#cctor"
 
-      ///   
+      ///
       X(int i) {}
       // "M:N.X.#ctor(System.Int32)"
 
-      ///   
+      ///
       ~X() {}
       // "M:N.X.Dispose", Dispose function representation in metadata
 
-      ///   
+      ///
       System::String^ q;
       // "F:N.X.q"
 
-      ///   
+      ///
       double PI;
       // "F:N.X.PI"
 
-      ///   
+      ///
       int f() { return 1; }
       // "M:N.X.f"
 
-      ///   
+      ///
       int bb(System::String ^ s, int % y, void * z) { return 1; }
       // "M:N.X.bb(System.String,System.Int32@,System.Void*)"
 
-      ///   
+      ///
       int gg(array<short> ^ array1, array< int, 2 >^ IntArray) { return 0; }
       // "M:N.X.gg(System.Int16[], System.Int32[0:,0:])"
 
-      ///   
+      ///
       static X^ operator+(X^ x, X^ xx) { return x; }
      // "M:N.X.op_Addition(N.X,N.X)"
 
-      ///   
+      ///
       property int prop;
       // "M:N.X.prop"
 
-      ///   
+      ///
       property int prop2 {
       // "P:N.X.prop2"
 
-         ///   
+         ///
          int get() { return 0; }
          // M:N.X.get_prop2
 
-         ///   
+         ///
          void set(int i) {}
-         // M:N.X.set_prop2(System.Int32)  
+         // M:N.X.set_prop2(System.Int32)
       }
 
-      ///   
+      ///
       delegate void D(int i);
       // "T:N.X.D"
 
-      ///   
+      ///
       event D ^ d;
       // "E:N.X.d"
 
-      ///   
+      ///
       ref class Nested {};
       // "T:N.X.Nested"
 
-      ///   
+      ///
       static explicit operator System::Int32 (X x) { return 1; }
       // "M:N.X.op_Explicit(N.X!System.Runtime.CompilerServices.IsByValue)~System.Int32"
    };

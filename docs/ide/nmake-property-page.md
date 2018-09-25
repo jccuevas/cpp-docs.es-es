@@ -19,66 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29d10b35b0855e34826c10b813a2df48cd84cfef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 030aba197b2f480212f20eb5e9c298461d8f03da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711976"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384786"
 ---
 # <a name="nmake-property-page"></a>NMake (página de propiedades)
-La página de propiedades **NMake** permite especificar opciones de compilación para los proyectos NMake.  
-  
+
+La página de propiedades **NMake** permite especificar opciones de compilación para los proyectos NMake.
+
 Para obtener más información sobre los proyectos NMake, vea [Crear un proyecto de archivo Make](../ide/creating-a-makefile-project.md). Para los proyectos de archivos Make que no son de Windows, vea [Propiedades del proyecto de archivos Make (C++ para Linux)](../linux/prop-pages/makefile-linux.md), [Propiedades de proyectos generales (archivos Make de C++ para Android)](/visualstudio/cross-platform/general-makefile-android-prop-page) o [Propiedades de NMake (C++ para Android)](/visualstudio/cross-platform/nmake-android-prop-page).
-  
-La página de propiedades **NMake** contiene las propiedades siguientes:  
-  
-## <a name="uielement-list"></a>Lista de UIElement  
+
+La página de propiedades **NMake** contiene las propiedades siguientes:
+
+## <a name="uielement-list"></a>Lista de UIElement
 
 - **Línea de comandos de Compilar**
 
-   Especifica el comando que se va a ejecutar cuando se hace clic en **Compilar** en el menú **Compilar**.  
-  
+   Especifica el comando que se va a ejecutar cuando se hace clic en **Compilar** en el menú **Compilar**.
+
 - **Línea de comandos de Recompilar todo**
 
-   Especifica el comando que se va a ejecutar cuando se hace clic en **Recompilar todo** en el menú **Compilar**.  
-  
+   Especifica el comando que se va a ejecutar cuando se hace clic en **Recompilar todo** en el menú **Compilar**.
+
 - **Línea de comandos de limpieza**
 
-   Especifica el comando que se va a ejecutar cuando se hace clic en **Limpiar** en el menú **Compilar**.  
-  
+   Especifica el comando que se va a ejecutar cuando se hace clic en **Limpiar** en el menú **Compilar**.
+
 - **Salida**
 
-   Especifica el nombre del archivo que contendrá la salida para la línea de comandos. De forma predeterminada, este nombre de archivo se basa en el nombre del proyecto.  
-  
+   Especifica el nombre del archivo que contendrá la salida para la línea de comandos. De forma predeterminada, este nombre de archivo se basa en el nombre del proyecto.
+
 - **Definiciones de preprocesador**
 
-   Especifica las definiciones de preprocesador que usan los archivos de código fuente. El valor predeterminado se determina por la plataforma y la configuración actuales.  
-  
+   Especifica las definiciones de preprocesador que usan los archivos de código fuente. El valor predeterminado se determina por la plataforma y la configuración actuales.
+
 - **Ruta de acceso de búsqueda de inclusión**
 
-   Especifica los directorios donde el compilador busca los archivos de inclusión.  
-  
+   Especifica los directorios donde el compilador busca los archivos de inclusión.
+
 - **Archivos de inclusión forzados**
 
-   Especifica los archivos que el preprocesador procesa de manera automática incluso si no se incluyen en los archivos de proyecto.  
-  
+   Especifica los archivos que el preprocesador procesa de manera automática incluso si no se incluyen en los archivos de proyecto.
+
 - **Ruta de acceso de búsqueda de ensamblado**
 
-   Especifica los directorios donde .NET Framework busca cuando intenta resolver los ensamblados .NET.  
-  
+   Especifica los directorios donde .NET Framework busca cuando intenta resolver los ensamblados .NET.
+
 - **Ensamblados de uso forzados**
 
-   Especifica los ensamblados que .NET Framework procesa de manera automática.  
-  
+   Especifica los ensamblados que .NET Framework procesa de manera automática.
+
 - **Opciones adicionales**
 
-   Especifica los modificadores del compilador adicionales que va a usar IntelliSense cuando analiza los archivos de C++.  
-  
-Para obtener información sobre cómo acceder a la página de propiedades **NMake**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
-  
-Para obtener información sobre cómo acceder mediante programación a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
-  
-## <a name="see-also"></a>Vea también  
- [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   
- [Cómo: Habilitar IntelliSense para proyectos de archivos MAKE](../ide/how-to-enable-intellisense-for-makefile-projects.md)
+   Especifica los modificadores del compilador adicionales que va a usar IntelliSense cuando analiza los archivos de C++.
+
+Para obtener información sobre cómo acceder a la página de propiedades **NMake**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
+
+Para obtener información sobre cómo acceder mediante programación a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.
+
+## <a name="see-also"></a>Vea también
+
+[Páginas de propiedades](../ide/property-pages-visual-cpp.md)<br>
+[Cómo: Habilitar IntelliSense para proyectos de archivos MAKE](../ide/how-to-enable-intellisense-for-makefile-projects.md)

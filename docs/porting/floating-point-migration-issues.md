@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578433"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421991"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migración de punto flotante  
+
   
 A veces, al actualizar los proyectos a una versión más reciente de Visual Studio, observará que los resultados de determinadas operaciones de punto flotante han cambiado. Esto suele deberse a una de dos razones: los cambios en la generación de código que aprovechan mejor el procesador disponible, o bien las correcciones de errores o los cambios en los algoritmos usados en las funciones matemáticas de la biblioteca de tiempo de ejecución de C (CRT). En general, los nuevos resultados son correctos dentro de los límites especificados por el estándar del lenguaje. Siga leyendo para averiguar lo que ha cambiado y, si es importante, cómo conseguir los mismos resultados que obtenía antes con sus funciones.  
 
@@ -41,6 +42,6 @@ En la mayoría de los casos, los cambios de punto flotante en los compiladores y
   
 ## <a name="see-also"></a>Vea también  
   
-[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Información general sobre posibles problemas de actualización (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Información general sobre posibles problemas de actualización (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)  

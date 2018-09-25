@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327816"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416895"
 ---
 # <a name="command-line-property-pages"></a>páginas de propiedades Línea de comandos
-La mayoría de las carpetas de página de propiedades contienen una página de propiedades **Línea de comandos**. En esta página se muestran qué propiedades se establecen en la carpeta. La página de propiedades **Línea de comandos** también contiene un cuadro **Opciones adicionales** donde puede especificar las propiedades que son válidas para la herramienta pero para las que no hay ninguna propiedad en la carpeta.  
-  
- Cualquier comando que escriba en el cuadro de edición se pasará a través de la herramienta para la carpeta. No se realiza ninguna comprobación en la entrada, ni tampoco hay comprobaciones de dependencia.  
-  
- Para obtener información sobre cómo acceder a las páginas de propiedades **Línea de comandos**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   
- [Archivos .Lib como entrada del vinculador](../build/reference/dot-lib-files-as-linker-input.md)
+
+La mayoría de las carpetas de página de propiedades contienen una página de propiedades **Línea de comandos**. En esta página se muestran qué propiedades se establecen en la carpeta. La página de propiedades **Línea de comandos** también contiene un cuadro **Opciones adicionales** donde puede especificar las propiedades que son válidas para la herramienta pero para las que no hay ninguna propiedad en la carpeta.
+
+Cualquier comando que escriba en el cuadro de edición se pasará a través de la herramienta para la carpeta. No se realiza ninguna comprobación en la entrada, ni tampoco hay comprobaciones de dependencia.
+
+Para obtener información sobre cómo acceder a las páginas de propiedades **Línea de comandos**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Vea también
+
+[Páginas de propiedades](../ide/property-pages-visual-cpp.md)<br>
+[Archivos .Lib como entrada del vinculador](../build/reference/dot-lib-files-as-linker-input.md)

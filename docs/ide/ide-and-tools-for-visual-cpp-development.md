@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132025"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412527"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE y herramientas para desarrollo de Visual C++
 
@@ -29,7 +29,7 @@ Además de las herramientas compartidas en el IDE de Visual Studio, MSVC dispone
 
 ## <a name="creating-a-solution-and-projects"></a>Crear una solución y uno o varios proyectos
 
-Un *proyecto* es básicamente un conjunto de archivos de código fuente y recursos como imágenes o archivos de datos que se integran en un archivo ejecutable. 
+Un *proyecto* es básicamente un conjunto de archivos de código fuente y recursos como imágenes o archivos de datos que se integran en un archivo ejecutable.
 
 Visual Studio 2015 proporciona compatibilidad con proyectos de MSBuild. Puede descargar extensiones de Visual Studio para otros sistemas de compilación, como Qt o CMake.
 
@@ -119,7 +119,7 @@ Puede depurar el programa si presiona **F5** cuando la configuración del proyec
 
 ## <a name="deploy-completed-applications"></a>Implementar aplicaciones completadas
 
-Una aplicación para UWP se implementa para los clientes a través de Microsoft Store mediante la opción de menú **Proyecto** > **Store**. La implementación de CRT se controla automáticamente en segundo plano. Para obtener más información, vea [Publicar aplicaciones y juegos de Windows](/windows/uwp/publish/). 
+Una aplicación para UWP se implementa para los clientes a través de Microsoft Store mediante la opción de menú **Proyecto** > **Store**. La implementación de CRT se controla automáticamente en segundo plano. Para obtener más información, vea [Publicar aplicaciones y juegos de Windows](/windows/uwp/publish/).
 
 Al implementar una aplicación de escritorio de C++ nativo en otro equipo, debe instalar tanto la aplicación como todos los archivos de biblioteca de los que dependa la aplicación. Hay tres maneras de implementar el runtime de C++ Universal (UCRT) con una aplicación: implementación central, implementación local o vinculación estática. Para obtener más información, vea [Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md).
 
