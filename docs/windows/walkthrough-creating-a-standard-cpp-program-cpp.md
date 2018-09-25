@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Crear un programa estándar de C++ (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382640"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029624"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: Crear un programa estándar de C++ (C++)
 
@@ -45,41 +45,48 @@ Para completar este tutorial, debe comprender los conceptos básicos del lenguaj
 
 1. Cree un proyecto que apunta a **New** en el **archivo** menú y, a continuación, haga clic en **proyecto**.
 
-2. En el **Visual C++** panel tipos de proyecto, haga clic en **Windows Desktop**y, a continuación, haga clic en **aplicación de consola Windows**.
+1. En el **Visual C++** panel tipos de proyecto, haga clic en **Windows Desktop**y, a continuación, haga clic en **aplicación de consola Windows**. 
 
-3. Escriba un nombre para el proyecto.
+   > [!NOTE]
+   > Para las versiones de Visual Studio anteriores a 2017, en el **nuevo proyecto** cuadro de diálogo, expanda **instalado** > **plantillas**  >  **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Aplicación de consola Win32**. 
+
+   Escriba un nombre para el proyecto.
 
    De forma predeterminada, la solución que contiene el proyecto tiene el mismo nombre que el proyecto, pero puede escribir un nombre diferente. También puede escribir una ubicación diferente para el proyecto.
 
    Haga clic en **Aceptar** para crear el proyecto.
 
-4. Si **el Explorador de soluciones** no aparece, en el **vista** menú, haga clic en **el Explorador de soluciones**.
+   > [!NOTE]
+   > Las versiones de Visual Studio anteriores a 2017, complete el **Asistente para aplicaciones Win32**. Haga clic en **siguiente**, a continuación, asegúrese de que **aplicación de consola** está seleccionada y desactive el **encabezados precompilados** cuadro. Haga clic en **Finalizar**.
 
-5. Agregue un nuevo archivo de origen al proyecto, como sigue.
+1. Si **el Explorador de soluciones** no aparece, en el **vista** menú, haga clic en **el Explorador de soluciones**.
+
+1. Agregue un nuevo archivo de origen al proyecto, como sigue.
 
    1. En **el Explorador de soluciones**, haga clic en el **archivos de código fuente** carpeta, seleccione **agregar**y, a continuación, haga clic en **nuevo elemento**.
 
-   2. En el **código** nodo, haga clic en **archivo C++ (.cpp)**, escriba un nombre para el archivo y, a continuación, haga clic en **agregar**.
+   1. En el **código** nodo, haga clic en **archivo C++ (.cpp)**, escriba un nombre para el archivo y, a continuación, haga clic en **agregar**.
 
    El archivo .cpp aparece en la **archivos de código fuente** carpeta **el Explorador de soluciones**, y el archivo se abre en el editor de Visual Studio.
 
-6. En el archivo en el editor, escriba un programa de C++ válido que usa la biblioteca estándar de C++ o copie uno de los programas de ejemplo y péguelo en el archivo.
+1. En el archivo en el editor, escriba un programa de C++ válido que usa la biblioteca estándar de C++ o copie uno de los programas de ejemplo y péguelo en el archivo.
 
-7. Guarde el archivo.
+1. Guarde el archivo.
 
-8. En el menú **Compilar** , haga clic en **Compilar solución**.
+1. En el menú **Compilar** , haga clic en **Compilar solución**.
 
    El **salida** ventana muestra información sobre el progreso de la compilación, por ejemplo, la ubicación del registro de compilación y un mensaje que indica el estado de compilación.
 
-9. En el menú **Depurar**, haga clic en **Iniciar sin depurar**.
+1. En el menú **Depurar**, haga clic en **Iniciar sin depurar**.
 
    Si usa el programa de ejemplo, una ventana de comandos se muestra y se muestra si hay determinados enteros en el conjunto.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Anterior:** [consola las aplicaciones en Visual C++](../windows/console-applications-in-visual-cpp.md). **A continuación:**[Tutorial: compilar un programa de C++ nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+**Anterior:** [consola las aplicaciones en Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**A continuación:** [Tutorial: compilar un programa de C++ nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+[Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

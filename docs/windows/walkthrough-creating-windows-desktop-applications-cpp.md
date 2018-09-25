@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Crear una aplicación tradicional de escritorio de Windows (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 06/12/2018
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679210"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029676"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Tutorial: Crear una aplicación tradicional de escritorio de Windows (C++)
 
@@ -120,7 +120,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
    Para obtener información sobre los parámetros y el valor devuelto de esta función, vea [punto de entrada WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
    > [!NOTE]
-   > ¿Cuáles son todas esas palabras adicionales, como `CALLBACK`, o `HINSTANCE`, o `_In_`? La API de Windows tradicional usa definiciones de tipos y macros de preprocesador ampliamente para abstraer algunos de los detalles de los tipos y específicos de la plataforma de código, como convenciones de llamada, **__declspec** declaraciones e instrucciones pragma del compilador. En Visual Studio, puede usar IntelliSense [información rápida](/visualstudio/ide/using-intellisense#quick-info) característica para ver lo que definen estas definiciones de tipos y macros. Mantenga el mouse sobre la palabra de interés, o selecciónelo y presione ctrl-K, ctrl-I para una pequeña ventana emergente que contiene la definición. Para obtener más información, vea [Usar IntelliSense](/visualstudio/ide/using-intellisense). A menudo usan parámetros y tipos de valor devuelto *anotaciones SAL* que le ayudarán a los errores de programación de catch. Para obtener más información, consulte [utilizar anotaciones SAL para reducir defectos de código de C o C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > ¿Cuáles son todas esas palabras adicionales, como `CALLBACK`, o `HINSTANCE`, o `_In_`? La API de Windows tradicional usa definiciones de tipos y macros de preprocesador ampliamente para abstraer algunos de los detalles de los tipos y específicos de la plataforma de código, como convenciones de llamada, **__declspec** declaraciones e instrucciones pragma del compilador. En Visual Studio, puede usar IntelliSense [información rápida](/visualstudio/ide/using-intellisense#quick-info) característica para ver lo que definen estas definiciones de tipos y macros. Mantenga el mouse sobre la palabra de interés, o selecciónelo y presione **Ctrl**+**K**, **Ctrl**+**me** para un pequeña ventana emergente que contiene la definición. Para obtener más información, vea [Usar IntelliSense](/visualstudio/ide/using-intellisense). A menudo usan parámetros y tipos de valor devuelto *anotaciones SAL* que le ayudarán a los errores de programación de catch. Para obtener más información, consulte [utilizar anotaciones SAL para reducir defectos de código de C o C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
 1. Programas de escritorio de Windows requieren &lt;windows.h >. &lt;Tchar.h > define el `TCHAR` macro, que se resuelve en última instancia a **wchar_t** si el símbolo UNICODE está definido en el proyecto, en caso contrario, se resuelve como **char**.  Si compila siempre con habilitada para UNICODE, no necesita TCHAR y puede usar simplemente **wchar_t** directamente.
 

@@ -3,8 +3,7 @@ title: -ejecución-juego de caracteres (juego de caracteres de ejecución conjun
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- cpp
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - execution-charset
@@ -19,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a2e2c690b9e827992ca79f861e40452c071d42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca6681fde6ae4e46dea62e0258138f567ef8ebc5
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420990"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029611"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-CharSet (establecer juego de caracteres de ejecución)
 
@@ -38,10 +37,10 @@ Le permite especificar el juego para el ejecutable de caracteres de ejecución.
 
 ## <a name="arguments"></a>Argumentos
 
-**IANA_name**<br/>
+*IANA_name*<br/>
 Asigne el carácter definido por la IANA.
 
-**CPID**<br/>
+*CPID*<br/>
 Identificador de la página de códigos.
 
 ## <a name="remarks"></a>Comentarios
