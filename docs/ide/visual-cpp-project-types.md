@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339987"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396693"
 ---
 # <a name="visual-c-project-types"></a>Tipos de proyecto de Visual C++
 
 Se puede usar una plantilla de proyecto para crear la estructura básica de programa, menús, barras de herramientas, iconos, referencias e instrucciones `#include` adecuados para el tipo de proyecto que quiera crear. Visual Studio incluye diversos tipos de plantilla de proyecto de Visual C++, muchos de ellos con su correspondiente asistente para que pueda personalizar sus proyectos mientras los va creando. Justo después de crear un proyecto, se puede compilar y ejecutar la aplicación; un procedimiento recomendado consiste en compilar cada cierto tiempo mientras se desarrolla la aplicación.
 
-No es necesario usar una plantilla para crear un proyecto, pero muchas veces es lo más eficaz, dado que es más fácil modificar los archivos de proyecto y la estructura existentes que crearlos desde cero.  
-  
+No es necesario usar una plantilla para crear un proyecto, pero muchas veces es lo más eficaz, dado que es más fácil modificar los archivos de proyecto y la estructura existentes que crearlos desde cero.
+
 > [!NOTE]
 > Puede crear un proyecto de lenguaje C con plantillas de proyecto de C++. En el proyecto generado, busque los archivos que tengan la extensión de nombre de archivo .cpp y cámbiela por .c. Luego, en la página **Propiedades del proyecto** del proyecto (no de la solución), expanda **Propiedades de configuración**y **C/C++** y seleccione **Avanzadas**. Cambie la opción **Compilar como** por **Compilar como código de C (/TC)**.
 
@@ -42,8 +42,8 @@ Las plantillas de proyecto que se incluyen en Visual Studio dependen de la versi
 
 ### <a name="windows-desktop"></a>Escritorio de Windows
 
-|Plantilla de proyecto|Description|  
-|----------------------|-----------------------------| 
+|Plantilla de proyecto|Descripción|
+|----------------------|-----------------------------|
 |[Aplicación de consola Windows](../windows/creating-a-console-application.md)|Un proyecto para crear una aplicación de consola Windows.|
 |[Aplicación de escritorio de Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Un proyecto para crear una aplicación de escritorio de Windows (Win32).|
 |[Biblioteca de vínculos dinámicos](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Un proyecto para crear una biblioteca de vínculos dinámicos (DLL).|
@@ -52,7 +52,7 @@ Las plantillas de proyecto que se incluyen en Visual Studio dependen de la versi
 
 ### <a name="general"></a>General
 
-|Plantilla de proyecto|Description|
+|Plantilla de proyecto|Descripción|
 |----------------------|-----------------------------|
 |Proyecto vacío|Un proyecto vacío para crear una aplicación, biblioteca o archivo DLL. Debe agregar el código o los recursos necesarios.|
 |[Proyecto de archivo Make](../ide/creating-a-makefile-project.md)|Un proyecto para usar un sistema de compilación externo.|
@@ -60,13 +60,13 @@ Las plantillas de proyecto que se incluyen en Visual Studio dependen de la versi
 
 ### <a name="atl"></a>ATL
 
-|Plantilla de proyecto|Description|
+|Plantilla de proyecto|Descripción|
 |----------------------|-----------------------------|
 |[Proyecto ATL](../atl/reference/creating-an-atl-project.md)|Un proyecto en el que se usa Active Template Library.|
 
 ### <a name="test"></a>Prueba
 
-|Plantilla de proyecto|Description|
+|Plantilla de proyecto|Descripción|
 |----------------------|-----------------------------|
 |[Proyecto de prueba unitaria nativo](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Un proyecto que contiene pruebas unitarias de C++ nativas.|
 
@@ -74,7 +74,7 @@ Las plantillas de proyecto que se incluyen en Visual Studio dependen de la versi
 
 Si se agrega el componente de compatibilidad con MFC y ATL a la instalación de Visual Studio, estas plantillas de proyecto se agregan a Visual Studio.
 
-|Plantilla de proyecto|Description|
+|Plantilla de proyecto|Descripción|
 |----------------------|-----------------------------|
 |[Aplicación MFC](../mfc/reference/creating-an-mfc-application.md)|Un proyecto para crear una aplicación en la que se usa la biblioteca MFC (Microsoft Foundation Class).|
 |[Control ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Un proyecto para crear un control ActiveX en el que se usa la biblioteca MFC.|
@@ -86,7 +86,7 @@ Si se agrega el componente Herramientas de la plataforma universal de Windows a 
 
 Para obtener información general sobre las aplicaciones universales de Windows en C++, vea [Aplicaciones universales de Windows (C++)](../windows/universal-windows-apps-cpp.md).
 
-|Plantilla de proyecto|Description|
+|Plantilla de proyecto|Descripción|
 |----------------------|-----------------------------|
 |Aplicación vacía|Un proyecto para una aplicación para Plataforma universal de Windows (UWP) de una sola página sin controles o diseños predefinidos.|
 |Aplicación de DirectX 11|Un proyecto para una aplicación para Plataforma universal de Windows que usa DirectX 11.|
@@ -104,4 +104,4 @@ Muchos de los archivos que se generan mediante una plantilla de proyecto contien
 
 ## <a name="see-also"></a>Vea también
 
-[Crear proyectos de escritorio con asistentes para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[Crear proyectos de escritorio con asistentes para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md)

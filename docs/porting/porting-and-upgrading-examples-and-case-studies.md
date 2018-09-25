@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d264c77668e0220c4198657b8133f0ebea34e6cb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 9cf2cd2828a7eb4b590cf18bcca1dcac055d5e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578412"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439801"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Migración y actualización: ejemplos y casos prácticos
+
 Puede hacerse una idea de los tipos de problemas con los que se puede encontrar durante una migración de una versión anterior de Visual C++ a la versión actual leyendo los casos de migraciones correctas.  
   
 ## <a name="examples-of-successful-migrations"></a>Ejemplos de migraciones correctas 
