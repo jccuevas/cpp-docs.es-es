@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Agregar objetos D2D a un proyecto MFC | Documentos de Microsoft'
+title: 'Tutorial: Agregar objetos D2D a un proyecto MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6117b17421e37238c9bc585677eb7b0c8ed557fb
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954876"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169663"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Tutorial: Agregar objetos D2D a un proyecto de MFC
 
-Este tutorial enseña a agregar un Direct2D básica (D2D) el objeto a Visual C++, el proyecto de biblioteca de clases de Microsoft Foundation (MFC) y, a continuación, compile el proyecto en una aplicación que imprime "Hello, world" sobre un fondo degradado.
+En este tutorial se enseña cómo agregar un Direct2D básica (D2D) a objeto Visual C++, el proyecto de biblioteca de clases (MFC) de Microsoft Foundation y, a continuación, compile el proyecto en una aplicación que imprime "Hello, world" en un fondo degradado.
 
 El tutorial muestra cómo realizar estas tareas:
 
@@ -32,29 +32,29 @@ El tutorial muestra cómo realizar estas tareas:
 
 - Crear un pincel de color sólido y un pincel de degradado lineal.
 
-- Modificar el pincel de degradado para que el cambio se realizará correctamente cuando se cambia el tamaño de la ventana.
+- Modifique el pincel de degradado para que el cambio se realizará correctamente cuando se cambia el tamaño de la ventana.
 
-- Implementar un controlador de dibujo D2D.
+- Implemente un controlador de dibujo D2D.
 
-- Comprobar los resultados.
+- Compruebe los resultados.
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar este tutorial, debe tener instalado con Visual Studio la **el desarrollo de escritorio con C++** carga de trabajo y la parte opcional **MFC de Visual C++ para x86 y x64** componente.
+Para completar este tutorial, debe tener instalado Visual Studio con el **desarrollo de escritorio con C++** carga de trabajo y la propiedad opcional **MFC de Visual C++ para x86 y x64** componente.
 
 ## <a name="to-create-an-mfc-application"></a>Para crear una aplicación MFC
 
 1. En el **archivo** menú, elija **New** y, a continuación, elija **proyecto**.
 
-2. En el **nuevo proyecto** cuadro de diálogo, en el panel izquierdo bajo **plantillas instaladas**, expanda **Visual C++** y, a continuación, seleccione **MFC**. En el panel central, seleccione **aplicación MFC**. En el **nombre** , escriba *MFCD2DWalkthrough*. Elija **Aceptar**.
+1. En el **nuevo proyecto** cuadro de diálogo, en el panel izquierdo bajo **plantillas instaladas**, expanda **Visual C++** y, a continuación, seleccione **MFC**. En el panel central, seleccione **aplicación MFC**. En el **nombre** , escriba *MFCD2DWalkthrough*. Elija **Aceptar**.
 
-3. En el **Asistente para aplicaciones MFC**, elija **finalizar** sin cambiar la configuración.
+1. En el **MFC Application Wizard**, elija **finalizar** sin cambiar la configuración.
 
 ## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Para crear un pincel de color sólido y un pincel de degradado lineal
 
-1. En **el Explorador de soluciones**, en la **MFCD2DWalkthrough** del proyecto, en la **archivos de encabezado** carpeta, abra MFCD2DWalkthroughView.h. Agregue este código a la `CMFCD2DWalkthroughView` clase para crear tres variables de datos:
+1. En **el Explorador de soluciones**, en el **MFCD2DWalkthrough** del proyecto, en el **archivos de encabezado** carpeta, abra MFCD2DWalkthroughView.h. Agregue este código a la `CMFCD2DWalkthroughView` clase para crear tres variables de datos:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -64,7 +64,7 @@ Para completar este tutorial, debe tener instalado con Visual Studio la **el des
 
    Guarde el archivo y ciérrelo.
 
-2. En el **archivos de código fuente** carpeta, abra MFCD2DWalkthroughView.cpp. En el constructor para la `CMFCD2DWalkthroughView` de clases, agregue este código:
+1. En el **archivos de código fuente** carpeta, abra MFCD2DWalkthroughView.cpp. En el constructor para la `CMFCD2DWalkthroughView` de clases, agregue este código:
 
    ```cpp
    // Enable D2D support for this window:
@@ -110,13 +110,13 @@ Para completar este tutorial, debe tener instalado con Visual Studio la **el des
 
 ## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>Para modificar el pincel de degradado para que el cambio se realizará correctamente cuando se cambia el tamaño de la ventana
 
-1. En el **proyecto** menú, elija **Asistente para clases**.
+1. En el **proyecto** menú, elija **Class Wizard**.
 
-2. En el **Asistente para clases MFC**, en **nombre de la clase**, seleccione `CMFCD2DWalkthroughView`.
+1. En el **Asistente para clases MFC**, en **nombre de la clase**, seleccione `CMFCD2DWalkthroughView`.
 
-3. En el **mensajes** ficha la **mensajes** cuadro, seleccione `WM_SIZE` y, a continuación, elija **Agregar controlador**. Esta acción agrega el `OnSize` controlador de mensajes para el `CMFCD2DWalkthroughView` clase.
+1. En el **mensajes** ficha la **mensajes** cuadro, seleccione `WM_SIZE` y, a continuación, elija **Agregar controlador**. Esta acción agrega el `OnSize` controlador de mensajes para el `CMFCD2DWalkthroughView` clase.
 
-4. En el **controladores existentes** cuadro, seleccione `OnSize`. Elija **editar código** para mostrar la `CMFCD2DWalkthroughView::OnSize` método. Agregue el código siguiente al final del método.
+1. En el **los controladores existentes** cuadro, seleccione `OnSize`. Elija **modificar código** para mostrar el `CMFCD2DWalkthroughView::OnSize` método. Al final del método, agregue el código siguiente.
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
@@ -126,15 +126,15 @@ Para completar este tutorial, debe tener instalado con Visual Studio la **el des
 
 ## <a name="to-implement-a-d2d-drawing-handler"></a>Para implementar un controlador de dibujo D2D
 
-1. En el **proyecto** menú, elija **Asistente para clases**.
+1. En el **proyecto** menú, elija **Class Wizard**.
 
-2. En el **Asistente para clases MFC**, en **nombre de la clase**, seleccione `CMFCD2DWalkthroughView`.
+1. En el **Asistente para clases MFC**, en **nombre de la clase**, seleccione `CMFCD2DWalkthroughView`.
 
-3. En el **mensajes** ficha, elija **Agregar mensaje personalizado**.
+1. En el **mensajes** ficha, elija **Agregar mensaje personalizado**.
 
-4. En el **Agregar mensaje personalizado** cuadro de diálogo, en la **mensaje de Windows personalizada** , escriba *AFX_WM_DRAW2D*. En el **nombre de controlador de mensaje** , escriba *OnDraw2D*. Seleccione el **mensaje registrado** opción y, a continuación, elija **Aceptar**. Esta acción agrega un controlador de mensajes para que el mensaje AFX_WM_DRAW2D el `CMFCD2DWalkthroughView` clase.
+1. En el **Agregar mensaje personalizado** cuadro de diálogo el **mensaje de Windows personalizada** , escriba *AFX_WM_DRAW2D*. En el **nombre de controlador de mensaje** , escriba *OnDraw2D*. Seleccione el **mensaje registrado** opción y, a continuación, elija **Aceptar**. Esta acción agrega un controlador de mensajes para que el mensaje AFX_WM_DRAW2D el `CMFCD2DWalkthroughView` clase.
 
-5. En el **controladores existentes** cuadro, seleccione `OnDraw2D`. Elija **editar código** para mostrar la `CMFCD2DWalkthroughView::OnDraw2D` método. Use este código para el `CMFCD2DWalkthroughView::OnDrawD2D` método:
+1. En el **los controladores existentes** cuadro, seleccione `OnDraw2D`. Elija **modificar código** para mostrar el `CMFCD2DWalkthroughView::OnDraw2D` método. Use este código para el `CMFCD2DWalkthroughView::OnDrawD2D` método:
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
@@ -163,8 +163,8 @@ Para completar este tutorial, debe tener instalado con Visual Studio la **el des
 
 ## <a name="to-verify-the-results"></a>Para comprobar los resultados
 
-- Compile y ejecute la aplicación. Debe tener un rectángulo de degradado que cambia cuando cambia el tamaño de la ventana. "¡Hello World!" debe mostrarse en el centro del rectángulo.
+Compile y ejecute la aplicación. Debe tener un rectángulo degradado que cambia cuando cambia el tamaño de la ventana. "¡Hello World!" se debe mostrar en el centro del rectángulo.
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutoriales](../mfc/walkthroughs-mfc.md)
+[Tutoriales](../mfc/walkthroughs-mfc.md)

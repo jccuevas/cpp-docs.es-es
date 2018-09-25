@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0678afc9d79499e4581feeca03b1a5bf9b7b963
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 4aa276c0e9d97cd5b723499a21432290772a49a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131311"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390310"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilizar el IDE de Visual Studio para desarrollo de escritorio de C++
 
@@ -31,7 +31,7 @@ Si todavía no ha instalado Visual Studio, ahora es el momento. Para obtener ví
 
 En estos tutoriales se supone que ha instalado Visual Studio y el lenguaje y los componentes de Visual C++ necesarios para el desarrollo de escritorio de Windows. También se asume que entiende los fundamentos del lenguaje C++. Si necesita obtener información sobre C++, hay muchos libros y recursos web disponibles. Un buen lugar para comenzar es la página [Get Started](https://isocpp.org/get-started) (Introducción) del sitio web de la Standard C++ Foundation.
 
-Si todavía no ha instalado Visual Studio, ahora es el momento. 
+Si todavía no ha instalado Visual Studio, ahora es el momento.
 
 **Instalación de Visual Studio 2017**
 
@@ -39,9 +39,9 @@ Para obtener Visual Studio 2017, puede descargarlo de [Descargas de Visual Studi
 
 **Instalación de Visual Studio 2015**
 
- Para instalar Visual Studio 2015, vaya a [Descargar versiones anteriores de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Ejecute el programa de instalación y elija **Instalación personalizada** y, a continuación, seleccione el componente de C++. 
+Para instalar Visual Studio 2015, vaya a [Descargar versiones anteriores de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Ejecute el programa de instalación y elija **Instalación personalizada** y, a continuación, seleccione el componente de C++.
 
- En general, recomendamos encarecidamente que use Visual Studio 2017, incluso para compilar el código mediante el compilador de Visual Studio 2015. Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](../porting/use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
+En general, recomendamos encarecidamente que use Visual Studio 2017, incluso para compilar el código mediante el compilador de Visual Studio 2015. Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](../porting/use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
 
 Una vez completada la instalación de Visual Studio, está listo para continuar.
 

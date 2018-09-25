@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211668"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398669"
 ---
 # <a name="working-with-project-properties"></a>Trabajar con configuraciones de proyecto
 
@@ -141,11 +141,11 @@ La macro definida por el usuario se almacena en una hoja de propiedades. Si el p
 
 ##### <a name="to-create-a-user-defined-macro"></a>Para crear una macro definida por el usuario
 
-1.  En la ventana **Administrador de propiedades** (en la barra de menús, seleccione **Ver**, **Administrador de propiedades**), abra el menú contextual de una hoja de propiedades (su nombre termina en .user) y después seleccione Propiedades. Se abre el cuadro de diálogo **Páginas de propiedades** de esa hoja de propiedades.
+1. En la ventana **Administrador de propiedades** (en la barra de menús, seleccione **Ver**, **Administrador de propiedades**), abra el menú contextual de una hoja de propiedades (su nombre termina en .user) y después seleccione Propiedades. Se abre el cuadro de diálogo **Páginas de propiedades** de esa hoja de propiedades.
 
-2.  En el panel de la izquierda del cuadro de diálogo, seleccione **Macros de usuario**. En el panel de la derecha, haga clic en el botón **Agregar macro** para abrir el cuadro de diálogo **Agregar macro de usuario**.
+1. En el panel de la izquierda del cuadro de diálogo, seleccione **Macros de usuario**. En el panel de la derecha, haga clic en el botón **Agregar macro** para abrir el cuadro de diálogo **Agregar macro de usuario**.
 
-3.  En el cuadro de diálogo, especifique un nombre y un valor para la macro. Opcionalmente, active la casilla **Establecer esta macro como variable de entorno en el entorno de compilación**.
+1. En el cuadro de diálogo, especifique un nombre y un valor para la macro. Opcionalmente, active la casilla **Establecer esta macro como variable de entorno en el entorno de compilación**.
 
 ## <a name="property-editor"></a>Editor de propiedades
 

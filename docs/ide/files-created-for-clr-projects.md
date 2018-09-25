@@ -15,24 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9d66c3f55164a743bc395dc5e9b48f8bcd57654
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3bd76a978c1c85969883b8222097f29f501fd960
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334670"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385357"
 ---
 # <a name="files-created-for-clr-projects"></a>Archivos creados para proyectos de CLR
-Cuando se usan las plantillas de Visual C++ para crear proyectos, se crean varios archivos, en función de la plantilla que se use. En la tabla siguiente se enumeran todos los archivos que se crean mediante plantillas de proyecto para los proyectos de .NET Framework.  
-  
-|Nombre del archivo|Descripción del archivo|  
-|---------------|----------------------|  
-|AssemblyInfo.cpp|Archivo que contiene información (es decir, atributos, archivos, recursos, tipos, información sobre versiones, información de firma, etc.) para modificar los metadatos de ensamblado del proyecto. Para obtener más información, vea [Contenido de los ensamblados](/dotnet/framework/app-domains/assembly-contents).|  
-|*Nombre_proyecto*.asmx|Un archivo de texto que hace referencia a clases administradas que encapsulan la funcionalidad del servicio Web XML.|  
-|*Nombre_proyecto*.cpp|El archivo de código fuente principal y punto de entrada a la aplicación que Visual Studio crea de manera automática. Identifica el archivo .dll y el espacio de nombres del proyecto. Incluya su propio código en este archivo.|  
-|*Nombre_proyecto*.vsdisco|Un archivo de implementación XML que contiene vínculos a otros recursos que describen el servicio Web XML.|  
-|*Nombre_proyecto*.h|El archivo de inclusión principal para el proyecto, que contiene todas las declaraciones, símbolos globales y directivas `#include` para otros archivos de encabezado.|  
-|*Nombre_proyecto*.sln|El archivo de solución que se usa dentro del entorno de desarrollo para organizar todos los elementos del proyecto en una única solución.|  
-|*Nombre_proyecto*.suo|El archivo de opciones de solución que se usa dentro del entorno de desarrollo.|  
-|*Nombre_proyecto*.vcxproj|El archivo de proyecto que se usa dentro del entorno de desarrollo que almacena la información específica de este proyecto.|  
+
+Cuando se usan las plantillas de Visual C++ para crear proyectos, se crean varios archivos, en función de la plantilla que se use. En la tabla siguiente se enumeran todos los archivos que se crean mediante plantillas de proyecto para los proyectos de .NET Framework.
+
+|Nombre del archivo|Descripción del archivo|
+|---------------|----------------------|
+|AssemblyInfo.cpp|Archivo que contiene información (es decir, atributos, archivos, recursos, tipos, información sobre versiones, información de firma, etc.) para modificar los metadatos de ensamblado del proyecto. Para obtener más información, vea [Contenido de los ensamblados](/dotnet/framework/app-domains/assembly-contents).|
+|*Nombre_proyecto*.asmx|Un archivo de texto que hace referencia a clases administradas que encapsulan la funcionalidad del servicio Web XML.|
+|*Nombre_proyecto*.cpp|El archivo de código fuente principal y punto de entrada a la aplicación que Visual Studio crea de manera automática. Identifica el archivo .dll y el espacio de nombres del proyecto. Incluya su propio código en este archivo.|
+|*Nombre_proyecto*.vsdisco|Un archivo de implementación XML que contiene vínculos a otros recursos que describen el servicio Web XML.|
+|*Nombre_proyecto*.h|El archivo de inclusión principal para el proyecto, que contiene todas las declaraciones, símbolos globales y directivas `#include` para otros archivos de encabezado.|
+|*Nombre_proyecto*.sln|El archivo de solución que se usa dentro del entorno de desarrollo para organizar todos los elementos del proyecto en una única solución.|
+|*Nombre_proyecto*.suo|El archivo de opciones de solución que se usa dentro del entorno de desarrollo.|
+|*Nombre_proyecto*.vcxproj|El archivo de proyecto que se usa dentro del entorno de desarrollo que almacena la información específica de este proyecto.|
 |ReadMe.txt|Un archivo que describe cada archivo del proyecto mediante los nombres de archivo reales creados por la plantilla.|
