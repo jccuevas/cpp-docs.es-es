@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c24ed9328f77d26a8ad11a6ff6bdbf47bad9fbe3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339714"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381418"
 ---
 # <a name="property-pages-visual-c"></a>Páginas de propiedades (Visual C++)
 
@@ -143,5 +143,5 @@ Observe que una página de propiedades solo muestra la configuración en el nive
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: Crear y quitar dependencias del proyecto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)  
-[Cómo: Crear y editar configuraciones](/visualstudio/ide/how-to-create-and-edit-configurations)  
+[Cómo: Crear y quitar dependencias del proyecto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[Cómo: Crear y editar configuraciones](/visualstudio/ide/how-to-create-and-edit-configurations)
