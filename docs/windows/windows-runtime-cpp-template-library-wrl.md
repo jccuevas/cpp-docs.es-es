@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401808"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429753"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
 
@@ -50,7 +50,7 @@ La biblioteca de plantillas C++ de Windows en tiempo de ejecución y C++ / c++ /
 
 Estos son algunos recursos que pueden ayudarle a trabajar inmediatamente con la biblioteca de plantillas C++ de Windows en tiempo de ejecución.
 
-[La biblioteca de Windows en tiempo de ejecución (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+[La biblioteca de Windows en tiempo de ejecución (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 En este vídeo de Channel 9, obtenga más información sobre cómo la biblioteca de plantillas C++ de Windows en tiempo de ejecución ayuda a que escribir aplicaciones de plataforma Universal de Windows (UWP) y cómo crear y consumir los componentes de Windows en tiempo de ejecución.
 
 [Cómo: activar y usar un componente de tiempo de ejecución de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
@@ -77,16 +77,16 @@ Muestra cómo utilizar componentes personalizados de Windows en tiempo de ejecuc
 [Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Se muestra cómo usar el [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) y [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto con las tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.
 
-[Ejemplo de Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+[Ejemplo de Bing Maps Trip Optimizer](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Usa el `HttpRequest` clase que se define en [Tutorial: conectar usando tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) en el contexto de una aplicación UWP completa.
 
-[Creación de un componente DLL en tiempo de ejecución de Windows con el ejemplo de C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+[Creación de un componente DLL en tiempo de ejecución de Windows con el ejemplo de C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente DLL en proceso y utilizarlo desde C++ / c++ / CX, JavaScript y C#.
 
-[Ejemplo de juego marble maze con DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Ejemplo de juego marble maze con DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para administrar la duración de los componentes de COM como DirectX y Media Foundation en el contexto de un completo juego en 3D.
 
-[Cómo enviar notificaciones de ejemplo de aplicaciones de escritorio](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+[Cómo enviar notificaciones de ejemplo de aplicaciones de escritorio](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para trabajar con notificaciones del sistema de una aplicación de escritorio.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de plantillas C++ de Windows en tiempo de ejecución y ATL
