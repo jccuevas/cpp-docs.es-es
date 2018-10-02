@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095942"
 ---
 # <a name="pointer-declarations"></a>Declaraciones de puntero
 
@@ -59,6 +59,7 @@ Si crea *type-specifier* **void**, puede retrasar la especificación del tipo al
 Puede declarar un puntero a un tipo de estructura, de unión o de enumeración antes de definir el tipo de estructura, de unión o de enumeración. El puntero se declara utilizando la etiqueta de estructura o de unión tal como se muestra en los ejemplos siguientes. Se permiten dichas declaraciones porque el compilador no necesita conocer el tamaño de la estructura o de la unión para asignar espacio para la variable de puntero.
 
 ## <a name="examples"></a>Ejemplos
+
 En los ejemplos siguientes se muestran declaraciones de puntero.
 
 ```
