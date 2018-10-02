@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206176"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319102"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
 
@@ -65,7 +65,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
   
 - **Sobrecargas de C++ de funciones de la biblioteca matemática** En versiones anteriores, \<math.h> definía algunas de las sobrecargas de C++ para las funciones de la biblioteca matemática, pero no todas. \<cmath> definía las sobrecargas restantes por lo que, para obtener todas las sobrecargas, era necesario incluir el encabezado \<cmath>. Esto causaba problemas con la resolución de sobrecargas de función en el código que solo incluía \<math.h>. Ahora, todas las sobrecargas de C++ se han quitado de \<math.h> y solo están presentes en \<cmath>.  
   
-     Para resolver errores, incluya <cmath> para obtener las declaraciones de las funciones que se han quitado de \<math.h>. En la tabla siguiente se muestran las funciones que se han movido.  
+     Para resolver errores, incluya \<cmath> para obtener las declaraciones de las funciones que se quitaron de \<math.h>. En la tabla siguiente se muestran las funciones que se han movido.  
   
      Funciones movidas:  
   
