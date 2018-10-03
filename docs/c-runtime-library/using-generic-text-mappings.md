@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9435076bdc02f9f0b8a909ffdbc60dd06e1a388
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097528"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234663"
 ---
 # <a name="using-generic-text-mappings"></a>Usar asignaciones de texto genérico
 
@@ -105,7 +105,7 @@ RetVal = strrev(szString);
 
 Por lo tanto, se puede crear, mantener y compilar un único archivo de código fuente para su ejecución con rutinas específicas de cualquiera de los tres tipos de juegos de caracteres.
 
- **FIN de Específicos de Microsoft**
+**FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
