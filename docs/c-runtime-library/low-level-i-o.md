@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8134ea416f94def7e985a4d63cc61d740924317a
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018319"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235300"
 ---
 # <a name="low-level-io"></a>E/S de bajo nivel
 
@@ -59,7 +59,7 @@ Las rutinas de E/S de bajo nivel establecen la variable global [errno](../c-runt
 |[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|Establecer la máscara de permisos de archivo|
 |[_write](../c-runtime-library/reference/write.md)|Escribir datos en el archivo|
 
- **_dup** y **_dup2** se suelen usar para asociar los descriptores de archivo predefinidos con distintos archivos.
+**_dup** y **_dup2** se suelen usar para asociar los descriptores de archivo predefinidos con distintos archivos.
 
 ## <a name="see-also"></a>Vea también
 

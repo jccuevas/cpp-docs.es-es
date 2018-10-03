@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117504"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235066"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funciones de conversión de valores de cadena en valores numéricos
 
@@ -94,7 +94,7 @@ Cuando el valor devuelto por estas funciones provocaría un desbordamiento o sub
 |`_strtoui64`|Desbordamiento|**_UI64_MAX**|
 |`_strtoui64`|Sin conversión|0|
 
- **_I64_MAX**, _**I64_MIN** y **_UI64_MAX** se definen en LIMITS.H.
+**_I64_MAX**, _**I64_MIN** y **_UI64_MAX** se definen en LIMITS.H.
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64` y `_wcstoui64` son versiones de caracteres anchos de `strtod`, `strtol`, `strtoul`, `_strtoi64` y `_strtoui64`, respectivamente; el puntero a un argumento del final de conversión para cada una de estas funciones de caracteres anchos es una cadena de caracteres anchos. En caso contrario, cada una de estas funciones de caracteres anchos se comporta de manera idéntica a su equivalente de caracteres de un solo byte.
 
