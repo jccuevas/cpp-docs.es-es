@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90cd0b401624ea6815b31b55a7da9c8796746ce8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072230"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789207"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Advertencia del compilador (nivel 3) C4580
 
 [attribute] está en desuso; especifique en su lugar System::Attribute o Platform::Metadata como clase base
 
-[[atributo](../../windows/attribute.md)] ya no es la sintaxis recomendada para crear atributos definidos por el usuario. Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Para el código CLR, derive los atributos de `System::Attribute`. Para el código Windows en tiempo de ejecución, derive los atributos de `Platform::Metadata`.
+[[atributo](../../windows/attributes/attribute.md)] ya no es la sintaxis recomendada para crear atributos definidos por el usuario. Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Para el código CLR, derive los atributos de `System::Attribute`. Para el código Windows en tiempo de ejecución, derive los atributos de `Platform::Metadata`.
 
 ## <a name="example"></a>Ejemplo
 
