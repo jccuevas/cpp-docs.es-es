@@ -1,7 +1,7 @@
 ---
 title: Atributos (extensiones de componentes de C++) definido por el usuario | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600386"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789233"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Atributos definidos por el usuario (Extensiones de componentes de C++)
 
@@ -47,7 +47,7 @@ Los atributos personalizados le permiten ampliar los metadatos de un elemento ad
 
 ### <a name="remarks"></a>Comentarios
 
-La información y la sintaxis presentadas en este tema está pensado para sustituir la información presentada en [atributo](../windows/attribute.md).
+La información y la sintaxis presentadas en este tema está pensado para sustituir la información presentada en [atributo](attributes/attribute.md).
 
 Puede definir un atributo personalizado mediante la definición de un tipo y realizar <xref:System.Attribute> una clase base para el tipo y, opcionalmente, aplicar el <xref:System.AttributeUsageAttribute> atributo.
 
@@ -55,9 +55,9 @@ Por ejemplo, en Microsoft Transaction Server (MTS) 1.0, el comportamiento con re
 
 Para obtener más información, vea
 
-- [Destinos de atributo](../windows/attribute-targets-cpp-component-extensions.md)
+- [Destinos de atributo](attribute-targets-cpp-component-extensions.md)
 
-- [Tipos de parámetro de atributo](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Tipos de parámetro de atributo](attribute-parameter-types-cpp-component-extensions.md)
 
 Para obtener información sobre cómo firmar ensamblados en Visual C++, vea [ensamblados de nombre seguro (firma de ensamblados) (C++ / c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +177,7 @@ El `Object^` tipo reemplaza al tipo de datos variant. En el ejemplo siguiente se
 
 Los argumentos de atributo deben ser constantes de tiempo de compilación; en la mayoría de los casos, deben ser literales constantes.
 
-Consulte [typeid](../windows/typeid-cpp-component-extensions.md) para obtener información sobre cómo devolver un valor de System:: Type de un bloque de atributos personalizados.
+Consulte [typeid](typeid-cpp-component-extensions.md) para obtener información sobre cómo devolver un valor de System:: Type de un bloque de atributos personalizados.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes para plataformas de tiempo de ejecución](component-extensions-for-runtime-platforms.md)

@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4151d712c12cb34785c3f4ab77c76cdd78d4830
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ac866d742734f5b6126315a0b79020c9ec7fb74
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024091"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788401"
 ---
 # <a name="compiler-error-c3749"></a>Error del compilador C3749
 
 'attribute': un atributo personalizado no puede usarse dentro de una función
 
-Un atributo personalizado no se puede usar dentro de una función. Para obtener más información sobre los atributos personalizados, vea el tema [atributo](../../windows/attribute.md).
+Un atributo personalizado no se puede usar dentro de una función. Para obtener más información sobre los atributos personalizados, vea el tema [atributo](../../windows/attributes/attribute.md).
 
 ## <a name="example"></a>Ejemplo
 

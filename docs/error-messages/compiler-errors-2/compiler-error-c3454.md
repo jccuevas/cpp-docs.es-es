@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ff8c33cc43bdc1af9a3bf02d9240a0fd5e09c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e469f6715775288720c61ad8a61e16956e4c63d1
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098776"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789168"
 ---
 # <a name="compiler-error-c3454"></a>Error del compilador C3454
 
@@ -29,7 +29,7 @@ No se permite [attribute] en la declaración de clase
 
 Debe definir una clase para que sea un atributo.
 
-Para obtener más información, consulta [attribute](../../windows/attribute.md).
+Para obtener más información, consulte [atributo](../../windows/attributes/attribute.md).
 
 ## <a name="example"></a>Ejemplo
 
