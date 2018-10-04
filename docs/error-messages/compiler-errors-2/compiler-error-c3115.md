@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47a6987a1b540dc42b154c1a181c67e1524043
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 716566066a58c20378128ee56d9da0aa070b6e9b
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090690"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788700"
 ---
 # <a name="compiler-error-c3115"></a>Error del compilador C3115
 
 'attribute': este atributo no se permite en 'construct'
 
-Un atributo se aplicó a una construcción para que no estaba previsto.  Consulte [atributos por uso](../../windows/attributes-by-usage.md) para obtener más información.
+Un atributo se aplicó a una construcción para que no estaba previsto.  Consulte [atributos por uso](../../windows/attributes/attributes-by-usage.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
