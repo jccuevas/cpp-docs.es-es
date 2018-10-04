@@ -1,7 +1,7 @@
 ---
 title: ATL COM + 1.0 componente Asistente | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717918"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250411"
 ---
 # <a name="atl-com-10-component-wizard"></a>Asistente para componentes ATL COM+ 1.0
 
 Use este asistente para agregar un objeto al proyecto que admita servicios COM + 1.0, incluidas las transacciones.
 
 Puede especificar si el objeto admite interfaces duales y automatización. También puede indicar la compatibilidad con la interfaz de la información de error, control de objeto mejorada, transacciones y asincrónica message Queue Server.
+
+> [!WARNING]
+> En Visual Studio 2017 versión 15.9 este asistente de código está en desuso y se quitará en una versión futura de Visual Studio. Este asistente se utiliza habitualmente. Compatibilidad general para ATL y MFC no se ve afectado por la eliminación de este asistente. Si gustaría compartir sus comentarios sobre esta condición de desuso, complete [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 ## <a name="remarks"></a>Comentarios
 

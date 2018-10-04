@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713224"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250372"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Asistente para componentes de páginas Active Server ATL
 
 Este asistente, inserta en el proyecto de un componente de páginas Active Server (ASP). Microsoft Internet Information Services (IIS) utiliza los componentes ASP como parte de su arquitectura de desarrollo de páginas Web.
 
 Con este asistente, puede especificar que el componente de subprocesamiento del modelo y su compatibilidad con la agregación. También puede indicar la compatibilidad con la interfaz de la información de errores, puntos de conexión y el cálculo de referencias de subprocesamiento libre.
+
+> [!WARNING]
+> En Visual Studio 2017 versión 15.9 este asistente de código está en desuso y se quitará en una versión futura de Visual Studio. Este asistente se utiliza habitualmente. Compatibilidad general para ATL y MFC no se ve afectado por la eliminación de este asistente. Si gustaría compartir sus comentarios sobre esta condición de desuso, complete [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764298"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234072"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementación de un cuadro de diálogo
 
@@ -30,7 +30,7 @@ Hay dos maneras de agregar un cuadro de diálogo para el proyecto ATL: usar el A
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Agregar un cuadro de diálogo con el Asistente de cuadro de diálogo ATL
 
-En el [cuadro de diálogo Agregar clase](../ide/add-class-dialog-box.md), seleccione el objeto de cuadro de diálogo ATL para agregar un cuadro de diálogo a un proyecto ATL. Cumplimente el Asistente de cuadro de diálogo ATL según corresponda y haga clic en **finalizar**. El asistente agrega una clase derivada de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) al proyecto. Abra la vista de recursos desde el **vista** menú, busque el cuadro de diálogo y haga doble clic en él para abrirlo en el editor de recursos.
+En el [cuadro de diálogo Agregar clase](../ide/add-class-dialog-box.md), seleccione el objeto de cuadro de diálogo ATL para agregar un cuadro de diálogo a un proyecto ATL. Cumplimente el Asistente de cuadro de diálogo ATL según corresponda y haga clic en **finalizar**. El asistente agrega una clase derivada de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) al proyecto. Abra **vista de recursos** desde el **vista** menú, busque el cuadro de diálogo y haga doble clic en él para abrirlo en el editor de recursos.
 
 > [!NOTE]
 >  Si se deriva de su cuadro de diálogo `CAxDialogImpl`, puede hospedar tanto ActiveX y controles de Windows. Si no desea la sobrecarga de la compatibilidad con controles ActiveX en la clase de cuadro de diálogo, utilice [CSimpleDialog](../atl/reference/csimpledialog-class.md) o [CDialogImpl](../atl/reference/cdialogimpl-class.md) en su lugar.

@@ -1,28 +1,40 @@
 ---
 title: EventTargetArray (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::AddTail
+- event/Microsoft::WRL::Details::EventTargetArray::Begin
+- event/Microsoft::WRL::Details::EventTargetArray::End
+- event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::Length
+- event/Microsoft::WRL::Details::EventTargetArray::~EventTargetArray
 dev_langs:
 - C++
 helpviewer_keywords:
-- EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray::AddTail method
+- Microsoft::WRL::Details::EventTargetArray::Begin method
+- Microsoft::WRL::Details::EventTargetArray::End method
+- Microsoft::WRL::Details::EventTargetArray::EventTargetArray, constructor
+- Microsoft::WRL::Details::EventTargetArray::Length method
+- Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3be91f85838ceb557edd5def7d7984aaf8904ea5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a02c571f33378ed65fc4b0c4efc7d1a82144279f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575670"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234714"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray (Clase)
 
@@ -38,25 +50,25 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 
 Representa una matriz de controladores de eventos.
 
-Los controladores de eventos que están asociados con un [EventSource](../windows/eventsource-class.md) objeto se almacenan en un protegido **EventTargetArray** miembro de datos.
+Los controladores de eventos que están asociados con un [EventSource](../windows/eventsource-class.md) objeto se almacenan en un protegido `EventTargetArray` miembro de datos.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[EventTargetArray::EventTargetArray (constructor)](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializa una nueva instancia de la **EventTargetArray** clase.|
-|[EventTargetArray::~EventTargetArray (destructor)](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Desinicializa actual **EventTargetArray** clase.|
+Name                                                           | Descripción
+-------------------------------------------------------------- | -----------------------------------------------------------
+[Eventtargetarray](#eventtargetarray)        | Inicializa una nueva instancia de la clase `EventTargetArray`.
+[EventTargetArray:: ~ EventTargetArray](#tilde-eventtargetarray) | Desinicializa actual `EventTargetArray` clase.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[EventTargetArray::AddTail (método)](../windows/eventtargetarray-addtail-method.md)|El controlador de eventos especificado se anexa al final de la matriz interna de controladores de eventos.|
-|[EventTargetArray::Begin (método)](../windows/eventtargetarray-begin-method.md)|Obtiene la dirección del primer elemento de la matriz interna de controladores de eventos.|
-|[EventTargetArray::End (método)](../windows/eventtargetarray-end-method.md)|Obtiene la dirección del último elemento de la matriz interna de controladores de eventos.|
-|[EventTargetArray::Length (método)](../windows/eventtargetarray-length-method.md)|Obtiene el número actual de elementos de la matriz interna de controladores de eventos.|
+Name                                  | Descripción
+------------------------------------- | ---------------------------------------------------------------------------------------
+[AddTail](#addtail) | El controlador de eventos especificado se anexa al final de la matriz interna de controladores de eventos.
+[Eventtargetarray](#begin)     | Obtiene la dirección del primer elemento de la matriz interna de controladores de eventos.
+[Eventtargetarray](#end)         | Obtiene la dirección del último elemento de la matriz interna de controladores de eventos.
+[Eventtargetarray](#length)   | Obtiene el número actual de elementos de la matriz interna de controladores de eventos.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -68,6 +80,117 @@ Los controladores de eventos que están asociados con un [EventSource](../window
 
 **Namespace:** wrl
 
-## <a name="see-also"></a>Vea también
+## <a name="tilde-eventtargetarray"></a>EventTargetArray:: ~ EventTargetArray
 
-[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+~EventTargetArray();
+```
+
+### <a name="remarks"></a>Comentarios
+
+Desinicializa actual `EventTargetArray` clase.
+
+## <a name="addtail"></a>AddTail
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Elemento*<br/>
+Puntero al controlador de eventos para anexar.
+
+### <a name="remarks"></a>Comentarios
+
+El controlador de eventos especificado se anexa al final de la matriz interna de controladores de eventos.
+
+`AddTail()` está pensado para ser utilizado internamente por sólo el `EventSource` clase.
+
+## <a name="begin"></a>Eventtargetarray
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+ComPtr<IUnknown>* Begin();
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+La dirección del primer elemento de la matriz interna de controladores de eventos.
+
+### <a name="remarks"></a>Comentarios
+
+Obtiene la dirección del primer elemento de la matriz interna de controladores de eventos.
+
+## <a name="end"></a>Eventtargetarray
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+ComPtr<IUnknown>* End();
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+La dirección del último elemento de la matriz interna de controladores de eventos.
+
+### <a name="remarks"></a>Comentarios
+
+Obtiene la dirección del último elemento de la matriz interna de controladores de eventos.
+
+## <a name="eventtargetarray"></a>Eventtargetarray
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+EventTargetArray(
+   _Out_ HRESULT* hr,
+   size_t items
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*recursos humanos*<br/>
+Después de las operaciones de este constructor, parámetro *hr* indica si la asignación de la matriz se realizó correctamente o no. En la lista siguiente se muestra los valores posibles para *hr*.
+
++   S_OK<br/>
+    La operación se realizó correctamente.
+
++   E_OUTOFMEMORY<br/>
+    No se pudo asignar memoria para la matriz.
+
++   S_FALSE<br/>
+    Parámetro *elementos* es menor o igual que cero.
+
+*elementos*<br/>
+El número de elementos de matriz que se va a asignar.
+
+### <a name="remarks"></a>Comentarios
+
+Inicializa una nueva instancia de la clase `EventTargetArray`.
+
+`EventTargetArray` se usa para mantener una matriz de controladores de eventos en un `EventSource` objeto.
+
+## <a name="length"></a>Eventtargetarray
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+size_t Length();
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+El número actual de elementos de la matriz interna de controladores de eventos.
+
+### <a name="remarks"></a>Comentarios
+
+Obtiene el número actual de elementos de la matriz interna de controladores de eventos.

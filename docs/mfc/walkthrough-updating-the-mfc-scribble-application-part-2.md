@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169689"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235443"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Tutorial: Actualizar la aplicación Scribble de MFC (Parte 2)
 
@@ -116,17 +116,17 @@ La aplicación original Scribble permite al usuario seleccionar el ancho del lá
 
 1. Haga clic en el segundo cuadro combinado. Cambio **título** a `Thick Pen`, **ID** a `ID_PEN_THICK_WIDTH`, **tipo** a `Drop List`, **datos** a `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, y **texto** a `5`.
 
-1. Los nuevos cuadros combinados no corresponden a los elementos del menú existente. Por lo tanto, debe crear un elemento de menú para cada opción de lápiz.
+1. Los nuevos cuadros combinados no corresponden a los elementos de menú existentes, por lo que debe crear un elemento de menú para cada opción de lápiz.
 
    1. En el **vista de recursos** ventana, abra el **IDR_SCRIBBTYPE** recurso de menú.
 
    1. Haga clic en **lápiz** para abrir el menú de lápiz. A continuación, haga clic en **escriba aquí** y tipo `Thi&n Pen`.
 
-   1. Haga clic en el texto que escribió para abrir el **propiedades** ventana y, a continuación, cambiar el identificador de propiedad para `ID_PEN_THIN_WIDTH`.
+   1. Haga clic en el texto que ha escrito para abrir el **propiedades** ventana y, a continuación, cambiar el identificador de propiedad para `ID_PEN_THIN_WIDTH`.
 
-   1. También debe crear un controlador de eventos para cada elemento de menú lápiz. Haga clic en el **Thi a & brir n** elemento de menú que acaba de crear y, a continuación, haga clic en **Add Event Handler**. El **Asistente para controladores de eventos** se muestra.
+   1. Cree un controlador de eventos para cada elemento de menú lápiz. Haga clic en el **Thi a & brir n** elemento de menú que ha creado y, a continuación, haga clic en **Add Event Handler**. El **Asistente para controladores de eventos** se muestra.
 
-   1. En el **clase lista** cuadro en el asistente, seleccione **CScribbleDoc** y, a continuación, haga clic en **agregar y editar**. Esto crea un controlador de eventos denominado `CScribbleDoc::OnPenThinWidth`.
+   1. En el **clase lista** cuadro en el asistente, seleccione **CScribbleDoc** y, a continuación, haga clic en **agregar y editar**. El comando crea un controlador de eventos denominado `CScribbleDoc::OnPenThinWidth`.
 
    1. Agregue el código siguiente a `CScribbleDoc::OnPenThinWidth`.
 
@@ -156,11 +156,11 @@ La aplicación original Scribble permite al usuario seleccionar el ancho del lá
 
    1. Haga clic en **lápiz** para abrir el menú de lápiz. A continuación, haga clic en **escriba aquí** y tipo `Thic&k Pen`.
 
-   1. Haga clic en el texto que escribió para mostrar el **propiedades** ventana. Cambiar la propiedad ID en `ID_PEN_THICK_WIDTH`.
+   1. Haga clic en el texto que ha escrito para mostrar el **propiedades** ventana. Cambiar la propiedad ID en `ID_PEN_THICK_WIDTH`.
 
-   1. Haga clic en el **pluma gruesa** elemento de menú que acaba de crear y, a continuación, haga clic en **Add Event Handler**. El **Asistente para controladores de eventos** se muestra.
+   1. Haga clic en el **pluma gruesa** elemento de menú que ha creado y, a continuación, haga clic en **Add Event Handler**. El **Asistente para controladores de eventos** se muestra.
 
-   1. En el **clase lista** cuadro del asistente, seleccione **CScribbleDoc** y, a continuación, haga clic en **agregar y editar**. Esto crea un controlador de eventos denominado `CScribbleDoc::OnPenThickWidth`.
+   1. En el **clase lista** cuadro del asistente, seleccione **CScribbleDoc** y, a continuación, haga clic en **agregar y editar**. El comando crea un controlador de eventos denominado `CScribbleDoc::OnPenThickWidth`.
 
    1. Agregue el código siguiente a `CScribbleDoc::OnPenThickWidth`.
 
@@ -190,17 +190,17 @@ A continuación, agregue un [CMFCRibbonColorButton](../mfc/reference/cmfcribbonc
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Para agregar un botón de color en el panel de lápiz
 
-1. Antes de agregar el botón de color, cree un elemento de menú para él. En el **vista de recursos** ventana, abra el **IDR_SCRIBBTYPE** recurso de menú. Haga clic en el **lápiz** elemento de menú para abrir el menú de lápiz. A continuación, haga clic en **escriba aquí** y tipo `&Color`. Haga clic en el texto que escribió para mostrar el **propiedades** ventana. Cambie el identificador a `ID_PEN_COLOR`.
+1. Antes de agregar el botón de color, cree un elemento de menú para él. En el **vista de recursos** ventana, abra el **IDR_SCRIBBTYPE** recurso de menú. Haga clic en el **lápiz** elemento de menú para abrir el menú de lápiz. A continuación, haga clic en **escriba aquí** y tipo `&Color`. Haga clic en el texto que ha escrito para mostrar el **propiedades** ventana. Cambie el identificador a `ID_PEN_COLOR`.
 
 1. Ahora, agregue el botón de color. Desde el **cuadro de herramientas**, arrastre un **botón Color** a la **lápiz** panel.
 
 1. Haga clic en el botón de color. Cambio **título** a `Color`, **ID** a `ID_PEN_COLOR`, **Simple vistazo** a `True`, **índice de imagen grandes** a `1`, y **modo de división** a `False`.
 
-1. Guarde los cambios y, a continuación, compile y ejecute la aplicación. El nuevo botón de color debe mostrarse en el **lápiz** panel. Sin embargo, no puede utilizarse porque no tiene todavía un controlador de eventos. Los pasos siguientes muestran cómo agregar un controlador de eventos para el botón de color.
+1. Guarde los cambios y, a continuación, compile y ejecute la aplicación. El nuevo botón de color debe mostrarse en el **lápiz** panel. Sin embargo, no puede utilizarse porque aún no tiene un controlador de eventos. Los pasos siguientes muestran cómo agregar un controlador de eventos para el botón de color.
 
 ##  <a name="addcolormember"></a> Agregar a un miembro de Color a la clase de documento
 
-Dado que la aplicación original Scribble no tienen lápices de color, debe escribir una implementación para ellos. Para almacenar el color del lápiz del documento, agregue un nuevo miembro a la clase de documento, `CscribbleDoc`.
+Puesto que la aplicación original Scribble no tiene los lápices de color, debe escribir una implementación para ellos. Para almacenar el color del lápiz del documento, agregue un nuevo miembro a la clase de documento, `CscribbleDoc`.
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>Para agregar a un miembro de color a la clase de documento
 
@@ -211,7 +211,7 @@ Dado que la aplicación original Scribble no tienen lápices de color, debe escr
    COLORREF m_penColor;
    ```
 
-1. Cada documento contiene una lista de los trazos que el usuario haya dibujado. Cada trazo se define mediante un `CStroke` objeto. La `CStroke` clase no incluye información sobre el color del lápiz. Por lo tanto, debe modificar la clase. En scribdoc.h, en el `CStroke` de clases, agregue las siguientes líneas de código después de la definición de la `m_nPenWidth` miembro de datos.
+1. Cada documento contiene una lista de los trazos que el usuario haya dibujado. Cada trazo se define mediante un `CStroke` objeto. La `CStroke` clase no incluye información sobre el color del lápiz, por lo que debe modificar la clase. En scribdoc.h, en el `CStroke` de clases, agregue las siguientes líneas de código después de la definición de la `m_nPenWidth` miembro de datos.
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ Dado que la aplicación original Scribble no tienen lápices de color, debe escr
 
    1. Haga clic en el **Color** elemento de menú y haga clic en **Add Event Handler**. El **Asistente para controladores de eventos** aparece.
 
-   1. En el **clase lista** cuadro en el asistente, seleccione **CScribbleDoc** y, a continuación, haga clic en el **agregar y editar** botón. Esto crea la `CScribbleDoc::OnPenColor` código auxiliar del controlador de eventos.
+   1. En el **clase lista** cuadro en el asistente, seleccione **CScribbleDoc** y, a continuación, haga clic en el **agregar y editar** botón. El comando crea el `CScribbleDoc::OnPenColor` código auxiliar del controlador de eventos.
 
 1. Reemplace el código auxiliar para el `CScribbleDoc::OnPenColor` controlador de eventos con el código siguiente.
 
@@ -287,7 +287,7 @@ Dado que la aplicación original Scribble no tienen lápices de color, debe escr
    }
    ```
 
-1. Guarde los cambios y, a continuación, compile y ejecute la aplicación. Debe poder presiona el botón de color y cambiar el color del lápiz.
+1. Guarde los cambios y, a continuación, compile y ejecute la aplicación. Ahora puede presionar el botón de color y cambiar el color del lápiz.
 
 ##  <a name="initpensave"></a> Inicializando lápices y guardar preferencias
 

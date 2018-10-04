@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169585"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236028"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 
@@ -28,7 +28,7 @@ En este tutorial se muestra cómo usar el **MFC Application Wizard** para crear 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En este tutorial se da por supuesto que ha configurado Visual Studio para usar **configuración General de desarrollo**. Si usa valores diferentes, algunos de los elementos de la interfaz de usuario a los que se hace referencia en las instrucciones siguientes pueden no mostrarse.
+En este tutorial se da por supuesto que ha configurado Visual Studio para usar **configuración General de desarrollo**. Si usa una configuración diferente, algunos de los elementos de interfaz (IU) del usuario que se hace referencia en las instrucciones siguientes podrían no mostrarse.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Para crear una aplicación MFC con una cinta de opciones
 
@@ -73,7 +73,7 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 1. A continuación, personalice el panel. Los paneles se usan para agrupar los elementos que se relacionan lógicamente entre sí. Por ejemplo, en el **inicio** ficha de esta aplicación, el **cortar**, **copia**, y **pegar** los comandos se encuentran en el  **Portapapeles** panel. Para personalizar el panel, haga clic en **Panel1** y, a continuación, haga clic en **propiedades**. En el **propiedades** ventana, cambio **título** a *favoritos*.
 
-    Puede especificar el **Image Index** para el panel. Este número especifica el icono que se muestra si el panel de la cinta se agrega a la **la barra de herramientas de acceso rápido**. El icono no aparece en el propio panel de la cinta.
+    Puede especificar el **Image Index** para el panel. Este número especifica el icono que se muestra si el panel de la cinta se agrega a la **la barra de herramientas de acceso rápido**. El icono no se muestra en el panel de la cinta.
 
 1. Para comprobar que la categoría y el panel de la cinta se crearon correctamente, obtenga una vista previa del control de cinta. En el **barra de herramientas del Editor de Ribbon**, haga clic en el **Ribbon de prueba** botón. Un **personalizado** pestaña y **favoritos** panel debe mostrarse en la cinta de opciones.
 

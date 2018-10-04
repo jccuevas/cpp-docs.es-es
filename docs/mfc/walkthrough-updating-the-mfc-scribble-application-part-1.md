@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169780"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235514"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 
@@ -54,7 +54,7 @@ Esta parte del tutorial tiene las secciones siguientes:
 
 ##  <a name="replaceclass"></a> Reemplazar las clases Base
 
-Para convertir una aplicación que admite un menú en una aplicación que admite una cinta, la aplicación, la ventana marco y las clases de barra de herramientas deben derivarse de clases base actualizadas. (Sugerimos no modificar el ejemplo original Scribble; en su lugar, limpie el proyecto Scribble, cópielo a otro directorio y, a continuación, modifique la copia).
+Para convertir una aplicación que admite un menú en una aplicación que admite una cinta, la aplicación, la ventana marco y las clases de barra de herramientas deben derivarse de clases base actualizadas. (Se recomienda que no modifique el ejemplo original Scribble. En su lugar, limpie el proyecto Scribble, cópielo en otro directorio y, a continuación, modifique la copia.)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Para reemplazar las clases base de la aplicación Scribble
 
@@ -117,7 +117,7 @@ Para convertir una aplicación que admite un menú en una aplicación que admite
 
 Los siguientes cuatro pasos de este tutorial requieren recursos de mapa de bits. Puede obtener los mapas de bits adecuados de varias maneras:
 
-- Use la [editores de recursos](../windows/resource-editors.md) inventar sus propios mapas de bits. O usar los editores de recursos para ensamblar mapas de bits de las imágenes de portable network graphics (PNG) que se incluye con Visual Studio y se pueden descargar desde el [biblioteca de imágenes de Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Use la [editores de recursos](../windows/resource-editors.md) inventar sus propios mapas de bits. O usar los editores de recursos para ensamblar mapas de bits de las imágenes de portable network graphics (PNG) que se incluyen con Visual Studio y pueden descargarse desde el [biblioteca de imágenes de Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     Sin embargo, el **cinta** interfaz de usuario requiere que ciertos mapas de bits admitan imágenes transparentes. Mapas de bits transparentes utilizan píxeles de 32 bits, donde 24 bits especifican los componentes rojos, verde y azules del color y 8 bits definen un *canal alfa* que especifica la transparencia del color. Los editores de recursos actuales pueden ver, pero no modificar los mapas de bits con píxeles de 32 bits. Por consiguiente, utilice un editor de imágenes externo en lugar de los editores de recursos para manipular los mapas de bits transparentes.
 
@@ -165,7 +165,7 @@ En este tutorial copia los archivos de recursos en el ejemplo creado en [Tutoria
 
 ##  <a name="addribbon"></a> Agregar un recurso de cinta al proyecto
 
-Al convertir una aplicación que utiliza los menús de una aplicación que tiene una cinta, no es necesario quitar o deshabilitar los menús existentes. En su lugar, cree un recurso de cinta, agregue los botones de la cinta y, a continuación, asocie los nuevos botones con los elementos de menú existentes. Aunque los menús no estén visibles, los mensajes de la barra de cinta se enrutan a través de los menús. Además, los accesos directos de menú siguen funcionando.
+Al convertir una aplicación que utiliza los menús de una aplicación que utiliza una cinta de opciones, no tienes que quitar o deshabilitar los menús existentes. Basta con crear un recurso de cinta, agregue botones de la cinta y, a continuación, asocie los nuevos botones con los elementos de menú existente. Aunque ya no están visibles los menús, los mensajes de la barra de cinta se enrutan a través de los menús y accesos directos del menú siguen funcionando.
 
 Consta de una cinta de opciones de la **aplicación** botón, que es el botón grande en la parte superior izquierda de la cinta de opciones y uno o más pestañas de categorías. Cada pestaña de categoría contiene uno o varios paneles que actúan como contenedores para los botones y los controles de la cinta. El siguiente procedimiento muestra cómo crear un recurso de cinta y, a continuación, personalizar el **aplicación** botón.
 
@@ -205,7 +205,7 @@ Consta de una cinta de opciones de la **aplicación** botón, que es el botón g
 
    1. Haga clic en el **impresión** botón y, a continuación, haga clic en **insertar** para agregar otro botón. Cambio **título** a `Print Pre&view`, **ID** a `ID_FILE_PRINT_PREVIEW`, **imagen** a `6`, y **imagen grande** a `6`.
 
-   1. Ha modificado el **Main Items**. Haga clic en **cerrar** para salir del **Editor de elementos**.
+   1. Ahora ha modificado el **Main Items**. Haga clic en **cerrar** para salir del **Editor de elementos**.
 
 1. La modificación siguiente crea un botón Salir que aparece en la parte inferior de la **aplicación** menú del botón.
 
@@ -221,14 +221,14 @@ En los pasos siguientes se muestra cómo crear una instancia de la barra de cint
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Para crear una instancia de la barra de cinta
 
-1. En el archivo mainfrm.h, agregue un miembro de datos a la sección protegida de `CMainFrame`, la definición de clase del marco principal. Este miembro representa la barra de cinta.
+1. En el archivo mainfrm.h, agregue un miembro de datos a la sección protegida de `CMainFrame`, la definición de clase del marco principal. Este miembro es de la barra de cinta de opciones.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. En el archivo mainfrm.cpp, agregue el código siguiente antes de la última instrucción `return` al final de la función `CMainFrame::OnCreate`. De esta forma se crea una instancia de la barra de cinta.
+2. En el archivo mainfrm.cpp, agregue el código siguiente antes de la última instrucción `return` al final de la función `CMainFrame::OnCreate`. Crea una instancia de la barra de cinta.
 
     ```cpp
     // Create the ribbon bar
@@ -250,9 +250,9 @@ Ahora que ha creado el **aplicación** botón, puede agregar elementos a la cint
 
 1. El programa Scribble solo requiere una categoría. En la vista Diseño, en el **cuadro de herramientas**, haga doble clic en **categoría** para agregar uno y mostrar sus propiedades. Cambie los valores de propiedad como sigue: **título** a `&Home`, **Large Images** a `IDB_RIBBON_HOMELARGE`, **imágenes pequeñas** a `IDB_RIBBON_HOMESMALL`.
 
-1. Cada categoría de la cinta está organizada en paneles con nombre. Cada panel contiene un conjunto de controles que realizan operaciones relacionadas. Esta categoría tiene un panel. Haga clic en **Panel**y, a continuación, cambie **título** a `Edit`.
+1. Cada categoría de la cinta está organizada en paneles con nombre. Cada panel contiene un conjunto de controles que completar operaciones relacionadas. Esta categoría tiene un panel. Haga clic en **Panel**y, a continuación, cambie **título** a `Edit`.
 
-1. Para el **editar** del panel, agregue un botón que se encarga de borrar el contenido del documento. El identificador del mensaje para este botón ya se ha definido en el `IDR_SCRIBBTYPE` recurso de menú. Especificar `Clear All` como el texto del botón y el índice del mapa de bits que decora el botón. Abra el **cuadro de herramientas**y, a continuación, arrastre un **botón** a la **editar** panel. Haga clic en el botón y, a continuación, cambie **título** a `Clear All`, **ID** a `ID_EDIT_CLEAR_ALL`, **Image Index** a `0`, **Large Image Index**  a `0`.
+1. Para el **editar** del panel, agregue un botón responsable de borrar el contenido del documento. El identificador del mensaje para este botón ya se ha definido en el `IDR_SCRIBBTYPE` recurso de menú. Especificar `Clear All` como el texto del botón y el índice del mapa de bits que decora el botón. Abra el **cuadro de herramientas**y, a continuación, arrastre un **botón** a la **editar** panel. Haga clic en el botón y, a continuación, cambie **título** a `Clear All`, **ID** a `ID_EDIT_CLEAR_ALL`, **Image Index** a `0`, **Large Image Index**  a `0`.
 
 1. Guarde los cambios y, a continuación, compile y ejecute la aplicación. La aplicación Scribble debería mostrarse y debe tener una barra de cinta en la parte superior de la ventana en lugar de una barra de menús. La barra de cinta debe tener una categoría, **inicio**, y **inicio** debe tener un panel, **editar**. Se deben asociados con los controladores de eventos existente, los botones de la cinta de opciones que agregó y **abierto**, **cerrar**, **guardar**, **impresión**, y **Borrar todo** botones deberían funcionar según lo previsto.
 

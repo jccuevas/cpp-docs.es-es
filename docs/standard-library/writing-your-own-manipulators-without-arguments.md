@@ -14,39 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8fcc1f316b5281e8c6775492d402559d77f483
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8bfad1919863a58554604fe6d32b4563e57a14a
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857758"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235716"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Escribir manipuladores propios sin argumentos
 
 Escribir manipuladores que no usan argumentos no requiere la derivación de clases ni el uso de macros complejas. Supongamos que su impresora requiere el par \<ESC >[ para entrar en modo de negrita. Puede insertar este par directamente en la secuencia:
 
 ```cpp
-cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;
+cout << "regular " << '\033' << '[' << "boldface" << endl;
 ```
 
 O puede definir el manipulador `bold`, que inserta los caracteres:
 
 ```cpp
 ostream& bold(ostream& os) {
-    return os <<'\033' <<'[';
+    return os << '\033' << '[';
 }
-cout <<"regular " <<bold <<"boldface" <<endl;
+cout << "regular " << bold << "boldface" << endl;
 ```
 
 La función `bold` definida globalmente toma un argumento de referencia `ostream` y devuelve la referencia `ostream`. No es una función miembro ni una función friend porque no necesita tener acceso a los elementos de ninguna clase privada. La función `bold` se conecta a la secuencia porque el operador `<<` de la secuencia se sobrecarga para aceptar este tipo de función, mediante una declaración de aspecto similar al siguiente:
 
 ```cpp
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
-{     // call ios_base manipulator
- (*_Pfn)(*(ios_base *)this);
+{
+    // call ios_base manipulator
+    (*_Pfn)(*(ios_base *)this);
 
     return (*this);
-
 }
 ```
 

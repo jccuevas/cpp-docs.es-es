@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029663"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235456"
 ---
 # <a name="how-to-migrate-to-clr"></a>Cómo: Migrar a /clr
 
@@ -118,7 +118,7 @@ Se admiten encabezados precompilados en **/CLR**. Sin embargo, si solo compila a
 
 La manera más fácil de compilar un proyecto donde algunos módulos se compilan **/CLR** consiste en deshabilitar completamente los encabezados precompilados. (En el cuadro de diálogo Páginas de propiedades del proyecto, abra el nodo C/C++ y seleccione Encabezados precompilados. A continuación, cambie la propiedad Crear/Utilizar encabezado precompilado a "No utilizar encabezados precompilados").
 
-Sin embargo, particularmente para los proyectos grandes, los encabezados precompilados proporcionan una velocidad de compilación mucho mayor, de modo que no es deseable deshabilitar esta característica. En este caso es mejor configurar el **/CLR** y no **/CLR** archivos para utilizar encabezados precompilados independientes. Esto puede hacerse en un solo paso mediante la selección múltiple los módulos que se compilarán **/CLR** mediante el Explorador de soluciones, con el botón secundario en el grupo y seleccione Propiedades. A continuación, cambie las propiedades Crear o utilizar encabezado precompilado a través de archivo y Archivo de encabezado precompilado para utilizar un nombre de archivo de encabezado y un archivo PCH diferentes, respectivamente.
+Sin embargo, particularmente para los proyectos grandes, los encabezados precompilados proporcionan una velocidad de compilación mucho mayor, de modo que no es deseable deshabilitar esta característica. En este caso es mejor configurar el **/CLR** y no **/CLR** archivos para utilizar encabezados precompilados independientes. Esto puede hacerse en un solo paso mediante la selección múltiple los módulos que se compilarán **/CLR** mediante **el Explorador de soluciones**, con el botón secundario en el grupo y seleccione Propiedades. A continuación, cambie las propiedades Crear o utilizar encabezado precompilado a través de archivo y Archivo de encabezado precompilado para utilizar un nombre de archivo de encabezado y un archivo PCH diferentes, respectivamente.
 
 ## <a name="fixing-errors"></a>Corregir errores
 

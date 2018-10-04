@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029624"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234331"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: Crear un programa estándar de C++ (C++)
 
@@ -32,7 +32,7 @@ Puede usar Visual C++ en el entorno de desarrollo integrado (IDE) de Visual Stud
 
 Puede escribir su propio programa de C++ o utilizar uno de los programas de ejemplo. El programa de ejemplo en este tutorial es una aplicación de consola. Esta aplicación usa el `set` contenedor en la biblioteca estándar de C++.
 
-Visual C++ cumple con el estándar de C++ de 2003, con estas excepciones principales: búsqueda de nombres en dos fases, especificaciones de excepciones y exportación. Además, Visual C++ admite varias características C ++ 0 x, por ejemplo, las expresiones lambda, auto, static_assert, referencias rvalue y plantillas extern.
+Visual C++ sigue el estándar de C++ de 2003, con estas excepciones principales: búsqueda de nombres en dos fases, especificaciones de excepciones y exportación. Además, Visual C++ admite varias características C ++ 0 x, por ejemplo, las expresiones lambda, auto, static_assert, referencias rvalue y plantillas extern.
 
 > [!NOTE]
 > Si se requiere compatibilidad con el estándar, use el `/Za` opción del compilador para deshabilitar las extensiones de Microsoft al estándar. Para obtener más información, consulte [/Za, /Ze (deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md).
@@ -59,7 +59,7 @@ Para completar este tutorial, debe comprender los conceptos básicos del lenguaj
    > [!NOTE]
    > Las versiones de Visual Studio anteriores a 2017, complete el **Asistente para aplicaciones Win32**. Haga clic en **siguiente**, a continuación, asegúrese de que **aplicación de consola** está seleccionada y desactive el **encabezados precompilados** cuadro. Haga clic en **Finalizar**.
 
-1. Si **el Explorador de soluciones** no aparece, en el **vista** menú, haga clic en **el Explorador de soluciones**.
+1. Si **el Explorador de soluciones** no se muestra, en el **vista** menú, haga clic en **el Explorador de soluciones**.
 
 1. Agregue un nuevo archivo de origen al proyecto, como sigue.
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169416"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235664"
 ---
 # <a name="walkthroughs-mfc"></a>Tutoriales (MFC)
 
@@ -28,7 +28,7 @@ Esta sección contiene artículos que le guiarán por diversas tareas asociadas 
 ## <a name="in-this-section"></a>En esta sección
 
 [Tutorial: Usar los nuevos controles de Shell de MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-En este tutorial creará una aplicación similar al Explorador de archivos. Creará una ventana que contendrá dos paneles. El panel de la izquierda contendrá un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objeto que mostrará el escritorio en una vista jerárquica. El panel derecho contendrá un [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) que mostrará los archivos en la carpeta que está seleccionada en el panel izquierdo.
+En este tutorial, creará una aplicación similar al explorador de archivos. Creación de una ventana que contiene dos paneles. El panel izquierdo tiene un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objeto que mostrará el escritorio en una vista jerárquica. El panel derecho tiene un [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) que mostrará los archivos en la carpeta que está seleccionada en el panel izquierdo.
 
 [Tutorial: Poner controles en las barras de herramientas](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 Las barras de herramientas de MFC modernas pueden hospedar otros controles distintos de los simples botones. En este artículo se explica cómo hacerlo.

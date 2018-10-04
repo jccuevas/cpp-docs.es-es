@@ -1,7 +1,7 @@
 ---
 title: path (Clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725314"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235469"
 ---
 # <a name="path-class"></a>path (Clase)
 
-El **ruta** clase almacena un objeto de tipo `string_type`, llamado `myname` aquí a efectos de la exposición, que se puede usar como una ruta de acceso. `string_type` es un sinónimo de `basic_string<value_type>`, donde `value_type` es un sinónimo de **char** en Windows o **wchar_t** en Posix.
+El **ruta** clase almacena un objeto de tipo `string_type`, llamado `myname` aquí a efectos de la exposición, que se puede usar como una ruta de acceso. `string_type` es un sinónimo de `basic_string<value_type>`, donde `value_type` es un sinónimo de **wchar_t** en Windows o **char** en POSIX.
 
 Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).
 

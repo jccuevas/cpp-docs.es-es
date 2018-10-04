@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599306"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250450"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL (Espacio de nombres)
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |Name|Descripción|
 |----------|-----------------|
 |[AsWeak (función)](../windows/asweak-function.md)|Recupera una referencia débil a una instancia especificada.|
-|[Función de devolución de llamada](../windows/callback-function-windows-runtime-cpp-template-library.md)|Crea un objeto cuya función de miembro es un método de devolución de llamada.|
+|[Función de devolución de llamada (WRL)](../windows/callback-function-wrl.md)|Crea un objeto cuya función de miembro es un método de devolución de llamada.|
 |[CreateActivationFactory (función)](../windows/createactivationfactory-function.md)|Crea un generador que produce instancias de la clase especificada que puede activar Windows Runtime.|
 |[CreateClassFactory (función)](../windows/createclassfactory-function.md)|Crea un generador que produce instancias de la clase especificada.|
 |[Make (función)](../windows/make-function.md)|Inicializa la clase en tiempo de ejecución de Windows especificada.|
