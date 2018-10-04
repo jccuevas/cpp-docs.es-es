@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 16613425633f55eeed152e86c1b4fea7f00a784c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169442"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234075"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Tutorial: Agregar animación a un proyecto de MFC
 
@@ -100,11 +100,11 @@ Para completar este tutorial, debe tener Visual Studio.
 
 1. En el **Asistente para clases MFC**, haga clic en **Aceptar**.
 
-1. Guardar MFCAnimationWalkthroughView.cpp, que está abierto en el editor, pero no lo cierre.
+1. Guardar MFCAnimationWalkthroughView.cpp, que está abierto en el editor, pero no la cierre.
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>Para agregar un objeto animado al proyecto
 
-1. En el Explorador de soluciones, haga doble clic en MFCAnimationWalkthroughView.h para abrirlo para su modificación. Justo antes de la definición de la `CMFCAnimationWalkthroughView` de clases, agregue el código siguiente para crear un controlador de animación personalizada que se va a controlar los conflictos de programación con el objeto de animación.
+1. En **el Explorador de soluciones**, haga doble clic en MFCAnimationWalkthroughView.h para abrirlo para su modificación. Justo antes de la definición de la `CMFCAnimationWalkthroughView` de clases, agregue el código siguiente para crear un controlador de animación personalizada que se va a controlar los conflictos de programación con el objeto de animación.
 
     ```cpp
     class CCustomAnimationController : public CAnimationController

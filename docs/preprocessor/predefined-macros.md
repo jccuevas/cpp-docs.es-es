@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408432"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235651"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -435,7 +435,7 @@ Microsoft Visual C++ admite estas macros predefinidas adicionales.
 
 - **&#95;WINRT&#95;DLL** definido como 1 cuando se compila como C++ y ambos [/ZW (compilación de Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md) y [/LD o /LDd](../build/reference/md-mt-ld-use-run-time-library.md) se establecen las opciones del compilador. En caso contrario, es indefinido.
 
- Macros de preprocesador utilizadas para determinar la versión de la biblioteca ATL o MFC no están predefinidas por el compilador. Estas macros se definen en los encabezados para la biblioteca, por lo que no están definidos en las directivas de preprocesador antes de que se incluye el encabezado necesario.
+Macros de preprocesador utilizadas para determinar la versión de la biblioteca ATL o MFC no están predefinidas por el compilador. Estas macros se definen en los encabezados para la biblioteca, por lo que no están definidos en las directivas de preprocesador antes de que se incluye el encabezado necesario.
 
 - **&#95;ATL&#95;VIDOR** definido en \<atldef.h > como un literal entero que codifica el número de versión ATL.
 

@@ -1,7 +1,7 @@
 ---
 title: Ejecutar LIB | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894608"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235428"
 ---
 # <a name="running-lib"></a>Ejecutar LIB
 
@@ -62,25 +62,29 @@ Puede pasar argumentos de línea de comandos a LIB en un archivo de comandos uti
 
 El archivo */commandfile* es un archivo de texto. No se permite ningún espacio o tabulación entre la arroba (**\@**) y el nombre de archivo. No hay ninguna extensión predeterminada; debe especificar el nombre de archivo completo, incluido cualquier extensión. No se puede usar caracteres comodín. Puede especificar una ruta de acceso absoluta o relativa con el nombre de archivo.
 
-En el archivo de comandos, se pueden separar los argumentos con espacios o tabulaciones, como puedan en la línea de comandos; También pueden separarse por caracteres de nueva línea. Usar un punto y coma (;) para marcar un comentario. LIB omite todo el texto desde el punto y coma al final de la línea.
+En el archivo de comandos, se pueden separar los argumentos con espacios o tabulaciones, como puedan en la línea de comandos; También pueden separarse por caracteres de nueva línea. Use un punto y coma (**;**) para marcar un comentario. LIB omite todo el texto desde el punto y coma al final de la línea.
 
 Puede especificar todos o parte de la línea de comandos en un archivo de comandos, y puede usar más de un archivo de comandos en un comando LIB. LIB acepta la entrada de archivo de comandos como si se especificaron en esa ubicación en la línea de comandos. Archivos de comandos no se pueden anidar. LIB refleje el contenido de archivos de comandos, a menos que se usa la opción /NOLOGO.
 
 ## <a name="using-lib-options"></a>Uso de las opciones de LIB
 
-Una opción consta de un especificador de opción, que es un guión (-) o una barra diagonal (/), seguido del nombre de la opción. Los nombres de opción no pueden abreviarse. Algunas opciones toman un argumento, especificado después de dos puntos (:). No se permiten espacios ni tabulaciones dentro de una especificación de opción. Use uno o más espacios o tabulaciones para separar especificaciones de opción en la línea de comandos. Los nombres de opción y sus argumentos de nombre de archivo o la palabra clave no distinguen mayúsculas de minúsculas, pero los identificadores utilizados como argumentos distinguen mayúsculas de minúsculas. LIB procesa las opciones en el orden especificado en la línea de comandos y en archivos de comandos. Si se repite una opción con distintos argumentos, la última de ellas para procesarse tiene prioridad.
+Una opción consta de un especificador de opción, que es ya sea un guión (**-**) o una barra diagonal (**/**), seguido del nombre de la opción. Los nombres de opción no pueden abreviarse. Algunas opciones toman un argumento, especificado después de dos puntos (**:**). No se permiten espacios ni tabulaciones dentro de una especificación de opción. Use uno o más espacios o tabulaciones para separar especificaciones de opción en la línea de comandos. Los nombres de opción y sus argumentos de nombre de archivo o la palabra clave no distinguen mayúsculas de minúsculas, pero los identificadores utilizados como argumentos distinguen mayúsculas de minúsculas. LIB procesa las opciones en el orden especificado en la línea de comandos y en archivos de comandos. Si se repite una opción con distintos argumentos, la última de ellas para procesarse tiene prioridad.
 
 Las siguientes opciones se aplican a todos los modos de LIB:
 
 > **/ ERRORREPORT** [**NONE** &AMP;#124; **PROMPT** &AMP;#124; **COLA** &AMP;#124; **ENVIAR**]
 
-Si lib.exe genera un error en tiempo de ejecución, puede utilizar/errorReport para enviar información a Microsoft sobre estos errores internos.
+Si lib.exe genera un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft sobre estos errores internos.
 
-Para obtener más información sobre/errorreport, vea [/errorReport (informar de errores de compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Para obtener más información acerca de **/errorreport**, consulte [/errorReport (informar de errores de compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
 > **/ LTCG**
 
-Hace que la biblioteca que se crea mediante la generación de código en tiempo de vínculo.  Para obtener más información, consulte [/LTCG](../../build/reference/ltcg-link-time-code-generation.md).
+Es el acrónimo "LTCG" *generación de código en tiempo de vínculo*. Esta característica requiere la cooperación entre el compilador ([cl.exe](compiler-options.md)), LIB y el vinculador ([vínculo](linker-options.md)) con el fin de optimizar el código más allá de lo que puede hacer cualquier componente por sí mismo.
+
+Para LIB, el **/LTCG** opción especifica que las entradas de cl.exe incluyen los archivos de objeto que se generaron mediante el [/GL](gl-whole-program-optimization.md) opción del compilador. Si LIB encuentra esas entradas y **/LTCG** no se especifica, se reiniciará con/LTCG habilita después de mostrar un mensaje informativo. En otras palabras, no es necesario establecer explícitamente esta opción, pero acelera el rendimiento de compilación debido a que LIB no tiene que reiniciarse.
+
+En el proceso de compilación, se envía la salida de LIB al vínculo. VÍNCULO tiene su propio independiente **/LTCG** opción que se usa para realizar varias optimizaciones, incluida la optimización de todo el programa y la instrumentación de optimización guiada por perfiles (PGO). Para obtener más información acerca de la opción de vínculo, vea [/LTCG](ltcg-link-time-code-generation.md).
 
 > **/ MÁQUINA**
 

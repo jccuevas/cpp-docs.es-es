@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433067"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234999"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
 
@@ -56,7 +56,7 @@ Para una aplicación de ejemplo que muestra los formularios de Windows Forms uti
 
 1. Agregue una clase nueva que cree subclases `CDialog`.
 
-     Haga clic con el botón derecho en el nombre del proyecto y agregue una clase MFC (denominada CHostForWinForm) que cree subclases `CDialog`. Puesto que no es necesario el recurso de cuadro de diálogo, puede eliminar el identificador de recurso (seleccione la vista de recursos, expanda la carpeta del cuadro de diálogo y elimine el recurso IDD_HOSTFORWINFORM.  A continuación, quite cualquier referencia al identificador en el código.).
+     Haga clic con el botón derecho en el nombre del proyecto y agregue una clase MFC (denominada CHostForWinForm) que cree subclases `CDialog`. Puesto que no es necesario el recurso de cuadro de diálogo, puede eliminar el identificador de recurso (seleccione **vista de recursos**, expanda el **diálogo** carpeta y eliminar `IDD_HOSTFORWINFORM` recursos.  A continuación, quite cualquier referencia al identificador en el código.).
 
 1. Reemplace `CDialog` en los archivos CHostForWinForm.h y CHostForWinForm.cpp con `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 

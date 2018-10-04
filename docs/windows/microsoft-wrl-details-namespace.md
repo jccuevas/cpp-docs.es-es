@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436889"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250398"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details (Espacio de nombres)
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator (clase)](../windows/makeallocator-class.md)|Asigna memoria para una clase activable, con o sin compatibilidad con la referencia débil.|
 |[ModuleBase (clase)](../windows/modulebase-class.md)|Representa la clase base de la [módulo](../windows/module-class.md) clases.|
 |[RemoveIUnknown (clase)](../windows/removeiunknown-class.md)|Convierte un tipo que es equivalente a un `IUnknown`-tipo de función, pero tiene no virtual `QueryInterface`, `AddRef`, y `Release` métodos.|
-|[WeakReference (clase)](../windows/weakreference-class1.md)|Representa un *referencia débil* que puede utilizarse con el tiempo de ejecución de Windows o COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|
+|[WeakReference (clase)](../windows/weakreference-class.md)|Representa un *referencia débil* que puede utilizarse con el tiempo de ejecución de Windows o COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|
 
 ### <a name="structures"></a>Estructuras
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback (función)](../windows/activationfactorycallback-function.md)|Obtiene el generador de activación para el identificador de activación especificado.|
 |[Move (función)](../windows/move-function.md)|Mueve el argumento especificado de una ubicación a otra.|
 |[RaiseException (función)](../windows/raiseexception-function.md)|Genera una excepción en el subproceso de llamada.|
-|[Swap (función) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Intercambia los valores de los dos argumentos especificados.|
+|[Swap (función) (WRL)](../windows/swap-function-wrl.md)|Intercambia los valores de los dos argumentos especificados.|
 |[TerminateMap (función)](../windows/terminatemap-function.md)|Cierra los generadores de clases en el módulo especificado.|
 
 ## <a name="requirements"></a>Requisitos
