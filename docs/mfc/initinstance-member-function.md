@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1dce40fd91f1b4345739f3dc38e13d2ee8d0997
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cafc3868d41dcf90baabbf05e0d5a4671c5b11fc
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426385"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820300"
 ---
 # <a name="initinstance-member-function"></a>InitInstance Member (Función)
 
@@ -45,7 +45,7 @@ El estándar `InitInstance` implementación creada por el Asistente para aplicac
 Puede agregar su propio código de inicialización o modificar el código escrito por el asistente.
 
 > [!NOTE]
->  Las aplicaciones MFC deben inicializarse como contenedor uniproceso (STA). Si se llama a [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) en su `InitInstance` invalidar, especifique COINIT_APARTMENTTHREADED (en lugar de COINIT_MULTITHREADED). Para obtener más información, vea el artículo PRB: aplicación MFC deja de responder al inicializar la aplicación como un multiproceso apartamento (828643) en [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+>  Las aplicaciones MFC deben inicializarse como contenedor uniproceso (STA). Si se llama a [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) en su `InitInstance` invalidar, especifique COINIT_APARTMENTTHREADED (en lugar de COINIT_MULTITHREADED). Para obtener más información, vea el artículo PRB: aplicación MFC deja de responder al inicializar la aplicación como un multiproceso apartamento (828643) en [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
 
 ## <a name="see-also"></a>Vea también
 

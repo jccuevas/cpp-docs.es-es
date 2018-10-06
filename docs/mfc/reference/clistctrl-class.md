@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e455d5cc87052facfc80ca1ef2c69c61d89c53c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411473"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821574"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
 
@@ -532,7 +532,7 @@ De forma predeterminada, un control de vista de lista destruye las listas de im�
 
 **Encabezado:** afxcmn.h
 
-##  <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect
+## <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect
 
 Determina el ancho y alto necesario para mostrar los elementos de un control de vista de lista.
 
@@ -559,7 +559,7 @@ Un `CSize` objeto que contiene el ancho aproximado y el alto necesario para most
 
 Esta función miembro implementa el comportamiento de la macro de Win32, [ListView_ApproximateViewRect](/windows/desktop/api/commctrl/nf-commctrl-listview_approximateviewrect), tal y como se describe en el SDK de Windows.
 
-##  <a name="arrange"></a>  CListCtrl::Arrange
+## <a name="arrange"></a>  CListCtrl::Arrange
 
 Cambia de posición los elementos de una vista de iconos que se alinean en una cuadrícula.
 
@@ -597,8 +597,7 @@ El *nCode* parámetro especifica el estilo de alineación.
     m_myListCtrl.Arrange(LVA_ALIGNTOP);
 ```
 
-
-##  <a name="canceleditlabel"></a>  CListCtrl::CancelEditLabel
+## <a name="canceleditlabel"></a>  CListCtrl::CancelEditLabel
 
 Cancela la operación de edición de texto de elemento.
 
@@ -610,7 +609,7 @@ void CancelEditLabel();
 
 Esta función miembro emula la funcionalidad de la [LVM_CANCELEDITLABEL](/windows/desktop/Controls/lvm-canceleditlabel) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="clistctrl"></a>  CListCtrl::CListCtrl
+## <a name="clistctrl"></a>  CListCtrl::CListCtrl
 
 Construye un objeto `CListCtrl`.
 
@@ -618,7 +617,7 @@ Construye un objeto `CListCtrl`.
 CListCtrl();
 ```
 
-##  <a name="create"></a>  CListCtrl::Create
+## <a name="create"></a>  CListCtrl::Create
 
 Crea un control de lista y lo adjunta a un `CListCtrl` objeto.
 
@@ -662,8 +661,7 @@ Para aplicar estilos extendidos de Windows para el objeto de lista de control, l
         CRect(10,10,400,200), pParentWnd, IDD_MYLISTCTRL);
 ```
 
-
-##  <a name="createex"></a>  CListCtrl::CreateEx
+## <a name="createex"></a>  CListCtrl::CreateEx
 
 Crea un control (una ventana secundaria) y lo asocia a la `CListCtrl` objeto.
 
@@ -703,7 +701,7 @@ Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de W
 
 `CreateEx` crea el control con los estilos extendidos de Windows especificados por *dwExStyle*. Para establecer los estilos extendidos específicos a un control, llame a [SetExtendedStyle](#setextendedstyle). Por ejemplo, usar `CreateEx` para establecer estos estilos como WS_EX_CONTEXTHELP, pero usa `SetExtendedStyle` para establecer estos estilos como LVS_EX_FULLROWSELECT. Para obtener más información, vea los estilos que se describe en el tema [estilos extendidos de vista de lista](/windows/desktop/Controls/extended-list-view-styles) en el SDK de Windows.
 
-##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage
+## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
 
 Crea una lista de la imagen de arrastre para el elemento especificado por *nItem*.
 
@@ -729,7 +727,6 @@ Un puntero a la lista de imágenes de arrastre si se realiza correctamente; en c
 
 La `CImageList` objeto es permanente y debe eliminarlo cuando termine. Por ejemplo:
 
-
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
 
@@ -738,8 +735,7 @@ La `CImageList` objeto es permanente y debe eliminarlo cuando termine. Por ejemp
         delete pImageList;
 ```
 
-
-##  <a name="deleteallitems"></a>  CListCtrl::DeleteAllItems
+## <a name="deleteallitems"></a>  CListCtrl::DeleteAllItems
 
 Elimina todos los elementos de control de vista de lista.
 
@@ -759,8 +755,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
     ASSERT(m_myListCtrl.GetItemCount() == 0);
 ```
 
-
-##  <a name="deletecolumn"></a>  CListCtrl::DeleteColumn
+## <a name="deletecolumn"></a>  CListCtrl::DeleteColumn
 
 Elimina una columna desde el control de vista de lista.
 
@@ -789,8 +784,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
         }
 ```
 
-
-##  <a name="deleteitem"></a>  CListCtrl::DeleteItem
+## <a name="deleteitem"></a>  CListCtrl::DeleteItem
 
 Elimina un elemento de un control de vista de lista.
 
@@ -819,8 +813,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
         }
 ```
 
-
-##  <a name="drawitem"></a>  CListCtrl::DrawItem
+## <a name="drawitem"></a>  CListCtrl::DrawItem
 
 Lo llama el marco cuando un aspecto visual de un cambios de control de vista de lista dibujado por el propietario.
 
@@ -841,7 +834,7 @@ De forma predeterminada, esta función miembro no hace nada. Reemplace esta func
 
 La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en *lpDrawItemStruct* antes de este miembro de la función termina.
 
-##  <a name="editlabel"></a>  CListCtrl::EditLabel
+## <a name="editlabel"></a>  CListCtrl::EditLabel
 
 Comienza la edición en contexto del texto de un elemento.
 
@@ -876,8 +869,7 @@ Use esta función para comenzar a editar en lugar del texto del elemento de vist
         ASSERT(pmyEdit != NULL);
 ```
 
-
-##  <a name="enablegroupview"></a>  CListCtrl::EnableGroupView
+## <a name="enablegroupview"></a>  CListCtrl::EnableGroupView
 
 Habilita o deshabilita si los elementos de un control de vista de lista se muestran como un grupo.
 
@@ -904,7 +896,7 @@ Devuelve uno de los siguientes valores:
 
 Esta función miembro emula la funcionalidad de la [LVM_ENABLEGROUPVIEW](/windows/desktop/Controls/lvm-enablegroupview) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="ensurevisible"></a>  CListCtrl::EnsureVisible
+## <a name="ensurevisible"></a>  CListCtrl::EnsureVisible
 
 Garantiza que un elemento de vista de lista sea como mínimo parcialmente visible.
 
@@ -939,8 +931,7 @@ Si es necesario, se desplaza el control de vista de lista. Si el *bPartialOK* pa
             m_myListCtrl.EnsureVisible(nCount-1, FALSE);
 ```
 
-
-##  <a name="finditem"></a>  CListCtrl::FindItem
+## <a name="finditem"></a>  CListCtrl::FindItem
 
 Busca un elemento de vista de lista con las características especificadas.
 
@@ -982,8 +973,7 @@ El *pFindInfo* parámetro señala a una `LVFINDINFO` estructura que contiene inf
         }
 ```
 
-
-##  <a name="getbkcolor"></a>  CListCtrl::GetBkColor
+## <a name="getbkcolor"></a>  CListCtrl::GetBkColor
 
 Recupera el color de fondo de un control de vista de lista.
 
@@ -999,7 +989,7 @@ Un valor de 32 bits que se usa para especificar un color RGB.
 
   Vea el ejemplo de [CListCtrl::SetBkColor](#setbkcolor).
 
-##  <a name="getbkimage"></a>  CListCtrl::GetBkImage
+## <a name="getbkimage"></a>  CListCtrl::GetBkImage
 
 Recupera la imagen de fondo actual de un control de vista de lista.
 
@@ -1035,8 +1025,7 @@ Este método implementa el comportamiento de la macro de Win32, [ListView_GetBkI
         }
 ```
 
-
-##  <a name="getcallbackmask"></a>  CListCtrl:: GetCallbackMask
+## <a name="getcallbackmask"></a>  CListCtrl:: GetCallbackMask
 
 Recupera la máscara de devolución de llamada para un control de vista de lista.
 
@@ -1056,7 +1045,7 @@ Un "elemento de devolución de llamada" es un elemento de vista de lista para qu
 
   Vea el ejemplo de [CListCtrl:: SetCallbackMask](#setcallbackmask).
 
-##  <a name="getcheck"></a>  CListCtrl::GetCheck
+## <a name="getcheck"></a>  CListCtrl::GetCheck
 
 Recupera el estado de la imagen de estado que está asociado con un elemento de visualización actual.
 
@@ -1081,7 +1070,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl::SetCheck](#setcheck).
 
-##  <a name="getcolumn"></a>  CListCtrl::GetColumn
+## <a name="getcolumn"></a>  CListCtrl::GetColumn
 
 Recupera los atributos de columna del control de vista de lista.
 
@@ -1122,8 +1111,7 @@ El `LVCOLUMN` estructura contiene información sobre una columna en la vista de 
         }
 ```
 
-
-##  <a name="getcolumnorderarray"></a>  CListCtrl::GetColumnOrderArray
+## <a name="getcolumnorderarray"></a>  CListCtrl::GetColumnOrderArray
 
 Recupera el orden de las columnas (de izquierda a derecha) de un control de vista de lista.
 
@@ -1177,8 +1165,7 @@ m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
         }
 ```
 
-
-##  <a name="getcolumnwidth"></a>  CListCtrl::GetColumnWidth
+## <a name="getcolumnwidth"></a>  CListCtrl::GetColumnWidth
 
 Recupera el ancho de una columna en la vista de informe o vista de lista.
 
@@ -1203,8 +1190,7 @@ El ancho, en píxeles, de la columna especificada por *nCol*.
         m_myListCtrl.SetColumnWidth(1, 20 + nWidth);
 ```
 
-
-##  <a name="getcountperpage"></a>  CListCtrl::GetCountPerPage
+## <a name="getcountperpage"></a>  CListCtrl::GetCountPerPage
 
 Calcula el número de elementos que se pueden ajustar verticalmente en el área visible de un control de vista de lista en vista de informes o la vista de lista.
 
@@ -1220,7 +1206,7 @@ El número de elementos que se pueden ajustar verticalmente en el área visible 
 
   Vea el ejemplo de [CListCtrl::GetTopIndex](#gettopindex).
 
-##  <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
+## <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
 
 Recupera el identificador de control de edición utilizado para editar el texto del elemento de vista de lista.
 
@@ -1247,8 +1233,7 @@ Si es correcto, un puntero a la [CEdit](cedit-class.md) objeto que se usa para e
         }
 ```
 
-
-##  <a name="getemptytext"></a>  CListCtrl::GetEmptyText
+## <a name="getemptytext"></a>  CListCtrl::GetEmptyText
 
 Recupera la cadena para mostrar si el control de vista de lista actual está vacío.
 
@@ -1264,7 +1249,7 @@ Un [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contiene el t
 
 Este método envía el [LVM_GETEMPTYTEXT](/windows/desktop/Controls/lvm-getemptytext) mensaje, que se describe en el SDK de Windows.
 
-##  <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle
+## <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle
 
 Recupera los estilos extendidos actuales de un control de vista de lista.
 
@@ -1284,7 +1269,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl:: SetExtendedStyle](#setextendedstyle).
 
-##  <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
+## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
 
 Obtiene la posición del primer elemento seleccionado en el control de vista de lista.
 
@@ -1299,7 +1284,6 @@ Un valor de posición que se puede usar para la iteración o recuperación de ob
 ### <a name="example"></a>Ejemplo
 
 Ejemplo de código siguiente muestra el uso de esta función.
-
 
 ```cpp
         POSITION pos = m_myListCtrl.GetFirstSelectedItemPosition();
@@ -1318,8 +1302,7 @@ Ejemplo de código siguiente muestra el uso de esta función.
         }
 ```
 
-
-##  <a name="getfocusedgroup"></a>  CListCtrl::GetFocusedGroup
+## <a name="getfocusedgroup"></a>  CListCtrl::GetFocusedGroup
 
 Recupera el grupo que tiene el foco de teclado en el control de vista de lista actual.
 
@@ -1335,7 +1318,7 @@ El índice del grupo cuyo estado es LVGS_FOCUSED, si hay un grupo; en caso contr
 
 Este método envía el [LVM_GETFOCUSEDGROUP](/windows/desktop/Controls/lvm-getfocusedgroup) mensaje, que se describe en el SDK de Windows. Para obtener más información, consulte el valor LVGS_FOCUSED de la `state` miembro de la [LVGROUP que se](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estructura.
 
-##  <a name="getgroupcount"></a>  CListCtrl::GetGroupCount
+## <a name="getgroupcount"></a>  CListCtrl::GetGroupCount
 
 Recupera el número de grupos en el control de vista de lista actual.
 
@@ -1351,7 +1334,7 @@ El número de grupos en el control de vista de lista.
 
 Este método envía el [LVM_GETGROUPCOUNT](/windows/desktop/Controls/lvm-getgroupcount) mensaje, como se describe en el SDK de Windows-->.
 
-##  <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo
+## <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo
 
 Obtiene la información para un grupo especificado del control de vista de lista.
 
@@ -1377,7 +1360,7 @@ Devuelve el identificador del grupo si se realiza correctamente, o -1 en caso co
 
 Esta función miembro emula la funcionalidad de la [LVM_GETGROUPINFO](/windows/desktop/Controls/lvm-getgroupinfo) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex
+## <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex
 
 Recupera información sobre un grupo especificado en el control de vista de lista actual.
 
@@ -1412,7 +1395,6 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Ejemplo
 
 En el ejemplo de código siguiente se muestra el `GetGroupInfoByIndex` método. En una sección anterior de este código de ejemplo que hemos creado un control de vista de lista que muestra dos columnas tituladas "ClientID" y "Grade" en una vista de informe. El ejemplo de código siguiente recupera información sobre el grupo cuyo índice es 0, si existe un grupo.
@@ -1443,8 +1425,7 @@ En el ejemplo de código siguiente se muestra el `GetGroupInfoByIndex` método. 
     }
 ```
 
-
-##  <a name="getgroupmetrics"></a>  CListCtrl::GetGroupMetrics
+## <a name="getgroupmetrics"></a>  CListCtrl::GetGroupMetrics
 
 Recupera las métricas de un grupo.
 
@@ -1461,7 +1442,7 @@ Un puntero a un [LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglv
 
 Esta función miembro emula la funcionalidad de la [LVM_GETGROUPMETRICS](/windows/desktop/Controls/lvm-getgroupmetrics) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getgrouprect"></a>  CListCtrl::GetGroupRect
+## <a name="getgrouprect"></a>  CListCtrl::GetGroupRect
 
 Recupera el rectángulo delimitador para un grupo especificado en el control de vista de lista actual.
 
@@ -1499,7 +1480,6 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Ejemplo
 
 En el ejemplo de código siguiente se muestra el `GetGroupRect` método. En una sección anterior de este ejemplo de código, creamos un control de vista de lista que muestra dos columnas tituladas "ClientID" y "Grade" en una vista de informe. En el ejemplo de código siguiente se dibuja un rectángulo 3D alrededor del grupo cuyo índice es 0, si existe un grupo.
@@ -1519,8 +1499,7 @@ En el ejemplo de código siguiente se muestra el `GetGroupRect` método. En una 
     }
 ```
 
-
-##  <a name="getgroupstate"></a>  CListCtrl::GetGroupState
+## <a name="getgroupstate"></a>  CListCtrl::GetGroupState
 
 Recupera el estado de un grupo especificado en el control de vista de lista actual.
 
@@ -1547,7 +1526,7 @@ El valor devuelto es el resultado de una operación AND bit a bit en el *dwMask*
 
 Este método envía el [LVM_GETGROUPSTATE](/windows/desktop/Controls/lvm-getgroupstate) mensaje, que se describe en el SDK de Windows. Para obtener más información, consulte el [ListView_GetGroupState](/windows/desktop/api/commctrl/nf-commctrl-listview_getgroupstate) macro.
 
-##  <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl
+## <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl
 
 Recupera el control de encabezado de un control de vista de lista.
 
@@ -1567,7 +1546,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
-##  <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
+## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
 
 Recupera el cursor usado cuando se habilita el seguimiento activo para un control de vista de lista.
 
@@ -1592,8 +1571,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
         ASSERT(m_myListCtrl.GetHotCursor() == hCursor);
 ```
 
-
-##  <a name="gethotitem"></a>  CListCtrl::GetHotItem
+## <a name="gethotitem"></a>  CListCtrl::GetHotItem
 
 Recupera el elemento de vista de lista actualmente bajo el cursor.
 
@@ -1620,8 +1598,7 @@ Si está habilitado el seguimiento activo, cuando un usuario se detiene sobre un
         m_myListCtrl.SetHotItem(0);
 ```
 
-
-##  <a name="gethovertime"></a>  CListCtrl::GetHoverTime
+## <a name="gethovertime"></a>  CListCtrl::GetHoverTime
 
 Recupera el tiempo de desplazamiento actual de un control de vista de lista.
 
@@ -1646,8 +1623,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
             m_myListCtrl.SetHoverTime(1000);
 ```
 
-
-##  <a name="getimagelist"></a>  CListCtrl::GetImageList
+## <a name="getimagelist"></a>  CListCtrl::GetImageList
 
 Recupera el identificador de una lista de imágenes que se usa para dibujar elementos de vista de lista.
 
@@ -1678,8 +1654,7 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
-
-##  <a name="getinsertmark"></a>  CListCtrl::GetInsertMark
+## <a name="getinsertmark"></a>  CListCtrl::GetInsertMark
 
 Recupera la posición actual de la marca de inserción.
 
@@ -1700,7 +1675,7 @@ Devuelve TRUE si se realiza correctamente o falso en caso contrario. Se devuelve
 
 Esta función miembro emula la funcionalidad de la [LVM_GETINSERTMARK](/windows/desktop/Controls/lvm-getinsertmark) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor
+## <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor
 
 Recupera el color actual de la marca de inserción.
 
@@ -1716,7 +1691,7 @@ Devuelve un [COLORREF](/windows/desktop/gdi/colorref) estructura que contiene el
 
 Esta función miembro emula la funcionalidad de la [LVM_GETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-getinsertmarkcolor) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect
+## <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect
 
 Recupera el rectángulo que delimita el punto de inserción.
 
@@ -1741,7 +1716,7 @@ Devuelve uno de los siguientes valores:
 
 Esta función miembro emula la funcionalidad de la [LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getitem"></a>  CListCtrl:: GetItem
+## <a name="getitem"></a>  CListCtrl:: GetItem
 
 Recupera algunos o todos los atributos del elemento de vista de lista.
 
@@ -1762,7 +1737,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 El `LVITEM` estructura especifica o recibe los atributos de un elemento de vista de lista.
 
-##  <a name="getitemcount"></a>  CListCtrl::GetItemCount
+## <a name="getitemcount"></a>  CListCtrl::GetItemCount
 
 Recupera el número de elementos en un control de vista de lista.
 
@@ -1778,7 +1753,7 @@ El número de elementos en la lista de control de vista.
 
   Vea el ejemplo de [CListCtrl::DeleteItem](#deleteitem).
 
-##  <a name="getitemdata"></a>  CListCtrl::GetItemData
+## <a name="getitemdata"></a>  CListCtrl::GetItemData
 
 Recupera el valor específico de la aplicación de 32 bits asociado al elemento especificado por `nItem`.
 
@@ -1812,8 +1787,7 @@ Este valor es el `lParam` miembro de la [LVITEM](/windows/desktop/api/commctrl/n
     }
 ```
 
-
-##  <a name="getitemindexrect"></a>  CListCtrl::GetItemIndexRect
+## <a name="getitemindexrect"></a>  CListCtrl::GetItemIndexRect
 
 Recupera el rectángulo delimitador para la totalidad o parte de un subelemento en el control de vista de lista actual.
 
@@ -1852,7 +1826,6 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Ejemplo
 
 En el ejemplo de código siguiente se muestra el `GetGroupRect` método. Antes de escribir este código de ejemplo que hemos creado un control de vista de lista que muestra dos columnas tituladas "ClientID" y "Grade" en una vista de informe. En el ejemplo de código siguiente se dibuja un rectángulo 3D alrededor del subelemento segundo en las dos columnas.
@@ -1871,8 +1844,7 @@ En el ejemplo de código siguiente se muestra el `GetGroupRect` método. Antes d
     m_listCtrl.GetDC()->Draw3dRect( &rect, RGB(255, 0, 0), RGB(255, 0, 0) );
 ```
 
-
-##  <a name="getitemposition"></a>  CListCtrl::GetItemPosition
+## <a name="getitemposition"></a>  CListCtrl::GetItemPosition
 
 Recupera la posición de un elemento de vista de lista.
 
@@ -1910,8 +1882,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
         }
 ```
 
-
-##  <a name="getitemrect"></a>  CListCtrl::GetItemRect
+## <a name="getitemrect"></a>  CListCtrl::GetItemRect
 
 Recupera el rectángulo delimitador para la totalidad o parte de un elemento en la vista actual.
 
@@ -1985,8 +1956,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 }
 ```
 
-
-##  <a name="getitemspacing"></a>  CListCtrl::GetItemSpacing
+## <a name="getitemspacing"></a>  CListCtrl::GetItemSpacing
 
 Calcula el espaciado entre los elementos del control de vista de lista actual.
 
@@ -2013,7 +1983,7 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
 Este método envía el [LVM_GETITEMSPACING](/windows/desktop/Controls/lvm-getitemspacing) mensaje, que se describe en el SDK de Windows.
 
-##  <a name="getitemstate"></a>  CListCtrl::GetItemState
+## <a name="getitemstate"></a>  CListCtrl::GetItemState
 
 Recupera el estado de un elemento de vista de lista.
 
@@ -2043,7 +2013,7 @@ Estado de un elemento especificado por el `state` miembro de la [LVITEM](/window
 
   Vea el ejemplo de [CListCtrl::GetTopIndex](#gettopindex).
 
-##  <a name="getitemtext"></a>  CListCtrl::GetItemText
+## <a name="getitemtext"></a>  CListCtrl::GetItemText
 
 Recupera el texto de un elemento de vista de lista o el subelemento.
 
@@ -2083,7 +2053,7 @@ La versión de devolver un `CString` devuelve el texto del elemento.
 
 Si *nSubItem* es cero, esta función recupera la etiqueta del elemento; si *nSubItem* es distinto de cero, recupera el texto del subelemento. Para obtener más información sobre el argumento del subelemento, vea la explicación de la [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) estructura en el SDK de Windows.
 
-##  <a name="getnextitem"></a>  CListCtrl::GetNextItem
+## <a name="getnextitem"></a>  CListCtrl::GetNextItem
 
 Busca una lista de ve el elemento que tiene las propiedades especificadas y que mantiene la relación especificada a un elemento determinado.
 
@@ -2125,7 +2095,7 @@ Si un elemento no tiene todo el conjunto de indicadores de estado especificado, 
 
 El índice del elemento siguiente si se realiza correctamente, o -1 en caso contrario.
 
-##  <a name="getnextitemindex"></a>  CListCtrl::GetNextItemIndex
+## <a name="getnextitemindex"></a>  CListCtrl::GetNextItemIndex
 
 Recupera el índice del elemento en el control de vista de lista actual que tiene un conjunto de propiedades especificado.
 
@@ -2152,7 +2122,7 @@ El llamador es responsable de asignar y establecer los miembros de la `LVITEMIND
 
 Este método envía el [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) mensaje, que se describe en el SDK de Windows.
 
-##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
+## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
 Obtiene el índice del elemento de lista identificado por *pos*, a continuación, establece *pos* en el valor de posición.
 
@@ -2196,8 +2166,7 @@ Ejemplo de código siguiente muestra el uso de esta función.
         }
 ```
 
-
-##  <a name="getnumberofworkareas"></a>  CListCtrl::GetNumberOfWorkAreas
+## <a name="getnumberofworkareas"></a>  CListCtrl::GetNumberOfWorkAreas
 
 Recupera el número actual de áreas de trabajo para un control de vista de lista.
 
@@ -2241,8 +2210,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
 ```
 
-
-##  <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor
+## <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor
 
 Recupera el color del borde de un control de vista de lista.
 
@@ -2258,7 +2226,7 @@ Devuelve un [COLORREF](/windows/desktop/gdi/colorref) estructura que contiene el
 
 Esta función miembro emula la funcionalidad de la [LVM_GETOUTLINECOLOR](/windows/desktop/Controls/lvm-getoutlinecolor) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getorigin"></a>  CListCtrl::GetOrigin
+## <a name="getorigin"></a>  CListCtrl::GetOrigin
 
 Recupera el origen de la vista actual para un control de vista de lista.
 
@@ -2275,7 +2243,7 @@ Dirección de un [punto](https://msdn.microsoft.com/library/windows/desktop/dd16
 
 Es distinto de cero si es correcto. En caso contrario, es cero. Sin embargo, si el control está en vista de informe, el valor devuelto siempre es cero.
 
-##  <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn
+## <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn
 
 Recupera el índice de la columna seleccionada actualmente en el control de lista.
 
@@ -2291,7 +2259,7 @@ El índice de la columna seleccionada.
 
 Esta función miembro emula la funcionalidad de la [LVM_GETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-getselectedcolumn) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount
+## <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount
 
 Recupera el número de elementos seleccionados en el control de vista de lista.
 
@@ -2321,8 +2289,7 @@ El número de elementos seleccionados en el control de vista de lista.
         }
 ```
 
-
-##  <a name="getselectionmark"></a>  CListCtrl::GetSelectionMark
+## <a name="getselectionmark"></a>  CListCtrl::GetSelectionMark
 
 Recupera la marca de selección de un control de vista de lista.
 
@@ -2347,8 +2314,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
         m_myListCtrl.SetSelectionMark(0);
 ```
 
-
-##  <a name="getstringwidth"></a>  CListCtrl::GetStringWidth
+## <a name="getstringwidth"></a>  CListCtrl::GetStringWidth
 
 Determina el ancho de columna mínimo necesario para mostrar toda la cadena especificada.
 
@@ -2385,8 +2351,7 @@ El ancho devuelto tiene en cuenta la fuente del control actual y los márgenes d
         }
 ```
 
-
-##  <a name="getsubitemrect"></a>  CListCtrl::GetSubItemRect
+## <a name="getsubitemrect"></a>  CListCtrl::GetSubItemRect
 
 Recupera el rectángulo delimitador de un elemento en un control de vista de lista.
 
@@ -2426,7 +2391,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Esta función miembro implementa el comportamiento de la macro de Win32, [ListView_GetSubItemRect](/windows/desktop/api/commctrl/nf-commctrl-listview_getsubitemrect), tal y como se describe en el SDK de Windows.
 
-##  <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor
+## <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor
 
 Recupera el color de fondo del texto de un control de vista de lista.
 
@@ -2442,7 +2407,7 @@ Un valor de 32 bits que se usa para especificar un color RGB.
 
   Vea el ejemplo de [CListCtrl::SetTextBkColor](#settextbkcolor).
 
-##  <a name="gettextcolor"></a>  CListCtrl::GetTextColor
+## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
 
 Recupera el color del texto de un control de vista de lista.
 
@@ -2458,7 +2423,7 @@ Un valor de 32 bits que se usa para especificar un color RGB.
 
   Vea el ejemplo de [CListCtrl::SetTextColor](#settextcolor).
 
-##  <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
+## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
 
 Recupera información sobre un icono en un control de vista de lista.
 
@@ -2479,7 +2444,7 @@ No se utiliza el valor devuelto.
 
 Esta función miembro emula la funcionalidad de la [LVM_GETTILEINFO](/windows/desktop/Controls/lvm-gettileinfo) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo
+## <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo
 
 Recupera información sobre un control de vista de lista en la vista en mosaico.
 
@@ -2500,7 +2465,7 @@ No se utiliza el valor devuelto.
 
 Esta función miembro emula la funcionalidad de la [LVM_GETTILEVIEWINFO](/windows/desktop/Controls/lvm-gettileviewinfo) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="gettooltips"></a>  CListCtrl::GetToolTips
+## <a name="gettooltips"></a>  CListCtrl::GetToolTips
 
 Recupera el control de información sobre herramientas que utiliza el control de vista de lista para mostrar información sobre herramientas.
 
@@ -2527,8 +2492,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [LVM_GET
         }
 ```
 
-
-##  <a name="gettopindex"></a>  CListCtrl::GetTopIndex
+## <a name="gettopindex"></a>  CListCtrl::GetTopIndex
 
 Recupera el índice del primer elemento visible en la vista de informes o la vista de lista.
 
@@ -2541,7 +2505,6 @@ int GetTopIndex() const;
 El índice del primer elemento visible.
 
 ### <a name="example"></a>Ejemplo
-
 
 ```cpp
         // Make sure the focus is set to the list view control.
@@ -2558,8 +2521,7 @@ El índice del primer elemento visible.
         }
 ```
 
-
-##  <a name="getview"></a>  CListCtrl::GetView
+## <a name="getview"></a>  CListCtrl::GetView
 
 Obtiene la vista del control de vista de lista.
 
@@ -2575,7 +2537,7 @@ La vista actual del control de vista de lista.
 
 Esta función miembro emula la funcionalidad de la [LVM_GETVIEW](/windows/desktop/Controls/lvm-getview) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="getviewrect"></a>  CListCtrl::GetViewRect
+## <a name="getviewrect"></a>  CListCtrl::GetViewRect
 
 Recupera el rectángulo delimitador de todos los elementos en el control de vista de lista.
 
@@ -2596,7 +2558,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 La vista de lista debe estar en la vista de iconos o vista de iconos pequeños.
 
-##  <a name="getworkareas"></a>  CListCtrl::GetWorkAreas
+## <a name="getworkareas"></a>  CListCtrl::GetWorkAreas
 
 Recupera las áreas de trabajo actual de un control de vista de lista.
 
@@ -2622,7 +2584,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).
 
-##  <a name="hasgroup"></a>  CListCtrl::HasGroup
+## <a name="hasgroup"></a>  CListCtrl::HasGroup
 
 Determina si el control de vista de lista tiene el grupo especificado.
 
@@ -2643,7 +2605,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Esta función miembro emula la funcionalidad de la [LVM_HASGROUP](/windows/desktop/Controls/lvm-hasgroup) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="hittest"></a>  CListCtrl::HitTest
+## <a name="hittest"></a>  CListCtrl::HitTest
 
 Determina qué elemento de vista de lista, si existe, está en una posición especificada.
 
@@ -2698,8 +2660,7 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-
-##  <a name="insertcolumn"></a>  CListCtrl::InsertColumn
+## <a name="insertcolumn"></a>  CListCtrl::InsertColumn
 
 Inserta una nueva columna en un control de vista de lista.
 
@@ -2707,7 +2668,6 @@ Inserta una nueva columna en un control de vista de lista.
 int InsertColumn(
     int nCol,
     const LVCOLUMN* pColumn);
-
 
 int InsertColumn(
     int nCol,
@@ -2747,7 +2707,7 @@ La columna situada en un control de vista de lista debe ser alineado a la izquie
 
 El [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) estructura contiene los atributos de una columna en la vista de informe. También sirve para recibir información sobre una columna. Esta estructura se describe en el SDK de Windows.
 
-##  <a name="insertgroup"></a>  CListCtrl::InsertGroup
+## <a name="insertgroup"></a>  CListCtrl::InsertGroup
 
 Inserta un grupo en el control de vista de lista.
 
@@ -2773,7 +2733,7 @@ Devuelve el índice del elemento que se agregó el grupo a, o -1 si la operació
 
 Esta función miembro emula la funcionalidad de la [LVM_INSERTGROUP](/windows/desktop/Controls/lvm-insertgroup) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted
+## <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted
 
 Inserta el grupo especificado en una lista ordenada de los grupos.
 
@@ -2794,24 +2754,21 @@ No se utiliza el valor devuelto.
 
 Esta función miembro emula la funcionalidad de la [LVM_INSERTGROUPSORTED](/windows/desktop/Controls/lvm-insertgroupsorted) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="insertitem"></a>  CListCtrl::InsertItem
+## <a name="insertitem"></a>  CListCtrl::InsertItem
 
 Inserta un elemento en el control de vista de lista.
 
 ```
 int InsertItem(const LVITEM* pItem);
 
-
 int InsertItem(
     int nItem,
     LPCTSTR lpszItem);
-
 
 int InsertItem(
     int nItem,
     LPCTSTR lpszItem,
     int nImage);
-
 
 int InsertItem(
     UINT nMask,
@@ -2881,8 +2838,7 @@ Llamar a este método puede provocar que el mensaje LVM_INSERTITEM para enviarse
         }
 ```
 
-
-##  <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest
+## <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest
 
 Recupera el punto de inserción más cercano a un punto especificado.
 
@@ -2908,7 +2864,7 @@ El punto de inserción más próximo al punto.
 
 Esta función miembro emula la funcionalidad de la [LVM_INSERTMARKHITTEST](/windows/desktop/Controls/lvm-insertmarkhittest) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled
+## <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled
 
 Determina si la vista de grupo está habilitada para un control de vista de lista.
 
@@ -2924,7 +2880,7 @@ Devuelve TRUE si la vista de grupo está habilitada, o FALSE en caso contrario.
 
 Esta función miembro emula la funcionalidad de la [LVM_ISGROUPVIEWENABLED](/windows/desktop/Controls/lvm-isgroupviewenabled) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="isitemvisible"></a>  CListCtrl::IsItemVisible
+## <a name="isitemvisible"></a>  CListCtrl::IsItemVisible
 
 Indica si un elemento especificado en el control de vista de lista actual está visible.
 
@@ -2946,7 +2902,7 @@ TRUE si el elemento especificado está visible; en caso contrario, FALSE.
 
 Este método envía el [LVM_ISITEMVISIBLE](/windows/desktop/Controls/lvm-isitemvisible) mensaje, que se describe en el SDK de Windows.
 
-##  <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex
+## <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex
 
 El identificador único de un elemento en el control de vista de lista actual se asigna a un índice.
 
@@ -2972,7 +2928,7 @@ Tenga en cuenta que en un entorno multiproceso se garantiza el índice solo en e
 
 Este método envía el [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) mensaje, que se describe en el SDK de Windows.
 
-##  <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
+## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
 El índice de un elemento en el control de vista de lista actual se asigna a un identificador único.
 
@@ -3008,7 +2964,6 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Ejemplo
 
 En el ejemplo de código siguiente se muestra el `MapIndexToID` método. En una sección anterior de este ejemplo de código, creamos un control de vista de lista que muestra dos columnas tituladas "ClientID" y "Grade" en una vista de informe. El ejemplo siguiente asigna el índice de cada elemento de vista de lista a un número de identificación y, a continuación, recupera el índice para cada número de identificación. Por último, el ejemplo se notifica si se recuperaron los índices originales.
@@ -3039,8 +2994,7 @@ En el ejemplo de código siguiente se muestra el `MapIndexToID` método. En una 
         MB_ICONINFORMATION);
 ```
 
-
-##  <a name="movegroup"></a>  CListCtrl::MoveGroup
+## <a name="movegroup"></a>  CListCtrl::MoveGroup
 
 Mueve el que grupo especificado para el índice de base cero del control de vista de lista.
 
@@ -3066,7 +3020,7 @@ No se utiliza el valor devuelto.
 
 Esta función miembro emula la funcionalidad de la [LVM_MOVEGROUP](/windows/desktop/Controls/lvm-movegroup) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup
+## <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup
 
 Mueve el elemento especificado en el grupo especificado.
 
@@ -3091,7 +3045,7 @@ void MoveItemToGroup(
 
 Este método emula la funcionalidad de la [LVM_MOVEITEMTOGROUP](/windows/desktop/Controls/lvm-moveitemtogroup) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="redrawitems"></a>  CListCtrl::RedrawItems
+## <a name="redrawitems"></a>  CListCtrl::RedrawItems
 
 Obliga a un control de vista de lista para volver a dibujar un intervalo de elementos.
 
@@ -3117,7 +3071,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Los elementos especificados no se vuelven a dibujar realmente hasta que la ventana de vista de lista recibe un mensaje WM_PAINT. Para volver a dibujar inmediatamente, llame a la Windows [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) función después de usar esta función.
 
-##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups
+## <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups
 
 Quita todos los grupos de un control de vista de lista.
 
@@ -3129,7 +3083,7 @@ void RemoveAllGroups();
 
 Esta función miembro emula la funcionalidad de la [LVM_REMOVEALLGROUPS](/windows/desktop/Controls/lvm-removeallgroups) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="removegroup"></a>  CListCtrl::RemoveGroup
+## <a name="removegroup"></a>  CListCtrl::RemoveGroup
 
 Quita el grupo especificado desde el control de vista de lista.
 
@@ -3150,7 +3104,7 @@ Lo contrario, devuelve el índice del grupo si se realiza correctamente, o -1.
 
 Esta función miembro emula la funcionalidad de la [LVM_REMOVEGROUP](/windows/desktop/Controls/lvm-removegroup) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="scroll"></a>  CListCtrl::Scroll
+## <a name="scroll"></a>  CListCtrl::Scroll
 
 Desplaza el contenido de un control de vista de lista.
 
@@ -3167,7 +3121,7 @@ Un `CSize` objeto que especifica la cantidad de desplazamiento horizontal y vert
 
 Es distinto de cero si es correcto. En caso contrario, es cero.
 
-##  <a name="setbkcolor"></a>  CListCtrl::SetBkColor
+## <a name="setbkcolor"></a>  CListCtrl::SetBkColor
 
 Establece el color de fondo del control de vista de lista.
 
@@ -3186,7 +3140,6 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
         // Use the 3D button face color for the background.
         COLORREF crBkColor = ::GetSysColor(COLOR_3DFACE);
@@ -3194,8 +3147,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
         ASSERT(m_myListCtrl.GetBkColor() == crBkColor);
 ```
 
-
-##  <a name="setbkimage"></a>  CListCtrl::SetBkImage
+## <a name="setbkimage"></a>  CListCtrl::SetBkImage
 
 Establece la imagen de fondo de un control de vista de lista.
 
@@ -3248,7 +3200,7 @@ Devuelve cero si se realiza correctamente, o cero en caso contrario.
 
   Vea el ejemplo de [CListCtrl::GetBkImage](#getbkimage).
 
-##  <a name="setcallbackmask"></a>  CListCtrl:: SetCallbackMask
+## <a name="setcallbackmask"></a>  CListCtrl:: SetCallbackMask
 
 Establece la máscara de devolución de llamada para un control de vista de lista.
 
@@ -3267,7 +3219,6 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
     // Set the callback mask so that only the selected and focused states
     // are stored for each item.
@@ -3276,8 +3227,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
         (LVIS_SELECTED|LVIS_FOCUSED));
 ```
 
-
-##  <a name="setcheck"></a>  CListCtrl::SetCheck
+## <a name="setcheck"></a>  CListCtrl::SetCheck
 
 Determina si está visible la imagen del estado de un elemento de control de lista.
 
@@ -3301,7 +3251,6 @@ Distinto de cero si el elemento está activado, en caso contrario, 0.
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
         int nCount = m_myListCtrl.GetItemCount();
         BOOL fCheck = FALSE;
@@ -3317,8 +3266,7 @@ Distinto de cero si el elemento está activado, en caso contrario, 0.
         }
 ```
 
-
-##  <a name="setcolumn"></a>  CListCtrl::SetColumn
+## <a name="setcolumn"></a>  CListCtrl::SetColumn
 
 Establece los atributos de una columna de vista de lista.
 
@@ -3344,7 +3292,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
   Vea el ejemplo de [CListCtrl::GetColumn](#getcolumn).
 
-##  <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
+## <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
 
 Establece el orden de las columnas (de izquierda a derecha) de un control de vista de lista.
 
@@ -3374,7 +3322,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
-##  <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
+## <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
 
 Cambia el ancho de una columna en la vista de informe o vista de lista.
 
@@ -3396,7 +3344,7 @@ El nuevo ancho de la columna. Puede ser LVSCW_AUTOSIZE o LVSCW_AUTOSIZE_USEHEADE
 
 Es distinto de cero si es correcto. En caso contrario, es cero.
 
-##  <a name="setextendedstyle"></a>  CListCtrl:: SetExtendedStyle
+## <a name="setextendedstyle"></a>  CListCtrl:: SetExtendedStyle
 
 Establece los estilos extendidos actuales de un control de vista de lista.
 
@@ -3419,15 +3367,13 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
     // Allow the header controls item to be movable by the user.
     m_myListCtrl.SetExtendedStyle
         (m_myListCtrl.GetExtendedStyle()|LVS_EX_HEADERDRAGDROP);
 ```
 
-
-##  <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo
+## <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo
 
 Establece la información que describe el grupo especificado del control de vista de lista actual.
 
@@ -3453,7 +3399,7 @@ El identificador del grupo si el método se realiza correctamente; en caso contr
 
 Este método envía el [LVM_SETGROUPINFO](/windows/desktop/Controls/lvm-setgroupinfo) mensaje, que se describe en el SDK de Windows.
 
-##  <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics
+## <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics
 
 Establece las métricas de grupo de un control de vista de lista.
 
@@ -3470,7 +3416,7 @@ Un puntero a un [LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglv
 
 Esta función miembro emula la funcionalidad de la [LVM_SETGROUPMETRICS](/windows/desktop/Controls/lvm-setgroupmetrics) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="sethotcursor"></a>  CListCtrl::SetHotCursor
+## <a name="sethotcursor"></a>  CListCtrl::SetHotCursor
 
 Establece el cursor usado cuando se habilita el seguimiento activo para un control de vista de lista.
 
@@ -3497,7 +3443,7 @@ El cursor activo, solo es visible cuando se habilita la selección al mantener e
 
   Vea el ejemplo de [CListCtrl::GetHotCursor](#gethotcursor).
 
-##  <a name="sethotitem"></a>  CListCtrl::SetHotItem
+## <a name="sethotitem"></a>  CListCtrl::SetHotItem
 
 Establece el elemento activo actual de un control de vista de lista.
 
@@ -3522,7 +3468,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl::GetHotItem](#gethotitem).
 
-##  <a name="sethovertime"></a>  CListCtrl::SetHoverTime
+## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
 
 Establece el tiempo de desplazamiento actual de un control de vista de lista.
 
@@ -3547,7 +3493,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl::GetHoverTime](#gethovertime).
 
-##  <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
+## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
 
 Establece el espaciado entre los iconos en un control de vista de lista.
 
@@ -3580,14 +3526,12 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
     // Leave lots of space between icons.
     m_myListCtrl.SetIconSpacing(CSize(100, 100));
 ```
 
-
-##  <a name="setimagelist"></a>  CListCtrl:: SetImageList
+## <a name="setimagelist"></a>  CListCtrl:: SetImageList
 
 Asigna una lista de imágenes a un control de vista de lista.
 
@@ -3619,7 +3563,7 @@ Un puntero a la lista de la imagen anterior.
 
   Vea el ejemplo de [CListCtrl::GetImageList](#getimagelist).
 
-##  <a name="setinfotip"></a>  CListCtrl::SetInfoTip
+## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
 
 Establece el texto de información sobre herramientas.
 
@@ -3640,7 +3584,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Esta función miembro emula la funcionalidad de la [LVM_SETINFOTIP](/windows/desktop/Controls/lvm-setinfotip) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="setinsertmark"></a>  CListCtrl::SetInsertMark
+## <a name="setinsertmark"></a>  CListCtrl::SetInsertMark
 
 Establece el punto de inserción a la posición definida.
 
@@ -3661,7 +3605,7 @@ Devuelve TRUE si se realiza correctamente o falso en caso contrario. Se devuelve
 
 Esta función miembro emula la funcionalidad de la [LVM_SETINSERTMARK](/windows/desktop/Controls/lvm-setinsertmark) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor
+## <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor
 
 Establece el color del punto de inserción.
 
@@ -3682,13 +3626,12 @@ Devuelve un `COLORREF` estructura que contiene el color anterior.
 
 Esta función miembro emula la funcionalidad de la [LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="setitem"></a>  CListCtrl:: SetItem
+## <a name="setitem"></a>  CListCtrl:: SetItem
 
 Establece los atributos del elemento de algunos o todos de una vista de lista.
 
 ```
 BOOL SetItem(const LVITEM* pItem);
-
 
 BOOL SetItem(
     int nItem,
@@ -3699,7 +3642,6 @@ BOOL SetItem(
     UINT nState,
     UINT nStateMask,
     LPARAM lParam);
-
 
 BOOL SetItem(
     int nItem,
@@ -3763,7 +3705,7 @@ El `mask` miembro de la `LVITEM` estructura y el *nMask* parámetro especificar 
 
   Vea el ejemplo de [CListCtrl::HitTest](#hittest).
 
-##  <a name="setitemcount"></a>  CListCtrl::SetItemCount
+## <a name="setitemcount"></a>  CListCtrl::SetItemCount
 
 Prepara un control de vista de lista para agregar un gran número de elementos.
 
@@ -3786,7 +3728,6 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
         CString str;
 
@@ -3800,8 +3741,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
         }
 ```
 
-
-##  <a name="setitemcountex"></a>  CListCtrl::SetItemCountEx
+## <a name="setitemcountex"></a>  CListCtrl::SetItemCountEx
 
 Establece el número de elementos de un control de vista de lista virtual.
 
@@ -3833,7 +3773,6 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
         CString str;
 
@@ -3851,8 +3790,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
         }
 ```
 
-
-##  <a name="setitemdata"></a>  CListCtrl::SetItemData
+## <a name="setitemdata"></a>  CListCtrl::SetItemData
 
 Establece el valor específico de la aplicación de 32 bits asociado al elemento especificado por *nItem*.
 
@@ -3878,7 +3816,6 @@ Este valor es el `lParam` miembro de la [LVITEM](/windows/desktop/api/commctrl/n
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
     // Set the data of each item to be equal to its index.
     for (int i = 0; i < m_myListCtrl.GetItemCount(); i++)
@@ -3887,8 +3824,7 @@ Este valor es el `lParam` miembro de la [LVITEM](/windows/desktop/api/commctrl/n
     }
 ```
 
-
-##  <a name="setitemindexstate"></a>  CListCtrl::SetItemIndexState
+## <a name="setitemindexstate"></a>  CListCtrl::SetItemIndexState
 
 Establece el estado de un elemento en el control de vista de lista actual.
 
@@ -3919,7 +3855,7 @@ Para obtener más información sobre la *dwMask* parámetro, vea el *stateMask* 
 
 Este método envía el [LVM_SETITEMINDEXSTATE](/windows/desktop/Controls/lvm-setitemindexstate) mensaje, que se describe en el SDK de Windows.
 
-##  <a name="setitemposition"></a>  CListCtrl::SetItemPosition
+## <a name="setitemposition"></a>  CListCtrl::SetItemPosition
 
 Mueve un elemento a una posición especificada en un control de vista de lista.
 
@@ -3951,7 +3887,7 @@ Si el control de vista de lista tiene el estilo LVS_AUTOARRANGE, la vista de lis
 
   Vea el ejemplo de [CListCtrl::GetItemPosition](#getitemposition).
 
-##  <a name="setitemstate"></a>  CListCtrl::SetItemState
+## <a name="setitemstate"></a>  CListCtrl::SetItemState
 
 Cambia el estado de un elemento en un control de vista de lista.
 
@@ -3959,7 +3895,6 @@ Cambia el estado de un elemento en un control de vista de lista.
 BOOL SetItemState(
     int nItem,
     LVITEM* pItem);
-
 
 BOOL SetItemState(
     int nItem,
@@ -3993,7 +3928,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
   Vea el ejemplo de [CListCtrl::GetTopIndex](#gettopindex).
 
-##  <a name="setitemtext"></a>  CListCtrl::SetItemText
+## <a name="setitemtext"></a>  CListCtrl::SetItemText
 
 Cambia el texto de un elemento de vista de lista o el subelemento.
 
@@ -4027,7 +3962,7 @@ Este método no está pensado para su uso con los controles que contiene el esti
 
   Vea el ejemplo de [CListCtrl::InsertItem](#insertitem).
 
-##  <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
+## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
 
 Establece el color del borde de un control de vista de lista si el [LVS_EX_BORDERSELECT](/windows/desktop/Controls/list-view-window-styles) se establece el estilo de ventana extendidos.
 
@@ -4048,7 +3983,7 @@ La anterior `COLORREF` estructura que contiene el color del contorno
 
 Esta función miembro emula la funcionalidad de la [LVM_SETOUTLINECOLOR](/windows/desktop/Controls/lvm-setoutlinecolor) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn
+## <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn
 
 Establece la columna seleccionada del control de vista de lista.
 
@@ -4069,7 +4004,7 @@ No se utiliza el valor devuelto.
 
 Esta función miembro emula la funcionalidad de la [LVM_SETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-setselectedcolumn) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark
+## <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark
 
 Establece la marca de selección de un control de vista de lista.
 
@@ -4094,7 +4029,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
   Vea el ejemplo de [CListCtrl::GetSelectionMark](#getselectionmark).
 
-##  <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
+## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
 
 Establece el color de fondo del texto en un control de vista de lista.
 
@@ -4113,7 +4048,6 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
         // Use the 3D button face color for the background.
         COLORREF crBkColor = ::GetSysColor(COLOR_3DFACE);
@@ -4121,8 +4055,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
         ASSERT(m_myListCtrl.GetTextBkColor() == crBkColor);
 ```
 
-
-##  <a name="settextcolor"></a>  CListCtrl::SetTextColor
+## <a name="settextcolor"></a>  CListCtrl::SetTextColor
 
 Establece el color del texto de un control de vista de lista.
 
@@ -4141,7 +4074,6 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
     // Use the window text color for
     // the item text of the list view control.
@@ -4150,8 +4082,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
     ASSERT(m_myListCtrl.GetTextColor() == crTextColor);
 ```
 
-
-##  <a name="settileinfo"></a>  CListCtrl::SetTileInfo
+## <a name="settileinfo"></a>  CListCtrl::SetTileInfo
 
 Establece la información para un icono del control de vista de lista.
 
@@ -4172,7 +4103,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Esta función miembro emula la funcionalidad de la [LVM_SETTILEINFO](/windows/desktop/Controls/lvm-settileinfo) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo
+## <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo
 
 Establece la información que usa un control de vista de lista en la vista en mosaico.
 
@@ -4193,7 +4124,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Esta función miembro emula la funcionalidad de la [LVM_SETTILEVIEWINFO](/windows/desktop/Controls/lvm-settileviewinfo) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="settooltips"></a>  CListCtrl::SetToolTips
+## <a name="settooltips"></a>  CListCtrl::SetToolTips
 
 Establece el control de información sobre herramientas que va a usar el control de vista de lista para mostrar información sobre herramientas.
 
@@ -4216,7 +4147,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [LVM_SET
 
 Para no usar informaciones sobre herramientas, indican el estilo LVS_NOTOOLTIPS al crear el `CListCtrl` objeto.
 
-##  <a name="setview"></a>  CListCtrl::SetView
+## <a name="setview"></a>  CListCtrl::SetView
 
 Establece la vista del control de vista de lista.
 
@@ -4237,7 +4168,7 @@ Lo contrario, devuelve 1 si se realiza correctamente, o -1. Por ejemplo, se devu
 
 Esta función miembro emula la funcionalidad de la [LVM_SETVIEW](/windows/desktop/Controls/lvm-setview) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="setworkareas"></a>  CListCtrl::SetWorkAreas
+## <a name="setworkareas"></a>  CListCtrl::SetWorkAreas
 
 Establece el área donde se pueden mostrar los iconos en un control de vista de lista.
 
@@ -4261,14 +4192,12 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
 
 ### <a name="example"></a>Ejemplo
 
-
 ```cpp
     // Remove all working areas.
     m_myListCtrl.SetWorkAreas(0, NULL);
 ```
 
-
-##  <a name="sortgroups"></a>  CListCtrl::SortGroups
+## <a name="sortgroups"></a>  CListCtrl::SortGroups
 
 Utiliza una función de comparación definido por la aplicación para ordenar grupos por Id. de dentro de un control de vista de lista.
 
@@ -4294,7 +4223,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Esta función miembro emula la funcionalidad de la [LVM_SORTGROUPS](/windows/desktop/Controls/lvm-sortgroups) del mensaje, como se describe en el SDK de Windows.
 
-##  <a name="sortitems"></a>  CListCtrl::SortItems
+## <a name="sortitems"></a>  CListCtrl::SortItems
 
 Ordena los elementos de vista de lista mediante el uso de una función de comparación definido por la aplicación.
 
@@ -4357,7 +4286,7 @@ void CListCtrlDlg::Sort()
 }
 ```
 
-##  <a name="sortitemsex"></a>  CListCtrl::SortItemsEx
+## <a name="sortitemsex"></a>  CListCtrl::SortItemsEx
 
 Ordena los elementos del control de vista de lista actual utilizando una función de comparación definido por la aplicación.
 
@@ -4408,11 +4337,9 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Ejemplo
 
 En el ejemplo de código siguiente se muestra el `SortItemEx` método. En una sección anterior de este ejemplo de código, creamos un control de vista de lista que muestra dos columnas tituladas "ClientID" y "Grade" en una vista de informe. En el ejemplo de código siguiente se ordena la tabla con los valores de la columna "Nivel".
-
 
 ```cpp
 // The ListCompareFunc() method is a global function used by SortItemEx().
@@ -4444,8 +4371,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 }
 ```
 
-
-##  <a name="subitemhittest"></a>  CListCtrl::SubItemHitTest
+## <a name="subitemhittest"></a>  CListCtrl::SubItemHitTest
 
 Determina qué elemento de vista de lista, si existe, está en una posición determinada.
 
@@ -4486,8 +4412,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 }
 ```
 
-
-##  <a name="update"></a>  CListCtrl::Update
+## <a name="update"></a>  CListCtrl::Update
 
 Obliga al control de vista de lista para volver a dibujar el elemento especificado por *nItem*.
 

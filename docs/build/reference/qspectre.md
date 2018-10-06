@@ -1,7 +1,7 @@
 ---
 title: /Qspectre | Microsoft Docs
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaf77e1856f535dba81d4b61e2ce19d363f48038
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386962"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821652"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,11 +32,13 @@ Especifica la generación del compilador de instrucciones para mitigar determina
 
 ## <a name="remarks"></a>Comentarios
 
-El **/qspectre** opción está disponible en Visual Studio 2017 versión 15.7 y versiones posteriores. Hace que el compilador inserta instrucciones para mitigar determinados [vulnerabilidades de seguridad de Spectre](https://spectreattack.com/spectre.pdf). Estas vulnerabilidades, llamadas *ataques de canal lateral de ejecución especulativa*, afectan a muchos sistemas operativos y los procesadores modernos, incluidos procesadores de Intel, AMD y ARM.
+El **/qspectre** opción está disponible en versión 15.5.5 de Visual Studio 2017 y versiones posteriores y en Visual Studio 2015 Update 3 a través de [4338871 KB](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Hace que el compilador inserta instrucciones para mitigar determinados [vulnerabilidades de seguridad de Spectre](https://spectreattack.com/spectre.pdf). Estas vulnerabilidades, llamadas *ataques de canal lateral de ejecución especulativa*, afectan a muchos sistemas operativos y los procesadores modernos, incluidos procesadores de Intel, AMD y ARM.
 
 El **/qspectre** opción está desactivada de forma predeterminada.
 
-En su versión inicial, el **/qspectre** opción solo funciona en código optimizado. Debe asegurarse de que al compilar el código con cualquiera de las opciones de optimización (por ejemplo, [/O2 o/O1](o1-o2-minimize-size-maximize-speed.md) pero no [/Od](od-disable-debug.md)) para asegurarse de que se aplica la mitigación. De forma similar, inspeccionar cualquier código que utilice [#pragma optimize ("stg", off)](../../preprocessor/optimize.md).
+En su versión inicial, el **/qspectre** opción solo funcionado en código optimizado. En Visual Studio 2017 versión 15.7 y versiones posterior, el **/qspectre** opción se admite en todos los niveles de optimización. 
+
+Bibliotecas de Microsoft Visual C++ también están disponibles en las versiones de mitigación de Spectre. Las bibliotecas de Spectre mitigadas para Visual Studio 2017 pueden descargarse en el instalador de Visual Studio. Que se encuentran en el **componentes individuales** pestaña **compiladores, herramientas de compilación y tiempos de ejecución**, y que tienen "Bibliotecas de Spectre" en el nombre. Archivo DLL y bibliotecas de tiempo de ejecución estática con mitigación habilitado están disponibles para un subconjunto de los tiempos de ejecución de Visual C++: código de inicio de VC ++, vcruntime140, msvcp140, concrt140 y vcamp140. Los archivos DLL se admiten para la implementación de aplicación local únicamente. no se ha modificado el contenido de Visual C++ 2017 en tiempo de ejecución bibliotecas Redistributable. También puede instalar las bibliotecas de Spectre mitigadas de MFC y ATL, se encuentra en la **componentes individuales** pestaña **SDK, bibliotecas y marcos**.
 
 ### <a name="applicability"></a>Aplicabilidad
 
@@ -44,9 +46,9 @@ Si el código funciona en los datos que se cruza un límite de confianza, a cont
 
 ### <a name="availability"></a>Disponibilidad
 
-El **/qspectre** opción está disponible en versión 15.5.5 de Visual Studio 2017 y todas las actualizaciones a los compiladores de Microsoft Visual C++ (MSVC) realizadas en o después del 23 de enero de 2018. Utilice al instalador de Visual Studio para actualizar el compilador y para instalar las bibliotecas de Spectre mitigadas como componentes individuales. El **/qspectre** opción también está disponible en Visual Studio 2015 Update 3 a través de una revisión. Para obtener más información, consulte [4338871 KB](https://support.microsoft.com/help/4338871).
+El **/qspectre** opción está disponible en versión 15.5.5 de Visual Studio 2017 y en todas las actualizaciones a los compiladores de Microsoft Visual C++ (MSVC) realizadas en o después del 23 de enero de 2018. Utilice al instalador de Visual Studio para actualizar el compilador y para instalar las bibliotecas de Spectre mitigadas como componentes individuales. El **/qspectre** opción también está disponible en Visual Studio 2015 Update 3 a través de una revisión. Para obtener más información, consulte [4338871 KB](https://support.microsoft.com/help/4338871).
 
-Todas las versiones de Visual Studio 2017 versión 15.5 y todas las versiones preliminares de Visual Studio versión 15.6 ya incluyen una opción sin documentar, **/d2guardspecload**, que es equivalente al comportamiento inicial de   **/qspectre**. Puede usar **/d2guardspecload** para aplicar la mismas mitigaciones a su código en estas versiones del compilador. Actualice la compilación para usar **/qspectre** en los compiladores que admiten la opción; la **/qspectre** opción también puede admitir las mitigaciones de nuevo en versiones posteriores del compilador.
+Todas las versiones de Visual Studio 2017 versión 15.5 y todas las versiones preliminares de Visual Studio 2017 versión 15.6 incluyen una opción sin documentar, **/d2guardspecload**, que es equivalente al comportamiento inicial de   **/qspectre**. Puede usar **/d2guardspecload** para aplicar la mismas mitigaciones a su código en estas versiones del compilador. Actualice la compilación para usar **/qspectre** en los compiladores que admiten la opción; la **/qspectre** opción también puede admitir las mitigaciones de nuevo en versiones posteriores del compilador.
 
 ### <a name="effect"></a>Efecto
 
@@ -62,9 +64,9 @@ El impacto de rendimiento **/qspectre** se ha visto que ser insignificante en va
 
 El **/qspectre** opción del compilador genera código que se vincule implícitamente las versiones de las bibliotecas en tiempo de ejecución que se han creado para proporcionar las mitigaciones de Spectre. Estas bibliotecas son componentes opcionales que deben instalarse mediante el instalador de Visual Studio:
 
-- VC ++ 2017 versión *número_de_versión* Libs para Spectre (x86 y x64)
-- ATL de Visual C++ (x86/x64) con mitigaciones de Spectre
-- MFC de Visual C++ para x86/x64 con mitigaciones de Spectre
+- VC ++ 2017 versión *version_numbers* bibliotecas de Spectre \[(x86 y x64) | (ARM) | (ARM64)]
+- ATL de Visual C++ para \[(x86/x64) | ARM | ARM64] con mitigaciones de Spectre
+- MFC de Visual C++ \[x86/x64 | ARM | ARM64] con mitigaciones de Spectre
 
 Si compila el código mediante el uso de **/qspectre** y estas bibliotecas no están instalados, los informes del sistema de compilación **advertencia MSB8038: mitigación de Spectre está habilitada pero no se encuentran las bibliotecas de Spectre mitigadas**. Si se produce un error en el código MFC o ATL generar y el vinculador informa de un error como **error irrecuperable LNK1104: no se puede abrir el archivo '/ oldnames.lib'**, estas bibliotecas que falta pueden ser la causa.
 

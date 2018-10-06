@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc08e0807f1af6859587271ec48d2508b9d4bd6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048674"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821185"
 ---
 # <a name="lambda-expressions-in-c"></a>Expresiones lambda en C++
 
@@ -349,7 +349,9 @@ Para obtener más información, consulte [generate_n](../standard-library/algori
         return [n] { return n + 1; }();
     }
 ```
+
 Una expresión lambda es implícitamente `constexpr` si su resultado satisface los requisitos de un `constexpr` función:
+
 ```cpp
     auto answer = [](int n)
     {
@@ -358,6 +360,7 @@ Una expresión lambda es implícitamente `constexpr` si su resultado satisface l
 
     constexpr int response = answer(10);
 ```
+
 Si una expresión lambda es implícita o explícitamente `constexpr`, la conversión a un puntero de función genera un `constexpr` función:
 
 ```cpp

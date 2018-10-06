@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Usar MSBuild para crear un proyecto de Visual C++ | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bb957f0ab1dd2ea7d05151257aee0e15561e8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e8a1c45342cf1f5eb178764d6fd723950f52e7e0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609704"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821253"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Tutorial: Usar MSBuild para crear un proyecto de Visual C++
 
@@ -53,13 +53,13 @@ Necesitas lo siguiente para poder llevar a cabo este tutorial:
 
 ## <a name="creating-the-c-source-files"></a>Creación de los archivos de código fuente de C++
 
-En este tutorial creará un proyecto que tiene un archivo de origen y un archivo de encabezado. El archivo de origen main.cpp contiene la función principal para la aplicación de consola. El archivo de encabezado main.h contiene código para incluir el archivo de encabezado iostream. Puede crear estos archivos de C++ con Visual Studio o un texto editor como código de Visual Studio.
+En este tutorial, creará un proyecto que tiene un archivo de origen y un archivo de encabezado. El archivo de origen main.cpp contiene la función principal para la aplicación de consola. El archivo de encabezado main.h contiene código para incluir el archivo de encabezado iostream. Puede crear estos archivos de C++ con Visual Studio o un texto editor como código de Visual Studio.
 
 ### <a name="to-create-the-c-source-files-for-your-project"></a>Para crear los archivos de origen de C++ para el proyecto
 
 1. Cree un directorio para el proyecto.
 
-2. Cree un archivo que se denomine main.cpp y agregue el código siguiente a este archivo:
+1. Cree un archivo que se denomine main.cpp y agregue el código siguiente a este archivo:
 
     ```cpp
     // main.cpp : the application source code.
@@ -72,7 +72,7 @@ En este tutorial creará un proyecto que tiene un archivo de origen y un archivo
     }
     ```
 
-3. Cree un archivo que se denomine main.h y agregue el código siguiente a este archivo:
+1. Cree un archivo que se denomine main.h y agregue el código siguiente a este archivo:
 
     ```cpp
     // main.h: the application header code.
@@ -81,24 +81,24 @@ En este tutorial creará un proyecto que tiene un archivo de origen y un archivo
 
 ## <a name="creating-the-xml-msbuild-project-file"></a>Creación del archivo de proyecto de MSBuild XML
 
-Un archivo de proyecto de MSBuild es un archivo XML que contiene un elemento raíz del proyecto (\<proyecto >). En el proyecto de ejemplo siguiente, el \<proyecto > elemento contiene siete elementos secundarios:
+Un archivo de proyecto de MSBuild es un archivo XML que contiene un elemento raíz del proyecto (`<Project>`). En el proyecto de ejemplo siguiente, la `<Project>` elemento contiene siete elementos secundarios:
 
-- Tres etiquetas de grupo de elementos (\<ItemGroup >) que especifican la configuración del proyecto y plataforma, el nombre del archivo de origen y el nombre del archivo de encabezado.
+- Tres etiquetas de grupo de elementos (`<ItemGroup>`) que especifican la configuración del proyecto y plataforma, el nombre del archivo de origen y el nombre del archivo de encabezado.
 
-- Tres etiquetas de importación (\<Importar >) que especifican la ubicación de configuración de Microsoft Visual C++.
+- Tres etiquetas de importación (`<Import>`) que especifican la ubicación de configuración de Microsoft Visual C++.
 
-- Una etiqueta de grupo de propiedades (\<PropertyGroup >) que especifica la configuración del proyecto.
+- Una etiqueta de grupo de propiedades (`<PropertyGroup>`) que especifica la configuración del proyecto.
 
 ### <a name="to-create-the-msbuild-project-file"></a>Para crear el archivo de proyecto de MSBuild
 
-1. Utilice un editor de texto para crear un archivo de proyecto que se denomina `myproject.vcxproj`y, a continuación, agregue la siguiente raíz \<proyecto > elemento. Inserte los elementos de los siguientes pasos del procedimiento entre la raíz \<proyecto > etiquetas:
+1. Utilice un editor de texto para crear un archivo de proyecto que se denomina `myproject.vcxproj`y, a continuación, agregue la siguiente raíz `<Project>` elemento. Inserte los elementos de los siguientes pasos del procedimiento entre la raíz `<Project>` etiquetas:
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-2. Agregue las dos siguientes \<ProjectConfiguration > elementos secundarios en un \<ItemGroup > elemento. El elemento secundario especifica la depuración y lanzamiento de las configuraciones para un sistema operativo de Windows de 32 bits:
+1. Agregue las dos siguientes `<ProjectConfiguration>` elementos secundarios en un `<ItemGroup>` elemento. El elemento secundario especifica la depuración y lanzamiento de las configuraciones para un sistema operativo de Windows de 32 bits:
 
     ```xml
     <ItemGroup>
@@ -113,13 +113,13 @@ Un archivo de proyecto de MSBuild es un archivo XML que contiene un elemento ra�
     </ItemGroup>
     ```
 
-3. Agregue las siguientes \<Import / > elemento que especifica la ruta de acceso de la configuración de C++ de forma predeterminada para este proyecto:
+1. Agregue las siguientes `<Import>` elemento que especifica la ruta de acceso de la configuración de C++ de forma predeterminada para este proyecto:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-4. Agregue el siguiente elemento de grupo de propiedades (\<PropertyGroup >) que especifica dos propiedades del proyecto:
+1. Agregue el siguiente elemento de grupo de propiedades (`<PropertyGroup>`) que especifica dos propiedades del proyecto:
 
     ```xml
     <PropertyGroup>
@@ -128,13 +128,13 @@ Un archivo de proyecto de MSBuild es un archivo XML que contiene un elemento ra�
     </PropertyGroup>
     ```
 
-5. Agregue las siguientes \<Import / > elemento que especifica la ruta de acceso de la configuración actual de C++ para este proyecto:
+1. Agregue las siguientes `<Import>` elemento que especifica la ruta de acceso de la configuración actual de C++ para este proyecto:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-6. Agregue el siguiente \<ClCompile > elemento secundario de un \<ItemGroup > elemento. El elemento secundario especifica el nombre del archivo de código fuente de C o C++ para compilar:
+1. Agregue el siguiente `<ClCompile>` elemento secundario de un `<ItemGroup>` elemento. El elemento secundario especifica el nombre del archivo de código fuente de C o C++ para compilar:
 
     ```xml
     <ItemGroup>
@@ -143,9 +143,9 @@ Un archivo de proyecto de MSBuild es un archivo XML que contiene un elemento ra�
     ```
 
    > [!NOTE]
-   > \<ClCompile > es un *destino de compilación* y se define en el **VCTargets** directory.
+   > `<ClCompile>` es un *destino de compilación* y se define en el **VCTargets** directory.
 
-7. Agregue el siguiente \<ClInclude > elemento secundario de un \<ItemGroup > elemento. El elemento secundario especifica el nombre del archivo de encabezado para el archivo de código fuente de C o C++:
+1. Agregue el siguiente `<ClInclude>` elemento secundario de un `<ItemGroup>` elemento. El elemento secundario especifica el nombre del archivo de encabezado para el archivo de código fuente de C o C++:
 
     ```xml
     <ItemGroup>
@@ -153,7 +153,7 @@ Un archivo de proyecto de MSBuild es un archivo XML que contiene un elemento ra�
     </ItemGroup>
     ```
 
-8. Agregue las siguientes \<importación > elemento que especifica la ruta de acceso del archivo que define el destino de este proyecto:
+1. Agregue las siguientes `<Import>` elemento que especifica la ruta de acceso del archivo que define el destino de este proyecto:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -197,7 +197,7 @@ Escriba el siguiente comando en el símbolo del sistema para compilar la aplicac
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-MSBuild crea un directorio para los archivos de salida y, a continuación, compila y vincula el proyecto para generar el programa Myproject.exe. Al finalizar el proceso de compilación, use el siguiente comando para ejecutar la aplicación:
+MSBuild crea un directorio para los archivos de salida y, a continuación, compila y vincula el proyecto para generar el programa Myproject.exe. Al finalizar el proceso de compilación, use el siguiente comando para ejecutar la aplicación desde la carpeta de depuración:
 
 `myproject`
 
@@ -219,7 +219,7 @@ MSBuild permite ejecutar destinos de compilación predefinidos, aplicar propieda
 
 ### <a name="using-msbuild-with-build-targets"></a>Usar MSBuild con destinos de compilación
 
-Un *destino de compilación* es un conjunto de comandos predefinidos o definidos por el usuario que se pueden ejecutar durante la compilación. Utilice la opción de línea de comandos de destino (**/t**) para especificar un destino de compilación. En el caso de los `myproject` proyecto de ejemplo, predefinido **limpia** elimina todos los archivos en la carpeta de depuración y crea un nuevo archivo de registro de destino.
+Un *destino de compilación* es un conjunto de comandos predefinidos o definidos por el usuario que se pueden ejecutar durante la compilación. Utilice la opción de línea de comandos de destino (`/t`) para especificar un destino de compilación. Para el `myproject` proyecto de ejemplo, predefinido **limpia** elimina todos los archivos en la carpeta de depuración y crea un nuevo archivo de registro de destino.
 
 En el símbolo del sistema, escriba el siguiente comando para limpiar `myproject`.
 
@@ -227,7 +227,7 @@ En el símbolo del sistema, escriba el siguiente comando para limpiar `myproject
 
 ### <a name="using-msbuild-with-build-properties"></a>Usar MSBuild con propiedades de compilación
 
-La opción de línea de comandos property (**/p**) permite reemplazar una propiedad en el archivo de compilación del proyecto. En el `myproject` configuración de compilación de proyecto, el lanzamiento o depuración de ejemplo se especifica mediante el `Configuration` propiedad. Y el sistema operativo que está diseñado para ejecutar la aplicación compilada se especifica mediante el `Platform` propiedad.
+La opción de línea de comandos property (`/p`) permite reemplazar una propiedad en el archivo de compilación del proyecto. En el `myproject` configuración de compilación de proyecto, el lanzamiento o depuración de ejemplo se especifica mediante el `Configuration` propiedad. Y el sistema operativo que está diseñado para ejecutar la aplicación compilada se especifica mediante el `Platform` propiedad.
 
 En el símbolo del sistema, escriba el siguiente comando para crear una compilación de depuración de la `myproject` aplicación que está diseñada para ejecutarse en Windows de 32 bits.
 
@@ -259,7 +259,7 @@ En el símbolo del sistema, escriba el siguiente comando para usar las herramien
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>Usar MSBuild con un conjunto de herramientas diferente
 
-Si tiene los conjuntos de herramientas y bibliotecas para otras versiones de Visual C++ instalado, MSBuild puede compilar aplicaciones para la versión actual de Visual C++ o para las demás versiones instaladas. Por ejemplo, si ha instalado Visual Studio 2012, para especificar el conjunto de herramientas 11.0 de Visual C++ para Windows XP, agregue el siguiente elemento de grupo de propiedades al archivo de proyecto Myproject.vcxproj después el Microsoft.Cpp.props `<Import />` elemento:
+Si tiene los conjuntos de herramientas y bibliotecas para otras versiones de Visual C++ instalado, MSBuild puede compilar aplicaciones para la versión actual de Visual C++ o para las demás versiones instaladas. Por ejemplo, si ha instalado Visual Studio 2012, para especificar el conjunto de herramientas 11.0 de Visual C++ para Windows XP, agregue el siguiente elemento de grupo de propiedades al archivo de proyecto Myproject.vcxproj después la `Microsoft.Cpp.props` \<Import / > elemento:
 
 ```xml
 <PropertyGroup>
@@ -267,11 +267,9 @@ Si tiene los conjuntos de herramientas y bibliotecas para otras versiones de Vis
 </PropertyGroup>
 ```
 
-Para volver a generar el proyecto con el conjunto de herramientas de Visual C++ 11.0 Windows XP, escriba cualquiera de los siguientes comandos:
+Para volver a generar el proyecto con el conjunto de herramientas de Visual C++ 11.0 Windows XP, escriba los siguientes comandos:
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
-
-`msbuild myproject.vcxproj /t:rebuild`
 
 ### <a name="adding-msbuild-customizations"></a>Agregar personalizaciones de MSBuild
 

@@ -1,7 +1,7 @@
 ---
 title: Agregar una propiedad al Control (ATL Tutorial, parte 3) | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,52 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e90da3fe44613b0c530e801d963eaddd9d783e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2373d2d703f18824274df158b31023669d8df945
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756913"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820478"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Agregar una propiedad al control (Tutorial de ATL, Parte 3)
 
 `IPolyCtl` es la interfaz que contiene las propiedades y los métodos del control personalizado y agregará una propiedad a él.
 
-### <a name="to-add-a-property-using-the-add-property-wizard"></a>Para agregar una propiedad mediante el Asistente para agregar propiedades
+### <a name="to-add-the-property-definitions-to-your-project"></a>Para agregar las definiciones de propiedad al proyecto
 
-1. En la vista de clases, expanda la rama de polígono.
+1. En **vista de clases**, expanda el `Polygon` rama.
 
-2. Haga clic en IPolyCtl.
+1. Haga clic en `IPolyCtl`.
 
-3. En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar propiedad**.
+1. En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar propiedad**. El **Agregar propiedad** aparecerá el asistente.
 
-     Aparecerá el Asistente para agregar propiedades.
+1. Tipo `Sides` como el **nombre de la propiedad**.
 
-4. En la lista desplegable de tipos de propiedades, seleccione `SHORT`.
+1. En la lista desplegable de **tipo de propiedad**, seleccione `short`.
 
-5. Tipo *lados* como el **nombre de propiedad.**
+1. Haga clic en **Aceptar** para terminar de agregar la propiedad.
 
-6. Haga clic en **finalizar** para terminar de agregar la propiedad.
+1. Desde **el Explorador de soluciones**, abra Polygon.idl y reemplace las líneas siguientes al final de la `IPolyCtl : IDispatch` interfaz:
 
-Cuando se agrega la propiedad a la interfaz, MIDL (el programa que compila los archivos .idl) define un `Get` método para recuperar su valor y un `Put` método para establecer un nuevo valor. Los métodos se denominan anteponiendo `put_` y `get_` al nombre de propiedad.
+    ```cpp
+    short get_Sides();
+    void set_Sides(short value);
+    ```
 
-El Asistente para agregar propiedades agrega las líneas necesarias al archivo .idl. También agrega el `Get` y `Put` a la definición de clase en PolyCtl.h los prototipos de función y agrega una implementación vacía a PolyCtl.cpp. Puede comprobarlo abriendo PolyCtl.cpp y buscando las funciones `get_Sides` y `put_Sides`.
+    with
 
-Aunque ahora dispone de funciones esqueletos para establecer y recuperar la propiedad, necesita un lugar donde se almacenan. Creará una variable para almacenar la propiedad y actualizar las funciones en consecuencia.
+    ```cpp
+    [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
+    [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+    ```
 
-#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>Para crear una variable para almacenar la propiedad y actualizar la put y los métodos get
+1. Desde **el Explorador de soluciones**, abra PolyCtl.h y agregue las líneas siguientes después de la definición de `m_clrFillColor`:
 
-1. En el Explorador de soluciones, abra PolyCtl.h y agregue la siguiente línea después de la definición de `m_clrFillColor`:
+    [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
+Aunque ahora dispone de funciones esqueletos para establecer y recuperar la propiedad y una variable para almacenar la propiedad, debe implementar las funciones en consecuencia.
 
-2. Establecer el valor predeterminado de `m_nSides`. Convierta la forma predeterminada un triángulo agregando una línea al constructor en PolyCtl.h:
+### <a name="to-update-the-get-and-put-methods"></a>Para actualizar get y put métodos
 
-     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
+1. Establecer el valor predeterminado de `m_nSides`. Convierta la forma predeterminada un triángulo agregando una línea al constructor en PolyCtl.h:
 
-3. Implemente el `Get` y `Put` métodos. El `get_Sides` y `put_Sides` a PolyCtl.h se han agregado las declaraciones de función. Reemplace el código de PolyCtl.cpp para `get_Sides` y `put_Sides` con el código siguiente:
+    [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
+1. Implemente el `Get` y `Put` métodos. El `get_Sides` y `put_Sides` a PolyCtl.h se han agregado las declaraciones de función. Ahora, agregue el código para `get_Sides` y `put_Sides` a PolyCtl.cpp con lo siguiente:
+
+    [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
 El `get_Sides` método devuelve el valor actual de la `Sides` propiedad a través de la `pVal` puntero. En el `put_Sides` método, el código garantiza que el usuario establezca el `Sides` propiedad a un valor aceptable. El mínimo debe ser 3, y porque se usará una matriz de puntos para cada lado, 100 es un límite razonable para un valor máximo.
 
@@ -68,4 +76,3 @@ Ahora tiene una propiedad denominada `Sides`. En el paso siguiente, cambiará el
 ## <a name="see-also"></a>Vea también
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)
-

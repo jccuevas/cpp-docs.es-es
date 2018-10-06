@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422673"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821405"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa
 
@@ -73,7 +73,7 @@ Los pasos anteriores proporcionan un ejemplo del uso de una técnica conocida co
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>¿Qué escenarios de software pueden verse afectados?
 
-Desarrollo de software seguro mediante un proceso como el [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) normalmente requiere que los desarrolladores a identificar los límites de confianza que existen en su aplicación. Existe un límite de confianza en lugares donde una aplicación puede interactuar con los datos proporcionados por un contexto de menor confianza, por ejemplo, otro proceso en el sistema o un proceso en modo usuario sin derechos administrativos en el caso de un controlador de dispositivo de modo kernel. La nueva clase de vulnerabilidades relacionadas con canales de lado de la ejecución especulativa es relevante para muchos de los límites de confianza en los modelos de seguridad de software existente que aislar código y los datos en un dispositivo.
+Desarrollo de software seguro mediante un proceso como el [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) normalmente requiere que los desarrolladores a identificar los límites de confianza que existen en su aplicación. Existe un límite de confianza en lugares donde una aplicación puede interactuar con los datos proporcionados por un contexto de menor confianza, por ejemplo, otro proceso en el sistema o un proceso en modo usuario sin derechos administrativos en el caso de un controlador de dispositivo de modo kernel. La nueva clase de vulnerabilidades relacionadas con canales de lado de la ejecución especulativa es relevante para muchos de los límites de confianza en los modelos de seguridad de software existente que aislar código y los datos en un dispositivo.
 
 En la tabla siguiente proporciona un resumen de los modelos de seguridad de software donde los desarrolladores que deba preocuparse acerca de estas vulnerabilidades que se producen:
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barrera de especulación a través de la instrumentación en tiempo de compilador
 
-El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que inserta automáticamente una barrera de especulación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. Es importante tener en cuenta que esta marca no cubre todos los modelos de codificación potencialmente vulnerables y por lo tanto los desarrolladores no deben confiar en ella como una solución completa para esta clase de vulnerabilidades.
+El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que inserta automáticamente una barrera de especulación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. Es importante tener en cuenta que esta marca no cubre todos los modelos de codificación potencialmente vulnerables y por lo tanto los desarrolladores no deben confiar en ella como una solución completa para esta clase de vulnerabilidades.
 
 ### <a name="masking-array-indices"></a>Los índices de matriz de enmascaramiento
 
