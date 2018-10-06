@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52cf47335c1bed55ca38d508789d65902b335f0f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 431cd954845041a7a186a967c83df7ffb1aac788
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707634"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821678"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible con la prevención de ejecución de datos)
 
@@ -40,7 +40,7 @@ De forma predeterminada, **/NXCOMPAT** está activado.
 
 Para obtener más información sobre la Prevención de ejecución de datos, vea estos artículos:
 
-- [Una descripción detallada de la característica de prevención de ejecución de datos (DEP)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
+- [Una descripción detallada de la característica de prevención de ejecución de datos (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
 - [Prevención de ejecución de datos](/windows/desktop/Memory/data-execution-prevention)
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6604bc0bf27b3d0192f602c4df88e5f01e4a161
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46135963"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820482"
 ---
 # <a name="project-build-error-prj0016"></a>Error PRJ0016 al compilar el proyecto
 
@@ -39,6 +39,6 @@ Otra causa de este error es que la configuración de directivas no incluye VCSpa
 
 Para obtener más información, consulte:
 
-- Artículo de Knowledge Base 324153, que está disponible en [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).
+- Artículo de Knowledge Base 324153, que está disponible en [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
 
 - [Cumplir con la configuración de directiva de sistema](https://msdn.microsoft.com/library/aa372139), la sección en "Ejecutar sólo aplicaciones permitidas de Windows".

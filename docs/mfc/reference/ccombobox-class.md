@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447432"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821509"
 ---
 # <a name="ccombobox-class"></a>CComboBox (clase)
 
@@ -256,7 +256,7 @@ Si creas un `CComboBox` objeto dentro de un cuadro de diálogo (a través de un 
 
 Si incrusta un `CComboBox` objeto dentro de otra ventana del objeto, no es necesario que lo destruirá. Si crea la `CComboBox` objeto en la pila, se destruye automáticamente. Si crea el `CComboBox` objeto en el montón mediante el uso de la **nueva** función, debe llamar a **eliminar** en el objeto que lo destruirá cuando se destruye el cuadro combinado de Windows.
 
-**Tenga en cuenta** si desea controlar los mensajes WM_KEYDOWN y WM_CHAR, tendrá que subclase del cuadro combinado editar y controles de cuadro de lista, derivar clases de `CEdit` y `CListBox`, y agregar controladores para esos mensajes a las clases derivadas. Para obtener más información, consulte [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) y [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Tenga en cuenta** si desea controlar los mensajes WM_KEYDOWN y WM_CHAR, tendrá que subclase del cuadro combinado editar y controles de cuadro de lista, derivar clases de `CEdit` y `CListBox`, y agregar controladores para esos mensajes a las clases derivadas. Para obtener más información, consulte [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) y [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

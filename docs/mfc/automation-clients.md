@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395522"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820599"
 ---
 # <a name="automation-clients"></a>clientes de automatización
 
@@ -46,7 +46,7 @@ A continuación, especifique el archivo de biblioteca de tipos que describen las
 
 ### <a name="handling-events-in-automation-clients"></a>Control de eventos en los clientes de automatización
 
-Si desea controlar los eventos en el cliente de automatización, deberá agregar una interfaz de receptor. MFC proporciona soporte técnico de Asistente para agregar interfaces de receptor para controles ActiveX, pero no se admite para otros servidores COM. Para obtener información sobre cómo agregar una interfaz de receptor en un cliente MFC para interfaces de origen que se describe en los servidores COM, vea Cómo: crear una interfaz de receptor en el cliente COM de MFC-Based (181845 KB) en [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+Si desea controlar los eventos en el cliente de automatización, deberá agregar una interfaz de receptor. MFC proporciona soporte técnico de Asistente para agregar interfaces de receptor para controles ActiveX, pero no se admite para otros servidores COM. Para obtener información sobre cómo agregar una interfaz de receptor en un cliente MFC para interfaces de origen que se describe en los servidores COM, vea Cómo: crear una interfaz de receptor en el cliente COM de MFC-Based (181845 KB) en [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
 
 ## <a name="see-also"></a>Vea también
 

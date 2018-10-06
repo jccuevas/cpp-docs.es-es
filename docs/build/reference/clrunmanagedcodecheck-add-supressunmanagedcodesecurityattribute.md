@@ -1,7 +1,7 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (agregar SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
+title: /CLRUNMANAGEDCODECHECK (quite SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429766"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820930"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (agregar SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (quite SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK** especifica si el vinculador aplicará <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a generadas por vinculador `PInvoke` llamadas desde código administrado en archivos DLL nativos.
+**/CLRUNMANAGEDCODECHECK** especifica que no se aplica el vinculador <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a generadas por vinculador `PInvoke` llamadas desde código administrado en archivos DLL nativos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429766"
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, el vinculador se aplica el **SuppressUnmanagedCodeSecurityAttribute** a generadas por vinculador `PInvoke` llamadas. Cuando **/CLRUNMANAGEDCODECHECK** está en vigor, **SuppressUnmanagedCodeSecurityAttribute** no se aplica.
+De forma predeterminada, el vinculador se aplica el **SuppressUnmanagedCodeSecurityAttribute** a generadas por vinculador `PInvoke` llamadas. Cuando **/CLRUNMANAGEDCODECHECK** está en vigor, **SuppressUnmanagedCodeSecurityAttribute** se quita. Para aplicar explícitamente la **SuppressUnmanagedCodeSecurityAttribute** a generadas por vinculador `PInvoke` llamadas, puede usar **/CLRUNMANAGEDCODECHECK:NO**.
 
-El vinculador solo agrega el atributo a objetos que se compilan con **/CLR** o **/CLR: pure**. Sin embargo, el **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+El vinculador solo agrega el atributo a objetos que están compilados con **/CLR** o **/CLR: pure**. Sin embargo, el **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
 Un `PInvoke` llamada genera el vinculador cuando el enlazador no encuentra un símbolo administrado que satisfaga una referencia desde un llamador administrado, pero puede encontrar un símbolo nativo para satisfacer esa referencia. Para obtener más información acerca de `PInvoke`, consulte [llamar a funciones nativas desde código administrado](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Tenga en cuenta que si usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> en el código, debe establecer explícitamente **/CLRUNMANAGEDCODECHECK**. Es posible vulnerabilidad de seguridad si una imagen contiene atributos SuppressUnmanagedCodeSecurity y AllowPartiallyTrustedCallers.
+Tenga en cuenta que si usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> en el código, debe establecer explícitamente **/CLRUNMANAGEDCODECHECK** para quitar el **SuppressUnmanagedCodeSecurity** atributo. Es una posible vulnerabilidad de seguridad si una imagen contiene tanto el **SuppressUnmanagedCodeSecurity** y **AllowPartiallyTrustedCallers** atributos.
 
 Consulte [instrucciones de codificación segura para código no administrado](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) para obtener más información acerca de las implicaciones del uso de **SuppressUnmanagedCodeSecurityAttribute**.
 

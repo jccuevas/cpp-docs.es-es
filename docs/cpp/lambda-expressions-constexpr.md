@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6a48067ebc145c907a81212a9acca55c3f4665
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71c28ab1531c2af19f2b8f594db457d0272b0664
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066601"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820365"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>expresiones lambda de constexpr en C++
 
@@ -38,7 +38,9 @@ ms.locfileid: "46066601"
         return [n] { return n + 1; }();
     }
 ```
+
 Una expresión lambda es implícitamente **constexpr** si su resultado satisface los requisitos de un **constexpr** función:
+
 ```cpp
     auto answer = [](int n)
     {
@@ -47,6 +49,7 @@ Una expresión lambda es implícitamente **constexpr** si su resultado satisface
 
     constexpr int response = answer(10);
 ```
+
 Si una expresión lambda es implícita o explícitamente **constexpr**y convertirlo en un puntero de función, la función resultante es también **constexpr**:
 
 ```cpp

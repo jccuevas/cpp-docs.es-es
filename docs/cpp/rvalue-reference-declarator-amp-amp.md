@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceb0d29a5e49efa4f387f2949a0aa670082a62ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64a42a65e112930767aa27f94612d06b7fb2d34a
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021946"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821639"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referencia rvalue: &amp;&amp;
 
@@ -63,7 +63,7 @@ int main()
 
 Antes de Visual C++ 2010, con cada llamada a **operator +** asigna y devuelve un nuevo archivo temporal `string` objeto (un valor r). **operator +** no se puede anexar una cadena al otro porque no sabe si las cadenas de origen son valores l o valores r. Si las cadenas de origen son ambas valores L, puede que se haga referencia a las mismas en otra parte del programa y, por consiguiente, no se deben modificar. Mediante el uso de las referencias rvalue, **operator +** puede modificarse para que acepte valores r, que no se puede hacer referencia en otro lugar en el programa. Por lo tanto, **operator +** ahora se puede anexar una cadena a otra. Esto puede reducir significativamente el número de asignaciones de memoria dinámica que la clase `string` debe realizar. Para obtener más información sobre la `string` de clases, vea [basic_string (clase)](../standard-library/basic-string-class.md).
 
-La semántica de transferencia de recursos también ayuda cuando el compilador no puede utilizar la optimización del valor devuelto (RVO) o la optimización del valor devuelto con nombre (NRVO). En estos casos, el compilador llama al constructor de movimiento si el tipo lo define. Para obtener más información acerca de la optimización de valor devuelto con nombre, vea [denominada optimización del valor devuelto en Visual C++ 2005](https://msdn.microsoft.com/en-us/library/ms364057.aspx).
+La semántica de transferencia de recursos también ayuda cuando el compilador no puede utilizar la optimización del valor devuelto (RVO) o la optimización del valor devuelto con nombre (NRVO). En estos casos, el compilador llama al constructor de movimiento si el tipo lo define. Para obtener más información acerca de la optimización de valor devuelto con nombre, vea [denominada optimización del valor devuelto en Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Para entender mejor la semántica de transferencia de recursos, considere el ejemplo de la inserción de un elemento en un objeto `vector`. Si se supera la capacidad del objeto `vector`, el objeto `vector` debe reasignar memoria para sus elementos y, a continuación, copiar cada elemento en otra ubicación de memoria para dejar espacio al elemento insertado. Cuando una operación de inserción copia un elemento, crea un nuevo elemento, llama al constructor de copias para copiar los datos del elemento anterior en el nuevo elemento y, a continuación, destruye el elemento anterior. La semántica de transferencia de recursos permite mover objetos directamente sin tener que realizar una asignación de gran consumo de memoria ni operaciones de copia.
 

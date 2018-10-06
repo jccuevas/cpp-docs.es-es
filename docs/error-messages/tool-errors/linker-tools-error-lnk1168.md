@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a80aa365edf3e39c41ed73d815cc82de6ce9a52
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118172"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821080"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Error de las herramientas del vinculador LNK1168
 
@@ -35,7 +35,7 @@ Puede usar las utilidades de Windows SysInternals [controlar](http://technet.mic
 
 Si el archivo está bloqueado por un programa antivirus, puede solucionar este problema excluyendo los directorios de salida de compilación de la detección automática del programa antivirus. La detección de los programas antivirus a menudo se activa por la creación de nuevos archivos en el sistema de archivos y mantiene bloqueos en los archivos mientras se ejecuta el análisis. Consulte en la documentación del programa antivirus los detalles acerca de cómo excluir directorios específicos del análisis.
 
-Si el archivo está bloqueado por un servicio de indización de búsqueda, puede solucionar este problema excluyendo los directorios de salida de compilación de la indización automática. Consulte la documentación del servicio de indización para obtener más información. Para cambiar el servicio de indización de búsqueda de Windows, use **opciones de indización** en el Windows **Panel de Control**. Para obtener más información, consulte [Windows mejorar las búsquedas mediante el índice: preguntas más frecuentes](http://windows.microsoft.com/en-us/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
+Si el archivo está bloqueado por un servicio de indización de búsqueda, puede solucionar este problema excluyendo los directorios de salida de compilación de la indización automática. Consulte la documentación del servicio de indización para obtener más información. Para cambiar el servicio de indización de búsqueda de Windows, use **opciones de indización** en el Windows **Panel de Control**. Para obtener más información, consulte [Windows mejorar las búsquedas mediante el índice: preguntas más frecuentes](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Si el proceso de compilación no puede sobrescribir el archivo ejecutable, es posible que esté bloqueado por el Explorador de archivos. Si el **aplicación experiencia** servicio se ha deshabilitado, Explorador de archivos puede contener un bloqueo del identificador de archivo ejecutable durante un período prolongado. Para solucionar este problema, ejecute **services.msc** y, a continuación, abra el **propiedades** cuadro de diálogo para la **experiencia de aplicación** service. Cambiar el **tipo de inicio** desde **deshabilitado** a **Manual**.
 
