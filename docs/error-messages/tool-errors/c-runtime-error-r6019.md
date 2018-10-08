@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95bc763ab39df16c1cfc1b05689560edecf70570
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 13653f54551501d5e35bd1285dc3d3f1a74343f1
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093314"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861608"
 ---
 # <a name="c-runtime-error-r6019"></a>C Runtime Error R6019
 
 no se puede abrir el dispositivo de consola
 
 > [!NOTE]
->  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque ha intentado acceder a la consola, pero no tiene permisos suficientes. Hay varias razones posibles para este error, pero suele ser porque se debe ejecutar el programa como administrador, o hay un error en el programa.
+> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque ha intentado acceder a la consola, pero no tiene permisos suficientes. Hay varias razones posibles para este error, pero suele ser porque se debe ejecutar el programa como administrador, o hay un error en el programa.
 >
->  Puede intentar seguir estos pasos para corregir este error:
+> Puede intentar seguir estos pasos para corregir este error:
 >
->  -   Ejecute el programa como administrador.
-> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
-> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
-> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+> - Ejecute el programa como administrador.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 

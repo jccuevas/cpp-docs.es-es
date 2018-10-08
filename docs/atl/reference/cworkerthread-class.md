@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79855860b4d2d6bfee328f8fa07f2a3ba6cfd69c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040237"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861465"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread (clase)
 
 Esta clase crea un subproceso de trabajo o usa uno existente, espera en uno o varios identificadores de objeto de kernel y ejecuta una función de cliente especificada cuando se señala a uno de los controladores.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,7 +46,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *ThreadTraits*<br/>
 La clase que proporciona la función de creación de subproceso, como [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) o [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
@@ -84,19 +84,19 @@ La clase que proporciona la función de creación de subproceso, como [CRTThread
 
 1. Cree una instancia de esta clase.
 
-2. Llame a [CWorkerThread::Initialize](#initialize).
+1. Llame a [CWorkerThread::Initialize](#initialize).
 
-3. Llame a [CWorkerThread::AddHandle](#addhandle) con el identificador de un objeto de kernel y un puntero a una implementación de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+1. Llame a [CWorkerThread::AddHandle](#addhandle) con el identificador de un objeto de kernel y un puntero a una implementación de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-     - O
+   \- o -
 
-     Llame a [CWorkerThread::AddTimer](#addtimer) con un puntero a una implementación de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+   Llame a [CWorkerThread::AddTimer](#addtimer) con un puntero a una implementación de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-4. Implemente [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) para realizar alguna acción cuando se señala el identificador o un temporizador.
+1. Implemente [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) para realizar alguna acción cuando se señala el identificador o un temporizador.
 
-5. Para quitar un objeto de la lista de objetos que puede esperar, llame a [CWorkerThread::RemoveHandle](#removehandle).
+1. Para quitar un objeto de la lista de objetos que puede esperar, llame a [CWorkerThread::RemoveHandle](#removehandle).
 
-6. Para terminar el subproceso, llame a [CWorkerThread::Shutdown](#shutdown).
+1. Para terminar el subproceso, llame a [CWorkerThread::Shutdown](#shutdown).
 
 ## <a name="requirements"></a>Requisitos
 

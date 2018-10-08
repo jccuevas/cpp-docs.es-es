@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086de927a6927087b8cbf3d1501ba6420e1027ed
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110810"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861842"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opciones del compilador y del vinculador (C++/CX)
 
@@ -28,7 +28,7 @@ La variable de entorno %LIBPATH% especifica la ruta de acceso predeterminada par
 
 |Opción|Descripción|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Permite a las extensiones de lenguaje de Windows en tiempo de ejecución.<br /><br /> El parámetro `nostdlib` impide que el compilador use la ruta de acceso de búsqueda estándar predefinida para buscar archivos .winmd y de ensamblado.<br /><br /> La opción del compilador **/ZW** especifica de manera implícita las siguientes opciones del compilador:<br /><br /> -   **/Fi** vccorlib.h, que fuerza la inclusión del archivo de encabezado vccorlib.h que define muchos tipos que son requeridos por el compilador.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, que fuerza la inclusión del archivo de metadatos Windows.winmd ofrecido por el sistema operativo y que define muchos tipos en tiempo de ejecución de Windows.<br />-   **/FU** Platform.winmd, que fuerza la inclusión del archivo de metadatos Platform.winmd ofrecido por el compilador y que define la mayoría de los tipos de la familia de Platform de espacios de nombres.|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Permite a las extensiones de lenguaje de Windows en tiempo de ejecución.<br /><br /> El parámetro `nostdlib` impide que el compilador use la ruta de acceso de búsqueda estándar predefinida para buscar archivos .winmd y de ensamblado.<br /><br /> La opción del compilador **/ZW** especifica de manera implícita las siguientes opciones del compilador:<br /><br />- **/Fi** vccorlib.h, que fuerza la inclusión del archivo de encabezado vccorlib.h que define muchos tipos que son requeridos por el compilador.<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, que fuerza la inclusión del archivo de metadatos Windows.winmd ofrecido por el sistema operativo y que define muchos tipos en tiempo de ejecución de Windows.<br />- **/FU** Platform.winmd, que fuerza la inclusión del archivo de metadatos Platform.winmd ofrecido por el compilador y que define la mayoría de los tipos de la familia de Platform de espacios de nombres.|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Agrega un directorio, que se especifica mediante el parámetro *dir* , a la ruta de acceso de búsqueda que usa el compilador para buscar archivos .winmd y de ensamblado.|
 |**/FU**  *archivo*|Fuerza la inclusión del módulo especificado o el archivo .winmd. Es decir, no tiene que especificar `#using` *archivo* en el código fuente. El compilador fuerza automáticamente la inclusión de su propio archivo de metadatos de Windows, Platform.winmd.|
 |/D "WINAPI_FAMILY=2"|Crea una definición que permite el uso de un subconjunto del SDK de Win32 que es compatible con el tiempo de ejecución de Windows.|

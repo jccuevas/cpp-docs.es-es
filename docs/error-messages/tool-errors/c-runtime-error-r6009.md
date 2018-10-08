@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0deafa72a427543c0d885401a1d4192d61a6db65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 42a5aed9f823b5d2c5425c4d7baae129c08e76e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069045"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860932"
 ---
 # <a name="c-runtime-error-r6009"></a>C Runtime Error R6009
 
 No hay suficiente espacio para el entorno
 
 > [!NOTE]
->  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de memoria muy baja, demasiada memoria usada por las variables de entorno o un error en el programa.
+> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de memoria muy baja, demasiada memoria usada por las variables de entorno o un error en el programa.
 >
->  Puede intentar seguir estos pasos para corregir este error:
+> Puede intentar seguir estos pasos para corregir este error:
 >
->  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
-> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
-> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
-> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+> - Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 

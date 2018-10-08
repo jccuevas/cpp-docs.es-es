@@ -1,7 +1,7 @@
 ---
 title: Pruebe-excepto instrucción | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031451"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861933"
 ---
 # <a name="try-except-statement"></a>try-except (Instrucción)
 
@@ -50,7 +50,14 @@ El **intente-excepto** instrucción es una extensión de Microsoft C y lenguajes
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__try** {/ / protegido código} **__except** ( *expresión* ) {/ / el código del controlador de excepción}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;código protegido<br/>
+> }<br/>
+> **__except** ( *expresión* )<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;código del controlador de excepción<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Comentarios
 
@@ -67,15 +74,15 @@ La instrucción compuesta después de la **__try** cláusula es el cuerpo o la s
 
 1. Se ejecuta la sección protegida.
 
-2. Si se produce ninguna excepción durante la ejecución de la sección protegida, la ejecución continúa en la instrucción después del **__except** cláusula.
+1. Si se produce ninguna excepción durante la ejecución de la sección protegida, la ejecución continúa en la instrucción después del **__except** cláusula.
 
-3. Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina que llame la sección protegida, la **__except** *expresión* (denominado el *filtro* expresión) se evalúa y el valor determina cómo se controla la excepción. Existen tres valores:
+1. Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina que llame la sección protegida, la **__except** *expresión* (denominado el *filtro* expresión) se evalúa y el valor determina cómo se controla la excepción. Hay tres valores posibles:
 
-   Se descarta la excepción EXCEPTION_CONTINUE_EXECUTION (-1). La ejecución continúa en el punto donde se ha producido la excepción.
+   - Se descarta la excepción EXCEPTION_CONTINUE_EXECUTION (-1). La ejecución continúa en el punto donde se ha producido la excepción.
 
-   No se reconoce la excepción exception_continue_search (0). La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
+   - No se reconoce la excepción exception_continue_search (0). La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
 
-   Exception_execute_handler (1) excepción se reconoce. Transferir el control al controlador de excepciones mediante la ejecución de la **__except** una instrucción compuesta, a continuación, continuar la ejecución después de la **__except** bloque.
+   - Exception_execute_handler (1) excepción se reconoce. Transferir el control al controlador de excepciones mediante la ejecución de la **__except** una instrucción compuesta, a continuación, continuar la ejecución después de la **__except** bloque.
 
 Dado que el **__except** expresión se evalúa como una expresión de C, se limita a un solo valor, el operador de expresión condicional u operador de coma. Si se requiere un mayor procesamiento, la expresión puede llamar a una rutina que devuelva uno de los tres valores enumerados anteriormente.
 
@@ -83,9 +90,7 @@ Cada aplicación puede tener su propio controlador de excepciones.
 
 No es válido saltar dentro un **__try** instrucción, pero sí fuera. No se llama al controlador de excepción si un proceso se termina en medio de ejecución de un **intente-excepto** instrucción.
 
-Para obtener más información, vea el artículo Q315937 de Knowledge Base: Cómo se detecta el desbordamiento de la pila en una aplicación de Visual C++.
-
-## <a name="the-leave-keyword"></a>La palabra clave __leave
+### <a name="the-leave-keyword"></a>La palabra clave __leave
 
 El **__leave** palabra clave sólo es válida en la sección protegida de un **intente-excepto** instrucción y su efecto es saltar al final de la sección protegida. La ejecución de la primera instrucción continúa después del controlador de excepciones.
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Salida
+### <a name="output"></a>Salida
 
 ```Output
 hello

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098789"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861374"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opciones, Asistente para objetos simples ATL
 
@@ -60,7 +60,7 @@ Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea 
    |Opción|Descripción|
    |------------|-----------------|
    |**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable posee funciones de interfaz personalizado y enlace tardío `IDispatch` métodos). Permite que los clientes COM y [controladores de automatización](../../mfc/automation-clients.md) para tener acceso al objeto. El valor predeterminado.|
-   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> -   **Compatible con automatización** controladores de automatización permite tener acceso a un objeto que tiene la compatibilidad de interfaz personalizado.|
+   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> - **Compatible con automatización** controladores de automatización permite tener acceso a un objeto que tiene la compatibilidad de interfaz personalizado.|
 
 - **Soporte técnico**
 

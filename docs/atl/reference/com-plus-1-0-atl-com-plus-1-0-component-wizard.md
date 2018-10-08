@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116105"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861790"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Asistente para componentes ATL COM+ 1.0
 
@@ -34,7 +34,7 @@ Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea 
    |Opción|Descripción|
    |------------|-----------------|
    |**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable tiene funciones de interfaz personalizada y un enlace `IDispatch` métodos). Permite que los clientes COM y los controladores de automatización tener acceso al objeto.|
-   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> -   **Compatible con automatización** agrega compatibilidad con automatización a la interfaz personalizada. Para proyectos con atributos, Establece el **oleautomation** atributo en la coclase.|
+   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> - **Compatible con automatización** agrega compatibilidad con automatización a la interfaz personalizada. Para proyectos con atributos, Establece el **oleautomation** atributo en la coclase.|
 
 - **Uno de estos**
 

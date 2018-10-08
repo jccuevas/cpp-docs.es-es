@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b06566f84003b08f5fe3869a021c4bf86dcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 604b54d1c1752c76e28680e3373913ca7e92a9bc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105163"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860438"
 ---
 # <a name="c-runtime-error-r6008"></a>C Runtime Error R6008
 
 No hay suficiente espacio para los argumentos
 
 > [!NOTE]
->  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de memoria muy baja, demasiada memoria usada por las variables de entorno o un error en el programa.
+> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de memoria muy baja, demasiada memoria usada por las variables de entorno o un error en el programa.
 >
->  Puede intentar seguir estos pasos para corregir este error:
+> Puede intentar seguir estos pasos para corregir este error:
 >
->  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
-> -   Reducir el número y tamaño de los argumentos de línea de comandos a la aplicación.
-> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
-> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
-> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+> - Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
+> - Reducir el número y tamaño de los argumentos de línea de comandos a la aplicación.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 

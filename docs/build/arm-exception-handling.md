@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711235"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861660"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
-Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado tanto en las excepciones generadas por hardware asincrónicas como en las excepciones generadas por software sincrónicas. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones auxiliares de lenguaje. Este documento describe el control de excepciones en Windows en ARM y las aplicaciones auxiliares de lenguaje utilizadas por el código generado por el ensamblador de ARM Microsoft y el compilador de Visual C++.
+Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado tanto en las excepciones generadas por hardware asincrónicas como en las excepciones generadas por software sincrónicas. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones del asistente de lenguaje. Este documento describe el control de excepciones en Windows en ARM y las aplicaciones auxiliares de lenguaje utilizadas por el código generado por el ensamblador de ARM Microsoft y el compilador de Visual C++.
 
 ## <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
@@ -82,15 +82,15 @@ En esta tabla se indica el formato de un registro .pdata que tiene datos de dese
 |Desplazamiento de palabra|Bits|Finalidad|
 |-----------------|----------|-------------|
 |0|0-31|*Función iniciar RVA* es la RVA de 32 bits del inicio de la función. Si la función contiene código Thumb, se debe establecer el bit inferior de esta dirección.|
-|1|0-1|*Marca* es un campo de 2 bits que tiene los siguientes significados:<br /><br /> -00 = empaquetada desenredar datos no utilizados; Seleccione un registro .xdata bits restantes.<br />-01 = empaquetada datos de desenredo.<br />-10 = empaquetada datos donde se supone que la función carece de prólogo de desenredado. Esto resulta práctico a la hora de describir fragmentos de la función que no son contiguas al inicio de la función.<br />-11 = reservado.|
+|1|0-1|*Marca* es un campo de 2 bits que tiene los siguientes significados:<br /><br />-00 = empaquetada desenredar datos no utilizados; Seleccione un registro .xdata bits restantes.<br />-01 = empaquetada datos de desenredo.<br />-10 = empaquetada datos donde se supone que la función carece de prólogo de desenredado. Esto resulta práctico a la hora de describir fragmentos de la función que no son contiguas al inicio de la función.<br />-11 = reservado.|
 |1|2-12|*Función longitud* es un campo de 11 bits que proporciona la longitud de toda la función en bytes dividida entre 2. Si la función supera los 4000 bytes, se deberá usar en su lugar un registro .xdata.|
-|1|13-14|*RET* es un campo de 2 bits que indica cómo devuelve la función:<br /><br /> -00 = devolución mediante extracción {pc} (el *L* bit de marca debe establecerse en 1 en este caso).<br />-01 = devolución mediante una bifurcación de 16 bits.<br />-10 = devolución mediante una bifurcación de 32 bits.<br />-11 = no hay epílogo en absoluto. Esto resulta práctico a la hora de describir un fragmento de función no contiguo que solo puede contener un prólogo, pero cuyo epílogo puede estar en cualquier otra parte.|
+|1|13-14|*RET* es un campo de 2 bits que indica cómo devuelve la función:<br /><br />-00 = devolución mediante extracción {pc} (el *L* bit de marca debe establecerse en 1 en este caso).<br />-01 = devolución mediante una bifurcación de 16 bits.<br />-10 = devolución mediante una bifurcación de 32 bits.<br />-11 = no hay epílogo en absoluto. Esto resulta práctico a la hora de describir un fragmento de función no contiguo que solo puede contener un prólogo, pero cuyo epílogo puede estar en cualquier otra parte.|
 |1|15|*H* es una marca de 1 bit que indica si la función "alberga" el parámetro entero registra (r0-r3) insertándolos al principio de la función y desasigna los 16 bytes de la pila antes de devolver. (0 = no alberga registros, 1 = alberga registros).|
 |1|16-18|*Reg* se guarda de un campo de 3 bits que indica el índice del último registro no volátil. Si el *R* bit es 0, a continuación, solo los registros de enteros se guardan y se supone que en el intervalo r4-RN, donde N es igual a 4 + *Reg*. Si el *R* bit es 1, a continuación, registros de punto flotante solo se guardan y se supone que en el intervalo d8-DN, donde N es igual a 8 + *Reg*. La combinación especial de *R* = 1 y *Reg* = 7 indica que no se guardan registros.|
 |1|19|*R* es una marca de 1 bit que indica si los registros no volátiles guardados son registros de tipo entero (0) o registros de punto flotante (1). Si *R* está establecido en 1 y el *Reg* campo se establece en 7, no se insertan ningún registros no volátiles.|
 |1|20|*L* es una marca de 1 bit que indica si la función guarda/restaura LR, junto con otros registros especificados por el *Reg* campo. (0 = no guarda/restaura, 1 = guarda/restaura).|
 |1|21|*C* es una marca de 1 bit que indica si la función incluye instrucciones adicionales para configurar una cadena de marcos de pila rápidos caminar (1) o no (0). Si este bit se establece, r11 se agrega implícitamente a la lista de registros no volátiles de enteros guardados (Vea a continuación si las restricciones de la *C* marca se usa.)|
-|1|22-31|*Ajustar la pila* es un campo de 10 bits que indica el número de bytes de la pila que se asignan a esta función, dividida entre 4. Con todo, solo se pueden codificar directamente los valores comprendidos entre 0x000-0x3F3. Las funciones que asignan más de 4044 bytes de la pila deben usar un registro .xdata completo. Si el *ajuste de pila* campo es 0x3F4 o superior, los 4 bits inferiores tienen un significado especial:<br /><br /> -Bits 0-1 indican el número de palabras del ajuste de pila (1-4) menos 1.<br />-2 bit se establece en 1 si el prólogo combinó este ajuste en su operación de inserción.<br />-3 bit se establece en 1 si el epílogo combinó este ajuste en su operación de extracción.|
+|1|22-31|*Ajustar la pila* es un campo de 10 bits que indica el número de bytes de la pila que se asignan a esta función, dividida entre 4. Con todo, solo se pueden codificar directamente los valores comprendidos entre 0x000-0x3F3. Las funciones que asignan más de 4044 bytes de la pila deben usar un registro .xdata completo. Si el *ajuste de pila* campo es 0x3F4 o superior, los 4 bits inferiores tienen un significado especial:<br /><br />-Bits 0-1 indican el número de palabras del ajuste de pila (1-4) menos 1.<br />-2 bit se establece en 1 si el prólogo combinó este ajuste en su operación de inserción.<br />-3 bit se establece en 1 si el epílogo combinó este ajuste en su operación de extracción.|
 
 Existen las siguientes restricciones, dada las posibles redundancias que se pueden producir en las codificaciones anteriores:
 
@@ -187,7 +187,7 @@ Cuando el formato de desenredado empaquetado no basta para describir el desenred
    |1|16-23|*Extended código palabras* es un campo de 8 bits que proporciona más espacio para codificar un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene este campo solo está presente si el *epílogo recuento* y *código palabras* campos en la primera palabra del encabezado se establecen en 0.|
    |1|24-31|Reservada|
 
-2. Después de los datos de excepción (si la *E* bit en el encabezado se establece en 0) es una lista de información sobre los ámbitos de epílogo, que se empaquetan una a una palabra y se almacenan en orden creciente de desplazamiento inicial. Cada ámbito contiene estos campos:
+1. Después de los datos de excepción (si la *E* bit en el encabezado se establece en 0) es una lista de información sobre los ámbitos de epílogo, que se empaquetan una a una palabra y se almacenan en orden creciente de desplazamiento inicial. Cada ámbito contiene estos campos:
 
    |Bits|Finalidad|
    |----------|-------------|
@@ -196,9 +196,9 @@ Cuando el formato de desenredado empaquetado no basta para describir el desenred
    |20-23|*Condición* es un campo de 4 bits que aporta la condición bajo la que se ejecuta el epílogo. En el caso de los epílogos incondicionales, se debe establecer en 0xE, lo que indica "siempre". (Un epílogo debe ser completamente condicional o completamente incondicional y, en el modo Thumb-2, el epílogo comienza por la primera instrucción tras el código de operación de IT).|
    |24-31|*Índice inicial de epílogo* es un campo de 8 bits que indica el índice de bytes del primer código de desenredado que describe este epílogo.|
 
-3. Tras la lista de ámbitos de epílogo viene una matriz que contiene códigos de desenredado, que se detallan en profundidad en la sección Códigos de desenredado de este artículo. Esta matriz se rellena al final del límite de palabra completa más cercano. Los bytes se almacenan en orden little-endian, por lo que se pueden recuperar directamente en modo little-endian.
+1. Tras la lista de ámbitos de epílogo viene una matriz que contiene códigos de desenredado, que se detallan en profundidad en la sección Códigos de desenredado de este artículo. Esta matriz se rellena al final del límite de palabra completa más cercano. Los bytes se almacenan en orden little-endian, por lo que se pueden recuperar directamente en modo little-endian.
 
-4. Si el *X* campo en el encabezado es 1, los bytes de código de desenredado van seguidos por la información del controlador de excepción. Esto se compone de uno *RVA del controlador de excepción* que contiene la dirección del controlador de excepciones, seguida inmediatamente de la cantidad (de longitud variable) de datos requeridos por el controlador de excepciones.
+1. Si el *X* campo en el encabezado es 1, los bytes de código de desenredado van seguidos por la información del controlador de excepción. Esto se compone de uno *RVA del controlador de excepción* que contiene la dirección del controlador de excepciones, seguida inmediatamente de la cantidad (de longitud variable) de datos requeridos por el controlador de excepciones.
 
 El registro .xdata está diseñado de forma que se pueden recuperar los primeros 8 bytes y calcular el tamaño completo del registro, sin incluir la longitud de los datos de tamaño variable que le siguen. En el siguiente fragmento de código se calcula el tamaño del registro:
 

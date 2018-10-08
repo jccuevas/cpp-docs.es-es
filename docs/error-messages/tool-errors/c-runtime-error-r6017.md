@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2437e33610222183aa03a22cf6638156aaaa5e9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: acd380c8eee7b4fa1b325e8dee0bfad55a42c790
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077040"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861075"
 ---
 # <a name="c-runtime-error-r6017"></a>C Runtime Error R6017
 
 error inesperado de bloqueo de multiproceso
 
 > [!NOTE]
->  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema interno. Hay varias razones posibles para este error, pero a menudo se debe a un defecto en el código de la aplicación.
+> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema interno. Hay varias razones posibles para este error, pero a menudo se debe a un defecto en el código de la aplicación.
 >
->  Puede intentar seguir estos pasos para corregir este error:
+> Puede intentar seguir estos pasos para corregir este error:
 >
->  -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
-> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
-> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 

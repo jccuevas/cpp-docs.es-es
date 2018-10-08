@@ -16,50 +16,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ed2e1f8f24b3d33dd7d45bb597b252ead1453647
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314240"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861153"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modificar el Control DHTML ATL
 
 El Asistente para controles ATL proporciona código de inicio para que pueda compilar y ejecutar el control, por lo que puede ver cómo se escriben los métodos en los archivos de proyecto y cómo DHTML llama al código de C++ del control mediante los métodos de envío. Puede agregar cualquier método de envío a la interfaz. A continuación, puede llamar a los métodos en el recurso de HTML.
 
-#### <a name="to-modify-the-atl-dhtml-control"></a>Para modificar el control DHTML ATL
+## <a name="to-modify-the-atl-dhtml-control"></a>Para modificar el control DHTML ATL
 
-1. En la vista de clases, expanda el proyecto de control.
+1. En **vista de clases**, expanda el proyecto de control.
 
    Tenga en cuenta que la interfaz que termina en "UI" tiene un método, `OnClick`. La interfaz que no terminan en "Interfaz de usuario" no tiene ningún método.
 
-2. Agregue un método llamado `MethodInvoked` a la interfaz que no termina en "Interfaz de usuario".
+1. Agregue un método llamado `MethodInvoked` a la interfaz que no termina en "Interfaz de usuario".
 
    Este método se agregarán a la interfaz que se usa en el contenedor del control de interacción de contenedor, no a la interfaz utilizada por DHTML para interactuar con el control. Solo el contenedor puede invocar este método.
 
-3. Busque el método auxiliar en el archivo .cpp y agregue código para mostrar un cuadro de mensaje, por ejemplo:
+1. Busque el método auxiliar en el archivo .cpp y agregue código para mostrar un cuadro de mensaje, por ejemplo:
 
    [!code-cpp[NVC_ATL_COM#5](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_1.cpp)]
 
-4. Agregue otro método denominado `HelloHTML`, pero esta vez, agréguelo a la interfaz que termina en "Interfaz de usuario". Busque la salida se procesó con stub `HelloHTML` método en el cpp archivo y agregue código para mostrar un cuadro de mensaje, por ejemplo:
+1. Agregue otro método denominado `HelloHTML`, pero esta vez, agréguelo a la interfaz que termina en "Interfaz de usuario". Busque la salida se procesó con stub `HelloHTML` método en el cpp archivo y agregue código para mostrar un cuadro de mensaje, por ejemplo:
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-5. Agregue un tercer método `GoToURL`, a la interfaz que no termina en "Interfaz de usuario". Implemente este método mediante una llamada a [IWebBrowser2:: Navigate](https://msdn.microsoft.com/library/aa752133.aspx), como sigue:
+1. Agregue un tercer método `GoToURL`, a la interfaz que no termina en "Interfaz de usuario". Implemente este método mediante una llamada a [IWebBrowser2:: Navigate](https://msdn.microsoft.com/library/aa752133.aspx), como sigue:
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
-   Puede usar el **IWebBrowser2** métodos porque ATL proporciona un puntero a la interfaz en el archivo. h.
+   Puede usar el `IWebBrowser2` métodos porque ATL proporciona un puntero a la interfaz en el archivo. h.
 
 A continuación, modifique el recurso HTML para invocar los métodos que ha creado. Agregará tres botones para invocar estos métodos.
 
-#### <a name="to-modify-the-html-resource"></a>Para modificar el recurso HTML
+## <a name="to-modify-the-html-resource"></a>Para modificar el recurso HTML
 
-1. En el Explorador de soluciones, haga doble clic en el archivo .htm para mostrar el recurso HTML.
+1. En **el Explorador de soluciones**, haga doble clic en el archivo .htm para mostrar el recurso HTML.
 
    Examine el código HTML, especialmente las llamadas a los métodos de envío externos de Windows. El código HTML llama el proyecto `OnClick` método y los parámetros indican el cuerpo del control (`theBody`) y el color que se asigne ("`red`"). El texto que sigue a la llamada al método es la etiqueta que aparece en el botón.
 
-2. Agregue otro `OnClick` método, solo cambie el color. Por ejemplo:
+1. Agregue otro `OnClick` método, solo cambie el color. Por ejemplo:
 
     ```html
     <br>
@@ -69,7 +69,7 @@ A continuación, modifique el recurso HTML para invocar los métodos que ha crea
 
    Este método creará un botón, **actualizar**, que el usuario puede hacer clic para devolver el control al fondo blanco, original.
 
-3. Agregue la llamada a la `HelloHTML` método creado. Por ejemplo:
+1. Agregue la llamada a la `HelloHTML` método creado. Por ejemplo:
 
     ```html
     <br>

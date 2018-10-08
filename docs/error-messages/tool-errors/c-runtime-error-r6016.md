@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f4b4529e0faf433ff9dc5c4fc2c0594a4d9ff6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b14d6e20f58ef5a9fbda6d640f5c8a596635d70c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076650"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861712"
 ---
 # <a name="c-runtime-error-r6016"></a>C Runtime Error R6016
 
 espacio insuficiente para datos de subproceso
 
 > [!NOTE]
->  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay muchas razones posibles para este error, pero a menudo está provocada por una condición de memoria muy bajo, un error en la aplicación, o por un error en un complemento o una extensión utilizada por la aplicación.
+> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay muchas razones posibles para este error, pero a menudo está provocada por una condición de memoria muy bajo, un error en la aplicación, o por un error en un complemento o una extensión utilizada por la aplicación.
 >
->  Puede intentar seguir estos pasos para corregir este error:
+> Puede intentar seguir estos pasos para corregir este error:
 >
->  -   Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
-> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar la aplicación.
-> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** quitar, repárela o vuelva a instalar complementos o extensiones utilizadas por la aplicación.
-> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
-> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+> - Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar la aplicación.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** quitar, repárela o vuelva a instalar complementos o extensiones utilizadas por la aplicación.
+> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 

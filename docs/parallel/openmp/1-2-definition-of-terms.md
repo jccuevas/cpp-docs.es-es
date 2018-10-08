@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423837"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861621"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definición de términos
 
@@ -43,7 +43,7 @@ Los siguientes términos se usan en este documento:
 
    Instrucciones léxicamente dentro un *bloque estructurado*.
 
--  subproceso principal
+- subproceso principal
 
    El subproceso que crea un equipo cuando un *región paralela* se ha especificado.
 
@@ -75,7 +75,7 @@ Los siguientes términos se usan en este documento:
 
    Un bloque estructurado es una instrucción (simple o compuesta) que tiene una sola entrada y una salida única. Instrucción no es un bloque estructurado si hay un salto dentro o fuera de esa instrucción (incluidos una llamada a **longjmp**(3C) o el uso de **throw**, pero una llamada a **salir** se permite). Una instrucción compuesta es un bloque estructurado si su ejecución siempre comienza en la apertura **{** y siempre termina en el cierre **}**. Una instrucción de expresión, la instrucción de selección, la instrucción de iteración, o **intente** bloque es un bloque estructurado si obtuvo la correspondiente instrucción compuesta escribiéndolo en **{** y **}** sería un bloque estructurado. Una instrucción de salto, la instrucción con etiqueta o la instrucción de declaración no es un bloque estructurado.
 
--  Equipo
+- Equipo
 
    Uno o varios subprocesos cooperan y cumplen la ejecución de una construcción.
 

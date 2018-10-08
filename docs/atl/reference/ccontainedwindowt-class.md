@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e65451fcb506da9072d0dc8031ffba1b30280e6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040484"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861439"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT (clase)
 
@@ -118,7 +118,7 @@ Cuando se usa el **Agregar control basado en** opción en el Asistente para proy
 |Crear controles|[Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Utilizar ventanas en ATL|[Clases de ventana ATL](../../atl/atl-window-classes.md)|
 |Asistente para proyectos ATL|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) y los temas siguientes en el SDK de Windows|
+|Windows|[Windows](/windows/desktop/winmsg/windows) y los temas siguientes en el SDK de Windows|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebcb2e52f67cfe37c4954e530fd2b2393ae23b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220221"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861699"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) y [15.8](#update_158) de Visual Studio 2017
 
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 Esta nueva advertencia C4768 se muestra en algunos encabezados de Windows SDK que se enviaron con la versión 15.3 de Visual Studio 2017 o una posterior (por ejemplo, la versión 10.0.15063.0, también conocida como RS2 SDK). Sin embargo, las versiones posteriores de los encabezados de Windows SDK (concretamente, ShlObj.h y ShlObj_core.h) se han corregido para que no generen esta advertencia. Cuando se le muestre esta advertencia en los encabezados de Windows SDK, puede hacer lo siguiente:
 
 1. Cambie al Windows SDK más reciente incluido en la versión 15.5 de Visual Studio 2017.
-2. Desactive la advertencia de #include de la instrucción del encabezado de Windows SDK:
+
+1. Desactive la advertencia de #include de la instrucción del encabezado de Windows SDK:
 
 ```cpp
    #pragma warning (push)

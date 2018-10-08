@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412813"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861868"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Archivo de lista)
 
@@ -87,9 +87,9 @@ Un archivo de lista denominado *filename.extension* se coloca en la instancia es
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-2. Seleccione el **propiedades de configuración** > **C o C++** > **archivos de salida** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **archivos de salida** página de propiedades.
 
-3. Modificar el **salida del ensamblador** propiedad para establecer el **/fac** y **/FAS** opciones para el ensamblador de máquina y código fuente. Modificar el **Unicode de uso para enumerar de ensamblador** propiedad para establecer el **/FAu** opción de salida ANSI y UTF-8. Modificar el **ubicación de la lista ASM** para establecer el **/Fa** opción para mostrar el nombre de archivo y ubicación.
+1. Modificar el **salida del ensamblador** propiedad para establecer el **/fac** y **/FAS** opciones para el ensamblador de máquina y código fuente. Modificar el **Unicode de uso para enumerar de ensamblador** propiedad para establecer el **/FAu** opción de salida ANSI y UTF-8. Modificar el **ubicación de la lista ASM** para establecer el **/Fa** opción para mostrar el nombre de archivo y ubicación.
 
 Tenga en cuenta que si se establecen **salida del ensamblador** y **Unicode de uso para enumerar de ensamblador** propiedades pueden provocar [advertencia de la línea de comandos D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Para combinar estas opciones en el IDE, utilice el **opciones adicionales** campo el **línea de comandos** página en su lugar.
 

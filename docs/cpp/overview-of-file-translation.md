@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d0aa647f6f94d31f1a06bb09b143554dba51b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051092"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861751"
 ---
 # <a name="overview-of-file-translation"></a>Información general de traducción de archivos
 
@@ -32,9 +32,9 @@ Los programas de C++, como los programas de C, constan de uno o más archivos. C
 
 1. Conversión de tokens léxicos. La asignación de caracteres y procesamiento de trígrafos, la delimitación de líneas y la conversión de tokens se realizan en esta fase de traducción.
 
-2. Preprocesamiento. Esta fase de traducción introduce en los archivos de código fuente auxiliares que hace referencia `#include` directivas, controla "generación de cadenas" y las directivas de "conversión a" (caracteres"y realiza la expansión de macros y pegado de token (consulte [directivas de preprocesador](../preprocessor/preprocessor-directives.md) en el *referencia del preprocesador* para obtener más información). El resultado de la fase de preprocesamiento es una secuencia de tokens que, en conjunto, definen una “unidad de traducción”.
+1. Preprocesamiento. Esta fase de traducción introduce en los archivos de código fuente auxiliares que hace referencia `#include` directivas, controla "generación de cadenas" y las directivas de "conversión a" (caracteres"y realiza la expansión de macros y pegado de token (consulte [directivas de preprocesador](../preprocessor/preprocessor-directives.md) en el *referencia del preprocesador* para obtener más información). El resultado de la fase de preprocesamiento es una secuencia de tokens que, en conjunto, definen una “unidad de traducción”.
 
-     Las directivas de preprocesador siempre empiezan por el signo de número (**#**) caracteres (es decir, el primer carácter de espacio en blanco en la línea debe ser un signo de número). Solo puede aparecer una directiva de preprocesador en cada línea. Por ejemplo:
+   Las directivas de preprocesador siempre empiezan por el signo de número (**#**) caracteres (es decir, el primer carácter de espacio en blanco en la línea debe ser un signo de número). Solo puede aparecer una directiva de preprocesador en cada línea. Por ejemplo:
 
     ```cpp
     #include <iostream>  // Include text of iostream in
@@ -43,9 +43,9 @@ Los programas de C++, como los programas de C, constan de uno o más archivos. C
                          //  text string).
     ```
 
-3. Generación de código. Esta fase de traducción utiliza los tokens generados en la fase de preprocesamiento para generar código de objetos.
+1. Generación de código. Esta fase de traducción utiliza los tokens generados en la fase de preprocesamiento para generar código de objetos.
 
-     Durante esta fase, se realiza la comprobación sintáctica y semántica del código fuente.
+   Durante esta fase, se realiza la comprobación sintáctica y semántica del código fuente.
 
 Consulte [fases de traducción](../preprocessor/phases-of-translation.md) en el *referencia del preprocesador* para obtener más información.
 

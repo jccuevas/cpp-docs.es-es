@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030433"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861413"
 ---
 # <a name="references-c"></a>Referencias (C++)
 
@@ -32,41 +32,35 @@ Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que
 
 Las referencias se pueden declarar con la sintaxis siguiente:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*especificadores de clase de almacenamiento*] \[ *calificadores cv*] *especificadores de tipo* \[ *ms-modifier*]  *declarador* \[ **=** *expresión*]**;**
 
 Se puede usar cualquier declarador válido que especifique una referencia. A menos que la referencia sea una referencia a un tipo de función o matriz, se aplica la siguiente sintaxis simplificada:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*especificadores de clase de almacenamiento*] \[ *calificadores cv*] *especificadores de tipo* \[ **&** o **&&**] \[ *calificadores cv*] *identificador* \[ **=** *expresión*]**;**
 
 Las referencias se declaran mediante la siguiente secuencia:
 
 1. Los especificadores de la declaración:
 
-- Un especificador de clase de almacenamiento opcional.
+   - Un especificador de clase de almacenamiento opcional.
 
-- Opcional **const** o **volátil** calificadores.
+   - Opcional **const** o **volátil** calificadores.
 
-- El especificador de tipo: el nombre de un tipo.
+   - El especificador de tipo: el nombre de un tipo.
 
-- 2. El declarador:
+1. El declarador:
 
-- Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-- El operador & o el operador &&.
+   - El **&** operador o **&&** operador.
 
-- Opcional **const** o **volátil** opcionales.
+   - Opcional **const** o **volátil** opcionales.
 
-- El identificador.
+   - El identificador.
 
-3. Un inicializador opcional.
+1. Un inicializador opcional.
 
-Las formas de declarador más compleja de punteros a matrices y funciones también se aplican a las referencias a las matrices y funciones, vea [punteros](../cpp/pointers-cpp.md).
+Las formas de declarador más complejas para punteros a matrices y funciones también se aplican a las referencias a las matrices y funciones. Para obtener más información, consulte [punteros](../cpp/pointers-cpp.md).
 
 Varios declaradores e inicializadores pueden aparecer en una lista separada por comas detrás de un único especificador de declaración. Por ejemplo:
 
@@ -83,7 +77,7 @@ int &ref, *ptr, k;
 
 Una referencia contiene la dirección de un objeto, pero se comporta sintácticamente como un objeto.
 
-Observe que, en el siguiente programa, el nombre del objeto `Today` y la referencia al objeto, `TodayRef`, se pueden usar de la misma forma:
+Observe que, en el siguiente programa, el nombre del objeto `s` y la referencia al objeto, `SRef`, se pueden usar de la misma forma:
 
 ## <a name="example"></a>Ejemplo
 
@@ -120,4 +114,3 @@ int main() {
 [Argumentos de función de tipo de referencia](../cpp/reference-type-function-arguments.md)<br/>
 [Valores devueltos de función de tipo de referencia](../cpp/reference-type-function-returns.md)<br/>
 [Referencias a punteros](../cpp/references-to-pointers.md)
-

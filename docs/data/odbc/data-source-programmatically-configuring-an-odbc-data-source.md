@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030773"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861361"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origen de datos: Configurar un origen de datos ODBC mediante programación
 
@@ -85,7 +85,7 @@ Descripción del controlador. Este es el nombre presentado a los usuarios en lug
 *lpszAttributes*<br/>
 Lista de atributos con el formato "nombre de clave = valor". Estas cadenas están separadas por terminadores nulos con dos terminadores nulos consecutivos al final de la lista. Estos atributos son principalmente entradas de específicas del controlador de predeterminado, que se incluyen en el registro para el nuevo origen de datos. Una clave importante que no se menciona en la referencia de API de ODBC para esta función es "DSN" ("nombre origen de datos"), que especifica el nombre del nuevo origen de datos. El resto de las entradas son específicas del controlador para el nuevo origen de datos. A menudo no es necesario proporcionar todas las entradas porque el controlador puede pedir al usuario cuadros de diálogo para los nuevos valores. (Establezca *hwndParent* en NULL para hacer esto.) Es posible que desee proporcionar explícitamente valores predeterminados para que no se solicita al usuario.  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Para determinar la descripción de un controlador para el parámetro lpszDriver mediante el Administrador ODBC  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Para determinar la descripción de un controlador para el parámetro lpszDriver mediante el Administrador ODBC  
   
 1. Ejecute el Administrador de ODBC.  
   
@@ -97,23 +97,23 @@ Como alternativa, puede examinar el registro (o, para 16 bits, el archivo Odbcin
   
 Una forma de encontrar los nombres de clave y valores para el *lpszAttributes* parámetro es examinar el archivo Odbc.ini para un origen de datos ya configurados (por ejemplo, uno que se ha configurado por el Administrador ODBC).  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Para buscar nombres de clave y valores para el parámetro lpszAttributes  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Para buscar nombres de clave y valores para el parámetro lpszAttributes  
   
 1. Ejecute el editor del registro de Windows (o, para 16 bits, abra el archivo Odbc.ini).  
   
 1. Encontrar la información de orígenes de datos ODBC mediante uno de los siguientes:  
   
-    -   Para 32 bits, busque la clave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Los orígenes de datos INI\ODBC** en el panel izquierdo.  
+   - Para 32 bits, busque la clave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Los orígenes de datos INI\ODBC** en el panel izquierdo.  
   
-         El panel derecho muestra las entradas de la forma: "pub: REG_SZ:*<data source name>*", donde *<data source name>* es un origen de datos que ya se ha configurado con la configuración deseada para el controlador desea Para usar. Seleccione el origen de datos que desee, por ejemplo, SQL Server. Los elementos que siguen a la cadena "pub:" son, en orden, el keyname y el valor para usar en su *lpszAttributes* parámetro.  
+      El panel derecho muestra las entradas de la forma: "pub: REG_SZ:*<data source name>*", donde *<data source name>* es un origen de datos que ya se ha configurado con la configuración deseada para el controlador desea Para usar. Seleccione el origen de datos que desee, por ejemplo, SQL Server. Los elementos que siguen a la cadena "pub:" son, en orden, el keyname y el valor para usar en su *lpszAttributes* parámetro.  
   
-    -   Para 16 bits, busque la sección en el archivo Odbc.ini marcado por [*\<el nombre del origen de datos >*].  
+   - Para 16 bits, busque la sección en el archivo Odbc.ini marcado por [*\<el nombre del origen de datos >*].  
   
-         Las líneas que siguen a esta línea tienen el formato "nombre de clave = valor". Estas son exactamente las entradas que se van a usar en su *lpszAttributes* parámetro.  
+      Las líneas que siguen a esta línea tienen el formato "nombre de clave = valor". Estas son exactamente las entradas que se van a usar en su *lpszAttributes* parámetro.  
   
 También puede examinar la documentación para el controlador específico que se va a usar. Puede encontrar información útil en la Ayuda en línea para el controlador, que puede tener acceso mediante la ejecución de administrador de ODBC. Normalmente, estos archivos de ayuda se colocan en el directorio WINDOWS\SYSTEM de Windows NT, Windows 3.1 o Windows 95.  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Para obtener ayuda en línea para el controlador ODBC  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Para obtener ayuda en línea para el controlador ODBC  
   
 1. Ejecute el Administrador de ODBC.  
   
