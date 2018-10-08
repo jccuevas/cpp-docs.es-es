@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317926"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860451"
 ---
 # <a name="menu-command-properties-c"></a>Propiedades de comando de menú (C++)
 
@@ -28,7 +28,7 @@ La siguiente información se organiza según el **menú** propiedades que aparec
 
 |Property|Descripción|
 |--------------|-----------------|
-|**Break**|Puede ser uno de estos valores:<br /><br /> -   **Ninguno** (predeterminado): sin interrupción.<br />-   **Column**: en los menús estáticos, este valor sitúa el comando de menú en una nueva línea. En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas. Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />-   **Barra**: igual que **columna** , excepto en los menús emergentes, este valor separa la nueva columna de la columna antigua con una línea vertical. Esta propiedad afecta a la apariencia del menú en tiempo de ejecución, no en el **menú** editor.|
+|**Break**|Puede ser uno de estos valores:<br /><br />- **Ninguno** (predeterminado): sin interrupción.<br />- **Columna**: en los menús estáticos, este valor sitúa el comando de menú en una nueva línea. En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas. Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />- **Barra**: igual que **columna** , excepto en los menús emergentes, este valor separa la nueva columna de la columna antigua con una línea vertical. Esta propiedad afecta a la apariencia del menú en tiempo de ejecución, no en el **menú** editor.|
 |**Título**|El texto que etiqueta el comando de menú (el nombre del menú). Para convertir una de las letras del título de un comando de menú en la tecla de acceso, sitúe delante de ella una Y comercial (&).|
 |**Activadas**|Si **True**, el comando de menú se activa inicialmente. Tipo: **Bool**. Valor predeterminado: **False**.|
 |**Habilitado**|Si es **False**, se deshabilita el elemento de menú.|

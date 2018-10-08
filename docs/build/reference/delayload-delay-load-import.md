@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722376"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860750"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Retrasar importación de carga)
 
@@ -38,7 +38,7 @@ Nombre de un archivo DLL cuya carga se desea retrasar.
 
 ## <a name="remarks"></a>Comentarios
 
-La opción /DELAYLOAD hace que el archivo DLL especificado por `dllname` se cargue solo en la primera llamada del programa a una función en ese archivo DLL. Para obtener más información, consulte [compatibilidad con vinculador para archivos DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md). Puede usar esta opción tantas veces como sea necesario para especificar todos los archivos DLL que desee. Debe utilizar Delayimp.lib cuando enlace el programa o puede implementar su propia función auxiliar de retraso de carga.
+La opción /DELAYLOAD hace que el archivo DLL especificado por `dllname` se cargue solo en la primera llamada del programa a una función en ese archivo DLL. Para obtener más información, consulte [compatibilidad con vinculador para archivos DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md). Puede usar esta opción tantas veces como sea necesario para especificar todos los archivos DLL que desee. Debe utilizar Delayimp.lib cuando enlace el programa o puede implementar su propia función del asistente de retraso de carga.
 
 El [/DELAY](../../build/reference/delay-delay-load-import-settings.md) opción especifica el enlace y carga las opciones para cada archivo DLL de carga retrasada.
 
@@ -46,9 +46,9 @@ El [/DELAY](../../build/reference/delay-delay-load-import-settings.md) opción e
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-2. En el **vinculador** carpeta, seleccione el **entrada** página de propiedades.
+1. En el **vinculador** carpeta, seleccione el **entrada** página de propiedades.
 
-3. Modificar el **archivos DLL de carga de retraso** propiedad.
+1. Modificar el **archivos DLL de carga de retraso** propiedad.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 

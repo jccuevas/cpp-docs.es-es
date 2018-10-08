@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116716"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861101"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementación de una colección de basada en la biblioteca estándar de C++
 
@@ -57,15 +57,15 @@ Este es el formato estándar para una interfaz de colección de solo lectura dis
 
 1. Interfaces de colección son normalmente duales porque tiene acceso los clientes de automatización la `_NewEnum` propiedad a través de `IDispatch::Invoke`. Sin embargo, los clientes de automatización pueden tener acceso a los métodos restantes a través de la tabla vtable, por lo que las interfaces duales son preferibles a las interfaces dispinterface.
 
-2. Si no se extiende una interfaz dual o dispinterface en tiempo de ejecución (es decir, si no se ofrecen métodos adicionales ni propiedades a través de `IDispatch::Invoke`), debe aplicar el **nonextensible** a la definición de atributo. Este atributo permite a los clientes de automatización realizar la comprobación de código completo en tiempo de compilación. En este caso, no se debe extender la interfaz.
+1. Si no se extiende una interfaz dual o dispinterface en tiempo de ejecución (es decir, si no se ofrecen métodos adicionales ni propiedades a través de `IDispatch::Invoke`), debe aplicar el **nonextensible** a la definición de atributo. Este atributo permite a los clientes de automatización realizar la comprobación de código completo en tiempo de compilación. En este caso, no se debe extender la interfaz.
 
-3. El DISPID correcto es importante si desea que los clientes de automatización para poder usar esta propiedad. (Tenga en cuenta que hay solo un carácter de subrayado en DISPID_NEWENUM.)
+1. El DISPID correcto es importante si desea que los clientes de automatización para poder usar esta propiedad. (Tenga en cuenta que hay solo un carácter de subrayado en DISPID_NEWENUM.)
 
-4. Puede proporcionar cualquier valor como el DISPID de la `Item` propiedad. Sin embargo, `Item` suele utilizar DISPID_VALUE para que sea la propiedad predeterminada de la colección. Esto permite a los clientes de automatización hacer referencia a la propiedad sin darle explícitamente.
+1. Puede proporcionar cualquier valor como el DISPID de la `Item` propiedad. Sin embargo, `Item` suele utilizar DISPID_VALUE para que sea la propiedad predeterminada de la colección. Esto permite a los clientes de automatización hacer referencia a la propiedad sin darle explícitamente.
 
-5. El tipo de datos utilizado para el valor devuelto de la `Item` propiedad es el tipo de elemento almacenado en la colección en cuanto los clientes COM están interesados. La interfaz devuelve cadenas, por lo que debe usar el tipo de cadena COM estándar, BSTR. Puede almacenar internamente los datos en un formato diferente como verá en breve.
+1. El tipo de datos utilizado para el valor devuelto de la `Item` propiedad es el tipo de elemento almacenado en la colección en cuanto los clientes COM están interesados. La interfaz devuelve cadenas, por lo que debe usar el tipo de cadena COM estándar, BSTR. Puede almacenar internamente los datos en un formato diferente como verá en breve.
 
-6. El valor utilizado para el DISPID de la `Count` propiedad es completamente arbitraria. No hay ningún DISPID estándar para esta propiedad.
+1. El valor utilizado para el DISPID de la `Count` propiedad es completamente arbitraria. No hay ningún DISPID estándar para esta propiedad.
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> Creación de definiciones de tipo para el almacenamiento y exposición
 
@@ -114,4 +114,3 @@ Ahora, puede probar el código con el cliente de su elección.
 [Las colecciones y enumeradores](../atl/atl-collections-and-enumerators.md)<br/>
 [Ejemplo ATLCollections](../visual-cpp-samples.md)<br/>
 [Clases de directivas de copia ATL](../atl/atl-copy-policy-classes.md)
-

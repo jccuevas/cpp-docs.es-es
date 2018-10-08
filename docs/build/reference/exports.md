@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714534"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860984"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -82,11 +82,11 @@ Puede exportar una definición de estas cuatro formas, por orden de más a menos
 
 1. El [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) palabra clave en el código fuente
 
-2. Una instrucción `EXPORTS` en un archivo .DEF
+1. Una instrucción `EXPORTS` en un archivo .DEF
 
-3. Un [/EXPORT](../../build/reference/export-exports-a-function.md) especificación en un comando LINK
+1. Un [/EXPORT](../../build/reference/export-exports-a-function.md) especificación en un comando LINK
 
-4. Un [comentario](../../preprocessor/comment-c-cpp.md) la directiva en el código fuente, del formulario `#pragma comment(linker, "/export: definition ")`. El ejemplo siguiente muestra una directiva de #pragma comment antes de una declaración de función, donde `PlainFuncName` es el nombre no representativo, y `_PlainFuncName@4` es el nombre representativo de la función:
+1. Un [comentario](../../preprocessor/comment-c-cpp.md) la directiva en el código fuente, del formulario `#pragma comment(linker, "/export: definition ")`. El ejemplo siguiente muestra una directiva de #pragma comment antes de una declaración de función, donde `PlainFuncName` es el nombre no representativo, y `_PlainFuncName@4` es el nombre representativo de la función:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

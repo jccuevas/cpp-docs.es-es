@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d674b2e3049d27f0e79eb082a44640f67a395dea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0d0b9da19ca3d1500e4e25822e8b10d5967a45cc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097904"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861686"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo (clase)
 
@@ -81,7 +81,7 @@ Si desea crear una ventana basada en una clase de ventana existente, derive la c
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-Para obtener más información acerca de las clases de ventana, consulte [clases de ventana](https://msdn.microsoft.com/library/windows/desktop/ms632596) en el SDK de Windows.
+Para obtener más información acerca de las clases de ventana, consulte [clases de ventana](/windows/desktop/winmsg/window-classes) en el SDK de Windows.
 
 Para obtener más información sobre el uso de ventanas en ATL, vea el artículo [clases de ventana ATL](../../atl/atl-window-classes.md).
 

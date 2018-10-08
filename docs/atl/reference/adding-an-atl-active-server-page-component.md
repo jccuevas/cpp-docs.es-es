@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112998"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861517"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Agregar un componente de páginas Active Server ATL
 
@@ -36,13 +36,13 @@ Componentes de servidor páginas Active forman parte de la arquitectura de Inter
 
 - Puede usar las capacidades de control de errores ASP para las aplicaciones basadas en Web.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Para agregar un componente de páginas Active Server ATL al proyecto
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Para agregar un componente de páginas Active Server ATL al proyecto
 
 1. En **el Explorador de soluciones** haga clic en el nombre del proyecto al que desea agregar el componente de páginas Active Server ATL.
 
-2. En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.
+1. En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.
 
-3. En el [Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo, en el panel Plantillas, haga clic en **componente de página Active Server ATL**y, a continuación, haga clic en **abierto** para mostrar el [servidor activo ATL Asistente para componentes de páginas](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. En el [Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo el **plantillas** panel, haga clic en **componente de página Active Server ATL**y, a continuación, haga clic en **abierto** para mostrar el [Asistente para componentes de páginas de Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>Vea también
 
@@ -52,4 +52,3 @@ Componentes de servidor páginas Active forman parte de la arquitectura de Inter
 [Agregar un método](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Clase MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Agregar una clase genérica de C++](../../ide/adding-a-generic-cpp-class.md)
-

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 971f3df56f049b919ebb1f3fb8f517c97b2829e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076078"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861283"
 ---
 # <a name="pointers-to-members"></a>Punteros a miembros
 
@@ -56,7 +56,7 @@ Las declaraciones de punteros a miembros son casos especiales de declaraciones d
   - Nombre completo de la clase.
   - El operador `::`.
   - El nombre de un miembro no estático de la clase del tipo adecuado.
-  -  Como siempre, se permiten varios declaradores (y cualesquiera inicializadores asociados) en una sola declaración.
+  - Como siempre, se permiten varios declaradores (y cualesquiera inicializadores asociados) en una sola declaración.
 
 Un puntero a un miembro de una clase se diferencia de un puntero normal porque tiene información del tipo de miembro y de la clase a la que pertenece el miembro. Un puntero normal identifica (tiene la dirección de) un solo objeto en memoria. Un puntero a un miembro de una clase identifica ese miembro en cualquier instancia de la clase. En el ejemplo siguiente se declara una clase, `Window`, y algunos punteros a los datos de miembros.
 

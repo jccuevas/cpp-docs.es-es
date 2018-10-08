@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c66324f886da27431a94a464554e2a8ddb00a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391585"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860737"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Secuencia de operaciones para crear aplicaciones de base de datos
 
@@ -36,7 +36,7 @@ En la tabla siguiente se muestra su rol y roles de .NET framework en la escritur
 |Tarea|Lo hace|El marco de trabajo|
 |----------|------------|------------------------|
 |Decida si desea utilizar las clases DAO o de ODBC de MFC.|Utilizar ODBC para nuevos proyectos de MFC. Usar DAO sólo para mantener las aplicaciones existentes. Para obtener información general, consulte el artículo [programación del acceso a datos](../data/data-access-programming-mfc-atl.md).|El marco de trabajo proporciona clases que admiten el acceso de la base de datos.|
-|Crear una aplicación esqueleto con opciones de base de datos.|Ejecute al Asistente para aplicaciones MFC. Seleccione las opciones en la página de soporte técnico de la base de datos. Si elige una opción que crea una vista de registros, especifique también:<br /><br /> -Nombres o nombre de origen y la tabla de datos<br />-Nombre o nombres de consulta.|El Asistente para aplicaciones MFC crea archivos y especifica que incluye el necesario. Según las opciones que especifique, los archivos pueden incluir una clase de conjunto de registros.|
+|Crear una aplicación esqueleto con opciones de base de datos.|Ejecute al Asistente para aplicaciones MFC. Seleccione las opciones en la página de soporte técnico de la base de datos. Si elige una opción que crea una vista de registros, especifique también:<br /><br />-Nombres o nombre de origen y la tabla de datos<br />-Nombre o nombres de consulta.|El Asistente para aplicaciones MFC crea archivos y especifica que incluye el necesario. Según las opciones que especifique, los archivos pueden incluir una clase de conjunto de registros.|
 |Diseñar un formulario de la base de datos o formularios.|Utilice el editor de cuadro de diálogo de Visual C++ para colocar controles en los recursos de plantilla de cuadro de diálogo para las clases de vista de registros.|El Asistente para aplicaciones MFC crea un recurso de plantilla vacía del cuadro de diálogo para que rellene.|
 |Crear clases de vista y el conjunto de registros de registros adicionales según sea necesario.|Utilice la vista de clases para crear las clases y el cuadro de diálogo editor de las vistas de diseño.|Vista de clases crea archivos adicionales para las clases nuevas.|
 |Crear objetos de conjunto de registros según sea necesario en el código. Utilice cada conjunto de registros para manipular los registros...|Los conjuntos de registros se basan en las clases derivadas de [CRecordset](../mfc/reference/crecordset-class.md) con los asistentes.|ODBC utiliza el intercambio de campos de registros (RFX) para intercambiar datos entre la base de datos y los miembros de datos de campo del conjunto de registros. Si usa una vista de registros, intercambio de datos de cuadro de diálogo (DDX) intercambia datos entre el conjunto de registros y los controles en la vista de registros.|

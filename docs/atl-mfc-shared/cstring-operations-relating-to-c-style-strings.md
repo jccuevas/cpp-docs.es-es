@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387021"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860568"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operaciones de CString relacionadas con cadenas de estilo C
 
@@ -67,7 +67,7 @@ Habrá veces en las que necesite una copia de los datos de `CString` para modifi
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  El tercer argumento `strcpy_s` (o la función Unicode/MBCS-portable `_tcscpy_s`) sea un `const wchar_t*` (Unicode) o un `const char*` (ANSI). En el ejemplo anterior se pasa un `CString` para este argumento. El compilador de C++ emplea automáticamente la función de conversión definida para la clase `CString`, que convierte un `CString` en un `LPCTSTR`. La posibilidad de definir operaciones de conversión de un tipo a otro es una de las características más útiles de C++.
+> El tercer argumento `strcpy_s` (o la función Unicode/MBCS-portable `_tcscpy_s`) sea un `const wchar_t*` (Unicode) o un `const char*` (ANSI). En el ejemplo anterior se pasa un `CString` para este argumento. El compilador de C++ emplea automáticamente la función de conversión definida para la clase `CString`, que convierte un `CString` en un `LPCTSTR`. La posibilidad de definir operaciones de conversión de un tipo a otro es una de las características más útiles de C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Trabajar con funciones de cadena de biblioteca en tiempo de ejecución estándar
 
@@ -83,13 +83,13 @@ Existen algunas situaciones en las que sí tiene sentido modificar el contenido 
 
 Los métodos `GetBuffer` y `ReleaseBuffer` dan acceso al búfer de caracteres interno de un objeto `CString`, donde podrá modificarlo directamente. En los siguientes pasos se explica cómo usar estas funciones con este fin.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Para usar GetBuffer y ReleaseBuffer para acceder al búfer de caracteres interno de un objeto CString
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Para usar GetBuffer y ReleaseBuffer para acceder al búfer de caracteres interno de un objeto CString
 
 1. Llame a `GetBuffer` en relación con un objeto `CString` e indique la longitud de búfer que necesita.
 
-2. Use el puntero que `GetBuffer` devuelve para escribir caracteres directamente en el objeto `CString`.
+1. Use el puntero que `GetBuffer` devuelve para escribir caracteres directamente en el objeto `CString`.
 
-3. Llame a `ReleaseBuffer` en relación con el objeto `CString` para actualizar toda la información de estado de `CString` interna (por ejemplo, la longitud de la cadena). Tras modificar el contenido de un objeto `CString` directamente, debe llamar a `ReleaseBuffer` antes de llamar a cualquier otra función miembro de `CString`.
+1. Llame a `ReleaseBuffer` en relación con el objeto `CString` para actualizar toda la información de estado de `CString` interna (por ejemplo, la longitud de la cadena). Tras modificar el contenido de un objeto `CString` directamente, debe llamar a `ReleaseBuffer` antes de llamar a cualquier otra función miembro de `CString`.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Uso de objetos CString con funciones de argumento Variable
 
@@ -113,4 +113,3 @@ Para la mayoría de los resultados de función, se puede devolver simplemente un
 
 [Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Paso de argumentos de CString](../atl-mfc-shared/cstring-argument-passing.md)
-

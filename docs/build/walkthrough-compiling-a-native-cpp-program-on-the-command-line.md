@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821197"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860412"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Tutorial: Compilar un programa nativo de C++ en la línea de comandos
 
@@ -53,7 +53,7 @@ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar
 
    Si está usando una versión diferente de Visual Studio o ejecutan una versión diferente de Windows, busque en el menú Inicio o página de inicio de una carpeta de herramientas de Visual Studio que contenga un acceso directo del símbolo para desarrolladores. También puede usar la función de búsqueda de Windows para buscar "símbolo" y elija una que coincida con la versión instalada de Visual Studio. Use el método abreviado para abrir la ventana de símbolo del sistema.
 
-1. A continuación, compruebe que la línea de comandos para desarrolladores de Visual C++ se ha configurado correctamente. En la ventana de símbolo del sistema, escriba `cl` y compruebe que el resultado es similar:
+1. A continuación, compruebe que la línea de comandos para desarrolladores de Visual C++ se ha configurado correctamente. En la ventana de símbolo del sistema, escriba `cl` y compruebe que el resultado es similar a esto:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -140,7 +140,7 @@ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar
    > [!NOTE]
    > Si se produce una advertencia o error del vinculador o compilador diferentes, revise el código fuente para corregir los errores, a continuación, guárdelo y vuelva a ejecutar el compilador. Para obtener información sobre los errores específicos, use el cuadro de búsqueda en esta página MSDN para buscar el número de error.
 
-7. Para ejecutar el programa hello.exe, en el símbolo del sistema, escriba `hello`.
+1. Para ejecutar el programa hello.exe, en el símbolo del sistema, escriba `hello`.
 
    El programa mostrará este texto y se cerrará:
 

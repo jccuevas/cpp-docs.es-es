@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039379"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861452"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 
@@ -162,7 +162,7 @@ Muchos operadores binarios (descritos en [expresiones con operadores binarios](.
 |Uno de los operandos es de tipo **long double**.|Otro operando se convierte al tipo **long double**.|
 |Anterior no se cumplió la condición y alguno de los operandos es de tipo **doble**.|Otro operando se convierte al tipo **doble**.|
 |Anterior condiciones no se cumplen y alguno de los operandos es de tipo **float**.|Otro operando se convierte al tipo **float**.|
-|Las condiciones anteriores no se satisfacen (ninguno de los operandos es de tipo flotante).|Las promociones de entero se realizan en los operandos de la forma siguiente:<br /><br /> -Si alguno de los operandos es de tipo **unsigned long**, el otro operando se convierte al tipo **unsigned long**.<br />-Si la condición anterior no se cumple y si alguno de los operandos es de tipo **largo** y otro de tipo **int sin signo**, ambos operandos se convierten al tipo **unsigned long**.<br />-Si no se cumplen las dos condiciones anteriores, y si alguno de los operandos es de tipo **largo**, el otro operando se convierte al tipo **largo**.<br />-Si no se cumplen las tres condiciones anteriores, y si alguno de los operandos es de tipo **int sin signo**, el otro operando se convierte al tipo **int sin signo**.<br />-Si se cumple ninguna de las condiciones anteriores, ambos operandos se convierten al tipo **int**.|
+|Las condiciones anteriores no se satisfacen (ninguno de los operandos es de tipo flotante).|Las promociones de entero se realizan en los operandos de la forma siguiente:<br /><br />-Si alguno de los operandos es de tipo **unsigned long**, el otro operando se convierte al tipo **unsigned long**.<br />-Si la condición anterior no se cumple y si alguno de los operandos es de tipo **largo** y otro de tipo **int sin signo**, ambos operandos se convierten al tipo **unsigned long**.<br />-Si no se cumplen las dos condiciones anteriores, y si alguno de los operandos es de tipo **largo**, el otro operando se convierte al tipo **largo**.<br />-Si no se cumplen las tres condiciones anteriores, y si alguno de los operandos es de tipo **int sin signo**, el otro operando se convierte al tipo **int sin signo**.<br />-Si se cumple ninguna de las condiciones anteriores, ambos operandos se convierten al tipo **int**.|
 
 En el código siguiente se muestran las reglas de conversión descritas en la tabla:
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020438"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861647"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 
@@ -52,7 +52,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
       1. **Seleccione o escriba un nombre de servidor:** haga clic en el menú de lista desplegable para mostrar todos los servidores de datos registrados en la red y seleccionar uno.
 
-      2. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
+      1. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
 
          > [!NOTE]
          > Hay un problema de seguridad con la característica de "Permitir guardar contraseña" del cuadro de diálogo Propiedades de vínculo de datos. En "Especifique la información para iniciar sesión en el servidor", hay dos botones de opción:
@@ -63,7 +63,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
          > Si selecciona **utilizar un nombre de usuario específico y una contraseña**, tiene la opción de guardar la contraseña (mediante la casilla de verificación para "Permitir guardar contraseña"); sin embargo, esta opción no es segura. Se recomienda que seleccione **seguridad integrada de uso Windows NT**; esta opción es segura porque cifra la contraseña.
          > Puede haber situaciones en las que desea seleccionar "Permitir guardar contraseña". Por ejemplo, si está lanzando una biblioteca con una solución de base de datos privado, debe no tener acceso directamente a la base de datos pero en su lugar, use una aplicación de nivel intermedio para comprobar el usuario (a través de cualquier esquema de autenticación que elija) y, a continuación, limitar al tipo de datos disponible para el usuario.
 
-      3. **Seleccione la base de datos en el servidor:** haga clic en el menú de lista desplegable para mostrar todas las instancias registradas de bases de datos en el servidor de datos y seleccione uno.
+      1. **Seleccione la base de datos en el servidor:** haga clic en el menú de lista desplegable para mostrar todas las instancias registradas de bases de datos en el servidor de datos y seleccione uno.
 
          \- o -
 
@@ -80,13 +80,13 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
          **Usar cadena de conexión:** escriba una cadena de conexión que ya ha obtenido o haga clic en el **compilar** botón; el **Seleccionar origen de datos** aparece el cuadro de diálogo. Seleccione un origen de datos de archivo o equipo y haga clic en **Aceptar**.
 
          > [!NOTE]
-         > Puede obtener una cadena de conexión mediante la visualización de las propiedades de una conexión existente en el Explorador de servidores, o puede crear una conexión haciendo doble clic en **Agregar conexión** en el Explorador de servidores.
+         > Puede obtener una cadena de conexión mediante la visualización de las propiedades de una conexión existente en **Explorador de servidores**, o bien puede crear una conexión haciendo doble clic en **Agregar conexión** en **Server Explorador**.
 
-      2. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
+      1. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
 
-      3. Escriba el catálogo inicial que se usará.
+      1. Escriba el catálogo inicial que se usará.
 
-      4. Haga clic en **Probar conexión**; si la prueba se realiza correctamente, haga clic en **Aceptar**. Si no es así, compruebe la información de inicio de sesión, intente otra base de datos o pruebe con otro servidor de datos.
+      1. Haga clic en **Probar conexión**; si la prueba se realiza correctamente, haga clic en **Aceptar**. Si no es así, compruebe la información de inicio de sesión, intente otra base de datos o pruebe con otro servidor de datos.
 
    - **Advanced** ficha
 
