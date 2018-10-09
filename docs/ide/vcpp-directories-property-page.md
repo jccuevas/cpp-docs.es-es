@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394457"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821223"
 ---
 # <a name="vc-directories-property-page-windows"></a>Directorios de VC++ (Página de propiedades) (Windows)
 
@@ -76,11 +76,13 @@ Nota: Esta lista se rellena a medida que se escribe. No presione **Entrar**.
 
 Para obtener más información sobre las macros y por qué se deben usar en lugar de rutas de acceso codificadas de forma rígida siempre que sea posible, vea [Trabajar con propiedades del proyecto](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Para obtener una lista de las macros usadas con frecuencia, vea [Macros comunes para propiedades y comandos de compilación](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Para obtener una lista de las macros usadas con frecuencia, vea [Macros comunes para propiedades y comandos de compilación](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties).
 
 Hay dos maneras de definir macros propias:
--   Establecer variables de entorno en un símbolo del sistema para desarrolladores. Todas las variables de entorno se tratan como propiedades o macros de MSBuild.
--   Definir macros de usuario en un archivo .props. Para obtener más información, vea [Macros de la página de propiedades](working-with-project-properties.md#bkmkPropertiesVersusMacros).
+
+- Establecer variables de entorno en un símbolo del sistema para desarrolladores. Todas las variables de entorno se tratan como propiedades o macros de MSBuild.
+
+- Definir macros de usuario en un archivo .props. Para obtener más información, vea [Macros de la página de propiedades](working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
 Para obtener más información, vea estas entradas de blog: [VC++ Directories](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx) (Directorios de VC++), [Inherited Properties and Property Sheets](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx) (Propiedades y hojas de propiedades heredadas) y [Visual Studio 2010 C++ Project Upgrade Guide](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) (Guía de actualización de proyectos de C++ de Visual Studio 2010).
 

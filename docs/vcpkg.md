@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42583898"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821444"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS
 
@@ -138,7 +138,7 @@ Ejecute **vcpkg integrate install** para configurar Visual Studio Code en Linux/
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Seleccionar Linux como destino desde Windows a través de WSL
 
-Puede generar archivos binarios de Linux desde un equipo Windows mediante el subsistema de Windows para Linux (WSL). Siga las instrucciones para [configurar WSL en Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10) y configurarlo con la [extensión de Visual Studio para Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Puede colocar todas las bibliotecas compiladas para Windows y Linux en la misma carpeta y acceder a ella desde Windows y WSL.
+Puede generar archivos binarios de Linux desde un equipo Windows mediante el subsistema de Windows para Linux (WSL). Siga las instrucciones para [configurar WSL en Windows 10](/windows/wsl/install-win10) y configurarlo con la [extensión de Visual Studio para Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Puede colocar todas las bibliotecas compiladas para Windows y Linux en la misma carpeta y acceder a ella desde Windows y WSL.
 
 
 ## <a name="export_binaries_per_project"></a> Exportar archivos binarios y encabezados compilados
@@ -243,4 +243,3 @@ El contenido de una instancia de vcpkg es:
 |---------|---------|
 |**--triplet \<t>**|Permite especificar el triplo de la arquitectura de destino. El valor predeterminado es `%VCPKG_DEFAULT_TRIPLET%`; vea también **vcpkg help triplet**.|
 |**--vcpkg-root \<path>**|Permite especificar el directorio raíz de vcpkg. El predeterminado es `%VCPKG_ROOT%`.|
-

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084060"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860594"
 ---
 # <a name="for-statement-c"></a>for (Instrucción) (C)
 
@@ -34,7 +34,7 @@ La ejecución de una instrucción **for** continúa como sigue:
 
 1. Se evalúa *init-expression*, si existe. Especifica la inicialización del bucle. No hay ninguna restricción sobre el tipo de *init-expression*.
 
-2. Se evalúa *cond-expression*, si existe. Esta expresión debe tener un tipo aritmético o de puntero. Se evalúa antes de cada iteración. Se pueden producir tres resultados:
+1. Se evalúa *cond-expression*, si existe. Esta expresión debe tener un tipo aritmético o de puntero. Se evalúa antes de cada iteración. Se pueden producir tres resultados:
 
    - Si *cond-expression* es **true** (distinto de cero), *statement* se ejecuta; después *loop-expression*, si existe, se evalúa. *loop-expression* se evalúa después de cada iteración. No hay restricciones sobre su tipo. Los efectos secundarios se ejecutarán en orden. Entonces, comienza de nuevo el proceso con la evaluación de *cond-expression*.
 
