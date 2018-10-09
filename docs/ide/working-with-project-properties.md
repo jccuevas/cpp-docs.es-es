@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398669"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821392"
 ---
 # <a name="working-with-project-properties"></a>Trabajar con configuraciones de proyecto
 
@@ -250,7 +250,7 @@ En el panel de la derecha, modifique las opciones **Entorno** o **Combinar entor
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>Modificar las propiedades y los destinos sin cambiar el archivo de proyecto
 
-Puede invalidar las propiedades y los destinos del proyecto desde la línea de comandos de MSBuild sin cambiar el archivo de proyecto. Esto es útil cuando se quieren aplicar algunas propiedades de manera ocasional o temporal. Se presuponen ciertos conocimientos de MSBuild. Para obtener más información, vea [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild).
+Puede invalidar las propiedades y los destinos del proyecto desde la línea de comandos de MSBuild sin cambiar el archivo de proyecto. Esto es útil cuando se quieren aplicar algunas propiedades de manera ocasional o temporal. Se presuponen ciertos conocimientos de MSBuild. Para obtener más información, vea [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Para crear el archivo .props o .targets, puede usar el Editor XML de Visual Studio o cualquier editor de texto. No use el **Administrador de propiedades** en este escenario ya que agrega las propiedades al archivo de proyecto.
