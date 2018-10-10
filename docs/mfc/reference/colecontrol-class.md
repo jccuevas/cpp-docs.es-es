@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435537"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890873"
 ---
 # <a name="colecontrol-class"></a>COleControl (clase)
 
@@ -957,7 +957,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Parámetros
 
 *pPX*<br/>
-Un puntero a un `CPropExchange` objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
+Puntero a un objeto `CPropExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1093,7 +1093,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Parámetros
 
 *pPX*<br/>
-Un puntero a un `CPropExchange` objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
+Puntero a un objeto `CPropExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
 
 *dwVersionDefault*<br/>
 El número de versión actual del control.
@@ -2158,7 +2158,7 @@ Distinto de cero si se ha inicializado el control; en caso contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Implementación de .NET framework de `IDispatch::Invoke` llamadas `IsInvokeAllowed` para determinar si una función determinada (identificado por `dispid`) se pueden invocar. Es el comportamiento predeterminado para un control OLE permitir que se invoca sólo si se ha inicializado el control; los métodos de automatización Sin embargo, `IsInvokeAllowed` es una función virtual y se puede reemplazar si es necesario (por ejemplo, cuando el control se se usa como un servidor de automatización). Para obtener más información, consulte el artículo de Knowledge Base Q166472, "HOWTO: usar un Control OLE como un servidor de automatización." Artículos de Knowledge Base están disponibles en [ http://support.microsoft.com ](http://support.microsoft.com/).
+Implementación de .NET framework de `IDispatch::Invoke` llamadas `IsInvokeAllowed` para determinar si una función determinada (identificado por `dispid`) se pueden invocar. Es el comportamiento predeterminado para un control OLE permitir que se invoca sólo si se ha inicializado el control; los métodos de automatización Sin embargo, `IsInvokeAllowed` es una función virtual y se puede reemplazar si es necesario (por ejemplo, cuando el control se se usa como un servidor de automatización).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445144"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890704"
 ---
 # <a name="cstringt-class"></a>CStringT (clase)
 
@@ -224,7 +224,7 @@ Si se utiliza en una aplicación ATL:
 `CString`, `CStringA`, y `CStringW` se exportan desde la DLL de MFC (MFC90. Archivo DLL), nunca en archivos DLL de usuario. Esto se hace para evitar `CStringT` desde que se definió.
 
 > [!NOTE]
->  Si el código contiene la solución de errores del vinculador que se describe en [Linking Errors When You Import CString-Derived clases "(Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200), debe quitar ese código. Ya no es necesario.
+>  Si el código contiene la solución de errores del vinculador que se describe en [exportar clases de cadena utilizando CStringT](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), debe quitar ese código. Ya no es necesario.
 
 Los tipos de cadena siguientes están disponibles en aplicaciones basadas en MFC:
 

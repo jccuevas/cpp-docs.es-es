@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409576"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890365"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Actualizar un control ActiveX existente
 
@@ -56,7 +56,7 @@ También puede agregar las optimizaciones, como se describe en [controles Active
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Empaquetar código para su descarga
 
-Para obtener más información sobre este tema, consulte el artículo de Knowledge Base "Empaquetado MFC controles de uso a través de Internet" (Q167158). Puede encontrar artículos de Knowledge Base en [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Para obtener más información sobre este tema, consulte [controles ActiveX de empaquetado](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>La etiqueta a la base de código
 
@@ -94,7 +94,7 @@ Archivos contenedores son la manera recomendada para empaquetar controles Active
 
 ### <a name="creating-cab-files"></a>Creación de archivos CAB
 
-Puede descargar el Kit de desarrollo desde el artículo de Knowledge Base [310618: Kit de desarrollo de Software de Microsoft Cabinet](http://go.microsoft.com/fwlink/p/?linkid=148204). En este kit encontrará las herramientas necesarias para crear archivos CAB.
+Herramientas para crear archivos contenedores son ahora forma parte de la [SDK de Windows 10](https://dev.windows.com/downloads/windows-10-sdk).
 
 El archivo .cab que apunta `CODEBASE` debe contener el archivo .ocx para el control ActiveX y un archivo .inf para controlar su instalación. Crear el archivo contenedor especificando el nombre del archivo de control y un archivo .inf. No incluya archivos DLL dependientes que ya existan en el sistema de este archivo CAB. Por ejemplo, los archivos DLL de MFC están empaquetadas en un archivo .cab independiente y que hace referencia el archivo .inf que controla.
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393313"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890613"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList (clase)
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>Comentarios
 
 Pueden ser agrega o elimina de la lista MRU archivos, la lista de archivos se puede leer o escribir en el registro o una. Archivo INI y el menú de mostrar la lista de elementos utilizados Recientemente archivos se pueden actualizar.
-
-Para obtener más información acerca de los elementos de menú de elementos utilizados Recientemente, vea
-
-- Artículo de Knowledge Base Q243751: HOWTO: agregar controladores de comandos para elementos de menú de MRU de la aplicación MFC
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419560"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890626"
 ---
 # <a name="cdialog-class"></a>CDialog (clase)
 
@@ -133,11 +133,7 @@ Cuadro de diálogo modal cierra automáticamente cuando el usuario presiona los 
 
 Al implementar un cuadro de diálogo no modal, invalidar siempre la `OnCancel` llamada y la función miembro `DestroyWindow` desde dentro de él. No llame a la clase base `CDialog::OnCancel`, porque llama a `EndDialog`, lo que hará que el cuadro de diálogo invisible pero no se destruyen. También debe reemplazar `PostNcDestroy` para los cuadros de diálogo no modal con el fin de eliminar **esto**, ya que normalmente se asignan a los cuadros de diálogo no modal **nuevo**. Normalmente se construye en el marco de cuadros de diálogo modales y no es necesario `PostNcDestroy` limpieza.
 
-Para obtener más información sobre `CDialog`, vea:
-
-- [Cuadros de diálogo](../../mfc/dialog-boxes.md)
-
-- Artículo de Knowledge Base Q262954: HOWTO: crear un cuadro de diálogo de tamaño ajustable con barras de desplazamiento
+Para obtener más información sobre `CDialog`, consulte [cuadros de diálogo](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -281,7 +277,7 @@ Utilice el estilo WS_VISIBLE en la plantilla de cuadro de diálogo si debe apare
 
 Use la `CWnd::DestroyWindow` función para destruir un cuadro de diálogo creado por el `CreateIndirect` función.
 
-Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un recurso DLGINIT. Para obtener más información, consulte el artículo de Knowledge Base Q231591, "HOWTO: usar una plantilla de cuadro de diálogo para crear un cuadro de diálogo MFC con un ActiveX Control." Artículos de Knowledge Base están disponibles en [ http://support.microsoft.com ](http://support.microsoft.com/).
+Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un recurso DLGINIT.
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -410,7 +406,7 @@ Distinto de cero si se creó y se inicializa correctamente, el objeto de cuadro 
 
 Para crear un cuadro de diálogo modal indirectamente, asignar un bloque de memoria global y rellenarlo con la plantilla de cuadro de diálogo. A continuación, llame a vacío `CDialog` constructor para construir el objeto de cuadro de diálogo. A continuación, llame a `InitModalIndirect` para almacenar el identificador de la plantilla de cuadro de diálogo en memoria. Se crea y muestra el cuadro de diálogo de Windows más adelante, cuando el [DoModal](#domodal) se llama a la función miembro.
 
-Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un recurso DLGINIT. Para obtener más información, consulte el artículo de Knowledge Base Q231591, "HOWTO: usar una plantilla de cuadro de diálogo para crear un cuadro de diálogo MFC con un ActiveX Control." Artículos de Knowledge Base están disponibles en [ http://support.microsoft.com ](http://support.microsoft.com/).
+Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un recurso DLGINIT.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

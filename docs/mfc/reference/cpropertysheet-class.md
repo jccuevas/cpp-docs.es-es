@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445183"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890782"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (clase)
 
@@ -155,7 +155,7 @@ Puede crear un tipo de ficha del cuadro de diálogo llama a un asistente, que co
 
 Para crear un cuadro de diálogo de tipo asistente, siga los mismos pasos que debe seguir para crear una hoja de propiedades estándar, pero llama a [SetWizardMode](#setwizardmode) antes de llamar a [DoModal](#domodal). Para habilitar los botones del asistente, llame a [SetWizardButtons](#setwizardbuttons), uso de marcas para personalizar sus funciones y apariencia. Para habilitar el **finalizar** botón, llame a [SetFinishText](#setfinishtext) después de que el usuario ha tomado ninguna acción en la última página del asistente.
 
-Para obtener más información sobre cómo usar `CPropertySheet` objetos, consulte el artículo [hojas de propiedades y páginas de propiedades](../../mfc/property-sheets-and-property-pages-in-mfc.md). Además, consulte el artículo de Knowledge Base Q146916: HOWTO: crear un objeto no modal CPropertySheet con botones estándar y el artículo Q300606: HOWTO: diseñar una hoja de propiedades puede cambiar el tamaño de MFC.
+Para obtener más información sobre cómo usar `CPropertySheet` objetos, consulte el artículo [hojas de propiedades y páginas de propiedades](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

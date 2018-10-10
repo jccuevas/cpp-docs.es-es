@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861816"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890665"
 ---
 # <a name="cimage-class"></a>CImage (clase)
 
@@ -320,7 +320,7 @@ Un identificador a un HBITMAP.
 *eOrientation*<br/>
 Especifica la orientación del mapa de bits. Puede ser uno de los siguientes:
 
-- La orientación del mapa de bits DIBOR_DEFAULT viene determinada por el sistema operativo. Sin embargo, esto es posible que no siempre tienen los resultados previstos en todos los sistemas operativos. Para obtener más información, consulte el siguiente artículo de Knowledge Base (**Q186586**): PRB: GetObject() siempre devuelve positivo alto para DIB secciones.
+- La orientación del mapa de bits DIBOR_DEFAULT viene determinada por el sistema operativo.
 
 - DIBOR_BOTTOMUP las líneas de mapa de bits están en orden inverso. Esto hace que [CImage::GetBits](#getbits) para devolver un puntero cerca del final del búfer de mapa de bits y [CImage::GetPitch](#getpitch) para devolver un número negativo.
 

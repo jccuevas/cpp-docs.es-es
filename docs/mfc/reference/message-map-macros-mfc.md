@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821366"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890639"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensajes (MFC)
 
@@ -352,7 +352,7 @@ Mensajes definidos por el usuario son los mensajes que no son mensajes WM_MESSAG
 Debe haber exactamente una instrucción de macro ON_MESSAGE en el mapa de mensajes para cada mensaje definido por el usuario que debe asignarse a una función de controlador de mensajes.
 
 > [!NOTE]
->  Además de los mensajes definidos por el usuario, ON_MESSAGE controla los mensajes de Windows menos comunes. Para obtener más información, vea el artículo de Knowledge Base [99848: INFO: Use ON_MESSAGE() Macro a los mensajes menos comunes de mapa](http://go.microsoft.com/fwlink/p/?linkid=192022).
+>  Además de los mensajes definidos por el usuario, ON_MESSAGE controla los mensajes de Windows menos comunes. Para obtener más información, consulte [mapas de mensajes](../../mfc/tn006-message-maps.md).
 
 Para obtener más información y ejemplos, vea [de mensajes y asignación de temas](../../mfc/message-handling-and-mapping.md) y [controladores definidos por el usuario](user-defined-handlers.md)
 

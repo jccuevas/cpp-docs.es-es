@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394749"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890041"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Tecnologías activas incluyen tecnologías de cliente y servidor, incluido lo si
 - En esta sección también proporciona información sobre cómo escribir componentes COM mediante MFC, por ejemplo, en [puntos de conexión](../mfc/connection-points.md).
 
 Para obtener una explicación de lo que todavía se denomina OLE en comparación con lo que ahora se denomina tecnología activa, vea los temas sobre [OLE](../mfc/ole-in-mfc.md).
-
-Además, consulte el artículo de Knowledge Base Q248019: HOWTO: evitar que servidor ocupado diálogo cuadro desde que aparecen durante unas COM operación de larga duración.
 
 ## <a name="in-this-section"></a>En esta sección
 

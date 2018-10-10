@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407552"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890562"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: Creación de subclases de un control de Windows
 
@@ -48,10 +48,8 @@ Para crear una subclase de un control de Windows, complete las tareas siguientes
 
 - [Controlar los mensajes de control de ActiveX (OCM) reflejados en el control](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Gran parte de este trabajo se realiza automáticamente por el Asistente para controles ActiveX si selecciona el control que se puede crear subclases utilizando la **seleccionar clase de ventana primaria** lista desplegable en el **configuración del Control** página.
-
-Consulte el artículo de Knowledge Base Q243454 para obtener más información sobre la creación de subclases de un control.
+   > [!NOTE]
+   > Gran parte de este trabajo se realiza automáticamente por el Asistente para controles ActiveX si selecciona el control que se puede crear subclases utilizando la **seleccionar clase de ventana primaria** lista desplegable en el **configuración del Control** página.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Reemplazar IsSubclassedControl y PreCreateWindow
 

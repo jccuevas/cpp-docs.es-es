@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437799"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890549"
 ---
 # <a name="toolbars"></a>Barras de herramientas
 
@@ -38,10 +38,7 @@ La familia de la barra de herramientas de artículos describe las barras de herr
 
 - [Ejemplo](../mfc/toolbar-sample-list.md)
 
-Para obtener más información acerca de las barras de herramientas MFC, vea el artículo Q232017, "HOWTO: agregar texto en botones," de Microsoft Knowledge Base en http://support.microsoft.com.
-
 ## <a name="see-also"></a>Vea también
 
 [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)<br/>
 [Editor de barras de herramientas](../windows/toolbar-editor.md)
-

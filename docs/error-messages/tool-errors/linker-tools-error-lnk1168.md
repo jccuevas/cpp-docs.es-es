@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821080"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890171"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Error de las herramientas del vinculador LNK1168
 
@@ -38,7 +38,3 @@ Si el archivo está bloqueado por un programa antivirus, puede solucionar este p
 Si el archivo está bloqueado por un servicio de indización de búsqueda, puede solucionar este problema excluyendo los directorios de salida de compilación de la indización automática. Consulte la documentación del servicio de indización para obtener más información. Para cambiar el servicio de indización de búsqueda de Windows, use **opciones de indización** en el Windows **Panel de Control**. Para obtener más información, consulte [Windows mejorar las búsquedas mediante el índice: preguntas más frecuentes](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Si el proceso de compilación no puede sobrescribir el archivo ejecutable, es posible que esté bloqueado por el Explorador de archivos. Si el **aplicación experiencia** servicio se ha deshabilitado, Explorador de archivos puede contener un bloqueo del identificador de archivo ejecutable durante un período prolongado. Para solucionar este problema, ejecute **services.msc** y, a continuación, abra el **propiedades** cuadro de diálogo para la **experiencia de aplicación** service. Cambiar el **tipo de inicio** desde **deshabilitado** a **Manual**.
-
-## <a name="see-also"></a>Vea también
-
-[Puede recibir un "PRJ0008" o mensaje de error "Error irrecuperable LNK1168" al intentar compilar una solución o un proyecto de ActiveX en Visual C++](http://support.microsoft.com/kb/308358)
