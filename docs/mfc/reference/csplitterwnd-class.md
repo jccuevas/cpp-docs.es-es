@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389567"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890678"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (clase)
 
@@ -181,11 +181,7 @@ Una ventana divisora es compatible con las barras de desplazamiento especial (ap
 
 Cree estas barras de desplazamiento especial al crear la ventana divisora. Por ejemplo, un `CSplitterWnd` que contiene una fila, dos columnas y el estilo WS_VSCROLL mostrará una barra de desplazamiento vertical que se comparte entre los dos paneles. Cuando el usuario mueve la barra de desplazamiento, se envían mensajes WM_VSCROLL a ambos paneles. Cuando los paneles establece la posición de la barra de desplazamiento, se establece la barra de desplazamiento compartido.
 
-Para obtener más información sobre las ventanas divisoras, consulte:
-
-- [Nota técnica 29](../../mfc/tn029-splitter-windows.md)
-
-- Artículo de Knowledge Base Q262024: HOWTO: CPropertySheet Use como un elemento secundario del objeto CSplitterWnd
+Para obtener más información sobre las ventanas divisoras, consulte [29 de nota técnica](../../mfc/tn029-splitter-windows.md).
 
 Para obtener más información sobre cómo crear ventanas divisoras dinámicas, consulte:
 
@@ -898,7 +894,7 @@ Si *conquistado* es NULL, que especifica la fila en el panel que estará activo.
 Si *conquistado* es NULL, que especifica la columna en el panel que estará activo.
 
 *conquistado*<br/>
-Un puntero a un `CWnd` objeto. Si es NULL, el panel especificado por *fila* y *col* está establecido en activo. Si no es NULL, especifica el panel que se establece en activo.
+Puntero a un objeto `CWnd` . Si es NULL, el panel especificado por *fila* y *col* está establecido en activo. Si no es NULL, especifica el panel que se establece en activo.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad47d769dbfd09cc741be18598355dc34486bd54
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d964c375adf80caef3bb5a6eb06c67ef8e3e7200
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045697"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890054"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Advertencia del compilador (nivel 1) C4251
 
@@ -39,11 +39,9 @@ Para minimizar la posibilidad de daños en los datos al exportar una clase con [
 
 Puede evitar la exportación de clases definiendo un archivo DLL que define una clase con funciones virtuales y funciones que se puede llamar para crear instancias y eliminar objetos del tipo.  , A continuación, simplemente puede llamar a funciones virtuales en el tipo.
 
-Para obtener más información sobre la exportación de plantillas, consulte [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).
-
 C4251 puede omitirse si se va a derivar de un tipo en la biblioteca estándar de C++, compilar una versión de depuración (**/MTd**) y donde el mensaje de error del compilador hace referencia a _Container_base.
 
-```
+```cpp
 // C4251.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>

@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406963"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890223"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Pasos de una aplicación cliente FTP típica
 
 Crea una aplicación de cliente FTP típica un [CInternetSession](../mfc/reference/cinternetsession-class.md) y un [CFtpConnection](../mfc/reference/cftpconnection-class.md) objeto. Tenga en cuenta que estas clases WinInet de MFC no controlar realmente la configuración del tipo de proxy; IIS proporciona.
-
-Además, consulte estos artículos de Knowledge Base:
-
-- HOWTO: FTP con el Proxy basado en CERN utilizando la API de WinInet (Id. de artículo: Q166961)
-
-- EJEMPLO: FTP con contraseñas CERN protegido Proxy (Id. de artículo: Q216214)
-
-- Se produce un error de administrador para mostrar los servicios Proxy instalado servicios de Internet (Id. de artículo: Q216802)
 
 En la tabla siguiente muestra los pasos que puede realizar en una aplicación de cliente FTP típica.
 

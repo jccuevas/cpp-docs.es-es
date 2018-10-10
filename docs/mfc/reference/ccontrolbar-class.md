@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393430"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890536"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -118,8 +118,6 @@ Para obtener más información sobre `CControlBar`, vea:
 - [Barras de control](../../mfc/control-bars.md)
 
 - [Nota técnica 31: Barras de Control](../../mfc/tn031-control-bars.md).
-
-- Artículo Q242577 de Knowledge Base: PRB: Los controladores de la interfaz de usuario de comandos de actualización no funcionan para un menú asociado a un cuadro de diálogo
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -549,7 +547,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Parámetros
 
 *conquistado*<br/>
-Un puntero a un `CWnd` objeto.
+Puntero a un objeto `CWnd` .
 
 ### <a name="remarks"></a>Comentarios
 

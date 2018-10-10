@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821574"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890899"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
 
@@ -457,12 +457,6 @@ Los controles de vista de lista pueden mostrar su contenido de cuatro maneras di
 - Vista de informe
 
      Cada elemento aparece en su propia línea, con información adicional que se organizan en columnas a la derecha. La columna de la izquierda contiene el pequeño icono y una etiqueta, y las columnas subsiguientes contienen los subelementos especificados por la aplicación. Un control de encabezado incrustado (clase [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa estas columnas. Para obtener más información sobre el control de encabezado y las columnas de una vista de informe, vea [utilizando CListCtrl: agregar columnas al Control (vista de informe)](../../mfc/adding-columns-to-the-control-report-view.md).
-
-Vea también:
-
-- Artículo de Knowledge Base Q250614: HOWTO: Ordenar elementos en un objeto CListCtrl en la vista Informe
-
-- Q200054 del artículo de Knowledge Base: PRB: OnTimer() es no llama varias veces para un Control de lista
 
 El estilo de vista de lista actual del control determina la vista actual. Para obtener más información sobre estos estilos y su uso, consulte [utilizando CListCtrl: cambiar los estilos de Control de lista](../../mfc/changing-list-control-styles.md).
 

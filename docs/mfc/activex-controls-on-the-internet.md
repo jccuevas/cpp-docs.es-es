@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432826"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890341"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX en Internet
 
@@ -170,10 +170,6 @@ Monikers asincrónicos proporcionan una manera de descargar datos de forma asinc
 Por ejemplo, si solo 10 bytes disponibles y lectura se llama de forma asincrónica en un archivo de 1 KB, lectura no se bloquea, pero devuelve con los 10 bytes disponibles actualmente.
 
 Implementar [monikers asincrónicos](../mfc/asynchronous-monikers-on-the-internet.md) utilizando la `CAsyncMonikerFile` clase. Sin embargo, pueden usar los controles ActiveX la `CDataPathProperty` (clase), que se deriva de `CAsyncMonikerFile`, para ayudar a implementar las propiedades de control asincrónico.
-
-El ejemplo ASYNDOWN muestra cómo configurar un bucle asincrónico usando temporizadores para leer los datos. ASYNDOWN se describe en detalle en el artículo de Knowledge Base "HOWTO: AsyncDown muestra asincrónica datos Download" (Q177244) y está disponible para su descarga desde Microsoft Download Center. (Para obtener más información sobre cómo descargar archivos desde Microsoft Download Center, consulte el artículo "Cómo para obtener Microsoft compatibilidad con archivos de servicios en línea" (Q119591) en Microsoft Knowledge Base). Puede encontrar artículos de Knowledge Base en [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-La técnica básica utilizada en ASYNDOWN consiste en establecer un temporizador en **CDataPathProperty:: ondataavailable** para indicar cuando hay datos. Cuando se recibe el mensaje de temporizador, la aplicación lee en bloques de 128 bytes de datos y rellena un control de edición. Si los datos no están disponibles cuando se controla el mensaje de temporizador, el temporizador está desactivado. `OnDataAvailable` activa el temporizador si llegan datos más más adelante.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Mostrar un Control en una página Web
 

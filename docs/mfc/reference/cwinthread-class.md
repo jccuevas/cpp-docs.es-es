@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441361"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890602"
 ---
 # <a name="cwinthread-class"></a>CWinThread (clase)
 
@@ -455,7 +455,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 Mensaje publicado se asigna al controlador de mensajes adecuado mediante la macro ON_THREAD_MESSAGE del mapa de mensajes.
 
 > [!NOTE]
->  Cuando se llama a la Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) función dentro de una aplicación MFC, el mensaje MFC no se llama a los controladores. Para obtener más información, consulte el artículo de Knowledge Base "PRB: MFC mensaje controlador no llamado con PostThreadMessage()" (Q142415).
+> Cuando se llama a [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), el mensaje se coloca en la cola de mensajes del subproceso. Sin embargo, dado que los mensajes publicados de este modo no están asociados a una ventana, MFC no enviará ellos a los controladores de mensaje o un comando. Para controlar estos mensajes, invalide el `PreTranslateMessage()` función de sus derivadas CWinApp clase y controlar los mensajes manualmente.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -490,7 +490,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parámetros
 
-*Código*<br/>
+*code*<br/>
 Especifica un código de enlace. Esta función miembro usa el código para determinar cómo procesar *lpMsg.*
 
 *lpMsg*<br/>

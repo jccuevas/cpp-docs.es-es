@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444212"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889976"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exportar clases de cadena mediante CStringT
 
@@ -29,7 +29,7 @@ En el pasado, los desarrolladores de MFC han derivado de `CString` especializar 
 
 - Con el nuevo `CStringT` clase de plantilla, puede personalizar `CString` comportamiento utilizando los parámetros de plantilla que especifican rasgos de caracteres, similares a las plantillas en la biblioteca estándar de C++.
 
-- Cuando exporta su propia clase de cadena desde un archivo DLL mediante `CStringT`, el compilador también automáticamente exporta el `CString` clase base. Puesto que `CString` es en sí mismo una clase de plantilla, puede crearse por el compilador cuando se utiliza, a menos que el compilador reconoce que `CString` se importa desde un archivo DLL. Si ha migrado proyectos de Visual C++ 6.0 a Visual C++. NET, que puede haber visto errores de símbolo del enlazador para un definido de forma múltiple `CString` debido a la colisión de la `CString` importados desde un archivo DLL y la versión localmente con instancias. A continuación se describe la manera adecuada de hacerlo. Para obtener más información sobre este problema, consulte el artículo de Knowledge Base, "vinculación errores al importar derivada CString clases" (Q309801) en [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).
+- Cuando exporta su propia clase de cadena desde un archivo DLL mediante `CStringT`, el compilador también automáticamente exporta el `CString` clase base. Puesto que `CString` es en sí mismo una clase de plantilla, puede crearse por el compilador cuando se utiliza, a menos que el compilador reconoce que `CString` se importa desde un archivo DLL. Si ha migrado proyectos de Visual C++ 6.0 a Visual C++. NET, que puede haber visto errores de símbolo del enlazador para un definido de forma múltiple `CString` debido a la colisión de la `CString` importados desde un archivo DLL y la versión localmente con instancias. A continuación se describe la manera adecuada de hacerlo.
 
 El siguiente escenario hará que el vinculador para generar errores de símbolo para las clases definidos de forma múltiple. Se supone que está exportando un `CString`-clase derivada (`CMyString`) desde un archivo DLL de extensión MFC:
 
