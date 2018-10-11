@@ -30,37 +30,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a518402d027ae128fcf403752fafb448461628
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38cd49dd483b556c8bda95e7a77109a9d4682e7c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390474"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233624"
 ---
 # <a name="lock"></a>_lock
-Adquiere un bloqueo multiproceso.  
-  
+
+Adquiere un bloqueo multiproceso.
+
 > [!IMPORTANT]
->  Esta función está obsoleta. A partir de Visual Studio 2015, no está disponible en CRT.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void __cdecl _lock  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- [in] `locknum`  
- El identificador del bloqueo que se adquirirá.  
-  
-## <a name="remarks"></a>Comentarios  
- Si ya se adquirió el bloqueo, este método obtiene el bloqueo de todas formas y produce un error interno en tiempo de ejecución de C (CRT). Si el método no puede adquirir un bloqueo, se cierra con un error irrecuperable y establece el código de error en `_RT_LOCK`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Origen:** mlock.c  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_unlock](../c-runtime-library/unlock.md)
+>  Esta función está obsoleta. A partir de Visual Studio 2015, no está disponible en CRT.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+void __cdecl _lock
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*locknum*<br/>
+[in] El identificador del bloqueo que se adquirirá.
+
+## <a name="remarks"></a>Comentarios
+
+Si ya se adquirió el bloqueo, este método obtiene el bloqueo de todas formas y produce un error interno en tiempo de ejecución de C (CRT). Si el método no puede adquirir un bloqueo, se cierra con un error irrecuperable y establece el código de error en `_RT_LOCK`.
+
+## <a name="requirements"></a>Requisitos
+
+**Origen:** mlock.c
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_unlock](../c-runtime-library/unlock.md)

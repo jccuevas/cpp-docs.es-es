@@ -1,7 +1,7 @@
 ---
 title: Configuración de un proyecto de C++ de Linux en Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383251"
 ---
 # <a name="configure-a-linux-project"></a>Configurar un proyecto de Linux
 
@@ -33,9 +33,11 @@ Con Visual Studio se pueden configurar una serie de opciones para un proyecto de
 
 De forma predeterminada, con la herramienta se crea un archivo ejecutable (.out).  Para compilar una biblioteca estática o dinámica o para usar un archivo Make existente, emplee la selección **Tipo de configuración**.
 
+Para más información sobre las opciones de las páginas de propiedades, vea [Referencia de las páginas de propiedades de un proyecto de Linux](prop-pages-linux.md).
+
 ## <a name="remote-settings"></a>Configuración remota
 
-Para cambiar la configuración correspondiente al equipo Linux remoto, configure las opciones remotas que aparecen en la configuración **General**:
+Para cambiar la configuración correspondiente al equipo Linux remoto, configure las opciones remotas que aparecen en la configuración [General](prop-pages/general-linux.md):
 
 - Para cambiar el equipo Linux de destino, use la entrada **Máquina de compilación remota**.  Esto le permitirá seleccionar una de las conexiones creadas anteriormente.  Para crear una nueva entrada, vea la sección [Conexión al equipo Linux remoto](connect-to-your-remote-linux-computer.md).
 
@@ -44,11 +46,12 @@ Para cambiar la configuración correspondiente al equipo Linux remoto, configure
 - El **Directorio del proyecto de compilación remota** es donde se creará este proyecto concreto en el equipo remoto Linux.  El valor predeterminado es **$(RemoteRootDir)/$(ProjectName)**, que se expandirá en un directorio con el nombre del proyecto actual, bajo el directorio raíz establecido arriba.
 
 > [!NOTE]
-> Para cambiar el valor predeterminado de los compiladores de C y C++, o el enlazador y el archivador usados para compilar el proyecto, use las entradas pertinentes de la sección **C/C++ > General** y en la sección **Enlazador > General**.  Podrían establecerse para usar una versión determinada de GCC o incluso el compilador Clang, por ejemplo.
+> Para cambiar el valor predeterminado de los compiladores de C y C++, o el enlazador y el archivador usados para compilar el proyecto, use las entradas pertinentes de la sección **C/C++ > General** y en la sección **Enlazador > General**.  Podrían establecerse para usar una versión determinada de GCC o incluso el compilador Clang, por ejemplo. Para más información, vea [Propiedades de C o C++ (C++ para Linux)](prop-pages/c-cpp-linux.md) y [Propiedades del enlazador (C++ para Linux)](prop-pages/linker-linux.md).
 
 ## <a name="include-directories-and-intellisense-support"></a>Directorios de inclusión y compatibilidad con IntelliSense
 
-**Visual Studio 2017 versión 15.6 y anteriores:** de forma predeterminada, Visual Studio no incluye los archivos de inclusión de nivel de sistema del equipo Linux.  Por ejemplo, los elementos del directorio **/usr/include** no están presentes en Visual Studio.
+**Visual Studio 2017 15.6 y versiones anteriores**:<br/>
+De forma predeterminada, Visual Studio no incluye ningún archivo de inclusión de nivel de sistema del equipo Linux.  Por ejemplo, los elementos del directorio **/usr/include** no están presentes en Visual Studio.
 Para una compatibilidad total con [IntelliSense](/visualstudio/ide/using-intellisense), tendrá que copiar esos archivos en alguna ubicación del equipo de desarrollo y apuntar Visual Studio a esta ubicación.  Una opción es usar scp (Secure Copy) para copiar los archivos.  En Windows 10, puede usar [Bash en Windows](https://msdn.microsoft.com/commandline/wsl/about) para ejecutar scp.  En versiones anteriores de Windows, podría usar algo como [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Puede copiar los archivos mediante un comando similar al siguiente:
@@ -61,7 +64,8 @@ Una vez copiados los archivos, use el elemento **Directorios de VC++** de las pr
 
 ![Directorios de VC++](media/settings_directories.png)
 
-**Visual Studio 2017 15.7 y versiones posteriores:** vea [Administrar encabezados remotos para IntelliSense](#remote_intellisense).
+**Visual Studio 2017, versión 15.7 y posteriores:**<br/>
+Vea [Administrar encabezados remotos para IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Copiar orígenes
 
@@ -97,8 +101,8 @@ Para administrar la caché de encabezados, vaya a **Herramientas > Opciones, mul
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)  
-[C++ General Properties (Linux C++)](../linux/prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))  
-[VC++ Directories (Linux C++)](../linux/prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))  
-[Copy Sources Project Properties (Linux C++)](../linux/prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))  
+[Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)<br/>
+[C++ General Properties (Linux C++)](../linux/prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))<br/>
+[VC++ Directories (Linux C++)](../linux/prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))<br/>
+[Copy Sources Project Properties (Linux C++)](../linux/prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))<br/>
 [Build Event Properties (Linux C++)](../linux/prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))

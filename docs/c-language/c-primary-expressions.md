@@ -14,30 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688e62cc82446a2e52dc1b75a439881a4f2d8eed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 276e82a7768520c6a75c87cb49fcb26ce1f01253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066471"
 ---
 # <a name="c-primary-expressions"></a>Expresiones primarias de C
-Los operandos en expresiones se denominan “expresiones primarias”.  
-  
-## <a name="syntax"></a>Sintaxis  
- *primary-expression*:  
- *identifier*  
-  
- *constant*  
-  
- *string-literal*  
-  
- **(**  *expression*  **)**  
-  
- *expression*:  
- *assignment-expression*  
-  
- *expression*  **,**  *assignment-expression*  
-  
-## <a name="see-also"></a>Vea también  
- [Operandos y expresiones](../c-language/operands-and-expressions.md)
+
+Los operandos en expresiones se denominan “expresiones primarias”.
+
+## <a name="syntax"></a>Sintaxis
+
+*primary-expression*: *identifier*
+
+*constant*
+
+*string-literal*
+
+**(**  *expression*  **)**
+
+*expression*: *assignment-expression*
+
+*expression*  **,**  *assignment-expression*
+
+## <a name="see-also"></a>Vea también
+
+[Operandos y expresiones](../c-language/operands-and-expressions.md)

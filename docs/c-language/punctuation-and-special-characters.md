@@ -18,21 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2605326b19b9708ab4328080f3397b6b92a828
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f67ba7abc4348bdf329ac24e26dd75da008b4e83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038744"
 ---
 # <a name="punctuation-and-special-characters"></a>Caracteres especiales y de puntuación
-Los caracteres de puntuación y especiales del juego de caracteres de C tienen varias finalidades, desde organizar el texto del programa hasta definir las tareas que realiza el compilador o el programa compilado. No especifican que se deba realizar una operación. Algunos símbolos de puntuación también son operadores (vea [Operadores](../c-language/c-operators.md)). El compilador determina su uso a partir del contexto.  
-  
-## <a name="syntax"></a>Sintaxis  
- `punctuator`: uno de  
- **( )   [ ]   { }   \*   ,   :   =   ;   ... #**  
-  
- Estos caracteres tienen significados especiales en C. Sus usos se describen en este libro. El signo de almohadilla (**#**) solo puede aparecer en [directivas de preprocesamiento](../preprocessor/preprocessor-directives.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Elementos de C](../c-language/elements-of-c.md)
+
+Los caracteres de puntuación y especiales del juego de caracteres de C tienen varias finalidades, desde organizar el texto del programa hasta definir las tareas que realiza el compilador o el programa compilado. No especifican que se deba realizar una operación. Algunos símbolos de puntuación también son operadores (vea [Operadores](../c-language/c-operators.md)). El compilador determina su uso a partir del contexto.
+
+## <a name="syntax"></a>Sintaxis
+
+`punctuator`: uno de **( )   [ ]   { }   \*   ,   :   =   ;   ... #**
+
+Estos caracteres tienen significados especiales en C. Sus usos se describen en este libro. El signo de almohadilla (**#**) solo puede aparecer en [directivas de preprocesamiento](../preprocessor/preprocessor-directives.md).
+
+## <a name="see-also"></a>Vea también
+
+[Elementos de C](../c-language/elements-of-c.md)
