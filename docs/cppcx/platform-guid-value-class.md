@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b09fe303cb69cb36d04d696af2b83b30b8378f70
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100436"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083455"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid (Clase de valor)
 
-Representa un [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) tipo en el sistema de tipos en tiempo de ejecución de Windows.
+Representa un tipo [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) en el sistema de tipos de Windows en tiempo de ejecución.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,7 +45,7 @@ Guid tiene los métodos Equals(), GetHashCode() y ToString() que se derivan de [
 
 ### <a name="remarks"></a>Comentarios
 
-¿Para obtener un ejemplo de cómo generar un nuevo Platform:: GUID mediante la función Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), consulte [componente WinRT: cómo generar un GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+Para obtener un ejemplo sobre cómo generar un nuevo elemento Platform::Guid mediante el uso de la función de Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), consulte [WinRT component: How to generate a GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)(Componente de WinRT: ¿Cómo generar un GUID?).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -157,7 +157,7 @@ True si los dos GUID no son iguales.
 
 ## <a name="operator-call"></a> ::Operator() (operador)
 
-Convierte implícitamente un [estructura GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID en Platform::.
+Convierte implícitamente un [estructura GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)GUID en Platform::.
 
 ### <a name="syntax"></a>Sintaxis
 

@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e985b81072de306c818218e19bbb660e3e04a4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 497de9695e75810f2fe68101627f2ba3606aa048
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719738"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082014"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Restricciones de las DLL de carga retrasada
 
 Hay ciertas restricciones relacionadas con la carga retrasada de importaciones.
 
-- No se pueden admitir las importaciones de datos. Una solución alternativa consiste en administrar uno mismo la importación de datos de forma explícita con `LoadLibrary` (o `GetModuleHandle` después de saber que la aplicación auxiliar de carga retrasada cargó la DLL) y `GetProcAddress`.
+- No se pueden admitir las importaciones de datos. Una solución alternativa consiste en administrar uno mismo la importación de datos de forma explícita con `LoadLibrary` (o `GetModuleHandle` después de saber que el asistente de carga retrasada cargó la DLL) y `GetProcAddress`.
 
-- No se admite la carga retrasada de Kernel32.dll. Esta DLL es necesaria para que las rutinas de la aplicación auxiliar de carga retrasada lleven a cabo la carga retrasada.
+- No se admite la carga retrasada de Kernel32.dll. Esta DLL es necesaria para que las rutinas del asistente de carga retrasada lleven a cabo la carga retrasada.
 
 - [Enlace](../../build/reference/binding-imports.md) de entrada no se admite los puntos que se reenvían.
 
@@ -44,9 +44,9 @@ Hay ciertas restricciones relacionadas con la carga retrasada de importaciones.
 ## <a name="see-also"></a>Vea también
 
 [Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary (función)](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)<br/>
-[GetModuleHandle (función)](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)<br/>
-[GetProcAddress (función)](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)<br/>
+[LoadLibrary (función)](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
+[GetModuleHandle (función)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
+[GetProcAddress (función)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
 [Función TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
 [Función TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
 [Función TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>

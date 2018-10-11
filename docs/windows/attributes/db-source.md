@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa55ba0193f24acdf308888c3ec505c33003292
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792138"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081908"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -37,7 +37,7 @@ Crea una conexión a un origen de datos.
 ### <a name="parameters"></a>Parámetros
 
 *db_source*<br/>
-La cadena de conexión usada para conectarse al origen de datos. Para el formato de la cadena de conexión, consulte [cadenas de conexión y vínculos de datos](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) en Microsoft Data Access Components (MDAC) SDK.
+La cadena de conexión usada para conectarse al origen de datos. Para el formato de la cadena de conexión, consulte [cadenas de conexión y vínculos de datos](/previous-versions/windows/desktop/ms718376) en Microsoft Data Access Components (MDAC) SDK.
 
 *name*<br/>
 (Opcional) Cuando usas **db_source** en una clase, *nombre* es una instancia de un objeto de origen de datos que tiene el **db_source** atributo aplicado a él (vea el ejemplo 1). Cuando usas **db_source** en línea en una implementación de método *nombre* es una variable (local al método) que se puede usar para acceder a los datos de origen (vea el ejemplo 2). Pase este *nombre* a la *source_name* parámetro de `db_command` para asociar un comando en el origen de datos.
@@ -88,7 +88,7 @@ class CMyCommand {};
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 

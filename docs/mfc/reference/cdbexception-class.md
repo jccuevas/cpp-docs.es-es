@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389582"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083117"
 ---
 # <a name="cdbexception-class"></a>CDBException (clase)
 
@@ -142,7 +142,7 @@ Contiene una cadena que describe el error que provocó la excepción.
 
 La cadena tiene el formato "estado: % s, nativo: % ld, origen: % s", donde los códigos de formato, en orden, se reemplazan por valores que describen:
 
-- El valor de SQLSTATE, una cadena terminada en null que contiene un código de error de cinco caracteres devuelto en el *szSqlState* parámetro de la función ODBC `SQLError`. Los valores de SQLSTATE se enumeran en el apéndice A, [códigos de Error ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\)), en el *referencia del programador de ODBC*. Ejemplo: "S0022".
+- El valor de SQLSTATE, una cadena terminada en null que contiene un código de error de cinco caracteres devuelto en el *szSqlState* parámetro de la función ODBC `SQLError`. Los valores de SQLSTATE se enumeran en el apéndice A, [códigos de Error ODBC](/previous-versions/windows/desktop/ms714687), en el *referencia del programador de ODBC*. Ejemplo: "S0022".
 
 - Devuelve el código de error nativo específico del origen de datos, en el *pfNativeError* parámetro de la `SQLError` función. Ejemplo: 207.
 
@@ -150,7 +150,7 @@ La cadena tiene el formato "estado: % s, nativo: % ld, origen: % s", donde los c
 
 El marco de trabajo interpreta la cadena de error y pone sus componentes en `m_strStateNativeOrigin`; si `m_strStateNativeOrigin` contiene información de más de un error, los errores están separados por nuevas líneas. El marco de trabajo coloca el texto del error alfanumérico en `m_strError`.
 
-Para obtener más información acerca de los códigos que se utiliza para realizar esta cadena, consulte la [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) funcionando en el *referencia del programador de ODBC*.
+Para obtener más información acerca de los códigos que se utiliza para realizar esta cadena, consulte la [SQLError](/previous-versions/windows/desktop/ms716312) funcionando en el *referencia del programador de ODBC*.
 
 ### <a name="example"></a>Ejemplo
 

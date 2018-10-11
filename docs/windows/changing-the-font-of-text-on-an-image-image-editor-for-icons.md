@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a49cb4fa88b3a014d79969cc86fc03fa1136efa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5491f8a761eee80595265150ee0cb89c682b3079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405351"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084053"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Cambiar la fuente o el texto de una imagen (Editor de imágenes para iconos)
 
@@ -32,7 +32,7 @@ El procedimiento siguiente es un ejemplo de cómo:
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Para cambiar la fuente del texto de una imagen
 
-1. Cree una aplicación de formularios de Windows de C++. Para obtener más información, consulte [crear un proyecto de aplicación Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). Un `app.ico` archivo se agrega al proyecto de forma predeterminada.
+1. Cree una aplicación de formularios de Windows de C++. Para obtener más información, consulte [crear un proyecto de aplicación Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Un `app.ico` archivo se agrega al proyecto de forma predeterminada.
 
 2. En **el Explorador de soluciones**, haga doble clic en el archivo app.ico. El [Editor de imágenes](../windows/image-editor-for-icons.md) se abrirá.
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073679"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083520"
 ---
 # <a name="ole-db-programming"></a>Programación de OLE DB
 
@@ -40,7 +40,7 @@ Además, puede usar atributos para implementar las plantillas de consumidor de O
 |Utilizar las plantillas de proveedor OLE DB (temas conceptuales)|[Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |Clases y macros de plantillas OLE DB|[Referencia de plantillas OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Atributos de consumidor OLE DB|[Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Interfaces OLE DB|[Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (en el SDK de Windows)|  
+|Interfaces OLE DB|[Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643) (en el SDK de Windows)|  
 |Ejemplos de plantillas OLE DB|[Ejemplos de plantillas OLE DB](https://github.com/Microsoft/VCSamples)| 
 |Información general sobre la programación de acceso a datos (Visual C++)|[Programación con Data Access](../../data/data-access-programming-mfc-atl.md)|  
 |Temas conceptuales de ODBC|[Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  

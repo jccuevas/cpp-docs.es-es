@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860984"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084066"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +67,7 @@ Para buscar los nombres representativos producidos por el compilador, utilice la
 
 Puede usar \@ *ordinal* para especificar que un número y no el nombre de función entra en tabla de exportación del archivo DLL. Muchas DLL de Windows exportan ordinales para admitir código heredado. En el código de Windows de 16 bits, era habitual usar ordinales, porque con ellos puede ser más fácil minimizar el tamaño de las DLL. No recomendamos exportar las funciones por ordinales, salvo que los clientes de su DLL lo necesiten para admitir código heredado. Dado que el archivo .LIB contendrá la asignación entre el ordinal y la función, puede usar el nombre de la función como lo haría normalmente en los proyectos que usan la DLL.
 
-Mediante el uso opcional **NONAME** palabra clave, puede exportar por ordinal solamente y reducir el tamaño de la tabla de exportación en la DLL resultante. Sin embargo, si desea usar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) en el archivo DLL, debe conocer el ordinal, porque el nombre no será válido.
+Mediante el uso opcional **NONAME** palabra clave, puede exportar por ordinal solamente y reducir el tamaño de la tabla de exportación en la DLL resultante. Sin embargo, si desea usar [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) en el archivo DLL, debe conocer el ordinal, porque el nombre no será válido.
 
 La palabra clave opcional **privada** impide *entrada* se incluyan en la biblioteca de importación generada por LINK. No afecta a la exportación de la imagen que también genera LINK.
 

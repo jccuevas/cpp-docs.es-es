@@ -37,16 +37,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 542c97c1e13d5979290772668b6dccebe1ece9f9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d00e6a89d8c05f5b9d6a3f1eaef434968931a26
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113167"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083312"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl (Clase)
 
-Proporciona una implementación para el [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interfaz.  
+Proporciona una implementación para el [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -98,7 +98,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) en el *referencia del programador OLE DB*. 
+Consulte [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611) en el *referencia del programador OLE DB*. 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
 
@@ -114,7 +114,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) en el *referencia del programador OLE DB*. El *iOrdinal* parámetro debe ser una columna de marcador. 
+Consulte [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) en el *referencia del programador OLE DB*. El *iOrdinal* parámetro debe ser una columna de marcador. 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
 
@@ -129,7 +129,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+Consulte [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
 

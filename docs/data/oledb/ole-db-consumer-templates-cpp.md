@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021582"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082428"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Plantillas de consumidor OLE DB (C++)
 
@@ -35,7 +35,7 @@ Las plantillas de consumidor OLE DB admiten la especificación de OLE DB versió
   
 - Tipos de datos nativos de C/C++ para la programación de OLE DB.  
   
-Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
+Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, vea [Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms718124).  
   
 Las plantillas OLE DB son compatibles con el modelo de objetos OLE DB existente en lugar de agregar un nuevo modelo de objetos. Las clases de nivel superior de las plantillas de consumidor OLE DB se corresponden con los componentes definidos en la especificación de OLE DB. El diseño de las plantillas de consumidor OLE DB incluye características avanzadas como, por ejemplo, varios descriptores de acceso en un conjunto de filas. El uso de plantillas y herencia múltiple permite que la biblioteca mantenga su flexibilidad y un tamaño reducido.  
   
@@ -71,5 +71,5 @@ Para obtener más información, vea los temas siguientes:
 
 [Programación de OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Acceso a datos](../data-access-in-cpp.md)<br/>
-[Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[Referencia del programador OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784)   
+[Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643)

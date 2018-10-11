@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e2e646a2b05ba8514f22fb9ffb027aa0a570c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c3ab06de159722e4aae4e15d93e057b12dc8864
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419651"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083299"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant (clase)
 
@@ -226,7 +226,7 @@ Almacena un puntero a un objeto de tipo TIMESTAMP_STRUCT.
 
 El `m_pdate` miembro de datos pertenece a una unión. Antes de acceder a `m_pdate`, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en DBVT_DATE, a continuación, `m_pdate` contiene un puntero válido; en caso contrario, obtener acceso a `m_pdate` producirá resultados no confiables.
 
-Para obtener más información sobre el tipo de datos TIMESTAMP_STRUCT, vea el tema [tipos de datos C](/previous-versions/windows/desktop/ms714556\(v=vs.85\)) en el apéndice D de la *referencia del programador de ODBC* en el SDK de Windows.
+Para obtener más información sobre el tipo de datos TIMESTAMP_STRUCT, vea el tema [tipos de datos C](/previous-versions/windows/desktop/ms714556) en el apéndice D de la *referencia del programador de ODBC* en el SDK de Windows.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

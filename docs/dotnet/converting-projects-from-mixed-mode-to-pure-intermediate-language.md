@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222085"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083468"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertir proyectos de modo mixto a lenguaje intermedio puro
 
@@ -84,26 +84,26 @@ Si usa una versión anterior del conjunto de herramientas del compilador de Visu
 
 3. Quitar todos los tipos no administrados:
 
-   Según sea necesario, reemplace los tipos no administrados por referencias a las estructuras de la [sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx) espacio de nombres. Tipos administrados más comunes se enumeran en la tabla siguiente:
+   Según sea necesario, reemplace los tipos no administrados por referencias a las estructuras de la [sistema](/dotnet/api/system) espacio de nombres. Tipos administrados más comunes se enumeran en la tabla siguiente:
 
    |Estructura|Descripción|
    |---------------|-----------------|
-   |[Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|Representa un valor booleano.|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|Representa un entero de 8 bits sin signo.|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Representa un carácter Unicode.|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|Representa un instante de tiempo, normalmente expresado en forma de fecha y hora del día.|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|Representa un número decimal.|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|Representa un número de punto flotante de precisión doble.|
-   |[GUID](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|Representa un identificador único global (GUID).|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|Representa un entero de 16 bits con signo.|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|Representa un entero de 32 bits con signo.|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|Representa un entero de 64 bits con signo.|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|Representa un entero con signo de 8 bits.|
-   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|Representa un número de punto flotante de precisión sencilla.|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|Representa un intervalo de tiempo.|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|Representa un entero de 16 bits sin signo.|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|Representa un entero de 32 bits sin signo.|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|Representa un entero de 64 bits sin signo.|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
-   |[Void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|
+   |[Boolean](/dotnet/api/system.boolean)|Representa un valor booleano.|
+   |[Byte](/dotnet/api/system.byte)|Representa un entero de 8 bits sin signo.|
+   |[Char](/dotnet/api/system.char)|Representa un carácter Unicode.|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Representa un instante de tiempo, normalmente expresado en forma de fecha y hora del día.|
+   |[Decimal](/dotnet/api/system.decimal)|Representa un número decimal.|
+   |[Double](/dotnet/api/system.double)|Representa un número de punto flotante de precisión doble.|
+   |[Guid](/dotnet/api/system.guid)|Representa un identificador único global (GUID).|
+   |[Int16](/dotnet/api/system.int16)|Representa un entero de 16 bits con signo.|
+   |[Int32](/dotnet/api/system.int32)|Representa un entero de 32 bits con signo.|
+   |[Int64](/dotnet/api/system.int64)|Representa un entero de 64 bits con signo.|
+   |[IntPtr](/dotnet/api/system.intptr)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
+   |[SByte](/dotnet/api/system.byte.aspx)|Representa un entero con signo de 8 bits.|
+   |[Single](/dotnet/api/system.single.aspx)|Representa un número de punto flotante de precisión sencilla.|
+   |[TimeSpan](/dotnet/api/system.timespan)|Representa un intervalo de tiempo.|
+   |[UInt16](/dotnet/api/system.uint16)|Representa un entero de 16 bits sin signo.|
+   |[UInt32](/dotnet/api/system.uint32)|Representa un entero de 32 bits sin signo.|
+   |[UInt64](/dotnet/api/system.uint64)|Representa un entero de 64 bits sin signo.|
+   |[UIntPtr](/dotnet/api/system.uintptr)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
+   |[Void](/dotnet/api/system.void)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|

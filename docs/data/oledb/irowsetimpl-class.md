@@ -102,16 +102,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085555"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083365"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl (Clase)
 
-Proporciona una implementación de la `IRowset` interfaz.  
+Proporciona una implementación de la interfaz `IRowset`.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -173,7 +173,7 @@ Unidad de almacenamiento para todos los identificadores de fila mantenidos por e
   
 ## <a name="remarks"></a>Comentarios  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) es la interfaz base del conjunto de filas.  
+[IRowset](/previous-versions/windows/desktop/ms720986) es la interfaz base del conjunto de filas.  
 
 ## <a name="addrefrows"></a> IRowsetImpl:: Addrefrows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) en el *referencia del programador OLE DB*.  
 
 ## <a name="createrow"></a> IRowsetImpl:: CreateRow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) en el *referencia del programador OLE DB*.  
   
 Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>Valor devuelto  
 
-El [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) marcas para la columna. 
+El [DBSTATUS](/previous-versions/windows/desktop/ms722617) marcas para la columna. 
 
 ## <a name="getnextrows"></a> IRowsetImpl:: GetNextRows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) en el *referencia del programador OLE DB*. 
+Consulte [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827) en el *referencia del programador OLE DB*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl:: IRowsetImpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+Consulte [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) en el *referencia del programador OLE DB*.  
   
 ### <a name="return-value"></a>Valor devuelto  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+Consulte [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771) en el *referencia del programador OLE DB*.  
 
 ## <a name="restartposition"></a> IRowsetImpl:: RestartPosition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) en el *referencia del programador OLE DB*.  
+Consulte [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parámetros  
 
 *statusFlags*<br/>
-El [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) marcas van a establecer para la columna.  
+El [DBSTATUS](/previous-versions/windows/desktop/ms722617) marcas van a establecer para la columna.  
   
 *currentRow*<br/>
 La fila actual.  

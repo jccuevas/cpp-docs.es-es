@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d4160972f521eeeaee56087c29e18433be87e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440243"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081941"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivar una clase de CObject
 
@@ -69,7 +69,7 @@ En la tabla siguiente se muestra la relación entre las macros utilizadas para a
 
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Normalmente, sin embargo, es posible que desee reemplazar algunas de `CObject`de las funciones miembro para controlar los detalles de la nueva clase. Por ejemplo, es posible que normalmente desea invalidar el `Dump` función de `CObject` para proporcionar la información de depuración para el contenido de la clase. Para obtener más información sobre cómo invalidar `Dump`, consulte el artículo [diagnósticos: volcar el contenido de objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\)). También puede invalidar el `AssertValid` función de `CObject` para proporcionar una prueba personalizada para validar la coherencia de los miembros de datos de objetos de clase. Para obtener una descripción de cómo invalidar `AssertValid`, consulte [MFC ASSERT_VALID y CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\)).
+Normalmente, sin embargo, es posible que desee reemplazar algunas de `CObject`de las funciones miembro para controlar los detalles de la nueva clase. Por ejemplo, es posible que normalmente desea invalidar el `Dump` función de `CObject` para proporcionar la información de depuración para el contenido de la clase. Para obtener más información sobre cómo invalidar `Dump`, consulte el artículo [diagnósticos: volcar el contenido de objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). También puede invalidar el `AssertValid` función de `CObject` para proporcionar una prueba personalizada para validar la coherencia de los miembros de datos de objetos de clase. Para obtener una descripción de cómo invalidar `AssertValid`, consulte [MFC ASSERT_VALID y CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 El artículo [especificar niveles de funcionalidad](../mfc/specifying-levels-of-functionality.md) se describe cómo especificar otros niveles de funcionalidad, incluida la información de clase en tiempo de ejecución, creación dinámica de objetos y serialización.
 

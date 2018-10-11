@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76eb58936082c7efde7e7bc87f17e7326ecc8920
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a541edb478c29fe04619dda319576717a7b9dc6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071554"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081850"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset (Clase)
 
@@ -72,7 +72,7 @@ Una clase de descriptor de acceso.
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|Constructor. Crea una instancia e inicializa el `CStreamRowset` objeto.|  
-|[Cerrar](#close)|Las versiones del [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) puntero de interfaz en la clase.|  
+|[Cerrar](#close)|Las versiones del [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntero de interfaz en la clase.|  
   
 ## <a name="remarks"></a>Comentarios  
 
@@ -105,7 +105,7 @@ CStreamRowset();
 
 ## <a name="close"></a> CStreamRowset:: Close
 
-Las versiones del [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) puntero de interfaz en la clase.  
+Las versiones del [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntero de interfaz en la clase.  
   
 ### <a name="syntax"></a>Sintaxis  
   

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860945"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083849"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilar ensamblados simultáneos de C/C++
 
@@ -30,7 +30,7 @@ Una aplicación de Visual C++ puede utilizar uno o varios archivos DLL en distin
 De forma predeterminada, cuando se genera un archivo DLL con Visual Studio, tiene un [manifiesto de aplicación](/windows/desktop/SbsCs/application-manifests) incrustado como recurso del tipo RT_MANIFEST con un identificador igual a 2. Al igual que para un archivo ejecutable, este manifiesto describe las dependencias de este archivo DLL en otros ensamblados. Esto supone que el archivo DLL no forma parte de un ensamblado en paralelo y las aplicaciones que dependen de este archivo DLL no se van a usar un manifiesto de aplicación para cargarlo, pero en su lugar se basan en el cargador del sistema operativo para encontrar este archivo DLL en la ruta de acceso del sistema.
 
 > [!NOTE]
-> Es importante para un archivo DLL que usa un manifiesto de aplicación para que el manifiesto incrustado como un recurso con el identificador igual a 2. Si el archivo DLL se carga dinámicamente en tiempo de ejecución (por ejemplo, si se usa el [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175) función), el cargador del sistema operativo carga los ensamblados dependientes especificados en el manifiesto del archivo DLL. Un manifiesto de aplicación externa para archivos DLL no está activado durante un `LoadLibrary` llamar. Si no se incrusta el manifiesto, el cargador puede intentar cargar las versiones incorrectas de ensamblados o no pueden buscar para buscar los ensamblados dependientes.
+> Es importante para un archivo DLL que usa un manifiesto de aplicación para que el manifiesto incrustado como un recurso con el identificador igual a 2. Si el archivo DLL se carga dinámicamente en tiempo de ejecución (por ejemplo, si se usa el [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) función), el cargador del sistema operativo carga los ensamblados dependientes especificados en el manifiesto del archivo DLL. Un manifiesto de aplicación externa para archivos DLL no está activado durante un `LoadLibrary` llamar. Si no se incrusta el manifiesto, el cargador puede intentar cargar las versiones incorrectas de ensamblados o no pueden buscar para buscar los ensamblados dependientes.
 
 Uno o varios relacionados se puede volver a empaquetar los archivos DLL en un ensamblado en paralelo con su correspondiente [manifiesto del ensamblado](/windows/desktop/SbsCs/assembly-manifests), que describe qué archivos forman el ensamblado, así como la dependencia del ensamblado en otro side-by-side ensamblados.
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061481"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860685"
 ---
 # <a name="do-while-statement-c"></a>do-while (Instrucción) (C)
 
@@ -38,7 +38,7 @@ El elemento *expression* en una instrucción *do-while* se evalúa después de q
 
 1. Se ejecuta el cuerpo de instrucción.
 
-2. A continuación, se evalúa *expression*. Si *expression* es false, la instrucción *do-while* finaliza y el control pasa a la siguiente instrucción del programa. Si *expression* es true (distinta de cero), el proceso se repite a partir del paso 1.
+1. A continuación, se evalúa *expression*. Si *expression* es false, la instrucción *do-while* finaliza y el control pasa a la siguiente instrucción del programa. Si *expression* es true (distinta de cero), el proceso se repite a partir del paso 1.
 
 La instrucción *do-while* también puede finalizar cuando se ejecuta una instrucción **break**, **goto** o **return** dentro del cuerpo de la instrucción.
 
