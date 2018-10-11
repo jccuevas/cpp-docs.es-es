@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42583902"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235016"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
@@ -370,14 +370,12 @@ Si elige informar de un error, primero intente encontrar problemas similares en 
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Uso de las páginas de la comunidad de desarrolladores de Visual Studio
 
-Las páginas de la comunidad de desarrolladores de Visual Studio son otra forma muy útil de informar de problemas y encontrar soluciones para Visual Studio, el compilador de C++, las herramientas y las bibliotecas. En la página [Preguntas de Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html) puede informar de problemas con el entorno de desarrollo integrado o la instalación. En el caso de problemas relacionados con el compilador de C++, el enlazador y otras herramientas y bibliotecas, use la página [Preguntas de C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
+Las páginas de la comunidad de desarrolladores de Visual Studio son otra forma muy útil de notificar problemas y encontrar soluciones para Visual Studio, el compilador de C++, las herramientas y las bibliotecas. Hay páginas específicas de la comunidad de desarrolladores de [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [Visual Studio para Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html), [ Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) y [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html). Debajo de estas pestañas, cerca de la parte superior de cada página, verá un cuadro de búsqueda que puede utilizar para encontrar publicaciones o temas en los que se informa de problemas similares. Es posible que ya esté disponible una solución u otra información útil relacionada con su problema. Si alguien ya ha notificado el mismo problema, vote a favor del tema y escriba su comentario en él, en lugar de crear otro tema sobre lo mismo. Para comentar, votar o notificar un problema nuevo, es posible que se le solicite que inicie sesión en su cuenta de Visual Studio y acepte ofrecer acceso a su perfil a la aplicación de la comunidad de desarrolladores.
 
-En el banner de la comunidad de desarrolladores que encontrará cerca de la parte superior de cada página verá un cuadro de búsqueda que puede utilizar para encontrar publicaciones o temas en los que se informa de problemas similares. Es posible que ya esté disponible una solución u otra información útil relacionada con su problema en un tema existente. Si alguien ya ha notificado el mismo problema, vote a favor del tema y escriba su comentario en él, en lugar de crear otro tema sobre lo mismo.
-
-Si todavía nadie ha informado del problema, haga clic en el botón **Notificar un problema** que encontrará junto al cuadro de búsqueda de la página de la comunidad de desarrolladores. Es posible que se le solicite que inicie sesión en su cuenta de Visual Studio y acepte ofrecer acceso a su perfil a la aplicación de la comunidad de desarrolladores. Una vez que haya iniciado sesión, vaya directamente a la página desde la que puede informar del problema. Puede incluir el código y la línea de comandos para reproducir el problema, capturas de pantalla, vínculos a debates relacionados y cualquier otra información que crea útil y oportuna.
+En el caso de problemas relacionados con el compilador de C++, el enlazador y otras herramientas y bibliotecas, use la página de [C++](https://developercommunity.visualstudio.com/spaces/62/index.html). Si busca el problema y todavía nadie ha informado sobre él, haga clic en el botón **Notificar un problema** que encontrará junto al cuadro de búsqueda de la parte superior de la página. Puede incluir el código y la línea de comandos para reproducir el problema, capturas de pantalla, vínculos a debates relacionados y cualquier otra información que crea útil y oportuna.
 
 > [!TIP]
-> En el caso de otros tipos de problemas en Visual Studio que no estén relacionados con el conjunto de herramientas (por ejemplo, problemas de la interfaz de usuario, funciones del IDE interrumpidas o bloqueos generales), la herramienta **Notificar un problema** puede ser una opción especialmente buena debido a sus funciones de captura de pantalla y a su capacidad de grabar las acciones de la interfaz de usuario que producen el problema en cuestión. También se puede dejar constancia de estos tipos de errores en el sitio de la [comunidad de desarrolladores](https://developercommunity.visualstudio.com/).
+> Para otros tipos de problemas que pueden surgir en Visual Studio que no están relacionadas con el conjunto de herramientas de C++ (por ejemplo, problemas de la interfaz de usuario, una funcionalidad del IDE interrumpida o bloqueos generales), use la herramienta **Notificar un problema** en el IDE. Esta es la mejor opción, debido a sus funcionalidades de captura de pantalla y su capacidad de grabar las acciones de la interfaz de usuario que conducen al problema que se ha encontrado. Estos tipos de errores también se pueden buscar en el sitio de la [comunidad de desarrolladores](https://developercommunity.visualstudio.com/). Para más información, vea [Cómo notificar un problema con Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 ### <a name="reports-and-privacy"></a>Informes y privacidad
 

@@ -28,50 +28,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c0105ccc5a40c4e5fe789814adfabe6c9749650
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0c2c04f623ba8cac2f3b967007079d41689d2346
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062870"
 ---
 # <a name="dllonexit"></a>__dllonexit
-Registra una rutina que se llama a la hora de salida.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-_onexit_t __dllonexit(   _onexit_t func,  
-   _PVFV **  pbegin,   
-   _PVFV **  pend   
-   )  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `func`  
- Puntero a una función que se ejecuta al salir.  
-  
- `pbegin`  
- Puntero a una variable que señala al comienzo de una lista de funciones que se ejecutan al desasociar.  
-  
- `pend`  
- Puntero a una variable que señala al final de una lista de funciones que se ejecutan al desasociar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, un puntero a la función del usuario. En caso contrario, un puntero **NULL**.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `__dllonexit` es análoga a la función [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) excepto en que esta rutina no puede ver las variables globales que usa esa función. En lugar de variables globales, esta función usa los parámetros `pbegin` y `pend`.  
-  
- Las funciones `_onexit` y `atexit` en un archivo DLL vinculado con MSVCRT.LIB deben mantener su propia lista atexit/_onexit. Esta rutina es el proceso de trabajo al que llaman estos archivos DLL.  
-  
- El tipo `_PVFV` se define como `typedef void (__cdecl *_PVFV)(void)`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Archivo necesario|  
-|-------------|-------------------|  
-|__dllonexit|onexit.c|  
-  
-## <a name="see-also"></a>Vea también  
- [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)
+
+Registra una rutina que se llama a la hora de salida.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+_onexit_t __dllonexit(   _onexit_t func,
+   _PVFV **  pbegin,
+   _PVFV **  pend
+   )
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*func*<br/>
+Puntero a una función que se ejecuta al salir.
+
+*pbegin*<br/>
+Puntero a una variable que señala al comienzo de una lista de funciones que se ejecutan al desasociar.
+
+*pend*<br/>
+Puntero a una variable que señala al final de una lista de funciones que se ejecutan al desasociar.
+
+## <a name="return-value"></a>Valor devuelto
+
+Si se realiza correctamente, un puntero a la función del usuario. En caso contrario, un puntero **NULL**.
+
+## <a name="remarks"></a>Comentarios
+
+La función `__dllonexit` es análoga a la función [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) excepto en que esta rutina no puede ver las variables globales que usa esa función. En lugar de variables globales, esta función usa los parámetros `pbegin` y `pend`.
+
+Las funciones `_onexit` y `atexit` en un archivo DLL vinculado con MSVCRT.LIB deben mantener su propia lista atexit/_onexit. Esta rutina es el proceso de trabajo al que llaman estos archivos DLL.
+
+El tipo `_PVFV` se define como `typedef void (__cdecl *_PVFV)(void)`.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Archivo necesario|
+|-------------|-------------------|
+|__dllonexit|onexit.c|
+
+## <a name="see-also"></a>Vea también
+
+[_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

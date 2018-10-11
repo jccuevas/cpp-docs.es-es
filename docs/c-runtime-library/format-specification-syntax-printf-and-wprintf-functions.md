@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082500"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
@@ -58,8 +58,7 @@ Los argumentos que siguen a la cadena de formato se interpretan según el carác
 Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `unsigned` se especifican mediante **d**, **i**, **o**, **u**, **x** y **X**. Los tipos de punto flotante como `float`, `double` y `long double`, se especifican mediante **a**, **A**, **e**, **E**, **f**, **F**, **g** y **G**. De forma predeterminada, y a menos que los modifique un prefijo de *tamaño*, los argumentos de entero se convierten en el tipo `int` y los argumentos de punto flotante se convierten en `double`. En sistemas de 64 bits, `int` es un valor de 32 bits; por consiguiente, los enteros de 64 bits se truncan cuando se les aplica formato para la salida, a menos que se use un prefijo para *tamaño* de **ll** o **I64**. Los tipos de puntero que se especifican mediante **p** usan el tamaño de puntero predeterminado para la plataforma.
 
 > [!NOTE]
-> **Específicos de Microsoft**  
-> El carácter de tipo **Z**, así como el comportamiento de los caracteres de tipo **c**, **C**, **s** y  **S** cuando se usan con las funciones `printf` y `wprintf`, son extensiones de Microsoft. El estándar ISO C usa **c** y **s** sistemáticamente para caracteres estrechos y cadenas, y **C** y **S** para caracteres anchos y cadenas, en todas las funciones de formato.
+> **Específico de Microsoft** El carácter de tipo **Z**, así como el comportamiento de los caracteres de tipo **c**, **C**, **s** y **S** cuando se usan con las funciones `printf` y `wprintf`, son extensiones de Microsoft. El estándar ISO C usa **c** y **s** sistemáticamente para caracteres estrechos y cadenas, y **C** y **S** para caracteres anchos y cadenas, en todas las funciones de formato.
 
 ### <a name="type-field-characters"></a>Caracteres del campo de tipo
 
@@ -212,11 +211,10 @@ En Visual C++, aunque `long double` es un tipo bien diferenciado, tiene la misma
 Un especificador de tipo **hc** o **hC** es sinónimo de **c** en las funciones `printf` y de **C** en las funciones `wprintf`. Un especificador de tipo **lc**, **lC**, **wc** or **wC** es sinónimo de **C** en las funciones `printf` y de **c** en las funciones `wprintf`. Un especificador de tipo **hs** o **hS** es sinónimo de **s** en las funciones `printf` y de **S** en las funciones `wprintf`. Un especificador de tipo **ls**, **lS**, **ws** o **wS** es sinónimo de **S** en las funciones `printf` y de **s** en las funciones `wprintf`.
 
 > [!NOTE]
-> **Específicos de Microsoft**  
-> Los prefijos del modificador de tamaño de argumento **I** (i mayúsculas), **I32**, **I64** y **w** son extensiones de Microsoft y no son compatibles con ISO C. El prefijo **h**, cuando se usa con datos de tipo `char`, y el prefijo **l** (l minúscula), cuando se usa con datos de tipo `double`, son extensiones de Microsoft.
+> **Específico de Microsoft** Los prefijos del modificador de tamaño de argumento **I** (i mayúsculas), **I32**, **I64** y **w** son extensiones de Microsoft y no son compatibles con ISO C. El prefijo **h**, cuando se usa con datos de tipo `char`, y el prefijo **l** (l minúscula), cuando se usa con datos de tipo `double`, son extensiones de Microsoft.
 
 ## <a name="see-also"></a>Vea también
 
-[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p (parámetros de posición)](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[printf_p (parámetros de posición)](../c-runtime-library/printf-p-positional-parameters.md)

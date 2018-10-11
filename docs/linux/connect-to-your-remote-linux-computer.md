@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bba17549abc9f747d93299cf22c39ae7c3e8f4d6
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207671"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601449"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectarse al equipo Linux remoto
 
@@ -41,7 +41,7 @@ Al crear un proyecto de Linux C++ en Visual Studio, el código se copia al equip
    | **Nombre de usuario**           | Usuario como el que se autentica
    | **Tipo de autenticación** | Se admite contraseña o clave privada
    | **Contraseña**            | Contraseña para el nombre de usuario especificado
-   | **Archivo de clave privada**    | Clave privada creada para la conexión ssh
+   | **Archivo de clave privada**    | Archivo de clave privada creado para la conexión ssh
    | **Frase de contraseña**          | Frase de contraseña usada con la clave privada seleccionada anteriormente
 
 1. Haga clic en el botón **Conectar** para intentar la conexión con el equipo remoto.  Si se produce un error en la conexión, se marcan en rojo los cuadros de entrada que deben cambiarse.

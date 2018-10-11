@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434acbaa23826636a221deb77f1930283e43e9de
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d8a4278d89727f47e85d20809060fc8cef421998
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427217"
 ---
 # <a name="porting-guide-com-spy"></a>Guía de migración: COM Spy
+
 Este tema es el segundo de una serie de artículos que demuestra el proceso de actualización de antiguos proyectos de Visual C++ a la versión más reciente de Visual Studio. El código de ejemplo que se muestra en este tema se compiló por última vez con Visual Studio 2005.  
   
 ## <a name="comspy"></a>COMSpy  
@@ -175,6 +176,6 @@ Este se ejecutó sin problemas y con COM Spy ejecutándose y configurado para su
   
 ## <a name="see-also"></a>Vea también  
 
-[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)   
-[Ejemplo siguiente: Spy++](../porting/porting-guide-spy-increment.md)   
+[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Ejemplo siguiente: Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [Ejemplo anterior: Scribble de MFC](../porting/porting-guide-mfc-scribble.md)

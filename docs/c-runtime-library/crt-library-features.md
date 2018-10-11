@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42578434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092251"
 ---
 # <a name="crt-library-features"></a>Características de la biblioteca CRT
 
@@ -65,7 +65,8 @@ En la siguiente tabla se muestran las bibliotecas que implementan la biblioteca 
 |vcruntime.lib|vcruntime\<versión>.dll|Biblioteca de importación de DLL para vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<versión>d.dll|Biblioteca de importación de DLL para vcruntime de depuración. No redistribuible.|**/MDd**|_DEBUG, _MT, _DLL|
 
-Cuando se produjo la refactorización de UCRT, las funciones de Runtime de simultaneidad se movieron a concrt140.dll, que forma parte del paquete redistribuible de C++. Esta DLL es necesaria para los algoritmos y los contenedores paralelos de C++, como `concurrency::parallel_for`. Además, la biblioteca estándar de C++ requiere que esta DLL en Windows XP admita primitivas de sincronización, dado que Windows XP no tiene variables de condición.
+> [!NOTE]
+> Cuando se produjo la refactorización de UCRT, las funciones de Runtime de simultaneidad se movieron a concrt140.dll, que se agregó al paquete redistribuible de C++. Esta DLL es necesaria para los algoritmos y los contenedores paralelos de C++, como `concurrency::parallel_for`. Además, la biblioteca estándar de C++ requiere que esta DLL en Windows XP admita primitivas de sincronización, dado que Windows XP no tiene variables de condición.
 
 El código que inicializa el CRT está en una de varias bibliotecas, en función de si la biblioteca CRT está vinculada estática o dinámicamente o es código nativo, administrado o mixto. Este código controla el inicio de CRT, la inicialización de datos internos por subproceso y la terminación. Es específico de la versión del compilador que se use. Esta biblioteca siempre se vincula estáticamente, incluso cuando se usa un UCRT vinculado dinámicamente.
 
