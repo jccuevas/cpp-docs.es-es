@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1138a675d64561a2e8399accd93c4ebb5eff382d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398123"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083871"
 ---
 # <a name="memory-management-frame-allocation"></a>Administración de memoria: asignación de marcos
 
@@ -47,7 +47,7 @@ Variables de función local, esta transición de ámbito se produce cuando la fu
 
 Cuando un objeto se define como una variable de marco, se invoca automáticamente su constructor en el punto donde se encuentra la definición. Cuando el objeto queda fuera del ámbito, su destructor se invoca automáticamente antes de la memoria para el objeto sea reclamada. Esta construcción y destrucción automáticas pueden ser muy útiles, pero debe ser consciente de las llamadas automáticas, especialmente al destructor.
 
-La ventaja clave de asignación de objetos en el marco es que se eliminen automáticamente. Cuando se asignan los objetos en el marco, no tiene que preocuparse por las pérdidas de memoria por objetos olvidados. (Para obtener más información sobre las pérdidas de memoria, vea el artículo [detectar pérdidas de memoria en MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Una desventaja de asignación en el marco es que las variables de marco no se puede usar fuera de su ámbito. Otro factor para elegir la asignación de marcos en comparación con la asignación del montón es que para las estructuras de gran tamaño y objetos, a menudo es mejor utilizar el montón en lugar de la pila para el almacenamiento, puesto que el espacio de pila se limita a menudo.
+La ventaja clave de asignación de objetos en el marco es que se eliminen automáticamente. Cuando se asignan los objetos en el marco, no tiene que preocuparse por las pérdidas de memoria por objetos olvidados. (Para obtener más información sobre las pérdidas de memoria, vea el artículo [detectar pérdidas de memoria en MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) Una desventaja de asignación en el marco es que las variables de marco no se puede usar fuera de su ámbito. Otro factor para elegir la asignación de marcos en comparación con la asignación del montón es que para las estructuras de gran tamaño y objetos, a menudo es mejor utilizar el montón en lugar de la pila para el almacenamiento, puesto que el espacio de pila se limita a menudo.
 
 ## <a name="see-also"></a>Vea también
 

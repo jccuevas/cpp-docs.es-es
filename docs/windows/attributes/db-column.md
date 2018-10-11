@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792411"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083619"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ El número de columna ordinal (`DBCOLUMNINFO` ordinal) o nombre de columna (cade
 ```
 
 *DbType*<br/>
-(Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para la entrada de columna.
+(Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251) para la entrada de columna.
 
 *precision*<br/>
-(Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845)
 
 *Escala*<br/>
-(Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-(Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*.
+(Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617) en el *referencia del programador de OLE DB*.
 
 *length*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.
 
 ## <a name="remarks"></a>Comentarios
 
-**db_column** enlaza la columna de tabla especificada a una variable en el conjunto de filas. Delimita los datos de los miembros que pueden participar en OLE DB `IAccessor`-enlace basado en. Este atributo se configura la asignación de columna que normalmente se definen mediante las macros de consumidor OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), y [COLUMN_ENTRY](../../data/oledb/column-entry.md). Estos manipulan OLE DB [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) para enlazar la columna especificada. Cada miembro se marca con el **db_column** atributo ocupa una entrada en el mapa de columnas en forma de una entrada de columna. Por lo tanto, llamar a este atributo donde tendría que poner el mapa de columnas, es decir, en la clase de comando o una tabla.
+**db_column** enlaza la columna de tabla especificada a una variable en el conjunto de filas. Delimita los datos de los miembros que pueden participar en OLE DB `IAccessor`-enlace basado en. Este atributo se configura la asignación de columna que normalmente se definen mediante las macros de consumidor OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), y [COLUMN_ENTRY](../../data/oledb/column-entry.md). Estos manipulan OLE DB [estructura DBBINDING](/previous-versions/windows/desktop/ms716845) para enlazar la columna especificada. Cada miembro se marca con el **db_column** atributo ocupa una entrada en el mapa de columnas en forma de una entrada de columna. Por lo tanto, llamar a este atributo donde tendría que poner el mapa de columnas, es decir, en la clase de comando o una tabla.
 
 Use **db_column** junto con el [db_table](db-table.md) o [db_command](db-command.md) atributos.
 
@@ -120,7 +120,7 @@ class CProducts {
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 

@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6283f29455cc3d835babdd83414e9dc98127eacd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029733"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082558"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl (Clase)
 
-Proporciona una implementación para el [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\)) interfaz.  
+Proporciona una implementación para el [ICommandText](/previous-versions/windows/desktop/ms714914) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -93,7 +93,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) en el *referencia del programador OLE DB*. El *pguidDialect* se omite el parámetro de forma predeterminada.  
+Consulte [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) en el *referencia del programador OLE DB*. El *pguidDialect* se omite el parámetro de forma predeterminada.  
 
 ## <a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 
@@ -108,7 +108,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
   
 #### <a name="parameters"></a>Parámetros  
 
-Consulte [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) en el *referencia del programador OLE DB*. 
+Consulte [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757) en el *referencia del programador OLE DB*. 
 
 ## <a name="strcommandtext"></a> ICommandTextImpl:: M_strcommandtext
 

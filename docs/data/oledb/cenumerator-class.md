@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117483"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082454"
 ---
 # <a name="cenumerator-class"></a>CEnumerator (Clase)
 
-Usa un objeto de enumerador OLE DB que expone el [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y enumeradores.  
+Usa un objeto de enumerador OLE DB que expone el [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y enumeradores.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,7 +61,7 @@ class CEnumerator :
   
 |||  
 |-|-|  
-|[Buscar](#find)|Búsquedas a través de proveedores disponibles (orígenes de datos) busca uno con el nombre especificado.|  
+|[Find](#find)|Búsquedas a través de proveedores disponibles (orígenes de datos) busca uno con el nombre especificado.|  
 |[GetMoniker](#getmoniker)|Recupera el `IMoniker` interfaz para el registro actual.|  
 |[Abrir](#open)|Se abre el enumerador.|  
   
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>Comentarios  
 
-Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaz.  
+Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interfaz.  
   
 ## <a name="getmoniker"></a> CEnumerator:: GetMoniker
 
@@ -119,7 +119,7 @@ Un HRESULT estándar.
 
 ## <a name="open"></a> CEnumerator:: Open
 
-Enlaza el moniker del enumerador, si uno se especifica, recupera el conjunto de filas del enumerador mediante una llamada a [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
+Enlaza el moniker del enumerador, si uno se especifica, recupera el conjunto de filas del enumerador mediante una llamada a [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200).  
   
 ### <a name="syntax"></a>Sintaxis  
   

@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116768"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082909"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset (Clase)
 
@@ -165,7 +165,7 @@ El ejemplo siguiente muestra el uso de la `CBulkRowset` clase.
 
 ## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
 
-Las llamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) para incrementar el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
+Las llamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) para incrementar el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>Valor devuelto  
 
-Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) en el *referencia del programador OLE DB*. 
+Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) en el *referencia del programador OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
 
@@ -295,11 +295,11 @@ Un HRESULT estándar.
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) en el *referencia del programador de OLE DB*.   
+Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) en el *referencia del programador de OLE DB*.   
 
 ## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
 
-Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
+Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
   
 ### <a name="syntax"></a>Sintaxis  
   

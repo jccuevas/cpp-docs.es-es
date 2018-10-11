@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108357"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083832"
 ---
 # <a name="updating-rowsets"></a>actualizar conjuntos de filas
 
 Una operación de base de datos muy básica es actualizar el almacén de datos, o escribir datos en este. En OLE DB, el mecanismo de actualización es sencillo: la aplicación de consumidor establece los valores de los miembros de datos enlazados y, después, escribe esos valores en el conjunto de filas; luego, el consumidor solicita que el proveedor actualice el almacén de datos.  
   
-Los consumidores pueden realizar los siguientes tipos de actualizaciones en los datos del conjunto de filas: establecer los valores de columna dentro de una fila, insertar una fila y eliminar una fila. Para realizar estas operaciones, la clase de plantilla OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa el [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfaz e invalida los métodos de interfaz siguientes:  
+Los consumidores pueden realizar los siguientes tipos de actualizaciones en los datos del conjunto de filas: establecer los valores de columna dentro de una fila, insertar una fila y eliminar una fila. Para realizar estas operaciones, la clase de plantilla OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa la interfaz [IRowsetChange](/previous-versions/windows/desktop/ms715790) e invalida los métodos de interfaz siguientes:  
   
 - [SetData](../../data/oledb/crowset-setdata.md) cambia los valores de columna de una fila de un conjunto de filas; es equivalente al comando UPDATE de SQL.  
   
@@ -223,4 +223,4 @@ Por último, una de las principales razones para diferir los cambios es que se p
 
 [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset (Clase)](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

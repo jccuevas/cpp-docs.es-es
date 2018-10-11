@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aef8b069e9f77b61ee0c6c26d8d9232ee139867d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7d8f7a55379707282fd5ea9ad2063d00392d7eb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098921"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082623"
 ---
 # <a name="setting-properties-in-your-provider"></a>Establecer propiedades en un proveedor
 
-Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) en el *referencia del programador de OLE DB*.  
+Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734) en el *referencia del programador de OLE DB*.  
   
 En el código del proveedor generado por el asistente, busque la asignación de propiedad correspondiente al grupo de propiedades. El nombre del grupo de propiedades normalmente corresponde al nombre del objeto. Propiedades de comando y conjunto de filas pueden encontrarse en el comando o un conjunto de filas; propiedades de inicialización y el origen de datos pueden encontrarse en el objeto de origen de datos.  
   
@@ -33,7 +33,7 @@ En el mapa de propiedades, agregue un [PROPERTY_INFO_ENTRY_EX](../../data/oledb/
   
 - El identificador de propiedad correspondiente a la propiedad. Debe quitar los siete primeros caracteres ("DBPROP_") desde el principio del nombre de la propiedad. Por ejemplo, si desea agregar `DBPROP_MAXROWS`, pasar `MAXROWS` como el primer elemento. Si se trata de una propiedad personalizada, pase el nombre completo de GUID (por ejemplo, `DBMYPROP_MYPROPERTY`).  
   
-- El tipo de variante de la propiedad (en [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) en el *referencia del programador de OLE DB*). Escriba el tipo VT_ (como VT_BOOL o VT_I2) correspondiente al tipo de datos.  
+- El tipo de variante de la propiedad (en [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734) en el *referencia del programador de OLE DB*). Escriba el tipo VT_ (como VT_BOOL o VT_I2) correspondiente al tipo de datos.  
   
 - Marcadores que indican si la propiedad es de lectura y escritura y el grupo al que pertenece. Por ejemplo, el código siguiente indica una propiedad de lectura/escritura que pertenecen al grupo de filas:  
   

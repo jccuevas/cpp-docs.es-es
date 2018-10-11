@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71ada4927d1a29c2f4d9a95ed93554b0cbffc92d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792214"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083533"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -78,12 +78,12 @@ Especifica la biblioteca de tipos.
 (Opcional) Consulte [helpstringcontext](helpstringcontext.md) para obtener más información.
 
 *hidden*<br/>
-(Opcional) Impide que aparezca toda la biblioteca. Este uso está diseñado para emplearlo con controles. Los hosts deben crear una biblioteca de tipos que ajuste el control con propiedades extendidas. Consulte la [oculto](/windows/desktop/Midl/hidden) atributo MIDL para obtener más información.
+(Opcional) Impide que aparezca toda la biblioteca. Este uso está diseñado para emplearlo con controles. Los hosts deben crear una biblioteca de tipos que ajuste el control con propiedades extendidas. Consulte el atributo MIDL [hidden](/windows/desktop/Midl/hidden) para obtener más información.
 
 *restricted*<br/>
-(Opcional) Los miembros de la biblioteca no se puede llamar arbitrariamente. Consulte la [restringido](/windows/desktop/Midl/restricted) atributo MIDL para obtener más información.
+(Opcional) Los miembros de la biblioteca no se puede llamar arbitrariamente. Consulte el atributo MIDL [restricted](/windows/desktop/Midl/restricted) para obtener más información.
 
-*Personalizado*<br/>
+*custom*<br/>
 (Opcional) Uno o más atributos; Esto es similar a la [personalizado](custom-cpp.md) atributo. El primer parámetro *personalizado* es el GUID del atributo. Por ejemplo:
 
 ```
@@ -98,9 +98,9 @@ Identificador de recurso de cadena del archivo .rgs usado para registrar el iden
 
 ## <a name="remarks"></a>Comentarios
 
-A menos que especifique el *restringido* parámetro [emitidl](emitidl.md), **módulo** se requiere en cualquier programa que utiliza atributos de C++.
+A menos que especifique el parámetro *restricted* en [emitidl](emitidl.md), se requiere **module** en todos los programas que usen atributos de C++.
 
-Se creará un bloque de biblioteca si, además del **módulo** atributo, el código fuente también usa [dispinterface](dispinterface.md), [dual](dual.md), [objeto](object-cpp.md), o un atributo que implique [coclase](coclass.md).
+Se creará un bloque de biblioteca si, además del atributo **module** , el código fuente también usa [dispinterface](dispinterface.md), [dual](dual.md), [object](object-cpp.md)o un atributo que implique [coclase](coclass.md).
 
 Se permite un bloque de biblioteca en un archivo .idl. Si en el código fuente hay varias entradas de módulo, se combinarán con los valores de parámetro más recientes que se implementen.
 
@@ -108,15 +108,15 @@ Si este atributo se usa en un proyecto que usa ATL, el comportamiento del atribu
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) se utiliza como la clase base y la entrada del archivo DLL estándar necesarios para un servidor COM de puntos. Estos puntos de entrada son [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), y [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) se usa como clase base y como los puntos de entrada del archivo DLL estándar necesarios para un servidor COM. Estos puntos de entrada son [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)y [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) se utiliza como la clase base y el punto de entrada ejecutable estándar [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) se usa como clase base y como el punto de entrada ejecutable estándar [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) se utiliza como la clase base y el punto de entrada ejecutable estándar [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) se usa como clase base y como el punto de entrada ejecutable estándar [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **unspecified**
 
@@ -168,7 +168,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 

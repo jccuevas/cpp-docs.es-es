@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6744fdd80e16e292399a261e10dc6b974af1dca4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371932"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081876"
 ---
 # <a name="thread-local-storage-tls"></a>Almacenamiento local para el subproceso (TLS)
 
@@ -114,7 +114,7 @@ Deben tenerse en cuenta las siguientes instrucciones cuando se declaran objetos 
 
      C++ no permite este tipo de inicialización dinámica de datos de subproceso debido a posibles mejoras futuras en el servicio de almacenamiento local para el subproceso.
 
-- En los sistemas operativos de Windows anteriores a Windows Vista, `__declspec`(thread) tiene algunas limitaciones. Si una DLL declara cualquier dato u objeto como `__declspec`(thread), puede producir un error de protección si se carga dinámicamente. Después de carga el archivo DLL mediante [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175), se producirá un error del sistema siempre que el código hace referencia a la `__declspec`datos (subproceso). Como el espacio para variables globales de un subproceso se asigna en tiempo de ejecución, el tamaño de este espacio se basa en un cálculo de los requisitos de la aplicación más los requisitos de todas las DLL que se vinculan estáticamente. Cuando se utiliza `LoadLibrary`, no se puede extender este espacio para albergar las variables locales para el subproceso declaradas con `__declspec`(thread). Use la API de TLS, como [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), en el archivo DLL para asignar TLS si es posible que se puede cargar la DLL con `LoadLibrary`.
+- En los sistemas operativos de Windows anteriores a Windows Vista, `__declspec`(thread) tiene algunas limitaciones. Si una DLL declara cualquier dato u objeto como `__declspec`(thread), puede producir un error de protección si se carga dinámicamente. Después de carga el archivo DLL mediante [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), se producirá un error del sistema siempre que el código hace referencia a la `__declspec`datos (subproceso). Como el espacio para variables globales de un subproceso se asigna en tiempo de ejecución, el tamaño de este espacio se basa en un cálculo de los requisitos de la aplicación más los requisitos de todas las DLL que se vinculan estáticamente. Cuando se utiliza `LoadLibrary`, no se puede extender este espacio para albergar las variables locales para el subproceso declaradas con `__declspec`(thread). Use la API de TLS, como [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), en el archivo DLL para asignar TLS si es posible que se puede cargar la DLL con `LoadLibrary`.
 
 ## <a name="see-also"></a>Vea también
 

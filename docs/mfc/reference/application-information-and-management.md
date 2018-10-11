@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374378"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083806"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 
@@ -591,7 +591,7 @@ Si la función se realiza correctamente, el valor devuelto es un identificador p
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve un identificador que se puede usar en [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función DLL. `AfxLoadLibrary` También puede usarse para asignar otros módulos ejecutables.
+Devuelve un identificador que se puede usar en [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) para obtener la dirección de una función DLL. `AfxLoadLibrary` También puede usarse para asignar otros módulos ejecutables.
 
 Cada proceso mantiene un recuento de referencias para cada módulo de biblioteca cargada. Este recuento de referencias se incrementa cada vez `AfxLoadLibrary` se llama y disminuye cada vez que `AfxFreeLibrary` se llama. Cuando el recuento de referencias llega a cero, el módulo no está asignado desde el espacio de direcciones del proceso que realiza la llamada y el identificador ya no es válido.
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Antes de Windows Vista, las aplicaciones que tiene acceso el registro suele usarse el **HKEY_CLASSES_ROOT** nodo. Sin embargo, con Windows Vista o sistemas operativos posteriores, debe ejecutar una aplicación en modo con privilegios elevados para escribir en HKCR.
 
-Este método permite que la aplicación leer y escribir en el registro sin que se ejecuta en modo con privilegios elevados mediante el redireccionamiento de acceso al registro de HKCR en HKCU. Para obtener más información, consulte [páginas de propiedades vinculador](../../ide/linker-property-pages.md).
+Este método permite que la aplicación leer y escribir en el registro sin que se ejecuta en modo con privilegios elevados mediante el redireccionamiento de acceso al registro de HKCR en HKCU. Para obtener más información, consulta [Linker Property Pages](../../ide/linker-property-pages.md).
 
 Si habilita la redirección del registro, el marco de trabajo redirige el acceso desde HKCR **HKEY_CURRENT_USER\Software\Classes**. Solo los marcos de trabajo MFC y ATL se ven afectados por la redirección.
 

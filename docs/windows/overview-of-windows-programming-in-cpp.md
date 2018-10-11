@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677832"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083091"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -54,11 +54,11 @@ Si tiene un proyecto de Windows 8.1 y desea trasladarlo a Windows 10 existentes,
 
 Para obtener más información sobre UWP en general, consulte [¿qué es una aplicación de plataforma Universal de Windows (UWP)?](/windows/uwp/get-started/whats-a-uwp).
 
-Para obtener más información sobre todos estos conceptos, consulte [guía para aplicaciones universales de Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
+Para obtener más información sobre todos estos conceptos, consulte [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
 ##  <a name="BK_Native"></a> Aplicaciones de escritorio y servidores
 
-Para obtener información sobre los fundamentos de escribir aplicaciones de cliente de Windows para el escritorio, consulte [desarrollar aplicaciones de Windows en C++](https://msdn.microsoft.com/vstudio//hh304489) y [Introducción a la programación de Windows en C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
+Para obtener información sobre los fundamentos de escribir aplicaciones cliente de Windows para el escritorio, consulte [Developing Windows Applications in C++](https://msdn.microsoft.com/vstudio//hh304489) (Desarrollo de aplicaciones Windows en C++) e [Introduction to Windows Programming in C++](https://msdn.microsoft.com/library/windows/desktop/ff381398)(Introducción a la programación para Windows en C++).
 
 En Windows 10, puede usar Visual C++ para crear muchos tipos de programas de escritorio:
 
@@ -76,7 +76,7 @@ En Windows 10, puede usar Visual C++ para crear muchos tipos de programas de esc
 
 - Servicios de Windows. Para obtener más información, consulta [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications).
 
-Puede utilizar Visual C++ para empaquetar casi cualquier tipo de funcionalidad personalizada de alto rendimiento en archivos DLL Win32 o en archivos DLL COM que pueden usar las aplicaciones de C++ o las aplicaciones escritas en otros lenguajes, por ejemplo C# o Visual Basic. Para obtener más información sobre los archivos DLL WIn32, consulte [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Para obtener más información sobre el desarrollo COM, vea [modelo de objetos componentes (COM)](/windows/desktop/com/component-object-model--com--portal).
+Puede utilizar Visual C++ para empaquetar casi cualquier tipo de funcionalidad personalizada de alto rendimiento en archivos DLL Win32 o en archivos DLL COM que pueden usar las aplicaciones de C++ o las aplicaciones escritas en otros lenguajes, por ejemplo C# o Visual Basic. Para obtener más información sobre los archivos DLL WIn32, consulte [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Para obtener más información sobre el desarrollo COM, consulte [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="games"></a>Juegos
 
@@ -92,7 +92,7 @@ Las bibliotecas de Microsoft incluyen:
 
 - Microsoft Foundation Classes (MFC): un marco de trabajo orientado a objetos para crear programas tradicionales de Windows, especialmente aplicaciones empresariales, que tienen interfaces de usuario complejas con botones, cuadros de lista, vistas de árbol y otros controles. Para obtener más información, consulta [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
 
-- Active Template Library (ATL): una biblioteca auxiliar eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
+- Active Template Library (ATL): una biblioteca del asistente eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
 
 - C++ AMP (C++ Accelerated Massive Parallelism): una biblioteca que habilita el trabajo de proceso general de alto rendimiento en la GPU. Para obtener más información, consulta [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 

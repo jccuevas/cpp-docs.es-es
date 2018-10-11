@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee8080c8e2caacb882f43425ab528a08dd2f8ea0
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136327"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083754"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken (clase)
 
@@ -671,7 +671,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Las llamadas del [OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) función de Win32.
+Las llamadas del [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) función de Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 

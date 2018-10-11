@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446353"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083650"
 ---
 # <a name="canimationcontroller-class"></a>Clase CAnimationController
 
@@ -882,7 +882,7 @@ Debe devolver TRUE si el guion gráfico propiedad de pGroupNew tiene prioridad. 
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_CANCEL. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de la administración de conflictos (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_CANCEL. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de [administración de conflictos](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +912,7 @@ Debe devolver TRUE si el guion gráfico propiedad de pGroupNew tiene prioridad. 
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_COMPRESS. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de la administración de conflictos (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_COMPRESS. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de [administración de conflictos](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +942,7 @@ Debe devolver TRUE si el guion gráfico propiedad de pGroupNew tiene prioridad. 
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_CONCLUDE. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de la administración de conflictos (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_CONCLUDE. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de [administración de conflictos](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +972,7 @@ Debe devolver TRUE si el guion gráfico propiedad de pGroupNew tiene prioridad. 
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_TRIM. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de la administración de conflictos (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Se llama a este método si se habilitan eventos de comparación de prioridad mediante CAnimationController::EnablePriorityComparisonHandler y se especifica UI_ANIMATION_PHT_TRIM. Se puede invalidar en una clase derivada para realizar acciones específicas de la aplicación. Documentación de API de animación de Windows de lectura para obtener más información acerca de [administración de conflictos](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

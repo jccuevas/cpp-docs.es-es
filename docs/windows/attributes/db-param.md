@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dda702a9c9df9662dc6ca3c38143853e8a407f43
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 153e1bba37b10da64b394c48ee1cf8c059ae86e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792144"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083032"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -49,16 +49,16 @@ El número de columna (ordinal DBCOLUMNINFO) correspondiente a un campo del conj
 - DBPARAMIO_NOTPARAM el descriptor de acceso no tiene parámetros. Establecer `eParamIO` en este valor en la fila de los descriptores de acceso recuerda al usuario que se omiten los parámetros.
 
 *DbType*<br/>
-(Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para la entrada de columna.
+(Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251) para la entrada de columna.
 
 *precision*<br/>
-(Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845)
 
 *Escala*<br/>
-(Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-(Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*.
+(Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617) en el *referencia del programador de OLE DB*.
 
 *length*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.
@@ -124,7 +124,7 @@ struct CSalesbyYear {
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 

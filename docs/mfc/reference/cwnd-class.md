@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448615"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084196"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 Además, `BringWindowToTop` activa las ventanas emergentes, de nivel superior y secundarias MDI. La función miembro `BringWindowToTop` se debe usar para mostrar cualquier ventana que esté oculta total o parcialmente por alguna ventana superpuesta.
 
-Esta función simplemente llama a Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) función. Llame a la [SetWindowPos](#setwindowpos) función para cambiar la posición de una ventana en el orden Z. La función `BringWindowToTop` no cambia el estilo de ventana para convertirla en una ventana de nivel superior. Para obtener más información, consulte [cuál es la diferencia entre HWND_TOP y HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Esta función simplemente llama a Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) función. Llame a la [SetWindowPos](#setwindowpos) función para cambiar la posición de una ventana en el orden Z. La función `BringWindowToTop` no cambia el estilo de ventana para convertirla en una ventana de nivel superior. Para obtener más información, consulte [cuál es la diferencia entre HWND_TOP y HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Ejemplo
 
@@ -3207,7 +3207,7 @@ Un HWND de una ventana de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un `CWnd` objeto.
+Puntero a un objeto `CWnd` .
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4417,7 +4417,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un `CWnd` objeto.
+Puntero a un objeto `CWnd` .
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4467,7 +4467,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un `CWnd` objeto. Si no hay un objeto `CWnd` asociado al identificador, se crea y asocia un objeto `CWnd` temporal. El puntero puede ser temporal y no se debe almacenar para su uso posterior.
+Puntero a un objeto `CWnd` . Si no hay un objeto `CWnd` asociado al identificador, se crea y asocia un objeto `CWnd` temporal. El puntero puede ser temporal y no se debe almacenar para su uso posterior.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4492,7 +4492,7 @@ void GetProperty(
 Identifica la propiedad que se va a recuperar.
 
 *vtProp*<br/>
-Especifica el tipo de la propiedad que se va a recuperar. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo de la propiedad que se va a recuperar. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvProp*<br/>
 Dirección de la variable que se va a que recibirá el valor de propiedad. Debe coincidir con el tipo especificado por *vtProp*.
@@ -5363,7 +5363,7 @@ Identifica el método o la propiedad que se va a invocar.
 Marcas que describen el contexto de la llamada a `IDispatch::Invoke`.
 
 *vtRet*<br/>
-Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Dirección de la variable que se va a que recibirá el valor de propiedad o valor devuelto. Debe coincidir con el tipo especificado por *vtRet*.
@@ -5376,9 +5376,9 @@ Lista de variables de parámetros de tipos especificados en *pbParamInfo*.
 
 ### <a name="remarks"></a>Comentarios
 
-El *pbParamInfo* parámetro especifica los tipos de los parámetros pasados al método o propiedad. La lista variable de argumentos se representa mediante *...*  en la declaración de sintaxis.
+El *pbParamInfo* parámetro especifica los tipos de los parámetros pasados al método o propiedad. La lista variable de argumentos se representa mediante *...* en la declaración de sintaxis.
 
-Esta función convierte los parámetros con valores VARIANTARG y luego invoca el `IDispatch::Invoke` método en el control ActiveX. Si la llamada a `IDispatch::Invoke` se produce un error, esta función iniciará una excepción. Si el SCODE (código de estado) devuelto por `IDispatch::Invoke` es DISP_E_EXCEPTION, esta función genera un [COleException](../../mfc/reference/coleexception-class.md) objeto, en caso contrario, produce un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Esta función convierte los parámetros con valores VARIANTARG y luego invoca el `IDispatch::Invoke` método en el control ActiveX. Si se produce un error en la llamada a `IDispatch::Invoke` , esta función generará una excepción. Si el SCODE (código de estado) devuelto por `IDispatch::Invoke` es DISP_E_EXCEPTION, esta función genera un [COleException](../../mfc/reference/coleexception-class.md) objeto, en caso contrario, produce un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
 > [!NOTE]
 > Esta función debe llamarse únicamente en un `CWnd` objeto que representa un control ActiveX.
@@ -8805,7 +8805,7 @@ afx_msg void OnPaintClipboard(
 Especifica un puntero para la ventana de la aplicación del Portapapeles. El puntero puede ser temporal y no se debe almacenar para su uso posterior.
 
 *hPaintStruct*<br/>
-Identifica un [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) estructura de datos que define qué parte del área de cliente para pintar.
+Identifica una estructura de datos [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) que define qué parte dibujar del área de cliente.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -10602,7 +10602,7 @@ Reemplazar esta función miembro permite dinámica subclases de controles. Es un
 
 ##  <a name="pretranslatemessage"></a>  CWnd:: PreTranslateMessage
 
-Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows.
+La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11592,7 +11592,7 @@ void AFX_CDECL SetProperty(
 Identifica la propiedad que se va a establecer.
 
 *vtProp*<br/>
-Especifica el tipo de la propiedad que se va a establecer. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo de la propiedad que se va a establecer. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Un único parámetro del tipo especificado por *vtProp*.
