@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423902"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161871"
 ---
 # <a name="call-class"></a>Clase call
 
@@ -55,7 +55,7 @@ La firma de funciones que este bloque puede aceptar.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Llamar a](#ctor)|Sobrecargado. Construye un `call` bloque de mensajería.|
+|[Llamar a](#ctor)|Sobrecargado. Construye un bloque de mensajería `call` .|
 |[~ Llame al Destructor](#dtor)|Destruye el `call` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
@@ -88,7 +88,7 @@ Para obtener más información, consulte [bloques de mensajes asincrónicos](../
 
 ##  <a name="ctor"></a> Llamar a
 
-Construye un `call` bloque de mensajería.
+Construye un bloque de mensajería `call` .
 
 ```
 call(
@@ -126,10 +126,10 @@ Una función que se invocará para cada mensaje aceptado.
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
-El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `call`.
+El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `call` .
 
 *_PScheduleGroup*<br/>
-El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `call`. El objeto `Scheduler` utilizado está implícito en el grupo de programación.
+El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `call` . El objeto `Scheduler` utilizado está implícito en el grupo de programación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Dado que el bloque no posponer mensajes ofrecidos.
+**True** porque no posponer el bloque de mensajes ofrecidos.
 
 ## <a name="see-also"></a>Vea también
 

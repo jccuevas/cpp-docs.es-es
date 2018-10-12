@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f84bd617505b78e572537b7c5cf7ce036692bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 94c3e3c43f573cde22c9818752544eb18bf32191
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405689"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162274"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager (Clase)
 
@@ -140,7 +140,7 @@ Un puntero a un bloque que se van a buscar en el `source_link_manager` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se encontró el bloque especificado, `false` en caso contrario.
+**True** si se encontró el bloque especificado, **false** en caso contrario.
 
 ##  <a name="count"></a> recuento
 
@@ -198,7 +198,7 @@ Un puntero a un bloque que se va a quitar, si se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el vínculo ha encontrado y eliminado, `false` en caso contrario.
+**True** si el vínculo ha encontrado y eliminado, **false** en caso contrario.
 
 ##  <a name="set_bound"></a> set_bound
 

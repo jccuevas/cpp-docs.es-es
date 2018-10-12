@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380157"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163626"
 ---
 # <a name="location-class"></a>location (Clase)
 
@@ -157,7 +157,7 @@ Operando `location`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si las dos ubicaciones son diferentes, `false` en caso contrario.
+**True** si las dos ubicaciones son diferentes, **false** en caso contrario.
 
 ##  <a name="operator_eq"></a> operator=
 
@@ -189,7 +189,7 @@ Operando `location`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si las dos ubicaciones son idénticas, y `false` en caso contrario.
+**True** si las dos ubicaciones son idénticas, y **false** en caso contrario.
 
 ## <a name="see-also"></a>Vea también
 

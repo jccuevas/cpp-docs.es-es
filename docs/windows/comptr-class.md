@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236002"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163236"
 ---
 # <a name="comptr-class"></a>ComPtr (clase)
 
@@ -539,9 +539,9 @@ Una referencia a otro `ComPtr` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer rendimientos de operador `true` si objeto *un* es igual al objeto *b*; en caso contrario, `false`.
+El primer rendimientos de operador **true** si objeto *un* es igual al objeto *b*; en caso contrario, **false**.
 
-Los operadores de la segundo y terceros yield `true` si objeto *un* es igual a `nullptr`; en caso contrario, `false`.
+Los operadores de la segundo y terceros yield **true** si objeto *un* es igual a **nullptr**; en caso contrario, **false**.
 
 ## <a name="operator-inequality"></a>Comptr:: operator! =
 
@@ -574,9 +574,9 @@ Una referencia a otro `ComPtr` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer rendimientos de operador `true` si objeto *un* no es igual al objeto *b*; en caso contrario, `false`.
+El primer rendimientos de operador **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.
 
-Los operadores de la segundo y terceros yield `true` si objeto *un* no es igual a `nullptr`; en caso contrario, `false`.
+Los operadores de la segundo y terceros yield **true** si objeto *un* no es igual a **nullptr**; en caso contrario, **false**.
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>Comptr:: operator booltype
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si una interfaz que está asociada a este `ComPtr`, la dirección de la [Boolstruct](../windows/boolstruct-member-data-member.md) miembro de datos; de lo contrario, `nullptr`.
+Si una interfaz que está asociada a este `ComPtr`, la dirección de la [Boolstruct](../windows/boolstruct-member-data-member.md) miembro de datos; de lo contrario, **nullptr**.
 
 ## <a name="ptr"></a>Ptr_
 

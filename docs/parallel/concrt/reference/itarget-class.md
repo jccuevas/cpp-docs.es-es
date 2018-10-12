@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412020"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163717"
 ---
 # <a name="itarget-class"></a>ITarget (Clase)
 
@@ -67,7 +67,7 @@ El tipo de datos de la carga dentro de los mensajes aceptados por el bloque de d
 |----------|-----------------|
 |[propagar](#propagate)|Cuando se invalida en una clase derivada, asincrónicamente pasa un mensaje desde un bloque de origen a este bloque de destino.|
 |[send](#send)|Cuando se invalida en una clase derivada, pasa sincrónicamente un mensaje al bloque de destino.|
-|[supports_anonymous_source](#supports_anonymous_source)|Cuando se invalida en una clase derivada, devuelve true o false dependiendo de si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje ofrecido, ya que el consumo de un mensaje pospuesto en un momento posterior requiere el origen pueda identificarse en su registro de vínculo sourse.|
+|[supports_anonymous_source](#supports_anonymous_source)|Cuando se invalida en una clase derivada, devuelve true o false dependiendo de si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si se devuelve el método invalidado **true**, el destino no puede posponer un mensaje ofrecido, ya que el consumo de un mensaje pospuesto en un momento posterior requiere el origen pueda identificarse en su registro de vínculo sourse.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -174,7 +174,7 @@ Cuando `send` devuelve el mensaje ya se ha aceptado y transferido en el bloque d
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-Cuando se invalida en una clase derivada, devuelve true o false dependiendo de si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje ofrecido, ya que el consumo de un mensaje pospuesto en un momento posterior requiere el origen pueda identificarse en su registro de vínculo sourse.
+Cuando se invalida en una clase derivada, devuelve true o false dependiendo de si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si se devuelve el método invalidado **true**, el destino no puede posponer un mensaje ofrecido, ya que el consumo de un mensaje pospuesto en un momento posterior requiere el origen pueda identificarse en su registro de vínculo sourse.
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el bloque puede aceptar el mensaje de un origen que no está vinculado a él `false` en caso contrario.
+**True** si el bloque puede aceptar el mensaje de un origen que no está vinculado a él **false** en caso contrario.
 
 ##  <a name="unlink_source"></a> unlink_source
 

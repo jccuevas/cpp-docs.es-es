@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5844afa476510e4b4984ae69c75193fdf048ddd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1e313dbda3dfc75f291310818d593b9a4daf90b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382367"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162183"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores de espacio de nombres de simultaneidad (AMP)
 
@@ -52,7 +52,7 @@ Una de las tuplas para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si las tuplas son iguales; en caso contrario, `false`.
+**True** si las tuplas son iguales; en caso contrario, **false**.
 
 ##  <a name="operator_neq"></a> operator!=
 
@@ -81,7 +81,7 @@ Una de las tuplas para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si las tuplas no son iguales; en caso contrario, `false`.
+**True** si las tuplas no son iguales; en caso contrario, **false**.
 
 ##  <a name="operator_add"></a>  operator+
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381678"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162514"
 ---
 # <a name="combinable-class"></a>Clase combinable
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parámetros
 
 *_Exists*<br/>
-Una referencia a un valor booleano. El valor booleano al que hace referencia este argumento se establecerá en `true` si el cálculo secundario ya existe en este subproceso y establece en `false` si éste era el primer cálculo secundario en este subproceso.
+Una referencia a un valor booleano. El valor booleano al que hace referencia este argumento se establecerá en **true** si el cálculo secundario ya existe en este subproceso y establece en **false** si éste era el primer cálculo secundario en este subproceso.
 
 ### <a name="return-value"></a>Valor devuelto
 

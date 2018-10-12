@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444338"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161273"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Cómo: Usar eventos de compilación en proyectos de MSBuild
 
@@ -29,7 +29,7 @@ Un evento de compilación es un comando que MSBuild se realiza en una determinad
 
 Cada uno de los eventos de tres compilación se representa en un grupo de definiciones de elemento mediante un elemento command (`<Command>`) que se ejecuta y un elemento de mensaje (`<Message>`) que es que se muestran cuando **MSBuild** realiza el evento de compilación. Cada elemento es opcional y, si especifica varias veces el mismo elemento, la última aparición tiene prioridad.
 
-Opcional *use compilación* elemento (`<`*eventos de compilación*`UseInBuild>`) se pueden especificar en un grupo de propiedades para indicar si se ejecuta el evento de compilación. El valor del contenido de un *use compilación* elemento sea `true` o `false`. De forma predeterminada, un evento de compilación se ejecuta a menos que el correspondiente *use compilación* elemento está establecido en `false`.
+Opcional *use compilación* elemento (`<`*eventos de compilación*`UseInBuild>`) se pueden especificar en un grupo de propiedades para indicar si se ejecuta el evento de compilación. El valor del contenido de un *use compilación* elemento sea **true** o **false**. De forma predeterminada, un evento de compilación se ejecuta a menos que el correspondiente *use compilación* elemento está establecido en `false`.
 
 En la tabla siguiente se enumera cada elemento XML de eventos de compilación:
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094902"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161286"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Advertencia del compilador (nivel 4) C4127
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094902"
 
 ## <a name="remarks"></a>Comentarios
 
-La expresión de control de una instrucción `if` o un bucle `while` se evalúa como una constante. Debido a su uso idiomático comunes, a partir de Visual Studio 2015 update 3, constantes trivial como 1 o `true` no desencadenan la advertencia, a menos que sean el resultado de una operación en una expresión.
+La expresión de control de un **si** instrucción o **mientras** bucle se evalúa como una constante. Debido a su uso idiomático comunes, a partir de Visual Studio 2015 update 3, constantes trivial como 1 o **true** no desencadenan la advertencia, a menos que sean el resultado de una operación en una expresión.
 
-Si la expresión de control de un `while` bucle es una constante porque se sale del bucle en el centro, considere reemplazar el `while` bucle con un `for` bucle. Se puede omitir la inicialización, la prueba de terminación y el incremento de un `for` bucle, lo que hace que el bucle infinito, al igual que `while(1)`, y puede salir del bucle desde el cuerpo de la `for` instrucción.
+Si la expresión de control de un **mientras** bucle es una constante porque se sale del bucle en el centro, considere reemplazar el **mientras** bucle con un **para** bucle. Se puede omitir la inicialización, la prueba de terminación y el incremento de un **para** bucle, lo que hace que el bucle infinito, al igual que `while(1)`, y puede salir del bucle desde el cuerpo de la **para** instrucción.
 
 ## <a name="example"></a>Ejemplo
 

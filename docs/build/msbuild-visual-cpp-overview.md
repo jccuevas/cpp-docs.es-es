@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716877"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163249"
 ---
 # <a name="msbuild-visual-c-overview"></a>Información general sobre MSBuild (Visual C++)
 
@@ -111,7 +111,7 @@ Por ejemplo, establecer el `PreferredToolArchitecture` propiedad `x64` para usar
 
 ### <a name="useenv-property"></a>Propiedad UseEnv
 
-De forma predeterminada, la configuración de específicos de la plataforma para el proyecto actual invalida las variables de entorno PATH, INCLUDE, LIB, LIBPATH, configuración y plataforma. Establecer el `UseEnv` propiedad `true` para garantizar que no se invalidan las variables de entorno.
+De forma predeterminada, la configuración de específicos de la plataforma para el proyecto actual invalida las variables de entorno PATH, INCLUDE, LIB, LIBPATH, configuración y plataforma. Establecer el `UseEnv` propiedad **true** para garantizar que no se invalidan las variables de entorno.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 

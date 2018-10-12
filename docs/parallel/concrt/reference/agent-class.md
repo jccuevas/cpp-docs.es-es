@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401373"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162521"
 ---
 # <a name="agent-class"></a>agent (Clase)
 
@@ -108,7 +108,7 @@ La `ScheduleGroup` objeto dentro de la que está programada la tarea de ejecuci�
 
 ### <a name="remarks"></a>Comentarios
 
-El runtime usa el programador predeterminado si no especifica la `_PScheduler` o `_PGroup` parámetros.
+El runtime usa el programador predeterminado si no se especifican los parámetros `_PScheduler` o `_PGroup` .
 
 ##  <a name="dtor"></a> ~ agent
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se ha cancelado el agente, `false` en caso contrario. Un agente no se puede cancelar si ya ha empezado a ejecutarse o ya se ha completado.
+**True** si se ha cancelado el agente, **false** en caso contrario. Un agente no se puede cancelar si ya ha empezado a ejecutarse o ya se ha completado.
 
 ##  <a name="done"></a> Listo
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el agente se mueve a la `agent_done` estado, `false` en caso contrario. No se puede mover un agente que se ha cancelado para la `agent_done` estado.
+**True** si el agente se mueve a la `agent_done` estado, **false** en caso contrario. No se puede mover un agente que se ha cancelado para la `agent_done` estado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el agente se inicia correctamente, `false` en caso contrario. No se puede iniciar un agente que se ha cancelado.
+**True** si el agente se inicia correctamente, **false** en caso contrario. No se puede iniciar un agente que se ha cancelado.
 
 ##  <a name="status"></a> Estado
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: f7ecf84317f8d88748e4a50a43c173a3fe41e0e2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235456"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163743"
 ---
 # <a name="how-to-migrate-to-clr"></a>Cómo: Migrar a /clr
 
@@ -84,7 +84,7 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 
 C++ también requiere que se creen prototipos de las funciones o se definan totalmente para que se pueda hacer referencia a ellas o se puedan invocar.
 
-Se debe cambiar el nombre de los identificadores utilizados en el código de C que resulten ser palabras clave en C++ (como `virtual`, `new`, `delete`, `bool`, `true`, `false`, etc.). Esto generalmente se puede hacer con operaciones simples de búsqueda y sustitución.
+Los identificadores utilizados en el código de C que resulten ser palabras clave en C++ (como **virtual**, **nueva**, **eliminar**, **bool**, **true** , **false**, etc.) debe cambiarse. Esto generalmente se puede hacer con operaciones simples de búsqueda y sustitución.
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code

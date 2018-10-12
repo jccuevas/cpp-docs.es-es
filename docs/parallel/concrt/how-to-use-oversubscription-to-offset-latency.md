@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392975"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163574"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Cómo: Usar la suscripción excesiva para compensar la latencia
 
@@ -30,7 +30,7 @@ La suscripción excesiva puede mejorar la eficacia general de algunas aplicacion
 
 Este ejemplo se usa el [biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md) para descargar archivos desde los servidores HTTP. El `http_reader` clase se deriva de [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) y usos paso de mensajes para leer de forma asincrónica qué nombres de URL para descargar.
 
-El `http_reader` clase utiliza la [Concurrency:: task_group](reference/task-group-class.md) clase para leer cada archivo simultáneamente. Cada tarea llama a la [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método con el `_BeginOversubscription` parámetro establecido en `true` para habilitar la suscripción excesiva en el contexto actual. Cada tarea, a continuación, utiliza Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) y [CHttpFile](../../mfc/reference/chttpfile-class.md) clases para descargar el archivo. Finalmente, cada tarea llama a `Context::Oversubscribe` con el parámetro `_BeginOversubscription` establecido en `false` para deshabilitar la suscripción excesiva.
+El `http_reader` clase utiliza la [Concurrency:: task_group](reference/task-group-class.md) clase para leer cada archivo simultáneamente. Cada tarea llama a la [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método con el `_BeginOversubscription` parámetro establecido en **true** para habilitar la suscripción excesiva en el contexto actual. Cada tarea, a continuación, utiliza Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) y [CHttpFile](../../mfc/reference/chttpfile-class.md) clases para descargar el archivo. Por último, cada tarea llama a `Context::Oversubscribe` con el `_BeginOversubscription` parámetro establecido en **false** para deshabilitar la suscripción excesiva.
 
 Cuando la suscripción excesiva está habilitada, el runtime crea un subproceso adicional en el que ejecutar las tareas. Cada uno de estos subprocesos también puede suscribir en exceso el contexto actual y crear de este modo subprocesos adicionales. El `http_reader` clase utiliza un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto para limitar el número de subprocesos que utiliza la aplicación. El agente inicializa el búfer con un número fijo de valores de token. Para cada operación de descarga, el agente lee un valor de token del búfer antes de que se inicie la operación y, a continuación, escribe el valora de vuelta en el búfer cuando la operación finaliza. Cuando el búfer está vacío, el agente espera a que una de las operaciones de la descarga vuelva a escribir un valor en el búfer.
 
@@ -68,7 +68,7 @@ El ejemplo se puede ejecutar más rápidamente cuando la suscripción excesiva e
 
 ## <a name="compiling-the-code"></a>Compilar el código
 
-Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `download-oversubscription.cpp` y, a continuación, ejecute uno de los siguientes comandos en una ventana del símbolo del sistema de Visual Studio.
+Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `download-oversubscription.cpp` y, a continuación, ejecute uno de los siguientes comandos en un **Visual Studio Command Prompt** ventana.
 
 **cl.exe/EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**
 

@@ -1,7 +1,7 @@
 ---
 title: Pruebe-excepto instrucción | Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861933"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162040"
 ---
 # <a name="try-except-statement"></a>try-except (Instrucción)
 
@@ -89,6 +90,8 @@ Dado que el **__except** expresión se evalúa como una expresión de C, se limi
 Cada aplicación puede tener su propio controlador de excepciones.
 
 No es válido saltar dentro un **__try** instrucción, pero sí fuera. No se llama al controlador de excepción si un proceso se termina en medio de ejecución de un **intente-excepto** instrucción.
+
+Para ofrecer compatibilidad con versiones anteriores, **_try**, **_except**, y **_leave** son sinónimos para **__try**, **__except** , y **__leave** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
 
 ### <a name="the-leave-keyword"></a>La palabra clave __leave
 

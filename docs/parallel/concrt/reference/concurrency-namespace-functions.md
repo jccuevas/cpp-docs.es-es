@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428153"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163353"
 ---
 # <a name="concurrency-namespace-functions"></a>funciones del espacio de nombres de simultaneidad
 
@@ -118,7 +118,7 @@ Una referencia a los datos que se envían.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se aceptó el mensaje antes de que el método devuelva, `false` en caso contrario.
+**True** si se aceptó el mensaje antes de que el método devuelva, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se cancela el grupo de tareas que se está ejecutando actualmente, `false` en caso contrario.
+**True** si se cancela el grupo de tareas que se está ejecutando actualmente, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -687,7 +687,7 @@ Iterador de acceso aleatorio que dirige a la posición situada una posición des
 Una instancia de un asignador de memoria compatible de la biblioteca estándar de C++.
 
 *_Func*<br/>
-Un objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no. Esta función de comparador debe imponer una ordenación débil estricta en los pares de elementos de la secuencia.
+Un objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen. Esta función de comparador debe imponer una ordenación débil estricta en los pares de elementos de la secuencia.
 
 *_Chunk_size*<br/>
 El tamaño mínimo de un fragmento que se dividirá en dos para la ejecución en paralelo.
@@ -1217,7 +1217,7 @@ Iterador de acceso aleatorio que dirige a la posición del primer elemento del i
 Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a ordenar.
 
 *_Func*<br/>
-Un objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no. Esta función de comparador debe imponer una ordenación débil estricta en los pares de elementos de la secuencia.
+Un objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen. Esta función de comparador debe imponer una ordenación débil estricta en los pares de elementos de la secuencia.
 
 *_Chunk_size*<br/>
 El tamaño mínimo de un fragmento que se dividirá en dos para la ejecución en paralelo.
@@ -1460,7 +1460,7 @@ Una referencia a los datos que se envían.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se aceptó el mensaje, `false` en caso contrario.
+**True** si se aceptó el mensaje, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1613,7 +1613,7 @@ El nombre para el objeto dado.
 
 ##  <a name="try_receive"></a>  try_receive)
 
-Una implementación try-receive general, que permite a un contexto buscar datos exactamente de un origen y filtrar los valores que se aceptan. Si los datos no están listos, este método devolverá false.
+Una implementación try-receive general, que permite a un contexto buscar datos exactamente de un origen y filtrar los valores que se aceptan. Si los datos no están listos, el método devolverá **false**.
 
 ```
 template <class T>

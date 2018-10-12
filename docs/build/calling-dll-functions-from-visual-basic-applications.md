@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894569"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161845"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Llamar a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic
 
@@ -33,7 +33,7 @@ Para que aplicaciones de Visual Basic (o aplicaciones en otros lenguajes como Pa
 
 `__stdcall` crea la convención de llamada correcta para la función (la función llamada limpia la pila y los parámetros se pasan de derecha a izquierda) pero decora el nombre de la función de forma diferente. Por tanto, cuando **__declspec (dllexport)** se utiliza en una función exportada en un archivo DLL, se exporta el nombre representativo.
 
-El `__stdcall` decoración prefijo al nombre de símbolo con un carácter de subrayado (_) y anexa el símbolo con un signo de arroba (**\@**) carácter seguido del número de bytes en la lista de argumentos (el espacio de pila requerido). Como resultado, la función cuando se declara como:
+El `__stdcall` decoración prefijo al nombre de símbolo con un carácter de subrayado ( **\_** ) y anexa el símbolo con un signo de arroba (**\@**) carácter seguido del número de bytes en la lista de argumentos (el espacio de pila requerido). Como resultado, la función cuando se declara como:
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ La convención de llamada de C (`__cdecl`) decora el nombre como `_func`.
 
 Para obtener el nombre representativo, utilice [/MAP](../build/reference/map-generate-mapfile.md). El uso de **__declspec (dllexport)** hace lo siguiente:
 
-- Si la función se exporta con la convención de llamada de C (**_cdecl**), quita el carácter de subrayado (_) inicial cuando se exporta el nombre.
+- Si la función se exporta con la convención de llamada de C (`__cdecl`), elimina el carácter de subrayado inicial ( **\_** ) cuando se exporta el nombre.
 
 - Si la función que se va a exportar no utiliza la convención de llamada de C (por ejemplo, `__stdcall`), exporta el nombre representativo.
 

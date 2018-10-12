@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396940"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163392"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Procedimientos recomendados en la biblioteca de modelos paralelos
 
@@ -180,7 +180,7 @@ Cuando sea posible, no realizan operaciones de bloqueo antes de llamar a la [tas
 
 Cuando una tarea realiza una operación de bloqueo cooperativa, el runtime puede realizar otro trabajo mientras la primera tarea espera los datos. El runtime reprograma la tarea en espera cuando se desbloquea. Normalmente, el runtime reprograma las tareas que se han desbloqueado más recientemente antes de reprogramar las tareas que se han desbloqueado menos recientemente. El runtime, por tanto, podría programar trabajo innecesario durante la operación de bloqueo, lo que provocaría una disminución del rendimiento. En consecuencia, si se realiza una operación de bloqueo antes de cancelar el trabajo paralelo, la operación de bloqueo puede retrasar la llamada a `cancel`. Esto hace que otras tareas realicen trabajo innecesario.
 
-Considere el siguiente ejemplo en el que se define la función `parallel_find_answer`, que busca un elemento de la matriz proporcionada que cumpla la función de predicado proporcionada. Cuando la función de predicado devuelve `true`, la función de trabajo paralela crea un objeto `Answer` y cancela la tarea general.
+Considere el siguiente ejemplo en el que se define la función `parallel_find_answer`, que busca un elemento de la matriz proporcionada que cumpla la función de predicado proporcionada. Cuando se devuelve la función de predicado **true**, la función de trabajo paralela crea un `Answer` de objetos y cancela la tarea global.
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
@@ -202,7 +202,7 @@ Considere el siguiente ejemplo usa el [Concurrency:: parallel_for_each](referenc
 
 Este ejemplo también puede provocar un rendimiento bajo porque la operación de bloqueo frecuente serializa eficazmente el bucle. Además, cuando un objeto del Runtime de simultaneidad realiza una operación de bloqueo, el programador puede crear un subproceso adicional que realice otro trabajo mientras el primer subproceso espera los datos. Si el runtime crea muchos subprocesos porque hay muchas tareas esperando los datos compartidos, la aplicación puede tener un rendimiento bajo o entrar en un estado de escasez de recursos.
 
-La biblioteca PPL define la [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), que le permite eliminar el estado compartido, ya que proporciona acceso a los recursos compartidos de forma libre de bloqueo. La clase `combinable` proporciona un almacenamiento local para los subprocesos que permite realizar cálculos específicos y, a continuación, combinar estos cálculos en un resultado final. Puede pensar en un objeto `combinable` como una variable de reducción.
+La biblioteca PPL define la [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), que le permite eliminar el estado compartido, ya que proporciona acceso a los recursos compartidos de forma libre de bloqueo. La clase `combinable` proporciona un almacenamiento local para los subprocesos que permite realizar cálculos específicos y, a continuación, fusionar mediante combinación estos cálculos en un resultado final. Puede pensar en un objeto `combinable` como una variable de reducción.
 
 El ejemplo siguiente modifica el ejemplo anterior mediante el uso de un objeto `combinable` en lugar de un objeto `critical_section` para calcular la suma. Este ejemplo sí se escala, porque cada subproceso tiene su propia copia local de la suma. Este ejemplo se usa el [concurrency::combinable::combine](reference/combinable-class.md#combine) método para combinar los cálculos locales en el resultado final.
 

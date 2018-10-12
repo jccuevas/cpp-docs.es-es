@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca17d81aa1712bcf6222b0ec0888f3a987269f03
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429973"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163132"
 ---
 # <a name="extent-class-c-amp"></a>extent (Clase) (C++ AMP)
 
@@ -110,7 +110,7 @@ El `index` valor para la prueba.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el texto especificado `index` valor está incluido en el `extent` objeto; en caso contrario, `false`.
+**True** si especificado *índice* valor está incluido en el `extent` objeto; en caso contrario, **false**.
 
 ##  <a name="ctor"></a> extensión
 
@@ -208,7 +208,7 @@ La `index` objeto que contiene los elementos que se va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El nuevo objeto `extent`.
+El nuevo objeto `extent` .
 
 ##  <a name="operator_add_add"></a> operator ++
 
@@ -263,7 +263,7 @@ La `index` objeto que contiene los elementos que se va a restar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El nuevo objeto `extent`.
+El nuevo objeto `extent` .
 
 ##  <a name="operator_min_min"></a> operator--
 

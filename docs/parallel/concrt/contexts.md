@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378226"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163834"
 ---
 # <a name="contexts"></a>Contextos
 
@@ -67,7 +67,7 @@ Para operaciones intensivas, la suscripción excesiva normalmente no se escala p
 > [!NOTE]
 >  Habilitar la sobresuscripción solo desde un subproceso creado por el Runtime de simultaneidad. La suscripción excesiva no tiene ningún efecto cuando se llama desde un subproceso que no se creó con el tiempo de ejecución (incluido el subproceso principal).
 
-Para habilitar la suscripción excesiva en el contexto actual, llame a la [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método con el `_BeginOversubscription` parámetro establecido en `true`. Cuando se habilita la suscripción excesiva en un subproceso creado por el Runtime de simultaneidad, hace que el tiempo de ejecución crear un subproceso adicional. Después de todas las tareas que requieren la finalización de la suscripción excesiva, llame a `Context::Oversubscribe` con el `_BeginOversubscription` parámetro establecido en `false`.
+Para habilitar la suscripción excesiva en el contexto actual, llame a la [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método con el `_BeginOversubscription` parámetro establecido en **true**. Cuando se habilita la suscripción excesiva en un subproceso creado por el Runtime de simultaneidad, hace que el tiempo de ejecución crear un subproceso adicional. Después de todas las tareas que requieren la finalización de la suscripción excesiva, llame a `Context::Oversubscribe` con el `_BeginOversubscription` parámetro establecido en **false**.
 
 Puede habilitar la sobresuscripción varias veces desde el contexto actual, pero debe deshabilitar al mismo número de veces que se habilita. También se puede anidar la sobresuscripción; es decir, una tarea que se crea mediante otra tarea que usa la suscripción excesiva también puede saturar su contexto. Sin embargo, si una tarea anidada y su elemento primario que pertenecen al mismo contexto, solo la más externa llamada a `Context::Oversubscribe` provoca la creación de un subproceso adicional.
 

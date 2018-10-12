@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102517"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163899"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView (Clase)
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 Índice basado en cero del principio de los elementos que se van a recuperar.
 
 *dest*<br/>
-Cuando finalice esta operación, una matriz de elementos que comienzan con el elemento especificado por `startIndex` y termina con el último elemento del objeto vectorview.
+Cuando se completa esta operación, matriz de elementos que empieza con el elemento especificado por `startIndex` y termina con el último elemento del objeto VectorView.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -168,11 +168,11 @@ El elemento que se va a buscar.
 *index*<br/>
 El índice de base cero del elemento si se encuentra el parámetro `value`; en caso contrario, 0.
 
-El parámetro `index` es 0 si el elemento es el primer elemento del objeto VectorView o no se encuentra el elemento. Si el valor devuelto es `true`, se encontró el elemento y es el primer elemento; de lo contrario, no se encuentra el elemento.
+El *índice* parámetro es 0 si el elemento o es el primer elemento de la `VectorView` o no se encontró el elemento. Si el valor devuelto es **true**, se encontró el elemento y es el primer elemento; en caso contrario, no se encontró el elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si se encontró el elemento especificado; de lo contrario, `false`.
+**True** si el elemento especificado se encuentra; en caso contrario, **false**.
 
 ## <a name="size"></a>  Vectorview (método)
 

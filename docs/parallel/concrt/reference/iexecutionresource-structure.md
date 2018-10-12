@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390271"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162404"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource (Estructura)
 
@@ -79,7 +79,7 @@ El nivel de suscripción actual.
 
 El nivel de suscripción indica cuántos subprocesos en ejecución están asociados con el subproceso de hardware. Esto incluye solo el Administrador de recursos es tener en cuenta en el formulario de subprocesos está suscritos y raíces de procesador virtual que están ejecutando activamente el proxy del subproceso de subprocesos.
 
-Una llamada al método [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), o el método [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) con el parámetro `doSubscribeCurrentThread` establecido en el valor `true`aumenta el nivel de suscripción de un subproceso de hardware en uno. Asimismo, devuelven un `IExecutionResource` interfaz que representa la suscripción. Una llamada correspondiente a la [IExecutionResource](#remove) disminuye nivel de suscripción del subproceso de hardware en uno.
+Una llamada al método [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), o el método [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) con el parámetro `doSubscribeCurrentThread` establecido en el valor **true** aumenta el nivel de suscripción de un subproceso de hardware en uno. Asimismo, devuelven un `IExecutionResource` interfaz que representa la suscripción. Una llamada correspondiente a la [IExecutionResource](#remove) disminuye nivel de suscripción del subproceso de hardware en uno.
 
 La acción de activar una raíz del procesador virtual mediante el método [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate) aumenta el nivel de suscripción de un subproceso de hardware en uno. Los métodos [IVirtualProcessorRoot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate), o [IExecutionResource](#remove) disminuir el nivel de suscripción en uno cuando se invoca en una raíz del procesador virtual activada.
 

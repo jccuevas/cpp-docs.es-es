@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436993"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162287"
 ---
 # <a name="message-passing-functions"></a>Funciones que pasan mensajes
 
@@ -41,9 +41,9 @@ En este tema se describe las funciones de paso de mensajes siguientes:
 
 El [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) función envía un mensaje al destino especificado de forma sincrónica y la [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) función envía un mensaje al destino especificado de forma asincrónica. Tanto el `send` y `asend` funciones espere hasta que el destino indica que finalmente Aceptar o rechazar el mensaje.
 
-El `send` función espera hasta que el destino acepta o rechaza el mensaje antes de devolver. El `send` función devuelve `true` si el mensaje se entregó y `false` en caso contrario. Dado que el `send` función funciona de forma sincrónica, el `send` función espera a que el destino recibir el mensaje antes de devolver.
+El `send` función espera hasta que el destino acepta o rechaza el mensaje antes de devolver. El `send` función devuelve **true** si el mensaje se entregó y **false** en caso contrario. Dado que el `send` función funciona de forma sincrónica, el `send` función espera a que el destino recibir el mensaje antes de devolver.
 
-Por el contrario, el `asend` función no espera a que el destino Aceptar o rechazar el mensaje antes de devolver. En su lugar, el `asend` función devuelve `true` si el destino acepta el mensaje y, finalmente, y realizará. En caso contrario, `asend` devuelve `false` para indicar que el destino rechazó el mensaje o pospone la decisión sobre si se debe tomar el mensaje.
+Por el contrario, el `asend` función no espera a que el destino Aceptar o rechazar el mensaje antes de devolver. En su lugar, el `asend` función devuelve **true** si el destino acepta el mensaje y, finalmente, y realizará. En caso contrario, `asend` devuelve **false** para indicar que el destino rechazó el mensaje o pospone la decisión sobre si se debe tomar el mensaje.
 
 [[Arriba](#top)]
 

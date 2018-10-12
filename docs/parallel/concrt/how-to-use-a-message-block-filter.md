@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411084"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162066"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Cómo: Utilizar un filtro de bloque de mensaje
 
@@ -48,7 +48,7 @@ Dado que el objeto `transformer` recibe solo números primos, el propio objeto `
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-El objeto `transformer` procesa ahora solo los valores que son primos. En el ejemplo anterior, el objeto `transformer` procesa todos los mensajes. Por consiguiente, en el ejemplo anterior debe recibir el mismo número de mensajes que envía. En este ejemplo usa el resultado de la [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) función para determinar cuántos mensajes se reciben los `transformer` objeto. La función `send` devuelve `true` cuando el búfer de mensajes acepta el mensaje y `false` cuando el búfer de mensajes rechaza el mensaje. Por tanto, el número de veces que el búfer de mensajes acepta el mensaje coincide con el contador de números primos.
+El objeto `transformer` procesa ahora solo los valores que son primos. En el ejemplo anterior, el objeto `transformer` procesa todos los mensajes. Por consiguiente, en el ejemplo anterior debe recibir el mismo número de mensajes que envía. En este ejemplo usa el resultado de la [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) función para determinar cuántos mensajes se reciben los `transformer` objeto. El `send` función devuelve **true** cuando el búfer de mensajes acepta el mensaje y **false** cuando el búfer de mensajes rechaza el mensaje. Por tanto, el número de veces que el búfer de mensajes acepta el mensaje coincide con el contador de números primos.
 
 ## <a name="example"></a>Ejemplo
 

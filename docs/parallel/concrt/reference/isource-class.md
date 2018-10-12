@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396485"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162209"
 ---
 # <a name="isource-class"></a>ISource (Clase)
 
@@ -158,7 +158,7 @@ Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-El `consume` es similar al método `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve `true`.
+El `consume` es similar al método `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve **true**.
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ Un puntero al bloque de destino que llama a la `reserve` método.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el mensaje se ha reservado correctamente, `false` en caso contrario. Las reservas de direcciones pueden producir un error por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptados por otro destino, el origen podría denegar reservas y así sucesivamente.
+**True** si el mensaje se ha reservado correctamente, **false** en caso contrario. Las reservas de direcciones pueden producir un error por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptados por otro destino, el origen podría denegar reservas y así sucesivamente.
 
 ### <a name="remarks"></a>Comentarios
 

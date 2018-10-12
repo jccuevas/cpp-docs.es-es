@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110797"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161234"
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentales (C++/CX)
 
@@ -26,7 +26,7 @@ En la tabla siguiente se muestran los tipos de caracteres y booleanos integrados
 
 |Espacio de nombres|C++ / c++ / nombre CX|de esquema JSON|Nombre de C++ estándar|Intervalo de valores|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Plataforma|Booleano|Un valor booleano de 8 bits.|bool|`true` (distinto de cero) y `false` (cero)|
+|Plataforma|Booleano|Un valor booleano de 8 bits.|bool|**True** (distinto de cero) y **false** (cero)|
 |default|char16|Valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|wchar_t<br /><br /> O bien<br /><br /> L'c'|(Especificado por el estándar Unicode)|
 
 ## <a name="numeric-types"></a>Tipos numéricos

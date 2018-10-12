@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 186fe4bbeb86780cde586500380a7e2c500da38e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a5fef363b289ba2062db6f8d903ea832bffd6e5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443528"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161676"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 
@@ -39,17 +39,17 @@ bool operator!();
 
 ## <a name="return-value"></a>Valor devuelto
 
-`true` Si no es válido; el objeto COM que se poseen `false` en caso contrario.
+**True** si no es válido; el objeto COM que se poseen **false** en caso contrario.
 
 ## <a name="remarks"></a>Comentarios
 
-Es válido si no es el objeto COM que se poseen `nullptr`.
+Es válido si no es el objeto COM que se poseen **nullptr**.
 
 ## <a name="example"></a>Ejemplo
 
 En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  El `CreateInstance` usa la función miembro `operator!` para determinar si un objeto de documento ya tiene propietario y solo crea una nueva instancia si el objeto no es válido.
 
-```
+```cpp
 // comptr_op_not.cpp
 // compile with: /clr /link msxml2.lib
 #include <msxml2.h>

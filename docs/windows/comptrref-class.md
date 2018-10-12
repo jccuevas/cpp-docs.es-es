@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788947"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162222"
 ---
 # <a name="comptrref-class"></a>ComPtrRef (clase)
 
@@ -176,11 +176,11 @@ Una referencia a otro `ComPtrRef` objeto o un puntero a un tipo anónimo (`void*
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer rendimientos de operador `true` si objeto *un* es igual al objeto *b*; en caso contrario, `false`.
+El primer rendimientos de operador **true** si objeto *un* es igual al objeto *b*; en caso contrario, **false**.
 
-Los operadores de la segundo y terceros yield `true` si objeto *un* es igual a `nullptr`; en caso contrario, `false`.
+Los operadores de la segundo y terceros yield **true** si objeto *un* es igual a **nullptr**; en caso contrario, **false**.
 
-El cuarto y quinto operadores producen `true` si objeto *un* es igual al objeto *b*; en caso contrario, `false`.
+El cuarto y quinto operadores producen **true** si objeto *un* es igual al objeto *b*; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -227,11 +227,11 @@ Una referencia a otro `ComPtrRef` objeto o un puntero a un objeto anónimo (`voi
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer rendimientos de operador `true` si objeto *un* no es igual al objeto *b*; en caso contrario, `false`.
+El primer rendimientos de operador **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.
 
-Los operadores de la segundo y terceros yield `true` si objeto *un* no es igual a `nullptr`; en caso contrario, `false`.
+Los operadores de la segundo y terceros yield **true** si objeto *un* no es igual a **nullptr**; en caso contrario, **false**.
 
-El cuarto y quinto operadores producen `true` si objeto *un* no es igual al objeto *b*; en caso contrario, `false`.
+El cuarto y quinto operadores producen **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
