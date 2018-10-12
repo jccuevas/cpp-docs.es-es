@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399306"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163210"
 ---
 # <a name="task-class-concurrency-runtime"></a>tarea (Clase) (Motor Runtime de simultaneidad)
 
@@ -75,7 +75,7 @@ Tipo de resultado de esta tarea.
 |Name|Descripción|
 |----------|-----------------|
 |[get](#get)|Sobrecargado. Devuelve el resultado que esta tarea generó. Si la tarea no está en un estado terminal, una llamada a `get` esperará a que finalice la tarea. Este método no devuelve un valor cuando se llama en una tarea con un `result_type` de `void`.|
-|[is_apartment_aware](#is_apartment_aware)|Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows en tiempo de ejecución o si desciende de esta tarea.|
+|[is_apartment_aware](#is_apartment_aware)|Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows Runtime o si desciende de esta tarea.|
 |[is_done](#is_done)|Determina si se completa la tarea.|
 |[Programador](#scheduler)|Devuelve el programador para esta tarea|
 |[then](#then)|Sobrecargado. Agrega una tarea de continuación a esta tarea.|
@@ -126,7 +126,7 @@ Si se cancela la tarea, una llamada a `get` producirá un [task_canceled](task-c
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
-Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows en tiempo de ejecución o si desciende de esta tarea.
+Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows Runtime o si desciende de esta tarea.
 
 ```
 bool is_apartment_aware() const;
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si la tarea desencapsula una interfaz `IAsyncInfo` o desciende de dicha tarea; en caso contrario, `false`.
+**True** si la tarea desencapsula una `IAsyncInfo` interfaz o desciende de dicha tarea, **false** en caso contrario.
 
 ##  <a name="is_done"></a>  Task::is_done (método) (Runtime de simultaneidad)
 
@@ -169,7 +169,7 @@ La tarea para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los objetos hacen referencia a distintas tareas subyacentes; en caso contrario, `false`.
+**True** si los objetos que hacen referencia a distintas tareas subyacentes, y **false** en caso contrario.
 
 ##  <a name="operator_eq"></a> operator=
 
@@ -209,7 +209,7 @@ La tarea para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los objetos hacen referencia a la misma tarea subyacente; en caso contrario, `false`.
+**True** si los objetos que hacen referencia a la misma tarea subyacente, y **false** en caso contrario.
 
 ##  <a name="scheduler"></a>  Task::Scheduler (método) (Runtime de simultaneidad)
 
@@ -267,7 +267,7 @@ Las tareas que se creen a partir de un objeto `task_completion_event` se complet
 
 La versión del constructor que toma un token de cancelación crea una tarea que se puede cancelar mediante el token `cancellation_token_source` desde el que se obtuvo. Las tareas que se crean sin token de cancelación no se pueden cancelar.
 
-Las tareas que se crean a partir de la interfaz `Windows::Foundation::IAsyncInfo` o de una expresión lambda que devuelve una interfaz `IAsyncInfo` alcanzan su estado de terminal cuando se completa la operación o acción asincrónica insertada en Windows en tiempo de ejecución. De manera similar, las tareas que se crean a partir de una expresión lamda que devuelve un objeto `task<result_type>` alcanzan su estado terminal cuando la tarea interna alcanza su estado terminal, y no cuando la expresión lamda devuelve un resultado.
+Las tareas que se crean a partir de la interfaz `Windows::Foundation::IAsyncInfo` o de una expresión lambda que devuelve una interfaz `IAsyncInfo` alcanzan su estado de terminal cuando se completa la operación o acción asincrónica insertada en Windows Runtime. De manera similar, las tareas que se crean a partir de una expresión lamda que devuelve un objeto `task<result_type>` alcanzan su estado terminal cuando la tarea interna alcanza su estado terminal, y no cuando la expresión lamda devuelve un resultado.
 
 El objeto `task` se comporta como un puntero inteligente y se puede pasar con seguridad por valor. Varios subprocesos pueden tener acceso a este objeto sin necesidad de bloqueos.
 
@@ -354,7 +354,7 @@ Un valor de `task_status`, que podría ser `completed` o `canceled`. Si la tarea
 ### <a name="remarks"></a>Comentarios
 
 > [!IMPORTANT]
->  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait` en el código que se ejecuta en el STA. En caso contrario, el runtime produce [Concurrency:: invalid_operation](invalid-operation-class.md) porque este método bloquea el subproceso actual y puede provocar que la aplicación deje de responder. Sin embargo, puede llamar a la [concurrency::task::get](#get) método para recibir el resultado de la tarea anterior en una continuación basada en tareas.
+>  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait` en el código que se ejecuta en el STA. De lo contrario, el runtime produce [concurrency::invalid_operation](invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.
 
 ## <a name="see-also"></a>Vea también
 

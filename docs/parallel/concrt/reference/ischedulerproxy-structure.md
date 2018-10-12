@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430065"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163145"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy (Estructura)
 
@@ -124,7 +124,7 @@ Si desea suscribirse el subproceso actual y tenerlo en cuenta durante la asignac
 
 ### <a name="return-value"></a>Valor devuelto
 
-El `IExecutionResource` interfaz para el subproceso actual, si el parámetro `doSubscribeCurrentThread` tiene el valor `true`. Si el valor es `false`, el método devuelve `NULL`.
+El `IExecutionResource` interfaz para el subproceso actual, si el parámetro `doSubscribeCurrentThread` tiene el valor **true**. Si el valor es **false**, el método devuelve NULL.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -132,7 +132,7 @@ Antes de que un programador ejecute cualquier trabajo, debe usar este método pa
 
 El Administrador de recursos concede recursos a un programador llamando al método [AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors) con una lista de raíces de procesador virtual. El método se invoca como una devolución de llamada en el programador antes de que devuelve este método.
 
-Si el programador solicitó la suscripción para el subproceso actual, establezca el parámetro `doSubscribeCurrentThread` a `true`, el método devuelve un `IExecutionResource` interfaz. La suscripción debe terminar en un momento posterior usando el [IExecutionResource](iexecutionresource-structure.md#remove) método.
+Si el programador solicitó la suscripción para el subproceso actual, establezca el parámetro `doSubscribeCurrentThread` a **true**, el método devuelve un `IExecutionResource` interfaz. La suscripción debe terminar en un momento posterior usando el [IExecutionResource](iexecutionresource-structure.md#remove) método.
 
 Al determinar qué subprocesos de hardware están seleccionadas, el Administrador de recursos intentará optimizar para la afinidad de nodo del procesador. Si se solicita la suscripción para el subproceso actual, es una indicación de que el subproceso actual tiene la intención de participar en el trabajo asignado a este programador. En tal caso, las raíces de procesadores virtuales asignados se encuentran en el nodo del procesador que está ejecutando el subproceso actual, si es posible.
 

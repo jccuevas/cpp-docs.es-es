@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416206"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163109"
 ---
 # <a name="timer-class"></a>Clase timer
 
@@ -66,7 +66,7 @@ El tipo de carga de los mensajes de salida de este bloque.
 |----------|-----------------|
 |[pausar](#pause)|Se detiene el `timer` bloque de mensajería. Si es una repetición `timer` bloque de mensajería, se puede reiniciar con una posterior `start()` llamar. Para no repetitivo temporizadores, esto tiene el mismo efecto que un `stop` llamar.|
 |[start](#start)|Se inicia el `timer` bloque de mensajería. Se llama el número especificado de milisegundos después de esto, el valor especificado se propagará descendentes, como un `message`.|
-|[Detener](#stop)|Se detiene el `timer` bloque de mensajería.|
+|[stop](#stop)|Se detiene el `timer` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -193,11 +193,11 @@ El `runtime_object_identity` de la `message` objeto va a reservar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el mensaje se ha reservado correctamente, `false` en caso contrario.
+**True** si el mensaje se ha reservado correctamente, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
+Después de `reserve` se llama, si devuelve **true**, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -267,11 +267,11 @@ Si es true, indica que el temporizador se activará periódicamente cada `_Ms` m
 El `Scheduler` objeto dentro del cual la tarea de propagación para el `timer` está programado el bloque de mensajería está programada.
 
 *_ScheduleGroup*<br/>
-El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `timer`. El objeto `Scheduler` utilizado está implícito en el grupo de programación.
+El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `timer` . El objeto `Scheduler` utilizado está implícito en el grupo de programación.
 
 ### <a name="remarks"></a>Comentarios
 
-El runtime usa el programador predeterminado si no especifica la `_Scheduler` o `_ScheduleGroup` parámetros.
+El runtime usa el programador predeterminado si no se especifican los parámetros `_Scheduler` o `_ScheduleGroup` .
 
 ##  <a name="dtor"></a> ~ timer
 

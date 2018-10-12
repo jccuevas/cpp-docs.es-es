@@ -1,12 +1,15 @@
 ---
 title: __cdecl | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __cdecl_cpp
+- __cdecl
+- _cdecl
+- cdecl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37804aed04f998c6762cdbbc7012ae10c19a2529
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 085d8a49ed3c66f96bf8c2b8bdae7ca54cf3bef6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066828"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163782"
 ---
 # <a name="cdecl"></a>__cdecl
 
@@ -62,6 +65,8 @@ equivale a esto:
 ```cpp
 void __cdecl CMyClass::mymethod() { return; }
 ```
+
+Para ofrecer compatibilidad con versiones anteriores, **cdecl** y **_cdecl** son un sinónimo de **__cdecl** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
 
 ## <a name="example"></a>Ejemplo
 

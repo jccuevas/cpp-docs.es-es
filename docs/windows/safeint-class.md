@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 845addc73d0dd542b7bb6a4abccbf915005ddd41
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235820"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163301"
 ---
 # <a name="safeint-class"></a>SafeInt (Clase)
 
@@ -194,7 +194,7 @@ Cuando se realiza una comparación lógica con un objeto de SafeInt, la comparac
 
 - `((uint)~0) > -1`
 
-Se resuelve como la primera instrucción `true`, pero la segunda instrucción se resuelve en `false`. La negación bit a bit 0 es 0xFFFFFFFF. En la segunda instrucción, el operador de comparación predeterminada compara 0xFFFFFFFF para 0xFFFFFFFF y considera que son iguales. El operador de comparación para la `SafeInt` clase percata de que el segundo parámetro es negativo, mientras que el primer parámetro es sin signo. Por lo tanto, aunque la representación de bits es idéntica, la `SafeInt` operador lógico se da cuenta que el entero sin signo es mayor que -1.
+Se resuelve como la primera instrucción **true**, pero la segunda instrucción se resuelve en `false`. La negación bit a bit 0 es 0xFFFFFFFF. En la segunda instrucción, el operador de comparación predeterminada compara 0xFFFFFFFF para 0xFFFFFFFF y considera que son iguales. El operador de comparación para la `SafeInt` clase percata de que el segundo parámetro es negativo, mientras que el primer parámetro es sin signo. Por lo tanto, aunque la representación de bits es idéntica, la `SafeInt` operador lógico se da cuenta que el entero sin signo es mayor que -1.
 
 Tenga cuidado al usar el `SafeInt` clase junto con el `?:` operador ternario. Tenga en cuenta la siguiente línea de código.
 

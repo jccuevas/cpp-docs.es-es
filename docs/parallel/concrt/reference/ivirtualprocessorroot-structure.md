@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162924"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot (Estructura)
 
@@ -111,7 +111,7 @@ El contexto que actualmente está siendo enviado por esta raíz.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor booleano. Un valor de `true` indica que el proxy del subproceso se devuelve desde el `Deactivate` método en respuesta a una llamada a la `Activate` método. Un valor de `false` indica que el proxy del subproceso devuelto del método en respuesta a un evento de notificación en el Administrador de recursos. En un programador de subprocesos (UMS) de modo de usuario programable, esto indica que los elementos han aparecido en la lista de finalización del programador y el programador es necesario para controlarlos.
+Valor booleano. Un valor de **true** indica que el proxy del subproceso se devuelve desde el `Deactivate` método en respuesta a una llamada a la `Activate` método. Un valor de `false` indica que el proxy del subproceso devuelto del método en respuesta a un evento de notificación en el Administrador de recursos. En un programador de subprocesos (UMS) de modo de usuario programable, esto indica que los elementos han aparecido en la lista de finalización del programador y el programador es necesario para controlarlos.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -119,9 +119,9 @@ Utilice este método para detener temporalmente la ejecución de una raíz del p
 
 Una raíz del procesador virtual desactivada puede reactivarse con una llamada a la `Activate` método con el mismo argumento se pasó a la `Deactivate` método. El programador es responsable de garantizar que las llamadas a la `Activate` y `Deactivate` métodos están emparejados, pero no son necesarios para poder recibir en un orden específico. El Administrador de recursos es capaz de recibir una llamada a la `Activate` método antes de recibir una llamada a la `Deactivate` método estaba destinado.
 
-Si una raíz del procesador virtual despierta y el valor devuelto desde el `Deactivate` método es el valor `false`, el programador debe consultar la lista de finalización UMS a través de la `IUMSCompletionList::GetUnblockNotifications` método, actuar sobre esa información y, a continuación, vuelve a llamar a la `Deactivate`nuevo al método. Esto se debe repetir hasta que el `Deactivate` método devuelve el valor `true`.
+Si una raíz del procesador virtual despierta y el valor devuelto desde el `Deactivate` método es el valor **false**, el programador debe consultar la lista de finalización UMS a través de la `IUMSCompletionList::GetUnblockNotifications` método, act de esa información y, a continuación, vuelve a llamar a la `Deactivate` nuevo al método. Esto se debe repetir hasta que el `Deactivate` método devuelve el valor `true`.
 
-`invalid_argument` se produce si el argumento `pContext` tiene el valor `NULL`.
+`invalid_argument` se produce si el argumento `pContext` tiene el valor NULL.
 
 `invalid_operation` se produce si nunca se ha activado la raíz del procesador virtual, o el argumento `pContext` no representa el contexto de ejecución que se ha enviado recientemente por esta raíz del procesador virtual.
 

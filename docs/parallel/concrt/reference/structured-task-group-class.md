@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446080"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161689"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group (Clase)
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |Name|Descripción|
 |----------|-----------------|
 |[Cancelar](#cancel)|Realiza un esfuerzo intenta cancelar el subárbol cuya raíz comienza en este grupo de tareas de trabajo. Todas las tareas programadas en el grupo de tareas obtener cancelará de manera transitiva si es posible.|
-|[is_canceling](#is_canceling)|Informa al llamador si el grupo de tareas está actualmente en medio de una cancelación. Esto no indica necesariamente que el `cancel` se llamó al método en el `structured_task_group` objeto (aunque sin duda califica este método para devolver `true`). Puede darse el caso de que el `structured_task_group` objeto está ejecutando alineado y un grupo de tareas aún más seguridad en el árbol de trabajo se canceló. En casos como estos dónde puede determinar el tiempo de ejecución antes de tiempo que la cancelación fluirá a través de este `structured_task_group` objeto, `true` devolverá también.|
+|[is_canceling](#is_canceling)|Informa al llamador si el grupo de tareas está actualmente en medio de una cancelación. Esto no indica necesariamente que el `cancel` se llamó al método en el `structured_task_group` objeto (aunque sin duda califica este método para devolver **true**). Puede darse el caso de que el `structured_task_group` objeto está ejecutando alineado y un grupo de tareas aún más seguridad en el árbol de trabajo se canceló. En casos como estos dónde puede determinar el tiempo de ejecución antes de tiempo que la cancelación fluirá a través de este `structured_task_group` objeto, **true** devolverá también.|
 |[run](#run)|Sobrecargado. Programa una tarea en el `structured_task_group` objeto. El llamador administra la duración de la `task_handle` objeto pasado en el `_Task_handle` parámetro. La versión que toma el parámetro `_Placement` hace que la tarea se orientadas a ejecutar en la ubicación especificada por ese parámetro.|
 |[run_and_wait](#run_and_wait)|Sobrecargado. Programa una tarea que se ejecuta alineada en el contexto de llamada con la Ayuda de la `structured_task_group` objeto para la compatibilidad de cancelación completa. Si un `task_handle` objeto se pasa como parámetro a `run_and_wait`, el llamador es responsable de administrar la duración de la `task_handle` objeto. La función, a continuación, espera hasta que todo funcione en el `structured_task_group` objeto se haya completado o cancelado.|
 |[Espere](#wait)|Espera hasta que todo funcione en el `structured_task_group` se cancela o se ha completado.|
@@ -97,7 +97,7 @@ Para obtener más información, consulte [cancelación](../../../parallel/concrt
 
 ##  <a name="is_canceling"></a> is_canceling
 
-Informa al llamador si el grupo de tareas está actualmente en medio de una cancelación. Esto no indica necesariamente que el `cancel` se llamó al método en el `structured_task_group` objeto (aunque sin duda califica este método para devolver `true`). Puede darse el caso de que el `structured_task_group` objeto está ejecutando alineado y un grupo de tareas aún más seguridad en el árbol de trabajo se canceló. En casos como estos dónde puede determinar el tiempo de ejecución antes de tiempo que la cancelación fluirá a través de este `structured_task_group` objeto, `true` devolverá también.
+Informa al llamador si el grupo de tareas está actualmente en medio de una cancelación. Esto no indica necesariamente que el `cancel` se llamó al método en el `structured_task_group` objeto (aunque sin duda califica este método para devolver **true**). Puede darse el caso de que el `structured_task_group` objeto está ejecutando alineado y un grupo de tareas aún más seguridad en el árbol de trabajo se canceló. En casos como estos dónde puede determinar el tiempo de ejecución antes de tiempo que la cancelación fluirá a través de este `structured_task_group` objeto, **true** devolverá también.
 
 ```
 bool is_canceling();

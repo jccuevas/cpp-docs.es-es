@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f439355c9d8b059ac48f0bdc1f57c1b32e5eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82266e387bcba3e4e7f2e377c666ce890d258e0f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387671"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162118"
 ---
 # <a name="overwritebuffer-class"></a>Clase overwrite_buffer
 
@@ -67,7 +67,7 @@ El tipo de carga de los mensajes se almacena y se propaga por el búfer.
 |Name|Descripción|
 |----------|-----------------|
 |[has_value](#has_value)|Comprueba si este `overwrite_buffer` bloque de mensajería aún tiene un valor.|
-|[value](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `overwrite_buffer` bloque de mensajería.|
+|[valor](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `overwrite_buffer` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -160,7 +160,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el bloque ha recibido un valor, `false` en caso contrario.
+**True** si el bloque ha recibido un valor, **false** en caso contrario.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -214,10 +214,10 @@ overwrite_buffer(
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
-El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `overwrite_buffer`.
+El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `overwrite_buffer` .
 
 *_PScheduleGroup*<br/>
-El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `overwrite_buffer`. El objeto `Scheduler` utilizado está implícito en el grupo de programación.
+El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `overwrite_buffer` . El objeto `Scheduler` utilizado está implícito en el grupo de programación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -296,7 +296,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Dado que el bloque no posponer mensajes ofrecidos.
+**True** porque no posponer el bloque de mensajes ofrecidos.
 
 ##  <a name="release_message"></a> release_message
 
@@ -326,11 +326,11 @@ El `runtime_object_identity` de la `message` objeto va a reservar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el mensaje se ha reservado correctamente, `false` en caso contrario.
+**True** si el mensaje se ha reservado correctamente, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
+Después de `reserve` se llama, si devuelve **true**, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

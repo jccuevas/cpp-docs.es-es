@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388490"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163431"
 ---
 # <a name="asynchronous-message-blocks"></a>Bloques de mensajes asincrónicos
 
@@ -307,7 +307,7 @@ La simultaneidad::[clase timer](../../parallel/concrt/reference/timer-class.md) 
 
 La clase `timer` envía su mensaje a un único destino. Si establece la `_PTarget` parámetro del constructor en `NULL`, puede especificar el destino más adelante mediante una llamada a la [link_target](reference/source-block-class.md#link_target) método.
 
-Un objeto `timer` puede ser repetitivo o no repetitivo. Para crear un temporizador repetitivo, pase el valor `true` al parámetro `_Repeating` al llamar al constructor. De lo contrario, pase `false` al parámetro `_Repeating` para crear un temporizador no repetitivo. Si el temporizador es repetitivo, envía el mismo mensaje a su destino después de cada intervalo.
+Un objeto `timer` puede ser repetitivo o no repetitivo. Para crear un temporizador repetitivo, pase **true** para el `_Repeating` parámetro cuando llame al constructor. De lo contrario, pase **false** para el `_Repeating` parámetro para crear un temporizador no repetitivo. Si el temporizador es repetitivo, envía el mismo mensaje a su destino después de cada intervalo.
 
 La Biblioteca de agentes crea los objetos `timer` en el estado no iniciado. Para iniciar un objeto de temporizador, llame a la [concurrency::timer::start](reference/timer-class.md#start) método. Para detener un `timer` de objetos, destruir el objeto o llame a la [destrúyalo](reference/timer-class.md#stop) método. Para pausar un temporizador repetitivo, llame a la [concurrency::timer::pause](reference/timer-class.md#pause) método.
 

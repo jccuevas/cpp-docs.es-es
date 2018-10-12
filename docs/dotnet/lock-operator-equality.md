@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f60cf71305731391d03763810775eaf7f8e5fd7e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7579c7493cd05d3cf2a0a119e601dd63ed5faf91
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411539"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162248"
 ---
 # <a name="lockoperator"></a>lock::operator==
 
@@ -46,11 +46,11 @@ El objeto para comparar la igualdad.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve `true` si `t` es el mismo que el objeto de bloqueo, `false` en caso contrario.
+Devuelve **true** si `t` es el mismo que el objeto de bloqueo, **false** en caso contrario.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // msl_lock_op_eq.cpp
 // compile with: /clr
 #include <msclr/lock.h>

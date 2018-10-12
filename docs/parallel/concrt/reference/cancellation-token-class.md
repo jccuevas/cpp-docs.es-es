@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414308"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162079"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token (Clase)
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Quita una devolución de llamada registrada anteriormente mediante el método `register` basándose en el objeto `cancellation_token_registration` devuelto en el momento del registro.|
 |[is_cancelable](#is_cancelable)|Devuelve una indicación de si este token se puede cancelar o no.|
-|[is_canceled](#is_canceled)|Devuelve `true` si el token se ha cancelado.|
+|[is_canceled](#is_canceled)|Devuelve **true** si se ha cancelado el token.|
 |[none](#none)|Devuelve un token de cancelación que nunca puede estar sujeto a la cancelación.|
 |[register_callback](#register_callback)|Registra una función de devolución de llamada con el token. La devolución de llamada se realizará únicamente si se cancela el token. Observe que si el token ya se canceló en el punto en el que se llama a este método, la devolución de llamada se realizará inmediatamente y de forma sincrónica.|
 
@@ -123,7 +123,7 @@ Indicación de si este token se puede cancelar o no.
 
 ##  <a name="is_canceled"></a> is_canceled
 
-Devuelve `true` si el token se ha cancelado.
+Devuelve **true** si se ha cancelado el token.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El valor `true` si el token se ha cancelado; de lo contrario, el valor `false`.
+El valor **true** si el token se ha cancelado; en caso contrario, el valor **false**.
 
 ##  <a name="none"></a> Ninguno
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437747"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162196"
 ---
 # <a name="event-class"></a>event (Clase)
 
@@ -167,7 +167,7 @@ Matriz de eventos en la que se va a esperar. El número de eventos dentro de la 
 El número de eventos dentro de la matriz proporcionado por el parámetro `_PPEvents`.
 
 *_FWaitAll*<br/>
-Si está establecido en el valor `true`, el parámetro especifica que todos los eventos de la matriz proporcionada en el parámetro `_PPEvents` deben señalarse para satisfacer la espera. Si está establecido en el valor `false`, especifica que cualquier evento de la matriz proporcionada en el parámetro `_PPEvents` que se ha señalado satisfará la espera.
+Si establece en el valor **true**, el parámetro especifica que todos los eventos dentro de la matriz proporcionan en el `_PPEvents` parámetro debe señalarse para satisfacer la espera. Si establece en el valor **false**, especifica que cualquier evento dentro de la matriz proporcionada en el `_PPEvents` parámetro se ha señalado satisfará la espera.
 
 *_Tiempo de espera*<br/>
 Indica el número de milisegundos antes de que se agote el tiempo de espera. El valor `COOPERATIVE_TIMEOUT_INFINITE` significa que no hay tiempo de espera.
@@ -181,7 +181,7 @@ Si se satisfizo la espera, el índice de la matriz proporcionada en el parámetr
 Si el parámetro `_FWaitAll` está establecido en el valor `true` para indicar que todos los eventos se deben señalar para satisfacer la espera, el índice que devuelve la función no tiene ninguna importancia especial aparte del hecho de que no es el valor `COOPERATIVE_WAIT_TIMEOUT`.
 
 > [!IMPORTANT]
->  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait_for_multiple` en el subproceso ASTA porque esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.
+> En una aplicación plataforma Universal de Windows (UWP), no llame a `wait_for_multiple` en el subproceso ASTA porque esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.
 
 ## <a name="see-also"></a>Vea también
 

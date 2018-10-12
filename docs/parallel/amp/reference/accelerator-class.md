@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375882"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163171"
 ---
 # <a name="accelerator-class"></a>accelerator (Clase)
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |Name|Descripción|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Compara este `accelerator` objeto con otro y devuelve `false` si son iguales; en caso contrario, devuelve `true`.|
+|[operator!=](#operator_neq)|Compara este `accelerator` objeto con otro y devuelve **false** si son iguales; en caso contrario, devuelve **true**.|
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `accelerator` objeto a ésta.|
-|[operator==](#operator_eq_eq)|Compara este `accelerator` objeto con otro y devuelve `true` si son iguales; en caso contrario, devuelve `false`.|
+|[operator==](#operator_eq_eq)|Compara este `accelerator` objeto con otro y devuelve **true** si son iguales; en caso contrario, devuelve **false**.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el `accelerator` puede generar una pantalla; de lo contrario, `false`.
+**True** si el `accelerator` puede generar una pantalla; de lo contrario, **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el `accelerator` tiene la capa DEBUG habilitada para informar sobre errores. En caso contrario, es `false`.
+**True** si el `accelerator` tiene la capa DEBUG habilitada para informar sobre errores. En caso contrario, **false**.
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el `accelerator` se emula. En caso contrario, es `false`.
+**True** si el `accelerator` se emula. En caso contrario, **false**.
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el Acelerador admite memoria compartida de CPU; en caso contrario, `false`.
+**True** si admite el Acelerador de la CPU comparte memoria; en caso contrario, **false**.
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-Devuelve un valor booleano que indica si el Acelerador admite matemática de precisión doble, incluyendo fusionan multiplicar agrega (FMA), división, recíproca y conversión entre `int` y `double`.
+Devuelve un valor booleano que indica si el Acelerador admite matemática de precisión doble, incluyendo fusionan multiplicar agrega (FMA), división, recíproca y conversión entre **int** y **dobles**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el Acelerador admite matemática de precisión doble; en caso contrario, `false`.
+**True** si el Acelerador admite matemática de precisión doble; de lo contrario, **false**.
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-Devuelve un valor booleano que indica si el acelerador tiene compatibilidad matemática de precisión doble limitada. Si el acelerador tiene solamente una compatibilidad limitada, a continuación, se fusionan multiply agregar (FMA), división, recíproca y conversión entre `int` y `double` no se admiten.
+Devuelve un valor booleano que indica si el acelerador tiene compatibilidad matemática de precisión doble limitada. Si el acelerador tiene solamente una compatibilidad limitada, a continuación, se fusionan multiply agregar (FMA), división, recíproca y conversión entre **int** y **doble** no se admiten.
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el acelerador tiene compatibilidad matemática de precisión doble; limitada en caso contrario, `false`.
+**True** si el acelerador tiene compatibilidad matemática de precisión doble; limitada en caso contrario, **false**.
 
 ##  <a name="get_version"></a> get_version
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> operador! =
 
-Compara este `accelerator` objeto con otro y devuelve `false` si son iguales; en caso contrario, devuelve `true`.
+Compara este `accelerator` objeto con otro y devuelve **false** si son iguales; en caso contrario, devuelve **true**.
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ La `accelerator` objeto que se va a comparar con éste.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`false` Si los dos `accelerator` objetos son iguales; en caso contrario, `true`.
+**false** si los dos `accelerator` objetos son iguales; en caso contrario, **true**.
 
 ##  <a name="operator_eq"></a> operator=
 
@@ -503,7 +503,7 @@ Una referencia a este `accelerator` objeto.
 
 ##  <a name="operator_eq_eq"></a> operador ==
 
-Compara este `accelerator` objeto con otro y devuelve `true` si son iguales; en caso contrario, devuelve `false`.
+Compara este `accelerator` objeto con otro y devuelve **true** si son iguales; en caso contrario, devuelve **false**.
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ La `accelerator` objeto que se va a comparar con éste.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el otro `accelerator` es igual que este objeto `accelerator` objeto; en caso contrario, `false`.
+**True** si el otro `accelerator` es igual que este objeto `accelerator` objeto; en caso contrario, **false**.
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ La ruta de acceso para el acelerador.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si la llamada establece correctamente el Acelerador predeterminado. En caso contrario, es `false`.
+**True** si establece el Acelerador predeterminado correctamente la llamada. En caso contrario, **false**.
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el runtime seleccionará automáticamente un acelerador adecuado; en caso contrario, `false`.
+**True** si el runtime seleccionará automáticamente un acelerador adecuado; de lo contrario, **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -737,7 +737,7 @@ La `accelerator_view` objeto que se va a comparar con éste.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`false` si los dos objetos son iguales; de lo contrario, `true`.
+**false** si los dos objetos son iguales; en caso contrario, **true**.
 
 ##  <a name="operator_eq"></a> operator=
 
@@ -758,7 +758,7 @@ Una referencia a la modificación `accelerator_view` objeto.
 
 ##  <a name="operator_eq_eq"></a> operador ==
 
-Compara este [accelerator_view](accelerator-view-class.md) objeto con otro y devuelve `true` si son iguales; en caso contrario, devuelve `false`.
+Compara este [accelerator_view](accelerator-view-class.md) objeto con otro y devuelve **true** si son iguales; en caso contrario, devuelve **false**.
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ La `accelerator_view` objeto que se va a comparar con éste.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los dos objetos son iguales; de lo contrario, `false`.
+**True** si los dos objetos son iguales; en caso contrario, **false**.
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

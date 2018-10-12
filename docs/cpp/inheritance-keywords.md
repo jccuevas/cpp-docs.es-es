@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061180"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161806"
 ---
 # <a name="inheritance-keywords"></a>Palabras clave de herencia
 
@@ -83,6 +83,8 @@ independientemente de las opciones de la línea de comandos o las pragmas, los p
 
 > [!NOTE]
 >  La misma declaración adelantada de una representación de puntero a miembro de la clase debe aparecer en cada unidad de traducción que declare punteros a miembros de esa clase y la declaración debe aparecer antes de que se declaren los punteros a miembros.
+
+Para ofrecer compatibilidad con versiones anteriores, **_single_inheritance**, **_multiple_inheritance**, y **_virtual_inheritance** son sinónimos para **__ herencia única**, **__multiple_inheritance**, y **__virtual_inheritance** a menos que la opción de compilador [/Za \(deshabilitar idioma extensiones)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
 
 **FIN de Específicos de Microsoft**
 

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374267"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163095"
 ---
 # <a name="singleassignment-class"></a>Clase single_assignment
 
@@ -58,7 +58,7 @@ El tipo de carga del mensaje se almacena y se propaga por el búfer.
 
 |Name|Descripción|
 |----------|-----------------|
-|[single_assignment](#ctor)|Sobrecargado. Construye un `single_assignment` bloque de mensajería.|
+|[single_assignment](#ctor)|Sobrecargado. Construye un bloque de mensajería `single_assignment` .|
 |[~ single_assignment (destructor)](#dtor)|Destruye el `single_assignment` bloque de mensajería.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -66,7 +66,7 @@ El tipo de carga del mensaje se almacena y se propaga por el búfer.
 |Name|Descripción|
 |----------|-----------------|
 |[has_value](#has_value)|Comprueba si este `single_assignment` bloque de mensajería se ha inicializado con un valor aún.|
-|[value](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `single_assignment` bloque de mensajería.|
+|[valor](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `single_assignment` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el bloque ha recibido un valor, `false` en caso contrario.
+**True** si el bloque ha recibido un valor, **false** en caso contrario.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ El `runtime_object_identity` de la `message` objeto va a reservar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el mensaje se ha reservado correctamente, `false` en caso contrario.
+**True** si el mensaje se ha reservado correctamente, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
+Después de `reserve` se llama, si devuelve **true**, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ Un [message_status](concurrency-namespace-enums.md) indicación de lo que el des
 
 ##  <a name="ctor"></a> single_assignment
 
-Construye un `single_assignment` bloque de mensajería.
+Construye un bloque de mensajería `single_assignment` .
 
 ```
 single_assignment();
@@ -303,10 +303,10 @@ single_assignment(
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
-El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `single_assignment`.
+El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `single_assignment` .
 
 *_PScheduleGroup*<br/>
-El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `single_assignment`. El objeto `Scheduler` utilizado está implícito en el grupo de programación.
+El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `single_assignment` . El objeto `Scheduler` utilizado está implícito en el grupo de programación.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414581"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163964"
 ---
 # <a name="choice-class"></a>Clase choice
 
@@ -85,7 +85,7 @@ Un `tuple`-según el tipo que representa las cargas de los orígenes de entrada.
 |[reserve](#reserve)|Reserva un mensaje ofrecido previamente por este `choice` bloque de mensajería.|
 |[unlink_target](#unlink_target)|Desvincula un bloque de destino de este `choice` bloque de mensajería.|
 |[unlink_targets](#unlink_targets)|Desvincula todos los destinos de este `choice` bloque de mensajería. (Invalida [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
-|[value](#value)|Obtiene el mensaje cuyo índice se ha seleccionado por el `choice` bloque de mensajería.|
+|[valor](#value)|Obtiene el mensaje cuyo índice se ha seleccionado por el `choice` bloque de mensajería.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -216,7 +216,7 @@ Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-El `consume` es similar al método `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve `true`.
+El `consume` es similar al método `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve **true**.
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el bloque ha recibido un valor, `false` en caso contrario.
+**True** si el bloque ha recibido un valor, **false** en caso contrario.
 
 ##  <a name="index"></a> Índice
 
@@ -315,7 +315,7 @@ Un puntero al bloque de destino que llama a la `reserve` método.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el mensaje se ha reservado correctamente, `false` en caso contrario. Las reservas de direcciones pueden producir un error por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptados por otro destino, el origen podría denegar reservas y así sucesivamente.
+**True** si el mensaje se ha reservado correctamente, **false** en caso contrario. Las reservas de direcciones pueden producir un error por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptados por otro destino, el origen podría denegar reservas y así sucesivamente.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413775"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163262"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event (Clase)
 
@@ -96,11 +96,11 @@ Para establecer este evento con el resultado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El método devuelve `true` si tuvo éxito y establecer el evento. Devuelve `false` si ya está establecido el evento.
+El método devuelve **true** si tuvo éxito y establecer el evento. Devuelve **false** si ya está establecido el evento.
 
 ### <a name="remarks"></a>Comentarios
 
-En presencia de varias llamadas simultáneas a o `set`, solo la primera llamada se realizará correctamente y su resultado (si existe) se almacenará en el evento de finalización de tarea. Los conjuntos restantes se omiten y el método devolverá false. Al establecer un evento de finalización de tarea, todas las tareas creadas desde que se completarán inmediatamente los eventos y sus continuaciones, si existe, se programará. Tareas de los objetos de finalización que tienen un `_ResultType` distinto `void` pasará el valor a sus continuaciones.
+En presencia de varias llamadas simultáneas a o `set`, solo la primera llamada se realizará correctamente y su resultado (si existe) se almacenará en el evento de finalización de tarea. Los conjuntos restantes se omiten y el método devolverá false. Al establecer un evento de finalización de tarea, todas las tareas creadas desde que se completarán inmediatamente los eventos y sus continuaciones, si existe, se programará. Tareas de los objetos de finalización que tienen un `_ResultType` distinto **void** pasará el valor a sus continuaciones.
 
 ##  <a name="set_exception"></a> set_exception
 

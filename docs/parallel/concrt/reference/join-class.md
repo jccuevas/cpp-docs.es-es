@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c960e73604a915dbb15c0efac958dc229c16b3b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 045cdeab321e9e3f88ee9bd50d337101e8512718
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379546"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163821"
 ---
 # <a name="join-class"></a>join (Clase)
 
@@ -60,7 +60,7 @@ El tipo de `join` bloque es, ya sea `greedy` o `non_greedy`
 
 |Name|Descripción|
 |----------|-----------------|
-|[join](#ctor)|Sobrecargado. Construye un `join` bloque de mensajería.|
+|[join](#ctor)|Sobrecargado. Construye un bloque de mensajería `join` .|
 |[~ join (destructor)](#dtor)|Destruye el `join` bloque.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
@@ -138,7 +138,7 @@ Similar a `accept`, pero siempre está precedido por una llamada a `reserve`.
 
 ##  <a name="ctor"></a> combinación
 
-Construye un `join` bloque de mensajería.
+Construye un bloque de mensajería `join` .
 
 ```
 join(
@@ -176,10 +176,10 @@ El número de entradas esto `join` se permitirá el bloque.
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
-El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `join`.
+El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `join` .
 
 *_PScheduleGroup*<br/>
-El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `join`. El objeto `Scheduler` utilizado está implícito en el grupo de programación.
+El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `join` . El objeto `Scheduler` utilizado está implícito en el grupo de programación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -261,11 +261,11 @@ El `runtime_object_identity` de la ofrecida `message` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el mensaje se ha reservado correctamente, `false` en caso contrario.
+**True** si el mensaje se ha reservado correctamente, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
+Después de `reserve` se llama, si devuelve **true**, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

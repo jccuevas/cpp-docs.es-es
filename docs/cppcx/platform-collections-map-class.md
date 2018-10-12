@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103884"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162560"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map (Clase)
 
@@ -173,7 +173,7 @@ La clave que se usa para ubicar el elemento Map. El tipo de *clave* es typename 
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si se encuentra la clave; de lo contrario, `false`.
+**True** si la clave se encuentra; en caso contrario, **false**.
 
 ## <a name="insert"></a>  Map:: Insert (método)
 
@@ -195,7 +195,7 @@ La parte de valor del par clave-valor. El tipo de *valor* es typename *V*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si la clave de un elemento existente en el mapa actual coincide con *clave* y la parte del valor de ese elemento se establece en *valor*. `false` Si ningún elemento existente en el mapa actual coincide con *clave* y *clave* y *valor* parámetros se crean en un par de clave-valor y, a continuación, se agrega al mapa actual.
+**True** si la clave de un elemento existente en el mapa actual coincide con *clave* y la parte del valor de ese elemento se establece en *valor*. **false** si ningún elemento existente en el mapa actual coincide con *clave* y *clave* y *valor* parámetros se crean en un par de clave-valor y, a continuación, se agregan a la objeto Map actual.
 
 ## <a name="lookup"></a>  Map:: Lookup (método)
 

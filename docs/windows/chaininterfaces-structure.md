@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789026"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161819"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (estructura)
 
@@ -117,7 +117,7 @@ Un tipo derivado.
 El tipo base de un tipo derivado.
 
 *hasImplements*<br/>
-Valor de un valor booleano que si `true`, significa que no se puede usar un [MixIn](../windows/mixin-structure.md) estructura con una clase que no se deriva de la [implementa](../windows/implements-structure.md) una estructura.
+Valor de un valor booleano que si **true**, significa que no se puede usar un [MixIn](../windows/mixin-structure.md) estructura con una clase que no se deriva de la [implementa](../windows/implements-structure.md) una estructura.
 
 ## <a name="members"></a>Miembros
 
@@ -169,7 +169,7 @@ Un puntero en el último identificador de interfaz que se convirtió correctamen
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si todas las operaciones de conversión se realizó correctamente; en caso contrario, `false`.
+**True** si todas las operaciones de conversión se realizó correctamente; en caso contrario, **false**.
 
 ## <a name="casttounknown"></a>Chaininterfaces
 

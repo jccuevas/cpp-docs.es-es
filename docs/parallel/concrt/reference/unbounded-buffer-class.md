@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46789b74d0b7b8d882a1e2ea90103c4c2f1e934b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396355"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163002"
 ---
 Un bloque de mensajería `unbounded_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado capaz de almacenar un número ilimitado de mensajes.
 
@@ -175,7 +175,7 @@ Elemento que se va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se aceptó el elemento, `false` en caso contrario.
+**True** si se aceptó el elemento, **false** en caso contrario.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -274,11 +274,11 @@ El `runtime_object_identity` de la `message` objeto va a reservar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el mensaje se ha reservado correctamente, `false` en caso contrario.
+**True** si el mensaje se ha reservado correctamente, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
+Después de `reserve` se llama, si devuelve **true**, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -321,7 +321,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Dado que el bloque no posponer mensajes ofrecidos.
+**True** porque no posponer el bloque de mensajes ofrecidos.
 
 ##  <a name="ctor"></a> unbounded_buffer
 
@@ -359,10 +359,10 @@ unbounded_buffer(
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
-El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `unbounded_buffer`.
+El objeto `Scheduler` dentro del que se programa la tarea de propagación para el bloque de mensajería `unbounded_buffer` .
 
 *_PScheduleGroup*<br/>
-El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `unbounded_buffer`. El objeto `Scheduler` utilizado está implícito en el grupo de programación.
+El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `unbounded_buffer` . El objeto `Scheduler` utilizado está implícito en el grupo de programación.
 
 ### <a name="remarks"></a>Comentarios
 

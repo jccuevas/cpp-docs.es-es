@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386592"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162976"
 ---
 # <a name="concurrentqueue-class"></a>Clase concurrent_queue
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si la cola simultánea estaba vacía en el momento hemos analizado, `false` en caso contrario.
+**True** si la cola simultánea estaba vacía en el momento hemos analizado, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -229,11 +229,11 @@ Una referencia a una ubicación para almacenar el elemento quitado de la cola.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si un elemento se quitó correctamente la cola, `false` en caso contrario.
+**True** si un elemento se quitó correctamente la cola, **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Si un elemento se quitó correctamente la cola, el parámetro `_Dest` recibe el valor quitado, se destruye el valor original que se retienen en la cola, y esta función devuelve `true`. Si no había ningún elemento de la cola, esta función devuelve `false` sin bloqueo y el contenido de la `_Dest` parámetro son indefinidos.
+Si un elemento se quitó correctamente la cola, el parámetro `_Dest` recibe el valor quitado, se destruye el valor original que se retienen en la cola, y esta función devuelve **true**. Si no había ningún elemento de la cola, esta función devuelve `false` sin bloqueo y el contenido de la `_Dest` parámetro son indefinidos.
 
 `try_pop` es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`, y `empty`.
 

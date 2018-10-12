@@ -1,7 +1,7 @@
 ---
 title: Funciones insertadas (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017826"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163600"
 ---
 # <a name="inline-functions-c"></a>Funciones insertadas (C++)
 
@@ -84,7 +88,7 @@ El uso de funciones insertadas puede agilizar la ejecución del programa porque 
 
 El compilador trata las opciones de expansión insertada y las palabras clave como sugerencias. No se garantiza que las funciones se inserten. No se puede forzar al compilador que inserte una función determinada, incluso con la **__forceinline** palabra clave. Cuando se compila con **/CLR**, el compilador no insertará una función si no hay atributos de seguridad aplicados a la función.
 
-El **inline** palabra clave solo está disponible en C++. El **__inline** y **__forceinline** palabras clave están disponibles en C y C++. Para ofrecer compatibilidad con versiones anteriores, **inline** es un sinónimo de **__inline**.
+El **inline** palabra clave solo está disponible en C++. El **__inline** y **__forceinline** palabras clave están disponibles en C y C++. Para ofrecer compatibilidad con versiones anteriores, **inline** y **_forceinline** son sinónimos para **__inline**, y **__forceinline** a menos que opción del compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
 
 El **inline** palabra clave indica al compilador que se prefiere la expansión en línea. Sin embargo, el compilador puede crear una instancia independiente de la función y crear vinculaciones de llamada estándar en lugar de insertar el código. Hay dos casos en los que esto puede ocurrir:
 

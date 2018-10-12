@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2798c4abe33e49d2ac6199ad6f9a1013805fde7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bcdb05230cdacbf626235e315e605414c435493
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424422"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163070"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry (Clase)
 
@@ -124,7 +124,7 @@ Un puntero a un bloque que se va a buscar en el `network_link_registry` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se encontró el bloque, `false` en caso contrario.
+**True** si se encontró el bloque, **false** en caso contrario.
 
 ##  <a name="count"></a> recuento
 
@@ -153,7 +153,7 @@ Un puntero a un bloque que se va a quitar, si se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el vínculo ha encontrado y eliminado, `false` en caso contrario.
+**True** si el vínculo ha encontrado y eliminado, **false** en caso contrario.
 
 ## <a name="see-also"></a>Vea también
 

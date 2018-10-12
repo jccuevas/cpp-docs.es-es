@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e59631592cd0bf9d147110e1a72d27d4bc781e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 36cee8d6f2cb41a22574f60c5cf86747228205bb
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789090"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163080"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT (Clase)
 
@@ -125,7 +125,7 @@ Indica si el actual `SyncLockWithStatusT` objeto posee un recurso; es decir, el 
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el `SyncLockWithStatusT` objeto está bloqueado; en caso contrario, `false`.
+**True** si el `SyncLockWithStatusT` objeto está bloqueado; en caso contrario, **false**.
 
 ## <a name="status"></a>Status_
 
