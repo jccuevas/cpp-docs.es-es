@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b305e928fec58833c4aac3f5625783aa2cb9ef
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 431ca9e88e644bd7a7c38f9ab4a1c3faeab6f9bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792503"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328407"
 ---
 # <a name="attributes-alphabetical-reference"></a>Referencia alfabética de los atributos
 
-Los siguientes atributos están disponibles en Visual C++.
+Los siguientes atributos están disponibles en el compilador de C++ de Microsoft:
 
 |Atributo|Descripción|
 |---------------|-----------------|
@@ -38,11 +38,11 @@ Los siguientes atributos están disponibles en Visual C++.
 |[bindable](bindable.md)|Indica que la propiedad admite enlace de datos.|
 |[call_as](call-as.md)|Permite que una función utilizables para asignarse a una función remota.|
 |[case](case-cpp.md)|Puede usar con el [switch_type](switch-type.md) atributo en una unión.|
-|[coclass](coclass.md)|Crea un objeto COM, que puede implementar una interfaz COM.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Agrega una entrada de la interfaz a un mapa COM.|
+|[coclase](coclass.md)|Crea un objeto COM, que puede implementar una interfaz COM.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Agrega una entrada de la interfaz a un mapa COM.|
 |[control](control.md)|Especifica que el tipo definido por el usuario es un control.|
 |[cpp_quote](cpp-quote.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo de encabezado generado.|
-|[Personalizado](custom-cpp.md)|Le permite definir sus propios atributos.|
+|[custom](custom-cpp.md)|Le permite definir sus propios atributos.|
 |[db_accessor](db-accessor.md)|Enlaza las columnas de un conjunto de filas y se enlazan a las asignaciones de descriptor de acceso correspondiente.|
 |[db_column](db-column.md)|Enlaza una columna especificada para el conjunto de filas.|
 |[db_command](db-command.md)|Ejecuta un comando de OLE DB.|
@@ -73,7 +73,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[idl_quote](idl-quote.md)|Le permite usar los atributos o IDL construcciones que no se admiten en la versión actual de Visual C++.|
 |[iid_is](iid-is.md)|Especifica el IID de la interfaz COM que apunta a un puntero de interfaz.|
 |[immediatebind](immediatebind.md)|Indica que la base de datos será notificada inmediatamente de todos los cambios a una propiedad de un objeto enlazado a datos.|
-|[Implementa](implements-cpp.md)|Especifica las interfaces de envío que se ven obligadas a ser miembros de la coclase IDL.|
+|[implements](implements-cpp.md)|Especifica las interfaces de envío que se ven obligadas a ser miembros de la coclase IDL.|
 |[implements_category](implements-category.md)|Especifica las categorías de componentes implementados para la clase.|
 |[import](import.md)|Especifica otro archivo .idl, .odl o encabezado que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|
 |[importidl](importidl.md)|Inserta el archivo .idl especificado en el archivo .idl generado.|
@@ -88,7 +88,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[licensed](licensed.md)|Indica que la coclase al que se aplica con licencia y se debe crear instancias mediante `IClassFactory2`.|
 |[local](local-cpp.md)|Permite usar el compilador de MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|
 |[max_is](max-is.md)|Designa el valor máximo para un índice de matriz válida.|
-|[módulo](module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|
+|[module](module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|
 |[ms_union](ms-union.md)|Controla la alineación de representación de datos de red de uniones nonencapsulated.|
 |[no_injected_text](no-injected-text.md)|Impide que el compilador inserte el código como resultado el uso de atributo.|
 |[nonbrowsable](nonbrowsable.md)|Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.|
@@ -97,7 +97,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[object](object-cpp.md)|Identifica una interfaz personalizada; es sinónimo de atributo personalizado.|
 |[odl](odl.md)|Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL).|
 |[oleautomation](oleautomation.md)|Indica que una interfaz es compatible con la automatización.|
-|[Opcional](optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|
+|[optional](optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|
 |[out](out-cpp.md)|Identifica los parámetros de puntero devueltos desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|
 |[pointer_default](pointer-default.md)|Especifica el atributo de puntero predeterminado para todos los punteros, excepto los punteros de nivel superior que aparecen en las listas de parámetros.|
 |[pragma](pragma.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo .idl generado.|
@@ -107,7 +107,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[propputref](propputref.md)|Especifica una función de la configuración de propiedad que utiliza una referencia en lugar de un valor.|
 |[ptr](ptr.md)|Designa un puntero como un puntero completo.|
 |[public](public-cpp-attributes.md)|Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no se hace referencia desde dentro del archivo. idl.|
-|[intervalo](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
+|[range](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
 |[rdx](rdx.md)|Crea o modifica una clave del registro.|
 |[readonly](readonly-cpp.md)|Prohíbe la asignación a una variable.|
 |[ref](ref-cpp.md)|Identifica un puntero de referencia.|
@@ -124,7 +124,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[switch_is](switch-is.md)|Especifica la expresión o el identificador que actúa como la unión discriminante que selecciona al miembro de unión.|
 |[switch_type](switch-type.md)|Identifica el tipo de la variable utilizada como la unión discriminante.|
 |[synchronize](synchronize.md)|Sincroniza el acceso a un método.|
-|[Subprocesamiento](threading-cpp.md)|Especifica el modelo de subprocesos para un objeto COM.|
+|[threading](threading-cpp.md)|Especifica el modelo de subprocesos para un objeto COM.|
 |[transmit_as](transmit-as.md)|Indica al compilador para asociar un tipo presentado, manipulan las aplicaciones cliente y servidor, con un tipo transmitido.|
 |[uidefault](uidefault.md)|Indica que el miembro de la información de tipo es el miembro predeterminado para su presentación en la interfaz de usuario.|
 |[unique](unique-cpp.md)|Especifica un puntero único.|

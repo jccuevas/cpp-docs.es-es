@@ -1,7 +1,7 @@
 ---
-title: ref new, gcnew (extensiones de componente de C++) | Microsoft Docs
+title: ref new, gcnew (C++ / c++ / CLI y c++ / CX) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596163"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328316"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Extensiones de componentes de C++)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new, gcnew (C++ / c++ / CLI y c++ / CX)
 
 El **referencia nuevos** palabra clave agregada asigna una instancia de un tipo que se recolecta cuando el objeto deja de estar accesible y que devuelve un identificador ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) al objeto asignado.
 
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

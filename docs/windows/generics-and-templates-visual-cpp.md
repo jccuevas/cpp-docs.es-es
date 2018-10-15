@@ -1,7 +1,7 @@
 ---
-title: Genéricos y plantillas (Visual C++) | Microsoft Docs
+title: Genéricos y plantillas (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591007"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328225"
 ---
-# <a name="generics-and-templates-visual-c"></a>Genéricos y plantillas (Visual C++)
+# <a name="generics-and-templates-ccli"></a>Genéricos y plantillas (C++ / c++ / CLI)
 
 Genéricos y plantillas son dos características de lenguaje que proporcionan compatibilidad para tipos parametrizados. Sin embargo, son diferentes y tienen usos diferentes. En este tema se proporciona información general de las numerosas diferencias.
 
@@ -61,7 +61,7 @@ La diferencia en genéricos básica tiene implicaciones para la creación de apl
 
 El ejemplo siguiente muestra un ejemplo sencillo del uso conjunto de plantillas y genéricos. En este ejemplo, la clase de plantilla pasa su parámetro a través del tipo genérico. Lo contrario no es posible.
 
-Esta expresión podría usarse cuando desea compilar en una API genérica existente con el código de plantilla que es local a un ensamblado de Visual C++, o cuando necesite agregar una capa adicional de parametrización a un tipo genérico, para aprovechar las ventajas de ciertas características de las plantillas no admitidas d. por los genéricos.
+Esta expresión podría usarse cuando desea compilar en una API genérica existente con el código de plantilla que sea local en C++ / c++ / ensamblado de la CLI, o cuando necesite agregar una capa adicional de parametrización a un tipo genérico aprovechar las ventajas de ciertas características de las plantillas no admite b y genéricos.
 
 ### <a name="code"></a>Código
 

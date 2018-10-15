@@ -1,7 +1,7 @@
 ---
-title: Matrices (extensiones de componentes de C++) | Microsoft Docs
+title: Matrices (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b1a1f977e15d80d631799d8a9e101a8c85e3aaf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402855"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328108"
 ---
-# <a name="arrays-c-component-extensions"></a>Matrices (Extensiones de componentes de C++)
+# <a name="arrays-ccli-and-ccx"></a>Matrices (C++ / c++ / CLI y c++ / CX)
 
 El `Platform::Array<T>` tipo en C++ / c++ / CX, o la **matriz** palabra clave en C++ / c++ / CLI, declara una matriz de un tipo especificado y el valor inicial.
 
@@ -180,4 +180,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

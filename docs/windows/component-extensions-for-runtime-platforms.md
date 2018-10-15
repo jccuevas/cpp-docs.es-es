@@ -1,7 +1,7 @@
 ---
-title: Extensiones de componentes para plataformas de tiempo de ejecución | Microsoft Docs
+title: Extensiones de componentes de .NET y UWP | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386760"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328420"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>Extensiones de componentes para plataformas de tiempo de ejecución
+# <a name="component-extensions-for-net-and-uwp"></a>Extensiones de componentes de .NET y UWP
 
-Visual C++ proporciona extensiones de lenguaje para ayudarle a programar en plataformas del runtime. Mediante el uso de C++ / c++ / CX, puede programar aplicaciones de la plataforma Universal de Windows y componentes que se compilan en código nativo. Aunque puede crear aplicaciones de la plataforma Universal de Windows programando directamente en las interfaces COM de Windows en tiempo de ejecución, mediante el uso de C++ / c++ / CX, puede trabajar con los constructores, excepciones y otros lenguajes de programación de C++ moderno. Para habilitar la programación de C++ en un entorno de ejecución administrado en la plataforma. NET, puede usar C++ / c++ / CLI.
+El estándar de C++ permite que los proveedores de compiladores proporcionar las extensiones no estándares del lenguaje. Microsoft proporciona extensiones para ayudarle a conectar C++ nativo a código que se ejecuta en .NET Framework o la plataforma Universal de Windows (UWP). Se llama a las extensiones de .NET C++ / c++ / CLI y generan código que se ejecuta en .NET administra el entorno de ejecución que se llama a Common Language Runtime (CLR). Las extensiones UWP se llaman C++ / c++ / CX y generan código máquina nativo.
+
+> [!NOTE]
+> Para las aplicaciones nuevas, se recomienda usar C++ / c++ / WinRT en lugar de C++ / c++ / CX. C++ / c++ / WinRT es una nueva, el estándar C ++ 17 proyección del lenguaje para Windows Runtime APIs. Se seguirá admitiendo C++ / c++ / CX y WRL, pero se recomienda encarecidamente que utilicen las nuevas aplicaciones C++ / c++ / WinRT. Para obtener más información, consulte [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Dos runtime, un conjunto de extensiones
 
-C++ / c++ / CX es un subconjunto de C / c++ / CLI. Para las extensiones que son comunes a C++ / c++ / CX y c++ / CLI, la semántica depende de si tiene como destino common language runtime (CLR) o el tiempo de ejecución de Windows. Para compilar la aplicación se ejecute en el tiempo de ejecución de Windows, especifique el `/ZW` opción del compilador. Para compilarlo para que se ejecute en CLR, especifique la opción del compilador `/clr`. Estos modificadores se establecen automáticamente cuando se usa Visual Studio para crear un proyecto.
-
-Para obtener más información sobre cómo crear aplicaciones de la plataforma Universal de Windows en C++, vea [aplicaciones Guía básica para Windows Runtime con C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
-
 C++ / c++ / CLI amplía el estándar de C++ de ANSI/ISO y se define en Ecma C++ / c++ / CLI estándar. Para obtener más información, consulte [programación de .NET con C++ / c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+C++ / c++ / extensiones CX son un subconjunto de C / c++ / CLI. Aunque la sintaxis de extensión es idéntica en la mayoría de los casos, el código que se genera depende de si se especifica la `/ZW` que tengan como destino UWP, opción del compilador o el `/clr` opción tienen como destino .NET. Estos modificadores se establecen automáticamente cuando se usa Visual Studio para crear un proyecto.
 
 ## <a name="data-type-keywords"></a>Palabras clave de tipo de datos
 
-Las extensiones de lenguaje incluyen *agregar palabras clave*, que son palabras clave que se componen de dos tokens separados por espacios en blanco. Los tokens pueden tener un significado cuando se usan por separado, y otro significado cuando se usan juntos. Por ejemplo, la palabra “ref” es un identificador normal, y la palabra “clase” es una palabra clave que declara una clase nativa. Pero cuando estas palabras se combinan para formar **clase ref**, la palabra clave agregada resultante declara una entidad que se conoce como un *clase en tiempo de ejecución*.
+Las extensiones de lenguaje incluyen *agregar palabras clave*, que constan de dos tokens separados por espacios en blanco. Los tokens pueden tener un significado cuando se usan por separado, y otro significado cuando se usan juntos. Por ejemplo, la palabra “ref” es un identificador normal, y la palabra “clase” es una palabra clave que declara una clase nativa. Pero cuando estas palabras se combinan para formar **clase ref**, la palabra clave agregada resultante declara una entidad que se conoce como un *clase en tiempo de ejecución*.
 
 Las extensiones también incluyen *contextual* palabras clave. Una palabra clave se trata como contextual en función del tipo de instrucción que la contenga, y de su posición en esa instrucción. Por ejemplo, el token “property” puede ser un identificador, o puede declarar una clase especial de miembro de clase pública.
 
@@ -53,7 +54,7 @@ En la tabla siguiente se enumeran las palabras clave en la extensión del lengua
 |**clase de interfaz**<br /><br /> **struct de interfaz**|No|Declara una interfaz.|[clase de interfaz](../windows/interface-class-cpp-component-extensions.md)|
 |**clase Enum**<br /><br /> **enum struct**|No|Declara una enumeración.|[clase Enum](../windows/enum-class-cpp-component-extensions.md)|
 |**propiedad**|Sí|Declara una propiedad.|[propiedad](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Sí|Declara un delegado.|[delegate (Extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Sí|Declara un delegado.|[delegado (C++ / c++ / CLI y c++ / CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Sí|Declara un evento.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Especificadores de invalidación

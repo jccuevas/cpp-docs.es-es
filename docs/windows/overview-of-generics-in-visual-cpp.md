@@ -1,7 +1,7 @@
 ---
-title: Información general sobre genéricos en Visual C++ | Microsoft Docs
+title: Información general sobre genéricos en C / c++ / CLI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590943"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327861"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Información general sobre genéricos en Visual C++
+# <a name="overview-of-generics-in-ccli"></a>Información general sobre genéricos en C / c++ / CLI
 
 Los genéricos son tipos parametrizados compatibles con common language runtime. Un tipo parametrizado es un tipo que se define con un parámetro de tipo desconocido que se especifica cuando se usa el tipo genérico.
 
 ## <a name="why-generics"></a>¿Por qué los genéricos?
 
-C++ admite plantillas y ambas plantillas y genéricos admiten tipos parametrizados para crear clases de colección con tipo. Sin embargo, las plantillas proporcionan la parametrización de tiempo de compilación. No se puede hacer referencia a un ensamblado que contiene una definición de plantilla y crear nuevas especializaciones de la plantilla. Una vez compilada, una plantilla especializada es similar de cualquier otra clase o método. En cambio, los genéricos se emiten en MSIL como un tipo parametrizado conocido por el tiempo de ejecución sea un tipo parametrizado; el código de origen que hace referencia a un ensamblado que contiene un tipo genérico puede crear especializaciones de tipo genérico. Para obtener más información sobre la comparación de las plantillas de Visual C++ y tipos genéricos, vea [genéricos y plantillas (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+C++ admite plantillas y ambas plantillas y genéricos admiten tipos parametrizados para crear clases de colección con tipo. Sin embargo, las plantillas proporcionan la parametrización de tiempo de compilación. No se puede hacer referencia a un ensamblado que contiene una definición de plantilla y crear nuevas especializaciones de la plantilla. Una vez compilada, una plantilla especializada es similar de cualquier otra clase o método. En cambio, los genéricos se emiten en MSIL como un tipo parametrizado conocido por el tiempo de ejecución sea un tipo parametrizado; el código de origen que hace referencia a un ensamblado que contiene un tipo genérico puede crear especializaciones de tipo genérico. Para obtener más información sobre la comparación de plantillas estándares de C++ y tipos genéricos, vea [genéricos y plantillas (C++ / c++ / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Tipos y funciones genéricas
 

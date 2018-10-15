@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792423"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328186"
 ---
 # <a name="attributes-by-usage"></a>Atributos por uso
 
 En este tema se enumera los atributos en función de los elementos del lenguaje C++ a la que se aplican.
 
-Si un atributo precede a un elemento de Visual C++ que no esté en el ámbito del atributo, el bloque de atributos se trata como un comentario.
+Si un atributo precede a un elemento que no está en el ámbito del atributo, el bloque de atributos se trata como un comentario.
 
 |Atributo|Descripción|
 |---------------|-----------------|
@@ -55,7 +55,7 @@ Los siguientes atributos se aplican a la [interfaz (o __interface)](../../cpp/in
 |Atributo|Descripción|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Especifica el UUID que indica al compilador MIDL para definir las versiones sincrónicas y asincrónicas de una interfaz COM.|
-|[Personalizado](custom-cpp.md)|Le permite definir sus propios atributos.|
+|[custom](custom-cpp.md)|Le permite definir sus propios atributos.|
 |[dispinterface](dispinterface.md)|Coloca una interfaz en el archivo .idl como interfaz de envío.|
 |[dual](dual.md)|Coloca una interfaz en el archivo .idl como una interfaz dual.|
 |[export](export.md)|Hace que una estructura de datos que se colocarán en el archivo. idl.|

@@ -1,7 +1,7 @@
 ---
-title: 'Cómo: mejorar el rendimiento con genéricos (Visual C++) | Microsoft Docs'
+title: 'Cómo: mejorar el rendimiento con genéricos (C++ / c++ / CLI) | Documentos de Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318531"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327828"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Cómo: Mejorar el rendimiento con genéricos (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Cómo: mejorar el rendimiento con genéricos (C++ / c++ / CLI)
 
-Con los genéricos, puede crear código reutilizable basado en un parámetro de tipo. El tipo real del parámetro de tipo se aplaza hasta que llame a código de cliente. Para obtener más información sobre genéricos, vea [genéricos](../windows/generics-cpp-component-extensions.md).
+Con los genéricos, puede crear código reutilizable basado en un parámetro de tipo. El tipo real del parámetro de tipo se aplaza hasta que llame a código de cliente. Para más información sobre genéricos, vea [Generics](../windows/generics-cpp-component-extensions.md).
 
 Este artículo describe cómo pueden ayudar a aumentar el rendimiento de una aplicación que usa colecciones de genéricos.
 
