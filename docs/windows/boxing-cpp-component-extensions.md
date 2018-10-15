@@ -1,7 +1,7 @@
 ---
-title: Conversión boxing (extensiones de componentes de C++) | Microsoft Docs
+title: Conversión boxing (C++ / c++ / CLI y c++ / CX) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316723"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328017"
 ---
-# <a name="boxing--c-component-extensions"></a>Conversión boxing (Extensiones de componentes de C++)
+# <a name="boxing--ccli-and-ccx"></a>Conversión boxing (C++ / c++ / CLI y c++ / CX)
 
-El compilador de Visual C++ puede convertir tipos de valor a los objetos en un proceso denominado *boxing*así como convertir objetos a tipos de valor en un proceso denominado *unboxing*.
+Se llama a la conversión de tipos de valor a los objetos *boxing*, y se llama a la conversión de objetos a los tipos de valor *unboxing*.
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
@@ -86,7 +86,7 @@ Para obtener más información, consulte [conversión Boxing (C++ / c++ / CX)](h
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Ahora el compilador de Visual C++ aplica conversión boxing a tipos de valor, que pasan a ser <xref:System.Object>. Esto es posible por una conversión definida por el compilador que convierte tipos de valor en <xref:System.Object>.
+Tipos de valor de los cuadros del compilador <xref:System.Object>. Esto es posible por una conversión definida por el compilador que convierte tipos de valor en <xref:System.Object>.
 
 Aplicar conversiones boxing y unboxing permite tratar a los tipos de valor como objetos. Los tipos de valor, incluidos los tipos de estructura y los tipos integrados, como int, se pueden convertir a y desde el tipo <xref:System.Object>.
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

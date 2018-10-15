@@ -1,7 +1,7 @@
 ---
-title: enum class (extensiones de componente de C++) | Microsoft Docs
+title: clase Enum (C++ / c++ / CLI y c++ / CX) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377271"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328147"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum class (Extensiones de componentes de C++)
+# <a name="enum-class--ccli-and-ccx"></a>clase Enum (C++ / c++ / CLI y c++ / CX)
 
 Declara una enumeración en el ámbito de espacio de nombres, que es un tipo definido por el usuario que está compuesto de un conjunto de constantes con nombre llamadas enumeradores.
 
@@ -65,7 +65,7 @@ El valor de cada enumerador es una expresión constante definida implícitamente
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información y ejemplos, vea [enumeraciones](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Para obtener más información y ejemplos, vea [Enumeraciones](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Observe que el compilador emite mensajes de error si la expresión constante que define el valor de un enumerador no se puede representar mediante *underlying-type*.  Sin embargo, el compilador no indica un error para un valor que es inadecuado para el tipo subyacente. Por ejemplo:
 
@@ -146,13 +146,13 @@ Los nombres de enumerador administrados (*identifiers*) no se insertan en el ám
 
 Los enumeradores de una enumeración estándar se insertan fuertemente en el ámbito de inclusión.  Es decir, si hay otro símbolo con el mismo nombre que un enumerador en el ámbito de inclusión, el compilador generará un error.
 
-En Visual C++ 2002 y Visual C++ 2003, los enumeradores se insertaban de forma poco rigurosa (visibles en el ámbito de inclusión a menos que hubiera otro identificador con el mismo nombre).
+En Visual Studio 2002 y Visual Studio 2003, los enumeradores se insertaban (visible en el ámbito de inclusión a menos que hubiera otro identificador con el mismo nombre).
 
-Si se define una enumeración estándar de C++ (sin **clase** o **struct**), la compilación con `/clr` hará que la enumeración se compile como una enumeración administrada.  La enumeración todavía tiene la semántica de una enumeración no administrada.  Nota: el compilador inserta un atributo, `Microsoft::VisualC::NativeEnumAttribute`, que el compilador de Visual C++ reconoce, para identificar la intención del programador de que la enumeración sea una enumeración nativa.  Otros compiladores verán simplemente la enumeración estándar como enumeración administrada.
+Si se define una enumeración estándar de C++ (sin **clase** o **struct**), la compilación con `/clr` hará que la enumeración se compile como una enumeración administrada.  La enumeración todavía tiene la semántica de una enumeración no administrada.  Tenga en cuenta que el compilador inserta un atributo, `Microsoft::VisualC::NativeEnumAttribute` para identificar la intención del programador de la enumeración sea una enumeración nativa.  Otros compiladores verán simplemente la enumeración estándar como enumeración administrada.
 
 Una llamada, enumeración estándar se compila con `/clr` estarán visibles en el ensamblado como una enumeración administrada y pueden utilizarse en cualquier otro compilador administrado.   Sin embargo, una enumeración estándar sin nombre no será visible de forma pública desde el ensamblado.
 
-En Visual C++ 2002 y Visual C++ 2003, una enumeración estándar usada como el tipo de un parámetro de función:
+En Visual Studio 2002 y Visual Studio 2003, una enumeración estándar usada como el tipo de un parámetro de función:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: Identificador de operador de objeto (^) (extensiones de componentes de C++) | Microsoft Docs
+title: Identificador de operador de objeto (^) (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7fb74dcff370b314df5da5428ba3e406023acbe
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410863"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327978"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>Operador de identificador de objeto (^) (Extensiones de componentes de C++)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Identificador de operador de objeto (^) (C++ / c++ / CLI y c++ / CX)
 
 El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tipo [especificador](../cpp/overview-of-declarators.md) para indicar que el objeto declarado debe eliminarse automáticamente cuando el sistema determina que el objeto es ya no es accesible.
 
@@ -34,7 +34,7 @@ Una variable que se declara con el declarador de identificador se comporta como 
 
 El compilador utiliza el COM *recuento de referencias* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Esto es posible debido a que un objeto que se deriva de una interfaz de Windows Runtime es, en realidad, un objeto COM. El recuento de referencias se incrementa cuando se crea o se copia el objeto y se reduce cuando el objeto se establece en null o queda fuera de ámbito. Si el recuento de referencias llega a cero, el objeto se elimina de inmediato y de manera automática.
 
-La ventaja del declarador del identificador es que, en COM, debe administrar de manera explícita el recuento de referencias para un objeto, lo cual es un proceso tedioso que puede dar lugar a errores. Es decir, para aumentar y disminuir el recuento de referencias, debe invocar los métodos AddRef() y Release() del objeto. Sin embargo, si declara un objeto con el declarador de identificador, el compilador de Visual C++ genera código que ajusta de manera automática el recuento de referencias.
+La ventaja del declarador del identificador es que, en COM, debe administrar de manera explícita el recuento de referencias para un objeto, lo cual es un proceso tedioso que puede dar lugar a errores. Es decir, para aumentar y disminuir el recuento de referencias, debe invocar los métodos AddRef() y Release() del objeto. Sin embargo, si declara un objeto con el declarador de identificador, el compilador genera código que se ajusta automáticamente el recuento de referencias.
 
 Para obtener información sobre cómo crear una instancia de un objeto, vea [referencia nuevos](../windows/ref-new-gcnew-cpp-component-extensions.md).
 
@@ -47,8 +47,6 @@ Opción del compilador: `/ZW`
 El sistema usa CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, se pueden mover sus objetos, lo que invalida las ubicaciones que usan las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.
 
 Dado que los punteros de C++ nativo (`*`) y las referencias (`&`) no son referencias administradas, el recolector de elementos no utilizados no puede actualizar de manera automática las direcciones a las que apuntan. Para solucionar este problema, utilice el declarador de identificador para especificar una variable que el recolector de elementos no utilizados reconozca y pueda actualizar automáticamente.
-
-En Visual C++ 2002 y Visual C++ 2003, se utiliza `__gc *` para declarar un objeto del montón administrado.  `^` reemplaza a `__gc *` en la nueva sintaxis.
 
 Para obtener más información, consulte [Cómo: declarar controla en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -235,5 +233,5 @@ Opción del compilador: `/clr`
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md)

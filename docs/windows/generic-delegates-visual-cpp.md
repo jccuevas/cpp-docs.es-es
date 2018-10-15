@@ -1,5 +1,5 @@
 ---
-title: Delegados genéricos (Visual C++) | Microsoft Docs
+title: Delegados genéricos (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1177b3c09649affc781a8c247a109f8efd8088d2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440880"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328290"
 ---
-# <a name="generic-delegates-visual-c"></a>Delegados genéricos (Visual C++)
+# <a name="generic-delegates-ccli"></a>Delegados genéricos (C++ / c++ / CLI)
 
-Puede usar parámetros de tipo genérico con delegados. Para obtener más información sobre los delegados, vea [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).
+Puede usar parámetros de tipo genérico con delegados. Para obtener más información sobre los delegados, vea [delegar (C++ / c++ / CLI y c++ / CX)](../windows/delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintaxis
 

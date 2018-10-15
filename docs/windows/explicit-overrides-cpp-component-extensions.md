@@ -1,7 +1,7 @@
 ---
-title: Invalidaciones explícitas (extensiones de componentes de C++) | Microsoft Docs
+title: Invalidaciones explícitas (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408952"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328043"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>Invalidaciones explícitas (extensiones componentes de C++)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Invalidaciones explícitas (C++ / c++ / CLI y c++ / CX)
 
 En este tema se describe cómo reemplazar explícitamente un miembro de una clase base o interfaz. Solo debe usarse una invalidación con nombre (explícita) para invalidar un método con un método derivado tiene un nombre diferente.
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: Genéricos (extensiones de componentes de C++) | Microsoft Docs
+title: Los genéricos (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,37 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448355"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327680"
 ---
-# <a name="generics--c-component-extensions"></a>Genéricos (Extensiones de componentes de C++)
+# <a name="generics--ccli-and-ccx"></a>Los genéricos (C++ / c++ / CLI y c++ / CX)
 
-Los genéricos son métodos y tipos parametrizados. En esta sección, averigüe qué características genéricas son compatibles con el tiempo de ejecución de Windows y common language runtime, y que son compatibles con sólo common language runtime. Descubra también cómo crear sus propios métodos y tipos genéricos en Visual C++ y cómo usar tipos genéricos creados en un lenguaje de .NET Framework en Visual C++. Por último, en esta sección se proporciona una comparación de los genéricos y plantillas de C++.
+Los genéricos son métodos y tipos parametrizados. En esta sección, averigüe qué características genéricas son compatibles con el tiempo de ejecución de Windows y common language runtime, y que son compatibles con sólo common language runtime. Además, obtenga información sobre cómo crear sus propios métodos y tipos genéricos en C / c++ / CLI y cómo usar tipos genéricos creados en un lenguaje de .NET Framework en C++ / c++ / CLI. Por último, en esta sección se proporciona una comparación de los genéricos y plantillas de C++.
 
 ## <a name="in-this-section"></a>En esta sección
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Compatible con el tiempo de ejecución de Windows y Common Language Runtime
 
-[Información general sobre genéricos en Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
+[Información general sobre genéricos en C / c++ / CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Información sobre los genéricos son, la motivación para la característica de lenguaje, las definiciones de términos que se usan para describir los genéricos y la información sobre el uso de tipos de referencia y tipos de valor como parámetros de tipo genéricos.
 
-[Interfaces genéricas (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Interfaces genéricas (C++ / c++ / CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Información sobre cómo definir y usar interfaces genéricas.
 
-[Delegados genéricos (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Delegados genéricos (C++ / c++ / CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Información sobre cómo definir y usar a delegados genéricos.
 
 [Restricciones de parámetros de tipo genérico (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Información sobre el uso de restricciones en tipos genéricos.
 
 [Uso de genéricos (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
-Información sobre el uso de genéricos definidos en ensamblados. NET, posiblemente creados en otros lenguajes, en Visual C++.
+Información sobre el uso de genéricos definidos en ensamblados. NET, posiblemente creados en otros lenguajes, en C++ / c++ / CLI.
 
-[Genéricos y plantillas (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Genéricos y plantillas (C++ / c++ / CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Una comparación de los genéricos y plantillas, al que se usará cada y cómo combinarlos útiles.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Compatible con Common Language Runtime
@@ -66,4 +66,4 @@ Mediante el [para cada uno, en](../dotnet/for-each-in.md) palabra clave en una c
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

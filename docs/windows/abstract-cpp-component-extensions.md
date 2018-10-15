@@ -1,7 +1,7 @@
 ---
-title: abstract (extensiones de componentes de C++) | Microsoft Docs
+title: abstract (C++ / c++ / CLI y c++ / CX) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 463848ea5f01bf232850d548c9f4255c07409254
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78a5b42de6b0ac54d060bb6369566aa446863289
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611004"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328199"
 ---
-# <a name="abstract--c-component-extensions"></a>abstract (Extensiones de componentes de C++)
+# <a name="abstract--ccli-and-ccx"></a>abstract (C++ / c++ / CLI y c++ / CX)
 
 El **abstracta** palabra clave declara si:
 
@@ -37,12 +37,9 @@ El **abstracta** palabra clave declara si:
 
 ### <a name="syntax"></a>Sintaxis
 
-```cpp
-      class-declaration
-      class-identifier
-      abstract {}
-virtualreturn-typemember-function-identifier() abstract ;
-```
+*declaración de clase* *identificador de clase* **abstracto {}**
+
+**virtual** *tipo de valor devuelto* *identificador de función miembro* **abstracto ();**
 
 ### <a name="remarks"></a>Comentarios
 
@@ -115,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403153"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328615"
 ---
 # <a name="mfc-classes"></a>Clases de MFC
 
@@ -34,7 +34,7 @@ Las clases de la siguiente lista se incluyen en la biblioteca MFC (Microsoft Fou
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Clase CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[Clase CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 Implementa una transición que aumenta/reduce la velocidad.
 
 [CAnimateCtrl (clase)](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -137,7 +137,7 @@ Implementa una propiedad de control OLE transferida de forma asincrónica y alma
 Proporciona la funcionalidad de un cuadro de lista de comprobación de Windows.
 
 [CClientDC (clase)](../../mfc/reference/cclientdc-class.md)<br/>
-Administra la llamada de las funciones de Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) en tiempo de construcción y [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) en tiempo de destrucción.
+Administra la llamada de funciones de Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) en tiempo de construcción y [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) en tiempo de destrucción.
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 Clase base para la arquitectura de mapa de mensajes de la biblioteca MFC (Microsoft Foundation Class).
@@ -863,7 +863,7 @@ Permite a un usuario administrar ventanas secundarias MDI en una aplicación MDI
 Representa una ventana de marco de altura media, como las que se suelen ver alrededor de las barras de herramientas flotantes.
 
 [CMonikerFile (clase)](../../mfc/reference/cmonikerfile-class.md)<br/>
-Representa un flujo de datos ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) llamado por un [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Representa una secuencia de datos ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) nombrada por un [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
 
 [CMonthCalCtrl (clase)](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 Encapsula la funcionalidad de un control de calendario mensual.
@@ -1022,7 +1022,7 @@ Se utiliza para servidores de edición visual OLE, servidores de automatización
 Se utiliza para un caso especial del cuadro de diálogo Editar vínculos de OLE, que se debe utilizar cuando se necesita actualizar solo los objetos existentes vinculados o incrustados en un documento.
 
 [COleVariant (clase)](../../mfc/reference/colevariant-class.md)<br/>
-Encapsula el [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo de datos.
+Encapsula el tipo de datos [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
 
 [CPagerCtrl (clase)](../../mfc/reference/cpagerctrl-class.md)<br/>
 La clase `CPagerCtrl` ajusta el control de paginación de Windows, que puede desplazar en la vista una ventana contenida que no cabe en la ventana contenedora.
@@ -1109,7 +1109,7 @@ Representa un conjunto de registros seleccionados de un origen de datos.
 Una vista que muestra registros de una base de datos en controles.
 
 [CRect (clase)](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Similar a un Windows [estructura RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).
+Similar a un Windows [estructura RECT](rect-structure.md).
 
 [CRectTracker (clase)](../../mfc/reference/crecttracker-class.md)<br/>
 Permite mostrar, mover y cambiar de tamaño un elemento de distintas maneras.
@@ -1175,7 +1175,7 @@ Encapsula una transición de intervalo sinusoidal que tiene un intervalo determi
 Encapsula una transición de progreso sinusoidal cuya amplitud determina el progreso inicial de la variable de animación.
 
 [CSize (clase)](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Similar a la Windows [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que implementa una coordenada relativa o una posición.
+Similar a la estructura [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) de Windows, que implementa una coordenada relativa o una posición.
 
 [CSliderCtrl (clase)](../../mfc/reference/csliderctrl-class.md)<br/>
 Proporciona la funcionalidad del control deslizante común de Windows.

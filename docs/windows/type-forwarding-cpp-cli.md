@@ -1,7 +1,7 @@
 ---
 title: Reenvío de tipos (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396557"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328342"
 ---
 # <a name="type-forwarding-ccli"></a>Reenvío de tipos (C++/CLI)
 
 *Reenvío de tipos* permite pasar un tipo de un ensamblado (ensamblado A) a otro ensamblado (ensamblado B), que no es necesario volver a compilar los clientes que utilizan el ensamblado A.
 
-## <a name="all-platforms"></a>Todas las plataformas
-
-Esta característica no se admite en todos los runtimes.
-
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
 Esta característica no se admite en el tiempo de ejecución de Windows.
-
-### <a name="requirements"></a>Requisitos
-
-Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -44,7 +36,7 @@ El ejemplo de código siguiente muestra cómo usar el reenvío de tipos.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ Por lo tanto, si un archivo de código fuente que se usa para generar el ensambl
 
 3. Eliminar el `MyClass` escriba definición desde el código fuente que se usa para compilar A.dll y reemplácelo con lo siguiente:
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

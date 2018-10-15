@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1ab725391b03eeba35e230c3e0a5ebe0913fec2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374228"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328355"
 ---
 # <a name="cpoint-class"></a>CPoint (clase)
 
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>Comentarios
 
-También incluye funciones de miembro para manipular `CPoint` y [punto](../../mfc/reference/point-structure1.md) estructuras.
+También incluye funciones de miembro para manipular `CPoint` y [punto](../../mfc/reference/point-structure.md) estructuras.
 
 Un `CPoint` objeto puede ser dondequiera que usa un `POINT` se usa la estructura. Los operadores de esta clase que interactúan con un "tamaño" aceptan [CSize](../../atl-mfc-shared/reference/csize-class.md) objetos o [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructuras, puesto que los dos son intercambiables.
 
@@ -106,7 +106,7 @@ Especifique el valor del miembro `x` de `CPoint`.
 Especifique el valor del miembro `y` de `CPoint`.
 
 *initPt*  
-[PUNTO](../../mfc/reference/point-structure1.md) estructura o `CPoint` que especifica los valores utilizados para inicializar `CPoint`.
+[PUNTO](../../mfc/reference/point-structure.md) estructura o `CPoint` que especifica los valores utilizados para inicializar `CPoint`.
 
 *initSize*  
 [TAMAÑO](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) que especifica los valores utilizados para inicializar `CPoint`.
@@ -164,7 +164,7 @@ Especifica la cantidad de desplazamiento del `x` miembro de la `CPoint`.
 Especifica la cantidad de desplazamiento del `y` miembro de la `CPoint`.
 
 *punto*  
-Especifica la cantidad ( [punto](../../mfc/reference/point-structure1.md) o `CPoint`) para desplazar la `CPoint`.
+Especifica la cantidad ( [punto](../../mfc/reference/point-structure.md) o `CPoint`) para desplazar la `CPoint`.
 
 *size*  
 Especifica la cantidad ( [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) o [CSize](../../atl-mfc-shared/reference/csize-class.md)) para desplazar la `CPoint`.
@@ -184,7 +184,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) estructura o `CPoint` objeto.
+Contiene un [punto](../../mfc/reference/point-structure.md) estructura o `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -205,7 +205,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) estructura o `CPoint` objeto.
+Contiene un [punto](../../mfc/reference/point-structure.md) estructura o `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -230,7 +230,7 @@ void operator+=(POINT point) throw();
 Contiene un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Contiene un [punto](../../mfc/reference/point-structure.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -259,7 +259,7 @@ void operator-=(POINT point) throw();
 Contiene un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Contiene un [punto](../../mfc/reference/point-structure.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -289,10 +289,10 @@ CRect operator+(const RECT* lpRect) const throw();
 Contiene un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Contiene un [punto](../../mfc/reference/point-structure.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *lpRect*  
-Contiene un puntero a un [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
+Contiene un puntero a un [RECT](../../mfc/reference/rect-structure.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -322,13 +322,13 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>Parámetros
 
 *punto*  
-Un [punto](../../mfc/reference/point-structure1.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Un [punto](../../mfc/reference/point-structure.md) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *size*  
 Un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *lpRect*  
-Un puntero a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
+Un puntero a un [RECT](../../mfc/reference/rect-structure.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -354,7 +354,7 @@ Use el operador unario para negar un punto. Por ejemplo, mediante el operador un
 
 [Ejemplo MDI de MFC](../../visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[POINT (estructura)](../../mfc/reference/point-structure1.md)<br/>
+[POINT (estructura)](../../mfc/reference/point-structure.md)<br/>
 [CRect (clase)](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize (clase)](../../atl-mfc-shared/reference/csize-class.md)
 

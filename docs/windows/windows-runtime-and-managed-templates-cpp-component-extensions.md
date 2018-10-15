@@ -1,7 +1,7 @@
 ---
-title: En tiempo de ejecución de Windows y plantillas administradas (extensiones de componentes de C++) | Microsoft Docs
+title: Windows Runtime y plantillas administradas (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591454"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328303"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime y plantillas administradas (Extensiones de componentes de C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime y plantillas administradas (C++ / c++ / CLI y c++ / CX)
 
 Las plantillas le permiten definir un prototipo de un tiempo de ejecución de Windows o un tipo common language runtime y, a continuación, crear instancias de las variaciones de ese tipo mediante el uso de parámetros de tipo de plantilla diferente.
 
@@ -50,7 +50,7 @@ Opción del compilador: `/clr`
 
 ### <a name="examples"></a>Ejemplos
 
-Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no se puede crear una instancia de una plantilla administrada con un parámetro de tipo genérico. Esto es porque los tipos genéricos se resuelven en tiempo de ejecución. Para obtener más información, consulte [genéricos y plantillas (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no se puede crear una instancia de una plantilla administrada con un parámetro de tipo genérico. Esto es porque los tipos genéricos se resuelven en tiempo de ejecución. Para obtener más información, consulte [genéricos y plantillas (C++ / c++ / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

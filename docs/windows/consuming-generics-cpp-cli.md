@@ -1,7 +1,7 @@
 ---
 title: Uso de genéricos (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c17e8212b01ad2cf80c74f80de26209d00f6d1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6bccfc4ab3e5df690c6fdb5ddb04c458756a4cd7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589861"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327757"
 ---
 # <a name="consuming-generics-ccli"></a>Consumir genéricos (C++/CLI)
 
-Genéricos creados en un lenguaje .NET se pueden usar en otros lenguajes. NET. A diferencia de las plantillas, un genérico en un ensamblado compilado sigue siendo genérico. Por lo tanto, uno puede crear instancias del tipo genérico en un ensamblado diferente e incluso en un idioma distinto del ensamblado en el que se definió el tipo genérico.
+Genéricos creados en un lenguaje .NET (o UWP) pueden usarse en otros lenguajes. A diferencia de las plantillas, un genérico en un ensamblado compilado sigue siendo genérico. Por lo tanto, uno puede crear instancias del tipo genérico en un ensamblado diferente e incluso en un idioma distinto del ensamblado en el que se definió el tipo genérico.
 
 ## <a name="example"></a>Ejemplo
 
