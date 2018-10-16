@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9af035e65e383c8027c8c19df02e18c298f625e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ea24e45c26abe418023d4f065117928bb17ae2b
+ms.sourcegitcommit: 3f3f1d687e109b63399e14e2c8f4404787bdfae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401053"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336540"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -103,11 +103,11 @@ El **lround** y **llround** funciones devuelven más cercano **largo** o **largo
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|+ **QNAN**, **IND**|ninguna|**_DOMINIO**|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **lround** o **llround** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **lround** y **llround** siempre toman y devuelven un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **lround** o **llround** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **lround** y **llround** siempre toman y devuelven un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -121,7 +121,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ```C
 // crt_lround.c
-// Build with: cl /W3 /Tc crt_lround.c
+// Build with: cl /W4 /Tc crt_lround.c
 // This example displays the rounded results of
 // the floating-point values 2.499999, -2.499999,
 // 2.8, -2.8, 3.5 and -3.5.
@@ -133,7 +133,7 @@ int main( void )
 {
    double x = 2.499999;
    float y = 2.8f;
-   long double z = 3.5;
+   long double z = 3.5L;
 
    printf("lround(%f) is %d\n", x, lround(x));
    printf("lround(%f) is %d\n", -x, lround(-x));
@@ -149,8 +149,8 @@ lround(2.499999) is 2
 lround(-2.499999) is -2
 lroundf(2.800000) is 3
 lroundf(-2.800000) is -3
-lroundl(2.500000) is 4
-lroundl(-2.500000) is -4
+lroundl(3.500000) is 4
+lroundl(-3.500000) is -4
 ```
 
 ## <a name="see-also"></a>Vea también
