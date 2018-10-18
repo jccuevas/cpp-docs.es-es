@@ -1,7 +1,7 @@
 ---
 title: Implementar un consumidor sencillo | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b407af3e6c105bdbb2f8d91aa9d854e6d877592c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162300"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410699"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementar un consumidor sencillo
 
@@ -211,75 +211,6 @@ Los pasos anteriores proporcionan compatibilidad con marcadores y un objeto de m
     ```  
   
 Para obtener más información acerca de los marcadores, vea [utilizar marcadores](../../data/oledb/using-bookmarks.md). También se muestran ejemplos de marcadores en [actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md).  
-  
-## <a name="adding-xml-support-to-the-consumer"></a>Agregar compatibilidad con XML al consumidor  
-
-Como se describe en [acceso a los datos XML](../../data/oledb/accessing-xml-data.md), hay dos maneras de recuperar datos XML desde un origen de datos: usar [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o mediante [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Este ejemplo se utiliza `CStreamRowset`, que es más eficaz, pero requiere que tenga que se ejecutan en el equipo donde se ejecute esta aplicación de ejemplo de SQL Server 2000.  
-  
-### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Para modificar la clase de comando que herede de CStreamRowset  
-  
-1. En la aplicación de consumidor que creó anteriormente, cambie su `CCommand` declaración para especificar `CStreamRowset` como el conjunto de filas de la clase como sigue:  
-  
-    ```cpp  
-    class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
-    ```  
-  
-### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Para modificar el código principal para recuperar y consultar los datos XML  
-  
-1. En el archivo MyCons.cpp desde la aplicación de consola que creó anteriormente, cambie el código principal para que quede como sigue:  
-  
-    ```cpp  
-    ///////////////////////////////////////////////////////////////////////  
-    // MyCons.cpp : Defines the entry point for the console application.  
-    //  
-  
-    #include "stdafx.h"  
-    #include "Products.h"   
-    #include <iostream>  
-    #include <fstream>  
-    using namespace std;  
-  
-    int _tmain(int argc, _TCHAR* argv[])  
-    {  
-       HRESULT hr = CoInitialize(NULL);  
-  
-       // Instantiate rowset  
-       CProducts rs;  
-  
-       // Add variable declarations for the Read method to handle sequential stream data  
-       CHAR buffer[1001];  // Pointer to buffer into which data stream is read  
-       ULONG cbRead;       // Actual number of bytes read from the data stream  
-  
-       hr = rs.OpenAll();  
-  
-       // Open file output.txt for writing in overwrite mode  
-       ofstream outfile( "C:\\output.txt", ios::out );  
-  
-       if (!outfile)      // Test for invalid file  
-          return -1;  
-  
-       // The following loop reads 1000 bytes of the data stream at a time   
-       // until it reaches the end of the data stream  
-       for (;;)  
-       {  
-          // Read sequential stream data into buffer  
-          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
-          if (FAILED (hr))  
-             break;  
-          // Output buffer to file  
-          buffer[cbRead] = 0;  
-          outfile << buffer;  
-          // Test for end of data stream  
-          if (cbRead < 1000)  
-             break;  
-       }  
-  
-       rs.CloseAll();  
-       CoUninitialize();  
-  
-       return 0;  
-    }  
-    ```  
   
 ## <a name="see-also"></a>Vea también  
 
