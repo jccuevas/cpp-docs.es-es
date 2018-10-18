@@ -1,7 +1,7 @@
 ---
 title: Usar ensamblados comprobables con SQL Server (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382224"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410712"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizar ensamblados comprobables con SQL Server (C++/CLI)
 
@@ -32,9 +32,10 @@ SQL Server proporciona extensiones a Transact-SQL (T-SQL) para que pueda instala
 
 - Modo no restringido: ejecutar código bajo su propia responsabilidad; código no tiene que ser de tipos comprobable.
 
-- Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe.
+- Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe. 
 
-Modo seguro requiere que los ensamblados ejecutados tengan seguridad de tipos comprobable.
+> [!IMPORTANT]
+> En desuso de Visual Studio 2015 y Visual Studio 2017 no admite la **/CLR: pure** y **/CLR: safe** creación de proyectos que se pueda comprobar. Si necesita código comprobable, se recomienda que trasladar el código en C#.
 
 Para crear y cargar un ensamblado comprobable en SQL Server, use los comandos CREATE ASSEMBLY y DROP ASSEMBLY de Transact-SQL como sigue:
 
@@ -88,5 +89,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: migrar a/CLR: safe (C++ / c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
+
 [Clases y structs](../cpp/classes-and-structs-cpp.md)

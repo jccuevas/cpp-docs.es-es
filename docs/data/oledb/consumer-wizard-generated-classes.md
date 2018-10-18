@@ -1,7 +1,7 @@
 ---
 title: Clases generadas por el Asistente para consumidores | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/15/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,22 +21,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106186"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410778"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Clases generadas por el Asistente para consumidores
 
-Cuando utiliza el Asistente para consumidores OLE DB ATL para generar un consumidor, tiene la opción de utilizar plantillas OLE DB o atributos OLE DB. En ambos casos, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando contiene código para abrir el origen de datos y el conjunto de filas especificado en el asistente. La clase de registro de usuario contiene un mapa de columnas para la tabla de base de datos seleccionada. Sin embargo, el código generado es distinto en cada caso:  
+Cuando se usa el **el Asistente para consumidores OLE DB ATL** para generar un consumidor, tiene la opción de utilizar plantillas OLE DB o atributos OLE DB. En ambos casos, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando contiene código para abrir el origen de datos y el conjunto de filas especificado en el asistente. La clase de registro de usuario contiene un mapa de columnas para la tabla de base de datos seleccionada. Sin embargo, el código generado es distinto en cada caso:  
   
-- Si selecciona un consumidor con plantilla, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando tendrá el nombre que escriba en el cuadro Clase del asistente (por ejemplo, `CProducts`) y la clase de registro de usuario tendrá un nombre con el formato "*ClassName*Accessor" (por ejemplo, `CProductsAccessor`). Ambas clases se colocan en el archivo de encabezado del consumidor.  
+- Si selecciona un consumidor con plantilla, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando tendrá el nombre que escriba en el **clase** cuadro en el Asistente (por ejemplo, `CProducts`), y la clase de registro de usuario tendrá un nombre con el formato "*ClassName*descriptor de acceso" (por ejemplo, `CProductsAccessor`). Ambas clases se colocan en el archivo de encabezado del consumidor.  
   
 - Si selecciona un consumidor con atributos, la clase de registro de usuario tendrá un nombre con el formato "_*ClassName*Accessor" y se insertará. Por tanto, solo podrá ver la clase de comando en el editor de texto; la clase de registro de usuario solo se puede ver como código insertado. Para obtener información acerca de cómo ver código insertado, vea [Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).  
   
-Los ejemplos siguientes usan una clase de comando creada en la tabla Products de la base de datos Northwind para mostrar el código de consumidor generado por el asistente para la clase de comando y la clase de registro de usuario.  
+Los ejemplos siguientes usan una clase de comando creada en el `Products` tabla de la `Northwind` base de datos para mostrar el código de consumidor generado por el Asistente para la clase de comando y la clase de registro de usuario.  
   
 ## <a name="templated-user-record-classes"></a>Clases de registro de usuario con plantilla  
 
@@ -47,10 +47,10 @@ Si crea un consumidor OLE DB mediante las plantillas OLE DB (en lugar de los atr
 La primera parte de la clase de registro de usuario incluye las declaraciones de los miembros de datos y los miembros de datos de estado y longitud de cada columna enlazada a datos. Para obtener información acerca de estos miembros de datos, consulte [Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 > [!NOTE]
->  Si modifica la clase de registro de usuario o escribe su propio consumidor, las variables de datos deben preceder a las variables de estado y longitud.  
+> Si modifica la clase de registro de usuario o escribe su propio consumidor, las variables de datos deben preceder a las variables de estado y longitud.  
   
 > [!NOTE]
->  El Asistente para consumidores OLE DB ATL usa el `DB_NUMERIC` tipo para enlazar tipos de datos numéricos. Anteriormente, usaba `DBTYPE_VARNUMERIC` (cuyo formato se describe mediante el `DB_VARNUMERIC` escriba; vea Oledb.h). Si no utiliza el Asistente para crear consumidores, se recomienda que utilice `DB_NUMERIC`.  
+> El Asistente para consumidores OLE DB ATL usa el `DB_NUMERIC` tipo para enlazar tipos de datos numéricos. Anteriormente, usaba `DBTYPE_VARNUMERIC` (cuyo formato se describe mediante el `DB_VARNUMERIC` escriba; vea Oledb.h). Si no utiliza el Asistente para crear consumidores, se recomienda que utilice `DB_NUMERIC`.  
   
 ```cpp  
 // Products.H : Declaration of the CProducts class  
@@ -159,7 +159,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
 ## <a name="attribute-injected-user-record-classes"></a>Clases de registro de usuario con atributos  
 
-Si crea un consumidor OLE DB mediante los atributos de base de datos ([db_command](../../windows/db-command.md) o [db_table](../../windows/db-table.md)), los atributos insertan una clase de registro de usuario cuyo nombre tiene el formato "_*ClassName*Accessor". Por ejemplo, si la clase de comando se llama `COrders`, la clase de registro de usuario será `_COrdersAccessor`. Aunque la clase de registro de usuario aparezca en la vista de clases, al hacer doble clic en esta se desplaza a la clase de comando o de tabla en el archivo de encabezado en su lugar. En estos casos, solo se puede ver la declaración real de la clase de registro de usuario mediante la visualización del código con atributos.  
+Si crea un consumidor OLE DB mediante los atributos de base de datos ([db_command](../../windows/db-command.md) o [db_table](../../windows/db-table.md)), los atributos insertan una clase de registro de usuario cuyo nombre tiene el formato "_*ClassName*Accessor". Por ejemplo, si la clase de comando se llama `COrders`, la clase de registro de usuario será `_COrdersAccessor`. Aunque la clase de registro de usuario aparezca en **vista de clases**, doble clic en él se desplaza a la clase de comando o una tabla en el archivo de encabezado en su lugar. En estos casos, solo se puede ver la declaración real de la clase de registro de usuario mediante la visualización del código con atributos.  
   
 Podría haber complicaciones si se agregan o anulan métodos en consumidores con atributos. Por ejemplo, podría agregar un constructor `_COrdersAccessor` a la declaración `COrders` , pero tenga en cuenta que en realidad se agrega un constructor a la clase `COrdersAccessor` insertada. Dicho constructor puede inicializar las columnas o los parámetros, pero no se puede crear a un constructor de copias de este modo, ya que no se puede crear instancias directamente del objeto `COrdersAccessor` . Si necesita un constructor (u otro método) directamente en la clase `COrders` , se recomienda definir una clase nueva derivada de `COrders` y agregarle los métodos necesarios.  
   
