@@ -1,7 +1,7 @@
 ---
 title: Captura de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7aaff3ccd2756ecfbac1cf745aaac74b76a91f9
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 4f0467d322242bb222e5365b45a57e1aa2fe2943
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859957"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807476"
 ---
 # <a name="fetching-data"></a>Obtener datos
 
-Después de abrir el origen de datos, sesión y los objetos de conjunto de filas, puede capturar datos. Según el tipo de descriptor de acceso que usa, es posible que deba enlazar las columnas.
+Después de abrir el origen de datos, sesión y los objetos de conjunto de filas, puede capturar datos. Según el tipo de descriptor de acceso que se usa, es posible que deba enlazar las columnas.
 
-### <a name="to-fetch-data"></a>Para capturar los datos
+## <a name="to-fetch-data"></a>Para capturar los datos
 
 1. Abra el conjunto de filas mediante el correspondiente **abierto** comando.
 
-1. Si usas `CManualAccessor`, enlazar las columnas de salida si aún no lo ha hecho. Para enlazar las columnas, llame a `GetColumnInfo`y, a continuación, cree un descriptor de acceso con los enlaces, tal como se muestra en el ejemplo siguiente:
+1. Si usa `CManualAccessor`, enlazar las columnas de salida si aún no lo ha hecho. En el siguiente ejemplo se toma de la [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) ejemplo. Para enlazar las columnas, llame a `GetColumnInfo`y, a continuación, cree un descriptor de acceso con los enlaces, tal como se muestra en el ejemplo siguiente:
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -50,7 +50,7 @@ Después de abrir el origen de datos, sesión y los objetos de conjunto de filas
     rs.Bind();
     ```
 
-1. Escribir un `while` bucle para recuperar los datos. En el bucle, llame a `MoveNext` para avanzar el cursor y probar el valor devuelto de S_OK, como se muestra en el ejemplo siguiente:
+1. Escribir un **mientras** bucle para recuperar los datos. En el bucle, llame a `MoveNext` para avanzar el cursor y probar el valor devuelto de S_OK, como se muestra en el ejemplo siguiente:
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -60,7 +60,7 @@ Después de abrir el origen de datos, sesión y los objetos de conjunto de filas
     }
     ```
 
-1. Dentro de la `while` bucle, se pueden recuperar los datos según el tipo de descriptor de acceso.
+1. Dentro de la **mientras** bucle, se pueden recuperar los datos según el tipo de descriptor de acceso.
 
    - Si usas el [CAccessor](../../data/oledb/caccessor-class.md) (clase), debe tener un registro de usuario que contiene los miembros de datos. Puede tener acceso a los datos de uso de esos miembros de datos, como se muestra en el ejemplo siguiente:
 

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434185"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808984"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan (clase)
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dateSpan*  
+*dateSpan*<br/>
 `COleDateTimeSpan` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -154,7 +154,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 El número de días que se copiará en el nuevo `COleDateTimeSpan` objeto.
 
 *lDays*, *nHours*, *nMins*, *nSecs*  
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pFormat*  
+*pFormat*<br/>
 Cadena de un formato similar a la `printf` cadena de formato. Códigos de formato, precedidos por un porcentaje (`%`) inicie sesión, se reemplazan por la correspondiente `COleDateTimeSpan` componente. Otros caracteres en la cadena de formato se copian sin cambios a la cadena devuelta. El valor y el significado de los códigos de formato para `Format` se enumeran a continuación:
 
 - **%H** horas del día actual
@@ -204,7 +204,7 @@ Los códigos de formato de cuatro enumerados anteriormente son los códigos úni
 
 -
 
-*nID*  
+*nID*<br/>
 El identificador de recurso para la cadena de formato de control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*status*  
+*status*<br/>
 El nuevo valor de estado para esta `COleDateTimeSpan` objeto.
 
 ### <a name="remarks"></a>Comentarios

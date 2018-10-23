@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f9e0e273df1221801a9b761cd7f45200e0b50c0
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 4a17ff7e6e78b21267b71ba495ba10a98e29cfe7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895089"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808861"
 ---
 # <a name="output-parameters"></a>Parámetros de salida
 
-Llamar a un procedimiento almacenado es similar a invocar un comando SQL. La principal diferencia es que los procedimientos almacenados, utilizan parámetros de salida (o "parámetros de salida") y valores devuelven.
+Llamar a un procedimiento almacenado es similar a la ejecución de un comando SQL. La principal diferencia es que los procedimientos almacenados, utilizan parámetros de salida (o "parámetros de salida") y valores devuelven.
 
 En el siguiente procedimiento almacenado, la primera '? 'es el valor devuelto (phone) y el segundo'?' es el parámetro de entrada (nombre):
 
@@ -64,7 +64,7 @@ as
 return 0
 ```  
 
-El \@parámetro de salida _rowcount informa de cuántas filas se han devuelto realmente desde la tabla de prueba. Sin embargo, este procedimiento almacenado limita el número de filas a un máximo de 50. Por ejemplo, si hay 100 filas en la prueba, el recuento de filas sería 50 (porque este código recupera solo las primeras 50 filas). Si sólo hay 30 filas en la tabla, el recuento de filas sería 30. Debe llamar a `Close` o `CloseAll` para rellenar el parámetro de salida antes de recuperar su valor.
+El \@parámetro de salida _rowcount informa de cuántas filas se han devuelto desde la tabla de prueba. Sin embargo, este procedimiento almacenado limita el número de filas en 50. Por ejemplo, si hay 100 filas en la prueba, el recuento de filas sería 50 (porque este código recupera solo las primeras 50 filas). Si sólo hay 30 filas en la tabla, el recuento de filas sería 30. No olvide llamar a `Close` o `CloseAll` para rellenar el parámetro de salida antes de recuperar su valor.
 
 ## <a name="see-also"></a>Vea también
 

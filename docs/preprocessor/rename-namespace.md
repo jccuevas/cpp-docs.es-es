@@ -1,7 +1,7 @@
 ---
 title: rename_namespace | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 966c6dda7e5e0bd28e78f37967397c3b64e4e55c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411864"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808477"
 ---
 # <a name="renamenamespace"></a>rename_namespace
-**Específicos de C++**  
-  
-Cambia el espacio de nombres que incluye el contenido de la biblioteca de tipos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-rename_namespace("NewName")  
-```  
-  
-### <a name="parameters"></a>Parámetros  
-*NewName*  
-Nuevo nombre del espacio de nombres.  
-  
-## <a name="remarks"></a>Comentarios  
- 
-Toma un único argumento, *NewName*, que especifica el nuevo nombre para el espacio de nombres.  
-  
-Para quitar el espacio de nombres, use el [no_namespace](../preprocessor/no-namespace.md) atributo en su lugar.  
-  
-**FIN de específicos de C++**  
-  
-## <a name="see-also"></a>Vea también  
- 
+
+**Específicos de C++**
+
+Cambia el espacio de nombres que incluye el contenido de la biblioteca de tipos.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+rename_namespace("NewName")
+```
+
+### <a name="parameters"></a>Parámetros
+
+*NewName*<br/>
+Nuevo nombre del espacio de nombres.
+
+## <a name="remarks"></a>Comentarios
+
+Toma un único argumento, *NewName*, que especifica el nuevo nombre para el espacio de nombres.
+
+Para quitar el espacio de nombres, use el [no_namespace](../preprocessor/no-namespace.md) atributo en su lugar.
+
+**FIN de específicos de C++**
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

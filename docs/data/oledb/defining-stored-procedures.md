@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 79899bb4ff2dada8f459a6c25499be25d078353e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 769f2bf2c0ef6c2c92b4c0468569e91d399cea59
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105380"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808451"
 ---
 # <a name="defining-stored-procedures"></a>Definir procedimientos almacenados
 
 Antes de llamar a un procedimiento almacenado, primero debe definir, mediante el [DEFINE_COMMAND](../../data/oledb/define-command.md) macro. Al definir el comando, denotar los parámetros con un signo de interrogación (?) como marcador de parámetro:  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
-Tenga en cuenta que la sintaxis (el uso de llaves etc.) que se usan en los ejemplos de código en este tema es específica de SQL Server. La sintaxis que usan en los procedimientos almacenados puede variar según el proveedor que utilice.  
+La sintaxis (el uso de llaves etc.) utilizada en los ejemplos de código de este tema es específica de SQL Server. La sintaxis que usan en los procedimientos almacenados puede variar según el proveedor que utilice.  
   
 A continuación, en la asignación de parámetros, especifique los parámetros que utilizan el comando, enumerar los parámetros en el orden que aparecen en el comando:  
   
-```  
+```cpp  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
    SET_PARAM_TYPE(DBPARAMIO_INPUT)  
    COLUMN_ENTRY(1, m_Name)   // name corresponds to first '?' param  
@@ -46,9 +46,9 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
-El ejemplo anterior define un procedimiento almacenado conforme avanza. Normalmente, para una reutilización eficiente de código, una base de datos contiene un conjunto de procedimientos almacenados predefinidos con nombres como "Ventas por año" o "dt_adduserobject". Puede ver sus definiciones mediante el Administrador corporativo de SQL Server. Como se indica a continuación llamarlos (la colocación de la '?' parámetros depende de la interfaz del procedimiento almacenado):  
+El ejemplo anterior define un procedimiento almacenado conforme avanza. Normalmente, para una reutilización eficiente de código, una base de datos contiene un conjunto de procedimientos almacenados predefinidos con nombres como "Ventas por año" o "dt_adduserobject". Puede ver sus definiciones mediante el Administrador corporativo de SQL Server. Como se indica a continuación llamarlos (la colocación de la '?' parámetros dependen de la interfaz del procedimiento almacenado):  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  

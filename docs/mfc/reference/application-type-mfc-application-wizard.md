@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434383"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808776"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Tipo de aplicación, Asistente para aplicaciones MFC
 
@@ -58,7 +58,7 @@ Utilice esta página de la [MFC Application Wizard](../../mfc/reference/mfc-appl
 
 - **Idioma de recurso**
 
-   Establece el idioma de los recursos. La lista muestra los idiomas disponibles en el sistema, como se instalan con Visual Studio. Si desea seleccionar un idioma distinto del idioma del sistema, ya debe instalarse la carpeta de plantilla adecuada para dicho idioma. Para obtener más información acerca de cómo instalar recursos de idiomas distintos de los valores predeterminados disponibles en la **idioma de recurso** lista, vea [compatibilidad del asistente con otros lenguajes](../../ide/wizard-support-for-other-languages.md).
+   Establece el idioma de los recursos. La lista muestra los idiomas disponibles en el sistema, como se instalan con Visual Studio. Si desea seleccionar un idioma distinto del idioma del sistema, ya debe instalarse la carpeta de plantilla adecuada para dicho idioma.
 
    El idioma que seleccione se refleja en el **cadenas traducidas** opción de la [cadenas de plantillas de documento, el Asistente para aplicaciones MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md) página del asistente.
 

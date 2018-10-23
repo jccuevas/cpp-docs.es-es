@@ -1,7 +1,7 @@
 ---
 title: 'TN041: Migración de MFC/OLE1 a MFC / OLE 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377063"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809023"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: Migración de MFC/OLE1 a MFC/OLE 2
 
@@ -301,7 +301,7 @@ En este momento, OCLIENT es una aplicación de contenedor OLE funcional. Es posi
 
 Una de las características más interesantes de OLE es la activación en contexto (o "Edición Visual"). Esta característica permite que la aplicación de servidor tomar el control de las partes de la interfaz de usuario del contenedor que proporciona una interfaz de edición más sencilla para el usuario. Para implementar la activación en contexto a OCLIENT, algunos recursos especiales deben agregarse, así como código adicional. AppWizard normalmente proporciona estos recursos y el código, de hecho, gran parte de este código se toman prestado directamente en una aplicación mediante AppWizard fresca compatible con el "Contenedor".
 
-En primer lugar, es necesario agregar un recurso de menú que se usará cuando hay un elemento que está activo en contexto. Puede crear este recurso de menú adicionales en Visual C++ al copiar el recurso IDR_OCLITYPE y eliminar todas excepto los elementos emergentes de archivo y la ventana. Se insertan dos barras separadoras entre los elementos emergentes de archivo y la ventana para indicar la separación de los grupos (debe ser similar a: archivo &#124; &#124; ventana). Para obtener más información sobre lo que significan estos separadores y cómo se combinan los menús de servidor y un contenedor, vea "Menús y recursos: combinación de menús" en *clases OLE 2*.
+En primer lugar, es necesario agregar un recurso de menú que se usará cuando hay un elemento que está activo en contexto. Puede crear este recurso de menú adicionales en Visual C++ al copiar el recurso IDR_OCLITYPE y eliminar todas excepto los elementos emergentes de archivo y la ventana. Se insertan dos barras separadoras entre los elementos emergentes de archivo y la ventana para indicar la separación de los grupos (debe ser similar a: archivo &#124; &#124; ventana). Para obtener más información sobre lo que significan estos separadores y cómo se combinan los menús de servidor y un contenedor, consulte [menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md).
 
 Una vez que estos menús creados, deberá permitir que el marco de trabajo informara de ello. Esto se realiza mediante una llamada a `CDocTemplate::SetContainerInfo` para la plantilla de documento antes de agregarlo a la lista de plantillas de documento en InitInstance. El nuevo código para registrar la plantilla de documento tiene este aspecto:
 
@@ -618,7 +618,7 @@ Hay muchos más errores en svritem.cpp que no se han solucionado. No son errores
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` ya no es compatible con la marca 'bIncludeNative'. Siempre se copian los datos nativos (es decir, los datos escritos por la función Serialize del elemento servidor), para quitar el primer parámetro. Además, `CopyToClipboard` se iniciará una excepción cuando se produce un error en lugar de devolver FALSE. Cambie el código para CServerView::OnEditCopy como sigue:
+`COleServerItem::CopyToClipboard` ya no es compatible con la `bIncludeNative` marca. Siempre se copian los datos nativos (es decir, los datos escritos por la función Serialize del elemento servidor), para quitar el primer parámetro. Además, `CopyToClipboard` se iniciará una excepción cuando se produce un error en lugar de devolver FALSE. Cambie el código para CServerView::OnEditCopy como sigue:
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ Para agregar "Edición Visual" (o la activación en contexto) para esta aplicaci
 
 - Deberá indicar al marco sobre estos recursos especiales y las clases.
 
-Es fácil crear el recurso de menú. Ejecución de Visual C++, copiar el recurso de menú IDR_HIERSVRTYPE a un recurso de menú denominado IDR_HIERSVRTYPE_SRVR_IP. Modifique el menú para que se mantienen solo la edición y ayudarle a menús contextuales. Agregar dos separadores al menú entre los menús editar y obtener ayuda (debería parecerse a: editar &#124; &#124; ayuda). Para obtener más información sobre lo que significan estos separadores y cómo se combinan los menús de servidor y un contenedor, vea "Los menús y recursos: combinación de menús" en *clases OLE 2*.
+Es fácil crear el recurso de menú. Ejecución de Visual C++, copiar el recurso de menú IDR_HIERSVRTYPE a un recurso de menú denominado IDR_HIERSVRTYPE_SRVR_IP. Modifique el menú para que se mantienen solo la edición y ayudarle a menús contextuales. Agregar dos separadores al menú entre los menús editar y obtener ayuda (debería parecerse a: editar &#124; &#124; ayuda). Para obtener más información sobre lo que significan estos separadores y cómo se combinan los menús de servidor y un contenedor, consulte [menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md).
 
 El mapa de bits de la barra de herramientas del subconjunto se puede crear fácilmente mediante la copia de una nueva aplicación AppWizard genera con una opción "Servidor" activada. Este mapa de bits, a continuación, puede importarse en Visual C++. Asegúrese de dar el mapa de bits en un Id. de IDR_HIERSVRTYPE_SRVR_IP.
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Tenga en cuenta la referencia a *`AfxGetApp()->m_pMainWnd*`. Cuando el servidor está activado en contexto, tiene una ventana principal y se establece m_pMainWnd, pero resulta suele pasar desapercibido. Además, esta ventana se refiere a la *principal* ventana de la aplicación, abra o ejecutarse de forma independiente de la ventana de marco MDI que aparece cuando el servidor está totalmente. No hace referencia a la ventana de marco activo, que cuando local activa es un marco de ventana deriva `COleIPFrameWnd`. Para obtener la ventana activa correcta incluso cuando la edición en contexto, esta versión de MFC se agrega una nueva función, `AfxGetMainWnd`. Por lo general, debe usar esta función en lugar de *`AfxGetApp()->m_pMainWnd*`. Este código debe cambiar como sigue:
+Tenga en cuenta la referencia a `AfxGetApp()->m_pMainWnd`. Cuando el servidor está activado en contexto, tiene una ventana principal y se establece m_pMainWnd, pero resulta suele pasar desapercibido. Además, esta ventana se refiere a la *principal* ventana de la aplicación, abra o ejecutarse de forma independiente de la ventana de marco MDI que aparece cuando el servidor está totalmente. No hace referencia a la ventana de marco activo, que cuando local activa es un marco de ventana deriva `COleIPFrameWnd`. Para obtener la ventana activa correcta incluso cuando la edición en contexto, esta versión de MFC se agrega una nueva función, `AfxGetMainWnd`. Por lo general, debe usar esta función en lugar de `AfxGetApp()->m_pMainWnd`. Este código debe cambiar como sigue:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

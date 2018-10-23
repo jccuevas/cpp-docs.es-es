@@ -1,7 +1,7 @@
 ---
 title: CSimpleStringT (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434666"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809153"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT (clase)
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Parámetros
 
-*BaseType*  
+*BaseType*<br/>
 El tipo de carácter de la clase string. Puede ser uno de los siguientes:
 
 - **char** (para las cadenas de caracteres ANSI).
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*strSrc*  
+*strSrc*<br/>
 La `CSimpleStringT` objeto se va a anexar.
 
-*pszSrc*  
+*pszSrc*<br/>
 Un puntero a una cadena que contiene los caracteres que se va a anexar.
 
-*nLength*  
+*nLength*<br/>
 Número de caracteres que se van a anexar.
 
 ### <a name="remarks"></a>Comentarios
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*CH*  
+*CH*<br/>
 El carácter que se debe anexar
 
 ### <a name="remarks"></a>Comentarios
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>Parámetros
 
-*pchDest*  
+*pchDest*<br/>
 Un puntero a una cadena de caracteres.
 
-*pchSrc*  
+*pchSrc*<br/>
 Un puntero a una cadena que contiene los caracteres que se va a copiar.
 
-*nChars*  
+*nChars*<br/>
 El número de *pchSrc* caracteres que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>Parámetros
 
-*pchDest*  
+*pchDest*<br/>
 Un puntero a una cadena de caracteres.
 
-*pchSrc*  
+*pchSrc*<br/>
 Un puntero a una cadena que contiene los caracteres que se va a copiar.
 
-*nChars*  
+*nChars*<br/>
 El número de *pchSrc* caracteres que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>Parámetros
 
-*strSrc*  
+*strSrc*<br/>
 Existente `CSimpleStringT` objeto que se copiará en esto `CSimpleStringT` objeto.
 
-*pchSrc*  
+*pchSrc*<br/>
 Un puntero a una matriz de caracteres de longitud *nLength*, no terminado en null.
 
-*pszSrc*  
+*pszSrc*<br/>
 Una cadena terminada en null que se copiará en esto `CSimpleStringT` objeto.
 
-*nLength*  
+*nLength*<br/>
 Un recuento del número de caracteres en `pch`.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Un puntero para el Administrador de memoria de la `CSimpleStringT` objeto. Para obtener más información acerca de `IAtlStringMgr` y administración de memoria para `CSimpleStringT`, consulte [administración de memoria y CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Comentarios
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>Parámetros
 
-*iChar*  
+*iChar*<br/>
 Índice de base cero del carácter en el `CSimpleStringT` objeto. El *iChar* parámetro debe ser mayor o igual que 0 y menor que el valor devuelto por [GetLength](#getlength). En caso contrario, `GetAt` generará una excepción.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>Parámetros
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 El número mínimo de caracteres que puede contener el búfer de caracteres. Este valor no incluye espacio para un terminador nulo.
 
 Si *nMinBufferLength* es mayor que la longitud del búfer actual, `GetBuffer` destruye el búfer actual, lo reemplaza con un búfer del tamaño solicitado y restablece el recuento de referencias de objeto a cero. Si previamente ha llamado [LockBuffer](#lockbuffer) en este búfer, se pierde el bloqueo del búfer.
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*nLength*  
+*nLength*<br/>
 El tamaño exacto de la `CSimpleStringT` búfer de caracteres en caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>Parámetros
 
-*iChar*  
+*iChar*<br/>
 Índice de base cero de un carácter en la cadena.
 
 ### <a name="remarks"></a>Comentarios
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iChar*  
+*iChar*<br/>
 Índice de base cero de un carácter en la cadena.
 
 ### <a name="remarks"></a>Comentarios
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*pszSrc*  
+*pszSrc*<br/>
 Un puntero a una cadena terminada en null.
 
-*strSrc*  
+*strSrc*<br/>
 Un puntero a una existente `CSimpleStringT` objeto.
 
-*CH*  
+*CH*<br/>
 Carácter que se va a anexar.
 
 ### <a name="remarks"></a>Comentarios
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*pszSrc*  
+*pszSrc*<br/>
 Un puntero a una cadena terminada en null.
 
-*strSrc*  
+*strSrc*<br/>
 Un puntero a una existente `CSimpleStringT` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*nLength*  
+*nLength*<br/>
 El tamaño exacto de la `CSimpleStringT` búfer de caracteres en caracteres.
 
 ### <a name="remarks"></a>Comentarios
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*nNewLength*  
+*nNewLength*<br/>
 La nueva longitud de la cadena en caracteres, sin contar un terminador nulo. Si la cadena termina en null, Establece el valor predeterminado de-1 la `CSimpleStringT` tamaño a la longitud actual de la cadena.
 
 ### <a name="remarks"></a>Comentarios
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*nNewLength*  
+*nNewLength*<br/>
 La longitud de la cadena de liberarse
 
 ### <a name="remarks"></a>Comentarios
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*iChar*  
+*iChar*<br/>
 Índice de base cero del carácter en el `CSimpleStringT` objeto. El *iChar* parámetro debe ser mayor o igual que 0 y menor que el valor devuelto por [GetLength](#getlength).
 
-*CH*  
+*CH*<br/>
 El carácter de nueva.
 
 ### <a name="remarks"></a>Comentarios
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Un puntero para el nuevo administrador de memoria.
 
 ### <a name="remarks"></a>Comentarios
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*pszSrc*  
+*pszSrc*<br/>
 Un puntero a una cadena terminada en null.
 
-*nLength*  
+*nLength*<br/>
 Un recuento del número de caracteres en *pszSrc*.
 
 ### <a name="remarks"></a>Comentarios
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>Parámetros
 
-*psz*  
+*psz*<br/>
 Un puntero a una cadena terminada en null.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>Parámetros
 
-*nNewLength*  
+*nNewLength*<br/>
 La nueva longitud de la cadena.
 
 ### <a name="remarks"></a>Comentarios

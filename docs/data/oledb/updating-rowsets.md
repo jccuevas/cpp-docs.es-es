@@ -1,7 +1,7 @@
 ---
 title: Actualizar conjuntos de filas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: afe17f30a079e8af24b37b983f8c91d46431966e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083832"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808873"
 ---
 # <a name="updating-rowsets"></a>actualizar conjuntos de filas
 
-Una operación de base de datos muy básica es actualizar el almacén de datos, o escribir datos en este. En OLE DB, el mecanismo de actualización es sencillo: la aplicación de consumidor establece los valores de los miembros de datos enlazados y, después, escribe esos valores en el conjunto de filas; luego, el consumidor solicita que el proveedor actualice el almacén de datos.  
+Actualizar o escribir datos en el almacén de datos es una operación de base de datos básica. En OLE DB, el mecanismo de actualización es sencillo: la aplicación de consumidor establece los valores de los miembros de datos enlazados y, después, escribe esos valores en el conjunto de filas; luego, el consumidor solicita que el proveedor actualice el almacén de datos.  
   
-Los consumidores pueden realizar los siguientes tipos de actualizaciones en los datos del conjunto de filas: establecer los valores de columna dentro de una fila, insertar una fila y eliminar una fila. Para realizar estas operaciones, la clase de plantilla OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa la interfaz [IRowsetChange](/previous-versions/windows/desktop/ms715790) e invalida los métodos de interfaz siguientes:  
+Los consumidores pueden completar los siguientes tipos de actualizaciones en los datos del conjunto de filas: establecer los valores de columna dentro de una fila, insertar una fila y eliminar una fila. Para completar estas operaciones, la clase de plantilla OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa el [IRowsetChange](/previous-versions/windows/desktop/ms715790) interfaz e invalida los métodos de interfaz siguientes:  
   
-- [SetData](../../data/oledb/crowset-setdata.md) cambia los valores de columna de una fila de un conjunto de filas; es equivalente al comando UPDATE de SQL.  
+- [SetData](../../data/oledb/crowset-setdata.md) valores de columna de los cambios de una fila de un conjunto de filas; lo equivale al comando UPDATE de SQL.  
   
-- [Insertar](../../data/oledb/crowset-insert.md) inserta una fila en un conjunto de filas; es equivalente al comando INSERT de SQL.  
+- [Insertar](../../data/oledb/crowset-insert.md) inserta una fila en un conjunto de filas; lo equivale al comando INSERT de SQL.  
   
-- [Delete](../../data/oledb/crowset-delete.md) elimina una fila de un conjunto de filas; es equivalente al comando DELETE de SQL.  
+- [Eliminar](../../data/oledb/crowset-delete.md) elimina filas de un conjunto de filas; lo equivale al comando DELETE de SQL.  
   
 ## <a name="supporting-update-operations"></a>Admitir operaciones de actualización  
 
-Al crear un consumidor con el Asistente para consumidores OLE DB ATL, puede activar una o más de las tres casillas **Cambiar**, **Insertar**y **Eliminar**para que se admitan las operaciones de actualización. Si las activa, el asistente modifica el código correctamente para admitir el tipo de cambios elegido. Sin embargo, si no usa el asistente, debe establecer las siguientes propiedades del conjunto de filas en `VARIANT_TRUE` para admitir las actualizaciones:  
+Al crear un consumidor con el Asistente para consumidores OLE DB ATL, puede activar una o más de las tres casillas **Cambiar**, **Insertar**y **Eliminar**para que se admitan las operaciones de actualización. Si selecciona estas opciones, el asistente modifica el código de forma adecuada para admitir el tipo de cambios elegido. Sin embargo, si no utiliza el asistente, deberá establecer las siguientes propiedades del conjunto de filas `VARIANT_TRUE` para admitir las actualizaciones:  
   
 - `DBPROPVAL_UP_CHANGE` permite cambiar los valores de datos en una fila.  
   
@@ -56,11 +56,11 @@ ps.AddProperty(DBPROP_IRowsetChange, true)
 ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
 ```  
   
-Las operaciones de cambio, inserción o eliminación pueden fallar si no se puede escribir en una o más columnas. Modifique la asignación del cursor para corregirlo.  
+Las operaciones de eliminación, inserción o cambio pueden producir un error si una o varias columnas no es modificable. Modificar la asignación del cursor para corregir este problema.  
   
 ## <a name="setting-data-in-rows"></a>Establecer datos en filas  
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) establece los valores de datos en una o más columnas de la fila actual. El código siguiente establece los valores de los miembros de datos enlazados a las columnas "Name" y "Units in Stock" de la tabla Products y, después, llama a `SetData` para escribir dichos valores en la fila número 100 del conjunto de filas:  
+[CRowset::SetData](../../data/oledb/crowset-setdata.md) establece los valores de datos en una o más columnas de la fila actual. El código siguiente establece los valores de los miembros de datos enlazados a las columnas "Name" y "Units in Stock" de la tabla `Products` y, a continuación, llama a `SetData` para escribir esos valores en la fila número 100 del conjunto de filas:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -91,9 +91,9 @@ HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
   
 - **false** (valor predeterminado) especifica que la fila actual se incremente a la siguiente fila (en cuyo caso apunta a la fila insertada).  
   
-- **true** especifica que la fila actual debe permanecer donde está.  
+- **True** especifica que la fila actual permanecer donde está.  
   
-El código siguiente establece los valores de los miembros de datos enlazados a las columnas de la tabla Products y, a continuación, llama a `Insert` para insertar una nueva fila con dichos valores después de la fila número 100 del conjunto de filas. Se recomienda establecer todos los valores de columna para evitar datos no definidos en la nueva fila:  
+El código siguiente establece los valores de los miembros de datos enlazados a las columnas de la tabla `Products` y, a continuación, llama a `Insert` para insertar una nueva fila con dichos valores después de la fila número 100 del conjunto de filas. Se recomienda establecer todos los valores de columna para evitar datos no definidos en la nueva fila:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -171,17 +171,17 @@ A menos que se especifique lo contrario, las llamadas a la `SetData`, `Insert`, 
   
 - [CRowset:: UpdateAll](../../data/oledb/crowset-updateall.md) los cambios realizados en todas las filas desde la última recuperación de cambios pendientes transfiere o `Update` llamar en ella.  
   
-Tenga en cuenta que la actualización, tal y como la usan los métodos de actualización, tiene el significado específico de realizar cambios en el comando y no debe confundirse con el comando UPDATE de SQL (`SetData` es equivalente al comando UPDATE de SQL).  
+Actualización, ya que usa los métodos de actualización, tiene el significado específico de realizar cambios en el comando y no debe confundirse con el comando UPDATE de SQL (`SetData` es equivalente al comando UPDATE de SQL).  
   
-Las actualizaciones diferidas son útiles, por ejemplo, en situaciones como una serie de transacciones bancarias; si se cancela una transacción, puede deshacer el cambio, ya que la serie de cambios no se envía hasta que se confirma el último. Además, el proveedor puede agrupar los cambios en una llamada de red, que es más eficaz.  
+Actualizaciones diferidas son útiles, por ejemplo, en situaciones como una serie de transacciones bancarias; Si se cancela una transacción, puede deshacer el cambio, ya que no envíe la serie de cambios hasta una vez confirmada la última de ellas. Además, el proveedor puede agrupar los cambios en una llamada de red, que es más eficaz.  
   
-Para admitir actualizaciones diferidas, se debe establecer el `DBPROP_IRowsetChange` propiedad además de las propiedades descritas en "Admitir operaciones de actualización":  
+Para admitir actualizaciones diferidas, se debe establecer el `DBPROP_IRowsetChange` propiedad junto con las propiedades descritas en "Admitir operaciones de actualización":  
   
 ```cpp  
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);  
 ```  
   
-Cuando se llama a `Update` o `UpdateAll`, los métodos transfieren los cambios de la memoria caché local al almacén de datos y, después, borran la memoria caché local. Dado que la actualización transfiere los cambios solo de la fila actual, es importante que la aplicación realice un seguimiento de qué fila debe actualizar y cuándo actualizarla. En el ejemplo siguiente se muestra cómo actualizar dos filas consecutivas:  
+Cuando se llama a `Update` o `UpdateAll`, los métodos transfieren los cambios de la memoria caché local al almacén de datos y, después, borran la memoria caché local. Dado que la actualización transfiere cambios sólo en la fila actual, es importante que la aplicación realiza un seguimiento de qué fila debe actualizar y cuándo actualizarla. En el ejemplo siguiente se muestra cómo actualizar dos filas consecutivas:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -215,9 +215,9 @@ product.Update();                 // Update row 101 now
   
 Para asegurarse de que se transfieren los cambios pendientes, debe llamar a `Update` antes de pasar a otra fila. Sin embargo, si esta acción resulta tediosa o poco eficaz, por ejemplo, cuando la aplicación necesite actualizar cientos de filas, puede usar `UpdateAll` para actualizar todas las filas a la vez.  
   
-Por ejemplo, si la primera `Update` llamada estaba presente en el código anterior, la fila 100 se mantendría sin cambios, pero se cambiaría la fila 101. Después de ese punto, la aplicación tendría que llamar a `UpdateAll` o regresar a la fila 100 y llamar a `Update` para actualizar esa fila.  
+Por ejemplo, si la primera `Update` llamada estaba presente en el código anterior, la fila 100 se quedaría sin cambios, pero se cambiaría la fila 101. Después de ese punto, la aplicación tendría que llamar a `UpdateAll` o regresar a la fila 100 y llamar a `Update` para actualizar esa fila.  
   
-Por último, una de las principales razones para diferir los cambios es que se pueden deshacer. La llamada a [CRowset::Undo](../../data/oledb/crowset-undo.md) revierte el estado de la memoria caché de cambios local al estado del almacén de datos antes de aplicar los cambios pendientes. Es importante tener en cuenta que `Undo` no revierte hacer una copia del estado de la memoria caché local en un paso (el estado anterior al cambio más reciente); en su lugar, borra la memoria caché local para esa fila. Además, `Undo` afecta únicamente la fila actual.  
+Por último, una de las principales razones para diferir los cambios es que se pueden deshacer. La llamada a [CRowset::Undo](../../data/oledb/crowset-undo.md) revierte el estado de la memoria caché de cambios local al estado del almacén de datos antes de aplicar los cambios pendientes. Es importante tener en cuenta que `Undo` no pasan hacer una copia del estado de la memoria caché local en un paso (el estado anterior al cambio más reciente); en su lugar, borra la memoria caché local para esa fila. Además, `Undo` afecta únicamente la fila actual.  
   
 ## <a name="see-also"></a>Vea también  
 

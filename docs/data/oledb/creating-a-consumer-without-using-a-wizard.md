@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: cd8412ed280c0a256ea8acb7274da5d6238134fc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410738"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807802"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Crear un consumidor sin utilizar un asistente
 
@@ -67,7 +67,7 @@ Mediante programación, un consumidor normalmente realiza la siguiente secuencia
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Si lo desea, conjunto de filas propiedades mediante `CDBPropSet::AddProperty` y pasarlos como parámetro a `rs.Open`. Para obtener un ejemplo de cómo hacerlo, consulte **GetRowsetProperties** en [generadas métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Si lo desea, conjunto de filas propiedades mediante `CDBPropSet::AddProperty` y pasarlos como parámetro a `rs.Open`. Para obtener un ejemplo de cómo hacerlo, consulte `GetRowsetProperties` en [generadas métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Ahora puede usar el conjunto de filas para recuperar o manipular los datos.  
   
