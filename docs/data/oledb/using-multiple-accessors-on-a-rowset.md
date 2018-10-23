@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ab75c1a8b0c6addf41366c63f14305b68ce5bc5
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860698"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808464"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilizar varios descriptores de acceso en un conjunto de filas
 
@@ -35,9 +35,9 @@ Hay tres escenarios básicos en el que se deba usar varios descriptores de acces
 
    - Descriptor de acceso 1 contiene todas las columnas excepto la clave principal.
 
-- **Rendimiento.** En este escenario, una o varias columnas contienen una gran cantidad de datos, por ejemplo, gráficos, sonido, archivos o de vídeo. Cada vez que se pasa a una fila, probablemente no desea recuperar la columna con el archivo de datos de gran tamaño, porque si lo hace así una reducción de rendimiento de la aplicación.
+- **Rendimiento.** En este escenario, una o varias columnas tienen una gran cantidad de datos, por ejemplo, gráficos, sonido, archivos o de vídeo. Cada vez que se pasa a una fila, probablemente no desea recuperar la columna con el archivo de datos de gran tamaño, porque si lo hace así una reducción de rendimiento de la aplicación.
 
-   Puede configurar los descriptores de acceso independientes en el que el primer descriptor de acceso contiene todas las columnas excepto la gran cantidad de datos y recupera datos de estas columnas automáticamente; Este es el descriptor de acceso automáticamente. El segundo descriptor de acceso recupera solo la columna que contiene datos de gran tamaño, pero no recupera datos de esta columna automáticamente. Actualizar o recuperar los datos de gran tamaño a petición se pueden utilizar otros métodos.
+   Puede configurar los descriptores de acceso independientes en el que el primer descriptor de acceso contiene todas las columnas excepto la gran cantidad de datos y recupera datos de estas columnas automáticamente; el descriptor de acceso primera es la automática. El segundo descriptor de acceso recupera solo la columna que contiene datos de gran tamaño, pero no recupera los datos de esta columna automáticamente. Actualizar o recuperar los datos de gran tamaño a petición se pueden utilizar otros métodos.
 
    - Descriptor de acceso 0 es automático; Recupera todas las columnas excepto la gran cantidad de datos.
 
@@ -53,7 +53,7 @@ Normalmente crean los descriptores de acceso mediante la [BEGIN_ACCESSOR](../../
 
 - En un descriptor de acceso no automático, la recuperación no se produce hasta que se llame explícitamente a un método como `Update`, `Insert`, `Fetch`, o `Delete`. En los escenarios descritos anteriormente, es posible que no desea recuperar todas las columnas en cada movimiento. Puede colocar una o varias columnas en un descriptor de acceso independiente y hacer un descriptor de acceso no automáticas, como se muestra a continuación.
 
-El ejemplo siguiente utiliza varios descriptores de acceso para leer y escribir en la tabla de trabajos de la base de datos pubs de SQL Server. Este es el uso más común de varios descriptores de acceso; consulte el escenario de "varios conjuntos de filas de lectura/escritura" anterior.
+El ejemplo siguiente utiliza varios descriptores de acceso para leer y escribir en la tabla de trabajos de la base de datos pubs de SQL Server. En este ejemplo es el uso más común de varios descriptores de acceso; consulte el escenario de "varios conjuntos de filas de lectura/escritura" anterior.
 
 La clase de registro de usuario es como sigue. Configura dos descriptores de acceso: el descriptor de acceso 0 contiene solo la columna de clave principal (ID) y descriptor de acceso 1 contiene otras columnas.
 

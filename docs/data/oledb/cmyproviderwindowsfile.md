@@ -1,43 +1,45 @@
 ---
-title: CMyProviderWindowsFile | Microsoft Docs
+title: CCustomWindowsFile | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderwindowsfile
+- ccustomwindowsfile
 dev_langs:
 - C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
+- CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6f3badc08da7bd11e65c244c42c91ad37a584ca5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a87f8cc4d6581c253225fa038d0c8972e71fcff1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087271"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808802"
 ---
-# <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+# <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-El asistente crea una clase que contenga una fila de datos. en este caso, se llama `CMyProviderWindowsFile`. El siguiente código para `CMyProviderWindowsFile` es asistente que se genera y muestra todos los archivos en un directorio mediante la `WIN32_FIND_DATA` estructura. `CMyProviderWindowsFile` hereda el `WIN32_FIND_DATA` estructura:  
+El asistente crea una clase que contenga una fila de datos. en este caso, se llama `CCustomWindowsFile`. El siguiente código para `CCustomWindowsFile` es asistente que se genera y muestra todos los archivos en un directorio mediante la `WIN32_FIND_DATA` estructura. `CCustomWindowsFile` hereda el `WIN32_FIND_DATA` estructura:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
-class CMyProviderWindowsFile:   
+class CCustomWindowsFile:   
    public WIN32_FIND_DATA  
 {  
 public:  
-BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)  
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)  
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)  
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)  
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)  
@@ -47,13 +49,13 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
-`CMyProviderWindowsFile` se llama a la [clase de registro de usuario](../../data/oledb/user-record.md) porque también contiene un mapa que describe las columnas de conjunto de filas del proveedor. El mapa de columnas del proveedor contiene una entrada para cada campo del conjunto de filas mediante las macros PROVIDER_COLUMN_ENTRY. Las macros de especifican el nombre de columna ordinal y el desplazamiento a una entrada de la estructura. Las entradas de la columna de proveedor en el código anterior contienen desplazamientos a la `WIN32_FIND_DATA` estructura. Cuando el consumidor llama a `IRowset::GetData`, se transfieren los datos en un búfer contiguo. En lugar de realizar realizar aritmética de puntero, el mapa permite especificar a un miembro de datos.  
+`CCustomWindowsFile` se llama a la [clase de registro de usuario](../../data/oledb/user-record.md) porque también contiene un mapa que describe las columnas de conjunto de filas del proveedor. El mapa de columnas del proveedor contiene una entrada para cada campo del conjunto de filas mediante las macros PROVIDER_COLUMN_ENTRY. Las macros de especifican el nombre de columna ordinal y el desplazamiento a una entrada de la estructura. Las entradas de la columna de proveedor en el código anterior contienen desplazamientos a la `WIN32_FIND_DATA` estructura. Cuando el consumidor llama a `IRowset::GetData`, se transfieren los datos en un búfer contiguo. En lugar de realizar realizar aritmética de puntero, el mapa permite especificar a un miembro de datos.  
   
-El `CMyProviderRowset` clase también contiene el `Execute` método. `Execute` es lo que realmente lee los datos en el origen nativo. El código siguiente muestra el asistente generó `Execute` método. La función usa Win32 `FindFirstFile` y `FindNextFile` API para recuperar información acerca de los archivos en el directorio y colocarlos en las instancias de la `CMyProviderWindowsFile` clase.  
+El `CCustomRowset` clase también contiene el `Execute` método. `Execute` es lo que realmente lee los datos en el origen nativo. El código siguiente muestra el asistente generó `Execute` método. La función usa Win32 `FindFirstFile` y `FindNextFile` API para recuperar información acerca de los archivos en el directorio y colocarlos en las instancias de la `CCustomWindowsFile` clase.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
 HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)  
 {  
@@ -62,7 +64,7 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
    HANDLE hFile;  
    LPTSTR  szDir = (m_strCommandText == _T("")) ? _T("*.*") :  
        OLE2T(m_strCommandText);  
-   CMyProviderWindowsFile wf;  
+   CCustomWindowsFile wf;  
    hFile = FindFirstFile(szDir, &wf);  
    if (hFile == INVALID_HANDLE_VALUE)  
       return DB_E_ERRORSINCOMMAND;  

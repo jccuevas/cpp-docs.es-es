@@ -1,7 +1,7 @@
 ---
 title: no_registry | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8071fdf5e18542273dddfacecca913130e7bdea6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b5a3089f71deb4e75aa50b634de84516575d1d02
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381236"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807749"
 ---
 # <a name="noregistry"></a>no_registry
-**no_registry** indica al compilador que no busque en el registro bibliotecas de tipos importadas con `#import`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-#import filename no_registry  
-```  
-  
-### <a name="parameters"></a>Parámetros  
-*filename*  
-Una biblioteca de tipos.  
-  
-## <a name="remarks"></a>Comentarios  
- 
-Si no se encuentra una biblioteca de tipos que se hace referencia en los directorios de inclusión, se producirá un error en la compilación incluso si la biblioteca de tipos está en el registro.  **no_registry** se propaga a otras bibliotecas de tipos importadas implícitamente con `auto_search`.  
-  
-El compilador nunca buscará en el registro bibliotecas de tipos especificadas por nombre de archivo y que se hayan pasado directamente a `#import`.  
-  
-Cuando `auto_search` se especifica, el adicionales `#import`s se generará con el **no_registry** configuración de la inicial `#import` (si inicial `#import` directiva fue **no_registry** , un `auto_search`-genera `#import` también es **no_registry**.)  
-  
-**no_registry** es útil si desea importar bibliotecas de tipo de referencia sin el riesgo de que el compilador encuentre una versión anterior del archivo en el registro. **no_registry** también es útil si la biblioteca de tipos no está registrada.  
-  
-## <a name="see-also"></a>Vea también  
- 
+
+**no_registry** indica al compilador que no busque en el registro bibliotecas de tipos importadas con `#import`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+#import filename no_registry
+```
+
+### <a name="parameters"></a>Parámetros
+
+*filename*<br/>
+Una biblioteca de tipos.
+
+## <a name="remarks"></a>Comentarios
+
+Si no se encuentra una biblioteca de tipos que se hace referencia en los directorios de inclusión, se producirá un error en la compilación incluso si la biblioteca de tipos está en el registro.  **no_registry** se propaga a otras bibliotecas de tipos importadas implícitamente con `auto_search`.
+
+El compilador nunca buscará en el registro bibliotecas de tipos especificadas por nombre de archivo y que se hayan pasado directamente a `#import`.
+
+Cuando `auto_search` se especifica, el adicionales `#import`s se generará con el **no_registry** configuración de la inicial `#import` (si inicial `#import` directiva fue **no_registry** , un `auto_search`-genera `#import` también es **no_registry**.)
+
+**no_registry** es útil si desea importar bibliotecas de tipo de referencia sin el riesgo de que el compilador encuentre una versión anterior del archivo en el registro. **no_registry** también es útil si la biblioteca de tipos no está registrada.
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

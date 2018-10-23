@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ceed8fa38ae2b6801fa13c65e54f1cd1cc711d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23b5db965c8b4e29e8d25bad658189e7b37fc929
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097697"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640773"
 ---
 # <a name="c-floating-point-constants"></a>Constantes de punto flotante de C
 
@@ -32,17 +32,27 @@ Una "constante de punto flotante" es un número decimal que representa un númer
 
 ## <a name="syntax"></a>Sintaxis
 
-*floating-point-constant*: &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub> &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>
+*floating-point-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*fractional-constant* *exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *exponent-part* *floating-suffix*<sub>opt</sub>
 
-*fractional-constant*: &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence* &nbsp;&nbsp; *digit-sequence*  **.**
+*fractional-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence*<sub>opt</sub> **.** *digit-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence*  **.**
 
-*exponent-part*: &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence* &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*
+*exponent-part*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**e** *sign*<sub>opt</sub> *digit-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**E** *sign*<sub>opt</sub> *digit-sequence*
 
-*sign* : uno de &nbsp;&nbsp; **+ -**
+*sign*: uno de<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
-*digit-sequence*: &nbsp;&nbsp; *digit* &nbsp;&nbsp; *digit-sequence digit*
+*digit-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*floating-suffix* : uno de &nbsp;&nbsp; **f l F L**
+*floating-suffix*: uno de<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**f l F L**
 
 Se pueden omitir los dígitos que hay delante del separador decimal (la parte entera del valor) o los dígitos que hay detrás del separador decimal (la parte fraccionaria), pero no ambos. Solo se puede omitir el separador decimal si se incluye un exponente. No se pueden utilizar caracteres de espacio en blanco para separar los dígitos o los caracteres de la constante.
 

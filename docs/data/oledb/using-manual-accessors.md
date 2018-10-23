@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101649"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808932"
 ---
 # <a name="using-manual-accessors"></a>Utilizar descriptores de acceso manuales
 
@@ -36,7 +36,7 @@ Hay cuatro aspectos que debe hacer cuando se controla un comando desconocido:
   
 - Si hay varios conjuntos de filas devuelto  
   
-Para hacer esto con las plantillas de consumidor OLE DB, use la `CManualAccessor` clase y siga estos pasos:  
+Para realizar estas operaciones con las plantillas de consumidor OLE DB, utilice el `CManualAccessor` clase y siga estos pasos:  
   
 1. Abra un `CCommand` objeto con `CManualAccessor` como un parámetro de plantilla.  
   
@@ -44,7 +44,7 @@ Para hacer esto con las plantillas de consumidor OLE DB, use la `CManualAccessor
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-1. Consultar la sesión para el `IDBSchemaRowset` interfaz y utilizar el conjunto de filas de parámetros de procedimiento. Si el `IDBSchemaRowset` interfaz no está disponible, consultar el `ICommandWithParameters` interfaz. Llame a `GetParameterInfo` para obtener información. Si ninguna de estas interfaces está disponible, puede asumir que no hay ningún parámetro.  
+1. Consultar la sesión para el `IDBSchemaRowset` interfaz y utilizar el conjunto de filas de parámetros de procedimiento. Si el `IDBSchemaRowset` no está disponible, la interfaz de consulta para el `ICommandWithParameters` interfaz. Llame a `GetParameterInfo` para obtener información. Si ninguna de estas interfaces está disponible, puede asumir que no hay ningún parámetro.  
   
 1. Para cada parámetro, llame a `AddParameterEntry` para agregar los parámetros y establecerlos.  
   

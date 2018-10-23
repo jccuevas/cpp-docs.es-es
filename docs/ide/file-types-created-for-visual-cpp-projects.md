@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939937ec79ae3e6d172b48d22368176088064397
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434354"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808426"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Tipos de archivos creados para proyectos de Visual C++
 
@@ -82,7 +82,7 @@ En la tabla siguiente se muestran los archivos comunes en un proyecto de Visual 
 |.pch|Depuración|Archivo de encabezado precompilado.|
 |.rc, .rc2|Recurso|[Archivos de script de recursos](../windows/working-with-resource-files.md) para generar recursos.|
 |.sbr|Compilación|Archivo intermedio de explorador de código fuente. Archivo de entrada para [BSCMAKE](../build/reference/bscmake-options.md).|
-|.sln|Soluciones|El archivo de la [solución](/visualstudio/ide/solutions-and-projects-in-visual-studio).|
+|.sln|Soluciones|Archivo de [solución](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
 |.suo|Soluciones|Archivo de opciones de solución.|
 |.txt|Recurso|Archivo de texto, normalmente el archivo "Léame".|
 |.vap|Proyecto|Archivo de proyecto de Visual Studio Analyzer.|
@@ -105,4 +105,3 @@ Al agregar un elemento a un proyecto, el elemento se agrega a todas las configur
 
 [Creación y administración de proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)<br>
-[Compatibilidad del asistente con otros idiomas](../ide/wizard-support-for-other-languages.md)

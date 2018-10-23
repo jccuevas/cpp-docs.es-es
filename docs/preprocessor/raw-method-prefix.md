@@ -1,7 +1,7 @@
 ---
 title: raw_method_prefix | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc2a37f587d3b5ac2b695171f5620db6521693d2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78094053c963f5d836646e91857e171625c447c9
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439684"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808555"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
-**Específicos de C++**  
-  
-Especifica otro prefijo para evitar conflictos de nombres.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-raw_method_prefix("Prefix")  
-```  
-  
-### <a name="parameters"></a>Parámetros  
-*Prefix*  
-El prefijo que se va a usar.  
-  
-## <a name="remarks"></a>Comentarios  
- 
-Métodos y propiedades de bajo nivel son expuestos por funciones miembro denominadas con el prefijo predeterminado **raw_** para evitar conflictos con las funciones de miembro alto nivel de control de errores.  
-  
+
+**Específicos de C++**
+
+Especifica otro prefijo para evitar conflictos de nombres.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+raw_method_prefix("Prefix")
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Prefix*<br/>
+El prefijo que se va a usar.
+
+## <a name="remarks"></a>Comentarios
+
+Métodos y propiedades de bajo nivel son expuestos por funciones miembro denominadas con el prefijo predeterminado **raw_** para evitar conflictos con las funciones de miembro alto nivel de control de errores.
+
 > [!NOTE]
-> Los efectos de la **raw_method_prefix** atributo no se cambiará por la presencia de la [raw_interfaces_only](#_predir_raw_interfaces_only) atributo. El **raw_method_prefix** siempre tiene prioridad sobre `raw_interfaces_only` especifica un prefijo. Si ambos atributos se usan en la misma `#import` instrucción y, a continuación, el prefijo especificado por el **raw_method_prefix** se usa el atributo.  
-  
-**FIN de específicos de C++**  
-  
-## <a name="see-also"></a>Vea también  
- 
+> Los efectos de la **raw_method_prefix** atributo no se cambiará por la presencia de la [raw_interfaces_only](#_predir_raw_interfaces_only) atributo. El **raw_method_prefix** siempre tiene prioridad sobre `raw_interfaces_only` especifica un prefijo. Si ambos atributos se usan en la misma `#import` instrucción y, a continuación, el prefijo especificado por el **raw_method_prefix** se usa el atributo.
+
+**FIN de específicos de C++**
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

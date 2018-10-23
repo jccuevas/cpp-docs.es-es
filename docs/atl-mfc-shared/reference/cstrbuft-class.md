@@ -1,7 +1,7 @@
 ---
 title: CStrBufT (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411188"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808997"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT (clase)
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parámetros
 
-*TCharType*  
+*TCharType*<br/>
 El tipo de carácter de la `CStrBufT` clase. Puede ser uno de los siguientes:
 
 - **char** (para las cadenas de caracteres ANSI)
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*str*  
+*str*<br/>
 El objeto de cadena asociado con el búfer. Normalmente, el desarrollador usará las definiciones de tipos predefinidos de `CStrBuf` (variante de TCHAR), `CStrBufA` (**char** variante) y `CStrBufW` (**wchar_t** variante).
 
-*nMinLength*  
+*nMinLength*<br/>
 La longitud mínima del búfer de caracteres.
 
-*dwFlags*  
+*dwFlags*<br/>
 Determina si la longitud de cadena se determina automáticamente. Puede ser uno de los siguientes:
 
 - Longitud de cadena AUTO_LENGTH es automáticamente determina cuándo [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) se llama. Debe ser la cadena terminada en null. Valor predeterminado.
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parámetros
 
-*nLength*  
+*nLength*<br/>
 La nueva longitud del búfer de caracteres del objeto de cadena.
 
 > [!NOTE]

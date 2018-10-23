@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017178"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807528"
 ---
 # <a name="provider-support-for-bookmarks"></a>Compatibilidad del proveedor con los marcadores
 
@@ -36,7 +36,7 @@ El ejemplo de este tema agrega la `IRowsetLocate` interfaz a la `CMyProviderRows
   
 - Agregar compatibilidad con marcadores.  
   
-La interfaz `IRowsetLocate` hereda de la interfaz `IRowset`. Para agregar la `IRowsetLocate` de la interfaz, heredar `CMyProviderRowset` desde [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+La interfaz `IRowsetLocate` hereda de la interfaz `IRowset` . Para agregar la `IRowsetLocate` de la interfaz, heredar `CMyProviderRowset` desde [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
 Agregar el `IRowsetLocate` interfaz es un poco diferente de la mayoría de las interfaces. Para hacer que la línea VTABLEs de OLE DB, plantillas de proveedores tienen un parámetro de plantilla para controlar la interfaz derivada. El código siguiente muestra la nueva lista de herencia:  
   
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-Mientras el bucle contiene código para llamar a la `Compare` método en el `IRowsetLocate` interfaz. El código que se debe pasar siempre porque se están comparando los mismos marcadores. Además, almacene un marcador en una variable temporal para que se puede utilizar después el tiempo de llamar a un bucle el `MoveToBookmark` función en las plantillas de consumidor. El `MoveToBookmark` llamadas de función el `GetRowsAt` método `IRowsetLocate`.  
+El **mientras** bucle contiene código para llamar a la `Compare` método en el `IRowsetLocate` interfaz. El código que se debe pasar siempre porque se están comparando los mismos marcadores. Además, almacene un marcador en una variable temporal para que pueda usar después la **mientras** bucle de llamar a la `MoveToBookmark` función en las plantillas de consumidor. El `MoveToBookmark` llamadas de función el `GetRowsAt` método `IRowsetLocate`.  
   
 También deberá actualizar el registro de usuario en el consumidor. Agregue una entrada en la clase para controlar un marcador y una entrada en el `COLUMN_MAP`:  
   

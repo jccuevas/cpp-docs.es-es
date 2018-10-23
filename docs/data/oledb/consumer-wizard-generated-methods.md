@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056032"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808230"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos generados por el Asistente para consumidores
 
@@ -40,7 +40,7 @@ El Asistente para consumidores OLE DB ATL y MFC Application Wizard generan deter
   
 - `CloseAll` abrir todos los conjuntos de filas se cierra y libera todas las ejecuciones de comandos.  
   
-- `OpenRowset` se llama desde OpenAll para abrir el conjunto de filas o los conjuntos de filas del consumidor.  
+- `OpenRowset` llama a `OpenAll` para abrir el conjunto de filas o los conjuntos de filas del consumidor.  
   
 - `GetRowsetProperties` Recupera un puntero a la propiedad del conjunto de filas con las propiedades que se pueden establecer.  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>Comentarios  
 
-Tenga en cuenta que si define un `HasBookmark` método, el `OpenAll` código establece la propiedad DBPROP_IRowsetLocate; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
+Tenga en cuenta que si define un `HasBookmark` método, el `OpenAll` código establece el `DBPROP_IRowsetLocate` propiedad; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` llama a este método para abrir el conjunto de filas en el consumidor. Normalmente, no es necesario llamar a `OpenRowset` a menos que desee trabajar con varios orígenes de datos/sesiones/conjuntos de filas. `OpenRowset` se declara en el archivo de encabezado de clase de comando o una tabla:  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-Los atributos implementan este método de manera diferente. Esta versión toma un objeto de sesión y una cadena de comando cuyo valor predeterminado es la cadena de comando especificada en db_command, aunque puede pasar otro diferente. Tenga en cuenta que si define un `HasBookmark` método, el `OpenRowset` código establece la propiedad DBPROP_IRowsetLocate; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
+Los atributos implementan este método de manera diferente. Esta versión toma un objeto de sesión y una cadena de comando cuyo valor predeterminado es la cadena de comando especificada en db_command, aunque puede pasar otro diferente. Tenga en cuenta que si define un `HasBookmark` método, el `OpenRowset` código establece el `DBPROP_IRowsetLocate` propiedad; Asegúrese de que sólo hacerlo si su proveedor admite esa propiedad.  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-Este método recupera un puntero al conjunto de propiedades del conjunto de filas; Puede usar este puntero para establecer propiedades como DBPROP_IRowsetChange. `GetRowsetProperties` se usa en la clase de registro de usuario como se indica a continuación. Puede modificar este código para establecer las propiedades del conjunto de filas adicionales:  
+Este método recupera un puntero al conjunto de propiedades del conjunto de filas; Puede usar este puntero para establecer propiedades tales como `DBPROP_IRowsetChange`. `GetRowsetProperties` se usa en la clase de registro de usuario como se indica a continuación. Puede modificar este código para establecer las propiedades del conjunto de filas adicionales:  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
