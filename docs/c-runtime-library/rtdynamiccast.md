@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 85f8b31ee9faec433fa0c9f1ff64d5bfa1e9665a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092068"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161260"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 
@@ -65,7 +65,7 @@ Tipo estático del objeto al que apunta el parámetro `inptr`.
 Resultado previsto de la conversión.
 
 *isReference*<br/>
-`true` si la entrada es una referencia; `false` si la entrada es un puntero.
+**true** si la entrada es una referencia, **false** si es un puntero.
 
 ## <a name="return-value"></a>Valor devuelto
 
