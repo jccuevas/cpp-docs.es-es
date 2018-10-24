@@ -1,7 +1,7 @@
 ---
 title: Plantillas OLE DB, atributos y otras implementaciones | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5798eeb4e99e4901ea83a26e4e570c18437ff445
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082662"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989936"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Plantillas, atributos y otras implementaciones de OLE DB
 
@@ -36,7 +36,7 @@ Esta biblioteca de plantillas contiene dos partes:
   
 - **Plantillas de proveedores OLE DB** usado para implementar una aplicación de servidor (proveedor) de OLE DB.  
   
-Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, vea [Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643).  
+Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643).  
   
 Para obtener más información, hacer lo siguiente:  
   
@@ -60,7 +60,7 @@ La biblioteca MFC contiene una clase, [COleDBRecordView](../../mfc/reference/col
   
 ## <a name="ole-db-sdk-interfaces"></a>Interfaces SDK de OLE DB  
 
-En los casos donde las plantillas OLE DB no admiten la funcionalidad de OLE DB, deberá usar sus propias interfaces OLE DB. Para obtener más información, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643) en el SDK de Windows.  
+En los casos donde las plantillas OLE DB no admite la funcionalidad de OLE DB, deberá usar sus propias interfaces OLE DB. Para obtener más información, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
 

@@ -26,7 +26,6 @@
 ### [Archivos XML de página de propiedades](property-page-xml-files.md)
 ### [Estructura de archivo .vcxproj y .props](vcxproj-file-structure.md)
 ## [Crear proyectos de escritorio con asistentes para aplicaciones](creating-desktop-projects-by-using-application-wizards.md)
-### [Compatibilidad del asistente con otros idiomas](wizard-support-for-other-languages.md)
 ### [Crear un proyecto de archivos MAKE](creating-a-makefile-project.md)
 #### [Asistente para proyectos de archivos MAKE](makefile-project-wizard.md)
 ##### [Configuración de la aplicación, Asistente para proyectos de archivos MAKE](application-settings-makefile-project-wizard.md)

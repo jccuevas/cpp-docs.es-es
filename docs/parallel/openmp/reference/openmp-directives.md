@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809010"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990339"
 ---
 # <a name="openmp-directives"></a>Directivas de OpenMP
 
@@ -66,7 +66,7 @@ Directiva                             | Descripción
 [single](#single)                     | Le permite especificar que una sección de código debe ejecutarse en un único subproceso, no necesariamente el subproceso principal.
 [threadprivate](#threadprivate)       | Especifica que una variable privada a un subproceso.
 
-## <a name="atomic"></a>atómico
+## <a name="atomic"></a>Atomic
 
 Especifica que una ubicación de memoria que se actualizarán de forma atómica.
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>barrera
 
 Sincroniza todos los subprocesos en un equipo; todos los subprocesos se detendrá en la barrera, hasta que todos los subprocesos ejecuten la barrera.
 
@@ -129,7 +129,7 @@ Para obtener más información, consulte [2.6.3 barrier (directiva)](../../../pa
 
 Para obtener un ejemplo de cómo usar `barrier`, consulte [maestro](#master).
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>Crítico
 
 Especifica que código se solo se ejecuta en un subproceso a la vez.
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>Flush (OpenMP)
 
 Especifica que todos los subprocesos tienen la misma vista de memoria para todos los objetos compartidos.
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>(OpenMP)
 
 Hace que el trabajo realizado en un `for` bucle dentro de una región paralela a dividirse entre subprocesos.
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>master
+## <a name="master"></a>Master
 
 Especifica que sólo el subproceso principal debe ejecutar una sección del programa.
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>Paralelo
 
 Define una región paralela, que es código que se va a ejecutar varios subprocesos en paralelo.
 
@@ -578,7 +578,7 @@ Hello from thread 3
 
 Tenga en cuenta que el orden de salida puede variar en equipos diferentes.
 
-## <a name="sections-openmp"></a>sections (OpenMP)
+## <a name="sections-openmp"></a>secciones (OpenMP)
 
 Identifica las secciones de código se divide entre todos los subprocesos.
 
@@ -588,7 +588,7 @@ Identifica las secciones de código se divide entre todos los subprocesos.
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>única
+## <a name="single"></a>único
 
 Le permite especificar que una sección de código debe ejecutarse en un único subproceso, no necesariamente el subproceso principal.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }

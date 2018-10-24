@@ -1,6 +1,6 @@
 ---
 title: C4800 de advertencias del compilador a través de C5999 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 10/24/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -99,18 +99,20 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
+- C5045
+- C5046
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 27f212865965883732e8bd956cafecf50e0a8de3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861426"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990352"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de advertencias del compilador a través de C5999
 
@@ -251,3 +253,4 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 2) los errores C5043|'*especificación*': especificación de excepción no coincide con la declaración anterior|
 |Advertencia del compilador (nivel 4) C5044|Un argumento de opción de línea de comandos *opción* apunta a una ruta de acceso '*ruta*' que no existe|
 |[C5045 de advertencia del compilador](c5045.md)|Compilador insertará la mitigación de Spectre para la carga de memoria si el modificador/qspectre especificado.|
+|[Advertencia del compilador (nivel 2) C5046](c5046.md)|'*función*': símbolo de que impliquen tipo con vinculación interna no definido|

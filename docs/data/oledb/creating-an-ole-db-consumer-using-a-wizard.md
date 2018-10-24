@@ -1,7 +1,7 @@
 ---
 title: Crear un consumidor OLE DB mediante un asistente | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76f16c10ff4342e32a6081e89581945c53ee607c
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097909"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990118"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Crear un consumidor OLE DB mediante un asistente
 
-Este procedimiento muestra cómo puede usar el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL para generar un consumidor de plantillas OLE DB y, a continuación, modifique el código principal de la aplicación de consola para recuperar y mostrar los datos de una tabla de base de datos.  
+Este procedimiento muestra cómo puede utilizar el **Asistente para proyectos ATL** y **el Asistente para consumidores OLE DB ATL* para generar un consumidor de plantillas OLE DB y, a continuación, modifique el código principal de la aplicación de consola recuperar y mostrar los datos de una tabla de base de datos.  
   
 Las dos últimas secciones explican el código de consumidor OLE DB generados por el asistente.  
   

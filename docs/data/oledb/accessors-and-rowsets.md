@@ -1,7 +1,7 @@
 ---
 title: Los descriptores de acceso y conjuntos de filas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113102"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990183"
 ---
 # <a name="accessors-and-rowsets"></a>Descriptores de acceso y conjuntos de filas
 
@@ -77,7 +77,7 @@ En la siguiente ilustración se muestra los tipos de conjunto de filas.
 ![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Clases de conjunto de filas  
   
-[Conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) hacer no acceder a los datos en los datos de almacén pero en su lugar, tener acceso a información sobre el almacén de datos, denominada metadatos. Conjuntos de filas de esquema se usan normalmente en situaciones en las que la estructura de base de datos no se conoce en tiempo de compilación y debe obtenerse en tiempo de ejecución.  
+[Conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) no acceder a los datos en los datos almacenar pero en su lugar, tener acceso a información sobre el almacén de datos, denominada metadatos. Conjuntos de filas de esquema se usan normalmente en situaciones en las que la estructura de base de datos no se conoce en tiempo de compilación y debe obtenerse en tiempo de ejecución.  
   
 ## <a name="see-also"></a>Vea también  
 

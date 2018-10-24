@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fffa63c9bbcc556009fb5edff93fd02f302ae3ea
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080888"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990131"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinar dinámicamente las columnas que se devuelven al consumidor
 
 Normalmente, las macros PROVIDER_COLUMN_ENTRY controlan la `IColumnsInfo::GetColumnsInfo` llamar. Sin embargo, dado que un consumidor puede optar por usar marcadores, el proveedor debe poder cambiar las columnas devueltas dependiendo de si el consumidor solicita un marcador.  
   
-Para controlar la `IColumnsInfo::GetColumnsInfo` llamada, elimine PROVIDER_COLUMN_MAP, que define una función `GetColumnInfo`, desde el `CAgentMan` usuario registre MyProviderRS.h y reemplácela con la definición de sus propias `GetColumnInfo` función:  
+Para controlar la `IColumnsInfo::GetColumnsInfo` llamada, elimine PROVIDER_COLUMN_MAP, que define una función `GetColumnInfo`, desde el `CAgentMan` registro de usuario en *personalizado*RS.h y reemplácela con la definición de sus propias `GetColumnInfo` función:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
 class CAgentMan  
 {  
 public:  
@@ -52,13 +52,13 @@ public:
   
 A continuación, implementará el `GetColumnInfo` funcionando en MyProviderRS.cpp, como se muestra en el código siguiente.  
   
-`GetColumnInfo` comprueba primero si la propiedad OLE DB `DBPROP_BOOKMARKS` está establecido. Para obtener la propiedad, `GetColumnInfo` utiliza un puntero (`pRowset`) para el objeto de conjunto de filas. El `pThis` puntero representa la clase que crea el conjunto de filas, que es la clase donde se almacena la asignación de propiedad. `GetColumnInfo` conversiones de tipo el `pThis` puntero a un `RMyProviderRowset` puntero.  
+`GetColumnInfo` comprueba primero si la propiedad OLE DB `DBPROP_BOOKMARKS` está establecido. Para obtener la propiedad, `GetColumnInfo` utiliza un puntero (`pRowset`) para el objeto de conjunto de filas. El `pThis` puntero representa la clase que crea el conjunto de filas, que es la clase donde se almacena la asignación de propiedad. `GetColumnInfo` conversiones de tipo el `pThis` puntero a un `RCustomRowset` puntero.  
   
 Para comprobar la `DBPROP_BOOKMARKS` propiedad `GetColumnInfo` usa el `IRowsetInfo` interfaz, que se puede obtener mediante una llamada a `QueryInterface` en el `pRowset` interfaz. Como alternativa, puede usar un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) método en su lugar.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
-// MyProviderRS.cpp  
+// CustomRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
 {  
    static ATLCOLUMNINFO _rgColumns[5];  
@@ -119,7 +119,7 @@ Este ejemplo utiliza una matriz estática para contener la información de colum
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
+// CustomRS.h  
   
 #define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
