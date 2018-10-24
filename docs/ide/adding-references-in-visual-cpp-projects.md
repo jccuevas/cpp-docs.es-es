@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407602"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162170"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Agregar referencias en proyectos de Visual C++
 
@@ -84,11 +84,11 @@ Las propiedades siguientes están disponibles en diversos tipos de referencia. E
 
 - **Copiar ensamblados satélite locales**
 
-   Especifica si se deben copiar automáticamente los ensamblados satélite del ensamblado al que se hace referencia en la ubicación de destino durante una compilación. Solo se utiliza si **Copia local** es `true`.
+   Especifica si se deben copiar automáticamente los ensamblados satélite del ensamblado al que se hace referencia en la ubicación de destino durante una compilación. Solo se utiliza si el valor de **Copia local** es **true**.
 
 - **Salida de ensamblado de referencia**
 
-   Especifica que este ensamblado se usa en el proceso de compilación. Si es `true`, el ensamblado se agregará a la línea de comandos del compilador durante la compilación
+   Especifica que este ensamblado se usa en el proceso de compilación. Si el valor es **true**, el ensamblado se agregará a la línea de comandos del compilador durante la compilación.
 
 ### <a name="project-to-project-reference-properties"></a>Propiedades de referencia de proyecto a proyecto
 
