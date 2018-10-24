@@ -1,7 +1,7 @@
 ---
 title: Operadores relacionales y de igualdad de C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058242"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808958"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operadores relacionales y de igualdad de C
 
@@ -31,32 +31,28 @@ Los operadores relacionales y de igualdad binarios comparan el primer operando c
 
 **Sintaxis**
 
-*relational-expression*: *shift-expression*
+*relational-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
 
-*relational-expression*  **\<**  *shift-expression*
-
-*relational-expression*  **>**  *shift-expression*
-
-*relational-expression*  **\<=**  *shift-expression*
-
-*relational-expression*  **>=**  *shift-expression*
-
-*equality-expression*: *relational-expression*
-
-*equality-expression*  **==**  *relational-expression*
-
-*equality-expression*  **!=**  *relational-expression*
+*equality-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 Los operadores relacionales y de igualdad prueban las relaciones siguientes:
 
 |Operador|Relación probada|
 |--------------|-------------------------|
-|**\<**|Primer operando menor que el segundo operando|
+|**&lt;**|Primer operando menor que el segundo operando|
 |**>**|Primer operando mayor que el segundo operando|
-|**\<=**|Primer operando menor o igual que segundo operando|
+|**&lt;=**|Primer operando menor o igual que segundo operando|
 |**>=**|Primer operando mayor o igual que segundo operando|
-|`==`|Primer operando igual a segundo operando|
-|`!=`|Primer operando no igual a segundo operando|
+|**==**|Primer operando igual a segundo operando|
+|**!=**|Primer operando no igual a segundo operando|
 
 Los cuatro primeros operadores de la lista anterior tienen mayor prioridad que los operadores de igualdad (`==` y `!=`). Vea la información de prioridad en la tabla [Prioridad y asociatividad de los operadores de C](../c-language/precedence-and-order-of-evaluation.md).
 
@@ -64,7 +60,7 @@ Los operandos pueden tener tipo entero, flotante o puntero. Los tipos de operand
 
 - Ambos operandos de cualquier operador relacional o de igualdad puede ser punteros al mismo tipo. Para los operadores de igualdad (`==`) y desigualdad (`!=`), el resultado de la comparación indica si los dos punteros direccionan la misma ubicación de memoria. Para los otros operadores relacionales (**\<**, **>**, **\<**= y **>**=), el resultado de la comparación indica la posición relativa de las dos direcciones de memoria de los objetos a los que se señala. Los operadores relacionales comparan solo desplazamientos.
 
-     La comparación de puntero solo se define para partes del mismo objeto. Si los punteros hacen referencia a miembros de una matriz, la comparación es equivalente a la comparación de los subíndices correspondientes. La dirección del primer elemento de la matriz es “menor que” la dirección del último elemento. En el caso de las estructuras, los punteros a miembros de estructura declarados más tarde son “mayores que” los punteros a miembros declarados antes en la estructura. Los punteros a los miembros de la misma unión son iguales.
+   La comparación de puntero solo se define para partes del mismo objeto. Si los punteros hacen referencia a miembros de una matriz, la comparación es equivalente a la comparación de los subíndices correspondientes. La dirección del primer elemento de la matriz es “menor que” la dirección del último elemento. En el caso de las estructuras, los punteros a miembros de estructura declarados más tarde son “mayores que” los punteros a miembros declarados antes en la estructura. Los punteros a los miembros de la misma unión son iguales.
 
 - Un valor de puntero se puede comparar con el valor constante 0 para igualdad (`==`) o desigualdad (`!=`). Un puntero a un valor de 0 se denomina un puntero “NULL”; es decir, no señala a una ubicación de memoria válida.
 
@@ -74,14 +70,14 @@ Los operandos pueden tener tipo entero, flotante o puntero. Los tipos de operand
 
 En los ejemplos siguientes se muestran los operadores relacionales y de igualdad.
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 Dado que `x` y `y` son iguales, la expresión de este ejemplo produce el valor 0.
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 El fragmento de este ejemplo establece cada elemento de `array` en una constante de carácter nulo.
 
-```
+```C
 enum color { red, white, green } col;
    .
    .
