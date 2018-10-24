@@ -1,7 +1,7 @@
 ---
 title: Cuestiones de diseño de arquitectura OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,34 +15,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f66ff77ef10f45b19a33a286f63f4bf923f639a2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820391"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990028"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Cuestiones de diseño de arquitectura OLE DB
 
-Debe considerar lo siguiente antes de iniciar la aplicación OLE DB:  
+Antes de iniciar la aplicación OLE DB, tenga en cuenta lo siguiente:  
   
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>¿Qué implementación de programación va a utilizar para escribir una aplicación OLE DB?
 
-Microsoft ofrece varias bibliotecas para lograr esto: una biblioteca de plantillas OLE DB, OLE DB atributos y las interfaces OLE DB sin procesar en el SDK de OLE DB. Además, hay asistentes que ayudan a escribir el programa. Estas implementaciones se describen en [plantillas OLE DB, atributos y otras implementaciones](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
+Microsoft ofrece varias bibliotecas para realizar esta tarea: una biblioteca de plantillas OLE DB, OLE DB atributos y las interfaces OLE DB sin procesar en el SDK de OLE DB. Además, hay asistentes que ayudan a escribir el programa. Estas implementaciones se describen en [plantillas OLE DB, atributos y otras implementaciones](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
 
 ## <a name="do-you-need-to-write-your-own-provider"></a>¿Tiene que escribir su propio proveedor?
 
-La mayoría de los desarrolladores no es necesario escribir su propio proveedor. Microsoft proporciona varios proveedores. Siempre que se crea una conexión de datos (por ejemplo, al agregar un consumidor al proyecto mediante el Asistente para consumidores OLE DB ATL), el **propiedades de vínculo de datos** cuadro de diálogo muestra todos los proveedores disponibles registrados en el sistema. Si uno de estos proveedores es adecuado para su propia aplicación de acceso de datos y el almacén de datos, lo más fácil es utilizar uno de ellos. Sin embargo, si el almacén de datos no se ajusta a una de estas categorías, deberá crear su propio proveedor. Para obtener información sobre la creación de proveedores, consulte [plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
+La mayoría de los desarrolladores no es necesario escribir su propio proveedor. Microsoft proporciona varios proveedores. Siempre que se crea una conexión de datos (por ejemplo, al agregar un consumidor al proyecto mediante el **el Asistente para consumidores OLE DB ATL**), el **propiedades de vínculo de datos** cuadro de diálogo muestra todos los proveedores disponibles registrado en el sistema. Si uno de los proveedores es adecuado para su propia aplicación de acceso de datos y el almacén de datos, lo más fácil es usar uno de ellos. Sin embargo, si el almacén de datos no ajusta una de estas categorías, deberá crear su propio proveedor. Para obtener información sobre la creación de proveedores, consulte [plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
 
 ## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>¿Qué nivel de compatibilidad es necesario para el consumidor?
 
-Algunos consumidores pueden ser muy básicos; mientras que otros pueden ser muy complejas. La funcionalidad de objetos de OLE DB especificada por propiedades. Cuando usa el Asistente para consumidores OLE DB ATL para crear un consumidor o el Asistente para proveedores de base de datos para crear un proveedor, Establece las propiedades del objeto adecuado para usted para ofrecerle un conjunto estándar de funcionalidades. Sin embargo, si las clases de consumidor o proveedor generados por el asistente no admiten todo lo que necesita llevar a cabo, deberá hacer referencia a las interfaces de dichas clases en el [biblioteca de plantillas OLE DB](../../data/oledb/ole-db-templates.md). Estas interfaces envuelven las interfaces OLE DB sin procesar, proporcionando una implementación adicional para facilitar su uso por usted.
+Algunos consumidores pueden ser básicos; mientras que otros pueden ser complejos. La funcionalidad de objetos de OLE DB especificada por propiedades. Cuando se usa el **el Asistente para consumidores OLE DB ATL** para crear un consumidor o el **Asistente para la base de datos de proveedor** para crear un proveedor, Establece las propiedades de objeto adecuado para usted para ofrecerle un conjunto estándar de funcionalidades. Sin embargo, si las clases de consumidor o proveedor generados por el asistente no admiten todo lo que necesita llevar a cabo, deberá hacer referencia a las interfaces de dichas clases en el [biblioteca de plantillas OLE DB](../../data/oledb/ole-db-templates.md). Estas interfaces envuelven las interfaces OLE DB sin procesar, proporcionando una implementación adicional para facilitar su uso por usted.
 
 Por ejemplo, si desea actualizar los datos de un conjunto de filas, pero se olvidó de especificarlo cuando creó el consumidor con el asistente, puede especificar la funcionalidad después del hecho estableciendo la `DBPROP_IRowsetChange` y `DBPROP_UPDATABILITY` las propiedades del objeto de comando. A continuación, cuando se crea el conjunto de filas, tiene la `IRowsetChange` interfaz.
 
 ## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>¿Tiene código antiguo con otra tecnología de acceso a datos (ADO, ODBC o DAO)?
 
-Dadas las posibles combinaciones de tecnologías (por ejemplo, usar componentes de ADO con componentes de OLE DB y migrar código ODBC a OLE DB), que abarcan todas las situaciones está fuera del ámbito de la documentación de Visual C++. Sin embargo, muchos artículos que tratan diversos escenarios están disponibles en los siguientes sitios Web de Microsoft:
+Dadas las posibles combinaciones de tecnologías (por ejemplo, usar componentes de ADO con componentes de OLE DB y migrar código ODBC a OLE DB), que abarcan todas las situaciones está fuera del ámbito de la documentación de Visual C++. Sin embargo, existen muchos artículos que abarcan varios escenarios en los siguientes sitios web de Microsoft:
 
 - [Ayuda y Soporte Técnico de Microsoft](https://support.microsoft.com/)
 

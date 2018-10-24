@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5552b9c3d3d697b322b8c1d71eaf0e71630fac38
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fc4461bb29bb9b9c706177c4dcd2134d37d697e0
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040211"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989910"
 ---
 # <a name="debugging-your-provider"></a>Depurar un proveedor
 
@@ -33,7 +33,7 @@ Hay dos maneras de depurar el proveedor:
   
 - Puede usar la utilidad ITEST que se incluye con Visual C++.  
   
-### <a name="to-use-the-itest-utility"></a>Para usar la utilidad ITEST  
+## <a name="to-use-the-itest-utility"></a>Para usar la utilidad ITEST  
   
 1. Abra el proyecto de proveedor.  
   

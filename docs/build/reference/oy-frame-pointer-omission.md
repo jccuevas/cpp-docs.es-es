@@ -1,5 +1,5 @@
 ---
-title: -Oy (omisión de puntero de marco) | Documentos de Microsoft
+title: -Oy (omisión de puntero de marco) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6feb682d364c4c40fd01e4aff33404c4506d9c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c077b5a350d7381adc5412ca4a318713d720ad6
+ms.sourcegitcommit: 1870c342d44b10990fd015e60856225c3026e8c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377266"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963056"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Omisión de puntero de marco)
 
@@ -40,19 +40,19 @@ Suprime la creación de punteros de marcos en la pila de llamadas.
 
 ## <a name="remarks"></a>Comentarios
 
-Esta opción acelera las llamadas de función, ya que no es necesario configurar y quitar punteros de marco. También libera un registro más (EBP en Intel 386 o posterior) para almacenar variables y subexpresiones que se utilizan con frecuencia.
+Esta opción acelera las llamadas de función, ya que no es necesario configurar y quitar punteros de marco. También libera un registro de uso general.
 
-**/Oy** habilita la omisión de puntero de marco y **/Oy-** deshabilita la omisión. **/Oy** solo está disponible en x86 compiladores.
+**/Oy** permite la omisión de puntero de marco y **/Oy-** deshabilita la omisión. **/Oy** solo está disponible en x86 compiladores.
 
-Si el código requiere direccionamiento basado en EBP, puede especificar el **/Oy-** opción después de la **/Ox** opción o use [optimizar](../../preprocessor/optimize.md) con el "**y**" y **desactivar** argumentos para obtener una optimización máxima con direccionamiento basado en EBP. El compilador detecta la mayoría de las situaciones en las que se requiere el direccionamiento basado en EBP (por ejemplo, con las funciones `_alloca` y `setjmp` y con el control de excepciones estructurado).
+Si el código requiere direccionamiento basado en EBP, puede especificar el **/Oy-** opción después de la **/Ox** o utilizar [optimizar](../../preprocessor/optimize.md) con el "**y**" y **desactivar** argumentos para obtener una optimización máxima con dicho direccionamiento. El compilador detecta la mayoría de las situaciones en las que se requiere el direccionamiento basado en EBP (por ejemplo, con las funciones `_alloca` y `setjmp` y con el control de excepciones estructurado).
 
-El [/Ox (habilitar más velocidad optimizaciones)](../../build/reference/ox-full-optimization.md) y [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opciones implican **/Oy**. Especificar **/Oy-** después de la **/Ox**, **/O1**, o **/O2** opción deshabilita **/Oy**, ya sea explícita o implícita.
+El [/Ox (habilitar más las optimizaciones de velocidad)](../../build/reference/ox-full-optimization.md) y [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opciones implican **/Oy**. Especificar **/Oy-** después de la **/Ox**, **/O1**, o **/O2** opción deshabilita **/Oy**, ya sea explícita o implícita.
 
-El **/Oy** compilador opción dificulta el uso del depurador porque el compilador suprime la información de puntero de marco. Si especifica una opción del compilador de depuración ([/Z7, / Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), se recomienda que especifique el **/Oy-** opción después de cualquier otra opción de compilador de optimización.
+El **/Oy** facilita la opción del compilador con el depurador más difícil porque el compilador suprime la información de puntero de marco. Si especifica una opción del compilador de depuración ([/Z7, / Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), se recomienda que especifique el **/Oy-** opción después de cualquier otra opción del compilador de optimización.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
