@@ -1,7 +1,7 @@
 ---
 title: Operadores de desplazamiento bit a bit | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1abcfa37373702df371b42efbf228fe748bfc45
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020126"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808204"
 ---
 # <a name="bitwise-shift-operators"></a>Operadores de desplazamiento bit a bit
 
-Los operadores de desplazamiento desplazan el primer operando a la izquierda (`<<`) o a la derecha (`>>`) el número de posiciones que especifica el segundo operando.
+Los operadores de desplazamiento mueven el primer operando a la izquierda (**&lt;&lt;**) o a la derecha (**>>**) según el número de posiciones que especifica el segundo operando.
 
 ## <a name="syntax"></a>Sintaxis
 
-*shift-expression*: *additive-expression*
-
-*shift-expression*  `<<`  *additive-expression shift-expression*  `>>`  *additive-expression*
+*shift-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
 
 Ambos operandos deben ser valores enteros. Estos operadores realizan las conversiones aritméticas habituales; el tipo del resultado es el tipo del operando izquierdo después de la conversión.
 
 Para los desplazamientos hacia la izquierda, los bits de la derecha desocupados se establecen en 0. Para los desplazamientos hacia la derecha, los bits de la izquierda desocupados se rellenan según el tipo del primer operando después de la conversión. Si el tipo es `unsigned`, se establecen en 0. Si no, se rellenan con copias del bit de signo. Para los operadores de desplazamiento a la izquierda sin desbordamiento, la instrucción
 
-```
+```C
 expr1 << expr2
 ```
 
 es equivalente a la multiplicación por 2<sup>expr2</sup>. Para los operadores de desplazamiento a la derecha,
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +55,7 @@ El resultado de una operación de desplazamiento es indefinido si el segundo ope
 
 Como las conversiones realizadas por los operadores de desplazamiento no proporcionan condiciones de desbordamiento o subdesbordamiento, la información puede perderse si el resultado de una operación de desplazamiento no se puede representar en el tipo del primer operando después de la conversión.
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;
