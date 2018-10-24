@@ -1,7 +1,7 @@
 ---
 title: Agregar funcionalidad con los asistentes para código (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -20,16 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d531184b03d06dbe2a395e55638e4457c2c9c0e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43d6301a13b0abd517b0fb596f953617cf80f7b0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441973"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861179"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Agregar funcionalidad con los asistentes para código (C++)
 
 Una vez haya creado un proyecto, le interesará cambiar o ampliar su funcionalidad. Estas tareas incluyen crear clases, agregar funciones miembro y variables nuevas, y agregar métodos y propiedades de automatización. Los asistentes para código están diseñados para permitir hacer todo esto.
+
+> [!WARNING]
+> Varios asistentes de código de ATL y MFC han quedado en desuso y se quitarán en una versión futura de Visual Studio. Estos asistentes se usan con poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de estos asistentes. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 > [!NOTE]
 >  Ahora, mediante la [ventana Propiedades](/visualstudio/ide/reference/properties-window), se pueden agregar controladores de mensajes y asignarles mensajes, y reemplazar funciones virtuales de MFC.
@@ -72,9 +75,9 @@ Hay tres ubicaciones desde las que se puede acceder a los asistentes para códig
 
    |Acceder al asistente para código desde|Descripción|
    |-----------------------------|-----------------|
-   |Agregar nuevo elemento|Los asistentes para código Agregar nuevo elemento agregan archivos de código fuente al proyecto. Si es necesario, se crean directorios adicionales para contener los archivos donde el motor de compilación de proyecto espera encontrarlos. Los asistentes para código disponibles desde el icono Agregar elemento incluyen los siguientes:<br /><br /> -    Agregar archivos de código fuente de C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />-   Agregar archivos de desarrollo web (.html, .asp, .css, .xml).<br />-   Agregar archivos de recursos y de utilidad (.bmp, .cur, .ico, .rct, .sql, .txt).<br /><br /> Por lo general, estos asistentes para código no solicitan información, sino que agregan un archivo al árbol de desarrollo. Se puede cambiar el nombre del archivo en la ventana Propiedades.|
-   |Explorador de soluciones|Los asistentes para código disponibles en el Explorador de soluciones dependen de dónde esté el foco del cursor al hacer clic con el botón derecho en un elemento. Si al hacer clic con el botón derecho en un elemento no aparece la opción **Agregar**, suba el cursor un nivel en el árbol de desarrollo e inténtelo de nuevo. Los asistentes para código siempre colocan el código adicional en el lugar adecuado en el árbol de desarrollo, con independencia de la posición del cursor. Los asistentes para código disponibles desde el Explorador de soluciones incluyen los siguientes:<br /><br /> -   Agregar clase (abre el cuadro de diálogo **Agregar clase** que contiene los asistentes para código nuevos).<br />-   Agregar recurso (Nuevo, Importar o Personalizar).<br />-   Agregar referencia web.|
-   |Vista de clases|Los asistentes para código disponibles desde la Vista de clases dependen de dónde esté el foco del cursor al hacer clic con el botón derecho en un elemento. Si al hacer clic con el botón derecho en un elemento no aparece la opción **Agregar**, suba el cursor un nivel en el árbol de clases e inténtelo de nuevo. Los asistentes para código siempre colocan el código adicional en el lugar adecuado en el árbol de desarrollo, con independencia de la posición del cursor. Los asistentes para código disponibles en la Vista de clases incluyen los siguientes:<br /><br /> -   [Agregar funciones miembro](../ide/adding-a-member-function-visual-cpp.md).<br />-   [Agregar variables miembro](../ide/adding-a-member-variable-visual-cpp.md).<br />-   [Agregar clases](../ide/adding-a-class-visual-cpp.md).<br />-   [Implementar interfaz](../ide/implement-interface-wizard.md) (solo desde una clase de control).<br />-   [Agregar punto de conexión](../ide/implement-connection-point-wizard.md) (solo para clases de ATL).<br />-   [Agregar método](../ide/add-method-wizard.md) (solo desde una interfaz).<br />-   [Agregar propiedad](../ide/names-add-property-wizard.md) (solo desde una interfaz).<br />-   [Agregar evento](../ide/add-event-wizard.md) (solo desde una clase de control).<br /><br /> Al seleccionar Agregar clase se abre el cuadro de diálogo **Agregar clase**, que proporciona acceso a todos los asistentes para código Agregar clase nuevos.|
+   |Agregar nuevo elemento|Los asistentes para código Agregar nuevo elemento agregan archivos de código fuente al proyecto. Si es necesario, se crean directorios adicionales para contener los archivos donde el motor de compilación de proyecto espera encontrarlos. Los asistentes para código disponibles desde el icono Agregar elemento incluyen los siguientes:<br /><br />- Agregar archivos de código fuente de C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />- Agregar archivos de desarrollo web (.html, .asp, .css, .xml).<br />- Agregar archivos de recursos y de utilidad (.bmp, .cur, .ico, .rct, .sql, .txt).<br /><br />Por lo general, estos asistentes para código no solicitan información, sino que agregan un archivo al árbol de desarrollo. Se puede cambiar el nombre del archivo en la ventana Propiedades.|
+   |Explorador de soluciones|Los asistentes para código disponibles en el Explorador de soluciones dependen de dónde esté el foco del cursor al hacer clic con el botón derecho en un elemento. Si al hacer clic con el botón derecho en un elemento no aparece la opción **Agregar**, suba el cursor un nivel en el árbol de desarrollo e inténtelo de nuevo. Los asistentes para código siempre colocan el código adicional en el lugar adecuado en el árbol de desarrollo, con independencia de la posición del cursor. Los asistentes para código disponibles desde el Explorador de soluciones incluyen los siguientes:<br /><br />- Agregar clase (abre el cuadro de diálogo **Agregar clase** que contiene los asistentes para código nuevos).<br />- Agregar recurso (Nuevo, Importar o Personalizar).<br />- Agregar referencia web.|
+   |Vista de clases|Los asistentes para código disponibles desde la Vista de clases dependen de dónde esté el foco del cursor al hacer clic con el botón derecho en un elemento. Si al hacer clic con el botón derecho en un elemento no aparece la opción **Agregar**, suba el cursor un nivel en el árbol de clases e inténtelo de nuevo. Los asistentes para código siempre colocan el código adicional en el lugar adecuado en el árbol de desarrollo, con independencia de la posición del cursor. Los asistentes para código disponibles en la Vista de clases incluyen los siguientes:<br /><br />- [Agregar funciones miembro](../ide/adding-a-member-function-visual-cpp.md).<br />- [Agregar variables miembro](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Agregar clases](../ide/adding-a-class-visual-cpp.md).<br />- [Implementar interfaz](../ide/implement-interface-wizard.md) (solo desde una clase de control).<br />- [Agregar punto de conexión](../ide/implement-connection-point-wizard.md) (solo para clases de ATL).<br />- [Agregar método](../ide/add-method-wizard.md) (solo desde una interfaz).<br />- [Agregar propiedad](../ide/names-add-property-wizard.md) (solo desde una interfaz).<br />- [Agregar evento](../ide/add-event-wizard.md) (solo desde una clase de control).<br /><br />Al seleccionar Agregar clase se abre el cuadro de diálogo **Agregar clase**, que proporciona acceso a todos los asistentes para código Agregar clase nuevos.|
 
 ## <a name="see-also"></a>Vea también
 

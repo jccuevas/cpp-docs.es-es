@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451e7fc6e2a7b4a72188da6b69888bf04b605842
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412371"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861348"
 ---
 # <a name="editing-a-com-interface"></a>Editar una interfaz COM
 
@@ -38,8 +38,8 @@ Los tres asistentes siguientes ayudan a personalizar las interfaces existentes. 
 
 |Asistente|Tipo de proyecto|
 |------------|------------------|
-|[Asistente para agregar propiedades](../ide/names-add-property-wizard.md)|Proyectos de ATL o MFC compatibles con ATL. Haga clic con el botón derecho en la interfaz a la que quiera agregar la propiedad.<br /><br /> Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar propiedades según corresponda:<br /><br /> -   Para las interfaces dispinterface de proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), la invocación del Asistente para agregar propiedades proporciona opciones específicas para MFC.<br />-   Para las interfaces de controles ActiveX MFC, el Asistente para agregar propiedades proporciona una lista de métodos y propiedades estándar que se pueden usar tal cual o personalizar para controlarlos.<br />-   Para todas las demás interfaces, los asistentes para agregar propiedades proporcionan opciones de utilidad en la mayoría de los casos.|
-|[Asistente para agregar métodos](../ide/add-method-wizard.md)|Proyectos de ATL o MFC compatibles con ATL. Haga clic con el botón derecho en la interfaz a la que quiera agregar el método.<br /><br /> Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar métodos según corresponda:<br /><br /> -   Para las interfaces dispinterface de proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), la invocación del Asistente para agregar métodos proporciona opciones específicas para MFC.<br />-   Para las interfaces de controles ActiveX MFC, el Asistente para agregar métodos proporciona una lista de métodos y propiedades estándar que se pueden usar tal cual o personalizar para controlarlos.<br />-   Para todas las demás interfaces, los asistentes para **agregar métodos** proporcionan opciones de utilidad en la mayoría de los casos.|
+|[Asistente para agregar propiedades](../ide/names-add-property-wizard.md)|Proyectos de ATL o MFC compatibles con ATL. Haga clic con el botón derecho en la interfaz a la que quiera agregar la propiedad.<br /><br />Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar propiedades según corresponda:<br /><br />- Para las interfaces dispinterface de proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), la invocación del Asistente para agregar propiedades proporciona opciones específicas para MFC.<br />- Para las interfaces de controles ActiveX MFC, el Asistente para agregar propiedades proporciona una lista de métodos y propiedades estándar que se pueden usar tal cual o personalizar para controlarlos.<br />- Para todas las demás interfaces, los asistentes para agregar propiedades proporcionan opciones de utilidad en la mayoría de los casos.|
+|[Asistente para agregar métodos](../ide/add-method-wizard.md)|Proyectos de ATL o MFC compatibles con ATL. Haga clic con el botón derecho en la interfaz a la que quiera agregar el método.<br /><br />Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar métodos según corresponda:<br /><br />- Para las interfaces dispinterface de proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), la invocación del Asistente para agregar métodos proporciona opciones específicas para MFC.<br />- Para las interfaces de controles ActiveX MFC, el Asistente para agregar métodos proporciona una lista de métodos y propiedades estándar que se pueden usar tal cual o personalizar para controlarlos.<br />- Para todas las demás interfaces, los asistentes para **agregar métodos** proporcionan opciones de utilidad en la mayoría de los casos.|
 
 Además, se pueden implementar interfaces nuevas en el control COM haciendo clic con el botón derecho en la clase de control del objeto en la Vista de clases y haciendo clic en [Implementar interfaz](../ide/implement-interface-wizard.md).
 

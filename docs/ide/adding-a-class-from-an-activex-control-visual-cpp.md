@@ -1,7 +1,7 @@
 ---
 title: Agregar una clase desde un control ActiveX (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,16 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fd284236d2e9267d281061eef3915ed41f6f590
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6f9e7d8ea0e3b21b06d73e187a4f45c53cd896cf
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375962"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250489"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>Agregar una clase desde un control ActiveX (Visual C++)
 
 Use este asistente para crear una clase MFC desde una interfaz en un control ActiveX disponible. Puede agregar una clase MFC a una [Aplicación MFC](../mfc/reference/creating-an-mfc-application.md), un archivo [DLL de MFC](../mfc/reference/creating-an-mfc-dll-project.md) o un [control ActiveX de MFC](../mfc/reference/creating-an-mfc-activex-control.md).
+
+> [!WARNING]
+> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 > [!NOTE]
 >  No es necesario crear un proyecto MFC con Automation habilitado para poder agregar una clase desde un control ActiveX.

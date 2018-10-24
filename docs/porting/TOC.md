@@ -15,6 +15,7 @@
 ### [Corregir dependencias en los datos internos de biblioteca](fix-your-dependencies-on-library-internals.md)
 ### [Problemas de migración de punto flotante](floating-point-migration-issues.md)
 ### [Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos](use-native-multi-targeting.md)
+### [Características de Visual C++ en desuso en la versión preliminar de Visual Studio 2019](features-deprecated-in-visual-studio.md)
 ## [Introducción a Visual C++ para los usuarios de UNIX](introduction-to-visual-cpp-for-unix-users.md)
 ## [Migrar de UNIX a Win32](porting-from-unix-to-win32.md)
 ## [Migrar a la Plataforma universal de Windows (C++)](porting-to-the-universal-windows-platform-cpp.md)
