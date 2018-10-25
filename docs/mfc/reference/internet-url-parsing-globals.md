@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0ffae70ae2da4edab9326a913e597fe1434611
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18ef64bc20ba963b248273be16af7748a798a1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054714"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Las aplicaciones auxiliares y variables globales de análisis de direcciones URL de Internet
 
@@ -237,6 +237,7 @@ Utilice esta función global para determinar el tipo de un identificador de Inte
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *hQuery*<br/>
@@ -297,6 +298,7 @@ Se produce una excepción de Internet.
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *dwContext*<br/>
@@ -321,5 +323,4 @@ Usted es responsable de determinar la causa según el código de error del siste
 [Macros y funciones globales](mfc-macros-and-globals.md)<br/>
 [CInternetException (clase)](cinternetexception-class.md)<br/>
 [THROW](#throw)
-
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e9e62c1969d61f84319c0ffadf50f9f96534380
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055492"
 ---
 # <a name="registry-data-exchange-macros"></a>Macros de intercambio de datos del registro
 
@@ -39,7 +39,7 @@ Estas macros realizan operaciones de intercambio de datos del registro.
 |[RDX_BINARY](#rdx_binary)|Asocia la entrada del registro especificada a una variable de miembro especificado de tipo BYTE.|
 |[RDX_CSTRING_TEXT](#rdx_cstring_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo CString.|
 |[RDX_DWORD](#rdx_dword)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo DWORD.|
-|[RDX_TEXT](#rdx_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo TCHAR.|  
+|[RDX_TEXT](#rdx_text)|Asocia la entrada del registro especificado con una variable de miembro especificado del tipo TCHAR.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -80,10 +80,10 @@ Asocia la entrada del registro especificada a una variable de miembro especifica
 
 ```
 RDX_BINARY(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -98,7 +98,7 @@ La subclave del registro.
 *VALUENAME*<br/>
 La clave del registro.
 
-*Miembro*<br/>
+*member*<br/>
 La variable miembro para asociar a la entrada del registro especificada.
 
 *member_size*<br/>
@@ -114,10 +114,10 @@ Asocia la entrada del registro especificado con una variable de miembro especifi
 
 ```
 RDX_CSTRING_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -132,7 +132,7 @@ La subclave del registro.
 *VALUENAME*<br/>
 La clave del registro.
 
-*Miembro*<br/>
+*member*<br/>
 La variable miembro para asociar a la entrada del registro especificada.
 
 *member_size*<br/>
@@ -148,10 +148,10 @@ Asocia la entrada del registro especificado con una variable de miembro especifi
 
 ```
 RDX_DWORD(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -166,7 +166,7 @@ La subclave del registro.
 *VALUENAME*<br/>
 La clave del registro.
 
-*Miembro*<br/>
+*member*<br/>
 La variable miembro para asociar a la entrada del registro especificada.
 
 *member_size*<br/>
@@ -182,10 +182,10 @@ Asocia la entrada del registro especificado con una variable de miembro especifi
 
 ```
 RDX_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -200,7 +200,7 @@ La subclave del registro.
 *VALUENAME*<br/>
 La clave del registro.
 
-*Miembro*<br/>
+*member*<br/>
 La variable miembro para asociar a la entrada del registro especificada.
 
 *member_size*<br/>

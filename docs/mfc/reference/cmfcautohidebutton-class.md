@@ -1,7 +1,7 @@
 ---
 title: Clase CMFCAutoHideButton | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -60,18 +60,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072473895bbd041f9b195f02572461b02202be32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92f7875620f6cc3efee77094fcae80de83f6db1b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386098"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056079"
 ---
 # <a name="cmfcautohidebutton-class"></a>Clase CMFCAutoHideButton
 
 Botón que muestra u oculta una [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurada para ocultar.
 
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
+
 ## <a name="syntax"></a>Sintaxis
 
 ```
@@ -130,7 +131,6 @@ En el siguiente ejemplo se muestra cómo construir un objeto `CMFCAutoHideButton
 **Encabezado:** afxautohidebutton.h
 
 ##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop
-
 
 ```
 void BringToTop();
@@ -220,7 +220,6 @@ Para asociar un botón de ocultación automática con un `CDockablePane`, pase e
 
 ##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar
 
-
 ```
 CMFCAutoHideBar* GetParentToolBar();
 ```
@@ -230,7 +229,6 @@ CMFCAutoHideBar* GetParentToolBar();
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect
-
 
 ```
 CRect GetRect() const;
@@ -301,7 +299,6 @@ Distinto de cero si el botón es horizontal; en caso contrario, es 0.
 El marco de trabajo establece la orientación de un [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objeto al crearlo.  Puede controlar la orientación mediante la *dwAlignment* parámetro en el [CMFCAutoHideButton::Create](#create) método.
 
 ##  <a name="istop"></a>  CMFCAutoHideButton::IsTop
-
 
 ```
 BOOL IsTop() const;
@@ -416,19 +413,17 @@ virtual void ShowButton(BOOL bShow);
 
 ##  <a name="move"></a>  CMFCAutoHideButton::Move
 
-
 ```
 void Move(int nOffset);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nOffset*
+[in] *nOffset*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane
-
 
 ```
 void ReplacePane(CDockablePane* pNewBar);
@@ -436,7 +431,7 @@ void ReplacePane(CDockablePane* pNewBar);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pNewBar*
+[in] *pNewBar*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

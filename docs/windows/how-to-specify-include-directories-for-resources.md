@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be030539a7b2d0585ea895f1428de822d3300d53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443545"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052972"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>Cómo: especificar directorios de inclusión de recursos (C++)
 
@@ -32,7 +32,7 @@ ms.locfileid: "46443545"
 
 2. En el **páginas de propiedades** cuadro de diálogo, haga clic en el **recursos** nodo en el panel izquierdo, a continuación, especifique el adicionales incluyen directorios en el **directorios de inclusión adicionales** propiedad.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en la Guía del desarrollador de .NET Framework. 
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en la Guía del desarrollador de .NET Framework.
 
 ## <a name="requirements"></a>Requisitos
 

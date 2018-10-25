@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054168"
 ---
 # <a name="registering-ole-controls"></a>Registrar controles OLE
 
@@ -86,7 +86,7 @@ Contiene uno o varios de los siguientes indicadores:
 
 - `afxRegFreeThreading` Establece el modelo de subprocesos en el registro para ThreadingModel = gratis.
 
-     Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` establecer ThreadingModel = Both. Consulte [InprocServer32](/windows/desktop/com/inprocserver32) en el SDK de Windows para obtener más información sobre el registro del modelo de subprocesos.
+   Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` establecer ThreadingModel = Both. Consulte [InprocServer32](/windows/desktop/com/inprocserver32) en el SDK de Windows para obtener más información sobre el registro del modelo de subprocesos.
 
 > [!NOTE]
 >  En las versiones MFC anteriores MFC 4.2, el **int** *nRegFlags* parámetro era un parámetro de tipo BOOL, *bInsertable*, que permite o deniega el control que debe insertarse de la instrucción Insert Cuadro de diálogo del objeto.

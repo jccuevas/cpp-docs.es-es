@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4c16337949340b03bbaa517ca98ac9b65a5bb2bb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053935"
 ---
 # <a name="catlarray-class"></a>CAtlArray (clase)
 
@@ -90,7 +90,7 @@ El código utilizado para copiar o mover elementos.
 
 |||
 |-|-|
-|[operador&#91;&#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|  
+|[operador&#91;&#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|
 
 ### <a name="typedefs"></a>Typedefs
 

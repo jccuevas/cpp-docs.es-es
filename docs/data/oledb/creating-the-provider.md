@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 230620a2375ac5aa822e55496d1f26751ee6f7b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410751"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055351"
 ---
 # <a name="creating-the-provider"></a>Crear un proveedor
 
@@ -32,7 +32,7 @@ ms.locfileid: "49410751"
 
 1. En el **Agregar clase** cuadro de diálogo **instalado** > **Visual C++** > **ATL**, seleccione el **Proveedor OLEDB ATL** icono y, a continuación, haga clic en **abierto**.
 
-1. En el **el Asistente para proveedores OLE DB ATL**, escriba un nombre corto para el proveedor en el **nombre corto** cuadro. Los temas siguientes utilizan el nombre corto "MyProvider", pero puede usar otro nombre. Rellenan otros cuadros con nombre según el nombre especificado.
+1. En el **el Asistente para proveedores OLE DB ATL**, escriba un nombre corto para el proveedor en el **nombre corto** cuadro. Los temas siguientes utilizan el nombre corto *personalizado*, pero puede usar otro nombre. Rellenan otros cuadros con nombre según el nombre especificado.
 
 1. Editar otros cuadros con nombre, si es necesario. Además de los nombres de objeto y el archivo, puede modificar lo siguiente:
 

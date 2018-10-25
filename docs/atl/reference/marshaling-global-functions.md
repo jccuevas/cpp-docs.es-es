@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106238"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055143"
 ---
 # <a name="marshaling-global-functions"></a>Funciones globales de serialización
 
@@ -34,7 +34,7 @@ Estas funciones proporcionan compatibilidad para el cálculo de referencias y co
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Libera los datos de serialización y el `IStream` puntero.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuevo objeto de secuencia y calcula las referencias el puntero de interfaz especificado.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Serialización de datos de la secuencia se convierte en un puntero de interfaz.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Serialización de datos de la secuencia se convierte en un puntero de interfaz.|
 
 ## <a name="requirements"></a>Requisitos:
 
@@ -42,7 +42,7 @@ Estas funciones proporcionan compatibilidad para el cálculo de referencias y co
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Libera los datos de serializar del flujo; a continuación, libera el puntero del flujo.  
+Libera los datos de serializar del flujo; a continuación, libera el puntero del flujo.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

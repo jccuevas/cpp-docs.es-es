@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055403"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Reflexión de mensajes para controles de Windows
 
@@ -126,7 +126,7 @@ Este sencillo ejemplo crea un control reutilizable denominado `CYellowEdit`. El 
 
 1. Crear un nuevo cuadro de diálogo en una aplicación existente. Para obtener más información, consulte el [editor de cuadro de diálogo](../windows/dialog-editor.md) tema.
 
-     Debe tener una aplicación en el que se va a desarrollar el control reutilizable. Si no tiene una aplicación existente para usar, crear una aplicación basada en el cuadro de diálogo mediante el Asistente para aplicaciones.
+   Debe tener una aplicación en el que se va a desarrollar el control reutilizable. Si no tiene una aplicación existente para usar, crear una aplicación basada en el cuadro de diálogo mediante el Asistente para aplicaciones.
 
 2. Con el proyecto cargado en Visual C++, use ClassWizard para crear una nueva clase denominada `CYellowEdit` según `CEdit`.
 
@@ -145,7 +145,7 @@ Este sencillo ejemplo crea un control reutilizable denominado `CYellowEdit`. El 
 
 5. Con ClassWizard, agregue un controlador para el mensaje WM_CTLCOLOR reflejado para su `CYellowEdit` clase. Tenga en cuenta que se indica que el mensaje se refleja el signo igual delante del nombre del mensaje en la lista de mensajes que puede controlar. Esto se describe en [definir un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-     ClassWizard agrega la siguiente función de macro y el esqueleto de mapa de mensajes para usted:
+   ClassWizard agrega la siguiente función de macro y el esqueleto de mapa de mensajes para usted:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()

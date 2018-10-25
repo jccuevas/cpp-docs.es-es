@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110879"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055989"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Error de las herramientas del vinculador LNK1106
 
@@ -33,16 +33,16 @@ La herramienta no pudo leer o escribir en `location` en un archivo asignado a me
 
 1. Disco está lleno.
 
-     Libere espacio y volver a vincular.
+   Libere espacio y volver a vincular.
 
 1. Intentando vincular a través de una red.
 
-     Algunas redes no son totalmente compatibles con los archivos asignados a memoria utilizados por el vinculador. Intentar vincular en el disco local.
+   Algunas redes no son totalmente compatibles con los archivos asignados a memoria utilizados por el vinculador. Intentar vincular en el disco local.
 
 1. Bloque no válido en el disco.
 
-     Aunque el sistema operativo y el hardware del disco deberían detectado un error de ese tipo, desea ejecutar un programa de comprobación de disco.
+   Aunque el sistema operativo y el hardware del disco deberían detectado un error de ese tipo, desea ejecutar un programa de comprobación de disco.
 
 1. Espacio en el montón.
 
-     Consulte [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) para obtener más información.
+   Consulte [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) para obtener más información.

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 750e51264f12d1c8961ced4e8b606ea5d040d8c9
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 41a757ccd70fe95ce82f90b1128985986e3722b0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792158"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057821"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -57,14 +57,14 @@ Enumeración de uno de los valores siguientes:
 *optimize*<br/>
 Cuando *tipo* es `native`, puede especificar `optimize=size`para indicar que hay 4 bytes de almacenamiento (mínimo) para todos los eventos en una clase o `optimize=speed` (predeterminado) para indicar que hay 4 * (número de eventos) bytes de almacenamiento.
 
-*Decore*<br/>
-Cuando *tipo* es `native`, puede especificar `decorate=false`para indicar que el nombre expandido en el archivo combinado (.mrg) no debe incluir el nombre de la clase envolvente. [/FX](../../build/reference/fx-merge-injected-code.md) le permite generar archivos mrg. `decorate=false`, que es el valor predeterminado, se crean nombres de tipo completo en el archivo combinado.
+*decorate*<br/>
+Cuando *tipo* es `native`, puede especificar `decorate=false`para indicar que el nombre expandido en el archivo combinado (.mrg) no debe incluir el nombre de la clase envolvente. [/Fx](../../build/reference/fx-merge-injected-code.md) permite generar archivos .mrg. `decorate=false`, que es el valor predeterminado, se crean nombres de tipo completo en el archivo combinado.
 
 ## <a name="remarks"></a>Comentarios
 
 El atributo de C++ **event_source** especifica que la clase o estructura a la que se aplica será un origen del evento.
 
-**event_source** se usa junto con el [event_receiver](event-receiver.md) atributo y el [__event](../../cpp/event.md) palabra clave. Use `event_receiver` en crear receptores de eventos. Use **__event** en métodos dentro del origen de eventos para especificar dichos métodos como eventos.
+**event_source** se usa junto con el atributo [event_receiver](event-receiver.md) y la palabra clave [__event](../../cpp/event.md) . Use `event_receiver` en crear receptores de eventos. Use **__event** en métodos dentro del origen de eventos para especificar dichos métodos como eventos.
 
 > [!NOTE]
 > Una clase o struct basada en plantilla no puede contener eventos.
@@ -80,7 +80,7 @@ El atributo de C++ **event_source** especifica que la clase o estructura a la qu
 |**Atributos requeridos**|**coclase** cuando `type`=`com`|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -89,4 +89,4 @@ Para obtener más información, consulte [contextos de atributo](cpp-attributes-
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[Atributos de clase](class-attributes.md)  
+[Atributos de clase](class-attributes.md)

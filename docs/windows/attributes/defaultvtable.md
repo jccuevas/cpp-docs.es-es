@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b007473de287a58798c42e05e49ee77170ec6e68
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 003123036b8ae0e6bc39660ff7f2d98394dcad83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057782"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -81,12 +81,12 @@ class CMyC3 : public IMyI3 {};
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|**coclass**|
+|**Atributos requeridos**|**coclase**|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Atributos de clase](class-attributes.md)  
+[Atributos de clase](class-attributes.md)

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403791"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056599"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Crear colecciones de pila y de cola
 
@@ -40,9 +40,9 @@ Dado que la colección de listas estándar tiene un encabezado y cola, es fácil
 
 1. Derivar una nueva clase de lista de una de las clases de lista MFC existentes y agregue más funciones miembro para admitir la funcionalidad de las operaciones de pila.
 
-     En el ejemplo siguiente se muestra cómo agregar funciones miembro para insertar elementos en la pila, inspeccionar el elemento superior de la pila y extraer el elemento superior de la pila:
+   En el ejemplo siguiente se muestra cómo agregar funciones miembro para insertar elementos en la pila, inspeccionar el elemento superior de la pila y extraer el elemento superior de la pila:
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Tenga en cuenta que este enfoque expone subyacente `CObList` clase. El usuario puede llamar a cualquiera `CObList` función miembro, si tiene sentido para una pila o no.
 
@@ -54,9 +54,9 @@ Dado que la colección de listas estándar tiene un encabezado y una cola, tambi
 
 1. Derivar una nueva clase de lista de una de las clases de lista predefinidas proporcionadas con la biblioteca Microsoft Foundation Class y agregue más funciones miembro para admitir la semántica de las operaciones de cola.
 
-     El ejemplo siguiente muestra cómo se pueden anexar funciones miembro para agregar un elemento al final de la cola y obtener el elemento de la parte delantera de la cola.
+   El ejemplo siguiente muestra cómo se pueden anexar funciones miembro para agregar un elemento al final de la cola y obtener el elemento de la parte delantera de la cola.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Vea también
 

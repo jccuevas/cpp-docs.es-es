@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442780"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052998"
 ---
 # <a name="form-views-mfc"></a>Vistas de formulario (MFC)
 
@@ -40,7 +40,7 @@ Cuando se inserta un nuevo formulario en la aplicación, Visual C++ hace lo sigu
 
 - Crea un recurso de cuadro de diálogo con estilos apropiados (o puede usar un recurso de cuadro de diálogo existente que aún no se ha asociado con una clase).
 
-     Si elige un recurso de cuadro de diálogo existente, deberá establecer estos estilos mediante la página de propiedades del cuadro de diálogo. Deben incluir los estilos para un cuadro de diálogo:
+   Si elige un recurso de cuadro de diálogo existente, deberá establecer estos estilos mediante la página de propiedades del cuadro de diálogo. Deben incluir los estilos para un cuadro de diálogo:
 
      **WS_CHILD**= On
 
@@ -54,17 +54,17 @@ Para aplicaciones basadas en la arquitectura documento/vista, el **nuevo formula
 
 - Crea un `CDocument`-clase basada en
 
-     En lugar de tener que crear una clase nueva, puede usar cualquier existente `CDocument`-en función de clase del proyecto.
+   En lugar de tener que crear una clase nueva, puede usar cualquier existente `CDocument`-en función de clase del proyecto.
 
 - Genera una plantilla de documento (derivado de `CDocument`) con recursos de cadena, menú e icono.
 
-     También puede crear una nueva clase en el que se va a basar la plantilla.
+   También puede crear una nueva clase en el que se va a basar la plantilla.
 
 - Agrega una llamada a `AddDocumentTemplate` en la aplicación `InitInstance` código.
 
-     Visual C++ agrega este código para cada formulario nuevo creado, que agrega el formulario a la lista de formularios disponibles cuando el usuario elige el **New** comando. Este código incluye el identificador de recurso asociado del formulario y los nombres de las clases de marco que juntas componen el nuevo objeto de formulario, vista y documento asociado.
+   Visual C++ agrega este código para cada formulario nuevo creado, que agrega el formulario a la lista de formularios disponibles cuando el usuario elige el **New** comando. Este código incluye el identificador de recurso asociado del formulario y los nombres de las clases de marco que juntas componen el nuevo objeto de formulario, vista y documento asociado.
 
-     Las plantillas de documento sirven como conexión entre documentos, ventanas de marco y vistas. Para un único documento, puede crear muchas de las plantillas.
+   Las plantillas de documento sirven como conexión entre documentos, ventanas de marco y vistas. Para un único documento, puede crear muchas de las plantillas.
 
 Para obtener más información, consulte:
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398753"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053180"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Usar sockets con archivos
 
@@ -49,7 +49,7 @@ Mediante un `CSocket` objeto implica crear y asociar varios objetos de clase MFC
 
 1. El objeto usa para crear subyacente **SOCKET** controlar.
 
-     Para un `CSocket` objeto de cliente, normalmente debe usar los parámetros predeterminados para [crear](../mfc/reference/casyncsocket-class.md#create), a menos que necesite un socket de datagrama. Para un `CSocket` objeto de servidor, debe especificar un puerto en el `Create` llamar.
+   Para un `CSocket` objeto de cliente, normalmente debe usar los parámetros predeterminados para [crear](../mfc/reference/casyncsocket-class.md#create), a menos que necesite un socket de datagrama. Para un `CSocket` objeto de servidor, debe especificar un puerto en el `Create` llamar.
 
     > [!NOTE]
     >  `CArchive` no funciona con sockets de datagramas. Si desea usar `CSocket` para un socket de datagrama, debe usar la clase como utilizaría `CAsyncSocket`, es decir, sin un archivo. Dado que los datagramas no son confiables (no garantiza que lleguen y puede repetirse o que vengan desordenados), no son compatibles con la serialización a través de un archivo. Esperar una operación de serialización para completar de forma confiable y en secuencia. Si intenta usar `CSocket` con un `CArchive` de objeto para un datagrama, se produce un error en una aserción de MFC.
@@ -58,7 +58,7 @@ Mediante un `CSocket` objeto implica crear y asociar varios objetos de clase MFC
 
      O bien
 
-     Si el socket es un servidor, llame a [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) para empezar a escuchar los intentos de conexión desde un cliente. Al recibir una solicitud de conexión, aceptarla mediante una llamada a [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Si el socket es un servidor, llame a [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) para empezar a escuchar los intentos de conexión desde un cliente. Al recibir una solicitud de conexión, aceptarla mediante una llamada a [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
 
     > [!NOTE]
     >  El `Accept` función miembro toma una referencia a una nueva y vacía `CSocket` objeto como su parámetro. Debe construir este objeto antes de llamar a `Accept`. Si este objeto socket se sale del ámbito, se cierra la conexión. No llame a `Create` para este nuevo objeto de socket.
@@ -67,13 +67,13 @@ Mediante un `CSocket` objeto implica crear y asociar varios objetos de clase MFC
 
 1. Crear un [CArchive](../mfc/reference/carchive-class.md) objeto para cargar (recibir) o almacenamiento de datos (enviar). El archivo está asociado con el `CSocketFile` objeto.
 
-     Tenga en cuenta que `CArchive` no funciona con sockets de datagramas.
+   Tenga en cuenta que `CArchive` no funciona con sockets de datagramas.
 
 1. Use la `CArchive` objeto para pasar datos entre los sockets de cliente y servidor.
 
-     Tenga en cuenta que una determinada `CArchive` objeto mueve los datos en un solo sentido: para cargar (recibir) o almacenar (enviar). En algunos casos, usará dos `CArchive` objetos: uno para enviar datos, otro para recibir confirmaciones.
+   Tenga en cuenta que una determinada `CArchive` objeto mueve los datos en un solo sentido: para cargar (recibir) o almacenar (enviar). En algunos casos, usará dos `CArchive` objetos: uno para enviar datos, otro para recibir confirmaciones.
 
-     Después de aceptar una conexión y configurar el archivo, puede realizar tareas como la validación de contraseñas.
+   Después de aceptar una conexión y configurar el archivo, puede realizar tareas como la validación de contraseñas.
 
 1. Destruir el archivo, archivo de socket y objetos de socket.
 

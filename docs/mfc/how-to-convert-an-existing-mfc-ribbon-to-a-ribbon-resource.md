@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052556"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Cómo: Convertir una cinta de MFC existente en un recurso de cinta
 
@@ -37,13 +37,13 @@ Debe tener un proyecto MFC existente que tiene código que utiliza las clases de
 
 ```
 
-     Save and close the file.
+   Guarde y cierre el archivo.
 
 1. Compilar y ejecutar la aplicación MFC y, a continuación, en el Bloc de notas, abra RibbonOutput.txt y copie su contenido.
 
 1. En Visual Studio, en el **proyecto** menú, haga clic en **Agregar recurso**. En el **Agregar recurso** cuadro de diálogo, seleccione **cinta** y, a continuación, haga clic en **New**.
 
-     Visual Studio crea un recurso de cinta y lo abre en la vista Diseño. El identificador de recurso de cinta es IDR_RIBBON1, que se muestra en **vista de recursos**. La cinta de opciones se define en el archivo XML de ribbon1.mfcribbon ms.
+   Visual Studio crea un recurso de cinta y lo abre en la vista Diseño. El identificador de recurso de cinta es IDR_RIBBON1, que se muestra en **vista de recursos**. La cinta de opciones se define en el archivo XML de ribbon1.mfcribbon ms.
 
 1. En Visual Studio, abra ribbon1.mfcribbon ms, elimine su contenido y, a continuación, pegue el contenido de RibbonOutput.txt, que copió anteriormente. Guarde y cierre ribbon1.mfcribbon ms.
 

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a776043d8a65d0a037d17c1c2538a4606b4c9d1
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: df80dfb235a03fdc45dfaa8a60c5fa5c1afb30bb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808386"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053310"
 ---
 # <a name="using-dynamic-accessors"></a>Utilizar descriptores de acceso dinámicos
 
@@ -173,4 +173,4 @@ Para obtener un ejemplo que muestra cómo utilizar esta clase para ejecutar un p
 [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicStringAccessor (Clase)](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
 [CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[Ejemplo DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  
+[Ejemplo DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)
