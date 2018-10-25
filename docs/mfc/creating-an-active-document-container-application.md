@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052820"
 ---
 # <a name="creating-an-active-document-container-application"></a>Crear una aplicación de contenedor de documentos activo
 
@@ -57,9 +57,9 @@ La manera más sencilla y más recomendada para crear una aplicación de contene
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` proporciona compatibilidad con la impresión. Este código reemplaza `DoPreparePrinting`, que es la preparación de impresión predeterminada.
+   `OnPreparePrinting` proporciona compatibilidad con la impresión. Este código reemplaza `DoPreparePrinting`, que es la preparación de impresión predeterminada.
 
-     Contención de documentos activos proporciona un esquema de impresión mejorado:
+   Contención de documentos activos proporciona un esquema de impresión mejorado:
 
    - Puede llamar primero el documento activo a través de su `IPrint` interfaz e indicarle que se imprima. Esto es diferente de contención OLE anterior, en el que el contenedor tenía que procesar una imagen del elemento contenido en la impresora `CDC` objeto.
 
@@ -67,7 +67,7 @@ La manera más sencilla y más recomendada para crear una aplicación de contene
 
    - Si se produce un error, asegúrese de su propia representación del elemento.
 
-     Las funciones miembro estáticas `COleDocObjectItem::OnPrint` y `COleDocObjectItem::OnPreparePrinting`, tal y como se implementa en el código anterior, controlar este esquema de impresión mejorado.
+   Las funciones miembro estáticas `COleDocObjectItem::OnPrint` y `COleDocObjectItem::OnPreparePrinting`, tal y como se implementa en el código anterior, controlar este esquema de impresión mejorado.
 
 11. Agregar sus propias implementaciones y compile la aplicación.
 

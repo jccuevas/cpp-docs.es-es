@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7871b3f547e51bac983e1fe65cf815c8bb70e369
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5eba42cd2884c233ac25a24176f7653fd1d6c257
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423109"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051971"
 ---
 # <a name="namedguids"></a>named_guids
-**Específicos de C++**  
-  
-Indica al compilador que defina e inicialice las variables GUID en estilo antiguo, el formato `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, y `DIID_MyDispInterface`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-named_guids  
-```  
-  
-## <a name="remarks"></a>Comentarios  
+**Específicos de C++**
 
-**FIN de específicos de C++**  
-  
-## <a name="see-also"></a>Vea también  
- 
+Indica al compilador que defina e inicialice las variables GUID en estilo antiguo, el formato `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, y `DIID_MyDispInterface`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+named_guids
+```
+
+## <a name="remarks"></a>Comentarios
+
+**FIN de específicos de C++**
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

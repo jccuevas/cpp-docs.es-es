@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413749"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052569"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definir un controlador de mensajes para un mensaje reflejado
 
@@ -53,7 +53,7 @@ Para crear un [control ActiveX](../../mfc/activex-controls-on-the-internet.md) c
 
 1. Haga clic en el nombre sugerido para Aceptar. El controlador se agrega al proyecto.
 
-     Los nombres de controlador de mensaje que se han agregado aparecen en la columna derecha de la ventana de mensajes reflejados.
+   Los nombres de controlador de mensaje que se han agregado aparecen en la columna derecha de la ventana de mensajes reflejados.
 
 9. Para editar o eliminar un controlador de mensajes, repita los pasos del 4 al 7. Haga clic en la celda que contiene el nombre del controlador para editar o eliminar y haga clic en la tarea apropiada.
 
@@ -64,6 +64,6 @@ Para crear un [control ActiveX](../../mfc/activex-controls-on-the-internet.md) c
 [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Reemplazar una función Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)

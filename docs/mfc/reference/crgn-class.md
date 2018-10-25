@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f90524b63a7d89d43cb6ed080804ed72fe2429e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f6ed7b94509c5dafd868680254c5f48f0066b7f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412684"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054233"
 ---
 # <a name="crgn-class"></a>CRgn (clase)
 
@@ -622,7 +622,7 @@ Especifica un identificador de una región de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un `CRgn` objeto. Si la función no se realizó correctamente, el valor devuelto es NULL.
+Puntero a un objeto `CRgn` . Si la función no se realizó correctamente, el valor devuelto es NULL.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -852,6 +852,4 @@ Use esta función en lugar de la `CreateRectRgn` la función miembro para evitar
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-
-
 

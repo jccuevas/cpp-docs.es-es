@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378207"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082715"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Usar hojas de propiedades en una aplicación
 
@@ -34,9 +34,9 @@ Para utilizar una hoja de propiedades en la aplicación, complete los pasos sigu
 
 1. Crear un recurso de plantilla de cuadro de diálogo para cada página de propiedades. Tenga en cuenta que el usuario se puede cambiar de una página a otra, por lo que disponer de cada página de un modo tan coherente como sea posible.
 
-     Las plantillas de cuadro de diálogo para todas las páginas no tiene que ser del mismo tamaño. El marco de trabajo usa el tamaño de la página más grande para determinar cuánto espacio asignar en la hoja de propiedades para las páginas de propiedades.
+   Las plantillas de cuadro de diálogo para todas las páginas no tiene que ser del mismo tamaño. El marco de trabajo usa el tamaño de la página más grande para determinar cuánto espacio asignar en la hoja de propiedades para las páginas de propiedades.
 
-     Cuando se crea el recurso de plantilla de cuadro de diálogo para una página de propiedades, debe especificar los estilos siguientes en la hoja Propiedades de cuadro de diálogo:
+   Cuando se crea el recurso de plantilla de cuadro de diálogo para una página de propiedades, debe especificar los estilos siguientes en la hoja Propiedades de cuadro de diálogo:
 
    - Establecer el **título** cuadro de edición en el **General** página para el texto que desee que aparezca en la ficha para esta página.
 
@@ -60,9 +60,9 @@ Para utilizar una hoja de propiedades en la aplicación, complete los pasos sigu
 
    - Llame a [CPropertySheet:: AddPage](../mfc/reference/cpropertysheet-class.md#addpage) para cada página.
 
-     Normalmente, el objeto que crea el `CPropertySheet` también crea el `CPropertyPage` objetos en este paso. Sin embargo, si implementa un `CPropertySheet`-clase derivada, se puede incrustar el `CPropertyPage` objetos en el `CPropertySheet` objeto y llamar a `AddPage` para cada página de la `CPropertySheet`-derivados de constructor de clase. `AddPage` Agrega el `CPropertyPage` objeto a la lista de la hoja de propiedades de las páginas, pero no crea realmente la ventana para esa página. Por lo tanto, no es necesario esperar a la creación de la ventana de la hoja de propiedades para llamar a `AddPage`; se puede llamar a `AddPage` desde el constructor de la hoja de propiedades.
+   Normalmente, el objeto que crea el `CPropertySheet` también crea el `CPropertyPage` objetos en este paso. Sin embargo, si implementa un `CPropertySheet`-clase derivada, se puede incrustar el `CPropertyPage` objetos en el `CPropertySheet` objeto y llamar a `AddPage` para cada página de la `CPropertySheet`-derivados de constructor de clase. `AddPage` Agrega el `CPropertyPage` objeto a la lista de la hoja de propiedades de las páginas, pero no crea realmente la ventana para esa página. Por lo tanto, no es necesario esperar a la creación de la ventana de la hoja de propiedades para llamar a `AddPage`; se puede llamar a `AddPage` desde el constructor de la hoja de propiedades.
 
-     De forma predeterminada, si una hoja de propiedades tiene varias pestañas que caben en una sola fila de la hoja de propiedades, las pestañas se apilarán en varias filas. Para deshabilitar el apilamiento, llame a [CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) con el parámetro establecido en **FALSE**. Debe llamar a `EnableStackedTabs` cuando se crea la hoja de propiedades.
+   De forma predeterminada, si una hoja de propiedades tiene varias pestañas que caben en una sola fila de la hoja de propiedades, las pestañas se apilarán en varias filas. Para deshabilitar el apilamiento, llame a [CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) con el parámetro establecido en **FALSE**. Debe llamar a `EnableStackedTabs` cuando se crea la hoja de propiedades.
 
 1. Llame a [CPropertySheet:: DoModal](../mfc/reference/cpropertysheet-class.md#domodal) o [crear](../mfc/reference/cpropertysheet-class.md#create) para mostrar la hoja de propiedades. Llame a `DoModal` para crear una hoja de propiedades como un cuadro de diálogo modal. Llame a **crear** para crear la hoja de propiedades como un cuadro de diálogo no modal.
 

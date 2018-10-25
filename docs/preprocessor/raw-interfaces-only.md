@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f217c0dad3bf74ab930cf1f66392fe22d9df832
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 789c9179b2ba48f5c3796f709931728bc756aaaa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075039"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Específicos de C++**  
-  
-Suprime la generación de funciones de contenedor de control de errores y [propiedad](../cpp/property-cpp.md) declaraciones que utilizan esas funciones de contenedor.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-raw_interfaces_only  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- 
-El **raw_interfaces_only** atributo también hace que el prefijo predeterminado utilizado en la nomenclatura de las funciones que no son propiedad va a quitar. Normalmente, el prefijo es **raw_**. Si se especifica este atributo, los nombres de función pertenecen directamente a la biblioteca de tipos.  
-  
-Este atributo permite exponer solo el contenido de bajo nivel de la biblioteca de tipos.  
-  
-**FIN de específicos de C++**  
-  
-## <a name="see-also"></a>Vea también  
- 
+**Específicos de C++**
+
+Suprime la generación de funciones de contenedor de control de errores y [propiedad](../cpp/property-cpp.md) declaraciones que utilizan esas funciones de contenedor.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+raw_interfaces_only
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **raw_interfaces_only** atributo también hace que el prefijo predeterminado utilizado en la nomenclatura de las funciones que no son propiedad va a quitar. Normalmente, el prefijo es **raw_**. Si se especifica este atributo, los nombres de función pertenecen directamente a la biblioteca de tipos.
+
+Este atributo permite exponer solo el contenido de bajo nivel de la biblioteca de tipos.
+
+**FIN de específicos de C++**
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

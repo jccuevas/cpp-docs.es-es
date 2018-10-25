@@ -1,7 +1,7 @@
 ---
 title: SafeIntException (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -21,16 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ffd82f80b8af0b53ca86ca3daded84580e1e07b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a1890bc20c0737007075656dcbefa20ad81a9bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235742"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068065"
 ---
 # <a name="safeintexception-class"></a>SafeIntException (Clase)
 
 El `SafeInt` clase utiliza `SafeIntException` identificar por qué no se puede completar una operación matemática.
+
+> [!NOTE]
+> La versión más reciente de esta biblioteca se encuentra en [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -74,7 +77,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>Parámetros
 
-*Código*<br/>
+*code*<br/>
 [in] Un valor de datos enumerado que describe el error que se ha producido.
 
 ### <a name="remarks"></a>Comentarios

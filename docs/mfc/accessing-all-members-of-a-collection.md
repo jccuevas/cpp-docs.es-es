@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320457928ef8bc1a03d86b3a898bc0b719e116a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bcaaf4723e8b6a1ad40fb534b7114f317d76f6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060824"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acceso a todos los miembros de una colección
 
@@ -48,38 +48,38 @@ Los procedimientos siguientes muestran cómo iterar en los tres tipos principale
 
 1. Use números de índice secuenciales con la función miembro `GetAt` :
 
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
-     Este ejemplo usa una matriz de puntero con tipo que contiene punteros a objetos `CPerson` . La matriz se deriva de la clase `CObArray`, una de las clases predefinidas no basadas en plantillas. `GetAt` devuelve un puntero a un objeto `CPerson` . Para las clases de colección de puntero con tipo (matrices o listas), el primer parámetro especifica la clase base; el segundo parámetro especifica el tipo para almacenar.
+   Este ejemplo usa una matriz de puntero con tipo que contiene punteros a objetos `CPerson` . La matriz se deriva de la clase `CObArray`, una de las clases predefinidas no basadas en plantillas. `GetAt` devuelve un puntero a un objeto `CPerson` . Para las clases de colección de puntero con tipo (matrices o listas), el primer parámetro especifica la clase base; el segundo parámetro especifica el tipo para almacenar.
 
-     El `CTypedPtrArray` también clase sobrecargas el **[]** operador para que pueda usar la sintaxis habitual de subíndices de matriz para acceder a los elementos de una matriz. Una alternativa a la instrucción en el cuerpo de la **para** es el bucle anterior
+   El `CTypedPtrArray` también clase sobrecargas el **[]** operador para que pueda usar la sintaxis habitual de subíndices de matriz para acceder a los elementos de una matriz. Una alternativa a la instrucción en el cuerpo de la **para** es el bucle anterior
 
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-     Este operador existe en las versiones **const** y no**const** . La versión **const** , que se invoca para las matrices **const** , puede aparecer solo en el lado derecho de una instrucción de asignación.
+   Este operador existe en las versiones **const** y no**const** . La versión **const** , que se invoca para las matrices **const** , puede aparecer solo en el lado derecho de una instrucción de asignación.
 
 ### <a name="_core_to_iterate_a_list"></a> Para recorrer en iteración una lista
 
 1. Use las funciones miembro `GetHeadPosition` y `GetNext` para trabajar a su manera a través de la lista:
 
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
-     Este ejemplo usa una lista de puntero con tipo que contiene punteros a objetos `CPerson` . La declaración de la lista es similar a la de la matriz en el procedimiento [Para recorrer en iteración una matriz](#_core_to_iterate_an_array) pero se deriva de la clase `CObList`. `GetNext` devuelve un puntero a un objeto `CPerson` .
+   Este ejemplo usa una lista de puntero con tipo que contiene punteros a objetos `CPerson` . La declaración de la lista es similar a la de la matriz en el procedimiento [Para recorrer en iteración una matriz](#_core_to_iterate_an_array) pero se deriva de la clase `CObList`. `GetNext` devuelve un puntero a un objeto `CPerson` .
 
 ### <a name="_core_to_iterate_a_map"></a> Para recorrer en iteración un mapa
 
 1. Use `GetStartPosition` para llegar al principio del mapa y `GetNextAssoc` para obtener repetidamente la clave y el valor siguiente del mapa, como se muestra en el siguiente ejemplo:
 
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
-     Este ejemplo usa una plantilla de mapa sencilla (en lugar de una colección de puntero con tipo) que usa claves de `CString` y almacena punteros a objetos `CPerson` . Cuando usa las funciones de acceso como `GetNextAssoc`, la clase proporciona punteros a objetos `CPerson` . Si en su lugar usa una de las colecciones de mapa que no está basada en plantillas, debe convertir el puntero `CObject` devuelto en un puntero a un `CPerson`.
+   Este ejemplo usa una plantilla de mapa sencilla (en lugar de una colección de puntero con tipo) que usa claves de `CString` y almacena punteros a objetos `CPerson` . Cuando usa las funciones de acceso como `GetNextAssoc`, la clase proporciona punteros a objetos `CPerson` . Si en su lugar usa una de las colecciones de mapa que no está basada en plantillas, debe convertir el puntero `CObject` devuelto en un puntero a un `CPerson`.
 
     > [!NOTE]
     >  Para los mapas que no están basados en plantillas, el compilador requiere una referencia a un puntero `CObject` en el último parámetro para `GetNextAssoc`. En la entrada, debe convertir los punteros a ese tipo, como se muestra en el siguiente ejemplo.
 
-     La solución de plantilla es más sencilla y ayuda a proporcionar mejor seguridad de tipos. El código que no está basado en plantillas es más complicado, como puede ver aquí:
+   La solución de plantilla es más sencilla y ayuda a proporcionar mejor seguridad de tipos. El código que no está basado en plantillas es más complicado, como puede ver aquí:
 
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
 Para obtener más información, vea [Eliminar todos los objetos de una colección CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md).
 

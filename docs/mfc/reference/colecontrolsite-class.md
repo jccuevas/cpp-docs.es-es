@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29583218feeff997d30bfa2b16d35be45b25249
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5963bdd004bfbd242e00e8adac274f33949b08ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082420"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite (clase)
 
@@ -307,7 +307,6 @@ virtual HRESULT CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 virtual HRESULT CreateControl(
     CWnd* pWndCtrl,
@@ -573,7 +572,7 @@ virtual void GetProperty(
 Identifica el identificador de envío de la propiedad, se encuentra en predeterminado el control `IDispatch` interfaz, va a recuperar.
 
 *vtProp*<br/>
-Especifica el tipo de la propiedad que se va a recuperar. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo de la propiedad que se va a recuperar. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvProp*<br/>
 Dirección de la variable que recibirá el valor de propiedad. Debe coincidir con el tipo especificado por *vtProp*.
@@ -637,13 +636,13 @@ Identifica el identificador de envío de la propiedad o método, se encuentra en
 Marcas que describen el contexto de la llamada a IDispatch:: Invoke. Posibles *wFlags* valores, vea `IDispatch::Invoke` en el SDK de Windows.
 
 *vtRet*<br/>
-Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Dirección de la variable que recibirá el valor de la propiedad o el valor devuelto. Debe coincidir con el tipo especificado por *vtRet*.
 
 *pbParamInfo*<br/>
-Puntero a una cadena terminada en null de bytes que especifica los tipos de los parámetros que siguen *pbParamInfo*. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Puntero a una cadena terminada en null de bytes que especifica los tipos de los parámetros que siguen *pbParamInfo*. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Lista de variables de parámetros de tipos especificados en *pbParamInfo*.
@@ -652,7 +651,7 @@ Lista de variables de parámetros de tipos especificados en *pbParamInfo*.
 
 El *pbParamInfo* parámetro especifica los tipos de los parámetros pasados al método o propiedad. La lista variable de argumentos se representa mediante... en la declaración de sintaxis.
 
-Esta función convierte los parámetros con valores VARIANTARG y luego invoca el `IDispatch::Invoke` método en el control. Si la llamada a `IDispatch::Invoke` se produce un error, esta función iniciará una excepción. Si el código de estado devuelto por `IDispatch::Invoke` es `DISP_E_EXCEPTION`, esta función genera un `COleDispatchException` objeto, en caso contrario, produce un `COleException`.
+Esta función convierte los parámetros con valores VARIANTARG y luego invoca el `IDispatch::Invoke` método en el control. Si se produce un error en la llamada a `IDispatch::Invoke` , esta función generará una excepción. Si el código de estado devuelto por `IDispatch::Invoke` es `DISP_E_EXCEPTION`, esta función genera un `COleDispatchException` objeto, en caso contrario, produce un `COleException`.
 
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV
 
@@ -677,13 +676,13 @@ Identifica el identificador de envío de la propiedad o método, se encuentra en
 Marcas que describen el contexto de la llamada a IDispatch:: Invoke.
 
 *vtRet*<br/>
-Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Dirección de la variable que recibirá el valor de la propiedad o el valor devuelto. Debe coincidir con el tipo especificado por *vtRet*.
 
 *pbParamInfo*<br/>
-Puntero a una cadena terminada en null de bytes que especifica los tipos de los parámetros que siguen *pbParamInfo*. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Puntero a una cadena terminada en null de bytes que especifica los tipos de los parámetros que siguen *pbParamInfo*. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *argList*<br/>
 Puntero a una lista de argumentos de variable.
@@ -1010,7 +1009,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 Identifica el identificador de envío de la propiedad o método, se encuentra en el control `IDispatch` interfaz, debe establecerse.
 
 *vtProp*<br/>
-Especifica el tipo de propiedad debe establecerse. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo de propiedad debe establecerse. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Un único parámetro del tipo especificado por *vtProp*.
@@ -1095,7 +1094,7 @@ virtual void AFX_CDECL SetProperty(
 Identifica el identificador de envío de la propiedad o método, se encuentra en el control `IDispatch` interfaz, debe establecerse.
 
 *vtProp*<br/>
-Especifica el tipo de propiedad debe establecerse. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo de propiedad debe establecerse. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Un único parámetro del tipo especificado por *vtProp*.
@@ -1123,7 +1122,7 @@ virtual void SetPropertyV(
 Identifica el identificador de envío de la propiedad o método, se encuentra en el control `IDispatch` interfaz, debe establecerse.
 
 *vtProp*<br/>
-Especifica el tipo de propiedad debe establecerse. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Especifica el tipo de propiedad debe establecerse. Para los valores posibles, vea la sección Comentarios para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *argList*<br/>
 Puntero a la lista de argumentos.

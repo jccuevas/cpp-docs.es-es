@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20cb959727cb2c515bd82d5b4d5d8e45019c6875
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7f5c117d0d65f86e4f4b69011457e166b6440820
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081568"
 ---
 # <a name="deferrableeventargs-class"></a>Clase DeferrableEventArgs
 
@@ -73,7 +73,7 @@ La clase aparece como el primer argumento de un controlador de eventos para un e
 Obtiene una referencia a la [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) el objeto que representa un evento diferido.
 
 ```cpp
-HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
+HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -88,11 +88,11 @@ S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el erro
 ## <a name="invokeallfinished"></a>Deferrableeventargs:: Invokeallfinished
 
 Se llama para indicar que se ha completado todo el procesamiento para controlar un evento diferido.
-  
+
 ```cpp
-void InvokeAllFinished()  
+void InvokeAllFinished()
 ```
-  
+
 ### <a name="remarks"></a>Comentarios
 
 Debe llamar a este método después de las llamadas de origen del evento [InvokeAll](../windows/eventsource-invokeall-method.md). Llamar a este método evita que se realicen futuros aplazamientos y obliga al controlador de finalización a ejecutarse si no se realizaron aplazamientos.

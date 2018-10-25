@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f180fd62d4e79f64119097401632caca9b44fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50731fede9a65e8d354008e1cee0075b43dd163
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399408"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083534"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 (clase)
 
@@ -803,10 +803,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parámetros
 
-*pDC*<br/>
-[in] [in] *rect*
-*pEdit*<br/>
-[in] [in] *estado* [in] *clrText*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *estado*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1057,8 +1058,9 @@ virtual void OnDrawHeaderCtrlBorder(
 *Rect*<br/>
 [in] Un rectángulo que especifica los límites del control de encabezado.
 
-*bIsPressed*<br/>
-[in] [in] *bIsHighlighted* un parámetro booleano que indica si se presiona el control de encabezado.
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+Un parámetro booleano que indica si se presiona el control de encabezado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1717,8 +1719,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in] El color inicial para la barra de progreso. El valor es el inicio de un degradado de color o el color completo de la barra de progreso.
 
-*clrProgressBarDest*<br/>
-[in] [in] *clrProgressText* [in] *bProgressText*
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

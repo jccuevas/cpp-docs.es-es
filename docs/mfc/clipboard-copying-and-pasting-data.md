@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a03708f96f881206aa683b31c26c3c5192f8cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f4a3ba23fbf6e9465d78b04fcd79758c7cae525
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389065"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060239"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Portapapeles: Copiar y pegar datos
 
@@ -56,7 +56,7 @@ Pegado de datos es más complicado que copiarlo, debe elegir el formato que se u
 
 1. Llame a `COleDataObject::IsDataAvailable` para comprobar si un formato determinado está disponible.
 
-     Como alternativa, puede usar `COleDataObject::BeginEnumFormats` para buscar otros formatos hasta que encuentre uno más adecuados para su aplicación.
+   Como alternativa, puede usar `COleDataObject::BeginEnumFormats` para buscar otros formatos hasta que encuentre uno más adecuados para su aplicación.
 
 1. La operación de pegar el formato.
 

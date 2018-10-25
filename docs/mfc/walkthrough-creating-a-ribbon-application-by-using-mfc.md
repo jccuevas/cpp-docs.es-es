@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12070bd690cc2b6228ae5f86e69d9d698bd28348
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236028"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056924"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 
@@ -38,7 +38,7 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 1. Establecer las siguientes opciones el **MFC Application Wizard**:
 
-    1. En el **tipo de aplicación** en sección **estilo Visual y colores**, seleccione **Office 2007 (tema azul)**. 
+    1. En el **tipo de aplicación** en sección **estilo Visual y colores**, seleccione **Office 2007 (tema azul)**.
 
     1. En el **compatibilidad con documentos compuestos** sección, asegúrese de que **ninguno** está seleccionada.
 
@@ -46,7 +46,7 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
     1. En el **soporte técnico de la base de datos** sección, asegúrese de que **ninguno** está seleccionada.
 
-    1. En el **características de la interfaz de usuario** sección, asegúrese de que **usar una cinta de opciones** está seleccionada. 
+    1. En el **características de la interfaz de usuario** sección, asegúrese de que **usar una cinta de opciones** está seleccionada.
 
     1. De forma predeterminada, el **MFC Application Wizard** agrega compatibilidad con varios paneles de acoplamiento. Debido a que en este tutorial solo se enseña la cinta, puede quitar estas opciones de la aplicación. En el **características avanzadas** sección, desactive todas las opciones.
 

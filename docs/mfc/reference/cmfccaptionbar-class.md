@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a6379112de9b31de55b86cc4bc4e06a94863ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 509c2eb386e235e8ba7c6d2bc016ff92f6499263
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077548"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (clase)
 
@@ -158,7 +158,7 @@ Para habilitar el modo de barra de mensajes, llame a [CMFCCaptionBar::Create](#c
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCCaptionBar` clase. El ejemplo muestra cómo crear el control de barra de título, establezca un borde 3D de la barra de título, Establece la distancia, en píxeles, entre el borde del título de la barra elementos y el borde del control de barra de título, establezca el botón de la barra de título , Establece la información sobre herramientas para el botón, establezca la etiqueta de texto de la barra de título, Establece la imagen de mapa de bits de la barra de título y establecer la información sobre herramientas para la imagen en la barra de título. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCCaptionBar` . El ejemplo muestra cómo crear el control de barra de título, establezca un borde 3D de la barra de título, Establece la distancia, en píxeles, entre el borde del título de la barra elementos y el borde del control de barra de título, establezca el botón de la barra de título , Establece la información sobre herramientas para el botón, establezca la etiqueta de texto de la barra de título, Establece la imagen de mapa de bits de la barra de título y establecer la información sobre herramientas para la imagen en la barra de título. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -525,7 +525,6 @@ void SetBitmap(
     COLORREF clrTransparent,
     BOOL bStretch=FALSE,
     BarElementAlignment bmpAlignment=ALIGN_RIGHT);
-
 
 void SetBitmap(
     UINT uiBmpResID,

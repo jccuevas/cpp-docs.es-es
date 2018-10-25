@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809075"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056228"
 ---
 # <a name="openmp-clauses"></a>Cláusulas de OpenMP
 
@@ -56,21 +56,21 @@ Proporciona vínculos a las cláusulas que se utilizan en la API de OpenMP.
 
 Visual C++ admite las cláusulas de OpenMP siguientes:
 
-Cláusula                             | Descripción
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | Permite que los subprocesos tener acceso a valor del subproceso principal, para un [threadprivate](openmp-directives.md#threadprivate) variable.
-[copyprivate](#copyprivate)        | Especifica que una o más variables deben compartirse entre todos los subprocesos.
-[default](#default-openmp)         | Especifica el comportamiento de las variables sin ámbito de una región paralela.
-[firstprivate](#firstprivate)      | Especifica que cada subproceso debe tener su propia instancia de una variable, y que la variable debe inicializarse con el valor de la variable, porque existe antes de la construcción paralela.
-[if](#if-openmp)                   | Especifica si se debe ejecutar un bucle en paralelo o en serie.
-[lastprivate](#lastprivate)        | Especifica que versión envolvente del contexto de la variable se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).
-[nowait](#nowait)                  | Invalida la barrera implícita en una directiva.
-[num_threads](#num-threads)        | Establece el número de subprocesos en un equipo de subproceso.
-[Ordenada](#ordered-openmp-clauses) | Necesario en un paralelo [para](openmp-directives.md#for-openmp) instrucción si un [ordenados](openmp-directives.md#ordered-openmp-directives) directiva es que se usará en el bucle.
-[private](#private-openmp)         | Especifica que cada subproceso debe tener su propia instancia de una variable.
-[reduction](#reduction)            | Especifica que una o más variables que son privadas para cada subproceso se el sujeto de una operación de reducción al final de la región paralela.
-[schedule](#schedule)              | Se aplica a la [para](openmp-directives.md#for-openmp) directiva.
-[Compartido](#shared-openmp)           | Especifica que una o más variables deben compartirse entre todos los subprocesos.
+|Cláusula|Descripción|
+|------|-----------|
+|[copyin](#copyin)|Permite que los subprocesos tener acceso a valor del subproceso principal, para un [threadprivate](openmp-directives.md#threadprivate) variable.|
+|[copyprivate](#copyprivate)|Especifica que una o más variables deben compartirse entre todos los subprocesos.|
+|[default](#default-openmp)|Especifica el comportamiento de las variables sin ámbito de una región paralela.|
+|[firstprivate](#firstprivate)|Especifica que cada subproceso debe tener su propia instancia de una variable, y que la variable debe inicializarse con el valor de la variable, porque existe antes de la construcción paralela.|
+|[if](#if-openmp)|Especifica si se debe ejecutar un bucle en paralelo o en serie.|
+|[lastprivate](#lastprivate)|Especifica que versión envolvente del contexto de la variable se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).|
+|[nowait](#nowait)|Invalida la barrera implícita en una directiva.|
+|[num_threads](#num-threads)|Establece el número de subprocesos en un equipo de subproceso.|
+|[Ordenada](#ordered-openmp-clauses)|Necesario en un paralelo [para](openmp-directives.md#for-openmp) instrucción si un [ordenados](openmp-directives.md#ordered-openmp-directives) directiva es que se usará en el bucle.|
+|[private](#private-openmp)|Especifica que cada subproceso debe tener su propia instancia de una variable.|
+|[reduction](#reduction)|Especifica que una o más variables que son privadas para cada subproceso se el sujeto de una operación de reducción al final de la región paralela.|
+|[schedule](#schedule)|Se aplica a la [para](openmp-directives.md#for-openmp) directiva.|
+|[Compartido](#shared-openmp)|Especifica que una o más variables deben compartirse entre todos los subprocesos.|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ El número de subprocesos
 
 ### <a name="remarks"></a>Comentarios
 
-El `num_threads` cláusula tiene la misma funcionalidad que el [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) función.
+El `num_threads` cláusula tiene la misma funcionalidad que el [omp_set_num_threads ()](openmp-functions.md#omp-set-num-threads) función.
 
 `num_threads` se aplica a las siguientes directivas:
 

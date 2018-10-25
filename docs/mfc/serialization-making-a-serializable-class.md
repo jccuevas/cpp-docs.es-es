@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054870"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serialization: Making a Serializable (Clase)
 
@@ -67,9 +67,9 @@ Considere la posibilidad de una clase que se deriva de `CObject` y tiene dos nue
 
 1. Insertar o extraer las variables de miembro específicas de la clase.
 
-     Los operadores de inserción y extracción interactúan con la clase de almacenamiento para leer y escribir los datos. El ejemplo siguiente muestra cómo implementar `Serialize` para el `CPerson` clase declarada anteriormente:
+   Los operadores de inserción y extracción interactúan con la clase de almacenamiento para leer y escribir los datos. El ejemplo siguiente muestra cómo implementar `Serialize` para el `CPerson` clase declarada anteriormente:
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 También puede usar el [CArchive::Read](../mfc/reference/carchive-class.md#read) y [CArchive:: Write](../mfc/reference/carchive-class.md#write) funciones miembro para leer y escribir grandes cantidades de datos sin tipo.
 

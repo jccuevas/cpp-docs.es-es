@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1557cf0ee42b10627618fff8a30ea6d5a6fbb169
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b81832ba31fc8ef36510ce4f35c9fb1a5f3426b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49807944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075026"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 
@@ -52,6 +52,6 @@ De forma predeterminada, Visual Studio usa la página de códigos actual como el
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[Directivas pragma y la \_ \_Pragma (palabra clave)](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/ Execution-CharSet (establecer juego de caracteres de ejecución)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (Establecer los juegos de caracteres de ejecución y origen en UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

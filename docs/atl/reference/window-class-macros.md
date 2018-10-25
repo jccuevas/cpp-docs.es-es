@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e151ba4fc2adbe6dab2397d68658b0cb1eb5ef1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106914"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059082"
 ---
 # <a name="window-class-macros"></a>Macros de clase de ventana
 
@@ -32,7 +32,7 @@ Estas macros definen las utilidades de clase de ventana.
 |[DECLARE_WND_CLASS](#declare_wnd_class)|Permite especificar el nombre de una nueva clase de ventana.|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Permite especificar el nombre de una nueva clase de ventana y la ventana cuyo procedimiento usará la nueva clase de la clase envolvente.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Permite especificar el nombre de una clase de ventana existente en el que se basará la nueva clase de ventana.|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Le permite especificar los parámetros de una clase.|  
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Le permite especificar los parámetros de una clase.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -69,9 +69,9 @@ DECLARE_WND_CLASS especifica los estilos de la nueva ventana siguientes:
 
 DECLARE_WND_CLASS también especifica el color de fondo de la ventana de forma predeterminada. Use la [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) macro para proporcionar sus propios estilos y el color de fondo.
 
-[CWindowImpl](cwindowimpl-class.md) usa la macro DECLARE_WND_CLASS para crear una ventana basada en una nueva clase de ventana. Para invalidar este comportamiento, use el [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) macro, o proporcionar su propia implementación de la [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) función.  
+[CWindowImpl](cwindowimpl-class.md) usa la macro DECLARE_WND_CLASS para crear una ventana basada en una nueva clase de ventana. Para invalidar este comportamiento, use el [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) macro, o proporcionar su propia implementación de la [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) función.
 
-Para obtener más información sobre el uso de ventanas en ATL, vea el artículo [clases de ventana ATL](../../atl/atl-window-classes.md).  
+Para obtener más información sobre el uso de ventanas en ATL, vea el artículo [clases de ventana ATL](../../atl/atl-window-classes.md).
 
 ##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
 
@@ -84,7 +84,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>Parámetros
 
 *WndClassName*<br/>
-[in] El nombre de la nueva clase de ventana. Si es NULL, ATL generará un nombre de clase de ventana. 
+[in] El nombre de la nueva clase de ventana. Si es NULL, ATL generará un nombre de clase de ventana.
 
 *EnclosingClass*<br/>
 [in] El nombre de la clase de ventana que contiene la nueva clase de ventana. No puede ser nulo.
@@ -120,7 +120,7 @@ DECLARE_WND_SUPERCLASS implementa la función estática siguiente:
 
 De forma predeterminada, [CWindowImpl](cwindowimpl-class.md) usa el [DECLARE_WND_CLASS](#declare_wnd_class) macro para crear una ventana basada en una clase de ventana nueva. Mediante la especificación de la macro DECLARE_WND_SUPERCLASS en un `CWindowImpl`-clase derivada, la clase de ventana se basará en una clase existente pero va a utilizar el procedimiento de ventana. Esta técnica se denomina crear superclases.
 
-Además de usar las macros DECLARE_WND_CLASS y DECLARE_WND_SUPERCLASS, puede invalidar el [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) función por su propia implementación.  
+Además de usar las macros DECLARE_WND_CLASS y DECLARE_WND_SUPERCLASS, puede invalidar el [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) función por su propia implementación.
 
 Para obtener más información sobre el uso de ventanas en ATL, vea el artículo [clases de ventana ATL](../../atl/atl-window-classes.md).
 

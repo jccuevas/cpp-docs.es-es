@@ -1,5 +1,5 @@
 ---
-title: Las Variables de entorno de OpenMP | Microsoft Docs
+title: Las variables de entorno de OpenMP | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2018
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 395494431c3942832a64cf64c9c150f643389062
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: a229aa453b6e40f0da25252f2f8aa1be3d97a729
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990235"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074259"
 ---
 # <a name="openmp-environment-variables"></a>Variables de entorno de OpenMP
 
@@ -37,12 +37,12 @@ Proporciona vínculos a las variables de entorno que se utilizan en la API de Op
 
 La implementación de Visual C++ del estándar OpenMP incluye las siguientes variables de entorno. Estas variables de entorno se leen al inicio del programa y se omiten las modificaciones en sus valores en tiempo de ejecución (por ejemplo, mediante [_putenv, _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).
 
-Variable de entorno                | Descripción
------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[OMP_DYNAMIC](#omp-dynamic)         | Especifica si el tiempo de ejecución de OpenMP puede ajustar el número de subprocesos en una región paralela.
-[OMP_NESTED](#omp-nested)           | Especifica si está habilitado paralelismo anidado, a menos que está habilitado o deshabilitado con paralelismo anidado `omp_set_nested`.
-[OMP_NUM_THREADS](#omp-num-threads) | Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) o [num_threads](openmp-clauses.md#num-threads).
-[OMP_SCHEDULE](#omp-schedule)       | Modifica el comportamiento de la [programación](openmp-clauses.md#schedule) cláusula cuando `schedule(runtime)` se especifica en un `for` o `parallel for` directiva.
+|Variable de entorno|Descripción|
+|--------------------|-----------|
+|[OMP_DYNAMIC](#omp-dynamic)|Especifica si el tiempo de ejecución de OpenMP puede ajustar el número de subprocesos en una región paralela.|
+|[OMP_NESTED](#omp-nested)|Especifica si está habilitado paralelismo anidado, a menos que está habilitado o deshabilitado con paralelismo anidado `omp_set_nested`.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](openmp-functions.md#omp-set-num-threads) o [num_threads](openmp-clauses.md#num-threads).|
+|[OMP_SCHEDULE](#omp-schedule)|Modifica el comportamiento de la [programación](openmp-clauses.md#schedule) cláusula cuando `schedule(runtime)` se especifica en un `for` o `parallel for` directiva.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -54,7 +54,7 @@ set OMP_DYNAMIC[=TRUE | =FALSE]
 
 ### <a name="remarks"></a>Comentarios
 
-El `OMP_DYNAMIC` variable de entorno puede reemplazarse por la [omp_set_dynamic ()](../../../parallel/openmp/reference/omp-set-dynamic.md) función.
+El `OMP_DYNAMIC` variable de entorno puede reemplazarse por la [omp_set_dynamic ()](openmp-functions.md#omp-set-dynamic) función.
 
 El valor predeterminado de la implementación de Visual C++ del estándar OpenMP es `OMP_DYNAMIC=FALSE`.
 
@@ -84,7 +84,7 @@ set OMP_NESTED[=TRUE | =FALSE]
 
 ### <a name="remarks"></a>Comentarios
 
-El `OMP_NESTED` variable de entorno puede reemplazarse por la [omp_set_nested ()](../../../parallel/openmp/reference/omp-set-nested.md) función.
+El `OMP_NESTED` variable de entorno puede reemplazarse por la [omp_set_nested ()](openmp-functions.md#omp-set-nested) función.
 
 El valor predeterminado de la implementación de Visual C++ del estándar OpenMP es `OMP_DYNAMIC=FALSE`.
 
@@ -106,7 +106,7 @@ set OMP_NESTED
 
 ## <a name="omp-num-threads"></a>OMP_NUM_THREADS
 
-Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) o [num_threads](openmp-clauses.md#num-threads).
+Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](openmp-functions.md#omp-set-num-threads) o [num_threads](openmp-clauses.md#num-threads).
 
 ```
 set OMP_NUM_THREADS[=num]
@@ -119,7 +119,7 @@ El número máximo de subprocesos que desee en la región paralela, hasta 64 en 
 
 ### <a name="remarks"></a>Comentarios
 
-El `OMP_NUM_THREADS` variable de entorno puede reemplazarse por la [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) función o por [num_threads](openmp-clauses.md#num-threads).
+El `OMP_NUM_THREADS` variable de entorno puede reemplazarse por la [omp_set_num_threads ()](openmp-functions.md#omp-set-num-threads) función o por [num_threads](openmp-clauses.md#num-threads).
 
 El valor predeterminado de `num` en Visual C++ implementación del estándar OpenMP es el número de procesadores virtuales, incluidas las CPU de hyperthreading.
 

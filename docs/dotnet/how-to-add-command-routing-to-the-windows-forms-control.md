@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5161e23d17283ba1495baf6fcb201943f8b6ae12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2af0148c386bc3b1ea8db60fdf84d080c38af857
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080694"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Cómo: Agregar enrutamientos de comandos al control de Windows Forms
 
@@ -51,7 +51,7 @@ En este tema se da por supuesto que ha completado previamente [Cómo: crear el C
     partial class UserControl1
     ```
 
-     a:
+   a:
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -84,19 +84,19 @@ En este tema se da por supuesto que ha completado previamente [Cómo: crear el C
 
 1. Agregue una opción de menú que llamará a `singleMenuHandler`.
 
-     Vaya a **vista de recursos** (Ctrl + Mayús + E), expanda el **menú** carpeta y, a continuación, haga doble clic en **IDR_MFC02TYPE**. Se muestra el editor de menús.
+   Vaya a **vista de recursos** (Ctrl + Mayús + E), expanda el **menú** carpeta y, a continuación, haga doble clic en **IDR_MFC02TYPE**. Se muestra el editor de menús.
 
-     Agregar una opción de menú en la parte inferior de la **vista** menú. Observe el identificador de la opción de menú en el **propiedades** ventana. Guarde el archivo.
+   Agregar una opción de menú en la parte inferior de la **vista** menú. Observe el identificador de la opción de menú en el **propiedades** ventana. Guarde el archivo.
 
-     En **el Explorador de soluciones**, abra el archivo Resource.h, copie el valor de identificador para la opción de menú que acaba de agregar y pegue ese valor como el primer parámetro del `m_CmdSrc.AddCommandHandler` llamar a C# del proyecto `Initialize` (reemplazando (método)`32771` si es necesario).
+   En **el Explorador de soluciones**, abra el archivo Resource.h, copie el valor de identificador para la opción de menú que acaba de agregar y pegue ese valor como el primer parámetro del `m_CmdSrc.AddCommandHandler` llamar a C# del proyecto `Initialize` (reemplazando (método)`32771` si es necesario).
 
 9. Compile y ejecute el proyecto.
 
-     En el menú **Compilar** , haga clic en **Compilar solución**.
+   En el menú **Compilar** , haga clic en **Compilar solución**.
 
-     En el **depurar** menú, haga clic en **iniciar sin depurar**.
+   En el **depurar** menú, haga clic en **iniciar sin depurar**.
 
-     Seleccione la opción de menú que ha agregado. Observe que se llama al método en .dll.
+   Seleccione la opción de menú que ha agregado. Observe que se llama al método en .dll.
 
 ## <a name="see-also"></a>Vea también
 

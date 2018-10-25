@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c78d95afbadb0d3612dcdbca1714ae8c3a06454
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 690e612201d0d3614b47c8baf7b5c46cb29d6140
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063047"
 ---
 # <a name="arrayview-class"></a>array_view (Clase)
 
@@ -103,7 +103,7 @@ El rango de la `array_view` objeto.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Operator()](#operator_call)|Devuelve el valor del elemento especificado por el parámetro o parámetros.|
+|[operator()](#operator_call)|Devuelve el valor del elemento especificado por el parámetro o parámetros.|
 |[operator[]](#operator_at)|Devuelve el elemento especificado por los parámetros.|
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `array_view` objeto en este.|
 
@@ -561,6 +561,7 @@ Notifica a la `array_view` objeto que su memoria enlazada se ha modificado fuera
 ```
 void refresh() const restrict(cpu);
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 Reinterpreta array_view a través de array_view unidimensional, que, como una opción, puede tener un tipo de valor distinto de array_view de origen.

@@ -1,7 +1,7 @@
 ---
 title: Bibliotecas de OpenMP | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-parallel
 ms.topic: reference
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a4ccfefeaeb9446731027db44b849233bfefd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7620b0ea710a5474fbbbf614691ceeb1e5cc945e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062007"
 ---
 # <a name="openmp-libraries"></a>Bibliotecas de OpenMP
 
@@ -32,10 +32,10 @@ Las bibliotecas siguientes contienen las funciones de biblioteca en tiempo de ej
 
 Si está definido _DEBUG en una compilación y si `#include omp.h` está en el código fuente, VCOMPD. LIB será lib de forma predeterminada. En caso contrario, VCOMP. Se usará LIB.
 
-Puede usar [/NODEFAULTLIB (Ignore Libraries)](../../../build/reference/nodefaultlib-ignore-libraries.md) quitar lib predeterminado y un vínculo explícito con lib de su elección.
+Puede usar [/NODEFAULTLIB (Omitir bibliotecas)](../../../build/reference/nodefaultlib-ignore-libraries.md) quitar lib predeterminado y un vínculo explícito con lib de su elección.
 
 Los archivos DLL de OpenMP se encuentran en el directorio del paquete redistribuible de Visual C++ y deba distribuirse con aplicaciones que usan OpenMP.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de la biblioteca](../../../parallel/openmp/reference/openmp-library-reference.md)
+[Referencia de la biblioteca](openmp-library-reference.md)

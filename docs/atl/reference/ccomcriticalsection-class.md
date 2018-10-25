@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4678acbe251086f3a42e3544e155a191a5847f11
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ebabc2d200047acec458c4a29603cc6aee5a589
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076833"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection (clase)
 
@@ -67,7 +67,7 @@ class CComCriticalSection
 
 `CComCriticalSection` es similar a la clase [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), salvo que explícitamente se debe inicializar y liberar la sección crítica.
 
-Normalmente, se utiliza `CComCriticalSection` a través de la **typedef** nombre [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Este nombre hace referencia a `CComCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.  
+Normalmente, se utiliza `CComCriticalSection` a través de la **typedef** nombre [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Este nombre hace referencia a `CComCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.
 
 Consulte [CComCritSecLock (clase)](../../atl/reference/ccomcritseclock-class.md) para una forma más segura de usar esta clase de llamar al `Lock` y `Unlock` directamente.
 

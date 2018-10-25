@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8b8c9f4460995aaab6a9d415202c2a965a6e9a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e58b6b9d64111e021586fc23a985f31c0edf9de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063775"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Usar botones desplegables en un control de barra de herramientas
 
@@ -43,19 +43,19 @@ El siguiente procedimiento muestra cómo implementar un botón de barra de herra
 
 1. Una vez su `CToolBarCtrl` se ha creado el objeto, establezca el estilo TBSTYLE_EX_DRAWDDARROWS, utilizando el código siguiente:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
 
 1. Establecer el estilo TBSTYLE_DROPDOWN para cualquier nuevo ([InsertButton](../mfc/reference/ctoolbarctrl-class.md#insertbutton) o [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons)) o existente ([SetButtonInfo](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)) botones que estarán botones desplegables. El ejemplo siguiente muestra la modificación de un botón existente en un `CToolBarCtrl` objeto:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
 
 1. Agregue un controlador TBN_DROPDOWN a la clase primaria del objeto de barra de herramientas.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
 
 1. En el controlador nuevo, mostrar el menú emergente apropiado. El código siguiente muestra un método:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
 
 ## <a name="see-also"></a>Vea también
 

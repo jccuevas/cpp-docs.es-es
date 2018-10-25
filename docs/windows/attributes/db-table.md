@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03d6512933d114cf1c3b06fa3fdc9eaa03c70934
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 07910693b3236e3a90d7ad420392552d90abd747
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792415"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052153"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -84,8 +84,8 @@ Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejem
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)  
+[Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)

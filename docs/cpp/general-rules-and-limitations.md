@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2a21de2cade8eb0d8776b340123df3535c36f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0222af4bd53b21750cb6debc477e10c96f9d5594
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061591"
 ---
 # <a name="general-rules-and-limitations"></a>Reglas generales y limitaciones
 
@@ -25,7 +25,7 @@ ms.locfileid: "46034400"
 
 - Si declara una función o un objeto sin el **dllimport** o **dllexport** atributo, la función o el objeto no se considera parte de la interfaz DLL. Por consiguiente, la definición de la función o el objeto debe estar presente en ese módulo o en otro módulo del mismo programa. Para hacer que el elemento de objeto o función de la interfaz DLL, debe declarar la definición de la función o un objeto en el otro módulo como **dllexport**. De los contrario, se genera un error del vinculador.
 
-     Si declara una función o un objeto con el **dllexport** atributo, su definición debe aparecer en algún módulo del mismo programa. De los contrario, se genera un error del vinculador.
+   Si declara una función o un objeto con el **dllexport** atributo, su definición debe aparecer en algún módulo del mismo programa. De los contrario, se genera un error del vinculador.
 
 - Si un solo módulo del programa contiene ambos **dllimport** y **dllexport** declaraciones para la misma función u objeto, el **dllexport** atributo tiene prioridad a través de la **dllimport** atributo. Sin embargo, se genera una advertencia del compilador. Por ejemplo:
 
@@ -53,7 +53,7 @@ ms.locfileid: "46034400"
     }
     ```
 
-     Sin embargo, dado que un programa que incluya el **dllexport** atributo en la declaración de un objeto debe proporcionar la definición de ese objeto en algún lugar en el programa, puede inicializar un puntero a función estático global o local con la dirección de un **dllexport** función. De forma similar, puede inicializar un puntero de datos estático global o local con la dirección de un **dllexport** objeto de datos. Por ejemplo, el código siguiente no genera errores en C ni en C++:
+   Sin embargo, dado que un programa que incluya el **dllexport** atributo en la declaración de un objeto debe proporcionar la definición de ese objeto en algún lugar en el programa, puede inicializar un puntero a función estático global o local con la dirección de un **dllexport** función. De forma similar, puede inicializar un puntero de datos estático global o local con la dirección de un **dllexport** objeto de datos. Por ejemplo, el código siguiente no genera errores en C ni en C++:
 
     ```cpp
     __declspec( dllexport ) void func1( void );
@@ -71,7 +71,7 @@ ms.locfileid: "46034400"
 
 - Si aplica **dllexport** a una clase normal que tiene una clase base que no está marcada como **dllexport**, el compilador generará la advertencia C4275.
 
-     El compilador genera la misma advertencia si la clase base es una especialización de una plantilla de clase. Para solucionar este problema, marque la clase base con **dllexport**. El problema con una especialización de una plantilla de clase es dónde colocar el **__declspec (dllexport)**; no tiene permiso para marcar la plantilla de clase. En su lugar, cree una instancia de la plantilla de clase y explícitamente Marque esta instancia explícita con **dllexport**. Por ejemplo:
+   El compilador genera la misma advertencia si la clase base es una especialización de una plantilla de clase. Para solucionar este problema, marque la clase base con **dllexport**. El problema con una especialización de una plantilla de clase es dónde colocar el **__declspec (dllexport)**; no tiene permiso para marcar la plantilla de clase. En su lugar, cree una instancia de la plantilla de clase y explícitamente Marque esta instancia explícita con **dllexport**. Por ejemplo:
 
     ```cpp
     template class __declspec(dllexport) B<int>;
@@ -79,14 +79,14 @@ ms.locfileid: "46034400"
     // ...
     ```
 
-     Esta solución no funciona si el argumento de la plantilla es la clase de la que se deriva. Por ejemplo:
+   Esta solución no funciona si el argumento de la plantilla es la clase de la que se deriva. Por ejemplo:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-     Dado que este es un patrón común con plantillas, el compilador cambió la semántica de **dllexport** cuando se aplica a una clase que tiene uno o más clases base y cuando una o varias de las clases base son una especialización de una plantilla de clase . En este caso, el compilador aplica implícitamente **dllexport** a las especializaciones de plantillas de clase. Puede hacer lo siguiente y no recibe una advertencia:
+   Dado que este es un patrón común con plantillas, el compilador cambió la semántica de **dllexport** cuando se aplica a una clase que tiene uno o más clases base y cuando una o varias de las clases base son una especialización de una plantilla de clase . En este caso, el compilador aplica implícitamente **dllexport** a las especializaciones de plantillas de clase. Puede hacer lo siguiente y no recibe una advertencia:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438644"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071977"
 ---
 # <a name="how-to-create-a-resource"></a>Cómo: Crear un recurso
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438644"
 
 1. Con el foco en el archivo .rc en [vista de recursos](../windows/resource-view-window.md), haga clic en el **editar** menú y elija **Agregar recurso** (o haga clic en el archivo .rc en **devistaderecursos** y elija **Agregar recurso** en el menú contextual).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
 
 2. En el [cuadro de diálogo Agregar recurso](../windows/add-resource-dialog-box.md), elija el tipo de recurso que desee agregar al proyecto.
@@ -48,7 +48,7 @@ ms.locfileid: "46438644"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Para crear un recurso nuevo en la Vista de clases
 
-1. En [vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic en la clase y elija **agregar**, a continuación, haga clic en **Agregar recurso** en el menú contextual.
+1. En la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic con el botón secundario en la clase y seleccione **Agregar**; a continuación, haga clic en **Agregar recurso** en el menú contextual.
 
 2. En el [cuadro de diálogo Agregar recurso](../windows/add-resource-dialog-box.md), elija el tipo de recurso que desee agregar al proyecto.
 
@@ -70,4 +70,4 @@ Win32
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)<br/>
-[Agregar recurso (cuadro de diálogo)](../windows/add-resource-dialog-box.md)
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

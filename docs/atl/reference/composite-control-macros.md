@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077359"
 ---
 # <a name="composite-control-macros"></a>Macros de Control compuesto
 
@@ -41,7 +41,7 @@ Estas macros definen los mapas de receptor de eventos y entradas.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlcom.h  
+**Encabezado:** atlcom.h
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +122,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in] Identifica el control.
 
 *IID*<br/>
-[in] Identifica la interfaz de envío.  
+[in] Identifica la interfaz de envío.
 
 *piid*<br/>
 [in] Puntero a la interfaz de envío.
@@ -156,7 +156,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in] Entero sin signo que identifica el origen del evento. Este valor debe coincidir con el *nID* parámetro de plantilla utilizado en el que se relaciona [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) clase base.
 
 *IID*<br/>
-[in] IID que identifica la interfaz de envío.  
+[in] IID que identifica la interfaz de envío.
 
 *piid*<br/>
 [in] Puntero a IID que identifica la interfaz de envío.

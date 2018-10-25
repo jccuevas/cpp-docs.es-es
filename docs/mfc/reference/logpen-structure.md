@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0fa2a4b422a7bd1f36fc46837adec4136b693fb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375678"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064959"
 ---
 # <a name="logpen-structure"></a>LOGPEN (Estructura)
 
@@ -56,9 +56,9 @@ Especifica el tipo de lápiz. Este miembro puede ser uno de los siguientes valor
 
 - PS_INSIDEFRAME crea genera un lápiz que dibuja una línea dentro del marco de las formas cerradas en GDI funciones que especifican un rectángulo delimitador de salida (por ejemplo, el `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, y `Chord` miembro funciones). Cuando se usa este estilo con GDI funciones que no especifican un rectángulo delimitador de salida (por ejemplo, el `LineTo` función miembro), el área de dibujo de la pluma no está limitado por un marco.
 
-     Si un lápiz tiene el estilo PS_INSIDEFRAME y un color que no coincide con un color en la tabla de colores lógico, el lápiz se dibuja con un color interpolado. El estilo de lápiz PS_SOLID no se puede usar para crear un lápiz con un color interpolado. El estilo PS_INSIDEFRAME es idéntico al PS_SOLID si el ancho del lápiz es menor o igual que 1.
+   Si un lápiz tiene el estilo PS_INSIDEFRAME y un color que no coincide con un color en la tabla de colores lógico, el lápiz se dibuja con un color interpolado. El estilo de lápiz PS_SOLID no se puede usar para crear un lápiz con un color interpolado. El estilo PS_INSIDEFRAME es idéntico al PS_SOLID si el ancho del lápiz es menor o igual que 1.
 
-     Cuando se usa el estilo PS_INSIDEFRAME con objetos GDI generados por funciones distintas de `Ellipse`, `Rectangle`, y `RoundRect`, la línea no puede ser totalmente dentro del marco especificado.
+   Cuando se usa el estilo PS_INSIDEFRAME con objetos GDI generados por funciones distintas de `Ellipse`, `Rectangle`, y `RoundRect`, la línea no puede ser totalmente dentro del marco especificado.
 
 *lopnWidth*<br/>
 Especifica el ancho del lápiz, en unidades lógicas. Si el `lopnWidth` miembro es 0, el lápiz es 1 píxel de ancho en dispositivos de trama independientemente del modo de asignación actual.

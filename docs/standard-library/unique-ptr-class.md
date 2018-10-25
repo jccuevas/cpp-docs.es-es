@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f148d548cb9d3c93e94f51c1cd8c90fae69527f8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725197"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075741"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr (Clase)
 
@@ -87,7 +87,6 @@ public:
     unique_ptr& operator=(nullptr_t) noexcept;
     T& operator[](size_t i) const;
 
-
     pointer get() const noexcept;
     deleter_type& get_deleter() noexcept;
     const deleter_type& get_deleter() const noexcept;
@@ -124,7 +123,7 @@ Una función `deleter` enlazada a `unique_ptr`.
 
 La clase `unique_ptr` reemplaza a `auto_ptr` y se puede usar como un elemento de los contenedores de la biblioteca estándar de C++.
 
-Use la función auxiliar [make_unique](../standard-library/memory-functions.md#make_unique) para crear eficazmente nuevas instancias de `unique_ptr`.
+Use la función del asistente [make_unique](../standard-library/memory-functions.md#make_unique) para crear eficazmente nuevas instancias de `unique_ptr`.
 
 `unique_ptr` administra de forma única un recurso. Cada objeto `unique_ptr` almacena un puntero al objeto que posee o almacena un puntero null. Un recurso no puede ser propiedad de más de un objeto `unique_ptr`. Cuando se destruye un objeto `unique_ptr` que posee un recurso determinado, se libera el recurso. Un objeto `unique_ptr` se puede mover, pero no se puede copiar. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 

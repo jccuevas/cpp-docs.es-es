@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055228"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementar ventanas de marco en contexto
 
@@ -39,15 +39,15 @@ En este artículo se explica lo que debe hacer para implementar ventanas de marc
 
 1. Declarar un `COleResizeBar` miembro en la clase de ventana de marco. Esto es necesario si desea admitir el cambio de tamaño en contexto en las aplicaciones de servidor.
 
-     Declarar un `OnCreate` controlador de mensajes (mediante el **propiedades** ventana) y llamar a `Create` para su `COleResizeBar` miembro, si se ha definido.
+   Declarar un `OnCreate` controlador de mensajes (mediante el **propiedades** ventana) y llamar a `Create` para su `COleResizeBar` miembro, si se ha definido.
 
 1. Si tiene una barra de herramientas, declare un `CToolBar` miembro en la clase de ventana de marco.
 
-     Invalidar el `OnCreateControlBars` función miembro para crear una barra de herramientas cuando el servidor está activo en su lugar. Por ejemplo:
+   Invalidar el `OnCreateControlBars` función miembro para crear una barra de herramientas cuando el servidor está activo en su lugar. Por ejemplo:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     Vea la explicación de este código después del paso 5.
+   Vea la explicación de este código después del paso 5.
 
 1. Incluir el archivo de encabezado para esta clase de ventana de marco en contexto en el archivo .cpp principal.
 

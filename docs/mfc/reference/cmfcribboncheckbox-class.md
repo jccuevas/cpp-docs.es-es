@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396563"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076261"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox (clase)
 
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *CDC** puntero al objeto CDC asociados con la casilla de verificación.
+[in] *CDC&#42;*<br/>
+Puntero al objeto CDC asociado con la casilla de verificación.
 
 *CRect*<br/>
 [in] Un `CRect` objeto que especifica el rectángulo en el que se va a dibujar la imagen del menú.

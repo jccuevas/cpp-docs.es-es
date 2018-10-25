@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5e499a6faabda20450a7af76d97664b90464b36
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 239f50011c91320c2b5e0a96449139e8eeab10ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072869"
 ---
 # <a name="progid"></a>progid
 
@@ -68,11 +68,11 @@ Vea el ejemplo de [coclase](coclass.md) para un ejemplo de uso de **progid**.
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
-[Clave de Id. de programa](/windows/desktop/com/-progid--key)  
+[Clave de Id. de programa](/windows/desktop/com/-progid--key)

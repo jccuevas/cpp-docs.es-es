@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054610"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Clientes de Automation: Usar bibliotecas de tipos
 
@@ -54,9 +54,9 @@ Si decide incluir automatización cuando se creó el proyecto, Visual C++ mantie
     > [!NOTE]
     >  Puede seleccionar las interfaces de más de una biblioteca de tipos.
 
-     Seleccionar interfaces, haga doble clic en ellos o haga clic en el **agregar** botón. Al hacerlo, los nombres de las clases de envíos aparecerá en el **clases generadas** cuadro. Puede editar los nombres de clase en el `Class` cuadro.
+   Seleccionar interfaces, haga doble clic en ellos o haga clic en el **agregar** botón. Al hacerlo, los nombres de las clases de envíos aparecerá en el **clases generadas** cuadro. Puede editar los nombres de clase en el `Class` cuadro.
 
-     El **archivo** cuadro muestra el archivo en el que se declarará la clase. (puede editar este nombre de archivo también). También puede usar el botón Examinar para seleccionar otros archivos, si prefiere tener la información de encabezado e implementación escrita en archivos existentes o en un directorio distinto al proyecto.
+   El **archivo** cuadro muestra el archivo en el que se declarará la clase. (puede editar este nombre de archivo también). También puede usar el botón Examinar para seleccionar otros archivos, si prefiere tener la información de encabezado e implementación escrita en archivos existentes o en un directorio distinto al proyecto.
 
     > [!NOTE]
     >  Todas las clases de distribución de las interfaces seleccionadas se colocará en el archivo especificado aquí. Si desea que las interfaces que se declararan en encabezados independientes, debe ejecutar a este asistente para cada archivo de encabezado que desea crear.
@@ -66,7 +66,7 @@ Si decide incluir automatización cuando se creó el proyecto, Visual C++ mantie
 
 1. Haga clic en **Finalizar**.
 
-     El asistente, a continuación, escribirá el código para las clases de envío mediante la clase especificada y los nombres de archivo.
+   El asistente, a continuación, escribirá el código para las clases de envío mediante la clase especificada y los nombres de archivo.
 
 ## <a name="see-also"></a>Vea también
 

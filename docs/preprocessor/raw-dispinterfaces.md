@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02133e6b9d884fa8e0a175dd01845035ec8b96a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1f549168a762b5ae095c4eacf5ddb1b4d053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435953"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062358"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**Específicos de C++**  
-  
-Indica al compilador que genere funciones de contenedor de bajo nivel para dispinterface métodos y propiedades que llaman a `IDispatch::Invoke` y devolver el código de error HRESULT.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-raw_dispinterfaces  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- 
-Si no se especifica este atributo, solo se generan los contenedores de alto nivel, que inician excepciones de C++ en caso de error.  
-  
-**FIN de específicos de C++**  
-  
-## <a name="see-also"></a>Vea también  
- 
+**Específicos de C++**
+
+Indica al compilador que genere funciones de contenedor de bajo nivel para dispinterface métodos y propiedades que llaman a `IDispatch::Invoke` y devolver el código de error HRESULT.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+raw_dispinterfaces
+```
+
+## <a name="remarks"></a>Comentarios
+
+Si no se especifica este atributo, solo se generan los contenedores de alto nivel, que inician excepciones de C++ en caso de error.
+
+**FIN de específicos de C++**
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

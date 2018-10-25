@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3182a9f5a53c2f086800eb0eccb7d61e423e591
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c68c60b31b0af42563dbe1fd784dec177abeebcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439190"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082272"
 ---
 # <a name="cstringlist-class"></a>CStringList (clase)
 
@@ -152,6 +152,4 @@ Para obtener más información sobre el uso de `CStringList`, consulte el artíc
 [Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-
-
 

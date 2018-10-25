@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 720d03cbab6712e5d76c5ee22c2e12b7b1b65742
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95a477e3d62a9ca2678101c8de51a814186c9488
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792140"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061396"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -76,9 +76,9 @@ __interface IFireTabCtrl {
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|`dispinterface`|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)  
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

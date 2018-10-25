@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6b343ec9342199727122ac89f6df77e532429ad
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85ffa775fd18b6979fccf4354ce243f017634d02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792510"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059680"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -71,10 +71,10 @@ Consulte la [licencia](licensed.md) ejemplo para un ejemplo de uso de **threadin
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|**coclass**|
+|**Atributos requeridos**|**coclase**|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -82,4 +82,4 @@ Para obtener más información acerca de los contextos de atributo, vea [context
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Compatibilidad del código antiguo con multithreading (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[Apartamentos neutros](/windows/desktop/cossdk/neutral-apartments)  
+[Apartamentos neutros](/windows/desktop/cossdk/neutral-apartments)

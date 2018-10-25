@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060525"
 ---
 # <a name="servers-implementing-server-documents"></a>Servidores: Implementar documentos de servidor
 
@@ -36,7 +36,7 @@ En este artículo se explica los pasos que debe seguir para implementar correcta
 
 1. Implemente el `OnGetEmbeddedItem` función miembro de la clase de documento de servidor.
 
-     `OnGetEmbeddedItem` se llama cuando el usuario de una aplicación de contenedor se crea o modifica un elemento incrustado. Debe devolver un elemento que representa el documento completo. Debe tratarse de un objeto de su `COleServerItem`-clase derivada.
+   `OnGetEmbeddedItem` se llama cuando el usuario de una aplicación de contenedor se crea o modifica un elemento incrustado. Debe devolver un elemento que representa el documento completo. Debe tratarse de un objeto de su `COleServerItem`-clase derivada.
 
 1. Invalidar el `Serialize` función miembro para serializar el contenido del documento. No es necesario serializar la lista de elementos del servidor si no utiliza para representar los datos nativos en el documento. Para obtener más información, consulte *implementar elementos de servidor* en el artículo [servidores: elementos del servidor](../mfc/servers-server-items.md).
 

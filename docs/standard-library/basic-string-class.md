@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86f8bca0cade273fc3b6bc1e7c936bf917bb4ba
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 61c7b7c5a8e1df8f22140bcd4debab3504144032
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082435"
 ---
 # <a name="basicstring-class"></a>basic_string (Clase)
 
@@ -606,7 +606,6 @@ Proporciona una referencia al carácter de una cadena que tiene el índice espec
 ```cpp
 const_reference at(size_type _Off) const;
 
-
 reference at(size_type _Off);
 ```
 
@@ -674,7 +673,6 @@ Devuelve una referencia al último elemento de la cadena.
 
 ```cpp
 const_reference back() const;
-
 
 reference back();
 ```
@@ -848,7 +846,6 @@ Devuelve un iterador que dirige al primer elemento de la cadena.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -1140,12 +1137,10 @@ Realiza una comparación que distingue entre mayúsculas y minúsculas con una c
 int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
-
 int compare(
     size_type _Pos1,
     size_type _Num1,
     const basic_string<CharType, Traits, Allocator>& str) const;
-
 
 int compare(
     size_type _Pos1,
@@ -1154,16 +1149,13 @@ int compare(
     size_type _Off,
     size_type count) const;
 
-
 int compare(
     const value_type* ptr) const;
-
 
 int compare(
     size_type _Pos1,
     size_type _Num1,
     const value_type* ptr) const;
-
 
 int compare(
     size_type _Pos1,
@@ -1843,7 +1835,6 @@ Devuelve un iterador que dirige a la ubicación siguiente al último elemento de
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -2022,17 +2013,14 @@ size_type find(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2200,17 +2188,14 @@ size_type find_first_not_of(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find_first_not_of(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find_first_not_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2391,17 +2376,14 @@ size_type find_first_of(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find_first_of(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find_first_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2581,17 +2563,14 @@ size_type find_last_not_of(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type find_last_not_of(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type find_last_not_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2773,17 +2752,14 @@ size_type find_last_of(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type find_last_of(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type find_last_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2947,7 +2923,6 @@ Devuelve una referencia al primer elemento de una cadena.
 
 ```cpp
 const_reference front() const;
-
 
 reference front();
 ```
@@ -3559,7 +3534,7 @@ El primer elemento de la cadena tiene un índice de cero y los enteros positivos
 
 La referencia devuelta puede ser anulada por las reasignaciones de cadena o las modificaciones de las cadenas no **const**.
 
-Al compilar con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) establecido en 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento fuera de los límites de la cadena. Para obtener más información, vea [Iteradores comprobados](../standard-library/checked-iterators.md).
+Al compilar con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) establecido en 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento fuera de los límites de la cadena. Para obtener más información, consulta [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -3711,7 +3686,6 @@ Devuelve un iterador al primer elemento de una cadena invertida.
 ```cpp
 const_reverse_iterator rbegin() const;
 
-
 reverse_iterator rbegin();
 ```
 
@@ -3807,7 +3781,6 @@ Devuelve un iterador que dirige a la ubicación que sigue al último elemento de
 
 ```cpp
 const_reverse_iterator rend() const;
-
 
 reverse_iterator rend();
 ```
@@ -4402,17 +4375,14 @@ size_type rfind(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type rfind(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type rfind(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,

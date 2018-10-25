@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095604"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053622"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker (clase)
 
@@ -75,7 +75,7 @@ La ventaja de esta clase es que proporciona una manera cómoda de cambiar el mod
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Implementación de [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Implementación de [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Comentarios
 
-Este método crea una instancia de la *trabajo* clase en la pila y llama a [inicializar](worker-archetype.md#initialize) en ese objeto. Si la inicialización es correcta, este método también llama a [Execute](worker-archetype.md#execute) y [Terminate](worker-archetype.md#terminate) en el mismo objeto.  
+Este método crea una instancia de la *trabajo* clase en la pila y llama a [inicializar](worker-archetype.md#initialize) en ese objeto. Si la inicialización es correcta, este método también llama a [Execute](worker-archetype.md#execute) y [Terminate](worker-archetype.md#terminate) en el mismo objeto.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

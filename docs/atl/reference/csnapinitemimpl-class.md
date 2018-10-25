@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b62de5b8303cfdd0516b143654fb9eb2e767eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091834"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059823"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl (clase)
 
@@ -119,7 +119,7 @@ TRUE si el objeto es una extensión de complemento; en caso contrario, FALSE.
 Este método implementa la función de Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
 
 ```
-AddMenuItems(  
+AddMenuItems(
     LPCONTEXTMENUCALLBACK piCallback,
     long* pInsertionAllowed,
     DATA_OBJECT_TYPES type);
@@ -181,7 +181,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 Este método implementa la función de Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
 
 ```
-CreatePropertyPages(  
+CreatePropertyPages(
     LPPROPERTYSHEETCALLBACK lpProvider,
     long handle,
     IUnknown* pUnk,
@@ -393,7 +393,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 Llame a esta función para modificar las marcas de inserción de menú, especificadas por *pInsertionAllowed*, para el objeto de complemento.
 
 ```
-void SetMenuInsertionFlags(  
+void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
 ```
@@ -425,7 +425,7 @@ No debe intentar establecer los bits *pInsertionAllowed* que originalmente se bo
 Llame a esta función para modificar los estilos de botón de barra de herramientas del objeto de complemento, antes de crea la barra de herramientas.
 
 ```
-void SetToolbarButtonInfo(  
+void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
     BYTE* fsType);
@@ -469,7 +469,7 @@ void SetToolbarButtonInfo(
 Llame a esta función para modificar un elemento de menú antes de insertarlo en el menú contextual del complemento de objeto.
 
 ```
-void UpdateMenuState(  
+void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
     UINT* flags);

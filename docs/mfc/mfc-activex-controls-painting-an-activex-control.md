@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056014"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: Pintar un control ActiveX
 
@@ -112,11 +112,11 @@ Después de haber implementado la representación del metarchivo del control, ut
 
 1. En el **Insertar nuevo Control** , seleccione el control y haga clic en **Aceptar**.
 
-     El control aparecerá en el contenedor de prueba.
+   El control aparecerá en el contenedor de prueba.
 
 1. En el **Control** menú, haga clic en **dibujar metarchivos**.
 
-     Aparecerá una ventana independiente en el que se muestra el metarchivo. Puede cambiar el tamaño de esta ventana para ver cómo afecta al metarchivo del control. Puede cerrar esta ventana en cualquier momento.
+   Aparecerá una ventana independiente en el que se muestra el metarchivo. Puede cambiar el tamaño de esta ventana para ver cómo afecta al metarchivo del control. Puede cerrar esta ventana en cualquier momento.
 
 ## <a name="see-also"></a>Vea también
 

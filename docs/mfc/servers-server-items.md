@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438865"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082910"
 ---
 # <a name="servers-server-items"></a>Servidores: Elementos de servidor
 
@@ -43,7 +43,7 @@ Si usa el Asistente para aplicaciones para generar código de "inicio" para la a
 
 1. En la clase derivada, invalide el `OnDraw` función miembro.
 
-     Las llamadas de framework `OnDraw` para representar el elemento OLE en un metarchivo. La aplicación contenedora usa este metarchivo para presentar el elemento. Clase de vista de la aplicación también tiene un `OnDraw` función miembro, que se usa para representar el elemento cuando la aplicación de servidor está activa.
+   Las llamadas de framework `OnDraw` para representar el elemento OLE en un metarchivo. La aplicación contenedora usa este metarchivo para presentar el elemento. Clase de vista de la aplicación también tiene un `OnDraw` función miembro, que se usa para representar el elemento cuando la aplicación de servidor está activa.
 
 1. Implemente un reemplazo de `OnGetEmbeddedItem` para la clase de documento de servidor. Para obtener más información, consulte el artículo [servidores: implementar documentos de servidor](../mfc/servers-implementing-server-documents.md) y el ejemplo OLE de MFC [HIERSVR](../visual-cpp-samples.md).
 

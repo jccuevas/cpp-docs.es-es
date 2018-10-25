@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068780"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles ActiveX MFC: Licencias de un control ActiveX
 
@@ -84,15 +84,15 @@ Estas funciones miembro son:
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     Comprueba que el control permite el uso de tiempo de diseño mediante la comprobación del sistema para detectar la presencia del archivo de licencia del control. Esta función se llama el marco de trabajo como parte del procesamiento `IClassFactory2::GetLicInfo` y `IClassFactory::CreateInstanceLic`.
+   Comprueba que el control permite el uso de tiempo de diseño mediante la comprobación del sistema para detectar la presencia del archivo de licencia del control. Esta función se llama el marco de trabajo como parte del procesamiento `IClassFactory2::GetLicInfo` y `IClassFactory::CreateInstanceLic`.
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     Solicita una clave única de la DLL de control. Esta clave está incrustada en la aplicación de contenedor y usará más adelante, junto con `VerifyLicenseKey`, para crear una instancia del control. Esta función se llama el marco de trabajo como parte del procesamiento `IClassFactory2::RequestLicKey`.
+   Solicita una clave única de la DLL de control. Esta clave está incrustada en la aplicación de contenedor y usará más adelante, junto con `VerifyLicenseKey`, para crear una instancia del control. Esta función se llama el marco de trabajo como parte del procesamiento `IClassFactory2::RequestLicKey`.
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     Comprueba que la clave incrustada y la clave única del control son los mismos. Esto permite que el contenedor crear una instancia del control para su uso. Esta función se llama el marco de trabajo como parte del procesamiento `IClassFactory2::CreateInstanceLic` y se puede invalidar para proporcionar una verificación personalizada de la clave de licencia. La implementación predeterminada realiza una comparación de cadenas. Para obtener más información, consulte [personalizar la licencia de un ActiveX Control](#_core_customizing_the_licensing_of_an_activex_control), más adelante en este artículo.
+   Comprueba que la clave incrustada y la clave única del control son los mismos. Esto permite que el contenedor crear una instancia del control para su uso. Esta función se llama el marco de trabajo como parte del procesamiento `IClassFactory2::CreateInstanceLic` y se puede invalidar para proporcionar una verificación personalizada de la clave de licencia. La implementación predeterminada realiza una comparación de cadenas. Para obtener más información, consulte [personalizar la licencia de un ActiveX Control](#_core_customizing_the_licensing_of_an_activex_control), más adelante en este artículo.
 
 ###  <a name="_core_header_file_modifications"></a> Modificaciones de archivos de encabezado
 

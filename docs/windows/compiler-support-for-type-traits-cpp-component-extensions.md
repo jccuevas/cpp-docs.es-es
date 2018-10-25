@@ -71,12 +71,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: bef92e7315418e13b660f655a54f20e8696c7590
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328543"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066596"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Compatibilidad de compilador para Type Traits (C++ / c++ / CLI y c++ / CX)
 
@@ -231,7 +231,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
 
    Devuelve **true** si el tipo tiene un destructor trivial, generado por el compilador.
 
-    ``` cpp 
+    ``` cpp
     // has_trivial_destructor.cpp
     #include <stdio.h>
     struct S {};
@@ -567,7 +567,7 @@ ref struct is_class {
 ref class R {};
 
 int main () {
-   if (is_class<R>::value)  
+   if (is_class<R>::value)
       Console::WriteLine("R is a ref class");
    else
       Console::WriteLine("R is not a ref class");

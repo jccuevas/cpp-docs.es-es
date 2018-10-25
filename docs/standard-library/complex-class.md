@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: de27208562a235f11e47e3fd5c1600c5fad4c3ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072088"
 ---
 # <a name="complex-class"></a>complex (Clase)
 
@@ -183,7 +183,6 @@ Extrae el componente imaginario de un número complejo.
 
 ```cpp
 T imag() const;
-
 
 T imag(const T& right);
 ```
@@ -715,7 +714,6 @@ Obtiene o establece el componente real de un número complejo.
 
 ```cpp
 constexpr T real() const;
-
 
 T real(const T& right);
 ```

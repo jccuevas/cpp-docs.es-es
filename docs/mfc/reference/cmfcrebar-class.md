@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3b91d0397b1eec53988e7acd5a5b7dce61db4ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059888"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar (clase)
 
@@ -81,7 +81,7 @@ Un objeto rebar se comporta de forma similar a un objeto de barra de herramienta
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCReBar` clase. El ejemplo muestra cómo crear un control rebar y agregarle una banda. La banda funciona como una barra de herramientas interna. Este fragmento de código forma parte de la [ejemplo de prueba de Rebar](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCReBar` . El ejemplo muestra cómo crear un control rebar y agregarle una banda. La banda funciona como una barra de herramientas interna. Este fragmento de código forma parte de la [ejemplo de prueba de Rebar](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
@@ -117,12 +117,14 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pBar* un puntero a la ventana secundaria que se va a insertar en el control rebar. El objeto que se hace referencia debe tener la **WS_CHILD** estilo de ventana.
+*pBar*<br/>
+[in, out] Un puntero a la ventana secundaria que se va a insertar en el control rebar. El objeto que se hace referencia debe tener la **WS_CHILD** estilo de ventana.
 
 *pszText*<br/>
 [in] Especifica el texto que aparece en el control rebar. El texto no forma parte de la ventana secundaria. En su lugar, se muestra en el control rebar propio.
 
-[in] [out] *pbmp* especifica el mapa de bits que se mostrará en el fondo del control rebar.
+*pbmp*<br/>
+[in, out] Especifica el mapa de bits que se mostrará en el fondo del control rebar.
 
 *dwStyle*<br/>
 [in] Contiene el estilo que se aplican a la banda. Para obtener una lista completa de los estilos de banda, consulte la descripción de `fStyle` en el [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) estructura en la documentación del SDK de Windows.
@@ -151,7 +153,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pParentWnd* un puntero a la ventana primaria de este control rebar.
+*pParentWnd*<br/>
+[in, out] Un puntero a la ventana primaria de este control rebar.
 
 *dwCtrlStyle*<br/>
 [in] Especifica el estilo del control rebar. El valor de estilo predeterminado es **RBS_BANDBORDERS**, que muestra restringir las líneas para separar las bandas adyacentes en el control rebar. Para obtener una lista de los estilos válidos, vea [estilos del Control Rebar](/windows/desktop/Controls/rebar-control-styles) en la documentación del SDK de Windows.
@@ -186,7 +189,6 @@ Llame a este método para aprovechar la funcionalidad de control común de Windo
 
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -195,15 +197,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parámetros
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat
-
 
 ```
 virtual BOOL CanFloat() const;
@@ -215,19 +216,17 @@ virtual BOOL CanFloat() const;
 
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
 
-
 ```
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *dwDockStyle*
+[in] *dwDockStyle*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
-
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -239,21 +238,19 @@ UINT GetReBarBandInfoSize() const;
 
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
 
-
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *CPoint*
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
-
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -263,15 +260,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
-[in] [in] *pTI*
+[in] *punto*<br/>
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -281,13 +277,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parámetros
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
-
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -295,7 +290,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *dwAlignment*
+[in] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

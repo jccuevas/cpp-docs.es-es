@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393326"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081396"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Actualizar el texto de un panel de barra de estado
 
@@ -40,17 +40,17 @@ Por ejemplo, suponga que tiene un panel `ID_INDICATOR_PAGE` como identificador d
 
 1. Definir el identificador de comando. del panel
 
-     En el **vista** menú, haga clic en **vista de recursos**. Haga clic en el recurso de proyecto y haga clic en **símbolos de recursos**. En el cuadro de diálogo símbolos de recursos, haga clic en `New`. Escriba un nombre de identificador de comando: por ejemplo, `ID_INDICATOR_PAGE`. Especifique un valor para el identificador o acepte el valor sugerido por el cuadro de diálogo símbolos de recursos. Por ejemplo, para `ID_INDICATOR_PAGE`, acepte el valor predeterminado. Cierre el cuadro de diálogo símbolos de recursos.
+   En el **vista** menú, haga clic en **vista de recursos**. Haga clic en el recurso de proyecto y haga clic en **símbolos de recursos**. En el cuadro de diálogo símbolos de recursos, haga clic en `New`. Escriba un nombre de identificador de comando: por ejemplo, `ID_INDICATOR_PAGE`. Especifique un valor para el identificador o acepte el valor sugerido por el cuadro de diálogo símbolos de recursos. Por ejemplo, para `ID_INDICATOR_PAGE`, acepte el valor predeterminado. Cierre el cuadro de diálogo símbolos de recursos.
 
 1. Defina una cadena predeterminada para mostrar en el panel.
 
-     Abra la vista de recursos, haga doble clic en **tabla de cadenas** en la ventana que se enumera los tipos de recursos para la aplicación. Con el **tabla de cadenas** editor abierto, elija **nueva cadena** desde el **insertar** menú. En la ventana Propiedades de cadena, seleccione el identificador del panel comando (por ejemplo, `ID_INDICATOR_PAGE`) y escriba un valor de cadena predeterminado, por ejemplo, "Página". Cierre el editor de cadenas. (Necesita una cadena predeterminada para evitar un error del compilador).
+   Abra la vista de recursos, haga doble clic en **tabla de cadenas** en la ventana que se enumera los tipos de recursos para la aplicación. Con el **tabla de cadenas** editor abierto, elija **nueva cadena** desde el **insertar** menú. En la ventana Propiedades de cadena, seleccione el identificador del panel comando (por ejemplo, `ID_INDICATOR_PAGE`) y escriba un valor de cadena predeterminado, por ejemplo, "Página". Cierre el editor de cadenas. (Necesita una cadena predeterminada para evitar un error del compilador).
 
 1. Agregar el panel a la *indicadores* matriz.
 
-     En el archivo MAINFRM. CPP, busque el *indicadores* matriz. Esta matriz enumera los identificadores de comandos para todos los indicadores de la barra de estado, en orden de izquierda a derecha. En el punto adecuado de la matriz, escriba el identificador del panel comando, tal y como se muestra aquí para `ID_INDICATOR_PAGE`:
+   En el archivo MAINFRM. CPP, busque el *indicadores* matriz. Esta matriz enumera los identificadores de comandos para todos los indicadores de la barra de estado, en orden de izquierda a derecha. En el punto adecuado de la matriz, escriba el identificador del panel comando, tal y como se muestra aquí para `ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 La manera recomendada de mostrar texto en un panel es llamar a la `SetText` función miembro de clase `CCmdUI` en una función de controlador de actualización para el panel. Por ejemplo, desea configurar una variable de entero *m_nPage* que contiene el número de página actual y la utilización `SetText` para establecer el texto del panel en una versión de cadena de ese número.
 
@@ -63,19 +63,19 @@ El procedimiento siguiente muestra cómo usar una función de controlador de act
 
 1. Agregar un controlador de actualización de comandos para el comando.
 
-     Agregar manualmente un prototipo para el controlador, como se muestra aquí para `ID_INDICATOR_PAGE` (en MAINFRM. (H):
+   Agregar manualmente un prototipo para el controlador, como se muestra aquí para `ID_INDICATOR_PAGE` (en MAINFRM. (H):
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. En el archivo. CPP, agregue la definición del controlador, como se muestra aquí para `ID_INDICATOR_PAGE` (en MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     Las tres últimas líneas de este controlador son el código que muestra el texto.
+   Las tres últimas líneas de este controlador son el código que muestra el texto.
 
 1. En el mapa de mensajes apropiado, agregue la ON_UPDATE_COMMAND_UI (macro), como se muestra aquí para `ID_INDICATOR_PAGE` (en MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 Una vez que defina el valor de la *m_nPage* variable miembro (de clase `CMainFrame`), esta técnica hace que el número de página aparecen en el panel durante el procesamiento en inactividad de la misma manera que la aplicación de actualizaciones de otros indicadores. Si *m_nPage* cambios, los cambios efectuados durante el siguiente bucle inactivo.
 

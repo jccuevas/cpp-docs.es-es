@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dcd9edb155afa9138778f1d464a5e59a20dd7ffd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415920"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070036"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Crear un nuevo icono o cursor de 256 colores (Editor de imágenes para iconos)
 
@@ -34,7 +34,7 @@ Mediante el **imagen** editor, iconos y cursores pueden ser de tamaño grande (6
 
 1. En [vista de recursos](../windows/resource-view-window.md), haga clic en el archivo .rc y elija **Insertar recurso** en el menú contextual. (Si ya tiene un recurso de imagen existente en el archivo .rc, como un cursor, puede hacer simplemente clic en el **Cursor** carpeta y seleccione **insertar Cursor** en el menú contextual.)
 
-   > [!NOTE] 
+   > [!NOTE]
    > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
 
 2. En el [cuadro de diálogo Insertar recurso](../windows/add-resource-dialog-box.md), seleccione **icono** o **Cursor** y haga clic en **New**.

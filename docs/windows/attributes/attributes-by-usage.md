@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328186"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060434"
 ---
 # <a name="attributes-by-usage"></a>Atributos por uso
 
@@ -43,7 +43,7 @@ Si un atributo precede a un elemento que no está en el ámbito del atributo, el
 
 ## <a name="module-attributes"></a>Atributos de módulo
 Solo se puede aplicar el atributo siguiente a la [módulo](module-cpp.md) atributo.
-  
+
 |Atributo|Descripción|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|Especifica el nombre del archivo DLL a utilizar para realizar la búsqueda de cadenas de documento (localización).|
@@ -85,7 +85,6 @@ Se deben observar estas reglas para definir una interfaz:
 - No se permiten métodos sobrecargados.
 
 Al no especificar el [uuid](uuid-cpp-attributes.md) atributo y con el mismo nombre de interfaz en los proyectos de atributo diferente, se genera el mismo GUID.
-
 
 ## <a name="see-also"></a>Vea también
 

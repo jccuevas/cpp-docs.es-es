@@ -24,102 +24,102 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: dd9d3b291f967b98017e4136740628ef951ea12a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060135"
 ---
 # <a name="ctable-class"></a>CTable (Clase)
 
-Proporciona un medio para tener acceso directamente a un conjunto de filas sencillo (uno sin parámetros).  
-  
+Proporciona un medio para tener acceso directamente a un conjunto de filas sencillo (uno sin parámetros).
+
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-            template <typename T> class TRowset = CRowset>  
-class CTable :  
-   public CAccessorRowset <TAccessor, TRowset>  
-```  
-  
-### <a name="parameters"></a>Parámetros  
+template <class TAccessor = CNoAccessor,
+            template <typename T> class TRowset = CRowset>
+class CTable :
+   public CAccessorRowset <TAccessor, TRowset>
+```
+
+### <a name="parameters"></a>Parámetros
 
 *TAccessor*<br/>
-Una clase de descriptor de acceso.  
-  
+Una clase de descriptor de acceso.
+
 *TRowset*<br/>
-Una clase de conjunto de filas.  
+Una clase de conjunto de filas.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atldbcli.h  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="methods"></a>Métodos  
-  
-|||  
-|-|-|  
-|[Abrir](#open)|Se abre en la tabla.|  
-  
-## <a name="remarks"></a>Comentarios  
+**Encabezado:** atldbcli.h
 
-Consulte [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para obtener acceso a un conjunto de filas.  
+## <a name="members"></a>Miembros
+
+### <a name="methods"></a>Métodos
+
+|||
+|-|-|
+|[Abrir](#open)|Se abre en la tabla.|
+
+## <a name="remarks"></a>Comentarios
+
+Consulte [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para obtener acceso a un conjunto de filas.
 
 ## <a name="open"></a> CTable:: Open
 
-Se abre en la tabla.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Se abre en la tabla.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCWSTR wszTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCWSTR wszTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   LPCSTR szTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCSTR szTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   DBID& dbid,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+HRESULT Open(const CSession& session,
+   DBID& dbid,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *Sesión*<br/>
-[in] La sesión para el que se abre en la tabla.  
-  
+[in] La sesión para el que se abre en la tabla.
+
 *wszTableName*<br/>
-[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena Unicode.  
-  
+[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena Unicode.
+
 *szTableName*<br/>
-[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena ANSI.  
-  
+[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena ANSI.
+
 *dbid*<br/>
-[in] El `DBID` de la tabla que desea abrir.  
-  
+[in] El `DBID` de la tabla que desea abrir.
+
 *pPropSet*<br/>
-[in] Un puntero a una matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696) en el *referencia del programador OLE DB* en el SDK de Windows. El valor predeterminado es null, especifica ninguna propiedad.  
-  
+[in] Un puntero a una matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696) en el *referencia del programador OLE DB* en el SDK de Windows. El valor predeterminado es null, especifica ninguna propiedad.
+
 *ulPropSets*<br/>
-[in] El número de [DBPROPSET](/previous-versions/windows/desktop/ms714367) pasan las estructuras en el *pPropSet* argumento.  
-  
-### <a name="return-value"></a>Valor devuelto  
+[in] El número de [DBPROPSET](/previous-versions/windows/desktop/ms714367) pasan las estructuras en el *pPropSet* argumento.
 
-Un HRESULT estándar.  
-  
-### <a name="remarks"></a>Comentarios  
+### <a name="return-value"></a>Valor devuelto
 
-Para obtener más información, consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724) en el *referencia del programador de OLE DB*.  
-  
-## <a name="see-also"></a>Vea también  
+Un HRESULT estándar.
+
+### <a name="remarks"></a>Comentarios
+
+Para obtener más información, consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724) en el *referencia del programador de OLE DB*.
+
+## <a name="see-also"></a>Vea también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+[Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

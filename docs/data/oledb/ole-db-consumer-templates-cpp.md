@@ -18,56 +18,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9983b9347fb0c39333bba33f1c7b1d9237b407ce
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 71c8c6d84bf4ee92d74a0b4cb68c9e8abc545a22
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069898"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Plantillas de consumidor OLE DB (C++)
 
-Las plantillas de consumidor OLE DB admiten la especificación de OLE DB versión 2.6. (Las plantillas de consumidor OLE DB se prueban en OLE DB 2.6 pero no son compatibles con todas las interfaces en la especificación). Las plantillas de consumidor reducen la cantidad de código que debe escribirse para implementar un consumidor OLE DB. Las plantillas proporcionan:  
-  
-- Acceso fácil a las características de OLE DB y una integración sin dificultad con ATL y MFC.  
-  
-- Un modelo de enlace sencillo para los parámetros y las columnas de la base de datos.  
-  
-- Tipos de datos nativos de C/C++ para la programación de OLE DB.  
-  
-Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms718124).  
-  
-Las plantillas OLE DB son compatibles con el modelo de objetos OLE DB existente en lugar de agregar un nuevo modelo de objetos. Las clases de nivel superior de las plantillas de consumidor OLE DB se corresponden con los componentes definidos en la especificación de OLE DB. El diseño de las plantillas de consumidor OLE DB incluye características avanzadas como, por ejemplo, varios descriptores de acceso en un conjunto de filas. El uso de plantillas y herencia múltiple permite que la biblioteca mantenga su flexibilidad y un tamaño reducido.  
-  
-## <a name="how-ole-db-consumers-access-data"></a>Cómo acceden los consumidores OLE DB a los datos  
+Las plantillas de consumidor OLE DB admiten la especificación de OLE DB versión 2.6. (Las plantillas de consumidor OLE DB se prueban en OLE DB 2.6 pero no son compatibles con todas las interfaces en la especificación). Las plantillas de consumidor reducen la cantidad de código que debe escribirse para implementar un consumidor OLE DB. Las plantillas proporcionan:
 
-Los consumidores usan diferentes tipos de objetos, que se describen en los temas siguientes:  
-  
-- [Orígenes de datos y sesiones](../../data/oledb/data-sources-and-sessions.md)  
-  
-- [Descriptores de acceso y conjuntos de filas](../../data/oledb/accessors-and-rowsets.md)  
-  
-- [Comandos y tablas](../../data/oledb/commands-and-tables.md)  
-  
-- [Registros de usuario](../../data/oledb/user-records.md)  
-  
-Antes de que el consumidor haga nada, primero seleccione un proveedor OLE DB adecuado para el tipo de base de datos que al que desea tener acceso (por ejemplo, SQL, Oracle, ODBC y MSDS). Para ello, se suele usar un enumerador (vea [CEnumerator](../../data/oledb/cenumerator-class.md) como se mencionó en [Orígenes de datos y sesiones](../../data/oledb/data-sources-and-sessions.md)).  
-  
-El [objeto de origen de datos](../../data/oledb/data-sources-and-sessions.md) proporciona la información de conexión necesaria para conectarse al origen de datos seleccionado. El objeto de origen de datos también contiene información de autenticación (por ejemplo, nombres de inicio de sesión y contraseñas), que se usa para permitir a los usuarios el acceso al origen de datos. El objeto de origen de datos establece una conexión con la base de datos y luego crea uno o varios objetos de sesión. Cada [objeto de sesión](../../data/oledb/data-sources-and-sessions.md) controla su propia interacción con la base de datos (es decir, consultar y recuperar datos) y realiza estas transacciones independientemente de las demás sesiones existentes.  
-  
-La sesión crea los objetos de comando y de conjunto de filas. El [objeto de comando](../../data/oledb/commands-and-tables.md) permite a los usuarios interactuar con la base de datos; por ejemplo, mediante comandos SQL. El [objeto de conjunto de filas](../../data/oledb/accessors-and-rowsets.md) es un conjunto de datos por el que es posible navegar y en el que se pueden [actualizar, eliminar e insertar filas](../../data/oledb/updating-rowsets.md).  
-  
-Un consumidor OLE DB enlaza las columnas de las tablas de la base de datos con variables locales. Para ello, usa un [descriptor de acceso](../../data/oledb/accessors-and-rowsets.md), que contiene un mapa que indica cómo se almacenan los datos en el consumidor. El mapa se compone de un conjunto de enlaces entre las columnas de la tabla y los búferes locales (variables) de la aplicación de consumidor.  
-  
-Un concepto importante cuando se trabaja con consumidores es declarar dos clases en el consumidor: la [clase de comando (o tabla)](../../data/oledb/commands-and-tables.md) y la [clase de registro de usuario](../../data/oledb/user-records.md). Es posible acceder a los conjuntos de filas a través de la clase de comando (o tabla), que se hereda de una clase de descriptor de acceso y una clase de conjunto de filas. La clase de registro de usuario contiene el mapa de enlaces de conjunto de filas descrito anteriormente.  
-  
-Para obtener más información, vea los temas siguientes:  
-  
-- [Crear un consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
-  
-- [Escenarios comunes de consumidor OLE DB (ejemplos)](../../data/oledb/working-with-ole-db-consumer-templates.md)  
-  
-## <a name="see-also"></a>Vea también  
+- Acceso fácil a las características de OLE DB y una integración sin dificultad con ATL y MFC.
+
+- Un modelo de enlace sencillo para los parámetros y las columnas de la base de datos.
+
+- Tipos de datos nativos de C/C++ para la programación de OLE DB.
+
+Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms718124).
+
+Las plantillas OLE DB son compatibles con el modelo de objetos OLE DB existente en lugar de agregar un nuevo modelo de objetos. Las clases de nivel superior de las plantillas de consumidor OLE DB se corresponden con los componentes definidos en la especificación de OLE DB. El diseño de las plantillas de consumidor OLE DB incluye características avanzadas como, por ejemplo, varios descriptores de acceso en un conjunto de filas. El uso de plantillas y herencia múltiple permite que la biblioteca mantenga su flexibilidad y un tamaño reducido.
+
+## <a name="how-ole-db-consumers-access-data"></a>Cómo acceden los consumidores OLE DB a los datos
+
+Los consumidores usan diferentes tipos de objetos, que se describen en los temas siguientes:
+
+- [Orígenes de datos y sesiones](../../data/oledb/data-sources-and-sessions.md)
+
+- [Descriptores de acceso y conjuntos de filas](../../data/oledb/accessors-and-rowsets.md)
+
+- [Comandos y tablas](../../data/oledb/commands-and-tables.md)
+
+- [Registros de usuario](../../data/oledb/user-records.md)
+
+Antes de que el consumidor haga nada, primero seleccione un proveedor OLE DB adecuado para el tipo de base de datos que al que desea tener acceso (por ejemplo, SQL, Oracle, ODBC y MSDS). Para ello, se suele usar un enumerador (vea [CEnumerator](../../data/oledb/cenumerator-class.md) como se mencionó en [Orígenes de datos y sesiones](../../data/oledb/data-sources-and-sessions.md)).
+
+El [objeto de origen de datos](../../data/oledb/data-sources-and-sessions.md) proporciona la información de conexión necesaria para conectarse al origen de datos seleccionado. El objeto de origen de datos también contiene información de autenticación (por ejemplo, nombres de inicio de sesión y contraseñas), que se usa para permitir a los usuarios el acceso al origen de datos. El objeto de origen de datos establece una conexión con la base de datos y luego crea uno o varios objetos de sesión. Cada [objeto de sesión](../../data/oledb/data-sources-and-sessions.md) controla su propia interacción con la base de datos (es decir, consultar y recuperar datos) y realiza estas transacciones independientemente de las demás sesiones existentes.
+
+La sesión crea los objetos de comando y de conjunto de filas. El [objeto de comando](../../data/oledb/commands-and-tables.md) permite a los usuarios interactuar con la base de datos; por ejemplo, mediante comandos SQL. El [objeto de conjunto de filas](../../data/oledb/accessors-and-rowsets.md) es un conjunto de datos por el que es posible navegar y en el que se pueden [actualizar, eliminar e insertar filas](../../data/oledb/updating-rowsets.md).
+
+Un consumidor OLE DB enlaza las columnas de las tablas de la base de datos con variables locales. Para ello, usa un [descriptor de acceso](../../data/oledb/accessors-and-rowsets.md), que contiene un mapa que indica cómo se almacenan los datos en el consumidor. El mapa se compone de un conjunto de enlaces entre las columnas de la tabla y los búferes locales (variables) de la aplicación de consumidor.
+
+Un concepto importante cuando se trabaja con consumidores es declarar dos clases en el consumidor: la [clase de comando (o tabla)](../../data/oledb/commands-and-tables.md) y la [clase de registro de usuario](../../data/oledb/user-records.md). Es posible acceder a los conjuntos de filas a través de la clase de comando (o tabla), que se hereda de una clase de descriptor de acceso y una clase de conjunto de filas. La clase de registro de usuario contiene el mapa de enlaces de conjunto de filas descrito anteriormente.
+
+Para obtener más información, vea los temas siguientes:
+
+- [Crear un consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+
+- [Escenarios comunes de consumidor OLE DB (ejemplos)](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+## <a name="see-also"></a>Vea también
 
 [Programación de OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Acceso a datos](../data-access-in-cpp.md)<br/>

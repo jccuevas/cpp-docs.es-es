@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063216"
 ---
 # <a name="toolbar-editor-c"></a>Barra de herramientas del Editor (C++)
 
@@ -43,8 +43,7 @@ Con el **barra de herramientas** editor, puede:
 
 El **barra de herramientas** ventana del editor muestra dos vistas de una imagen del botón, igual que la ventana del editor de imágenes. Una barra de división separa los dos paneles. Se puede arrastrar dicha barra a uno u otro lado para cambiar el tamaño relativo de los paneles. El panel activo muestra un borde de selección. Por encima de las dos vistas de la imagen se encuentra la barra de herramientas del asunto.
 
-![Editor de la barra de herramientas](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-Editor de barras de herramientas
+![Editor de la barra de herramientas](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") barra de herramientas del Editor
 
 El **barra de herramientas** editor es similar a la **imagen** editor en la funcionalidad. Los elementos de menú, las herramientas gráficas y cuadrícula de mapa de bits son los mismos que los de la **imagen** editor. Hay un comando de menú en el **imagen** menú para que pueda cambiar entre el **barra de herramientas** editor y la **imagen** editor. Para obtener más información sobre el uso de la **gráficos** barra de herramientas, **colores** paleta, o **imagen** menú, vea [Editor de imágenes](../windows/image-editor-for-icons.md).
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8345b99655cae3ea27b93e1742d8c07e8d80eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68ad9b2627921024e5bd9477ee2aab62494b4912
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408037"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053076"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Crear un control ActiveX MFC
 
@@ -54,5 +54,4 @@ Una vez haya creado el proyecto, puede usar los asistentes para código para agr
 
 [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propiedades](../../ide/property-pages-visual-cpp.md)
-
 

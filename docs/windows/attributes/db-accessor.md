@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60cfe67acb2841c3cf5bf3cc371b0f70c7fcf72b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: aa63ca982f436b49787e542c4789390faa1d16a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057028"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -87,8 +87,8 @@ public:
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)  
+[Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)

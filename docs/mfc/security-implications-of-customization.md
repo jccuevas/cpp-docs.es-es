@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442089"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080850"
 ---
 # <a name="security-implications-of-customization"></a>Implicaciones de seguridad de la personalización
 
@@ -38,7 +38,7 @@ Se recomienda cualquiera de estas tres formas de cerrar las vulnerabilidades en 
 
 - Store los datos en un archivo seguro en lugar de en el registro.
 
-     Para llevar a cabo cualquiera de estas dos primeras maneras, derive una clase de [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) e invalidar sus métodos para implementar el cifrado o almacenamiento fuera del registro.
+   Para llevar a cabo cualquiera de estas dos primeras maneras, derive una clase de [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) e invalidar sus métodos para implementar el cifrado o almacenamiento fuera del registro.
 
 - También puede deshabilitar las personalizaciones en la aplicación.
 

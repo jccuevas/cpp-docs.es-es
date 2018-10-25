@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc76e89cf8ca44b3254b21585bf00ff6243d818c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: ccd409a99ccbcf80dc117d7c034d4b8a66b551ef
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890834"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060473"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (clase)
 
@@ -927,7 +927,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 ### <a name="parameters"></a>Parámetros
 
-*PF*<br/>
+*pf*<br/>
 En la primera versión, un puntero a un [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) estructura para contener los atributos de la selección actual de formato de párrafo.
 
 En la segunda versión, un puntero a un [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) estructura, que es una extensión de Rich Edit 2.0 a la `PARAFORMAT` estructura, que contiene los atributos de formato de carácter predeterminado.
@@ -1782,7 +1782,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parámetros
 
-*PF*<br/>
+*pf*<br/>
 En la primera versión, un puntero a un [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) atributos de formato de párrafo de la estructura que contiene el nuevo valor predeterminado.
 
 En la segunda versión, un puntero a un [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) estructura, que es una extensión de Rich Edit 2.0 a la `PARAFORMAT` estructura, que contiene los atributos de formato de carácter predeterminado.
@@ -1956,7 +1956,6 @@ Establece el ancho de línea y de dispositivo de destino utilizado para WYSIWYG 
 BOOL SetTargetDevice(
     HDC hDC,
     long lLineWidth);
-
 
 BOOL SetTargetDevice(
     CDC& dc,

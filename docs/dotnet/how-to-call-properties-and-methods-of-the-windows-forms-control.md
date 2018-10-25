@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061578"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Cómo: Llamar a propiedades y métodos del control de formularios Windows Forms
 
@@ -39,11 +39,11 @@ En este tema se da por supuesto que ha completado previamente [Cómo: crear el C
 
 1. Agregue la siguiente línea a la sección pública de invalidaciones de la `CMFC02View` declaración en MFC02View.h de clase.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Agregue una invalidación para OnInitialupdate.
 
-     Mostrar el **propiedades** ventana (F4). En **vista de clases** (CTRL + MAYÚS + C), seleccione la clase CMFC02View. En el **propiedades** ventana, seleccione el icono de invalidaciones. Desplácese por la lista a OnInitialUpdate. Haga clic en la lista desplegable y seleccione \<Agregar >. En MFC02View.cpp. Asegúrese de que el cuerpo de la función OnInitialUpdate es como sigue:
+   Mostrar el **propiedades** ventana (F4). En **vista de clases** (CTRL + MAYÚS + C), seleccione la clase CMFC02View. En el **propiedades** ventana, seleccione el icono de invalidaciones. Desplácese por la lista a OnInitialUpdate. Haga clic en la lista desplegable y seleccione \<Agregar >. En MFC02View.cpp. Asegúrese de que el cuerpo de la función OnInitialUpdate es como sigue:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ En este tema se da por supuesto que ha completado previamente [Cómo: crear el C
 
 1. Compile y ejecute el proyecto.
 
-     En el menú **Compilar** , haga clic en **Compilar solución**.
+   En el menú **Compilar** , haga clic en **Compilar solución**.
 
-     En el **depurar** menú, haga clic en **iniciar sin depurar**.
+   En el **depurar** menú, haga clic en **iniciar sin depurar**.
 
-     Tenga en cuenta que ahora se inicializa el cuadro de texto.
+   Tenga en cuenta que ahora se inicializa el cuadro de texto.
 
 ## <a name="see-also"></a>Vea también
 

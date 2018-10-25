@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083261"
 ---
 # <a name="openmp-directives"></a>Directivas de OpenMP
 
@@ -52,19 +52,19 @@ Proporciona vínculos a las directivas que se utilizan en la API de OpenMP.
 
 Visual C++ admite las siguientes directivas de OpenMP:
 
-Directiva                             | Descripción
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | Especifica que una ubicación de memoria que se actualizarán de forma atómica.
-[barrier](#barrier)                   | Sincroniza todos los subprocesos en un equipo; todos los subprocesos se detendrá en la barrera, hasta que todos los subprocesos ejecuten la barrera.
-[critical](#critical)                 | Especifica que código solo se ejecuta en un subproceso a la vez.
-[flush](#flush-openmp)                | Especifica que todos los subprocesos tienen la misma vista de memoria para todos los objetos compartidos.
-[for](#for-openmp)                    | Hace que el trabajo realizado en un `for` bucle dentro de una región paralela a dividirse entre subprocesos.
-[master](#master)                     | Especifica que sólo el subproceso principal debe ejecutar una sección del programa.
-[Ordenada](#ordered-openmp-directives) | Especifica que el código en una ejecución en paralelo `for` bucle se debe ejecutar como un bucle secuencial.
-[parallel](#parallel)                 | Define una región paralela, que es código que se va a ejecutar varios subprocesos en paralelo.
-[Secciones](#sections-openmp)          | Identifica las secciones de código se divide entre todos los subprocesos.
-[single](#single)                     | Le permite especificar que una sección de código debe ejecutarse en un único subproceso, no necesariamente el subproceso principal.
-[threadprivate](#threadprivate)       | Especifica que una variable privada a un subproceso.
+|Directiva|Descripción|
+|---------|-----------|
+|[atomic](#atomic)|Especifica que una ubicación de memoria que se actualizarán de forma atómica.|
+|[barrier](#barrier)|Sincroniza todos los subprocesos en un equipo; todos los subprocesos se detendrá en la barrera, hasta que todos los subprocesos ejecuten la barrera.|
+|[critical](#critical)|Especifica que código solo se ejecuta en un subproceso a la vez.|
+|[flush](#flush-openmp)|Especifica que todos los subprocesos tienen la misma vista de memoria para todos los objetos compartidos.|
+|[for](#for-openmp)|Hace que el trabajo realizado en un `for` bucle dentro de una región paralela a dividirse entre subprocesos.|
+|[master](#master)|Especifica que sólo el subproceso principal debe ejecutar una sección del programa.|
+|[Ordenada](#ordered-openmp-directives)|Especifica que el código en una ejecución en paralelo `for` bucle se debe ejecutar como un bucle secuencial.|
+|[parallel](#parallel)|Define una región paralela, que es código que se va a ejecutar varios subprocesos en paralelo.|
+|[Secciones](#sections-openmp)|Identifica las secciones de código se divide entre todos los subprocesos.|
+|[single](#single)|Le permite especificar que una sección de código debe ejecutarse en un único subproceso, no necesariamente el subproceso principal.|
+|[threadprivate](#threadprivate)|Especifica que una variable privada a un subproceso.|
 
 ## <a name="atomic"></a>Atomic
 
@@ -123,7 +123,7 @@ Sincroniza todos los subprocesos en un equipo; todos los subprocesos se detendr�
 
 El `barrier` directiva es compatible con ningún cláusulas de OpenMP.
 
-Para obtener más información, consulte [2.6.3 barrier (directiva)](../../../parallel/openmp/2-6-3-barrier-directive.md).
+Para obtener más información, consulte [2.6.3 directiva barrera](../../../parallel/openmp/2-6-3-barrier-directive.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -306,13 +306,13 @@ Un `for` bucle. Se producirá un comportamiento indefinido si el código de usua
 
 El `for` directiva es compatible con las cláusulas de OpenMP siguientes:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [Ordenada](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [Ordenada](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 Si `parallel` también se especifica, `clauses` puede ser cualquier cláusula aceptado por el `parallel` o `for` directivas, excepto `nowait`.
 
@@ -535,14 +535,14 @@ Define una región paralela, que es código que se va a ejecutar varios subproce
 
 El `parallel` directiva es compatible con las cláusulas de OpenMP siguientes:
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [Compartido](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [Compartido](openmp-clauses.md#shared-openmp)
 
 `parallel` También puede utilizarse con el [secciones](#sections-openmp) y [para](#for-openmp) directivas.
 
@@ -603,11 +603,11 @@ El `sections` directiva puede contener cero o más `section` directivas.
 
 El `sections` directiva es compatible con las cláusulas de OpenMP siguientes:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 Si `parallel` también se especifica, `clauses` puede ser cualquier cláusula aceptado por el `parallel` o `sections` directivas, excepto `nowait`.
 
@@ -656,10 +656,10 @@ Le permite especificar que una sección de código debe ejecutarse en un único 
 
 El `single` directiva es compatible con las cláusulas de OpenMP siguientes:
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 El [maestro](#master) directiva le permite especificar que una sección de código debe ejecutarse solo en el subproceso principal.
 
@@ -745,4 +745,4 @@ Los usuarios no tienen ningún control sobre cuándo se terminarán los subproce
 
 ### <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo del uso de `threadprivate`, consulte [privada](../../../parallel/openmp/reference/private-openmp.md).
+Para obtener un ejemplo del uso de `threadprivate`, consulte [privada](openmp-clauses.md#private-openmp).

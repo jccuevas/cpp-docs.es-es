@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45a5b1714721a414f1016d977cc9cb549b4000d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446613"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083118"
 ---
 # <a name="event-maps"></a>Mapas de eventos
 
@@ -279,7 +279,6 @@ La función que llama el marco de trabajo cuando se invoca el verbo.
 El índice del verbo estándar tiene el formato `OLEIVERB_`, seguido de una acción. OLEIVERB_SHOW OLEIVERB_HIDE y OLEIVERB_UIACTIVATE son algunos ejemplos de verbos estándar.
 
 Consulte [ON_OLEVERB](#on_oleverb) para obtener una descripción del prototipo de función que se usará como el *memberFxn* parámetro.
-
 
 ### <a name="requirements"></a>Requisitos
 

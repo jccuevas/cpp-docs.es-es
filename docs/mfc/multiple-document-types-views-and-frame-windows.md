@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a488a3d46d60762f73406ea6f604761804277aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce4caa9b8a8575264563d69f47dbba1dcedb69e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054116"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Varios tipos de documentos, vistas y ventanas de marco
 
@@ -62,15 +62,15 @@ MFC admite tres interfaces de usuario comunes que requieren varias vistas en el 
 
 - Objetos de vista de la misma clase, cada uno en una ventana de marco de documento MDI propia.
 
-     Es conveniente que exista la posibilidad de crear una segunda ventana de marco en un documento. Así, los usuarios podrían elegir un comando Nueva ventana para abrir un segundo marco con una vista del mismo documento y, después, usar ambos marcos para ver distintas partes del documento al mismo tiempo. Para dar cabida al comando Nueva ventana del menú Ventana en las aplicaciones MDI, lo que el marco de trabajo hace es duplicar la vista y la ventana de marco iniciales conectadas al documento.
+   Es conveniente que exista la posibilidad de crear una segunda ventana de marco en un documento. Así, los usuarios podrían elegir un comando Nueva ventana para abrir un segundo marco con una vista del mismo documento y, después, usar ambos marcos para ver distintas partes del documento al mismo tiempo. Para dar cabida al comando Nueva ventana del menú Ventana en las aplicaciones MDI, lo que el marco de trabajo hace es duplicar la vista y la ventana de marco iniciales conectadas al documento.
 
 - Objetos de vista de la misma clase en la misma ventana de marco de documento.
 
-     Las ventanas divisoras dividen el espacio de una vista de documento único en varias vistas distintas de ese documento. El marco de trabajo crea varios objetos de vista a partir de la misma clase de vista. Para obtener más información, vea [Ventanas divisoras](#_core_splitter_windows).
+   Las ventanas divisoras dividen el espacio de una vista de documento único en varias vistas distintas de ese documento. El marco de trabajo crea varios objetos de vista a partir de la misma clase de vista. Para obtener más información, vea [Ventanas divisoras](#_core_splitter_windows).
 
 - Objetos de vista de diferente clase en una sola ventana de marco.
 
-     En este modelo, que es una variación de la ventana divisora, varias vistas comparten una sola ventana de marco. Las vistas se construyen a partir de clases diferentes, y cada una de esas vistas proporciona una forma distinta de ver el mismo documento. Por ejemplo, una vista podría mostrar un documento de procesamiento de texto en modo normal, mientras que otra lo muestra en modo de esquema. Un control divisor permite al usuario ajustar los tamaños relativos de las vistas.
+   En este modelo, que es una variación de la ventana divisora, varias vistas comparten una sola ventana de marco. Las vistas se construyen a partir de clases diferentes, y cada una de esas vistas proporciona una forma distinta de ver el mismo documento. Por ejemplo, una vista podría mostrar un documento de procesamiento de texto en modo normal, mientras que otra lo muestra en modo de esquema. Un control divisor permite al usuario ajustar los tamaños relativos de las vistas.
 
 En la siguiente imagen, dividida en las partes a, b y c, se muestran los tres modelos de interfaz de usuario en el orden descrito anteriormente.
 

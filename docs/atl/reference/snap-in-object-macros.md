@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f2c692f9055e0c2ca3657a6bba0d854209f786b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068754"
 ---
 # <a name="snap-in-object-macros"></a>Macros de objeto de complemento
 
@@ -41,7 +41,7 @@ Estas macros proporcionan compatibilidad para extensiones de complemento.
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Crea a un miembro de datos para la clase de datos de la extensión del complemento.|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Escribe una clase de datos de extensión de complemento en la asignación de clase de datos de extensión de complemento del objeto de complemento.|
 |[SNAPINMENUID](#snapinmenuid)|Declara el identificador del menú contextual usado por el objeto de complemento.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Escribe una barra de herramientas en el mapa de barra de herramientas del complemento de objeto.|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Escribe una barra de herramientas en el mapa de barra de herramientas del complemento de objeto.|
 
 ## <a name="requirements"></a>Requisitos
 

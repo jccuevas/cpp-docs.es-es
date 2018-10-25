@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3448f915ae7b738c839ceaa4fb7adeb00492d9f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48261d545737215ff44b1b56bb3b2d48839b6eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067064"
 ---
 # <a name="default-arguments"></a>Argumentos predeterminados
 
@@ -112,7 +112,7 @@ Tenga en cuenta los siguientes puntos al utilizar argumentos predeterminados:
     }
     ```
 
-     El problema con este código es que la declaración de función de la definición vuelve a definir el argumento predeterminado para `prec`.
+   El problema con este código es que la declaración de función de la definición vuelve a definir el argumento predeterminado para `prec`.
 
 - Declaraciones posteriores pueden agregar argumentos predeterminados adicionales.
 

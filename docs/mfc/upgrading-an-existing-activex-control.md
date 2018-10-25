@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082937"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Actualizar un control ActiveX existente
 
@@ -213,11 +213,11 @@ Para usar un control con licencia en una página HTML abierta en un equipo, debe
 
 1. Insertar el \<objeto > etiqueta para el control con licencia después de la etiqueta del Administrador de licencias.
 
-     Por ejemplo, a continuación se muestra una página HTML que muestra el control de edición enmascarada de Microsoft. La primera clase que es el identificador para el control del Administrador de licencias, la segunda clase que es el identificador para el control de edición enmascarado. Cambiar las etiquetas para que apunte a la ruta de acceso relativa del archivo LPK que creó anteriormente y agregue una etiqueta de objeto, incluidos el identificador de clase para el control.
+   Por ejemplo, a continuación se muestra una página HTML que muestra el control de edición enmascarada de Microsoft. La primera clase que es el identificador para el control del Administrador de licencias, la segunda clase que es el identificador para el control de edición enmascarado. Cambiar las etiquetas para que apunte a la ruta de acceso relativa del archivo LPK que creó anteriormente y agregue una etiqueta de objeto, incluidos el identificador de clase para el control.
 
 1. Insertar el \<Insertar > atributo para el archivo LPK, si usa el complemento NCompass ActiveX.
 
-     Si el control puede verse en otros activo exploradores compatibles, por ejemplo, Netscape mediante el complemento NCompass ActiveX, debe agregar el \<EMBED > sintaxis, tal como se muestra a continuación.
+   Si el control puede verse en otros activo exploradores compatibles, por ejemplo, Netscape mediante el complemento NCompass ActiveX, debe agregar el \<EMBED > sintaxis, tal como se muestra a continuación.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

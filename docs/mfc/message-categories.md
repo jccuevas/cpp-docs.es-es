@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1b8da6f6c1b94432d9cd4c91d88f6d844fbb27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4184ca20188ccbc3eff0818e807911635292b668
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433054"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081384"
 ---
 # <a name="message-categories"></a>Categorías de mensaje
 
@@ -33,17 +33,17 @@ ms.locfileid: "46433054"
 
 1. mensajes de Windows
 
-     Esto incluye principalmente aquellos mensajes que empiezan con el **WM_** prefijo, excepto WM_COMMAND. Mensajes de Windows se controlan mediante ventanas y vistas. Estos mensajes suelen tengan los parámetros que se usan para determinar cómo tratar el mensaje.
+   Esto incluye principalmente aquellos mensajes que empiezan con el **WM_** prefijo, excepto WM_COMMAND. Mensajes de Windows se controlan mediante ventanas y vistas. Estos mensajes suelen tengan los parámetros que se usan para determinar cómo tratar el mensaje.
 
 1. Notificaciones del control
 
-     Esto incluye los mensajes de notificación WM_COMMAND de controles y otras ventanas secundarias a sus ventanas primarias. Por ejemplo, un control de edición envía a su elemento primario de un mensaje WM_COMMAND, que contiene el código de notificación de control EN_CHANGE cuando el usuario ha realizado una acción que puede haber modificado el texto del control de edición. Controlador de la ventana para el mensaje responde al mensaje de notificación de alguna manera adecuada, como recuperar el texto del control.
+   Esto incluye los mensajes de notificación WM_COMMAND de controles y otras ventanas secundarias a sus ventanas primarias. Por ejemplo, un control de edición envía a su elemento primario de un mensaje WM_COMMAND, que contiene el código de notificación de control EN_CHANGE cuando el usuario ha realizado una acción que puede haber modificado el texto del control de edición. Controlador de la ventana para el mensaje responde al mensaje de notificación de alguna manera adecuada, como recuperar el texto del control.
 
-     El marco de trabajo enruta los mensajes de notificación de control como otro **WM_** mensajes. Una excepción, sin embargo, es el mensaje de notificación de control BN_CLICKED enviado por los botones cuando el usuario hace clic en ellos. Este mensaje se tratan de manera especial como un mensaje de comando y se enruta al igual que otros comandos.
+   El marco de trabajo enruta los mensajes de notificación de control como otro **WM_** mensajes. Una excepción, sin embargo, es el mensaje de notificación de control BN_CLICKED enviado por los botones cuando el usuario hace clic en ellos. Este mensaje se tratan de manera especial como un mensaje de comando y se enruta al igual que otros comandos.
 
 1. Mensajes de comandos
 
-     Esto incluye mensajes de notificación de WM_COMMAND de objetos de la interfaz de usuario: menús, botones de barra de herramientas y teclas de aceleración. El marco de trabajo procesa los comandos de manera diferente a otros mensajes, y puede controlarse mediante más tipos de objetos, como se explica en [destinos de comando](../mfc/command-targets.md).
+   Esto incluye mensajes de notificación de WM_COMMAND de objetos de la interfaz de usuario: menús, botones de barra de herramientas y teclas de aceleración. El marco de trabajo procesa los comandos de manera diferente a otros mensajes, y puede controlarse mediante más tipos de objetos, como se explica en [destinos de comando](../mfc/command-targets.md).
 
 ##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Mensajes de Windows y los mensajes de notificación de Control
 

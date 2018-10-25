@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c19b000c1d7ee5cb1f8480f0e9f384b42937dc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 167d3af6d353ec48edde4288db26b9e407c62bd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078965"
 ---
 # <a name="exception-handling-in-mfc"></a>Control de excepciones en MFC
 
@@ -81,15 +81,15 @@ Tres categorías de resultados pueden producirse cuando se llama a una función 
 
 - Ejecución normal
 
-     La función puede ejecutar con normalidad y devolver. Algunas funciones devuelven un código de resultado al llamador, que indica el resultado de la función. Los códigos de resultado posibles estrictamente definidos para la función y representan el intervalo de los posibles resultados de la función. El código de resultado puede indicar éxito o error, o incluso puede indicar un determinado tipo de error que se encuentra dentro del intervalo normal de las expectativas. Por ejemplo, una función del estado de archivo puede devolver un código que indica que el archivo no existe. Tenga en cuenta que el término "código de error" no se utiliza como un código de resultado representa uno de muchos resultados esperados.
+   La función puede ejecutar con normalidad y devolver. Algunas funciones devuelven un código de resultado al llamador, que indica el resultado de la función. Los códigos de resultado posibles estrictamente definidos para la función y representan el intervalo de los posibles resultados de la función. El código de resultado puede indicar éxito o error, o incluso puede indicar un determinado tipo de error que se encuentra dentro del intervalo normal de las expectativas. Por ejemplo, una función del estado de archivo puede devolver un código que indica que el archivo no existe. Tenga en cuenta que el término "código de error" no se utiliza como un código de resultado representa uno de muchos resultados esperados.
 
 - Ejecución con errores
 
-     El llamador algunos comete al pasar argumentos a la función o llama a la función en un contexto inadecuado. Esta situación produce un error y debe ser detectada por una aserción durante el desarrollo del programa. (Para obtener más información sobre las aserciones, vea [aserciones de C/C ++](/visualstudio/debugger/c-cpp-assertions).)
+   El llamador algunos comete al pasar argumentos a la función o llama a la función en un contexto inadecuado. Esta situación produce un error y debe ser detectada por una aserción durante el desarrollo del programa. (Para obtener más información sobre las aserciones, vea [aserciones de C/C ++](/visualstudio/debugger/c-cpp-assertions).)
 
 - Ejecución anómala
 
-     Ejecución anormal incluye situaciones donde las condiciones fuera del control del programa, como memoria insuficiente o errores de E/S, influyen en el resultado de la función. Las situaciones anormales deben controlarse detectando e iniciando excepciones.
+   Ejecución anormal incluye situaciones donde las condiciones fuera del control del programa, como memoria insuficiente o errores de E/S, influyen en el resultado de la función. Las situaciones anormales deben controlarse detectando e iniciando excepciones.
 
 Utilizar excepciones resulta especialmente indicado para su ejecución anómala.
 

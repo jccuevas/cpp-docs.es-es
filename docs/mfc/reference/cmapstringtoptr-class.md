@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b4eaf72ac8186723c793d8e4d84658424df76f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc7d201ba32d0f7e3a4c860c6df117e9c74ae254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055507"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr (clase)
 
@@ -123,6 +123,4 @@ Cuando un `CMapStringToPtr` se elimina el objeto, o cuando se quitan sus element
 
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-
-
 

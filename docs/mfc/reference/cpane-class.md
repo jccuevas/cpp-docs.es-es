@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080226"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Especifica el tamaño inicial y la posición de la *pParentWnd* ventana, en coordenadas de cliente.
 
-[in] [out] *pParentWnd* especifica la ventana primaria de este panel.
+*pParentWnd*<br/>
+[in, out] Especifica la ventana primaria de este panel.
 
 *nID*<br/>
 [in] Especifica el identificador del panel.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Especifica el estilo del panel. Para obtener más información, consulte [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* especifica el contexto de creación del panel.
+*pContext*<br/>
+[in, out] Especifica el contexto de creación del panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Especifica el tamaño inicial y la posición de la *pParentWnd* ventana, en coordenadas de cliente.
 
-[in] [out] *pParentWnd* especifica la ventana primaria de este panel.
+*pParentWnd*<br/>
+[in, out] Especifica la ventana primaria de este panel.
 
 *nID*<br/>
 [in] Especifica el identificador del panel.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Especifica el estilo del panel. Para obtener más información, consulte [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* especifica el contexto de creación para el panel.
+*pContext*<br/>
+[in, out] Especifica el contexto de creación para el panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pDockBar* especifica el panel para acoplar este panel para base.
+*pDockBar*<br/>
+[in, out] Especifica el panel para acoplar este panel para base.
 
 *lpRect*<br/>
 [in] Especifica el rectángulo en el panel de base donde este panel está acoplada.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pWndOldParent* ventana primaria de la anterior del panel.
+*pWndOldParent*<br/>
+[in, out] Ventana de elemento primario anterior del panel.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pWndNewParent* especifica la nueva ventana primaria.
+*pWndNewParent*<br/>
+[in, out] Especifica la nueva ventana primaria.
 
 *bDelay*<br/>
 [in] TRUE para retrasar el ajuste del diseño de acoplamiento global; en caso contrario, FALSE.
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *ppDockBar* especifica el panel de acoplamiento a este panel.
+*ppDockBar*<br/>
+[in, out] Especifica el panel de acoplamiento a este panel.
 
 *lpRect*<br/>
 [in] Especifica el rectángulo de acoplamiento.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pClass* especifica la información de clase en tiempo de ejecución de la ventana de marco reducido.
+*pClass*<br/>
+[in, out] Especifica la información de clase en tiempo de ejecución de la ventana de marco reducido.
 
 ### <a name="remarks"></a>Comentarios
 

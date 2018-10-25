@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433237"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070418"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutinas de intercambio de datos de cuadros de diálogo estándar
 
@@ -75,7 +75,7 @@ Una referencia a una variable de miembro del cuadro de diálogo, vista de formul
 
 Cuando `DDX_CBIndex` se llama, *índice* se establece en el índice de la selección actual del cuadro combinado. Si se selecciona ningún elemento, *índice* se establece en 0.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -110,7 +110,7 @@ Cuando `DDX_CBString` se llama, *valor* está establecido en la selección actua
 > [!NOTE]
 >  Si el cuadro combinado es un cuadro de lista desplegable, el valor que se intercambian está limitado a 255 caracteres.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -145,7 +145,7 @@ Cuando `DDX_CBStringExact` se llama, *valor* está establecido en la selección 
 > [!NOTE]
 >  Si el cuadro combinado es un cuadro de lista desplegable, el valor que se intercambian está limitado a 255 caracteres.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -177,7 +177,7 @@ Una referencia a una variable de miembro del cuadro de diálogo, vista de formul
 
 Cuando `DDX_Check` se llama, *valor* está establecido en el estado actual del control de casilla de verificación. Para obtener una lista de los valores de los Estados posibles, consulte [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) en el SDK de Windows.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -209,7 +209,7 @@ Una referencia a una variable de miembro del cuadro de diálogo, vista de formul
 
 El *pDX* objeto proporcionado por el marco de trabajo cuando el `DoDataExchange` se llama a la función. Por lo tanto, `DDX_Control` solo debe llamarse dentro de la invalidación de `DoDataExchange`.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -253,7 +253,7 @@ Cuando `DDX_DateTimeCtrl` se llama, *valor* está establecido en el actual estad
 
 En la tercera versión anterior, `DDX_DateTimeCtrl` administra la transferencia de `CString` control datos entre una fecha y hora y un [CString](../../atl-mfc-shared/reference/cstringt-class.md) miembro de datos del objeto de vista de control. Formato de la cadena mediante las reglas de la configuración regional actual para dar formato a fechas y horas.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -268,10 +268,11 @@ Crea un control de .NET que coincida con identificador de recurso. del control
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *pDX*<br/>
@@ -297,8 +298,6 @@ Para obtener más información, consulte [Cómo: realizar enlace de datos DDX/DD
 
 [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -335,7 +334,7 @@ Utilizar Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) para l
 
 Cuando `DDX_IPAddress` se llama, *valor* se lee desde el control de dirección IP, o *valor* se escribe en el control, dependiendo de la dirección del intercambio.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -367,7 +366,7 @@ Una referencia a una variable de miembro del cuadro de diálogo, vista de formul
 
 Cuando `DDX_LBIndex` se llama, *índice* se establece en el índice de la selección actual del cuadro de lista. Si se selecciona ningún elemento, *índice* se establece en -1.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -404,7 +403,7 @@ Cuando `DDX_LBString` se llama para transferir datos desde un control de cuadro 
 > [!NOTE]
 >  Si el cuadro de lista es un cuadro de lista desplegable, el valor que se intercambian está limitado a 255 caracteres.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -441,7 +440,7 @@ Cuando `DDX_CBStringExact` se llama para transferir datos desde un control de cu
 > [!NOTE]
 >  Si el cuadro de lista es un cuadro de lista desplegable, el valor que se intercambian está limitado a 255 caracteres.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -481,7 +480,7 @@ Una referencia a un `CTime` o `COleDateTime` variable de miembro del cuadro de d
 
 Cuando `DDX_MonthCalCtrl` se llama, *valor* está establecido en el estado actual del control de calendario mensual.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -515,7 +514,7 @@ Cuando `DDX_Radio` se llama, *valor* está establecido en el estado actual del g
 
 Por ejemplo, en caso de que el primer botón de radio del grupo está activado (el botón con el estilo WS_GROUP) el valor de la **int** miembro es 0, y así sucesivamente.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -547,7 +546,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 Cuando `DDX_Scroll` se llama, *valor* se establece en la posición actual del control de posición del control. Para obtener más información sobre los valores asociados con la posición actual del control de posición del control, vea [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) en el SDK de Windows.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -579,7 +578,7 @@ Una referencia al valor que se van a intercambiar. Este parámetro contiene o es
 
 Cuando `DDX_Slider` se llama, *valor* se establece en la posición actual del control de posición del control, o el valor recibe la posición, dependiendo de la dirección del intercambio.
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md). Para obtener información acerca de los controles deslizantes, consulte [usar CSliderCtrl](../../mfc/using-csliderctrl.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md). Para obtener información acerca de los controles deslizantes, consulte [usar CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -659,7 +658,7 @@ Una referencia a un miembro de datos en el cuadro de diálogo, vista de formular
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 

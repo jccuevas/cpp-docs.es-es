@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a102eae0dd5f96d74f7258c10c5bcce55c3a6443
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065375"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivar una clase de CObject
 
@@ -65,9 +65,9 @@ En la tabla siguiente se muestra la relación entre las macros utilizadas para a
 
 1. Use la sintaxis de C++ normal para derivar la clase de `CObject` (o desde una clase derivada de `CObject`).
 
-     El ejemplo siguiente muestra el caso más simple, la derivación de una clase desde `CObject`:
+   El ejemplo siguiente muestra el caso más simple, la derivación de una clase desde `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
 Normalmente, sin embargo, es posible que desee reemplazar algunas de `CObject`de las funciones miembro para controlar los detalles de la nueva clase. Por ejemplo, es posible que normalmente desea invalidar el `Dump` función de `CObject` para proporcionar la información de depuración para el contenido de la clase. Para obtener más información sobre cómo invalidar `Dump`, consulte el artículo [diagnósticos: volcar el contenido de objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). También puede invalidar el `AssertValid` función de `CObject` para proporcionar una prueba personalizada para validar la coherencia de los miembros de datos de objetos de clase. Para obtener una descripción de cómo invalidar `AssertValid`, consulte [MFC ASSERT_VALID y CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 

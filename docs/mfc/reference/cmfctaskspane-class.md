@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a548c50345601dda85d79ec4c40f1632ab316f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dcf14a23331ef783a25d75ed167703dcd4ffd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065674"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane (clase)
 
@@ -396,7 +396,6 @@ int AddGroup(
     BOOL bSpecial = FALSE,
     HICON hIcon = NULL);
 
-
 int AddGroup(
     LPCTSTR lpszGroupName,
     BOOL bBottomLocation = FALSE,
@@ -506,14 +505,13 @@ int AddPage(LPCTSTR lpszPageLabel);
 
 ##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator
 
-
 ```
 int AddSeparator(int nGroup);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *sagrupar*
+[in] *sagrupar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -601,10 +599,8 @@ CMFCTasksPane();
 
 ##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups
 
-
 ```
 void CollapseAllGroups(BOOL bCollapse = TRUE);
-
 
 void CollapseAllGroups(
     int nPageIdx,
@@ -613,8 +609,8 @@ void CollapseAllGroups(
 
 ### <a name="parameters"></a>Parámetros
 
-*bCollapse*<br/>
-[in] [in] *nPageIdx*
+[in] *bCollapse*<br/>
+[in] *nPageIdx*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -626,7 +622,6 @@ Contrae o expande un grupo.
 BOOL CollapseGroup(
     CMFCTasksPaneTaskGroup* pGroup,
     BOOL bCollapse = TRUE);
-
 
 BOOL CollapseGroup(
     int nGroup,
@@ -654,14 +649,13 @@ Un grupo contraído muestra solo el título del grupo; la lista de tareas está 
 
 ##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe
 
-
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rectInitial*
+[in] *rectInitial*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -774,14 +768,13 @@ De forma predeterminada, el marco de trabajo no muestra la barra de herramientas
 
 ##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls
 
-
 ```
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bHabilitar el*
+[in] *bHabilitar el*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -952,14 +945,13 @@ El espaciado predeterminado entre un panel de tareas y el borde del área de cli
 
 ##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages
 
-
 ```
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *lstNextPages*
+[in] *lstNextPages*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -999,19 +991,17 @@ El número de páginas en el panel de tareas.
 
 ##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages
 
-
 ```
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *lstPrevPages*
+[in] *lstPrevPages*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl
-
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1019,7 +1009,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nBar*
+[in] *nBar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1145,7 +1135,6 @@ El desplazamiento horizontal del valor predeterminado de tareas es de 12 píxele
 
 ##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset
 
-
 ```
 int GetTasksIconHorzOffset() const;
 ```
@@ -1155,7 +1144,6 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset
-
 
 ```
 int GetTasksIconVertOffset() const;
@@ -1182,7 +1170,6 @@ El margen vertical entre un panel de tareas y los bordes del área de cliente.
 El margen vertical es el espacio entre un panel de tareas y los bordes del área de cliente. El valor predeterminado del margen vertical es 12 píxeles.
 
 ##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible
-
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1242,7 +1229,6 @@ El botón Reenviar permite la navegación hacia delante en el historial de pági
 
 ##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled
 
-
 ```
 BOOL IsGroupCollapseEnabled() const;
 ```
@@ -1276,7 +1262,6 @@ BOOL IsNavigationToolbarEnabled() const;
 TRUE si la barra de herramientas de navegación está habilitada; en caso contrario, FALSE.
 
 ##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox
-
 
 ```
 virtual BOOL IsToolBox() const;
@@ -1312,7 +1297,6 @@ TRUE si la cadena de la tarea se ajusta; en caso contrario, FALSE.
 
 ##  <a name="loadstate"></a>  CMFCTasksPane::LoadState
 
-
 ```
 virtual BOOL LoadState(
     LPCTSTR lpszProfileName = NULL,
@@ -1322,8 +1306,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *uiID*
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1342,7 +1327,6 @@ virtual void OnActivateTasksPanePage();
 Invalide este método en una clase derivada para personalizar la apariencia de la página del panel de tareas.
 
 ##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel
-
 
 ```
 virtual void OnCancel();
@@ -1383,7 +1367,6 @@ El marco llama a este método cuando un usuario hace clic en una tarea. De forma
 Invalide este método en una clase derivada para ejecutar código personalizado cuando se hace clic en una tarea.
 
 ##  <a name="onok"></a>  CMFCTasksPane::OnOK
-
 
 ```
 virtual void OnOK();
@@ -1435,7 +1418,6 @@ Invalide este método en una clase derivada para ejecutar código personalizado 
 
 ##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton
 
-
 ```
 virtual void OnPressOtherButton(
     CMFCCaptionMenuButton* pbtn,
@@ -1444,13 +1426,12 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>Parámetros
 
-*pbtn*<br/>
-[in] [in] *pWndOwner*
+[in] *pbtn*<br/>
+[in] *pWndOwner*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData
-
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1458,14 +1439,13 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *lVal*
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1475,13 +1455,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parámetros
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage
-
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1489,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1497,14 +1476,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout
 
-
 ```
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bRedraw*
+[in] *bRedraw*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1606,7 +1584,6 @@ TRUE si la función se realiza correctamente; FALSE si *sagrupar* o *NLA* no es 
 
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState
 
-
 ```
 virtual BOOL SaveState(
     LPCTSTR lpszProfileName = NULL,
@@ -1616,8 +1593,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *uiID*
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1625,14 +1603,13 @@ virtual BOOL SaveState(
 
 ##  <a name="serialize"></a>  CMFCTasksPane::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *ar*
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1905,19 +1882,17 @@ El desplazamiento horizontal del valor predeterminado es 12 píxeles.
 
 ##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset
 
-
 ```
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset
-
 
 ```
 void SetTasksIconVertOffset(int n = -1);
@@ -1925,7 +1900,7 @@ void SetTasksIconVertOffset(int n = -1);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1988,7 +1963,6 @@ BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
 
-
 BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
@@ -2015,14 +1989,13 @@ Llame a [CMFCTasksPane::AddWindow](#addwindow) para agregar tareas con los contr
 
 ##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString
 
-
 ```
 virtual void ShowCommandMessageString(UINT uiCmdId);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *uiCmdId*
+[in] *uiCmdId*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 336bbf00edc84335972171aba0e7fc01e206984e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 384e3db9d1c5925d64d066b5a5a3b2e9ac4e68eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067370"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -68,9 +68,9 @@ __interface ICustom {
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|**dual**, **dispinterface**|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Atributos de interfaz](interface-attributes.md)  
+[Atributos de interfaz](interface-attributes.md)

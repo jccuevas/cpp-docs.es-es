@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069339"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
 
@@ -253,7 +253,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Lo llama el marco de trabajo cuando se activa un menú con barra desplazable.|
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Lo llama el marco de trabajo para actualizar el menú del marco. (Invalida `CMDIFrameWnd::OnUpdateFrameMenu`).|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Devuelve el panel de acoplamiento que contiene el punto especificado.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows.  (Invalida `CMDIFrameWnd::PreTranslateMessage`).|
+|`CMDIFrameWndEx::PreTranslateMessage`|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .  (Invalida `CMDIFrameWnd::PreTranslateMessage`).|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Lo llama el marco de trabajo para volver a calcular el diseño de la ventana de marco. (Invalida [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Anula el registro de un panel y se quita el Administrador de acoplamiento.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Guarda el diseño actual de grupos con fichas MDI y la lista de documentos abiertos previamente.|
@@ -831,7 +831,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,
@@ -2033,7 +2032,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>Comentarios
 
-Este método invalida [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
+Este método invalida [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
 ## <a name="see-also"></a>Vea también
 

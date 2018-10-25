@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083196"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador que están desactivadas de forma predeterminada
 El compilador incluye advertencias que están desactivadas de forma predeterminada, porque la mayoría de los programadores no desean verlas. En algunos casos, representa una opción de la regla de estilo, son expresiones comunes en código antiguo o aprovechar las ventajas de una extensión de Microsoft al lenguaje. En otros casos, indican un área donde los programadores a menudo realizan suposiciones incorrectas, lo que pueden provocar un comportamiento inesperado o no definido. Algunas de estas advertencias pueden ser muy ruidoso en encabezados de la biblioteca. Las bibliotecas en tiempo de ejecución de C y las bibliotecas estándar de C++ están diseñadas para no emitir ninguna advertencia sólo en el nivel de advertencia [/W4](../build/reference/compiler-option-warning-level.md).
@@ -36,7 +36,7 @@ Puede habilitar advertencias normalmente desactivadas de forma predeterminada co
 
    La advertencia especificada (*warning_number*) está habilitada en el nivel especificado (*nivel_advertencia*).
 
-- [/ Wall](../build/reference/compiler-option-warning-level.md)
+- [/Wall](../build/reference/compiler-option-warning-level.md)
 
    `/Wall` habilita todas las advertencias que están desactivadas de forma predeterminada. Si usa esta opción, puede desactivar las advertencias individuales mediante el [/wd](../build/reference/compiler-option-warning-level.md) opción.
 
@@ -154,12 +154,12 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |C5042 (nivel 3)|'*función*': las declaraciones de función en el ámbito de bloque no pueden ser 'inline' especificado en el estándar de C++; quite el especificador "inline" <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Compilador insertará la mitigación de Spectre para la carga de memoria si se especificó el modificador/qspectre <sup>15.7</sup>|
 
-<sup>14,1</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 1.  
-<sup>14.3</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 3.  
-<sup>15.3</sup> esta advertencia está disponible a partir de Visual Studio 2017 versión 15.3.  
-<sup>15.5</sup> esta advertencia está disponible a partir de Visual Studio 2017 versión 15.5.  
-<sup>15.7</sup> esta advertencia está disponible a partir de Visual Studio 2017 versión 15.7.  
-<sup>Perm</sup> esta advertencia está desactivada, a menos que el [/ permissive-](../build/reference/permissive-standards-conformance.md) se establece la opción del compilador.  
+<sup>14,1</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 1.<br/>
+<sup>14.3</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 3.<br/>
+<sup>15.3</sup> esta advertencia está disponible a partir de Visual Studio 2017 versión 15.3.<br/>
+<sup>15.5</sup> esta advertencia está disponible a partir de Visual Studio 2017 versión 15.5.<br/>
+<sup>15.7</sup> esta advertencia está disponible a partir de Visual Studio 2017 versión 15.7.<br/>
+<sup>Perm</sup> esta advertencia está desactivada, a menos que el [/ permissive-](../build/reference/permissive-standards-conformance.md) se establece la opción del compilador.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Advertencias desactivado de forma predeterminada en versiones anteriores
 

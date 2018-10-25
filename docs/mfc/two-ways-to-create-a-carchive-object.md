@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080590"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dos maneras de crear un objeto CArchive
 
@@ -66,9 +66,9 @@ Además de serializar un documento mediante el marco de trabajo, existen otras o
 
 1. Pase el `CFile` objeto al constructor para `CArchive`, como se muestra en el ejemplo siguiente:
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     El segundo argumento para el `CArchive` constructor es un valor enumerado que especifica si el archivo se usará para almacenar o cargar datos a o desde el archivo. El `Serialize` función de un objeto comprueba este estado mediante una llamada a la `IsStoring` función del objeto de almacenamiento.
+   El segundo argumento para el `CArchive` constructor es un valor enumerado que especifica si el archivo se usará para almacenar o cargar datos a o desde el archivo. El `Serialize` función de un objeto comprueba este estado mediante una llamada a la `IsStoring` función del objeto de almacenamiento.
 
 Cuando haya terminado de almacenar o cargar datos desde o hacia el `CArchive` de objetos, ciérrelo. Aunque el `CArchive` (y `CFile`) los objetos cerrará automáticamente el archivo (y el archivo), es recomendable hacerlo explícitamente ya que facilita la recuperación de errores. Para obtener más información sobre el control de errores, vea el artículo [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
@@ -76,7 +76,7 @@ Cuando haya terminado de almacenar o cargar datos desde o hacia el `CArchive` de
 
 1. El ejemplo siguiente muestra cómo cerrar la `CArchive` objeto:
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>Vea también
 

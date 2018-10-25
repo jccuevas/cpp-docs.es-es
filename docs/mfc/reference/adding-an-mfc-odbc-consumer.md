@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02323f1af8ee36d53cdd29d48989a96e61f72c60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b073d361fe8dbffb7c92718f5d7522534fc7e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052359"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Agregar un consumidor ODBC de MFC
 
@@ -31,7 +31,7 @@ Un consumidor ODBC MFC está formado por un ODBC recordset clase y enlaces de da
 
 1. En la carpeta de Visual C++, haga doble clic en el **consumidor ODBC de MFC** icono o selecciónelo y haga clic en **abierto**.
 
-     Se abre el Asistente para consumidores ODBC MFC.
+   Se abre el Asistente para consumidores ODBC MFC.
 
 1. Definir la configuración como se describe en [Asistente para consumidores ODBC de MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).
 

@@ -18,25 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28a92f6193053baca80ca078bddc0de862f50279
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dc899314070f10c0b10cd959af57a7230a406ac3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036454"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069716"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Mejorar un proveedor sencillo de sólo lectura
 
-Esta sección muestra cómo mejorar la [proveedor sencillo de sólo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md) creado en la sección anterior. `IRowsetLocateImpl` crea una implementación para el `IRowsetLocate` interfaz y agrega compatibilidad con marcadores.  
-  
-Si dispone de un proveedor de trabajo, desea mejorarlo para implementar la actualización del proveedor, controlar transacciones o mejorar el rendimiento del algoritmo de búsqueda de filas. Mayoría de las mejoras de proveedor implica agregar una interfaz a un objeto COM existente.  
-  
-El ejemplo en los temas siguientes mejora el mecanismo de captura de filas mediante la adición del `IRowsetLocate` a la interfaz `CAgentRowset`. Los temas muestran cómo para:  
-  
-- [Hacer que RMyProviderRowset herede de IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).  
-  
-- [Determinar dinámicamente las columnas que se devuelven al consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
-  
-## <a name="see-also"></a>Vea también  
+Esta sección muestra cómo mejorar la [proveedor sencillo de sólo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md) creado en la sección anterior. `IRowsetLocateImpl` crea una implementación para el `IRowsetLocate` interfaz y agrega compatibilidad con marcadores.
+
+Si dispone de un proveedor de trabajo, desea mejorarlo para implementar la actualización del proveedor, controlar transacciones o mejorar el rendimiento del algoritmo de búsqueda de filas. Mayoría de las mejoras de proveedor implica agregar una interfaz a un objeto COM existente.
+
+El ejemplo en los temas siguientes mejora el mecanismo de captura de filas mediante la adición del `IRowsetLocate` a la interfaz `CAgentRowset`. Los temas muestran cómo para:
+
+- [Hacer RCustomRowset herede de IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).
+
+- [Determinar dinámicamente las columnas que se devuelven al consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+
+## <a name="see-also"></a>Vea también
 
 [Crear un proveedor sencillo de solo lectura](../../data/oledb/creating-a-simple-read-only-provider.md)

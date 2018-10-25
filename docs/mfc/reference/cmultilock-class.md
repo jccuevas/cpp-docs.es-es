@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076365"
 ---
 # <a name="cmultilock-class"></a>CMultiLock (clase)
 
@@ -148,19 +148,19 @@ Si `Lock` se produce un error, devuelve - 1. Si se realiza correctamente, devuel
 
 - Entre WAIT_OBJECT_0 y WAIT_OBJECT_0 + (número de objetos - 1)
 
-     Si *bWaitForAll* es TRUE, todos los objetos se señalizan (disponible). Si *bWaitForAll* es FALSE, el valor devuelto - WAIT_OBJECT_0 es el índice de la matriz de objetos del objeto que se señala (disponible).
+   Si *bWaitForAll* es TRUE, todos los objetos se señalizan (disponible). Si *bWaitForAll* es FALSE, el valor devuelto - WAIT_OBJECT_0 es el índice de la matriz de objetos del objeto que se señala (disponible).
 
 - WAIT_OBJECT_0 + (número de objetos)
 
-     Un evento especificado en *dwWakeMask* está disponible en la cola de entrada del subproceso.
+   Un evento especificado en *dwWakeMask* está disponible en la cola de entrada del subproceso.
 
 - Entre WAIT_ABANDONED_0 y WAIT_ABANDONED_0 + (número de objetos - 1)
 
-     Si *bWaitForAll* es TRUE, todos los objetos se señalizan y al menos uno de los objetos es un objeto de exclusión mutua abandonada. Si *bWaitForAll* es FALSE, el valor devuelto - WAIT_ABANDONED_0 es el índice de la matriz de objetos del objeto de exclusión mutua abandonada que satisfizo la espera.
+   Si *bWaitForAll* es TRUE, todos los objetos se señalizan y al menos uno de los objetos es un objeto de exclusión mutua abandonada. Si *bWaitForAll* es FALSE, el valor devuelto - WAIT_ABANDONED_0 es el índice de la matriz de objetos del objeto de exclusión mutua abandonada que satisfizo la espera.
 
 - WAIT_TIMEOUT
 
-     El intervalo de tiempo de espera especificado en *dwTimeOut* caducado sin espera subsiguientes.
+   El intervalo de tiempo de espera especificado en *dwTimeOut* caducado sin espera subsiguientes.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -174,7 +174,6 @@ Libera el objeto de sincronización que pertenecen a `CMultiLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ El primer formulario del `Unlock` intenta desbloquear el objeto de sincronizaci�
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-
-
 

@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082585"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel (clase)
 
 Implementa un panel que contiene un conjunto de elementos de cinta. Cuando se dibuja el panel, muestra tantos elementos como es posible, dado el tamaño del panel.
 
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
-
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -540,7 +539,6 @@ Nombre del panel de la cinta.
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Un puntero a la categoría de cinta que contiene este panel de la cinta.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ El panel principal de la cinta de opciones se muestra cuando el usuario seleccio
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Especifica el índice de base cero del elemento que se va a reemplazar.
 
-[in] [out] *pElem* un puntero válido para el elemento que reemplaza el elemento original.
+*pElem*<br/>
+[in, out] Un puntero válido para el elemento que reemplaza el elemento original.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Especifica el identificador de comando del elemento a reemplazar.
 
-[in] [out] *pElem* un puntero válido para el elemento que va a reemplazar el elemento original.
+*pElem*<br/>
+[in, out] Un puntero válido para el elemento que va a reemplazar el elemento original.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Especifica el índice de base cero del elemento de cinta de opciones para agregar.
 
-[in] [out] *pRTC* un puntero a la información de clase en tiempo de ejecución para el elemento de la cinta de opciones que se agrega al panel de cinta de opciones.
+*pRTC*<br/>
+[in, out] Un puntero a la información de clase en tiempo de ejecución para el elemento de la cinta de opciones que se agrega al panel de cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Especifica el identificador de comando del elemento de cinta de opciones para agregar.
 
-[in] [out] *pRTC* un puntero a la información de clase en tiempo de ejecución asociado con el elemento de la cinta de opciones que se agrega al panel de cinta de opciones.
+*pRTC*<br/>
+[in, out] Un puntero a la información de clase en tiempo de ejecución asociado con el elemento de la cinta de opciones que se agrega al panel de cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,
