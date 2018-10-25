@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: e37e6183ca840067ceca47dd48f3b24d7b3b98c7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889998"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074545"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Controles ActiveX MFC: Crear un servidor de Automation
 
@@ -43,17 +43,17 @@ Puede desarrollar un control ActiveX de MFC como un servidor de automatización 
 
 1. Al principio de la `InitInstance` de función, agregue la siguiente línea:
 
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
 1. En la vista de clases, haga clic en el nodo del proyecto y seleccione **Agregar clase de typelib** para importar la biblioteca de tipos.
 
-     Esto agregará los archivos con las extensiones de archivo .h y .cpp al proyecto.
+   Esto agregará los archivos con las extensiones de archivo .h y .cpp al proyecto.
 
 1. En el archivo de encabezado de la clase donde se llamará a uno o varios métodos en el control ActiveX, agregue la siguiente línea: `#include filename.h`, donde el nombre de archivo es el nombre del archivo de encabezado que se creó cuando se importa la biblioteca de tipos.
 
 1. En la función donde se realizará una llamada a un método en el control ActiveX, agregue código que crea un objeto de clase contenedora del control y crear el objeto ActiveX. Por ejemplo, el siguiente código MFC crea un `CCirc` control, obtiene la propiedad Caption y muestra el resultado cuando se hace clic en el botón Aceptar en un cuadro de diálogo:
 
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
 
 Si agrega métodos al control ActiveX después de usarlo en una aplicación, puede empezar a usar la versión más reciente del control en la aplicación mediante la eliminación de los archivos que se crearon cuando se importa la biblioteca de tipos. A continuación, vuelva a importar la biblioteca de tipos.
 

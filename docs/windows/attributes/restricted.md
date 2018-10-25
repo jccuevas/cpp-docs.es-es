@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1dfaed296242d2a0fc341c2ff5f137a08d753e71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bb13132c651323fcdffef2c06215314ad193c91d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071107"
 ---
 # <a name="restricted"></a>restricted
 
@@ -83,10 +83,10 @@ class c : public a, public b
 |**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o **struct**)|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>
-[Atributos de método](method-attributes.md)  
+[Atributos de método](method-attributes.md)

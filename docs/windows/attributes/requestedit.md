@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f566308384b1fb9dc863c2fe5a4483fc0cddbe83
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 27b584f4f73e3509a5e7c907193f73e98b0b2811
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792183"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066908"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -53,7 +53,7 @@ Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **requested
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -62,4 +62,4 @@ Para obtener más información acerca de los contextos de atributo, vea [context
 [Atributos de miembros de datos](data-member-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
-[immediatebind](immediatebind.md)  
+[immediatebind](immediatebind.md)

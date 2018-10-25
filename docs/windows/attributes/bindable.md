@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08bd8791a49c0dd6bc7514c2638dbcb0e818e4cf
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7f30ab333a2f50c845b8cf66179da05863fa67d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792459"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073011"
 ---
 # <a name="bindable"></a>bindable
 
@@ -55,7 +55,7 @@ El código siguiente muestra cómo puede usar **enlazable** en una propiedad:
 // compile with: /LD
 #include <windows.h>
 [
-   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"), dispinterface, helpstring("property demo Interface")  
+   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"), dispinterface, helpstring("property demo Interface")
 ]
 __interface IPropDemo : IDispatch {
 
@@ -80,7 +80,7 @@ __interface IPropDemo : IDispatch {
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -89,4 +89,4 @@ Para obtener más información acerca de los contextos de atributo, vea [context
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

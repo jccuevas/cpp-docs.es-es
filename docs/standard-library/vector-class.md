@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dddbcfba7920efdda1f222843299ef29f19f0c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235794"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076757"
 ---
 # <a name="vector-class"></a>vector (Clase)
 
@@ -370,7 +370,7 @@ const_reference back() const;
 
 Si el valor devuelto de `back` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `back` se asigna a `reference`, el objeto de vector se puede modificar.
 
-Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
+Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -402,7 +402,6 @@ Devuelve un iterador de acceso aleatorio al primer elemento del vector.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -789,7 +788,6 @@ Devuelve un puntero al primer elemento del vector.
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -1165,7 +1163,7 @@ Referencia al primer elemento en el objeto de vector. Si el vector está vacío,
 
 Si el valor devuelto de `front` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `front` se asigna a una **referencia**, el objeto de vector se puede modificar.
 
-Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
+Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1410,7 +1408,7 @@ Si la posición especificada es mayor o igual que el tamaño del contenedor, el 
 
 Si el valor devuelto de `operator[]` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `operator[]` se asigna a una referencia, el objeto vector se puede modificar.
 
-Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
+Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1554,7 +1552,6 @@ Agrega un elemento al final del vector.
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

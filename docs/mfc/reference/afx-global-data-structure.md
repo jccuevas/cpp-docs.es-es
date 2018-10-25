@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6ccad2c7c6c925a2c5ef6a7270a95d8a270f0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 935a92beb49d26240aa63f5cfbd4adc9f22d06e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078016"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (estructura)
 
@@ -113,13 +113,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Inicializa los generadores `D2D`, `DirectWrite`y `WIC` . Llame a este método antes de que se inicialice la ventana principal.|
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|Indica si se admiten los iconos de 32 bits predefinidos.|
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Determina si se inicializó `D2D` .|
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Proporciona una manera sencilla para llamar a la Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) método.|
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Proporciona una manera sencilla de llamar al método de Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) .|
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|Indica si las imágenes se muestran actualmente en contraste alto.|
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Detecta el estado actual de las características del escritorio para la animación de menús y para ocultar automáticamente la barra de tareas.|
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Registra la clase de ventana MFC especificada.|
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Libera las interfaces obtenidas a través de los métodos GetITaskbarList y GetITaskbarList3.|
-|[AFX_GLOBAL_DATA::resume](#resume)|Reinicializa los punteros a función internos que tienen acceso a los métodos que admiten Windows [temas y estilos visuales](/windows/desktop/Controls/visual-styles-overview).|
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Proporciona una manera sencilla para llamar a la Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) método.|
+|[AFX_GLOBAL_DATA::resume](#resume)|Reinicializa los punteros a función internos que tienen acceso a métodos compatibles con los [temas y estilos visuales](/windows/desktop/Controls/visual-styles-overview)de Windows.|
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Proporciona una manera sencilla de llamar al método de Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) .|
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Crea la fuente lógica especificada.|
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Crea e inicializa un objeto de elemento del Shell a partir de un nombre de análisis.|
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Reinicializa las fuentes lógicas utilizadas por el marco.|
@@ -169,11 +169,9 @@ La mayoría de los datos de la estructura `AFX_GLOBAL_DATA` se inicializan cuand
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 Indica si el sistema operativo admite la combinación alfa.
-
 
 ```
 BOOL  bIsOSAlphaBlendingSupport;
@@ -183,19 +181,17 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 TRUE indica que se admite la mezcla alfa; en caso contrario, FALSE.
 
-
 ## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
 
 Libera los recursos asignados por el marco, como pinceles, fuentes y archivos DLL.
 
-
 ```
 void CleanUp();
 ```
+
 ## <a name="d2d1makerotatematrix"></a> AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
 
 Crea una transformación de giro que gire según el ángulo especificado alrededor de un punto especificado.
-
 
 ```
 HRESULT D2D1MakeRotateMatrix(
@@ -223,7 +219,6 @@ Lo contrario, devuelve S_OK si se realiza correctamente, o un valor de error.
 
 Dibuja el fondo del elemento primario de un control en el área especificada.
 
-
 ```
 BOOL DrawParentBackground(
     CWnd* pWnd,
@@ -250,7 +245,6 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
 Dibuja el texto especificado en el estilo visual del tema especificado.
 
-
 ```
 BOOL DrawTextOnGlass(
     HTHEME hTheme,
@@ -275,10 +269,10 @@ Use la [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) m�
 [in] Puntero a un contexto de dispositivo.
 
 *iPartId*<br/>
-[in] El elemento de control que tiene la apariencia del texto deseado. Para obtener más información, vea la columna de partes de la tabla en [Estados y elementos](https://msdn.microsoft.com/library/windows/desktop/bb773210). Si este valor es 0, el texto se dibuja en la fuente predeterminada o en una fuente seleccionada en el contexto del dispositivo.
+[in] El elemento de control que tiene la apariencia del texto deseado. Para obtener más información, vea la columna Parts (Elementos) de la tabla de [Parts and States](https://msdn.microsoft.com/library/windows/desktop/bb773210)(Estados y elementos). Si este valor es 0, el texto se dibuja en la fuente predeterminada o en una fuente seleccionada en el contexto del dispositivo.
 
 *iStateId*<br/>
-[in] Estado del control que tiene la apariencia del texto deseado. Para obtener más información, vea la columna de Estados de la tabla en [Estados y elementos](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] Estado del control que tiene la apariencia del texto deseado. Para obtener más información, vea la columna States (Estados) de la tabla de [Parts and States](https://msdn.microsoft.com/library/windows/desktop/bb773210)(Estados y elementos).
 
 *strText*<br/>
 [in] El texto que se va a dibujar.
@@ -319,7 +313,6 @@ Un tema define el estilo visual de una aplicación. Un tema no se usa para dibuj
 
 Habilita o deshabilita la compatibilidad con Microsoft Active Accessibility.
 
-
 ```
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
@@ -335,7 +328,6 @@ Active Accessibility es una tecnología basada en COM que mejora el funcionamien
 
 Use la [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) método para determinar si está habilitada la compatibilidad con Microsoft Active Accessibility.
 
-
 ### <a name="see-also"></a>Vea también
 
 [Automatización de la interfaz de usuario y Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
@@ -344,7 +336,6 @@ Use la [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) métod
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
 Quita el par especificado de etiquetas XML de un búfer especificado.
-
 
 ```
 BOOL ExcludeTag(
@@ -392,7 +383,6 @@ Use los símbolos en la tabla siguiente para codificar un juego de caracteres de
 
 Recupera el color actual del elemento de la interfaz de usuario especificado.
 
-
 ```
 COLORREF GetColor(int nColor);
 ```
@@ -420,7 +410,6 @@ Si el *nColor* parámetro está fuera del intervalo, el valor devuelto es cero. 
 
 Devuelve un puntero a la interfaz de ID2D1Factory que se almacena en los datos globales. Si no se inicializa la interfaz, se crea y tiene los parámetros predeterminados.
 
-
 ```
 ID2D1Factory* GetDirect2dFactory();
 ```
@@ -433,7 +422,6 @@ Un puntero a interfaz de ID2D1Factory si la creación de una fábrica se realiza
 
 Recupera el cursor predefinido que se parece a una mano y cuyo identificador es IDC_HAND.
 
-
 ```
 HCURSOR GetHandCursor();
 ```
@@ -445,7 +433,6 @@ El identificador del cursor de mano.
 ## <a name="getnonclientmetrics"></a> AFX_GLOBAL_DATA::GetNonClientMetrics
 
 Recupera las métricas asociadas al área no cliente de las ventanas no minimizadas.
-
 
 ```
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
@@ -460,7 +447,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-
 ### <a name="see-also"></a>Vea también
 
 [Estructura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
@@ -468,7 +454,6 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
 Recupera el alto de caracteres de texto en la fuente actual.
-
 
 ```
 int GetTextHeight(BOOL bHorz = TRUE);
@@ -487,7 +472,6 @@ El alto de la fuente actual, que se mide desde su ascender hasta su descendiente
 
 Devuelve un puntero a la interfaz de IWICImagingFactory que se almacena en los datos globales. Si no se inicializa la interfaz, se crea y tiene los parámetros predeterminados.
 
-
 ```
 IWICImagingFactory* GetWICFactory();
 ```
@@ -500,7 +484,6 @@ Un puntero a interfaz de IWICImagingFactory si la creación de una fábrica se r
 
 Devuelve un puntero a la interfaz de IDWriteFactory que se almacena en los datos globales. Si no se inicializa la interfaz, se crea y tiene los parámetros predeterminados.
 
-
 ```
 IDWriteFactory* GetWriteFactory();
 ```
@@ -512,7 +495,6 @@ Un puntero a interfaz de IDWriteFactory si la creación de una fábrica se reali
 ## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
 
 Inicializa los generadores de WIC, DirectWrite y D2D. Llame a este método antes de que se inicialice la ventana principal.
-
 
 ```
 BOOL InitD2D(
@@ -536,10 +518,8 @@ Devuelve TRUE si los generadores eran intilalizrd, FALSE: en caso contrario
 
 Indica si se admiten los iconos de 32 bits predefinidos.
 
-
 ```
 BOOL Is32BitIcons() const;
-
 
 ```
 
@@ -555,7 +535,6 @@ Este método devuelve TRUE si el marco admite iconos de 32 bits integrados, si e
 
 Indica si la compatibilidad con Microsoft Active Accessibility está habilitada.
 
-
 ```
 BOOL IsAccessibilitySupport() const;
 ```
@@ -570,7 +549,6 @@ Microsoft Active Accessibility fue la solución anterior para hacer que las apli
 
 Use la [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) método para habilitar o deshabilitar la compatibilidad con Active Accessibility.
 
-
 ### <a name="see-also"></a>Vea también
 
 [Automatización de la interfaz de usuario y Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
@@ -578,7 +556,6 @@ Use la [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Determina si se ha inicializado el D2D
-
 
 ```
 BOOL IsD2DInitialized() const;
@@ -590,8 +567,7 @@ TRUE si se inicializó D2D; en caso contrario, FALSE.
 
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
 
-Proporciona una manera sencilla para llamar a la Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) método.
-
+Proporciona una manera sencilla de llamar al método de Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) .
 
 ```
 BOOL IsDwmCompositionEnabled();
@@ -625,7 +601,6 @@ En el modo de contraste alto negro, orientado a la luz de bordes son el blancos 
 
 Indica si el sistema operativo admite ventanas superpuestas.
 
-
 ```
 BOOL IsWindowsLayerSupportAvailable() const;
 ```
@@ -642,7 +617,6 @@ Si se admiten las ventanas por capas, *acoplamiento inteligente* marcadores de u
 
 Indica si el marco usa iconos de colores de 32 bits predefinidos o iconos de una resolución inferior.
 
-
 ```
 BOOL  m_bUseBuiltIn32BitIcons;
 ```
@@ -656,7 +630,6 @@ Este miembro debe establecerse al iniciar la aplicación.
 ## <a name="m_busesystemfont"></a> AFX_GLOBAL_DATA::m_bUseSystemFont
 
 Indica si se usa una fuente del sistema para los menús, las barras de herramientas y las cintas.
-
 
 ```
 BOOL m_bUseSystemFont;
@@ -672,7 +645,6 @@ Las pruebas de este miembro no es la única forma para el marco de trabajo deter
 
 Almacena el identificador del cursor de mano.
 
-
 ```
 HCURSOR m_hcurHand;
 ```
@@ -680,7 +652,6 @@ HCURSOR m_hcurHand;
 ## <a name="m_hcurstretch"></a> AFX_GLOBAL_DATA::m_hcurStretch
 
 Almacena el identificador del cursor de ajuste horizontal.
-
 
 ```
 HCURSOR m_hcurStretch;
@@ -690,7 +661,6 @@ HCURSOR m_hcurStretch;
 
 Almacena el identificador del cursor de ajuste vertical.
 
-
 ```
 HCURSOR m_hcurStretchVert;
 ```
@@ -699,14 +669,13 @@ HCURSOR m_hcurStretchVert;
 
 Almacena el identificador para el icono de la herramienta.
 
-
 ```
 HICON m_hiconTool;
 ```
+
 ## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
 
 Especifica el desplazamiento de la barra de herramientas Ocultar automáticamente situada más a la izquierda de la barra de acoplamiento.
-
 
 ```
 int  m_nAutoHideToolBarMargin;
@@ -720,7 +689,6 @@ El `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor inicializa este miembro de 4 p
 
 Especifica la separación entre las barras de herramientas Ocultar automáticamente.
 
-
 ```
 int   m_nAutoHideToolBarSpacing;
 ```
@@ -732,7 +700,6 @@ El `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor inicializa este miembro a 14 p
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
 Especifica el grosor del marco de arrastrar que se usa para indicar el estado acoplado.
-
 
 ```
 int  m_nDragFrameThicknessDock;
@@ -746,7 +713,6 @@ El `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor inicializa este miembro en 3 p
 
 Especifica el grosor del marco de arrastrar que se usa para indicar el estado flotante.
 
-
 ```
 int  m_nDragFrameThicknessFloat;
 ```
@@ -759,7 +725,6 @@ El `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor inicializa este miembro de 4 p
 
 Detecta el estado actual de las características del escritorio para la animación de menús y para ocultar automáticamente la barra de tareas.
 
-
 ```
 void OnSettingChange();
 ```
@@ -771,7 +736,6 @@ Este método establece las variables de marco de trabajo en el estado de ciertos
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
 
 Registra la clase de ventana MFC especificada.
-
 
 ```
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
@@ -799,7 +763,6 @@ El valor devuelto es una lista delimitada por signos de la *lpszClassNamePrefix*
 
 Reinicializa los punteros a función internos que tienen acceso a los métodos que admiten los temas de Windows y los estilos visuales.
 
-
 ```
 BOOL Resume();
 ```
@@ -814,8 +777,7 @@ Este método se llama cuando el marco de trabajo recibe el [WM_POWERBROADCAST](/
 
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
 
-Proporciona una manera sencilla para llamar a la Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) método.
-
+Proporciona una manera sencilla de llamar al método de Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) .
 
 ```
 BOOL SetLayeredAttrib(
@@ -852,7 +814,6 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
 Crea la fuente lógica especificada.
 
-
 ```
 BOOL SetMenuFont(
     LPLOGFONT lpLogFont,
@@ -879,7 +840,6 @@ Este método crea una fuente regular horizontal, una fuente subrayada, y una fue
 
 Reinicializa las fuentes lógicas utilizadas por el marco.
 
-
 ```
 void UpdateFonts();
 ```
@@ -892,7 +852,6 @@ Para obtener más información acerca de las fuentes lógicas, consulte `CFont::
 
 Inicializa los colores, la profundidad de color, los pinceles, los lápices y las imágenes utilizadas por el marco.
 
-
 ```
 void UpdateSysColors();
 ```
@@ -900,7 +859,6 @@ void UpdateSysColors();
 ## <a name="biswindows7"></a> AFX_GLOBAL_DATA::bIsWindows7
 
 Indica si la aplicación se está ejecutando en Windows 7 o posterior.
-
 
 ```
 BOOL bIsWindows7;
@@ -910,7 +868,6 @@ BOOL bIsWindows7;
 
 Especifica el color del degradado de la leyenda activa. Se suele utilizar para acoplar paneles.
 
-
 ```
 COLORREF clrActiveCaptionGradient;
 ```
@@ -919,7 +876,6 @@ COLORREF clrActiveCaptionGradient;
 
 Especifica el color del degradado de la leyenda inactiva. Se suele utilizar para acoplar paneles.
 
-
 ```
 COLORREF clrInactiveCaptionGradient;
 ```
@@ -927,7 +883,6 @@ COLORREF clrInactiveCaptionGradient;
 ## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
 
 Crea y almacena en los datos globales un puntero a la `ITaskBarList` interfaz.
-
 
 ```
 ITaskbarList *GetITaskbarList();
@@ -941,7 +896,6 @@ Un puntero a la `ITaskbarList` interfaz si se realiza correctamente la creación
 
 Crea y almacena en los datos globales un puntero a la `ITaskBarList3` interfaz.
 
-
 ```
 ITaskbarList3 *GetITaskbarList3();
 ```
@@ -953,7 +907,6 @@ Un puntero a la `ITaskbarList3` interfaz si se realiza correctamente la creació
 ## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
 
 Determina las posiciones de las barras Ocultar automáticamente del Shell.
-
 
 ```
 int GetShellAutohideBars();
@@ -967,7 +920,6 @@ Un valor entero con codificado marcadores que especifican las posiciones de auto
 
 Libera las interfaces obtenidas a través de la `GetITaskbarList` y `GetITaskbarList3` métodos.
 
-
 ```
 void ReleaseTaskBarRefs();
 ```
@@ -975,7 +927,6 @@ void ReleaseTaskBarRefs();
 ## <a name="shellcreateitemfromparsingname"></a> AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
 
 Crea e inicializa un objeto de elemento del Shell a partir de un nombre de análisis.
-
 
 ```
 HRESULT ShellCreateItemFromParsingName(

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440295"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077535"
 ---
 # <a name="cpen-class"></a>CPen (clase)
 
@@ -92,12 +92,10 @@ Construye un objeto `CPen`.
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ La segunda versión de la `CPen` constructor especifica una combinación de tipo
 
 - PS_COSMETIC crea una pluma de cosmética.
 
-     La segunda versión de la `CPen` constructor agrega los siguientes estilos de lápiz para *nPenStyle*:
+   La segunda versión de la `CPen` constructor agrega los siguientes estilos de lápiz para *nPenStyle*:
 
 - PS_ALTERNATE crea un lápiz que establece todos los demás píxeles. (Este estilo es aplicable sólo a lápices cosméticos).
 
 - PS_USERSTYLE crea un lápiz que usa una matriz de estilo proporcionados por el usuario.
 
-     El extremo puede ser uno de los siguientes valores:
+   El extremo puede ser uno de los siguientes valores:
 
 - Delimitadores PS_ENDCAP_ROUND son redondear.
 
@@ -146,7 +144,7 @@ La segunda versión de la `CPen` constructor especifica una combinación de tipo
 
 - Delimitadores PS_ENDCAP_FLAT son fijos.
 
-     La combinación puede ser uno de los siguientes valores:
+   La combinación puede ser uno de los siguientes valores:
 
 - Une PS_JOIN_BEVEL son biselada.
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

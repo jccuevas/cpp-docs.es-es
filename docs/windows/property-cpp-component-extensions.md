@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328238"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075871"
 ---
 # <a name="property--ccli-and-ccx"></a>propiedad (C++ / c++ / CLI y c++ / CX)
 
@@ -53,17 +53,17 @@ Debe declarar explícitamente un miembro de datos que contenga el valor de propi
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -172,7 +172,6 @@ Cuando se declara un miembro de datos de propiedad, el compilador inserta un mie
 Se permite la accesibilidad diferente para los métodos del descriptor de acceso en un bloque de propiedades.  Es decir, el método set puede ser público y el método get puede ser privado.  Sin embargo, es un error que un método del descriptor de acceso tenga una accesibilidad menos restrictiva que la de la misma declaración de la propiedad.
 
 **propiedad** es una palabra clave contextual.  Para obtener más información, consulte [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).
-
 
 ### <a name="requirements"></a>Requisitos
 

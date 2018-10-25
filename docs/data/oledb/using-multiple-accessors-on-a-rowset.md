@@ -1,7 +1,7 @@
 ---
 title: Utilizar varios descriptores de acceso en un conjunto de filas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071053"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilizar varios descriptores de acceso en un conjunto de filas
 
@@ -45,7 +45,7 @@ Hay tres escenarios básicos en el que se deba usar varios descriptores de acces
 
    Utilice el argumento automático para especificar si el descriptor de acceso es automático.
 
-- **Varias columnas ISequentialStream.** En este escenario, tiene más de una columna que contiene `ISequentialStream` datos. Sin embargo, cada descriptor de acceso está limitado a uno `ISequentialStream` flujo de datos. Para solucionar este problema, configure varios descriptores de acceso, cada uno con uno `ISequentialStream` puntero.
+- **Varias columnas ISequentialStream.** En este escenario, ha explotación de más de una columna `ISequentialStream` datos. Sin embargo, cada descriptor de acceso está limitado a uno `ISequentialStream` flujo de datos. Para solucionar este problema, configure varios descriptores de acceso, cada uno con uno `ISequentialStream` puntero.
 
 Normalmente crean los descriptores de acceso mediante la [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) y [END_ACCESSOR](../../data/oledb/end-accessor.md) macros. También puede usar el [db_accessor](../../windows/db-accessor.md) atributo. (Se describe con más detalle en los descriptores de acceso [registros de usuario](../../data/oledb/user-records.md).) Las macros o el atributo especifican si un descriptor de acceso es automático o un descriptor de acceso no automático:
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115a4524f3b11d847291015f3bee5ca10f628310
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d016b95ea2a2d5d94b8db47a2d6c9d5cc577083f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064451"
 ---
 # <a name="benefits-of-character-set-portability"></a>Ventajas de la portabilidad de los juegos de caracteres
 
@@ -29,7 +29,6 @@ Puede beneficiarse del uso de las características de portabilidad de tiempo de 
 - Código portable hace que el código base flexible. Más adelante se puede mover fácilmente a Unicode o MBCS.
 
 - El uso de Unicode hace que las aplicaciones para Windows más eficaz. Dado que Windows utiliza Unicode, se deben traducir cadenas no Unicode que se pasan a y desde el sistema operativo que incurre en sobrecarga.
-
 
 ## <a name="see-also"></a>Vea también
 

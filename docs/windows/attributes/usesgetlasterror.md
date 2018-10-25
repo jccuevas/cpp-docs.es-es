@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 501f6b1801ace9f6002cca5d3559dfcb01e994f5
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bb08e2442e34c4d579e568c68d240accdfdbde59
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792162"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074246"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -53,8 +53,8 @@ Consulte la [idl_module](idl-module.md) ejemplo para obtener un ejemplo de cómo
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos IDL](idl-attributes.md)  
+[Atributos IDL](idl-attributes.md)

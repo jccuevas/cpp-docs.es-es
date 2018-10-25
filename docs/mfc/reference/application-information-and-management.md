@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083806"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068975"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 
@@ -61,8 +61,6 @@ La biblioteca Microsoft Foundation Class proporciona las siguientes funciones gl
 |[AfxSocketInit](#afxsocketinit)|Llamado en un `CWinApp::InitInstance` invalidar para inicializar Windows Sockets.|
 |[AfxUserToolsManager](#afxusertoolsmanager)|Puntero a la plantilla global [Administrador de las herramientas de usuario](cusertoolsmanager-class.md).|
 |[AfxWinInit](#afxwininit)|Lo llama el proporcionado por MFC `WinMain` función, como parte de la [CWinApp](../../mfc/reference/cwinapp-class.md) inicialización de una aplicación basada en GUI, inicializar MFC. Debe llamarse directamente para las aplicaciones de consola que utilizan la biblioteca MFC.|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ Puntero a la plantilla global [Administrador de menús de contexto](ccontextmenu
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxcontextmenumanager.h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>Vea también
 
 [CContextMenuManager (clase)](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ Use `AfxFindResourceHandle` para recorrer la cadena de recursos y busque un tipo
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *lpszName*<br/>
@@ -471,6 +470,7 @@ Determina si la ventana dada es un objeto de marco extendido.
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *conquistado*<br/>
@@ -514,6 +514,7 @@ Determina si la ventana dada es un objeto de barra de herramientas.
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *conquistado*<br/>
@@ -536,7 +537,6 @@ Este método devuelve `TRUE` si *conquistado* deriva `CMFCToolBar`. Este método
 [CWnd (clase)](cwnd-class.md)<br/>
 [CMFCToolBar (clase)](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Puntero a la plantilla global [manager teclado](ckeyboardmanager-class.md).
@@ -546,6 +546,7 @@ Puntero a la plantilla global [manager teclado](ckeyboardmanager-class.md).
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [Macros, funciones globales y Variables globales](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager (clase)](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -618,6 +618,7 @@ Puntero a la plantilla global [manager de menú divisible](cmenutearoffmanager-c
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ Puntero a la plantilla global [manager mouse](cmousemanager-class.md).
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>Vea también
 
 [CMouseManager (clase)](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>Vea también
 
 [CUserToolsManager (clase)](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

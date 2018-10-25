@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429518"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068702"
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
 
@@ -103,7 +103,6 @@ Además, la biblioteca de tiempo de ejecución de C también admite un conjunto 
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.
@@ -113,6 +112,7 @@ Suprime las advertencias del compilador para el uso de funciones en desuso de MF
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>Ejemplo
 
 Este ejemplo de código podría causar una advertencia del compilador si no se definieron _AFX_SECURE_NO_WARNINGS.
@@ -309,6 +309,7 @@ Usar para validar la corrección de datos.
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *booleanExpression*<br/>
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [Macros y funciones globales](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [VERIFY](#verify)
-
 
 ##  <a name="trace"></a>  TRACE
 
@@ -450,7 +450,6 @@ Esta variable solo se define en la versión de depuración de MFC. Para obtener 
 
 **Encabezado:** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump (interno)
 
 Función interna que utiliza MFC para volcar el estado de un objeto durante la depuración.
@@ -460,6 +459,7 @@ Función interna que utiliza MFC para volcar el estado de un objeto durante la d
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *lugar de nacimiento*<br/>
@@ -478,8 +478,6 @@ El código del programa no debe llamar a `AfxDump`, pero en su lugar, debe llama
 ### <a name="see-also"></a>Vea también
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -597,8 +595,6 @@ El código del programa no debe llamar a `AfxDump`, pero en su lugar, debe llama
 ### <a name="see-also"></a>Vea también
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 

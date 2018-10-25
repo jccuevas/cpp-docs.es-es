@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 626f05dff87bcff2d10d0726bcc10dfa767117d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069928"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++ / c++ / CLI y c++ / CX)
 
@@ -91,11 +91,11 @@ public ref struct A {
 Tenga en cuenta la diferencia en los metadatos de `sc` y `lit`: el `modopt` directiva se aplica a `sc`, lo que significa que se puede hacer caso omiso otros compiladores.
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>Ejemplo

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dd43b806852e578c28dc7a647cb367ad6f2780
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406800"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076625"
 ---
 # <a name="servers-implementing-a-server"></a>Servidores: Implementar un servidor
 
@@ -36,7 +36,7 @@ El código del servidor que proporciona el Asistente para la aplicación se divi
 
    - Los recursos de menú y barra de herramientas usa cuando el servidor está activo en su lugar.
 
-     Para obtener más información acerca de estos recursos, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
+   Para obtener más información acerca de estos recursos, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
 
 - Definir una clase de elemento derivado de `COleServerItem`. Para obtener más información sobre los elementos del servidor, consulte [servidores: elementos del servidor](../mfc/servers-server-items.md).
 

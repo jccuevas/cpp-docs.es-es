@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c158e5b59decd751340f87d5c29c572d6972d8e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113141"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077912"
 ---
 # <a name="com-map-global-functions"></a>Funciones globales de mapa COM
 
@@ -31,11 +31,11 @@ Estas funciones proporcionan compatibilidad para mapa COM `IUnknown` implementac
 |||
 |-|-|
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delega en el `IUnknown` de un objeto no agregado.|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera un código eficaz para comparar las interfaces con `IUnknown`.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera un código eficaz para comparar las interfaces con `IUnknown`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h  
+**Encabezado:** atlbase.h
 
 ##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
 

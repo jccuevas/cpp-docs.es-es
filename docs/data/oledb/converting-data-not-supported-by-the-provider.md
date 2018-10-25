@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa9fed1f7c779efc7104ec8138d618b85aeb2a33
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79889125675a3e544802eb700718dee0829457c5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066128"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Convertir datos no compatibles con el proveedor
 
-Cuando el consumidor solicita un tipo de datos que no es compatible con el proveedor, el código para la plantilla de proveedores OLE DB `IRowsetImpl::GetData` llama a Msdadc.dll para convertir el tipo de datos.  
-  
-Si implementa una interfaz como `IRowsetChange` que requiere conversión de datos, puede llamar a Msdaenum.dll para realizar la conversión. Use `GetData`, definido en Atldb.h, por ejemplo.  
-  
-## <a name="see-also"></a>Vea también  
+Cuando el consumidor solicita un tipo de datos que no es compatible con el proveedor, el código para la plantilla de proveedores OLE DB `IRowsetImpl::GetData` llama a Msdadc.dll para convertir el tipo de datos.
+
+Si implementa una interfaz como `IRowsetChange` que requiere conversión de datos, puede llamar a Msdaenum.dll para realizar la conversión. Use `GetData`, definido en Atldb.h, por ejemplo.
+
+## <a name="see-also"></a>Vea también
 
 [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

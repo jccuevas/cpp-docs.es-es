@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e8ddf566082bfded1f20a2bfe04e7cef0b5dc14
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 994a4a48c5199c3efb05a00331656b3b23a2a0c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792115"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067047"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -58,9 +58,9 @@ Vea el ejemplo de [defaultvalue](defaultvalue.md) para un ejemplo de uso de **po
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Atributos de interfaz](interface-attributes.md)  
+[Atributos de interfaz](interface-attributes.md)

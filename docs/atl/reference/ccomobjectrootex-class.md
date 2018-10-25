@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098958"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076989"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx (clase)
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Parámetros
 
 *ThreadModel*<br/>
-La clase cuyos métodos implementan el modelo de subprocesos deseado. Puede elegir el modelo de subprocesos estableciendo explícitamente *ThreadModel* a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), o [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Puede aceptar el modelo de subprocesos predeterminado del servidor estableciendo *ThreadModel* a [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) o [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+La clase cuyos métodos implementan el modelo de subprocesos deseado. Puede elegir el modelo de subprocesos estableciendo explícitamente *ThreadModel* a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), o [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Puede aceptar el modelo de subprocesos predeterminado del servidor estableciendo *ThreadModel* a [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) o [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Miembros
 
@@ -139,9 +139,9 @@ Existen ventajas al realizar la inicialización en `FinalConstruct` en lugar del
 
 - No se puede llamar a funciones virtuales a través del mecanismo de función virtual desde el constructor de una clase. Llamar a una función virtual desde el constructor de una clase da como resultado una llamada a la función resuelta estáticamente según se define en la jerarquía de herencia en ese momento. Las llamadas a funciones virtuales puras dar lugar a errores del vinculador.
 
-     La clase no es la clase más derivada en la jerarquía de herencia, se basa en una clase derivada proporcionada por ATL para proporcionar parte de su funcionalidad. Hay muchas posibilidades de que la inicialización se deberá usar las características proporcionadas por esa clase (Esto es especialmente cierto cuando los objetos de la clase necesitan agregar otros objetos), pero el constructor de la clase no tiene forma de obtener acceso a esas características. El código de construcción de la clase se ejecuta antes de la clase más derivada se construye totalmente.
+   La clase no es la clase más derivada en la jerarquía de herencia, se basa en una clase derivada proporcionada por ATL para proporcionar parte de su funcionalidad. Hay muchas posibilidades de que la inicialización se deberá usar las características proporcionadas por esa clase (Esto es especialmente cierto cuando los objetos de la clase necesitan agregar otros objetos), pero el constructor de la clase no tiene forma de obtener acceso a esas características. El código de construcción de la clase se ejecuta antes de la clase más derivada se construye totalmente.
 
-     Sin embargo, `FinalConstruct` se llama inmediatamente después de la más derivada clase se construye totalmente lo que le permite llamar a funciones virtuales y usar la implementación de recuento de referencias proporcionada por ATL.
+   Sin embargo, `FinalConstruct` se llama inmediatamente después de la más derivada clase se construye totalmente lo que le permite llamar a funciones virtuales y usar la implementación de recuento de referencias proporcionada por ATL.
 
 ### <a name="example"></a>Ejemplo
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Comentarios
 
-Con `m_pOuterUnknown`, que forma parte de una unión:  
+Con `m_pOuterUnknown`, que forma parte de una unión:
 
 ```
 union {

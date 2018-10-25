@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c7100199d7e4ee76bf2f096aba9e20c244ae10ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070573"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuración e informe de errores
 
@@ -102,7 +102,7 @@ Expresión (incluidos los punteros) que se evalúa como 0 o distinto de cero.
 
 ### <a name="remarks"></a>Comentarios
 
-En las compilaciones de depuración, se evalúa como ATLASSERT *booleanExpression* y genera un informe de depuración cuando el resultado es false.  
+En las compilaciones de depuración, se evalúa como ATLASSERT *booleanExpression* y genera un informe de depuración cuando el resultado es false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -139,11 +139,11 @@ La diferencia entre ATLENSURE y ATLASSERT es que ATLENSURE produce una excepció
 
 ### <a name="example"></a>Ejemplo
 
-[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afx.h  
+**Encabezado:** afx.h
 
 ##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
 
@@ -168,7 +168,7 @@ En versiones de lanzamiento, simplemente devuelva E_NOTIMPL.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atltrace.h 
+**Encabezado:** atltrace.h
 
 ##  <a name="atltrace"></a>  ATLTRACE
 
@@ -177,7 +177,7 @@ Advertencias de informes a un dispositivo de salida, como la ventana del depurad
 ```
 ATLTRACE(exp);
 
-ATLTRACE(  
+ATLTRACE(
     DWORD category,
     UINT  level,
     LPCSTR lpszFormat, ...);

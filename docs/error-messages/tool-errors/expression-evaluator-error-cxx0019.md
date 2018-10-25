@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f1e78bd88f35240e90332ef9a9139558051cab5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070132"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>Error del evaluador de expresiones CXX0019
 
@@ -42,4 +42,4 @@ Este error es idéntico a CAN0019.
     (char **)h_message
     ```
 
-     no se puede evaluar el evaluador de expresiones de C.
+   no se puede evaluar el evaluador de expresiones de C.

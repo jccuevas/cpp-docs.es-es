@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61da17093d56dcfd8b0eeec3ade7955f27bc6b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077723"
 ---
 # <a name="accessing-run-time-class-information"></a>Acceso a la información de clases en tiempo de ejecución
 
@@ -50,7 +50,7 @@ El `CObject` función miembro `IsKindOf` puede usarse para determinar si un obje
 
 1. Use `RUNTIME_CLASS` con el nombre de la clase, como se muestra aquí para la clase `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
 Prácticamente no necesitarán tener acceso al objeto de clase en tiempo de ejecución directamente. Un uso más común consiste en pasar el objeto de clase de tiempo de ejecución para el `IsKindOf` funcione, como se muestra en el procedimiento siguiente. El `IsKindOf` función comprueba un objeto para ver si pertenece a una clase determinada.
 
@@ -60,9 +60,9 @@ Prácticamente no necesitarán tener acceso al objeto de clase en tiempo de ejec
 
 1. Llame a la `IsKindOf` función miembro para objetos de esa clase, utilizando el `RUNTIME_CLASS` macro para generar el `CRuntimeClass` argumento, como se muestra aquí:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
     >  IsKindOf devuelve **TRUE** si el objeto es un miembro de la clase especificada o de una clase derivada de la clase especificada. `IsKindOf` no admite herencia múltiple o clases base virtuales, aunque puede usar herencia múltiple para las clases derivadas de Microsoft Foundation si es necesario.

@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47af9bf4a42f02ce16cc6f43e0689bfa2c5003b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3516614809ffda8e0659379ebfc8566ea7aee942
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411704"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075988"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl (clase)
 
@@ -247,7 +247,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Indica si el marco de trabajo se vuelve a dibujar las columnas de nombre y valor del control de cuadrícula de propiedad actual cuando un usuario cambia el tamaño de las columnas.|
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Indica si la apariencia del control de cuadrícula de propiedad está en el estilo que usa .NET VS.|
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Especifica cómo se muestran las propiedades modificadas.|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Quita todos los objetos de propiedad de un control de cuadrícula de propiedades.|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Restaura el valor original de todas las propiedades.|
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Establece o restablece el modo alfabético.|
@@ -331,7 +331,6 @@ En el ejemplo siguiente se muestra cómo configurar un objeto de control de cuad
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
 
-
 ```
 virtual HRESULT accSelect(
     long flagsSelect,
@@ -340,8 +339,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Parámetros
 
-*flagsSelect*<br/>
-[in] [in] *varChild*
+[in] *flagsSelect*<br/>
+[in] *varChild*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -391,14 +390,13 @@ Este método vuelve a calcular cómo dibujar el control de cuadrícula de propie
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-
 ```
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bMostrar*
+[in] *bMostrar*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -527,7 +525,6 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 Utilice este método para eliminar una propiedad y los subelementos, desde el control de cuadrícula de propiedades.
 
 ##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
-
 
 ```
 BOOL DrawControlBarColors() const;
@@ -682,14 +679,13 @@ Use la [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) const
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
-
 ```
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pcountChildren*
+[in] *pcountChildren*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -697,21 +693,19 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus
 
-
 ```
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pvarChild*
+[in] *pvarChild*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp
-
 
 ```
 virtual HRESULT get_accHelp(
@@ -721,15 +715,14 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Parámetros
 
-*varChild*<br/>
-[in] [in] *pszHelp*
+[in] *varChild*<br/>
+[in] *pszHelp*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic
-
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -740,15 +733,15 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Parámetros
 
-*pszHelpFile*<br/>
-[in] [in] *varChild* [in] *pidTopic*
+[in] *pszHelpFile*<br/>
+[in] *varChild*<br/>
+[in] *pidTopic*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut
-
 
 ```
 virtual HRESULT get_accKeyboardShortcut(
@@ -758,8 +751,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Parámetros
 
-*varChild*<br/>
-[in] [in] *pszKeyboardShortcut*
+[in] *varChild*<br/>
+[in] *pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -767,14 +760,13 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection
 
-
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pvarChildren*
+[in] *pvarChildren*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1136,7 +1128,6 @@ Cuando el control de cuadrícula de propiedades está en modo alfabético, todas
 Use la [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) método para habilitar o deshabilitar el modo es un carácter alfabético.
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
-
 
 ```
 BOOL IsAlwaysShowUserToolTip() const;

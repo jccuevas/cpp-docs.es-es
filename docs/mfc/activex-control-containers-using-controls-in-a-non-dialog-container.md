@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20d069024fd424beeec41d3483f8e2c28432e00
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 62cb53dd65810132170d608e68661b64dc97d791
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070236"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Contenedores de controles ActiveX: Usar controles en un contenedor sin cuadro de diálogo
 
@@ -56,18 +56,18 @@ Implementación de esta característica es un proceso de cuatro pasos.
 
 1. Insertar CIRC. H en CMYVIEW. H, justo antes del `CMyView` definición de clase:
 
-     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
+   [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
 
 1. Agregue una variable miembro (de tipo `CCirc`) a la sección protegida de la `CMyView` ubicado en CMYVIEW de definición de clase. H:
 
-     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
+   [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
     [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
 
 1. Agregar un `WM_CREATE` controlador de mensajes para la clase `CMyView`.
 
 1. En la función de controlador, `CMyView::OnCreate`, realizar una llamada para el control `Create` funcionan según el **esto** puntero como la ventana primaria:
 
-     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
 1. Recompile el proyecto. Un control Circ creará dinámicamente cada vez que se crea la vista de la aplicación.
 

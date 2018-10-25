@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792371"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067805"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -48,7 +48,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[bindable](bindable.md)|Indica que la propiedad admite enlace de datos.|
 |[call_as](call-as.md)|Permite que una función utilizables para asignarse a una función remota.|
 |[case](case-cpp.md)|Puede usar con el [switch_type](switch-type.md) atributo en una unión.|
-|[coclass](coclass.md)|Sitios de la clase definición en un archivo .idl como coclase.|
+|[coclase](coclass.md)|Sitios de la clase definición en un archivo .idl como coclase.|
 |[control](control.md)|Especifica que el tipo definido por el usuario es un control.|
 |[cpp_quote](cpp-quote.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo de encabezado generado.|
 |[defaultbind](defaultbind.md)|Indica la única propiedad enlazable que mejor representa al objeto.|
@@ -83,7 +83,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[licensed](licensed.md)|Indica que la coclase al que se aplica con licencia y se debe crear instancias mediante `IClassFactory2`.|
 |[local](local-cpp.md)|Permite usar el compilador de MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|
 |[max_is](max-is.md)|Designa el valor máximo para un índice de matriz válida.|
-|[módulo](module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|
+|[module](module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|
 |[ms_union](ms-union.md)|Controla la alineación de representación de datos de red de uniones nonencapsulated.|
 |[no_injected_text](no-injected-text.md)|Impide que el compilador inserte el código como resultado el uso de atributo.|
 |[nonbrowsable](nonbrowsable.md)|Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.|
@@ -92,7 +92,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[object](object-cpp.md)|Identifica una interfaz personalizada; es sinónimo de atributo personalizado.|
 |[odl](odl.md)|Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL).|
 |[oleautomation](oleautomation.md)|Indica que una interfaz es compatible con la automatización.|
-|[Opcional](optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|
+|[optional](optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|
 |[out](out-cpp.md)|Identifica los parámetros de puntero devueltos desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|
 |[pointer_default](pointer-default.md)|Especifica el atributo de puntero predeterminado para todos los punteros, excepto los punteros de nivel superior que aparecen en las listas de parámetros.|
 |[pragma](pragma.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo .idl generado.|
@@ -102,7 +102,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[propput](propput.md)|Especifica una función de valor de propiedad.|
 |[ptr](ptr.md)|Designa un puntero como un puntero completo.|
 |[public](public-cpp-attributes.md)|Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no se hace referencia desde dentro del archivo. idl.|
-|[intervalo](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
+|[range](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
 |[readonly](readonly-cpp.md)|Prohíbe la asignación a una variable.|
 |[ref](ref-cpp.md)|Identifica un puntero de referencia.|
 |[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
@@ -125,4 +125,4 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos por grupo](attributes-by-group.md)  
+[Atributos por grupo](attributes-by-group.md)

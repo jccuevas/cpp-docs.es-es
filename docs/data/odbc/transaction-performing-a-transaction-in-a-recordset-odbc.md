@@ -15,84 +15,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5d73b7c45223c029451f300e495915eb15b0a956
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9d8075cd0d2f339db255f669386b888a3f11dd6a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073629"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transacción: Realizar una transacción en un conjunto de registros (ODBC)
 
-En este tema se explica cómo realizar una transacción en un conjunto de registros.  
-  
+En este tema se explica cómo realizar una transacción en un conjunto de registros.
+
 > [!NOTE]
->  Se admite sólo un nivel de transacciones; no se pueden anidar transacciones.  
-  
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>Para realizar una transacción en un conjunto de registros  
-  
-1. Llame a la `CDatabase` del objeto `BeginTrans` función miembro.  
-  
-1. Si no ha implementado la obtención masiva de filas, llame a la `AddNew/Update`, `Edit/Update`, y `Delete` las funciones miembro de uno o más objetos de conjunto de registros de la misma base de datos tantas veces como sea necesario. Para obtener más información, consulte [conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si ha implementado la obtención masiva de filas, debe escribir sus propias funciones para actualizar el origen de datos.  
-  
-1. Por último, llame a la `CDatabase` del objeto `CommitTrans` función miembro. Si se produce un error en una de las actualizaciones o si decide cancelar los cambios, llame a su `Rollback` función miembro.  
-  
-El ejemplo siguiente utiliza dos conjuntos de registros para eliminar la inscripción de un estudiante de una base de datos de registro de escuela, quitando los estudiantes de todas las clases en el que está inscrito el alumno. Dado que el `Delete` deben completarse correctamente las llamadas en ambos conjuntos de registros, se requiere una transacción. En el ejemplo se presupone la existencia de `m_dbStudentReg`, una variable de miembro de tipo `CDatabase` ya conectado al origen de datos y las clases de conjunto de registros `CEnrollmentSet` y `CStudentSet`. El `strStudentID` variable contiene un valor obtenido del usuario.  
-  
-```  
-BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
-{  
-    // remove student from all the classes  
-    // the student is enrolled in  
-  
-    if ( !m_dbStudentReg.BeginTrans( ) )  
-        return FALSE;  
-  
-    CEnrollmentSet rsEnrollmentSet(&m_dbStudentReg);  
-    rsEnrollmentSet.m_strFilter = "StudentID = " + strStudentID;  
-  
-    if ( !rsEnrollmentSet.Open(CRecordset::dynaset) )  
-        return FALSE;  
-  
-    CStudentSet rsStudentSet(&m_dbStudentReg);  
-    rsStudentSet.m_strFilter = "StudentID = " + strStudentID;  
-  
-    if ( !rsStudentSet.Open(CRecordset::dynaset) )  
-        return FALSE;  
-  
-    TRY  
-    {  
-        while ( !rsEnrollmentSet.IsEOF( ) )  
-        {  
-            rsEnrollmentSet.Delete( );  
-            rsEnrollmentSet.MoveNext( );  
-        }  
-  
-        // delete the student record  
-        rsStudentSet.Delete( );  
-  
-        m_dbStudentReg.CommitTrans( );  
-    }  
-  
-    CATCH_ALL(e)  
-    {  
-        m_dbStudentReg.Rollback( );  
-        return FALSE;  
-    }  
-    END_CATCH_ALL  
-  
-    rsEnrollmentSet.Close( );  
-    rsStudentSet.Close( );  
-  
-    return TRUE;  
-  
-}  
-```  
-  
+>  Se admite sólo un nivel de transacciones; no se pueden anidar transacciones.
+
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Para realizar una transacción en un conjunto de registros
+
+1. Llame a la `CDatabase` del objeto `BeginTrans` función miembro.
+
+1. Si no ha implementado la obtención masiva de filas, llame a la `AddNew/Update`, `Edit/Update`, y `Delete` las funciones miembro de uno o más objetos de conjunto de registros de la misma base de datos tantas veces como sea necesario. Para obtener más información, consulte [conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si ha implementado la obtención masiva de filas, debe escribir sus propias funciones para actualizar el origen de datos.
+
+1. Por último, llame a la `CDatabase` del objeto `CommitTrans` función miembro. Si se produce un error en una de las actualizaciones o si decide cancelar los cambios, llame a su `Rollback` función miembro.
+
+El ejemplo siguiente utiliza dos conjuntos de registros para eliminar la inscripción de un estudiante de una base de datos de registro de escuela, quitando los estudiantes de todas las clases en el que está inscrito el alumno. Dado que el `Delete` deben completarse correctamente las llamadas en ambos conjuntos de registros, se requiere una transacción. En el ejemplo se presupone la existencia de `m_dbStudentReg`, una variable de miembro de tipo `CDatabase` ya conectado al origen de datos y las clases de conjunto de registros `CEnrollmentSet` y `CStudentSet`. El `strStudentID` variable contiene un valor obtenido del usuario.
+
+```
+BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
+{
+    // remove student from all the classes
+    // the student is enrolled in
+
+    if ( !m_dbStudentReg.BeginTrans( ) )
+        return FALSE;
+
+    CEnrollmentSet rsEnrollmentSet(&m_dbStudentReg);
+    rsEnrollmentSet.m_strFilter = "StudentID = " + strStudentID;
+
+    if ( !rsEnrollmentSet.Open(CRecordset::dynaset) )
+        return FALSE;
+
+    CStudentSet rsStudentSet(&m_dbStudentReg);
+    rsStudentSet.m_strFilter = "StudentID = " + strStudentID;
+
+    if ( !rsStudentSet.Open(CRecordset::dynaset) )
+        return FALSE;
+
+    TRY
+    {
+        while ( !rsEnrollmentSet.IsEOF( ) )
+        {
+            rsEnrollmentSet.Delete( );
+            rsEnrollmentSet.MoveNext( );
+        }
+
+        // delete the student record
+        rsStudentSet.Delete( );
+
+        m_dbStudentReg.CommitTrans( );
+    }
+
+    CATCH_ALL(e)
+    {
+        m_dbStudentReg.Rollback( );
+        return FALSE;
+    }
+    END_CATCH_ALL
+
+    rsEnrollmentSet.Close( );
+    rsStudentSet.Close( );
+
+    return TRUE;
+
+}
+```
+
 > [!NOTE]
->  Una llamada a `BeginTrans` nuevo sin llamar a `CommitTrans` o `Rollback` es un error.  
-  
-## <a name="see-also"></a>Vea también  
+>  Una llamada a `BeginTrans` nuevo sin llamar a `CommitTrans` o `Rollback` es un error.
+
+## <a name="see-also"></a>Vea también
 
 [Transacción (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transacción: Cómo afectan las transacciones a las actualizaciones (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d14b4598020358de01a7914b369eac2b8f5b016d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029018"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076105"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc (clase)
 
@@ -84,7 +84,7 @@ Para obtener una introducción al modelo de control de acceso en Windows, consul
 Llame a este método para convertir un descriptor de seguridad y las listas de control de acceso (ACL) en un formato que admite la propagación automática de entradas de control de acceso heredable (ACE).
 
 ```
-bool ConvertToAutoInherit(  
+bool ConvertToAutoInherit(
     const CSecurityDesc* pParent,
     GUID* ObjectType,
     bool bIsDirectoryObject,
@@ -142,14 +142,14 @@ El destructor libera todos los recursos asignados y elimina el descriptor de seg
 Llame a este método para asignar e inicializar un descriptor de seguridad autorelativo para el objeto privado creado por el Administrador de recursos que realiza la llamada.
 
 ```
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     bool bIsDirectoryObject,
     const CAccessToken& Token,
     PGENERIC_MAPPING GenericMapping) throw();
 
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     GUID* ObjectType,
@@ -203,7 +203,7 @@ El segundo método permite especificar el tipo de objeto GUID del nuevo objeto o
 Llame a este método para recuperar información de descriptor de seguridad de un objeto privado.
 
 ```
-bool Get(  
+bool Get(
     SECURITY_INFORMATION si,
     CSecurityDesc* pResult) const throw();
 ```
@@ -246,13 +246,13 @@ Devuelve el texto actualizado `CPrivateObjectSecurityDesc` objeto.
 Llame a este método para modificar el descriptor de seguridad de un objeto privado.
 
 ```
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     PGENERIC_MAPPING GenericMapping,
     const CAccessToken& Token) throw();
 
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     ULONG AutoInheritFlags,

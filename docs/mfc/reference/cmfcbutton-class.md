@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9acae5f87223a3b23c492f02596452fabb745f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca8a6689d0ac305a0dc3264b0311a4d7bf2e7d11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441296"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076079"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton (clase)
 
@@ -419,8 +419,6 @@ static BOOL IsWindowsThemingEnabled();
 
 TRUE si el estilo del borde del botón se corresponde con el tema actual de Windows; en caso contrario, FALSE.
 
-
-
 ## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
 
 Especifica si se debe usar los temas de Windows XP al dibujar el botón.
@@ -446,7 +444,6 @@ El `CMFCButton` constructor inicializa este miembro en TRUE.
 ##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
 
 Cuando es TRUE, permite a un botón deshabilitado va a dibujar como deshabilitado.
-
 
 ```
 BOOL m_bGrayDisabled;
@@ -479,7 +476,6 @@ Indica si se debe mostrar una imagen a la derecha del botón.
 ```
 BOOL m_bRightImage;
 ```
-
 
 ##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
 
@@ -739,14 +735,12 @@ void SetCheckedImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetCheckedImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetCheckedImage(
     UINT uiBmpResId,
@@ -828,14 +822,12 @@ void SetImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetImage(
     UINT uiBmpResId,

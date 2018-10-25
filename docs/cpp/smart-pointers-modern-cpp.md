@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 58591309faaa107756739a52173ceea2f1f7b188
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069885"
 ---
 # <a name="smart-pointers-modern-c"></a>Punteros inteligentes (C++ moderno)
 
@@ -76,11 +76,14 @@ En la sección siguiente se resumen los distintos tipos de punteros inteligentes
 
 Utilice estos punteros inteligentes como primera opción para encapsular punteros a los objetos estándar de C++ (POCO).
 
-- `unique_ptr` Permite a exactamente un propietario del puntero subyacente. Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto `shared_ptr`. Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir. Sustituye a `auto_ptr`, que está desusado. Comparado con `boost::scoped_ptr`, `unique_ptr` es pequeño y eficaz; el tamaño es un puntero y admite referencias rvalue para una rápida inserción y la recuperación de las colecciones de la biblioteca estándar de C++. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) y [unique_ptr (clase)](../standard-library/unique-ptr-class.md).
+- `unique_ptr`<br/>
+   Permite exactamente un único propietario del puntero subyacente. Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto `shared_ptr`. Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir. Sustituye a `auto_ptr`, que está desusado. Comparado con `boost::scoped_ptr`, `unique_ptr` es pequeño y eficaz; el tamaño es un puntero y admite referencias rvalue para una rápida inserción y la recuperación de las colecciones de la biblioteca estándar de C++. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) y [unique_ptr (clase)](../standard-library/unique-ptr-class.md).
 
-- `shared_ptr` Recuento de referencias del puntero inteligente. Utilícelo cuando desee asignar un puntero sin formato a varios propietarios, por ejemplo, cuando devuelve una copia de un puntero desde un contenedor pero desea conservar el original. El puntero sin formato no se elimina hasta que todos los propietarios de `shared_ptr` han salido del ámbito o, de lo contrario, han renunciado a la propiedad. El tamaño es dos punteros: uno para el objeto y otro para el bloque de control compartido que contiene el recuento de referencias. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) y [shared_ptr (clase)](../standard-library/shared-ptr-class.md).
+- `shared_ptr`<br/>
+   Puntero inteligente con recuento de referencias. Utilícelo cuando desee asignar un puntero sin formato a varios propietarios, por ejemplo, cuando devuelve una copia de un puntero desde un contenedor pero desea conservar el original. El puntero sin formato no se elimina hasta que todos los propietarios de `shared_ptr` han salido del ámbito o, de lo contrario, han renunciado a la propiedad. El tamaño es dos punteros: uno para el objeto y otro para el bloque de control compartido que contiene el recuento de referencias. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) y [shared_ptr (clase)](../standard-library/shared-ptr-class.md).
 
-- `weak_ptr` Caso especial de puntero inteligente para su uso junto con `shared_ptr`. `weak_ptr` proporciona acceso a un objeto que pertenece a una o varias instancias de `shared_ptr`, pero no participa en el recuento de referencias. Utilícelo cuando desee observar un objeto, pero no quiere que permanezca activo. Es necesario en algunos casos para interrumpir las referencias circulares entre instancias de `shared_ptr`. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) y [weak_ptr (clase)](../standard-library/weak-ptr-class.md).
+- `weak_ptr`<br/>
+    Puntero inteligente de caso especial para usarlo junto con `shared_ptr`. `weak_ptr` proporciona acceso a un objeto que pertenece a una o varias instancias de `shared_ptr`, pero no participa en el recuento de referencias. Utilícelo cuando desee observar un objeto, pero no quiere que permanezca activo. Es necesario en algunos casos para interrumpir las referencias circulares entre instancias de `shared_ptr`. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y usar instancias de weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) y [weak_ptr (clase)](../standard-library/weak-ptr-class.md).
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Punteros inteligentes para objetos COM (programación clásica de Windows)
 
@@ -106,7 +109,7 @@ Se parece a `CComQIPtr` en funcionalidad, pero no depende de los encabezados ATL
 Además de punteros inteligentes para los objetos COM, ATL también define punteros inteligentes y colecciones de punteros inteligentes para objetos estándar de C++. En la programación clásica de Windows, estos tipos son alternativas útiles a las colecciones de la biblioteca estándar de C++, especialmente cuando no se requiere la portabilidad del código o cuando no desee mezclar los modelos de programación de la biblioteca estándar de C++ y ATL.
 
 [CAutoPtr (clase)](../atl/reference/cautoptr-class.md)<br/>
-Puntero inteligente que exige una propiedad única al transferir la propiedad en la copia. Puede compararse con la clase `std::auto_ptr` desusada.
+Puntero inteligente que exige una propiedad única al transferir la propiedad en la copia. Puede compararse con la clase `std::auto_ptr` en desuso.
 
 [CHeapPtr (clase)](../atl/reference/cheapptr-class.md)<br/>
 Puntero inteligente para objetos que se asignan mediante el uso de la C [malloc](../c-runtime-library/reference/malloc.md) función.

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075168"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067298"
 ---
 # <a name="security-global-functions"></a>Funciones globales de seguridad
 
@@ -50,11 +50,11 @@ Estas funciones proporcionan compatibilidad para modificar objetos de SID y ACL.
 |[AtlSetOwnerSid](#atlsetownersid)|Llame a esta función para definir el identificador de seguridad (SID) del propietario de un objeto.|
 |[AtlGetSacl](#atlgetsacl)|Llame a esta función para recuperar la información de la lista de control de acceso del sistema (SACL) de un objeto especificado.|
 |[AtlSetSacl](#atlsetsacl)|Llame a esta función para definir la información de la lista de control de acceso del sistema (SACL) de un objeto especificado.|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Llame a esta función para recuperar el descriptor de seguridad de un objeto especificado.|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Llame a esta función para recuperar el descriptor de seguridad de un objeto especificado.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 En las compilaciones de depuración, se producirá un error de aserción si *hObject* no es válido, o si *dwInheritanceFlowControl* no es uno de los tres valores permitidos.
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ Puntero a un `CSid` objetos que contendrán la nueva información de seguridad.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
+Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ La `CSid` objeto que contiene la nueva información de seguridad.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
+Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ Puntero a un `CSid` objetos que contendrán la nueva información de seguridad.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
+Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ La `CSid` objeto que contiene la nueva información de seguridad.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
+Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 ### <a name="remarks"></a>Comentarios
 
-Si `AtlGetSacl` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.  
+Si `AtlGetSacl` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 En las compilaciones de depuración, se producirá un error de aserción si *hObject* no es válido, o si *dwInheritanceFlowControl* no es uno de los tres valores permitidos.
 
-Si `AtlSetSacl` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.  
+Si `AtlSetSacl` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h 
+**Encabezado:** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 ### <a name="remarks"></a>Comentarios
 
-Si `AtlGetSecurityDescriptor` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.  
+Si `AtlGetSecurityDescriptor` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.
 
 ### <a name="requirements"></a>Requisitos
 

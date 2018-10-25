@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072166"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Error de las herramientas del vinculador LNK1181
 
@@ -42,8 +42,6 @@ Para obtener más información, consulte [archivos .lib como entrada del vincula
 Otra causa posible de LNK1181 es que un nombre de archivo largo con espacios incrustados no estaba entre comillas.  En ese caso, el vinculador solo reconoce un nombre de archivo hasta el primer espacio y, a continuación, se supone una extensión de archivo. obj.  La solución a esta situación es incluir el nombre de archivo largos (nombre de archivo además de la ruta de acceso) entre comillas.
 
 Compilar con la [/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md) opción puede producir LNK1181 porque esta opción suprime la creación de archivos .obj.
-
-
 
 ## <a name="see-also"></a>Vea también
 

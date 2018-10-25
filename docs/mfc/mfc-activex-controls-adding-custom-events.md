@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384421"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076040"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Controles ActiveX MFC: Agregar eventos personalizados
 
@@ -48,7 +48,7 @@ El siguiente procedimiento agrega un evento personalizado específico, ClickIn. 
 
 1. En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar evento**.
 
-     Se abrirá al Asistente para agregar eventos.
+   Se abrirá al Asistente para agregar eventos.
 
 1. En el **nombre de evento** cuadro, primero seleccione cualquier evento existente y luego haga clic en el **personalizado** radio botón y, después, escriba *ClickIn*.
 
@@ -94,7 +94,7 @@ Ahora que ha agregado el evento personalizado ClickIn mediante el Asistente para
 
 1. En la ventana Propiedades, haga clic en el **mensajes** botón.
 
-     La ventana Propiedades muestra una lista de los mensajes que pueden controlarse mediante el control ActiveX. Cualquier mensaje que se muestra en negrita ya tiene una función de controlador asignada a él.
+   La ventana Propiedades muestra una lista de los mensajes que pueden controlarse mediante el control ActiveX. Cualquier mensaje que se muestra en negrita ya tiene una función de controlador asignada a él.
 
 1. En la ventana Propiedades, seleccione el mensaje que desee controlar. En este ejemplo, seleccione WM_LBUTTONDOWN.
 
@@ -131,7 +131,7 @@ El siguiente procedimiento agrega un clic personalizado eventos.
 
 1. En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar evento**.
 
-     Se abrirá al Asistente para agregar eventos.
+   Se abrirá al Asistente para agregar eventos.
 
 1. En el **nombre de evento** lista desplegable, seleccione un nombre de evento estándar. En este ejemplo, seleccione **haga clic en**.
 

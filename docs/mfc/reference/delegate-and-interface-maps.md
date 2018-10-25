@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f44d362fc30503b062221c358dde6b2c10b9bd3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2bbf1a088151bcd2a6ecc1990c668211c6f70cd9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423759"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065491"
 ---
 |||
 |-|-|
@@ -34,7 +34,6 @@ ms.locfileid: "46423759"
 |[INTERFACE_PART](#interface_part)|Se utiliza entre el begin_interface_map (macro) y la end_interface_map (macro) para cada interfaz será compatible con el objeto.|
 |[MAKE_DELEGATE](#make_delegate)|Asocia un controlador de eventos a un control administrado.|
 
-
 ## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 
 Comienza una asignación de delegado.
@@ -44,6 +43,7 @@ Comienza una asignación de delegado.
 ```
 BEGIN_DELEGATE_MAP(  CLASS );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *CLASE*<br/>
@@ -70,6 +70,7 @@ Inicia la definición de la asignación interfaced cuando se utiliza en el archi
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *theClass*<br/>
@@ -97,6 +98,7 @@ Registra los métodos de devolución de llamada con un origen de comando.
 ```
 delegate void CommandHandler(  UINT^ cmdID  );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *cmdID*<br/>
@@ -127,6 +129,7 @@ Registra los métodos de devolución de llamada con un mensaje de comando de act
 ```
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *cmdID*<br/>
@@ -172,7 +175,6 @@ Esta macro marca el final de una lista de entradas de delegado, que componen un 
 
 [Cómo: Recibir eventos de Windows Forms de clases nativas de C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_PART
 
 Finaliza el mapa de interfaz en el archivo de implementación.
@@ -196,7 +198,6 @@ Para obtener más información acerca de los mapas de interfaz, vea [Nota técni
 [Macros y funciones globales](mfc-macros-and-globals.md)<br/>
 [BEGIN_INTERFACE_PART](#begin_interface_map)
 
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 Crea una entrada en el mapa del delegado.
@@ -206,6 +207,7 @@ Crea una entrada en el mapa del delegado.
 ```
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *MIEMBRO*<br/>
@@ -242,7 +244,6 @@ END_DELEGATE_MAP()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)
 
-
 ##  <a name="interface_part"></a>INTERFACE_PART
 
 Se utiliza entre el begin_interface_map (macro) y la end_interface_map (macro) para cada interfaz será compatible con el objeto.
@@ -252,6 +253,7 @@ Se utiliza entre el begin_interface_map (macro) y la end_interface_map (macro) p
 ```
 INTERFACE_PART( theClass, iid, localClass)
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *theClass*<br/>
@@ -271,7 +273,6 @@ Para obtener más información sobre los mapas de interfaz, vea [Nota técnica 3
 
 **Encabezado:** afxwin.h
 
-
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
 Asocia un controlador de eventos a un control administrado.
@@ -281,6 +282,7 @@ Asocia un controlador de eventos a un control administrado.
 ```
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *DELEGADO*<br/>
@@ -316,7 +318,4 @@ void CMyView::OnInitialUpdate()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)<br/>
 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
-
-
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3093ca60b222512e517400f478fc9d635a6f867
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073778"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funciones de devolución de llamada usadas por MFC
 
@@ -117,7 +117,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Identifica el contexto de dispositivo.
 
-*Código*<br/>
+*code*<br/>
 Especifica si se ha producido un error. Es 0 si no se ha producido ningún error. Es SP_OUTOFDISK si el Administrador de impresión se está quedando sin espacio y más espacio en disco estará disponible si la aplicación espera. Si *código* es SP_OUTOFDISK, la aplicación no tiene que anular el trabajo de impresión. Si no es así, debe dar al administrador de impresión mediante una llamada a la `PeekMessage` o `GetMessage` función de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -127,7 +127,6 @@ El valor devuelto de la función de controlador de la anulación es distinto de 
 ### <a name="remarks"></a>Comentarios
 
 El nombre real debe exportarse como se describe en la sección Comentarios de [CDC:: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc).
-
 
 ## <a name="see-also"></a>Vea también
 

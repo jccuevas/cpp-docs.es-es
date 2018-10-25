@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076314"
 ---
 # <a name="cbasepane-class"></a>CBasePane (clase)
 
@@ -292,7 +292,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` no se utiliza este método.|
 |`CBasePane::OnUpdateCmdUI`|Lo utiliza internamente.|
 |[CBasePane::PaneFromPoint](#panefrompoint)|Devuelve el panel que contiene el punto especificado.|
-|`CBasePane::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
+|`CBasePane::PreTranslateMessage`|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` no se utiliza este método.|
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Anula el registro de un panel y lo quita de la lista en el Administrador de acoplamiento.|
 |[CBasePane::SaveState](#savestate)|Guarda el estado del panel en el registro.|
@@ -332,7 +332,7 @@ Las siguientes sugerencias de personalización que pertenecen a la `CBasePane Cl
 
     - AFX_CBRS_CLOSE permite que el panel que se cerrará (oculto).
 
-     Estos son marcas que se pueden combinar con una operación OR bit a bit.
+   Estos son marcas que se pueden combinar con una operación OR bit a bit.
 
 `CBasePane` implementa los siguientes métodos de tipo Boolean virtuales para reflejar estas marcas: [cbasepane:: Canbeclosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Se puede reemplazar en clases derivadas para personalizar su comportamiento.
 
@@ -352,7 +352,7 @@ Las siguientes sugerencias de personalización que pertenecen a la `CBasePane Cl
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CBasePane` clase. En el ejemplo se muestra cómo recuperar un panel desde el `CFrameWndEx` clase y cómo establecer el modo de acoplamiento, la alineación del panel y el estilo del panel. El código está tomado del [ejemplo de WordPad](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CBasePane` . En el ejemplo se muestra cómo recuperar un panel desde el `CFrameWndEx` clase y cómo establecer el modo de acoplamiento, la alineación del panel y el estilo del panel. El código está tomado del [ejemplo de WordPad](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *CPaneDivider\**  no usa.
+*CPaneDivider\**<br/>
+[in] No se utiliza.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

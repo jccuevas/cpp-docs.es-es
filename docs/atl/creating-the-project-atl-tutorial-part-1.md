@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 654ddd149eb6875bede85bdef51641c359644f51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821106"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075637"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Crear el proyecto (Tutorial de ATL, Parte 1)
 
@@ -30,13 +30,13 @@ Este tutorial le guiará paso a paso a través de un proyecto ATL sin atributos 
 > Este tutorial crea el mismo código de origen como en el ejemplo de polígono. Si desea evitar escribir manualmente el código fuente, puede descargarlo desde el [extracto del ejemplo Polygon](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). A continuación, puede hacer referencia al código fuente polígono como trabajar con el tutorial, o usarlo para comprobar si hay errores en su propio proyecto.
 > Para compilar, abra stdafx.h y reemplace:
 > ```
-> #ifndef WINVER  
-> #define WINVER 0x0400   
+> #ifndef WINVER
+> #define WINVER 0x0400
 > #endif
 > ```
 > with
 > ```
-> #ifndef WINVER  
+> #ifndef WINVER
 > #define WINVER 0x0500
 > #define _WIN32_WINNT 0x0500
 > #endif

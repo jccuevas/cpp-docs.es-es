@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cd4a7c77c5b7a19bff7cf586b55302a9de0cc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2ef8bddd43b8a6102a39dfa20787a627c21bb6a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401035"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073037"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl (clase)
 
@@ -627,6 +627,4 @@ Busca un botón de barra de herramientas con el identificador de comando especif
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarButton (clase)](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

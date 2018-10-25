@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 028c74bdc0c937fe59b621b81fb6abb8def63707
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df664db673ee3989d689b8cf28b87cfff32a8dc7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076820"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException (clase)
 
@@ -79,6 +79,4 @@ No utilice este constructor directamente, pero en su lugar llame a la función g
 
 [CException (clase)](cexception-class.md)<br/>
 [Gráfico de jerarquías](../hierarchy-chart.md)
-
-
 

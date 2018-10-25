@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa96d87c51eb4db8c7d180f741c3543571984ec
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04ff3603d403c34915bc062ff6c17fd818d8a286
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072517"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox (clase)
 
@@ -104,7 +104,6 @@ CMFCToolBarFontComboBox(
     int iWidth = 0,
     BYTE nPitchAndFamily = DEFAULT_PITCH);
 
-
 protected:
 CMFCToolBarFontComboBox(
     CObList* pLstFontsExternal,
@@ -172,7 +171,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un `CMFCFontInfo` objeto. Si *iÍndice* no especifica un índice de elemento válido, el valor devuelto es NULL.
+Puntero a un objeto `CMFCFontInfo` . Si *iÍndice* no especifica un índice de elemento válido, el valor devuelto es NULL.
 
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight
 
@@ -226,6 +225,4 @@ Si *bExact* es TRUE, este método selecciona una fuente que coincide exactamente
 [CMFCFontInfo (clase)](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

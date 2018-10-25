@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e76b1c8be4e180136c4c1ff3de3e4801770bce92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6a915dbe9904a7bbe56e8ba1100631bd954d86
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071172"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Cómo: Crear proyectos vacíos de CLR
 
@@ -34,7 +34,7 @@ Para crear un proyecto vacío de CLR, use el **proyecto vacío de CLR** plantill
 
 1. En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.
 
-     Aparecerá el cuadro de diálogo **Nuevo proyecto** .
+   Aparecerá el cuadro de diálogo **Nuevo proyecto** .
 
 1. En **plantillas instaladas**, haga clic en el **Visual C++** nodo; a continuación, haga clic en el **CLR** nodo. Elija la **proyecto vacío de CLR** icono.
 

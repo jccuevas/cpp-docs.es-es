@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412865"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069911"
 ---
 # <a name="collections"></a>Colecciones
 
@@ -53,15 +53,15 @@ Cada una de las tres formas de colección proporcionada se describe brevemente m
 
 - Lista
 
-     La clase list ofrece una lista ordenada y no indizada de elementos, que se implementa como una lista vinculada por partida doble. Una lista tiene un "encabezado" y "cola" y agregar o quitar elementos de la cabeza final, o insertar o eliminar elementos en el medio, es muy rápida.
+   La clase list ofrece una lista ordenada y no indizada de elementos, que se implementa como una lista vinculada por partida doble. Una lista tiene un "encabezado" y "cola" y agregar o quitar elementos de la cabeza final, o insertar o eliminar elementos en el medio, es muy rápida.
 
 - Matriz
 
-     La clase de matriz proporciona una matriz dinámicamente con tamaño, ordenada y entero indexado de objetos.
+   La clase de matriz proporciona una matriz dinámicamente con tamaño, ordenada y entero indexado de objetos.
 
 - Mapa (también conocido como un diccionario)
 
-     Un mapa es una colección que asocia un objeto de clave a un objeto de valor.
+   Un mapa es una colección que asocia un objeto de clave a un objeto de valor.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Las clases de colección basadas en plantillas
 

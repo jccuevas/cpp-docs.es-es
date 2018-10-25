@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be2676609cae4de6b2f3995be1bc9311f88e0a84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a10e1f6adb1fc9274a2a59215564fb60984ea661
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074493"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef (clase)
 
@@ -235,7 +235,7 @@ Si se puede modificar la definición de consulta:
 
 - Tener permisos de actualización para la base de datos.
 
-     Esto depende de si se han implementado las características de seguridad. MFC no ofrece soporte para la seguridad; debe implementarlo usted mismo mediante una llamada a DAO directamente o mediante el uso de Microsoft Access. Vea el tema "Permisos de propiedad" en la Ayuda de DAO.
+   Esto depende de si se han implementado las características de seguridad. MFC no ofrece soporte para la seguridad; debe implementarlo usted mismo mediante una llamada a DAO directamente o mediante el uso de Microsoft Access. Vea el tema "Permisos de propiedad" en la Ayuda de DAO.
 
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
 
@@ -426,7 +426,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -519,7 +518,6 @@ void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetParameterInfo(
     LPCTSTR lpszName,
@@ -790,7 +788,6 @@ Llame a esta función miembro para establecer el valor de un parámetro en la de
 virtual void SetParamValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     int nIndex,

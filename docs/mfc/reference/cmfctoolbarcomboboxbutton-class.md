@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4c205ff7c68fbf778b8d300fbe98e6a3deca1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0cde2b5c62d4d4584330fe24000114b33ba957b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413034"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067493"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton (clase)
 
@@ -146,7 +146,7 @@ Para obtener más información, consulte [Tutorial: poner controles en las barra
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCToolBarComboBoxButton` clase. El ejemplo muestra cómo habilitar los cuadros de edición y combinado, establezca la posición vertical combinado de botones del cuadro en la aplicación, establezca la altura del cuadro de lista cuando se coloca, establecer la apariencia de estilo plano de botones del cuadro combinado en la aplicación y establecer el texto en el cuadro de edición de la combinación de botón de cuadro. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCToolBarComboBoxButton` . El ejemplo muestra cómo habilitar los cuadros de edición y combinado, establezca la posición vertical combinado de botones del cuadro en la aplicación, establezca la altura del cuadro de lista cuando se coloca, establecer la apariencia de estilo plano de botones del cuadro combinado en la aplicación y establecer el texto en el cuadro de edición de la combinación de botón de cuadro. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -1176,11 +1176,9 @@ static BOOL SelectItemAll(
     UINT uiCmd,
     int iIndex);
 
-
 static BOOL SelectItemAll(
     UINT uiCmd,
     DWORD_PTR dwData);
-
 
 static BOOL SelectItemAll(
     UINT uiCmd,
@@ -1348,6 +1346,4 @@ void SetText(LPCTSTR lpszText);
 [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 
