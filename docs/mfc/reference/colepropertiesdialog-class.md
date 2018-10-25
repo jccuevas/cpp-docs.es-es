@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387840"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078198"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog (clase)
 
@@ -138,15 +138,15 @@ De forma predeterminada, el cuadro de diálogo Propiedades del objeto OLE común
 
 - General
 
-     Esta página contiene información del sistema para el archivo representado por el elemento del documento seleccionado. Desde esta página, el usuario puede convertir el elemento seleccionado en otro tipo.
+   Esta página contiene información del sistema para el archivo representado por el elemento del documento seleccionado. Desde esta página, el usuario puede convertir el elemento seleccionado en otro tipo.
 
 - Ver
 
-     Esta página contiene las opciones para mostrar el elemento, cambiar el icono y cambiar la escala de la imagen.
+   Esta página contiene las opciones para mostrar el elemento, cambiar el icono y cambiar la escala de la imagen.
 
 - Vínculo
 
-     Esta página contiene opciones para cambiar la ubicación del elemento vinculado y actualizar el elemento vinculado. Desde esta página, el usuario puede romper el vínculo del elemento seleccionado.
+   Esta página contiene opciones para cambiar la ubicación del elemento vinculado y actualizar el elemento vinculado. Desde esta página, el usuario puede romper el vínculo del elemento seleccionado.
 
 Para agregar páginas más allá de los proporcionados de forma predeterminada, modifique la [m_psh](#m_psh) variable miembro antes de salir el constructor de su `COlePropertiesDialog`-clase derivada. Se trata de una implementación avanzada de la `COlePropertiesDialog` constructor.
 

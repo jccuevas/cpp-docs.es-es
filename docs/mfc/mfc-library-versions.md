@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1781077896465d8a7a1d925262c3fd0696d24380
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a077cd90055a17f9aff71d67d2cb9a511a1caf0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078042"
 ---
 # <a name="mfc-library-versions"></a>Versiones de la biblioteca MFC
 
@@ -95,7 +95,7 @@ Los proyectos MFC utilizan el símbolo de preprocesador \_UNICODE para indicar l
 
 Bibliotecas estáticas de MFC utilizan las siguientes convenciones de nomenclatura. Los nombres de biblioteca tienen el formato
 
-> *u*AFX*c ** d*. LIB
+> <em>u</em>AFX<em>cd</em>. LIB
 
 donde las letras en cursiva en minúsculas son marcadores de posición para los especificadores, cuyo significado se muestra en la tabla siguiente:
 

@@ -1,7 +1,7 @@
 ---
 title: CDockablePane (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417493"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078315"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pTabControlBarAttachTo* especifica el panel de destino que asocia el panel actual a. El panel de destino debe ser un panel acoplable.
+*pTabControlBarAttachTo*<br/>
+[in, out] Especifica el panel de destino que asocia el panel actual a. El panel de destino debe ser un panel acoplable.
 
 *dockMethod*<br/>
 [in] Especifica el método de acoplamiento.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Especifica el nombre de la ventana.
 
-[in] [out] *pParentWnd* especifica la ventana primaria.
+*pParentWnd*<br/>
+[in, out] Especifica la ventana primaria.
 
 *Rect*<br/>
 [in] Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Especifica los atributos de estilo adicionales.
 
-[in] [out] *pContext* especifica el contexto de creación de la ventana.
+*pContext*<br/>
+[in, out] Especifica el contexto de creación de la ventana.
 
 *lpszWindowName*<br/>
 [in] Especifica el nombre de la ventana.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Especifica el nombre de la ventana.
 
-[in] [out] *pParentWnd* especifica la ventana primaria.
+*pParentWnd*<br/>
+[in, out] Especifica la ventana primaria.
 
 *Rect*<br/>
 [in] Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Especifica los atributos de estilo adicionales.
 
-[in] [out] *pContext* especifica el contexto de creación de la ventana.
+*pContext*<br/>
+[in, out] Especifica el contexto de creación de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] [out] *pTargetWindow* especifica el panel acoplable para acoplar este panel a.
+*pTargetWindow*<br/>
+[in, out] Especifica el panel acoplable para acoplar este panel a.
 
 *dwAlignment*<br/>
 [in] Especifica la alineación del panel de acoplamiento. Puede ser uno de CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM o CBRS_ALIGN_ANY. (Definidos en afxres.h).
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Especifica la alineación del panel para crear la opción Ocultar automáticamente.
 
-[in] [out] *pCurrAutoHideBar* un puntero a la barra de herramientas de ocultación automática actual. Puede ser NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Un puntero a la barra de herramientas de ocultación automática actual. Puede ser NULL.
 
 *bUseTimer*<br/>
 [in] Especifica si utilizar el efecto de ocultar automáticamente cuando el usuario activa el panel en modo de ocultación automática u ocultar el panel inmediatamente.
