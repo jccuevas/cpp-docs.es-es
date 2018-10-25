@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078850"
 ---
 # <a name="concurrency-namespace-enums"></a>enumeraciones del espacio de nombres de simultaneidad
 
@@ -44,6 +44,7 @@ Los estados válidos para un `agent`.
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -94,6 +95,7 @@ Los tipos de eventos a los que se puede realizar un seguimiento utilizando la fu
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -119,6 +121,7 @@ Marcas de seguimiento para los tipos de evento
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -142,6 +145,7 @@ El tipo de región crítica dentro del que se encuentra un contexto.
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -161,6 +165,7 @@ La usa la directiva `DynamicProgressFeedback` para describir si los recursos par
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -174,6 +179,7 @@ El tipo de un bloque de mensajería `join`.
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -192,6 +198,7 @@ Las respuestas válidas para una oferta de un objeto `message` a un bloque.
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -212,6 +219,7 @@ Claves de directiva que describen aspectos de comportamiento del programador. Ca
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -258,6 +266,7 @@ La usa la directiva `SchedulingProtocol` para describir el algoritmo de programa
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -276,6 +285,7 @@ Se usa para denotar el estado en el que se encuentra un proxy del subproceso, cu
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -297,6 +307,7 @@ Describe el estado de ejecución de un objeto `task_group` o `structured_task_gr
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|
@@ -311,11 +322,12 @@ enum task_group_status;
 
 ##  <a name="winrtinitializationtype"></a>  WinRTInitializationType (enumeración)
 
-La utiliza la directiva `WinRTInitialization` para describir si se iniciará y cómo se iniciará Windows en tiempo de ejecución en subprocesos del programador para una aplicación que se ejecuta en sistemas operativos con Windows 8 o una versión posterior. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md).
+La utiliza la directiva `WinRTInitialization` para describir si se iniciará y cómo se iniciará Windows Runtime en subprocesos del programador para una aplicación que se ejecuta en sistemas operativos con Windows 8 o una versión posterior. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md).
 
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>Valores
 
 |Nombre|Descripción|

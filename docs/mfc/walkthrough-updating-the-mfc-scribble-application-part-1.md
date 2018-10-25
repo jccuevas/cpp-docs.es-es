@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235514"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082884"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 
@@ -32,7 +32,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
 
 En este tutorial se ha modificado el ejemplo clásico de MFC Scribble 1.0 que permite utilizar el mouse para crear dibujos lineales. En esta parte del tutorial se muestra cómo modificar el ejemplo Scribble de modo que muestre una barra de cinta. [Parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) agregan más botones a la barra de cinta.
 
-## <a name="prerequisites"></a>Requisitos previos 
+## <a name="prerequisites"></a>Requisitos previos
 
 El [ejemplo Scribble de MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obtener ayuda sobre la conversión a Visual Studio 2017, consulte [Guía de migración: Scribble de MFC](../porting/porting-guide-mfc-scribble.md).
 
@@ -146,7 +146,7 @@ En este tutorial copia los archivos de recursos en el ejemplo creado en [Tutoria
    1. Importe el archivo filesmall.bmp, que contiene 16 x 16 (16 x 176) once imágenes. Cambie el identificador del mapa de bits a `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Porque es necesario que las imágenes de ocho primeros 16 x 16 (16 x 128), si lo desea puede recortar el ancho de la derecha de este mapa de bits 176 128. 
+   > Porque es necesario que las imágenes de ocho primeros 16 x 16 (16 x 128), si lo desea puede recortar el ancho de la derecha de este mapa de bits 176 128.
 
    1. Importe filelarge.bmp, que contiene los 32 x 32 (32 x 288) nueve imágenes. Cambie el identificador del mapa de bits a `IDB_RIBBON_FILELARGE`.
 
@@ -161,7 +161,7 @@ En este tutorial copia los archivos de recursos en el ejemplo creado en [Tutoria
    1. Importe el mapa de bits panelicons.bmp, que contiene ocho imágenes de 16x16. En el **propiedades** ventana de la **Editor de mapa de bits**, ajuste el ancho del mapa de bits a 64 (16 x 64). Cambie el identificador del mapa de bits a `IDB_PANEL_ICONS`.
 
    > [!NOTE]
-   > Porque es necesario que las imágenes de cuatro primeros 16 x 16 (16 x 64), si lo desea puede recortar el ancho de la derecha de este mapa de bits de 128 a 64. 
+   > Porque es necesario que las imágenes de cuatro primeros 16 x 16 (16 x 64), si lo desea puede recortar el ancho de la derecha de este mapa de bits de 128 a 64.
 
 ##  <a name="addribbon"></a> Agregar un recurso de cinta al proyecto
 

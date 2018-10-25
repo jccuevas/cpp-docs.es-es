@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5e735a78f35ac799678b077b7933c6134d568e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4833c10772afd7cfd167171821e13a000a611f15
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386196"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083040"
 ---
 # <a name="mfc-macros-and-globals"></a>Macros y variables globales de MFC
 
@@ -75,7 +75,6 @@ Las macros y funciones globales de MFC proporcionan funcionalidad en las categor
 - [Estilos de control ToolBar](toolbar-control-styles.md)
 
 - [CMFCImagePaintArea::IMAGE_EDIT_MODE (enumeración)](cmfcimagepaintarea-image-edit-mode-enumeration.md)
-
 
 ## <a name="database"></a>Base de datos
 
@@ -139,6 +138,4 @@ En la primera parte de esta sección se explica brevemente cada una de las categ
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../mfc/class-library-overview.md)
-
-
 

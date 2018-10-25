@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e6fed56e21f2b5d97b9b89596630cd63f544148
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078692"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro
 
@@ -45,7 +45,7 @@ La manera más fácil de obtener acceso a un control ActiveX desde dentro de su 
 
 1. En el **nombre de Variable** cuadro, escriba un nombre.
 
-     Por ejemplo, *m_circctl*.
+   Por ejemplo, *m_circctl*.
 
 1. Haga clic en **finalizar** para aceptar las opciones seleccionadas y salir del Asistente para agregar variables miembro.
 

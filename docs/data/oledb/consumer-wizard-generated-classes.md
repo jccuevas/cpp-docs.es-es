@@ -21,180 +21,180 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6054695cf7483ffc3991efe89853a94a22ce284
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 0473aaae7309f7f041883eea0afab5acc9095c9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808672"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083352"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Clases generadas por el Asistente para consumidores
 
-Cuando se usa el **el Asistente para consumidores OLE DB ATL** para generar un consumidor, tiene la opción de utilizar plantillas OLE DB o atributos OLE DB. En ambos casos, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando contiene código para abrir el origen de datos y el conjunto de filas especificado en el asistente. La clase de registro de usuario contiene un mapa de columnas para la tabla de base de datos seleccionada. Sin embargo, el código generado es distinto en cada caso:  
-  
-- Si selecciona un consumidor con plantilla, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando tendrá el nombre que escriba en el **clase** cuadro en el Asistente (por ejemplo, `CProducts`), y la clase de registro de usuario tendrá un nombre con el formato "*ClassName*descriptor de acceso" (por ejemplo, `CProductsAccessor`). Ambas clases se colocan en el archivo de encabezado del consumidor.  
-  
-- Si selecciona un consumidor con atributos, la clase de registro de usuario tendrá un nombre con el formato "_*ClassName*Accessor" y se insertará. Por tanto, solo podrá ver la clase de comando en el editor de texto; la clase de registro de usuario solo se puede ver como código insertado. Para obtener información acerca de cómo ver código insertado, vea [Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).  
-  
-Los ejemplos siguientes usan una clase de comando creada en el `Products` tabla de la `Northwind` base de datos para mostrar el código de consumidor generado por el Asistente para la clase de comando y la clase de registro de usuario.  
-  
-## <a name="templated-user-record-classes"></a>Clases de registro de usuario con plantilla  
+Cuando se usa el **el Asistente para consumidores OLE DB ATL** para generar un consumidor, tiene la opción de utilizar plantillas OLE DB o atributos OLE DB. En ambos casos, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando contiene código para abrir el origen de datos y el conjunto de filas especificado en el asistente. La clase de registro de usuario contiene un mapa de columnas para la tabla de base de datos seleccionada. Sin embargo, el código generado es distinto en cada caso:
 
-Si crea un consumidor OLE DB mediante las plantillas OLE DB (en lugar de los atributos OLE DB), el asistente genera código como se describe en esta sección.  
-  
-### <a name="column-data-members"></a>Miembros de datos de columna  
+- Si selecciona un consumidor con plantilla, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando tendrá el nombre que escriba en el **clase** cuadro en el Asistente (por ejemplo, `CProducts`), y la clase de registro de usuario tendrá un nombre con el formato "*ClassName*descriptor de acceso" (por ejemplo, `CProductsAccessor`). Ambas clases se colocan en el archivo de encabezado del consumidor.
 
-La primera parte de la clase de registro de usuario incluye las declaraciones de los miembros de datos y los miembros de datos de estado y longitud de cada columna enlazada a datos. Para obtener información acerca de estos miembros de datos, consulte [Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
-  
+- Si selecciona un consumidor con atributos, la clase de registro de usuario tendrá un nombre con el formato "_*ClassName*Accessor" y se insertará. Es decir, podrá ver solo la clase de comando en el editor de texto; la clase de registro de usuario solo se puede ver como código insertado. Para obtener información acerca de cómo ver código insertado, vea [Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
+
+Los ejemplos siguientes usan una clase de comando creada en el `Products` tabla de la `Northwind` base de datos para mostrar el código de consumidor generado por el Asistente para la clase de comando y la clase de registro de usuario.
+
+## <a name="templated-user-record-classes"></a>Clases de registro de usuario con plantilla
+
+Si crea un consumidor OLE DB mediante las plantillas OLE DB (en lugar de los atributos OLE DB), el asistente genera código como se describe en esta sección.
+
+### <a name="column-data-members"></a>Miembros de datos de columna
+
+La primera parte de la clase de registro de usuario incluye las declaraciones de los miembros de datos y los miembros de datos de estado y longitud de cada columna enlazada a datos. Para obtener información acerca de estos miembros de datos, consulte [Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
+
 > [!NOTE]
-> Si modifica la clase de registro de usuario o escribe su propio consumidor, las variables de datos deben preceder a las variables de estado y longitud.  
-  
+> Si modifica la clase de registro de usuario o escribe su propio consumidor, las variables de datos deben preceder a las variables de estado y longitud.
+
 > [!NOTE]
-> El Asistente para consumidores OLE DB ATL usa el `DB_NUMERIC` tipo para enlazar tipos de datos numéricos. Anteriormente, usaba `DBTYPE_VARNUMERIC` (cuyo formato se describe mediante el `DB_VARNUMERIC` escriba; vea Oledb.h). Si no utiliza el Asistente para crear consumidores, se recomienda que utilice `DB_NUMERIC`.  
-  
-```cpp  
-// Products.H : Declaration of the CProducts class  
-  
-class CProductsAccessor  
-{  
-public:  
-   // Column data members:  
-   LONG m_ProductID;  
-   TCHAR m_ProductName[41];  
-   LONG m_SupplierID;  
-   LONG m_CategoryID;  
-   TCHAR m_QuantityPerUnit[21];  
-   CURRENCY m_UnitPrice;  
-   SHORT m_UnitsInStock;  
-   SHORT m_UnitsOnOrder;  
-   SHORT m_ReorderLevel;  
-   VARIANT_BOOL m_Discontinued;  
-  
-   // Column status data members:  
-   DBSTATUS m_dwProductIDStatus;  
-   DBSTATUS m_dwProductNameStatus;  
-   DBSTATUS m_dwSupplierIDStatus;  
-   DBSTATUS m_dwCategoryIDStatus;  
-   DBSTATUS m_dwQuantityPerUnitStatus;  
-   DBSTATUS m_dwUnitPriceStatus;  
-   DBSTATUS m_dwUnitsInStockStatus;  
-   DBSTATUS m_dwUnitsOnOrderStatus;  
-   DBSTATUS m_dwReorderLevelStatus;  
-   DBSTATUS m_dwDiscontinuedStatus;  
-  
-   // Column length data members:  
-   DBLENGTH m_dwProductIDLength;  
-   DBLENGTH m_dwProductNameLength;  
-   DBLENGTH m_dwSupplierIDLength;  
-   DBLENGTH m_dwCategoryIDLength;  
-   DBLENGTH m_dwQuantityPerUnitLength;  
-   DBLENGTH m_dwUnitPriceLength;  
-   DBLENGTH m_dwUnitsInStockLength;  
-   DBLENGTH m_dwUnitsOnOrderLength;  
-   DBLENGTH m_dwReorderLevelLength;  
-   DBLENGTH m_dwDiscontinuedLength;  
-```  
-  
-### <a name="rowset-properties"></a>Propiedades del conjunto de filas  
+> El Asistente para consumidores OLE DB ATL usa el `DB_NUMERIC` tipo para enlazar tipos de datos numéricos. Anteriormente, usaba `DBTYPE_VARNUMERIC` (cuyo formato se describe mediante el `DB_VARNUMERIC` escriba; vea Oledb.h). Si no utiliza el Asistente para crear consumidores, se recomienda que utilice `DB_NUMERIC`.
 
-A continuación, el asistente establece las propiedades del conjunto de filas. Si seleccionó **Cambiar**, **Insertar**o **Eliminar** en el Asistente para consumidores OLE DB ATL, las propiedades adecuadas se establecen aquí (siempre se establece DBPROP_IRowsetChange y, después, una o varias de las propiedades DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT y DBPROPVAL_UP_DELETE, respectivamente).  
-  
-```cpp  
-void GetRowsetProperties(CDBPropSet* pPropSet)  
-{  
-   pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
-   pPropSet->AddProperty(DBPROP_CANSCROLLBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
-   pPropSet->AddProperty(DBPROP_IRowsetChange, true, DBPROPOPTIONS_OPTIONAL);  
-   pPropSet->AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE);  
-}  
-```  
-  
-### <a name="command-or-table-class"></a>Clase de comando o de tabla  
+```cpp
+// Products.H : Declaration of the CProducts class
 
-Si se especifica una clase de comando, el asistente declara la clase de comando; para código con plantilla, el comando tiene el siguiente aspecto:  
-  
-```cpp  
-DEFINE_COMMAND_EX(CProductsAccessor, L" \  
-SELECT \  
-   ProductID, \  
-   ProductName, \  
-   SupplierID, \  
-   CategoryID, \  
-   QuantityPerUnit, \  
-   UnitPrice, \  
-   UnitsInStock, \  
-   UnitsOnOrder, \  
-   ReorderLevel, \  
-   Discontinued \  
-   FROM dbo.Products")  
-```  
-  
-### <a name="column-map"></a>Mapa de columnas  
+class CProductsAccessor
+{
+public:
+   // Column data members:
+   LONG m_ProductID;
+   TCHAR m_ProductName[41];
+   LONG m_SupplierID;
+   LONG m_CategoryID;
+   TCHAR m_QuantityPerUnit[21];
+   CURRENCY m_UnitPrice;
+   SHORT m_UnitsInStock;
+   SHORT m_UnitsOnOrder;
+   SHORT m_ReorderLevel;
+   VARIANT_BOOL m_Discontinued;
 
-El asistente genera los enlaces de columna o el mapa de columnas. Para solucionar varios problemas con algunos proveedores, el código siguiente podría enlazar columnas en un orden diferente del que indica el proveedor.  
-  
-```cpp  
-   BEGIN_COLUMN_MAP(CProductsAccessor)  
-      COLUMN_ENTRY_LENGTH_STATUS(1, m_ProductID, m_dwProductIDLength, m_dwProductIDStatus)  
-      COLUMN_ENTRY_LENGTH_STATUS(2, m_ProductName, m_dwProductNameLength, m_dwProductNameStatus)  
-      COLUMN_ENTRY_LENGTH_STATUS(3, m_SupplierID, m_dwSupplierIDLength, m_dwSupplierIDStatus)  
-      COLUMN_ENTRY_LENGTH_STATUS(4, m_CategoryID, m_dwCategoryIDLength, m_dwCategoryIDStatus)  
-      COLUMN_ENTRY_LENGTH_STATUS(5, m_QuantityPerUnit, m_dwQuantityPerUnitLength, m_dwQuantityPerUnitStatus)  
-      _COLUMN_ENTRY_CODE(6, DBTYPE_CY, _SIZE_TYPE(m_UnitPrice), 0, 0, offsetbuf(m_UnitPrice), offsetbuf(m_dwUnitPriceLength), offsetbuf(m_dwUnitPriceStatus))  
-      COLUMN_ENTRY_LENGTH_STATUS(7, m_UnitsInStock, m_dwUnitsInStockLength, m_dwUnitsInStockStatus)  
-      COLUMN_ENTRY_LENGTH_STATUS(8, m_UnitsOnOrder, m_dwUnitsOnOrderLength, m_dwUnitsOnOrderStatus)  
-      COLUMN_ENTRY_LENGTH_STATUS(9, m_ReorderLevel, m_dwReorderLevelLength, m_dwReorderLevelStatus)  
-      _COLUMN_ENTRY_CODE(10, DBTYPE_BOOL, _SIZE_TYPE(m_Discontinued), 0, 0, offsetbuf(m_Discontinued), offsetbuf(m_dwDiscontinuedLength), offsetbuf(m_dwDiscontinuedStatus))  
-   END_COLUMN_MAP()  
-};  
-```  
-  
-### <a name="class-declaration"></a>Declaración de clase  
+   // Column status data members:
+   DBSTATUS m_dwProductIDStatus;
+   DBSTATUS m_dwProductNameStatus;
+   DBSTATUS m_dwSupplierIDStatus;
+   DBSTATUS m_dwCategoryIDStatus;
+   DBSTATUS m_dwQuantityPerUnitStatus;
+   DBSTATUS m_dwUnitPriceStatus;
+   DBSTATUS m_dwUnitsInStockStatus;
+   DBSTATUS m_dwUnitsOnOrderStatus;
+   DBSTATUS m_dwReorderLevelStatus;
+   DBSTATUS m_dwDiscontinuedStatus;
 
-Por último, el asistente genera una declaración de clase de comando como la siguiente:  
-  
-```cpp  
-class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
-```  
-  
-## <a name="attribute-injected-user-record-classes"></a>Clases de registro de usuario con atributos  
+   // Column length data members:
+   DBLENGTH m_dwProductIDLength;
+   DBLENGTH m_dwProductNameLength;
+   DBLENGTH m_dwSupplierIDLength;
+   DBLENGTH m_dwCategoryIDLength;
+   DBLENGTH m_dwQuantityPerUnitLength;
+   DBLENGTH m_dwUnitPriceLength;
+   DBLENGTH m_dwUnitsInStockLength;
+   DBLENGTH m_dwUnitsOnOrderLength;
+   DBLENGTH m_dwReorderLevelLength;
+   DBLENGTH m_dwDiscontinuedLength;
+```
 
-Si crea un consumidor OLE DB mediante los atributos de base de datos ([db_command](../../windows/db-command.md) o [db_table](../../windows/db-table.md)), los atributos insertan una clase de registro de usuario cuyo nombre tiene el formato "_*ClassName*Accessor". Por ejemplo, si la clase de comando se llama `COrders`, la clase de registro de usuario será `_COrdersAccessor`. Aunque la clase de registro de usuario aparezca en **vista de clases**, doble clic en él se desplaza a la clase de comando o una tabla en el archivo de encabezado en su lugar. En estos casos, solo se puede ver la declaración real de la clase de registro de usuario mediante la visualización del código con atributos.  
-  
-Podría haber complicaciones si se agregan o anulan métodos en consumidores con atributos. Por ejemplo, podría agregar un constructor `_COrdersAccessor` a la declaración `COrders` , pero tenga en cuenta que en realidad se agrega un constructor a la clase `COrdersAccessor` insertada. Dicho constructor puede inicializar las columnas o los parámetros, pero no se puede crear a un constructor de copias de este modo, ya que no se puede crear instancias directamente del objeto `COrdersAccessor` . Si necesita un constructor (u otro método) directamente en la clase `COrders` , se recomienda definir una clase nueva derivada de `COrders` y agregarle los métodos necesarios.  
-  
-En el ejemplo siguiente, el asistente genera una declaración para la clase `COrders`, pero la clase de registro de usuario `COrdersAccessor` no aparece porque los atributos la insertan.  
-  
-```cpp  
-#define _ATL_ATTRIBUTES  
-#include <atlbase.h>  
-#include <atldbcli.h>  
-[  
-   db_source(L"your connection string"),  
-   db_command(L"Select ShipName from Orders;")  
-]  
-class COrders  
-{  
-public:  
-  
-   // COrders()            // incorrect constructor name  
-   _COrdersAccessor()      // correct constructor name  
-   {  
-   }  
-      [db_column(1) ] TCHAR m_ShipName[41];  
-   };  
-```  
-  
-La declaración de clase de comando insertada presenta el siguiente aspecto:  
-  
-```cpp  
-class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
-```  
-  
-La mayoría del código insertado es igual o similar a la versión de la plantilla. Las diferencias principales están en los métodos insertados, que se describen en [Métodos generados por el Asistente para consumidores](../../data/oledb/consumer-wizard-generated-methods.md).  
-  
-Para obtener información acerca de cómo ver código insertado, vea [Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).  
-  
-## <a name="see-also"></a>Vea también  
+### <a name="rowset-properties"></a>Propiedades del conjunto de filas
+
+A continuación, el asistente establece las propiedades del conjunto de filas. Si seleccionó **Cambiar**, **Insertar**o **Eliminar** en el Asistente para consumidores OLE DB ATL, las propiedades adecuadas se establecen aquí (siempre se establece DBPROP_IRowsetChange y, después, una o varias de las propiedades DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT y DBPROPVAL_UP_DELETE, respectivamente).
+
+```cpp
+void GetRowsetProperties(CDBPropSet* pPropSet)
+{
+   pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);
+   pPropSet->AddProperty(DBPROP_CANSCROLLBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);
+   pPropSet->AddProperty(DBPROP_IRowsetChange, true, DBPROPOPTIONS_OPTIONAL);
+   pPropSet->AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE);
+}
+```
+
+### <a name="command-or-table-class"></a>Clase de comando o de tabla
+
+Si se especifica una clase de comando, el asistente declara la clase de comando; para código con plantilla, el comando tiene el siguiente aspecto:
+
+```cpp
+DEFINE_COMMAND_EX(CProductsAccessor, L" \
+SELECT \
+   ProductID, \
+   ProductName, \
+   SupplierID, \
+   CategoryID, \
+   QuantityPerUnit, \
+   UnitPrice, \
+   UnitsInStock, \
+   UnitsOnOrder, \
+   ReorderLevel, \
+   Discontinued \
+   FROM dbo.Products")
+```
+
+### <a name="column-map"></a>Mapa de columnas
+
+El asistente genera los enlaces de columna o el mapa de columnas. Para solucionar varios problemas con algunos proveedores, el código siguiente podría enlazar columnas en un orden diferente del que indica el proveedor.
+
+```cpp
+   BEGIN_COLUMN_MAP(CProductsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_ProductID, m_dwProductIDLength, m_dwProductIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_ProductName, m_dwProductNameLength, m_dwProductNameStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_SupplierID, m_dwSupplierIDLength, m_dwSupplierIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(4, m_CategoryID, m_dwCategoryIDLength, m_dwCategoryIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(5, m_QuantityPerUnit, m_dwQuantityPerUnitLength, m_dwQuantityPerUnitStatus)
+      _COLUMN_ENTRY_CODE(6, DBTYPE_CY, _SIZE_TYPE(m_UnitPrice), 0, 0, offsetbuf(m_UnitPrice), offsetbuf(m_dwUnitPriceLength), offsetbuf(m_dwUnitPriceStatus))
+      COLUMN_ENTRY_LENGTH_STATUS(7, m_UnitsInStock, m_dwUnitsInStockLength, m_dwUnitsInStockStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(8, m_UnitsOnOrder, m_dwUnitsOnOrderLength, m_dwUnitsOnOrderStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(9, m_ReorderLevel, m_dwReorderLevelLength, m_dwReorderLevelStatus)
+      _COLUMN_ENTRY_CODE(10, DBTYPE_BOOL, _SIZE_TYPE(m_Discontinued), 0, 0, offsetbuf(m_Discontinued), offsetbuf(m_dwDiscontinuedLength), offsetbuf(m_dwDiscontinuedStatus))
+   END_COLUMN_MAP()
+};
+```
+
+### <a name="class-declaration"></a>Declaración de clase
+
+Por último, el asistente genera una declaración de clase de comando como la siguiente:
+
+```cpp
+class CProducts : public CCommand<CAccessor<CProductsAccessor>>
+```
+
+## <a name="attribute-injected-user-record-classes"></a>Clases de registro de usuario con atributos
+
+Si crea un consumidor OLE DB mediante los atributos de base de datos ([db_command](../../windows/db-command.md) o [db_table](../../windows/db-table.md)), los atributos insertan una clase de registro de usuario cuyo nombre tiene el formato "_*ClassName*Accessor". Por ejemplo, si la clase de comando se llama `COrders`, la clase de registro de usuario será `_COrdersAccessor`. Aunque la clase de registro de usuario aparezca en **vista de clases**, doble clic en él se desplaza a la clase de comando o una tabla en el archivo de encabezado en su lugar. En estos casos, solo se puede ver la declaración real de la clase de registro de usuario mediante la visualización del código con atributos.
+
+Podría haber complicaciones si se agregan o anulan métodos en consumidores con atributos. Por ejemplo, podría agregar un constructor `_COrdersAccessor` a la declaración `COrders` , pero tenga en cuenta que en realidad se agrega un constructor a la clase `COrdersAccessor` insertada. Dicho constructor puede inicializar las columnas o los parámetros, pero no se puede crear a un constructor de copias de este modo, ya que no se puede crear instancias directamente el `COrdersAccessor` objeto. Si necesita un constructor (u otro método) directamente en el `COrders` (clase), se recomienda definir una nueva clase que deriva de `COrders` y agregue los métodos necesarios.
+
+En el ejemplo siguiente, el asistente genera una declaración de la clase `COrders`, pero la clase de registro de usuario `COrdersAccessor` no aparece, porque los atributos la insertan.
+
+```cpp
+#define _ATL_ATTRIBUTES
+#include <atlbase.h>
+#include <atldbcli.h>
+[
+   db_source(L"your connection string"),
+   db_command(L"Select ShipName from Orders;")
+]
+class COrders
+{
+public:
+
+   // COrders()            // incorrect constructor name
+   _COrdersAccessor()      // correct constructor name
+   {
+   }
+      [db_column(1) ] TCHAR m_ShipName[41];
+   };
+```
+
+La declaración de clase de comando insertada presenta el siguiente aspecto:
+
+```cpp
+class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
+```
+
+La mayoría del código insertado es igual o similar a la versión de la plantilla. Las diferencias principales están en los métodos insertados, que se describen en [Métodos generados por el Asistente para consumidores](../../data/oledb/consumer-wizard-generated-methods.md).
+
+Para obtener información acerca de cómo ver código insertado, vea [Depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
+
+## <a name="see-also"></a>Vea también
 
 [Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

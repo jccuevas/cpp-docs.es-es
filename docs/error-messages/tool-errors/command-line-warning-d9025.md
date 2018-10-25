@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5bcc7cbe6fcd8a61e15e80c43f27703957a1e88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083092"
 ---
 # <a name="command-line-warning-d9025"></a>Advertencia de la línea de comandos D9025
 
@@ -35,6 +35,6 @@ Si aparece esta advertencia al compilar desde el entorno de desarrollo y no est�
 
 - Una opción puede especificarse en el código o en la configuración del proyecto. Si observa el compilador [páginas de propiedades de línea de comandos](../../ide/command-line-property-pages.md) y si ve las opciones en conflicto en el **todas las opciones** , a continuación, se establecen las opciones de páginas de propiedades del proyecto, en caso contrario, las opciones de campo se establecen en el código fuente.
 
-     Si las opciones se establecen en páginas de propiedades del proyecto, busque en la página de propiedades preprocesador del compilador (con el nodo del proyecto seleccionado en el Explorador de soluciones).  Si no ve la opción definida allí, revise la configuración de la página de propiedades preprocesador para cada archivo de código fuente (en el Explorador de soluciones) para asegurarse de que no se agrega no existe.
+   Si las opciones se establecen en páginas de propiedades del proyecto, busque en la página de propiedades preprocesador del compilador (con el nodo del proyecto seleccionado en el Explorador de soluciones).  Si no ve la opción definida allí, revise la configuración de la página de propiedades preprocesador para cada archivo de código fuente (en el Explorador de soluciones) para asegurarse de que no se agrega no existe.
 
-     Si las opciones se establecen en el código se podría establecer en el código o en los encabezados de windows.  Puede intentar crear un archivo preprocesado ([/P](../../build/reference/p-preprocess-to-a-file.md)) y buscar el símbolo.
+   Si las opciones se establecen en el código se podría establecer en el código o en los encabezados de windows.  Puede intentar crear un archivo preprocesado ([/P](../../build/reference/p-preprocess-to-a-file.md)) y buscar el símbolo.

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e94fa412b76107dde90d3a6a664ec68c6b6bdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078802"
 ---
 # <a name="temporary-objects"></a>Objetos temporales
 
@@ -41,9 +41,9 @@ En algunos casos, es necesario que el compilador cree objetos temporales. Estos 
                     //   value.
     ```
 
-     Como el valor devuelto no se copia en otro objeto, se crea un objeto temporal. Un caso más común de creación de objetos temporales es durante la evaluación de una expresión en la que deben llamarse a funciones de operador sobrecargadas. Estas funciones de operador sobrecargadas devuelven un tipo definido por el usuario que normalmente no se copia a otro objeto.
+   Como el valor devuelto no se copia en otro objeto, se crea un objeto temporal. Un caso más común de creación de objetos temporales es durante la evaluación de una expresión en la que deben llamarse a funciones de operador sobrecargadas. Estas funciones de operador sobrecargadas devuelven un tipo definido por el usuario que normalmente no se copia a otro objeto.
 
-     Considere la expresión `ComplexResult = Complex1 + Complex2 + Complex3`. La expresión `Complex1 + Complex2` se evalúa y el resultado se almacena en un objeto temporal. A continuación, la expresión *temporal* `+ Complex3` se evalúa, y el resultado se copia en `ComplexResult` (no se sobrecarga la suponiendo que el operador de asignación).
+   Considere la expresión `ComplexResult = Complex1 + Complex2 + Complex3`. La expresión `Complex1 + Complex2` se evalúa y el resultado se almacena en un objeto temporal. A continuación, la expresión *temporal* `+ Complex3` se evalúa, y el resultado se copia en `ComplexResult` (no se sobrecarga la suponiendo que el operador de asignación).
 
 - Para almacenar el resultado de una conversión en un tipo definido por el usuario. Cuando un objeto de un tipo determinado se convierte explícitamente en un tipo definido por el usuario, este nuevo objeto se crea como un objeto temporal.
 

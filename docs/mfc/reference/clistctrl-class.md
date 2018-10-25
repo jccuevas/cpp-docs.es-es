@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f89d70ed5b7a84cdbed61784b59b0748abc6432d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083326"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
 
@@ -444,19 +444,19 @@ Los controles de vista de lista pueden mostrar su contenido de cuatro maneras di
 
 - Vista de iconos
 
-     Cada elemento aparece como un icono de tamaño completo (32 x 32 píxeles) con una etiqueta debajo de él. El usuario puede arrastrar los elementos en cualquier ubicación en la ventana de vista de lista.
+   Cada elemento aparece como un icono de tamaño completo (32 x 32 píxeles) con una etiqueta debajo de él. El usuario puede arrastrar los elementos en cualquier ubicación en la ventana de vista de lista.
 
 - Vista de iconos pequeños
 
-     Cada elemento aparece como un icono pequeño (16 x 16 píxeles) con la etiqueta a la derecha de la misma. El usuario puede arrastrar los elementos en cualquier ubicación en la ventana de vista de lista.
+   Cada elemento aparece como un icono pequeño (16 x 16 píxeles) con la etiqueta a la derecha de la misma. El usuario puede arrastrar los elementos en cualquier ubicación en la ventana de vista de lista.
 
 - vista de lista
 
-     Cada elemento aparece como un pequeño icono con una etiqueta a la derecha de la misma. Los elementos se organizan en columnas y no se pueden arrastrar a cualquier ubicación en la ventana de vista de lista.
+   Cada elemento aparece como un pequeño icono con una etiqueta a la derecha de la misma. Los elementos se organizan en columnas y no se pueden arrastrar a cualquier ubicación en la ventana de vista de lista.
 
 - Vista de informe
 
-     Cada elemento aparece en su propia línea, con información adicional que se organizan en columnas a la derecha. La columna de la izquierda contiene el pequeño icono y una etiqueta, y las columnas subsiguientes contienen los subelementos especificados por la aplicación. Un control de encabezado incrustado (clase [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa estas columnas. Para obtener más información sobre el control de encabezado y las columnas de una vista de informe, vea [utilizando CListCtrl: agregar columnas al Control (vista de informe)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Cada elemento aparece en su propia línea, con información adicional que se organizan en columnas a la derecha. La columna de la izquierda contiene el pequeño icono y una etiqueta, y las columnas subsiguientes contienen los subelementos especificados por la aplicación. Un control de encabezado incrustado (clase [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa estas columnas. Para obtener más información sobre el control de encabezado y las columnas de una vista de informe, vea [utilizando CListCtrl: agregar columnas al Control (vista de informe)](../../mfc/adding-columns-to-the-control-report-view.md).
 
 El estilo de vista de lista actual del control determina la vista actual. Para obtener más información sobre estos estilos y su uso, consulte [utilizando CListCtrl: cambiar los estilos de Control de lista](../../mfc/changing-list-control-styles.md).
 
@@ -466,19 +466,19 @@ Además de los estilos de lista estándar, la clase `CListCtrl` admite un gran c
 
 - Mantenga la selección
 
-     Cuando está habilitada, permite la selección automática de un elemento cuando el cursor permanece sobre el elemento durante un período de tiempo determinado.
+   Cuando está habilitada, permite la selección automática de un elemento cuando el cursor permanece sobre el elemento durante un período de tiempo determinado.
 
 - Vistas de lista virtual
 
-     Cuando está habilitada, permite que el control admitir el máximo de elementos DWORD. Esto es posible mediante la colocación de la sobrecarga de administración de datos de elemento en la aplicación. Excepto la información de foco y selección de elementos, la aplicación debe administrar toda la información de elemento. Para obtener más información, consulte [utilizando CListCtrl: los controles de lista Virtual](../../mfc/virtual-list-controls.md).
+   Cuando está habilitada, permite que el control admitir el máximo de elementos DWORD. Esto es posible mediante la colocación de la sobrecarga de administración de datos de elemento en la aplicación. Excepto la información de foco y selección de elementos, la aplicación debe administrar toda la información de elemento. Para obtener más información, consulte [utilizando CListCtrl: los controles de lista Virtual](../../mfc/virtual-list-controls.md).
 
 - Activación de uno y dos clics
 
-     Cuando está habilitada, permite el seguimiento activo (resaltado automática del texto del elemento) y la activación de uno o dos clics del elemento resaltado.
+   Cuando está habilitada, permite el seguimiento activo (resaltado automática del texto del elemento) y la activación de uno o dos clics del elemento resaltado.
 
 - Arrastre y coloque la ordenación de columnas
 
-     Cuando está habilitada, permite arrastrar y colocar reordenación de columnas en un control de vista de lista. Solo está disponible en la vista de informe.
+   Cuando está habilitada, permite arrastrar y colocar reordenación de columnas en un control de vista de lista. Solo está disponible en la vista de informe.
 
 Para obtener información sobre el uso de estos nuevos estilos extendidos, vea [utilizando CListCtrl: cambiar los estilos de Control de lista](../../mfc/changing-list-control-styles.md).
 
@@ -496,19 +496,19 @@ Los iconos, imágenes de elemento de encabezado y aplicación - definen los Esta
 
 - Icono grande
 
-     Se utiliza en la vista de iconos para iconos de tamaño completo.
+   Se utiliza en la vista de iconos para iconos de tamaño completo.
 
 - Icono pequeño
 
-     Usa en el icono pequeño, lista y vistas de informe de versiones reducidas de los iconos utilizados en la vista de iconos.
+   Usa en el icono pequeño, lista y vistas de informe de versiones reducidas de los iconos utilizados en la vista de iconos.
 
 - Estado definido por la aplicación
 
-     Contiene las imágenes de estado, que se muestran al lado del icono de un elemento para indicar el estado definido por la aplicación.
+   Contiene las imágenes de estado, que se muestran al lado del icono de un elemento para indicar el estado definido por la aplicación.
 
 - Elemento de encabezado
 
-     Se utiliza en la vista de informe para imágenes pequeñas que aparecen en cada elemento del control de encabezado.
+   Se utiliza en la vista de informe para imágenes pequeñas que aparecen en cada elemento del control de encabezado.
 
 De forma predeterminada, un control de vista de lista destruye las listas de imágenes asignadas cuando se destruye; Sin embargo, el desarrollador puede personalizar este comportamiento mediante la destrucción de cada lista de imágenes cuando ya no se utiliza, según lo determinado por la aplicación. Para obtener más información, consulte [utilizando CListCtrl: elementos de lista y listas de imágenes](../list-items-and-image-lists.md).
 

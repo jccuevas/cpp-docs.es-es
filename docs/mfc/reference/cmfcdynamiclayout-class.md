@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 868bc5271fd52e32ecb01f0155fe1c11181ac2ea
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1313c50682a2d2baad124db512e7e0ad4b441284
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082324"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Clase CMFCDynamicLayout
 
@@ -101,7 +101,6 @@ Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas c
 BOOL AddItem(
     HWND hwnd,
     MoveSettings moveSettings SizeSettings sizeSettings);
-
 
 BOOL AddItem(
     int nID,
@@ -338,7 +337,6 @@ Se trata de una clase anidada dentro de `CMFCDynamicLayout`.
 ## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
 
 Compruebe si los datos de movimiento especifican un movimiento horizontal distinto de cero.
-
 
 ```
 BOOL IsHorizontal() const

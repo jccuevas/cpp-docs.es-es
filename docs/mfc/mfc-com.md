@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 5ae1ccdcda4fac1cbd0660b054d792999ae449fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890041"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079293"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -52,7 +52,7 @@ Tecnologías activas incluyen tecnologías de cliente y servidor, incluido lo si
 
 - [Automatización](../mfc/automation.md) (anteriormente conocida como automatización OLE) permite que una aplicación manipule objetos implementados en otra aplicación o "exponer" objetos de forma que se puedan manipular.
 
-     El objeto automatizado puede ser local o remoto (en otra máquina accesible a través de una red). La automatización está disponible para objetos COM y OLE.
+   El objeto automatizado puede ser local o remoto (en otra máquina accesible a través de una red). La automatización está disponible para objetos COM y OLE.
 
 - En esta sección también proporciona información sobre cómo escribir componentes COM mediante MFC, por ejemplo, en [puntos de conexión](../mfc/connection-points.md).
 

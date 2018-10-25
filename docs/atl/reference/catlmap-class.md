@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1223de9791ea5c47c7ef3cf9ee5b490c5238fec3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078529"
 ---
 # <a name="catlmap-class"></a>CAtlMap (clase)
 
@@ -62,8 +62,8 @@ Esta clase proporciona métodos para crear y administrar un objeto de mapa.
 
 ```
 template <typename K,
-          typename V, 
-          class KTraits = CElementTraits<K>, 
+          typename V,
+          class KTraits = CElementTraits<K>,
           class VTraits = CElementTraits<V>>
 class CAtlMap
 ```
@@ -97,7 +97,7 @@ El código utilizado para copiar o mover elementos de valor.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Clase CAtlMap::CPair](#cpair_class)|Una clase que contiene los elementos clave y valor.|  
+|[Clase CAtlMap::CPair](#cpair_class)|Una clase que contiene los elementos clave y valor.|
 
 ### <a name="cpair-data-members"></a>Miembros de datos CPair
 
@@ -145,7 +145,7 @@ El código utilizado para copiar o mover elementos de valor.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Reemplaza o agrega un nuevo elemento a la `CAtlMap`.|  
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Reemplaza o agrega un nuevo elemento a la `CAtlMap`.|
 
 ## <a name="remarks"></a>Comentarios
 

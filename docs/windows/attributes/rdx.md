@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffee10ea334c6c425aa5ecd81705ef1915dc80c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e48d71ace613eac040f83023f70f2a1f28d09f6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792141"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082313"
 ---
 # <a name="rdx"></a>rdx
 
@@ -62,7 +62,7 @@ Este atributo se puede usar junto con el [coclase](coclass.md), [progid](progid.
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Ejemplo
 
@@ -90,4 +90,4 @@ public:
 ## <a name="see-also"></a>Vea también
 
 [Atributos COM](com-attributes.md)<br/>
-[registration_script](registration-script.md)  
+[registration_script](registration-script.md)

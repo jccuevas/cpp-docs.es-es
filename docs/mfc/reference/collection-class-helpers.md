@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083378"
 ---
 # <a name="collection-class-helpers"></a>Asistentes de clase de colección
 
@@ -152,7 +152,6 @@ Número de elementos que se va a volcar.
 El `CArray::Dump`, `CList::Dump`, y `CMap::Dump` funciones llamar si la profundidad del volcado de memoria es mayor que 0.
 
 La implementación predeterminada no hace nada. Si se derivan de los elementos de la colección `CObject`, la invalidación normalmente creará una iteración por los elementos de la colección, una llamada a `Dump` para cada elemento a su vez.
-
 
 ### <a name="requirements"></a>Requisitos
 
