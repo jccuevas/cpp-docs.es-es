@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081876"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059849"
 ---
 # <a name="thread-local-storage-tls"></a>Almacenamiento local para el subproceso (TLS)
 
@@ -100,7 +100,7 @@ Deben tenerse en cuenta las siguientes instrucciones cuando se declaran objetos 
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     Esta restricción no se aplica a C++. Como C++ permite la inicialización dinámica de todos los objetos, puede inicializar un objeto mediante una expresión que utiliza la dirección de una variable local para el subproceso. Esto se hace del mismo modo que la construcción de objetos locales para el subproceso. Por ejemplo, el código mostrado anteriormente no genera un error cuando se compila como un archivo de origen de C++. Tenga en cuenta que la dirección de una variable local para el subproceso solo será válida mientras exista el subproceso en el que se obtuvo la dirección.
+   Esta restricción no se aplica a C++. Como C++ permite la inicialización dinámica de todos los objetos, puede inicializar un objeto mediante una expresión que utiliza la dirección de una variable local para el subproceso. Esto se hace del mismo modo que la construcción de objetos locales para el subproceso. Por ejemplo, el código mostrado anteriormente no genera un error cuando se compila como un archivo de origen de C++. Tenga en cuenta que la dirección de una variable local para el subproceso solo será válida mientras exista el subproceso en el que se obtuvo la dirección.
 
 - C estándar permite la inicialización de un objeto o de una variable con una expresión que contenga una referencia a sí misma, pero solo para objetos cuyo tamaño no sea estático. Aunque, en general, C++ permite esa inicialización dinámica de objetos con una expresión que contenga una referencia a sí misma, este tipo de inicialización no se permite con objetos locales para el subproceso. Por ejemplo:
 
@@ -110,9 +110,9 @@ Deben tenerse en cuenta las siguientes instrucciones cuando se declaran objetos 
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     Tenga en cuenta que una expresión `sizeof` que incluye el objeto que se está inicializando no representa una referencia a sí misma y se permite en C y en C++.
+   Tenga en cuenta que una expresión `sizeof` que incluye el objeto que se está inicializando no representa una referencia a sí misma y se permite en C y en C++.
 
-     C++ no permite este tipo de inicialización dinámica de datos de subproceso debido a posibles mejoras futuras en el servicio de almacenamiento local para el subproceso.
+   C++ no permite este tipo de inicialización dinámica de datos de subproceso debido a posibles mejoras futuras en el servicio de almacenamiento local para el subproceso.
 
 - En los sistemas operativos de Windows anteriores a Windows Vista, `__declspec`(thread) tiene algunas limitaciones. Si una DLL declara cualquier dato u objeto como `__declspec`(thread), puede producir un error de protección si se carga dinámicamente. Después de carga el archivo DLL mediante [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), se producirá un error del sistema siempre que el código hace referencia a la `__declspec`datos (subproceso). Como el espacio para variables globales de un subproceso se asigna en tiempo de ejecución, el tamaño de este espacio se basa en un cálculo de los requisitos de la aplicación más los requisitos de todas las DLL que se vinculan estáticamente. Cuando se utiliza `LoadLibrary`, no se puede extender este espacio para albergar las variables locales para el subproceso declaradas con `__declspec`(thread). Use la API de TLS, como [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), en el archivo DLL para asignar TLS si es posible que se puede cargar la DLL con `LoadLibrary`.
 

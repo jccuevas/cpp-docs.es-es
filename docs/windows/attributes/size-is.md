@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ebd9a1606adadc0b0406d8ed8448a965e4d1489
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cbcc63e2fb9cadb576ec8272809b523a1138707
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063619"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -58,7 +58,7 @@ Vea el ejemplo de [first_is](first-is.md) para obtener un ejemplo de cómo espec
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|`max_is`|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -68,4 +68,4 @@ Para obtener más información acerca de los contextos de atributo, vea [context
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
-[length_is](length-is.md)  
+[length_is](length-is.md)

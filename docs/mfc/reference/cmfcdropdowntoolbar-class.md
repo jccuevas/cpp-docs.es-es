@@ -1,7 +1,7 @@
 ---
 title: CMFCDropDownToolBar (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/188/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 675a155c8f19ca9c0ab30d15da9be7f5b3b40e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5d781cb78b1dce9f7ab3580e7acd32e3e6dbac55
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063346"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar (clase)
 
@@ -115,7 +115,6 @@ En el ejemplo siguiente se muestra cómo usar el `Create` método en el `CMFCDro
 
 ##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu
 
-
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
@@ -164,12 +163,11 @@ Distinto de cero si el método es correcto; de lo contrario, 0.
 
 ### <a name="remarks"></a>Comentarios
 
-El [cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) método llama a este método para cargar las imágenes que están asociadas con la barra de herramientas. Invalide este método para realizar la carga personalizada de recursos de imagen.
+El método [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) llama a este método para cargar las imágenes asociadas a la barra de herramientas. Invalide este método para realizar la carga personalizada de recursos de imagen.
 
 Llame al método `LoadBitmapEx` para cargar imágenes adicionales después de crear la barra de herramientas.
 
 ##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar
-
 
 ```
 virtual BOOL LoadToolBar(
@@ -184,19 +182,25 @@ virtual BOOL LoadToolBar(
 
 ### <a name="parameters"></a>Parámetros
 
-*uiResID*<br/>
-[in] [in] *uiColdResID*
-*uiMenuResID*<br/>
-[in] [in] *BOOL*
-*uiDisabledResID*<br/>
-[in] [in] *uiMenuDisabledResID* [in] *uiHotResID*
+[in] *uiResID*<br/>
+
+[in] *uiColdResID*<br/>
+
+[in] *uiMenuResID*<br/>
+
+[in] *BOOL*<br/>
+
+[in] *uiDisabledResID*<br/>
+
+[in] *uiMenuDisabledResID*<br/>
+
+[in] *uiHotResID*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp
-
 
 ```
 afx_msg void OnLButtonUp(
@@ -206,13 +210,13 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>Parámetros
 
-*nFlags*<br/>
-[in] [in] *punto*
+[in] *nFlags*<br/>
+
+[in] *punto*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove
-
 
 ```
 afx_msg void OnMouseMove(
@@ -222,13 +226,13 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>Parámetros
 
-*nFlags*<br/>
-[in] [in] *punto*
+[in] *nFlags*<br/>
+
+[in] *punto*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand
-
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -236,14 +240,13 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -253,8 +256,9 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parámetros
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -267,6 +271,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton (clase)](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
 [Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

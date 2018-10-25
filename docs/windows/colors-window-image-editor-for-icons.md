@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a65959ffc149b93c6d9b28667647d8f49cfc1f2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063242"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Ventana Colores (Editor de imágenes para iconos)
 
@@ -36,8 +36,8 @@ El **colores** ventana consta de dos partes:
 
 2. El **indicador de Color**, que muestra los colores de primer y segundo plano y selectores de colores de pantalla e inversos.
 
-   ![Ventana colores](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Ventana Colores
+   ![Ventana colores](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
+   Ventana Colores
 
 > [!NOTE]
 > El **pantalla color** y **color inverso** herramientas solo están disponibles para iconos y cursores.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61743dfdb5eb684cbf09705ace4ce2531c292ff4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d570a2302f072d375962176f0e139035b4ec3ccc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059563"
 ---
 # <a name="requirescategory"></a>requires_category
 
@@ -44,7 +44,7 @@ El identificador de la categoría necesaria.
 
 El **requires_category** atributo de C++ especifica las categorías de componentes requeridas por la clase de destino. Para obtener más información, consulte [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
 
-Este atributo requiere que el [coclase](coclass.md), [progid](progid.md), o [vi_progid](vi-progid.md) atributo (u otro atributo que implique uno de estos) se aplica también al mismo elemento.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento.
 
 ## <a name="example"></a>Ejemplo
 
@@ -75,9 +75,9 @@ class CMyClass {};
 |**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos COM](com-attributes.md)<br/>
-[implements_category](implements-category.md)  
+[implements_category](implements-category.md)

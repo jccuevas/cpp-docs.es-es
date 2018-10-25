@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cb9202d020aee86a4ebe3892fa8dd84ec4c4577
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061633"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +31,7 @@ Crea un comando OLE DB.
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -88,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
@@ -113,15 +113,15 @@ Si no especifica un valor para *enlaces*, **db_command** analizará el bloque de
 *bulk_fetch*<br/>
 (Opcional) Un valor entero que especifica el número de filas que se va a capturar.
 
-El valor predeterminado es 1, que especifica la única fila (el conjunto de filas será del tipo [CRowset](../../data/oledb/crowset-class.md)).
+El valor predeterminado es 1, que especifica que se obtendrá una única fila (el conjunto de filas será del tipo [CRowset](../../data/oledb/crowset-class.md)).
 
-Un valor superior a 1 especifica una obtención de filas masiva. Obtención masiva de filas hace referencia a la capacidad de conjuntos de filas masivos de obtener varios identificadores de fila (el conjunto de filas será del tipo [CBulkRowset](../../data/oledb/cbulkrowset-class.md) y llamará a `SetRows` con el número especificado de filas).
+Un valor superior a 1 especifica una obtención de filas masiva. La obtención masiva de filas hace referencia a la capacidad de los conjuntos de filas masivos de obtener varios identificadores de fila (el conjunto de filas será del tipo [CBulkRowset](../../data/oledb/cbulkrowset-class.md) y llamará a `SetRows` con el número de filas especificado).
 
 Si *bulk_fetch* es inferior a uno, `SetRows` devolverá cero.
 
 ## <a name="remarks"></a>Comentarios
 
-**db_command** crea un [CCommand](../../data/oledb/ccommand-class.md) objeto, que se usa por un consumidor OLE DB para ejecutar un comando.
+**db_command** crea un objeto [CCommand](../../data/oledb/ccommand-class.md) , usado por un consumidor OLE DB para ejecutar un comando.
 
 Puede usar **db_command** con cualquier ámbito de función o clase; la principal diferencia radica en el ámbito del objeto `CCommand` . Con el ámbito de función, los datos tales como los enlaces concluyen al final de la función. Los usos de ámbito de clase y función implican la clase de plantilla de consumidor OLE DB `CCommand<>`, pero difieren de los argumentos de plantilla para los casos de función y de clase. En el caso de la función, los enlaces se efectuarán con un `Accessor` formado por variables locales, mientras que el uso de la clase deducirá una `CAccessor`-derivado de la clase como argumento. Cuando se usa como atributo de clase, **db_command** funciona de forma conjunta con **db_column**.
 
@@ -131,7 +131,7 @@ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase,
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se define un comando que selecciona los nombres y apellidos de una tabla en la que la columna state coincide con “CA”. **db_command** crea y lee un conjunto de filas en el que se pueden llamar a funciones generadas por el asistente como [OpenAll y CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), así como `CRowset` funciones miembro como [MoveNext](../../data/oledb/crowset-movenext.md).
+En este ejemplo se define un comando que selecciona los nombres y apellidos de una tabla en la que la columna state coincide con “CA”. **db_command** crea y lee un conjunto de filas en el que puede llamar a funciones generadas por el asistente, como [OpenAll y CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), así como funciones de miembro `CRowset` , como [MoveNext](../../data/oledb/crowset-movenext.md).
 
 Tenga en cuenta que, en este código, debe proporcionar su propia cadena de conexión que se conecte a la base de datos pubs. Para obtener información sobre cómo hacer esto en el entorno de desarrollo, consulte [Cómo: conectarse a una base de datos y examinar objetos existentes](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) y [agregar nuevas conexiones](/visualstudio/data-tools/add-new-connections).
 
@@ -253,9 +253,9 @@ int main() {
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)<br/>
-[Atributos independientes](stand-alone-attributes.md)  
+[Atributos independientes](stand-alone-attributes.md)

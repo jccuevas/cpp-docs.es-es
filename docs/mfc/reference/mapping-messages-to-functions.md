@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402881"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058961"
 ---
 # <a name="mapping-messages-to-functions"></a>Asignar mensajes a funciones
 
@@ -42,7 +42,7 @@ Cuando se usa la vista de clases para crear una nueva clase derivada de una de l
     > [!NOTE]
     >  El **mensajes** botón está disponible cuando se selecciona el nombre de clase en la vista de clases o al hacer clic en la ventana de código fuente.
 
-     Si el proyecto tiene un controlador para un mensaje, el nombre del controlador aparece en la columna derecha junto al mensaje.
+   Si el proyecto tiene un controlador para un mensaje, el nombre del controlador aparece en la columna derecha junto al mensaje.
 
 1. Si el mensaje no tiene ningún controlador, a continuación, haga clic en la celda en la columna derecha en la ventana Propiedades para mostrar el nombre sugerido del controlador como \<Agregar >*HandlerName*. (Por ejemplo, el controlador de mensajes WM_TIMER sugiere \<Agregar >`OnTimer`).
 
@@ -59,6 +59,6 @@ Para quitar un controlador de mensajes, haga doble clic en el controlador en la 
 [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Reemplazar una función Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Adición de controladores de eventos para controles de cuadros de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Agregar controladores de eventos para controles de cuadros de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)

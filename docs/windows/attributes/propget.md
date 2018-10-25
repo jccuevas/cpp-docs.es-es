@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 44a5b06a4d94bc431d33fa29cdcef4738e43ca54
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0afbd6943808099be62545cd872002040f03064b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792399"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062982"
 ---
 # <a name="propget"></a>propget
 
@@ -53,11 +53,11 @@ Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **propget**
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|`propput`, `propputref`|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [propput](propput.md)<br/>
-[propputref](propputref.md)  
+[propputref](propputref.md)

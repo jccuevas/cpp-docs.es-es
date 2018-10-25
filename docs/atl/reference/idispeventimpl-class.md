@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060903"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl (clase)
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ La clase usada para administrar la información de tipo para *T*. El valor prede
 
 `IDispEventImpl` funciona junto con el mapa de receptores de eventos en la clase para enrutar eventos a la función de controlador adecuado. Para usar esta clase:
 
-Agregar un [SINK_ENTRY](composite-control-macros.md#sink_entry) o [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro al mapa de receptores de eventos para cada evento en cada objeto que desea administrar. Cuando se usa `IDispEventImpl` como una clase base de un control compuesto, se puede llamar a [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) para establecer e interrumpir la conexión con los orígenes de eventos para todas las entradas de mapa de receptores de eventos. En otros casos, o para un mayor control, llame a [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) para establecer la conexión entre el objeto de origen y la clase base. Llame a [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) para interrumpir la conexión.  
+Agregar un [SINK_ENTRY](composite-control-macros.md#sink_entry) o [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro al mapa de receptores de eventos para cada evento en cada objeto que desea administrar. Cuando se usa `IDispEventImpl` como una clase base de un control compuesto, se puede llamar a [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) para establecer e interrumpir la conexión con los orígenes de eventos para todas las entradas de mapa de receptores de eventos. En otros casos, o para un mayor control, llame a [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) para establecer la conexión entre el objeto de origen y la clase base. Llame a [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) para interrumpir la conexión.
 
 Debe derivar de `IDispEventImpl` (con un valor único para *nID*) para cada objeto para el que necesita controlar los eventos. Puede volver a usar la clase base por desaconsejar con objeto de un origen que avisa de, a continuación, en un objeto de origen diferente, pero el número máximo de objetos de origen que pueden controlarse mediante un único objeto al mismo tiempo está limitado por el número de `IDispEventImpl` clases base.
 

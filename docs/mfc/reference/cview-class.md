@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402270"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062241"
 ---
 # <a name="cview-class"></a>CView (clase)
 
@@ -196,7 +196,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Parámetros
 
 *pInfo*<br/>
-Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.
+Apunta a una estructura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que describe el trabajo de impresión actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -319,13 +319,13 @@ virtual void OnBeginPrinting(
 Apunta al contexto del dispositivo de impresora.
 
 *pInfo*<br/>
-Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.
+Apunta a una estructura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que describe el trabajo de impresión actual.
 
 ### <a name="remarks"></a>Comentarios
 
-La implementación predeterminada de esta función no hace nada. Reemplace esta función para asignar los recursos de GDI, como lápices o fuentes, que se necesitan específicamente para imprimir. Seleccione los objetos GDI en el contexto de dispositivo desde el [OnPrint](#onprint) función miembro para cada página que los usa. Si usa el mismo objeto de vista para realizar la presentación en pantalla y la impresión, use variables independientes para los recursos GDI necesarios para cada presentación; esto le permite actualizar la pantalla durante la impresión.
+La implementación predeterminada de esta función no hace nada. Reemplace esta función para asignar los recursos de GDI, como lápices o fuentes, que se necesitan específicamente para imprimir. Seleccione los objetos GDI en el contexto del dispositivo dentro de la función miembro [OnPrint](#onprint) para cada página que los use. Si usa el mismo objeto de vista para realizar la presentación en pantalla y la impresión, use variables independientes para los recursos GDI necesarios para cada presentación; esto le permite actualizar la pantalla durante la impresión.
 
-También puede usar esta función para realizar inicializaciones que dependan de las propiedades del contexto del dispositivo de impresora. Por ejemplo, el número de páginas necesarias para imprimir el documento puede depender de la configuración que especificó el usuario en el cuadro de diálogo Imprimir (por ejemplo, la longitud de la página). En esta situación, no se puede especificar la longitud del documento en el [OnPreparePrinting](#onprepareprinting) función miembro, donde normalmente debería hacerlo; debe esperar hasta que se ha creado el contexto de dispositivo de impresora en función de la configuración del cuadro de diálogo. [OnBeginPrinting](#onbeginprinting) es la primera función reemplazable que proporciona acceso a la [CDC](../../mfc/reference/cdc-class.md) objeto que representa el contexto de dispositivo de impresora, por lo que puede establecer la longitud del documento desde esta función. Tenga en cuenta que si no se especifica la longitud del documento en este momento, no se muestra una barra de desplazamiento durante la vista previa de impresión.
+También puede usar esta función para realizar inicializaciones que dependan de las propiedades del contexto del dispositivo de impresora. Por ejemplo, el número de páginas necesarias para imprimir el documento puede depender de la configuración que especificó el usuario en el cuadro de diálogo Imprimir (por ejemplo, la longitud de la página). En esta situación, no puede especificar la longitud del documento en la función miembro [OnPreparePrinting](#onprepareprinting) , donde lo haría normalmente. Debe esperar a que se cree el contexto del dispositivo de impresora en función de la configuración del cuadro de diálogo. [OnBeginPrinting](#onbeginprinting) es la primera función reemplazable que proporciona acceso al objeto [CDC](../../mfc/reference/cdc-class.md) que representa el contexto del dispositivo de impresora, por lo que puede establecer la longitud del documento desde esta función. Tenga en cuenta que si no se especifica la longitud del documento en este momento, no se muestra una barra de desplazamiento durante la vista previa de impresión.
 
 ##  <a name="ondragenter"></a>  CView::OnDragEnter
 
@@ -602,7 +602,7 @@ virtual void OnEndPrinting(
 Apunta al contexto del dispositivo de impresora.
 
 *pInfo*<br/>
-Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.
+Apunta a una estructura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que describe el trabajo de impresión actual.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -626,7 +626,7 @@ virtual void OnEndPrintPreview(
 Apunta al contexto del dispositivo de impresora.
 
 *pInfo*<br/>
-Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.
+Apunta a una estructura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que describe el trabajo de impresión actual.
 
 *punto*<br/>
 Especifica el punto en la página que se mostró por última vez en modo de vista previa.
@@ -701,7 +701,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Parámetros
 
 *pInfo*<br/>
-Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.
+Apunta a una estructura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que describe el trabajo de impresión actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -757,7 +757,7 @@ Reemplace esta función para cualquiera de los siguientes motivos:
 
 - Para hacer que la imagen impresa aspecto diferente de la imagen de pantalla (es decir, si la aplicación no es WYSIWYG). En lugar de pasar la impresora en el contexto de dispositivo a `OnDraw`, use el contexto de dispositivo para representar una imagen mediante los atributos que no se muestra en la pantalla.
 
-     Si necesita recursos de GDI para la impresión que no se usan para la presentación en pantalla, selecciónelos en el contexto de dispositivo antes de dibujar y anular la selección posteriormente. Se deben asignar estos recursos GDI en [OnBeginPrinting](#onbeginprinting) y se lanzan en [OnEndPrinting](#onendprinting).
+   Si necesita recursos de GDI para la impresión que no se usan para la presentación en pantalla, selecciónelos en el contexto de dispositivo antes de dibujar y anular la selección posteriormente. Se deben asignar estos recursos GDI en [OnBeginPrinting](#onbeginprinting) y se lanzan en [OnEndPrinting](#onendprinting).
 
 - Para implementar los encabezados o pies de página. Todavía puede usar `OnDraw` para realizar la representación restringiendo el área que puede imprimir.
 

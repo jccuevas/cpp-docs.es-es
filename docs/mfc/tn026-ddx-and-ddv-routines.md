@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063554"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutinas DDX y DDV
 
@@ -224,21 +224,21 @@ Cada campo está delimitado por un carácter ';'. A continuación se describen l
 
    - *promptN*
 
-     Cadena que se coloca encima del elemento de edición (con & de acelerador).
+      Cadena que se coloca encima del elemento de edición (con & de acelerador).
 
    - *fmtN*
 
-     Carácter de formato para el tipo de argumento, uno de:
+      Carácter de formato para el tipo de argumento, uno de:
 
-     |Carácter|Tipo|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int (es decir, long)
-     U | Long sin signo (es decir, DWORD)
-     f | float
-     F | double
-     s | cadena
+      |Carácter|Tipo|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int (es decir, long)|
+      |U | Long sin signo (es decir, DWORD)|
+      |f | float|
+      |F | double|
+      |s | cadena|
 
 ## <a name="see-also"></a>Vea también
 

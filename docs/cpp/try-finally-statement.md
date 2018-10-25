@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060018"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161663"
 La sintaxis siguiente describe el **try-finally** instrucción:
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ El control alcanza un **__try** instrucción mediante la ejecución secuencial s
 
 1. Cuando se complete el controlador de terminación, la ejecución continúa después de la **__finally** instrucción. Independientemente de cómo los protegidos de los extremos de la sección (por ejemplo, mediante un **goto** fuera del cuerpo protegido o un **devolver** instrucción), se ejecuta el controlador de terminación *antes* el flujo de control salga de la sección protegida.
 
-     Un **__finally** instrucción no bloquea la búsqueda de un controlador de excepciones adecuado.
+   Un **__finally** instrucción no bloquea la búsqueda de un controlador de excepciones adecuado.
 
 Si se produce una excepción en el **__try** bloque, el sistema operativo debe buscar un controlador para la excepción o se producirá un error en el programa. Si se encuentra un controlador, todos los **__finally** se ejecutan bloques y se reanuda la ejecución en el controlador.
 

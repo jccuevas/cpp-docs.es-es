@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eeeb28b7679fa67e991e96aa998abc4946bb82b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fb8b53141f54e0f59c9734b9d7d855569dfceb9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059369"
 ---
 # <a name="firstis"></a>first_is
 
@@ -78,7 +78,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -88,4 +88,4 @@ Para obtener más información, consulte [contextos de atributo](cpp-attributes-
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
 [length_is](length-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)
