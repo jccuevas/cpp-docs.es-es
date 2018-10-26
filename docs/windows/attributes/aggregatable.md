@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b686cd19d76706bb6a30286cf611c563c1aed50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 169b0ab1194783f1e7de44c9ae0a153e9d4d3071
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057836"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ Indica que la clase admite agregación.
 
 El **agregables** atributo de C++ tiene la misma funcionalidad que el [agregables](/windows/desktop/Midl/aggregatable) atributo MIDL. Esto significa que el compilador pasará el **agregables** a través del atributo en el archivo .idl generado.
 
-Este atributo requiere que el [coclase](coclass.md), [progid](progid.md), o [vi_progid](vi-progid.md) atributo (u otro atributo que implique uno de estos) se aplica también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
 
 ### <a name="atl-projects"></a>Proyectos ATL
 
@@ -88,11 +88,11 @@ class CMyClass {};
 |**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregación](/windows/desktop/com/aggregation)  
+[Agregación](/windows/desktop/com/aggregation)

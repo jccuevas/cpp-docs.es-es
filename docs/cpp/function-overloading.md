@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821353"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081500"
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 
@@ -126,7 +126,6 @@ El código anterior muestra la sobrecarga de la función `print` en el ámbito d
 El argumento predeterminado no se considera parte del tipo de función. Por lo tanto, no se utiliza en la selección de funciones sobrecargadas. Dos funciones que solo difieren en sus argumentos predeterminados se consideran varias definiciones en lugar de funciones sobrecargadas.
 
 Los argumentos predeterminados no se pueden proporcionar para operadores sobrecargados.
-
 
 ## <a name="argument-matching"></a>Coincidencia de argumentos
 
@@ -471,7 +470,7 @@ Se puede sobrecargar **new (operador)** únicamente en la base del tipo de valor
     void Print( PSTR szToPrint );
     ```
 
-     Las dos funciones anteriores tienen listas de argumentos idénticas. `PSTR` es un sinónimo de tipo `char *`. En el ámbito del miembro, este código genera un error.
+   Las dos funciones anteriores tienen listas de argumentos idénticas. `PSTR` es un sinónimo de tipo `char *`. En el ámbito del miembro, este código genera un error.
 
 - Los tipos enumerados son tipos distintos y se pueden utilizar para diferenciar funciones sobrecargadas.
 
@@ -482,7 +481,7 @@ Se puede sobrecargar **new (operador)** únicamente en la base del tipo de valor
     void Print( char szToPrint[] );
     ```
 
-     Para matrices con varias dimensiones, la segunda y todas las dimensiones sucesivas se consideran parte del tipo. Por consiguiente, se utilizan en la distinción entre funciones sobrecargadas:
+   Para matrices con varias dimensiones, la segunda y todas las dimensiones sucesivas se consideran parte del tipo. Por consiguiente, se utilizan en la distinción entre funciones sobrecargadas:
 
     ```cpp
     void Print( char szToPrint[] );

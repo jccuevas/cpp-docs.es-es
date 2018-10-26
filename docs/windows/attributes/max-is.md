@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd90cc386686d78ca7bcb862ab60e079e29832a7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: a0dc76d9478a2639103196b33c0132c07be76860
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073986"
 ---
 # <a name="maxis"></a>max_is
 
@@ -54,7 +54,7 @@ El **max_is** atributo de C++ tiene la misma funcionalidad que el [max_is](/wind
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|**size_is**|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Ejemplo
 
@@ -68,4 +68,4 @@ Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar un
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>
 [length_is](length-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)

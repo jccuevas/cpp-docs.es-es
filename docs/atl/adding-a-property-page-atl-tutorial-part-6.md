@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821145"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055071"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Agregar una página de propiedades (Tutorial de ATL, Parte 6)
 
@@ -45,7 +45,7 @@ Para agregar una página de propiedades al control, use la plantilla de página 
 
 1. Haga clic en **cadenas** para abrir el **cadenas** página y escriba **& polígono** como el **título**.
 
-     El **título** de la propiedad de página es la cadena que aparece en la pestaña para esa página. El **cadena** es una descripción que utiliza un marco de propiedades para colocar en una sugerencia de línea o la herramienta de estado. Tenga en cuenta que el marco de propiedad estándar actualmente no usa esta cadena, por lo que puede dejar con el contenido predeterminado. No se generará un **archivo de Ayuda** en este momento, así que elimine la entrada en ese cuadro de texto.
+   El **título** de la propiedad de página es la cadena que aparece en la pestaña para esa página. El **cadena** es una descripción que utiliza un marco de propiedades para colocar en una sugerencia de línea o la herramienta de estado. Tenga en cuenta que el marco de propiedad estándar actualmente no usa esta cadena, por lo que puede dejar con el contenido predeterminado. No se generará un **archivo de Ayuda** en este momento, así que elimine la entrada en ese cuadro de texto.
 
 1. Haga clic en **finalizar**, y se creará el objeto de la página de propiedad.
 

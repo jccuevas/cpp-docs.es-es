@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ec9bb1a35b1ce049dfeca7b356b98431fad4578
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b777be28fcee3c11a8f3ae2058d6197f39d2ba22
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792534"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060174"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -73,9 +73,9 @@ __interface IFireTabCtrl : IDispatch
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Atributos de parámetro](parameter-attributes.md)  
+[Atributos de parámetro](parameter-attributes.md)

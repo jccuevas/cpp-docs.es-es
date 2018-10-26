@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 51e612e889c06b8736e13e3c0fe04baf07b11a9b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074063"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078289"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits (clase)
 
@@ -114,7 +114,7 @@ La segunda cadena de elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Cero si las cadenas son idénticas, < 0 si *str1* es menor que *str2*, o 0 > Si *str1* es mayor que *str2*. El [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método se usa para realizar las comparaciones.  
+Cero si las cadenas son idénticas, < 0 si *str1* es menor que *str2*, o 0 > Si *str1* es mayor que *str2*. El [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método se usa para realizar las comparaciones.
 
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
 

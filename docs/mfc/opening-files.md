@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080928"
 ---
 # <a name="opening-files"></a>Abrir archivos
 
@@ -41,15 +41,15 @@ En MFC, la manera más común para abrir un archivo es un proceso de dos fases.
 
 1. Cree el objeto de archivo sin especificar una ruta de acceso o permiso marcadores.
 
-     Suele crear un objeto de archivo declarando un [CFile](../mfc/reference/cfile-class.md) variable en el marco de pila.
+   Suele crear un objeto de archivo declarando un [CFile](../mfc/reference/cfile-class.md) variable en el marco de pila.
 
 1. Llame a la [abierto](../mfc/reference/cfile-class.md#open) función miembro para el objeto de archivo, proporcionando una ruta de acceso e indicadores de permisos.
 
-     El valor devuelto para `Open` será distinto de cero si el archivo se abrió correctamente o 0 si no se pudo abrir el archivo especificado. El `Open` función miembro es el siguiente prototipo:
+   El valor devuelto para `Open` será distinto de cero si el archivo se abrió correctamente o 0 si no se pudo abrir el archivo especificado. El `Open` función miembro es el siguiente prototipo:
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     Las marcas open especifican qué permisos, como de solo lectura, que desee para el archivo. Los valores de indicador posibles se definen como constantes enumeradas en la `CFile` clase, por lo que se completa con "`CFile::`" como en `CFile::modeRead`. Use el `CFile::modeCreate` marca si desea crear el archivo.
+   Las marcas open especifican qué permisos, como de solo lectura, que desee para el archivo. Los valores de indicador posibles se definen como constantes enumeradas en la `CFile` clase, por lo que se completa con "`CFile::`" como en `CFile::modeRead`. Use el `CFile::modeCreate` marca si desea crear el archivo.
 
 El ejemplo siguiente muestra cómo crear un nuevo archivo con permiso de lectura/escritura (reemplazando cualquier archivo anterior con la misma ruta de acceso):
 

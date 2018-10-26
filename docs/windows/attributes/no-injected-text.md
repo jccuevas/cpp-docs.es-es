@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9289c1b8f28b90dd5a3a4a437d3e2a5870e8468
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3169c58d192b80400bada8c403f8a769cfb11f55
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792407"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069989"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -54,8 +54,8 @@ El uso más común de la **no_injected_text** atributo de C++ es mediante la [/F
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos de compilador](compiler-attributes.md)  
+[Atributos de compilador](compiler-attributes.md)

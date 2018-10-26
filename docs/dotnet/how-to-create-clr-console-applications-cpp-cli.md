@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421263"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076066"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Cómo: Crear aplicaciones de consola CLR (C++/CLI)
 
@@ -33,7 +33,7 @@ Cuando se utiliza la plantilla Aplicación de consola para crear un proyecto, ag
 
 - Hace referencia a estos espacios de nombres de .NET Framework:
 
-   - [Sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contiene clases fundamentales y clases base que definen habitualmente usan los valores y tipos de datos de referencia, eventos y controladores de eventos, interfaces, atributos y excepciones de procesamiento.
+   - [Sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contiene clases fundamentales y clases base que definen valores y tipos de datos de referencia, eventos y controladores de eventos, interfaces, atributos y excepciones de procesamiento comúnmente utilizados.
 
    - mscorlib: el archivo DLL de ensamblado que admite el desarrollo de .NET Framework.
 
@@ -67,7 +67,7 @@ Cuando se utiliza la plantilla Aplicación de consola para crear un proyecto, ag
 
 1. En el cuadro **Nombre** , escriba un nombre único para la aplicación.
 
-     Puede especificar otros valores del proyecto y de la solución, pero no son necesarios.
+   Puede especificar otros valores del proyecto y de la solución, pero no son necesarios.
 
 1. Elija el botón **Aceptar** .
 

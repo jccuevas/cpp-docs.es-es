@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 168d7c1740f9b33af1eca539e30514ce76259ceb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236054"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076339"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Tutorial: Usar los nuevos controles de Shell de MFC
 
@@ -35,17 +35,17 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 1. En el **nuevo proyecto** cuadro de diálogo, expanda el **Visual C++** nodo en el **tipos de proyecto** panel y seleccione **MFC**. A continuación, en el **plantillas** panel, seleccione **aplicación MFC**. Escriba un nombre para el proyecto, como `MFCShellControls` y haga clic en **Aceptar**. Después de **MFC Application Wizard** muestra, use las siguientes opciones:
 
-    1. En el **tipo de aplicación** panel, en **tipo de aplicación**, desactive la **documentos con fichas** opción. A continuación, seleccione **único documento** y seleccione **compatibilidad con la arquitectura documento/vista**. En **proyecto estilo**, seleccione **Visual Studio**y desde el **estilo Visual y colores** lista desplegable de la lista, seleccione **Office 2007 (tema azul)**. 
+    1. En el **tipo de aplicación** panel, en **tipo de aplicación**, desactive la **documentos con fichas** opción. A continuación, seleccione **único documento** y seleccione **compatibilidad con la arquitectura documento/vista**. En **proyecto estilo**, seleccione **Visual Studio**y desde el **estilo Visual y colores** lista desplegable de la lista, seleccione **Office 2007 (tema azul)**.
 
     1. En el **compatibilidad con documentos compuestos** panel, seleccione **ninguno**.
 
     1. No realice ningún cambio a la **cadenas de plantillas de documento** panel.
 
-    1. En el **soporte técnico de la base de datos** panel (Visual Studio 2015 y versiones posteriores), seleccione **ninguno** porque la aplicación no usa una base de datos. 
+    1. En el **soporte técnico de la base de datos** panel (Visual Studio 2015 y versiones posteriores), seleccione **ninguno** porque la aplicación no usa una base de datos.
 
-    1. En el **características de la interfaz de usuario** panel, asegúrese de que el **usar una barra de menú y barra de herramientas** está seleccionada. Deje el resto de las opciones tal como están. 
+    1. En el **características de la interfaz de usuario** panel, asegúrese de que el **usar una barra de menú y barra de herramientas** está seleccionada. Deje el resto de las opciones tal como están.
 
-    1. En el **características avanzadas** panel, en **características avanzadas**, seleccione solo **controles ActiveX** y **manifiesto de controles comunes**. En **paneles de marco avanzados**, seleccione solo la **panel de navegación** opción. Lo hará que el asistente crear el panel a la izquierda de la ventana con un `CMFCShellTreeCtrl` ya insertado. 
+    1. En el **características avanzadas** panel, en **características avanzadas**, seleccione solo **controles ActiveX** y **manifiesto de controles comunes**. En **paneles de marco avanzados**, seleccione solo la **panel de navegación** opción. Lo hará que el asistente crear el panel a la izquierda de la ventana con un `CMFCShellTreeCtrl` ya insertado.
 
     1. No vamos a hacer cualquier cambio en el **clases generadas** panel, haga clic en **finalizar** para crear un nuevo proyecto MFC.
 

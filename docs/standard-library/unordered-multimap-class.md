@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 289c21fcf1b55db701dcb5365694c78c823bb8a0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: bae7d94c7e92ea52a6f34172d0d339d813684725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060117"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap (Clase)
 
@@ -297,7 +297,6 @@ Designa el principio de la secuencia controlada o un depósito.
 iterator begin();
 
 const_iterator begin() const;
-
 
 local_iterator begin(size_type nbucket);
 
@@ -1124,7 +1123,6 @@ iterator end();
 
 const_iterator end() const;
 
-
 local_iterator end(size_type nbucket);
 
 const_local_iterator end(size_type nbucket) const;
@@ -1486,19 +1484,16 @@ Inserta un elemento o un intervalo de elementos en un unordered_multimap.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1506,13 +1501,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2004,7 +1997,6 @@ Obtiene o establece los elementos máximos por depósito.
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```

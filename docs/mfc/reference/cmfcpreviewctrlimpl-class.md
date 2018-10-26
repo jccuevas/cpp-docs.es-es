@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b157cfb497c355f44a15c8e42b81bc30753a4a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29632784248d624f184550f0c598d05cd26b85cf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441309"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079550"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Clase CMFCPreviewCtrlImpl
 
@@ -183,7 +183,6 @@ virtual void DoPaint(
 *pDC*<br/>
 Un puntero a un contexto de dispositivo para dibujar.
 
-
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
 
 Establece el foco a este control de entrada.
@@ -193,6 +192,7 @@ Establece el foco a este control de entrada.
 ```
 virtual void Focus();
 ```
+
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 
 Devuelve un documento conectado a este control de vista previa.
@@ -226,6 +226,7 @@ Color del texto de la ventana Vista previa.
 ```
 COLORREF m_clrTextColor;
 ```
+
 ## <a name="m_font"></a> Fuente de CMFCPreviewCtrlImpl::m_font utilizada para mostrar texto en la ventana Vista previa.
 
 ### <a name="syntax"></a>Sintaxis
@@ -233,6 +234,7 @@ COLORREF m_clrTextColor;
 ```
 CFont m_font;
 ```
+
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
 
 Un puntero a un documento cuyo contenido se muestra una vista previa en el control.
@@ -252,6 +254,7 @@ Indica que este control para volver a dibujar.
 ```
 virtual void Redraw();
 ```
+
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
 
 Lo llama el controlador de vista previa para crear una relación entre la implementación de documento y el control de vista previa.

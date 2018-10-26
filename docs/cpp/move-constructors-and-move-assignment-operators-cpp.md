@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069784"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructores de movimiento y operadores de asignación de movimiento (C++)
 
@@ -151,14 +151,14 @@ Los procedimientos siguientes describen cómo escribir un constructor de movimie
 
 1. En la instrucción condicional, libere los recursos (tales como la memoria) del objeto al que se asigna.
 
-     El ejemplo siguiente libera el miembro `_data` del objeto al que se asigna:
+   El ejemplo siguiente libera el miembro `_data` del objeto al que se asigna:
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     Siga los pasos 2 y 3 del primer procedimiento para transferir los miembros de datos del objeto de origen al objeto que se construye:
+   Siga los pasos 2 y 3 del primer procedimiento para transferir los miembros de datos del objeto de origen al objeto que se construye:
 
     ```cpp
     // Copy the data pointer and its length from the

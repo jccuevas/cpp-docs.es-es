@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7deaf83c093c16b30ee04d8c5924c1d567d86c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4867b98a9778c818ab19d5325782b24e29282fca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435810"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077990"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor (clase)
 
@@ -132,6 +132,4 @@ Si tiene que restaurar el cursor de espera mientras se encuentra en una función
 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
 [¿Cómo lo hago?: cambia el Cursor del Mouse en una aplicación de la clase Microsoft Foundation](http://go.microsoft.com/fwlink/p/?linkid=128044)
-
-
 

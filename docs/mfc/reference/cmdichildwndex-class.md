@@ -1,7 +1,7 @@
 ---
 title: CMDIChildWndEx (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -122,19 +122,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073869"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 
 La `CMDIChildWndEx` clase proporciona la funcionalidad de un Windows ventana secundaria de varios documentos (MDI) de la interfaz. Amplía la funcionalidad de [CMDIChildWnd (clase)](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.
 
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
-
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -193,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Lo llama el marco de trabajo cuando es necesario ajustar un mapa de bits para Windows 7 barra de tareas ficha Vista previa en miniatura del formulario secundario MDI.|
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Lo llama el marco de trabajo para actualizar el título del marco. (Invalida `CMDIChildWnd::OnUpdateFrameTitle`).|
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Devuelve el panel que contiene el punto especificado.|
-|`CMDIChildWndEx::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
+|`CMDIChildWndEx::PreTranslateMessage`|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Vuelve a calcular el diseño de la ventana.|
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Registra el formulario secundario MDI con fichas de la barra de tareas de Windows 7.|
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Quita un panel desde el Administrador de acoplamiento.|
@@ -283,7 +282,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 [in] Identificador de una estructura de posición de ventana aplazada.
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
-
 
 ```
 virtual BOOL CanShowOnMDITabs();
@@ -411,7 +409,6 @@ Llame a este método para habilitar la alineación de acoplamiento para el marco
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +499,6 @@ CBasePane* GetPane(UINT nID);
 Un puntero al panel si se encuentra, de lo contrario, NULL.
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +766,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *p*
+[in] *p*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +788,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>Parámetros
 
-*pBar*<br/>
-[in] [in] *bMostrar*
-*bDelay*<br/>
-[in] [in] *bActivate*
+[in] *pBar*<br/>
+
+[in] *bMostrar*<br/>
+
+[in] *bDelay*<br/>
+
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

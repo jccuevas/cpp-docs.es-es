@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 8726499df30d26e35d4a554e7028af9ff2249549
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080902"
 ---
 # <a name="omp"></a>omp
-Toma una o más directivas de OpenMP, junto con cualquier cláusula directiva opcional.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-#pragma omp directive  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- 
-Consulte [directivas de OpenMP](../parallel/openmp/reference/openmp-directives.md) para obtener más información.  
-  
-## <a name="see-also"></a>Vea también  
+Toma una o más directivas de OpenMP, junto con cualquier cláusula directiva opcional.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+#pragma omp directive
+```
+
+## <a name="remarks"></a>Comentarios
+
+Consulte [directivas de OpenMP](../parallel/openmp/reference/openmp-directives.md) para obtener más información.
+
+## <a name="see-also"></a>Vea también
 
 [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

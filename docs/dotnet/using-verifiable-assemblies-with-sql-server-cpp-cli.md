@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063411"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizar ensamblados comprobables con SQL Server (C++/CLI)
 
@@ -32,7 +32,7 @@ SQL Server proporciona extensiones a Transact-SQL (T-SQL) para que pueda instala
 
 - Modo no restringido: ejecutar código bajo su propia responsabilidad; código no tiene que ser de tipos comprobable.
 
-- Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe. 
+- Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe.
 
 > [!IMPORTANT]
 > En desuso de Visual Studio 2015 y Visual Studio 2017 no admite la **/CLR: pure** y **/CLR: safe** creación de proyectos que se pueda comprobar. Si necesita código comprobable, se recomienda que trasladar el código en C#.
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>Vea también
-
 
 [Clases y structs](../cpp/classes-and-structs-cpp.md)

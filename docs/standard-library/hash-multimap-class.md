@@ -1,7 +1,7 @@
 ---
 title: Clase hash_multimap | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235768"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075325"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap (Clase)
 
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -1554,7 +1553,7 @@ Los tres últimos constructores utilizan una initializer_list.
 ## <a name="insert"></a>  hash_multimap::insert
 
 > [!NOTE]
-> Esta API está obsoleta. La alternativa es la [clase unordered_multimap](../standard-library/unordered-multimap-class.md).
+> Esta API está obsoleta. La alternativa es [unordered_multimap Class](../standard-library/unordered-multimap-class.md).
 
 Inserta un elemento o un intervalo de elementos en un hash_multimap.
 
@@ -2477,9 +2476,9 @@ Devuelve el objeto de función de comparación que un objeto hash_multimap usa p
 
 ### <a name="remarks"></a>Comentarios
 
-Para un objeto hash_multimap *m*, si dos elementos *e*1( *k*1 *, d*1) y *e*2( *k*2 *, d*2) son objetos de tipo [value_type](#value_type), donde *k*1 y *k*2 son sus claves de tipo [key_type](#key_type), y `d`1 y `d`2 son sus datos de tipo [mapped_type](#mapped_type), entonces *m.*`value_comp`( )( *e*1 *, e*2) es equivalente a *m.*`key_comp`( ) ( *k*1 *, k*2). Un objeto almacenado define la función miembro
+Para un objeto hash_multimap *m*, si dos elementos *e1* (*k1*, *d1*) y *e2*(*k2* , *d2*) son objetos de tipo [value_type](#value_type), donde *k1* y *k2* son sus claves de tipo [key_type](#key_type) y *d1* y *d2* son sus datos de tipo [mapped_type](#mapped_type), a continuación, `m.value_comp()(e1, e2)` es equivalente a `m.key_comp()(k1, k2)` . Un objeto almacenado define la función miembro
 
-**bool operator**( **value_type&**`left`, **value_type&** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 que devuelve **True** si el valor de clave de `left` precede y no es igual al valor de clave de `right` en el criterio de ordenación.
 

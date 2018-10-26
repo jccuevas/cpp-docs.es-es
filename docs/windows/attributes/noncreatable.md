@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95418345d72f0e5be30d2d8df989793dc49b20a4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: acfb5ea65e4efcba13d6b376dbb2d0f2fe3e6855
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792186"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067870"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -68,12 +68,12 @@ class CMyClass : public A
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|**coclass**|
+|**Atributos requeridos**|**coclase**|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Atributos de clase](class-attributes.md)  
+[Atributos de clase](class-attributes.md)

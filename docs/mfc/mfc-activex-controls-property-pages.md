@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079862"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: Páginas de propiedades
 
@@ -86,7 +86,7 @@ Por ejemplo, efectos, los procedimientos siguientes usar un control simple (deno
 
 1. Abra el cuadro de diálogo IDD_PROPPAGE_SAMPLE.
 
-     El Asistente para controles ActiveX se anexa el nombre del proyecto hasta el final del identificador de diálogo, en este caso, ejemplo.
+   El Asistente para controles ActiveX se anexa el nombre del proyecto hasta el final del identificador de diálogo, en este caso, ejemplo.
 
 1. Arrastre y coloque el control seleccionado en el cuadro de herramientas en el área del cuadro de diálogo.
 

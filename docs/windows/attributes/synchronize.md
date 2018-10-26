@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 740d99bfbc0da4c290a09a95f5d4f8f227a11fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8296ba9a6f5c6072f025dbdd931b6f609d9df9e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792191"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067831"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -40,7 +40,7 @@ El **sincronizar** atributo de C++ implementa la compatibilidad con el método d
 
 El código insertado por este atributo llama adecuada `Lock` método (determinado por el modelo de subprocesos) al principio del método de destino. Cuando se sale del método, `Unlock` se llama automáticamente. Para obtener más información sobre estas funciones, vea [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-Este atributo requiere que el [coclase](coclass.md), [progid](progid.md), o [vi_progid](vi-progid.md) atributo (u otro atributo que implique uno de estos) se aplica también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
 
 ## <a name="example"></a>Ejemplo
 
@@ -59,7 +59,7 @@ El código siguiente proporciona sincronización para el `UpdateBalance` método
 threading(both),
 vi_progid("MyProject.MyClass"),
 progid("MyProject.MyClass.1"),
-uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")  
+uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")
 ]
 class CMyClass {
    float m_nBalance;
@@ -82,8 +82,8 @@ class CMyClass {
 |**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos COM](com-attributes.md)  
+[Atributos COM](com-attributes.md)

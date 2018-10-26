@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 1bf8d43d9325ff6900cd1c5cd63629ead434acbc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055520"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX en Internet
 
@@ -67,7 +67,7 @@ Para mejorar el rendimiento de los controles, siga estas sugerencias sobre efici
 
 - Descargar datos en bloques pequeños.
 
-     Cuando se descargan secuencias grandes, como mapas de bits o de datos de vídeo, tener acceso a datos de un control asincrónicamente en cooperación con el contenedor. Recuperar los datos de forma incremental o progresiva, trabaja en cooperación con otros controles que también se puede recuperar datos. Código también puede descargar de forma asincrónica.
+   Cuando se descargan secuencias grandes, como mapas de bits o de datos de vídeo, tener acceso a datos de un control asincrónicamente en cooperación con el contenedor. Recuperar los datos de forma incremental o progresiva, trabaja en cooperación con otros controles que también se puede recuperar datos. Código también puede descargar de forma asincrónica.
 
 - Descargue el código y las propiedades en segundo plano.
 
@@ -75,15 +75,15 @@ Para mejorar el rendimiento de los controles, siga estas sugerencias sobre efici
 
 - Tenga en cuenta cómo se almacenan los datos persistentes, propiedades y datos de gran tamaño BLOBs (por ejemplo, los datos de mapa de bits imagen o vídeo).
 
-     Controles con grandes cantidades de datos persistentes, como mapas de bits grandes o archivos AVI, requieren una cuidadosa atención al método de descarga. Un documento o página puede hacerse visible tan pronto como sea posible y permite al usuario interactuar con la página, mientras que los controles de recuperan datos en segundo plano.
+   Controles con grandes cantidades de datos persistentes, como mapas de bits grandes o archivos AVI, requieren una cuidadosa atención al método de descarga. Un documento o página puede hacerse visible tan pronto como sea posible y permite al usuario interactuar con la página, mientras que los controles de recuperan datos en segundo plano.
 
 - Escribir rutinas eficientes para mantener el tamaño del código y tiempo de ejecución.
 
-     Controles de botón y etiqueta pequeño, con solo unos pocos bytes de datos persistentes, son adecuados para su uso en el entorno de Internet y funcionan bien dentro de los exploradores.
+   Controles de botón y etiqueta pequeño, con solo unos pocos bytes de datos persistentes, son adecuados para su uso en el entorno de Internet y funcionan bien dentro de los exploradores.
 
 - Considere la posibilidad de progreso se comunica al contenedor.
 
-     Notificar al contenedor del progreso en la descarga asincrónica, incluso cuando el usuario pueda empezar a interactuar con una página, y una vez completada la descarga. El contenedor puede mostrar el progreso (como el porcentaje completado) para el usuario.
+   Notificar al contenedor del progreso en la descarga asincrónica, incluso cuando el usuario pueda empezar a interactuar con una página, y una vez completada la descarga. El contenedor puede mostrar el progreso (como el porcentaje completado) para el usuario.
 
 - Tenga en cuenta cómo se registran los controles en el equipo cliente.
 
@@ -99,7 +99,7 @@ Al crear un nuevo control mediante el Asistente para la aplicación, puede habil
 
 1. En el **configuración del Control** página, seleccione **carga las propiedades de forma asincrónica**. Al seleccionar esta opción establece la propiedad de estado listo y el evento cambiado de estado listo para usted.
 
-     También puede seleccionar otras optimizaciones, como **activación sin ventana**, que se describe en [controles ActiveX: optimización](../mfc/mfc-activex-controls-optimization.md).
+   También puede seleccionar otras optimizaciones, como **activación sin ventana**, que se describe en [controles ActiveX: optimización](../mfc/mfc-activex-controls-optimization.md).
 
 1. Elija **finalizar** para crear el proyecto.
 
@@ -111,15 +111,15 @@ Al crear un nuevo control mediante el Asistente para la aplicación, puede habil
 
 1. En esta clase, invalide `OnDataAvailable`. Esta función se invoca cada vez que los datos están disponibles para su presentación. Cuando hay datos disponibles, se puede controlar cualquier forma que elija, por ejemplo presentando progresivamente.
 
-     El fragmento de código siguiente es un ejemplo sencillo de presentación progresiva de datos en un control de edición. Tenga en cuenta el uso de marca **BSCF_FIRSTDATANOTIFICATION** para borrar el control de edición.
+   El fragmento de código siguiente es un ejemplo sencillo de presentación progresiva de datos en un control de edición. Tenga en cuenta el uso de marca **BSCF_FIRSTDATANOTIFICATION** para borrar el control de edición.
 
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-     Tenga en cuenta que debe incluir AFXCMN. H para poder utilizar el `CListCtrl` clase.
+   Tenga en cuenta que debe incluir AFXCMN. H para poder utilizar el `CListCtrl` clase.
 
 1. Cuando el control del general cambia estado (por ejemplo, de carga a inicializado o usuario interactivo), llamada `COleControl::InternalSetReadyState`. Si el control tiene la propiedad de ruta de acceso de datos solo una, puede agregar código en **BSCF_LASTDATANOTIFICATION** para notificar al contenedor que la descarga está completa. Por ejemplo:
 
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
 1. Reemplace `OnProgress`. En `OnProgress`, se pasa un número que muestra el intervalo máximo y es un número mostrando hasta qué punto a lo largo de la descarga. Puede usar estos números para mostrar el estado de porcentaje de finalización para el usuario.
 
@@ -135,19 +135,19 @@ El procedimiento siguiente agrega una propiedad al control para utilizar la clas
 
 1. Declare una variable de miembro de su `CDataPathProperty`-clase derivada a la clase del control ActiveX.
 
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
 1. Implemente los métodos `Get/Set`. Para `Get`, devolver la cadena. Para `Set`, cargar la propiedad y llame a `SetModifiedFlag`.
 
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
 1. En [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), agregue la siguiente línea:
 
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
 1. Invalidar [ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) para notificar a la propiedad que se va a restablecer su control mediante la adición de esta línea:
 
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
 ## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>La decisión de CDataPathProperty o CCachedDataPathProperty
 
@@ -200,8 +200,6 @@ Si va a agregar compatibilidad con propiedades asincrónicas a un control existe
 [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
 Se actualizará el estado preparado tal y como se descarga el código mediante una llamada a [COleControl:: InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Un solo lugar puede llamar a `InternalSetReadyState` proviene el `OnProgress` la invalidación de `CDataPathProperty`-clase derivada.
-
-
 
 ## <a name="see-also"></a>Vea también
 

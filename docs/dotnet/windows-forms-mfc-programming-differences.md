@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e6bac12d841a065495f7775598c65f39a0aaba67
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0b62bbca87e5b4fcabcf5124271ee8be68b755f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394275"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068845"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Diferencias de programación entre formularios Windows Forms y MFC
 
@@ -39,31 +39,31 @@ Las siguientes características de vista o documentos MFC o de enrutamiento de c
 
 - Integración de Shell
 
-     MFC controla los comandos de intercambio dinámico de datos (DDE) y los argumentos de línea de comandos que utiliza el shell cuando hace clic con el botón secundario del mouse en un documento y selecciona verbos como Abrir, Editar o Imprimir. Formularios Windows Forms no tiene integración de shell y no responde a sus verbos.
+   MFC controla los comandos de intercambio dinámico de datos (DDE) y los argumentos de línea de comandos que utiliza el shell cuando hace clic con el botón secundario del mouse en un documento y selecciona verbos como Abrir, Editar o Imprimir. Formularios Windows Forms no tiene integración de shell y no responde a sus verbos.
 
 - Plantillas de documento
 
-     En MFC, las plantillas de documento asocian una vista contenida en una ventana de marco (en modo MDI, SDI o MTI) con el documento que ha abierto. Formularios Windows Forms no tiene equivalente a las plantillas de documento.
+   En MFC, las plantillas de documento asocian una vista contenida en una ventana de marco (en modo MDI, SDI o MTI) con el documento que ha abierto. Formularios Windows Forms no tiene equivalente a las plantillas de documento.
 
 - Documentos
 
-     MFC registra tipos de archivo de documento y los procesa cuando abre un documento desde el shell. Formularios Windows Forms no tiene compatibilidad con documentos.
+   MFC registra tipos de archivo de documento y los procesa cuando abre un documento desde el shell. Formularios Windows Forms no tiene compatibilidad con documentos.
 
 - Estados de documento
 
-     MFC mantiene modificación de estados en el documento. Por lo tanto, cuando cierra la aplicación, cierra la última vista que contiene la aplicación o sale de Windows, MFC le pide que guarde el documento. Formularios Windows Forms no tiene compatibilidad equivalente.
+   MFC mantiene modificación de estados en el documento. Por lo tanto, cuando cierra la aplicación, cierra la última vista que contiene la aplicación o sale de Windows, MFC le pide que guarde el documento. Formularios Windows Forms no tiene compatibilidad equivalente.
 
 - Comandos
 
-     MFC dispone del concepto de comandos. La barra de menús, la de herramientas y el menú contextual pueden invocar el mismo comando; por ejemplo, Cortar y Copiar. En formularios Windows Forms, los comandos son eventos estrechamente relacionados con un elemento de interfaz de usuario (como un elemento de menú); por lo tanto, tendrá que enlazar los eventos de comando explícitamente. En formularios Windows Forms, también puede controlar múltiples eventos con un único controlador. Para obtener más información, consulte [conectar múltiples eventos a un solo controlador de eventos en Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
+   MFC dispone del concepto de comandos. La barra de menús, la de herramientas y el menú contextual pueden invocar el mismo comando; por ejemplo, Cortar y Copiar. En formularios Windows Forms, los comandos son eventos estrechamente relacionados con un elemento de interfaz de usuario (como un elemento de menú); por lo tanto, tendrá que enlazar los eventos de comando explícitamente. En formularios Windows Forms, también puede controlar múltiples eventos con un único controlador. Para obtener más información, consulte [conectar múltiples eventos a un solo controlador de eventos en Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
 - Enrutamiento de comandos
 
-     El enrutamiento de comandos MFC permite procesar comandos a la vista o documentos activos. Dado que el mismo comando tiene a menudo diferentes significados según la vista en que se utilice (por ejemplo, Copiar se comporta de manera distinta en la vista de edición de texto que en un editor de gráficos), los comandos necesitan que los controle la vista activa. Dado que los menús de Windows Forms y las barras de herramientas no tienen ningún conocimiento inherente de la vista activa, no puede tener un controlador distinto para cada tipo de vista para su **MenuItem.Click** eventos sin escribir código interno adicional.
+   El enrutamiento de comandos MFC permite procesar comandos a la vista o documentos activos. Dado que el mismo comando tiene a menudo diferentes significados según la vista en que se utilice (por ejemplo, Copiar se comporta de manera distinta en la vista de edición de texto que en un editor de gráficos), los comandos necesitan que los controle la vista activa. Dado que los menús de Windows Forms y las barras de herramientas no tienen ningún conocimiento inherente de la vista activa, no puede tener un controlador distinto para cada tipo de vista para su **MenuItem.Click** eventos sin escribir código interno adicional.
 
 - Mecanismo de actualización de comandos
 
-     MFC dispone de un mecanismo de actualización de comandos. Por lo tanto, la vista o documento activos son responsables del estado de los elementos de la interfaz de usuario (por ejemplo, la habilitación o deshabilitación de un elemento de menú o de un botón de la barra de herramientas y estados de activación). Formularios Windows Forms no tiene un equivalente del mecanismo de actualización de comandos.
+   MFC dispone de un mecanismo de actualización de comandos. Por lo tanto, la vista o documento activos son responsables del estado de los elementos de la interfaz de usuario (por ejemplo, la habilitación o deshabilitación de un elemento de menú o de un botón de la barra de herramientas y estados de activación). Formularios Windows Forms no tiene un equivalente del mecanismo de actualización de comandos.
 
 ## <a name="see-also"></a>Vea también
 

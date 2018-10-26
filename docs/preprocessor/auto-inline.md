@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1b8a3b8539fb4871e4a28f4635c8012b9f80a2
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cc2fb4cb870ff1dca2f0b55e9aad20741ffb8220
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083183"
 ---
 # <a name="autoinline"></a>auto_inline
-Excluye cualquier función definida dentro del intervalo donde **desactivar** se especifica a partir del que se consideran candidatas para la expansión automática alineada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-#pragma auto_inline( [{on | off}] )  
-```  
-  
-## <a name="remarks"></a>Comentarios  
+Excluye cualquier función definida dentro del intervalo donde **desactivar** se especifica a partir del que se consideran candidatas para la expansión automática alineada.
 
-Para usar el **auto_inline** pragma, colóquela delante e inmediatamente después (no en) una definición de función. La pragma surte efecto en cuanto aparece en la primera definición de función.  
-  
+## <a name="syntax"></a>Sintaxis
+
+```
+#pragma auto_inline( [{on | off}] )
+```
+
+## <a name="remarks"></a>Comentarios
+
+Para usar el **auto_inline** pragma, colóquela delante e inmediatamente después (no en) una definición de función. La pragma surte efecto en cuanto aparece en la primera definición de función.
+
 ## <a name="see-also"></a>Vea también
 
 [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

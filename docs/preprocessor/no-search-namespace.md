@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ebcdd54e145ff17dc7c473abf6a3ae37e35e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0895bc1ab6141eaadbeda4a567b8e4cfaad30658
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440100"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072283"
 ---
 # <a name="nosearchnamespace"></a>no_search_namespace
-**Específicos de C++**  
-  
-Tiene la misma funcionalidad que el [no_namespace](../preprocessor/no-namespace.md) atributo pero se usa en las bibliotecas de tipos que usa el `#import` la directiva con la [auto_search](../preprocessor/auto-search.md) atributo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-no_search_namespace  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- 
-**FIN de específicos de C++**  
-  
-## <a name="see-also"></a>Vea también  
- 
+**Específicos de C++**
+
+Tiene la misma funcionalidad que el [no_namespace](../preprocessor/no-namespace.md) atributo pero se usa en las bibliotecas de tipos que usa el `#import` la directiva con la [auto_search](../preprocessor/auto-search.md) atributo.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+no_search_namespace
+```
+
+## <a name="remarks"></a>Comentarios
+
+**FIN de específicos de C++**
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

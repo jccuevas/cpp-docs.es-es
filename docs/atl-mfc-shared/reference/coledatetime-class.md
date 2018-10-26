@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809166"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057406"
 ---
 # <a name="coledatetime-class"></a>COleDateTime (clase)
 
@@ -228,10 +228,10 @@ Un `SYSTEMTIME` estructura para convertirse en un valor de fecha y hora y copiar
 *filetimeSrc*<br/>
 Un `FILETIME` estructura para convertirse en un valor de fecha y hora y copiar en el nuevo `COleDateTime` objeto. Tenga en cuenta que `FILETIME` usa la hora Universal coordinada (UTC), por lo que si se pasa una hora local en la estructura, los resultados serán incorrectos. Consulte [tiempos archivos](/windows/desktop/SysInfo/file-times) en el SDK de Windows para obtener más información.
 
-*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*  
+*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*<br/>
 Indique los valores de fecha y hora en que se copiará en el nuevo `COleDateTime` objeto.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Los valores de fecha y hora de MS-DOS para convertirse en un valor de fecha y hora y copiar en el nuevo `COleDateTime` objeto.
 
 *DBTS*<br/>
@@ -333,13 +333,13 @@ Si el estado de este `COleDateTime` objeto es null, el valor devuelto es una cad
 
 A continuación se muestra una breve descripción de las tres formas para esta función:
 
-`Format`( *dwFlags*, *lcid*)  
+`Format`( *dwFlags*, *lcid*)<br/>
 Este formulario da formato al valor mediante el uso de las especificaciones del lenguaje (identificadores de configuración regional) para la fecha y hora. Con los parámetros predeterminados, este formulario imprimirá la fecha y la hora, a menos que la parte de hora es 0 (medianoche), en cuyo caso imprimirá solo la fecha o la parte de fecha es 0 (30 de diciembre de 1899), en cuyo caso se imprimirá el momento. Si el valor de fecha y hora es 0 (30 de diciembre de 1899, medianoche), este formulario con los parámetros predeterminados imprimirá la medianoche.
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 Este formulario da formato al valor usando la cadena de formato que contiene códigos de formato especiales que van precedidos por un signo de porcentaje (%), como en `printf`. La cadena de formato se pasa como un parámetro a la función. Para obtener más información acerca de los códigos de formato, vea [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) en la referencia de la biblioteca de tiempo de ejecución.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Este formulario da formato al valor usando la cadena de formato que contiene códigos de formato especiales que van precedidos por un signo de porcentaje (%), como en `printf`. La cadena de formato es un recurso. El Id. de este recurso de cadena se pasa como parámetro. Para obtener más información acerca de los códigos de formato, vea [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) en el *referencia de la biblioteca de tiempo de ejecución*.
 
 ### <a name="example"></a>Ejemplo
@@ -701,13 +701,13 @@ Devuelve el estado de este `COleDateTime` valor. Si se llama a `GetStatus` en un
 El valor devuelto se define mediante el `DateTimeStatus` tipo enumerado, que se define dentro de la `COleDateTime` clase.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:
@@ -930,10 +930,10 @@ El `DATE` operador se producirá una aserción si el `COleDateTime` objeto está
 Analiza una cadena para leer un valor de fecha y hora.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -991,15 +991,15 @@ Para obtener más información acerca de los límites y la implementación para 
 Establece la fecha de este `COleDateTime` objeto.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nYear*, *nMonth*, *Ndía*  
+*nYear*, *nMonth*, *Ndía*<br/>
 Indican los componentes de fecha que se copiará en esto `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1062,18 +1062,18 @@ Para obtener más información acerca de los límites de `COleDateTime` valores,
 Establece la fecha y hora de esta `COleDateTime` objeto.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*  
+*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*<br/>
 Indican los componentes de fecha y hora en que se copiará en esto `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1170,15 +1170,15 @@ Vea el ejemplo de [GetStatus](#getstatus).
 Establece la hora de esta `COleDateTime` objeto.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Nhora*, *nmín*, *nSec*  
+*Nhora*, *nmín*, *nSec*<br/>
 Indican los componentes de tiempo que se copiará en esto `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto

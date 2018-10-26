@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069940"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Cómo: Compilar código de MFC y ATL mediante /clr
 
@@ -40,7 +40,7 @@ En este tema se describe cómo compilar programas MFC y ATL existentes para tene
 
 1. En el **las propiedades del proyecto** diálogo cuadro, expanda el nodo junto a **propiedades de configuración** y seleccione **General**. En el panel derecho, bajo **valores predeterminados del proyecto**, establezca **compatible con Common Language Runtime** a **compatible con Common Language Runtime (/ clr)**.
 
-     En el mismo panel, asegúrese de que **uso de MFC** está establecido en **utilizar MFC en un archivo DLL compartido**.
+   En el mismo panel, asegúrese de que **uso de MFC** está establecido en **utilizar MFC en un archivo DLL compartido**.
 
 1. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **General**. Asegúrese de que **formato de información de depuración** está establecido en **/Zi de base de datos de programa** (no **/Zi**).
 
@@ -60,7 +60,7 @@ En este tema se describe cómo compilar programas MFC y ATL existentes para tene
 
 1. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **encabezados precompilados**. Establecer **crear o utilizar encabezado precompilado** a **no utilizar encabezados precompilados**.
 
-     Como alternativa, en **el Explorador de soluciones**, haga clic en Stdafx.cpp y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **General**. Establecer **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.
+   Como alternativa, en **el Explorador de soluciones**, haga clic en Stdafx.cpp y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **General**. Establecer **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.
 
 1. En el archivo que contiene DllMain y cualquier otra cosa llamadas, en **el Explorador de soluciones**, haga clic en el archivo y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **General**. En el panel derecho, bajo **valores predeterminados del proyecto**, establezca **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.
 
@@ -84,7 +84,7 @@ En este tema se describe cómo compilar programas MFC y ATL existentes para tene
 
 1. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **encabezados precompilados**. Establecer **crear o utilizar encabezado precompilado** a **no utilizar encabezados precompilados**.
 
-     Como alternativa, en **el Explorador de soluciones**, haga clic en Stdafx.cpp y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **General**. Establecer **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.
+   Como alternativa, en **el Explorador de soluciones**, haga clic en Stdafx.cpp y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **General**. Establecer **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.
 
 1. En el archivo que contiene DllMain y cualquier otra cosa llamadas, en **el Explorador de soluciones**, haga clic en el archivo y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C o C++** y seleccione **General**. En el panel derecho, bajo **valores predeterminados del proyecto**, establezca **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.
 

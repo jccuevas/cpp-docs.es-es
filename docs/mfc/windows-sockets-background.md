@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079667"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Nociones
 
@@ -69,11 +69,11 @@ Hay dos tipos de socket disponibles:
 
 - Sockets de secuencias
 
-     Los sockets de secuencias proporcionan un flujo de datos sin límites de registro: una secuencia de bytes. Se garantiza que las secuencias se entreguen y estén correctamente ordenadas y no duplicadas.
+   Los sockets de secuencias proporcionan un flujo de datos sin límites de registro: una secuencia de bytes. Se garantiza que las secuencias se entreguen y estén correctamente ordenadas y no duplicadas.
 
 - Sockets de datagrama
 
-     Los sockets de datagrama admiten un flujo de datos orientado a registros cuya entrega no se garantiza y que pueden no estar secuenciados tal como se envían o sin duplicar.
+   Los sockets de datagrama admiten un flujo de datos orientado a registros cuya entrega no se garantiza y que pueden no estar secuenciados tal como se envían o sin duplicar.
 
 "Secuenciado" significa que los paquetes se entregarán en el orden enviado. "Sin duplicar" significa que un paquete determinado solo se obtiene una vez.
 

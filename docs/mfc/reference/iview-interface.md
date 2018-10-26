@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84ed9bfb8b0c8b5ab30af07d8f0448109161df51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077769"
 ---
 # <a name="iview-interface"></a>Interfaz IView
 
@@ -57,7 +57,6 @@ interface class IView
 
 Para obtener más información sobre el uso de Windows Forms, consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-
 ## <a name="requirements"></a>Requisitos
 
 Encabezado: afxwinforms.h (definido en el ensamblado atlmfc\lib\mfcmifc80.dll)
@@ -68,6 +67,7 @@ Se llama por MFC cuando se activa o desactiva una vista.
 ```
 void OnActivateView(bool activate);
 ```
+
 ## <a name="parameters"></a>Parámetros
 
 *Activar*<br/>
@@ -86,6 +86,7 @@ Llamado por MFC cuando se ha modificado el documento de la vista.
 ```
 void OnUpdate();
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Esta función permite que la vista que actualice su presentación para reflejar las modificaciones.

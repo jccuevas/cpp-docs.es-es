@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061708"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Editar una cadena en un recurso de información de versión (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "46445033"
 
 1. Haga clic en el elemento una vez para seleccionarlo y luego comience a editarlo. Realice los cambios directamente en el **información de versión** tabla o en el [ventana propiedades](/visualstudio/ide/reference/properties-window). Los cambios que realice se reflejarán en ambos lugares.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Cuando se edita la `FILEFLAGS` clave en el **información de versión** editor, observará que no se puede establecer el **depurar**, **compilación privada**, o **especiales Compilar** propiedades (en el **propiedades** ventana) para archivos. rc:
 
    - El **información de versión** editor establece la **depurar** propiedad con un `#ifdef` en el script de recursos, según la `_DEBUG` marca de compilación.
@@ -49,4 +49,4 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editor de la información de versión](../windows/version-information-editor.md)<br/>
-[Información de versión (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+[Información de versiones (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

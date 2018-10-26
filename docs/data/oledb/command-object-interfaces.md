@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea824fda89ccf45c62145a0fe72e55edc614970a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8176bad2921edd22edaab1688e38bc7de275b0bb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106980"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074805"
 ---
 # <a name="command-object-interfaces"></a>Interfaces del objeto de comando
 
-El objeto de comando utiliza el `IAccessor` interfaz para especificar enlaces de parámetros. El consumidor llama a `IAccessor::CreateAccessor`, pasa una matriz de `DBBINDING` estructuras. `DBBINDING` contiene información acerca de los enlaces de columna (por ejemplo, tipo y longitud). El proveedor recibe las estructuras y determina cómo se deben transferir los datos y si las conversiones son necesarias.  
-  
-El `ICommandText` interfaz proporciona una manera de especificar un comando de texto. El `ICommandProperties` interfaz controla todas las propiedades de comando.  
-  
-## <a name="see-also"></a>Vea también  
+El objeto de comando utiliza el `IAccessor` interfaz para especificar enlaces de parámetros. El consumidor llama a `IAccessor::CreateAccessor`, pasa una matriz de `DBBINDING` estructuras. `DBBINDING` contiene información acerca de los enlaces de columna (por ejemplo, tipo y longitud). El proveedor recibe las estructuras y determina cómo se deben transferir los datos y si las conversiones son necesarias.
+
+El `ICommandText` interfaz proporciona una manera de especificar un comando de texto. El `ICommandProperties` interfaz controla todas las propiedades de comando.
+
+## <a name="see-also"></a>Vea también
 
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

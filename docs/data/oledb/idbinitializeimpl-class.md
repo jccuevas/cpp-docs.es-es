@@ -50,140 +50,140 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b799b0383316c212ff2d2cd12ccac9b2b14dce0b
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 92d71bc780e66d4a61d74605aeb5c316b181beba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081769"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl (Clase)
 
-Proporciona una implementación para el [IDBInitialize](/previous-versions/windows/desktop/ms713706) interfaz.  
-  
+Proporciona una implementación para el [IDBInitialize](/previous-versions/windows/desktop/ms713706) interfaz.
+
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
-```  
-  
-### <a name="parameters"></a>Parámetros  
+template <class T>
+class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
+```
+
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-La clase derivada de `IDBInitializeImpl`.  
+La clase derivada de `IDBInitializeImpl`.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atldb.h  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="methods"></a>Métodos  
-  
-|||  
-|-|-|  
-|[IDBInitializeImpl](#idbinitializeimpl)|El constructor.|  
-  
-### <a name="interface-methods"></a>Métodos de interfaz  
-  
-|||  
-|-|-|  
-|[Initialize](#initialize)|Inicia el proveedor.|  
-|[Anular la inicialización](#uninitialize)|Detiene el proveedor.|  
-  
-### <a name="data-members"></a>Miembros de datos  
-  
-|||  
-|-|-|  
-|[m_dwStatus](#dwstatus)|Indicadores del origen de datos.|  
-|[m_pCUtlPropInfo](#pcutlpropinfo)|Un puntero a la implementación de la información de las propiedades de la base de datos.|  
-  
-## <a name="remarks"></a>Comentarios  
+**Encabezado:** atldb.h
 
-Una interfaz obligatoria en los objetos de origen de datos y una interfaz opcional sobre los enumeradores.  
+## <a name="members"></a>Miembros
+
+### <a name="methods"></a>Métodos
+
+|||
+|-|-|
+|[IDBInitializeImpl](#idbinitializeimpl)|El constructor.|
+
+### <a name="interface-methods"></a>Métodos de interfaz
+
+|||
+|-|-|
+|[Initialize](#initialize)|Inicia el proveedor.|
+|[Anular la inicialización](#uninitialize)|Detiene el proveedor.|
+
+### <a name="data-members"></a>Miembros de datos
+
+|||
+|-|-|
+|[m_dwStatus](#dwstatus)|Indicadores del origen de datos.|
+|[m_pCUtlPropInfo](#pcutlpropinfo)|Un puntero a la implementación de la información de las propiedades de la base de datos.|
+
+## <a name="remarks"></a>Comentarios
+
+Una interfaz obligatoria en los objetos de origen de datos y una interfaz opcional sobre los enumeradores.
 
 ## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
 
-El constructor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-IDBInitializeImpl();  
-```  
-  
-### <a name="remarks"></a>Comentarios  
+El constructor.
 
-Inicializa a todos los miembros de datos. 
-  
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+IDBInitializeImpl();
+```
+
+### <a name="remarks"></a>Comentarios
+
+Inicializa a todos los miembros de datos.
+
 ## <a name="initialize"></a> Idbinitializeimpl:: Initialize
 
-Inicializa el objeto de origen de datos mediante la preparación de su compatibilidad con la propiedad.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-STDMETHOD(Initialize)(void);  
-```  
-  
-### <a name="remarks"></a>Comentarios  
+Inicializa el objeto de origen de datos mediante la preparación de su compatibilidad con la propiedad.
 
-Consulte [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026) en el *referencia del programador OLE DB*. 
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(Initialize)(void);
+```
+
+### <a name="remarks"></a>Comentarios
+
+Consulte [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026) en el *referencia del programador OLE DB*.
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: UnInitialize
 
-Coloca los datos del origen de objeto en un estado no inicializado al liberar los recursos internos, como la compatibilidad con la propiedad.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Coloca los datos del origen de objeto en un estado no inicializado al liberar los recursos internos, como la compatibilidad con la propiedad.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-STDMETHOD(Uninitialize)(void);  
-```  
-  
-### <a name="remarks"></a>Comentarios  
+STDMETHOD(Uninitialize)(void);
+```
+
+### <a name="remarks"></a>Comentarios
 
 Consulte [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648) en el *referencia del programador OLE DB*.
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
 
-Indicadores del origen de datos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-DWORD m_dwStatus;  
-```  
-  
-### <a name="remarks"></a>Comentarios  
+Indicadores del origen de datos.
 
-Estas marcas especifican o indican el estado de varios atributos para el objeto de origen de datos. Contiene uno o varios de los siguientes **enum** valores:  
-  
-```cpp  
-enum DATASOURCE_FLAGS {  
-    DSF_MASK_INIT     = 0xFFFFF00F,  
-    DSF_PERSIST_DIRTY = 0x00000001,  
-    DSF_INITIALIZED   = 0x00000010,  
-};  
-```  
-  
-|||  
-|-|-|  
-|`DSF_MASK_INIT`|Una máscara para habilitar la restauración de estado no inicializado.|  
-|`DSF_PERSIST_DIRTY`|Establece si el objeto de origen de datos requiere la persistencia (es decir, si ha habido cambios).|  
-|`DSF_INITIALIZED`|Establecer si se ha inicializado el origen de datos.|  
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+DWORD m_dwStatus;
+```
+
+### <a name="remarks"></a>Comentarios
+
+Estas marcas especifican o indican el estado de varios atributos para el objeto de origen de datos. Contiene uno o varios de los siguientes **enum** valores:
+
+```cpp
+enum DATASOURCE_FLAGS {
+    DSF_MASK_INIT     = 0xFFFFF00F,
+    DSF_PERSIST_DIRTY = 0x00000001,
+    DSF_INITIALIZED   = 0x00000010,
+};
+```
+
+|||
+|-|-|
+|`DSF_MASK_INIT`|Una máscara para habilitar la restauración de estado no inicializado.|
+|`DSF_PERSIST_DIRTY`|Establece si el objeto de origen de datos requiere la persistencia (es decir, si ha habido cambios).|
+|`DSF_INITIALIZED`|Establecer si se ha inicializado el origen de datos.|
 
 ## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
 
-Un puntero al objeto de implementación para la información de las propiedades de la base de datos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Un puntero al objeto de implementación para la información de las propiedades de la base de datos.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-CUtlPropInfo< T >* m_pCUtlPropInfo;  
-```  
-  
-## <a name="see-also"></a>Vea también  
+CUtlPropInfo< T >* m_pCUtlPropInfo;
+```
+
+## <a name="see-also"></a>Vea también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403589"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073102"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Controladores para intervalos de mapa de mensajes
 
@@ -81,7 +81,7 @@ La entrada de mapa de mensajes consta de los siguientes elementos:
 
 - Parámetros de la macro:
 
-     Las dos primeras macros toman tres parámetros:
+   Las dos primeras macros toman tres parámetros:
 
    - El identificador de comando inicial del intervalo
 
@@ -89,9 +89,9 @@ La entrada de mapa de mensajes consta de los siguientes elementos:
 
    - El nombre de la función de controlador de mensaje
 
-     El intervalo de identificadores de comando debe ser contiguo.
+   El intervalo de identificadores de comando debe ser contiguo.
 
-     La tercera macro, `ON_CONTROL_RANGE`, toma un parámetro adicional de primera: mensaje de notificación de control, como **EN_CHANGE**.
+   La tercera macro, `ON_CONTROL_RANGE`, toma un parámetro adicional de primera: mensaje de notificación de control, como **EN_CHANGE**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> Declarar la función de controlador
 
@@ -113,11 +113,11 @@ Al escribir la entrada de mapa de mensajes, especifica:
 
 - Dos identificadores de comando inicial y final de un intervalo contiguo.
 
-     Aquí están **ID_VIEW_ZOOM25** y **ID_VIEW_ZOOM300**.
+   Aquí están **ID_VIEW_ZOOM25** y **ID_VIEW_ZOOM300**.
 
 - El nombre de la función de controlador para los comandos.
 
-     Aquí tiene `OnZoom`.
+   Aquí tiene `OnZoom`.
 
 La declaración de función podría ser similar a esto:
 
@@ -137,15 +137,15 @@ Al escribir el `ON_CONTROL_RANGE` macro en el mapa de mensajes, especifica:
 
 - Un mensaje de notificación de control determinado.
 
-     Aquí tiene **BN_CLICKED**.
+   Aquí tiene **BN_CLICKED**.
 
 - Los valores de Id. del control asociados al intervalo contiguo de controles.
 
-     Aquí son **IDC_BUTTON1** y **IDC_BUTTON10**.
+   Aquí son **IDC_BUTTON1** y **IDC_BUTTON10**.
 
 - El nombre de la función de controlador de mensajes.
 
-     Aquí tiene `OnButtonClicked`.
+   Aquí tiene `OnButtonClicked`.
 
 Cuando se escribe la función de controlador, especifique el archivo extra **UINT** parámetro, como se muestra en la siguiente:
 

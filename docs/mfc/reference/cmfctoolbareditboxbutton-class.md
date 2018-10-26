@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a346cf75a0afebcfdcb31259a0ba72d3a8f6c22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe5aa32a8d6cf0eecc1cc38e49643900bf34f9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397330"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066999"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton (clase)
 
@@ -141,7 +141,7 @@ Para obtener más información, consulte [Tutorial: poner controles en las barra
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCToolBarEditBoxButton` clase. En el ejemplo se muestra cómo especificar que un usuario puede expandir el botón durante la personalización, especificar que se muestra un borde del botón cuando un usuario hace clic en el botón, establecer el texto en el control de cuadro de texto, especificar la apariencia de estilo plano de los botones del cuadro de edición en el receptor la aplicación y especifique el estilo de una barra de herramientas de control de cuadro de edición.
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCToolBarEditBoxButton` . En el ejemplo se muestra cómo especificar que un usuario puede expandir el botón durante la personalización, especificar que se muestra un borde del botón cuando un usuario hace clic en el botón, establecer el texto en el control de cuadro de texto, especificar la apariencia de estilo plano de los botones del cuadro de edición en el receptor la aplicación y especifique el estilo de una barra de herramientas de control de cuadro de edición.
 
 [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]
 
@@ -703,6 +703,4 @@ Este método establece [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoo
 [CEdit (clase)](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

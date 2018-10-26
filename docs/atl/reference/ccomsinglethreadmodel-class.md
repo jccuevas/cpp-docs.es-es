@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a20a5c8ad87428e66f90b8f04c3006e5f1c2e84
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068879"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel (clase)
 
@@ -58,9 +58,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>Comentarios
 
-`CComSingleThreadModel` Proporciona métodos para aumentar y disminuir el valor de una variable. A diferencia de [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) y [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), estos métodos no son seguros para subprocesos.  
+`CComSingleThreadModel` Proporciona métodos para aumentar y disminuir el valor de una variable. A diferencia de [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) y [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), estos métodos no son seguros para subprocesos.
 
-Normalmente, se utiliza `CComSingleThreadModel` a través de uno de los dos **typedef** nombres, ya sea [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) o [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La clase que se hace referencia a cada uno de ellos **typedef** depende del modelo de subprocesos utilizado, tal como se muestra en la tabla siguiente:  
+Normalmente, se utiliza `CComSingleThreadModel` a través de uno de los dos **typedef** nombres, ya sea [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) o [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La clase que se hace referencia a cada uno de ellos **typedef** depende del modelo de subprocesos utilizado, tal como se muestra en la tabla siguiente:
 
 |typedef|Modelo de subprocesamiento único|Modelo de subprocesamiento controlado|Modelo de subprocesamiento libre|
 |-------------|----------------------------|-------------------------------|--------------------------|

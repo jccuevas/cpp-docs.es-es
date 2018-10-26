@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b84ed250bcacc07b421318429458c889546e9e6a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954059"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060655"
 ---
 # <a name="initializerlist-class"></a>initializer_list (Clase)
 
@@ -45,7 +45,6 @@ class initializer_list
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*Type*|Tipo de datos de elementos que se va a almacenar en la `initializer_list`.|
-
 
 ## <a name="remarks"></a>Comentarios
 

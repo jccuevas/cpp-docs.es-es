@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063801"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar (clase)
 
@@ -121,7 +121,7 @@ Normalmente, el área principal de la barra de estado muestra las notificaciones
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCRibbonStatusBar` clase. El ejemplo muestra cómo agregar un nuevo elemento de la cinta de opciones a la barra de estado de la cinta de opciones, agregue un elemento de la cinta de opciones para el área extendida de la barra de estado de la cinta de opciones, agregue un separador y habilitar el modo normal de la barra de estado de la cinta de opciones.
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonStatusBar` . El ejemplo muestra cómo agregar un nuevo elemento de la cinta de opciones a la barra de estado de la cinta de opciones, agregue un elemento de la cinta de opciones para el área extendida de la barra de estado de la cinta de opciones, agregue un separador y habilitar el modo normal de la barra de estado de la cinta de opciones.
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*uiCmdID*<br/>
-[in] [in] *BOOL*
+[in] *uiCmdID*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rect*
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pElement*
+[in] *pElement*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
