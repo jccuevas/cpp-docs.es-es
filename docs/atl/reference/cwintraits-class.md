@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069401"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062475"
 ---
 # <a name="cwintraits-class"></a>CWinTraits (clase)
 
@@ -68,15 +68,15 @@ Use esta plantilla cuando desee proporcionar predeterminado estilos de ventana q
 
 ATL proporciona tres especializaciones predefinidas de esta plantilla para combinaciones frecuentes de estilos de ventana:
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    Diseñado para una ventana de control estándar. Se usan los siguientes estilos estándares: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN y WS_CLIPSIBLINGS. No hay ningún estilos extendidos.
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    Diseñado para una ventana de marco estándar. Los estilos estándares utilizados incluyen: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN y WS_CLIPSIBLINGS. Los estilos extendidos utilizados incluyen: WS_EX_APPWINDOW y WS_EX_WINDOWEDGE.
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    Diseñado para una ventana MDI secundaria estándar. Los estilos estándares utilizados incluyen: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN y WS_CLIPSIBLINGS. Los estilos extendidos utilizados incluyen: WS_EX_MDICHILD.
 

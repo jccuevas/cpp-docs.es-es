@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919cff46250d07876c9ca50acb21972fcfa75d4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a734e51f298f7f092dde341479293bad3a2d9434
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072689"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controles ActiveX MFC: Utilizar imágenes en un control ActiveX
 
@@ -47,15 +47,15 @@ Las clases de controles ActiveX proporcionan varios componentes que puede usar p
 
 - La clase [CPictureHolder](../mfc/reference/cpictureholder-class.md) .
 
-     Esta clase proporciona fácil acceso a la funcionalidad y al objeto de imagen del elemento mostrado por la propiedad de imagen personalizada.
+   Esta clase proporciona fácil acceso a la funcionalidad y al objeto de imagen del elemento mostrado por la propiedad de imagen personalizada.
 
 - Compatibilidad con las propiedades de tipo **LPPICTUREDISP**, implementadas con las funciones Get/Set.
 
-     Con la vista de clases, puede agregar rápidamente una propiedad personalizada (o varias) que admita el tipo de imagen. Para obtener más información sobre la adición de propiedades de controles ActiveX con la vista de clases, vea el [Controles ActiveX MFC: Propiedades](../mfc/mfc-activex-controls-properties.md).
+   Con la vista de clases, puede agregar rápidamente una propiedad personalizada (o varias) que admita el tipo de imagen. Para obtener más información sobre la adición de propiedades de controles ActiveX con la vista de clases, vea el [Controles ActiveX MFC: Propiedades](../mfc/mfc-activex-controls-properties.md).
 
 - Página de propiedades que manipula la propiedad o las propiedades de imagen de un control.
 
-     Esta página de propiedades forma parte de un grupo de páginas de propiedades estándar disponibles para los controles ActiveX. Para obtener más información sobre las páginas de propiedades de controles ActiveX, vea el [Controles ActiveX MFC: Usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+   Esta página de propiedades forma parte de un grupo de páginas de propiedades estándar disponibles para los controles ActiveX. Para obtener más información sobre las páginas de propiedades de controles ActiveX, vea el [Controles ActiveX MFC: Usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementar una propiedad de imagen personalizada en el control ActiveX
 
@@ -67,11 +67,11 @@ Para implementar una propiedad de imagen personalizada, debe hacer lo siguiente:
 
 - [Agregar código al proyecto de control](#_core_additions_to_your_control_project).
 
-     Se deben agregar un identificador de página de propiedades de imagen estándar, un miembro de datos de tipo `CPictureHolder`y una propiedad personalizada de tipo **LPPICTUREDISP** con una implementación Get/Set.
+   Se deben agregar un identificador de página de propiedades de imagen estándar, un miembro de datos de tipo `CPictureHolder`y una propiedad personalizada de tipo **LPPICTUREDISP** con una implementación Get/Set.
 
 - [Modificar varias funciones en la clase del control](#_core_modifications_to_your_control_project).
 
-     Estas modificaciones se realizarán en varias funciones que son responsables del dibujo del control ActiveX.
+   Estas modificaciones se realizarán en varias funciones que son responsables del dibujo del control ActiveX.
 
 ##  <a name="_core_additions_to_your_control_project"></a> Adiciones al proyecto de control
 
