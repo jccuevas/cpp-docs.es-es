@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b0a7c9ae697bc28ad9fe3bd89d37f22d7a8cdc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e1d17b66285b60190a5c91c8defd5adf51f79a6a
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313473"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143658"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Describe un objeto que almacena un par ordenado de objetos de tipo **long double**, el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.
+Esta clase de plantilla especializada de forma explícita describe un objeto que almacena un par ordenado de objetos, ambos de tipo **long double**, el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,6 +41,7 @@ public:
 
 complex(
     constexpr complex<long double>& complexNum);
+
 // rest same as template class complex
 };
 ```
@@ -62,9 +63,11 @@ Un número complejo de tipo **long double**.
 
 ## <a name="remarks"></a>Comentarios
 
-La especialización explícita de la clase de plantilla compleja en una clase compleja de tipo **long double** difiere solo en los constructores que define la clase de plantilla. La conversión de **long double** a **float** puede ser implícita, pero la conversión de **doble** a **long double** es necesario para ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
+La especialización explícita de la clase de plantilla `complex` en una clase compleja de tipo **long double** difiere solo en los constructores que define la clase de plantilla. La conversión de **long double** a **float** puede ser implícita, pero la conversión de **doble** a **long double** es necesario para ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
 
-Para obtener más información sobre la clase de plantilla `complex`, vea [complex (Clase)](../standard-library/complex-class.md). Para obtener una lista de los miembros de la clase de plantilla `complex`, vea .
+Para obtener más información sobre la clase de plantilla `complex` y sus miembros, vea [complex (clase)](../standard-library/complex-class.md).
+
+**Específico de Microsoft**: el **long double** y **doble** tipos tienen la misma representación, pero son tipos distintos. Para obtener más información, consulte [tipos fundamentales](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -76,49 +79,50 @@ Para obtener más información sobre la clase de plantilla `complex`, vea [compl
 
 int main( )
 {
-   using namespace std;
-   double pi = 3.14159265359;
+    using namespace std;
+    double pi = 3.14159265359;
 
-   // The first constructor specifies real & imaginary parts
-   complex <long double> c1 ( 4.0 , 5.0 );
-   cout << "Specifying initial real & imaginary parts,\n"
+    // The first constructor specifies real & imaginary parts
+    complex<long double> c1( 4.0 , 5.0 );
+    cout << "Specifying initial real & imaginary parts,\n"
         << " as type float gives c1 = " << c1 << endl;
 
-   // The second constructor initializes values of the real &
-   // imaginary parts using those of complex number of type float
-   complex <float> c2float ( 1.0 , 3.0 );
-   complex <long double> c2longdouble ( c2float );
-   cout << "Implicit conversion from type float to type long double,"
+    // The second constructor initializes values of the real &
+    // imaginary parts using those of complex number of type float
+    complex<float> c2float( 1.0 , 3.0 );
+    complex<long double> c2longdouble ( c2float );
+    cout << "Implicit conversion from type float to type long double,"
         << "\n gives c2longdouble = " << c2longdouble << endl;
 
-   // The third constructor initializes values of the real &
-   // imaginary parts using those of a complex number
-   // of type double
-   complex <double> c3double ( 3.0 , 4.0 );
-   complex <long double> c3longdouble ( c3double );
-   cout << "Implicit conversion from type long double to type float,"
+    // The third constructor initializes values of the real &
+    // imaginary parts using those of a complex number
+    // of type double
+    complex<double> c3double( 3.0 , 4.0 );
+    complex<long double> c3longdouble( c3double );
+    cout << "Implicit conversion from type long double to type float,"
         << "\n gives c3longdouble = " << c3longdouble << endl;
 
-   // The modulus and argument of a complex number can be recovered
-   double absc3 = abs ( c3longdouble );
-   double argc3 = arg ( c3longdouble );
-   cout << "The modulus of c3 is recovered from c3 using: abs ( c3 ) = "
+    // The modulus and argument of a complex number can be recovered
+    double absc3 = abs( c3longdouble );
+    double argc3 = arg( c3longdouble );
+    cout << "The modulus of c3 is recovered from c3 using: abs( c3 ) = "
         << absc3 << endl;
-   cout << "Argument of c3 is recovered from c3 using:\n arg ( c3 ) = "
+    cout << "Argument of c3 is recovered from c3 using:\n arg( c3 ) = "
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-/* Output:
+```
+
+```Output
 Specifying initial real & imaginary parts,
 as type float gives c1 = (4,5)
 Implicit conversion from type float to type long double,
 gives c2longdouble = (1,3)
 Implicit conversion from type long double to type float,
 gives c3longdouble = (3,4)
-The modulus of c3 is recovered from c3 using: abs ( c3 ) = 5
+The modulus of c3 is recovered from c3 using: abs( c3 ) = 5
 Argument of c3 is recovered from c3 using:
-arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
-*/
+arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
 ## <a name="requirements"></a>Requisitos
