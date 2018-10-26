@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721297"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136177"
 ---
 # <a name="linker-options"></a>Opciones del enlazador
 
@@ -60,7 +60,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Establece el tipo de una imagen de CLR (IJW, pura o segura).|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Conserva el último código de error de las funciones a las que se llama con el mecanismo P/Invoke.|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Especifica el atributo de subprocesamiento que se debe aplicar al punto de entrada del programa CLR.|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Especifica si el enlazador aplicará el atributo SuppressUnmanagedCodeSecurity a los códigos auxiliares PInvoke generados por el enlazador que llamen desde el código administrado a DLL nativas.|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Especifica si el enlazador aplicará el atributo SuppressUnmanagedCodeSecurity a los códigos auxiliares PInvoke generados por el enlazador que llamen desde el código administrado a DLL nativas.|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|Crea información de depuración.|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Especifica qué datos desea incluir en la información de depuración.|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|Pasa un archivo de definición de módulos (.def) al enlazador.|
