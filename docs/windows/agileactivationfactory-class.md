@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 765d5c2f7157cffb685ac476eae4c5dfc88c694d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0d8ccf5e0141f166ec682df04c10ef915ab1daec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789285"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059225"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory (Clase)
 
@@ -43,13 +43,13 @@ class AgileActivationFactory :
         cacheFlagValue
     >;
 ```
-  
+
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** module.h
-  
+
 **Espacio de nombres:** Microsoft::WRL
-  
+
 ## <a name="see-also"></a>Vea también
 
 [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)<br/>

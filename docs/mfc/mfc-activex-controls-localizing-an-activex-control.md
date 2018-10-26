@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053284"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controles ActiveX MFC: Localizar un control ActiveX
 
@@ -68,7 +68,7 @@ Para crear varias bibliotecas de tipos traducida puede agregarlos archivos. Arch
 
 1. Con el proyecto de control abierto, en el **proyecto** menú, haga clic en **Agregar elemento existente**.
 
-     El **Agregar elemento existente** aparece el cuadro de diálogo.
+   El **Agregar elemento existente** aparece el cuadro de diálogo.
 
 1. Si es necesario, seleccione la unidad y directorio que desea ver.
 

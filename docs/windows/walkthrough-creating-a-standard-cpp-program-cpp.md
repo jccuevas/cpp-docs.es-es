@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 800dd3b626a03ec3b04910f6c4c1bbea3e1ab17d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053531"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: Crear un programa estándar de C++ (C++)
 
@@ -45,10 +45,10 @@ Para completar este tutorial, debe comprender los conceptos básicos del lenguaj
 
 1. Cree un proyecto que apunta a **New** en el **archivo** menú y, a continuación, haga clic en **proyecto**.
 
-1. En el **Visual C++** panel tipos de proyecto, haga clic en **Windows Desktop**y, a continuación, haga clic en **aplicación de consola Windows**. 
+1. En el **Visual C++** panel tipos de proyecto, haga clic en **Windows Desktop**y, a continuación, haga clic en **aplicación de consola Windows**.
 
    > [!NOTE]
-   > Para las versiones de Visual Studio anteriores a 2017, en el **nuevo proyecto** cuadro de diálogo, expanda **instalado** > **plantillas**  >  **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Aplicación de consola Win32**. 
+   > Para las versiones de Visual Studio anteriores a 2017, en el **nuevo proyecto** cuadro de diálogo, expanda **instalado** > **plantillas**  >  **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Aplicación de consola Win32**.
 
    Escriba un nombre para el proyecto.
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072530"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM y .NET
 
@@ -90,21 +90,21 @@ Además, el vinculador de Visual C++ generarán toda la información de atributo
 ## <a name="contexts"></a> Contextos de atributo
 
 Atributos de C++ se pueden describir mediante los cuatro campos básicos: el destino se puede aplicar a (**se aplica a**), si son repetibles o no (**repetible**), el requiere la presencia de otros atributos ( **Atributos requeridos**) y las incompatibilidades con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla que aparece en el tema de referencia de cada atributo. Cada uno de estos campos se describe a continuación.
-  
+
 ### <a name="applies-to"></a>Se aplica a
 
 Este campo describe los diferentes elementos del lenguaje C++ que son destinos válidos para el atributo especificado. Por ejemplo, si un atributo especifica "class" en la **se aplica a** campo, esto indica que el atributo solo puede aplicarse a una clase de C++ válida. Si el atributo se aplica a una función miembro de una clase, se produciría un error de sintaxis.
-  
+
 Para obtener más información, consulte [atributos por uso](attributes-by-usage.md).
-  
+
 ### <a name="repeatable"></a>Reiterativo
 
 Este campo indica si el atributo puede aplicarse varias veces en el mismo destino. La mayoría de los atributos no son repetibles.
-  
+
 ### <a name="required-attributes"></a>Atributos requeridos
 
 Este campo muestra otros atributos que deben estar presentes (que es, se aplican al mismo destino) para el atributo especificado funcionar correctamente. Es raro que un atributo para que todas las entradas para este campo.
-  
+
 ### <a name="invalid-attributes"></a>Atributos no válidos
 
 Este campo muestra otros atributos que no son compatibles con el atributo especificado. Es raro que un atributo para que todas las entradas para este campo.

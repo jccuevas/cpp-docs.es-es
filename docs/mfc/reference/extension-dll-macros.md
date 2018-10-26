@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320bbc9fde5888f75149d6f3f9fad60deb869924
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 18fda4f020c4143a29ed88526c61f9fdf45a096a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054662"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros y funciones para administrar los archivos DLL
 
@@ -221,6 +221,7 @@ Llame a esta función en una DLL de extensión MFC `DllMain` para inicializar el
 ```
 BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModule );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *state*<br/>
@@ -282,6 +283,7 @@ Utilice esta función para establecer la marca de estado por módulo, que afecta
 ```
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *bSet*<br/>

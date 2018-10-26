@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075130"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Usar las clases para escribir aplicaciones para Windows
 
@@ -66,17 +66,17 @@ Otras partes de framework se incluyen:
 
 - [Administración de memoria](../mfc/memory-management.md)
 
-     Además de proporcionar una ventaja de escribir aplicaciones para el sistema operativo de Windows, MFC también facilita mucho más fáciles de escribir aplicaciones que utilizan específicamente vinculación e incrustación de la tecnología OLE. Puede realizar la aplicación OLE visual de edición de contenedor, un servidor de edición visual OLE o ambos, y puede agregar automatización para que otras aplicaciones pueden usar los objetos de la aplicación o incluso controlarlo de forma remota.
+   Además de proporcionar una ventaja de escribir aplicaciones para el sistema operativo de Windows, MFC también facilita mucho más fáciles de escribir aplicaciones que utilizan específicamente vinculación e incrustación de la tecnología OLE. Puede realizar la aplicación OLE visual de edición de contenedor, un servidor de edición visual OLE o ambos, y puede agregar automatización para que otras aplicaciones pueden usar los objetos de la aplicación o incluso controlarlo de forma remota.
 
 - [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-     El kit de desarrollo de control OLE (CDK) ahora está totalmente integrado con el marco de trabajo. Esta serie de artículos proporciona información general sobre desarrollo de controles ActiveX con MFC. (Los controles ActiveX anteriormente eran conocidos como controles OLE).
+   El kit de desarrollo de control OLE (CDK) ahora está totalmente integrado con el marco de trabajo. Esta serie de artículos proporciona información general sobre desarrollo de controles ActiveX con MFC. (Los controles ActiveX anteriormente eran conocidos como controles OLE).
 
 - [Programación de la base de datos](../data/data-access-programming-mfc-atl.md)
 
-     MFC también proporciona dos conjuntos de clases de base de datos que simplifican la escritura de acceso a datos de aplicaciones. Utilizando las clases de base de datos ODBC, puede conectarse a bases de datos a través de un controlador de Open Database Connectivity (ODBC), seleccionar los registros de las tablas y mostrar información del registro en un formulario en pantalla. Utilizando las clases de objeto de acceso a datos (DAO), puede trabajar con bases de datos a través del motor de base de datos Microsoft Jet o los orígenes de datos externos de (que no sean de Jet), incluidos los orígenes de datos ODBC.
+   MFC también proporciona dos conjuntos de clases de base de datos que simplifican la escritura de acceso a datos de aplicaciones. Utilizando las clases de base de datos ODBC, puede conectarse a bases de datos a través de un controlador de Open Database Connectivity (ODBC), seleccionar los registros de las tablas y mostrar información del registro en un formulario en pantalla. Utilizando las clases de objeto de acceso a datos (DAO), puede trabajar con bases de datos a través del motor de base de datos Microsoft Jet o los orígenes de datos externos de (que no sean de Jet), incluidos los orígenes de datos ODBC.
 
-     Además, MFC está totalmente habilitado para escribir aplicaciones que utilizan Unicode y juegos de caracteres multibyte (MBCS), juegos de caracteres de específicamente de doble byte (DBCS).
+   Además, MFC está totalmente habilitado para escribir aplicaciones que utilizan Unicode y juegos de caracteres multibyte (MBCS), juegos de caracteres de específicamente de doble byte (DBCS).
 
 Para obtener una guía general para la documentación de MFC, vea [temas generales de MFC](../mfc/general-mfc-topics.md).
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380454"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078159"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Cómo: Crear una colección con seguridad de tipos
 
@@ -45,11 +45,11 @@ La biblioteca Microsoft Foundation Class proporciona colecciones con seguridad d
 
 1. Declare una variable del tipo de clase de colección. Por ejemplo:
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. Llamar a funciones del objeto de colección del miembro. Por ejemplo:
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. Si es necesario, implemente el [funciones auxiliares](../mfc/reference/collection-class-helpers.md) y [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). Para obtener información sobre la implementación de estas funciones, vea [implementar funciones auxiliares](#_core_implementing_helper_functions).
 
@@ -85,27 +85,27 @@ Hay dos maneras de crear colecciones con seguridad de tipos con las colecciones 
 
 1. Use una de las clases sin plantilla, como `CWordArray`, directamente.
 
-     Por ejemplo, puede crear un `CWordArray` y agregarle los valores de 32 bits, a continuación, recuperarlos. No hay nada más que hacer. Simplemente utilice la funcionalidad predefinida.
+   Por ejemplo, puede crear un `CWordArray` y agregarle los valores de 32 bits, a continuación, recuperarlos. No hay nada más que hacer. Simplemente utilice la funcionalidad predefinida.
 
-     También puede usar una colección predefinida, como `CObList`, para contener cualquier objeto derivado de `CObject`. Un `CObList` se define una colección para almacenar punteros a `CObject`. Cuando se recupera un objeto de la lista, es posible que deba convertir el resultado al tipo apropiado desde el `CObList` funciones devuelven punteros a `CObject`. Por ejemplo, si almacena `CPerson` objetos en un `CObList` colección, tendrá que convertir un elemento recuperado para ser un puntero a un `CPerson` objeto. En el ejemplo siguiente se usa un `CObList` colección donde se almacenan `CPerson` objetos:
+   También puede usar una colección predefinida, como `CObList`, para contener cualquier objeto derivado de `CObject`. Un `CObList` se define una colección para almacenar punteros a `CObject`. Cuando se recupera un objeto de la lista, es posible que deba convertir el resultado al tipo apropiado desde el `CObList` funciones devuelven punteros a `CObject`. Por ejemplo, si almacena `CPerson` objetos en un `CObList` colección, tendrá que convertir un elemento recuperado para ser un puntero a un `CPerson` objeto. En el ejemplo siguiente se usa un `CObList` colección donde se almacenan `CPerson` objetos:
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     Esta técnica del uso de un tipo de colección predefinida y convertir según sea necesario puede ser adecuada para muchas de sus necesidades de la colección. Si necesita una mayor funcionalidad o más seguridad de tipos, use una clase de plantilla o siga el procedimiento siguiente.
+   Esta técnica del uso de un tipo de colección predefinida y convertir según sea necesario puede ser adecuada para muchas de sus necesidades de la colección. Si necesita una mayor funcionalidad o más seguridad de tipos, use una clase de plantilla o siga el procedimiento siguiente.
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>Para derivar y extender una colección de seguridad de tipos sin plantilla
 
 1. Derivar su propia clase de colección de una de las clases sin plantilla predefinida.
 
-     Al derivar su clase, puede agregar funciones de contenedor de seguridad de tipos para proporcionar una interfaz de seguridad de tipos para las funciones existentes.
+   Al derivar su clase, puede agregar funciones de contenedor de seguridad de tipos para proporcionar una interfaz de seguridad de tipos para las funciones existentes.
 
-     Por ejemplo, si ha derivado una lista de `CObList` para contener `CPerson` objetos, podría agregar las funciones contenedoras `AddHeadPerson` y `GetHeadPerson`, tal y como se muestra a continuación.
+   Por ejemplo, si ha derivado una lista de `CObList` para contener `CPerson` objetos, podría agregar las funciones contenedoras `AddHeadPerson` y `GetHeadPerson`, tal y como se muestra a continuación.
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     Estas funciones contenedoras proporcionan una manera segura de tipo para agregar y recuperar `CPerson` objetos en la lista derivada. Puede ver que para el `GetHeadPerson` función, simplemente se está encapsulando la conversión de tipos.
+   Estas funciones contenedoras proporcionan una manera segura de tipo para agregar y recuperar `CPerson` objetos en la lista derivada. Puede ver que para el `GetHeadPerson` función, simplemente se está encapsulando la conversión de tipos.
 
-     También puede agregar nueva funcionalidad definiendo nuevas funciones que amplían las capacidades de la colección, en lugar de simplemente encapsulando la funcionalidad existente en contenedores con seguridad de tipos. Por ejemplo, el artículo [eliminar todos los objetos de una colección CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) describe una función para eliminar todos los objetos contenidos en una lista. Esta función se puede agregar a la clase derivada como una función miembro.
+   También puede agregar nueva funcionalidad definiendo nuevas funciones que amplían las capacidades de la colección, en lugar de simplemente encapsulando la funcionalidad existente en contenedores con seguridad de tipos. Por ejemplo, el artículo [eliminar todos los objetos de una colección CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) describe una función para eliminar todos los objetos contenidos en una lista. Esta función se puede agregar a la clase derivada como una función miembro.
 
 ## <a name="see-also"></a>Vea también
 

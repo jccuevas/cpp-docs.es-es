@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af4817c3b89f83fd9f3f22875e5da26053b55c87
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 89fb592a29fec5198ee96b25319e194eeaffa91f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792111"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063606"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -53,7 +53,7 @@ Vea el ejemplo de [enlazable](bindable.md) para obtener un ejemplo de cómo usar
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -62,4 +62,4 @@ Para obtener más información, consulte [contextos de atributo](cpp-attributes-
 [Atributos de miembros de datos](data-member-attributes.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

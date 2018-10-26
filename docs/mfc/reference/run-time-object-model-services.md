@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064569"
 ---
 # <a name="run-time-object-model-services"></a>Servicios del modelo de objetos en tiempo de ejecución
 
@@ -39,8 +39,6 @@ Para obtener más información sobre estos servicios de objeto de tiempo de ejec
 
 ### <a name="run-time-object-model-services-macros"></a>Macros de servicios del modelo de objetos de tiempo de ejecución
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Permite el acceso a la información de clase en tiempo de ejecución (debe usarse en la declaración de clase).|
@@ -51,19 +49,11 @@ Para obtener más información sobre estos servicios de objeto de tiempo de ejec
 |[IMPLEMENT_SERIAL](#implement_serial)|Permite la serialización y el acceso a la información de clase en tiempo de ejecución (debe usarse en la implementación de la clase).|
 |[RUNTIME_CLASS](#runtime_class)|Devuelve el `CRuntimeClass` estructura que corresponde a la clase con nombre.|
 
-
 OLE con frecuencia requiere la creación dinámica de objetos en tiempo de ejecución. Por ejemplo, una aplicación de servidor OLE debe ser capaz de crear elementos OLE dinámicamente en respuesta a una solicitud de un cliente. De forma similar, un servidor de automatización debe ser capaz de crear elementos en respuesta a las solicitudes de los clientes de automatización.
 
 La biblioteca Microsoft Foundation Class proporciona dos macros específicas a OLE.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Creación dinámica de objetos OLE
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ Determina si la biblioteca de controles comunes implementa la API especificada.
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *proc*<br/>
@@ -112,6 +103,7 @@ Determina si la biblioteca de controles comunes implementa la API especificada (
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *proc*<br/>
@@ -129,8 +121,6 @@ afxcomctl32.h, afxcomctl32.inl
 
 [Aislamiento de la biblioteca de controles comunes de MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ Vea el ejemplo de [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Encabezado:** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 Declara el `GetUserTypeNameID` y `GetMiscStatus` las funciones miembro de la clase del control.
@@ -207,6 +196,7 @@ Declara el `GetUserTypeNameID` y `GetMiscStatus` las funciones miembro de la cla
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *CLASS_NAME*<br/>
@@ -224,7 +214,6 @@ El nombre de la clase de control.
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Declara que el control OLE proporciona una lista de páginas de propiedades para mostrar sus propiedades.
@@ -234,6 +223,7 @@ Declara que el control OLE proporciona una lista de páginas de propiedades para
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *CLASS_NAME*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *CLASS_NAME*<br/>
@@ -408,7 +399,6 @@ El identificador de clase OLE es un identificador único de 128 bits para el obj
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [Clave CLSID](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implementa el `GetUserTypeNameID` y `GetMiscStatus` las funciones miembro de la clase del control.
@@ -418,6 +408,7 @@ Implementa el `GetUserTypeNameID` y `GetMiscStatus` las funciones miembro de la 
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *CLASS_NAME*<br/>

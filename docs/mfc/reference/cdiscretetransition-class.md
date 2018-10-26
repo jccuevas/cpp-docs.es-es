@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98deeff0e6b39a52002416c1b234434623f31b6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9384fbc79137807015b5b18092806e2a67577b88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416219"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073882"
 ---
 # <a name="cdiscretetransition-class"></a>Clase CDiscreteTransition
 
@@ -115,7 +115,6 @@ virtual BOOL Create(
 
 *pLibrary*<br/>
 Un puntero a un [IUIAnimationTransitionLibrary interfaz](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define una biblioteca de transiciones estándares.
-
 
 ### <a name="return-value"></a>Valor devuelto
 

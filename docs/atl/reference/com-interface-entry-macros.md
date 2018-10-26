@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080122"
 ---
-# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
+# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
 
-Estas macros escriba interfaces de un objeto en su mapa COM para que sean accesibles para `QueryInterface`. El orden de las entradas de mapa COM es las interfaces de orden se comprobará para un IID coincidente durante `QueryInterface`.  
+Estas macros escriba interfaces de un objeto en su mapa COM para que sean accesibles para `QueryInterface`. El orden de las entradas de mapa COM es las interfaces de orden se comprobará para un IID coincidente durante `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Estas macros escriba interfaces de un objeto en su mapa COM para que sean accesi
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Procesa el mapa COM de la clase base cuando llega a esta entrada en el mapa COM el procesamiento.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Un mecanismo general para enlazar con de ATL `QueryInterface` lógica.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Igual que [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), salvo que consultar los IID da como resultado una llamada a *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Devuelve E_NOINTERFACE y finaliza el procesamiento de mapa COM cuando se consulta la interfaz especificada.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Devuelve E_NOINTERFACE y finaliza el procesamiento de mapa COM cuando se consulta la interfaz especificada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,6 +70,7 @@ Escribe las interfaces en el mapa de interfaz COM.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlcom.h
@@ -356,7 +358,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 *almacenamiento de datos*<br/>
 [in] Un parámetro que se pasa a la *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] El puntero de función que va a devolver *iid*.
 
 ### <a name="remarks"></a>Comentarios
@@ -380,7 +382,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 *almacenamiento de datos*<br/>
 [in] Un parámetro que se pasa a la *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] La función que se llama cuando se procesa esta entrada en el mapa COM.
 
 ### <a name="remarks"></a>Comentarios
@@ -406,4 +408,3 @@ Puede usar esta macro para impedir que una interfaz que se usan en un caso concr
 
 La interfaz se construirán IID anexando *x* a `IID_`. Por ejemplo, si *x* es `IPersistStorage`, será el IID `IID_IPersistStorage`.
 
-  

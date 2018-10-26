@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ea3ece20ac6df0fab00f1e21d27c41ae6e115517
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792113"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065907"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -51,7 +51,7 @@ no es válido para el atributo **dispinterface** .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [enlazable](bindable.md) para obtener un ejemplo de cómo usar **dispinterface**.
+Consulte el ejemplo de [bindable](bindable.md) para ver un ejemplo de cómo usar **dispinterface**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -64,7 +64,7 @@ Vea el ejemplo de [enlazable](bindable.md) para obtener un ejemplo de cómo usar
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-Para obtener más información, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
@@ -72,6 +72,6 @@ Para obtener más información, consulte [contextos de atributo](cpp-attributes-
 [Atributos por uso](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[Personalizado](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

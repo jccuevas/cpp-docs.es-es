@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc19475cff0038d11131a26c36ab498a562b234c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236041"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060116"
 ---
 # <a name="hashmap-class"></a>hash_map (Clase)
 
@@ -277,7 +277,6 @@ Una referencia al valor de datos del elemento encontrado.
 ### <a name="remarks"></a>Comentarios
 
 Si no se encuentra el valor de clave de argumento, la función genera un objeto de clase [out_of_range](../standard-library/out-of-range-class.md).
-
 
 ### <a name="example"></a>Ejemplo
 
@@ -2688,9 +2687,9 @@ Devuelve el objeto de función de comparación que un objeto hash_map usa para o
 
 ### <a name="remarks"></a>Comentarios
 
-Para un objeto hash_map *m*, si dos elementos *e*1 *(k*1 *, d*1 *)* y *e*2 *(k*2 *, d*2 *)* son objetos de tipo [value_type](#value_type), donde *k*1 y *k*2 son sus claves de tipo [key_type](#key_type) y `d`1 y `d`2 son sus datos de tipo [mapped_type](#mapped_type), entonces *m.*`value_comp`*( )(e*1 *, e*2 *)* es equivalente a *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Un objeto almacenado define la función miembro
+Para un objeto hash_map *m*, si dos elementos *e1* (*k1*, *d1*) y *e2* (*k2*, *d2*) son objetos de tipo [value_type](#value_type), donde *k1* y *k2* son sus claves de tipo [key_type](#key_type) y *d1* y *d2* son sus datos de tipo [mapped_type](#mapped_type), a continuación, `m.value_comp()(e1, e2)` es equivalente a `m.key_comp()(k1, k2)` . Un objeto almacenado define la función miembro
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 que devuelve **True** si el valor de clave de `left` precede y no es igual al valor de clave de `right` en el criterio de ordenación.
 

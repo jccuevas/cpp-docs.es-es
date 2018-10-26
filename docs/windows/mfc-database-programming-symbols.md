@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dfdec25349afcd9b582952f2c907cd573e366a35
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437734"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059628"
 ---
 # <a name="mfc-database-programming-symbols"></a>Símbolos de la programación de bases de datos de MFC
 
 Los símbolos de esta tabla solo aparecen en un proyecto de MFC cuando se ha agregado compatibilidad con la base de datos. Admite la conexión de MFC con servidores SQL Server y la programación de la base de datos.
-  
+
 |||
 |-|-|
 |AFX_IDP_SQL_API_CONFORMANCE|AFX_IDP_SQL_BOOKMARKS_ NOT_ENABLED|
@@ -44,11 +44,11 @@ Los símbolos de esta tabla solo aparecen en un proyecto de MFC cuando se ha agr
 |AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
-  
+
 ## <a name="requirements"></a>Requisitos
 
 MFC
-  
+
 ## <a name="see-also"></a>Vea también
 
 [Símbolos predefinidos de MFC](../windows/mfc-predefined-symbols.md)<br/>

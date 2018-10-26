@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc9d5aa1d7c49de34ee3dbb02d2a55542962a50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 78d108dfda75147e4147e94544ddddcdfa04481d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062865"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -43,7 +43,7 @@ La ruta de acceso completa a un archivo de script (.rgs) de registro personaliza
 
 El **registration_script** atributo de C++ ejecuta el script de registro personalizado especificado por *script*. Si no se especifica este atributo, se usa un archivo .rgs estándar (que contiene información para registrar el componente). Para obtener más información sobre los archivos .rgs, consulte [el componente de registro de ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
-Este atributo requiere que el [coclase](coclass.md), [progid](progid.md), o [vi_progid](vi-progid.md) atributo (u otro atributo que implique uno de estos) se aplica también al mismo elemento.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento.
 
 ## <a name="example"></a>Ejemplo
 
@@ -79,10 +79,10 @@ class CMyClass:public IFace {};
 |**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos COM](com-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[rdx](rdx.md)  
+[rdx](rdx.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078211"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controles ActiveX MFC: Agregar otra página de propiedades personalizadas
 
@@ -65,7 +65,7 @@ Para obtener más información sobre el uso de páginas de propiedades en un con
 
 1. En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar clase**.
 
-     Se abrirá el [Agregar clase](../ide/add-class-dialog-box.md) cuadro de diálogo.
+   Se abrirá el [Agregar clase](../ide/add-class-dialog-box.md) cuadro de diálogo.
 
 1. Haga doble clic en el **clase MFC** plantilla.
 
@@ -95,25 +95,25 @@ El paso siguiente implica la creación de dos nuevos recursos de cadena que prop
 
 1. Haga doble clic en el **tabla de cadenas** carpeta y, a continuación, haga doble clic en recurso al que desea agregar una cadena de la tabla de la cadena existente.
 
-     Esto abre la tabla de cadenas en una ventana.
+   Esto abre la tabla de cadenas en una ventana.
 
 1. Seleccione la línea en blanco al final de la tabla de cadenas y escriba el texto o el título de la cadena: por ejemplo, "página de propiedades adicional."
 
-     Se abrirá un **las propiedades de cadena** que muestra la página **título** y **ID** cuadros. El **título** cuadro contiene la cadena que escribió.
+   Se abrirá un **las propiedades de cadena** que muestra la página **título** y **ID** cuadros. El **título** cuadro contiene la cadena que escribió.
 
 1. En el **ID** cuadro, seleccione o escriba un identificador de la cadena. Presione ENTRAR cuando termine.
 
-     Este ejemplo se utiliza **IDS_SAMPLE_ADDPAGE** para el nombre de tipo de la nueva página de propiedades.
+   Este ejemplo se utiliza **IDS_SAMPLE_ADDPAGE** para el nombre de tipo de la nueva página de propiedades.
 
 1. Repita los pasos 3 y 4 con **IDS_SAMPLE_ADDPPG_CAPTION** para el identificador y la "Página de propiedades adicionales" para el título.
 
 1. En. CPP de la nueva clase de página de propiedades (en este ejemplo, `CAddtlPropPage`) modificar el `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` para que se pase IDS_SAMPLE_ADDPAGE [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), como en el ejemplo siguiente:
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. Modifique el constructor de `CAddtlPropPage` poder IDS_SAMPLE_ADDPPG_CAPTION se pasa a la `COlePropertyPage` constructor, como se indica a continuación:
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 Una vez realizadas las modificaciones necesarias Recompile el proyecto y usar el contenedor de prueba para probar la nueva página de propiedades. Consulte [Probar propiedades y eventos con un contenedor de prueba](../mfc/testing-properties-and-events-with-test-container.md) para obtener información acerca de cómo acceder al contenedor de prueba.
 

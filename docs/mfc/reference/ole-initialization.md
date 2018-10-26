@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d02bdd5f00e5ffc5d64381b04da38ec0d57d15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: df0187364a44c84a2d0f7f38e968e0ea17df1fb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890107"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064165"
 ---
 # <a name="ole-initialization"></a>Inicialización de OLE
 
@@ -34,7 +34,6 @@ Antes de que una aplicación puede usar servicios del sistema OLE, debe iniciali
 |-|-|
 |[AfxOleInit](#afxoleinit)|Inicializa las bibliotecas OLE.|
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|Llame a esta función en el objeto de aplicación `InitInstance` función para habilitar la compatibilidad con la contención de controles OLE.|
-
 
 ## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
 
@@ -53,7 +52,6 @@ Para obtener más información acerca de los controles OLE (ahora denominados co
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxdisp.h
-
 
 ##  <a name="afxoleinit"></a>  AfxOleInit
 

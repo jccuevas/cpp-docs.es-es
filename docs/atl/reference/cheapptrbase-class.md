@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e1fad70e709ecef33d6df2c8e8e0aa58589e356
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059784"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase (clase)
 
@@ -76,7 +76,7 @@ La clase de asignación de memoria que utilice. De forma predeterminada, las rut
 |----------|-----------------|
 |[CHeapPtrBase::operator T *](#operator_t_star)|El operador de conversión.|
 |[CHeapPtrBase::operator &](#operator_amp)|El & operador.|
-|[CHeapPtrBase::operator ->](#operator_ptr)|El operador de puntero a miembro.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|El operador de puntero a miembro.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 

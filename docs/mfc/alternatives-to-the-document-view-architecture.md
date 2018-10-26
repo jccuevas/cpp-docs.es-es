@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403481"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053050"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas a la arquitectura documento/vista
 
@@ -56,7 +56,7 @@ Se recomienda encarecidamente usar al Asistente para aplicaciones MFC para crear
 
 - Tratar el documento como un apéndice sin usar e implementar el código de administración de datos en la clase de vista, como se sugirió anteriormente. Es relativamente baja sobrecarga para el documento. Una sola [CDocument](../mfc/reference/cdocument-class.md) objeto incurre en una pequeña cantidad de sobrecarga por sí mismo, además de la pequeña sobrecarga de `CDocument`de clases base, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) y [CObject](../mfc/reference/cobject-class.md). Tanto de las últimas clases son pequeños.
 
-     Declarado en `CDocument`:
+   Declarado en `CDocument`:
 
    - Dos `CString` objetos.
 
@@ -66,7 +66,7 @@ Se recomienda encarecidamente usar al Asistente para aplicaciones MFC para crear
 
    - Una `CPtrList` objeto, que contiene una lista de las vistas del documento.
 
-     Además, el documento requiere que la cantidad de tiempo para crear el objeto de documento, sus objetos de vista, una ventana de marco y un objeto de plantilla de documento.
+   Además, el documento requiere que la cantidad de tiempo para crear el objeto de documento, sus objetos de vista, una ventana de marco y un objeto de plantilla de documento.
 
 - Tratar el documento y la vista como apéndices no utilizados. Coloque el código de dibujo y administración de datos en la ventana de marco en lugar de la vista. Este enfoque está más cerca al modelo de programación de lenguaje C.
 

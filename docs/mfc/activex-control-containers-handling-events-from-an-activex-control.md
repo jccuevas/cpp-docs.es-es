@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080083"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenedores de controles ActiveX: Controlar eventos desde un control ActiveX
 
@@ -34,7 +34,6 @@ En este artículo se analiza el uso de la ventana Propiedades para instalar a co
 
 >[!IMPORTANT]
 > ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](activex-controls.md).
-
 
 > [!NOTE]
 >  Este artículo usa un basada en el cuadro de diálogo ActiveX control contenedor proyecto denominado contenedor y un control incrustado denominado Circ como ejemplos en los procedimientos y código.
@@ -70,7 +69,7 @@ Para obtener más información sobre las macros de receptor de eventos, consulte
 
 1. En la ventana Propiedades, seleccione el identificador de control del control ActiveX incrustado. En este ejemplo, utilice `IDC_CIRCCTRL1`.
 
-     La ventana Propiedades muestra una lista de eventos que pueden activar el control ActiveX incrustado. Cualquier función miembro que se muestra en negrita ya tiene funciones controladoras asignadas a ella.
+   La ventana Propiedades muestra una lista de eventos que pueden activar el control ActiveX incrustado. Cualquier función miembro que se muestra en negrita ya tiene funciones controladoras asignadas a ella.
 
 1. Seleccione el evento que desee de la clase de cuadro de diálogo para administrar. En este ejemplo, seleccione **haga clic en**.
 

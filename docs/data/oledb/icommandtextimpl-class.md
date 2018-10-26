@@ -33,94 +33,94 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a2ddd7e1a4397b36daba8b354c84941d0d1c4d0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057977"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl (Clase)
 
-Proporciona una implementación para el [ICommandText](/previous-versions/windows/desktop/ms714914) interfaz.  
-  
+Proporciona una implementación para el [ICommandText](/previous-versions/windows/desktop/ms714914) interfaz.
+
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <class T >  
-class ATL_NO_VTABLE ICommandTextImpl   
-   : public ICommandImpl<T, ICommandText>  
-```  
-  
-### <a name="parameters"></a>Parámetros  
+template <class T >
+class ATL_NO_VTABLE ICommandTextImpl
+   : public ICommandImpl<T, ICommandText>
+```
+
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-Deriva de la clase de comando `ICommandTextImpl`. 
+Deriva de la clase de comando `ICommandTextImpl`.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Encabezado:** altdb.h  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="interface-methods"></a>Métodos de interfaz  
-  
-|||  
-|-|-|  
-|[GetCommandText](#getcommandtext)|Devuelve el comando de texto establecido por la última llamada a [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
-|[SetCommandText](#setcommandtext)|Establece el texto del comando, reemplazando el texto del comando existente.|  
-  
-### <a name="data-members"></a>Miembros de datos  
-  
-|||  
-|-|-|  
-|[m_strCommandText](#strcommandtext)|Almacena el texto del comando.|  
-  
-## <a name="remarks"></a>Comentarios  
+**Encabezado:** altdb.h
 
-Una interfaz obligatoria en los comandos.  
- 
+## <a name="members"></a>Miembros
+
+### <a name="interface-methods"></a>Métodos de interfaz
+
+|||
+|-|-|
+|[GetCommandText](#getcommandtext)|Devuelve el comando de texto establecido por la última llamada a [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[SetCommandText](#setcommandtext)|Establece el texto del comando, reemplazando el texto del comando existente.|
+
+### <a name="data-members"></a>Miembros de datos
+
+|||
+|-|-|
+|[m_strCommandText](#strcommandtext)|Almacena el texto del comando.|
+
+## <a name="remarks"></a>Comentarios
+
+Una interfaz obligatoria en los comandos.
+
 ## <a name="getcommandtext"></a> ICommandTextImpl:: Getcommandtext
 
-Devuelve el comando de texto establecido por la última llamada a [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect,   
-   LPOLESTR * ppwszCommand);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+Devuelve el comando de texto establecido por la última llamada a [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
-Consulte [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) en el *referencia del programador OLE DB*. El *pguidDialect* se omite el parámetro de forma predeterminada.  
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+   LPOLESTR * ppwszCommand);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+Consulte [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) en el *referencia del programador OLE DB*. El *pguidDialect* se omite el parámetro de forma predeterminada.
 
 ## <a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 
-Establece el texto del comando, reemplazando el texto del comando existente.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
-   LPCOLESTR pwszCommand);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+Establece el texto del comando, reemplazando el texto del comando existente.
 
-Consulte [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757) en el *referencia del programador OLE DB*. 
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+   LPCOLESTR pwszCommand);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+Consulte [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757) en el *referencia del programador OLE DB*.
 
 ## <a name="strcommandtext"></a> ICommandTextImpl:: M_strcommandtext
 
-Almacena la cadena de texto de comando.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Almacena la cadena de texto de comando.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-CComBSTR m_strCommandText;  
-```  
-  
-## <a name="see-also"></a>Vea también  
+CComBSTR m_strCommandText;
+```
+
+## <a name="see-also"></a>Vea también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

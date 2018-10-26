@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e589f07d1c9c54c3acd2fa3ff6a0f346077f9b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053102"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Establecer Day State en un control de calendario mensual
 
@@ -51,9 +51,9 @@ Para controlar correctamente este mensaje, debe determinar cuántas meses se va 
 
 1. En el cuerpo del controlador, agregue el código siguiente:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-     El ejemplo se convierte el *pNMHDR* puntero al tipo apropiado, a continuación, determina el número de meses de información que se solicitan (`pDayState->cDayState`). Para cada mes, el campo de bits actual (`pDayState->prgDayState[i]`) se inicializa en cero y, a continuación, el cliente necesita se establecen las fechas (en este caso, el 15 de cada mes).
+   El ejemplo se convierte el *pNMHDR* puntero al tipo apropiado, a continuación, determina el número de meses de información que se solicitan (`pDayState->cDayState`). Para cada mes, el campo de bits actual (`pDayState->prgDayState[i]`) se inicializa en cero y, a continuación, el cliente necesita se establecen las fechas (en este caso, el 15 de cada mes).
 
 ## <a name="see-also"></a>Vea también
 

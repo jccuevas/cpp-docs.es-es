@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adbc9d4634eee8401f34ac7247c858f1a4610a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1ef6e0c0df01807d23b89bc8cf9f6a35035b6f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056092"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -358,7 +358,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Vuelve a calcular el diseño interno de una ventana con pestañas.|
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Quita todas las pestañas de la ventana con pestañas.|
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Quita una pestaña de una ventana con pestañas.|
@@ -462,7 +462,6 @@ virtual void AddTab(
     UINT uiImageId = (UINT)-1,,
     BOOL bDetachable = TRUE);
 
-
 virtual void AddTab(
     CWnd* pTabWnd,
     UINT uiResTabLabel,
@@ -493,19 +492,17 @@ Si *pTabWnd* apunta a un objeto que no se deriva el [CDockablePane Class](../../
 
 ##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo
 
-
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bUseTabIndexes*
+[in] *bUseTabIndexes*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow
-
 
 ```
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
@@ -513,12 +510,11 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bAutoDestroy*
+[in] *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit
-
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -526,12 +522,11 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rectEdit*
+[in] *rectEdit*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp
-
 
 ```
 virtual void CleanUp();
@@ -540,7 +535,6 @@ virtual void CleanUp();
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList
-
 
 ```
 virtual void ClearImageList();
@@ -614,14 +608,13 @@ Si la ficha especificada por *nTabNum* es que no sean separables, esta función 
 
 ##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive
 
-
 ```
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bLastActive*
+[in] *bLastActive*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -750,7 +743,6 @@ De forma predeterminada, este método no es compatible con la `CMFCBaseTabCtrl C
 
 ##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode
 
-
 ```
 void EnterDragMode();
 ```
@@ -780,19 +772,17 @@ En el `CMFCBaseTabCtrl` (clase), este método es una función virtual pura: debe
 
 ##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab
 
-
 ```
 virtual void FireChangeActiveTab(int nNewTab);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nNewTab*
+[in] *nNewTab*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab
-
 
 ```
 virtual BOOL FireChangingActiveTab(int nNewTab);
@@ -800,7 +790,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nNewTab*
+[in] *nNewTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -885,7 +875,6 @@ Recupera un puntero a la primera pestaña visible.
 ```
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 
-
 virtual CWnd* GetFirstVisibleTab(
     int iStartFrom,
     int& iTabNum);
@@ -911,7 +900,6 @@ Si *iStartFrom* es mayor o igual que el número de pestañas en el control de fi
 
 ##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum
 
-
 ```
 virtual int GetFirstVisibleTabNum() const;
 ```
@@ -934,7 +922,6 @@ int GetHighlightedTab() const;
 
 ##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList
 
-
 ```
 virtual const CImageList* GetImageList() const;
 ```
@@ -944,7 +931,6 @@ virtual const CImageList* GetImageList() const;
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize
-
 
 ```
 virtual CSize GetImageSize() const;
@@ -956,14 +942,13 @@ virtual CSize GetImageSize() const;
 
 ##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab
 
-
 ```
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTabNum*
+[in] *iTabNum*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -986,7 +971,6 @@ La ubicación del área de ficha.
 Los valores de ubicación de área de pestaña posibles son LOCATION_BOTTOM y LOCATION_TOP.
 
 ##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize
-
 
 ```
 virtual CSize GetMaxWindowSize() const;
@@ -1076,7 +1060,6 @@ La pestaña los identificadores se asignan automáticamente cuando se agregan la
 
 ##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton
 
-
 ```
 CRect GetTabCloseButton() const;
 ```
@@ -1121,14 +1104,13 @@ El índice de la pestaña que contenga *pt*; -1 si no hay pestaña contiene *pt*
 
 ##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth
 
-
 ```
 virtual int GetTabFullWidth(int iTab) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1241,7 +1223,6 @@ TRUE si se realiza correctamente; FALSE si no es válido el índice de tabulaci�
 
 ##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight
 
-
 ```
 virtual int GetTabsHeight() const;
 ```
@@ -1264,14 +1245,13 @@ El número de fichas del control de ficha.
 
 ##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect
 
-
 ```
 virtual void GetTabsRect(CRect& rect) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rect*
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1364,14 +1344,13 @@ El número de pestañas visibles.
 
 ##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage
 
-
 ```
 virtual BOOL HasImage(int iTab) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1405,7 +1384,6 @@ Virtual void InsertTab(
     int nInsertAt,
     UINT uiImageId = (UINT)-1,
     BOOL bDetachable = TRUE);
-
 
 virtual void InsertTab(
     CWnd* pNewWnd,
@@ -1441,19 +1419,17 @@ Si el objeto indicado por *pNewWnd* no se deriva el [CDockablePane Class](../../
 
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab
 
-
 ```
 void InvalidateTab(int iTab);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*
+[in] *iTab*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton
-
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
@@ -1481,7 +1457,6 @@ Puede habilitar o deshabilitar el modo de color automático mediante la [CMFCBas
 
 ##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow
 
-
 ```
 BOOL IsAutoDestroyWindow() const;
 ```
@@ -1491,7 +1466,6 @@ BOOL IsAutoDestroyWindow() const;
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored
-
 
 ```
 virtual BOOL IsColored() const;
@@ -1503,7 +1477,6 @@ virtual BOOL IsColored() const;
 
 ##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl
 
-
 ```
 BOOL IsDialogControl() const;
 ```
@@ -1513,7 +1486,6 @@ BOOL IsDialogControl() const;
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix
-
 
 ```
 BOOL IsDrawNoPrefix() const;
@@ -1543,7 +1515,6 @@ No se puede representar los controles de ficha que usan el estilo de Outlook con
 
 ##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab
 
-
 ```
 virtual BOOL IsFlatTab() const;
 ```
@@ -1570,7 +1541,6 @@ Utilice el método [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) para habilit
 
 ##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded
 
-
 ```
 BOOL IsIconAdded(
     HICON hIcon,
@@ -1579,8 +1549,9 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>Parámetros
 
-*hIcon*<br/>
-[in] [in] *el icono*
+[in] *hIcon*<br/>
+
+[in] *el icono*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1604,7 +1575,6 @@ Puede habilitar o deshabilitar la edición en contexto llamando al método [CMFC
 
 ##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded
 
-
 ```
 virtual BOOL IsLeftRightRounded() const;
 ```
@@ -1614,7 +1584,6 @@ virtual BOOL IsLeftRightRounded() const;
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab
-
 
 ```
 BOOL IsMDITab() const;
@@ -1665,7 +1634,6 @@ En el `CMFCBaseTabCtrl Class`, este método es una función virtual pura y no ti
 
 ##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
 
-
 ```
 BOOL IsTabCloseButtonHighlighted() const;
 ```
@@ -1675,7 +1643,6 @@ BOOL IsTabCloseButtonHighlighted() const;
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed
-
 
 ```
 BOOL IsTabCloseButtonPressed() const;
@@ -1762,7 +1729,6 @@ Distinto de cero si la pestaña especificada está visible; en caso contrario, e
 
 ##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style
 
-
 ```
 virtual BOOL IsVS2005Style() const;
 ```
@@ -1797,7 +1763,6 @@ De forma predeterminada, este miembro es FALSE.
 
 ##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab
 
-
 ```
 virtual void MoveTab(
     int nSource,
@@ -1806,8 +1771,9 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>Parámetros
 
-*Norigen*<br/>
-[in] [in] *nDest*
+[in] *Norigen*<br/>
+
+[in] *nDest*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1825,7 +1791,6 @@ De forma predeterminada, este método no hace nada. Invalide este método para e
 
 ##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop
 
-
 ```
 virtual BOOL OnDrop(
     COleDataObject*,
@@ -1835,16 +1800,17 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *COleDataObject**
-*EFECTOCOLOCAR*<br/>
-[in] [in] *CPoint*
+[in] *COleDataObject\**<br/>
+
+[in] *EFECTOCOLOCAR*<br/>
+
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver
-
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -1855,16 +1821,17 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *COleDataObject**
-*DWORD*<br/>
-[in] [in] *CPoint*
+[in] *COleDataObject\**<br/>
+
+[in] *DWORD*<br/>
+
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave
-
 
 ```
 virtual void OnDragLeave();
@@ -1873,7 +1840,6 @@ virtual void OnDragLeave();
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter
-
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -1884,9 +1850,11 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *COleDataObject**
-*DWORD*<br/>
-[in] [in] *CPoint*
+[in] *COleDataObject\**<br/>
+
+[in] *DWORD*<br/>
+
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1894,15 +1862,15 @@ virtual DROPEFFECT OnDragEnter(
 
 ##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab
 
-
 ```
 virtual BOOL OnRenameTab(int, CString&);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*int*<br/>
-[in] [in] *CString &*
+[in] *int*<br/>
+
+[in] *CString &*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1910,14 +1878,13 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1975,7 +1942,6 @@ Si [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) es TRUE, `Remo
 
 ##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab
 
-
 ```
 virtual BOOL RenameTab();
 ```
@@ -1994,14 +1960,13 @@ void ResetImageList();
 
 ##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *ar*
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2159,14 +2124,13 @@ Este método vuelve a calcular el alto de la ficha de acuerdo con los tamaños d
 
 ##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation
 
-
 ```
 virtual void SetLocation(Location location);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *ubicación*
+[in] *ubicación*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2308,7 +2272,6 @@ Distinto de cero si se realiza correctamente; en caso contrario, es 0.
 
 ##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight
 
-
 ```
 virtual void SetTabsHeight();
 ```
@@ -2394,21 +2357,19 @@ El parámetro *bActivate* solo se aplica si *bMostrar* es TRUE. Si *bActivate* e
 
 ##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab
 
-
 ```
 virtual BOOL StartRenameTab(int iTab);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs
-
 
 ```
 virtual void SwapTabs(
@@ -2418,8 +2379,9 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>Parámetros
 
-*nFisrtTabID*<br/>
-[in] [in] *nSecondTabID*
+[in] *nFisrtTabID*<br/>
+
+[in] *nSecondTabID*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

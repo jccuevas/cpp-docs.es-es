@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413255"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068832"
 ---
 # <a name="dynamic-layout"></a>Diseño dinámico
 
@@ -65,7 +65,7 @@ El procedimiento anterior es útil para configurar las propiedades del diseño d
 
 1. Busque o cree un lugar en el código de implementación de la clase de su diálogo donde desee especificar el diseño dinámico del diálogo. Por ejemplo, puede que quiera agregar un método `AdjustLayout` en el diálogo y llamarlo desde los lugares donde se deba cambiar el diseño. Podría llamar primero a este método desde el constructor o después de haber realizado cambios en el diálogo.
 
-2. Para el cuadro de diálogo, llame a [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un método de la `CWnd` clase. `GetDynamicLayout` Devuelve un puntero a un `CMFCDynamicLayout` objeto.
+2. Para el cuadro de diálogo, llame a [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un método de la `CWnd` clase. `GetDynamicLayout` devuelve un puntero a un objeto `CMFCDynamicLayout` .
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -119,7 +119,7 @@ El procedimiento anterior es útil para configurar las propiedades del diseño d
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     El recurso con nombre debe hacer referencia a un cuadro de diálogo que contiene información de diseño en forma de un **AFX_DIALOG_LAYOUT** entrada en el archivo de recursos, como en el ejemplo siguiente:
+   El recurso con nombre debe hacer referencia a un cuadro de diálogo que contiene información de diseño en forma de un **AFX_DIALOG_LAYOUT** entrada en el archivo de recursos, como en el ejemplo siguiente:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////

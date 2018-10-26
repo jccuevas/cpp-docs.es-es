@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb26790a46f46638e4a4180ee2209efefda201c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6dcf63933a54983fcf98e35acce533670dc74ed4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432222"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070964"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
-**Específicos de C++**  
-  
-Cambia la manera en que el compilador genera las funciones de contenedor para los métodos de interfaz dual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-no_dual_interfaces  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- 
-Normalmente, el contenedor llamará al método a través de la tabla de funciones virtuales para la interfaz. Con **no_dual_interfaces**, el contenedor en su lugar llama `IDispatch::Invoke` para invocar el método.  
-  
-**FIN de específicos de C++**  
-  
-## <a name="see-also"></a>Vea también  
- 
+**Específicos de C++**
+
+Cambia la manera en que el compilador genera las funciones de contenedor para los métodos de interfaz dual.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+no_dual_interfaces
+```
+
+## <a name="remarks"></a>Comentarios
+
+Normalmente, el contenedor llamará al método a través de la tabla de funciones virtuales para la interfaz. Con **no_dual_interfaces**, el contenedor en su lugar llama `IDispatch::Invoke` para invocar el método.
+
+**FIN de específicos de C++**
+
+## <a name="see-also"></a>Vea también
+
 [atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directiva #import](../preprocessor/hash-import-directive-cpp.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a02bc21362c8f8acd71984f91d5528078d141eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890210"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060421"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Ejemplo: Mostrar un cuadro de diálogo a través de un comando de menú
 
@@ -56,15 +56,15 @@ Los procedimientos utilizan los nombres y los valores siguientes:
 
 1. En **vista de clases**, seleccione la clase de documento (CDisplayDialogDoc). En la ventana **Propiedades** , haga clic en el botón **Eventos** . Haga doble clic en el identificador del comando de menú (ID_VIEW_TEST) en el panel izquierdo de la **propiedades** ventana y seleccione **comando**. En el panel derecho, haga clic en la flecha hacia abajo y seleccione  **\<Agregar > OnViewTest**.
 
-     Si agrega el comando de menú al gran sistema de una aplicación MDI, seleccione la clase de aplicación (CDisplayDialogApp) en su lugar.
+   Si agrega el comando de menú al gran sistema de una aplicación MDI, seleccione la clase de aplicación (CDisplayDialogApp) en su lugar.
 
 1. Agregue la siguiente instrucción de inclusión a CDisplayDialogDoc.cpp (o CDisplayDialogApp.cpp) después de que el existente se incluyen instrucciones:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
 
 1. Agregue el código siguiente al `OnViewTest` para implementar la función:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Para mostrar un cuadro de diálogo no modal
 

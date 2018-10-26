@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070600"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Tutorial: Crear una aplicación basada en agente
 
@@ -64,7 +64,7 @@ En esta sección se muestra cómo crear una aplicación de consola de Visual C++
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   El archivo de encabezado agents.h contiene la funcionalidad de la [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) clase.
 
 1. Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela. Para compilar la aplicación, en el **compilar** menú, haga clic en **compilar solución**. Si la aplicación se compila correctamente, ejecute la aplicación haciendo **Iniciar depuración** en el **depurar** menú.
 
@@ -90,19 +90,19 @@ En esta sección se muestra cómo crear la clase `file_reader`. El runtime progr
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   El miembro `_file_name` es el nombre de archivo del que lee el agente. El `_target` miembro es un [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) que el agente escribe el contenido del archivo de objeto. El miembro `_error` contiene cualquier error que se produce durante la vida del agente.
 
 1. Agregue el código siguiente para los constructores de `file_reader` en la sección `public` de la clase `file_reader`.
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   Cada sobrecarga de constructor establece los miembros de datos de `file_reader`. La segunda y tercera sobrecarga de constructor permiten que la aplicación use un programador concreto con el agente. La primera sobrecarga utiliza el programador predeterminado con el agente.
 
 1. Agregue el método `get_error` a la sección pública de la clase `file_reader`.
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   El método `get_error` recupera cualquier error que se produce durante la vida del agente.
 
 1. Implemente el [concurrency::agent::run](reference/agent-class.md#run) método en la `protected` sección de la clase.
 
@@ -140,7 +140,7 @@ En esta sección se muestra cómo utilizar la clase `file_reader` para leer el c
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   Este objeto `call` también establece el objeto `event` cuando recibe la cadena vacía para señalar el fin del procesamiento.
 
 1. Cree un objeto `file_reader` que lea del archivo test.txt y escriba el contenido de este archivo en el objeto `call`.
 

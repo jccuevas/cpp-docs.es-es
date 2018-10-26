@@ -43,189 +43,189 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 63bf2b36477ddc0c4088698c552b8ef734e16986
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8919a4bb17e65ad105b49e9fd9b4945e47cbdb63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058068"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor (Clase)
 
-Representa un tipo de descriptor de acceso que ha diseñado para uso avanzado.  
-  
+Representa un tipo de descriptor de acceso que ha diseñado para uso avanzado.
+
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-class CManualAccessor : public CAccessorBase  
-```  
+class CManualAccessor : public CAccessorBase
+```
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atldbcli.h  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="methods"></a>Métodos  
-  
-|||  
-|-|-|  
-|[AddBindEntry](#addbindentry)|Agrega una entrada de enlace a las columnas de salida.|  
-|[AddParameterEntry](#addparameterentry)|Agrega una entrada de parámetro para el descriptor de acceso de parámetro.|  
-|[CreateAccessor](#createaccessor)|Asigna memoria para la columna de las estructuras de enlace e inicializa a los miembros de datos de columna.|  
-|[CreateParameterAccessor](#createparameteraccessor)|Asigna memoria para el parámetro de enlace estructuras e inicializa a los miembros de datos de parámetro.|  
-  
-## <a name="remarks"></a>Comentarios  
+**Encabezado:** atldbcli.h
 
-Uso de `CManualAccessor`, puede especificar el parámetro y el enlace de columna de salida por llamadas a funciones de tiempo de ejecución.  
+## <a name="members"></a>Miembros
+
+### <a name="methods"></a>Métodos
+
+|||
+|-|-|
+|[AddBindEntry](#addbindentry)|Agrega una entrada de enlace a las columnas de salida.|
+|[AddParameterEntry](#addparameterentry)|Agrega una entrada de parámetro para el descriptor de acceso de parámetro.|
+|[CreateAccessor](#createaccessor)|Asigna memoria para la columna de las estructuras de enlace e inicializa a los miembros de datos de columna.|
+|[CreateParameterAccessor](#createparameteraccessor)|Asigna memoria para el parámetro de enlace estructuras e inicializa a los miembros de datos de parámetro.|
+
+## <a name="remarks"></a>Comentarios
+
+Uso de `CManualAccessor`, puede especificar el parámetro y el enlace de columna de salida por llamadas a funciones de tiempo de ejecución.
 
 ## <a name="addbindentry"></a> CManualAccessor:: AddBindEntry
 
-Agrega una entrada de enlace a las columnas de salida.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Agrega una entrada de enlace a las columnas de salida.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-void AddBindEntry(DBORDINAL nOrdinal,  
-   DBTYPE wType,  DBLENGTH nColumnSize,  
-   void* pData,  
-   void* pLength = NULL,  
-   void* pStatus = NULL) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+void AddBindEntry(DBORDINAL nOrdinal,
+   DBTYPE wType,  DBLENGTH nColumnSize,
+   void* pData,
+   void* pLength = NULL,
+   void* pStatus = NULL) throw ();
+```
 
-Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845) en el *referencia del programador OLE DB*.  
-  
+#### <a name="parameters"></a>Parámetros
+
+Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845) en el *referencia del programador OLE DB*.
+
 *nOrdinal*<br/>
-[in] Número de columna.  
-  
-*wType*<br/>
-[in] Tipo de datos.  
-  
-*nColumnSize*<br/>
-[in] Tamaño de columna en bytes.  
-  
-*pData*<br/>
-[in] Un puntero a la columna de datos almacenado en el búfer.  
-  
-*pLength*<br/>
-[in] Un puntero a la longitud de campo, si es necesario.  
-  
-*pStatus*<br/>
-[in] Un puntero a la variable esté enlazado con el estado de la columna, si es necesario.  
-  
-### <a name="remarks"></a>Comentarios  
+[in] Número de columna.
 
-Para usar esta función, primero debe llamar a [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). No se puede agregar más entradas que el número de columnas especificadas en `CreateAccessor`. 
-  
+*wType*<br/>
+[in] Tipo de datos.
+
+*nColumnSize*<br/>
+[in] Tamaño de columna en bytes.
+
+*pData*<br/>
+[in] Un puntero a la columna de datos almacenado en el búfer.
+
+*pLength*<br/>
+[in] Un puntero a la longitud de campo, si es necesario.
+
+*pStatus*<br/>
+[in] Un puntero a la variable esté enlazado con el estado de la columna, si es necesario.
+
+### <a name="remarks"></a>Comentarios
+
+Para usar esta función, primero debe llamar a [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). No se puede agregar más entradas que el número de columnas especificadas en `CreateAccessor`.
+
 ## <a name="addparameterentry"></a> CManualAccessor:: AddParameterEntry
 
-Agrega una entrada de parámetro a las estructuras de entrada de parámetro.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Agrega una entrada de parámetro a las estructuras de entrada de parámetro.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-void AddParameterEntry(DBORDINAL nOrdinal,  
-   DBTYPE wType,  DBLENGTH nColumnSize,  
-   void* pData,  
-   void* pLength = NULL,  
-   void* pStatus = NULL,  
-   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+void AddParameterEntry(DBORDINAL nOrdinal,
+   DBTYPE wType,  DBLENGTH nColumnSize,
+   void* pData,
+   void* pLength = NULL,
+   void* pStatus = NULL,
+   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
+```
 
-Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845) en el *referencia del programador OLE DB*.  
-  
+#### <a name="parameters"></a>Parámetros
+
+Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845) en el *referencia del programador OLE DB*.
+
 *nOrdinal*<br/>
-[in] Número de parámetro.  
-  
-*wType*<br/>
-[in] Tipo de datos.  
-  
-*nColumnSize*<br/>
-[in] Tamaño de columna en bytes.  
-  
-*pData*<br/>
-[in] Un puntero a la columna de datos almacenado en el búfer.  
-  
-*pLength*<br/>
-[in] Un puntero a la longitud de campo, si es necesario.  
-  
-*pStatus*<br/>
-[in] Un puntero a la variable esté enlazado con el estado de la columna, si es necesario.  
-  
-*eParamIO*<br/>
-[in] Especifica si el parámetro que está asociado el enlace es un parámetro de entrada, entrada/salida o de salida.  
-  
-### <a name="remarks"></a>Comentarios  
+[in] Número de parámetro.
 
-Para usar esta función, primero debe llamar a [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md). 
+*wType*<br/>
+[in] Tipo de datos.
+
+*nColumnSize*<br/>
+[in] Tamaño de columna en bytes.
+
+*pData*<br/>
+[in] Un puntero a la columna de datos almacenado en el búfer.
+
+*pLength*<br/>
+[in] Un puntero a la longitud de campo, si es necesario.
+
+*pStatus*<br/>
+[in] Un puntero a la variable esté enlazado con el estado de la columna, si es necesario.
+
+*eParamIO*<br/>
+[in] Especifica si el parámetro que está asociado el enlace es un parámetro de entrada, entrada/salida o de salida.
+
+### <a name="remarks"></a>Comentarios
+
+Para usar esta función, primero debe llamar a [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
 ## <a name="createaccessor"></a> CManualAccessor:: CreateAccessor
 
-Asigna memoria para la columna de las estructuras de enlace e inicializa a los miembros de datos de columna.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Asigna memoria para la columna de las estructuras de enlace e inicializa a los miembros de datos de columna.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-HRESULT CreateAccessor(int nBindEntries,   
-  void* pBuffer,   
-   DBLENGTH nBufferSize) throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+HRESULT CreateAccessor(int nBindEntries, 
+  void* pBuffer, 
+   DBLENGTH nBufferSize) throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nBindEntries*<br/>
-[in] Número de columnas. Este número debe coincidir con el número de llamadas a la [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) función.  
-  
+[in] Número de columnas. Este número debe coincidir con el número de llamadas a la [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) función.
+
 *pBuffer*<br/>
-[in] Un puntero al búfer donde se almacenan las columnas de salida.  
-  
+[in] Un puntero al búfer donde se almacenan las columnas de salida.
+
 *nBufferSize*<br/>
-[in] El tamaño del búfer en bytes.  
-  
-### <a name="return-value"></a>Valor devuelto  
+[in] El tamaño del búfer en bytes.
 
-Uno de los valores HRESULT estándar.  
-  
-### <a name="remarks"></a>Comentarios  
+### <a name="return-value"></a>Valor devuelto
 
-Llame a esta función antes de llamar a la `CManualAccessor::AddBindEntry` función.  
+Uno de los valores HRESULT estándar.
+
+### <a name="remarks"></a>Comentarios
+
+Llame a esta función antes de llamar a la `CManualAccessor::AddBindEntry` función.
 
 ## <a name="createparameteraccessor"></a> CManualAccessor:: Createparameteraccessor
 
-Asigna memoria para el parámetro de enlace estructuras e inicializa a los miembros de datos de parámetro.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Asigna memoria para el parámetro de enlace estructuras e inicializa a los miembros de datos de parámetro.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-HRESULT CreateParameterAccessor(int nBindEntries,   
-   void* pBuffer,   
-   DBLENGTH nBufferSize) throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+HRESULT CreateParameterAccessor(int nBindEntries, 
+   void* pBuffer, 
+   DBLENGTH nBufferSize) throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nBindEntries*<br/>
-[in] Número de columnas.  
-  
-*pBuffer*<br/>
-[in] Un puntero al búfer donde se almacenan las columnas de entrada.  
-  
-*nBufferSize*<br/>
-[in] El tamaño del búfer en bytes.  
-  
-### <a name="return-value"></a>Valor devuelto  
+[in] Número de columnas.
 
-Uno de los valores HRESULT estándar.  
-  
-### <a name="remarks"></a>Comentarios  
+*pBuffer*<br/>
+[in] Un puntero al búfer donde se almacenan las columnas de entrada.
+
+*nBufferSize*<br/>
+[in] El tamaño del búfer en bytes.
+
+### <a name="return-value"></a>Valor devuelto
+
+Uno de los valores HRESULT estándar.
+
+### <a name="remarks"></a>Comentarios
 
 Debe llamar a esta función antes de llamar a [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
 [DBViewer](../../visual-cpp-samples.md)<br/>
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

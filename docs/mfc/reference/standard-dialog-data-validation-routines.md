@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067922"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutinas de validación de datos de cuadros de diálogo estándar
 
@@ -47,8 +47,6 @@ En este tema se enumera las rutinas de validación (DDV) de datos de cuadro de d
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Comprueba un valor de control determinada no supera un determinado **UINT** intervalo.|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Comprueba el que valor de un control determinado se encuentra entre dos valores especificados.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Comprueba un valor de control determinada no supera un determinado **ULONGLONG** intervalo.|
-
-
 
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
@@ -552,6 +550,7 @@ Llame a `DDV_MinMaxUnsigned` para comprobar que el valor en el control asociado 
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadr
 [Macros y funciones globales](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

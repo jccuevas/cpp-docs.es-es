@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058341"
 ---
 # <a name="storage-classes-c"></a>Clases de almacenamiento (C++)
 
@@ -35,7 +35,6 @@ Un *clase de almacenamiento* en el contexto de C++, las declaraciones de variabl
 1. El [mutable](../cpp/mutable-data-members-cpp.md) palabra clave puede considerarse un especificador de clase de almacenamiento. Sin embargo, solo está disponible en la lista de miembros de una definición de clase.
 
 1. **Visual C++ 2010 y versiones posteriores:** el **automática** palabra clave ya no es un especificador de clase de almacenamiento de C++ y el **registrar** palabra clave está desusada. **Visual Studio 2017 versión 15.7 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **registrar** palabra clave se quitará el lenguaje C++.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -226,7 +225,7 @@ Cosas a tener en cuenta sobre el `thread_local` especificador:
 
 - Solo puede especificar `thread_local` en elementos de datos con duración de almacenamiento estática. Esto incluye los objetos de datos globales (tanto **estático** y **extern**), objetos estáticos locales y miembros de datos estáticos de clases. Cualquier variable local declarada `thread_local` es implícitamente estático si no se proporciona ninguna otra clase de almacenamiento; es decir, en el ámbito de bloque `thread_local` es equivalente a `thread_local static`.
 
-- Debe especificar `thread_local` para la declaración y la definición de un objeto local de subproceso, ya sea que la declaración y la definición se realicen en el mismo archivo o en archivos distintos.
+- Debe especificar `thread_local` para la declaración y la definición de un objeto local para el subproceso, ya sea que la declaración y la definición se realicen en el mismo archivo o en archivos distintos.
 
 En Windows, `thread_local` es funcionalmente equivalente a [__declspec (Thread)](../cpp/thread.md) , salvo que **__declspec (Thread)** se pueden aplicar a una definición de tipo y es válido en el código de C. Siempre que sea posible, use `thread_local` porque forma parte del estándar de C++ y, por tanto, es más portátil.
 

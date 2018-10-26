@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055013"
 ---
 # <a name="icommandui-interface"></a>ICommandUI (interfaz)
 
@@ -73,6 +73,7 @@ Establece el elemento de interfaz de usuario para este comando en el estado de c
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Esta propiedad establece el elemento de interfaz de usuario para este comando en el estado de comprobación adecuada. Establecer comprobación en los siguientes valores:
@@ -86,6 +87,7 @@ Indica el mecanismo de enrutamiento de comandos para enrutar el mensaje actual d
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Se trata de una función miembro avanzado que debe usarse junto con un controlador ON_COMMAND_EX que devuelve FALSE. Para obtener más información, consulte TN006 de nota técnica: mapas de mensajes.
@@ -96,6 +98,7 @@ Habilita o deshabilita el elemento de interfaz de usuario para este comando.
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Esta propiedad habilita o deshabilita el elemento de interfaz de usuario para este comando. Establezca Enabled en True para habilitar el elemento, FALSE para deshabilitarla.
@@ -106,6 +109,7 @@ Obtiene el identificador del objeto de interfaz de usuario, representado por el 
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Esta propiedad obtiene el identificador (un identificador) de otro objeto de interfaz de usuario representado por el objeto ICommandUI, botón de barra de herramientas o el elemento de menú.
@@ -116,6 +120,7 @@ Obtiene el índice del objeto de interfaz de usuario, representado por el objeto
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Esta propiedad obtiene el índice (un identificador) de otro objeto de interfaz de usuario representado por el objeto ICommandUI, botón de barra de herramientas o el elemento de menú.
@@ -126,6 +131,7 @@ Establece el elemento de interfaz de usuario para este comando en el estado de c
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Esta propiedad establece el elemento de interfaz de usuario para este comando en el estado de comprobación adecuada. Establece el Radio en True para habilitar el elemento; en caso contrario, FALSE.
@@ -136,6 +142,7 @@ Establece el texto del elemento de interfaz de usuario para este comando.
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Comentarios
 
 Esta propiedad establece el texto del elemento de interfaz de usuario para este comando. Establezca texto en un identificador de cadena de texto.

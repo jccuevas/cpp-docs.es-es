@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01b24996e04efe9c5f3dd0301d3f2135c89d496c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93a56649bb34060c45bf58a621156f46a22682fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375247"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075587"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -223,67 +223,54 @@ virtual BOOL Read(
     LPCTSTR pszKey,
     int& iVal);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     DWORD& dwVal);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     CString& sVal);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CStringList& scStringList);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     CStringArray& scArray);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CDWordArray& dwcArray);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     CWordArray& wcArray);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CByteArray& bcArray);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     LPPOINT& lpPoint);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CRect& rect);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     BYTE** ppData,
     UINT* pBytes);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CObList& list);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CObject& obj);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
@@ -331,7 +318,7 @@ virtual BOOL Read(
 *pBytes*<br/>
 [out] Puntero a una variable de entero sin signo. Esta variable recibe el tamaño del búfer que *ppData* apunta a.
 
-*list*<br/>
+*lista*<br/>
 [out] Hacer referencia a un [CObList](../../mfc/reference/coblist-class.md) variable que recibe el valor leído desde la clave del registro.
 
 *obj*<br/>
@@ -357,67 +344,54 @@ virtual BOOL Write(
     LPCTSTR pszKey,
     int iVal);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     DWORD dwVal);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     LPCTSTR pszVal);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CStringList& scStringList);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     CByteArray& bcArray);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CStringArray& scArray);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     CDWordArray& dwcArray);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CWordArray& wcArray);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     const CRect& rect);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     LPPOINT& lpPoint);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     LPBYTE pData,
     UINT nBytes);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CObList& list);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CObject& obj);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
@@ -465,7 +439,7 @@ virtual BOOL Write(
 *nBytes*<br/>
 [in] Especifica el tamaño, en bytes, de los datos a la que el *pData* puntos del parámetro.
 
-*list*<br/>
+*lista*<br/>
 [in] Hacer referencia a un [CObList](../../mfc/reference/coblist-class.md) variable que contiene los datos que se va a almacenar.
 
 *obj*<br/>

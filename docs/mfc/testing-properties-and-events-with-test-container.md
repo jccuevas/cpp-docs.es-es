@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e06f10114b896e2728e5a017281e54f75ce534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b00eb755ef0fba0037df8c6d1e99bfd25d13b263
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078419"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Probar propiedades y eventos con un contenedor de prueba
 
@@ -56,7 +56,7 @@ En este momento puede probar el control propiedades o eventos.
 
 1. Haga clic en **Invoke** para aplicar el nuevo valor para el objeto.
 
-     La propiedad contiene ahora el nuevo valor.
+   La propiedad contiene ahora el nuevo valor.
 
 #### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Para probar eventos y especificar el destino de la información de eventos.
 

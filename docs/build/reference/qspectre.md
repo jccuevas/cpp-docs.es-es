@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328524"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070405"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ El **/qspectre** opción está disponible en versión 15.5.5 de Visual Studio 20
 
 El **/qspectre** opción está desactivada de forma predeterminada.
 
-En su versión inicial, el **/qspectre** opción solo funcionado en código optimizado. En Visual Studio 2017 versión 15.7 y versiones posterior, el **/qspectre** opción se admite en todos los niveles de optimización. 
+En su versión inicial, el **/qspectre** opción solo funcionado en código optimizado. En Visual Studio 2017 versión 15.7 y versiones posterior, el **/qspectre** opción se admite en todos los niveles de optimización.
 
 Bibliotecas de Microsoft Visual C++ también están disponibles en las versiones de mitigación de Spectre. Las bibliotecas de Spectre mitigadas para Visual Studio 2017 pueden descargarse en el instalador de Visual Studio. Que se encuentran en el **componentes individuales** pestaña **compiladores, herramientas de compilación y tiempos de ejecución**, y que tienen "Bibliotecas de Spectre" en el nombre. Archivo DLL y bibliotecas de tiempo de ejecución estática con mitigación habilitado están disponibles para un subconjunto de los tiempos de ejecución de Visual C++: código de inicio de VC ++, vcruntime140, msvcp140, concrt140 y vcamp140. Los archivos DLL se admiten para la implementación de aplicación local únicamente. no se ha modificado el contenido de Visual C++ 2017 en tiempo de ejecución bibliotecas Redistributable. También puede instalar las bibliotecas de Spectre mitigadas de MFC y ATL, se encuentra en la **componentes individuales** pestaña **SDK, bibliotecas y marcos**.
 

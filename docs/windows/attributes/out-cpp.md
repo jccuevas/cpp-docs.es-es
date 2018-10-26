@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c695dbee2b92a2a3fbc5de0830f298b81e63ad8d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792124"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063762"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,11 +36,11 @@ Identifica los parámetros de puntero devueltos desde el procedimiento llamado a
 
 ## <a name="remarks"></a>Comentarios
 
-El **out** atributo de C++ tiene la misma funcionalidad que el [out](/windows/desktop/Midl/out-idl) atributo MIDL.
+El atributo de C++ **out** tiene la misma funcionalidad que el atributo MIDL [out](/windows/desktop/Midl/out-idl) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **out**.
+Consulte el ejemplo de [bindable](bindable.md) para ver un ejemplo de uso de **out**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -53,11 +53,11 @@ Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **out**.
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
 
-Para obtener más información acerca de los contextos de atributo, vea [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[identificador](id.md)  
+[identificador](id.md)
