@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061565"
 ---
 # <a name="cc-properties-linux-c"></a>Propiedades de C o C++ (C++ para Linux)
 
@@ -85,4 +85,4 @@ Propiedad. | Descripción | Opciones
 Compilar como | Permite seleccionar la opción de lenguaje de compilación para los archivos .c y .cpp.  En la opción "Predeterminado", la detección se realizará en función de la extensión ".c" o ".cpp". (-x c, -x c++). | **Predeterminado**: opción predeterminada.<br/>**Compilar como código de C**: compila como código de C.<br/>**Compilar como código de C++**: compila como código de C++.<br/>
 Archivos de inclusión obligatorios | Uno o más archivos de inclusión forzados (-include [nombre])
 
-## <a name="additional-options"></a>Opciones adicionales 
+## <a name="additional-options"></a>Opciones adicionales

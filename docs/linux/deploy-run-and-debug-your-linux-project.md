@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410829"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069952"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implementar, ejecutar y depurar el proyecto de Linux
 
@@ -41,7 +41,7 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 
     - En modo **gdb**, el depurador de Visual Studio controla GDB en el sistema remoto, que es más compatible si la versión local de GDB no es compatible con la versión instalada en el equipo de destino. |
 
-    > [!NOTE] 
+    > [!NOTE]
     > Si no es posible alcanzar puntos de interrupción en el modo de depuración gdbserver, pruebe el modo gdb. En primer lugar, gdb debe [instalarse](../linux/download-install-and-setup-the-linux-development-workload.md) en el destino remoto.
 
 2. Seleccione el destino remoto a través de la barra de herramientas estándar **Depurar** de Visual Studio.
@@ -64,7 +64,7 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 
     Si no hay ningún error, la aplicación se iniciará y el depurador se detendrá en el punto de interrupción.
 
-    ![Llegar a un punto de interrupción](media/hit_breakpoint.png)  
+    ![Llegar a un punto de interrupción](media/hit_breakpoint.png)
 
     Ahora, puede interactuar con la aplicación en su estado actual, ver variables y recorrer el código mediante las teclas de comando como **F10** o **F11**.
 
@@ -79,7 +79,7 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 ## <a name="configure-other-debugging-options"></a>Configurar otras opciones de depuración
 
 * Se pueden pasar argumentos de línea de comandos al ejecutable mediante el elemento **Argumentos de programa** de la página de propiedades **Depuración** del proyecto.
-  
+
   ![Argumentos de programa](media/settings_programarguments.png)
 
 * Se pueden pasar opciones concretas del depurador a GDB mediante la entrada **Comandos adicionales del depurador**.  Por ejemplo, es posible que quiera pasar por alto las señales SIGILL (instrucciones no válidas).  Puede usar el comando **handle** para lograrlo.  al agregar lo siguiente a la entrada **Comandos adicionales del depurador** como se muestra arriba:

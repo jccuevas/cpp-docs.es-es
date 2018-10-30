@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374150"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064426"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio
 
@@ -52,11 +52,11 @@ Debe quitar esta propiedad cuando quiera actualizar los proyectos.
 
 Si decide no actualizar, Visual Studio no realiza ningún cambio en los archivos de solución o proyecto. Al compilar el proyecto, los archivos binarios generados son totalmente compatibles con los compilados con la versión anterior de Visual Studio. Esto es porque Visual Studio usa el mismo compilador de C++ y vincula las mismas bibliotecas incluidas en el IDE anterior. Esa es la razón por la que el cuadro de diálogo de actualización le advierte de que mantenga la versión anterior de Visual Studio instalada si elige **Cancelar**.
 
-## <a name="instructions-for-visual-studio-2008"></a>Instrucciones para Visual Studio 2008  
-  
+## <a name="instructions-for-visual-studio-2008"></a>Instrucciones para Visual Studio 2008
+
 Visual Studio 2008 tenía su propio sistema de compilación dedicado para C++, denominado **VCBuild**. A partir de Visual Studio 2010, los proyectos de Visual C++ se cambiaron para usar **MSBuild**. Esto significa que debe seguir un paso de actualización para compilar los proyectos de Visual Studio 2008 en la versión más reciente de Visual Studio. El proyecto actualizado todavía genera archivos binarios que son totalmente compatibles con los creados mediante el IDE de Visual Studio 2008.
 
-En primer lugar, además de la versión actual de Visual Studio, debe instalar Visual Studio 2010 en el mismo equipo que Visual Studio 2008. Solo Visual Studio 2010 instala los scripts de **MSBuild** necesarios para los proyectos de Visual Studio 2008. 
+En primer lugar, además de la versión actual de Visual Studio, debe instalar Visual Studio 2010 en el mismo equipo que Visual Studio 2008. Solo Visual Studio 2010 instala los scripts de **MSBuild** necesarios para los proyectos de Visual Studio 2008.
 
 A continuación, debe actualizar los proyectos y la solución de Visual Studio 2008 a la versión actual de Visual Studio. Se recomienda crear una copia de seguridad de los proyectos y los archivos de solución antes de la actualización. Para iniciar el proceso de actualización, abra la solución en la versión actual de Visual Studio. Cuando aparezca el mensaje de actualización, revise la información mostrada y luego elija **Aceptar** para iniciar la actualización. Si tiene más de un proyecto en la solución, debe actualizar el asistente para crear nuevos archivos de proyecto .vcxproj en paralelo con los archivos .vcproj existentes. Siempre que además tenga una copia del archivo .sln original, la actualización no tiene ningún impacto en los proyectos existentes de Visual Studio 2008.
 
@@ -77,4 +77,4 @@ Cuando se instalan estos productos, el menú desplegable de propiedades **Conjun
 ## <a name="see-also"></a>Vea también
 
 [Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Mejoras de conformidad de C++ en Visual Studio 2017](../cpp-conformance-improvements-2017.md)  
+[Mejoras de conformidad de C++ en Visual Studio 2017](../cpp-conformance-improvements-2017.md)
