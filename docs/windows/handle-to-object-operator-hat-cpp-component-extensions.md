@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa8434230081afe0ad104853e80ba5aa28ec280e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054142"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204895"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Identificador de operador de objeto (^) (C++ / c++ / CLI y c++ / CX)
 
@@ -44,7 +44,7 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-El sistema usa CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, se pueden mover sus objetos, lo que invalida las ubicaciones que usan las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.
+El sistema usa CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, puede mover objetos en el montón, lo que invalida las ubicaciones que hace referencia a las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.
 
 Dado que los punteros de C++ nativo (`*`) y las referencias (`&`) no son referencias administradas, el recolector de elementos no utilizados no puede actualizar de manera automática las direcciones a las que apuntan. Para solucionar este problema, utilice el declarador de identificador para especificar una variable que el recolector de elementos no utilizados reconozca y pueda actualizar automáticamente.
 

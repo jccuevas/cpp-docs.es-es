@@ -1,7 +1,7 @@
 ---
 title: Mejorar un proveedor sencillo de sólo lectura | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dc899314070f10c0b10cd959af57a7230a406ac3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f798eb6219fdbc6c54e4c80474491f84f25a8060
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069716"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216479"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Mejorar un proveedor sencillo de sólo lectura
 
@@ -39,4 +39,4 @@ El ejemplo en los temas siguientes mejora el mecanismo de captura de filas media
 
 ## <a name="see-also"></a>Vea también
 
-[Crear un proveedor sencillo de solo lectura](../../data/oledb/creating-a-simple-read-only-provider.md)
+[Crear un proveedor sencillo de solo lectura](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

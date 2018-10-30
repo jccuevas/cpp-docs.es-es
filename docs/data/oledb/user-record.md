@@ -19,39 +19,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c1958604edbb2f9d9c10e58082e70c2df400b8c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e37ed0ac918b004513aa64308870a534a7b2af40
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077379"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216297"
 ---
 # <a name="user-record"></a>Registro de usuario
 
-El registro de usuario proporciona la estructura de código y los datos que representa la columna de datos para un conjunto de filas. Puede crearse un registro de usuario en tiempo de compilación o en tiempo de ejecución. Cuando se crea un proveedor mediante el Asistente para proveedores OLE DB ATL, el asistente crea un registro de usuario predeterminado que tiene este aspecto (suponiendo que ha especificado un nombre de proveedor [short name] de *personalizado*):
+El registro de usuario proporciona la estructura de código y los datos que representa la columna de datos para un conjunto de filas. Puede crearse un registro de usuario en tiempo de compilación o en tiempo de ejecución. Cuando se crea un proveedor mediante el **el Asistente para proveedores OLE DB ATL**, el asistente crea un registro de usuario predeterminado que tiene este aspecto (suponiendo que ha especificado un nombre de proveedor [short name] de *MyProvider*):
 
 ```cpp
 class CWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
-
-BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+  
+BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
    PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
    PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
 END_PROVIDER_COLUMN_MAP()
-
+  
 };
 ```
 
-Las plantillas de proveedor OLE DB controlen todos los detalles de OLE DB con respecto a las interacciones con el cliente. Para adquirir los datos de columna necesarios para una respuesta, el proveedor llama a la `GetColumnInfo` función, que se debe colocar en el registro de usuario. Puede invalidar explícitamente `GetColumnInfo` en el registro de usuario, por ejemplo, por declararlo en el archivo .h como se muestra aquí:
+Las plantillas de proveedor OLE DB controlen todos los detalles de OLE DB en las interacciones con el cliente. Para adquirir los datos de columna necesarios para una respuesta, el proveedor llama a la `GetColumnInfo` función, que se debe colocar en el registro de usuario. Puede invalidar explícitamente `GetColumnInfo` en el registro de usuario, por ejemplo, por declararlo en el archivo .h como se muestra aquí:
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
 ```
 
 Esto equivale a:
@@ -61,7 +61,7 @@ static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 ```
 
-También debe implementar `GetColumnInfo` en el archivo .cpp del registro de usuario.
+A continuación, implemente `GetColumnInfo` en el archivo .cpp del registro de usuario.
 
 Las macros PROVIDER_COLUMN_MAP ayudan a crear un `GetColumnInfo` función:
 
@@ -71,7 +71,7 @@ Las macros PROVIDER_COLUMN_MAP ayudan a crear un `GetColumnInfo` función:
 
 - END_PROVIDER_COLUMN_MAP cierra la matriz y la función. También coloca el número de elementos de matriz en la *pcCols* parámetro.
 
-Cuando se crea un registro de usuario en tiempo de ejecución `GetColumnInfo` usa el *pThis* parámetro para recibir un puntero a una instancia de conjunto de filas o un comando. Los comandos y conjuntos de filas deben admitir la `IColumnsInfo` interfaz, por lo que puede obtenerse información de la columna de este puntero.
+Cuando se crea un registro de usuario en tiempo de ejecución `GetColumnInfo` usa el *pThis* parámetro para recibir un puntero a una instancia de conjunto de filas o un comando. Los comandos y conjuntos de filas deben admitir la `IColumnsInfo` interfaz, por lo que se puede obtener la información de la columna de este puntero.
 
 `CommandClass` y `RowsetClass` son el comando y el conjunto de filas que se utiliza el registro de usuario.
 
@@ -79,4 +79,4 @@ Para obtener un ejemplo más detallado de cómo invalidar `GetColumnInfo` en un 
 
 ## <a name="see-also"></a>Vea también
 
-[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

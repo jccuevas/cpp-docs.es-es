@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bcabecde8f299e878ec6498dada503a894c406b4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3ad9a2c9ac2d7371cc1fb357e2ce6a9e35701607
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081136"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216388"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
 
@@ -37,6 +37,27 @@ Las clases de proveedor utilizan herencia múltiple. El código siguiente muestr
 /////////////////////////////////////////////////////////////////////////
 // CCustomSource
 class ATL_NO_VTABLE CCustomSource :
+   public CComObjectRootEx<CComSingleThreadModel>,
+   public CComCoClass<CCustomSource, &CLSID_Custom>,
+   public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
+   public IDBInitializeImpl<CCustomSource>,
+   public IDBPropertiesImpl<CCustomSource>,
+   public IPersistImpl<CCustomSource>,
+   public IInternalConnectionImpl<CCustomSource>
+```
+
+Todos los componentes COM que se derivan de `CComObjectRootEx` y `CComCoClass`. `CComObjectRootEx` proporciona toda la implementación para el `IUnknown` interfaz. Puede controlar cualquier modelo de subprocesos. `CComCoClass` controla cualquier compatibilidad error requerida. Si desea enviar información de error más completa al cliente, puede usar algunas de la API de errores en `CComCoClass`.
+
+También hereda el objeto de origen de datos de varias clases 'Impl'. Cada clase proporciona la implementación de una interfaz. Los datos del origen de objeto implementa la `IPersist`, `IDBProperties`, `IDBInitialize`, y `IDBCreateSession` interfaces. OLE DB requiere cada interfaz para implementar el objeto de origen de datos. Puede elegir admitir o no una funcionalidad concreta heredando o no heredar de una de estas clases 'Impl'. Si desea admitir la `IDBDataSourceAdmin` interfaz, heredan de la `IDBDataSourceAdminImpl` clase para obtener la funcionalidad necesaria.
+
+## <a name="com-map"></a>Mapa COM
+
+Cada vez que el cliente llama a `QueryInterface` para una interfaz en el origen de datos, pasa por el siguiente mapa COM:
+
+```cpp
+/////////////////////////////////////////////////////////////////////////
+// CCustomSource
+class ATL_NO_VTABLE CCustomSource : 
    public CComObjectRootEx<CComSingleThreadModel>,
    public CComCoClass<CCustomSource, &CLSID_Custom>,
    public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
@@ -68,7 +89,7 @@ Las macros COM_INTERFACE_ENTRY pertenecen a ATL e indican a la implementación d
 
 ## <a name="property-map"></a>Asignación de propiedad
 
-El mapa de propiedades especifica todas las propiedades designadas por el proveedor:
+El mapa de propiedades especifica todas las propiedades asignadas por el proveedor:
 
 ```cpp
 BEGIN_PROPSET_MAP(CCustomSource)
@@ -162,11 +183,11 @@ Cada elemento de la estructura representa información para controlar la propied
 
 Si desea cambiar el valor predeterminado de una propiedad (tenga en cuenta que un consumidor puede cambiar el valor de una propiedad de escritura en cualquier momento), puede utilizar la macro PROPERTY_INFO_ENTRY_VALUE o PROPERTY_INFO_ENTRY_EX. Estas macros le permiten especificar un valor para una propiedad correspondiente. La macro PROPERTY_INFO_ENTRY_VALUE es una notación abreviada que permite cambiar el valor. La macro PROPERTY_INFO_ENTRY_VALUE llama a la macro PROPERTY_INFO_ENTRY_EX. Esta macro permite agregar o cambiar todos los atributos en el `UPROPINFO` estructura.
 
-Si desea definir su propio conjunto de propiedades, puede agregar uno mediante la realización de una combinación BEGIN_PROPSET_MAP/END_PROPSET_MAP adicional. Debe definir un GUID para el conjunto de propiedades y, a continuación, definir sus propias propiedades. Si tiene propiedades específicas del proveedor, agregue una nueva propiedad establecida en lugar de usar uno existente. Esto evita problemas en versiones posteriores de OLE DB.
+Si desea definir su propio conjunto de propiedades, puede agregar uno mediante la realización de una combinación BEGIN_PROPSET_MAP/END_PROPSET_MAP adicional. Definir un GUID para el conjunto de propiedades y, a continuación, definir sus propias propiedades. Si tiene propiedades específicas del proveedor, agregue una nueva propiedad establecida en lugar de usar uno existente. Esto evita problemas en versiones posteriores de OLE DB.
 
 ## <a name="user-defined-property-sets"></a>Conjuntos de propiedades definido por el usuario
 
-Visual C++ admite conjuntos de propiedades definido por el usuario. No es necesario invalidar `GetProperties` o `GetPropertyInfo`. En su lugar, las plantillas de detectan cualquier conjunto de propiedades definido por el usuario y agregarlo al objeto adecuado.
+Visual C++ admite conjuntos de propiedades definido por el usuario. No tiene que invalidar `GetProperties` o `GetPropertyInfo`. En su lugar, las plantillas de detectan cualquier conjunto de propiedades definido por el usuario y agregarlo al objeto adecuado.
 
 Si tiene un conjunto de propiedades definido por el usuario que debe estar disponible en tiempo de inicialización (es decir, antes de que el consumidor llama a `IDBInitialize::Initialize`), puede especificarlo mediante el indicador UPROPSET_USERINIT junto con la macro BEGIN_PROPERTY_SET_EX. El conjunto de propiedades debe estar en el objeto de origen de datos para que funcione (tal y como requiere la especificación OLE DB). Por ejemplo:
 
@@ -178,4 +199,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)
+[Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)<br/>

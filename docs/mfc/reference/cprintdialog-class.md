@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441441"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204657"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog (clase)
 
@@ -108,7 +108,7 @@ Los cuadros de diálogo de impresión comunes proporcionan una manera fácil de 
 > [!NOTE]
 >  La `CPrintDialogEx` clase encapsula los servicios proporcionados por la hoja de propiedades de impresión de Windows. Para obtener más información, consulte el [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) información general.
 
-`CPrintDialog`de funcionalidad ha sido reemplazada por el de [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), que está diseñada para proporcionarle un cuadro de diálogo común para tanto el programa de instalación y configuración de página de la impresión.
+`CPrintDialog`de funcionalidad se ha reemplazado por el de [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), que está diseñada para proporcionarle un cuadro de diálogo común para tanto el programa de instalación y configuración de página de la impresión.
 
 Puede confiar en el marco de trabajo para controlar muchos aspectos del proceso de impresión de la aplicación. En este caso, el marco de trabajo muestra automáticamente el cuadro de diálogo comunes de Windows para la impresión. También puede tiene el identificador de marco de trabajo la impresión para la aplicación pero invalidar el cuadro de diálogo Imprimir común con su propio cuadro de diálogo de impresión. Para obtener más información sobre cómo usar el marco de trabajo para controlar las tareas de impresión, consulte el artículo [impresión](../../mfc/printing.md).
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4ed220aad7dd90ff2b5ca97c4cf5160fd4d00ed4
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079043"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204579"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilador (nivel 3) de la advertencia C4996
 
@@ -35,7 +35,7 @@ Estos son algunos mensajes de advertencia C4996 comunes generados por la bibliot
 
 - [' std::*function_name*::\_Unchecked\_iteradores::\_Deprecate' llamar a std::*nombre_función*con parámetros que pueden ser seguros; esta llamada se basa en el llamador para comprobar que los valores pasados son correctos. Para deshabilitar esta advertencia, utilice -D_SCL_SECURE_NO_WARNINGS. Consulte la documentación sobre cómo usar Visual C++ 'Iteradores activados'](#unsafe-standard-library-functions)
 
-- [Esta función o variable ha sido reemplazada por la funcionalidad de biblioteca o un sistema operativo más reciente. Considere el uso de *new_item* en su lugar. Consulte la ayuda en línea para obtener información detallada.](#obsolete-crt-functions-and-variables)
+- [Esta función o variable se ha sustituido por nuevas funcionalidades del sistema operativo o biblioteca. Considere el uso de *new_item* en su lugar. Consulte la ayuda en línea para obtener información detallada.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>Motivo
 
@@ -256,7 +256,7 @@ Para obtener información sobre cómo suprimir estas advertencias, vea [_AFX_SEC
 
 ### <a name="obsolete-crt-functions-and-variables"></a>Las variables y funciones de CRT obsoletas
 
-**Esta función o variable ha sido reemplazada por la funcionalidad de biblioteca o un sistema operativo más reciente. Considere el uso de** *new_item* **en su lugar. Consulte la ayuda en línea para obtener información detallada.**
+**Esta función o variable se ha sustituido por nuevas funcionalidades del sistema operativo o biblioteca. Considere el uso de** *new_item* **en su lugar. Consulte la ayuda en línea para obtener información detallada.**
 
 Algunas variables globales y funciones de la biblioteca están en desuso por estar obsoletas. Es posible que estas funciones y variables se quiten en una versión futura de la biblioteca. El compilador emite una advertencia de desuso para estos elementos y sugiere la alternativa preferida.
 

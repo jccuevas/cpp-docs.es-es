@@ -1,7 +1,7 @@
 ---
 title: Implementar un proveedor sencillo de sólo lectura | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 834370ef6af5cd3db15789a1637ad3aaf8707d10
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 517020762fa4baf45fc4ff0477e2a561ef353b39
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060122"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216427"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementar un proveedor sencillo de sólo lectura
 
@@ -32,4 +32,4 @@ El ejemplo ampliado de este tema muestra cómo editar los archivos creados por e
 
 ## <a name="see-also"></a>Vea también
 
-[Crear un proveedor sencillo de solo lectura](../../data/oledb/creating-a-simple-read-only-provider.md)
+[Crear un proveedor sencillo de solo lectura](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

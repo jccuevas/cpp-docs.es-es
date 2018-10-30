@@ -1,7 +1,7 @@
 ---
 title: Plantillas de proveedores OLE DB (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0eef554fd6b7fbd16ff7c34434d08d917b5dcea9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4d4d93f656279cf5e5c548ef09bf809364c9d90e
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080070"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216414"
 ---
 # <a name="ole-db-provider-templates-c"></a>Plantillas de proveedores OLE DB (C++)
 
@@ -39,25 +39,25 @@ Los proveedores pueden ser simple o complejo. El proveedor puede admitir una can
 
 Cada proveedor implementa un conjunto estándar de objetos COM para controlar las solicitudes del cliente, con un significado estándar que cualquier consumidor de OLE DB puede tener acceso a datos desde cualquier proveedor, independientemente del lenguaje (por ejemplo, C++ y básico).
 
-Cada objeto COM contiene varias interfaces, algunos de los cuales son necesarios y algunos de los cuales son opcionales. Implementando las interfaces obligatorias, un proveedor garantiza un nivel mínimo de funcionalidad (denominado conformidad) que cualquier cliente debe ser capaz de usar. Un proveedor puede implementar interfaces opcionales para proporcionar funcionalidad adicional. [La arquitectura de plantillas de proveedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md) describe estas interfaces en detalle. El cliente siempre debe llamar a `QueryInterface` para determinar si un proveedor admite una interfaz determinada.
+Cada objeto COM contiene varias interfaces, algunos de los cuales son necesarios y algunos de los cuales son opcionales. Implementando las interfaces obligatorias, un proveedor garantiza un nivel mínimo de funcionalidad (denominado conformidad) que cualquier cliente debe ser capaz de usar. Un proveedor puede implementar interfaces opcionales para proporcionar funcionalidad adicional. El [arquitectura de plantillas de proveedor OLE DB](../../data/oledb/ole-db-provider-template-architecture.md) describe estas interfaces en detalle. El cliente siempre debe llamar a `QueryInterface` para determinar si un proveedor admite una interfaz determinada.
 
 ## <a name="ole-db-specification-level-support"></a>Compatibilidad con nivel de OLE DB especificación
 
-Las plantillas de proveedor OLE DB admiten la especificación de OLE DB versión 2.7. Mediante las plantillas de proveedor OLE DB, puede implementar un proveedor compatible con el nivel 0. El ejemplo de proveedor, por ejemplo, utiliza las plantillas para implementar un servidor de comando de aplicación que se ejecuta el comando DIR de DOS para consultar el sistema de archivos. El ejemplo de proveedor devuelve la información del directorio en un conjunto de filas, que es el mecanismo estándar de OLE DB para devolver datos tabulares.
+Las plantillas de proveedor OLE DB admiten la especificación de OLE DB versión 2.7. Mediante las plantillas de proveedor OLE DB, puede implementar un proveedor compatible con el nivel 0. El `Provider` ejemplo, por ejemplo, utiliza las plantillas para implementar un servidor de comando de aplicación que se ejecuta el comando DIR de DOS para consultar el sistema de archivos. El `Provider` ejemplo devuelve la información del directorio en un conjunto de filas, que es el mecanismo estándar de OLE DB para devolver datos tabulares.
 
-El tipo más sencillo de proveedor compatible con las plantillas OLE DB es un proveedor de sólo lectura con ningún comando. También se admiten los proveedores con los comandos, como son la capacidad de lectura/escritura y marcadores. Puede implementar un proveedor de lectura/escritura al escribir código adicional. Las transacciones y los conjuntos de filas dinámicas no son compatibles con la versión actual, pero puede agregar si desea.
+El tipo más sencillo de proveedor compatible con las plantillas OLE DB es un proveedor de sólo lectura con ningún comando. También se admiten proveedores con comandos, como son las características de marcadores y lectura/escritura. Puede implementar un proveedor de lectura/escritura al escribir código adicional. Las transacciones y los conjuntos de filas dinámicas no son compatibles con la versión actual, pero puede agregar si desea.
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>¿Cuando necesite crear un proveedor OLE DB?
 
-No siempre debe crear su propio proveedor; Microsoft proporciona varios proveedores estándares ya preparados en el **propiedades de vínculo de datos** cuadro de diálogo de Visual C++. Es la razón principal para crear un proveedor OLE DB aprovechar las ventajas de la estrategia de Universal Data Access. Por lo que algunas de las ventajas de hacerlo son:
+No siempre es necesario crear su propio proveedor; Microsoft proporciona varios proveedores estándares ya preparados en el **propiedades de vínculo de datos** cuadro de diálogo de Visual C++. Es la razón principal para crear un proveedor OLE DB aprovechar las ventajas de la estrategia de Universal Data Access. Por lo que algunas de las ventajas de hacerlo son:
 
 - Acceso a datos a través de cualquier lenguaje como C++, Basic y Visual Basic Scripting Edition. Permite que distintos programadores de su organización para tener acceso a los mismos datos de la misma manera, independientemente del lenguaje utilizan.
 
-- Exponer los datos a otros datos de orígenes como SQL Server, Excel y Access. Esto puede ser muy útil si desea transferir datos entre diferentes formatos.
+- Abra los datos a otros orígenes de datos como SQL Server, Excel y Access. Esto puede ser útil si desea transferir datos entre diferentes formatos.
 
-- Tomar parte en operaciones de origen de datos entre (heterogéneos). Esto puede ser una forma muy eficaz del almacenamiento de datos. Mediante el uso de proveedores OLE DB, puede mantener los datos en su formato nativo y seguir siendo capaces de obtener acceso a él en una operación sencilla.
+- Tomar parte en operaciones de origen de datos entre (heterogéneos). Esto puede ser una forma eficaz de almacenamiento de datos. Mediante el uso de proveedores OLE DB, puede mantener los datos en su formato nativo y seguir siendo capaces de obtener acceso a él en una operación sencilla.
 
-- Agregar capacidades adicionales a los datos, como el procesamiento de consultas.
+- Agregar características adicionales a los datos, como el procesamiento de consultas.
 
 - Aumento del rendimiento de acceso a datos mediante el control de la manipulación.
 
@@ -81,5 +81,5 @@ Para obtener más información, consulte:
 ## <a name="see-also"></a>Vea también
 
 [Acceso a datos](../data-access-in-cpp.md)<br/>
-[Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784)
-[referencia del programador OLE DB](/previous-versions/windows/desktop/ms713643)
+[Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
+[Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643)<br/>
