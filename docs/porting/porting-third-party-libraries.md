@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075000"
 ---
 # <a name="porting-third-party-libraries"></a>Migración de bibliotecas de terceros
 
-Cuando actualice un proyecto a la versión actual de Visual C++, también debe actualizar las bibliotecas que usa el proyecto para que así la biblioteca y el proyecto estén compilados con la misma versión y tipo de compilador. (Para obtener más información, vea [Información general sobre posibles problemas de actualización](overview-of-potential-upgrade-issues-visual-cpp.md)). 
+Cuando actualice un proyecto a la versión actual de Visual C++, también debe actualizar las bibliotecas que usa el proyecto para que así la biblioteca y el proyecto estén compilados con la misma versión y tipo de compilador. (Para obtener más información, vea [Información general sobre posibles problemas de actualización](overview-of-potential-upgrade-issues-visual-cpp.md)).
 
 ## <a name="introducing-vcpkg"></a>Introducción a Vcpkg
 
@@ -35,7 +35,7 @@ Antes, el proceso de buscar y actualizar bibliotecas de terceros era a veces una
 Si la biblioteca no está presente en el catálogo de [vcpkg](https://github.com/Microsoft/vcpkg/issues), puede abrir una incidencia en el **repositorio de GitHub** para que la comunidad y el equipo de Visual C++ puedan verlo y crear el archivo de migración para esta biblioteca.
 
 En el caso de bibliotecas propiedad de terceros (que no son de código abierto), recomendamos que se ponga en contacto con el proveedor de la biblioteca. Aun así, nos interesa saber qué bibliotecas propiedad de terceros lo bloquean, por lo que agradecemos que nos comunique cuáles son las bibliotecas de las que depende (puede ponerse en contacto con nosotros a través de vcupgrade@microsoft.com).
-  
-## <a name="see-also"></a>Vea también  
+
+## <a name="see-also"></a>Vea también
 
 [Guía de migración y actualización de Visual C++](visual-cpp-porting-and-upgrading-guide.md)

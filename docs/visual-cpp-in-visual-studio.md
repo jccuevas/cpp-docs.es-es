@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067948"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ en Visual Studio
 
-> [!NOTE]  
-> Esta documentación para desarrolladores es aplicable a Visual Studio 2015 y Visual Studio 2017. 
+> [!NOTE]
+> Esta documentación para desarrolladores es aplicable a Visual Studio 2015 y Visual Studio 2017.
 
-> Si busca un paquete redistribuible de Visual C++ que le permita ejecutar un programa, vaya al [Centro de descarga de Microsoft](http://www.microsoft.com/download/) y escriba **Visual C++** en el cuadro de búsqueda.  
-  
+> Si busca un paquete redistribuible de Visual C++ que le permita ejecutar un programa, vaya al [Centro de descarga de Microsoft](http://www.microsoft.com/download/) y escriba **Visual C++** en el cuadro de búsqueda.
+
 
 Microsoft Visual C++, con frecuencia abreviado como Visual C++ o MSVC, es el nombre de las herramientas y las bibliotecas de desarrollo de lenguaje ensamblador, C++ y C que están disponibles como parte de Visual Studio en Windows. Dichas herramientas y bibliotecas permiten crear aplicaciones de la Plataforma universal de Windows (UWP), aplicaciones nativas de servidor y escritorio de Windows, y aplicaciones y bibliotecas multiplataforma que se ejecuten en Windows, Linux, Android y iOS, así como aplicaciones y bibliotecas administradas que usen .NET Framework. Puede usar Visual C++ para escribir cualquier cosa, desde sencillas aplicaciones de consola hasta aplicaciones de lo más complejas y sofisticadas de escritorio de Windows, desde controladores de dispositivos y componentes del sistema operativo hasta juegos multiplataforma para dispositivos móviles, y desde dispositivos IoT de lo más simples hasta elementos multiservidor de informática de alto rendimiento en la nube de Azure.
 

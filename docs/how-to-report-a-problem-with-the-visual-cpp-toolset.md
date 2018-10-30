@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062124"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
@@ -381,7 +381,7 @@ En el caso de problemas relacionados con el compilador de C++, el enlazador y ot
 
 De forma predeterminada, **toda la información de los informes, así como los comentarios y las respuestas están visibles públicamente**. Normalmente, esto es una ventaja, porque permite que toda la comunidad ver los problemas, las soluciones y las soluciones alternativas que han encontrado otros usuarios. Aunque si le preocupa que por motivos de propiedad intelectual o privacidad se publiquen sus datos o su identidad, tiene otras opciones.
 
-Si le preocupa que se revele su identidad, [cree una cuenta de Microsoft](https://signup.live.com/) que no divulgue ningún detalle sobre usted. Utilice esta cuenta para crear el informe. 
+Si le preocupa que se revele su identidad, [cree una cuenta de Microsoft](https://signup.live.com/) que no divulgue ningún detalle sobre usted. Utilice esta cuenta para crear el informe.
 
 **No incluya nada que no quiera revelar en el título ni el contenido del informe inicial, que es público.** En cambio, tenga en cuenta que enviará detalles de forma privada en un comentario aparte. Para asegurarse de que el informe se dirige a las personas adecuadas, incluya **cppcompiler** en la lista de temas del informe de problemas. Ahora es posible especificar quién puede ver las respuestas y los datos adjuntos una vez creado el informe de problemas.
 

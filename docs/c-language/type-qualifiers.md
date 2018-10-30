@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083248"
 ---
 # <a name="type-qualifiers"></a>Calificadores de tipos
 
@@ -69,7 +69,7 @@ En esta lista se describe cómo usar **const** y `volatile`.
 
 - El compilador supone que, en cualquier punto del programa, se puede tener acceso a una variable `volatile` mediante un proceso desconocido que utilice o modifique su valor. Por consiguiente, independientemente de las optimizaciones especificadas en la línea de comandos, el código de cada asignación de una variable `volatile` y cada referencia a la misma debe generarse aunque no parezca surtir ningún efecto.
 
-     Si solo se usa `volatile`, se supone `int`. El especificador de tipo `volatile` se puede utilizar para proporcionar acceso confiable a ubicaciones de memoria especiales. Use `volatile` con objetos de datos a los que se pueda tener acceso o que se puedan modificar mediante controladores de la señal, ejecutando programas simultáneamente o mediante hardware especial tal como registros de control de E/S asignados a la memoria. Puede declarar una variable como `volatile` mientras dure o puede convertir una única referencia para que sea `volatile`.
+   Si solo se usa `volatile`, se supone `int`. El especificador de tipo `volatile` se puede utilizar para proporcionar acceso confiable a ubicaciones de memoria especiales. Use `volatile` con objetos de datos a los que se pueda tener acceso o que se puedan modificar mediante controladores de la señal, ejecutando programas simultáneamente o mediante hardware especial tal como registros de control de E/S asignados a la memoria. Puede declarar una variable como `volatile` mientras dure o puede convertir una única referencia para que sea `volatile`.
 
 - Un elemento puede ser a la vez **const** y `volatile`, en cuyo caso el elemento no se podría modificar de manera legítima por su propio programa, pero podría modificarlo algún proceso asincrónico.
 

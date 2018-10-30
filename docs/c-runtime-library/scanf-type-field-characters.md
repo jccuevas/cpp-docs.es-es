@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db1a8370a43b8b0c43c7c228c7b3acf9dd2c8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04a4c2005dc0a7e0e052002198bebb7c78267843
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082890"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059963"
 ---
 # <a name="scanf-type-field-characters"></a>scanf (Caracteres de campo de tipo)
 
@@ -54,7 +54,6 @@ El carácter de `type` es el único campo de formato necesario; aparece después
 |`n`|No lee ninguna entrada de secuencia o búfer.|Puntero a `int`, dentro del cual se almacena el número de caracteres correctamente leídos de la secuencia o búfer hasta ese punto en la llamada actual a funciones `scanf` o `wscanf` .|No.|
 |`s`|Cadena, hasta el primer carácter de espacio en blanco (espacio, tabulación o nueva línea). Para leer cadenas no delimitadas por caracteres de espacio, use el conjunto de corchetes (`[ ]`), como se describe en [scanf Width Specification](../c-runtime-library/scanf-width-specification.md).|Cuando se usa con funciones `scanf` , especifica un carácter de un solo byte; cuando se usa con funciones `wscanf` , especifica una matriz de caracteres anchos. En cualquiera de los casos, la matriz de caracteres debe ser lo suficientemente grande como para que quepa el campo de entrada más el carácter nulo de terminación, que se anexa automáticamente.|Obligatorio. El tamaño incluye espacio para un terminador nulo.|
 |`S`|Cadena de caracteres tamaño opuesto, hasta el primer carácter de espacio en blanco (espacio, tabulación o nueva línea). Para leer cadenas no delimitadas por caracteres de espacio, use un conjunto de corchetes (`[ ]`), tal y como se describe en [scanf (Especificación de ancho)](../c-runtime-library/scanf-width-specification.md).|Cuando se usa con funciones `scanf`, especifica una matriz de caracteres anchos; cuando se usa con funciones `wscanf`, especifica una matriz de caracteres de un solo byte. En cualquiera de los casos, la matriz de caracteres debe ser lo suficientemente grande como para que quepa el campo de entrada más el carácter nulo de terminación, que se anexa automáticamente.|Obligatorio. El tamaño incluye espacio para un terminador nulo.|
-
 
 Los argumentos de tamaño, si son necesarios, deben pasarse a la lista de parámetros inmediatamente después del argumento al que se aplican. Por ejemplo, el código siguiente:
 

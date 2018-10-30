@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075143"
 ---
 # <a name="try-except-statement-c"></a>try-except (Instrucción) (C)
 
@@ -49,11 +49,11 @@ La instrucción compuesta detrás de la cláusula `__try` es la sección protegi
 
 1. Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina a la que llame la sección protegida, se evalúa la expresión `__except` y el valor devuelto determina cómo se controla la excepción. Existen tres valores:
 
-     `EXCEPTION_CONTINUE_SEARCH` La excepción no se reconoce. La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
+   `EXCEPTION_CONTINUE_SEARCH` La excepción no se reconoce. La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
 
-     `EXCEPTION_CONTINUE_EXECUTION` La excepción se reconoce pero se descarta. La ejecución continúa en el punto donde se ha producido la excepción.
+   `EXCEPTION_CONTINUE_EXECUTION` La excepción se reconoce pero se descarta. La ejecución continúa en el punto donde se ha producido la excepción.
 
-     `EXCEPTION_EXECUTE_HANDLER` La excepción se reconoce. El control se transfiere al controlador de excepciones ejecutando la instrucción compuesta `__except`, después la ejecución continúa en el punto donde se produjo la excepción.
+   `EXCEPTION_EXECUTE_HANDLER` La excepción se reconoce. El control se transfiere al controlador de excepciones ejecutando la instrucción compuesta `__except`, después la ejecución continúa en el punto donde se produjo la excepción.
 
 Dado que la expresión `__except` se evalúa como expresión de C, se limita a un valor único: el operador de expresión condicional u operador de coma. Si se requiere un mayor procesamiento, la expresión puede llamar a una rutina que devuelva uno de los tres valores enumerados anteriormente.
 

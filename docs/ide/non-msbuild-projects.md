@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069261"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Proyectos Abrir carpeta en Visual C++
 
@@ -245,6 +245,7 @@ Puede crear cualquier número de configuraciones en CppProperties.json. Todas ap
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>Definición de tareas con tasks.vs.json
 
 Puede automatizar los scripts de compilación o cualquier otra operación externa en los archivos que tiene en el área de trabajo actual al ejecutarlos directamente en el IDE. Para configurar una tarea nueva, haga clic con el botón derecho en un archivo o una carpeta y seleccione **Configurar tareas**.

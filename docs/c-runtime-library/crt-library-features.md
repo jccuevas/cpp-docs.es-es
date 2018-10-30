@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057054"
 ---
 # <a name="crt-library-features"></a>Características de la biblioteca CRT
 
@@ -123,7 +123,6 @@ Puede evitar muchos de estos problemas empleando las tecnologías de la interfaz
 También es posible evitar algunos de estos problemas si todas las imágenes del proceso usan la misma versión cargada dinámicamente de CRT. Para asegurarse de que todos los componentes utilizan la misma versión DLL de CRT, compílelos mediante la opción **/MD** y use el mismo conjunto de herramientas y configuración de propiedades del compilador.
 
 Es necesario prestar atención si el programa pasa ciertos recursos de CRT (por ejemplo, identificadores de archivo, configuraciones regionales y variables de entorno) a través de los límites de los archivos DLL, incluso si se utiliza la misma versión de CRT. Para obtener más información sobre los posibles problemas y cómo resolverlos, consulte [Errores potenciales que pasan los objetos de CRT entre los límites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>Vea también
 
