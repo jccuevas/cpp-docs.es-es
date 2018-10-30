@@ -20,22 +20,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 947efa181a6b632050c01c4f2b327cf11a113e3f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bbbde895c7c83264d0ad77bf50bfc14428cdb99f
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070938"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216271"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-El asistente crea una clase que contenga una fila de datos. en este caso, se llama `CCustomWindowsFile`. El siguiente código para `CCustomWindowsFile` es asistente que se genera y muestra todos los archivos en un directorio mediante la `WIN32_FIND_DATA` estructura. `CCustomWindowsFile` hereda el `WIN32_FIND_DATA` estructura:
+El asistente crea una clase que tiene una fila de datos. en este caso, se llama `CCustomWindowsFile`. El siguiente código para `CCustomWindowsFile` es asistente que se genera y muestra todos los archivos en un directorio mediante la `WIN32_FIND_DATA` estructura. `CCustomWindowsFile` hereda el `WIN32_FIND_DATA` estructura:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile:
+class CCustomWindowsFile: 
    public WIN32_FIND_DATA
 {
 public:
@@ -49,7 +49,7 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` se llama a la [clase de registro de usuario](../../data/oledb/user-record.md) porque también contiene un mapa que describe las columnas de conjunto de filas del proveedor. El mapa de columnas del proveedor contiene una entrada para cada campo del conjunto de filas mediante las macros PROVIDER_COLUMN_ENTRY. Las macros de especifican el nombre de columna ordinal y el desplazamiento a una entrada de la estructura. Las entradas de la columna de proveedor en el código anterior contienen desplazamientos a la `WIN32_FIND_DATA` estructura. Cuando el consumidor llama a `IRowset::GetData`, se transfieren los datos en un búfer contiguo. En lugar de realizar realizar aritmética de puntero, el mapa permite especificar a un miembro de datos.
+`CCustomWindowsFile` se llama a la [clase de registro de usuario](../../data/oledb/user-record.md) porque también tiene un mapa que describe las columnas de conjunto de filas del proveedor. El mapa de columnas del proveedor contiene una entrada para cada campo del conjunto de filas mediante las macros PROVIDER_COLUMN_ENTRY. Las macros de especifican el nombre de columna ordinal y el desplazamiento a una entrada de la estructura. Las entradas de la columna de proveedor en el código anterior contienen desplazamientos a la `WIN32_FIND_DATA` estructura. Cuando el consumidor llama a `IRowset::GetData`, se transfieren los datos en un búfer contiguo. En lugar de realizar realizar aritmética de puntero, el mapa permite especificar a un miembro de datos.
 
 El `CCustomRowset` clase también contiene el `Execute` método. `Execute` es lo que realmente lee los datos en el origen nativo. El código siguiente muestra el asistente generó `Execute` método. La función usa Win32 `FindFirstFile` y `FindNextFile` API para recuperar información acerca de los archivos en el directorio y colocarlos en las instancias de la `CCustomWindowsFile` clase.
 
@@ -84,10 +84,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-El directorio de búsqueda se representa mediante `m_strCommandText`; este archivo contiene el texto representado por la `ICommandText` interfaz en el objeto de comando. Si no se especifica ningún directorio, utiliza el directorio actual.
+El directorio de búsqueda se muestra mediante `m_strCommandText`; este archivo contiene el texto representado por la `ICommandText` interfaz en el objeto de comando. Si no se especifica ningún directorio, utiliza el directorio actual.
 
-El método crea una entrada para cada archivo (correspondiente a una fila) y lo coloca en el `m_rgRowData` miembro de datos. El `CRowsetImpl` clase define la `m_rgRowData` miembro de datos. Los datos de esta matriz representan toda la tabla y se utilizan a lo largo de las plantillas.
+El método crea una entrada para cada archivo (correspondiente a una fila) y lo coloca en el `m_rgRowData` miembro de datos. El `CRowsetImpl` clase define la `m_rgRowData` miembro de datos. Los datos de esta matriz se muestran toda la tabla y se utilizan a lo largo de las plantillas.
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)
+[Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)<br/>
