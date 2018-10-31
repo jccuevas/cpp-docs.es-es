@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441374"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136125"
 ---
 # <a name="extract-function"></a>Extraer función
 **Qué:** permite convertir un fragmento de código en su propia función.
@@ -41,7 +41,7 @@ ms.locfileid: "46441374"
 
 1. En la ventana **Extraer función/método (experimental)**, escriba el nombre de función nuevo, seleccione dónde quiere colocar el código y haga clic en el botón **Aceptar**.
 
-   ![Función Extraer función](images/extractfunction_dialog.png)
+   ![Extraer el diálogo de la función](images/extractfunction_dialog.png)
 
 1. La función nueva se creará donde haya especificado, un prototipo de función en el archivo de encabezado correspondiente, y el código original se cambiará para llamar a esa función.
 

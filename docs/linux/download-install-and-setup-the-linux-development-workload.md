@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a45d216f1d6ddcef704dba40ff97f6ed71f98240
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410647"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143697"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Descargar, instalar y configurar la carga de trabajo de Linux
 
@@ -26,14 +26,14 @@ Puede usar el IDE de Visual Studio en Windows para crear, editar y depurar proye
 
 ## <a name="visual-studio-setup"></a>Instalación de Visual Studio
 
-1. Escriba "Instalador de Visual Studio" en el menú de búsqueda de Windows; búsquelo en los resultados de **Aplicaciones** y haga doble clic en él. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++**.
+1. Escriba "Instalador de Visual Studio" en el cuadro de búsqueda de Windows: ![cuadro de búsqueda de Windows](media/visual-studio-installer-search.png).
+2. Busque el instalador en los resultados de la categoría **Aplicaciones** y haga doble clic en este. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++**.
 
    ![Carga de trabajo Visual C++ for Linux Development](media/linuxworkload.png)
 
-1. Si utiliza CMake o tiene como destino plataformas incrustadas o IoT, vaya al panel **Detalles de la instalación** de la derecha, debajo de **Desarrollo de Linux con C++**, expanda **Componentes opcionales** y elija los componentes que necesita. 
+1. Si utiliza CMake o tiene como destino plataformas incrustadas o IoT, vaya al panel **Detalles de la instalación** de la derecha, debajo de **Desarrollo de Linux con C++**, expanda **Componentes opcionales** y elija los componentes que necesita.
 
 1. Haga clic en **Modificar** para continuar con la instalación.
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opciones para crear un entorno Linux
 

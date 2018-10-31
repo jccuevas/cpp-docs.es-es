@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328381"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136164"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE y herramientas de compilación para el desarrollo de Visual C++
 
@@ -30,7 +30,7 @@ Además de las herramientas compartidas en el IDE de Visual Studio, MSVC dispone
 
 ## <a name="create-projects"></a>Crear proyectos
 
-Un *proyecto* es básicamente un conjunto de archivos de código fuente y recursos como imágenes o archivos de datos que se integran en un archivo ejecutable. 
+Un *proyecto* es básicamente un conjunto de archivos de código fuente y recursos como imágenes o archivos de datos que se integran en un archivo ejecutable.
 
 Visual Studio 2015 proporciona compatibilidad con proyectos de MSBuild. Puede descargar extensiones de Visual Studio para otros sistemas de compilación, como Qt o CMake.
 
@@ -65,7 +65,7 @@ Para obtener más información sobre cómo crear una interfaz de usuario para un
 
 ## <a name="write-code"></a>Escribir código
 
-Después de crear un proyecto, todos los archivos del proyecto se muestran en la ventana **Explorador de soluciones**. (Una *solución* es un contenedor lógico para uno o más proyectos relacionados). Al hacer clic en un archivo .h o .cpp en el **Explorador de soluciones**, el archivo se abre en el editor de código. 
+Después de crear un proyecto, todos los archivos del proyecto se muestran en la ventana **Explorador de soluciones**. (Una *solución* es un contenedor lógico para uno o más proyectos relacionados). Al hacer clic en un archivo .h o .cpp en el **Explorador de soluciones**, el archivo se abre en el editor de código.
 
 ![Explorador de soluciones y editor de código](media/vs2017-solution-explorer-code-editor.png "Explorador de soluciones y editor de código de Visual Studio 2017")
 
