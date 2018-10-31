@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 91b97c653a5f035a767fbedcfcbfdfa7ca178327
+ms.sourcegitcommit: 038f1406b1172318f8832371ad14176f788c44fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704891"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50132158"
 ---
 # <a name="link-options"></a>Opciones de vínculo
 
@@ -52,11 +52,12 @@ El directorio lib de CRT incluye una serie de archivos de objetos pequeños que 
 
 Las versiones en modo puro de CLR de estos objetos están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017. Use las versiones normales para código nativo y /clr.
 
-|Nativo y /clr|Modo puro|Description|
+|Nativo y /clr|Modo puro|Descripción|
 |----------------------|---------------|-----------------|
 |binmode.obj|pbinmode.obj|Establece el modo de traducción de archivo predeterminado en binario. Consulte [_fmode](../c-runtime-library/fmode.md).|
 |chkstk.obj|N/D|Ofrece compatibilidad con comprobación de pila y alloca cuando no se use CRT.|
 |commode.obj|pcommode.obj|Establece la marca global de confirmación en "commit". Consulte [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) y [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|
+|exe_initialize_mta.lib|N/D|Inicializa el apartamento MTA durante el inicio de EXE, lo que permite el uso de objetos COM en punteros inteligentes globales. No use esta opción para DLL, puesto que provoca la fuga de una referencia al apartamento MTA durante el apagado. Un vínculo a esta opción equivale a incluir combase.h y definir _EXE_INITIALIZE_MTA. |
 |fp10.obj|N/D|Cambia el control de precisión predeterminado a 64 bits. Consulte [Compatibilidad con el punto flotante](../c-runtime-library/floating-point-support.md).|
 |invalidcontinue.obj|pinvalidcontinue.obj|Establece un controlador de parámetros no válidos predeterminado que no hace nada, lo que significa que los parámetros no válidos que se pasen a funciones de CRT solo establecerán errno y devolverán un resultado de error.|
 |loosefpmath.obj|N/D|Se asegura de que el código de punto flotante tolera valores desnormalizados.|

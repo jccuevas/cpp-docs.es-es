@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084118"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136255"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -128,7 +128,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +271,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
    Supongamos, por ejemplo, que el código define tanto **placement new** como **placement delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +318,14 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    El código anterior genera el error siguiente en Visual Studio 2015:
@@ -525,7 +525,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Clases base virtuales privadas y herencia indirecta**
 
-   Las versiones anteriores del compilador permiten una clase derivada para llamar a funciones de miembro de sus clases base *derivadas indirectamente*`private virtual` . Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2280 como resultado.
+   Las versiones anteriores del compilador permitían que una clase derivada llamase a funciones de miembro de sus clases base `private virtual` *derivadas indirectamente*. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2280 como resultado.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -834,7 +834,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **#include: uso del especificador de principal-directorio '..' en pathname** (solo afecta a `/Wall` `/WX`)
 
-     Las versiones anteriores del compilador no detectaron el uso del especificador de principal-directorio '..' en el nombre de la ruta de acceso de las directivas  `#include` . El código escrito de este modo normalmente está pensado para incluir encabezados que existen fuera del proyecto usando incorrectamente rutas de acceso relativas del proyecto. Este comportamiento antiguo crea un riesgo de que el programa se pueda compilar incluyendo un archivo de origen diferente del que pensaba el programador, o que esas rutas de acceso relativas no son portables a otros entornos de compilación. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4464 de compilador opcional, si se habilita.
+   Las versiones anteriores del compilador no detectaron el uso del especificador de principal-directorio '..' en el nombre de la ruta de acceso de las directivas  `#include` . El código escrito de este modo normalmente está pensado para incluir encabezados que existen fuera del proyecto usando incorrectamente rutas de acceso relativas del proyecto. Este comportamiento antiguo crea un riesgo de que el programa se pueda compilar incluyendo un archivo de origen diferente del que pensaba el programador, o que esas rutas de acceso relativas no son portables a otros entornos de compilación. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4464 de compilador opcional, si se habilita.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1465,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Ejemplo (antes):
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1473,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1483,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Ejemplo (después)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1491,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1774,7 @@ Use el nuevo marco de pruebas unitarias de C++ en Visual Studio para escribir pr
 
 #### <a name="architecture-dependency-graphs"></a>Gráficos de dependencias de arquitectura
 
-Para comprender mejor el código, ahora puede generar gráficos de dependencias de los archivos binarios, de clase, espacio de nombres e inclusión de una solución. En la barra de menús, elija **Arquitectura** > **Generar gráfico de dependencias** y, después, **Para la solución** o **Para archivo de inclusión** para generar un gráfico de dependencias. Una vez completada la generación del gráfico, puede explorarlo al expandir cada nodo, obtener información sobre las relaciones de dependencia al moverse por los nodos y examinar el código fuente al elegir **Ver contenido** en el menú contextual de un nodo. Para generar un gráfico de dependencias para los archivos de inclusión, en el menú contextual de un archivo de código fuente *.cpp o archivo de encabezado *.h, elija **Generar gráfico de archivos de inclusión**.
+Para comprender mejor el código, ahora puede generar gráficos de dependencias de los archivos binarios, de clase, espacio de nombres e inclusión de una solución. En la barra de menús, elija **Arquitectura** > **Generar gráfico de dependencias** y, después, **Para la solución** o **Para archivo de inclusión** para generar un gráfico de dependencias. Una vez completada la generación del gráfico, puede explorarlo al expandir cada nodo, obtener información sobre las relaciones de dependencia al moverse por los nodos y examinar el código fuente al elegir **Ver contenido** en el menú contextual de un nodo. Para generar un gráfico de dependencias para los archivos de inclusión, en el menú contextual de un archivo de código fuente \*.cpp o archivo de encabezado \*.h, elija **Generar gráfico de archivos de inclusión**.
 
 #### <a name="architecture-explorer"></a>Explorador de arquitectura
 
@@ -2100,7 +2100,7 @@ El compilador tiene cambios importantes en esta versión.
 - Se ha agregado la opción del enlazador `/CLRIMAGETYPE` (especificar tipo de imagen CLR).
 - Se ha agregado la opción del enlazador `/CLRSUPPORTLASTERROR` (conservar el último código de error para las llamadas a PInvoke).
 - Se ha agregado la opción del enlazador `/CLRTHREADATTRIBUTE` (establecer el atributo del subproceso de CLR).
-- Se ha agregado la opción del enlazador `/CLRUNMANAGEDCODECHECK` (agregar SupressUnmanagedCodeSecurityAttribute).
+- Se ha agregado la opción del enlazador `/CLRUNMANAGEDCODECHECK` (agregar SuppressUnmanagedCodeSecurityAttribute).
 - Se ha agregado la opción del enlazador `/ERRORREPORT` (informar de los errores internos del enlazador).
 - Se ha quitado la opción del enlazador `/EXETYPE`. El enlazador ya no admite la creación de controladores de dispositivos de Windows 95 y Windows 98. Use un DDK adecuado para crear estos controladores de dispositivos. La palabra clave EXETYPE ya no es válida para los archivos de definición de módulo.
 - Se ha agregado la opción del enlazador `/FUNCTIONPADMIN` (crear imagen a la que aplicar una revisión activa).

@@ -1,7 +1,7 @@
 ---
 title: Proyectos de CMake en Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235105"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143736"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Proyectos de CMake en Visual C++
 
@@ -89,7 +89,7 @@ No se importa todo el contenido de la caché.  Propiedades como el generador y l
 Para compilar un proyecto de CMake, tienes estas opciones:
 
 1. Seleccione el destino en la lista desplegable **Depurar** y presione **F5**, o bien haga clic en el botón **Ejecutar** (el triángulo de color verde). Primero se compila el proyecto de manera automática, como una solución de Visual Studio.
-1. Haga clic con el botón derecho en CMakeLists.txt y seleccione **Compilar** en el menú contextual. Si tiene varios destinos en la estructura de carpetas, puede elegir compilarlos todos o solo un destino específico, o bien,
+1. Haga clic con el botón derecho en CMakeLists.txt y seleccione **Compilar** en el menú contextual. Si tiene varios destinos en la estructura de carpetas, puede elegir compilarlos todos o solo un destino específico.
 1. en el menú principal, seleccione **Compilar | Compilar solución** (**F7** o **Ctrl+Mayús+B**). Asegúrese de que hay un destino de CMake seleccionado en la lista desplegable **Elemento de inicio** de la barra de herramientas **General**.
 
 ![Comando Compilar del menú de CMake](media/cmake-build-menu.png "Comando Compilar del menú de CMake")
@@ -215,7 +215,7 @@ Para especificar un generador de Visual Studio, abra el archivo CMakeSettings.js
 
 1. **buildRoot**: se asigna al modificador **DCMAKE_BINARY_DIR** y especifica dónde se va a crear la caché de CMake. Si la carpeta no existe, se creará.
 
-1. **variables**: contiene un par nombre-valor de variables de CMake que se pasan como **-D**_nombre_**=**_valor_ a CMake. Si las instrucciones de compilación del proyecto de CMake especifican la adición de las variables directamente al archivo de caché de CMake, en su lugar se recomienda agregarlas aquí. En el siguiente ejemplo se muestra cómo especificar los pares nombre-valor.
+1. **variables**: contiene un par nombre-valor de variables de CMake que se pasan como **-D** *_nombre_=_valor_* a CMake. Si las instrucciones de compilación del proyecto de CMake especifican la adición de las variables directamente al archivo de caché de CMake, en su lugar se recomienda agregarlas aquí. En el siguiente ejemplo se muestra cómo especificar los pares nombre-valor.
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ Ahora CMakeSettings.json es compatible con los entornos heredados. Esta caracter
 
 El ejemplo anterior equivale a ejecutar el **Símbolo del sistema para desarrolladores de VS 2017** con los argumentos **-arch=amd64 -host_arch=amd64**.
 
-En la tabla siguiente se muestran los valores predeterminados y sus equivalentes de la línea de comandos:
+En la tabla siguiente se muestran los valores predeterminados:
 
 |Nombre del contexto|Descripción|
 |-----------|-----------------|
