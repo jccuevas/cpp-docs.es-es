@@ -1,10 +1,6 @@
 ---
-title: strcpy_s, wcscpy_s, _mbscpy_s | Microsoft Docs
-ms.custom: ''
+title: strcpy_s, wcscpy_s, _mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616611"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
@@ -121,11 +111,11 @@ Cero si es correcto; en caso contrario, error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strcpy_s** función copia el contenido de la dirección de *src*, incluido el carácter nulo final, en la ubicación especificada por *dest*. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de **strcpy_s** es indefinido si las cadenas de origen y de destino se superponen.
+El **strcpy_s** función copia el contenido de la dirección de *src*, incluido el carácter nulo final, en la ubicación especificada por *dest*. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de **strcpy_s** es indefinido si las cadenas de origen y destino se superponen.
 
-**wcscpy_s** es la versión con caracteres anchos de **strcpy_s**, y **_mbscpy_s** es la versión de caracteres multibyte. Los argumentos de **wcscpy_s** son caracteres anchos cadenas; los de **_mbscpy_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcscpy_s** es la versión de caracteres anchos de **strcpy_s**, y **_mbscpy_s** es la versión de caracteres multibyte. Los argumentos de **wcscpy_s** son caracteres anchos cadenas; los de **_mbscpy_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-Si *dest* o *src* es un puntero nulo, o si el tamaño de la cadena de destino *dest_size* es demasiado pequeño, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL** cuando *dest* o  *src* es un puntero nulo, y devuelven **ERANGE** y establecer **errno** a **ERANGE** cuando la cadena de destino es demasiado pequeña.
+Si *dest* o *src* es un puntero nulo, o si el tamaño de la cadena de destino *dest_size* es demasiado pequeño, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL** cuando *dest* o  *src* es un puntero nulo, y devuelven **ERANGE** y establecer **errno** a **ERANGE** cuando la cadena de destino es demasiado pequeña.
 
 Si la ejecución finaliza correctamente, la cadena de destino siempre termina en null.
 
@@ -147,11 +137,11 @@ Las versiones de la biblioteca de depuración de estas funciones rellenan primer
 |**wcscpy_s**|\<string.h> o \<wchar.h>|
 |**_mbscpy_s**|\<mbstring.h>|
 
-Estas funciones son específicos de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Estas funciones son específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-A diferencia del código de calidad de producción, este ejemplo llama a las funciones de cadena segura sin comprobación de errores:
+A diferencia del código de calidad de producción, en este ejemplo llama a las funciones de cadena segura sin comprobación de errores:
 
 ```C
 // crt_strcpy_s.c

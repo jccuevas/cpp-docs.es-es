@@ -1,10 +1,6 @@
 ---
-title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l | Microsoft Docs
-ms.custom: ''
+title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -38,8 +34,6 @@ f1_keywords:
 - mbsnccnt
 - _strncnt
 - _wcsncnt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncnt function
 - _mbsnbcnt function
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6322f9511f0813eeaeb49383f49c73e361048cd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573448"
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -112,24 +102,24 @@ size_t _mbsnccnt_l(
 Cadena que se va a examinar.
 
 *count*<br/>
-Número de caracteres o bytes que se pueden examinar en *str*.
+Número de caracteres o bytes que se va a examinar en *str*.
 
 *locale*<br/>
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_mbsnbcnt** y **_mbsnbcnt_l** devuelve el número de bytes que se encuentran en la primera *recuento* de caracteres multibyte de *str*. **_mbsnccnt** y **_mbsnccnt_l** devuelve el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si se encuentra un carácter nulo antes el examen de *str* ha terminado, devuelven el número de bytes o caracteres que se encuentran antes del carácter nulo. Si *str* consta de menos de *recuento* caracteres o bytes, devuelven el número de caracteres o bytes de la cadena. Si *recuento* es menor que cero, devuelven 0. En versiones anteriores, estas funciones tenían un valor devuelto de tipo **int** en lugar de **size_t**.
+**_mbsnbcnt** y **_mbsnbcnt_l** devuelve el número de bytes que se encuentran en la primera *recuento* de caracteres multibyte de *str*. **_mbsnccnt** y **_mbsnccnt_l** devuelve el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si se encuentra un carácter nulo antes del examen de *str* ha terminado, devuelven el número de bytes o caracteres que se encuentran antes del carácter nulo. Si *str* consta de menos de *recuento* caracteres o bytes, devuelven el número de caracteres o bytes de la cadena. Si *recuento* es menor que cero, devuelven 0. En versiones anteriores, estas funciones tenían un valor devuelto de tipo **int** lugar **size_t**.
 
-**_strncnt** devuelve el número de caracteres de la primera *recuento* bytes de la cadena de un solo byte *str*. **_wcsncnt** devuelve el número de caracteres de la primera *recuento* caracteres anchos de la cadena de caracteres anchos *str*.
+**_strncnt** devuelve el número de caracteres de la primera *recuento* bytes de la cadena de un byte *str*. **_wcsncnt** devuelve el número de caracteres de la primera *recuento* caracteres anchos de la cadena de caracteres anchos *str*.
 
 ## <a name="remarks"></a>Comentarios
 
-**_mbsnbcnt** y **_mbsnbcnt_l** contar el número de bytes que se encuentran en la primera *recuento* de caracteres multibyte de *str*. **_mbsnbcnt** y **_mbsnbcnt_l** reemplazar **mtob** y debe utilizarse en lugar de **mtob**.
+**_mbsnbcnt** y **_mbsnbcnt_l** contar el número de bytes que se encuentran en la primera *recuento* de caracteres multibyte de *str*. **_mbsnbcnt** y **_mbsnbcnt_l** reemplazar **mtob** y debe usarse en lugar de **mtob**.
 
-**_mbsnccnt** y **_mbsnccnt_l** contar el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si **_mbsnccnt** y **_mbsnccnt_l** detecta un carácter nulo en el segundo byte de un carácter de doble byte, el primer byte también se considera null y no se incluye en el valor de recuento devuelto. **_mbsnccnt** y **_mbsnccnt_l** reemplazar **btom** y debe utilizarse en lugar de **btom**.
+**_mbsnccnt** y **_mbsnccnt_l** contar el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si **_mbsnccnt** y **_mbsnccnt_l** se produce un carácter nulo en el segundo byte de un carácter de doble byte, el primer byte también se considera null y no se incluye en el valor de recuento devuelto. **_mbsnccnt** y **_mbsnccnt_l** reemplazar **btom** y debe usarse en lugar de **btom**.
 
-Si *str* es un **NULL** puntero o es *recuento* es 0, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), **errno** está establecido en **EINVAL**, y la función devuelve 0.
+Si *str* es un **NULL** puntero o es *recuento* es 0, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), **errno** está establecido en **EINVAL**, y la función devuelve 0.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

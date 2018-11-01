@@ -1,37 +1,27 @@
 ---
-title: Compilador advertencia (nivel 1) C4319 | Documentos de Microsoft
-ms.custom: ''
+title: Advertencia del compilador (nivel 1) C4319
 ms.date: 1/18/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4319
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1b5fe896ae7d8f43708b60ee4dda486ef08f428
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284750"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599451"
 ---
 # <a name="compiler-warning-level-1-c4319"></a>Advertencia del compilador (nivel 1) C4319
 
-> ' ~': extensión de cero '*type1*'to'*type2*' de mayor tamaño
+> ' ~': extensión de cero '*type1*'para'*type2*' de mayor tamaño
 
-El resultado de la **~** (complemento bit a bit) (operador) es sin signo y, a continuación, ceros cuando se convierte a un tipo mayor.
+El resultado de la **~** (complemento bit a bit) (operador) es sin signo y, a continuación, completa con ceros cuando se convierte a un tipo mayor.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, `~(a - 1)` se evalúa como una expresión de tipo long sin signo de 32 bits y, a continuación, se convierte a 64 bits mediante extensión con ceros. Esto podría producir resultados de operación inesperados.
+En el ejemplo siguiente, `~(a - 1)` se evalúa como una expresión de tipo long sin signo de 32 bits y, a continuación, convierte a 64 bits mediante extensión con ceros. Esto podría producir resultados de operación inesperados.
 
 ```cpp
 // C4319.cpp

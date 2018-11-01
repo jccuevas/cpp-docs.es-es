@@ -1,10 +1,6 @@
 ---
-title: strcpy, wcscpy, _mbscpy | Microsoft Docs
-ms.custom: ''
+title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413926"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640068"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
@@ -107,12 +97,12 @@ Cada una de estas funciones devuelve la cadena de destino. No se reserva ningún
 
 ## <a name="remarks"></a>Comentarios
 
-El **strcpy** función copias *strSource*, incluido el carácter nulo final, en la ubicación especificada por *strDestination*. El comportamiento de **strcpy** es indefinido si las cadenas de origen y de destino se superponen.
+El **strcpy** función copias *strSource*, incluido el carácter nulo final, en la ubicación especificada por *strDestination*. El comportamiento de **strcpy** es indefinido si las cadenas de origen y destino se superponen.
 
 > [!IMPORTANT]
-> Dado que **strcpy** no comprueba si hay espacio suficiente en *strDestination* antes de copiarlos *strSource*, es una posible causa de saturaciones de búfer. Por tanto, es recomendable usar la propiedad [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) en su lugar.
+> Dado que **strcpy** no comprueba si hay espacio suficiente en *strDestination* antes de copiar *strSource*, es una posible causa de saturaciones del búfer. Por tanto, es recomendable usar la propiedad [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) en su lugar.
 
-**wcscpy** y **_mbscpy** son, respectivamente, versiones de caracteres multibyte y anchos de **strcpy**. Los argumentos y el valor devuelto de **wcscpy** son caracteres anchos cadenas; los de **_mbscpy** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcscpy** y **_mbscpy** son, respectivamente, versiones de caracteres anchos y caracteres multibyte de **strcpy**. Los argumentos y el valor devuelto de **wcscpy** son caracteres anchos cadenas; los de **_mbscpy** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

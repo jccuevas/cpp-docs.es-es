@@ -1,10 +1,6 @@
 ---
-title: asinh, asinhf, asinhl | Microsoft Docs
-ms.custom: ''
+title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -26,23 +22,17 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs:
-- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1387e44b885d0f1ed58113b87d26ba5928768c18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662962"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -70,7 +60,7 @@ Valor de punto flotante.
 
 El **asinh** funciones devuelven el seno hiperbólico inverso (arcoseno hiperbólico) de *x*. Esta función es válida en el dominio de punto flotante. Si *x* es un NaN reservado, indefinido o infinito, se devuelve el mismo valor.
 
-|Entrada|Excepción SEH|**_matherr** (excepción)|
+|Entrada|Excepción SEH|**_matherr** excepción|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|ninguna|ninguna|
 

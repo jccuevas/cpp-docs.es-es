@@ -1,10 +1,6 @@
 ---
-title: mbsrtowcs_s | Microsoft Docs
-ms.custom: ''
+title: mbsrtowcs_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsrtowcs_s
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsrtowcs_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8885d11c7fca10c63077464020a8bbab2b6f3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a935b5181078f3b08ba5f2f89c581ed8cce8ded5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405450"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588833"
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 
@@ -78,10 +68,10 @@ El tamaño de *wcstr* en palabras (caracteres anchos).
 Puntero indirecto a la ubicación de la cadena de caracteres multibyte a convertir.
 
 *count*<br/>
-El número máximo de caracteres anchos para almacenar en la *wcstr* búfer, sin incluir el carácter nulo de terminación o [_TRUNCATE](../../c-runtime-library/truncate.md).
+El número máximo de caracteres anchos a almacenar en el *wcstr* búfer, sin incluir el terminador nulo, o [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
-Un puntero a un **mbstate_t** objeto de estado de conversión. Si este valor es un puntero nulo, se utiliza un objeto de estado de la conversión interno estático. Dado que el fax interno **mbstate_t** objeto no es seguro para subprocesos, se recomienda pasar siempre su propio *mbstate* parámetro.
+Un puntero a un **mbstate_t** objeto de estado de conversión. Si este valor es un puntero nulo, se utiliza un objeto de estado de la conversión interno estático. Dado que la interna **mbstate_t** objeto no es seguro para subprocesos, se recomienda pasar siempre su propio *mbstate* parámetro.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -98,38 +88,38 @@ Si solo se produce una de estas condiciones, se invoca la excepción de parámet
 
 ## <a name="remarks"></a>Comentarios
 
-El **mbsrtowcs_s** función convierte una cadena de caracteres multibyte indirectamente señalada por *mbstr* en caracteres anchos almacenados en el búfer señalado por *wcstr*, utilizando el estado de conversión contenido en *mbstate*. La conversión continuará para cada carácter hasta que se cumpla alguna de estas condiciones:
+El **mbsrtowcs_s** función convierte una cadena de caracteres multibyte indirectamente señalada por *mbstr* en caracteres anchos almacenados en el búfer señalado por *wcstr*, por con el estado de conversión contenido en *mbstate*. La conversión continuará para cada carácter hasta que se cumpla alguna de estas condiciones:
 
 - Se encuentra un carácter multibyte nulo
 
 - Se encuentra un carácter multibyte no válido
 
-- El número de caracteres anchos almacenados en el *wcstr* almacenar en búfer es igual a *recuento*.
+- El número de caracteres anchos almacenados en el *wcstr* búfer equals *recuento*.
 
 La cadena de destino *wcstr* siempre está terminada en null, incluso si se produce un error, a menos que *wcstr* es un puntero nulo.
 
-Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s** convierte tanto de la cadena como quepan en el búfer de destino, dejando espacio para un valor null terminador.
+Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s** convierte tanto de la cadena como cabe en el búfer de destino, dejando espacio para un valor null terminador.
 
-Si **mbsrtowcs_s** convierte correctamente la cadena de origen, coloca el tamaño en caracteres anchos de la cadena convertida y el terminador nulo en  *&#42;pReturnValue*, suministrado  *pReturnValue* no es un puntero nulo. Esto ocurre incluso si la *wcstr* argumento es un puntero nulo y le permite determinar el tamaño de búfer necesario. Tenga en cuenta que si *wcstr* es un puntero nulo, *recuento* se omite.
+Si **mbsrtowcs_s** convierte correctamente la cadena de origen, pone el tamaño en caracteres anchos de la cadena convertida y el terminador nulo en  *&#42;pReturnValue*, que proporciona  *pReturnValue* no es un puntero nulo. Esto ocurre incluso si la *wcstr* argumento es un puntero nulo y le permite determinar el tamaño de búfer necesario. Observe que si *wcstr* es un puntero nulo, *recuento* se omite.
 
-Si *wcstr* no es un puntero nulo, el objeto de puntero señalado por *mbstr* se le asigna un puntero null si la conversión se detuvo porque se alcanzó un carácter nulo de terminación. De lo contrario, se le asigna la dirección inmediatamente posterior al último carácter multibyte convertido, de haberlo. Esto permite que una llamada de función subsiguiente reinicie la conversión en el punto en que se detuvo esta llamada.
+Si *wcstr* no es un puntero nulo, el objeto de puntero apunta a *mbstr* se asigna un puntero nulo si la conversión se detuvo porque se alcanzó un carácter nulo de terminación. De lo contrario, se le asigna la dirección inmediatamente posterior al último carácter multibyte convertido, de haberlo. Esto permite que una llamada de función subsiguiente reinicie la conversión en el punto en que se detuvo esta llamada.
 
-Si *mbstate* es un puntero nulo, la biblioteca interna **mbstate_t** se usa el objeto estático de estado de conversión. Dado que este objeto estático interno no es seguro para subprocesos, se recomienda pasar siempre su propio *mbstate* valor.
+Si *mbstate* es un puntero nulo, la biblioteca interna **mbstate_t** se usa el objeto estático del estado de conversión. Dado que este objeto estático interno no es segura para subprocesos, se recomienda pasar siempre su propio *mbstate* valor.
 
 Si **mbsrtowcs_s** encuentra un carácter multibyte que no es válido en la configuración regional actual, pone -1  *&#42;pReturnValue*, Establece el búfer de destino *wcstr* en una cadena vacía, establece **errno** a **EILSEQ**y devuelve **EILSEQ**.
 
-Si las secuencias señaladas por *mbstr* y *wcstr* se superponen, el comportamiento de **mbsrtowcs_s** no está definido. **mbsrtowcs_s** se ve afectado por la categoría LC_TYPE de la configuración regional actual.
+Si las secuencias señaladas por *mbstr* y *wcstr* se superponen, el comportamiento de **mbsrtowcs_s** es indefinido. **mbsrtowcs_s** se ve afectado por la categoría LC_TYPE de la configuración regional actual.
 
 > [!IMPORTANT]
 > Asegúrese de que *wcstr* y *mbstr* no se superponen y que *recuento* refleja correctamente el número de caracteres multibyte a convertir.
 
-El **mbsrtowcs_s** función difiere de [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) por su capacidad de reinicio. El estado de la conversión se almacena en *mbstate* para llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación debe utilizar **mbsrlen** en lugar de **mbslen**, si una llamada subsiguiente a **mbsrtowcs_s** se utiliza en lugar de **mbstowcs_s**.
+El **mbsrtowcs_s** función difiere de [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación debe utilizar **mbsrlen** en lugar de **mbslen**, si una llamada subsiguiente a **mbsrtowcs_s** se utiliza en lugar de **mbstowcs_s**.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla. Las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Excepciones
 
-El **mbsrtowcs_s** función es segura para subprocesos si ninguna función en el proceso actual llama **setlocale** siempre y cuando se ejecute esta función y la *mbstate* argumento es no es un puntero nulo.
+El **mbsrtowcs_s** función es segura para subprocesos si ninguna función en las llamadas del subproceso actual **setlocale** siempre y cuando se ejecuta esta función y el *mbstate* argumento es no es un puntero nulo.
 
 ## <a name="requirements"></a>Requisitos
 

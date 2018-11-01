@@ -1,25 +1,16 @@
 ---
-title: Advertencias del compilador que están desactivadas de forma predeterminada | Microsoft Docs
+title: Advertencias del compilador desactivadas de forma predeterminada
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651378"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador que están desactivadas de forma predeterminada
 El compilador incluye advertencias que están desactivadas de forma predeterminada, porque la mayoría de los programadores no desean verlas. En algunos casos, representa una opción de la regla de estilo, son expresiones comunes en código antiguo o aprovechar las ventajas de una extensión de Microsoft al lenguaje. En otros casos, indican un área donde los programadores a menudo realizan suposiciones incorrectas, lo que pueden provocar un comportamiento inesperado o no definido. Algunas de estas advertencias pueden ser muy ruidoso en encabezados de la biblioteca. Las bibliotecas en tiempo de ejecución de C y las bibliotecas estándar de C++ están diseñadas para no emitir ninguna advertencia sólo en el nivel de advertencia [/W4](../build/reference/compiler-option-warning-level.md).

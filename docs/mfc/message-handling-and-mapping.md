@@ -1,27 +1,17 @@
 ---
-title: Control y asignación de mensajes | Microsoft Docs
-ms.custom: ''
+title: Controlar y asignar mensajes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, messages
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8c0fc3b9eec88fc9db9bb4eaff93381d1368368
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b109a3f85ffd3311d08c3d749d543b1e625e77c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628623"
 ---
 # <a name="message-handling-and-mapping"></a>Controlar y asignar mensajes
 

@@ -1,10 +1,6 @@
 ---
-title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l | Microsoft Docs
-ms.custom: ''
+title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnicoll_l
 - _mbsnicoll
@@ -40,8 +36,6 @@ f1_keywords:
 - _mbsnicoll
 - strinicoll
 - _tcsncicoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - ftcsncicoll function
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f8592f40dda312f138351526509b69eadf9647c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606042"
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -135,7 +125,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor que indica la relación de las subcadenas de *string1* y *string2*, como se indica a continuación.
+Cada una de estas funciones devuelve un valor que indica la relación de las subcadenas de *string1* y *cadena2*, como se indica a continuación.
 
 |Valor devuelto|Relación de string1 y string2|
 |------------------|----------------------------------------|
@@ -143,13 +133,13 @@ Cada una de estas funciones devuelve un valor que indica la relación de las sub
 |0|*cadena1* idéntico al *cadena2*|
 |> 0|*cadena1* mayor *cadena2*|
 
-Cada una de estas funciones devuelve **_NLSCMPERROR**. Usar **_NLSCMPERROR**, incluir una de las cadenas. H o MBSTRING. H. **_wcsnicoll** puede producir un error si el valor *string1* o *string2* contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsnicoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsnicoll**, establezca **errno** en 0 y, a continuación, comprobar **errno** después de llamar a **_wcsnicoll**.
+Cada una de estas funciones devuelve **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluir una de las cadenas. H o MBSTRING. H. **_wcsnicoll** puede producir un error si *string1* o *cadena2* contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsnicoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsnicoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **_wcsnicoll**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de la primera *recuento* caracteres de *string1* y *string2* según la página de códigos. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos, y la diferencia influye en la comparación de cadenas. Las versiones de estas funciones sin el **_l** sufijo use la página de configuración regional y de código actual. Las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de la primera *recuento* caracteres de *string1* y *cadena2* según la página de códigos. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos, y la diferencia influye en la comparación de cadenas. Las versiones de estas funciones sin el **_l** sufijo use la página de configuración regional y de código actual. Las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Todas estas funciones validan sus parámetros. Si el valor *string1* o *string2* es un puntero nulo, o si el recuento es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
+Todas estas funciones validan sus parámetros. Si bien *string1* o *cadena2* es un puntero nulo, o si el recuento es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
