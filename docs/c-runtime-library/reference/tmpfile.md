@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft Docs
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530330"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -52,15 +42,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **tmpfile** devuelve un puntero de la secuencia. De lo contrario, devuelve un **NULL** puntero.
+Si es correcto, **tmpfile** devuelve un puntero de la secuencia. De lo contrario, devuelve un **NULL** puntero.
 
 ## <a name="remarks"></a>Comentarios
 
 El **tmpfile** función crea un archivo temporal y devuelve un puntero a ese flujo. El archivo temporal se crea en el directorio raíz. Para crear un archivo temporal en un directorio que no sea el raíz, use [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) junto con [fopen](fopen-wfopen.md).
 
-Si no se puede abrir el archivo, **tmpfile** devuelve un **NULL** puntero. Este archivo temporal se elimina automáticamente cuando se cierra el archivo, cuando el programa se cierra normalmente o al **_rmtmp** se llama, suponiendo que el directorio de trabajo actual no cambia. Se abre el archivo temporal en **w + b** modo (lectura/escritura binario).
+Si no se puede abrir el archivo, **tmpfile** devuelve un **NULL** puntero. Este archivo temporal se elimina automáticamente cuando se cierra el archivo, cuando el programa finaliza normalmente o cuando **_rmtmp** se llama, suponiendo que no cambie el directorio de trabajo actual. Se abre el archivo temporal en **w + b** modo (lectura/escritura binario).
 
-Error puede producirse si intenta más TMP_MAX (vea STDIO. (H) llamadas con **tmpfile**.
+Error puede producirse si intenta más de TMP_MAX (consulte STDIO. H) llamadas con **tmpfile**.
 
 ## <a name="requirements"></a>Requisitos
 

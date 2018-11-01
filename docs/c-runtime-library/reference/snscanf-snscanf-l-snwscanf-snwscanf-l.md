@@ -1,10 +1,6 @@
 ---
-title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs
-ms.custom: ''
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf
 - _snscanf_l
@@ -35,8 +31,6 @@ f1_keywords:
 - sntscanf
 - snwscanf
 - snwscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - snscanf_l function
 - snwscanf function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5d99cc7465f88c92588983d5356a004da466de4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408349"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626894"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -102,7 +92,7 @@ int __cdecl _snwscanf_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Entrada*<br/>
+*entrada*<br/>
 Cadena de entrada que se va a examinar.
 
 *length*<br/>
@@ -119,7 +109,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el número de campos convertidos y asignados correctamente; el valor devuelto no incluye los campos que se leyeron pero no se asignaron. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** si hay un error o si se alcanza el final de la cadena antes de la primera conversión. Para obtener más información, vea [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Cada una de estas funciones devuelve el número de campos convertidos y asignados correctamente; el valor devuelto no incluye los campos que se leyeron pero no se asignaron. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** para un error o si se alcanza el final de la cadena antes de la primera conversión. Para obtener más información, vea [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
 Si *entrada* o *formato* es un **NULL** puntero, o si *longitud* es menor o igual a cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
 
@@ -127,7 +117,7 @@ Para obtener información sobre estos y otros códigos de error, vea [_doserrno,
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función es similar a **sscanf** salvo que proporciona la capacidad de especificar un número fijo de caracteres que se va a examinar de la cadena de entrada. Para obtener más información, vea [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Esta función es similar a **sscanf** excepto que proporciona la capacidad de especificar un número fijo de caracteres que se va a examinar de la cadena de entrada. Para obtener más información, vea [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 

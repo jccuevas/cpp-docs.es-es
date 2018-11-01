@@ -1,10 +1,6 @@
 ---
-title: _ecvt | Microsoft Docs
-ms.custom: ''
+title: _ecvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _ecvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt function
 - numbers, converting
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450968"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605736"
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -76,17 +66,17 @@ Signo del número que se convierte.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_ecvt** función convierte un número de punto flotante en una cadena de caracteres. El *valor* parámetro es el número de punto flotante que se va a convertir. Esta función se almacena hasta *recuento* dígitos de *valor* como una cadena y anexa un carácter nulo ('\0'). Si el número de dígitos en *valor* supera *recuento*, se redondean los dígitos de orden inferior. Si hay menos de *recuento* dígitos, la cadena se rellena con ceros.
+El **_ecvt** función convierte un número de punto flotante en una cadena de caracteres. El *valor* parámetro es el número de punto flotante que se va a convertir. Esta función almacena hasta *recuento* dígitos de *valor* como una cadena y anexa un carácter nulo ('\0'). Si el número de dígitos en *valor* supera *recuento*, se redondea el dígito de orden inferior. Si hay menos de *recuento* dígitos, la cadena se rellena con ceros.
 
-El número total de dígitos devuelto por **_ecvt** no excederá **_CVTBUFSIZE**.
+El número total de dígitos devuelto por **_ecvt** no superará **_CVTBUFSIZE**.
 
-Solo se almacenan dígitos en la cadena. La posición de la coma decimal y el signo de *valor* puede obtenerse de *dec* y *inicio de sesión* después de la llamada. El *dec* parámetro señala a un valor entero que proporciona la posición del separador decimal en relación con el principio de la cadena. Un valor entero de 0 o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El *inicio de sesión* parámetro señala a un entero que indica el signo de número convertido. Si el valor entero es 0, el número es positivo. De lo contrario, el número es negativo.
+Solo se almacenan dígitos en la cadena. La posición del separador decimal y el signo de *valor* pueden obtenerse *dec* y *sesión* después de la llamada. El *dec* parámetro apunta a un valor entero que proporciona la posición del separador decimal con respecto al principio de la cadena. Un valor entero de 0 o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El *sesión* parámetro apunta a un entero que indica el signo de número convertido. Si el valor entero es 0, el número es positivo. De lo contrario, el número es negativo.
 
-La diferencia entre **_ecvt** y **_fcvt** está en la interpretación de la *recuento* parámetro. **_ecvt** interpreta *recuento* como el número total de dígitos en la cadena de salida, mientras que **_fcvt** interpreta *recuento* como el número de dígitos después del separador decimal.
+La diferencia entre **_ecvt** y **_fcvt** está en la interpretación de los *recuento* parámetro. **_ecvt** interpreta *recuento* como el número total de dígitos en la cadena de salida, mientras que **_fcvt** interpreta *recuento* como el número de dígitos después del separador decimal.
 
-**_ecvt** y **_fcvt** utilice un único búfer asignado estáticamente para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
+**_ecvt** y **_fcvt** usan un solo búfer asignado estáticamente para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
 
-Esta función valida sus parámetros. Si *dec* o *inicio de sesión* es **NULL**, o *recuento* es 0, se invoca el controlador de parámetros no válidos, tal y como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **NULL** se devuelve.
+Esta función valida sus parámetros. Si *dec* o *sesión* es **NULL**, o *recuento* es 0, se invoca el controlador de parámetros no válidos, como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **NULL** se devuelve.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: fgetc, fgetwc | Microsoft Docs
-ms.custom: ''
+title: fgetc, fgetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f06c5c2f092932d97755a8f0cff63cde3a9682c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639928"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -64,20 +54,20 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fgetc** devuelve el carácter leído como un **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho que se corresponde con el carácter leído o devuelve **WEOF** para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error de una condición de final de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *flujo* es **NULL**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EOF**.
+**fgetc** devuelve el carácter leído como un **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter leído, o bien devuelve **WEOF** para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de final de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *secuencia* es **NULL**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EOF**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones lee un único carácter de la posición actual del archivo asociado con *flujo*. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
+Cada una de estas funciones lee un carácter único de la posición actual del archivo asociado con *secuencia*. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
 
-**fgetc** es equivalente a **getc**, pero se implementa como una función, en lugar de como una función y una macro.
+**fgetc** es equivalente a **getc**, pero se implementa solo como una función, en lugar de una función y una macro.
 
-**fgetwc** es la versión con caracteres anchos de **fgetc**; lee **c** como un carácter multibyte o carácter ancho en función de si *flujo* se abre en modo de texto o modo binario.
+**fgetwc** es la versión de caracteres anchos de **fgetc**; lee **c** como un carácter multibyte o carácter ancho en función de si *flujo* se abre en modo de texto o modo binario.
 
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos.
 

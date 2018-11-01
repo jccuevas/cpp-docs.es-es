@@ -1,10 +1,6 @@
 ---
-title: puts, _putws | Microsoft Docs
-ms.custom: ''
+title: puts, _putws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -25,8 +21,6 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8a0b4f0c4924970905cb541d82450a807de1357
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667329"
 ---
 # <a name="puts-putws"></a>puts, _putws
 
@@ -69,15 +59,15 @@ Cadena de salida
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un valor no negativo si se ejecuta correctamente. Si **coloca** produce un error, devuelve **EOF**; si **_putws** produce un error, devuelve **WEOF**. Si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EOF** o **WEOF**.
+Devuelve un valor no negativo si se ejecuta correctamente. Si **coloca** produce un error, devuelve **EOF**; si **_putws** produce un error, devuelve **WEOF**. Si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EOF** o **WEOF**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **coloca** función escrituras *str* en el flujo de salida estándar **stdout**, reemplazando la cadena del carácter nulo de terminación ('\0') con un carácter de nueva línea ('\n') en el flujo de salida.
+El **coloca** función escrituras *str* al flujo de salida estándar **stdout**, reemplazando la cadena del carácter nulo de terminación ('\0') con un carácter de nueva línea ('\n') en el flujo de salida.
 
-**_putws** es la versión con caracteres anchos de **coloca**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **coloca** no admite actualmente la salida en un flujo UNICODE.
+**_putws** es la versión de caracteres anchos de **coloca**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **coloca** no admite actualmente la salida en un flujo UNICODE.
 
 **_putwch** escribe caracteres Unicode mediante la configuración regional de la consola actual.
 
@@ -94,7 +84,7 @@ El **coloca** función escrituras *str* en el flujo de salida estándar **stdout
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

@@ -1,35 +1,25 @@
 ---
-title: Opciones del compilador por orden alfabético | Microsoft Docs
-ms.custom: ''
+title: Opciones del compilador por orden alfabético
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701863"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646737"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opciones del compilador por orden alfabético
 
-A continuación se muestra una lista completa por orden alfabético de las opciones del compilador. Para obtener una lista de categorías, consulte el [Compiler Options Listed por categoría](compiler-options-listed-by-category.md).
+A continuación se muestra una lista completa por orden alfabético de las opciones del compilador. Para obtener una lista por categoría, vea [Opciones del compilador, por categoría](compiler-options-listed-by-category.md).
 
 |Opción|Propósito|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|Especifica un archivo de respuesta.|
 |[/?](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/AI](ai-specify-metadata-directories.md)|Especifica un directorio de búsqueda para resolver las referencias a archivos que se transfieren a la directiva [#using](../../preprocessor/hash-using-directive-cpp.md) .|
-|[/ analyze](analyze-code-analysis.md)|Habilita el análisis de código.|
+|[/analyze](analyze-code-analysis.md)|Habilita el análisis de código.|
 |[/arch](arch-minimum-cpu-architecture.md)|Especifica la arquitectura para la generación de código.|
 |[/ await](await-enable-coroutine-support.md)|Habilitar las extensiones de corrutinas (las funciones reanudables).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta el número de secciones direccionables en un archivo .obj.|
@@ -44,47 +34,47 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/E](e-preprocess-to-stdout.md)|Copia los resultados del preprocesador a resultados estándar.|
 |[/EH](eh-exception-handling-model.md)|Especifica el modelo del control de excepciones.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia los resultados del preprocesador a resultados estándar.|
-|[/ errorreport](errorreport-report-internal-compiler-errors.md)|Permite proporcionar directamente al equipo de Visual C++ información sobre los errores internos del compilador.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Permite proporcionar directamente al equipo de Visual C++ información sobre los errores internos del compilador.|
 |[/ Execution-CharSet](execution-charset-set-execution-character-set.md)|Establecer el juego de caracteres de ejecución.|
 |[/F](f-set-stack-size.md)|Establece el tamaño de la pila.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Genera código que está optimizado para un específico x64 arquitectura o para las características de microarquitecturas en arquitecturas en las arquitecturas de AMD64 y de Extended Memory 64 Technology (EM64T).|
 |[/FA](fa-fa-listing-file.md)|Crea un archivo de lista.|
-|[/FA](fa-fa-listing-file.md)|Establece el nombre del archivo de lista.|
+|[/Fa](fa-fa-listing-file.md)|Establece el nombre del archivo de lista.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Muestra la ruta de acceso completa de archivos de código fuente pasados a cl.exe en texto de diagnóstico.|
 |[/Fd](fd-program-database-file-name.md)|Cambia el nombre del archivo de la base de datos de programa.|
-|[/FE](fe-name-exe-file.md)|Cambia el nombre del archivo ejecutable.|
+|[/Fe](fe-name-exe-file.md)|Cambia el nombre del archivo ejecutable.|
 |[/FI](fi-name-forced-include-file.md)|Preprocesa el archivo de inclusión especificado.|
 |[/Fi](fi-preprocess-output-file-name.md)|Establece el nombre del archivo de salida preprocesado.|
-|[/FM](fm-name-mapfile.md)|Crea un archivo de asignaciones.|
-|[/FO](fo-object-file-name.md)|Crea un archivo de objeto.|
-|[/ FP](fp-specify-floating-point-behavior.md)|Especifica el comportamiento de punto flotante.|
-|[/ FP](fp-name-dot-pch-file.md)|Especifica el nombre de un archivo de encabezado precompilado.|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|Genera archivos de explorador. **/Fr** está en desuso.|
-|[/ FS](fs-force-synchronous-pdb-writes.md)|Fuerza que las operaciones de escritura en el archivo de base de datos de programa (PDB) se serialicen mediante MSPDBSRV.EXE.|
+|[/Fm](fm-name-mapfile.md)|Crea un archivo de asignaciones.|
+|[/Fo](fo-object-file-name.md)|Crea un archivo de objeto.|
+|[/fp](fp-specify-floating-point-behavior.md)|Especifica el comportamiento de punto flotante.|
+|[/Fp](fp-name-dot-pch-file.md)|Especifica el nombre de un archivo de encabezado precompilado.|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Genera archivos de explorador. **/Fr** está en desuso.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Fuerza que las operaciones de escritura en el archivo de base de datos de programa (PDB) se serialicen mediante MSPDBSRV.EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|Fuerza el uso de un nombre de archivo, como si se hubiera transferido a la directiva [#using](../../preprocessor/hash-using-directive-cpp.md) .|
-|[/FX](fx-merge-injected-code.md)|Combina el código insertado con el archivo de código fuente.|
+|[/Fx](fx-merge-injected-code.md)|Combina el código insertado con el archivo de código fuente.|
 |[/GA](ga-optimize-for-windows-application.md)|Optimiza el código para la aplicación Windows.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__cdecl` (solo x86).|
-|[/GE](ge-enable-stack-probes.md)|Desusado. Activa las comprobaciones de la pila.|
+|[/Ge](ge-enable-stack-probes.md)|Desusado. Activa las comprobaciones de la pila.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Habilita la agrupación de cadenas.|
 |[/GH](gh-enable-pexit-hook-function.md)|Llama a la función de enlace `_pexit`.|
-|[/GH](gh-enable-penter-hook-function.md)|Llama a la función de enlace `_penter`.|
-|[/ GL](gl-whole-program-optimization.md)|Habilita la optimización completa del programa.|
-|[/GM](gm-enable-minimal-rebuild.md)|Habilita la recompilación mínima.|
+|[/Gh](gh-enable-penter-hook-function.md)|Llama a la función de enlace `_penter`.|
+|[/GL](gl-whole-program-optimization.md)|Habilita la optimización completa del programa.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Habilita la recompilación mínima.|
 |[/GR](gr-enable-run-time-type-information.md)|Habilita la información de tipo en tiempo de ejecución (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__fastcall` (solo x86).|
-|[/ GS.](gs-buffer-security-check.md)|Almacena en un búfer la comprobación de seguridad.|
-|[/ GS.](gs-control-stack-checking-calls.md)|Controla las comprobaciones de la pila.|
+|[/GS](gs-buffer-security-check.md)|Almacena en un búfer la comprobación de seguridad.|
+|[/Gs](gs-control-stack-checking-calls.md)|Controla las comprobaciones de la pila.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Admite la seguridad de fibras para los datos asignados mediante almacenamiento local de subprocesos estáticos.|
-|[/ Guard: CF](guard-enable-control-flow-guard.md)|Agrega las comprobaciones de seguridad de protección de flujo de control.|
+|[/guard:cf](guard-enable-control-flow-guard.md)|Agrega las comprobaciones de seguridad de protección de flujo de control.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__vectorcall` . (solo x86 y x64)|
-|[/GW](gw-optimize-global-data.md)|Habilita la optimización global de los datos de todo el programa.|
+|[/Gw](gw-optimize-global-data.md)|Habilita la optimización global de los datos de todo el programa.|
 |[/GX](gx-enable-exception-handling.md)|Desusado. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
 |[/Gy](gy-enable-function-level-linking.md)|Habilita la vinculación en el nivel de función.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Desusado. Igual que [/RTC1](rtc-run-time-error-checks.md).|
-|[/GZ](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__stdcall` (solo x86).|
+|[/Gz](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__stdcall` (solo x86).|
 |[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
-|[/ HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
+|[/HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Fuerza la escritura de parámetros pasados en registros en sus ubicaciones en la pila a la entrada de la función. Esta opción del compilador es solo para el x64 compiladores (compilación nativos y cruzada).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea una imagen a la que se puede aplicar una revisión reciente.|
 |[/I](i-additional-include-directories.md)|Busca archivos de inclusión en un directorio.|
@@ -92,7 +82,7 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/ JMC](jmc.md)|Admite la depuración nativa de C++ solo mi código.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|El compilador y el vinculador producirán un binario que se puede ejecutar en el kernel de Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Crea una biblioteca de vínculos dinámicos.|
-|[/Ldd](md-mt-ld-use-run-time-library.md)|Crea una biblioteca de vínculos dinámicos para depuración.|
+|[/LDd](md-mt-ld-use-run-time-library.md)|Crea una biblioteca de vínculos dinámicos para depuración.|
 |[/link](link-pass-options-to-linker.md)|Pasa la opción especificada a LINK.|
 |[/LN](ln-create-msil-module.md)|Crea un módulo MSIL.|
 |[/MD](md-mt-ld-use-run-time-library.md)|Crea una DLL multiproceso por medio de MSVCRT.lib.|
@@ -101,14 +91,14 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/MT](md-mt-ld-use-run-time-library.md)|Crea un archivo ejecutable multiproceso mediante LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Crea un archivo ejecutable multiproceso para depuración mediante LIBCMTD.lib.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Suprime la presentación de la pancarta de inicio de sesión.|
-|[/ O1](o1-o2-minimize-size-maximize-speed.md)|Crea código pequeño.|
-|[/ O2](o1-o2-minimize-size-maximize-speed.md)|Crea código rápido.|
-|[/OB](ob-inline-function-expansion.md)|Controla la expansión en línea.|
+|[/O1](o1-o2-minimize-size-maximize-speed.md)|Crea código pequeño.|
+|[/O2](o1-o2-minimize-size-maximize-speed.md)|Crea código rápido.|
+|[/Ob](ob-inline-function-expansion.md)|Controla la expansión en línea.|
 |[/Od](od-disable-debug.md)|Deshabilita la optimización.|
-|[/ Og](og-global-optimizations.md)|Desusado. Usa optimizaciones globales.|
+|[/Og](og-global-optimizations.md)|Desusado. Usa optimizaciones globales.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funciones intrínsecas.|
-|[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) en el código fuente.|
-|[/OS](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código pequeño.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) en el código fuente.|
+|[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código pequeño.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código rápido.|
 |[/Ox](ox-full-optimization.md)|Usa la optimización máxima (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omite el puntero del marco (solo x86).|
@@ -116,61 +106,61 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/ permissive-](permissive-standards-conformance.md)|Establecer el modo de cumplimiento del estándar.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funciones transcendentales rápidas.|
 |[/QIfist](qifist-suppress-ftol.md)|Desusado. Suprime `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero (solo x86).|
-|[/ Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Quita los comandos `fwait` del interior de los bloques `try` .|
+|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Quita los comandos `fwait` del interior de los bloques `try` .|
 |[/Qpar (Paralelizador automático)](qpar-auto-parallelizer.md)|Habilita la ejecución en paralelo automática de bucles marcados con la directiva [#pragma loop()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Utiliza instrucciones de movimiento de enteros para valores de punto flotante y deshabilita ciertas optimizaciones de carga de punto flotante.|
 |[/Qvec/report (Nivel de información de vectorizador automático)](qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|
-|[/ RTC](rtc-run-time-error-checks.md)|Habilita la comprobación de errores en tiempo de ejecución.|
+|[/RTC](rtc-run-time-error-checks.md)|Habilita la comprobación de errores en tiempo de ejecución.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Habilita características de seguridad y advertencias adicionales.|
 |[/showIncludes](showincludes-list-include-files.md)|Muestra una lista de los archivos de inclusión durante la compilación.|
 |[/ Source-CharSet](source-charset-set-source-character-set.md)|Establecer el juego de caracteres de origen.|
 |[/ STD](std-specify-language-standard-version.md)|Selector de compatibilidad de la versión estándar de C++.|
-|[/ TC](tc-tp-tc-tp-specify-source-file-type.md)|Especifica un archivo de código fuente de C.|
-|[/ TC](tc-tp-tc-tp-specify-source-file-type.md)|Especifica que todos los archivos de origen están C.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Especifica un archivo de código fuente de C++.|
+|[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Especifica un archivo de código fuente de C.|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Especifica que todos los archivos de origen están C.|
+|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Especifica un archivo de código fuente de C++.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Especifica todos los archivos de código fuente C++.|
 |[/U](u-u-undefine-symbols.md)|Quita una macro predefinida.|
 |[/u](u-u-undefine-symbols.md)|Quita todas las macros predefinidas.|
 |[/ UTF-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Conjunto de caracteres de origen y ejecución se establece en UTF-8.|
 |[/V](v-version-number.md)|Desusado. Establece la cadena de versión del archivo .obj.|
 |[/ Validate/CharSet](validate-charset-validate-for-compatible-characters.md)|Validar archivos UTF-8 únicamente caracteres compatibles.|
-|[/Vd](vd-disable-construction-displacements.md)|Suprime o habilita los miembros ocultos de la clase vtordisp.|
-|[/ vmb](vmb-vmg-representation-method.md)|Usa la base más apropiada para los punteros a miembros.|
+|[/vd](vd-disable-construction-displacements.md)|Suprime o habilita los miembros ocultos de la clase vtordisp.|
+|[/vmb](vmb-vmg-representation-method.md)|Usa la base más apropiada para los punteros a miembros.|
 |[/vmg](vmb-vmg-representation-method.md)|Usa generalidad completa para los punteros a miembros.|
-|[/ VMM](vmm-vms-vmv-general-purpose-representation.md)|Declara la herencia múltiple.|
-|[/ VMs](vmm-vms-vmv-general-purpose-representation.md)|Declara la herencia simple.|
+|[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Declara la herencia múltiple.|
+|[/vms](vmm-vms-vmv-general-purpose-representation.md)|Declara la herencia simple.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Declara la herencia virtual.|
-|[/ volatile](volatile-volatile-keyword-interpretation.md)|Selecciona cómo se interpreta la palabra clave volatile.|
+|[/volatile](volatile-volatile-keyword-interpretation.md)|Selecciona cómo se interpreta la palabra clave volatile.|
 |[/w](compiler-option-warning-level.md)|Deshabilita todas las advertencias.|
-|[/ W0, / W1, / W2, / W3, / W4](compiler-option-warning-level.md)|Establece el nivel de advertencia para la salida.|
+|[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Establece el nivel de advertencia para la salida.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Establece el nivel de advertencia para la advertencia especificada.|
-|[/ Wall](compiler-option-warning-level.md)|Habilita todas las advertencias, incluso las que están deshabilitadas de forma predeterminada.|
+|[/Wall](compiler-option-warning-level.md)|Habilita todas las advertencias, incluso las que están deshabilitadas de forma predeterminada.|
 |[/wd](compiler-option-warning-level.md)|Deshabilita la advertencia especificada.|
 |[/we](compiler-option-warning-level.md)|Trata la advertencia especificada como un error.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Habilita los diagnósticos de una línea para los mensajes de error y de advertencia cuando se compila código fuente de C++ desde la línea de comandos.|
-|[/ wo](compiler-option-warning-level.md)|Muestra la advertencia especificada solo una vez.|
-|[/ Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidad de 64 bits.|
-|[/ Wv](compiler-option-warning-level.md)|No muestra ninguna advertencia introducida después de la versión especificada del compilador.|
+|[/wo](compiler-option-warning-level.md)|Muestra la advertencia especificada solo una vez.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidad de 64 bits.|
+|[/Wv](compiler-option-warning-level.md)|No muestra ninguna advertencia introducida después de la versión especificada del compilador.|
 |[/WX](compiler-option-warning-level.md)|Trata todas las advertencias como errores.|
 |[/X](x-ignore-standard-include-paths.md)|Omite el directorio de archivos de inclusión estándar.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Omite todas las demás opciones del compilador de encabezado precompilado en la generación actual.|
-|[/ Yc](yc-create-precompiled-header-file.md)|Crea un archivo de encabezado precompilado.|
+|[/Yc](yc-create-precompiled-header-file.md)|Crea un archivo de encabezado precompilado.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Desusado. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Inserta una referencia de PCH cuando se crea una biblioteca de depuración|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un archivo de encabezado precompilado durante la compilación.|
-|[/ Z7](z7-zi-zi-debug-information-format.md)|Genera C 7.0 compatible con la información de depuración.|
-|[/ Za](za-ze-disable-language-extensions.md)|Deshabilita las extensiones del lenguaje|
+|[/Z7](z7-zi-zi-debug-information-format.md)|Genera C 7.0 compatible con la información de depuración.|
+|[/Za](za-ze-disable-language-extensions.md)|Deshabilita las extensiones del lenguaje|
 |[/Zc](zc-conformance.md)|Especifica un comportamiento estándar bajo [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (deshabilitar extensiones de lenguaje)](za-ze-disable-language-extensions.md)|
-|[/ Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje.|
+|[/Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje.|
 |[/ZF](zf.md)|PDB mejora el tiempo de generación en las compilaciones en paralelo.|
 |[/Zg](zg-generate-function-prototypes.md)|Se quitó en Visual C++ 2015. Genera prototipos de función.|
-|[/ ZI](z7-zi-zi-debug-information-format.md)|Incluye la información de depuración en una base de datos de programa compatible con Editar y continuar.|
-|[/ Zi](z7-zi-zi-debug-information-format.md)|Genera información de depuración completa.|
+|[/ZI](z7-zi-zi-debug-information-format.md)|Incluye la información de depuración en una base de datos de programa compatible con Editar y continuar.|
+|[/Zi](z7-zi-zi-debug-information-format.md)|Genera información de depuración completa.|
 |[/Zl](zl-omit-default-library-name.md)|Quita el nombre de la biblioteca predeterminada del archivo .obj (solo x86).|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Especifica el límite de asignación de memoria del encabezado precompilado.|
 |[/Zp](zp-struct-member-alignment.md)|Empaqueta los miembros de la estructura.|
 |[/Zs](zs-syntax-check-only.md)|Comprueba únicamente la sintaxis.|
-|[/ ZW](zw-windows-runtime-compilation.md)|Genera un archivo de salida para ejecutarse en el tiempo de ejecución de Windows.|
+|[/ZW](zw-windows-runtime-compilation.md)|Genera un archivo de salida para ejecutarse en el tiempo de ejecución de Windows.|
 
 ## <a name="see-also"></a>Vea también
 

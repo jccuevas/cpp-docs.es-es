@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft Docs
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677167"
 ---
 # <a name="umask"></a>_umask
 
@@ -64,7 +54,7 @@ Configuración de permisos predeterminada.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_umask** función establece la máscara de permisos de archivo del proceso actual en el modo especificado por *pmode*. La máscara de permisos de archivo modifica la configuración del permiso de nuevos archivos creados por **_creat**, **_open**, o **_sopen**. Si un bit de la máscara es 1, el bit correspondiente del valor de permiso solicitado del archivo se establece en 0 (no permitido). Si un bit de la máscara es 0, el bit correspondiente se deja sin modificar. La configuración de permisos de un nuevo archivo no se establece hasta que se cierra el archivo por primera vez.
+El **_umask** función establece la máscara de permisos de archivo del proceso actual en el modo especificado por *pmode*. La máscara de permisos de archivo modifica la configuración de permisos de los archivos creados por **_creat**, **_open**, o **_sopen**. Si un bit de la máscara es 1, el bit correspondiente del valor de permiso solicitado del archivo se establece en 0 (no permitido). Si un bit de la máscara es 0, el bit correspondiente se deja sin modificar. La configuración de permisos de un nuevo archivo no se establece hasta que se cierra el archivo por primera vez.
 
 La expresión de entero *pmode* contiene una o ambas de las siguientes constantes de manifiesto, definidas en SYS\STAT. H:
 
@@ -74,9 +64,9 @@ La expresión de entero *pmode* contiene una o ambas de las siguientes constante
 **_S_IREAD**|Lectura permitida.
 **_S_IREAD** \| **_S_IWRITE**|Lectura y escritura permitidas.
 
-Cuando ambas constantes se proporcionan, se combinan con el operador OR bit a bit ( **|** ). Si el *pmode* argumento es **_S_IREAD**, no se permite la lectura (el archivo es de solo escritura). Si el *pmode* argumento es **_S_IWRITE**, no se permite la escritura (el archivo es de solo lectura). Por ejemplo, si el bit de escritura está establecido en la máscara, los nuevos archivos serán de solo lectura. Tenga en cuenta que en los sistemas operativos MS-DOS y Windows, todos los archivos se pueden leer; no se puede conceder permiso de solo escritura. Por consiguiente, establecer la lectura de tipo bit **_umask** no tiene ningún efecto sobre los modos del archivo.
+Cuando ambas constantes se proporcionan, se unen con el operador OR bit a bit ( **|** ). Si el *pmode* argumento es **_S_IREAD**, no se permite la lectura (el archivo es de solo escritura). Si el *pmode* argumento es **_S_IWRITE**, no se permite la escritura (el archivo es de solo lectura). Por ejemplo, si el bit de escritura está establecido en la máscara, los nuevos archivos serán de solo lectura. Tenga en cuenta que en los sistemas operativos MS-DOS y Windows, todos los archivos se pueden leer; no se puede conceder permiso de solo escritura. Por consiguiente, establecer el bit de lectura con **_umask** no tiene ningún efecto en los modos del archivo.
 
-Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente omitirá los.
+Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omitirá.
 
 ## <a name="requirements"></a>Requisitos
 

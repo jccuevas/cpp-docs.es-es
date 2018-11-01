@@ -1,10 +1,6 @@
 ---
-title: _execv, _wexecv | Microsoft Docs
-ms.custom: ''
+title: _execv, _wexecv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexecv
 - _execv
@@ -25,24 +21,18 @@ f1_keywords:
 - _execv
 - _wexecv
 - wexecv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wexecv function
 - _execv function
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8c6013e7d62b3738efe717c95e1464f31e2f0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523956"
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
 
@@ -92,7 +82,7 @@ Para obtener más información sobre estos y otros códigos de retorno, consulte
 
 Cada una de estas funciones carga y ejecuta un proceso nuevo, y pasa una matriz de punteros a los argumentos de la línea de comandos.
 
-El **_execv** funciones validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, puntero a una matriz vacía, o si la matriz contiene una cadena vacía como el primer argumento, el **_execv** funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso.
+El **_execv** funciones validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, puntero a una matriz vacía, o si la matriz contiene una cadena vacía como primer argumento, el **_execv** funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso.
 
 ## <a name="requirements"></a>Requisitos
 

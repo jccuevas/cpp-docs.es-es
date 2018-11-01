@@ -1,28 +1,18 @@
 ---
-title: Detalles de compatibilidad con ATL agregan por el Asistente para ATL | Microsoft Docs
-ms.custom: ''
+title: Información detallada sobre la compatibilidad agregada por el Asistente para ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.atl.support
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: efa96037139e61e16b752b45617bb8a3c54be993
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5684e1f53e9df120feca89cbb6b2ba70bd38d439
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564780"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Información detallada sobre la compatibilidad agregada por el Asistente para ATL
 
@@ -45,6 +35,6 @@ Cuando se agrega compatibilidad con ATL a un proyecto de DLL de MFC, verá algun
 [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Reemplazar una función Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)

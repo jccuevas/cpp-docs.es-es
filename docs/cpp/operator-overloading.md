@@ -1,15 +1,9 @@
 ---
-title: Sobrecarga de operadores | Microsoft Docs
-ms.custom: ''
+title: Sobrecarga de operadores
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - operator_cpp
 - operator
-dev_langs:
-- C++
 helpviewer_keywords:
 - redefinable operators [C++]
 - non-redefinable operators [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff6be1e24371692c53621cf6583677cc97d631b4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621746"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores
 
@@ -47,7 +37,7 @@ El nombre de un operador sobrecargado es **operador** *x*, donde *x* es el opera
 |Operador|Nombre|Tipo|
 |--------------|----------|----------|
 |**,**|Coma|Binary|
-|**!**|NOT lógico|Unario|
+|**\!**|NOT lógico|Unario|
 |**\!=**|Desigualdad|Binary|
 |**%**|Módulo|Binary|
 |**%=**|Asignación y módulo|Binary|
