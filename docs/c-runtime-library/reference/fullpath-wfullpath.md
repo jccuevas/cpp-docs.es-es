@@ -1,10 +1,6 @@
 ---
-title: _fullpath, _wfullpath | Microsoft Docs
-ms.custom: ''
+title: _fullpath, _wfullpath
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fullpath
 - _wfullpath
@@ -26,8 +22,6 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550402"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -74,8 +64,8 @@ Puntero a un búfer que contiene el nombre de ruta de acceso absoluta o completa
 *relPath*<br/>
 Nombre de ruta de acceso relativa.
 
-*maxLength*<br/>
-Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Esta longitud se muestra en bytes para **_fullpath** y en caracteres anchos (**wchar_t**) para **_wfullpath**.
+*MaxLength*<br/>
+Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Es esta longitud en bytes para **_fullpath** pero, en caracteres anchos (**wchar_t**) para **_wfullpath**.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -83,7 +73,7 @@ Cada una de estas funciones devuelve un puntero a un búfer que contiene el nomb
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fullpath** función expande el nombre de ruta de acceso relativa en *relPath* a su ruta de acceso completa o absoluta y almacena este nombre en *absPath*. Si *absPath* es **NULL**, **malloc** se utiliza para asignar un búfer de longitud suficiente para contener el nombre de ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de **_makepath**, **_fullpath** puede utilizarse para obtener el nombre de ruta de acceso absoluta para rutas de acceso relativas (*relPath*) que incluyen ". /"o".. / "en sus nombres.
+El **_fullpath** expande el nombre de ruta de acceso relativa en *relPath* a su ruta de acceso absoluta o completa y almacena este nombre en *absPath*. Si *absPath* es **NULL**, **malloc** se usa para asignar un búfer de longitud suficiente para contener el nombre de ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de **_makepath**, **_fullpath** puede usarse para obtener el nombre de ruta de acceso absoluta para rutas de acceso relativas (*relPath*) que incluyen ". /"o".. / "en sus nombres.
 
 Por ejemplo, para usar rutinas en tiempo de ejecución de C, la aplicación debe incluir los archivos de encabezado que contienen las declaraciones de las rutinas. Cada archivo de encabezado incluye una instrucción que hace referencia a la ubicación del archivo de forma relativa (desde el directorio de trabajo de la aplicación):
 
@@ -95,11 +85,11 @@ cuando la ruta de acceso absoluta (ubicación real del sistema de archivos) del 
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wfullpath** es una versión con caracteres anchos de **_fullpath**; los argumentos de cadena para **_wfullpath** son cadenas de caracteres anchos. **_wfullpath** y **_fullpath** se comportan exactamente igual, salvo que **_wfullpath** no controla las cadenas de caracteres multibyte.
+**_fullpath** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wfullpath** es una versión con caracteres anchos de **_fullpath**; los argumentos de cadena **_wfullpath** son cadenas de caracteres anchos. **_wfullpath** y **_fullpath** se comportan exactamente igual, salvo que **_wfullpath** no controla las cadenas de caracteres multibyte.
 
-Si **_DEBUG** y **_CRTDBG_MAP_ALLOC** son ambos definido, las llamadas a **_fullpath** y **_wfullpath** se reemplazan por llamadas a **_fullpath_dbg** y **_wfullpath_dbg** para permitir que las asignaciones de memoria de depuración. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Si **_DEBUG** y **_CRTDBG_MAP_ALLOC** se definen, las llamadas a **_fullpath** y **_wfullpath** se reemplazan por llamadas a **_fullpath_dbg** y **_wfullpath_dbg** para permitir que las asignaciones de memoria de depuración. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
-Esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md)si *maxlen* es menor o igual que 0. Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **NULL**.
+Esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md)si *maxlen* es menor o igual que 0. Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **NULL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

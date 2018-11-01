@@ -1,10 +1,6 @@
 ---
-title: isleadbyte, _isleadbyte_l | Microsoft Docs
-ms.custom: ''
+title: isleadbyte, _isleadbyte_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -25,8 +21,6 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682cdde6983c5e590920c43418e510b9c275b34e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531895"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 
@@ -66,13 +56,13 @@ Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**isleadbyte** devuelve un valor distinto de cero si el argumento cumple la condición de prueba o 0 si no es así. En la configuración regional "C" y en un solo byte del juego de caracteres configuraciones regionales (SBCS), **isleadbyte** siempre devuelve 0.
+**isleadbyte** devuelve un valor distinto de cero si el argumento cumple la condición de prueba o 0 si no es así. En la configuración regional "C" y un byte en el juego de caracteres de las configuraciones regionales (SBCS), **isleadbyte** siempre devuelve 0.
 
 ## <a name="remarks"></a>Comentarios
 
-El **isleadbyte** macro devuelve un valor distinto de cero si el argumento es el primer byte de un carácter multibyte. **isleadbyte** genera un resultado significativo para cualquier argumento entero comprendido entre -1 (**EOF**) a **UCHAR_MAX** (0xFF), ambos inclusive.
+El **isleadbyte** macro devuelve un valor distinto de cero si su argumento es el primer byte de un carácter multibyte. **isleadbyte** genera un resultado significativo para cualquier argumento entero comprendido entre -1 (**EOF**) a **UCHAR_MAX** (0xFF), ambos inclusive.
 
-El tipo de argumento esperado de **isleadbyte** es **int**; si se pasa un carácter con signo, el compilador podría convertirlo en un entero por la extensión de signo y producir resultados imprevisibles.
+El tipo de argumento esperado **isleadbyte** es **int**; si se pasa un carácter con signo, el compilador podría convertirlo en un entero mediante la extensión de signo y producir resultados imprevisibles.
 
 La versión de esta función con el **_l** sufijo es idéntico, salvo que usa la configuración regional pasada en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional.
 

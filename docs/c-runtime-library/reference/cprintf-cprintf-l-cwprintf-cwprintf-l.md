@@ -1,10 +1,6 @@
 ---
-title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534048"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -105,13 +95,13 @@ Número de caracteres que se van a imprimir.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones dan formato a una serie de caracteres y valores directamente en la consola, usando la **_putch** función (**_putwch** para **_cwprintf**) para producir caracteres . Cada argumento de *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento utiliza la [formato de sintaxis de especificación de funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A diferencia de la **fprintf**, **printf**, y **sprintf** funciones, ni **_cprintf** ni **_cwprintf**convierten los caracteres de avance de línea en combinaciones retorno de línea (CR-LF) en sus resultados.
+Estas funciones de formato e imprimir una serie de caracteres y valores directamente en la consola, utilizando el **_putch** función (**_putwch** para **_cwprintf**) para generar caracteres . Cada argumento de *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento usa el [dar formato a la sintaxis de especificación de funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A diferencia de la **fprintf**, **printf**, y **sprintf** funciones, ni **_cprintf** ni **_cwprintf**traduce los caracteres de avance de línea al carro combinaciones de retorno y salto de línea (CR-LF) cuando la salida.
 
-Una diferencia importante es que **_cwprintf** muestra caracteres Unicode cuando se usan en las ventanas. A diferencia de **_cprintf**, **_cwprintf** utiliza la configuración regional de consola actual.
+Una diferencia importante es que **_cwprintf** muestra caracteres Unicode cuando se usan en Windows. A diferencia de **_cprintf**, **_cwprintf** usa la configuración regional actual de consola.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual.
 
-**_cprintf** valida la *formato* parámetro. Si *formato* es un puntero nulo, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
+**_cprintf** valida el *formato* parámetro. Si *formato* es un puntero nulo, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.

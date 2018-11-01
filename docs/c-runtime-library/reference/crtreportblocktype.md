@@ -1,10 +1,6 @@
 ---
-title: _CrtReportBlockType | Microsoft Docs
-ms.custom: ''
+title: _CrtReportBlockType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtReportBlockType
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtReportBlockType function
 - BLOCK_SUBTYPE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59f8e919ee8a3ec9cc0822420ebbf6581480a13b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516078"
 ---
 # <a name="crtreportblocktype"></a>_CrtReportBlockType
 
