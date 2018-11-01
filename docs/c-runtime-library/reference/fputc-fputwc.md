@@ -1,10 +1,6 @@
 ---
-title: fputc, fputwc | Microsoft Docs
-ms.custom: ''
+title: fputc, fputwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputc
 - fputwc
@@ -25,8 +21,6 @@ f1_keywords:
 - fputc
 - fputwc
 - _fputtc
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputtc function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af93e0c42002dc557f691daadd2fc003dced0247
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447182"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -67,18 +57,18 @@ wint_t fputwc(
 *c*<br/>
 Carácter que se va a escribir.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el carácter escrito. Para **fputc**, un valor devuelto de **EOF** indica un error. Para **fputwc**, un valor devuelto de **WEOF** indica un error. Si *flujo* es **NULL**, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** y establecer **errno** a **EINVAL**.
+Cada una de estas funciones devuelve el carácter escrito. Para **fputc**, un valor devuelto de **EOF** indica un error. Para **fputwc**, un valor devuelto de **WEOF** indica un error. Si *secuencia* es **NULL**, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** y establecer **errno** a **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones escribe el carácter único *c* a un archivo en la posición indicada por el indicador de posición de archivo asociado (si se ha definido) y hace avanzar el indicador según corresponda. En el caso de **fputc** y **fputwc**, está asociado el archivo *flujo*. Si el archivo no admite solicitudes de posición o no se abrió en modo Append, el carácter se anexa al final del flujo.
+Cada una de estas funciones escribe el carácter único *c* a un archivo en la posición indicada por el indicador de posición de archivo asociado (si se ha definido) y hace avanzar el indicador según corresponda. En el caso de **fputc** y **fputwc**, está asociado el archivo *secuencia*. Si el archivo no admite solicitudes de posición o no se abrió en modo Append, el carácter se anexa al final del flujo.
 
 Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **fputc** no admite actualmente la salida en un flujo UNICODE.
 
@@ -88,8 +78,8 @@ Comentarios específicos de la rutina.
 
 |Rutina|Comentarios|
 |-------------|-------------|
-|**fputc**|Equivalente a **putc**, pero implementado solo como una función, en lugar de como una función y una macro.|
-|**fputwc**|Versión con caracteres anchos de **fputc**. Escribe *c* como un carácter multibyte o carácter ancho en función de si *flujo* se abre en modo de texto o binario.|
+|**fputc**|Equivalente a **putc**, pero implementado solo como una función, en lugar de una función y una macro.|
+|**fputwc**|Versión con caracteres anchos de **fputc**. Escribe *c* como un carácter multibyte o carácter ancho en función de si *flujo* se abre en modo de texto o modo binario.|
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -104,7 +94,7 @@ Comentarios específicos de la rutina.
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola:**stdin**, **stdout**, y **stderr**: se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

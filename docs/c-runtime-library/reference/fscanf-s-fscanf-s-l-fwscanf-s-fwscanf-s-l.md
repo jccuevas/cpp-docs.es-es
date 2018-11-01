@@ -1,10 +1,6 @@
 ---
-title: fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwscanf_s
 - _fscanf_s_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftscanf_s_l
 - _ftscanf_s
 - fwscanf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - formatted data [C++], reading from streams
 - _ftscanf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62bca0d0d53871e507ce47eb878fed663443bd40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454722"
 ---
 # <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -90,13 +80,13 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 *format*<br/>
 Cadena de control de formato.
 
-*Argumento*<br/>
+*argumento*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -106,18 +96,18 @@ Configuración regional que se va a usar.
 
 Cada una de estas funciones devuelve el número de campos que se convierten y asignan correctamente; el valor devuelto no incluye los campos que se leyeron pero no se asignaron. Un valor devuelto de 0 indica que no se ha asignado ningún campo. Si se produce un error, o si se alcanza el final de la secuencia de archivo antes de la primera conversión, el valor devuelto es **EOF** para **fscanf_s** y **fwscanf_s**.
 
-Estas funciones validan sus parámetros. Si *flujo* es un puntero de archivo no válido, o *formato* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
+Estas funciones validan sus parámetros. Si *secuencia* es un puntero de archivo no válido o *formato* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fscanf_s** función lee los datos de la posición actual del *flujo* en las ubicaciones que se proporcionan por *argumento* (si existe). Cada *argumento* debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. *formato* controla la interpretación de la entrada de campos y tiene el mismo formato y función que el *formato* argumento para **scanf_s**; vea [campos de especificación de formato: Funciones scanf y wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) para obtener una descripción de *formato*.  **fwscanf_s** es una versión con caracteres anchos de **fscanf_s**; el argumento format para **fwscanf_s** es una cadena de caracteres anchos. Estas funciones se comportan igual si el flujo se abre en modo ANSI. **fscanf_s** no admite actualmente la entrada desde un flujo UNICODE.
+El **fscanf_s** función lee los datos de la posición actual del *secuencia* en las ubicaciones que se proporcionan con *argumento* (si existe). Cada *argumento* debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. *formato* controla la interpretación de la entrada campos y tiene el mismo formato y función que el *formato* argumento para **scanf_s**; vea [Format Specification Fields: funciones scanf y wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) para obtener una descripción de *formato*.  **fwscanf_s** es una versión con caracteres anchos de **fscanf_s**; el argumento format para **fwscanf_s** es una cadena de caracteres anchos. Estas funciones se comportan igual si el flujo se abre en modo ANSI. **fscanf_s** no admite actualmente la entrada desde un flujo UNICODE.
 
-La diferencia principal entre las funciones más seguras (que tienen la **_s** sufijo) y las demás versiones es que las funciones más seguras requieren el tamaño en caracteres de cada **c**, **C**, **s**, **S**, y **[** campo de tipo que se pasa como argumento inmediatamente después de la variable. Para obtener más información, consulte [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) y [scanf (Especificación de ancho)](../../c-runtime-library/scanf-width-specification.md).
+La principal diferencia entre las funciones más seguras (que tienen el **_s** sufijo) y las demás versiones es que las funciones más seguras requieren el tamaño en caracteres de cada **c**, **C**, **s**, **S**, y **[** campo de tipo que se pasa como argumento inmediatamente después de la variable. Para obtener más información, consulte [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) y [scanf (Especificación de ancho)](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> El parámetro de tamaño es del tipo **sin signo**, no **size_t**.
+> El parámetro de tamaño es de tipo **sin signo**, no **size_t**.
 
-Las versiones de estas funciones que tienen la **_l** sufijo son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

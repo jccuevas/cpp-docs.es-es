@@ -1,10 +1,6 @@
 ---
-title: _ecvt_s | Microsoft Docs
-ms.custom: ''
+title: _ecvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 623d12bb515794a1d57b5a18e0e93e70d50a6812
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435586"
 ---
 # <a name="ecvts"></a>_ecvt_s
 
@@ -84,7 +74,7 @@ Número de dígitos almacenados.
 *_Dec*<br/>
 Posición del separador decimal almacenada.
 
-*_Sign*<br/>
+*_Iniciar*<br/>
 Signo del número que se convierte.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -98,23 +88,23 @@ En el caso de un parámetro no válido, como se muestra en la siguiente tabla, e
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valor devuelto|Valor de *búfer*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|No modificado.|
-|No **NULL** (apunta a la memoria válido)|<=0|any|any|any|any|**EINVAL**|No modificado.|
+|No **NULL** (apunta a la memoria válida)|<=0|any|any|any|any|**EINVAL**|No modificado.|
 |any|any|any|any|**NULL**|any|**EINVAL**|No modificado.|
 |any|any|any|any|any|**NULL**|**EINVAL**|No modificado.|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
-**_ecvt_s** podría generar una infracción de acceso si *búfer* no apunta a la memoria válido y no es **NULL**.
+**_ecvt_s** podría generar una infracción de acceso si *búfer* no apunta a la memoria válida y no es **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_ecvt_s** función convierte un número de punto flotante en una cadena de caracteres. El *_Value* parámetro es el número de punto flotante que se va a convertir. Esta función se almacena hasta *recuento* dígitos de *_Value* como una cadena y anexa un carácter nulo ('\0'). Si el número de dígitos en *_Value* supera *_Count*, se redondean los dígitos de orden inferior. Si hay menos de *recuento* dígitos, la cadena se rellena con ceros.
+El **_ecvt_s** función convierte un número de punto flotante en una cadena de caracteres. El *_Value* parámetro es el número de punto flotante que se va a convertir. Esta función almacena hasta *recuento* dígitos de *_Value* como una cadena y anexa un carácter nulo ('\0'). Si el número de dígitos en *_Value* supera *_Count*, se redondea el dígito de orden inferior. Si hay menos de *recuento* dígitos, la cadena se rellena con ceros.
 
-Solo se almacenan dígitos en la cadena. La posición de la coma decimal y el signo de *_Value* puede obtenerse de *_Dec* y *_Sign* después de la llamada. El *_Dec* parámetro señala a un valor entero que proporciona la posición del separador decimal en relación con el principio de la cadena. Un valor entero de 0 o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El *_Sign* parámetro señala a un entero que indica el signo de número convertido. Si el valor entero es 0, el número es positivo. De lo contrario, el número es negativo.
+Solo se almacenan dígitos en la cadena. La posición del separador decimal y el signo de *_Value* pueden obtenerse *_Dec* y *_iniciar* después de la llamada. El *_Dec* parámetro apunta a un valor entero que proporciona la posición del separador decimal con respecto al principio de la cadena. Un valor entero de 0 o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El *_iniciar* parámetro apunta a un entero que indica el signo de número convertido. Si el valor entero es 0, el número es positivo. De lo contrario, el número es negativo.
 
 Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier valor de punto flotante.
 
-La diferencia entre **_ecvt_s** y **_fcvt_s** está en la interpretación de la *_Count* parámetro. **_ecvt_s** interpreta *_Count* como el número total de dígitos en la cadena de salida, mientras que **_fcvt_s** interpreta *_Count* como el número de dígitos después el punto decimal.
+La diferencia entre **_ecvt_s** y **_fcvt_s** está en la interpretación de los *_Count* parámetro. **_ecvt_s** interpreta *_Count* como el número total de dígitos en la cadena de salida, mientras que **_fcvt_s** interpreta *_Count* como el número de dígitos después el separador decimal.
 
 En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
