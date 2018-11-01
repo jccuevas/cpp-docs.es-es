@@ -1,10 +1,6 @@
 ---
-title: _CrtIsMemoryBlock | Microsoft Docs
-ms.custom: ''
+title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsMemoryBlock
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555772"
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -57,7 +47,7 @@ int _CrtIsMemoryBlock(
 
 ### <a name="parameters"></a>Parámetros
 
-*UserData*<br/>
+*userData*<br/>
 Puntero al principio del bloque de memoria que se va a comprobar.
 
 *size*<br/>
@@ -74,13 +64,13 @@ Puntero al número de línea en el archivo de origen o **NULL**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_CrtIsMemoryBlock** devuelve **TRUE** si el bloque de memoria especificado se encuentra en el montón local y tiene un identificador de tipo de bloque del montón de depuración válido; en caso contrario, la función devuelve **FALSE**.
+**_CrtIsMemoryBlock** devuelve **TRUE** si el bloque de memoria especificado está ubicado en el montón local y tiene un identificador de tipo de bloque del montón de depuración válido; en caso contrario, la función devuelve **FALSE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtIsMemoryBlock** función comprueba que un bloque de memoria especificado está ubicado en el montón local de la aplicación y que tiene un identificador de tipo de bloque válido. Esta función también se puede usar para obtener el número de orden de la asignación de objetos, y el nombre y el número de línea del archivo de código fuente en el que se solicitó la asignación del bloque de memoria originalmente. Pasar no -**NULL** los valores para la *requestNumber*, *filename*, o *linenumber* causas de parámetros **_ CrtIsMemoryBlock** para establecer estos parámetros a los valores de encabezado de depuración del bloque de memoria, si encuentra el bloque en el montón local. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsMemoryBlock** se quitan durante el preprocesamiento.
+El **_CrtIsMemoryBlock** función simplemente comprueba que un bloque de memoria especificado está ubicado en el montón local de la aplicación y que tiene un identificador de tipo de bloque válido. Esta función también se puede usar para obtener el número de orden de la asignación de objetos, y el nombre y el número de línea del archivo de código fuente en el que se solicitó la asignación del bloque de memoria originalmente. Pasar que no sean de**NULL** valores para el *requestNumber*, *filename*, o *linenumber* causas de los parámetros **_ CrtIsMemoryBlock** para establecer estos parámetros a los valores de encabezado de depuración del bloque de memoria, si encuentra el bloque en el montón local. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsMemoryBlock** se quitan durante el preprocesamiento.
 
-Si **_CrtIsMemoryBlock** produce un error, devuelve **FALSE** y los parámetros de salida se inicializan con valores predeterminados: *requestNumber* y **lineNumber**  se establecen en 0 y *filename* está establecido en **NULL**.
+Si **_CrtIsMemoryBlock** produce un error, devuelve **FALSE** y los parámetros de salida se inicializan en los valores predeterminados: *requestNumber* y **lineNumber**  se establecen en 0 y *filename* está establecido en **NULL**.
 
 Dado que esta función devuelve **TRUE** o **FALSE**, se puede pasar a una de las macros [_ASSERT](assert-asserte-assert-expr-macros.md) para crear un mecanismo sencillo de control de errores de depuración. En el ejemplo siguiente se genera un error de aserción si la dirección especificada no se está en el montón local:
 
@@ -89,7 +79,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Para obtener más información acerca de cómo **_CrtIsMemoryBlock** puede utilizarse con otras macros y funciones de depuración, consulte [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información acerca de cómo **_CrtIsMemoryBlock** puede utilizarse con otras macros y funciones de depuración, vea [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

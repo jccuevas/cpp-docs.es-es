@@ -1,11 +1,6 @@
 ---
-title: timespec_get, _timespec32_get, _timespec64_get1 | Microsoft Docs
-ms.custom: ''
+title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - timespec_get
 - _timespec32_get
@@ -33,23 +28,17 @@ f1_keywords:
 - timespec
 - _timespec32
 - _timespec64
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespec_get function
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f00a59f8b5813398b47562b106f3ec0eff3363b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1d0cbaf194060d816e31d397a9319ef47f75371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638456"
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -83,7 +72,7 @@ Un valor específico de implementación distinta de cero que especifica la base 
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor de *base* si correcto; en caso contrario, devuelve cero.
+El valor de *base* si es correcto, en caso contrario, devuelve cero.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -91,7 +80,7 @@ El **timespec_get** funciones establecen la hora actual en la estructura que se�
 
 **Específicos de Microsoft**
 
-Estas funciones solo admiten **TIME_UTC** como el *base* valor. Esto establece la *time_spec* valor para el número de segundos y nanosegundos desde el inicio de la época, medianoche del 1 de enero de 1970, hora Universal coordinada (UTC). En un **struct** **_timespec32**, **tv_sec** es un **__time32_t** valor. En un **struct** **_timespec64**, **tv_sec** es un **__time64_t** valor. En un **struct** **timespec**, **tv_sec** es un **time_t** tipo, que es de 32 bits o 64 bits de longitud, dependiendo de si el preprocesador se define _USE_32BIT_TIME_T de macro. El **timespec_get** función es una función insertada que llama **_timespec32_get** si se define _USE_32BIT_TIME_T; en caso contrario, llama **_timespec64_get**.
+Estas funciones solo admiten **TIME_UTC** como el *base* valor. Esto establece la *time_spec* valor con el número de segundos y nanosegundos desde el inicio de la época, medianoche del 1 de enero de 1970, hora Universal coordinada (UTC). En un **struct** **_timespec32**, **tv_sec** es un **__time32_t** valor. En un **struct** **_timespec64**, **tv_sec** es un **__time64_t** valor. En un **struct** **timespec**, **tv_sec** es un **time_t** tipo, que es de 32 o 64 bits de longitud, dependiendo de si el preprocesador se define _USE_32BIT_TIME_T de macro. El **timespec_get** función es una función insertada que llama a **_timespec32_get** si se define _USE_32BIT_TIME_T; en caso contrario, llama a **_timespec64_get**.
 
 **Fin de Específicos de Microsoft**
 

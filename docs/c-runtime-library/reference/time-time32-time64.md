@@ -1,10 +1,6 @@
 ---
-title: time, _time32, _time64 | Microsoft Docs
-ms.custom: ''
+title: time, _time32, _time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410572"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546591"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -69,13 +59,13 @@ Puntero a la ubicación de almacenamiento de tiempo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve la hora como segundos transcurridos desde la medianoche del 1 de enero de 1970, o -1 si se produce un error.
+Devuelve la hora de segundos transcurridos desde la medianoche del 1 de enero de 1970, o -1 si se produce un error.
 
 ## <a name="remarks"></a>Comentarios
 
 El **tiempo** función devuelve el número de segundos transcurridos desde la medianoche (00: 00:00) del 1 de enero de 1970, hora Universal coordinada (UTC), según el reloj del sistema. El valor devuelto se almacena en la ubicación proporcionada por *destTime*. Este parámetro puede ser **NULL**, en cuyo caso no se almacena el valor devuelto.
 
-**tiempo** es un contenedor de **_time64** y **time_t** es, de forma predeterminada, equivalente a **__time64_t**. Si necesita forzar que el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. Esto, sin embargo, no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038; no se permite el uso de esta macro en plataformas de 64 bits.
+**tiempo** es un contenedor para **_time64** y **time_t** es, de forma predeterminada, equivalente a **__time64_t**. Si necesita forzar el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. Esto, sin embargo, no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038; no se permite el uso de esta macro en plataformas de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 

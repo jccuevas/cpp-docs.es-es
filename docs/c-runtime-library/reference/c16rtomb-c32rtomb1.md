@@ -1,11 +1,6 @@
 ---
-title: c16rtomb, c32rtomb1 | Microsoft Docs
-ms.custom: ''
+title: c16rtomb, c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,22 +22,16 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536596"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -76,15 +65,15 @@ Un puntero a un **mbstate_t** objeto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El número de bytes almacenados en el objeto de matriz *mbchar*, incluidas las secuencias de desplazamiento. Si *wchar* no es un carácter ancho válido, el valor (**size_t**)(-1) se devuelve, **errno** está establecido en **EILSEQ**y el valor de *estado* no está especificado.
+El número de bytes almacenados en el objeto de matriz *mbchar*, incluidas las secuencias de desplazamiento. Si *wchar* no es un carácter ancho válido, el valor (**size_t**)(-1) se devuelve, **errno** está establecido en **EILSEQ**y el valor de *estado* no se ha especificado.
 
 ## <a name="remarks"></a>Comentarios
 
-El **c16rtomb** función convierte el carácter UTF-16 *wchar* a la secuencia de caracteres estrechos multibyte equivalentes en la configuración regional actual. Si *mbchar* no es un puntero nulo, la función almacena la secuencia convertida en el objeto array que señala *mbchar*. Hasta **MB_CUR_MAX** bytes se almacenan en *mbchar*, y *estado* se establece en el estado de desplazamiento multibyte resultante.    Si *wchar* es un carácter ancho nulo, una secuencia necesaria para restauración se almacena el estado de desplazamiento inicial, si es necesario, seguido por el carácter null, y *estado* se establece en el estado inicial de conversión. El **c32rtomb** función es idéntica, pero convierte un carácter UTF-32.
+El **c16rtomb** función convierte el carácter UTF-16 *wchar* a la secuencia de caracteres estrechos multibyte equivalentes en la configuración regional actual. Si *mbchar* no es un puntero nulo, la función almacena la secuencia convertida en el objeto de matriz señalada por *mbchar*. Hasta **MB_CUR_MAX** bytes se almacenan en *mbchar*, y *estado* está establecido en el estado de desplazamiento multibyte resultante.    Si *wchar* es un carácter ancho nulo, necesarios para una secuencia de restauración se almacena el estado de desplazamiento inicial, si es necesario, seguido por el carácter null, y *estado* está establecido en el estado de conversión inicial. El **c32rtomb** función es idéntica, pero convierte un carácter UTF-32.
 
 Si *mbchar* es un puntero nulo, el comportamiento es equivalente a una llamada a la función que sustituye un búfer interno para *mbchar* y un carácter nulo ancho para *wchar*.
 
-El *estado* objeto de estado de conversión le permite realizar llamadas posteriores a esta función y otras funciones reiniciables que mantienen el estado de desplazamiento de los caracteres multibyte de salida. Resultados son indefinidos al mezclar el uso de funciones reiniciables y no reiniciables, o si una llamada a **setlocale** se realiza entre las llamadas a funciones reiniciables.
+El *estado* objeto de estado de la conversión le permite realizar las llamadas posteriores a esta función y otras funciones reiniciables que mantienen el estado de desplazamiento de los caracteres multibyte de salida. Los resultados son indefinidos al mezclar el uso de funciones reiniciables y no reiniciables, o si una llamada a **setlocale** se realiza entre las llamadas a funciones reiniciables.
 
 ## <a name="requirements"></a>Requisitos
 

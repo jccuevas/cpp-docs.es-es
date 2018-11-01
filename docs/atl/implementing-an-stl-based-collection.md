@@ -1,25 +1,15 @@
 ---
-title: Implementación de una colección de basada en la biblioteca estándar de C++ | Microsoft Docs
-ms.custom: ''
+title: Implementación de una colección de basada en la biblioteca estándar de C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b82599bd95abb473a361a962566669ed1ef7a35b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861101"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530486"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementación de una colección de basada en la biblioteca estándar de C++
 

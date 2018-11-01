@@ -1,27 +1,17 @@
 ---
-title: Las herramientas del vinculador LNK1120 Error | Microsoft Docs
-ms.custom: ''
+title: Error de las herramientas del vinculador LNK1120
 ms.date: 05/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1120
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1120
 ms.assetid: 56aa7d36-921f-4daf-b44d-cca0d4fb1b51
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea6cc7fdde3d68c9b00ba60c7fa650cbdfd3bd8d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b11318dcffb665d3b422fffcbd7e6275f35984dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086348"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490810"
 ---
 # <a name="linker-tools-error-lnk1120"></a>Error de las herramientas del vinculador LNK1120
 

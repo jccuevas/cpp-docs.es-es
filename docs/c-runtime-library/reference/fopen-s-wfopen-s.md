@@ -1,10 +1,6 @@
 ---
-title: fopen_s, _wfopen_s | Microsoft Docs
-ms.custom: ''
+title: fopen_s, _wfopen_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfopen_s
 - fopen_s
@@ -25,8 +21,6 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bef5587188cebe4ed7e91cbd95eb46cca7f05044
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5ac5203f2246a7ede31bcbc9a34c4632772a14c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636116"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -94,15 +84,15 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 ## <a name="remarks"></a>Comentarios
 
-Archivos abiertos por **fopen_s** y **_wfopen_s** no son puede compartirse. Si necesita que un archivo estén puede compartirse, use [_fsopen, _wfsopen](fsopen-wfsopen.md) con la constante de modo compartido adecuada, por ejemplo, **_SH_DENYNO** para el uso compartido de lectura/escritura.
+Los archivos abiertos por **fopen_s** y **_wfopen_s** no son que se pueden compartir. Si necesita que se pueda compartir un archivo, use [_fsopen, _wfsopen](fsopen-wfsopen.md) con la constante de modo compartido adecuada, por ejemplo, **_SH_DENYNO** para uso compartido de lectura/escritura.
 
-El **fopen_s** función abre el archivo especificado por *filename*. **_wfopen_s** es una versión con caracteres anchos de **fopen_s**; los argumentos a **_wfopen_s** son cadenas de caracteres anchos. **_wfopen_s** y **fopen_s** se comportan exactamente igual.
+El **fopen_s** función abre el archivo especificado por *filename*. **_wfopen_s** es una versión con caracteres anchos de **fopen_s**; los argumentos de **_wfopen_s** son cadenas de caracteres anchos. **_wfopen_s** y **fopen_s** se comportan exactamente igual.
 
-**fopen_s** acepta las rutas válidas en el sistema de archivos en el momento de ejecución; Se aceptan rutas de acceso UNC y las rutas que requieren unidades de red asignadas por **fopen_s** siempre y cuando el sistema que está ejecutando el código tiene acceso al recurso compartido o unidad de red asignada en el tiempo de ejecución. Al construir rutas para **fopen_s**, no haga suposiciones sobre la disponibilidad de unidades, rutas o recursos compartidos de red en el entorno de ejecución. Puede usar barras diagonales (/) o barras diagonales inversas (\\) como separadores de directorio en una ruta de acceso.
+**fopen_s** acepta las rutas válidas en el sistema de archivos en el punto de ejecución; Se aceptan rutas de acceso UNC y las rutas que requieren unidades de red asignadas por **fopen_s** siempre que el sistema que se está ejecutando el código tiene acceso al recurso compartido o unidad de red asignada en el momento de ejecución. Cuando se construyen las rutas de **fopen_s**, no haga suposiciones sobre la disponibilidad de unidades, rutas o recursos compartidos de red en el entorno de ejecución. Puede usar barras diagonales (/) o barras diagonales inversas (\\) como separadores de directorio en una ruta de acceso.
 
-Estas funciones validan sus parámetros. Si *pFile*, *filename*, o *modo* es un puntero nulo, estas funciones generan una excepción de parámetro no válido, como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md).
+Estas funciones validan sus parámetros. Si *pFile*, *filename*, o *modo* es un puntero nulo, estas funciones generan una excepción de parámetros no válidos, como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md).
 
-Compruebe siempre el valor devuelto para ver si la función se realizó correctamente antes de realizar cualquier otra operación en el archivo. Si se produce un error, se devuelve el código de error y la variable global **errno** se establece. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Compruebe siempre el valor devuelto para ver si la función se realizó correctamente antes de realizar cualquier otra operación en el archivo. Si se produce un error, se devuelve el código de error y la variable global **errno** está establecido. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="unicode-support"></a>Compatibilidad con Unicode
 
@@ -110,18 +100,18 @@ Compruebe siempre el valor devuelto para ver si la función se realizó correcta
 
 **fopen_s (& fp, "newfile.txt", "rw, ccs =**_codificación_**");**
 
-Valores permitidos de *codificación* son **UNICODE**, **UTF-8**, y **UTF-16LE**. Si no existe ningún valor se especifica para *codificación*, **fopen_s** usa la codificación ANSI.
+Los valores permitidos de *codificación* son **UNICODE**, **UTF-8**, y **UTF-16LE**. Si no existe ningún valor se especifica para *codificación*, **fopen_s** usa la codificación ANSI.
 
-Si el archivo ya existe y está abierto para lectura o para anexar, la marca de orden de bytes (BOM), si está presente en el archivo, determina la codificación. La codificación de BOM tiene prioridad sobre la codificación especificada por el *ccs* marca. El *ccs* codificación solo se usa cuando no hay BOM presente o si el archivo es un archivo nuevo.
+Si el archivo ya existe y está abierto para lectura o para anexar, la marca de orden de bytes (BOM), si está presente en el archivo, determina la codificación. La codificación de BOM tiene prioridad sobre la codificación especificada por el *ccs* marca. El *ccs* codificación solo se usa cuando no hay BOM presente o si el archivo es un nuevo archivo.
 
 > [!NOTE]
-> Detección de BOM solo se aplica a los archivos que se abren en el modo Unicode; es decir, pasando el *ccs* marca.
+> Detección de BOM solo se aplica a los archivos abiertos en modo Unicode; es decir, pasando el *ccs* marca.
 
-La siguiente tabla resume los modos de diversos *ccs* marcas que se asignan a **fopen_s** y marcas de orden de bytes en el archivo de.
+La siguiente tabla resume los modos de diversos *ccs* marcas que se entregan a **fopen_s** y para las marcas de orden de bytes en el archivo.
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Codificaciones utilizadas basadas en el indicador de ccs y BOM
 
-|el indicador de CCS|Ninguna BOM (o archivo nuevo)|BOM: UTF-8|BOM: UTF-16|
+|indicador de CCS|Ninguna BOM (o archivo nuevo)|BOM: UTF-8|BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -129,7 +119,7 @@ La siguiente tabla resume los modos de diversos *ccs* marcas que se asignan a **
 
 En los archivos que se abren para escribir en el modo Unicode se escribe una BOM automáticamente.
 
-Si *modo* es **", ccs =**_codificación_**"**, **fopen_s** primero intenta abrir el archivo con lectura acceso y acceso de escritura. Si la operación se realiza correctamente, la función lee la BOM para determinar la codificación del archivo; si se produce un error, la función usa la codificación predeterminada del archivo. En cualquier caso, **fopen_s** , a continuación, se vuelve a abrir el archivo con acceso de solo escritura. (Esto se aplica a **una** no único, de modo **a +**.)
+Si *modo* es **"a, ccs =**_codificación_**"**, **fopen_s** primero intenta abrir el archivo con tanto de lectura el acceso y acceso de escritura. Si la operación se realiza correctamente, la función lee la BOM para determinar la codificación del archivo; si se produce un error, la función usa la codificación predeterminada del archivo. En cualquier caso, **fopen_s** , a continuación, vuelve a abrir el archivo con acceso de solo escritura. (Esto se aplica a **un** no único, de modo **a +**.)
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -141,38 +131,38 @@ La cadena de caracteres *modo* especifica el tipo de acceso solicitado para el a
 
 |*mode*|Access|
 |-|-|
-**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra, el **fopen_s** llamadas se produce un error.
+**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra el **fopen_s** llamar se produce un error.
 **"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.
 **"a"**|Abre para escritura al final del archivo (anexo) sin eliminar el marcador de fin de archivo (EOF) antes de que se escriban nuevos datos en el archivo. Crea el archivo si no existe.
 **"r+"**|Abre para lectura y escritura. El archivo debe existir.
 **"w+"**|Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido.
 **"a+"**|Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe.
 
-Cuando se abre un archivo mediante la **"a"** o **"+"** acceder a tipo, todas las operaciones de escritura aparecen al final del archivo. Se puede mover el puntero de archivo mediante el uso de [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier operación se lleva a cabo para que no se puede sobrescribir los datos existentes de escritura.
+Cuando se abre un archivo mediante el **"a"** o **"a +"** acceso tipo, todas las operaciones se producen al final del archivo de escritura. Se puede mover el puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier escritura operación se lleva a cabo para que no se puede sobrescribir datos existentes.
 
-El **"a"** modo no quita el marcador EOF antes de anexar al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. El **"+"** modo quita el marcador EOF antes de anexar al archivo. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El **"+"** modo se requiere para anexar a un archivo de streaming terminado mediante el marcador EOF CTRL+Z.
+El **"a"** modo no quita el marcador EOF antes de anexar al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. El **"a +"** modo quita el marcador EOF antes de anexar al archivo. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El **"a +"** modo se requiere para anexar a un archivo de streaming terminado mediante el marcador EOF CTRL+Z.
 
-Cuando el **"r +"**, **"w +"**, o **"+"** se especifica el tipo de acceso, se permiten la lectura y escritura. (Se dice que el archivo se abierto para “actualizar”). Sin embargo, cuando cambie de lectura a la escritura, la operación de entrada debe encontrar un marcador EOF. Si no hay ningún EOF, debe usar una llamada intermedia a una función de posición del archivo. Las funciones de posición de archivo son **fsetpos**, [fseek](fseek-fseeki64.md), y [rebobinar](rewind.md). Cuando cambie de escritura a lectura, debe utilizar una llamada intermedia a **fflush** o a una función de posicionamiento de archivo.
+Cuando el **"r +"**, **"w +"**, o **"a +"** se especifica el tipo de acceso, se permiten operaciones de lectura y escritura. (Se dice que el archivo se abierto para “actualizar”). Sin embargo, cuando cambie de lectura a la escritura, la operación de entrada debe encontrar un marcador EOF. Si no hay ningún EOF, debe usar una llamada intermedia a una función de posición del archivo. Las funciones de posición del archivo son **fsetpos**, [fseek](fseek-fseeki64.md), y [rebobinar](rewind.md). Cuando cambie de escritura a lectura, debe usar una llamada intermedia a **fflush** o a una función de posicionamiento de archivo.
 
-Además de los valores anteriores, los siguientes caracteres pueden incluirse en *modo* para especificar el modo de traducción de caracteres de nueva línea:
+Además de los valores anteriores, se pueden incluir los siguientes caracteres en *modo* para especificar el modo de traducción de caracteres de nueva línea:
 
 |*modo* modificador|Modo de traducción|
 |-|-|
 **t**|Abra en modo de texto (traducido).
 **b**|Abra en modo binario (sin traducir); las traducciones que implican los caracteres de retorno de carro y avance de línea se suprimen.
 
-En modo de texto (traducido), CTRL+Z se interpreta como un carácter de final de archivo en la entrada. En los archivos abiertos para lectura/escritura con **"+"**, **fopen_s** comprueba si hay un CTRL+Z al final del archivo y lo quita, si es posible. Esto se hace porque utilizar [fseek](fseek-fseeki64.md) y **ftell** para desplazarse por un archivo que finaliza con CTRL+Z, puede hacer [fseek](fseek-fseeki64.md) para que se comporte de forma incorrecta cerca del final del archivo.
+En el modo de texto (traducido), CTRL+Z se interpreta como un carácter de final de archivo en la entrada. En los archivos abiertos para lectura/escritura con **"a +"**, **fopen_s** comprueba un CTRL+Z al final del archivo y lo quita, si es posible. Esto se hace porque utilizar [fseek](fseek-fseeki64.md) y **ftell** para desplazarse por un archivo que finaliza con un CTRL+Z puede hacer que [fseek](fseek-fseeki64.md) para que se comporte de forma incorrecta cerca del final del archivo.
 
-Además, en modo de texto, combinaciones de avance de línea de retorno de carro se traducen en avances de línea únicos en la entrada y caracteres de avance de línea se traducen en combinaciones de avance de línea de retorno de carro en la salida. Cuando una función de E/S de flujo Unicode funciona en el modo de texto (valor predeterminado), se asume que el flujo de origen o de destino son una secuencia de caracteres multibyte. Por lo tanto, las funciones de entrada y flujo Unicode convierten los caracteres multibyte en caracteres anchos (como si se realizara una llamada a la **mbtowc** función). Por la misma razón, las funciones de salida y flujo Unicode convierten los caracteres anchos a caracteres multibyte (como si se realizara una llamada a la **wctomb** función).
+Además, en modo de texto, las combinaciones de retorno de carro y se traducen en avances de línea únicos en la entrada y caracteres de avance de línea se traducen en combinaciones de retorno de carro en la salida. Cuando una función de E/S de flujo Unicode funciona en el modo de texto (valor predeterminado), se asume que el flujo de origen o de destino son una secuencia de caracteres multibyte. Por consiguiente, las funciones de entrada de secuencias Unicode convierten los caracteres multibyte en caracteres anchos (como si se realizara una llamada a la función **mbtowc**). Por la misma razón, las funciones de salida de secuencias Unicode convierten los caracteres anchos en caracteres multibyte (como si se realizara una llamada a la función **wctomb**).
 
-Si **t** o **b** no se proporciona en *modo*, el modo de traducción predeterminado está definido por la variable global [_fmode](../../c-runtime-library/fmode.md). Si **t** o **b** tiene como prefijo al argumento, la función se produce un error y devuelve **NULL**.
+Si **t** o **b** no se proporciona en *modo*, el modo de traducción predeterminado está definido por la variable global [_fmode](../../c-runtime-library/fmode.md). Si **t** o **b** tiene como prefijo para el argumento, la función produce un error y devuelve **NULL**.
 
 Para obtener más información sobre el uso de los modos de texto y binario en E/S de secuencias Unicode y multibyte, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 |*modo* modificador|Comportamiento|
 |-|-|
-**c**|Habilite la marca de confirmación para la asociada *filename* para que el contenido del búfer del archivo se escriba directamente en disco si **fflush** o **_flushall** se llama.
-**n**|Restaure la marca de confirmación para la asociada *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a COMMODE.OBJ. El valor predeterminado de la marca de confirmación global es "no-commit", a menos que vincule explícitamente el programa a COMMODE.OBJ (vea [Link Options](../../c-runtime-library/link-options.md)).
+**c**|Habilitar la marca de confirmación asociado *filename* para que el contenido del búfer del archivo se escribe directamente en el disco si **fflush** o **_flushall** se llama.
+**n**|Restablecer la marca de confirmación asociado *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a COMMODE.OBJ. El valor predeterminado de la marca de confirmación global es "no-commit", a menos que vincule explícitamente el programa a COMMODE.OBJ (vea [Link Options](../../c-runtime-library/link-options.md)).
 **N**|Especifica que el archivo no se hereda mediante procesos secundarios.
 **S**|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.
 **R**|Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco.
@@ -180,9 +170,9 @@ Para obtener más información sobre el uso de los modos de texto y binario en E
 **D**|Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo.
 **CCS =**_codificación_|Especifica el carácter codificado establecido (uno de **UTF-8**, **UTF-16LE**, o **UNICODE**) para este archivo. Deje sin especificar si desea la codificación ANSI.
 
-Los caracteres válidos para el *modo* cadena que se usa en **fopen_s** y [_fdopen](fdopen-wfdopen.md) corresponden a *oflag* argumentos que se usan en [_ Abra](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
+Los caracteres válidos para el *modo* cadena utilizada en **fopen_s** y [_fdopen](fdopen-wfdopen.md) corresponden a *oflag* argumentos utilizados en [_ Abra](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
 
-|Caracteres de *modo* cadena|Equivalente *oflag* valor para _open/_sopen|
+|Los caracteres de *modo* cadena|Equivalente *oflag* valor para _open/_sopen|
 |-------------------------------|----------------------------------------------------|
 |**a**|**_O_WRONLY** &#124; **_O_APPEND** (normalmente **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
 |**a +**|**_O_RDWR** &#124; **_O_APPEND** (normalmente **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
@@ -202,7 +192,7 @@ Los caracteres válidos para el *modo* cadena que se usa en **fopen_s** y [_fdop
 |**CCS = UTF-8**|**_O_UTF8**|
 |**CCS = UTF-16LE**|**_O_UTF16**|
 
-Si utilizas **rb** modo, no necesita especificar trasladar su código, y si va a leer gran parte del archivo y no le interesa rendimiento de la red, los archivos de Win32 asignados en memoria también podrían ser una opción.
+Si usas **rb** modo, no tendrá que portar el código y espera leer una gran parte del archivo o no le preocupa el rendimiento de red, archivos de Win32 asignados en memoria también podrían ser una opción.
 
 ## <a name="requirements"></a>Requisitos
 

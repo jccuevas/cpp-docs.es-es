@@ -1,10 +1,6 @@
 ---
-title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s | Microsoft Docs
-ms.custom: ''
+title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ctime64_s
 - _wctime32_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -57,16 +51,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3f9c5e6d9d6f0d910decae904cbbd75d995a6c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496384"
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -135,13 +125,13 @@ errno_t _wctime64_s(
 *buffer*<br/>
 Debe ser lo suficientemente grande como para contener 26 caracteres. Un puntero al resultado de la cadena de caracteres, o **NULL** si:
 
-- *sourceTime* representa una fecha antes de la medianoche del 1 de enero de 1970 UTC.
+- *sourceTime* representa una fecha anterior a la medianoche del 1 de enero de 1970 UTC.
 
-- Si usa **_ctime32_s** o **_wctime32_s** y *sourceTime* representa una fecha posterior a 23:59:59 del 18 de enero de 2038, UTC.
+- Si usas **_ctime32_s** o **_wctime32_s** y *sourceTime* representa una fecha posterior a las 23:59:59 del 18 de enero de 2038, UTC.
 
-- Si usa **_ctime64_s** o **_wctime64_s** y *sourceTime* representa una fecha posterior a 23:59:59 del 31 de diciembre de 3000, UTC.
+- Si usas **_ctime64_s** o **_wctime64_s** y *sourceTime* representa una fecha posterior a las 23:59:59 del 31 de diciembre de 3000, UTC.
 
-- Si usa **_ctime_s** o **_wctime_s**, estas funciones son contenedores para las funciones anteriores. Vea la sección Comentarios.
+- Si usas **_ctime_s** o **_wctime_s**, estas funciones son contenedores para las funciones anteriores. Vea la sección Comentarios.
 
 *numberOfElements*<br/>
 Tamaño del búfer.
@@ -158,14 +148,14 @@ Cero si es correcto. Si hay un error debido a un parámetro no válido, se invoc
 |*buffer*|*numberOfElements*|*sourceTime*|Volver|Valor de *búfer*|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|any|any|**EINVAL**|No modificado|
-|No **NULL** (apunta a la memoria válido)|0|any|**EINVAL**|No modificado|
-|no **NULL**|0< tamaño < 26|any|**EINVAL**|Cadena vacía|
-|no **NULL**|>= 26|NULL|**EINVAL**|Cadena vacía|
-|no **NULL**|>= 26|< 0|**EINVAL**|Cadena vacía|
+|No **NULL** (apunta a la memoria válida)|0|any|**EINVAL**|No modificado|
+|No **NULL**|0< tamaño < 26|any|**EINVAL**|Cadena vacía|
+|No **NULL**|>= 26|NULL|**EINVAL**|Cadena vacía|
+|No **NULL**|>= 26|< 0|**EINVAL**|Cadena vacía|
 
 ## <a name="remarks"></a>Comentarios
 
-El **ctime_s** función convierte un valor de hora almacenado como un [time_t](../../c-runtime-library/standard-types.md) estructura en una cadena de caracteres. El *sourceTime* valor suele obtenerse a partir de una llamada a [tiempo](time-time32-time64.md), que devuelve el número de segundos transcurrido desde la medianoche (00: 00:00) del 1 de enero de 1970, hora universal coordinada (UTC). La cadena del valor devuelto contiene exactamente 26 caracteres y tiene el formato:
+El **ctime_s** función convierte un valor de tiempo almacenado como un [time_t](../../c-runtime-library/standard-types.md) estructura en una cadena de caracteres. El *sourceTime* valor suele obtenerse de una llamada a [tiempo](time-time32-time64.md), que devuelve el número de segundos transcurrido desde la medianoche (00: 00:00) del 1 de enero de 1970, hora universal coordinada (UTC). La cadena del valor devuelto contiene exactamente 26 caracteres y tiene el formato:
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
@@ -173,9 +163,9 @@ Se usa un reloj de 24 horas. Todos los campos tienen un ancho constante. El car�
 
 La cadena de caracteres convertidos también se ajusta en función de la configuración de zona horaria local. Consulte la [tiempo](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), y [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) funciones para obtener información acerca de cómo configurar la hora local y la [_tzset](tzset.md) función para obtener información acerca de cómo definir el entorno de zona horaria y variables globales.
 
-**_wctime32_s** y **_wctime64_s** tienen la versión con caracteres anchos de **_ctime32_s** y **_ctime64_s**; devuelve un puntero a la cadena de caracteres anchos. En caso contrario, **_ctime64_s**, **_wctime32_s**, y **_wctime64_s** se comportan de forma idéntica a **_ctime32_s**.
+**_wctime32_s** y **_wctime64_s** son la versión de caracteres anchos de **_ctime32_s** y **_ctime64_s**; devuelve un puntero a la cadena de caracteres anchos. En caso contrario, **_ctime64_s**, **_wctime32_s**, y **_wctime64_s** se comportan de forma idéntica a **_ctime32_s**.
 
-**ctime_s** es una función insertada que se evalúa como **_ctime64_s** y **time_t** es equivalente a **__time64_t**. Si necesita forzar que el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. Si lo hace esto hará que **ctime_s** se evalúe como **_ctime32_s**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
+**ctime_s** es una función insertada que se evalúa como **_ctime64_s** y **time_t** es equivalente a **__time64_t**. Si necesita forzar el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. Al hacerlo, **ctime_s** se evalúe como **_ctime32_s**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
 
 En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,27 +1,17 @@
 ---
-title: Error en tiempo de ejecución de C R6035 | Microsoft Docs
-ms.custom: ''
+title: Error en tiempo de ejecución de C R6035
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6035
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 081e878e6bc96edc734f84e0e4efecee607135b5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bb215668fc13ecf84efdbf5f7ec6bb25c922181b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026718"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668264"
 ---
 # <a name="c-runtime-error-r6035"></a>Error en tiempo de ejecución de C R6035
 
@@ -73,7 +63,7 @@ void DllEntryHelper() {
 }
 ```
 
-En este caso, DllEntryPoint no tiene protección de saturación del búfer (no tiene ningún búfer de cadenas local y no utiliza el control de excepciones estructurado); por lo tanto, puede llamar con seguridad a `__security_init_cookie`. A continuación, llama a una función auxiliar que está protegida.
+En este caso, DllEntryPoint no tiene protección de saturación del búfer (no tiene ningún búfer de cadenas local y no utiliza el control de excepciones estructurado); por lo tanto, puede llamar con seguridad a `__security_init_cookie`. A continuación, llama a una función del asistente que está protegida.
 
 > [!NOTE]
 >  El mensaje de error R6035 sólo lo genera el CRT de depuración x86, y para el control de excepciones estructurado exclusivamente, pero la condición de error se produce en todas las plataformas y para todas las formas de control de excepciones, como C++ EH.

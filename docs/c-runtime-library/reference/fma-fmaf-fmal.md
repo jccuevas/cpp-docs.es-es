@@ -1,11 +1,6 @@
 ---
-title: fma, fmaf, fmal | Microsoft Docs
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529953"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -95,7 +84,7 @@ Primer valor que se va a multiplicar.
 *y*<br/>
 Segundo valor que se va a multiplicar.
 
-*Z*<br/>
+*z*<br/>
 El valor que se va a agregar.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -107,9 +96,9 @@ De lo contrario, es posible que devuelva uno de los siguientes valores:
 |Problema|Volver|
 |-----------|------------|
 |*x* = infinito, *y* = 0 o<br /><br /> *x* = 0, *y* = infinito|NaN|
-|*x* o *y* = ± exacta infinito, *z* = infinito con el signo opuesto|NaN|
+|*x* o *y* = exacta + infinito, *z* = infinito con signo opuesto|NaN|
 |*x* o *y* = NaN|NaN|
-|no (*x* = 0, *y*= indefinida) y *z* = NaN<br /><br /> no (*x*= indefinida, *y*= 0) y *z* = NaN|NaN|
+|no (*x* = 0, *y*= indefinido) y *z* = NaN<br /><br /> no (*x*= indefinido, *y*= 0) y *z* = NaN|NaN|
 |Error de intervalo de desbordamiento|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|
 |Error de intervalo de subdesbordamiento|valor correcto después del redondeo.|
 
@@ -117,7 +106,7 @@ Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **fma** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **fma** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **fma** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **fma** siempre toma y devuelve un **doble**.
 
 Esta función calcula el valor como si fuera de precisión infinita y luego redondea el resultado final.
 

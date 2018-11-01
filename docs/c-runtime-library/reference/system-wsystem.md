@@ -1,10 +1,6 @@
 ---
-title: system, _wsystem | Microsoft Docs
-ms.custom: ''
+title: system, _wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624671"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -71,7 +61,7 @@ Comando que se va a ejecutar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si *comando* es **NULL** y se encuentra el intérprete de comandos, devuelve un valor distinto de cero. Si no se encuentra el intérprete de comandos, devuelve 0 y establece **errno** a **ENOENT**. Si *comando* no **NULL**, **system** devuelve el valor devuelto por el intérprete de comandos. Devuelve el valor 0 únicamente si el intérprete de comandos devuelve el valor 0. Un valor devuelto de - 1 indica un error, y **errno** se establece en uno de los siguientes valores:
+Si *comando* es **NULL** y se encuentra el intérprete de comandos, devuelve un valor distinto de cero. Si no se encuentra el intérprete de comandos, devuelve 0 y establece **errno** a **ENOENT**. Si *comando* no **NULL**, **sistema** devuelve el valor devuelto por el intérprete de comandos. Devuelve el valor 0 únicamente si el intérprete de comandos devuelve el valor 0. Un valor devuelto de - 1 indica un error, y **errno** se establece en uno de los siguientes valores:
 
 |||
 |-|-|
@@ -84,11 +74,11 @@ Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-d
 
 ## <a name="remarks"></a>Comentarios
 
-El **system** función pasa *comando* al intérprete de comandos, que ejecuta la cadena como un comando del sistema operativo. **sistema** utiliza la **COMSPEC** y **ruta de acceso** variables de entorno para buscar el intérprete de comandos CMD.exe de archivos. Si *comando* es **NULL**, la función comprueba si existe el intérprete de comandos.
+El **sistema** función pasadas *comando* al intérprete de comandos, que ejecuta la cadena como un comando del sistema operativo. **sistema** usa el **COMSPEC** y **ruta** variables de entorno para buscar el intérprete de comandos CMD.exe de archivos. Si *comando* es **NULL**, la función simplemente comprueba si existe el intérprete de comandos.
 
-Debe vaciar explícitamente, mediante el uso de [fflush](fflush.md) o [_flushall](flushall.md), o cerrar todos los flujos antes de llamar a **system**.
+Debe vaciar explícitamente, mediante el uso de [fflush](fflush.md) o [_flushall](flushall.md), o cerrar todos los flujos antes de llamar a **sistema**.
 
-**_wsystem** es una versión con caracteres anchos de **system**; el *comando* argumento pasado a **_wsystem** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+**_wsystem** es una versión con caracteres anchos de **sistema**; el *comando* argumento **_wsystem** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

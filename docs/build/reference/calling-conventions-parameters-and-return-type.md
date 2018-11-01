@@ -1,31 +1,21 @@
 ---
-title: Convenciones de llamada, parámetros y tipo de valor devuelto | Microsoft Docs
-ms.custom: ''
+title: Convenciones de llamada, parámetros y tipo de valor devuelto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - calling conventions, helper functions
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74aa2e58b7285ced1b49efc7f54c1ec11ad606c1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8343c17828040ca36b042cb99e0c51c37548d3b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654433"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Convenciones de llamada, parámetros y tipo de valor devuelto
 
-El prototipo de la rutina de la aplicación auxiliar es:
+El prototipo de la rutina del asistente es:
 
 ```
 FARPROC WINAPI __delayLoadHelper2(
@@ -42,7 +32,7 @@ Un puntero `const` a una `ImgDelayDescr` (consulte delayimp.h) que contiene los 
 Para obtener la definición de la `PCImgDelayDescr` estructura, vea [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
-Un puntero a la ranura de la tabla de direcciones de importación (IAT) de carga retrasada que se actualizará con la dirección de la función importada. La rutina de la aplicación auxiliar tiene que almacenar el mismo valor que devolverá en esta ubicación.
+Un puntero a la ranura de la tabla de direcciones de importación (IAT) de carga retrasada que se actualizará con la dirección de la función importada. La rutina del asistente tiene que almacenar el mismo valor que devolverá en esta ubicación.
 
 ## <a name="expected-return-values"></a>Valores devueltos esperados
 
@@ -62,7 +52,7 @@ Es su responsabilidad administrar estas excepciones.
 
 La convención de llamada de la función auxiliar es `__stdcall`. El tipo del valor devuelto no es relevante, de modo que se usa FARPROC. Esta función tiene vinculación de C.
 
-El valor devuelto de la aplicación auxiliar de carga retrasada tiene que almacenarse en la ubicación del puntero de función transferida, salvo que quiera que la rutina de la aplicación auxiliar se use como enlace de notificación. En ese caso, su código será el responsable de buscar el puntero de función adecuado que deba devolver. Entonces, el código thunk generado por el enlazador tomará ese valor devuelto como el destino real de la importación y saltará a él directamente.
+El valor devuelto del asistente de carga retrasada tiene que almacenarse en la ubicación del puntero de función transferida, salvo que quiera que la rutina del asistente se use como enlace de notificación. En ese caso, su código será el responsable de buscar el puntero de función adecuado que deba devolver. Entonces, el código thunk generado por el enlazador tomará ese valor devuelto como el destino real de la importación y saltará a él directamente.
 
 ## <a name="sample"></a>Ejemplo
 
