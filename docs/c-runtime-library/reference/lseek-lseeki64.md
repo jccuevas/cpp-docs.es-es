@@ -1,10 +1,6 @@
 ---
-title: _lseek, _lseeki64 | Microsoft Docs
-ms.custom: ''
+title: _lseek, _lseeki64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lseeki64
 - _lseek
@@ -25,8 +21,6 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs:
-- C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb47214ac2de3c3e217bf41387ba206b94caf906
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541692"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -84,7 +74,7 @@ Para obtener más información sobre estos y otros códigos error, vea [_doserrn
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lseek** función mueve el puntero de archivo asociado a *fd* a una ubicación nueva *desplazamiento* bytes a partir de *origen*. Se produce la siguiente operación en el archivo en la nueva ubicación. El argumento *origin* debe ser una de las siguientes constantes, que se definen en Stdio.h.
+El **_lseek** función mueve el puntero de archivo asociado *fd* a una nueva ubicación es *desplazamiento* bytes a partir de *origen*. Se produce la siguiente operación en el archivo en la nueva ubicación. El argumento *origin* debe ser una de las siguientes constantes, que se definen en Stdio.h.
 
 |*origen* valor||
 |-|-|
@@ -92,7 +82,7 @@ El **_lseek** función mueve el puntero de archivo asociado a *fd* a una ubicaci
 **SEEK_CUR**|Posición actual del puntero de archivo.
 **SEEK_END**|Final de archivo.
 
-Puede usar **_lseek** para volver a colocar el puntero en cualquier lugar en un archivo o más allá del final del archivo.
+Puede usar **_lseek** a colocar el puntero en cualquier lugar en un archivo o más allá del final del archivo.
 
 ## <a name="requirements"></a>Requisitos
 

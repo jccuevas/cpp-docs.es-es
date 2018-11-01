@@ -1,23 +1,13 @@
 ---
-title: Gráficos (C++ AMP) | Microsoft Docs
-ms.custom: ''
+title: Gráficos (C++ AMP)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97c673e564a91447854dc02a18ced0b4f0061a9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408224"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570331"
 ---
 # <a name="graphics-c-amp"></a>Gráficos (C++ AMP)
 
@@ -285,7 +275,7 @@ Las vistas de textura son análogas a las vistas de matriz, pero no proporcionan
 
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view está en desuso
 
-Para Visual Studio 2013, C++ AMP presenta mejor compatibilidad para las características de textura de hardware como muestreo y mapas MIP, que podría no ser compatible con la [writeonly_texture_view (clase)](../../parallel/amp/reference/writeonly-texture-view-class.md). La clase `texture_view` introducida recientemente admite un supraconjunto de la funcionalidad de `writeonly_texture_view`; como resultado, `writeonly_texture_view` está desusado.
+Para Visual Studio 2013, C++ AMP presenta mejor compatibilidad para las características de textura de hardware como muestreo y mapas MIP, que podría no ser compatible con la [writeonly_texture_view (clase)](../../parallel/amp/reference/writeonly-texture-view-class.md). La clase `texture_view` introducida recientemente admite un supraconjunto de la funcionalidad de `writeonly_texture_view`; como resultado, `writeonly_texture_view` está en desuso.
 
 Se recomienda, al menos para nuevo código, utilizar `texture_view` para tener acceso a la funcionalidad proporcionada antes por `writeonly_texture_view`. Compare los dos ejemplos de código siguientes que escriben en un objeto de textura con dos componentes (int_2). Observe que en ambos casos, la vista, `wo_tv4`, debe capturarse por el valor de la expresión lambda. A continuación se muestra el ejemplo que usa la nueva clase `texture_view`:
 

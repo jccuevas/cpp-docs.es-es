@@ -1,10 +1,6 @@
 ---
-title: fsetpos | Microsoft Docs
-ms.custom: ''
+title: fsetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fsetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fsetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c381cf478a97d47efe10c68096fffe3d9fd8efdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528237"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -54,7 +44,7 @@ int fsetpos(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 *punto de venta*<br/>
@@ -62,13 +52,13 @@ Almacenamiento del indicador de posición.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **fsetpos** devuelve 0. En caso de error, la función devuelve un valor distinto de cero y establece **errno** a uno de los siguientes (definidos en ERRNO de constantes del manifiesto. (H): **EBADF**, lo que significa que el archivo no está accesible o el objeto que *flujo* señala a no es una estructura de archivo válido; o **EINVAL**, lo que significa que un valor no válido para *flujo* o *pos* se pasó. Si se pasa un parámetro no válido, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Si es correcto, **fsetpos** devuelve 0. En caso de error, la función devuelve un valor distinto de cero y establece **errno** a uno de los siguientes (definidas en ERRNO de constantes del manifiesto. (H): **EBADF**, lo que significa que el archivo no está accesible o el objeto que *secuencia* señala a no es una estructura de archivo válido; o **EINVAL**, lo que significa que un valor no válido para *secuencia* o *pos* se pasó. Si se pasa un parámetro no válido, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fsetpos** función establece el indicador de posición de archivo para *flujo* en el valor de *pos*, que se obtiene en una llamada anterior a **fgetpos**contra *flujo*. La función borra el indicador de fin de archivo y deshace los efectos de [ungetc](ungetc-ungetwc.md) en *flujo*. Después de llamar a **fsetpos**, la siguiente operación en *flujo* puede ser de entrada o salida.
+El **fsetpos** función establece el indicador de posición de archivo para *secuencia* al valor de *pos*, que se obtiene en una llamada anterior a **fgetpos**contra *secuencia*. La función borra el indicador de fin de archivo y deshace los efectos de [ungetc](ungetc-ungetwc.md) en *secuencia*. Después de llamar a **fsetpos**, la siguiente operación en *secuencia* es posible que sea de entrada o salida.
 
 ## <a name="requirements"></a>Requisitos
 

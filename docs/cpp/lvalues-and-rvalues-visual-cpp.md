@@ -1,26 +1,16 @@
 ---
-title: 'Categorías de valor: Lvalues y Rvalues (Visual C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Categorías de valor: Lvalues y Rvalues (Visual C++)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
-ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866220"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546359"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues y Rvalues (Visual C++)
 
@@ -30,7 +20,7 @@ El estándar C ++ 17 define las categorías de valor de expresión como sigue:
 
 - Un *glvalue* es una expresión cuya evaluación determina la identidad de un objeto, el campo de bits o la función.
 - Un *prvalue* es una expresión cuya evaluación Inicializa un objeto o un campo de bits, o calcula el valor del operando de un operador, como especificado por el contexto donde aparece.
-- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque es casi al final de su ciclo de vida). [Ejemplo: determinados tipos de expresiones que implican las referencias rvalue (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue. ]
+- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque es casi al final de su ciclo de vida). [Ejemplo: determinados tipos de expresiones que implican las referencias rvalue (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue. ]
 - Un *lvalue* es un glvalue que no sea un xvalue.
 - Un *rvalue* es un prvalue o un xvalue.
 

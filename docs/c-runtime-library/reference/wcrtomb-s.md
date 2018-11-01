@@ -1,10 +1,6 @@
 ---
-title: wcrtomb_s | Microsoft Docs
-ms.custom: ''
+title: wcrtomb_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb_s
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb_s function
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a035010c2af49c0d12b4b7f1d6429c66ba9032cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522476"
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
 
@@ -83,21 +73,21 @@ Un puntero a un **mbstate_t** objeto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el valor cero o un **errno** valor si se produce un error.
+Devuelve cero o un **errno** valor si se produce un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **wcrtomb_s** función convierte un carácter ancho, comenzando en el estado de conversión especificada contenido en *mbstate*, desde el valor contenido en *wchar*, en el dirección representada por *mbchar*. El *pReturnValue* valor será el número de bytes que se convierten, pero no más de **MB_CUR_MAX** bytes o un -1 si se produjo un error.
+El **wcrtomb_s** función convierte un carácter ancho, comenzando en el estado de conversión especificado contenido en *mbstate*, desde el valor contenido en *wchar*, en el dirección representada por *mbchar*. El *pReturnValue* valor será el número de bytes convertidos, pero no más de **MB_CUR_MAX** bytes o -1 si se produjo un error.
 
-Si *mbstate* es null, interno **mbstate_t** se usa el estado de la conversión. Si el carácter que se encuentra en *wchar* no tiene un carácter multibyte correspondiente, el valor de *pReturnValue* será -1 y la función devolverá el **errno** valor de **EILSEQ**.
+Si *mbstate* es null, interno **mbstate_t** se usa el estado de la conversión. Si el carácter incluido en *wchar* no tiene un carácter multibyte correspondiente, el valor de *pReturnValue* será -1 y la función devolverá el **errno** valor de **EILSEQ**.
 
-El **wcrtomb_s** función difiere de [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) por su capacidad de reinicio. El estado de la conversión se almacena en *mbstate* para llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación podría utilizar **wcsrlen** en lugar de **wcslen**, si una llamada subsiguiente a **wcsrtombs_s** se usaron en lugar de **wcstombs_s**.
+El **wcrtomb_s** función difiere de [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** lugar **wcslen**, si una llamada subsiguiente a **wcsrtombs_s** se usaron en lugar de **wcstombs_s**.
 
 En C++, el uso de esta función se simplifica con las sobrecargas de plantilla; las sobrecargas pueden deducir automáticamente la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Excepciones
 
-El **wcrtomb_s** función es segura para subprocesos siempre y cuando no llama a ninguna función en el subproceso actual **setlocale** mientras se está ejecutando esta función y la *mbstate* es null.
+El **wcrtomb_s** función es segura para subprocesos siempre y cuando ninguna función en el subproceso actual llame a **setlocale** mientras se está ejecutando esta función y el *mbstate* es null.
 
 ## <a name="example"></a>Ejemplo
 

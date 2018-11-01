@@ -1,10 +1,6 @@
 ---
-title: _mbbtombc, _mbbtombc_l | Microsoft Docs
-ms.custom: ''
+title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtombc_l
 - _mbbtombc
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbbtombc
 - mbbtombc_l
 - mbbtombc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbbtombc_l function
 - mbbtombc function
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98053437d2e189c26b46b53ec34ef67740d62bce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547997"
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
 
@@ -78,11 +68,11 @@ Si **_mbbtombc** convierte correctamente *c*, devuelve un carácter multibyte; d
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbbtombc** función convierte un carácter multibyte dado de un solo byte en un carácter multibyte de doble byte correspondiente. Caracteres deben estar dentro del intervalo 0 x 20-0x7E o 0xA1 - 0xDF va a convertir.
+El **_mbbtombc** función convierte un determinado carácter multibyte de byte único en un carácter multibyte de doble byte correspondiente. Caracteres deben estar dentro del intervalo 0 x 20-0x7E o 0xA1 - 0xDF va a convertir.
 
 El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de esta función son idénticas, salvo que **_mbbtombc** usa la configuración regional actual para este comportamiento dependiente de la configuración regional y **_mbbtombc_l** en su lugar utiliza el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En versiones anteriores, **_mbbtombc** se llamaba **hantozen**. Para código nuevo, use **_mbbtombc**.
+En versiones anteriores, **_mbbtombc** se denominaba **hantozen**. Para código nuevo, use **_mbbtombc**.
 
 ## <a name="requirements"></a>Requisitos
 

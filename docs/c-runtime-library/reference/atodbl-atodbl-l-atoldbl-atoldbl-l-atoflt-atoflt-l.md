@@ -1,10 +1,6 @@
 ---
-title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs
-ms.custom: ''
+title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,20 +49,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393594"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552040"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Convierte una cadena en double (**_atodbl**), long double (**_atoldbl**), o float (**_atoflt**).
+Convierte una cadena en un valor double (**_atodbl**), long double (**_atoldbl**), o float (**_atoflt**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -100,9 +90,9 @@ Si la operación se realiza correctamente, devuelve 0. Códigos de error posible
 
 Estas funciones convierten una cadena en un valor de punto flotante. La diferencia entre estas funciones y la **atof** familia de funciones es que estas funciones no generan código de punto flotante y no producen excepciones de hardware. En lugar de ello, las condiciones de error se notifican como códigos de error.
 
-Si una cadena no tiene una interpretación válida como un valor de punto flotante, *valor* se establece en cero y el rendimiento de valor es cero.
+Si una cadena no tiene una interpretación válida como valor de punto flotante, *valor* se establece en cero y el valor es cero.
 
-Las versiones de estas funciones que tienen la **_l** sufijo son idénticas las versiones que no tienen el sufijo, salvo que usan el *configuración regional* parámetro que se pasa en lugar del subproceso actual configuración regional.
+Las versiones de estas funciones que tienen el **_l** sufijo son idénticas las versiones que no tienen el sufijo, salvo que usan el *configuración regional* parámetro que se pasa en lugar del subproceso actual configuración regional.
 
 ## <a name="requirements"></a>Requisitos
 
