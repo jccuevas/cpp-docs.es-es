@@ -1,11 +1,6 @@
 ---
-title: cacos, cacosf, cacosl | Microsoft Docs
-ms.custom: ''
+title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543200"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
@@ -67,16 +56,16 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo que representa un ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El arco coseno de *z*, en radianes. El resultado es ilimitado a lo largo del eje imaginario y en el en el intervalo [0, π] en el eje real. Se producirá un error de dominio si *z* está fuera del intervalo [-1, + 1].
+El arco coseno de *z*, en radianes. El resultado es ilimitado en el eje imaginario y en la en el intervalo [0, π] en el eje real. Se producirá un error de dominio si *z* está fuera del intervalo [-1, + 1].
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **cacos** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cacos** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cacos** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cacos** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
