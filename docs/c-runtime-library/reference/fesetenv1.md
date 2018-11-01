@@ -1,11 +1,6 @@
 ---
-title: fesetenv | Documentos de Microsoft
-ms.custom: ''
+title: fesetenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetenv
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd761f505c602aad44c5e00df223d4a6c983e851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436167"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -63,9 +52,9 @@ Devuelve 0 si el entorno se ha establecido correctamente. De lo contrario, devue
 
 ## <a name="remarks"></a>Comentarios
 
-El **fesetenv** función establece el entorno de punto flotante actual desde el valor almacenado en el **fenv_t** objeto señalado por *penv*. El entorno de punto flotante consiste en el conjunto de marcas de estado y modos de control que afectan a los cálculos de punto flotante. Incluye el modo de redondeo y las marcas de estado de las excepciones de punto flotante.  Si *penv* no **FE_DFL_ENV** o no apunta a válido **fenv_t** objeto posterior comportamiento es indefinido.
+El **fesetenv** función establece el entorno actual de punto flotante del valor almacenado en el **fenv_t** objeto señalado por *penv*. El entorno de punto flotante consiste en el conjunto de marcas de estado y modos de control que afectan a los cálculos de punto flotante. Incluye el modo de redondeo y las marcas de estado de las excepciones de punto flotante.  Si *penv* no **FE_DFL_ENV** o no apunta a una **fenv_t** objeto, el comportamiento posterior es indefinido.
 
-Una llamada a esta función establece la excepción de los indicadores de estado que se encuentran en el *penv* objeto, pero no genera esas excepciones.
+Una llamada a esta función establece la excepción de las marcas de estado que se encuentran en el *penv* objeto, pero no genera esas excepciones.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 
