@@ -1,29 +1,19 @@
 ---
-title: Los genéricos (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Los genéricos (C++ / c++ / CLI y c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - generic_cpp
 - generic
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 5c00d8ece7d08adbb6e60cccd75cbe84487a9ecd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477615"
 ---
 # <a name="generics--ccli-and-ccx"></a>Los genéricos (C++ / c++ / CLI y c++ / CX)
 
@@ -36,10 +26,10 @@ Los genéricos son métodos y tipos parametrizados. En esta sección, averigüe 
 [Información general sobre genéricos en C / c++ / CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Información sobre los genéricos son, la motivación para la característica de lenguaje, las definiciones de términos que se usan para describir los genéricos y la información sobre el uso de tipos de referencia y tipos de valor como parámetros de tipo genéricos.
 
-[Interfaces genéricas (C++ / c++ / CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Interfaces genéricas (C++/CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Información sobre cómo definir y usar interfaces genéricas.
 
-[Delegados genéricos (C++ / c++ / CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Delegados genéricos (C++/CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Información sobre cómo definir y usar a delegados genéricos.
 
 [Restricciones de parámetros de tipo genérico (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
@@ -48,7 +38,7 @@ Información sobre el uso de restricciones en tipos genéricos.
 [Uso de genéricos (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Información sobre el uso de genéricos definidos en ensamblados. NET, posiblemente creados en otros lenguajes, en C++ / c++ / CLI.
 
-[Genéricos y plantillas (C++ / c++ / CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Genéricos y plantillas (C++/CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Una comparación de los genéricos y plantillas, al que se usará cada y cómo combinarlos útiles.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Compatible con Common Language Runtime

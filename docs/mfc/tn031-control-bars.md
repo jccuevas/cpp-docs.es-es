@@ -1,14 +1,8 @@
 ---
-title: 'TN031: Barras de Control | Microsoft Docs'
-ms.custom: ''
+title: 'TN031: Barras de control'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
-dev_langs:
-- C++
 helpviewer_keywords:
 - control bars [MFC], styles
 - CStatusBar class [MFC], Tech Note 31 usage
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412dd9e0a4e81ee6152197634205401cbe71df2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463317"
 ---
 # <a name="tn031-control-bars"></a>TN031: Barras de control
 
@@ -74,7 +64,7 @@ La clase `CControlBar` proporciona una implementación estándar para:
 
 - Admitir la implementación de clases derivadas.
 
-Los objetos de la barra de control C++ normalmente se insertarán como miembros de una clase derivada `CFrameWnd` , y se borrarán cuando el elemento primario `HWND` y el objeto se destruyan. Si necesita asignar un objeto de barra de control en el montón, simplemente puede establecer el *m_bAutoDestruct* miembro **TRUE** para que la barra de control "**eliminar este**" cuando el `HWND` se destruye.
+Los objetos de la barra de control C++ normalmente se insertarán como miembros de una clase derivada `CFrameWnd` , y se borrarán cuando el elemento primario `HWND` y el objeto se destruyan. Si necesita asignar un objeto de barra de control en el montón, simplemente establezca el miembro *m_bAutoDestruct* en **TRUE** para que la barra de control pueda "**eliminar esto**" cuando `HWND` se destruya.
 
 > [!NOTE]
 >  Si crea su propio `CControlBar`-clase derivada, en lugar de mediante uno de los de MFC derivadas de las clases, como `CStatusBar`, `CToolBar`, o `CDialogBar`, deberá establecer el *m_dwStyle* miembro de datos. Esto puede hacerse en el reemplazo de `Create`:

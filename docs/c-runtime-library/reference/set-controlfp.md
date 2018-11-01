@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp | Microsoft Docs
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499056"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -59,7 +49,7 @@ void __cdecl _set_controlfp(
 *newControl*<br/>
 Valores de bit de la nueva palabra de control.
 
-*máscara*<br/>
+*Máscara*<br/>
 Máscara de los bits de la nueva palabra de control que se va a definir.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -68,9 +58,9 @@ Ninguno.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_set_controlfp** es similar a la función **_control87**, pero solo establece la palabra de control de punto flotante *newControl*. Los bits de los valores indican el estado de control de punto flotante. El estado de control de punto flotante permite que el programa cambie los modos de precisión, redondeo e infinito en el paquete matemático de punto flotante. También puede enmascarar o desenmascarar excepciones de punto flotante mediante **_set_controlfp**. Para obtener más información, vea [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+El **_set_controlfp** es similar a la función **_control87**, pero solo establece la palabra de control de punto flotante en *newControl*. Los bits de los valores indican el estado de control de punto flotante. El estado de control de punto flotante permite que el programa cambie los modos de precisión, redondeo e infinito en el paquete matemático de punto flotante. También puede aplicar o quitar la máscara de excepciones de punto flotante mediante **_set_controlfp**. Para obtener más información, vea [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Esta función está en desuso cuando se compila con [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime solo admite la precisión de punto flotante predeterminada.
+Esta función está en desuso cuando se compila con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime solo admite la precisión de punto flotante predeterminada.
 
 ## <a name="requirements"></a>Requisitos
 
