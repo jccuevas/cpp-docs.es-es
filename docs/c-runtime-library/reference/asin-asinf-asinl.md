@@ -1,10 +1,6 @@
 ---
-title: ASIN, asinf, asinl | Documentos de Microsoft
-ms.custom: ''
+title: asin, asinf, asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393282"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476055"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -70,19 +60,19 @@ Valor cuyo arcoseno se va a calcular.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **asin** función devuelve el arco seno (función de seno inverso) de *x* en el intervalo de - π/2 a π/2 radianes.
+El **asin** función devuelve el arco seno (la función seno inverso) de *x* en el intervalo de - π/2 a π/2 radianes.
 
-De forma predeterminada, si *x* es menor que -1 o mayor que 1, **asin** devuelve un indefinido.
+De forma predeterminada, si *x* es menor que -1 o mayor que 1, **asin** devuelve un valor indefinido.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NO VÁLIDO**|**_DOMAIN**|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
-|&#124;x&#124;>1|**NO VÁLIDO**|**_DOMAIN**|
+|± ∞|**NO VÁLIDO**|**_DOMINIO**|
+|+ **QNAN**, **IND**|ninguna|**_DOMINIO**|
+|&#124;x&#124;>1|**NO VÁLIDO**|**_DOMINIO**|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **asin** con **float** y **largo** **doble** valores. En un programa C, **asin** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **asin** con **float** y **largo** **doble** valores. En un programa C, **asin** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,39 +1,29 @@
 ---
-title: Compilador (niveles 1 y 4) C4700 | Documentos de Microsoft
-ms.custom: ''
+title: Advertencia del compilador (niveles 1 y 4) C4700
 ms.date: 02/21/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4700
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 876ae98fb2fdea5a9d8bdaecb93b8c229213d329
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa3326bd5ab495dbc4c54130bb168422eb827dce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286073"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463224"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>Advertencia del compilador (niveles 1 y 4) C4700
 
-> variable local no inicializada '*nombre*' utiliza
+> variable local sin inicializar '*nombre*' utiliza
 
-La variable local *nombre* ha sido *usa*, es decir, lectura desde, antes de que ha asignado ningún valor. En C y C++, no se inicializan las variables locales de forma predeterminada. Las variables sin inicializar pueden contener cualquier valor y su uso conduce a un comportamiento indefinido. Advertencia C4700 casi siempre indica un error que puede provocar resultados imprevisibles o bloqueos en el programa.
+La variable local *nombre* ha sido *usa*, es decir, se leen, antes de que tenga asignado un valor. En C y C++, las variables locales no se inicializan de forma predeterminada. Variables sin inicializar pueden contener cualquier valor, y su uso da lugar a un comportamiento indefinido. Advertencia C4700 casi siempre indica un error que puede provocar resultados imprevisibles o bloqueos en el programa.
 
-Para corregir este problema, puede inicializar las variables locales cuando se declaran o asignarles un valor antes de utilizarlos. Una función puede usarse para inicializar una variable que se pasa como un parámetro de referencia, o cuando su dirección se pasa como un parámetro de puntero.
+Para corregir este problema, puede inicializar las variables locales cuando se declaran o asignarles un valor antes de usarse. Una función puede utilizarse para inicializar una variable que se pasa como un parámetro de referencia, o cuando su dirección se pasa como un parámetro de puntero.
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo genera C4700 cuando se utilizan variables t, u y v antes de que se inicializan y muestra el tipo de valor de elementos no utilizados que puede provocar. Las variables x y realice z no provocar la advertencia, porque se inicializan antes de su uso:
+Este ejemplo genera C4700 cuando se usan variables t, u y v antes de que se inicializan y se muestra el tipo de valor de elementos no utilizados que puede producir. Las variables x y realice z no provocar la advertencia, porque se inicializan antes de su uso:
 
 ```cpp
 // c4700.cpp
@@ -63,7 +53,7 @@ int main()
 }
 ```
 
-Cuando este código es ejecutar, t, u y v están sin inicializar, y el resultado de s es impredecible:
+Cuando este código es la ejecución, t, u y v están sin inicializar y la salida de s es imprevisible:
 
 ```Output
 Value in s: 37816963

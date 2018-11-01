@@ -1,10 +1,6 @@
 ---
-title: _ismbbkalnum, _ismbbkalnum_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkalnum
 - _ismbbkalnum_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkalnum
 - ismbbkalnum_l
 - _ismbbkalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkalnum_l function
 - ismbbkalnum_l function
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62aa208085b3a295ef51f4aa5ecafd7e68bb4710
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481060"
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -71,7 +61,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbkalnum** devuelve un valor distinto de cero si el entero *c* es un símbolo de texto no ASCII que no sea de puntuación, o 0 si no lo está. **_ismbbkalnum** utiliza la configuración regional actual para obtener información de caracteres dependientes de la configuración regional. **_ismbbkalnum_l** es idéntico a **_ismbbkalnum** salvo por que utiliza la configuración regional como parámetro. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** devuelve un valor distinto de cero si el entero *c* es un símbolo de texto no ASCII distinto de puntuación, o 0 si no lo está. **_ismbbkalnum** usa la configuración regional actual para la información sobre caracteres dependientes de la configuración regional. **_ismbbkalnum_l** es idéntico al **_ismbbkalnum** salvo que toma la configuración regional como parámetro. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

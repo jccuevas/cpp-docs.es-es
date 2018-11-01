@@ -1,10 +1,6 @@
 ---
-title: fread | Microsoft Docs
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400933"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468840"
 ---
 # <a name="fread"></a>fread
 
@@ -67,20 +57,20 @@ Tamaño del elemento en bytes.
 *count*<br/>
 Número máximo de elementos que se va a leer.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fread** devuelve el número de elementos completos leído realmente, que puede ser menor que *recuento* si se produce un error o si se encuentra el final del archivo antes de llegar a *recuento*. Use la **feof** o **ferror** función para distinguir un error de lectura de una condición de final de archivo. Si *tamaño* o *recuento* es 0, **fread** devuelve 0 y el contenido del búfer no se modifican. Si *flujo* o *búfer* es un puntero nulo, **fread** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve 0.
+**fread** devuelve el número de elementos completos leído realmente, que puede ser menor que *recuento* si se produce un error o si se encuentra el final del archivo antes de llegar a *recuento*. Use la **feof** o **ferror** función para distinguir un error de lectura de una condición de final de archivo. Si *tamaño* o *recuento* es 0, **fread** devuelve 0 y el contenido del búfer es iguales. Si *secuencia* o *búfer* es un puntero nulo, **fread** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve 0.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fread** función lee hasta *recuento* elementos de *tamaño* bytes a partir de la entrada *flujo* y los almacena en *búfer* . El puntero de archivo asociado a *flujo* (si existe) se incrementa el número de bytes leídos realmente. Si la secuencia especificada se abre en modo de texto, pares de avance de línea de retorno de carro se reemplazan por caracteres de avance de línea única. Este reemplazo no tiene ningún efecto en el puntero de archivo ni en el valor devuelto. Si se produce un error, la posición del puntero de archivo es indeterminada. No se puede determinar el valor de un elemento leído parcialmente.
+El **fread** función lee hasta *recuento* elementos de *tamaño* bytes en la entrada *secuencia* y los almacena en *búfer* . El puntero de archivo asociado *secuencia* (si existe) se aumenta el número de bytes leídos realmente. Si la secuencia dada se abre en modo de texto, los pares de retorno de carro se reemplazan por caracteres de avance de línea. Este reemplazo no tiene ningún efecto en el puntero de archivo ni en el valor devuelto. Si se produce un error, la posición del puntero de archivo es indeterminada. No se puede determinar el valor de un elemento leído parcialmente.
 
-Esta función bloquea otros subprocesos. Si necesita una versión no realiza el bloqueo, utilice **_fread_nolock**.
+Esta función bloquea otros subprocesos. Si tiene una versión que no sea de bloqueo, use **_fread_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,29 +1,19 @@
 ---
-title: Clase mask_array | Microsoft Docs
-ms.custom: ''
+title: mask_array (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - valarray/std::mask_array
-dev_langs:
-- C++
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 108c942bef33e44b515d46e953c9d99274e3ce8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962678"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475830"
 ---
-# <a name="maskarray-class"></a>mask_array (Clase)
+# <a name="maskarray-class"></a>mask_array (clase)
 
 Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre matrices de subconjuntos.
 
