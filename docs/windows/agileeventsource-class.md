@@ -1,28 +1,18 @@
 ---
-title: Clase AgileEventSource | Microsoft Docs
-ms.custom: ''
+title: Clase AgileEventSource
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 - event/Microsoft::WRL::InvokeModeOptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - AgileEventSource class
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0f2ee187087917220751155cc43e8619e6dcf763
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8e99c5930fa4df5be686a9c738586ecbb21e2855
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526575"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 

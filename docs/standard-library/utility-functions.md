@@ -1,8 +1,6 @@
 ---
-title: Funciones de &lt;utility&gt; | Microsoft Docs
-ms.custom: ''
+title: Funciones de &lt;utility&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543915"
 ---
 # <a name="ltutilitygt-functions"></a>Funciones de &lt;utility&gt;
 
@@ -258,11 +256,11 @@ El tipo devuelto `U` se determina de igual forma a partir del tipo de entrada `U
 
 Una ventaja de `make_pair` es que el compilador determina automáticamente los tipos de objetos que se almacenan y no tienen que especificarse explícitamente. No utilice los argumentos de plantilla explícitos como `make_pair<int, int>(1, 2)` cuando use `make_pair` porque es innecesariamente detallado y agrega problemas complejos de referencia rvalue que pueden producir un error de compilación. En este ejemplo, la sintaxis correcta sería `make_pair(1, 2)`.
 
-La función auxiliar `make_pair` también permite pasar dos valores a una función que requiera un par como un parámetro de entrada.
+La función del asistente `make_pair` también permite pasar dos valores a una función que requiera un par como un parámetro de entrada.
 
 ### <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo sobre cómo usar la función auxiliar `make_pair` para declarar e inicializar un par, vea [pair (Estructura)](../standard-library/pair-structure.md).
+Para obtener un ejemplo sobre cómo usar la función del asistente `make_pair` para declarar e inicializar un par, vea [pair (Estructura)](../standard-library/pair-structure.md).
 
 ## <a name="move"></a>  move
 
