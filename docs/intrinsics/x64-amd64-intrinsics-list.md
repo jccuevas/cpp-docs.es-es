@@ -1,26 +1,16 @@
 ---
-title: x64 (amd64) lista de intrínsecos | Microsoft Docs
-ms.custom: ''
+title: x64 (amd64) (Lista de intrínsecos)
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28a1d01910fd996ea396d2fd3e845001fa208341
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491261"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) (Lista de intrínsecos)
 
@@ -30,11 +20,11 @@ Para obtener información sobre funciones intrínsecas individuales, vea estos r
 
 - El archivo de encabezado. Muchos intrínsecos se documentan en los comentarios del archivo de encabezado.
 
-- [Guía sobre intrínsecos de Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Use el cuadro de búsqueda para buscar los intrínsecos concretos.
+- [Intel Intrinsics Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide)(Guía sobre intrínsecos de Intel). Use el cuadro de búsqueda para buscar los intrínsecos concretos.
 
-- [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](https://software.intel.com/articles/intel-sdm)
+- [Manuales para desarrolladores de software de las arquitecturas Intel 64 e IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Referencia de programación de extensiones de conjuntos de instrucciones de arquitectura Intel](https://software.intel.com/isa-extensions)
+- [Intel Architecture Instruction Set Extensions Programming Reference (Referencia de programación de extensiones de conjuntos de instrucciones de arquitectura Intel)](https://software.intel.com/isa-extensions)
 
 - [Introducción a las extensiones de Vector avanzadas de Intel](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
@@ -1284,4 +1274,4 @@ La tabla siguiente enumera los intrínsecos disponibles en procesadores x64. La 
 
 [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
 [Intrínsecos ARM](../intrinsics/arm-intrinsics.md)<br/>
-[x86 intrínsecos](../intrinsics/x86-intrinsics-list.md)
+[Intrínsecos x86](../intrinsics/x86-intrinsics-list.md)
