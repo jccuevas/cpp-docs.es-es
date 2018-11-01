@@ -1,10 +1,6 @@
 ---
-title: 'Errores graves del compilador: de C999 a C1999 | Documentos de Microsoft'
-ms.custom: ''
+title: 'Errores graves del compilador: de C999 a C1999'
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,19 +161,13 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677336"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errores graves del compilador: de C999 a C1999
 
@@ -198,7 +188,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error irrecuperable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|marca '*string*' irreconocible en '*option*'|
 |[Error irrecuperable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|no se ha especificado un archivo de entrada|
 |[Error irrecuperable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|límite del compilador: las macros están demasiado anidadas|
-|[Error irrecuperable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Compruebe si olvidó agregar ' #include <*archivo*>' a su origen?|
+|[Error irrecuperable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Olvidó agregar ' #include <*archivo*>' para el origen?|
 |Error irrecuperable C1012|Paréntesis '*character*' desemparejado.|
 |Error irrecuperable C1013|límite del compilador: hay demasiados paréntesis abiertos|
 |Error irrecuperable C1014|hay demasiados archivos de inclusión: nivel = *number*|
@@ -224,7 +214,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Error irrecuperable C1048|opción '*string*' desconocida en '*option*'|
 |Error irrecuperable C1049|argumento numérico*value*' no válido|
 |[Error irrecuperable C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|el archivo de base de datos de programa, '*file*', tiene un formato obsoleto; elimínelo y vuelva a compilar|
-|[Error irrecuperable C1052](fatal-error-c1052.md)|archivo de base de datos de programa, '*filename*', se genera mediante el vinculador con/debug: Fastlink; compilador no puede actualizar estos archivos PDB; elimínela o use /Fd para especificar otro nombre de archivo PDB|
+|[Error irrecuperable C1052](fatal-error-c1052.md)|archivo de base de datos de programa, '*filename*', fue generado por el vinculador con/debug: Fastlink; compilador no puede actualizar estos archivos PDB; elimínelo o utilice /Fd para especificar otro nombre de archivo PDB|
 |Error irrecuperable C1053|'*function*': la función es demasiado larga|
 |[Error irrecuperable C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|límite del compilador: los inicializadores están demasiado anidados|
 |[Error irrecuperable C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|límite del compilador: no hay claves|

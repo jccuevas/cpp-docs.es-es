@@ -1,10 +1,6 @@
 ---
-title: __min | Microsoft Docs
-ms.custom: ''
+title: __min
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __min
 apilocation:
@@ -23,24 +19,18 @@ f1_keywords:
 - __min
 - min
 - _min
-dev_langs:
-- C++
 helpviewer_keywords:
 - __min macro
 - min macro
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cc69cb018cda6fc093c570dab86a8df4cf396b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617820"
 ---
 # <a name="min"></a>__min
 
@@ -63,9 +53,9 @@ El menor de los dos argumentos.
 
 ## <a name="remarks"></a>Comentarios
 
-El **__min** macro compara dos valores y devuelve el valor de uno más pequeño. Los argumentos pueden ser de cualquier tipo de datos numérico, con o sin signo. Los argumentos y el valor devuelto deben ser del mismo tipo de datos.
+El **__min** macro compara dos valores y devuelve el valor del más pequeño. Los argumentos pueden ser de cualquier tipo de datos numérico, con o sin signo. Los argumentos y el valor devuelto deben ser del mismo tipo de datos.
 
-El argumento devuelto se evalúa dos veces mediante la macro. Esto puede provocar resultados inesperados si el argumento es una expresión que cambia su valor cuando se evalúa, como `*p++`.
+El argumento devuelto se evalúa dos veces, la macro. Esto puede provocar resultados inesperados si el argumento es una expresión que se modifica su valor cuando sea evaluado, tales como `*p++`.
 
 ## <a name="requirements"></a>Requisitos
 

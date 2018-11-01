@@ -1,27 +1,16 @@
 ---
-title: Uso de varios conjuntos de resultados de un procedimiento almacenado | Microsoft Docs
-ms.custom: ''
+title: Utilizar varios conjuntos de resultados de un procedimiento almacenado
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - stored procedures, returning result sets
 - multiple result sets
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: ac30f74a593f79cea7f252c454f19b85260e27b8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fe41bfe1d9fb0207f55d2cd653a56a1ff00ce2d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078519"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570685"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Utilizar varios conjuntos de resultados de un procedimiento almacenado
 

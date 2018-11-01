@@ -1,10 +1,6 @@
 ---
-title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l | Microsoft Docs
-ms.custom: ''
+title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,16 +51,12 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416377"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579678"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
@@ -117,7 +107,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor que indica la relación de *string1* a *string2*, como se indica a continuación.
+Cada una de estas funciones devuelve un valor que indica la relación de *string1* a *cadena2*, como se indica a continuación.
 
 |Valor devuelto|Relación de string1 y string2|
 |------------------|----------------------------------------|
@@ -126,15 +116,15 @@ Cada una de estas funciones devuelve un valor que indica la relación de *string
 |> 0|*cadena1* mayor *cadena2*|
 |**_NLSCMPERROR**|Error.|
 
-Cada una de estas funciones devuelve **_NLSCMPERROR**. Usar **_NLSCMPERROR**, incluir \<string.h > o \<mbstring.h >. **_wcsicoll** puede producir un error si el valor *string1* o *string2* contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsicoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsicoll**, establezca **errno** en 0 y, a continuación, comprobar **errno** después de llamar a **_wcsicoll**.
+Cada una de estas funciones devuelve **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluir \<string.h > o \<mbstring.h >. **_wcsicoll** puede producir un error si *string1* o *cadena2* contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsicoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsicoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **_wcsicoll**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de *string1* y *string2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
+Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de *string1* y *cadena2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
 
-**_stricmp** difiere de **_stricoll** en que la **_stricmp** comparación se ve afectada por **LC_CTYPE**, mientras que la **_stricoll** comparación se realiza de acuerdo con la **LC_CTYPE** y **LC_COLLATE** categorías de la configuración regional. Para obtener más información sobre la **LC_COLLATE** categoría, vea [setlocale](setlocale-wsetlocale.md) y [categorías de configuración regional](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el **_l** sufijo use la configuración regional actual; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_stricmp** difiere **_stricoll** en que el **_stricmp** comparación se ve afectada por **LC_CTYPE**, mientras que el **_stricoll** comparación según la **LC_CTYPE** y **LC_COLLATE** categorías de la configuración regional. Para obtener más información sobre la **LC_COLLATE** categoría, vea [setlocale](setlocale-wsetlocale.md) y [categorías de configuración regional](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el **_l** sufijo use la configuración regional actual; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Todas estas funciones validan sus parámetros. Si el valor *string1* o *string2* son **NULL** se invoca punteros, el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
+Todas estas funciones validan sus parámetros. Si *string1* o *cadena2* son **NULL** se invoca punteros, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

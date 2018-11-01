@@ -1,10 +1,6 @@
 ---
-title: ceil, ceilf, ceill | Microsoft Docs
-ms.custom: ''
+title: ceil, ceilf, ceill
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ceilf
 - ceil
@@ -27,24 +23,18 @@ f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa68ff857db09d1426fbed6ea497624e13cc362a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637195"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -77,17 +67,17 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **ceil** funciones devuelven un valor de punto flotante que representa el entero más pequeño que es mayor o igual que *x*. No se devuelve ningún error.
+El **ceil** funciones devuelven un valor de punto flotante que representa el entero más pequeño que es mayor o igual a *x*. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|+ **QNAN**, **IND**|ninguna|**_DOMINIO**|
 
 **ceil** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **ceil** que toman **float** o **largo** **doble** tipos. En un programa C, **ceil** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ceil** que toman **float** o **largo** **doble** tipos. En un programa C, **ceil** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

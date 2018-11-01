@@ -1,10 +1,6 @@
 ---
-title: _memicmp, _memicmp_l | Microsoft Docs
-ms.custom: ''
+title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403058"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636818"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
@@ -84,18 +74,18 @@ El valor devuelto indica la relación entre los búferes.
 
 |Valor devuelto|Relación de los primeros count bytes de buf1 y buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* inferior a *buffer2*.|
-|0|*buffer1* idéntica a *buffer2*.|
+|< 0|*buffer1* menor *buffer2*.|
+|0|*buffer1* idéntico al *buffer2*.|
 |> 0|*buffer1* mayor *buffer2*.|
 |**_NLSCMPERROR**|Error.|
 
 ## <a name="remarks"></a>Comentarios
 
-El **_memicmp** función compara los primeros *recuento* caracteres de dos búferes *buffer1* y *buffer2* byte a byte. La comparación no distingue entre mayúsculas y minúsculas.
+El **_memicmp** función compara los primeros *recuento* caracteres de los dos búferes *buffer1* y *buffer2* byte a byte. La comparación no distingue entre mayúsculas y minúsculas.
 
-Si el valor *buffer1* o *buffer2* es un puntero nulo, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** a **EINVAL**.
+Si bien *buffer1* o *buffer2* es un puntero nulo, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** a **EINVAL**.
 
-**_memicmp** utiliza la configuración regional actual para el comportamiento dependiente de la configuración regional; **_memicmp_l** es idéntica, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_memicmp** usa la configuración regional actual para el comportamiento dependiente de la configuración regional; **_memicmp_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

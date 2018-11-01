@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDebugFillThreshold | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDebugFillThreshold
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0980331389a36fa123c6ee64989296f5afec5c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398664"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602207"
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -63,7 +53,7 @@ El valor de umbral anterior.
 
 ## <a name="remarks"></a>Comentarios
 
-Las versiones de depuración de algunas funciones de CRT con seguridad mejorada rellenan el búfer pasado a estos con un carácter especial (0xFE). Esto ayuda a encontrar casos en que se ha pasado el tamaño incorrecto a la función. Lamentablemente, también reduce el rendimiento. Para mejorar el rendimiento, utilice **_CrtSetDebugFillThreshold** para deshabilitar el llenado de búfer para los búferes mayores que el *newThreshold* umbral. A *newThreshold* el valor 0 deshabilita para todos los búferes.
+Las versiones de depuración de algunas funciones de CRT con seguridad mejorada llenar el búfer pasado a ellas con un carácter especial (0xFE). Esto ayuda a encontrar casos en que se ha pasado el tamaño incorrecto a la función. Lamentablemente, también reduce el rendimiento. Para mejorar el rendimiento, utilice **_CrtSetDebugFillThreshold** para deshabilitar el llenado de búfer para los búferes mayores que el *newThreshold* umbral. Un *newThreshold* valor 0 la deshabilita para todos los búferes.
 
 El umbral predeterminado es **SIZE_T_MAX**.
 

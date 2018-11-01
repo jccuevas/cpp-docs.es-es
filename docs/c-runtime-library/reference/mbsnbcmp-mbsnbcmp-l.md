@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcmp, _mbsnbcmp_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcmp
 - _mbsnbcmp_l
@@ -27,8 +23,6 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a21d19a3de6a047366497283f2e8515aca37794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620016"
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -84,25 +74,25 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto indica la relación ordinal entre las subcadenas de *string1* y *string2*.
+El valor devuelto indica la relación ordinal entre las subcadenas de *string1* y *cadena2*.
 
 |Valor devuelto|Descripción|
 |------------------|-----------------|
-|< 0|*cadena1* subcadena es menor que *string2* subcadena.|
-|0|*cadena1* subcadena es idéntica a *string2* subcadena.|
-|> 0|*cadena1* es mayor que la subcadena *string2* subcadena.|
+|< 0|*cadena1* subcadena es menor que *cadena2* subcadena.|
+|0|*cadena1* es idéntica a la subcadena *cadena2* subcadena.|
+|> 0|*cadena1* es mayor que la subcadena *cadena2* subcadena.|
 
 Un error de validación de parámetros, **_mbsnbcmp** y **_mbsnbcmp_l** devolver **_NLSCMPERROR**, que se define en \<string.h > y \< MBSTRING.h >.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnbcmp** funciones comparan a lo sumo los primeros *recuento* bytes en *string1* y *string2* y devuelve un valor que indica el relación entre las subcadenas. **_mbsnbcmp** es una versión entre mayúsculas y minúsculas de **_mbsnbicmp**. A diferencia de **_mbsnbcoll**, **_mbsnbcmp** no se ve afectado por el orden de intercalación de la configuración regional. **_mbsnbcmp** reconoce las secuencias de caracteres multibyte según la actual [página de códigos](../../c-runtime-library/code-pages.md).
+El **_mbsnbcmp** funciones comparan a lo sumo los primeros *recuento* bytes en *string1* y *cadena2* y devolver un valor que indica el relación entre las subcadenas. **_mbsnbcmp** es una versión entre mayúsculas y minúsculas de **_mbsnbicmp**. A diferencia de **_mbsnbcoll**, **_mbsnbcmp** no se ve afectado por el orden de intercalación de la configuración regional. **_mbsnbcmp** reconoce secuencias de caracteres multibyte según la actual [página de códigos](../../c-runtime-library/code-pages.md).
 
-**_mbsnbcmp** es similar a **_mbsncmp**, salvo que **_mbsncmp** compara las cadenas por caracteres en lugar de en bytes.
+**_mbsnbcmp** es similar a **_mbsncmp**, salvo que **_mbsncmp** compara las cadenas de caracteres en lugar de bytes.
 
 El valor de salida se ve afectado por la **LC_CTYPE** categoría de la configuración regional, que especifica los bytes iniciales y finales bytes de caracteres multibyte. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md). El **_mbsnbcmp** función usa la configuración regional actual para este comportamiento dependiente de la configuración regional. El **_mbsnbcmp_l** función es idéntica, salvo que usa el *configuración regional* parámetro en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si el valor *string1* o *string2* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven **_NLSCMPERROR** y **errno** está establecido en **EINVAL**.
+Si bien *string1* o *cadena2* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven **_NLSCMPERROR** y **errno** está establecido en **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
