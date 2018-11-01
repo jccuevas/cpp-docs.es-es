@@ -1,10 +1,6 @@
 ---
-title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs
-ms.custom: ''
+title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoll
 - _atoll_l
@@ -31,24 +27,18 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15a0753a487d969d3f75e1e41b6509ea40b9b19f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a857e0f04ff875a740a8a5d1401484cdaf9d3c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613985"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -83,11 +73,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el **largo** **largo** valor generado mediante la interpretación de los caracteres de entrada como un número. El valor devuelto para **atoll** es 0 si la entrada no se puede convertir en un valor de ese tipo.
+Cada función devuelve el **largo** **largo** valor que se genera al interpretar los caracteres de entrada como un número. El valor devuelto para **Atolón** es 0 si la entrada no se puede convertir en un valor de ese tipo.
 
-Desbordamiento con valores enteros positivos grandes, **atoll** devuelve **LLONG_MAX**, y de desbordamiento con valores enteros negativos grandes, devuelve **LLONG_MIN**.
+Caso de desbordamiento con valores enteros positivos grandes, **Atolón** devuelve **LLONG_MAX**, y de desbordamiento con valores enteros negativos grandes, devuelve **LLONG_MIN**.
 
-En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si el parámetro que se pasa es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
+En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si el parámetro que se pasa es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -95,15 +85,15 @@ Estas funciones convierten una cadena de caracteres para un **largo** **largo** 
 
 La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que finaliza la cadena.
 
-El *str* argumento pasado a **atoll** tiene la forma siguiente:
+El *str* argumento **Atolón** tiene el formato siguiente:
 
-> [*espacio en blanco*] [*inicio de sesión*] [*dígitos*]
+> [*espacio en blanco*] [*sesión*] [*dígitos*]
 
-A *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *inicio de sesión* sea más (+) o menos (-); y *dígitos* es uno o más dígitos.
+Un *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *sesión* sea más (+) o menos (-); y *dígitos* son uno o más dígitos.
 
-**_wtoll** es idéntico a **atoll** salvo que toma una cadena de caracteres anchos como parámetro.
+**_wtoll** es idéntico al **Atolón** salvo que toma una cadena de caracteres anchos como parámetro.
 
-Las versiones de estas funciones que tienen la **_l** sufijo son idénticas a las versiones que no lo tiene, salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el **_l** sufijo son idénticas a las versiones que no lo tienen, salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -117,12 +107,12 @@ Las versiones de estas funciones que tienen la **_l** sufijo son idénticas a la
 
 |Rutinas|Encabezado necesario|
 |--------------|---------------------|
-|**Atoll**, **_atoll_l**|\<stdlib.h>|
+|**Atolón**, **_atoll_l**|\<stdlib.h>|
 |**_wtoll**, **_wtoll_l**|\<stdlib.h> o \<wchar.h>|
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra cómo utilizar el **atoll** funciones para convertir números almacenados como cadenas en valores numéricos.
+Este programa muestra cómo usar el **Atolón** funciones para convertir números almacenados como cadenas en valores numéricos.
 
 ```C
 // crt_atoll.c

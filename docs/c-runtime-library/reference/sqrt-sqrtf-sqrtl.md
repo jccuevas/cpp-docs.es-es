@@ -1,10 +1,6 @@
 ---
-title: sqrt, sqrtf, sqrtl | Microsoft Docs
-ms.custom: ''
+title: sqrt, sqrtf, sqrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sqrtl
 - sqrtf
@@ -26,8 +22,6 @@ f1_keywords:
 - sqrt
 - sqrtf
 - _sqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sqrtf function
 - sqrt function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6eefbbf3269ad809cdf30dd3ea034f7ca6c8ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560581"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -78,13 +68,13 @@ Valor de punto flotante no negativo
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **sqrt** que toman **float** o **largo** **doble** tipos. En un programa C, **sqrt** siempre toma y devuelve **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **sqrt** que toman **float** o **largo** **doble** tipos. En un programa C, **sqrt** siempre toma y devuelve **doble**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 El **sqrt** funciones devuelven la raíz cuadrada de *x*. De forma predeterminada, si *x* es negativo, **sqrt** devuelve un NaN indefinido.
 
-|Entrada|Excepción SEH|**_matherr** (excepción)|
+|Entrada|Excepción SEH|**_matherr** excepción|
 |-----------|-------------------|--------------------------|
 |± QNAN,IND|ninguna|_DOMAIN|
 |- ∞|ninguna|_DOMAIN|
