@@ -1,11 +1,6 @@
 ---
-title: fdim, fdimf, fdiml | Microsoft Docs
-ms.custom: ''
+title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fdim
 - fdimf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs:
-- C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdcad02c94717715fdda1b3a9d2e820fc16d0bf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8cea831e333ebcd9677d830641c60e460ba5ed4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397511"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515094"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -111,7 +100,7 @@ Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **fdim** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **fdim** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **fdim** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **fdim** siempre toma y devuelve un **doble**.
 
 Excepto para el control de NaN, esta función es equivalente a `fmax(x - y, 0)`.
 

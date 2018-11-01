@@ -1,23 +1,13 @@
 ---
-title: Resolver declaraciones ambiguas (C++) | Microsoft Docs
-ms.custom: ''
+title: Resolver declaraciones ambiguas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 3d773ee7-bbea-47de-80c2-cb0a9d4ec0b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1e55d5afc3cc95dbfd61bead30cdb2d686f7f30
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 52e94f474d59505298cb4f78a477cedd21b90aad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066648"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507372"
 ---
 # <a name="resolving-ambiguous-declarations-c"></a>Resolver declaraciones ambiguas (C++)
 

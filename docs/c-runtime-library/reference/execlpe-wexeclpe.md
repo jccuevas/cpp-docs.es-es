@@ -1,10 +1,6 @@
 ---
-title: _execlpe, _wexeclpe | Microsoft Docs
-ms.custom: ''
+title: _execlpe, _wexeclpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execlpe
 - _wexeclpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execlpe
 - wexeclpe
 - _execlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexeclpe function
 - _wexeclpe function
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b0dd88ce15b3a74c491ae751d4f32196e914d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402181"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506865"
 ---
 # <a name="execlpe-wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -100,9 +90,9 @@ Para obtener más información sobre estos y otros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando cada argumento de la línea de comandos como parámetro independiente y pasando también una matriz de punteros a la configuración del entorno. Estas funciones usan la **ruta de acceso** variable de entorno para buscar el archivo para ejecutar.
+Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando cada argumento de la línea de comandos como parámetro independiente y pasando también una matriz de punteros a la configuración del entorno. Estas funciones usan la **ruta** variable de entorno para buscar el archivo para ejecutar.
 
-El **_execlpe** funciones validan sus parámetros. Si el valor *cmdname* o *arg0* es un valor null punteros o una cadena vacía, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso nuevo.
+El **_execlpe** funciones validan sus parámetros. Si bien *cmdname* o *arg0* es un valor null punteros o cadena vacía, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso nuevo.
 
 ## <a name="requirements"></a>Requisitos
 
