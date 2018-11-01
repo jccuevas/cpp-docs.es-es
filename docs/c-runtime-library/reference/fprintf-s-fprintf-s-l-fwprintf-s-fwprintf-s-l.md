@@ -1,10 +1,6 @@
 ---
-title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fprintf_s_l
 - fwprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _ftprintf_s
 - fprintf_s
 - fwprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftprintf_s_l function
 - ftprintf_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea8e9d28a960149d0f199b090daa98e76049f291
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404222"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639431"
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
@@ -85,25 +75,25 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 *format*<br/>
 Cadena de control de formato.
 
 *argument_list*<br/>
-Argumentos opcionales a la cadena de formato.
+Argumentos opcionales de la cadena de formato.
 
 *locale*<br/>
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fprintf_s** devuelve el número de bytes escritos. **fwprintf_s** devuelve el número de caracteres anchos que se escriben. Cada una de estas funciones devuelve un valor negativo cuando se produce un error de salida.
+**fprintf_s** devuelve el número de bytes escritos. **fwprintf_s** devuelve el número de caracteres anchos escritos. Cada una de estas funciones devuelve un valor negativo cuando se produce un error de salida.
 
 ## <a name="remarks"></a>Comentarios
 
-**fprintf_s** da formato e imprime una serie de caracteres y valores a la salida de *flujo*. Cada argumento de *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento utiliza la [formato de sintaxis de especificación de funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+**fprintf_s** da formato e imprime una serie de caracteres y valores en la salida *secuencia*. Cada argumento de *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento usa el [dar formato a la sintaxis de especificación de funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 **fwprintf_s** es una versión con caracteres anchos de **fprintf_s**; en **fwprintf_s**, *formato* es una cadena de caracteres anchos. Estas funciones se comportan igual si el flujo se abre en modo ANSI. **fprintf_s** no admite actualmente la salida en un flujo UNICODE.
 
@@ -112,7 +102,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
 
-Al igual que las versiones no seguras (vea [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), estas funciones validan sus parámetros e invocar el controlador de parámetros no válidos, tal y como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md), si el valor *flujo* o *formato* es un puntero nulo. También se valida la propia cadena de formato. Si hay algún especificador de formato desconocido o con formato incorrecto, estas funciones generan la excepción de parámetro no válido. En todos los casos, si la ejecución puede continuar, las funciones devuelven -1 y establecen **errno** a **EINVAL**. Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
+Como las versiones no seguras (vea [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), estas funciones validan sus parámetros e invocan el controlador de parámetros no válidos, tal y como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md), si *secuencia* o *formato* es un puntero nulo. También se valida la propia cadena de formato. Si hay algún especificador de formato desconocido o con formato incorrecto, estas funciones generan la excepción de parámetro no válido. En todos los casos, si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**. Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
