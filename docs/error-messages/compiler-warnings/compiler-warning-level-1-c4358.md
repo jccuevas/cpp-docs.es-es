@@ -1,27 +1,17 @@
 ---
-title: Compilador advertencia (nivel 1) C4358 | Microsoft Docs
-ms.custom: ''
+title: Advertencia del compilador (nivel 1) C4358
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4358
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ac1e9740f8e6129b4d3c71ad10f8c5a48f801c2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637338"
 ---
 # <a name="compiler-warning-level-1-c4358"></a>Advertencia del compilador (nivel 1) C4358
 

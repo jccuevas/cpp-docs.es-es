@@ -1,10 +1,6 @@
 ---
-title: mbrtowc | Microsoft Docs
-ms.custom: ''
+title: mbrtowc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbrtowc
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbrtowc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 256c3df754607d0d9321f87d565e2ce94491035c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd719e7b336333f6e06a1db9b1e34784575a1602
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581836"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -65,7 +55,7 @@ Dirección de una secuencia de bytes (un carácter multibyte).
 Número de bytes que se va a comprobar.
 
 *mbstate*<br/>
-Puntero al objeto de estado de la conversión. Si este valor es un puntero nulo, la función utiliza un objeto de estado de la conversión interno estático. Dado que el fax interno **mbstate_t** objeto no es seguro para subprocesos, se recomienda pasar siempre su propio *mbstate* argumento.
+Puntero al objeto de estado de la conversión. Si este valor es un puntero nulo, la función utiliza un objeto de estado de la conversión interno estático. Dado que la interna **mbstate_t** objeto no es seguro para subprocesos, se recomienda pasar siempre su propio *mbstate* argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -73,9 +63,9 @@ Uno de los siguientes valores:
 
 0 la próxima *recuento* o menos bytes completan el carácter multibyte que representa el carácter ancho nulo, que se almacena en *wchar*si *wchar* no es un puntero nulo.
 
-1 a *recuento*, ambos inclusive la próxima *recuento* o menos bytes completan un carácter multibyte válido. El valor devuelto es el número de bytes que completan el carácter multibyte. El carácter ancho equivalente se almacena en *wchar*si *wchar* no es un puntero nulo.
+1 para *recuento*, inclusive la próxima *recuento* o menos bytes completan un carácter multibyte válido. El valor devuelto es el número de bytes que completan el carácter multibyte. El carácter ancho equivalente se almacena en *wchar*si *wchar* no es un puntero nulo.
 
-(size_t) (-1) Se produjo un error de codificación. La siguiente *recuento* o menos bytes no contribuyen a un carácter multibyte completo y válido. En este caso, **errno** se establece a EILSEQ y el estado de desplazamiento de conversión en *mbstate* no está especificado.
+(size_t) (-1) Se ha producido un error de codificación. La siguiente *recuento* o menos bytes no contribuyen a un carácter multibyte completo y válido. En este caso, **errno** se establece a EILSEQ y el estado de desplazamiento de la conversión en *mbstate* no se ha especificado.
 
 (size_t) -(2) La siguiente *recuento* bytes contribuyen a un carácter multibyte incompleto pero potencialmente válido y los *recuento* bytes se han procesado. Ningún valor se almacena en *wchar*, pero *mbstate* se actualiza para reiniciar la función.
 
@@ -87,9 +77,9 @@ Si *mbchar* es un puntero nulo, la función es equivalente a la llamada:
 
 En este caso, el valor de los argumentos *wchar* y *recuento* se omiten.
 
-Si *mbchar* no es un puntero nulo, la función examina *recuento* bytes a partir de *mbchar* para determinar el número necesario de bytes que se necesitan para completar la siguiente carácter multibyte. Si el carácter siguiente es válido, el carácter multibyte correspondiente se almacena en *wchar* si no es un puntero nulo. Si el carácter nulo ancho correspondiente no es de carácter, el estado resultante de *mbstate* es el estado inicial de conversión.
+Si *mbchar* no es un puntero nulo, la función examina *recuento* bytes a partir de *mbchar* para determinar el número necesario de bytes que se necesitan para completar el siguiente carácter multibyte. Si el carácter siguiente es válido, el carácter multibyte correspondiente se almacena en *wchar* si no es un puntero nulo. Si el carácter es nulo ancho correspondiente de caracteres, el estado resultante del *mbstate* es el estado de conversión inicial.
 
-El **mbrtowc** función difiere de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) por su capacidad de reinicio. El estado de la conversión se almacena en *mbstate* para llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación debe utilizar **wcsrlen** en lugar de **wcslen** si una llamada subsiguiente a **wcsrtombs** se utiliza en lugar de **wcstombs**.
+El **mbrtowc** función difiere de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación debe utilizar **wcsrlen** en lugar de **wcslen** si una llamada subsiguiente a **wcsrtombs** se utiliza en lugar de **wcstombs**.
 
 ## <a name="example"></a>Ejemplo
 
