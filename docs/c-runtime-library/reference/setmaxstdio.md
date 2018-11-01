@@ -1,10 +1,6 @@
 ---
-title: _setmaxstdio | Microsoft Docs
-ms.custom: ''
+title: _setmaxstdio
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmaxstdio
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
-dev_langs:
-- C++
 helpviewer_keywords:
 - maximum open files
 - _setmaxstdio function
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 785fcc05c6b19086c14edc85983749894c867c18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445089"
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 
-Establece el número de archivos abiertos simultáneamente en el **stdio** nivel.
+Establece un valor máximo para el número de archivos abiertos simultáneamente en el **stdio** nivel.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,19 +51,19 @@ Nuevo máximo para el número de archivos abiertos simultáneamente en el **stdi
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve *newmax* si se realiza correctamente; en caso contrario de -1.
+Devuelve *newmax* si se realiza correctamente; en caso contrario, de -1.
 
-Si *newmax* es menor que **_IOB_ENTRIES** o superior, a continuación, se invoca el número máximo de identificadores disponibles en el sistema operativo, el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** a **EINVAL**.
+Si *newmax* es menor que **_IOB_ENTRIES** o mayor, a continuación, se invoca el número máximo de controladores disponibles en el sistema operativo, el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** a **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_setmaxstdio** función cambia el valor máximo para el número de archivos que pueden abrir simultáneamente en el **stdio** nivel.
+El **_setmaxstdio** función cambia el valor máximo para el número de archivos que se pueden abrir simultáneamente en el **stdio** nivel.
 
-La E/S en tiempo de ejecución de C ahora admite muchos más archivos abiertos en las plataformas de Win32 que en las versiones anteriores. Hasta 2.048 archivos puede estar abierto simultáneamente en el [lowio nivel](../../c-runtime-library/low-level-i-o.md) (es decir, abierto y tiene acceso por medio de la **_open**, **_preguntas**, **_write**, y así sucesivamente familia de funciones de E/S). Hasta 512 archivos puede estar abierto simultáneamente en el [nivel stdio](../../c-runtime-library/stream-i-o.md) (es decir, abierto y tiene acceso por medio de la **fopen**, **fgetc**, **fputc** y así sucesivamente familia de funciones). El límite de 512 archivos abiertos en el **stdio** nivel se puede aumentar hasta un máximo de 2048 por medio de la **_setmaxstdio** (función).
+La E/S en tiempo de ejecución de C ahora admite muchos más archivos abiertos en las plataformas de Win32 que en las versiones anteriores. Hasta 2048 archivos puede estar abierto simultáneamente en el [nivel de lowio](../../c-runtime-library/low-level-i-o.md) (es decir, puede abrir y acceso por medio de la **_open**, **_read**, **_write**, y así sucesivamente familia de funciones de E/S). Hasta 512 archivos puede estar abierto simultáneamente en el [nivel de stdio](../../c-runtime-library/stream-i-o.md) (es decir, puede abrir y acceso por medio de la **fopen**, **fgetc**, **fputc** y así sucesivamente familia de funciones). El límite de 512 archivos abiertos en el **stdio** nivel se puede aumentar hasta un máximo de 2048 mediante la **_setmaxstdio** función.
 
-Dado que **stdio**-nivel de funciones, como **fopen**, se generan en la parte superior de la **lowio** funciones, el número máximo de 2.048 es un límite superior para el número de simultáneamente abrir archivos que se tiene accesibles a través de la biblioteca de tiempo de ejecución de C.
+Dado que **stdio**-las funciones de nivel, como **fopen**, se crean en la parte superior de la **lowio** functions, el máximo de 2048 es un límite superior para el número de forma simultánea Abra los archivos que se tiene acceso a través de la biblioteca de tiempo de ejecución de C.
 
 > [!NOTE]
 > Este límite superior puede exceder la compatibilidad de ciertas plataformas y configuraciones de Win32.
@@ -88,7 +78,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Vea [_getmaxstdio](getmaxstdio.md) para obtener un ejemplo del uso de **_setmaxstdio**.
+Consulte [_getmaxstdio](getmaxstdio.md) para obtener un ejemplo del uso de **_setmaxstdio**.
 
 ## <a name="see-also"></a>Vea también
 

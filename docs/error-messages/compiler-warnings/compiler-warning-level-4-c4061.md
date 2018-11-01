@@ -1,31 +1,21 @@
 ---
-title: Compilador (nivel 4) de la advertencia C4061 | Documentos de Microsoft
-ms.custom: ''
+title: Del compilador (nivel 4) de la advertencia C4061
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4061
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d0086ea5e590c7183024bc4dcc93e2f2522f483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292625"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453279"
 ---
-# <a name="compiler-warning-level-4-c4061"></a>Compilador (nivel 4) de la advertencia C4061
+# <a name="compiler-warning-level-4-c4061"></a>Del compilador (nivel 4) de la advertencia C4061
 
-> enumerador '*identificador*'en el modificador de enum'*enumeración*' no está controlada de forma explícita por una etiqueta de caso
+> enumerador '*identificador*'en el conmutador de la enumeración'*enumeración*' no está controlado de forma explícita por una etiqueta de caso
 
 El enumerador tiene asociado ningún controlador un `switch` instrucción.
 
@@ -33,7 +23,7 @@ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias d
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4061; Agregar un caso del enumerador falta corregir:
+El ejemplo siguiente genera C4061; Agregar un caso del enumerador que faltan corregir:
 
 ```cpp
 // C4061.cpp

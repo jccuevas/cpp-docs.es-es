@@ -1,10 +1,6 @@
 ---
-title: expm1, expm1f, expm1l | Microsoft Docs
-ms.custom: ''
+title: expm1, expm1f, expm1l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - expm1l
 - expm1
@@ -26,23 +22,17 @@ f1_keywords:
 - expm1l
 - expm1
 - expm1f
-dev_langs:
-- C++
 helpviewer_keywords:
 - expm1f function
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 381078cc4549b0c3347d093743f4240fab270b10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5971f879ecef7d4fa1027849cc44d598e877b5f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441072"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -75,11 +65,11 @@ Valor exponencial del punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **expm1** funciones devuelven un valor de punto flotante que representa e<sup>x</sup> - 1, si se realiza correctamente. Si se produce desbordamiento, **expm1** devuelve **HUGE_VAL**, **expm1f** devuelve **HUGE_VALF**, **expm1l** devuelve **HUGE_VALL**, y **errno** está establecido en **ERANGE**. Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+El **expm1** funciones devuelven un valor de punto flotante que representa e<sup>x</sup> - 1, si se realiza correctamente. En caso de desbordamiento, **expm1** devuelve **HUGE_VAL**, **expm1f** devuelve **HUGE_VALF**, **expm1l** devuelve **HUGE_VALL**, y **errno** está establecido en **ERANGE**. Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **expm1** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **expm1** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **expm1** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **expm1** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

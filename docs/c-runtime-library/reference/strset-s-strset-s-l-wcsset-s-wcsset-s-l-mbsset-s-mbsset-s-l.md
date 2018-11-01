@@ -1,10 +1,6 @@
 ---
-title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l | Microsoft Docs
-ms.custom: ''
+title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsset_s
 - _wcsset_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _strset_s_l
 - _tcsset_s_l
 - _tcsset_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsset_s_l function
 - wcsset_s function
@@ -63,16 +57,12 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f632185a17bd02dfa837bae3605c51d27442772a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cb2e9a6ba4179f8e362749e01324fe7e38cf5eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452538"
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
@@ -137,13 +127,13 @@ Configuración regional que se va a usar.
 
 Cero si es correcto, código de error en caso contrario.
 
-Estas funciones validan sus argumentos. Si *str* es un puntero nulo, o la *numberOfElements* argumento es menor o igual que 0, o el bloque pasado no es terminada en null y, a continuación, se invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
+Estas funciones validan sus argumentos. Si *str* es un puntero nulo, o la *numberOfElements* argumento es menor o igual que 0, o el bloque que se pasa no está terminada en null y, a continuación, se invoca el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strset_s** función establece todos los caracteres de *str* a *c* (convertido en **char**), excepto el carácter nulo de terminación. **_wcsset_s** y **_mbsset_s** son versiones de caracteres multibyte y anchos de **_strset_s**. Los tipos de datos de los argumentos y los valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
+El **_strset_s** todos los caracteres de la función establece *str* a *c* (convertir a **char**), excepto el carácter nulo de terminación. **_wcsset_s** y **_mbsset_s** son versiones de caracteres anchos y caracteres multibyte de **_strset_s**. Los tipos de datos de los argumentos y los valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 

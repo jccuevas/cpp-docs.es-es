@@ -1,10 +1,6 @@
 ---
-title: pow, powf, powl | Microsoft Docs
-ms.custom: ''
+title: pow, powf, powl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - powl
 - pow
@@ -27,8 +23,6 @@ f1_keywords:
 - pow
 - _powl
 - powf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - powl function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5daf7348198cb6f3ba0186eb4586b2486548f6f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403835"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452025"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -90,11 +80,11 @@ Devuelve el valor de *x*<sup>*y*</sup>. No se imprime ningún mensaje de error e
 
 ## <a name="remarks"></a>Comentarios
 
-**Pow** no reconoce valores de punto flotante enteros mayores que 2<sup>64</sup> (por ejemplo, 1.0E100).
+**Pow** no reconoce los valores de punto flotante enteros mayores que 2<sup>64</sup> (por ejemplo, 1.0E100).
 
 **Pow** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como C++ permite las sobrecargas, puede llamar a cualquiera de las sobrecargas de **pow**. En un programa C, **pow** siempre toma dos **doble** valores y devuelve un **doble** valor.
+Dado que C++ admite sobrecargas, puede llamar a cualquiera de las distintas sobrecargas de **pow**. En un programa C, **pow** siempre toma dos **doble** valores y devuelve un **doble** valor.
 
 La sobrecarga de `pow(int, int)` ya no está disponible. Si utiliza esta sobrecarga, el compilador puede emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar este problema, convierta el primer parámetro **doble**, **float**, o **largo** **doble**.
 

@@ -1,12 +1,6 @@
 ---
-title: 'Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - task_handle class, example
 - task_group class, example
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f7afde03f1c210b3cca8fc58cf25e64ba484760
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e72d99cb1b9168e3de1e109d93c163e21cb7fad7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440162"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo
 
@@ -66,7 +56,7 @@ En esta sección se describe cómo usar el algoritmo `parallel_invoke` para real
 
 [!code-cpp[concrt-parallel-bitonic-sort#11](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_3.cpp)]
 
-1. Cree una nueva función, denominada `parallel_bitonic_mege`, que use el algoritmo `parallel_invoke` para combinar las secuencias en paralelo si hay suficiente cantidad de trabajo. De lo contrario, llame a `bitonic_merge` para combinar las secuencias en serie.
+1. Cree una nueva función, denominada `parallel_bitonic_mege`, que use el algoritmo `parallel_invoke` para fusionar mediante combinación las secuencias en paralelo si hay suficiente cantidad de trabajo. De lo contrario, llame a `bitonic_merge` para fusionar mediante combinación las secuencias en serie.
 
 [!code-cpp[concrt-parallel-bitonic-sort#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_4.cpp)]
 

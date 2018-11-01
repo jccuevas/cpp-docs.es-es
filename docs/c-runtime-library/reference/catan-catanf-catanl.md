@@ -1,11 +1,6 @@
 ---
-title: catan, catanf, catanl | Microsoft Docs
-ms.custom: ''
+title: catan, catanf, catanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catan
 - catanf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a66781ad1b9962a8d6a1792ad0b77abf853f2559
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455229"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Recupera el arco tangente de un número complejo con cortes de bifurcación fuera del intervalo [-1; + 1] en el eje imaginario.
+Recupera el arco tangente de un número complejo, con cortes de bifurcación fuera del intervalo [-1; + 1] en el eje imaginario.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -67,16 +56,16 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo que representa un ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El arco tangente de *z*, en radianes. El resultado es ilimitado a lo largo del eje imaginario y en el intervalo [-π/2; + π/2] en el eje real.
+El arco tangente de *z*, en radianes. El resultado es ilimitado en el eje imaginario y, en el intervalo [-π/2; + π/2] en el eje real.
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **catan** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **catan** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **catan** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **catan** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: -w,-W0,-W1, - W2,-W3, - W4,-w1,-w2,-w3,-w4,-Wall, -wd,-we, -wo, -Wv, - WX (nivel de advertencia) | Microsoft Docs
-ms.custom: ''
+title: / w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / WO, / wv, /WX (nivel de advertencia)
 ms.date: 01/31/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DisableSpecificWarnings
 - VC.Project.VCCLCompilerTool.WarningLevel
@@ -24,8 +20,6 @@ f1_keywords:
 - /wd
 - /we
 - /wo
-dev_langs:
-- C++
 helpviewer_keywords:
 - /W1 compiler option [C++]
 - w compiler option [C++]
@@ -63,16 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0badc4359d399788d7c40f5d299132abca1fe922
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4842e845013bf69a7bc033ba7b6abf5ecc7d5079
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725223"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441748"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/ w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / WO, / wv, /WX (nivel de advertencia)
 
@@ -106,7 +96,7 @@ En la tabla siguiente se describen las opciones de advertencia y los argumentos 
 ------------|-----------------|
 |**/w**|Suprime todas las advertencias del compilador.|
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Especifica el nivel de advertencias que se genera el compilador. Los niveles válidos van de 0 a 4:<br />**/ W0** suprime todas las advertencias. Esto es equivalente a **/w**.<br />**/ W1** muestra advertencias de nivel 1 (gravedad). **/ W1** es la configuración predeterminada en el compilador de línea de comandos.<br />**/ W2** muestra el nivel 1 y advertencias de nivel 2 (importantes).<br />**/ W3** muestra el nivel 1, nivel 2 y avisos de nivel 3 (calidad de producción). **/ W3** es la configuración predeterminada en el IDE.<br />**/ W4** muestra de nivel 1, nivel 2 y avisos de nivel 3 y 4 advertencias (informativas) que no están desactivadas de forma predeterminada el nivel todos. Se recomienda que use esta opción para proporcionar advertencias similar a lint. Para un nuevo proyecto, puede ser mejor usar **/W4** en todas las compilaciones; Esto garantizará el menor número de defectos de código difícil de encontrar posibles.|
-|**/ Wall**|Muestra todas las advertencias que se muestran por **/W4** y todas las demás advertencias que **/W4** no incluye, por ejemplo, las advertencias que están desactivadas de forma predeterminada. Para obtener más información, consulte [compilador advertencias que está desactivado de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|**/Wall**|Muestra todas las advertencias que se muestran por **/W4** y todas las demás advertencias que **/W4** no incluye, por ejemplo, las advertencias que están desactivadas de forma predeterminada. Para obtener más información, consulte [compilador advertencias que está desactivado de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |**/ Wv**\[**:**_versión_]|Muestra solo advertencias introducidas en la versión del compilador *versión* y versiones anteriores. Puede usar esta opción para suprimir las advertencias nuevas en el código al migrar a una versión más reciente del compilador y para mantener el proceso de compilación existente mientras se corregirlos. El parámetro opcional *versión* adopta la forma *nn*[. *mm*[. *bbbbb*]] donde *nn* es el número de versión principal, *mm* es el número de versión secundaria opcional y *bbbbb* es el número de compilación opcional el compilador. Por ejemplo, usar */Wv:17* para mostrar advertencias introducidas en Visual Studio 2012 (es decir, cualquier versión del compilador que tiene un número de versión principal de 17) o una versión anterior, pero suprimir las advertencias introducidas en Visual Studio 2013 (versión principal 18) y versiones posteriores. De forma predeterminada, **/wv** usa el número de versión del compilador actual y sin advertencias se han suprimido. Para obtener información sobre qué advertencias se han suprimido por versión del compilador, vea [advertencias del compilador por versión del compilador](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
 |**/WX**|Trata todas las advertencias del compilador como errores. Para un nuevo proyecto, puede ser mejor usar **/WX** en todas las compilaciones; resolver todas las advertencias asegura el menor número de defectos de código difícil de encontrar posibles.<br /><br /> El vinculador también tiene un **/WX** opción. Para obtener más información, consulte [/WX (Tratar advertencias del enlazador como errores)](../../build/reference/wx-treat-linker-warnings-as-errors.md).|
 |**/ W1**_nnnn_<br /><br /> **/ W2**_nnnn_<br /><br /> **/ W3**_nnnn_<br /><br /> **/ W4**_nnnn_|Establece el nivel de advertencia para el número de advertencia especificado por _nnnn_. Esto le permite cambiar el comportamiento del compilador para que aparezca esa advertencia cuando se establece un nivel de advertencia específico. Puede usar estas opciones en combinación con otras opciones de advertencia para aplicar los estándares de sus propio código para advertencias en lugar de los valores predeterminados que proporciona Visual Studio.<br /><br /> Por ejemplo, **/w34326** que C4326 se genere como una advertencia de nivel 3 en lugar de nivel 1. Si compila con ambos métodos el **/w34326** opción y la **/W2** opción, no se genera C4326 de advertencia.|
