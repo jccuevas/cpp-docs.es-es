@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock, _ftelli64_nolock | Microsoft Docs
-ms.custom: ''
+title: _ftell_nolock, _ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580848"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -63,7 +53,7 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Destino del **archivo** estructura.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -72,7 +62,7 @@ Igual que **ftell** y **_ftelli64**. Para obtener más información, consulte [f
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones son no realiza el bloqueo versiones de **ftell** y **_ftelli64**, respectivamente. Son idénticas a **ftell** y **_ftelli64** salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Estas funciones son sin bloqueo versiones de **ftell** y **_ftelli64**, respectivamente. Son idénticas a **ftell** y **_ftelli64** , salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
 ## <a name="requirements"></a>Requisitos
 
