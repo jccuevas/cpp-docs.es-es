@@ -1,10 +1,6 @@
 ---
-title: fgetpos | Microsoft Docs
-ms.custom: ''
+title: fgetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fgetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b111a911083354c8d9478b2c914a0a5f7dfe7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397390"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658424"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -54,7 +44,7 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Secuencia de destino.
 
 *punto de venta*<br/>
@@ -62,11 +52,11 @@ Almacenamiento del indicador de posición.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **fgetpos** devuelve 0. En caso de error, devuelve un valor distinto de cero y establece **errno** a uno de los siguientes (definidos en STDIO de constantes del manifiesto. (H): **EBADF**, lo que significa que la secuencia especificada no es un puntero de archivo válido o no es accesible, o **EINVAL**, lo que significa que la *flujo* valor o el valor de *pos* es válido, por ejemplo, si bien es un puntero nulo. Si *flujo* o *pos* es un **NULL** puntero, la función, invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Si es correcto, **fgetpos** devuelve 0. En caso de error, devuelve un valor distinto de cero y establece **errno** a uno de los siguientes (definidas en STDIO de constantes del manifiesto. (H): **EBADF**, lo que significa que la secuencia especificada no es un puntero de archivo válido o no está accesible, o **EINVAL**, lo que significa que el *secuencia* valor o el valor de *pos* es válido, por ejemplo, si bien es un puntero nulo. Si *secuencia* o *pos* es un **NULL** puntero, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **fgetpos** función obtiene el valor actual de la *flujo* del argumento indicador de posición de archivo y almacena en el objeto que señala *pos*. El **fsetpos** función más adelante puede usar la información almacenada en *pos* para restablecer la *flujo* puntero de argumento en su posición en el momento de **fgetpos** se llamó. El *pos* valor se almacena en un formato interno y está pensado para su uso sólo por **fgetpos** y **fsetpos**.
+El **fgetpos** función obtiene el valor actual de la *secuencia* indicador de posición de archivo y la almacena en el objeto que apunta del argumento *pos*. El **fsetpos** función puede usar más adelante información almacenada en *pos* para restablecer la *secuencia* puntero del argumento en su posición en el momento **fgetpos** llamó. El *pos* valor se almacena en un formato interno y está pensado para usarse únicamente por **fgetpos** y **fsetpos**.
 
 ## <a name="requirements"></a>Requisitos
 
