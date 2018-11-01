@@ -1,10 +1,6 @@
 ---
-title: fputs, fputws | Microsoft Docs
-ms.custom: ''
+title: fputs, fputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputs
 - fputws
@@ -25,8 +21,6 @@ f1_keywords:
 - fputs
 - fputws
 - _fputts
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing strings to
 - fputws function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94a8a872d88d42b2e76c5171b1adb22900b66436
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400182"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574855"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -67,18 +57,18 @@ int fputws(
 *str*<br/>
 Cadena de salida
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor no negativo si se ejecuta correctamente. Produce un error, **fputs** y **fputws** devolver **EOF**. Si *str* o *flujo* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y, a continuación, **fputs** devuelve **EOF**, y  **fputws** devuelve **WEOF**.
+Cada una de estas funciones devuelve un valor no negativo si se ejecuta correctamente. Produce un error, **fputs** y **fputws** devolver **EOF**. Si *str* o *secuencia* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y, a continuación, **fputs** devuelve **EOF**, y  **fputws** devuelve **WEOF**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones copia *str* a la salida de *flujo* en la posición actual. **fputws** copia el argumento de caracteres anchos *str* a *flujo* como una cadena de caracteres multibyte o una cadena de caracteres anchos según si *flujo*se abre en modo de texto o binario, respectivamente. Ninguna de las funciones copia el carácter de terminación NULL.
+Cada una de estas funciones copia *str* a la salida *secuencia* en la posición actual. **fputws** copia el argumento de caracteres anchos *str* a *secuencia* como una cadena de caracteres multibyte o una cadena de caracteres anchos según si *secuencia*se abre en modo de texto o binario, respectivamente. Ninguna de las funciones copia el carácter de terminación NULL.
 
 Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **fputs** no admite actualmente la salida en un flujo UNICODE.
 
@@ -95,7 +85,7 @@ Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **fputs**
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola:**stdin**, **stdout**, y **stderr**: se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

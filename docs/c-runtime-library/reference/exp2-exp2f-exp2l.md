@@ -1,11 +1,6 @@
 ---
-title: exp2, exp2f, exp2l | Microsoft Docs
-ms.custom: ''
+title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - exp2
 - exp2f
@@ -30,27 +25,21 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aea847d367200635c8fecbd694f8a50be859b3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396727"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562765"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Calcula 2 elevado en el valor especificado.
+Calcula el valor de 2 elevado en el valor especificado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -83,22 +72,22 @@ Valor del exponente.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve el exponente de base 2 de *x*, es decir, 2<sup>x</sup>. En caso contrario, devuelve uno de los siguientes valores:
+Si es correcto, devuelve el exponente de base 2 de *x*, es decir, 2<sup>x</sup>. En caso contrario, devuelve uno de los valores siguientes:
 
 |Problema|Volver|
 |-----------|------------|
 |*x* = ± 0|1|
-|*x* = - infinito|+0|
-|*x* = + infinito|+INFINITY|
+|*x* = - INFINITY|+0|
+|*x* = + INFINITY|+INFINITY|
 |*x* = NaN|NaN|
 |Error de intervalo de desbordamiento|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
-|Error de intervalo de subdesbordamiento|Resultado correcto, después de redondearlo|
+|Error de intervalo de subdesbordamiento|Resultado correcto después del redondeo|
 
 Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **exp2** que toman y devuelven **float** y **long double** tipos. En un programa C, **exp2** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **exp2** que toman y devuelven **float** y **long double** tipos. En un programa C, **exp2** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
