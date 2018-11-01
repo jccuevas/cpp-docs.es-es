@@ -1,27 +1,18 @@
 ---
-title: Clases de información (ATL) de sitio | Microsoft Docs
-ms.custom: ''
+title: Clases de información de sitio (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.site
-dev_langs:
-- C++
 helpviewer_keywords:
 - site information classes
 ms.assetid: 102eae20-7953-4efb-b27b-409885c9c064
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ac1821f34269a54fc0fb10a3ae797a815d5acd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0e6430d5b45c94ec9fb031d89b1af57df23233b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594980"
 ---
 # <a name="site-information-classes"></a>Clases de información del sitio
 

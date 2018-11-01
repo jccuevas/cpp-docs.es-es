@@ -1,28 +1,18 @@
 ---
-title: Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación | Microsoft Docs
-ms.custom: ''
+title: Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - UAC [C++]
 - security [C++], User Account Control
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ffe19d739654af9c981fc826c622b883705398fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 336260ddc1c9da795478d5541af73d9801633843
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556967"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación
 
