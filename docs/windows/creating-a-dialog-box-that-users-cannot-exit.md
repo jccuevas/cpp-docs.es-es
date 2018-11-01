@@ -1,28 +1,17 @@
 ---
-title: Creación de un cuadro de diálogo (C++) que los usuarios no puedan salir | Microsoft Docs
-ms.custom: ''
+title: Creación de un cuadro de diálogo (C++) que los usuarios no puedan salir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], creating
 - modal dialog boxes [C++], logon screens
 - logon screens
 ms.assetid: 54823c27-1658-4388-bd12-0a1ce8f3899e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5abae461b4298d8a6300f5d7ad9f3e162a5b21c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 83c6c099f3d39db66969371e2cf7ad99a7f08587
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579847"
 ---
 # <a name="creating-a-dialog-box-c-that-users-cannot-exit"></a>Creación de un cuadro de diálogo (C++) que los usuarios no puedan salir
 
