@@ -1,12 +1,6 @@
 ---
-title: Eliminar una imagen de dispositivo (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Eliminar una imagen de dispositivo (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - cursors [C++], deleting
 - display devices [C++], deleting device image
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - cursors [C++], undoing changes
 - icons, undoing changes
 ms.assetid: aab1031c-da95-49cf-aabc-46e127b11399
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9ff6cc2fd04dfd92ce1744cf68681f5b9dc4ed13
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6eb84ed0a6f2c323deb833ee92723c0620db0b26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598983"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Eliminar una imagen de dispositivo (Editor de imágenes para iconos)
 

@@ -1,28 +1,18 @@
 ---
-title: Que proporciona compatibilidad con arrastrar y colocar elementos de encabezado | Microsoft Docs
-ms.custom: ''
+title: Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HDS_DRAGDROP style
 - header items in header controls
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b2eaa5040d34a442868a8fa6cb9f2aae08b0a6f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 21ff14982baac93fac1cf3ee441353c079f4f760
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602974"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado
 

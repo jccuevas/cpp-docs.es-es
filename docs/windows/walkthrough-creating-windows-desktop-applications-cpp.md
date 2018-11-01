@@ -1,27 +1,17 @@
 ---
-title: 'Tutorial: Crear una aplicación tradicional de escritorio de Windows (C++) | Microsoft Docs'
+title: 'Tutorial: Crear una aplicación tradicional de escritorio de Windows (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528391"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Tutorial: Crear una aplicación tradicional de escritorio de Windows (C++)
 
@@ -142,7 +132,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
 
    En esta función, escribe código para controlar *mensajes* que recibe la aplicación de Windows cuando *eventos* se producen. Por ejemplo, si un usuario elige un botón Aceptar en la aplicación, Windows enviará un mensaje a usted y puede escribir código dentro de su `WndProc` función que hace que sea adecuado. Se llama *control* un evento. Solo controlar los eventos que son relevantes para su aplicación.
 
-   Para obtener más información, consulte [procedimientos de ventana](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Para más información, vea [Procedimientos de ventanas](https://msdn.microsoft.com/library/windows/desktop/ms632593).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Para agregar funcionalidad a la función WinMain
 
@@ -167,7 +157,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
 
    Para obtener información acerca de los campos de la estructura anterior, consulte [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Registrar el `WNDCLASSEX` con Windows para que sepa que TI acerca de la ventana y cómo enviar mensajes a ella. Use la [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) de función y pase la estructura de clase de ventana como argumento. El `_T` macro se usa porque usamos el `TCHAR` tipo.
+1. Registrar el `WNDCLASSEX` con Windows para que sepa que TI acerca de la ventana y cómo enviar mensajes a ella. Use la función [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) y pase la estructura de clase de ventana como argumento. El `_T` macro se usa porque usamos el `TCHAR` tipo.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -181,7 +171,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
    }
    ```
 
-1. Ahora puede crear una ventana. Use la [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) función.
+1. Ahora puede crear una ventana. Use la función [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) .
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -219,7 +209,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
    }
    ```
 
-   Esta función devuelve un `HWND`, que es un identificador a una ventana. Un identificador es un poco como un puntero que Windows usa para realizar un seguimiento de ventanas abiertas. Para obtener más información, consulte [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).
+   Esta función devuelve un `HWND`, que es un identificador a una ventana. Un identificador es un poco como un puntero que Windows usa para realizar un seguimiento de ventanas abiertas. Para obtener más información, vea [Tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).
 
 1. En este momento, la ventana se ha creado pero todavía es necesario indicar a Windows para que sea visible. Eso es lo que hace este código:
 
@@ -247,7 +237,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
    return (int) msg.wParam;
    ```
 
-   Para obtener más información sobre las estructuras y funciones en el bucle de mensajes, vea [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), y [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Para más información sobre las estructuras y funciones que se usan en el bucle de mensajes, vea [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    En este punto, la función `WinMain` debe ser similar al código siguiente.
 
@@ -342,7 +332,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
 
    Es un mensaje importante para controlar el [WM_PAINT](/windows/desktop/gdi/wm-paint) mensaje. La aplicación recibe el `WM_PAINT` mensaje cuando forma parte de su ventana mostrada debe actualizarse. El evento puede producirse cuando un usuario mueve una ventana delante de la ventana, a continuación, mueve inmediatamente a intentarlo, y no sabe la aplicación cuando se producen estos eventos. Sólo Windows sabe, por lo que le notifica con `WM_PAINT`. Cuando la ventana se muestra por primera vez, todas del mismo deben actualizarse.
 
-   Para controlar un `WM_PAINT` mensajes, la primera llamada [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), controle toda la lógica para colocar el texto, botones y otros controles en la ventana y, a continuación, llame a [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Para la aplicación, la lógica entre la llamada inicial y la llamada final consiste en mostrar la cadena "Hola, escritorio de Windows" en la ventana. En el código siguiente, tenga en cuenta que el [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) función se utiliza para mostrar la cadena.
+   Para controlar un mensaje `WM_PAINT` , primero llame a [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), controle toda la lógica para mostrar el texto, los botones y otros controles de la ventana y luego llame a [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Para la aplicación, la lógica entre la llamada inicial y la llamada final consiste en mostrar la cadena "Hola, escritorio de Windows" en la ventana. En el siguiente código, observe que la función [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) se usa para mostrar la cadena.
 
    ```cpp
    PAINTSTRUCT ps;

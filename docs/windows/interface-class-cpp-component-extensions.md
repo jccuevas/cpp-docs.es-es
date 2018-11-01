@@ -1,29 +1,19 @@
 ---
-title: clase de interfaz (C++ / c++ / CLI y c++ / CX) | Documentos de Microsoft
-ms.custom: ''
+title: clase de interfaz (C++ / c++ / CLI y c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - interface_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ecc99a5c97f96290932a7d758a959501532c07be
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 57bb83e91492995551ec155c2bcd6bbff3da3186
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517135"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>clase de interfaz (C++ / c++ / CLI y c++ / CX)
 
@@ -67,7 +57,7 @@ Para obtener más información, consulte:
 
 - [Constructor estático de interfaz](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [Interfaces genéricas (C++ / c++ / CLI)](../windows/generic-interfaces-visual-cpp.md)
+- [Interfaces genéricas (C++/CLI)](../windows/generic-interfaces-visual-cpp.md)
 
 Para obtener información sobre otros tipos CLR, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
