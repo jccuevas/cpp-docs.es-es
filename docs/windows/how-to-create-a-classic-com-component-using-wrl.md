@@ -1,24 +1,14 @@
 ---
-title: 'Cómo: crear un componente COM clásico mediante WRL | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: Crear un componente COM clásico mediante WRL'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7c3d16cada621232c54176717f9bbdedb71a7e21
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 025f369b002abcdbe2091a6cae4b38894f370863
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437848"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Cómo: Crear un componente COM clásico mediante WRL
 

@@ -1,10 +1,6 @@
 ---
-title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs
-ms.custom: ''
+title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __wcserror_s
 - _strerror_s
@@ -31,8 +27,6 @@ f1_keywords:
 - tcserror_s
 - strerror_s
 - _strerror_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - __wcserror_s function
 - error messages, printing
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 362716963911a29a9b3558c387e69c4cd91b369e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429645"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -132,7 +122,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 ## <a name="remarks"></a>Comentarios
 
-El **strerror_s** función mapas *errnum* en una cadena de mensaje de error, devuelve la cadena de *búfer*. **_strerror_s** no toma el número de error; utiliza el valor actual de **errno** para determinar el mensaje adecuado. Ni **strerror_s** ni **_strerror_s** imprimen realmente el mensaje: para ello, debe llamar a una función de salida como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+El **strerror_s** función mapas *errnum* a una cadena de mensaje de error, devuelve la cadena de *búfer*. **_strerror_s** no toma el número de error usa el valor actual de **errno** para determinar el mensaje adecuado. Ni **strerror_s** ni **_strerror_s** imprimen realmente el mensaje: para ello, deberá llamar a una función de salida, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -142,17 +132,17 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-Si *strErrMsg* es **NULL**, **_strerror_s** devuelve una cadena en *búfer* que contiene el mensaje de error de sistema de la última llamada a biblioteca que generó un error. La cadena del mensaje de error termina con el carácter de línea nueva ('\n'). Si *strErrMsg* no es igual a **NULL**, a continuación, **_strerror_s** devuelve una cadena en *búfer* que contiene (en orden) el mensaje de cadena, un dos puntos, un espacio, el mensaje de error de sistema de la última llamada de biblioteca que se produce un error y un carácter de nueva línea. El mensaje de cadena puede tener, como máximo, 94 caracteres.
+Si *strErrMsg* es **NULL**, **_strerror_s** devuelve una cadena en *búfer* que contiene el mensaje de error del sistema para la última llamada a biblioteca que generó un error. La cadena del mensaje de error termina con el carácter de línea nueva ('\n'). Si *strErrMsg* no es igual a **NULL**, a continuación, **_strerror_s** devuelve una cadena en *búfer* que contiene (en orden) el mensaje de cadena, un dos puntos, un espacio, el mensaje de error del sistema para la última llamada a biblioteca que genera un error y un carácter de nueva línea. El mensaje de cadena puede tener, como máximo, 94 caracteres.
 
 Estas funciones truncan el mensaje de error si su longitud supera *numberOfElements* -1. La cadena resultante en *búfer* siempre está terminada en null.
 
-El número de error real para **_strerror_s** se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Se obtiene acceso a los mensajes de error del sistema a través de la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que es una matriz de mensajes ordenados por número de error. **_strerror_s** accede al mensaje de error adecuado mediante la **errno** valor como índice de la variable **_sys_errlist**. El valor de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se define como el número máximo de elementos de la **_sys_errlist** matriz. Para generar resultados precisos, llame a **_strerror_s** inmediatamente después de una rutina de biblioteca devuelva un error. En caso contrario, las llamadas subsiguientes a **strerror_s** o **_strerror_s** puede sobrescribir el **errno** valor.
+El número de error real para **_strerror_s** se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Se obtiene acceso a los mensajes de error del sistema a través de la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que es una matriz de mensajes ordenados por número de error. **_strerror_s** tiene acceso a mensaje de error adecuado mediante la **errno** valor como un índice en la variable **_sys_errlist**. El valor de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se define como el número máximo de elementos de la **_sys_errlist** matriz. Para generar resultados precisos, llame a **_strerror_s** inmediatamente después de una rutina de biblioteca devuelva un error. En caso contrario, las llamadas subsiguientes a **strerror_s** o **_strerror_s** puede sobrescribir el **errno** valor.
 
 **_wcserror_s** y **__wcserror_s** son versiones de caracteres anchos de **strerror_s** y **_strerror_s**, respectivamente.
 
-Estas funciones validan sus parámetros. Si el búfer es **NULL** o si el parámetro de tamaño es 0, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
+Estas funciones validan sus parámetros. Si el búfer es **NULL** o si el parámetro de tamaño es 0, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
 
-**_strerror_s**, **_wcserror_s**, y **__wcserror_s** no forman parte de la definición de ANSI, pero en su lugar, son extensiones de Microsoft a él. No se utilicen donde se desea disponer de portabilidad; para la compatibilidad con ANSI, use **strerror_s** en su lugar.
+**_strerror_s**, **_wcserror_s**, y **__wcserror_s** no forman parte de la definición ANSI, pero en su lugar, son extensiones de Microsoft a ella. No se utilicen donde se desea disponer de portabilidad; para la compatibilidad con ANSI, use **strerror_s** en su lugar.
 
 En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

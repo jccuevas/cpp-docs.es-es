@@ -1,10 +1,6 @@
 ---
-title: _execvpe, _wexecvpe | Microsoft Docs
-ms.custom: ''
+title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvpe
 - _wexecvpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97020ba4e1b20bfc95f48eaa1afe6fa111a9b769
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431699"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -95,9 +85,9 @@ Para obtener más información sobre estos y otros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno. Estas funciones usan la **ruta de acceso** variable de entorno para buscar el archivo para ejecutar.
+Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno. Estas funciones usan la **ruta** variable de entorno para buscar el archivo para ejecutar.
 
-El **_execvpe** funciones validan sus parámetros. Si el *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, un puntero a una matriz vacía o un puntero a una matriz que contiene una cadena vacía como primer argumento, estas funciones invocan no válido controlador de parámetros, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso.
+El **_execvpe** funciones validan sus parámetros. Si el *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, un puntero a una matriz vacía o un puntero a una matriz que contiene una cadena vacía como primer argumento, estas funciones invocan el no válido controlador de parámetros, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso.
 
 ## <a name="requirements"></a>Requisitos
 

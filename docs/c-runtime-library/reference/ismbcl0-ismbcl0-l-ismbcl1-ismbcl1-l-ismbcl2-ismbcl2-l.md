@@ -1,10 +1,6 @@
 ---
-title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcl2
 - _ismbcl1
@@ -38,8 +34,6 @@ f1_keywords:
 - _ismbcl0_l
 - _ismbcl2
 - ismbcl2_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcl0_l function
 - _ismbcl2 function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29d80c6d26171d9ac347aae1ac488d1fcadb1fec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430893"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,20 +98,20 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c* < = 255 y hay un correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de los correspondientes **_ismbb** rutina.
+Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c* < = 255 y hay correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la correspondiente **_ismbb** rutina.
 
 ## <a name="remarks"></a>Comentarios
 
 Cada una de estas funciones prueba si un carácter multibyte dado cumple una condición determinada.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 |Rutina|Condición de prueba (solo página de códigos 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS no-Kanji: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS no-Kanji: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS de nivel 1: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|JIS de nivel 1: 0x889F < =*c*< = 0x9872.|
+|**_ismbcl0**|JIS no Kanji: 0 x 8140 < =*c*< = 0x889E.|
+|**_ismbcl0_l**|JIS no Kanji: 0 x 8140 < =*c*< = 0x889E.|
+|**_ismbcl1**|JIS de nivel 1: 0x889F < =*c*< = 0 x 9872.|
+|**_ismbcl1_l**|JIS de nivel 1: 0x889F < =*c*< = 0 x 9872.|
 |**_ismbcl2**|JIS de nivel 2: 0x989F < =*c*< = 0xEAA4.|
 |**_ismbcl2_l**|JIS de nivel 2: 0x989F < =*c*< = 0xEAA4.|
 

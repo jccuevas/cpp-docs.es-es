@@ -1,10 +1,6 @@
 ---
-title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430308"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -96,7 +86,7 @@ Ambas funciones devuelven el carácter *c* si se realiza correctamente. Si se pr
 
 ## <a name="remarks"></a>Comentarios
 
-El carácter de inserción de estas funciones *c* a la consola, provocando *c* como el siguiente carácter leído por **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** y **_ungetwch** producirá un error si se les llama más de una vez antes de la siguiente operación de lectura. El *c* argumento no puede ser **EOF** (o **WEOF**).
+Estas funciones devuelven el carácter *c* a la consola, causando *c* sea el siguiente carácter leído por **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** y **_ungetwch** producirá un error si se llaman más de una vez antes de la siguiente operación de lectura. El *c* argumento no puede ser **EOF** (o **WEOF**).
 
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Pueden ser más rápidas, porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 

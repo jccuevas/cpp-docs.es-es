@@ -1,10 +1,6 @@
 ---
-title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Microsoft Docs
-ms.custom: ''
+title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -33,8 +29,6 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add1f3ec75a3746d30e256ef32034b3d604f223a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430074"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -171,7 +161,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto, **STRUNCATE** si se produjo truncamiento; en caso contrario, un código de error.
+Cero si es correcto, **STRUNCATE** si se ha producido un truncamiento, en caso contrario, un código de error.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
@@ -180,13 +170,13 @@ Cero si es correcto, **STRUNCATE** si se produjo truncamiento; en caso contrario
 |**NULL**|any|any|**EINVAL**|no modificado|
 |any|any|**NULL**|**EINVAL**|*strDest*[0] se establece en 0|
 |any|0|any|**EINVAL**|no modificado|
-|no **NULL**|demasiado pequeño|any|**ERANGE**|*strDest*[0] se establece en 0|
+|No **NULL**|demasiado pequeño|any|**ERANGE**|*strDest*[0] se establece en 0|
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intentan copiar los primeros *d.* caracteres de *strSource* a *strDest*, donde *d.* es el menor de *recuento*  y la longitud de *strSource*. Si esos *d.* caracteres quepa en *strDest* (cuyo tamaño se proporciona como *numberOfElements*) y dejar espacio para un terminador nulo, a continuación, se copian los caracteres y se anexa un carácter nulo final; en caso contrario, *strDest*[0] se establece en el carácter nulo y el parámetro no válido se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Estas funciones intentan copiar los primeros *d.* caracteres de *strSource* a *strDest*, donde *d.* es el menor de *recuento*  y la longitud de *strSource*. Si esos *d.* se ajusten a caracteres *strDest* (cuyo tamaño se da como *numberOfElements*) y queda espacio para un terminador nulo, dichos caracteres se copian y se anexa un carácter nulo final; en caso contrario, *strDest*[0] se establece en el carácter nulo y el parámetro no válido se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
-Existe una excepción al comportamiento anterior. Si *recuento* es **_TRUNCATE**, a continuación, como gran parte de *strSource* que quepa en *strDest* se copia dejando espacio para el terminación null que se anexa siempre.
+Existe una excepción al comportamiento anterior. Si *recuento* es **_TRUNCATE**, a continuación, como gran parte de *strSource* que quepa en *strDest* se copia, dejando espacio para el terminación null que se anexa siempre.
 
 Por ejemplo,
 
@@ -195,7 +185,7 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-es decir, te pedimos **strncpy_s** copie cinco caracteres en un búfer de cinco bytes de longitud; esto no daría lugar a ningún espacio para el terminador nulo, por lo tanto, **strncpy_s** pone a la cadena de cero y llama no válido controlador de parámetros.
+significa que, te pedimos **strncpy_s** copie cinco caracteres en un búfer de cinco bytes de longitud; esto no quedaría espacio para el terminador nulo, por lo tanto, **strncpy_s** pone a cero la cadena y llama el no válido controlador de parámetros.
 
 Si se necesita comportamiento de truncamiento, utilice **_TRUNCATE** o (*tamaño* - 1):
 
@@ -206,13 +196,13 @@ strncpy_s(dst, 5, "a long string", 4);
 
 Tenga en cuenta que a diferencia de **strncpy**si *recuento* es mayor que la longitud de *strSource*, la cadena de destino no se rellena con caracteres nulos hasta la longitud *recuento*.
 
-El comportamiento de **strncpy_s** es indefinido si las cadenas de origen y de destino se superponen.
+El comportamiento de **strncpy_s** es indefinido si las cadenas de origen y destino se superponen.
 
 Si *strDest* o *strSource* es **NULL**, o *numberOfElements* es 0, se invoca el controlador de parámetros no válidos. Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**.
 
-**wcsncpy_s** y **_mbsncpy_s** son versiones de caracteres multibyte y anchos de **strncpy_s**. Los argumentos y el valor devuelto de **wcsncpy_s** y **mbsncpy_s** varían en consecuencia. Por lo demás, estas seis funciones se comportan exactamente igual.
+**wcsncpy_s** y **_mbsncpy_s** son versiones de caracteres anchos y caracteres multibyte de **strncpy_s**. Los argumentos y el valor devuelto de **wcsncpy_s** y **mbsncpy_s** varían en consecuencia. Por lo demás, estas seis funciones se comportan exactamente igual.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -226,7 +216,7 @@ Las versiones de depuración de estas funciones rellenan primero el búfer con 0
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**, **_wcsncpy_s_l** y **_mbsncpy_s_l** no tienen dependen de la configuración regional y se proporcionan solo para **_tcsncpy_s_l** y no pretende ser llamar directamente.
+> **_strncpy_s_l**, **_wcsncpy_s_l** y **_mbsncpy_s_l** no tienen dependen de la configuración regional y se proporcionan solo para **_tcsncpy_s_l** y no pretende ser se llama directamente.
 
 ## <a name="requirements"></a>Requisitos
 

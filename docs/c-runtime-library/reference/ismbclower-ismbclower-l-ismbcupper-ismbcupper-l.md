@@ -1,10 +1,6 @@
 ---
-title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -26,8 +22,6 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef7b21cc10ca5e72a5054e34b0e228be89d74cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402239"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431868"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -85,7 +75,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*< = 255 y hay un correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de los correspondientes **_ismbb** rutina.
+Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*< = 255 y hay correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la correspondiente **_ismbb** rutina.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -95,10 +85,10 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un solo byte de una letra inglesa en minúsculas de ASCII: 0 x 61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un solo byte de una letra inglesa en minúsculas de ASCII: 0 x 61 < =*c*< = 0x7A.|
-|**_ismbcupper**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un solo byte de una letra inglesa de ASCII en mayúsculas: 0 x 41 < =*c*< = 0x5A.|
-|**_ismbcupper_l**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un solo byte de una letra inglesa de ASCII en mayúsculas: 0 x 41 < =*c*< = 0x5A.|
+|**_ismbclower**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa minúscula ASCII: 0 x 61 < =*c*< = 0x7A.|
+|**_ismbclower_l**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa minúscula ASCII: 0 x 61 < =*c*< = 0x7A.|
+|**_ismbcupper**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa mayúscula ASCII: 0 x 41 < =*c*< = 0x5A.|
+|**_ismbcupper_l**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa mayúscula ASCII: 0 x 41 < =*c*< = 0x5A.|
 
 ## <a name="requirements"></a>Requisitos
 

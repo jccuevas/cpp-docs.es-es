@@ -1,27 +1,17 @@
 ---
-title: Error PRJ0013 al compilar del proyecto | Microsoft Docs
-ms.custom: ''
+title: Error PRJ0013 al compilar el proyecto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0013
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0013
 ms.assetid: 95e7bafd-63c8-4b2d-b778-f19cdf9ba36c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7a151ca34d680a517c405e5cb6f91c18d35bedd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 868b50bdac3931465103b6b4893f7bc4d030c16d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102650"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437089"
 ---
 # <a name="project-build-error-prj0013"></a>Error PRJ0013 al compilar el proyecto
 

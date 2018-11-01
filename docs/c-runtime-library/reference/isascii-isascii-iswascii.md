@@ -1,10 +1,6 @@
 ---
-title: isascii, __isascii, iswascii | Microsoft Docs
-ms.custom: ''
+title: isascii, __isascii, iswascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswascii
 - __isascii
@@ -30,8 +26,6 @@ f1_keywords:
 - ctype/isascii
 - ctype/__isascii
 - corecrt_wctype/iswascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - __isascii function
 - _isascii function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bffc46bae24689558999d188f96e5b9f8d21c54e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433664"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -75,13 +65,13 @@ Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si **c** es una representación concreta de un carácter ASCII. **__isascii** devuelve un valor distinto de cero si **c** es un carácter ASCII (en el intervalo 0 x 00 - 0x7F). **iswascii** devuelve un valor distinto de cero si **c** es una representación de caracteres anchos de un carácter ASCII. Cada una de estas rutinas devuelve 0 si **c** no satisface la condición de prueba.
+Cada una de estas rutinas devuelve distinto de cero si **c** es una representación concreta de un carácter ASCII. **__isascii** devuelve un valor distinto de cero si **c** es un carácter ASCII (en el intervalo 0 x 00 - 0x7F). **iswascii** devuelve un valor distinto de cero si **c** es una representación de caracteres anchos de un carácter ASCII. Cada una de estas rutinas devuelve 0 si **c** no satisface la condición de prueba.
 
 ## <a name="remarks"></a>Comentarios
 
-Ambos **__isascii** y **iswascii** se implementan como macros a menos que se define la macro de preprocesador _CTYPE_DISABLE_MACROS.
+Ambos **__isascii** y **iswascii** se implementan como macros, a menos que la macro de preprocesador _ctype_disable_macros.
 
-Por compatibilidad con versiones anteriores, **isascii** se implementa como un solo si macro [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) no está definido o se define como 0; en caso contrario, es indefinido.
+Por compatibilidad con versiones anteriores, **isascii** se implementa como una macro solo si [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) no está definido o se define como 0; en caso contrario, está sin definir.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

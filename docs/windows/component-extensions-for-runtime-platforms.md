@@ -1,12 +1,7 @@
 ---
-title: Extensiones de componentes de .NET y UWP | Documentos de Microsoft
-ms.custom: ''
+title: Extensiones de componentes de .NET y UWP
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432369"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensiones de componentes de .NET y UWP
 
@@ -54,7 +44,7 @@ En la tabla siguiente se enumeran las palabras clave en la extensión del lengua
 |**clase de interfaz**<br /><br /> **struct de interfaz**|No|Declara una interfaz.|[clase de interfaz](../windows/interface-class-cpp-component-extensions.md)|
 |**clase Enum**<br /><br /> **enum struct**|No|Declara una enumeración.|[clase Enum](../windows/enum-class-cpp-component-extensions.md)|
 |**propiedad**|Sí|Declara una propiedad.|[propiedad](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Sí|Declara un delegado.|[delegado (C++ / c++ / CLI y c++ / CX)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Sí|Declara un delegado.|[delegate (C++/CLI y C++/CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Sí|Declara un evento.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Especificadores de invalidación
