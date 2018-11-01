@@ -1,10 +1,6 @@
 ---
-title: _execvp, _wexecvp | Microsoft Docs
-ms.custom: ''
+title: _execvp, _wexecvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvp
 - _wexecvp
@@ -25,24 +21,18 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47154bd999b421c2170118236a899dcc4e2860
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402223"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505318"
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 
@@ -90,7 +80,7 @@ Para obtener más información sobre estos y otros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a argumentos de línea de comandos y usando la **ruta de acceso** variable de entorno para buscar el archivo para ejecutar.
+Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a argumentos de línea de comandos y usando el **ruta** variable de entorno para buscar el archivo para ejecutar.
 
 El **_execvp** funciones validan sus parámetros. Si el *cmdname* es un puntero nulo, o *argv* es un puntero nulo, puntero a una matriz vacía, o si la matriz contiene una cadena vacía como primer argumento, estas funciones invocan el controlador de parámetros no válidos como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso.
 
