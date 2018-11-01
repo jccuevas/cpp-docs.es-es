@@ -1,10 +1,6 @@
 ---
-title: vscanf, vwscanf | Microsoft Docs
-ms.custom: ''
+title: vscanf, vwscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vscanf
 - vwscanf
@@ -24,19 +20,13 @@ f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
-dev_langs:
-- C++
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 825d0d61fccc6d0f83ae8b11648a3c7a3a9c50a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ba72e0dc313617211f7b9608bcbd8919bbc62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625096"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -68,18 +58,18 @@ Lista de argumentos de variable.
 
 Devuelve el número de campos que se han convertido y asignado correctamente; el valor devuelto no incluye los campos leídos pero no asignados. Un valor devuelto de 0 indica que no se ha asignado ningún campo.
 
-Si *formato* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
+Si *formato* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **vscanf** función lee los datos del flujo de entrada estándar **stdin** y escribe los datos en las ubicaciones que se proporcionan en el *arglist* lista de argumentos. Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+El **vscanf** función lee los datos de flujo de entrada estándar **stdin** y escribe los datos en las ubicaciones que proporcionan el *arglist* lista de argumentos. Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
 > Cuando usas **vscanf** para leer una cadena, especifique siempre un ancho para el **%s** formato (por ejemplo, **"% 32s"** en lugar de **"%s"**); en caso contrario, la entrada con formato incorrecto puede provocar una saturación del búfer. Como alternativa, puede usar [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) o [fgets](fgets-fgetws.md).
 
-**vwscanf** es una versión con caracteres anchos de **vscanf**; el *formato* argumento pasado a **vwscanf** es una cadena de caracteres anchos. **vwscanf** y **vscanf** se comportan exactamente igual si el flujo se abre en modo ANSI. **vscanf** no admite la entrada desde un flujo UNICODE.
+**vwscanf** es una versión con caracteres anchos de **vscanf**; el *formato* argumento **vwscanf** es una cadena de caracteres anchos. **vwscanf** y **vscanf** se comportan exactamente igual si el flujo se abre en modo ANSI. **vscanf** no admite la entrada desde un flujo UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -96,7 +86,7 @@ Para obtener más información, vea [Campos de especificación de formato: funci
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

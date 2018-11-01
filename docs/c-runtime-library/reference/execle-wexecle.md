@@ -1,10 +1,6 @@
 ---
-title: _execle, _wexecle | Microsoft Docs
-ms.custom: ''
+title: _execle, _wexecle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execle
 - _wexecle
@@ -25,24 +21,18 @@ f1_keywords:
 - wexecle
 - _execle
 - _wexecle
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecle function
 - execle function
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 519cdb78132c50513ae3197985de7faaceff7c91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400647"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530525"
 ---
 # <a name="execle-wexecle"></a>_execle, _wexecle
 
@@ -101,7 +91,7 @@ Para obtener más información sobre estos códigos de retorno, consulte [_doser
 
 Cada una de estas funciones carga y ejecuta un proceso nuevo, y pasa cada argumento de la línea de comandos como parámetro independiente, así como una matriz de punteros a la configuración del entorno.
 
-El **_execle** funciones validan sus parámetros. Si *cmdname* o *arg0* es un puntero nulo o una cadena vacía, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso nuevo.
+El **_execle** funciones validan sus parámetros. Si *cmdname* o *arg0* es un puntero nulo o una cadena vacía, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1. No se inicia ningún proceso nuevo.
 
 ## <a name="requirements"></a>Requisitos
 
