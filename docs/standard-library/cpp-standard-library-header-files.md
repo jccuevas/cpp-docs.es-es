@@ -1,12 +1,6 @@
 ---
-title: Archivos de encabezado de la biblioteca estándar de C++ | Microsoft Docs
-ms.custom: ''
+title: Archivos de encabezado de la biblioteca estándar de C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f177ebceff77aa9776ce2943ff5cb6176440ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847005"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496361"
 ---
 # <a name="c-standard-library-header-files"></a>Archivos de encabezado de la biblioteca estándar de C++
 
@@ -42,7 +32,7 @@ Archivos de encabezado de la biblioteca estándar de C++ y extensiones, por cate
 |Contenedores asociativos sin ordenar|[<unordered_map>](../standard-library/unordered-map.md), [<unordered_set>](../standard-library/unordered-set.md)|
 |Contenedores de adaptador|[\<queue>](../standard-library/queue.md), [\<stack>](../standard-library/stack.md)|
 |[Controlar errores y excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<exception>](../standard-library/exception.md), [\<stdexcept>](../standard-library/stdexcept.md), [<system_error>](../standard-library/system-error.md)|
-|[I/OS y formato](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
+|[E/S y el formato](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
 |Iterators|[\<iterator>](../standard-library/iterator.md)|
 |Localización|[\<codecvt>](../standard-library/codecvt.md), [\<cvt/wbuffer>](../standard-library/cvt-wbuffer.md), [\<cvt/wstring>](../standard-library/cvt-wstring.md), [\<locale>](../standard-library/locale.md)|
 |Matemáticas y valores numéricos|[\<complex>](../standard-library/complex.md), [\<limits>](../standard-library/limits.md), [\<numeric>](../standard-library/numeric.md), [\<random>](../standard-library/random.md), [\<ratio>](../standard-library/ratio.md), [\<valarray>](../standard-library/valarray.md)|

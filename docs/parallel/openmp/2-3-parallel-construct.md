@@ -1,23 +1,13 @@
 ---
-title: 2.3 parallel (construcción) | Microsoft Docs
-ms.custom: ''
+title: 2.3 parallel (Construcción)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4be5bdc40f69cfa0a326ffa6a7f8465e401cfd33
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6ee7539af05bef1fdca117d806900f2f5a9c0d7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494680"
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel (Construcción)
 
@@ -41,7 +31,7 @@ El *cláusula* es uno de los siguientes:
 
 **copyin(** *variable-list* **)**
 
-**reducción (** *operador* **:***lista de variables* **)** 
+**reducción (** *operador* **:***lista de variables* **)**
 
 **num_threads(** *integer-expression* **)**
 
