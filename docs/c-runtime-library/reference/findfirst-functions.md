@@ -1,10 +1,6 @@
 ---
-title: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64 | Microsoft Docs
-ms.custom: ''
+title: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _findfirst
 - _wfindfirst
@@ -56,8 +52,6 @@ f1_keywords:
 - tfindfirst32i64
 - _findfirst
 - _wfindfirst64
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tfindfirst64 function
 - _wfindfirst64i32 function
@@ -96,20 +90,16 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c57577208e9c2e8306f2c1c30f352e62c068c88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405645"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542091"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
-Proporciona información acerca de la primera instancia de un nombre de archivo que coincida con el archivo especificado en el *filespec* argumento.
+Proporcionan información acerca de la primera instancia de un nombre de archivo que coincida con el archivo especificado en el *filespec* argumento.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -174,14 +164,14 @@ Búfer de información de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **_findfirst** devuelve un identificador de búsqueda única identificar el archivo o el grupo de archivos que coinciden con la *filespec* especificación, que puede usarse en una llamada subsiguiente a [_ FindNext](findnext-functions.md) o a [_findclose](findclose.md). En caso contrario, **_findfirst** devuelve -1 y establece **errno** a uno de los siguientes valores.
+Si es correcto, **_findfirst** devuelve un identificador de búsqueda exclusivo que identifica el archivo o grupo de archivos que coinciden con el *filespec* especificación, que puede usarse en una llamada subsiguiente a [_ FindNext](findnext-functions.md) o a [_findclose](findclose.md). En caso contrario, **_findfirst** devuelve -1 y establece **errno** a uno de los siguientes valores.
 
 |valor de errno|Condición|
 |-|-|
-**EINVAL**|Parámetro no válido: *filespec* o *fileinfo* era **NULL**. O bien, el sistema operativo ha devuelto un error inesperado.
+**EINVAL**|Parámetros no válidos: *filespec* o *fileinfo* era **NULL**. O bien, el sistema operativo ha devuelto un error inesperado.
 **ENOENT**|Especificación de archivo que no se encuentra.
 **ENOMEM**|Memoria insuficiente.
-**EINVAL**|Especificación del nombre de archivo no válido o el nombre de archivo dado era mayor que **MAX_PATH**.
+**EINVAL**|Especificación de nombre de archivo no válido o el nombre de archivo indicado era mayor que **MAX_PATH**.
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -189,21 +179,21 @@ Si se pasa un parámetro no válido, estas funciones invocan al controlador de p
 
 ## <a name="remarks"></a>Comentarios
 
-Debe llamar a [_findclose](findclose.md) cuando haya terminado con cualquiera el **_findfirst** o [_findnext](findnext-functions.md) función (o cualquiera de sus variantes). Así se liberan los recursos que usan estas funciones de la aplicación.
+Debe llamar a [_findclose](findclose.md) después de finalizar con el **_findfirst** o [_findnext](findnext-functions.md) función (o cualquiera de sus variantes). Así se liberan los recursos que usan estas funciones de la aplicación.
 
-Las variaciones de estas funciones que tienen la **w** prefijo son versiones con caracteres anchos; en caso contrario, son idénticas a las funciones de un solo byte correspondientes.
+Las variaciones de estas funciones que tienen el **w** prefijo son versiones de caracteres anchos; de lo contrario, son idénticas a las funciones de un solo byte correspondientes.
 
-Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y tamaños de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tipo de tiempo; el segundo sufijo es **i32** o **i64**e indica Si el tamaño del archivo se representa como un entero de 32 bits o 64 bits. Para obtener información sobre las versiones que admiten tipos de tiempo y tamaños de archivo de 32 bits y 64 bits, consulte la tabla siguiente. El **i32** o **i64** sufijo se omite si es el mismo que el tamaño del tipo de tiempo, por lo que **_findfirst64** también admite longitudes de archivos de 64 bits y **_findfirst32**  admite solo las longitudes de archivos de 32 bits.
+Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y tamaños de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tipo de hora; el segundo sufijo es **i32** o **i64**e indica Si el tamaño del archivo se representa como un entero de 32 bits o 64 bits. Para obtener información sobre las versiones que admiten tipos de tiempo y tamaños de archivo de 32 bits y 64 bits, consulte la tabla siguiente. El **i32** o **i64** sufijo se omite si es el mismo que el tamaño del tipo de tiempo, por lo que **_findfirst64** también admite longitudes de archivos de 64 bits y **_findfirst32**  admite longitudes de archivos de 32 bits sólo.
 
-Estas funciones usan diversas formas de la **_finddata_t** estructura para el *fileinfo* parámetro. Para obtener más información sobre la estructura, consulte [Funciones de búsqueda de nombre de archivo](../../c-runtime-library/filename-search-functions.md).
+Estas funciones usan diversas formas de la **_finddata_t** de estructura para el *fileinfo* parámetro. Para obtener más información sobre la estructura, consulte [Funciones de búsqueda de nombre de archivo](../../c-runtime-library/filename-search-functions.md).
 
 Las variaciones que usan un tipo de tiempo de 64 bits permiten expresar fechas de creación de archivos hasta las 23:59:59 horas del 31 de diciembre de 3000, UTC. Las que usan un tipo de tiempo de 32 bits, solo representan fechas hasta las 23:59:59 horas del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 
-A menos que tenga una razón concreta para usar las versiones que especificar explícitamente el tamaño de tiempo, utilice **_findfirst** o **_wfindfirst** o bien, si necesita admitir el tamaño de archivo mayor que 3 GB, use **_ findfirsti64** o **_wfindfirsti64**. Todas estas funciones usan el tipo de tiempo de 64 bits. En versiones anteriores, estas funciones usan un tipo de tiempo de 32 bits. Si se trata de un cambio importante para una aplicación, se podría definir **_USE_32BIT_TIME_T** para revertir al comportamiento anterior. Si **_USE_32BIT_TIME_T** se define, **_findfirst**, **_finfirsti64**, y sus correspondientes versiones Unicode usan uno de 32 bits.
+A menos que tenga una razón concreta para usar las versiones que especifican explícitamente el tamaño de tiempo, use **_findfirst** o **_wfindfirst** o bien, si tiene que admitir tamaños de archivo mayores que 3 GB, use **_ findfirsti64** o **_wfindfirsti64**. Todas estas funciones usan el tipo de tiempo de 64 bits. En versiones anteriores, estas funciones usan un tipo de tiempo de 32 bits. Si se trata de un cambio importante para una aplicación, se podría definir **_USE_32BIT_TIME_T** para revertir al comportamiento anterior. Si **_USE_32BIT_TIME_T** está definido, **_findfirst**, **_finfirsti64**, y sus correspondientes versiones Unicode usan un tiempo de 32 bits.
 
 ### <a name="time-type-and-file-length-type-variations-of-findfirst"></a>Variaciones de tipo de tiempo y tipo de longitud de archivo de _findfirst
 
-|Funciones|**¿_USE_32BIT_TIME_T** definido?|Tipo de tiempo|Tipo de longitud de archivo|
+|Funciones|**¿_USE_32BIT_TIME_T** definidos?|Tipo de tiempo|Tipo de longitud de archivo|
 |---------------|----------------------------------|---------------|----------------------|
 |**_findfirst**, **_wfindfirst**|No definida|64 bits|32 bits|
 |**_findfirst**, **_wfindfirst**|Definido|32 bits|32 bits|

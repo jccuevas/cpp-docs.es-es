@@ -1,27 +1,17 @@
 ---
-title: Las herramientas del vinculador LNK1223 Error | Microsoft Docs
-ms.custom: ''
+title: Error de las herramientas del vinculador LNK1223
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1223
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1223
 ms.assetid: c4728c36-daee-462f-a1c7-8733dcdec88e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8639919c74559829367108b36d62594e2a83a91a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 331521c357389c2f7c1aa786969154a2b747ffe5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537974"
 ---
 # <a name="linker-tools-error-lnk1223"></a>Error de las herramientas del vinculador LNK1223
 

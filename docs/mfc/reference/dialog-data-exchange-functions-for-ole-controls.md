@@ -1,10 +1,6 @@
 ---
-title: Funciones de intercambio de datos de cuadro de diálogo para controles OLE | Microsoft Docs
-ms.custom: ''
+title: Funciones de intercambio de datos de cuadro de diálogo para controles OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -18,22 +14,16 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a24bac5e27b0a3e0b1c011b1bb6019be2160d281
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531253"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funciones de intercambio de datos de cuadro de diálogo para controles OLE
 
@@ -84,7 +74,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -118,7 +108,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -152,7 +142,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -186,7 +176,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -226,7 +216,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -266,7 +256,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -306,7 +296,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -346,7 +336,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -380,7 +370,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -414,7 +404,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -448,7 +438,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -482,7 +472,7 @@ Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de 
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre DDX, consulte [intercambio de datos de cuadro de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).
+Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 

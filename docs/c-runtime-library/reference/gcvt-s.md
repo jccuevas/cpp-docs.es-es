@@ -1,10 +1,6 @@
 ---
-title: _gcvt_s | Microsoft Docs
-ms.custom: ''
+title: _gcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a2bd12a63db064bca0c880484f99a2df9d210f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554972"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -90,16 +80,16 @@ Cero si es correcto. Si se produce un error debido a un parámetro no válido (v
 |*buffer*|*sizeInBytes*|*valor*|*digits*|Volver|Valor de *búfer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|No modificado.|
-|No **NULL** (apunta a la memoria válido)|cero|any|any|**EINVAL**|No modificado.|
-|No **NULL** (apunta a la memoria válido)|any|any|>= *sizeInBytes*|**EINVAL**|No modificado.|
+|No **NULL** (apunta a la memoria válida)|cero|any|any|**EINVAL**|No modificado.|
+|No **NULL** (apunta a la memoria válida)|any|any|>= *sizeInBytes*|**EINVAL**|No modificado.|
 
 **Problemas de seguridad**
 
-**_gcvt_s** puede generar una infracción de acceso si *búfer* no apunta a la memoria válido y no es **NULL**.
+**_gcvt_s** puede generar una infracción de acceso si *búfer* no apunta a la memoria válida y no es **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_gcvt_s** función convierte un punto flotante *valor* en una cadena de caracteres (que incluye un separador decimal y un byte de inicio de sesión posible) y almacena la cadena de *búfer* . *búfer* debe ser lo suficientemente grande como para alojar el valor convertido más de un carácter null final, que se anexa automáticamente. Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier flotante como valor de punto. Si un tamaño de búfer de *dígitos* + 1 se utiliza, la función no sobrescribirá el final del búfer, por lo que debe asegurarse de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta generar *dígitos* dígitos en formato decimal. Si no es posible, genera *dígitos* dígitos en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
+El **_gcvt_s** función convierte un punto flotante *valor* en una cadena de caracteres (que incluye un separador decimal y un posible byte con signo) y almacena la cadena en *búfer* . *búfer* debe ser lo suficientemente grande como para contener el valor convertido más un carácter nulo final, que se anexa automáticamente. Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier flotante como valor de punto. Si un tamaño de búfer *dígitos* + 1 se usa, la función no sobrescribirá el final del búfer, así que asegúrese de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta generar *dígitos* dígitos en formato decimal. Si no es posible, genera *dígitos* dígitos en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
 
 En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

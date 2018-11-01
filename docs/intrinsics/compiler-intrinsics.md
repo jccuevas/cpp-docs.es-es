@@ -1,28 +1,18 @@
 ---
-title: Intrínsecos del compilador | Microsoft Docs
-ms.custom: ''
+title: Intrínsecos del controlador
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - intrinsics, compiler
 - compiler intrinsics
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a11efde9be7e990608277a242d7018f347df0ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f66c6247aba92a1528489dcf689239c9341b7d2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560022"
 ---
 # <a name="compiler-intrinsics"></a>Intrínsecos del controlador
 

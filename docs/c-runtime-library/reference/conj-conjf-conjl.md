@@ -1,11 +1,6 @@
 ---
-title: conj, conjf, conjl | Microsoft Docs
-ms.custom: ''
+title: conj, conjf, conjl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - conj
 - conjf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/conj
 - complex/conjf
 - complex/conjl
-dev_langs:
-- C++
 helpviewer_keywords:
 - conj function
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb91b566c499ba9f34c7c67c9cdc24d67924601d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579964"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -74,7 +63,7 @@ _Lcomplex conjl(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -83,7 +72,7 @@ El conjugado complejo de *z*.  El resultado tiene el mismo elemento real e imagi
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **conj** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **conj** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **conj** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **conj** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
