@@ -1,27 +1,17 @@
 ---
-title: Agregar un controlador de mensajes MFC | Microsoft Docs
-ms.custom: ''
+title: Agregar un controlador de mensajes MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.adding.mfc.msghandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9980a367c0272fe35e2135c1fb5a7df1c19a314
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: edb48b510be1de73abe3361f9bd409a8fed929d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377310"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593549"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Agregar un controlador de mensajes MFC
 
@@ -38,7 +28,7 @@ Mediante el uso de la ventana Propiedades para definir funciones de control de m
 [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Reemplazar una función Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
 [Editor de cuadros de diálogo](../../windows/dialog-editor.md)
 

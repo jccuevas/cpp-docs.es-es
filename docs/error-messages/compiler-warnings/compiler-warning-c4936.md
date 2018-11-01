@@ -1,27 +1,17 @@
 ---
-title: Advertencia del compilador C4936 | Documentos de Microsoft
-ms.custom: ''
+title: Advertencia del compilador C4936
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4936
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0be4a565dd251da77174c401c23b8ed8bfc531b0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: bbb69cccbf93be6e97d13db5008780f57e63f9da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537571"
 ---
 # <a name="compiler-warning-c4936"></a>Advertencia del compilador C4936
 
@@ -29,7 +19,7 @@ ms.locfileid: "34703944"
 
 ## <a name="remarks"></a>Comentarios
 
-El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
 Se utilizó un modificador `__declspec` , pero ese modificador `__declspec` solo es válido cuando se compila con una de las opciones [/clr](../../build/reference/clr-common-language-runtime-compilation.md) .
 

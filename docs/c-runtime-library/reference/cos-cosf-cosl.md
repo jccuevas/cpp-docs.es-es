@@ -1,10 +1,6 @@
 ---
-title: cos, cosf, cosl | Documentos de Microsoft
-ms.custom: ''
+title: cos, cosf, cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519910"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -76,12 +66,12 @@ El coseno de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se p
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|ninguna|**_DOMAIN**|
-|± INF|**NO VÁLIDO**|**_DOMAIN**|
+|+ QNAN, IND|ninguna|**_DOMINIO**|
+|+ INF|**NO VÁLIDO**|**_DOMINIO**|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **cos** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **cos** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cos** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **cos** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -93,7 +83,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [sen, sinf, sinl](sin-sinf-sinl.md).
+Vea el ejemplo de [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,10 +1,6 @@
 ---
-title: _ASSERT, _ASSERTE, _ASSERT_EXPR (Macros) | Microsoft Docs
-ms.custom: ''
+title: _ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,8 +18,6 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d2d83c3afa8e22c1f75480fe2afefa8bf68be858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598463"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
 
@@ -74,7 +64,7 @@ El **_ASSERT_EXPR**, **_ASSERT** y **_ASSERTE** ofrecen una aplicación con un m
 
 Dado que el **_ASSERTE** macro especifica la expresión del error, y **_ASSERT_EXPR** permite especificar un mensaje en el informe generado, permiten a los usuarios identificar el problema sin hacer referencia a la código fuente de la aplicación. Sin embargo, existe una desventaja de que cada *mensaje* impresos por **_ASSERT_EXPR** y cada expresión evaluada por **_ASSERTE** se incluye en la salida (versión de depuración) archivo de la aplicación como una constante de cadena. Por lo tanto, si un gran número de llamadas se realizan en **_ASSERT_EXPR** o **_ASSERTE**, estas expresiones pueden aumentar considerablemente el tamaño del archivo de salida.
 
-A menos que se especifique lo contrario con las funciones [_CrtSetReportMode](crtsetreportmode.md) y [_CrtSetReportFile](crtsetreportfile.md), aparecen mensajes en un cuadro de diálogo emergente equivalente a establecer lo siguiente:
+A menos que se especifique lo contrario con las funciones [_CrtSetReportMode](crtsetreportmode.md) y [_CrtSetReportFile](crtsetreportfile.md) , aparecen mensajes en un cuadro de diálogo emergente equivalente a establecer lo siguiente:
 
 ```C
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
@@ -84,7 +74,7 @@ _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 
 Cuando el destino es una ventana de mensaje de depuración y el usuario hace clic en el **vuelva a intentar** botón, **_CrtDbgReportW** devuelve 1, provocando la **_ASSERT_EXPR**, **_ ASSERT** y **_ASSERTE** macros para iniciar el depurador siempre que esté habilitada la depuración just-in-time (JIT).
 
-Para obtener más información sobre el proceso de creación de informes, consulte la función [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) . Para más información sobre cómo resolver errores de aserción y usar estas macros como mecanismo de control de errores de depuración, vea [Uso de macros para comprobación e informes](/visualstudio/debugger/macros-for-reporting).
+Para más información sobre el proceso de creación de informes, vea la función [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) . Para más información sobre cómo resolver errores de aserción y usar estas macros como mecanismo de control de errores de depuración, vea [Uso de macros para comprobación e informes](/visualstudio/debugger/macros-for-reporting).
 
 Además el **_ASSERT** macros, la [assert](assert-macro-assert-wassert.md) macro puede usarse para comprobar la lógica del programa. Esta macro está disponible en las versiones de lanzamiento y depuración de las bibliotecas. Las macros de depuración [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) también están disponibles para generar un informe de depuración, pero no evalúan una expresión. El **_RPT** macros generan un informe sencillo. El **_RPTF** las macros son el número de archivo y la línea de código fuente donde se llamó a la macro de informe en el informe generado. Hay disponibles versiones de caracteres anchos de estas macros (**_RPTW**, **_RPTFW**). Las versiones de caracteres anchos son idénticas a las versiones de caracteres estrechos, salvo que se usan cadenas de caracteres anchos para todos los parámetros de cadena y la salida.
 

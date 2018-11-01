@@ -1,10 +1,6 @@
 ---
-title: _CrtSetAllocHook | Microsoft Docs
-ms.custom: ''
+title: _CrtSetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetAllocHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d86072ceb41b966adfca298152b6209450aace3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa466ec4bce6034c15a627ccab4ee4bb0ef8f5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402070"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533684"
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 
@@ -62,9 +52,9 @@ Devuelve la función de enlace de asignación previamente definida, o **NULL** s
 
 ## <a name="remarks"></a>Comentarios
 
-**_CrtSetAllocHook** permite que una aplicación enlace su propia función de asignación en el proceso de asignación de memoria de biblioteca de C depuración en tiempo de ejecución. Como resultado, todas las llamadas a una función de asignación de depuración para asignar, reasignar o liberar un bloque de memoria desencadena una llamada a la función de enlace de la aplicación. **_CrtSetAllocHook** proporciona una aplicación con un método sencillo para probar cómo controla la aplicación las situaciones de memoria insuficiente, la capacidad para examinar pautas de asignación y la posibilidad de registrar información de asignación para más tarde análisis. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetAllocHook** se quitan durante el preprocesamiento.
+**_CrtSetAllocHook** permite que una aplicación enlace su propia función de asignación en el proceso de asignación de memoria de biblioteca de C de depuración en tiempo de ejecución. Como resultado, todas las llamadas a una función de asignación de depuración para asignar, reasignar o liberar un bloque de memoria desencadena una llamada a la función de enlace de la aplicación. **_CrtSetAllocHook** proporciona una aplicación con un método sencillo para probar cómo controla la aplicación las situaciones de memoria insuficiente, la capacidad de examinar patrones de asignación y la posibilidad de registrar información de asignación de más adelante análisis. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetAllocHook** se quitan durante el preprocesamiento.
 
-El **_CrtSetAllocHook** función instala la nueva función de asignación definida por el cliente especificada en *allocHook* y devuelve la función de enlace definida previamente. En el ejemplo siguiente se muestra cómo se deben crear prototipos de un enlace de asignación definido por el cliente:
+El **_CrtSetAllocHook** función instala la nueva función de asignación definido por el cliente especificada en *allocHook* y devuelve la función de enlace definida previamente. En el ejemplo siguiente se muestra cómo se deben crear prototipos de un enlace de asignación definido por el cliente:
 
 ```C
 int YourAllocHook( int allocType, void *userData, size_t size,
@@ -72,20 +62,20 @@ int YourAllocHook( int allocType, void *userData, size_t size,
                    const unsigned char *filename, int lineNumber);
 ```
 
-El **allocType** argumento especifica el tipo de operación de asignación (**_HOOK_ALLOC**, **_HOOK_REALLOC**, y **_HOOK_FREE**) que desencadena la llamada a función de enlace de asignación. Cuando el tipo de asignación desencadenante es **_HOOK_FREE**, *userData* es un puntero a la sección de datos de usuario del bloque de memoria que se va a liberar. Sin embargo, cuando el tipo de asignación desencadenante es **_HOOK_ALLOC** o **_HOOK_REALLOC**, *userData* es **NULL** porque bloquear la memoria no se ha asignado todavía.
+El **allocType** argumento especifica el tipo de operación de asignación (**_HOOK_ALLOC**, **_HOOK_REALLOC**, y **_HOOK_FREE**) que desencadena la llamada a función de enlace de asignación. Cuando el tipo de asignación desencadenante es **_HOOK_FREE**, *userData* es un puntero a la sección de datos de usuario del bloque de memoria que se va a liberar. Sin embargo, cuando el tipo de asignación desencadenante es **_HOOK_ALLOC** o **_HOOK_REALLOC**, *userData* es **NULL** porque bloquean la memoria no se ha asignado todavía.
 
-*tamaño* especifica el tamaño de la memoria de bloque en bytes, *existen* indica el tipo del bloque de memoria, *requestNumber* es el número de orden de asignación de objetos del bloque de memoria y, disponible, *filename* y **lineNumber** especificar el origen archivo nombre y número de línea donde se inició la operación de asignación desencadenante.
+*tamaño* especifica el tamaño de la memoria de bloque en bytes, *existen* indica el tipo del bloque de memoria, *requestNumber* es el número de orden de asignación de objetos del bloque de memoria y, está disponible, *filename* y **lineNumber** especificar el origen archivo nombre y número de línea donde se inició la operación de asignación desencadenante.
 
-Una vez que la función de enlace se ha terminado de procesar, debe devolver un valor booleano, que indica al proceso de asignación principal en tiempo de ejecución de C cómo continuar. Cuando la función de enlace indica que el proceso de asignación principal debe continuar como si nunca se hubiera llamado la función de enlace, la función de enlace debe devolver **TRUE**. De esta forma, se ejecuta la operación de asignación desencadenante original. Con esta implementación, la función de enlace puede recopilar y guardar información de asignación para un análisis posterior, sin interferir con la operación de asignación actual ni el estado del montón de depuración.
+Una vez que la función de enlace se ha terminado de procesar, debe devolver un valor booleano, que indica al proceso de asignación principal en tiempo de ejecución de C cómo continuar. Cuando la función de enlace desea el proceso de asignación principal debe continuar como si nunca hubiera llamado la función de enlace, debe devolver la función de enlace **TRUE**. De esta forma, se ejecuta la operación de asignación desencadenante original. Con esta implementación, la función de enlace puede recopilar y guardar información de asignación para un análisis posterior, sin interferir con la operación de asignación actual ni el estado del montón de depuración.
 
-Cuando la función de enlace indica que el proceso de asignación principal debe continuar como si se llamó a la operación de asignación desencadenante y se produjo un error, a continuación, la función de enlace debe devolver **FALSE**. Con esta implementación, la función de enlace puede simular gran cantidad de condiciones de memoria y estados de montón de depuración para comprobar cómo controla la aplicación las distintas situaciones.
+Cuando la función de enlace desea el proceso de asignación principal debe continuar como si se llamó a la operación de asignación desencadenante y se produjo un error, entonces la función de enlace debe devolver **FALSE**. Con esta implementación, la función de enlace puede simular gran cantidad de condiciones de memoria y estados de montón de depuración para comprobar cómo controla la aplicación las distintas situaciones.
 
-Para borrar la función de enlace, pasar **NULL** a **_CrtSetAllocHook**.
+Para borrar la función de enlace, pase **NULL** a **_CrtSetAllocHook**.
 
-Para obtener más información acerca de cómo **_CrtSetAllocHook** puede utilizarse con otras funciones de administración de memoria o cómo escribir sus propias funciones de enlace definida por el cliente, consulte [creación de funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).
+Para obtener más información acerca de cómo **_CrtSetAllocHook** puede utilizarse con otras funciones de administración de memoria o cómo escribir sus propias funciones de enlace definido por el cliente, consulte [creación de funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).
 
 > [!NOTE]
-> **_CrtSetAllocHook** no es compatible con **/CLR: pure**. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y se quitó en Visual Studio de 2017.
+> **_CrtSetAllocHook** no es compatible con **/CLR: pure**. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y se quitó en Visual Studio 2017.
 
 ## <a name="requirements"></a>Requisitos
 

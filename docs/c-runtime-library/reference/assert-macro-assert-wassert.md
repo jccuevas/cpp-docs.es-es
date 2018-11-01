@@ -1,10 +1,6 @@
 ---
-title: assert (Macro), _assert, _wassert | Microsoft Docs
-ms.custom: ''
+title: assert (macro), _assert, _wassert
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - assert
 - _assert
@@ -27,23 +23,17 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs:
-- C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590962"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert (macro), _assert, _wassert
 
@@ -97,7 +87,7 @@ Para más información sobre la depuración, vea [Técnicas de depuración de CR
 
 El **_assert** y **_wassert** funciones son funciones de CRT internas. Ayudan a minimizar el código necesario en sus archivos de objeto para admitir aserciones. No se recomienda llamar a estas funciones directamente.
 
-El **assert** macro está habilitada en las versiones de lanzamiento y depuración de las bibliotecas de tiempo de ejecución de C cuando **NDEBUG** no está definido. Cuando **NDEBUG** está definido, la macro está disponible, pero no evalúa su argumento y no tiene ningún efecto. Cuando se habilita, el **assert** llamadas a macros **_wassert** para su implementación. Otras macros de aserción, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) y [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), también están disponibles, pero solo evalúan las expresiones que se les pasan cuando se ha definido la macro [_DEBUG](../../c-runtime-library/debug.md) y cuando están en código vinculado con la versión de depuración de las bibliotecas en tiempo de ejecución de C.
+El **assert** macro está habilitada en las versiones de lanzamiento y depuración de las bibliotecas de tiempo de ejecución de C cuando **NDEBUG** no está definido. Cuando **NDEBUG** está definido, la macro está disponible, pero no evalúa su argumento y no tiene ningún efecto. Cuando se habilita, el **assert** llamadas a macros **_wassert** para su implementación. Otras macros de aserción, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) y [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), también están disponibles, pero sólo evalúan las expresiones que se les pasan cuando la macro [_DEBUG](../../c-runtime-library/debug.md) se ha definido y cuando se encuentran en código vinculado con la versión de depuración de las bibliotecas en tiempo de ejecución de C.
 
 ## <a name="requirements"></a>Requisitos
 
