@@ -1,10 +1,6 @@
 ---
-title: _CrtCheckMemory | Microsoft Docs
-ms.custom: ''
+title: _CrtCheckMemory
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtCheckMemory
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b6d4b84fd717525e7206956964204794fe6b88c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb39a76c140934dabdd1269c02aba6018691f917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537155"
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
 
@@ -52,13 +42,13 @@ int _CrtCheckMemory( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **_CrtCheckMemory** devuelve TRUE; en caso contrario, la función devuelve FALSE.
+Si es correcto, **_CrtCheckMemory** devuelve TRUE; de lo contrario, la función devuelve FALSE.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtCheckMemory** función valida la memoria asignada por el administrador del montón de depuración comprobando el montón base subyacente e inspeccionando cada bloque de memoria. Si se produce una incoherencia de error o de memoria en el montón base subyacente, la información de encabezado de depuración o los búferes sobrescritos, **_CrtCheckMemory** genera un informe de depuración con información que describe la condición de error. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtCheckMemory** se quitan durante el preprocesamiento.
+El **_CrtCheckMemory** función valida la memoria asignada por el administrador del montón de depuración mediante la comprobación del montón base subyacente e inspeccionando cada bloque de memoria. Si se ha detectado una incoherencia de error o de memoria en el montón base subyacente, la información de encabezado de depuración o los búferes sobrescritos, **_CrtCheckMemory** genera un informe de depuración con información que describe la condición de error. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtCheckMemory** se quitan durante el preprocesamiento.
 
-El comportamiento de **_CrtCheckMemory** puede controlarse estableciendo los campos de bits de la [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca mediante el [_CrtSetDbgFlag](crtsetdbgflag.md) función. Activar la **_CRTDBG_CHECK_ALWAYS_DF** campo de bits en **_CrtCheckMemory** que se llama cada vez que se solicita una operación de asignación de memoria. Aunque este método ralentiza la ejecución, es útil para detectar errores rápidamente. Activar la **_CRTDBG_ALLOC_MEM_DF** causas OFF de campo de bits **_CrtCheckMemory** no comprobar el montón y devolver inmediatamente **TRUE**.
+El comportamiento de **_CrtCheckMemory** puede controlarse estableciendo los campos de bits de la [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca mediante el [_CrtSetDbgFlag](crtsetdbgflag.md) función. Activar el **_CRTDBG_CHECK_ALWAYS_DF** campo de bits en **_CrtCheckMemory** que se llama cada vez que se solicita una operación de asignación de memoria. Aunque este método ralentiza la ejecución, es útil para detectar errores rápidamente. Activar el **_CRTDBG_ALLOC_MEM_DF** causas OFF de campo de bits **_CrtCheckMemory** no comprueba el montón y devuelve inmediatamente **TRUE**.
 
 Dado que esta función devuelve **TRUE** o **FALSE**, se puede pasar a una de las macros [_ASSERT](assert-asserte-assert-expr-macros.md) para crear un mecanismo sencillo de control de errores de depuración. En el ejemplo siguiente se genera un error de aserción si se detectan daños en el montón:
 
@@ -66,7 +56,7 @@ Dado que esta función devuelve **TRUE** o **FALSE**, se puede pasar a una de la
 _ASSERTE( _CrtCheckMemory( ) );
 ```
 
-Para obtener más información acerca de cómo **_CrtCheckMemory** puede utilizarse con otras funciones de depuración, consulte [funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details). Para obtener información general sobre la administración de memoria y el montón de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información acerca de cómo **_CrtCheckMemory** puede utilizarse con otras funciones de depuración, vea [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Para obtener información general sobre la administración de memoria y el montón de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

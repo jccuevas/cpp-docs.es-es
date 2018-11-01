@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft Docs
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602285"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
@@ -65,11 +55,11 @@ unsigned _getdiskfree(
 Unidad de disco de la que desea obtener información.
 
 *DriveInfo*<br/>
-A **_diskfree_t** estructura que se rellenará con información acerca de la unidad.
+Un **_diskfree_t** estructura que se rellenará con información acerca de la unidad.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la función es correcta, el valor devuelto es cero. Si la función no es correcta, el valor devuelto es un código de error. El valor **errno** se establece para los errores devueltos por el sistema operativo. Para obtener más información acerca de las condiciones de error que se indican mediante **errno**, consulte [errno constantes](../../c-runtime-library/errno-constants.md).
+Si la función es correcta, el valor devuelto es cero. Si la función no es correcta, el valor devuelto es un código de error. El valor **errno** se establece para los errores devueltos por el sistema operativo. Para obtener más información acerca de las condiciones de error que se indican mediante **errno**, consulte [errno (constantes)](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -84,7 +74,7 @@ struct _diskfree_t {
 };
 ```
 
-Esta función valida sus parámetros. Si el *driveinfo* puntero es **NULL** o *unidad* especifica una unidad no válida, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**. Las unidades válidas oscilan entre 0 y 26. A *unidad* el valor 0 especifica la unidad actual; por lo tanto, se asignan números a letras del alfabeto inglés tal que 1 es la unidad A, 3 es la unidad C y así sucesivamente.
+Esta función valida sus parámetros. Si el *driveinfo* puntero es **NULL** o *unidad* especifica una unidad no válida, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**. Las unidades válidas oscilan entre 0 y 26. Un *unidad* el valor 0 especifica la unidad actual; por lo tanto, se asignan números a letras del alfabeto inglés de forma tal que 1 indica la unidad A, 3 indica que la unidad C y así sucesivamente.
 
 ## <a name="requirements"></a>Requisitos
 

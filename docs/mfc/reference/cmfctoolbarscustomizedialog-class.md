@@ -1,10 +1,6 @@
 ---
-title: CMFCToolBarsCustomizeDialog (clase) | Microsoft Docs
-ms.custom: ''
+title: CMFCToolBarsCustomizeDialog (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarsCustomizeDialog
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::GetFlags
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::OnInitDialog
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::PostNcDestroy
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], CMFCToolBarsCustomizeDialog
 - CMFCToolBarsCustomizeDialog [MFC], FillAllCommandsList
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d0e9a8cd4cba5fd34842ada81550db9b76e0b86
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428166"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629001"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog (clase)
 
@@ -106,7 +96,7 @@ Mientras el **personalizar** cuadro de diálogo está activo, la aplicación fun
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCToolBarsCustomizeDialog` clase. El ejemplo muestra cómo reemplazar un botón de barra de herramientas en el cuadro de lista de comandos en el **comandos** página, habilite la creación de nuevas barras de herramientas mediante el **personalizar** cuadro de diálogo y mostrar el  **Personalización** cuadro de diálogo. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCToolBarsCustomizeDialog` . El ejemplo muestra cómo reemplazar un botón de barra de herramientas en el cuadro de lista de comandos en el **comandos** página, habilite la creación de nuevas barras de herramientas mediante el **personalizar** cuadro de diálogo y mostrar el  **Personalización** cuadro de diálogo. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
