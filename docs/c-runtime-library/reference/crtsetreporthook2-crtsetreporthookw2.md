@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,24 +21,18 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402265"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446779"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -64,22 +54,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>Parámetros
 
 *mode*<br/>
-La acción que se realizará: **_CRT_RPTHOOK_INSTALL** o **_CRT_RPTHOOK_REMOVE**.
+La acción necesaria: **_CRT_RPTHOOK_INSTALL** o **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Enlace de informe para instalar o quitar en la versión con caracteres anchos o estrechos caracteres de esta función.
+Enlace de informe para instalar o quitar en la versión de caracteres estrechos o caracteres anchos de esta función.
 
 ## <a name="return-value"></a>Valor devuelto
 
--1 si se produce un error, con **EINVAL** o **ENOMEM** establecer; en caso contrario, devuelve el recuento de referencias de *pfnNewHook* después de la llamada.
+-1 si se produce un error, con **EINVAL** o **ENOMEM** establecido; de lo contrario, devuelve el recuento de referencias de *pfnNewHook* después de la llamada.
 
 ## <a name="remarks"></a>Comentarios
 
-**_CrtSetReportHook2** y **_CrtSetReportHookW2** permiten enlazar o desenlazar una función, mientras que [_CrtSetReportHook](crtsetreporthook.md) solo permite una función de enlace.
+**_CrtSetReportHook2** y **_CrtSetReportHookW2** le permiten enlazar o desenlazar una función, mientras que [_CrtSetReportHook](crtsetreporthook.md) solo permite enlazar una función.
 
-**_CrtSetReportHook2** o **_CrtSetReportHookW2** debe usarse en lugar de **_CrtSetReportHook** cuando se realiza la llamada de enlace en un archivo DLL y cuando se pueden cargar varias DLL y establecer sus propias funciones de enlace. En tales circunstancias, los archivos DLL se pueden descargar en un orden diferente al que se han cargado y la función de enlace puede dejarse apuntando a un archivo DLL descargado. Los resultados de la depuración bloquea el proceso si se han agregado las funciones de enlace con **_CrtSetReportHook**.
+**_CrtSetReportHook2** o **_CrtSetReportHookW2** debe usarse en lugar de **_CrtSetReportHook** cuando se realiza la llamada al enlace en un archivo DLL y cuando se puede cargar varias DLL y establecer sus propias funciones de enlace. En tales circunstancias, los archivos DLL se pueden descargar en un orden diferente al que se han cargado y la función de enlace puede dejarse apuntando a un archivo DLL descargado. Los resultados de la depuración bloquean el proceso si se han agregado las funciones de enlace con **_CrtSetReportHook**.
 
-Cualquier enlazar las funciones agregadas con **_CrtSetReportHook** se denominan si no hay ningún enlace de funciones de agregan con **_CrtSetReportHook2** o **_CrtSetReportHookW2** o si todos los enlazar funciones de agregado con **_CrtSetReportHook2** y **_CrtSetReportHookW2** devolver **FALSE**.
+Las funciones agregadas con de enlace **_CrtSetReportHook** se llama si no hay ningún enlace de las funciones de agregan con **_CrtSetReportHook2** o **_CrtSetReportHookW2** o si todos enlazar las funciones de agregado con **_CrtSetReportHook2** y **_CrtSetReportHookW2** devolver **FALSE**.
 
 Está disponible la versión con caracteres anchos de esta función. Las funciones de enlace de informe toman una cadena cuyo tipo (caracteres anchos o estrechos) debe coincidir con la versión de esta función que se usa. Use el prototipo de función siguiente con los enlaces de informe que se usan con la versión de caracteres anchos de dicha función:
 
@@ -93,10 +83,10 @@ Use el prototipo siguiente con los enlaces de informe de caracteres estrechos:
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Estas funciones validan sus parámetros. Si *modo* o **pfnNewNook** es válida, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
+Estas funciones validan sus parámetros. Si *modo* o **pfnNewNook** es válido, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
 
 > [!NOTE]
-> Si la aplicación se compila con **/CLR** y la función de creación de informes se llama después de que la aplicación se ha cerrado principal, el CLR iniciará una excepción si la función de creación de informes llama a las funciones de CRT.
+> Si la aplicación se compila con **/CLR** y la función de creación de informes se llama después de que ha salido de la aplicación principal, el CLR iniciará una excepción si la función de creación de informes llama a las funciones de CRT.
 
 ## <a name="requirements"></a>Requisitos
 
