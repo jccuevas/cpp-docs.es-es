@@ -1,23 +1,13 @@
 ---
-title: Datos definiciones de desenredo en C | Microsoft Docs
-ms.custom: ''
+title: Definiciones de datos de desenredo en C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 93cb6430-e4cf-43f5-ab60-3b57d1273b2c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19f87165074ec220c5c202cb8df25877fbe7f8d6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3e08a7b7421404572ce8614d69edc43c7a4eb39b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703643"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619328"
 ---
 # <a name="unwind-data-definitions-in-c"></a>Definiciones de datos de desenredo en C
 

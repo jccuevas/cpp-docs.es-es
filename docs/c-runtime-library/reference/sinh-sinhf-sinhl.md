@@ -1,10 +1,6 @@
 ---
-title: SINH, sinhf, sinhl | Documentos de Microsoft
-ms.custom: ''
+title: SINH, sinhf, sinhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinhl
 - sinhf
@@ -26,8 +22,6 @@ f1_keywords:
 - sinh
 - sinhf
 - sinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sinh function
 - sinhl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569811"
 ---
 # <a name="sinh-sinhf-sinhl"></a>SINH, sinhf, sinhl
 
@@ -72,7 +62,7 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **sinh** funciones devuelven el seno hiperbólico de *x*. De forma predeterminada, si el resultado es demasiado grande, **sinh** establece **errno** a **ERANGE** y devuelve ±**HUGE_VAL**.
+El **sinh** funciones devuelven el seno hiperbólico de *x*. De forma predeterminada, si el resultado es demasiado grande, **sinh** establece **errno** a **ERANGE** y devuelve +**HUGE_VAL**.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,7 +73,7 @@ Para obtener más información sobre los códigos de retorno, vea [errno, _doser
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **sinh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **sinh** siempre toma y devuelve **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **sinh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **sinh** siempre toma y devuelve **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
