@@ -1,10 +1,6 @@
 ---
-title: _tell, _telli64 | Microsoft Docs
-ms.custom: ''
+title: _tell, _telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409991"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660153"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
@@ -64,20 +54,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parámetros
 
-*Identificador*<br/>
+*identificador*<br/>
 Descriptor de archivo que hace referencia a un archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Posición actual del puntero de archivo. En los dispositivos incapaces de efectuar búsquedas, el valor devuelto es indefinido.
 
-Un valor devuelto de-1 L indica un error. Si *controlar* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EBADF** y devuelven-1 L.
+Un valor devuelto de-1 L indica un error. Si *controlar* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EBADF** y devuelven-1 L.
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_tell** función obtiene la posición actual del puntero de archivo (si existe) asociada a la *controlar* argumento. La posición se expresa como el número de bytes desde el principio del archivo. Para el **_telli64** función, este valor se expresa como un entero de 64 bits.
+El **_tell** función obtiene la posición actual del puntero de archivo (si existe) asociada con el *controlar* argumento. La posición se expresa como el número de bytes desde el principio del archivo. Para el **_telli64** función, este valor se expresa como un entero de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 

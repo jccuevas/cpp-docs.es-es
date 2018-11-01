@@ -1,10 +1,6 @@
 ---
-title: printf, _printf_l, wprintf, _wprintf_l | Microsoft Docs
-ms.custom: ''
+title: printf, _printf_l, wprintf, _wprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_l
 - wprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e66c185a6ee56e4a82a98e62d8d2c7d8167399e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666900"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -87,7 +77,7 @@ int _wprintf_l(
 *format*<br/>
 Control de formato.
 
-*Argumento*<br/>
+*argumento*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -95,13 +85,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el número de caracteres impreso o un valor negativo si se produce un error. Si *formato* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**. Si **EOF** (0xFFFF) se encuentra en *argumento*, la función devuelve -1.
+Devuelve el número de caracteres impreso o un valor negativo si se produce un error. Si *formato* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**. Si **EOF** (0xFFFF) se encuentra en *argumento*, la función devuelve -1.
 
 Para obtener información sobre **errno** y códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **printf** función da formato e imprime una serie de caracteres y valores en el flujo de salida estándar, **stdout**. Si los argumentos siguen la *formato* cadena, la *formato* cadena debe contener especificaciones que determinen el formato de salida para los argumentos. **printf** y [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) se comportan exactamente igual, salvo que **printf** escribe la salida del **stdout** en lugar de a un destino de tipo **archivo** .
+El **printf** función da formato e imprime una serie de caracteres y valores en el flujo de salida estándar, **stdout**. Si los argumentos siguen la *formato* cadena, la *formato* cadena debe contener especificaciones que determinen el formato de salida para los argumentos. **printf** y [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) se comportan exactamente igual, salvo que **printf** escribe la salida en **stdout** en lugar de a un destino de tipo **archivo** .
 
 **wprintf** es una versión con caracteres anchos de **printf**; *formato* es una cadena de caracteres anchos. **wprintf** y **printf** se comportan exactamente igual si el flujo se abre en modo ANSI. **printf** no admite actualmente la salida en un flujo UNICODE.
 
@@ -113,7 +103,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-El *formato* argumento consta de caracteres ordinarios, secuencias de escape y (si los argumentos siguen *formato*) especificaciones de formato. Las secuencias de escape y caracteres ordinarios se copian en **stdout** en orden de aparición. Por ejemplo, la línea:
+El *formato* argumento consta de caracteres ordinarios, secuencias de escape, y (si los argumentos siguen *formato*) especificaciones de formato. Las secuencias de escape y caracteres ordinarios se copian en **stdout** en orden de aparición. Por ejemplo, la línea:
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -126,7 +116,7 @@ Line one
         Line two
 ```
 
-[Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan por un signo de porcentaje (**%**) y se leen de izquierda a derecha. Cuando **printf** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después *formato* y lo representa en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
+[Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan con un signo de porcentaje (**%**) y se leen de izquierda a derecha. Cuando **printf** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después *formato* y lo envía en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
@@ -145,7 +135,7 @@ Line one
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

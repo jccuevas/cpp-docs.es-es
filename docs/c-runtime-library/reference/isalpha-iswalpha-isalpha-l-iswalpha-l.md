@@ -1,10 +1,6 @@
 ---
-title: isalpha, iswalpha, _isalpha_l, _iswalpha_l | Microsoft Docs
-ms.custom: ''
+title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591758"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -88,9 +78,9 @@ Configuración regional que se va a usar en lugar de la configuración regional 
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter alfabético. **isalpha** devuelve un valor distinto de cero si *c* está en los intervalos A - Z o a - z. **iswalpha** devuelve un valor distinto de cero solo para caracteres anchos que [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) o **iswlower** es distinto de cero; es decir, para cualquier carácter ancho que es parte de un conjunto definido por la implementación para que ni **iswcntrl**, **iswdigit**, **iswpunct**, o **iswspace** es distinto de cero. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un carácter alfabético. **isalpha** devuelve un valor distinto de cero si *c* está dentro de los intervalos A - Z o a - z. **iswalpha** devuelve un valor distinto de cero solo para caracteres anchos para que [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) o **iswlower** es distinto de cero; es decir, para cualquier carácter ancho que es parte de un conjunto definido por la implementación para que ni **iswcntrl**, **iswdigit**, **iswpunct**, o **iswspace** es distinto de cero. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
 
-Las versiones de estas funciones que tienen la **_l** sufijo usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el **_l** sufijo usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 El comportamiento de **isalpha** y **_isalpha_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
 

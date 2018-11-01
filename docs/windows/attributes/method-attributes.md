@@ -1,27 +1,16 @@
 ---
-title: Los atributos de método (COM de C++) | Microsoft Docs
-ms.custom: ''
+title: Atributos de método (COM de C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8f5f9af9e302b9346b2bd42acdf1e268a59113f7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667927"
 ---
 # <a name="method-attributes"></a>Atributos de método
 
@@ -31,7 +20,7 @@ Los siguientes atributos se aplican a los métodos en una clase, coclase o inter
 |---------------|-----------------|
 |[bindable](bindable.md)|Indica que la propiedad admite enlace de datos.|
 |[call_as](call-as.md)|Permite que una función utilizables para asignarse a una función remota.|
-|[Personalizado](custom-cpp.md)|Le permite definir su propio atributo.|
+|[custom](custom-cpp.md)|Le permite definir su propio atributo.|
 |[db_column](db-column.md)|Enlaza una columna especificada para el conjunto de filas.|
 |[db_command](db-command.md)|Crea un comando OLE DB.|
 |[db_param](db-param.md)|La variable de miembro especificado se asocia con un parámetro de entrada o salido y delimita la variable.|
@@ -55,7 +44,7 @@ Los siguientes atributos se aplican a los métodos en una clase, coclase o inter
 |[propput](propput.md)|Especifica una función de la configuración de la propiedad.|
 |[propputref](propputref.md)|Especifica una función de la configuración de la propiedad que utiliza una referencia en lugar de un valor.|
 |[ptr](ptr.md)|Designa un puntero como un puntero completo.|
-|[intervalo](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
+|[range](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
 |[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
 |[restricted](restricted.md)|Especifica que un miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.|
 |[satype](satype.md)|Especifica el tipo de datos de la `SAFEARRAY` estructura.|
