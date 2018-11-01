@@ -1,27 +1,17 @@
 ---
-title: 'Cómo: declarar y usar punteros internos y matrices administradas (C++ / c++ / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: Declarar y usar punteros internos y matrices administradas (C++/CLI)'
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a18170d66ef2b2fe374085557d7fca4411c48ec6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 98f198812654706792ea18024bb8654803d27970
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598268"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Cómo: Declarar y usar punteros internos y matrices administradas (C++/CLI)
 

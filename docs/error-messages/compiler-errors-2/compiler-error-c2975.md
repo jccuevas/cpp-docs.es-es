@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C2975 | Documentos de Microsoft
-ms.custom: ''
+title: Error del compilador C2975
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2975
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53cb020dc0d456f10b7cfbae82a16b2ebe5fda6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609760"
 ---
 # <a name="compiler-error-c2975"></a>Error del compilador C2975
 
@@ -45,7 +35,7 @@ int main() {
 }
 ```
 
-Error C2975 también se produce cuando se usa &#95; &#95;línea&#95; &#95; como una constante de tiempo de compilación con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md). Una solución sería compilar con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) en lugar de **/Zi**.
+C2975 también se produce cuando se usa &#95; &#95;línea&#95; &#95; como una constante de tiempo de compilación con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md). Una solución sería compilar con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) en lugar de **/Zi**.
 
 ```cpp
 // C2975b.cpp

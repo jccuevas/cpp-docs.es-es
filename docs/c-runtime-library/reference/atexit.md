@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft Docs
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393139"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556653"
 ---
 # <a name="atexit"></a>atexit
 
@@ -52,7 +42,7 @@ int atexit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*<br/>
+*func*<br/>
 Función a la que se llama.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -61,11 +51,11 @@ Función a la que se llama.
 
 ## <a name="remarks"></a>Comentarios
 
-El **atexit** función se le pasa la dirección de una función *func* se llama cuando el programa finaliza con normalidad. Las llamadas sucesivas a **atexit** crea un registro de las funciones que se ejecutan en orden, último en salir (LIFO). Las funciones que se pasan a **atexit** no pueden tomar parámetros. **atexit** y **_onexit** utilizar el montón para almacenar el registro de funciones. Por lo tanto, el número de funciones que se pueden registrar no tiene más límite que la memoria del montón.
+El **atexit** función se pasa la dirección de una función *func* se llama cuando el programa finaliza con normalidad. Las llamadas sucesivas a **atexit** crean un registro de las funciones que se ejecutan en orden último en salir (LIFO). Las funciones que se pasan a **atexit** no pueden tomar parámetros. **atexit** y **_onexit** usan el montón para almacenar el registro de funciones. Por lo tanto, el número de funciones que se pueden registrar no tiene más límite que la memoria del montón.
 
-El código en el **atexit** función no puede contener cualquier dependencia de cualquier archivo DLL que podría haber ya se ha descargado cuando el **atexit** función se invoca.
+El código en el **atexit** función no debe contener ninguna dependencia de cualquier archivo DLL que podría haberse descargado ya cuando la **atexit** se llama a la función.
 
-Para generar una aplicación compatible con ANSI, use el estándar ANSI **atexit** función (en lugar de la similar **_onexit** función).
+Para generar una aplicación compatible con ANSI, use el estándar ANSI **atexit** función (en lugar de similar **_onexit** función).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +65,7 @@ Para generar una aplicación compatible con ANSI, use el estándar ANSI **atexit
 
 ## <a name="example"></a>Ejemplo
 
-Este programa inserciones cuatro funciones en la pila de funciones que se ejecute cuando **atexit** se llama. Cuando el programa termina, estos programas se ejecutan por último en entrar, primero en salir.
+Este programa inserta cuatro funciones en la pila de funciones que se ejecuta al **atexit** se llama. Cuando el programa termina, estos programas se ejecutan por último en entrar, primero en salir.
 
 ```C
 // crt_atexit.c

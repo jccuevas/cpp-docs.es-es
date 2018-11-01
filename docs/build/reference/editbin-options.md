@@ -1,27 +1,17 @@
 ---
-title: Opciones de EDITBIN | Microsoft Docs
-ms.custom: ''
+title: Opciones de EDITBIN
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - editbin
-dev_langs:
-- C++
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0850f242b8368a9592a5622e627c781b4df4cde5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 263cfb79897ae60daff64521928db865f1dcb874
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710143"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540548"
 ---
 # <a name="editbin-options"></a>Opciones de EDITBIN
 
@@ -43,11 +33,11 @@ EDITBIN tiene las siguientes opciones:
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Especifica si el archivo DLL o una imagen ejecutable es compatible con alta entropía (64 bits) dirección espacio selección aleatoria del diseño (ASLR).|
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Especifica si se comprueba la firma digital en tiempo de carga.|
 |[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Especifica si el objeto admite las direcciones que están más de dos gigabytes.|
-|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Suprime la pancarta de inicio EDITBIN.|
+|[/NOLOGO](../../build/reference/nologo-editbin.md)|Suprime la pancarta de inicio EDITBIN.|
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Especifica si la imagen ejecutable es compatible con la prevención de ejecución de datos de Windows.|
 |[/REBASE](../../build/reference/rebase.md)|Establece las direcciones base para los objetos especificados.|
 |[/RELEASE](../../build/reference/release.md)|Establece la suma de comprobación en el encabezado.|
-|[O SECCIÓN](../../build/reference/section-editbin.md)|Invalida los atributos de una sección.|
+|[/SECTION](../../build/reference/section-editbin.md)|Invalida los atributos de una sección.|
 |[/STACK](../../build/reference/stack.md)|Establece el tamaño de pila de la imagen ejecutable en bytes.|
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|Especifica el entorno de ejecución.|
 |[/SWAPRUN](../../build/reference/swaprun.md)|Especifica que la imagen ejecutable debe copiar en el archivo de intercambio y, a continuación, ejecute desde allí.|
