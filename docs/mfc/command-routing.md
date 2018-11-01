@@ -1,12 +1,6 @@
 ---
-title: Enrutamiento de comandos | Microsoft Docs
-ms.custom: ''
+title: enrutamiento de comandos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541705"
 ---
 # <a name="command-routing"></a>enrutamiento de comandos
 
@@ -45,11 +35,11 @@ Cómo costoso es este mecanismo de enrutamiento en comparación a lo que hace el
 
 |Cuando un objeto de este tipo recibe un comando. . .|Se da a si mismo y a otros objetos de destino del comando una oportunidad de controlar el comando, en este orden:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Ventana de marco MDI (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  Esta ventana de marco<br />3.  Aplicación (`CWinApp` objeto)|
-|Ventana de marco de documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Vista activa<br />2.  Esta ventana de marco<br />3.  Aplicación (`CWinApp` objeto)|
+|Ventana de marco MDI (`CMDIFrameWnd`)|1.  `CMDIChildWnd` activo<br />2.  Esta ventana de marco<br />3.  Aplicación (objeto de `CWinApp`)|
+|Ventana de marco de documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Vista activa<br />2.  Esta ventana de marco<br />3.  Aplicación (objeto de `CWinApp`)|
 |Ver|1.  Esta vista<br />2.  Documento asociado a la vista|
 |Documento|1.  Este documento<br />2.  Plantilla de documento asociada al documento|
-|Cuadro de diálogo|1.  Este cuadro de diálogo<br />2.  Ventana propietaria del cuadro de diálogo<br />3.  Aplicación (`CWinApp` objeto)|
+|Cuadro de diálogo|1.  Este cuadro de diálogo<br />2.  Ventana propietaria del cuadro de diálogo<br />3.  Aplicación (objeto de `CWinApp`)|
 
 En los casos en los que las entradas numeradas de la segunda columna de la tabla anterior mencionan otros objetos, como un documento, vea el elemento correspondiente de la primera columna. Por ejemplo, cuando lee en la segunda columna que la vista reenvía un comando al documento, vea la entrada “Documento” en la primera columna para seguir el enrutamiento detenidamente.
 
