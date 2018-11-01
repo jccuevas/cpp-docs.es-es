@@ -1,25 +1,17 @@
 ---
-title: -std (especificar la versión estándar del lenguaje) | Microsoft Docs
-ms.custom: ''
+title: /STD (especificar la versión estándar del lenguaje)
 ms.date: 11/16/2017
-ms.topic: reference
 f1_keywords:
 - /std
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
-dev_langs:
-- C++
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32bbcd47c4ce22882941b6fa9c02373bab32eeb1
-ms.sourcegitcommit: 938d118d02543c822a5f58c84d6119d23339e43c
+ms.openlocfilehash: 28796826a7c312b92b3ec0510513ad4804800ca1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476049"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar la versión estándar del lenguaje)
 
