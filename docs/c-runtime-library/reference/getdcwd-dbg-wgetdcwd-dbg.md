@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_dbg, _wgetdcwd_dbg | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_dbg, _wgetdcwd_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - getdcwd_dbg
 - _wgetdcwd_dbg
 - wgetdcwd_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - working directory
 - _getdcwd_dbg function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f68fc4fe1c19204433e8f5c9b6c7991d8f7f90e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402831"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547184"
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
@@ -87,18 +77,18 @@ Longitud máxima de la ruta de acceso en caracteres: **char** para **_getdcwd_db
 Tipo del bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
 Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a *búfer*. A **NULL** valor devuelto indica un error, y **errno** se establece en **ENOMEM**, que indica que no hay memoria suficiente para asignar *maxlen* bytes (cuando un **NULL** argumento se proporciona como *búfer*), o a **ERANGE**, que indica que la ruta de acceso es más larga que *maxlen*  caracteres. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Devuelve un puntero a *búfer*. Un **NULL** valor devuelto indica un error, y **errno** se establece en **ENOMEM**, que indica que no hay memoria suficiente para asignar *maxlen* bytes (cuando un **NULL** argumento se asigna como *búfer*), o a **ERANGE**, que indica que la ruta de acceso es mayor que *maxlen*  caracteres. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_getdcwd_dbg** y **_wgetdcwd_dbg** funciones son idénticas a **_getdcwd** y **_wgetdcwd** salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración **malloc** y **_malloc_dbg** para asignar memoria si **NULL** se pasa como el *búfer* parámetro. Para obtener más información, consulte [_malloc_dbg](malloc-dbg.md).
+El **_getdcwd_dbg** y **_wgetdcwd_dbg** funciones son idénticas a **_getdcwd** y **_wgetdcwd** , salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración **malloc** y **_malloc_dbg** para asignar memoria si **NULL** se pasa como el *búfer* parámetro. Para obtener más información, consulte [_malloc_dbg](malloc-dbg.md).
 
 En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la **_CRTDBG_MAP_ALLOC** marca. Cuando **_CRTDBG_MAP_ALLOC** está definido, las llamadas a **_getdcwd** y **_wgetdcwd** se reasignan a **_getdcwd_dbg** y **_ wgetdcwd_dbg**, respectivamente, con el *existen* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como **_CLIENT_BLOCK**. Para obtener más información, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 
