@@ -1,11 +1,6 @@
 ---
-title: log1p, log1pf, log1pl2 | Microsoft Docs
-ms.custom: ''
+title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402753"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525000"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -82,7 +73,7 @@ El argumento de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve natural (base -*e*) de registro del (*x* + 1).
+Si es correcto, devuelve natural (base -*e*) de registro del (*x* + 1).
 
 De lo contrario, es posible que devuelva uno de los siguientes valores:
 
@@ -95,15 +86,15 @@ De lo contrario, es posible que devuelva uno de los siguientes valores:
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
 |±SNaN|Igual que la entrada|INVALID||
-|±QNaN, indefinida|Igual que la entrada|||
+|±QNaN, indefinido|Igual que la entrada|||
 
 El **errno** valor se establece en ERANGE si *x* = -1. El **errno** valor se establece en **EDOM** si *x* < -1.
 
 ## <a name="remarks"></a>Comentarios
 
-El **log1p** funciones pueden ser más precisas que el uso de `log(x + 1)` cuando *x* esté cerca de 0.
+El **log1p** funciones pueden ser más precisas que el uso de `log(x + 1)` cuando *x* es próximo a 0.
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **log1p** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **log1p** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **log1p** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **log1p** siempre toma y devuelve un **doble**.
 
 Si *x* es un número natural, esta función devuelve el logaritmo del factorial de (*x* - 1).
 

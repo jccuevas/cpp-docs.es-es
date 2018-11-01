@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861452"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070592"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 
@@ -81,11 +81,11 @@ Las promociones que poseen la cualidad de conservación de valores y las promoci
 
 - Un operando de **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, o **>=**
 
-     Estos operadores dependen del signo para determinar el resultado. Por consiguiente, las promociones que poseen la cualidad de conservación de valores y que conservan el tipo signed/unsigned generan resultados diferentes cuando se aplican a estos operandos.
+   Estos operadores dependen del signo para determinar el resultado. Por consiguiente, las promociones que poseen la cualidad de conservación de valores y que conservan el tipo signed/unsigned generan resultados diferentes cuando se aplican a estos operandos.
 
 - El operando izquierdo de **>>** o **>>=**
 
-     Estos operadores tratan las cantidades signed y unsigned de forma diferente cuando realizan una operación de desplazamiento. En el caso de cantidades signed, el desplazamiento de una cantidad a la derecha hace que el bit de signo se propague a las posiciones de bits desocupadas. En el caso de cantidades unsigned, las posiciones de bits desocupadas se rellenan con ceros.
+   Estos operadores tratan las cantidades signed y unsigned de forma diferente cuando realizan una operación de desplazamiento. En el caso de cantidades signed, el desplazamiento de una cantidad a la derecha hace que el bit de signo se propague a las posiciones de bits desocupadas. En el caso de cantidades unsigned, las posiciones de bits desocupadas se rellenan con ceros.
 
 - Un argumento a una función sobrecargada o un operando de un operador sobrecargado que depende de la condición signed/unsigned de dicho operando para la coincidencia de argumentos. (Consulte [operadores sobrecargados](../cpp/operator-overloading.md) para obtener más información acerca de cómo definir operadores sobrecargados.)
 
@@ -221,7 +221,7 @@ El segundo caso en el que un puntero a una clase se puede convertir a un puntero
 
 El resultado de tal conversión es un puntero al “subobjeto”, la parte del objeto que la clase base describe completamente.
 
-En el código siguiente se definen dos clases, `A` y `B`, donde `B` se deriva de `A`. (Para obtener más información sobre la herencia, vea [clases derivadas](../cpp/inheritance-cpp.md).) A continuación, define `bObject`, un objeto de tipo `B` y dos punteros (`pA` y `pB`) que apuntan al objeto.
+En el código siguiente se definen dos clases, `A` y `B`, donde `B` se deriva de `A`. (Para obtener más información sobre la herencia, vea [clases derivadas](../cpp/inheritance-cpp.md).) A continuación, define , un objeto de tipo `bObject` y dos punteros (`B` y `pB`) que apuntan al objeto.
 
 ```cpp
 // C2039 expected

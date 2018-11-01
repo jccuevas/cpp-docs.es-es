@@ -1,10 +1,6 @@
 ---
-title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snprintf_s
 - _snprintf_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - snwprintf_s
 - sntprintf_s
 - sntprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snprintf_s_l function
 - _snwprintf_s_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3744fc543cd5c478ffba01e3abca9b152145be6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560035"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
@@ -122,7 +112,7 @@ int _snwprintf_s(
 Ubicación de almacenamiento del resultado.
 
 *sizeOfBuffer*<br/>
-Tamaño de la ubicación de almacenamiento para la salida. Cambio de tamaño en **bytes** para **_snprintf_s** o tamaño en **palabras** para **_snwprintf_s**.
+Tamaño de la ubicación de almacenamiento para la salida. Tamaño en **bytes** para **_snprintf_s** o tamaño en **palabras** para **_snwprintf_s**.
 
 *count*<br/>
 Número máximo de caracteres que se pueden almacenar o [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -130,7 +120,7 @@ Número máximo de caracteres que se pueden almacenar o [_TRUNCATE](../../c-runt
 *format*<br/>
 Cadena de control de formato.
 
-*Argumento*<br/>
+*argumento*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -140,7 +130,7 @@ Configuración regional que se va a usar.
 
 **_snprintf_s** devuelve el número de caracteres almacenados en *búfer*, sin contar el carácter nulo de terminación. **_snwprintf_s** devuelve el número de caracteres anchos almacenados en *búfer*, sin contar el carácter ancho final null.
 
-Si supera el almacenamiento necesario para almacenar los datos y un carácter nulo final *sizeOfBuffer*, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución continúa después del controlador de parámetros no válidos, estas funciones establecen *búfer* en una cadena vacía, establecen **errno** a **ERANGE**y devuelven -1.
+Si supera el almacenamiento necesario para almacenar los datos y un carácter nulo final *sizeOfBuffer*, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución continúa después del controlador de parámetros no válidos, estas funciones establecen *búfer* en una cadena vacía, establece **errno** a **ERANGE**y devuelven -1.
 
 Si *búfer* o *formato* es un **NULL** puntero, o si *recuento* es menor o igual a cero, se invoca el controlador de parámetros no válidos. Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
 
@@ -148,14 +138,14 @@ Para obtener información sobre estos y otros códigos de error, vea [_doserrno,
 
 ## <a name="remarks"></a>Comentarios
 
-El **_snprintf_s** formatos de función y almacenes de *recuento* caracteres o menos en *búfer* y anexa un carácter nulo. Cada argumento (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El formato es coherente con la **printf** familia de funciones; vea [sintaxis de especificación de formato: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+El **_snprintf_s** función formatos y almacenes *recuento* caracteres o menos en *búfer* y anexa un carácter nulo final. Cada argumento (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El formato es coherente con la **printf** familia de funciones; vea [sintaxis de especificación de formato: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-Si *recuento* es [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **_snprintf_s** escrituras como gran parte de la cadena como caben en *búfer* dejando espacio para un terminación null. Si toda la cadena (con valor nulo final) cabe *búfer*, a continuación, **_snprintf_s** devuelve el número de caracteres escrito (sin incluir el carácter null final); en caso contrario, **_snprintf_s**  devuelve -1 para indicar que el truncamiento se produjo.
+Si *recuento* es [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **_snprintf_s** escribe la parte de la cadena como cabe en *búfer* , dejando espacio para un terminación null. Si toda la cadena (con valor nulo final) cabe *búfer*, a continuación, **_snprintf_s** devuelve el número de caracteres escritos (sin incluir el carácter nulo final); en caso contrario, **_snprintf_s**  devuelve -1 para indicar que el truncamiento se produjo.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
 
-**_snwprintf_s** es una versión con caracteres anchos de **_snprintf_s**; los argumentos de puntero a **_snwprintf_s** son cadenas de caracteres anchos. Detección de errores en de codificación **_snwprintf_s** pueden diferir de la de **_snprintf_s**. **_snwprintf_s**, como **swprintf_s**, escribe la salida a una cadena en lugar de a un destino de tipo **archivo**.
+**_snwprintf_s** es una versión con caracteres anchos de **_snprintf_s**; los argumentos de puntero **_snwprintf_s** son cadenas de caracteres anchos. Detección de errores de codificación **_snwprintf_s** puede diferir en **_snprintf_s**. **_snwprintf_s**, como **swprintf_s**, escribe la salida en una cadena en lugar de a un destino de tipo **archivo**.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 

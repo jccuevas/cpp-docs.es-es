@@ -1,10 +1,6 @@
 ---
-title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -36,8 +32,6 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a90fe131ff216bd9f758f3312d366e0ec29d79ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404274"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532228"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,7 +102,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*< = 255 y hay un correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de los correspondientes **_ismbb** rutina.
+Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*< = 255 y hay correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la correspondiente **_ismbb** rutina.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -122,9 +112,9 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|Alfanumérico|Devuelve cero si y solo si *c* es una representación de un solo byte de una letra inglesa ASCII: vea los ejemplos de **_ismbcdigit** y **_ismbcalpha**.|
-|**_ismbcalpha**, **_ismbcalpha_l**|Alfabético|Devuelve cero si y solo si *c* es una representación de un solo byte de una letra inglesa ASCII: 0 x 41 < =*c*< = 0x5A o 0 x 61 < =*c*< = 0x7A; o una letra katakana: 0xA6 < =*c*< = 0xDF.|
-|**_ismbcdigit**, **_ismbcdigit**|Dígito|Devuelve cero si y solo si *c* es una representación de un solo byte de un dígito de ASCII: 0 x 30 < =*c*< = 0 x 39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alfanumérico|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa ASCII: vea los ejemplos de **_ismbcdigit** y **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alfabético|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa ASCII: 0 x 41 < =*c*< = 0x5A o 0 x 61 < =*c*< = 0x7A; o una letra katakana: 0xA6 < =*c*< = 0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Dígito|Devuelve cero si y solo si *c* es una representación de un byte de un dígito ASCII: 0 x 30 < =*c*< = 0 x 39.|
 
 ## <a name="requirements"></a>Requisitos
 

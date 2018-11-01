@@ -1,27 +1,16 @@
 ---
-title: Atributos (C++ COM) de la interfaz | Microsoft Docs
-ms.custom: ''
+title: Atributos de interfaz (COM de C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: cd12db4235d22245c3f31ce7dfe3fd2470133dfd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556656"
 ---
 # <a name="interface-attributes"></a>Atributos de interfaz
 
@@ -30,7 +19,7 @@ Los siguientes atributos se aplican a la [interfaz (o __interface)](../../cpp/in
 |Atributo|Descripción|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Especifica el UUID que indica al compilador MIDL para definir las versiones sincrónicas y asincrónicas de una interfaz COM.|
-|[Personalizado](custom-cpp.md)|Le permite definir sus propios atributos.|
+|[custom](custom-cpp.md)|Le permite definir sus propios atributos.|
 |[dispinterface](dispinterface.md)|Coloca una interfaz en el archivo .idl como interfaz de envío.|
 |[dual](dual.md)|Coloca una interfaz en el archivo .idl como una interfaz dual.|
 |[export](export.md)|Hace que una estructura de datos que se colocarán en el archivo. idl.|

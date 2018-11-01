@@ -1,10 +1,6 @@
 ---
-title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_s_l
 - wprintf_s
@@ -25,8 +21,6 @@ apitype: DLLExport
 f1_keywords:
 - wprintf_s
 - printf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wprintf_s function
 - tprintf_s function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ffe17ed1fc562b61d306294e970a070b03186e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a140d63f18244ec453e97b727a2f93ca56547fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560243"
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
@@ -85,7 +75,7 @@ int _wprintf_s_l(
 *format*<br/>
 Control de formato.
 
-*Argumento*<br/>
+*argumento*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -103,7 +93,7 @@ La diferencia principal entre **printf_s** y **printf** es que **printf_s** comp
 
 Para obtener información sobre **errno** y códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**printf_s** y **fprintf_s** se comportan exactamente igual, salvo que **printf_s** escribe la salida del **stdout** en lugar de a un destino de tipo **Archivo**. Para obtener más información, vea [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**printf_s** y **fprintf_s** se comportan exactamente igual, salvo que **printf_s** escribe la salida en **stdout** en lugar de a un destino de tipo **Archivo**. Para obtener más información, vea [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
 **wprintf_s** es una versión con caracteres anchos de **printf_s**; *formato* es una cadena de caracteres anchos. **wprintf_s** y **printf_s** se comportan exactamente igual si el flujo se abre en modo ANSI. **printf_s** no admite actualmente la salida en un flujo UNICODE.
 
@@ -116,7 +106,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-El *formato* argumento consta de caracteres ordinarios, secuencias de escape y (si los argumentos siguen *formato*) especificaciones de formato. Las secuencias de escape y caracteres ordinarios se copian en **stdout** en orden de aparición. Por ejemplo, la línea
+El *formato* argumento consta de caracteres ordinarios, secuencias de escape, y (si los argumentos siguen *formato*) especificaciones de formato. Las secuencias de escape y caracteres ordinarios se copian en **stdout** en orden de aparición. Por ejemplo, la línea
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
@@ -129,7 +119,7 @@ Line one
         Line two
 ```
 
-[Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan por un signo de porcentaje (**%**) y se leen de izquierda a derecha. Cuando **printf_s** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después *formato* y lo representa en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
+[Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan con un signo de porcentaje (**%**) y se leen de izquierda a derecha. Cuando **printf_s** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después *formato* y lo envía en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
@@ -141,7 +131,7 @@ Line one
 |**printf_s**, **_printf_s_l**|\<stdio.h>|
 |**wprintf_s**, **_wprintf_s_l**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

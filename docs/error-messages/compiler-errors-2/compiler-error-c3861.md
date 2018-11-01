@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C3861 | Documentos de Microsoft
-ms.custom: ''
+title: Error del compilador C3861
 ms.date: 03/23/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3861
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6dbfbb11184928331b94b7addc747ffb7e44d6d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270269"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530811"
 ---
 # <a name="compiler-error-c3861"></a>Error del compilador C3861
 
@@ -31,17 +21,17 @@ El compilador no pudo resolver una referencia a un identificador, incluso con un
 
 ## <a name="remarks"></a>Comentarios
 
-Para corregir este error, compare el uso de *identificador* a la declaración del identificador de caso y la ortografía. Compruebe que [operadores de resolución de ámbito](../../cpp/scope-resolution-operator.md) y espacio de nombres [directivas using](../../cpp/namespaces-cpp.md#using_directives) han usado correctamente. Si el identificador se declara en un archivo de encabezado, compruebe que el encabezado se haya incluido antes de que se hace referencia el identificador. Si el identificador está pensado para ser visibles externamente, asegúrese de que se declara en cualquier archivo de código fuente que lo utilice. También compruebe que la definición o declaración de identificador no está excluido por [directivas de compilación condicional](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+Para corregir este error, compare el uso de *identificador* a la declaración del identificador de caso y la ortografía. Compruebe que [operadores de resolución de ámbito](../../cpp/scope-resolution-operator.md) y espacio de nombres [directivas using](../../cpp/namespaces-cpp.md#using_directives) se usan correctamente. Si el identificador se declara en un archivo de encabezado, compruebe que se incluirá el encabezado antes de que se hace referencia el identificador. Si el identificador se ha diseñado para ser visibles externamente, asegúrese de que se declara en cualquier archivo de origen que lo utiliza. Compruebe también que la definición o declaración de identificador no se ha excluido por [directivas de compilación condicional](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-Cambios para quitar funciones obsoletas de la biblioteca en tiempo de ejecución de C en Visual Studio 2015 pueden provocar C3861. Para resolver este error, quite las referencias a estas funciones o reemplácelos con sus alternativas seguras, si lo hay. Para obtener más información, consulte [funciones obsoletas](../../c-runtime-library/obsolete-functions.md).
+Los cambios para quitar funciones obsoletas de la biblioteca en tiempo de ejecución de C en Visual Studio 2015 pueden provocar C3861. Para resolver este error, quite las referencias a estas funciones o reemplazarlos con sus alternativas seguras, si existe. Para obtener más información, consulte [funciones obsoletas](../../c-runtime-library/obsolete-functions.md).
 
-Si el error C3861 aparece después de la migración de proyectos desde versiones anteriores del compilador, puede tener problemas relacionados con las versiones de Windows compatibles. Visual C++ ya no admite como destino Windows 95, Windows 98, Windows ME, Windows NT o Windows 2000. Si las macros **WINVER** o **_WIN32_WINNT** están asignadas a una de estas versiones de Windows, debe modificar las macros. Para obtener más información, consulte [Modificar WINVER y _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+Si aparece el error C3861 después de la migración de proyectos desde versiones anteriores del compilador, puede tener problemas relacionados con las versiones compatibles de Windows. Visual C++ ya no admite como destino Windows 95, Windows 98, Windows ME, Windows NT o Windows 2000. Si las macros **WINVER** o **_WIN32_WINNT** están asignadas a una de estas versiones de Windows, debe modificar las macros. Para obtener más información, consulte [Modificar WINVER y _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
 ## <a name="examples"></a>Ejemplos
 
 ### <a name="undefined-identifier"></a>Identificador no definido
 
-El ejemplo siguiente genera el error C3861 porque el identificador no está definido.
+El ejemplo siguiente genera C3861 porque el identificador no está definido.
 
 ```cpp
 // C3861.cpp
@@ -52,9 +42,9 @@ int main() {
 }
 ```
 
-### <a name="identifier-not-in-scope"></a>Identificador no está en ámbito
+### <a name="identifier-not-in-scope"></a>Identificador fuera del ámbito
 
-El ejemplo siguiente genera el error C3861 porque un identificador solo está visible en el ámbito de archivo de su definición, a menos que se declara en otros archivos de código fuente que lo usan.
+El ejemplo siguiente genera C3861 porque un identificador solo está visible en el ámbito de archivo de su definición, a menos que se declara en otros archivos de origen que lo usan.
 
 ```cpp
 // C3861_a1.cpp
@@ -74,7 +64,7 @@ int f() {  // declared and defined here
 }
 ```
 
-### <a name="namespace-qualification-required"></a>Calificación de Namespace necesario
+### <a name="namespace-qualification-required"></a>Calificación Namespace necesario
 
 Las clases de excepción en la biblioteca estándar de C++ requieren el `std` espacio de nombres.
 
@@ -94,9 +84,9 @@ int main() {
 }
 ```
 
-### <a name="obsolete-function-called"></a>Función obsoleta llama
+### <a name="obsolete-function-called"></a>Función obsoleta llamado
 
-Funciones obsoletas se han quitado de la biblioteca CRT.
+Funciones obsoletas se quitaron de la biblioteca CRT.
 
 ```cpp
 // C3861_c.cpp

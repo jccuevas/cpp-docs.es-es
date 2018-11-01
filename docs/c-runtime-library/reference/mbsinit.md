@@ -1,10 +1,6 @@
 ---
-title: mbsinit | Microsoft Docs
-ms.custom: ''
+title: mbsinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsinit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597241"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -56,11 +46,11 @@ Puntero a una variable [mbstate_t](../../c-runtime-library/standard-types.md).
 
 ## <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si *ps* es **NULL** o si no en el medio de una conversión.
+Distinto de cero si *ps* es **NULL** o si no está en medio de una conversión.
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando se usa una de las funciones de ANSI que toma un **mbstate_t** puntero, pasa la dirección de su **mbstate_t** devolverá información sobre si se ha convertido el último byte en el búfer.
+Cuando se usa una de las funciones de ANSI que toma un **mbstate_t** puntero, pasa la dirección de su **mbstate_t** devolverá información sobre si se ha convertido el último byte del búfer.
 
 Se debe instalar la página de códigos adecuada para admitir los caracteres multibyte.
 
