@@ -1,10 +1,6 @@
 ---
-title: _get_daylight | Microsoft Docs
-ms.custom: ''
+title: _get_daylight
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __daylight
 - _get_daylight
@@ -24,23 +20,17 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fbe7e36db2e5ca5365f43dc23281d9b5e79077d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444647"
 ---
 # <a name="getdaylight"></a>_get_daylight
 
@@ -59,15 +49,15 @@ Desplazamiento en horas del horario de verano.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si se realiza correctamente, o un **errno** valor si se produce un error.
+Cero si es correcto o un **errno** valor si se produce un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_get_daylight** función recupera el número de horas en el horario de verano como un entero. Si el horario de verano está en vigor, el desplazamiento predeterminado es de una hora (si bien en algunas regiones el desplazamiento es de dos horas).
+El **_get_daylight** función recupera el número de horas del horario de verano como un entero. Si el horario de verano está en vigor, el desplazamiento predeterminado es de una hora (si bien en algunas regiones el desplazamiento es de dos horas).
 
-Si *horas* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+Si *horas* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
 
-Se recomienda usar esta función en lugar de la macro **_daylight** o la función en desuso **__daylight**.
+Se recomienda usar esta función en lugar de la macro **_daylight** o la función desusada **__daylight**.
 
 ## <a name="requirements"></a>Requisitos
 

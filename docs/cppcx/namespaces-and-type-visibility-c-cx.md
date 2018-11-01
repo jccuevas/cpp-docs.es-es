@@ -1,20 +1,13 @@
 ---
-title: Espacios de nombres y la visibilidad de tipos (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Visibilidad de espacios de nombres y tipos (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102777"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440527"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilidad de espacios de nombres y tipos (C++/CX)
 
@@ -41,13 +34,13 @@ Utiliza los modificadores de acceso siguientes para controlar tanto la visibilid
 |private|La accesibilidad predeterminada. El mismo significado que en C++ estándar.|No|
 |protected|El mismo significado que en C++ estándar, tanto dentro de la aplicación o componente como en los metadatos.|Sí|
 |public|El mismo significado que en C++ estándar.|Sí|
-|`public protected` - o - `protected public`|Accesibilidad protegida en metadatos, pública dentro de la aplicación o componente.|Sí|
+|`public protected` O bien `protected public`|Accesibilidad protegida en metadatos, pública dentro de la aplicación o componente.|Sí|
 |`protected private` o `private protected`|No visible en los metadatos; accesibilidad protegida dentro de la aplicación o componente.||
 |`internal` o `private public`|El miembro es público dentro de la aplicación o componente, pero no está visible en los metadatos.|No|
 
 ## <a name="windows-runtime-namespaces"></a>Espacios de nombres en tiempo de ejecución de Windows
 
-La API de Windows consta de tipos que se declaran en el Windows::\* espacios de nombres. Estos espacios de nombres se reservan para Windows y no se les puede agregar tipos. En el **Explorador de objetos**, puedes ver estos espacios de nombres en el archivo windows.winmd. Para obtener documentación sobre estos espacios de nombres, vea [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377).
+La API de Windows consta de tipos que se declaran en el Windows::\* espacios de nombres. Estos espacios de nombres se reservan para Windows y no se les puede agregar tipos. En el **Explorador de objetos**, puedes ver estos espacios de nombres en el archivo windows.winmd. Para documentación sobre estos espacios de nombres, vea [API de Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 ## <a name="ccx-namespaces"></a>C++/CX (espacio de nombres)
 
@@ -57,7 +50,7 @@ C++ / c++ / CX define determinados tipos de espacios de nombres como parte de la
 |-|-|
 |**Espacio de nombres**|**Descripción**|
 |default|Contiene los tipos numéricos y char16 integrados. Estos tipos están en el ámbito de cada espacio de nombres y nunca se requiere una instrucción `using` .|
-|Plataforma|Contiene tipos principalmente públicos que se corresponden con los tipos en tiempo de ejecución de Windows como `Array<T>`, `String`, `Guid`, y `Boolean`. También incluye tipos auxiliares especializados como `Platform::Agile<T>` y `Platform::Box<T>`.|
+|Plataforma|Contiene tipos principalmente públicos que se corresponden con los tipos en tiempo de ejecución de Windows como `Array<T>`, `String`, `Guid`, y `Boolean`. También incluye tipos del asistente especializados como `Platform::Agile<T>` y `Platform::Box<T>`.|
 |Platform::Collections|Contiene las clases de colección concretos que implementan las interfaces de colección en tiempo de ejecución de Windows `IVector`, `IMap`, y así sucesivamente. Estos tipos se definen en un archivo de encabezado collection.h y no en platform.winmd.|
 |Platform::Details|Contiene tipos que el compilador utiliza y que no están previstos para consumo público.|
 
