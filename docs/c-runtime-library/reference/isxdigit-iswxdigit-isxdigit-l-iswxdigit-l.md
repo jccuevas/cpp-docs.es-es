@@ -1,10 +1,6 @@
 ---
-title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Microsoft Docs
-ms.custom: ''
+title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -27,8 +23,6 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs:
-- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92908e6d4c39f990da6fba5008c7ffe8af40ccc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7f70fedb19cca746ffb1e276c69b5fc98388b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659711"
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -84,11 +74,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un dígito hexadecimal. **isxdigit** devuelve un valor distinto de cero si *c* es un dígito hexadecimal (A - F, a - f o 0 - 9). **iswxdigit** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un carácter de dígito hexadecimal. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un dígito hexadecimal. **isxdigit** devuelve un valor distinto de cero si *c* es un dígito hexadecimal (A - F, a - f o 0 - 9). **iswxdigit** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un carácter de dígito hexadecimal. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
 
-Para la configuración regional "C", la **iswxdigit** función no admite caracteres hexadecimales de ancho completo de Unicode.
+Para la configuración regional "C", el **iswxdigit** función no admite caracteres hexadecimales de ancho completo Unicode.
 
-Las versiones de estas funciones que tienen la **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 El comportamiento de **isxdigit** y **_isxdigit_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
 
