@@ -1,10 +1,6 @@
 ---
-title: _mkgmtime, _mkgmtime32, _mkgmtime64 | Microsoft Docs
-ms.custom: ''
+title: _mkgmtime, _mkgmtime32, _mkgmtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mkgmtime32
 - _mkgmtime64
@@ -29,8 +25,6 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcb587cf5504f661512ccf88cf4f15d0555e2f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452265"
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
@@ -78,15 +68,15 @@ Un puntero a la hora UTC como un **struct** **tm** para convertir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Una cantidad de tipo **__time32_t** o **__time64_t** que representa el número de segundos transcurridos desde la medianoche del 1 de enero de 1970, hora Universal coordinada (UTC). Si la fecha está fuera del intervalo (vea la sección Comentarios) o la entrada no se puede interpretar como una hora válida, el valor devuelto es -1.
+Cantidad de tipo **__time32_t** o **__time64_t** que representa el número de segundos transcurridos desde la medianoche del 1 de enero de 1970, hora Universal coordinada (UTC). Si la fecha está fuera del intervalo (vea la sección Comentarios) o la entrada no se puede interpretar como una hora válida, el valor devuelto es -1.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mkgmtime32** y **_mkgmtime64** funciones convierten una hora UTC en un **__time32_t** o **__time64_t** tipo que representa el tiempo en HORA UTC. Para convertir una hora local en hora UTC, utilice **mktime**, **_mktime32**, y **_mktime64** en su lugar.
+El **_mkgmtime32** y **_mkgmtime64** funciones convierten una hora UTC en un **__time32_t** o **__time64_t** que representa la hora de tipo HORA UTC. Para convertir una hora local a la hora UTC, use **mktime**, **_mktime32**, y **_mktime64** en su lugar.
 
-**_mkgmtime** es una función insertada que se evalúa como **_mkgmtime64**, y **time_t** es equivalente a **__time64_t**. Si necesita forzar que el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. No se recomienda porque podría producir un error de la aplicación después del 18 de enero de 2038 (el rango máximo de 32 bits **time_t**), y no se permite en absoluto en plataformas de 64 bits.
+**_mkgmtime** es una función insertada que se evalúa como **_mkgmtime64**, y **time_t** es equivalente a **__time64_t**. Si necesita forzar el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. No se recomienda porque podría producir un error de la aplicación después del 18 de enero de 2038 (el intervalo máximo de 32 bits **time_t**), y no se permite en absoluto en plataformas de 64 bits.
 
-El tiempo transcurrida de estructura en se cambiarán como se indica a continuación, en la misma forma tal y como se cambian con el **_mktime** funciones: el **tm_wday** y **tm_yday** campos están establecidos en nuevos los valores según los valores de **tm_mday** y **tm_year**. Al especificar un **tm** estructura de hora, establezca la **tm_isdst** campo:
+La hora a la estructura pasada en cambiará como sigue, en la misma manera según se modifican con el **_mktime** funciones: el **tm_wday** y **tm_yday** campos se establecen para nuevos los valores según los valores de **tm_mday** y **tm_year**. Al especificar un **tm** estructura de hora, establezca la **tm_isdst** campo:
 
 - Cero (0) para indicar que está vigente la hora estándar.
 
@@ -96,9 +86,9 @@ El tiempo transcurrida de estructura en se cambiarán como se indica a continuac
 
 La biblioteca en tiempo de ejecución de C usa la variable de entorno TZ para determinar el horario de verano correcto. Si TZ no está establecido, se consulta al sistema operativo para obtener el comportamiento correcto del horario de verano regional. **tm_isdst** es un campo obligatorio. Si no se establece, su valor es indefinido y el valor devuelto de **mktime** es imprevisible.
 
-El intervalo de la **_mkgmtime32** función es desde la medianoche del 1 de enero de 1970 UTC y las 23:59:59 del 18 de enero de 2038, UTC. El intervalo de **_mkgmtime64** es desde la medianoche del 1 de enero de 1970 UTC a 23:59:59 del 31 de diciembre de 3000, UTC. Una fecha fuera de intervalo da como resultado un valor devuelto de -1. El intervalo de **_mkgmtime** depende de si **_USE_32BIT_TIME_T** está definido. Si no ha definido (valor predeterminado) el intervalo es de **_mkgmtime64**; en caso contrario, el intervalo se limita al intervalo de 32 bits de **_mkgmtime32**.
+El intervalo de la **_mkgmtime32** función es desde la medianoche del 1 de enero de 1970 UTC hasta las 23:59:59 del 18 de enero de 2038, UTC. El intervalo de **_mkgmtime64** es desde la medianoche del 1 de enero de 1970, UTC a 23:59:59 del 31 de diciembre de 3000, UTC. Una fecha fuera del intervalo da como resultado un valor devuelto de -1. El intervalo de **_mkgmtime** depende de si **_USE_32BIT_TIME_T** está definido. Si no ha definido (valor predeterminado) el intervalo es de **_mkgmtime64**; en caso contrario, el intervalo se limitará al rango de 32 bits **_mkgmtime32**.
 
-Tenga en cuenta que **gmtime** y **localtime** utilice un único búfer asignado estáticamente para la conversión. Si proporciona este búfer a **mkgmtime**, se destruye el contenido anterior.
+Tenga en cuenta que **gmtime** y **localtime** usan un solo búfer asignado estáticamente para la conversión. Si proporciona este búfer a **mkgmtime**, se destruye el contenido anterior.
 
 ## <a name="example"></a>Ejemplo
 

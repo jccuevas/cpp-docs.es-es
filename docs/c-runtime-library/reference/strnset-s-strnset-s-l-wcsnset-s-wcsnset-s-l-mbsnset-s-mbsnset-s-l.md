@@ -1,10 +1,6 @@
 ---
-title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l | Microsoft Docs
-ms.custom: ''
+title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset_s_l
 - _strnset_s
@@ -41,8 +37,6 @@ f1_keywords:
 - mbsnset_s_l
 - mbsnset_s
 - wcsnset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnset_s_l function
@@ -60,16 +54,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 786f802a25964b118b997a2d5af7376932f8f74f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb82e96c23e1554fb2ec5e2a36089823eaf55595
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460000"
 ---
 # <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
@@ -143,15 +133,15 @@ Configuración regional que se va a usar.
 
 Cero si es correcto, código de error en caso contrario.
 
-Estas funciones validan sus argumentos. Si *str* no es una cadena terminada en null válida o el argumento de tamaño es menor o igual que 0, a continuación, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen **errno** para ese código de error. El código de error predeterminado es **EINVAL** si no hay ningún valor más concreto.
+Estas funciones validan sus argumentos. Si *str* no es una cadena válida terminada en null o el argumento de tamaño es menor o igual que 0, a continuación, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen **errno** para ese código de error. El código de error predeterminado es **EINVAL** si no se aplica un valor más concreto.
 
 ## <a name="remarks"></a>Comentarios
 
 Estas funciones establecen, como máximo, los primeros *recuento* caracteres de *str* a *c*. Si *recuento* es mayor que el tamaño de *str*, el tamaño de *str* se utiliza en lugar de *recuento*. Se produce un error si *recuento* es mayor que *numberOfElements* y los dos parámetros son mayores que el tamaño de *str*.
 
-**_wcsnset_s** y **_mbsnset_s** son versiones de caracteres multibyte y anchos de **_strnset_s**. El argumento de cadena de **_wcsnset_s** es un carácter de toda la cadena; de **_mbsnset_s** es la cadena de caracteres amultibyte. Estas tres funciones se comportan exactamente igual.
+**_wcsnset_s** y **_mbsnset_s** son versiones de caracteres anchos y caracteres multibyte de **_strnset_s**. El argumento de cadena de **_wcsnset_s** es un carácter de toda la cadena, mientras que el de **_mbsnset_s** es una cadena de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclegal_l
 - _ismbclegal
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbclegal_l
 - ismbcsymbol
 - ismbclegal
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcsymbol function
 - ismbclegal_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d2bd03eb230d85a1f93038d50566b8ccae468a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454579"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -95,7 +85,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*< = 255 y hay un correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de los correspondientes **_ismbb** rutina.
+Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*< = 255 y hay correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la correspondiente **_ismbb** rutina.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -106,7 +96,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|
 |-------------|--------------------|---------------------------|
 |**_ismbclegal**|Multibyte válido|Devuelve cero si y solo si el primer byte de *c* está dentro de los intervalos 0 x 81-0x9F o 0xE0 - 0xFC, y el segundo byte está dentro de los intervalos 0 x 40-0x7E o 0 x 80 - FC.|
-|**_ismbcsymbol**|Símbolo multibyte|Devuelve cero si y solo si 0x8141 < =*c*< = 0x81AC.|
+|**_ismbcsymbol**|Símbolo multibyte|Devuelve cero si y solo si 0 x 8141 < =*c*< = 0x81AC.|
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

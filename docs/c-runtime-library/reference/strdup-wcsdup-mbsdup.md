@@ -1,10 +1,6 @@
 ---
-title: _strdup, _wcsdup, _mbsdup | Microsoft Docs
-ms.custom: ''
+title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461521"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
@@ -91,9 +81,9 @@ Cada una de estas funciones devuelve un puntero a la ubicación de almacenamient
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strdup** llamadas a funciones [malloc](malloc.md) para asignar espacio de almacenamiento para una copia de *strSource* y, a continuación, copia *strSource* a la espacio asignado.
+El **_strdup** llamadas de función [malloc](malloc.md) para asignar espacio de almacenamiento de copia de *strSource* y, a continuación, copia *strSource* a la espacio asignado.
 
-**_wcsdup** y **_mbsdup** son versiones de caracteres multibyte y anchos de **_strdup**. Los argumentos y el valor devuelto de **_wcsdup** son caracteres anchos cadenas; los de **_mbsdup** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**_wcsdup** y **_mbsdup** son versiones de caracteres anchos y caracteres multibyte de **_strdup**. Los argumentos y el valor devuelto de **_wcsdup** son caracteres anchos cadenas; los de **_mbsdup** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -101,7 +91,7 @@ El **_strdup** llamadas a funciones [malloc](malloc.md) para asignar espacio de 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Dado que **_strdup** llamadas **malloc** para asignar espacio de almacenamiento para la copia de *strSource*, es recomendable siempre liberar esta memoria mediante una llamada a la [libre](free.md) rutinarias en el puntero devuelto por la llamada a **_strdup**.
+Dado que **_strdup** llamadas **malloc** para asignar espacio de almacenamiento para la copia de *strSource*, es recomendable siempre para liberar esta memoria mediante una llamada a la [libre](free.md) rutinarias en el puntero devuelto por la llamada a **_strdup**.
 
 Si **_DEBUG** y **_CRTDBG_MAP_ALLOC** se definen, **_strdup** y **_wcsdup** se reemplazan por llamadas a **_strdup_dbg**  y **_wcsdup_dbg** para permitir que las asignaciones de memoria de depuración. Para obtener más información, vea [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 

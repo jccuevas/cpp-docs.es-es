@@ -1,10 +1,6 @@
 ---
-title: _heapwalk | Microsoft Docs
-ms.custom: ''
+title: _heapwalk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapwalk
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d98260ce281bc8773f597dae5897afe4beee0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454904"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -61,7 +51,7 @@ Búfer que contendrá la información del montón.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_heapwalk** devuelve una de las siguientes constantes de manifiesto enteras definidas en Malloc.h.
+**_heapwalk** devuelve una de las siguientes constantes de manifiesto enteras, definidas en Malloc.h.
 
 |Valor devuelto|Significado|
 |-|-|
@@ -70,13 +60,13 @@ Búfer que contendrá la información del montón.
 |**_HEAPBADPTR**| El **_pentry** campo de la **_HEAPINFO** estructura no contiene un puntero válido en el montón o *entryinfo* es un puntero nulo.|
 |**_HEAPEND**| Se ha llegado al final del montón correctamente.|
 |**_HEAPEMPTY**| El montón no está inicializado.|
-|**_HEAPOK**| Ningún error hasta el momento. *entryinfo* se actualiza con información acerca de la siguiente entrada del montón.|
+|**_HEAPOK**| Ningún error hasta el momento. *entryinfo* se actualizan con información sobre la siguiente entrada del montón.|
 
 Además, si se produce un error, **_heapwalk** establece **errno** a **ENOSYS**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_heapwalk** función le ayuda a depurar problemas relacionados con el montón en programas. La función recorre el montón, atravesando una entrada por cada llamada y devuelve un puntero a una estructura de tipo **_HEAPINFO** que contiene información sobre la siguiente entrada del montón. El **_HEAPINFO** tipo, definida en Malloc.h, contiene los siguientes elementos.
+El **_heapwalk** función ayuda a depurar problemas relacionados con el montón en programas. La función recorre el montón, atravesando una entrada por llamada y devuelve un puntero a una estructura de tipo **_HEAPINFO** que contiene información sobre la siguiente entrada del montón. El **_HEAPINFO** tipo, definido en Malloc.h, contiene los siguientes elementos.
 
 |Campo|Significado|
 |-|-|
@@ -84,9 +74,9 @@ El **_heapwalk** función le ayuda a depurar problemas relacionados con el mont�
 |`size_t _size`|Tamaño de la entrada del montón.|
 |`int _useflag`|Marca que indica si la entrada del montón está en uso.|
 
-Una llamada a **_heapwalk** que devuelve **_HEAPOK** almacena el tamaño de la entrada en el **_size** campo y establece el **_useflag** campo cualquiera **_FREEENTRY** o **_USEDENTRY** (ambos son constantes definidas en Malloc.h). Para obtener esta información acerca de la primera entrada en el montón, pase **_heapwalk** un puntero a un **_HEAPINFO** estructura cuyo **_pentry** miembro es **NULL** . Si el sistema operativo no admite **_heapwalk**(por ejemplo, Windows 98), la función devuelve **_HEAPEND** y establece **errno** a **ENOSYS**.
+Una llamada a **_heapwalk** que devuelve **_HEAPOK** almacena el tamaño de la entrada en el **_Tamaño** campo y establece el **_useflag** campo cualquiera **_FREEENTRY** o **_USEDENTRY** (ambos son constantes definidas en Malloc.h). Para obtener esta información acerca de la primera entrada en el montón, pase **_heapwalk** un puntero a un **_HEAPINFO** estructura cuyo **_pentry** miembro es **NULL** . Si el sistema operativo no admite **_heapwalk**(por ejemplo, Windows 98), la función devuelve **_HEAPEND** y establece **errno** a **ENOSYS**.
 
-Esta función valida su parámetro. Si *entryinfo* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **_HEAPBADPTR**.
+Esta función valida su parámetro. Si *entryinfo* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **_HEAPBADPTR**.
 
 ## <a name="requirements"></a>Requisitos
 
