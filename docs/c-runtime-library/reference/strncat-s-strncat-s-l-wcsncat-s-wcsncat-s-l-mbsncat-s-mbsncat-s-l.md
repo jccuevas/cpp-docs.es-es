@@ -1,10 +1,6 @@
 ---
-title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs
-ms.custom: ''
+title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -35,8 +31,6 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -53,16 +47,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d88467034eeab3f3a269f735d5b158d94a429873
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500755"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -185,9 +175,9 @@ Devuelve 0 si se ejecuta correctamente; devuelve un código de error si se produ
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intentan anexar los primeros *d.* caracteres de *strSource* al final de *strDest*, donde *d.* es el menor de *recuento* y la longitud de *strSource*. Si los anexa *d.* caracteres quepa en *strDest* (cuyo tamaño se proporciona como *numberOfElements*) y dejar espacio para un terminador null y, a continuación, esos caracteres se anexan a partir de la versión original terminación null de *strDest*, y un carácter nulo final nueva se anexa; en caso contrario, *strDest*[0] se establece en el carácter nulo y el parámetro no válido se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Estas funciones intentan anexar los primeros *d.* caracteres de *strSource* al final de *strDest*, donde *d.* es el menor de *recuento* y la longitud de *strSource*. Si los anexa *d.* se ajusten a caracteres *strDest* (cuyo tamaño se da como *numberOfElements*) y queda espacio para un terminador nulo, entonces esos caracteres adicionales. se anexan, empezando en el original terminación null de *strDest*, y un carácter nulo final nueva se anexa; en caso contrario, *strDest*[0] se establece en el carácter nulo y el parámetro no válido se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
-Existe una excepción al comportamiento anterior. Si *recuento* es [_TRUNCATE](../../c-runtime-library/truncate.md) toda la parte de *strSource* como el ajuste se anexa a *strDest* dejando espacio para anexar una terminación null.
+Existe una excepción al comportamiento anterior. Si *recuento* es [_TRUNCATE](../../c-runtime-library/truncate.md) , la parte de *strSource* que quepa se anexa a *strDest* , siempre dejando espacio para anexar un terminación null.
 
 Por ejemplo,
 
@@ -197,7 +187,7 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-es decir, te pedimos **strncat_s** que anexe tres caracteres a dos caracteres en un búfer de cinco caracteres; esto no daría lugar a ningún espacio para el terminador nulo, por lo tanto, **strncat_s** ceros la cadena y llama al controlador de parámetros no válidos.
+significa que, te pedimos **strncat_s** que anexe tres caracteres a dos caracteres en un búfer de cinco caracteres; esto no quedaría espacio para el terminador nulo, por lo tanto, **strncat_s** ceros a la cadena y llama al controlador de parámetros no válidos.
 
 Si se necesita comportamiento de truncamiento, utilice **_TRUNCATE** o ajustar el *tamaño* parámetro según corresponda:
 
@@ -213,11 +203,11 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 En todos los casos, la cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-Si *strSource* o *strDest* es **NULL**, o es *numberOfElements* es cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, la función devuelve **EINVAL** sin modificar sus parámetros.
+Si *strSource* o *strDest* es **NULL**, o es *numberOfElements* es cero, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, la función devuelve **EINVAL** sin modificar sus parámetros.
 
-**wcsncat_s** y **_mbsncat_s** son versiones de caracteres multibyte y anchos de **strncat_s**. Los argumentos de cadena y el valor devuelto de **wcsncat_s** son caracteres anchos cadenas; los de **_mbsncat_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcsncat_s** y **_mbsncat_s** son versiones de caracteres anchos y caracteres multibyte de **strncat_s**. Los argumentos de cadena y el valor devuelto de **wcsncat_s** son caracteres anchos cadenas; los de **_mbsncat_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -230,7 +220,7 @@ Las versiones de depuración de estas funciones rellenan primero el búfer con 0
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** y **_wcsncat_s_l** no que dependen de la configuración regional; sólo se proporcionan para **_tcsncat_s_l**.
+**_strncat_s_l** y **_wcsncat_s_l** no que dependen de la configuración regional; se proporcionan solo para **_tcsncat_s_l**.
 
 ## <a name="requirements"></a>Requisitos
 
