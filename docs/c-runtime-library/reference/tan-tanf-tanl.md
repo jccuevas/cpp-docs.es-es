@@ -1,10 +1,6 @@
 ---
-title: tan, tanf, tanl | Documentos de Microsoft
-ms.custom: ''
+title: tan, tanf, tanl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tan
 - tanf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanf
 - _tanl
 - tanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanl function
 - _tanl function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c0108e6d72e35a253e31df6ec96cbff19113c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564034"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -75,14 +65,14 @@ long double tan( long double x );  // C++ only
 
 El **tan** funciones devuelven la tangente de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se produce una pérdida de significado en el resultado.
 
-|Entrada|Excepción SEH|**Matherr** (excepción)|
+|Entrada|Excepción SEH|**_Matherr** excepción|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|ninguna|_DOMAIN|
-|± INF|**NO VÁLIDO**|_DOMAIN|
+|+ INF|**NO VÁLIDO**|_DOMAIN|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **tan** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **tan** siempre toma y devuelve **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **tan** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **tan** siempre toma y devuelve **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
