@@ -1,26 +1,16 @@
 ---
-title: (X64) de control de excepciones | Microsoft Docs
-ms.custom: ''
+title: Control de excepciones (x64)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34695d8e0edf7a6c910173eca0c465cf01028c29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1eafa1d0bd156e9e95f707fd25dba68bd223acd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718749"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676218"
 ---
 # <a name="exception-handling-x64"></a>Control de excepciones (x64)
 
@@ -32,7 +22,7 @@ Esta sección describe el control de excepciones estructurado y el comportamient
 
 - [Controlador específico del lenguaje](../build/language-specific-handler.md)
 
-- [Aplicaciones auxiliares de desenredo para MASM](../build/unwind-helpers-for-masm.md)
+- [Asistentes de desenredo para MASM](../build/unwind-helpers-for-masm.md)
 
 - [Definiciones de datos de desenredo en C](../build/unwind-data-definitions-in-c.md)
 

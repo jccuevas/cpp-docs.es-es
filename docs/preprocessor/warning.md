@@ -1,31 +1,21 @@
 ---
-title: Advertencia | Microsoft Docs
-ms.custom: ''
+title: warning
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90cb11a6e6ab0c088c0b2425856d61556e76564c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631730"
 ---
 # <a name="warning-pragma"></a>warning (pragma)
 Habilita la modificación selectiva del comportamiento de los mensajes de advertencia del compilador.
@@ -46,7 +36,7 @@ Los siguientes parámetros de warning-specifier están disponibles.
 |warning-specifier|Significado|
 |------------------------|-------------|
 |*1, 2, 3, 4*|Aplica el nivel dado a las advertencias especificadas. También activa una advertencia especificada que está desactivada de forma predeterminada.|
-|*default*|Restablece el comportamiento de advertencia a su valor predeterminado. También activa una advertencia especificada que está desactivada de forma predeterminada. La advertencia se generará en su nivel predeterminado documentado.<br /><br /> Para obtener más información, consulte [advertencias del compilador desactivadas de forma predeterminada](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|*default*|Restablece el comportamiento de advertencia a su valor predeterminado. También activa una advertencia especificada que está desactivada de forma predeterminada. La advertencia se generará en su nivel predeterminado documentado.<br /><br /> Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |*disable*|No emite los mensajes de advertencia especificados.|
 |*Error*|Notifica las advertencias especificadas como errores.|
 |*once*|Muestra los mensajes especificados solo una vez.|

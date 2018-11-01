@@ -1,10 +1,6 @@
 ---
-title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660371"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -88,7 +78,7 @@ int _wprintf_p_l(
 *format*<br/>
 Control de formato.
 
-*Argumento*<br/>
+*argumento*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -100,18 +90,18 @@ Devuelve el número de caracteres impreso o un valor negativo si se produce un e
 
 ## <a name="remarks"></a>Comentarios
 
-El **_printf_p** función da formato e imprime una serie de caracteres y valores en el flujo de salida estándar, **stdout**. Si los argumentos siguen la *formato* cadena, la *formato* cadena debe contener especificaciones que determinen el formato de salida para los argumentos (consulte [printf_p (parámetros posicionales)](../../c-runtime-library/printf-p-positional-parameters.md)).
+El **_printf_p** función da formato e imprime una serie de caracteres y valores en el flujo de salida estándar, **stdout**. Si los argumentos siguen la *formato* cadena, la *formato* cadena debe contener especificaciones que determinen el formato de salida para los argumentos (vea [printf_p (parámetros posicionales)](../../c-runtime-library/printf-p-positional-parameters.md)).
 
 La diferencia entre **_printf_p** y **printf_s** es que **_printf_p** admite parámetros posicionales, lo que permite especificar el orden en que los argumentos son se utiliza en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_wprintf_p** es la versión con caracteres anchos de **_printf_p**; se comportan exactamente igual si el flujo se abre en modo ANSI. **_printf_p** no admite actualmente la salida en un flujo UNICODE.
+**_wprintf_p** es la versión de caracteres anchos de **_printf_p**; se comportan exactamente igual si el flujo se abre en modo ANSI. **_printf_p** no admite actualmente la salida en un flujo UNICODE.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
 
-Si *formato* o *argumento* son **NULL**, o del formato de cadena contiene caracteres de formato no válidos, **_printf_p** y **_wprintf_p** funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
+Si *formato* o *argumento* son **NULL**, o del formato de cadena contiene caracteres de formato no válidos, **_printf_p** y **_wprintf_p** funciones invocan un controlador de parámetros no válidos, tal como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -127,7 +117,7 @@ Si *formato* o *argumento* son **NULL**, o del formato de cadena contiene caract
 |**_printf_p**, **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,10 +1,6 @@
 ---
-title: clearerr_s | Microsoft Docs
-ms.custom: ''
+title: clearerr_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clearerr_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clearerr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - error indicator for streams
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 140d984c470bd505f347aa43065b033339ed38a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450871"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665028"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -54,18 +44,18 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a **archivo** estructura
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto; **EINVAL** si *flujo* es **NULL**.
+Cero si se realiza correctamente; **EINVAL** si *secuencia* es **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **clearerr_s** función restablece el indicador de error y el indicador de fin de archivo para *flujo*. Indicadores de error no se borran automáticamente; una vez que se establece el indicador de error de una secuencia especificada, las operaciones en ese flujo continuar devolver un valor de error hasta que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama.
+El **clearerr_s** función restablece el indicador de error y el indicador de fin de archivo para *secuencia*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama.
 
-Si *flujo* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+Si *secuencia* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
