@@ -1,10 +1,6 @@
 ---
-title: registro, logf, logl, log10, log10f, log10l | Documentos de Microsoft
-ms.custom: ''
+title: registro, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543304"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>registro, logf, logl, log10, log10f, log10l
 
@@ -90,7 +80,7 @@ El **registro** funciones devuelven el logaritmo natural (base *e*) de *x* si se
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|ninguna|_DOMAIN|
+|+ QNAN, IND|ninguna|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 

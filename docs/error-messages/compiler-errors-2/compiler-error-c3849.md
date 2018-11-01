@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C3849 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C3849
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3849
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08f89deb3bd83162dd7cf5dc80335e5274efa1c7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077508"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598567"
 ---
 # <a name="compiler-error-c3849"></a>Error del compilador C3849
 
