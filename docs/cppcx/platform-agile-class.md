@@ -1,8 +1,6 @@
 ---
-title: 'Clase Platform:: Agile | Microsoft Docs'
-ms.custom: ''
+title: Platform::Agile (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471206"
 ---
 # <a name="platformagile-class"></a>Platform::Agile (Clase)
 
@@ -162,11 +154,11 @@ Un tipo especificado por el parámetro typename de la plantilla.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La dirección de un identificador a un objeto de tipo `T`.
+Dirección de un identificador para un objeto de tipo `T`.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta operación libera la representación actual de un objeto de tipo `T`, si las hay; reinicializa los miembros de datos del objeto Agile; adquiere el contexto del subproceso actual; y, a continuación, devuelve la dirección de una variable de objeto de identificador que puede representar un objeto no ágil. Para hacer que una instancia de la clase ágil representar un objeto, utilice el operador de asignación ([Agile:: operator =](#operator-assign)) para asignar el objeto a la instancia de la clase Agile.
+Esta operación libera la representación actual de un objeto de tipo `T`, en caso de haberlo; reinicializa los miembros de datos del objeto Agile; adquiere el contexto de subprocesos actual; y luego devuelve la dirección de una variable de controlador a objeto que puede representar un objeto que no es Agile. Para hacer que una instancia de la clase ágil representar un objeto, utilice el operador de asignación ([Agile:: operator =](#operator-assign)) para asignar el objeto a la instancia de la clase Agile.
 
 ## <a name="getaddressofforinout"></a>  Getaddressofforinout (método)
 

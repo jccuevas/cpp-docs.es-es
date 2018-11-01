@@ -1,8 +1,6 @@
 ---
-title: Stringreference (clase) | Microsoft Docs
-ms.custom: ''
+title: Platform::StringReference (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -10,19 +8,13 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs:
-- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b177cf30b4eee49d144ddf3516a4bbf3da91c85
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105801"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498389"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference (Clase)
 
@@ -72,7 +64,7 @@ class StringReference
 
 ## <a name="data"></a>  Stringreference (método)
 
-Devuelve el contenido de este `StringReference` como una matriz de valores char16.
+Devuelve el contenido de este `StringReference` como matriz de valores char16.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -199,7 +191,7 @@ Número de elementos de `__strArg`.
 
 ### <a name="remarks"></a>Comentarios
 
-La primera versión de este constructor es el constructor predeterminado. La segunda versión inicializa una nueva clase de instancia `StringReference` desde el objeto especificado por el parámetro `__fstrArg`. La tercera y cuarta sobrecargas inicializan una nueva `StringReference` instancia a partir de una matriz de valores char16. char16 representa un carácter de texto UNICODE de 16 bits.
+La primera versión de este constructor es el constructor predeterminado. La segunda versión inicializa una nueva clase de instancia `StringReference` desde el objeto especificado por el parámetro `__fstrArg`. La tercera y la cuarta sobrecargas inicializan una nueva instancia de `StringReference` desde una matriz de valores char16. char16 representa un carácter de texto UNICODE de 16 bits.
 
 ## <a name="see-also"></a>Vea también
 
