@@ -1,10 +1,6 @@
 ---
-title: strcspn, wcscspn, _mbscspn, _mbscspn_l | Microsoft Docs
-ms.custom: ''
+title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscspn_l
 - wcscspn
@@ -30,8 +26,6 @@ f1_keywords:
 - wcscspn
 - _ftcscspn
 - _tcscspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - ftcscspn function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e282aa9d796f06e2682278e08dfae4f24b7a65c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415179"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446454"
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
@@ -98,17 +88,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Estas funciones devuelven el índice del primer carácter de *str* que se encuentra en *strCharSet*. Si ninguno de los caracteres de *str* en *strCharSet*, a continuación, el valor devuelto es la longitud de *str*.
+Estas funciones devuelven el índice del primer carácter en *str* que se encuentra en *strCharSet*. Si ninguno de los caracteres de *str* en *strCharSet*, a continuación, el valor devuelto es la longitud de *str*.
 
 No se reserva ningún valor devuelto para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-**wcscspn** y **_mbscspn** son versiones de caracteres multibyte y anchos de **strcspn**. Los argumentos de **wcscspn** son caracteres anchos cadenas; los de **_mbscspn** son cadenas de caracteres multibyte.
+**wcscspn** y **_mbscspn** son versiones de caracteres anchos y caracteres multibyte de **strcspn**. Los argumentos de **wcscspn** son caracteres anchos cadenas; los de **_mbscspn** son cadenas de caracteres multibyte.
 
-**_mbscspn** valida sus parámetros. Si el valor *str* o *strCharSet* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** a **EINVAL**. **strcspn** y **wcscspn** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
+**_mbscspn** valida sus parámetros. Si bien *str* o *strCharSet* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** a **EINVAL**. **strcspn** y **wcscspn** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -1,10 +1,6 @@
 ---
-title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
-ms.custom: ''
+title: atoi, _atoi_l, _wtoi, _wtoi_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -30,8 +26,6 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ec426518aed278f98ca334ba4ed34830f5836a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54c0a58a070fa42218a7b048d9eb57b05040738
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397160"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452252"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -90,19 +80,19 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el **int** valor generado mediante la interpretación de los caracteres de entrada como un número. El valor devuelto es 0 para **atoi** y **_wtoi**, si la entrada no se puede convertir en un valor de ese tipo.
+Cada función devuelve el **int** valor genera al interpretar los caracteres de entrada como un número. El valor devuelto es 0 para **atoi** y **_wtoi**, si la entrada no se puede convertir en un valor de ese tipo.
 
-En el caso de desbordamiento con valores enteros negativos grandes, **LONG_MIN** se devuelve. **atoi** y **_wtoi** devolver **INT_MAX** y **INT_MIN** en estas condiciones. En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si se pasa el parámetro es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
+En el caso de desbordamiento con valores enteros negativos grandes, **LONG_MIN** se devuelve. **atoi** y **_wtoi** devolver **INT_MAX** y **INT_MIN** en estas condiciones. En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si el parámetro pasado es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
 
 ## <a name="remarks"></a>Comentarios
 
 Estas funciones convierten una cadena de caracteres en un valor entero (**atoi** y **_wtoi**). La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que termina la cadena.
 
-El *str* argumento pasado a **atoi** y **_wtoi** tiene la forma siguiente:
+El *str* argumento **atoi** y **_wtoi** tiene el formato siguiente:
 
-> [*espacio en blanco*] [*inicio de sesión*] [*dígitos*]]
+> [*espacio en blanco*] [*sesión*] [*dígitos*]]
 
-A *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *inicio de sesión* sea más (+) o menos (-); y *dígitos* es uno o más dígitos.
+Un *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *sesión* sea más (+) o menos (-); y *dígitos* son uno o más dígitos.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
@@ -122,7 +112,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra cómo se pueden convertir números almacenados como cadenas en valores numéricos utilizando la **atoi** funciones.
+Este programa muestra cómo se pueden convertir números almacenados como cadenas en valores numéricos con el **atoi** funciones.
 
 ```C
 // crt_atoi.c

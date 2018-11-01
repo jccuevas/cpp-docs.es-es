@@ -1,33 +1,23 @@
 ---
-title: Del compilador (nivel 2) de la advertencia C4396 | Microsoft Docs
-ms.custom: ''
+title: Advertencia del compilador (nivel 2) C4396
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4396
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa0a084e90db9d48f517bfe65c6340eb532f0ae6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445323"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Advertencia del compilador (nivel 2) C4396
 
 "name": el especificador inline no se puede usar cuando una declaración de confianza hace referencia a una especialización de una plantilla de función
 
-Una especialización de una plantilla de función no puede especificar cualquiera de los [inline](../../cpp/inline-functions-cpp.md) especificadores. El compilador emite la advertencia C4396 y omite el especificador inline.
+Una especialización de una plantilla de función no puede especificar ninguno de los especificadores [inline](../../cpp/inline-functions-cpp.md) . El compilador emite la advertencia C4396 y omite el especificador inline.
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 

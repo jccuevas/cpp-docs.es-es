@@ -1,28 +1,18 @@
 ---
-title: Información general sobre la biblioteca estándar de C++ | Microsoft Docs
-ms.custom: ''
+title: Información general sobre la biblioteca estándar de C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2795ab431930627160b0275866b573aff36bb97b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444998"
 ---
 # <a name="c-standard-library-overview"></a>Información general sobre la biblioteca estándar de C++
 

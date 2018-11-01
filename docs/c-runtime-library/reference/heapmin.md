@@ -1,10 +1,6 @@
 ---
-title: _heapmin | Microsoft Docs
-ms.custom: ''
+title: _heapmin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapmin
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapmin
 - heapmin
-dev_langs:
-- C++
 helpviewer_keywords:
 - heap memory
 - minimizing heaps
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec73905c6361d025b9f29c8cf4543ed200a4abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455476"
 ---
 # <a name="heapmin"></a>_heapmin
 
@@ -56,13 +46,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **_heapmin** devuelve 0; en caso contrario, la función devuelve -1 y establece **errno** a **ENOSYS**.
+Si es correcto, **_heapmin** devuelve 0; en caso contrario, la función devuelve -1 y establece **errno** a **ENOSYS**.
 
-Para obtener más información sobre este y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_heapmin** función minimiza el montón, liberar memoria del montón no utilizado en el sistema operativo. Si el sistema operativo no admite **_heapmin**(por ejemplo, Windows 98), la función devuelve -1 y establece **errno** a **ENOSYS**.
+El **_heapmin** función minimiza el montón al liberar memoria del montón no utilizada al sistema operativo. Si el sistema operativo no admite **_heapmin**(por ejemplo, Windows 98), la función devuelve -1 y establece **errno** a **ENOSYS**.
 
 ## <a name="requirements"></a>Requisitos
 

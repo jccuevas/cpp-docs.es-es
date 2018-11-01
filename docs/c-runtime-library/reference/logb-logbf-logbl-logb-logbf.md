@@ -1,10 +1,6 @@
 ---
-title: logb, logbf, logbl, _logb, _logbf | Microsoft Docs
-ms.custom: ''
+title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - logb
 - _logb
@@ -30,8 +26,6 @@ f1_keywords:
 - _logb
 - _logbf
 - logbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _logbf function
 - mantissas, floating-point variables
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f09a243994112c3ce19d72213391e09ba23c3c4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466292"
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -92,13 +82,13 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**logb** devuelve el valor de exponente imparcial de *x* como un entero con signo representado como un valor de punto flotante.
+**logb** devuelve el valor de exponente imparcial de *x* como un entero con signo, representado como un valor de punto flotante.
 
 ## <a name="remarks"></a>Comentarios
 
 El **logb** funciones extraen el valor exponencial del argumento de punto flotante *x*, como si *x* se representara con el intervalo infinito. Si el argumento *x* es desnormalizado, se trata como si fuera normalizado.
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **logb** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **logb** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **logb** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **logb** siempre toma y devuelve un **doble**.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|

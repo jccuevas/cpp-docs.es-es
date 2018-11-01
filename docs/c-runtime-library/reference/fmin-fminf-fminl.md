@@ -1,11 +1,6 @@
 ---
-title: Fmin, fminf, fminl | Documentos de Microsoft
-ms.custom: ''
+title: fmin, fminf, fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398950"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464368"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -89,7 +80,7 @@ Segundo valor que se va a comparar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve el menor de *x* o *y*.
+Si es correcto, devuelve el menor de *x* o *y*.
 
 |Entrada|Resultado|
 |-----------|------------|
@@ -97,11 +88,11 @@ Si se realiza correctamente, devuelve el menor de *x* o *y*.
 |*y* es NaN|*x*|
 |*x* y *y* son NaN|NaN|
 
-No hace que la función [_matherr](matherr.md) para invocar, hacer que las excepciones de punto flotante o cambie el valor de **errno**.
+No hace que la función [_matherr](matherr.md) que se invoque, producir las excepciones de punto flotante o cambie el valor de **errno**.
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **fmin** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **fmin** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **fmin** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **fmin** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

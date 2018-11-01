@@ -1,10 +1,6 @@
 ---
-title: _calloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _calloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _calloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2759c19fb88b820fc346b5cf35e97522b7e74cb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396776"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454397"
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 
@@ -69,7 +59,7 @@ Tipo de bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
 Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
@@ -78,7 +68,7 @@ El *filename* y *linenumber* parámetros solo están disponibles cuando **_callo
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cuando se finaliza correctamente, esta función devuelve un puntero a la parte de usuario del último bloque de memoria asignado, llama a la nueva función de controlador o devuelve **NULL**. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios. Para obtener más información sobre cómo se usa la nueva función de controlador, consulte la función [calloc](calloc.md).
+Se completa correctamente, esta función devuelve un puntero a la parte del usuario del último bloque de memoria asignado, llama a la nueva función de controlador o devuelve **NULL**. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios. Para obtener más información sobre cómo se usa la nueva función de controlador, consulte la función [calloc](calloc.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -90,7 +80,7 @@ Cuando se finaliza correctamente, esta función devuelve un puntero a la parte d
 
 - *nombre de archivo*/*linenumber* información para determinar el origen de las solicitudes de asignación.
 
-**_calloc_dbg** asigna cada bloque de memoria con un poco más de espacio que solicitado *tamaño*. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. Cuando se asigna el bloque, la parte del usuario de bloque se rellena con el valor 0xCD y cada uno de los búferes sobrescritos se rellena con 0xFD.
+**_calloc_dbg** asigna cada bloque de memoria con un poco más de espacio solicitado *tamaño*. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. Cuando se asigna el bloque, la parte del usuario de bloque se rellena con el valor 0xCD y cada uno de los búferes sobrescritos se rellena con 0xFD.
 
 **_calloc_dbg** establece **errno** a **ENOMEM** si se produce un error en una asignación de memoria; **EINVAL** se devuelve si se supera la cantidad de memoria necesaria (incluida la sobrecarga ya mencionada) **_HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
