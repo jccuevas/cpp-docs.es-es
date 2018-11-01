@@ -1,20 +1,13 @@
 ---
-title: Sistema de tipos (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Sistema de tipos (C++/CX)
 ms.date: 02/03/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7b9f17007c1614761f1b7872d8d421f0f5e18df
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9c8e09dded3743d5928fd1a4db797c6e647ec465
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105177"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445993"
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 
@@ -40,7 +33,7 @@ Al compilar una aplicación de plataforma Universal de Windows que está escrita
 
 Los metadatos del archivo de .winmd representan la superficie publicada de tu código. Los tipos publicados son visibles para otras plataformas de Windows universales independientemente del lenguaje se escriban esas otras aplicaciones. Por lo tanto, los metadatos, o tu código publicado, solo puede contener tipos especificados por el sistema de tipos en tiempo de ejecución de Windows. Las construcciones de lenguaje específicas de C++, como clases, matrices, plantillas o contenedores STL normales, no se pueden publicar en los metadatos porque una aplicación cliente de JavaScript o de C# no sabría lo que debería hacer con ellas.
 
-Que un tipo o un método estén visibles en los metadatos depende de los modificadores de accesibilidad que se les aplique. Para que esté visible, un tipo se debe declarar en un espacio de nombres y como público. Una clase ref pública se permite como tipo auxiliar interno en tu código; simplemente no está visible en los metadatos. Incluso en una clase ref pública, no todos los miembros están visibles necesariamente. La tabla siguiente muestra la relación entre los especificadores de acceso de C++ en una clase ref pública y la visibilidad de los metadatos de Windows en tiempo de ejecución:
+Que un tipo o un método estén visibles en los metadatos depende de los modificadores de accesibilidad que se les aplique. Para que esté visible, un tipo se debe declarar en un espacio de nombres y como público. Una clase ref pública se permite como tipo del asistente interno en tu código; simplemente no está visible en los metadatos. Incluso en una clase ref pública, no todos los miembros están visibles necesariamente. La tabla siguiente muestra la relación entre los especificadores de acceso de C++ en una clase ref pública y la visibilidad de los metadatos de Windows en tiempo de ejecución:
 
 |||
 |-|-|

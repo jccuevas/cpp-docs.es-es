@@ -1,11 +1,6 @@
 ---
-title: csqrt, csqrtf, csqrtl | Microsoft Docs
-ms.custom: ''
+title: csqrt, csqrtf, csqrtl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 143bb55180b3394f8ac32b36f7641503dd346b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449886"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
@@ -74,21 +63,21 @@ _Lcomplex csqrtl(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
 La raíz cuadrada de *z*. El resultado se encuentra en el semiplano derecho.
 
-|Entrada|Excepción SEH|**_matherr** (excepción)|
+|Entrada|Excepción SEH|**_matherr** excepción|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND|ninguna|_DOMAIN|
+|+ QNAN, IND|ninguna|_DOMAIN|
 |- ∞|ninguna|_DOMAIN|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **csqrt** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **csqrt** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **csqrt** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **csqrt** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
