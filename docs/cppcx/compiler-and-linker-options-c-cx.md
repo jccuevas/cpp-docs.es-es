@@ -1,20 +1,13 @@
 ---
-title: Las opciones del compilador y vinculador (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Opciones del compilador y del vinculador (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577296"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opciones del compilador y del vinculador (C++/CX)
 
@@ -28,7 +21,7 @@ La variable de entorno %LIBPATH% especifica la ruta de acceso predeterminada par
 
 |Opción|Descripción|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Permite a las extensiones de lenguaje de Windows en tiempo de ejecución.<br /><br /> El parámetro `nostdlib` impide que el compilador use la ruta de acceso de búsqueda estándar predefinida para buscar archivos .winmd y de ensamblado.<br /><br /> La opción del compilador **/ZW** especifica de manera implícita las siguientes opciones del compilador:<br /><br />- **/Fi** vccorlib.h, que fuerza la inclusión del archivo de encabezado vccorlib.h que define muchos tipos que son requeridos por el compilador.<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, que fuerza la inclusión del archivo de metadatos Windows.winmd ofrecido por el sistema operativo y que define muchos tipos en tiempo de ejecución de Windows.<br />- **/FU** Platform.winmd, que fuerza la inclusión del archivo de metadatos Platform.winmd ofrecido por el compilador y que define la mayoría de los tipos de la familia de Platform de espacios de nombres.|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Permite a las extensiones de lenguaje de Windows en tiempo de ejecución.<br /><br /> El parámetro `nostdlib` impide que el compilador use la ruta de acceso de búsqueda estándar predefinida para buscar archivos .winmd y de ensamblado.<br /><br /> La opción del compilador **/ZW** especifica de manera implícita las siguientes opciones del compilador:<br /><br />- **/FI** vccorlib.h, que fuerza la inclusión del archivo de encabezado vccorlib.h que define muchos de los tipos requeridos por el compilador.<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, que fuerza la inclusión del archivo de metadatos Windows.winmd ofrecido por el sistema operativo y que define muchos tipos en tiempo de ejecución de Windows.<br />- **/FU** Platform.winmd, que fuerza la inclusión del archivo de metadatos Platform.winmd ofrecido por el compilador y que define la mayoría de los tipos de la familia de Platform de espacios de nombres.|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Agrega un directorio, que se especifica mediante el parámetro *dir* , a la ruta de acceso de búsqueda que usa el compilador para buscar archivos .winmd y de ensamblado.|
 |**/FU**  *archivo*|Fuerza la inclusión del módulo especificado o el archivo .winmd. Es decir, no tiene que especificar `#using` *archivo* en el código fuente. El compilador fuerza automáticamente la inclusión de su propio archivo de metadatos de Windows, Platform.winmd.|
 |/D "WINAPI_FAMILY=2"|Crea una definición que permite el uso de un subconjunto del SDK de Win32 que es compatible con el tiempo de ejecución de Windows.|
