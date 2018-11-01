@@ -1,10 +1,6 @@
 ---
-title: localtime, _localtime32, _localtime64 | Microsoft Docs
-ms.custom: ''
+title: localtime, _localtime32, _localtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _localtime64
 - _localtime32
@@ -28,8 +24,6 @@ f1_keywords:
 - localtime32
 - localtime
 - _localtime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - localtime32 function
 - _localtime32 function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 778b2d214551c5848dd091e33dbbab1814544fb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d34a45ff20cb74d61a8eb189282bfdce4d8954ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405515"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629975"
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -68,17 +58,17 @@ Puntero a la hora almacenada.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devolver un puntero al resultado de la estructura, o **NULL** si pasa la fecha a la función es:
+Devolver un puntero al resultado de la estructura o **NULL** si la fecha se pasa a la función es:
 
 - Antes de la medianoche del 1 de enero de 1970.
 
-- Después de 03:14:07, 19 de enero de 2038, UTC (mediante **_time32** y **time32_t**).
+- Después de 03:14:07 del 19 de enero de 2038, UTC (mediante **_time32** y **time32_t**).
 
-- Después de 23:59:59 del 31 de diciembre de 3000, UTC (mediante **_time64** y **__time64_t**).
+- Posterior a las 23:59:59 del 31 de diciembre de 3000, UTC (mediante **_time64** y **__time64_t**).
 
-**_localtime64**, que usa el **__time64_t** estructura, permite expresar mediante 23:59:59 del 31 de diciembre de 3000, hora universal coordinada (UTC), fechas, mientras que **_localtime32** representa fechas hasta las 23:59:59 del 18 de enero de 2038, UTC.
+**_localtime64**, que usa el **__time64_t** estructura, permite expresar hasta las 23:59:59, 31 de diciembre de 3000, hora universal coordinada (UTC), fechas, mientras que **_localtime32** representa fechas hasta las 23:59:59 del 18 de enero de 2038, UTC.
 
-**LocalTime** es una función insertada que se evalúa como **_localtime64**, y **time_t** es equivalente a **__time64_t**. Si necesita forzar que el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. Si lo hace esto hará que **localtime** se evalúe como **_localtime32**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
+**LocalTime** es una función insertada que se evalúa como **_localtime64**, y **time_t** es equivalente a **__time64_t**. Si necesita forzar el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. Al hacerlo, **localtime** se evalúe como **_localtime32**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
 
 Los campos de tipo de estructura [tm](../../c-runtime-library/standard-types.md) almacenar los valores siguientes, cada uno de los cuales es un **int**:
 
@@ -86,7 +76,7 @@ Los campos de tipo de estructura [tm](../../c-runtime-library/standard-types.md)
 |-|-|
 |**tm_sec**|Segundos después del minuto (0 - 59).|
 |**tm_min**|Minutos después de la hora (0 - 59).|
-|**tm_hour**|Horas desde la medianoche (0 - 23).|
+|**tm_hour**|Horas desde medianoche (0 - 23).|
 |**tm_mday**|Día del mes (1-31).|
 |**tm_mon**|Mes (0 - 11; Enero = 0).|
 |**tm_year**|Año (año actual menos 1900).|
@@ -94,20 +84,20 @@ Los campos de tipo de estructura [tm](../../c-runtime-library/standard-types.md)
 |**tm_yday**|Día del año (0 - 365; El 1 de enero = 0).|
 |**tm_isdst**|Valor positivo si el horario de verano está en vigor; 0 si el horario de verano no está en vigor; valor negativo si se desconoce el estado del horario de verano.|
 
-Si el **TZ** se establece la variable de entorno, la biblioteca de tiempo de ejecución de C se da por supuesto reglas adecuado para los Estados Unidos para implementar el cálculo del horario de verano (DST).
+Si el **TZ** se establece la variable de entorno, la biblioteca de tiempo de ejecución de C usa las reglas correspondientes a Estados Unidos para implementar el cálculo del horario de verano (DST).
 
 ## <a name="remarks"></a>Comentarios
 
-El **localtime** función convierte una hora que se almacenan como un [time_t](../../c-runtime-library/standard-types.md) valor y almacena el resultado en una estructura de tipo [tm](../../c-runtime-library/standard-types.md). El **largo** valor *sourceTime* representa los segundos transcurridos desde la medianoche (00: 00:00) del 1 de enero de 1970, hora UTC. Este valor suele obtenerse a partir del [tiempo](time-time32-time64.md) función.
+El **localtime** función convierte una hora almacenada como un [time_t](../../c-runtime-library/standard-types.md) de valor y almacena el resultado en una estructura de tipo [tm](../../c-runtime-library/standard-types.md). El **largo** valor *sourceTime* representa los segundos transcurridos desde la medianoche (00: 00:00) del 1 de enero de 1970, UTC. Este valor suele obtenerse de la [tiempo](time-time32-time64.md) función.
 
-Las versiones de 32 bits y 64 bits de [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md), y **localtime** todos utilizan un único **tm** estructura por subproceso para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
+Las versiones de 32 bits y 64 bits de [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md), y **localtime** usan una única **tm** estructura por subproceso para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
 
-**LocalTime** corrige para la zona horaria local si el usuario establece primero la variable de entorno global **TZ**. Cuando **TZ** está establecida, otras tres variables de entorno (**_timezone**, **_daylight**, y **_tzname**) se establecen automáticamente también. Si el **TZ** variable no está establecida, **localtime** intenta utilizar la información de zona horaria especificada en la aplicación de fecha y hora en el Panel de Control. Si no se puede obtener esta información, se usa de forma predeterminada PST8PDT, que significa la zona horaria del Pacífico. Vea [_tzset](tzset.md) para obtener una descripción de estas variables. **TZ** es una extensión de Microsoft y no forma parte de la definición del estándar ANSI de **localtime**.
+**LocalTime** corrige la zona horaria local si el usuario establece primero la variable de entorno global **TZ**. Cuando **TZ** está establecida, otras tres variables de entorno (**_timezone**, **_daylight**, y **_tzname**) se establecen automáticamente también. Si el **TZ** no se establece la variable, **localtime** intenta usar la información de zona horaria especificada en la aplicación de fecha y hora en el Panel de Control. Si no se puede obtener esta información, se usa de forma predeterminada PST8PDT, que significa la zona horaria del Pacífico. Vea [_tzset](tzset.md) para obtener una descripción de estas variables. **TZ** es una extensión de Microsoft y no forma parte de la definición del estándar ANSI de **localtime**.
 
 > [!NOTE]
 > El entorno de destino debería intentar determinar si el horario de verano está vigente.
 
-Estas funciones validan sus parámetros. Si *sourceTime* es un puntero nulo, o si la *sourceTime* valor es negativo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **NULL** y establecer **errno** a **EINVAL**.
+Estas funciones validan sus parámetros. Si *sourceTime* es un puntero nulo, o si el *sourceTime* valor es negativo, estas funciones invocan un controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **NULL** y establecer **errno** a **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

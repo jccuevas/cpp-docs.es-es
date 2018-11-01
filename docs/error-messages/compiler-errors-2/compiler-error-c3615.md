@@ -1,36 +1,27 @@
 ---
-title: C3615 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3615
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3615
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce1ab43f8e15535614cedf43dba42fef882bf87a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253400"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652223"
 ---
-# <a name="compiler-error-c3615"></a>C3615 de Error del compilador
+# <a name="compiler-error-c3615"></a>Error del compilador C3615
 
-> función constexpr '*función*' no se puede dar lugar a una expresión constante
+> la función constexpr '*función*' no se puede dar lugar a una expresión constante
 
-La función *función* no se pudo evaluar como `constexpr` en tiempo de compilación. Para ser `constexpr`, una función solo puede llamar a otro `constexpr` funciones.
+La función *función* no se puede evaluar como `constexpr` en tiempo de compilación. Para ser `constexpr`, una función solo puede llamar a otro `constexpr` funciones.
 
 ## <a name="example"></a>Ejemplo
 
-Visual Studio de 2017 correctamente genera un error si el operando izquierdo de una operación de evaluación condicional no es válido en un `constexpr` contexto. El siguiente código se compila en Visual Studio 2015, pero no en Visual Studio de 2017.
+Visual Studio 2017 genera correctamente un error cuando el operando izquierdo de una operación de evaluación condicional no es válido en un `constexpr` contexto. El siguiente código se compila en Visual Studio 2015, pero no en Visual Studio 2017.
 
 ```cpp
 // C3615.cpp
@@ -48,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-Para corregir este problema, ya sea declare el `array::size()` funcionar como `constexpr` o quitar el `constexpr` calificador de `f`.
+Para corregir este problema, declare el `array::size()` funcionar como `constexpr` o quitar el `constexpr` calificador `f`.
