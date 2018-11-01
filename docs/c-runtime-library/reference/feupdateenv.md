@@ -1,11 +1,6 @@
 ---
-title: feupdateenv | Microsoft Docs
-ms.custom: ''
+title: feupdateenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feupdateenv
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d88284717aec7a19c936d7ed8d87da96006d7ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605122"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -62,7 +51,7 @@ Devuelve 0 si todas las acciones se completan correctamente. De lo contrario, de
 
 ## <a name="remarks"></a>Comentarios
 
-El **feupdateenv** función realiza varias acciones. En primer lugar, almacena las marcas de estado de excepción de punto flotante actuales en el almacenamiento automático. A continuación, Establece el entorno de punto flotante actual desde el valor almacenado en el **fenv_t** objeto señalado por *penv*. Si *penv* no **FE_DFL_ENV** o no apunta a válido **fenv_t** objeto posterior comportamiento es indefinido. Por último, **feupdateenv** genera las excepciones de punto flotante almacenadas de forma local.
+El **feupdateenv** función realiza varias acciones. En primer lugar, almacena las marcas de estado de excepción de punto flotante actuales en el almacenamiento automático. A continuación, Establece el entorno actual de punto flotante del valor almacenado en el **fenv_t** objeto señalado por *penv*. Si *penv* no **FE_DFL_ENV** o no apunta a una **fenv_t** objeto, el comportamiento posterior es indefinido. Por último, **feupdateenv** genera las excepciones de punto flotante almacenadas localmente.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 

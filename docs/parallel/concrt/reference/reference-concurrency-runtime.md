@@ -1,10 +1,6 @@
 ---
-title: Referencia (Runtime de simultaneidad) | Microsoft Docs
-ms.custom: ''
+title: Referencia (Runtime de simultaneidad)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_My_segment
 - agents/Concurrency::details::_Dynamic_array::_Swap
@@ -451,24 +447,18 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663338"
 ---
 # <a name="reference-concurrency-runtime"></a>Referencia (Runtime de simultaneidad)
 
@@ -480,7 +470,7 @@ Esta sección contiene información de referencia para el Runtime de simultaneid
 ## <a name="in-this-section"></a>En esta sección
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
-El espacio de nombres de simultaneidad proporciona clases y funciones que le proporcionan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../concurrency-runtime.md).
+El espacio de nombres de simultaneidad proporciona clases y funciones que le proporcionan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulta [Concurrency Runtime](../concurrency-runtime.md).
 
 [espacio de nombres std](std-namespace.md)
 

@@ -1,25 +1,15 @@
 ---
-title: Ejemplos de expresiones Lambda | Microsoft Docs
-ms.custom: ''
+title: Ejemplos de expresiones lambda
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b25d2914285e6ddab9e727f484823d40c9910d3b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061830"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663962"
 ---
 # <a name="examples-of-lambda-expressions"></a>Ejemplos de expresiones lambda
 

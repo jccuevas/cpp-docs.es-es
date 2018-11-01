@@ -1,14 +1,8 @@
 ---
-title: Agregar valores a un Control de cuadro combinado | Microsoft Docs
-ms.custom: ''
+title: Agregar valores a un control de cuadro combinado
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
-dev_langs:
-- C++
 helpviewer_keywords:
 - combo boxes [C++], Data property
 - controls [C++], testing values in combo boxes
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 22a78f98-fada-48b3-90d8-7fa0d8e4de51
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0812c05844bbff9d6a341ea5b5812c5e328c2d5b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5df37a14809a41166b713f946b4f1abc19ea1ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570383"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Agregar valores a un control de cuadro combinado
 

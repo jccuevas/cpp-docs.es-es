@@ -1,10 +1,6 @@
 ---
-title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - vswprintf_s
 - vsprintf_s
 - _vstprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _vstprintf_s_l function
 - vsprintf_s_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f1ee1235b5fe6c3904c6dc201e7c8a183d95647
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616497"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
@@ -118,15 +108,15 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**vsprintf_s** y **vswprintf_s** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si *búfer* o *formato* es un puntero nulo, si el recuento es cero, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen **errno** a **EINVAL**.
+**vsprintf_s** y **vswprintf_s** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si *búfer* o *formato* es un puntero nulo, si el recuento es cero, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, se da formato y escribe los datos especificados en la memoria que señala *búfer*.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, se da formato y escribe los datos especificados en la memoria que apunta *búfer*.
 
-**vswprintf_s** se ajusta a la Standard de C ISO para **vswprintf**, lo que requiere el segundo parámetro, *recuento*, del tipo **size_t**.
+**vswprintf_s** se ajusta a la Standard C ISO para **vswprintf**, que requiere que el segundo parámetro, *recuento*, del tipo **size_t**.
 
 Estas funciones se diferencian de las versiones no seguras únicamente en que las seguras admiten parámetros de posición. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
 

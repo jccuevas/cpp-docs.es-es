@@ -1,27 +1,16 @@
 ---
-title: TypeDef, Enum, Union y Struct (atributos) (COM de C++) | Microsoft Docs
-ms.custom: ''
+title: TypeDef, Enum, Union y Struct (atributos) (COM de C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792222"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631067"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef, Enum, Union y Struct (Atributos)
 
@@ -32,7 +21,7 @@ Los siguientes atributos se aplican a la [typedef](../../cpp/aliases-and-typedef
 |Atributo|Descripción|
 |---------------|-----------------|
 |[case](case-cpp.md)|Puede usar con el [switch_type](switch-type.md) atributo en un **union**.|
-|[Personalizado](custom-cpp.md)|Le permite definir su propio atributo.|
+|[custom](custom-cpp.md)|Le permite definir su propio atributo.|
 |[export](export.md)|Hace que una estructura de datos que se colocarán en el archivo. idl.|
 |[first_is](first-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|
 |[helpcontext](helpcontext.md)|Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el archivo de ayuda.|
@@ -51,7 +40,7 @@ Los siguientes atributos se aplican a la [typedef](../../cpp/aliases-and-typedef
 
 |Atributo|Descripción|
 |---------------|-----------------|
-|[Personalizado](custom-cpp.md)|Le permite definir su propio atributo.|
+|[custom](custom-cpp.md)|Le permite definir su propio atributo.|
 |[export](export.md)|Hace que una estructura de datos que se colocarán en el archivo. idl.|
 |[uuid](uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|
 |[v1_enum](v1-enum.md)|Indica que el tipo enumerado especificado se transmite como una entidad de 32 bits, en lugar de con el valor predeterminado de 16 bits.|
@@ -60,7 +49,7 @@ Los siguientes atributos se aplican a la [typedef](../../cpp/aliases-and-typedef
 
 |Atributo|Descripción|
 |---------------|-----------------|
-|[Personalizado](custom-cpp.md)|Le permite definir su propio atributo.|
+|[custom](custom-cpp.md)|Le permite definir su propio atributo.|
 |[export](export.md)|Hace que una estructura de datos que se colocarán en el archivo. idl.|
 |[first_is](first-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|
 |[last_is](last-is.md)|Especifica el índice del último elemento de matriz que se transmitan.|
@@ -84,10 +73,10 @@ Los siguientes atributos se aplican a la [typedef](../../cpp/aliases-and-typedef
 |[aggregatable](aggregatable.md)|Indica que la clase admite agregación.|
 |[aggregates](aggregates.md)|Indica que un control agrega la clase de destino.|
 |[appobject](appobject.md)|Identifica la coclase como un objeto de aplicación, que está asociado a una aplicación completa .exe e indica que las funciones y propiedades de la coclase están disponibles globalmente en esta biblioteca de tipos.|
-|[coclass](coclass.md)|Crea un control ActiveX.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Agrega una entrada de la interfaz a un mapa COM.|
+|[coclase](coclass.md)|Crea un control ActiveX.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Agrega una entrada de la interfaz a un mapa COM.|
 |[control](control.md)|Especifica que el tipo definido por el usuario es un control.|
-|[Personalizado](custom-cpp.md)|Le permite definir su propio atributo.|
+|[custom](custom-cpp.md)|Le permite definir su propio atributo.|
 |[db_column](db-column.md)|Enlaza una columna especificada para el conjunto de filas.|
 |[db_command](db-command.md)|Crea un comando OLE DB.|
 |[db_param](db-param.md)|La variable de miembro especificado se asocia con un parámetro de entrada o salido y delimita la variable.|
@@ -107,7 +96,7 @@ Los siguientes atributos se aplican a la [typedef](../../cpp/aliases-and-typedef
 |[requires_category](requires-category.md)|Especifica las categorías de los componentes necesarios de la clase de destino.|
 |[size_is](size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo - o matrices multidimensionales.|
 |[source](source-cpp.md)|En una clase, especifica las interfaces de origen del objeto COM para puntos de conexión. En una propiedad o método, indica que el miembro devuelve un objeto o una variante de un origen de eventos.|
-|[Subprocesamiento](threading-cpp.md)|Especifica el modelo de subprocesos para un objeto COM.|
+|[threading](threading-cpp.md)|Especifica el modelo de subprocesos para un objeto COM.|
 |[unique](unique-cpp.md)|Especifica un puntero único.|
 |[uuid](uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|
 |[version](version-cpp.md)|Identifica una versión determinada entre varias versiones de una clase.|

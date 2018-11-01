@@ -1,10 +1,6 @@
 ---
-title: fprintf, _fprintf_l, fwprintf, _fwprintf_l | Microsoft Docs
-ms.custom: ''
+title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7578a8a8c2bef7fe68e9a08ae987ac7c1609cb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637308"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
@@ -85,13 +75,13 @@ int _fwprintf_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 *format*<br/>
 Cadena de control de formato.
 
-*Argumento*<br/>
+*argumento*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -99,13 +89,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fprintf** devuelve el número de bytes escritos. **fwprintf** devuelve el número de caracteres anchos que se escriben. Cada una de estas funciones devuelve un valor negativo cuando se produce un error de salida. Si *flujo* o *formato* es **NULL**, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen **errno** a **EINVAL**. No se comprueba la cadena de formato de caracteres de formato válidos tal cual al usar **fprintf_s** o **fwprintf_s**.
+**fprintf** devuelve el número de bytes escritos. **fwprintf** devuelve el número de caracteres anchos escritos. Cada una de estas funciones devuelve un valor negativo cuando se produce un error de salida. Si *secuencia* o *formato* es **NULL**, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**. No se comprueba la cadena de formato de caracteres de formato válidos ya que es cuando se usa **fprintf_s** o **fwprintf_s**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-**fprintf** da formato e imprime una serie de caracteres y valores a la salida de *flujo*. Cada función *argumento* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. Para **fprintf**, *formato* argumento tiene la misma sintaxis y el uso que tiene en **printf**.
+**fprintf** da formato e imprime una serie de caracteres y valores en la salida *secuencia*. Cada función *argumento* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. Para **fprintf**, *formato* argumento tiene la misma sintaxis y uso que tiene en **printf**.
 
 **fwprintf** es una versión con caracteres anchos de **fprintf**; en **fwprintf**, *formato* es una cadena de caracteres anchos. Estas funciones se comportan igual si el flujo se abre en modo ANSI. **fprintf** no admite actualmente la salida en un flujo UNICODE.
 

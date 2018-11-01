@@ -1,28 +1,18 @@
 ---
-title: '&lt;iterator&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iterator>
 - iterator/std::<iterator>
-dev_langs:
-- C++
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1582f6167d8aae3a9d5a318726cc7404c7e1ea62
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640367"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -99,7 +89,7 @@ Visual Studio ha agregado extensiones a los iteradores de la Biblioteca estánda
 |[istream_iterator](../standard-library/istream-iterator-class.md)|La clase de plantilla describe un objeto iterador de entrada. Extrae objetos de clase `Ty` desde un flujo de entrada, que se accede mediante un objeto que almacena, de tipo puntero a `basic_istream` \< **Elem**, **Tr**>.|
 |[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|La clase de plantilla describe un objeto iterador de entrada. Inserta elementos de la clase `Elem` en un búfer de secuencia de salida, que tiene acceso a través de un objeto que almacena, de tipo `pointer` a `basic_streambuf` \< **Elem**, **Tr** >.|
 |[iterator](../standard-library/iterator-struct.md)|La clase de plantilla se usa como tipo base para todos los iteradores.|
-|[iterator_traits](../standard-library/iterator-traits-struct.md)|Clase de plantilla auxiliar que proporciona los tipos críticos asociados a diferentes tipos de iterador para que se pueda hacer referencia a ellos de la misma manera.|
+|[iterator_traits](../standard-library/iterator-traits-struct.md)|Clase de plantilla del asistente que proporciona los tipos críticos asociados a diferentes tipos de iterador para que se pueda hacer referencia a ellos de la misma manera.|
 |[move_iterator](../standard-library/move-iterator-class.md)|Un objeto `move_iterator` almacena un iterador de acceso aleatorio de tipo `RandomIterator`. Se comporta como un iterador de acceso aleatorio, excepto cuando se desreferencia. El resultado de `operator*` se convierte implícitamente a `value_type&&:` para crear `rvalue reference`.|
 |[ostream_iterator](../standard-library/ostream-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta objetos de clase `Type` en un flujo de salida, que tiene acceso a través de un objeto que almacena, de tipo `pointer` a `basic_ostream` \< **Elem**, **Tr**>.|
 |[ostreambuf_iterator (Clase)](../standard-library/ostreambuf-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos de la clase `Elem` en un búfer de secuencia de salida, que se accede mediante un objeto que almacena, de tipo puntero a `basic_streambuf` \< **Elem**, **Tr**>.|

@@ -1,10 +1,6 @@
 ---
-title: _set_new_handler | Microsoft Docs
-ms.custom: ''
+title: _set_new_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_new_handler
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30cd0c2a991ec046b0b1f55100c58641833cb992
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640315"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
-Transfiere el control al mecanismo de control de errores si la **nueva** operador no puede asignar memoria.
+Transfiere el control al mecanismo de control de errores si el operador **new** no puede asignar memoria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -59,17 +49,17 @@ Puntero a la función de control de memoria proporcionada por la aplicación. Un
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la excepción anterior control función registrada por **_set_new_handler**, de modo que la función anterior puede restaurarse más tarde. Si no se ha establecido ninguna función anterior, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
+Devuelve un puntero a la función registrada por de control de excepciones anterior **_set_new_handler**, de modo que la función anterior se puede restaurar más adelante. Si no se ha establecido ninguna función anterior, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-C++ **_set_new_handler** función especifica una función de control de excepciones que toma el control si el **nueva** operador no puede asignar memoria. Si **nueva** se produce un error, el sistema en tiempo de ejecución llama automáticamente a la función de control de excepciones que se pasó como argumento pasado a **_set_new_handler**. **_PNH**, definido en New.h, es un puntero a una función que devuelve el tipo **int** y toma un argumento de tipo **size_t**. Use **size_t** para especificar la cantidad de espacio que se asignará.
+El C++ **_set_new_handler** función especifica una función de control de excepciones que obtiene el control si el **nuevo** operador no puede asignar memoria. Si **nueva** se produce un error, el sistema de tiempo de ejecución llama automáticamente a la función de control de excepciones que se pasó como argumento a **_set_new_handler**. **_PNH**, definido en New.h, es un puntero a una función que devuelve el tipo **int** y toma un argumento de tipo **size_t**. Use **size_t** para especificar la cantidad de espacio que se va a asignar.
 
 No hay ningún controlador predeterminado.
 
 **_set_new_handler** es básicamente un esquema de la colección de elementos no utilizados. El sistema de tiempo de ejecución reintenta la asignación cada vez que la función devuelve un valor distinto de cero y se produce un error si la función devuelve 0.
 
-Una repetición de la **_set_new_handler** función en un programa registra la función de control de excepciones especificada en la lista de argumentos con el sistema en tiempo de ejecución:
+Una repetición de la **_set_new_handler** función en un programa registra la función de control de excepciones especificada en la lista de argumentos con el sistema de tiempo de ejecución:
 
 ```cpp
 // set_new_handler1.cpp
@@ -87,7 +77,7 @@ int main( void )
 }
 ```
 
-Puede guardar la dirección de función que se pasó última a la **_set_new_handler** de función y restablecerlo más adelante:
+Puede guardar la dirección de la función que se pasó por última vez a la **_set_new_handler** de función y restablecerla más adelante:
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -98,7 +88,7 @@ Puede guardar la dirección de función que se pasó última a la **_set_new_han
    // . . .
 ```
 
-La función [_set_new_mode](set-new-mode.md) de C++ establece el nuevo modo de controlador para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error, **malloc** consiste en llamar a la rutina del controlador nuevo según lo establecido por **_set_new_handler**. De forma predeterminada, **malloc** no llama a la rutina del controlador de nuevo en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **malloc** no puede asignar memoria, **malloc** llama a la rutina del controlador de nuevo en la misma forma en que la **nueva** does de operador Cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a:
+La función [_set_new_mode](set-new-mode.md) de C++ establece el nuevo modo de controlador para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error, **malloc** consiste en llamar a la rutina del nuevo controlador según lo establecido por **_set_new_handler**. De forma predeterminada, **malloc** no llama a la rutina del nuevo controlador en caso de error para asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **malloc** no puede asignar memoria, **malloc** llame a la rutina del nuevo controlador de la misma forma en que el **nuevo** operador Cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a:
 
 ```cpp
 _set_new_mode(1);
@@ -106,11 +96,11 @@ _set_new_mode(1);
 
 temprano en el programa o vincúlelo con Newmode.obj.
 
-Si definido por el usuario `operator new` es siempre, las nuevas funciones de controlador no se llaman automáticamente en caso de error.
+Si un usuario definido por el `operator new` es siempre, las nuevas funciones de controlador no se llaman automáticamente en caso de error.
 
 Para obtener más información, vea los operadores [new](../../cpp/new-operator-cpp.md) y [delete](../../cpp/delete-operator-cpp.md) en *Referencia de lenguaje C++*.
 
-Hay una sola **_set_new_handler** controlador para dinámicamente todos los ejecutables y DLL vinculados; incluso si se llama a **_set_new_handler** el controlador podría reemplazarse por otro o que se va a sustituir un controlador establecido por otro ejecutable o DLL.
+Solo hay un **_set_new_handler** controlador para dinámicamente todos los ejecutables y DLL vinculados; incluso si se llama a **_set_new_handler** el controlador es posible que se reemplace por otro o que se va a sustituir un controlador establecido por otro ejecutable o DLL.
 
 ## <a name="requirements"></a>Requisitos
 

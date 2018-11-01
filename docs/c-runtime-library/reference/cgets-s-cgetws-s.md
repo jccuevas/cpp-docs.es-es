@@ -1,10 +1,6 @@
 ---
-title: _cgets_s, _cgetws_s | Microsoft Docs
-ms.custom: ''
+title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588545"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
@@ -99,12 +89,12 @@ El valor devuelto es cero si es correcto; en caso contrario, un código de error
 |*buffer*|*numberOfElements*|*pSizeRead*|Volver|Contenido de *búfer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|any|any|**EINVAL**|N/D|
-|no **NULL**|cero|any|**EINVAL**|no modificado|
-|no **NULL**|any|**NULL**|**EINVAL**|cadena de longitud cero|
+|No **NULL**|cero|any|**EINVAL**|no modificado|
+|No **NULL**|any|**NULL**|**EINVAL**|cadena de longitud cero|
 
 ## <a name="remarks"></a>Comentarios
 
-**_cgets_s** y **_cgetws_s** leen una cadena de la consola y copie la cadena (con un terminador null) en *búfer*. **_cgetws_s** no es la versión de caracteres anchos de la función; el tamaño de carácter, el comportamiento de estas dos funciones es idéntico. El tamaño máximo de la cadena que debe leerse se pasa como el *numberOfElements* parámetro. Este tamaño debe incluir un carácter adicional para el carácter null de terminación. El número real de caracteres que se leen se coloca en *pSizeRead*.
+**_cgets_s** y **_cgetws_s** leer una cadena de la consola y copie la cadena (con un terminador nulo) en *búfer*. **_cgetws_s** es la versión de caracteres anchos de la función; aparte el tamaño de caracteres, el comportamiento de estas dos funciones es idéntico. El tamaño máximo de la cadena para leer se pasa como el *numberOfElements* parámetro. Este tamaño debe incluir un carácter adicional para el carácter null de terminación. El número real de caracteres que se leen se coloca en *pSizeRead*.
 
 Si se produce un error durante la operación o en la validación de los parámetros, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **EINVAL** se devuelve.
 
